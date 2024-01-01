@@ -136,5 +136,5 @@ module _
   is-prop-is-pullback-Precategory = {!!}
 
   is-pullback-prop-Precategory : Prop (l1 ⊔ l2)
-  pr1 is-pullback-prop-Precategory = {!!}
+  is-pullback-prop-Precategory = {!!}
 ```

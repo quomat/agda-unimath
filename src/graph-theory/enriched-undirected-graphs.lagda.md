@@ -48,7 +48,7 @@ equivalence `B (sh v) ≃ neighbor v` then ensures type type being acted on is
 Enriched-Undirected-Graph :
   {l1 l2 : Level} (l3 l4 : Level) (A : UU l1) (B : A → UU l2) →
   UU (l1 ⊔ l2 ⊔ lsuc l3 ⊔ lsuc l4)
-Enriched-Undirected-Graph l3 l4 A B = {!!}
+Enriched-Undirected-Graph = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} (A : UU l1) (B : A → UU l2)
@@ -73,26 +73,26 @@ module _
 
   classifying-type-∞-group-vertex-Enriched-Undirected-Graph :
     vertex-Enriched-Undirected-Graph → UU l1
-  classifying-type-∞-group-vertex-Enriched-Undirected-Graph v = {!!}
+  classifying-type-∞-group-vertex-Enriched-Undirected-Graph = {!!}
 
   point-classifying-type-∞-group-vertex-Enriched-Undirected-Graph :
     (v : vertex-Enriched-Undirected-Graph) →
     classifying-type-∞-group-vertex-Enriched-Undirected-Graph v
-  point-classifying-type-∞-group-vertex-Enriched-Undirected-Graph v = {!!}
+  point-classifying-type-∞-group-vertex-Enriched-Undirected-Graph = {!!}
 
   ∞-group-vertex-Enriched-Undirected-Graph :
     vertex-Enriched-Undirected-Graph → ∞-Group l1
-  ∞-group-vertex-Enriched-Undirected-Graph v = {!!}
+  ∞-group-vertex-Enriched-Undirected-Graph = {!!}
 
   type-∞-group-vertex-Enriched-Undirected-Graph :
     vertex-Enriched-Undirected-Graph → UU l1
-  type-∞-group-vertex-Enriched-Undirected-Graph v = {!!}
+  type-∞-group-vertex-Enriched-Undirected-Graph = {!!}
 
   mul-∞-group-vertex-Enriched-Undirected-Graph :
     (v : vertex-Enriched-Undirected-Graph) →
     (h g : type-∞-group-vertex-Enriched-Undirected-Graph v) →
     type-∞-group-vertex-Enriched-Undirected-Graph v
-  mul-∞-group-vertex-Enriched-Undirected-Graph v h g = {!!}
+  mul-∞-group-vertex-Enriched-Undirected-Graph = {!!}
 
   neighbor-Enriched-Undirected-Graph :
     vertex-Enriched-Undirected-Graph → UU (l3 ⊔ l4)
@@ -108,36 +108,36 @@ module _
     (v : vertex-Enriched-Undirected-Graph) →
     B (shape-vertex-Enriched-Undirected-Graph v) →
     neighbor-Enriched-Undirected-Graph v
-  map-equiv-neighbor-Enriched-Undirected-Graph v = {!!}
+  map-equiv-neighbor-Enriched-Undirected-Graph = {!!}
 
   map-inv-equiv-neighbor-Enriched-Undirected-Graph :
     (v : vertex-Enriched-Undirected-Graph) →
     neighbor-Enriched-Undirected-Graph v →
     B (shape-vertex-Enriched-Undirected-Graph v)
-  map-inv-equiv-neighbor-Enriched-Undirected-Graph v = {!!}
+  map-inv-equiv-neighbor-Enriched-Undirected-Graph = {!!}
 
   is-section-map-inv-equiv-neighbor-Enriched-Undirected-Graph :
     (v : vertex-Enriched-Undirected-Graph) →
     ( map-equiv-neighbor-Enriched-Undirected-Graph v ∘
       map-inv-equiv-neighbor-Enriched-Undirected-Graph v) ~ id
-  is-section-map-inv-equiv-neighbor-Enriched-Undirected-Graph v = {!!}
+  is-section-map-inv-equiv-neighbor-Enriched-Undirected-Graph = {!!}
 
   is-retraction-map-inv-equiv-neighbor-Enriched-Undirected-Graph :
     (v : vertex-Enriched-Undirected-Graph) →
     ( map-inv-equiv-neighbor-Enriched-Undirected-Graph v ∘
       map-equiv-neighbor-Enriched-Undirected-Graph v) ~ id
-  is-retraction-map-inv-equiv-neighbor-Enriched-Undirected-Graph v = {!!}
+  is-retraction-map-inv-equiv-neighbor-Enriched-Undirected-Graph = {!!}
 
   action-∞-group-vertex-Enriched-Undirected-Graph :
     (v : vertex-Enriched-Undirected-Graph) →
     action-∞-Group l2 (∞-group-vertex-Enriched-Undirected-Graph v)
-  action-∞-group-vertex-Enriched-Undirected-Graph v u = {!!}
+  action-∞-group-vertex-Enriched-Undirected-Graph = {!!}
 
   mul-action-∞-group-vertex-Enriched-Undirected-Graph :
     (v : vertex-Enriched-Undirected-Graph)
     (g : type-∞-group-vertex-Enriched-Undirected-Graph v) →
     neighbor-Enriched-Undirected-Graph v → neighbor-Enriched-Undirected-Graph v
-  mul-action-∞-group-vertex-Enriched-Undirected-Graph v g e = {!!}
+  mul-action-∞-group-vertex-Enriched-Undirected-Graph = {!!}
 
   associative-mul-action-∞-group-vertex-Enriched-Undirected-Graph :
     (v : vertex-Enriched-Undirected-Graph)
@@ -148,7 +148,7 @@ module _
       ( x)) ＝
     ( mul-action-∞-group-vertex-Enriched-Undirected-Graph v g
       ( mul-action-∞-group-vertex-Enriched-Undirected-Graph v h x))
-  associative-mul-action-∞-group-vertex-Enriched-Undirected-Graph v h g x = {!!}
+  associative-mul-action-∞-group-vertex-Enriched-Undirected-Graph = {!!}
 ```
 
 ## External links

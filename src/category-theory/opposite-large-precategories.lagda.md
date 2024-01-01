@@ -119,7 +119,7 @@ module _
   right-unit-law-comp-hom-opposite-Large-Precategory = {!!}
 
   opposite-Large-Precategory : Large-Precategory α (λ l1 l2 → β l2 l1)
-  obj-Large-Precategory opposite-Large-Precategory = {!!}
+  opposite-Large-Precategory = {!!}
 ```
 
 ## Properties

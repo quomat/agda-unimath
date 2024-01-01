@@ -30,16 +30,16 @@ ring of which the non-invertible elements form an ideal is a local ring.
 
 ```agda
 is-local-prop-Ring : {l : Level} (R : Ring l) → Prop l
-is-local-prop-Ring R = {!!}
+is-local-prop-Ring = {!!}
 
 is-local-Ring : {l : Level} → Ring l → UU l
-is-local-Ring R = {!!}
+is-local-Ring = {!!}
 
 is-prop-is-local-Ring : {l : Level} (R : Ring l) → is-prop (is-local-Ring R)
-is-prop-is-local-Ring R = {!!}
+is-prop-is-local-Ring = {!!}
 
 Local-Ring : (l : Level) → UU (lsuc l)
-Local-Ring l = {!!}
+Local-Ring = {!!}
 
 module _
   {l : Level} (R : Local-Ring l)

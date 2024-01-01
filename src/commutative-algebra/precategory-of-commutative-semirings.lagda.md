@@ -29,8 +29,7 @@ and homomorphisms of semirings.
 
 ```agda
 Commutative-Semiring-Large-Precategory : Large-Precategory lsuc _⊔_
-obj-Large-Precategory
-  Commutative-Semiring-Large-Precategory = {!!}
+Commutative-Semiring-Large-Precategory = {!!}
 hom-set-Large-Precategory
   Commutative-Semiring-Large-Precategory = {!!}
 comp-hom-Large-Precategory

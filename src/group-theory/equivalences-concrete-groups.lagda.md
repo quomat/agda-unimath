@@ -36,7 +36,7 @@ their classifying types
 ```agda
 equiv-Concrete-Group :
   {l1 l2 : Level} (G : Concrete-Group l1) (H : Concrete-Group l2) → UU (l1 ⊔ l2)
-equiv-Concrete-Group G H = {!!}
+equiv-Concrete-Group = {!!}
 ```
 
 ### The identity equivalence of a concrete group
@@ -44,7 +44,7 @@ equiv-Concrete-Group G H = {!!}
 ```agda
 id-equiv-Concrete-Group :
   {l : Level} (G : Concrete-Group l) → equiv-Concrete-Group G G
-id-equiv-Concrete-Group G = {!!}
+id-equiv-Concrete-Group = {!!}
 ```
 
 ## Properties
@@ -62,7 +62,7 @@ module _
 
   equiv-eq-Concrete-Group :
     (H : Concrete-Group l) → (G ＝ H) → equiv-Concrete-Group G H
-  equiv-eq-Concrete-Group .G refl = {!!}
+  equiv-eq-Concrete-Group = {!!}
 
   is-equiv-equiv-eq-Concrete-Group :
     (H : Concrete-Group l) → is-equiv (equiv-eq-Concrete-Group H)
@@ -70,9 +70,9 @@ module _
 
   extensionality-Concrete-Group :
     (H : Concrete-Group l) → (G ＝ H) ≃ equiv-Concrete-Group G H
-  pr1 (extensionality-Concrete-Group H) = {!!}
+  extensionality-Concrete-Group = {!!}
 
   eq-equiv-Concrete-Group :
     (H : Concrete-Group l) → equiv-Concrete-Group G H → G ＝ H
-  eq-equiv-Concrete-Group H = {!!}
+  eq-equiv-Concrete-Group = {!!}
 ```

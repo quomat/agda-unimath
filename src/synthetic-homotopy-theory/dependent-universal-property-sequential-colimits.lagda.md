@@ -133,9 +133,7 @@ module _
         ( top-map-cofork-cocone-sequential-diagram A)
         ( cofork-cocone-sequential-diagram A c)) →
     dependent-universal-property-sequential-colimit A c
-  dependent-universal-property-sequential-colimit-dependent-universal-property-coequalizer
-    ( dup-coequalizer)
-    ( P) = {!!}
+  dependent-universal-property-sequential-colimit-dependent-universal-property-coequalizer = {!!}
 
   dependent-universal-property-coequalizer-dependent-universal-property-sequential-colimit :
     dependent-universal-property-sequential-colimit A c →
@@ -144,9 +142,7 @@ module _
         ( bottom-map-cofork-cocone-sequential-diagram A)
         ( top-map-cofork-cocone-sequential-diagram A)
         ( cofork-cocone-sequential-diagram A c))
-  dependent-universal-property-coequalizer-dependent-universal-property-sequential-colimit
-    ( dup-c)
-    ( P) = {!!}
+  dependent-universal-property-coequalizer-dependent-universal-property-sequential-colimit = {!!}
 ```
 
 ### The non-dependent and dependent universal properties of sequential colimits are logically equivalent
@@ -160,15 +156,12 @@ module _
   universal-property-dependent-universal-property-sequential-colimit :
     dependent-universal-property-sequential-colimit A c →
     universal-property-sequential-colimit A c
-  universal-property-dependent-universal-property-sequential-colimit
-    ( dup-c)
-    ( Y) = {!!}
+  universal-property-dependent-universal-property-sequential-colimit = {!!}
 
   dependent-universal-property-universal-property-sequential-colimit :
     universal-property-sequential-colimit A c →
     dependent-universal-property-sequential-colimit A c
-  dependent-universal-property-universal-property-sequential-colimit
-    ( up-sequential-diagram) = {!!}
+  dependent-universal-property-universal-property-sequential-colimit = {!!}
 ```
 
 ### The 3-for-2 property of the dependent universal property of sequential colimits
@@ -193,22 +186,17 @@ module _
       dependent-universal-property-sequential-colimit A c →
       dependent-universal-property-sequential-colimit A c' →
       is-equiv h
-    is-equiv-dependent-universal-property-sequential-colimit-dependent-universal-property-sequential-colimit
-      ( dup-c)
-      ( dup-c') = {!!}
+    is-equiv-dependent-universal-property-sequential-colimit-dependent-universal-property-sequential-colimit = {!!}
 
     dependent-universal-property-sequential-colimit-is-equiv-dependent-universal-property-sequential-colimit :
       dependent-universal-property-sequential-colimit A c →
       is-equiv h →
       dependent-universal-property-sequential-colimit A c'
-    dependent-universal-property-sequential-colimit-is-equiv-dependent-universal-property-sequential-colimit
-      ( dup-c) (is-equiv-h) = {!!}
+    dependent-universal-property-sequential-colimit-is-equiv-dependent-universal-property-sequential-colimit = {!!}
 
     dependent-universal-property-sequential-colimit-dependent-universal-property-sequential-colimit-is-equiv :
       is-equiv h →
       dependent-universal-property-sequential-colimit A c' →
       dependent-universal-property-sequential-colimit A c
-    dependent-universal-property-sequential-colimit-dependent-universal-property-sequential-colimit-is-equiv
-      ( is-equiv-h)
-      ( dup-c') = {!!}
+    dependent-universal-property-sequential-colimit-dependent-universal-property-sequential-colimit-is-equiv = {!!}
 ```

@@ -49,7 +49,7 @@ module _
   hom-set-Nonunital-Precategory = {!!}
 
   hom-Nonunital-Precategory : (x y : obj-Nonunital-Precategory) → UU l2
-  hom-Nonunital-Precategory x y = {!!}
+  hom-Nonunital-Precategory = {!!}
 
   is-set-hom-Nonunital-Precategory :
     (x y : obj-Nonunital-Precategory) → is-set (hom-Nonunital-Precategory x y)
@@ -101,7 +101,7 @@ module _
   where
 
   set-magmoid-Nonunital-Precategory : Set-Magmoid l1 l2
-  pr1 set-magmoid-Nonunital-Precategory = {!!}
+  set-magmoid-Nonunital-Precategory = {!!}
 ```
 
 ### The total hom-type of a nonunital precategory

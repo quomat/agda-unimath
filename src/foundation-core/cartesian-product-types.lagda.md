@@ -20,7 +20,7 @@ constant type family.
 
 ```agda
 prod : {l1 l2 : Level} (A : UU l1) (B : UU l2) → UU (l1 ⊔ l2)
-prod A B = {!!}
+prod = {!!}
 
 pair' :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → A → B → prod A B

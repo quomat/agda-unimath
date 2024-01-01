@@ -55,10 +55,10 @@ module _
   where
 
   family-descent-data-circle-function-type : S → UU (l2 ⊔ l3)
-  family-descent-data-circle-function-type x = {!!}
+  family-descent-data-circle-function-type = {!!}
 
   descent-data-circle-function-type : descent-data-circle (l2 ⊔ l3)
-  pr1 descent-data-circle-function-type = {!!}
+  descent-data-circle-function-type = {!!}
 ```
 
 ## Properties

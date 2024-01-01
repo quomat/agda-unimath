@@ -54,12 +54,12 @@ of universe level `l₀ ⊔ l₁ ⊔ l₂ ⊔ l₃`.
 ```agda
 iterated-Π :
   {l : Level} {n : ℕ} → telescope l n → UU l
-iterated-Π (base-telescope A) = {!!}
+iterated-Π = {!!}
 iterated-Π (cons-telescope {X = X} A) = {!!}
 
 iterated-implicit-Π :
   {l : Level} {n : ℕ} → telescope l n → UU l
-iterated-implicit-Π (base-telescope A) = {!!}
+iterated-implicit-Π = {!!}
 iterated-implicit-Π (cons-telescope {X = X} A) = {!!}
 ```
 
@@ -82,7 +82,7 @@ data
 iterated-λ :
   {l : Level} {n : ℕ} {A : telescope l n} →
   iterated-section A → iterated-Π A
-iterated-λ (base-iterated-section a) = {!!}
+iterated-λ = {!!}
 iterated-λ (cons-iterated-section f) x = {!!}
 ```
 
@@ -95,12 +95,12 @@ product.
 apply-codomain-iterated-Π :
   {l1 : Level} {n : ℕ}
   (P : {l : Level} → UU l → UU l) → telescope l1 n → UU l1
-apply-codomain-iterated-Π P A = {!!}
+apply-codomain-iterated-Π = {!!}
 
 apply-codomain-iterated-implicit-Π :
   {l1 : Level} {n : ℕ}
   (P : {l : Level} → UU l → UU l) → telescope l1 n → UU l1
-apply-codomain-iterated-implicit-Π P A = {!!}
+apply-codomain-iterated-implicit-Π = {!!}
 ```
 
 ## Properties

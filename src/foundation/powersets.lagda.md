@@ -46,7 +46,7 @@ module _
   is-set-powerset = {!!}
 
   powerset-Set : (l2 : Level) → Set (l1 ⊔ lsuc l2)
-  powerset-Set l2 = {!!}
+  powerset-Set = {!!}
 ```
 
 ### The powerset large preorder

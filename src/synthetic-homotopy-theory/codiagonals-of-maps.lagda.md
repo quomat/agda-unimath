@@ -50,7 +50,7 @@ module _
   where
 
   cocone-codiagonal-map : cocone f f B
-  pr1 cocone-codiagonal-map = {!!}
+  cocone-codiagonal-map = {!!}
 
   codiagonal-map : pushout f f → B
   codiagonal-map = {!!}

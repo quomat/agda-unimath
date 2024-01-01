@@ -61,11 +61,11 @@ postulate
   loop-𝕊¹ : Id base-𝕊¹ base-𝕊¹
 
 free-loop-𝕊¹ : free-loop 𝕊¹
-pr1 free-loop-𝕊¹ = {!!}
+free-loop-𝕊¹ = {!!}
 pr2 free-loop-𝕊¹ = {!!}
 
 𝕊¹-Pointed-Type : Pointed-Type lzero
-pr1 𝕊¹-Pointed-Type = {!!}
+𝕊¹-Pointed-Type = {!!}
 pr2 𝕊¹-Pointed-Type = {!!}
 
 postulate
@@ -168,7 +168,7 @@ is-0-connected-𝕊¹ = {!!}
 
 ```agda
 𝕊¹-∞-Group : ∞-Group lzero
-pr1 𝕊¹-∞-Group = {!!}
+𝕊¹-∞-Group = {!!}
 pr2 𝕊¹-∞-Group = {!!}
 ```
 
@@ -214,7 +214,7 @@ circle, which would not form an equivalence.
 
 ```agda
 map-sphere-0-eq-base-𝕊¹ : (sphere 0) → base-𝕊¹ ＝ base-𝕊¹
-map-sphere-0-eq-base-𝕊¹ (inl n) = {!!}
+map-sphere-0-eq-base-𝕊¹ = {!!}
 map-sphere-0-eq-base-𝕊¹ (inr n) = {!!}
 
 suspension-structure-sphere-0-𝕊¹ :
@@ -262,8 +262,7 @@ apply-up-suspension-meridian-suspension-sphere-1-circle-sphere-1 :
     ( ap sphere-1-circle (ap circle-sphere-1 (meridian-suspension n)))
     ( sphere-1-circle-base-𝕊¹-eq-south-sphere-1)
     ( sphere-1-circle-sphere-1-south-sphere-1)
-apply-up-suspension-meridian-suspension-sphere-1-circle-sphere-1
-  n = {!!}
+apply-up-suspension-meridian-suspension-sphere-1-circle-sphere-1 = {!!}
 
 apply-loop-universal-property-𝕊¹-sphere-1-circle-sphere-1 :
   coherence-square-identifications
@@ -293,7 +292,7 @@ pr1 (pr2 dependent-suspension-structure-sphere-1-circle-sphere-1) = {!!}
 pr2 (pr2 dependent-suspension-structure-sphere-1-circle-sphere-1) = {!!}
 
 sphere-1-circle-sphere-1 : section sphere-1-circle
-pr1 sphere-1-circle-sphere-1 = {!!}
+sphere-1-circle-sphere-1 = {!!}
 pr2 sphere-1-circle-sphere-1 = {!!}
 ```
 
@@ -332,7 +331,7 @@ circle-sphere-1-circle-loop-𝕊¹ :
 circle-sphere-1-circle-loop-𝕊¹ = {!!}
 
 circle-sphere-1-circle : retraction sphere-1-circle
-pr1 circle-sphere-1-circle = {!!}
+circle-sphere-1-circle = {!!}
 pr2 circle-sphere-1-circle = {!!}
 ```
 
@@ -340,11 +339,11 @@ pr2 circle-sphere-1-circle = {!!}
 
 ```agda
 is-equiv-sphere-1-circle : is-equiv sphere-1-circle
-pr1 is-equiv-sphere-1-circle = {!!}
+is-equiv-sphere-1-circle = {!!}
 pr2 is-equiv-sphere-1-circle = {!!}
 
 equiv-sphere-1-circle : 𝕊¹ ≃ sphere 1
-pr1 equiv-sphere-1-circle = {!!}
+equiv-sphere-1-circle = {!!}
 pr2 equiv-sphere-1-circle = {!!}
 ```
 

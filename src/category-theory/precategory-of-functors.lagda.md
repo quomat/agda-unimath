@@ -75,14 +75,12 @@ module _
     comp-natural-transformation-Precategory C D F G I
       ( comp-natural-transformation-Precategory C D G H I h g)
       ( f)
-  inv-associative-comp-hom-functor-precategory-Precategory
-    { F} {G} {H} {I} h g f = {!!}
+  inv-associative-comp-hom-functor-precategory-Precategory = {!!}
 
   associative-composition-operation-functor-precategory-Precategory :
     associative-composition-operation-binary-family-Set
       ( natural-transformation-set-Precategory C D)
-  pr1 associative-composition-operation-functor-precategory-Precategory
-    {F} {G} {H} = {!!}
+  associative-composition-operation-functor-precategory-Precategory = {!!}
 
   id-hom-functor-precategory-Precategory :
     (F : functor-Precategory C D) → natural-transformation-Precategory C D F F

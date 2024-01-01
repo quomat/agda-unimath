@@ -96,6 +96,5 @@ module _
       ( H)
       ( concat-htpy-natural-transformation-Large-Precategory τ υ ϕ K L)
       ( X))
-  associative-concat-htpy-natural-transformation-Large-Precategory
-    σ τ υ ϕ H K L = {!!}
+  associative-concat-htpy-natural-transformation-Large-Precategory = {!!}
 ```

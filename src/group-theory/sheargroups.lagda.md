@@ -20,5 +20,5 @@ open import foundation.universe-levels
 
 ```agda
 Sheargroup : (l : Level) → UU (lsuc l)
-Sheargroup l = {!!}
+Sheargroup = {!!}
 ```

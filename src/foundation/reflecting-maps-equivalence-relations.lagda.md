@@ -41,10 +41,10 @@ module _
 
   reflects-equivalence-relation :
     {l3 : Level} {B : UU l3} → (A → B) → UU (l1 ⊔ l2 ⊔ l3)
-  reflects-equivalence-relation f = {!!}
+  reflects-equivalence-relation = {!!}
 
   reflecting-map-equivalence-relation : {l3 : Level} → UU l3 → UU (l1 ⊔ l2 ⊔ l3)
-  reflecting-map-equivalence-relation B = {!!}
+  reflecting-map-equivalence-relation = {!!}
 
   map-reflecting-map-equivalence-relation :
     {l3 : Level} {B : UU l3} → reflecting-map-equivalence-relation B → A → B
@@ -58,11 +58,11 @@ module _
   is-prop-reflects-equivalence-relation :
     {l3 : Level} (B : Set l3) (f : A → type-Set B) →
     is-prop (reflects-equivalence-relation f)
-  is-prop-reflects-equivalence-relation B f = {!!}
+  is-prop-reflects-equivalence-relation = {!!}
 
   reflects-prop-equivalence-relation :
     {l3 : Level} (B : Set l3) (f : A → type-Set B) → Prop (l1 ⊔ l2 ⊔ l3)
-  pr1 (reflects-prop-equivalence-relation B f) = {!!}
+  reflects-prop-equivalence-relation = {!!}
 ```
 
 ## Properties
@@ -77,12 +77,12 @@ module _
 
   reflects-equivalence-relation-is-surjective-and-effective :
     is-surjective-and-effective R q → reflects-equivalence-relation R q
-  reflects-equivalence-relation-is-surjective-and-effective E {x} {y} = {!!}
+  reflects-equivalence-relation-is-surjective-and-effective = {!!}
 
   reflecting-map-equivalence-relation-is-surjective-and-effective :
     is-surjective-and-effective R q →
     reflecting-map-equivalence-relation R (type-Set B)
-  pr1 (reflecting-map-equivalence-relation-is-surjective-and-effective E) = {!!}
+  reflecting-map-equivalence-relation-is-surjective-and-effective = {!!}
 ```
 
 ### Characterizing the identity type of reflecting maps into sets
@@ -95,7 +95,7 @@ module _
 
   htpy-reflecting-map-equivalence-relation :
     (g : reflecting-map-equivalence-relation R (type-Set B)) → UU (l1 ⊔ l3)
-  htpy-reflecting-map-equivalence-relation g = {!!}
+  htpy-reflecting-map-equivalence-relation = {!!}
 
   refl-htpy-reflecting-map-equivalence-relation :
     htpy-reflecting-map-equivalence-relation f
@@ -104,7 +104,7 @@ module _
   htpy-eq-reflecting-map-equivalence-relation :
     (g : reflecting-map-equivalence-relation R (type-Set B)) →
     f ＝ g → htpy-reflecting-map-equivalence-relation g
-  htpy-eq-reflecting-map-equivalence-relation .f refl = {!!}
+  htpy-eq-reflecting-map-equivalence-relation = {!!}
 
   is-torsorial-htpy-reflecting-map-equivalence-relation :
     is-torsorial (htpy-reflecting-map-equivalence-relation)
@@ -118,10 +118,10 @@ module _
   extensionality-reflecting-map-equivalence-relation :
     (g : reflecting-map-equivalence-relation R (type-Set B)) →
     (f ＝ g) ≃ htpy-reflecting-map-equivalence-relation g
-  pr1 (extensionality-reflecting-map-equivalence-relation g) = {!!}
+  extensionality-reflecting-map-equivalence-relation = {!!}
 
   eq-htpy-reflecting-map-equivalence-relation :
     (g : reflecting-map-equivalence-relation R (type-Set B)) →
     htpy-reflecting-map-equivalence-relation g → f ＝ g
-  eq-htpy-reflecting-map-equivalence-relation g = {!!}
+  eq-htpy-reflecting-map-equivalence-relation = {!!}
 ```

@@ -103,7 +103,7 @@ module _
   where
 
   id-equiv-Type-With-Endomorphism : equiv-Type-With-Endomorphism X X
-  pr1 id-equiv-Type-With-Endomorphism = {!!}
+  id-equiv-Type-With-Endomorphism = {!!}
 ```
 
 ### Composition for equivalences of types equipped with endomorphisms

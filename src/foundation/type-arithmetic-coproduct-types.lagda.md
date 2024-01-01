@@ -38,24 +38,24 @@ module _
   where
 
   map-commutative-coprod : A + B → B + A
-  map-commutative-coprod (inl a) = {!!}
+  map-commutative-coprod = {!!}
 
   map-inv-commutative-coprod : B + A → A + B
-  map-inv-commutative-coprod (inl b) = {!!}
+  map-inv-commutative-coprod = {!!}
 
   is-section-map-inv-commutative-coprod :
     ( map-commutative-coprod ∘ map-inv-commutative-coprod) ~ id
-  is-section-map-inv-commutative-coprod (inl b) = {!!}
+  is-section-map-inv-commutative-coprod = {!!}
 
   is-retraction-map-inv-commutative-coprod :
     ( map-inv-commutative-coprod ∘ map-commutative-coprod) ~ id
-  is-retraction-map-inv-commutative-coprod (inl a) = {!!}
+  is-retraction-map-inv-commutative-coprod = {!!}
 
   is-equiv-map-commutative-coprod : is-equiv map-commutative-coprod
   is-equiv-map-commutative-coprod = {!!}
 
   commutative-coprod : (A + B) ≃ (B + A)
-  pr1 commutative-coprod = {!!}
+  commutative-coprod = {!!}
 ```
 
 ### Associativity of coproducts
@@ -66,18 +66,18 @@ module _
   where
 
   map-associative-coprod : (A + B) + C → A + (B + C)
-  map-associative-coprod (inl (inl x)) = {!!}
+  map-associative-coprod = {!!}
 
   map-inv-associative-coprod : A + (B + C) → (A + B) + C
-  map-inv-associative-coprod (inl x) = {!!}
+  map-inv-associative-coprod = {!!}
 
   is-section-map-inv-associative-coprod :
     (map-associative-coprod ∘ map-inv-associative-coprod) ~ id
-  is-section-map-inv-associative-coprod (inl x) = {!!}
+  is-section-map-inv-associative-coprod = {!!}
 
   is-retraction-map-inv-associative-coprod :
     (map-inv-associative-coprod ∘ map-associative-coprod) ~ id
-  is-retraction-map-inv-associative-coprod (inl (inl x)) = {!!}
+  is-retraction-map-inv-associative-coprod = {!!}
 
   is-equiv-map-associative-coprod : is-equiv map-associative-coprod
   is-equiv-map-associative-coprod = {!!}
@@ -86,10 +86,10 @@ module _
   is-equiv-map-inv-associative-coprod = {!!}
 
   associative-coprod : ((A + B) + C) ≃ (A + (B + C))
-  pr1 associative-coprod = {!!}
+  associative-coprod = {!!}
 
   inv-associative-coprod : (A + (B + C)) ≃ ((A + B) + C)
-  pr1 inv-associative-coprod = {!!}
+  inv-associative-coprod = {!!}
 ```
 
 ### Right distributivity of Σ over coproducts
@@ -101,21 +101,21 @@ module _
 
   map-right-distributive-Σ-coprod :
     Σ (A + B) C → (Σ A (λ x → C (inl x))) + (Σ B (λ y → C (inr y)))
-  map-right-distributive-Σ-coprod (pair (inl x) z) = {!!}
+  map-right-distributive-Σ-coprod = {!!}
 
   map-inv-right-distributive-Σ-coprod :
     (Σ A (λ x → C (inl x))) + (Σ B (λ y → C (inr y))) → Σ (A + B) C
-  pr1 (map-inv-right-distributive-Σ-coprod (inl (pair x z))) = {!!}
+  map-inv-right-distributive-Σ-coprod = {!!}
 
   is-section-map-inv-right-distributive-Σ-coprod :
     ( map-right-distributive-Σ-coprod ∘ map-inv-right-distributive-Σ-coprod) ~
     ( id)
-  is-section-map-inv-right-distributive-Σ-coprod (inl (pair x z)) = {!!}
+  is-section-map-inv-right-distributive-Σ-coprod = {!!}
 
   is-retraction-map-inv-right-distributive-Σ-coprod :
     ( map-inv-right-distributive-Σ-coprod ∘ map-right-distributive-Σ-coprod) ~
     ( id)
-  is-retraction-map-inv-right-distributive-Σ-coprod (pair (inl x) z) = {!!}
+  is-retraction-map-inv-right-distributive-Σ-coprod = {!!}
 
   abstract
     is-equiv-map-right-distributive-Σ-coprod :
@@ -124,7 +124,7 @@ module _
 
   right-distributive-Σ-coprod :
     Σ (A + B) C ≃ ((Σ A (λ x → C (inl x))) + (Σ B (λ y → C (inr y))))
-  pr1 right-distributive-Σ-coprod = {!!}
+  right-distributive-Σ-coprod = {!!}
 ```
 
 ### Left distributivity of Σ over coproducts
@@ -136,19 +136,19 @@ module _
 
   map-left-distributive-Σ-coprod :
     Σ A (λ x → B x + C x) → (Σ A B) + (Σ A C)
-  map-left-distributive-Σ-coprod (pair x (inl y)) = {!!}
+  map-left-distributive-Σ-coprod = {!!}
 
   map-inv-left-distributive-Σ-coprod :
     (Σ A B) + (Σ A C) → Σ A (λ x → B x + C x)
-  pr1 (map-inv-left-distributive-Σ-coprod (inl (pair x y))) = {!!}
+  map-inv-left-distributive-Σ-coprod = {!!}
 
   is-section-map-inv-left-distributive-Σ-coprod :
     ( map-left-distributive-Σ-coprod ∘ map-inv-left-distributive-Σ-coprod) ~ id
-  is-section-map-inv-left-distributive-Σ-coprod (inl (pair x y)) = {!!}
+  is-section-map-inv-left-distributive-Σ-coprod = {!!}
 
   is-retraction-map-inv-left-distributive-Σ-coprod :
     ( map-inv-left-distributive-Σ-coprod ∘ map-left-distributive-Σ-coprod) ~ id
-  is-retraction-map-inv-left-distributive-Σ-coprod (pair x (inl y)) = {!!}
+  is-retraction-map-inv-left-distributive-Σ-coprod = {!!}
 
   is-equiv-map-left-distributive-Σ-coprod :
     is-equiv map-left-distributive-Σ-coprod
@@ -156,7 +156,7 @@ module _
 
   left-distributive-Σ-coprod :
     Σ A (λ x → B x + C x) ≃ ((Σ A B) + (Σ A C))
-  pr1 left-distributive-Σ-coprod = {!!}
+  left-distributive-Σ-coprod = {!!}
 ```
 
 ### Right distributivity of products over coproducts
@@ -233,27 +233,27 @@ module _
 
   is-contr-left-summand :
     is-contr (A + B) → A → is-contr A
-  pr1 (is-contr-left-summand H a) = {!!}
+  is-contr-left-summand = {!!}
 
   is-contr-left-summand-is-empty :
     is-contr (A + B) → is-empty B → is-contr A
-  pr1 (is-contr-left-summand-is-empty (inl a , H) K) = {!!}
+  is-contr-left-summand-is-empty = {!!}
 
   is-contr-right-summand :
     is-contr (A + B) → B → is-contr B
-  pr1 (is-contr-right-summand H b) = {!!}
+  is-contr-right-summand = {!!}
 
   is-contr-right-summand-is-empty :
     is-contr (A + B) → is-empty A → is-contr B
-  is-contr-right-summand-is-empty (inl a , H) K = {!!}
+  is-contr-right-summand-is-empty = {!!}
 
   is-empty-left-summand-is-contr-coprod :
     is-contr (A + B) → B → is-empty A
-  is-empty-left-summand-is-contr-coprod H b a = {!!}
+  is-empty-left-summand-is-contr-coprod = {!!}
 
   is-empty-right-summand-is-contr-coprod :
     is-contr (A + B) → A → is-empty B
-  is-empty-right-summand-is-contr-coprod H a b = {!!}
+  is-empty-right-summand-is-contr-coprod = {!!}
 ```
 
 ## See also

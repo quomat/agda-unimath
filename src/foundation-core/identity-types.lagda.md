@@ -103,10 +103,10 @@ module _
   refl ∙ q = {!!}
 
   concat : {x y : A} → x ＝ y → (z : A) → y ＝ z → x ＝ z
-  concat p z q = {!!}
+  concat = {!!}
 
   concat' : (x : A) {y z : A} → y ＝ z → x ＝ y → x ＝ z
-  concat' x q p = {!!}
+  concat' = {!!}
 ```
 
 ### Inverting identifications
@@ -117,7 +117,7 @@ module _
   where
 
   inv : {x y : A} → x ＝ y → y ＝ x
-  inv refl = {!!}
+  inv = {!!}
 ```
 
 ### The groupoidal laws for types
@@ -136,16 +136,16 @@ module _
   left-unit = {!!}
 
   right-unit : {x y : A} {p : x ＝ y} → p ∙ refl ＝ p
-  right-unit {p = refl} = {!!}
+  right-unit = {!!}
 
   left-inv : {x y : A} (p : x ＝ y) → inv p ∙ p ＝ refl
-  left-inv refl = {!!}
+  left-inv = {!!}
 
   right-inv : {x y : A} (p : x ＝ y) → p ∙ (inv p) ＝ refl
-  right-inv refl = {!!}
+  right-inv = {!!}
 
   inv-inv : {x y : A} (p : x ＝ y) → inv (inv p) ＝ p
-  inv-inv refl = {!!}
+  inv-inv = {!!}
 
   distributive-inv-concat :
     {x y : A} (p : x ＝ y) {z : A} (q : y ＝ z) →

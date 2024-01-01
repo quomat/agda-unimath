@@ -72,7 +72,7 @@ we state the remaining conditions of polytopes, we introduce some terminology
 
 ```agda
 Prepolytope : (l1 l2 : Level) (k : ℕ) → UU (lsuc l1 ⊔ lsuc l2)
-Prepolytope l1 l2 k = {!!}
+Prepolytope = {!!}
 ```
 
 ## Properties
@@ -299,8 +299,7 @@ module _
     {i1 i2 : Fin (succ-ℕ k)} {x : face-Prepolytope i1} {y : face-Prepolytope i2}
     (p : path-faces-Prepolytope x y) →
     {i3 : Fin (succ-ℕ k)} → face-Prepolytope i3 → Prop l1
-  is-on-path-face-prepolytope-Prop
-    {x = x} refl-path-faces-Finitely-Graded-Poset z = {!!}
+  is-on-path-face-prepolytope-Prop = {!!}
 
   module _
     {i1 i2 i3 : Fin (succ-ℕ k)}

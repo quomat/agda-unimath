@@ -64,7 +64,7 @@ module _
   where
 
   is-image-map-subtype : {l4 : Level} (T : subtype l4 B) → UUω
-  is-image-map-subtype T = {!!}
+  is-image-map-subtype = {!!}
 ```
 
 ### The image of a subtype under a map
@@ -75,7 +75,7 @@ module _
   where
 
   im-subtype : subtype (l1 ⊔ l2 ⊔ l3) B
-  im-subtype y = {!!}
+  im-subtype = {!!}
 
   is-in-im-subtype : B → UU (l1 ⊔ l2 ⊔ l3)
   is-in-im-subtype = {!!}
@@ -91,14 +91,14 @@ module _
   preserves-order-im-subtype :
     {l3 l4 : Level} (S : subtype l3 A) (T : subtype l4 A) →
     S ⊆ T → im-subtype f S ⊆ im-subtype f T
-  preserves-order-im-subtype S T H y p = {!!}
+  preserves-order-im-subtype = {!!}
 
   im-subtype-hom-Large-Poset :
     hom-Large-Poset
       ( λ l → l1 ⊔ l2 ⊔ l)
       ( powerset-Large-Poset A)
       ( powerset-Large-Poset B)
-  map-hom-Large-Preorder im-subtype-hom-Large-Poset = {!!}
+  im-subtype-hom-Large-Poset = {!!}
 ```
 
 ### The image-pullback Galois connection on powersets
@@ -111,17 +111,17 @@ module _
   forward-implication-adjoint-relation-image-pullback-subtype :
     {l3 l4 : Level} (S : subtype l3 A) (T : subtype l4 B) →
     (im-subtype f S ⊆ T) → (S ⊆ pullback-subtype f T)
-  forward-implication-adjoint-relation-image-pullback-subtype S T H x p = {!!}
+  forward-implication-adjoint-relation-image-pullback-subtype = {!!}
 
   backward-implication-adjoint-relation-image-pullback-subtype :
     {l3 l4 : Level} (S : subtype l3 A) (T : subtype l4 B) →
     (S ⊆ pullback-subtype f T) → (im-subtype f S ⊆ T)
-  backward-implication-adjoint-relation-image-pullback-subtype S T H y p = {!!}
+  backward-implication-adjoint-relation-image-pullback-subtype = {!!}
 
   adjoint-relation-image-pullback-subtype :
     {l3 l4 : Level} (S : subtype l3 A) (T : subtype l4 B) →
     (im-subtype f S ⊆ T) ↔ (S ⊆ pullback-subtype f T)
-  pr1 (adjoint-relation-image-pullback-subtype S T) = {!!}
+  adjoint-relation-image-pullback-subtype = {!!}
 
   image-pullback-subtype-galois-connection-Large-Poset :
     galois-connection-Large-Poset
@@ -129,8 +129,7 @@ module _
       ( λ l → l)
       ( powerset-Large-Poset A)
       ( powerset-Large-Poset B)
-  lower-adjoint-galois-connection-Large-Poset
-    image-pullback-subtype-galois-connection-Large-Poset = {!!}
+  image-pullback-subtype-galois-connection-Large-Poset = {!!}
 ```
 
 ## Properties
@@ -146,7 +145,7 @@ module _
   has-same-elements-im-has-same-elements-subtype :
     has-same-elements-subtype S T →
     has-same-elements-subtype (im-subtype f S) (im-subtype f T)
-  has-same-elements-im-has-same-elements-subtype s = {!!}
+  has-same-elements-im-has-same-elements-subtype = {!!}
 ```
 
 ### The image subtype `im f (full-subtype A)` has the same elements as the subtype `im f`
@@ -160,7 +159,7 @@ module _
     has-same-elements-subtype
       ( im-subtype f (full-subtype lzero A))
       ( subtype-im f)
-  compute-im-full-subtype y = {!!}
+  compute-im-full-subtype = {!!}
 ```
 
 ### The image subtype `im (g ∘ f) S` has the same elements as the image subtype `im g (im f S)`
@@ -195,5 +194,5 @@ module _
 
   compute-subtype-im-comp :
     has-same-elements-subtype (subtype-im (g ∘ f)) (im-subtype g (subtype-im f))
-  compute-subtype-im-comp x = {!!}
+  compute-subtype-im-comp = {!!}
 ```

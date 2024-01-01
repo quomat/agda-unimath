@@ -33,7 +33,7 @@ is-inverse-Semigroup :
 is-inverse-Semigroup = {!!}
 
 Inverse-Semigroup : (l : Level) → UU (lsuc l)
-Inverse-Semigroup l = {!!}
+Inverse-Semigroup = {!!}
 
 module _
   {l : Level} (S : Inverse-Semigroup l)
@@ -71,7 +71,7 @@ module _
   is-inverse-semigroup-Inverse-Semigroup = {!!}
 
   inv-Inverse-Semigroup : type-Inverse-Semigroup → type-Inverse-Semigroup
-  inv-Inverse-Semigroup x = {!!}
+  inv-Inverse-Semigroup = {!!}
 
   inner-inverse-law-mul-Inverse-Semigroup :
     (x : type-Inverse-Semigroup) →

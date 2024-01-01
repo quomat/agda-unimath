@@ -29,7 +29,7 @@ on `e : A ≃ A`.
 
 ```agda
 Set-With-Automorphism : (l : Level) → UU (lsuc l)
-Set-With-Automorphism l = {!!}
+Set-With-Automorphism = {!!}
 
 module _
   {l : Level} (A : Set-With-Automorphism l)

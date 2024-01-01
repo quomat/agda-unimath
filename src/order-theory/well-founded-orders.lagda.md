@@ -39,7 +39,7 @@ module _
 
 ```agda
 Well-Founded-Order : {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-Well-Founded-Order l2 X = {!!}
+Well-Founded-Order = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} (R : Well-Founded-Order l2 X)
@@ -60,7 +60,7 @@ module _
   is-well-founded-relation-Well-Founded-Order = {!!}
 
   well-founded-relation-Well-Founded-Order : Well-Founded-Relation l2 X
-  pr1 well-founded-relation-Well-Founded-Order = {!!}
+  well-founded-relation-Well-Founded-Order = {!!}
 
   is-asymmetric-Well-Founded-Order :
     is-asymmetric rel-Well-Founded-Order

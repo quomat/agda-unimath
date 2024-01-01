@@ -178,11 +178,11 @@ module _
 
   htpy-hom-Commutative-Semiring :
     (f g : hom-Commutative-Semiring R S) → UU (l1 ⊔ l2)
-  htpy-hom-Commutative-Semiring f g = {!!}
+  htpy-hom-Commutative-Semiring = {!!}
 
   refl-htpy-hom-Commutative-Semiring :
     (f : hom-Commutative-Semiring R S) → htpy-hom-Commutative-Semiring f f
-  refl-htpy-hom-Commutative-Semiring f = {!!}
+  refl-htpy-hom-Commutative-Semiring = {!!}
 ```
 
 ## Properties

@@ -16,5 +16,5 @@ open import foundation.universe-levels
 
 ```agda
 const : {l1 l2 : Level} (A : UU l1) (B : UU l2) → B → A → B
-const A B b x = {!!}
+const = {!!}
 ```

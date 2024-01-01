@@ -25,7 +25,7 @@ is-2-type : {l : Level} → UU l → UU l
 is-2-type = {!!}
 
 UU-2-Type : (l : Level) → UU (lsuc l)
-UU-2-Type l = {!!}
+UU-2-Type = {!!}
 
 type-2-Type :
   {l : Level} → UU-2-Type l → UU l

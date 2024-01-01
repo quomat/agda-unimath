@@ -50,7 +50,7 @@ laws
 ```agda
 is-group-𝔽 :
   {l : Level} (G : Semigroup-𝔽 l) → UU l
-is-group-𝔽 G = {!!}
+is-group-𝔽 = {!!}
 ```
 
 ### The type of groups
@@ -58,11 +58,11 @@ is-group-𝔽 G = {!!}
 ```agda
 Group-𝔽 :
   (l : Level) → UU (lsuc l)
-Group-𝔽 l = {!!}
+Group-𝔽 = {!!}
 
 compute-group-𝔽 :
   {l : Level} → (G : Group l) → is-finite (type-Group G) → Group-𝔽 l
-pr1 (compute-group-𝔽 G f) = {!!}
+compute-group-𝔽 = {!!}
 pr2 (compute-group-𝔽 G f) = {!!}
 
 module _
@@ -79,7 +79,7 @@ module _
   is-group-Group-𝔽 = {!!}
 
   group-Group-𝔽 : Group l
-  pr1 group-Group-𝔽 = {!!}
+  group-Group-𝔽 = {!!}
 
   finite-type-Group-𝔽 : 𝔽 l
   finite-type-Group-𝔽 = {!!}
@@ -125,7 +125,7 @@ module _
   monoid-Group-𝔽 = {!!}
 
   finite-monoid-Group-𝔽 : Monoid-𝔽 l
-  pr1 finite-monoid-Group-𝔽 = {!!}
+  finite-monoid-Group-𝔽 = {!!}
 
   unit-Group-𝔽 : type-Group-𝔽
   unit-Group-𝔽 = {!!}
@@ -184,7 +184,7 @@ module _
 
   compute-structure-group-𝔽 :
     structure-group-𝔽 → Group-𝔽 l
-  pr1 (compute-structure-group-𝔽 (s , g)) = {!!}
+  compute-structure-group-𝔽 = {!!}
 
   is-finite-structure-group-𝔽 :
     is-finite (structure-group-𝔽)

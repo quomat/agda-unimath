@@ -37,13 +37,13 @@ module _
   where
 
   loop-space-Set : is-set (type-Ω A) → Set l
-  pr1 (loop-space-Set is-set-Ω) = {!!}
+  loop-space-Set = {!!}
 
   loop-space-Semigroup : is-set (type-Ω A) → Semigroup l
-  pr1 (loop-space-Semigroup is-set-Ω) = {!!}
+  loop-space-Semigroup = {!!}
 
   loop-space-Group : is-set (type-Ω A) → Group l
-  pr1 (loop-space-Group is-set-Ω) = {!!}
+  loop-space-Group = {!!}
 
 loop-space-1-type-Set :
   {l : Level} (A : 1-Type l) (a : type-1-Type A) → Set l

@@ -34,16 +34,16 @@ standard-closed-subset-zariski-topology-Commutative-Ring :
   {l1 l2 l3 : Level} (A : Commutative-Ring l1) →
   subtype l3 (type-Commutative-Ring A) →
   subtype (l1 ⊔ l2 ⊔ l3) (prime-ideal-Commutative-Ring l2 A)
-standard-closed-subset-zariski-topology-Commutative-Ring A U P = {!!}
+standard-closed-subset-zariski-topology-Commutative-Ring = {!!}
 
 is-closed-subset-zariski-topology-Commutative-Ring :
   {l1 l2 l3 : Level} (A : Commutative-Ring l1)
   (U : subtype (l1 ⊔ l2 ⊔ l3) (prime-ideal-Commutative-Ring l2 A)) →
   Prop (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-is-closed-subset-zariski-topology-Commutative-Ring {l1} {l2} {l3} A U = {!!}
+is-closed-subset-zariski-topology-Commutative-Ring = {!!}
 
 closed-subset-zariski-topology-Commutative-Ring :
   {l1 l2 : Level} (l3 : Level) (A : Commutative-Ring l1) →
   UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-closed-subset-zariski-topology-Commutative-Ring {l1} {l2} l3 A = {!!}
+closed-subset-zariski-topology-Commutative-Ring = {!!}
 ```

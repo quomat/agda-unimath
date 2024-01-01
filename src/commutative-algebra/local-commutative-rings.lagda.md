@@ -36,14 +36,14 @@ is-local-prop-Commutative-Ring :
 is-local-prop-Commutative-Ring = {!!}
 
 is-local-Commutative-Ring : {l : Level} → Commutative-Ring l → UU l
-is-local-Commutative-Ring A = {!!}
+is-local-Commutative-Ring = {!!}
 
 is-prop-is-local-Commutative-Ring :
   {l : Level} (A : Commutative-Ring l) → is-prop (is-local-Commutative-Ring A)
 is-prop-is-local-Commutative-Ring = {!!}
 
 Local-Commutative-Ring : (l : Level) → UU (lsuc l)
-Local-Commutative-Ring l = {!!}
+Local-Commutative-Ring = {!!}
 
 module _
   {l : Level} (A : Local-Commutative-Ring l)

@@ -29,7 +29,7 @@ module _
   where
 
   is-covering-Locale : {I : UU l2} → (I → type-Locale L) → UU l1
-  is-covering-Locale x = {!!}
+  is-covering-Locale = {!!}
 
   covering-Locale : UU (l1 ⊔ lsuc l2)
   covering-Locale = {!!}

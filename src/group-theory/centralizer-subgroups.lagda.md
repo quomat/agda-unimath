@@ -45,7 +45,7 @@ module _
   where
 
   subset-centralizer-subset-Group : subset-Group (l1 ⊔ l2) G
-  subset-centralizer-subset-Group x = {!!}
+  subset-centralizer-subset-Group = {!!}
 
   is-in-centralizer-subset-Group : type-Group G → UU (l1 ⊔ l2)
   is-in-centralizer-subset-Group = {!!}
@@ -64,5 +64,5 @@ module _
   is-closed-under-inverses-centralizer-subset-Group = {!!}
 
   centralizer-subset-Group : Subgroup (l1 ⊔ l2) G
-  pr1 centralizer-subset-Group = {!!}
+  centralizer-subset-Group = {!!}
 ```

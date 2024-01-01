@@ -36,15 +36,15 @@ open import foundation.universe-levels
 
 ```agda
 le-ℕ-Prop : ℕ → ℕ → Prop lzero
-le-ℕ-Prop m zero-ℕ = {!!}
+le-ℕ-Prop = {!!}
 le-ℕ-Prop zero-ℕ (succ-ℕ m) = {!!}
 le-ℕ-Prop (succ-ℕ n) (succ-ℕ m) = {!!}
 
 le-ℕ : ℕ → ℕ → UU lzero
-le-ℕ n m = {!!}
+le-ℕ = {!!}
 
 is-prop-le-ℕ : (n : ℕ) → (m : ℕ) → is-prop (le-ℕ n m)
-is-prop-le-ℕ n m = {!!}
+is-prop-le-ℕ = {!!}
 
 infix 30 _<-ℕ_
 _<-ℕ_ = {!!}
@@ -57,15 +57,15 @@ _<-ℕ_ = {!!}
 ```agda
 concatenate-eq-le-eq-ℕ :
   {x y z w : ℕ} → x ＝ y → le-ℕ y z → z ＝ w → le-ℕ x w
-concatenate-eq-le-eq-ℕ refl p refl = {!!}
+concatenate-eq-le-eq-ℕ = {!!}
 
 concatenate-eq-le-ℕ :
   {x y z : ℕ} → x ＝ y → le-ℕ y z → le-ℕ x z
-concatenate-eq-le-ℕ refl p = {!!}
+concatenate-eq-le-ℕ = {!!}
 
 concatenate-le-eq-ℕ :
   {x y z : ℕ} → le-ℕ x y → y ＝ z → le-ℕ x z
-concatenate-le-eq-ℕ p refl = {!!}
+concatenate-le-eq-ℕ = {!!}
 ```
 
 ### Strict inequality is decidable
@@ -73,7 +73,7 @@ concatenate-le-eq-ℕ p refl = {!!}
 ```agda
 is-decidable-le-ℕ :
   (m n : ℕ) → is-decidable (le-ℕ m n)
-is-decidable-le-ℕ zero-ℕ zero-ℕ = {!!}
+is-decidable-le-ℕ = {!!}
 is-decidable-le-ℕ zero-ℕ (succ-ℕ n) = {!!}
 is-decidable-le-ℕ (succ-ℕ m) zero-ℕ = {!!}
 is-decidable-le-ℕ (succ-ℕ m) (succ-ℕ n) = {!!}
@@ -90,7 +90,7 @@ is-nonzero-le-ℕ m .zero-ℕ () refl
 
 ```agda
 le-is-nonzero-ℕ : (n : ℕ) → is-nonzero-ℕ n → le-ℕ zero-ℕ n
-le-is-nonzero-ℕ zero-ℕ H = {!!}
+le-is-nonzero-ℕ = {!!}
 le-is-nonzero-ℕ (succ-ℕ n) H = {!!}
 ```
 
@@ -124,7 +124,7 @@ anti-reflexive-le-ℕ (succ-ℕ n) = {!!}
 
 ```agda
 neq-le-ℕ : {x y : ℕ} → le-ℕ x y → x ≠ y
-neq-le-ℕ {zero-ℕ} {succ-ℕ y} H = {!!}
+neq-le-ℕ = {!!}
 neq-le-ℕ {succ-ℕ x} {succ-ℕ y} H p = {!!}
 ```
 
@@ -132,14 +132,14 @@ neq-le-ℕ {succ-ℕ x} {succ-ℕ y} H p = {!!}
 
 ```agda
 antisymmetric-le-ℕ : (m n : ℕ) → le-ℕ m n → le-ℕ n m → m ＝ n
-antisymmetric-le-ℕ (succ-ℕ m) (succ-ℕ n) p q = {!!}
+antisymmetric-le-ℕ = {!!}
 ```
 
 ### The strict ordering of the natural numbers is transitive
 
 ```agda
 transitive-le-ℕ : (n m l : ℕ) → (le-ℕ n m) → (le-ℕ m l) → (le-ℕ n l)
-transitive-le-ℕ zero-ℕ (succ-ℕ m) (succ-ℕ l) p q = {!!}
+transitive-le-ℕ = {!!}
 transitive-le-ℕ (succ-ℕ n) (succ-ℕ m) (succ-ℕ l) p q = {!!}
 ```
 
@@ -160,7 +160,7 @@ transitive-le-ℕ' (succ-ℕ k) (succ-ℕ l) (succ-ℕ m) t s = {!!}
 
 ```agda
 linear-le-ℕ : (x y : ℕ) → (le-ℕ x y) + ((x ＝ y) + (le-ℕ y x))
-linear-le-ℕ zero-ℕ zero-ℕ = {!!}
+linear-le-ℕ = {!!}
 linear-le-ℕ zero-ℕ (succ-ℕ y) = {!!}
 linear-le-ℕ (succ-ℕ x) zero-ℕ = {!!}
 linear-le-ℕ (succ-ℕ x) (succ-ℕ y) = {!!}
@@ -171,11 +171,11 @@ linear-le-ℕ (succ-ℕ x) (succ-ℕ y) = {!!}
 ```agda
 subtraction-le-ℕ :
   (n m : ℕ) → le-ℕ n m → Σ ℕ (λ l → (is-nonzero-ℕ l) × (l +ℕ n ＝ m))
-subtraction-le-ℕ zero-ℕ m p = {!!}
+subtraction-le-ℕ = {!!}
 subtraction-le-ℕ (succ-ℕ n) (succ-ℕ m) p = {!!}
 
 le-subtraction-ℕ : (n m l : ℕ) → is-nonzero-ℕ l → l +ℕ n ＝ m → le-ℕ n m
-le-subtraction-ℕ zero-ℕ m l q p = {!!}
+le-subtraction-ℕ = {!!}
 le-subtraction-ℕ (succ-ℕ n) (succ-ℕ m) l q p = {!!}
 ```
 
@@ -183,7 +183,7 @@ le-subtraction-ℕ (succ-ℕ n) (succ-ℕ m) l q p = {!!}
 
 ```agda
 succ-le-ℕ : (n : ℕ) → le-ℕ n (succ-ℕ n)
-succ-le-ℕ zero-ℕ = {!!}
+succ-le-ℕ = {!!}
 succ-le-ℕ (succ-ℕ n) = {!!}
 ```
 
@@ -192,7 +192,7 @@ succ-le-ℕ (succ-ℕ n) = {!!}
 ```agda
 preserves-le-succ-ℕ :
   (m n : ℕ) → le-ℕ m n → le-ℕ m (succ-ℕ n)
-preserves-le-succ-ℕ m n H = {!!}
+preserves-le-succ-ℕ = {!!}
 ```
 
 ### Concatenating strict and nonstrict inequalities
@@ -200,13 +200,13 @@ preserves-le-succ-ℕ m n H = {!!}
 ```agda
 concatenate-leq-le-ℕ :
   {x y z : ℕ} → x ≤-ℕ y → le-ℕ y z → le-ℕ x z
-concatenate-leq-le-ℕ {zero-ℕ} {zero-ℕ} {succ-ℕ z} H K = {!!}
+concatenate-leq-le-ℕ = {!!}
 concatenate-leq-le-ℕ {zero-ℕ} {succ-ℕ y} {succ-ℕ z} H K = {!!}
 concatenate-leq-le-ℕ {succ-ℕ x} {succ-ℕ y} {succ-ℕ z} H K = {!!}
 
 concatenate-le-leq-ℕ :
   {x y z : ℕ} → le-ℕ x y → y ≤-ℕ z → le-ℕ x z
-concatenate-le-leq-ℕ {zero-ℕ} {succ-ℕ y} {succ-ℕ z} H K = {!!}
+concatenate-le-leq-ℕ = {!!}
 concatenate-le-leq-ℕ {succ-ℕ x} {succ-ℕ y} {succ-ℕ z} H K = {!!}
 ```
 
@@ -214,7 +214,7 @@ concatenate-le-leq-ℕ {succ-ℕ x} {succ-ℕ y} {succ-ℕ z} H K = {!!}
 
 ```agda
 contradiction-le-ℕ : (m n : ℕ) → le-ℕ m n → ¬ (n ≤-ℕ m)
-contradiction-le-ℕ zero-ℕ (succ-ℕ n) H K = {!!}
+contradiction-le-ℕ = {!!}
 contradiction-le-ℕ (succ-ℕ m) (succ-ℕ n) H = {!!}
 ```
 
@@ -222,14 +222,14 @@ contradiction-le-ℕ (succ-ℕ m) (succ-ℕ n) H = {!!}
 
 ```agda
 contradiction-le-ℕ' : (m n : ℕ) → n ≤-ℕ m → ¬ (le-ℕ m n)
-contradiction-le-ℕ' m n K H = {!!}
+contradiction-le-ℕ' = {!!}
 ```
 
 ### If `m ≮ n` then `n ≤ m`
 
 ```agda
 leq-not-le-ℕ : (m n : ℕ) → ¬ (le-ℕ m n) → n ≤-ℕ m
-leq-not-le-ℕ zero-ℕ zero-ℕ H = {!!}
+leq-not-le-ℕ = {!!}
 leq-not-le-ℕ zero-ℕ (succ-ℕ n) H = {!!}
 leq-not-le-ℕ (succ-ℕ m) zero-ℕ H = {!!}
 leq-not-le-ℕ (succ-ℕ m) (succ-ℕ n) H = {!!}
@@ -240,7 +240,7 @@ leq-not-le-ℕ (succ-ℕ m) (succ-ℕ n) H = {!!}
 ```agda
 leq-le-ℕ :
   (x y : ℕ) → le-ℕ x y → x ≤-ℕ y
-leq-le-ℕ zero-ℕ (succ-ℕ y) H = {!!}
+leq-le-ℕ = {!!}
 leq-le-ℕ (succ-ℕ x) (succ-ℕ y) H = {!!}
 ```
 
@@ -249,7 +249,7 @@ leq-le-ℕ (succ-ℕ x) (succ-ℕ y) H = {!!}
 ```agda
 leq-le-succ-ℕ :
   (x y : ℕ) → le-ℕ x (succ-ℕ y) → x ≤-ℕ y
-leq-le-succ-ℕ zero-ℕ y H = {!!}
+leq-le-succ-ℕ = {!!}
 leq-le-succ-ℕ (succ-ℕ x) (succ-ℕ y) H = {!!}
 ```
 
@@ -258,7 +258,7 @@ leq-le-succ-ℕ (succ-ℕ x) (succ-ℕ y) H = {!!}
 ```agda
 leq-succ-le-ℕ :
   (x y : ℕ) → le-ℕ x y → leq-ℕ (succ-ℕ x) y
-leq-succ-le-ℕ zero-ℕ (succ-ℕ y) H = {!!}
+leq-succ-le-ℕ = {!!}
 leq-succ-le-ℕ (succ-ℕ x) (succ-ℕ y) H = {!!}
 ```
 
@@ -267,7 +267,7 @@ leq-succ-le-ℕ (succ-ℕ x) (succ-ℕ y) H = {!!}
 ```agda
 le-succ-leq-ℕ :
   (x y : ℕ) → leq-ℕ x y → le-ℕ x (succ-ℕ y)
-le-succ-leq-ℕ zero-ℕ zero-ℕ H = {!!}
+le-succ-leq-ℕ = {!!}
 le-succ-leq-ℕ zero-ℕ (succ-ℕ y) H = {!!}
 le-succ-leq-ℕ (succ-ℕ x) (succ-ℕ y) H = {!!}
 ```
@@ -277,17 +277,17 @@ le-succ-leq-ℕ (succ-ℕ x) (succ-ℕ y) H = {!!}
 ```agda
 eq-or-le-leq-ℕ :
   (x y : ℕ) → leq-ℕ x y → ((x ＝ y) + (le-ℕ x y))
-eq-or-le-leq-ℕ zero-ℕ zero-ℕ H = {!!}
+eq-or-le-leq-ℕ = {!!}
 eq-or-le-leq-ℕ zero-ℕ (succ-ℕ y) H = {!!}
 eq-or-le-leq-ℕ (succ-ℕ x) (succ-ℕ y) H = {!!}
 
 eq-or-le-leq-ℕ' :
   (x y : ℕ) → leq-ℕ x y → ((y ＝ x) + (le-ℕ x y))
-eq-or-le-leq-ℕ' x y H = {!!}
+eq-or-le-leq-ℕ' = {!!}
 
 leq-eq-or-le-ℕ :
   (x y : ℕ) → ((x ＝ y) + (le-ℕ x y)) → leq-ℕ x y
-leq-eq-or-le-ℕ x .x (inl refl) = {!!}
+leq-eq-or-le-ℕ = {!!}
 leq-eq-or-le-ℕ x y (inr l) = {!!}
 ```
 
@@ -295,7 +295,7 @@ leq-eq-or-le-ℕ x y (inr l) = {!!}
 
 ```agda
 le-leq-neq-ℕ : {x y : ℕ} → x ≤-ℕ y → x ≠ y → le-ℕ x y
-le-leq-neq-ℕ {zero-ℕ} {zero-ℕ} l f = {!!}
+le-leq-neq-ℕ = {!!}
 le-leq-neq-ℕ {zero-ℕ} {succ-ℕ y} l f = {!!}
 le-leq-neq-ℕ {succ-ℕ x} {succ-ℕ y} l f = {!!}
 ```

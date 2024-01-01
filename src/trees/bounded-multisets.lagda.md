@@ -47,7 +47,7 @@ module _
   where
 
   is-of-natural-height-𝕍 : ℕ → 𝕍 l → UU l
-  is-of-natural-height-𝕍 zero-ℕ X = {!!}
+  is-of-natural-height-𝕍 = {!!}
 ```
 
 ### Explicitly bounded multisets
@@ -59,7 +59,7 @@ with a proof that `X` is of natural height `n` is far from a proposition.
 
 ```agda
 Explicitly-Bounded-𝕍 : (l : Level) → UU (lsuc l)
-Explicitly-Bounded-𝕍 l = {!!}
+Explicitly-Bounded-𝕍 = {!!}
 ```
 
 ### Bounded multisets
@@ -76,7 +76,7 @@ data
     {n : ℕ} {X : UU l} (Y : X → Bounded-𝕍 l n) → Bounded-𝕍 l (succ-ℕ n)
 
 Bounded-𝕍' : (l : Level) → UU (lsuc l)
-Bounded-𝕍' l = {!!}
+Bounded-𝕍' = {!!}
 ```
 
 ## Properties

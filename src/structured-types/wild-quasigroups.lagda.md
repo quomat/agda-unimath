@@ -27,7 +27,7 @@ A wild quasigroup is a type `A` equipped with a binary equivalence
 
 ```agda
 Wild-Quasigroup : (l : Level) → UU (lsuc l)
-Wild-Quasigroup l = {!!}
+Wild-Quasigroup = {!!}
 
 module _
   {l : Level} (A : Wild-Quasigroup l)
@@ -43,7 +43,7 @@ module _
   mul-Wild-Quasigroup = {!!}
 
   mul-Wild-Quasigroup' : (x y : type-Wild-Quasigroup) → type-Wild-Quasigroup
-  mul-Wild-Quasigroup' x y = {!!}
+  mul-Wild-Quasigroup' = {!!}
 
   is-binary-equiv-mul-Wild-Quasigroup :
     is-binary-equiv mul-Wild-Quasigroup
@@ -54,12 +54,12 @@ module _
   is-equiv-mul-Wild-Quasigroup = {!!}
 
   equiv-mul-Wild-Quasigroup : type-Wild-Quasigroup → Aut type-Wild-Quasigroup
-  pr1 (equiv-mul-Wild-Quasigroup x) = {!!}
+  equiv-mul-Wild-Quasigroup = {!!}
 
   is-equiv-mul-Wild-Quasigroup' :
     (x : type-Wild-Quasigroup) → is-equiv (mul-Wild-Quasigroup' x)
   is-equiv-mul-Wild-Quasigroup' = {!!}
 
   equiv-mul-Wild-Quasigroup' : type-Wild-Quasigroup → Aut type-Wild-Quasigroup
-  pr1 (equiv-mul-Wild-Quasigroup' x) = {!!}
+  equiv-mul-Wild-Quasigroup' = {!!}
 ```

@@ -25,79 +25,79 @@ open import foundation-core.identity-types
 ```agda
 ev-true-false :
   {l : Level} (A : UU l) → (f : bool → A) → A × A
-ev-true-false A f = {!!}
+ev-true-false = {!!}
 
 map-universal-property-bool :
   {l : Level} {A : UU l} →
   A × A → (bool → A)
-map-universal-property-bool (pair x y) true = {!!}
+map-universal-property-bool = {!!}
 map-universal-property-bool (pair x y) false = {!!}
 
 abstract
   is-section-map-universal-property-bool :
     {l : Level} {A : UU l} →
     ((ev-true-false A) ∘ map-universal-property-bool) ~ id
-  is-section-map-universal-property-bool (pair x y) = {!!}
+  is-section-map-universal-property-bool = {!!}
 
 abstract
   is-retraction-map-universal-property-bool' :
     {l : Level} {A : UU l} (f : bool → A) →
     (map-universal-property-bool (ev-true-false A f)) ~ f
-  is-retraction-map-universal-property-bool' f true = {!!}
+  is-retraction-map-universal-property-bool' = {!!}
 
 abstract
   is-retraction-map-universal-property-bool :
     {l : Level} {A : UU l} →
     (map-universal-property-bool ∘ (ev-true-false A)) ~ id
-  is-retraction-map-universal-property-bool f = {!!}
+  is-retraction-map-universal-property-bool = {!!}
 
 abstract
   universal-property-bool :
     {l : Level} (A : UU l) →
     is-equiv (λ (f : bool → A) → pair (f true) (f false))
-  universal-property-bool A = {!!}
+  universal-property-bool = {!!}
 
 ev-true :
   {l : Level} {A : UU l} → (bool → A) → A
-ev-true f = {!!}
+ev-true = {!!}
 
 triangle-ev-true :
   {l : Level} (A : UU l) →
   ev-true ~ pr1 ∘ ev-true-false A
-triangle-ev-true A = {!!}
+triangle-ev-true = {!!}
 
 {-
 aut-bool-bool :
   bool → (bool ≃ bool)
-aut-bool-bool true = {!!}
+aut-bool-bool = {!!}
 aut-bool-bool false = {!!}
 
 bool-aut-bool :
   (bool ≃ bool) → bool
-bool-aut-bool e = {!!}
+bool-aut-bool = {!!}
 
 decide-true-false :
   (b : bool) → coprod (b ＝ true) (b ＝ false)
-decide-true-false true = {!!}
+decide-true-false = {!!}
 decide-true-false false = {!!}
 
 eq-false :
   (b : bool) → (b ≠ true) → (b ＝ false)
-eq-false true p = {!!}
+eq-false = {!!}
 eq-false false p = {!!}
 
 eq-true :
   (b : bool) → b ≠ false → b ＝ true
-eq-true true p = {!!}
+eq-true = {!!}
 eq-true false p = {!!}
 
 Eq-𝟚-eq : (x y : bool) → x ＝ y → Eq-𝟚 x y
-Eq-𝟚-eq x .x refl = {!!}
+Eq-𝟚-eq = {!!}
 
 eq-false-equiv' :
   (e : bool ≃ bool) → map-equiv e true ＝ true →
   is-decidable (map-equiv e false ＝ false) → map-equiv e false ＝ false
-eq-false-equiv' e p (inl q) = {!!}
+eq-false-equiv' = {!!}
 eq-false-equiv' e p (inr x) = {!!}
 -}
 ```

@@ -60,7 +60,7 @@ module _
   is-prop-is-orthogonal-factorization-system = {!!}
 
   is-orthogonal-factorization-system-Prop : Prop (lsuc l ⊔ lL ⊔ lR)
-  pr1 is-orthogonal-factorization-system-Prop = {!!}
+  is-orthogonal-factorization-system-Prop = {!!}
 ```
 
 ### The type of orthogonal factorization systems

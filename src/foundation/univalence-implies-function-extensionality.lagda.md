@@ -36,7 +36,7 @@ The [univalence axiom](foundation-core.univalence.md) implies
 ```agda
 abstract
   weak-funext-univalence : {l : Level} → weak-function-extensionality-Level l l
-  weak-funext-univalence A B is-contr-B = {!!}
+  weak-funext-univalence = {!!}
 
 abstract
   funext-univalence :

@@ -51,7 +51,7 @@ data Q8 : UU lzero where
   -k-Q8 : Q8
 
 mul-Q8 : Q8 → Q8 → Q8
-mul-Q8 e-Q8 e-Q8 = {!!}
+mul-Q8 = {!!}
 mul-Q8 e-Q8 -e-Q8 = {!!}
 mul-Q8 e-Q8 i-Q8 = {!!}
 mul-Q8 e-Q8 -i-Q8 = {!!}
@@ -117,7 +117,7 @@ mul-Q8 -k-Q8 k-Q8 = {!!}
 mul-Q8 -k-Q8 -k-Q8 = {!!}
 
 inv-Q8 : Q8 → Q8
-inv-Q8 e-Q8 = {!!}
+inv-Q8 = {!!}
 inv-Q8 -e-Q8 = {!!}
 inv-Q8 i-Q8 = {!!}
 inv-Q8 -i-Q8 = {!!}
@@ -127,7 +127,7 @@ inv-Q8 k-Q8 = {!!}
 inv-Q8 -k-Q8 = {!!}
 
 left-unit-law-mul-Q8 : (x : Q8) → Id (mul-Q8 e-Q8 x) x
-left-unit-law-mul-Q8 e-Q8 = {!!}
+left-unit-law-mul-Q8 = {!!}
 left-unit-law-mul-Q8 -e-Q8 = {!!}
 left-unit-law-mul-Q8 i-Q8 = {!!}
 left-unit-law-mul-Q8 -i-Q8 = {!!}
@@ -137,7 +137,7 @@ left-unit-law-mul-Q8 k-Q8 = {!!}
 left-unit-law-mul-Q8 -k-Q8 = {!!}
 
 right-unit-law-mul-Q8 : (x : Q8) → Id (mul-Q8 x e-Q8) x
-right-unit-law-mul-Q8 e-Q8 = {!!}
+right-unit-law-mul-Q8 = {!!}
 right-unit-law-mul-Q8 -e-Q8 = {!!}
 right-unit-law-mul-Q8 i-Q8 = {!!}
 right-unit-law-mul-Q8 -i-Q8 = {!!}
@@ -151,7 +151,7 @@ associative-mul-Q8 :
 associative-mul-Q8 = {!!}
 
 left-inverse-law-mul-Q8 : (x : Q8) → Id (mul-Q8 (inv-Q8 x) x) e-Q8
-left-inverse-law-mul-Q8 e-Q8 = {!!}
+left-inverse-law-mul-Q8 = {!!}
 left-inverse-law-mul-Q8 -e-Q8 = {!!}
 left-inverse-law-mul-Q8 i-Q8 = {!!}
 left-inverse-law-mul-Q8 -i-Q8 = {!!}
@@ -161,7 +161,7 @@ left-inverse-law-mul-Q8 k-Q8 = {!!}
 left-inverse-law-mul-Q8 -k-Q8 = {!!}
 
 right-inverse-law-mul-Q8 : (x : Q8) → Id (mul-Q8 x (inv-Q8 x)) e-Q8
-right-inverse-law-mul-Q8 e-Q8 = {!!}
+right-inverse-law-mul-Q8 = {!!}
 right-inverse-law-mul-Q8 -e-Q8 = {!!}
 right-inverse-law-mul-Q8 i-Q8 = {!!}
 right-inverse-law-mul-Q8 -i-Q8 = {!!}
@@ -171,7 +171,7 @@ right-inverse-law-mul-Q8 k-Q8 = {!!}
 right-inverse-law-mul-Q8 -k-Q8 = {!!}
 
 Eq-Q8 : Q8 → Q8 → UU lzero
-Eq-Q8 e-Q8 e-Q8 = {!!}
+Eq-Q8 = {!!}
 Eq-Q8 e-Q8 -e-Q8 = {!!}
 Eq-Q8 e-Q8 i-Q8 = {!!}
 Eq-Q8 e-Q8 -i-Q8 = {!!}
@@ -237,7 +237,7 @@ Eq-Q8 -k-Q8 k-Q8 = {!!}
 Eq-Q8 -k-Q8 -k-Q8 = {!!}
 
 refl-Eq-Q8 : (x : Q8) → Eq-Q8 x x
-refl-Eq-Q8 e-Q8 = {!!}
+refl-Eq-Q8 = {!!}
 refl-Eq-Q8 -e-Q8 = {!!}
 refl-Eq-Q8 i-Q8 = {!!}
 refl-Eq-Q8 -i-Q8 = {!!}
@@ -247,10 +247,10 @@ refl-Eq-Q8 k-Q8 = {!!}
 refl-Eq-Q8 -k-Q8 = {!!}
 
 Eq-eq-Q8 : {x y : Q8} → Id x y → Eq-Q8 x y
-Eq-eq-Q8 {x} refl = {!!}
+Eq-eq-Q8 = {!!}
 
 eq-Eq-Q8 : (x y : Q8) → Eq-Q8 x y → Id x y
-eq-Eq-Q8 e-Q8 e-Q8 e = {!!}
+eq-Eq-Q8 = {!!}
 eq-Eq-Q8 -e-Q8 -e-Q8 e = {!!}
 eq-Eq-Q8 i-Q8 i-Q8 e = {!!}
 eq-Eq-Q8 -i-Q8 -i-Q8 e = {!!}
@@ -260,7 +260,7 @@ eq-Eq-Q8 k-Q8 k-Q8 e = {!!}
 eq-Eq-Q8 -k-Q8 -k-Q8 e = {!!}
 
 is-decidable-Eq-Q8 : (x y : Q8) → is-decidable (Eq-Q8 x y)
-is-decidable-Eq-Q8 e-Q8 e-Q8 = {!!}
+is-decidable-Eq-Q8 = {!!}
 is-decidable-Eq-Q8 e-Q8 -e-Q8 = {!!}
 is-decidable-Eq-Q8 e-Q8 i-Q8 = {!!}
 is-decidable-Eq-Q8 e-Q8 -i-Q8 = {!!}
@@ -326,7 +326,7 @@ is-decidable-Eq-Q8 -k-Q8 k-Q8 = {!!}
 is-decidable-Eq-Q8 -k-Q8 -k-Q8 = {!!}
 
 has-decidable-equality-Q8 : has-decidable-equality Q8
-has-decidable-equality-Q8 x y = {!!}
+has-decidable-equality-Q8 = {!!}
 
 is-set-Q8 : is-set Q8
 is-set-Q8 = {!!}
@@ -345,7 +345,7 @@ is-noncommutative-mul-Q8 :
 is-noncommutative-mul-Q8 = {!!}
 
 map-equiv-count-Q8 : Fin 8 → Q8
-map-equiv-count-Q8 (inl (inl (inl (inl (inl (inl (inl (inr star)))))))) = {!!}
+map-equiv-count-Q8 = {!!}
 map-equiv-count-Q8 (inl (inl (inl (inl (inl (inl (inr star))))))) = {!!}
 map-equiv-count-Q8 (inl (inl (inl (inl (inl (inr star)))))) = {!!}
 map-equiv-count-Q8 (inl (inl (inl (inl (inr star))))) = {!!}
@@ -355,7 +355,7 @@ map-equiv-count-Q8 (inl (inr star)) = {!!}
 map-equiv-count-Q8 (inr star) = {!!}
 
 map-inv-equiv-count-Q8 : Q8 → Fin 8
-map-inv-equiv-count-Q8 e-Q8 = {!!}
+map-inv-equiv-count-Q8 = {!!}
 map-inv-equiv-count-Q8 -e-Q8 = {!!}
 map-inv-equiv-count-Q8 i-Q8 = {!!}
 map-inv-equiv-count-Q8 -i-Q8 = {!!}
@@ -370,8 +370,7 @@ is-section-map-inv-equiv-count-Q8 = {!!}
 
 is-retraction-map-inv-equiv-count-Q8 :
   ( map-inv-equiv-count-Q8 ∘ map-equiv-count-Q8) ~ id
-is-retraction-map-inv-equiv-count-Q8
-  (inl (inl (inl (inl (inl (inl (inl (inr star)))))))) = {!!}
+is-retraction-map-inv-equiv-count-Q8 = {!!}
 is-retraction-map-inv-equiv-count-Q8
   (inl (inl (inl (inl (inl (inl (inr star))))))) = {!!}
 is-retraction-map-inv-equiv-count-Q8 (inl (inl (inl (inl (inl (inr star)))))) = {!!}

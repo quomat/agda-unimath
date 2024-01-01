@@ -67,7 +67,7 @@ is-euclidean-valuation :
   { l : Level} (R : Integral-Domain l) →
   ( type-Integral-Domain R → ℕ) →
   UU l
-is-euclidean-valuation R v = {!!}
+is-euclidean-valuation = {!!}
 ```
 
 ### The condition of being a Euclidean domain
@@ -75,14 +75,14 @@ is-euclidean-valuation R v = {!!}
 ```agda
 is-euclidean-domain-Integral-Domain :
   { l : Level} (R : Integral-Domain l) → UU l
-is-euclidean-domain-Integral-Domain R = {!!}
+is-euclidean-domain-Integral-Domain = {!!}
 ```
 
 ### Euclidean domains
 
 ```agda
 Euclidean-Domain : (l : Level) → UU (lsuc l)
-Euclidean-Domain l = {!!}
+Euclidean-Domain = {!!}
 
 module _
   {l : Level} (R : Euclidean-Domain l)
@@ -192,7 +192,7 @@ module _
   is-equiv-add-Euclidean-Domain' = {!!}
 
   is-binary-equiv-add-Euclidean-Domain : is-binary-equiv add-Euclidean-Domain
-  pr1 is-binary-equiv-add-Euclidean-Domain = {!!}
+  is-binary-equiv-add-Euclidean-Domain = {!!}
 
   is-binary-emb-add-Euclidean-Domain : is-binary-emb add-Euclidean-Domain
   is-binary-emb-add-Euclidean-Domain = {!!}
@@ -230,10 +230,10 @@ module _
   is-nonzero-Euclidean-Domain = {!!}
 
   is-zero-euclidean-domain-Prop : type-Euclidean-Domain → Prop l
-  is-zero-euclidean-domain-Prop x = {!!}
+  is-zero-euclidean-domain-Prop = {!!}
 
   is-nonzero-euclidean-domain-Prop : type-Euclidean-Domain → Prop l
-  is-nonzero-euclidean-domain-Prop x = {!!}
+  is-nonzero-euclidean-domain-Prop = {!!}
 
   left-unit-law-add-Euclidean-Domain :
     (x : type-Euclidean-Domain) →
@@ -296,7 +296,7 @@ module _
   ap-mul-Euclidean-Domain :
     {x x' y y' : type-Euclidean-Domain} (p : Id x x') (q : Id y y') →
     Id (mul-Euclidean-Domain x y) (mul-Euclidean-Domain x' y')
-  ap-mul-Euclidean-Domain p q = {!!}
+  ap-mul-Euclidean-Domain = {!!}
 
   associative-mul-Euclidean-Domain :
     (x y z : type-Euclidean-Domain) →
@@ -355,13 +355,13 @@ module _
     (x y z : type-Euclidean-Domain) →
     mul-Euclidean-Domain (mul-Euclidean-Domain x y) z ＝
     mul-Euclidean-Domain (mul-Euclidean-Domain x z) y
-  right-swap-mul-Euclidean-Domain x y z = {!!}
+  right-swap-mul-Euclidean-Domain = {!!}
 
   left-swap-mul-Euclidean-Domain :
     (x y z : type-Euclidean-Domain) →
     mul-Euclidean-Domain x (mul-Euclidean-Domain y z) ＝
     mul-Euclidean-Domain y (mul-Euclidean-Domain x z)
-  left-swap-mul-Euclidean-Domain x y z = {!!}
+  left-swap-mul-Euclidean-Domain = {!!}
 
   interchange-mul-mul-Euclidean-Domain :
     (x y z w : type-Euclidean-Domain) →
@@ -539,19 +539,19 @@ module _
     ( x y : type-Euclidean-Domain) →
     ( is-nonzero-Euclidean-Domain y) →
     type-Euclidean-Domain × type-Euclidean-Domain
-  euclidean-division-Euclidean-Domain x y p = {!!}
+  euclidean-division-Euclidean-Domain = {!!}
 
   quotient-euclidean-division-Euclidean-Domain :
     ( x y : type-Euclidean-Domain) →
     ( is-nonzero-Euclidean-Domain y) →
     type-Euclidean-Domain
-  quotient-euclidean-division-Euclidean-Domain x y p = {!!}
+  quotient-euclidean-division-Euclidean-Domain = {!!}
 
   remainder-euclidean-division-Euclidean-Domain :
     ( x y : type-Euclidean-Domain) →
     ( is-nonzero-Euclidean-Domain y) →
     type-Euclidean-Domain
-  remainder-euclidean-division-Euclidean-Domain x y p = {!!}
+  remainder-euclidean-division-Euclidean-Domain = {!!}
 
   equation-euclidean-division-Euclidean-Domain :
     ( x y : type-Euclidean-Domain) →
@@ -563,7 +563,7 @@ module _
           ( quotient-euclidean-division-Euclidean-Domain x y p)
           ( y))
         ( remainder-euclidean-division-Euclidean-Domain x y p)))
-  equation-euclidean-division-Euclidean-Domain x y p = {!!}
+  equation-euclidean-division-Euclidean-Domain = {!!}
 
   remainder-condition-euclidean-division-Euclidean-Domain :
     ( x y : type-Euclidean-Domain) →
@@ -573,5 +573,5 @@ module _
     ( euclidean-valuation-Euclidean-Domain
       ( remainder-euclidean-division-Euclidean-Domain x y p) <-ℕ
     ( euclidean-valuation-Euclidean-Domain y))
-  remainder-condition-euclidean-division-Euclidean-Domain x y p = {!!}
+  remainder-condition-euclidean-division-Euclidean-Domain = {!!}
 ```

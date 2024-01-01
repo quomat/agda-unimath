@@ -50,5 +50,5 @@ module _
   inclusion-lower-type-Preorder = {!!}
 
   leq-lower-type-Preorder : (x y : type-lower-type-Preorder) → UU l2
-  leq-lower-type-Preorder x y = {!!}
+  leq-lower-type-Preorder = {!!}
 ```

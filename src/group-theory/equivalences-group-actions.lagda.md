@@ -50,7 +50,7 @@ module _
   where
 
   is-equiv-hom-action-Group : hom-action-Group G X Y → UU (l2 ⊔ l3)
-  is-equiv-hom-action-Group f = {!!}
+  is-equiv-hom-action-Group = {!!}
 ```
 
 ### The type of equivalences of group actions
@@ -110,7 +110,7 @@ module _
   where
 
   htpy-equiv-action-Group : (f : equiv-action-Group G X Y) → UU (l2 ⊔ l3)
-  htpy-equiv-action-Group f = {!!}
+  htpy-equiv-action-Group = {!!}
 
   refl-htpy-equiv-action-Group : htpy-equiv-action-Group e
   refl-htpy-equiv-action-Group = {!!}
@@ -200,7 +200,7 @@ module _
   where
 
   id-equiv-action-Group : equiv-action-Group G X X
-  pr1 id-equiv-action-Group = {!!}
+  id-equiv-action-Group = {!!}
 ```
 
 ## Properties

@@ -49,27 +49,27 @@ The **Gaussian integers** are the complex numbers of the form `a + bi`, where
 
 ```agda
 Eq-ℤ[i] : ℤ[i] → ℤ[i] → UU lzero
-Eq-ℤ[i] x y = {!!}
+Eq-ℤ[i] = {!!}
 
 refl-Eq-ℤ[i] : (x : ℤ[i]) → Eq-ℤ[i] x x
-pr1 (refl-Eq-ℤ[i] x) = {!!}
+refl-Eq-ℤ[i] = {!!}
 pr2 (refl-Eq-ℤ[i] x) = {!!}
 
 Eq-eq-ℤ[i] : {x y : ℤ[i]} → x ＝ y → Eq-ℤ[i] x y
-Eq-eq-ℤ[i] {x} refl = {!!}
+Eq-eq-ℤ[i] = {!!}
 
 eq-Eq-ℤ[i]' : {x y : ℤ[i]} → Eq-ℤ[i] x y → x ＝ y
-eq-Eq-ℤ[i]' {a , b} {.a , .b} (refl , refl) = {!!}
+eq-Eq-ℤ[i]' = {!!}
 
 eq-Eq-ℤ[i] : {x y : ℤ[i]} → pr1 x ＝ pr1 y → pr2 x ＝ pr2 y → x ＝ y
-eq-Eq-ℤ[i] {a , b} {.a , .b} refl refl = {!!}
+eq-Eq-ℤ[i] = {!!}
 ```
 
 ### The Gaussian integer zero
 
 ```agda
 zero-ℤ[i] : ℤ[i]
-pr1 zero-ℤ[i] = {!!}
+zero-ℤ[i] = {!!}
 pr2 zero-ℤ[i] = {!!}
 ```
 
@@ -77,7 +77,7 @@ pr2 zero-ℤ[i] = {!!}
 
 ```agda
 one-ℤ[i] : ℤ[i]
-pr1 one-ℤ[i] = {!!}
+one-ℤ[i] = {!!}
 pr2 one-ℤ[i] = {!!}
 ```
 
@@ -85,7 +85,7 @@ pr2 one-ℤ[i] = {!!}
 
 ```agda
 gaussian-int-ℤ : ℤ → ℤ[i]
-pr1 (gaussian-int-ℤ x) = {!!}
+gaussian-int-ℤ = {!!}
 pr2 (gaussian-int-ℤ x) = {!!}
 ```
 
@@ -93,7 +93,7 @@ pr2 (gaussian-int-ℤ x) = {!!}
 
 ```agda
 i-ℤ[i] : ℤ[i]
-pr1 i-ℤ[i] = {!!}
+i-ℤ[i] = {!!}
 pr2 i-ℤ[i] = {!!}
 ```
 
@@ -101,7 +101,7 @@ pr2 i-ℤ[i] = {!!}
 
 ```agda
 neg-i-ℤ[i] : ℤ[i]
-pr1 neg-i-ℤ[i] = {!!}
+neg-i-ℤ[i] = {!!}
 pr2 neg-i-ℤ[i] = {!!}
 ```
 
@@ -109,7 +109,7 @@ pr2 neg-i-ℤ[i] = {!!}
 
 ```agda
 add-ℤ[i] : ℤ[i] → ℤ[i] → ℤ[i]
-pr1 (add-ℤ[i] (a , b) (a' , b')) = {!!}
+add-ℤ[i] = {!!}
 pr2 (add-ℤ[i] (a , b) (a' , b')) = {!!}
 
 infixl 35 _+ℤ[i]_
@@ -124,7 +124,7 @@ ap-add-ℤ[i] = {!!}
 
 ```agda
 neg-ℤ[i] : ℤ[i] → ℤ[i]
-pr1 (neg-ℤ[i] (a , b)) = {!!}
+neg-ℤ[i] = {!!}
 pr2 (neg-ℤ[i] (a , b)) = {!!}
 ```
 
@@ -132,7 +132,7 @@ pr2 (neg-ℤ[i] (a , b)) = {!!}
 
 ```agda
 mul-ℤ[i] : ℤ[i] → ℤ[i] → ℤ[i]
-pr1 (mul-ℤ[i] (a , b) (a' , b')) = {!!}
+mul-ℤ[i] = {!!}
 pr2 (mul-ℤ[i] (a , b) (a' , b')) = {!!}
 
 infixl 40 _*ℤ[i]_
@@ -147,7 +147,7 @@ ap-mul-ℤ[i] = {!!}
 
 ```agda
 conjugate-ℤ[i] : ℤ[i] → ℤ[i]
-pr1 (conjugate-ℤ[i] (a , b)) = {!!}
+conjugate-ℤ[i] = {!!}
 pr2 (conjugate-ℤ[i] (a , b)) = {!!}
 ```
 
@@ -155,10 +155,10 @@ pr2 (conjugate-ℤ[i] (a , b)) = {!!}
 
 ```agda
 left-unit-law-add-ℤ[i] : (x : ℤ[i]) → zero-ℤ[i] +ℤ[i] x ＝ x
-left-unit-law-add-ℤ[i] (a , b) = {!!}
+left-unit-law-add-ℤ[i] = {!!}
 
 right-unit-law-add-ℤ[i] : (x : ℤ[i]) → x +ℤ[i] zero-ℤ[i] ＝ x
-right-unit-law-add-ℤ[i] (a , b) = {!!}
+right-unit-law-add-ℤ[i] = {!!}
 
 associative-add-ℤ[i] :
   (x y z : ℤ[i]) → (x +ℤ[i] y) +ℤ[i] z ＝ x +ℤ[i] (y +ℤ[i] z)
@@ -177,10 +177,10 @@ commutative-add-ℤ[i] :
 commutative-add-ℤ[i] = {!!}
 
 left-unit-law-mul-ℤ[i] : (x : ℤ[i]) → one-ℤ[i] *ℤ[i] x ＝ x
-left-unit-law-mul-ℤ[i] (a , b) = {!!}
+left-unit-law-mul-ℤ[i] = {!!}
 
 right-unit-law-mul-ℤ[i] : (x : ℤ[i]) → x *ℤ[i] one-ℤ[i] ＝ x
-right-unit-law-mul-ℤ[i] (a , b) = {!!}
+right-unit-law-mul-ℤ[i] = {!!}
 
 commutative-mul-ℤ[i] :
   (x y : ℤ[i]) → x *ℤ[i] y ＝ y *ℤ[i] x
@@ -201,12 +201,12 @@ right-distributive-mul-add-ℤ[i] :
 right-distributive-mul-add-ℤ[i] = {!!}
 
 ℤ[i]-Semigroup : Semigroup lzero
-pr1 ℤ[i]-Semigroup = {!!}
+ℤ[i]-Semigroup = {!!}
 pr1 (pr2 ℤ[i]-Semigroup) = {!!}
 pr2 (pr2 ℤ[i]-Semigroup) = {!!}
 
 ℤ[i]-Group : Group lzero
-pr1 ℤ[i]-Group = {!!}
+ℤ[i]-Group = {!!}
 pr1 (pr1 (pr2 ℤ[i]-Group)) = {!!}
 pr1 (pr2 (pr1 (pr2 ℤ[i]-Group))) = {!!}
 pr2 (pr2 (pr1 (pr2 ℤ[i]-Group))) = {!!}
@@ -215,11 +215,11 @@ pr1 (pr2 (pr2 (pr2 ℤ[i]-Group))) = {!!}
 pr2 (pr2 (pr2 (pr2 ℤ[i]-Group))) = {!!}
 
 ℤ[i]-Ab : Ab lzero
-pr1 ℤ[i]-Ab = {!!}
+ℤ[i]-Ab = {!!}
 pr2 ℤ[i]-Ab = {!!}
 
 ℤ[i]-Ring : Ring lzero
-pr1 ℤ[i]-Ring = {!!}
+ℤ[i]-Ring = {!!}
 pr1 (pr1 (pr2 ℤ[i]-Ring)) = {!!}
 pr2 (pr1 (pr2 ℤ[i]-Ring)) = {!!}
 pr1 (pr1 (pr2 (pr2 ℤ[i]-Ring))) = {!!}
@@ -229,6 +229,6 @@ pr1 (pr2 (pr2 (pr2 ℤ[i]-Ring))) = {!!}
 pr2 (pr2 (pr2 (pr2 ℤ[i]-Ring))) = {!!}
 
 ℤ[i]-Commutative-Ring : Commutative-Ring lzero
-pr1 ℤ[i]-Commutative-Ring = {!!}
+ℤ[i]-Commutative-Ring = {!!}
 pr2 ℤ[i]-Commutative-Ring = {!!}
 ```

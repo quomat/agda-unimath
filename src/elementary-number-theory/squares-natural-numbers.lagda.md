@@ -46,21 +46,21 @@ of `n` with itself.
 
 ```agda
 square-ℕ : ℕ → ℕ
-square-ℕ n = {!!}
+square-ℕ = {!!}
 ```
 
 ### The predicate of being a square of a natural number
 
 ```agda
 is-square-ℕ : ℕ → UU lzero
-is-square-ℕ n = {!!}
+is-square-ℕ = {!!}
 ```
 
 ### The square root of a square natural number
 
 ```agda
 square-root-ℕ : (n : ℕ) → is-square-ℕ n → ℕ
-square-root-ℕ _ (root , _) = {!!}
+square-root-ℕ = {!!}
 ```
 
 ## Properties
@@ -71,12 +71,12 @@ square-root-ℕ _ (root , _) = {!!}
 square-succ-ℕ :
   (n : ℕ) →
   square-ℕ (succ-ℕ n) ＝ succ-ℕ ((succ-ℕ (succ-ℕ n)) *ℕ n)
-square-succ-ℕ n = {!!}
+square-succ-ℕ = {!!}
 
 square-succ-succ-ℕ :
   (n : ℕ) →
   square-ℕ (succ-ℕ (succ-ℕ n)) ＝ square-ℕ n +ℕ 2 *ℕ n +ℕ 2 *ℕ n +ℕ 4
-square-succ-succ-ℕ n = {!!}
+square-succ-succ-ℕ = {!!}
 ```
 
 ### `n > √n` for `n > 1`
@@ -87,7 +87,7 @@ contradiction by squaring both sides of the inequality
 ```agda
 greater-than-square-root-ℕ :
   (n root : ℕ) → ¬ ((n +ℕ 2 ≤-ℕ root) × (n +ℕ 2 ＝ square-ℕ root))
-greater-than-square-root-ℕ n root (pf-leq , pf-eq) = {!!}
+greater-than-square-root-ℕ = {!!}
 ```
 
 ### Squareness in ℕ is decidable
@@ -95,12 +95,12 @@ greater-than-square-root-ℕ n root (pf-leq , pf-eq) = {!!}
 ```agda
 is-decidable-big-root :
   (n : ℕ) → is-decidable (Σ ℕ (λ root → (n ≤-ℕ root) × (n ＝ square-ℕ root)))
-is-decidable-big-root 0 = {!!}
+is-decidable-big-root = {!!}
 is-decidable-big-root 1 = {!!}
 is-decidable-big-root (succ-ℕ (succ-ℕ n)) = {!!}
 
 is-decidable-is-square-ℕ : (n : ℕ) → is-decidable (is-square-ℕ n)
-is-decidable-is-square-ℕ n = {!!}
+is-decidable-is-square-ℕ = {!!}
 ```
 
 ## See also

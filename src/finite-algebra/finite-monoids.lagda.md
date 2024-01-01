@@ -36,11 +36,11 @@ Finite monoids are unital finite semigroups
 ```agda
 is-unital-Semigroup-𝔽 :
   {l : Level} → Semigroup-𝔽 l → UU l
-is-unital-Semigroup-𝔽 G = {!!}
+is-unital-Semigroup-𝔽 = {!!}
 
 Monoid-𝔽 :
   (l : Level) → UU (lsuc l)
-Monoid-𝔽 l = {!!}
+Monoid-𝔽 = {!!}
 
 module _
   {l : Level} (M : Monoid-𝔽 l)
@@ -71,7 +71,7 @@ module _
   mul-Monoid-𝔽 = {!!}
 
   mul-Monoid-𝔽' : type-Monoid-𝔽 → type-Monoid-𝔽 → type-Monoid-𝔽
-  mul-Monoid-𝔽' y x = {!!}
+  mul-Monoid-𝔽' = {!!}
 
   ap-mul-Monoid-𝔽 :
     {x x' y y' : type-Monoid-𝔽} →
@@ -87,7 +87,7 @@ module _
   has-unit-Monoid-𝔽 = {!!}
 
   monoid-Monoid-𝔽 : Monoid l
-  pr1 monoid-Monoid-𝔽 = {!!}
+  monoid-Monoid-𝔽 = {!!}
 
   unit-Monoid-𝔽 : type-Monoid-𝔽
   unit-Monoid-𝔽 = {!!}
@@ -109,10 +109,10 @@ module _
 abstract
   is-prop-is-unital-Semigroup-𝔽 :
     {l : Level} (G : Semigroup-𝔽 l) → is-prop (is-unital-Semigroup-𝔽 G)
-  is-prop-is-unital-Semigroup-𝔽 G = {!!}
+  is-prop-is-unital-Semigroup-𝔽 = {!!}
 
 is-unital-Semigroup-𝔽-Prop : {l : Level} (G : Semigroup-𝔽 l) → Prop l
-pr1 (is-unital-Semigroup-𝔽-Prop G) = {!!}
+is-unital-Semigroup-𝔽-Prop = {!!}
 pr2 (is-unital-Semigroup-𝔽-Prop G) = {!!}
 ```
 
@@ -121,7 +121,7 @@ pr2 (is-unital-Semigroup-𝔽-Prop G) = {!!}
 ```agda
 is-finite-is-unital-Semigroup-𝔽 :
   {l : Level} (G : Semigroup-𝔽 l) → is-finite (is-unital-Semigroup-𝔽 G)
-is-finite-is-unital-Semigroup-𝔽 G = {!!}
+is-finite-is-unital-Semigroup-𝔽 = {!!}
 ```
 
 ### There is a finite number of ways to equip a finite type with a structure of semigroup
@@ -129,14 +129,14 @@ is-finite-is-unital-Semigroup-𝔽 G = {!!}
 ```agda
 structure-monoid-𝔽 :
   {l1 : Level} → 𝔽 l1 → UU l1
-structure-monoid-𝔽 X = {!!}
+structure-monoid-𝔽 = {!!}
 
 compute-structure-monoid-𝔽 :
   {l : Level} → (X : 𝔽 l) → structure-monoid-𝔽 X → Monoid-𝔽 l
-pr1 (compute-structure-monoid-𝔽 X (a , u)) = {!!}
+compute-structure-monoid-𝔽 = {!!}
 pr2 (compute-structure-monoid-𝔽 X (a , u)) = {!!}
 
 is-finite-structure-monoid-𝔽 :
   {l : Level} → (X : 𝔽 l) → is-finite (structure-monoid-𝔽 X)
-is-finite-structure-monoid-𝔽 X = {!!}
+is-finite-structure-monoid-𝔽 = {!!}
 ```

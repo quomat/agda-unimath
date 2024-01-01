@@ -41,7 +41,7 @@ family of elements of `R` indexed by a standard finite type.
 sum-Semiring :
   {l : Level} (R : Semiring l) (n : ℕ) →
   (functional-vec-Semiring R n) → type-Semiring R
-sum-Semiring R zero-ℕ f = {!!}
+sum-Semiring = {!!}
 sum-Semiring R (succ-ℕ n) f = {!!}
 ```
 
@@ -57,12 +57,12 @@ module _
   sum-one-element-Semiring :
     (f : functional-vec-Semiring R 1) →
     sum-Semiring R 1 f ＝ head-functional-vec 0 f
-  sum-one-element-Semiring f = {!!}
+  sum-one-element-Semiring = {!!}
 
   sum-two-elements-Semiring :
     (f : functional-vec-Semiring R 2) →
     sum-Semiring R 2 f ＝ add-Semiring R (f (zero-Fin 1)) (f (one-Fin 1))
-  sum-two-elements-Semiring f = {!!}
+  sum-two-elements-Semiring = {!!}
 ```
 
 ### Sums are homotopy invariant
@@ -75,7 +75,7 @@ module _
   htpy-sum-Semiring :
     (n : ℕ) {f g : functional-vec-Semiring R n} →
     (f ~ g) → sum-Semiring R n f ＝ sum-Semiring R n g
-  htpy-sum-Semiring zero-ℕ H = {!!}
+  htpy-sum-Semiring = {!!}
 ```
 
 ### Sums are equal to the zero-th term plus the rest
@@ -90,7 +90,7 @@ module _
     {x : type-Semiring R} → head-functional-vec n f ＝ x →
     sum-Semiring R (succ-ℕ n) f ＝
     add-Semiring R (sum-Semiring R n (f ∘ inl-Fin n)) x
-  cons-sum-Semiring n f refl = {!!}
+  cons-sum-Semiring = {!!}
 
   snoc-sum-Semiring :
     (n : ℕ) (f : functional-vec-Semiring R (succ-ℕ n)) →
@@ -99,7 +99,7 @@ module _
     add-Semiring R
       ( x)
       ( sum-Semiring R n (f ∘ inr-Fin n))
-  snoc-sum-Semiring zero-ℕ f refl = {!!}
+  snoc-sum-Semiring = {!!}
   snoc-sum-Semiring (succ-ℕ n) f refl = {!!}
 ```
 
@@ -115,7 +115,7 @@ module _
     (f : functional-vec-Semiring R n) →
     mul-Semiring R x (sum-Semiring R n f) ＝
     sum-Semiring R n (λ i → mul-Semiring R x (f i))
-  left-distributive-mul-sum-Semiring zero-ℕ x f = {!!}
+  left-distributive-mul-sum-Semiring = {!!}
   left-distributive-mul-sum-Semiring (succ-ℕ n) x f = {!!}
 
   right-distributive-mul-sum-Semiring :
@@ -123,7 +123,7 @@ module _
     (x : type-Semiring R) →
     mul-Semiring R (sum-Semiring R n f) x ＝
     sum-Semiring R n (λ i → mul-Semiring R (f i) x)
-  right-distributive-mul-sum-Semiring zero-ℕ f x = {!!}
+  right-distributive-mul-sum-Semiring = {!!}
   right-distributive-mul-sum-Semiring (succ-ℕ n) f x = {!!}
 ```
 
@@ -141,7 +141,7 @@ module _
       ( sum-Semiring R n g) ＝
     sum-Semiring R n
       ( add-functional-vec-Semiring R n f g)
-  interchange-add-sum-Semiring zero-ℕ f g = {!!}
+  interchange-add-sum-Semiring = {!!}
   interchange-add-sum-Semiring (succ-ℕ n) f g = {!!}
 ```
 
@@ -158,7 +158,7 @@ module _
       ( succ-ℕ n)
       ( cons-functional-vec-Semiring R n (zero-Semiring R) f) ＝
     sum-Semiring R n f
-  extend-sum-Semiring n f = {!!}
+  extend-sum-Semiring = {!!}
 ```
 
 ### Shifting a sum of elements in a semiring
@@ -175,7 +175,7 @@ module _
       ( snoc-functional-vec-Semiring R n f
         ( zero-Semiring R)) ＝
     sum-Semiring R n f
-  shift-sum-Semiring zero-ℕ f = {!!}
+  shift-sum-Semiring = {!!}
   shift-sum-Semiring (succ-ℕ n) f = {!!}
 ```
 
@@ -189,7 +189,7 @@ module _
   sum-zero-Semiring :
     (n : ℕ) →
     sum-Semiring R n (zero-functional-vec-Semiring R n) ＝ zero-Semiring R
-  sum-zero-Semiring zero-ℕ = {!!}
+  sum-zero-Semiring = {!!}
 ```
 
 ### Splitting sums
@@ -202,6 +202,6 @@ split-sum-Semiring :
   add-Semiring R
     ( sum-Semiring R n (f ∘ inl-coprod-Fin n m))
     ( sum-Semiring R m (f ∘ inr-coprod-Fin n m))
-split-sum-Semiring R n zero-ℕ f = {!!}
+split-sum-Semiring = {!!}
 split-sum-Semiring R n (succ-ℕ m) f = {!!}
 ```

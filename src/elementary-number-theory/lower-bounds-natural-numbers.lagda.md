@@ -41,8 +41,8 @@ module _
 
   abstract
     is-prop-is-lower-bound-ℕ : (x : ℕ) → is-prop (is-lower-bound-ℕ P x)
-    is-prop-is-lower-bound-ℕ x = {!!}
+    is-prop-is-lower-bound-ℕ = {!!}
 
   is-lower-bound-ℕ-Prop : (x : ℕ) → Prop l1
-  pr1 (is-lower-bound-ℕ-Prop x) = {!!}
+  is-lower-bound-ℕ-Prop = {!!}
 ```

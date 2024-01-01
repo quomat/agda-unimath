@@ -34,7 +34,7 @@ module _
   where
 
   matrix-Ring : ℕ → ℕ → UU l
-  matrix-Ring m n = {!!}
+  matrix-Ring = {!!}
 ```
 
 ### The zero matrix

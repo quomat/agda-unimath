@@ -107,8 +107,7 @@ module _
   antisymmetric-leq-Large-Subposet = {!!}
 
   large-poset-Large-Subposet : Large-Poset (λ l → α l ⊔ γ l) β
-  large-preorder-Large-Poset
-    large-poset-Large-Subposet = {!!}
+  large-poset-Large-Subposet = {!!}
 ```
 
 ### The predicate of having the same elements

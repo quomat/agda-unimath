@@ -42,7 +42,7 @@ record unit : UU lzero where
 
 ```agda
 ind-unit : {l : Level} {P : unit → UU l} → P star → (x : unit) → P x
-ind-unit p star = {!!}
+ind-unit = {!!}
 ```
 
 ### The terminal map out of a type
@@ -71,16 +71,16 @@ module _
 
 ```agda
 raise-unit : (l : Level) → UU l
-raise-unit l = {!!}
+raise-unit = {!!}
 
 raise-star : {l : Level} → raise l unit
 raise-star = {!!}
 
 raise-terminal-map : {l1 l2 : Level} {A : UU l1} → A → raise-unit l2
-raise-terminal-map {l2 = l2} = {!!}
+raise-terminal-map = {!!}
 
 compute-raise-unit : (l : Level) → unit ≃ raise-unit l
-compute-raise-unit l = {!!}
+compute-raise-unit = {!!}
 ```
 
 ## Properties
@@ -90,7 +90,7 @@ compute-raise-unit l = {!!}
 ```agda
 abstract
   is-contr-unit : is-contr unit
-  pr1 is-contr-unit = {!!}
+  is-contr-unit = {!!}
 ```
 
 ### Any contractible type is equivalent to the unit type
@@ -103,14 +103,14 @@ module _
   abstract
     is-equiv-terminal-map-is-contr :
       is-contr A → is-equiv (terminal-map {A = A})
-    pr1 (pr1 (is-equiv-terminal-map-is-contr H)) = {!!}
+    is-equiv-terminal-map-is-contr = {!!}
 
   equiv-unit-is-contr : is-contr A → A ≃ unit
-  pr1 (equiv-unit-is-contr H) = {!!}
+  equiv-unit-is-contr = {!!}
 
   abstract
     is-contr-is-equiv-const : is-equiv (terminal-map {A = A}) → is-contr A
-    pr1 (is-contr-is-equiv-const ((g , G) , (h , H))) = {!!}
+    is-contr-is-equiv-const = {!!}
 ```
 
 ### The unit type is a proposition
@@ -121,7 +121,7 @@ abstract
   is-prop-unit = {!!}
 
 unit-Prop : Prop lzero
-pr1 unit-Prop = {!!}
+unit-Prop = {!!}
 pr2 unit-Prop = {!!}
 ```
 
@@ -133,7 +133,7 @@ abstract
   is-set-unit = {!!}
 
 unit-Set : Set lzero
-pr1 unit-Set = {!!}
+unit-Set = {!!}
 pr2 unit-Set = {!!}
 ```
 
@@ -158,6 +158,6 @@ abstract
   is-set-raise-unit = {!!}
 
 raise-unit-Set : Set lzero
-pr1 raise-unit-Set = {!!}
+raise-unit-Set = {!!}
 pr2 raise-unit-Set = {!!}
 ```

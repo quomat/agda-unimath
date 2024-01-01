@@ -142,5 +142,5 @@ module _
   commutative-mul-Π-Commutative-Ring = {!!}
 
   Π-Commutative-Ring : Commutative-Ring (l1 ⊔ l2)
-  pr1 Π-Commutative-Ring = {!!}
+  Π-Commutative-Ring = {!!}
 ```

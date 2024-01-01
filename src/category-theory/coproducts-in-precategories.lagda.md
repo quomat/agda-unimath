@@ -38,7 +38,7 @@ module _
   is-coproduct-Precategory = {!!}
 
   coproduct-Precategory : obj-Precategory C → obj-Precategory C → UU (l1 ⊔ l2)
-  coproduct-Precategory x y = {!!}
+  coproduct-Precategory = {!!}
 
   has-all-binary-coproducts : UU (l1 ⊔ l2)
   has-all-binary-coproducts = {!!}
@@ -104,7 +104,7 @@ module _
   is-prop-is-coproduct-Precategory = {!!}
 
   is-coproduct-prop-Precategory : Prop (l1 ⊔ l2)
-  pr1 is-coproduct-prop-Precategory = {!!}
+  is-coproduct-prop-Precategory = {!!}
 ```
 
 ## Properties

@@ -61,7 +61,7 @@ module _
   nullifies-normal-subgroup-hom-Ab = {!!}
 
   nullifying-hom-Ab : Subgroup-Ab l3 A → UU (l1 ⊔ l2 ⊔ l3)
-  nullifying-hom-Ab H = {!!}
+  nullifying-hom-Ab = {!!}
 
   hom-nullifying-hom-Ab :
     (H : Subgroup-Ab l3 A) → nullifying-hom-Ab H → hom-Ab A B
@@ -227,5 +227,5 @@ module _
   group-quotient-Ab = {!!}
 
   quotient-Ab : Ab (l1 ⊔ l2)
-  pr1 quotient-Ab = {!!}
+  quotient-Ab = {!!}
 ```

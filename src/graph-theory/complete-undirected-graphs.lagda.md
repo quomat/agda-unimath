@@ -35,7 +35,7 @@ of its vertices.
 
 ```agda
 complete-Undirected-Graph-𝔽 : {l : Level} → 𝔽 l → Undirected-Graph-𝔽 l l
-complete-Undirected-Graph-𝔽 X = {!!}
+complete-Undirected-Graph-𝔽 = {!!}
 ```
 
 ## External links

@@ -27,10 +27,10 @@ A **preidempotent map** is a map `f : A → A` equipped with a homotopy
 
 ```agda
 is-preidempotent : {l : Level} {A : UU l} → (A → A) → UU l
-is-preidempotent f = {!!}
+is-preidempotent = {!!}
 
 preidempotent-map : {l : Level} (A : UU l) → UU l
-preidempotent-map A = {!!}
+preidempotent-map = {!!}
 ```
 
 ## Properties

@@ -42,10 +42,10 @@ module _
   obj-opposite-Precategory = {!!}
 
   hom-set-opposite-Precategory : (x y : obj-opposite-Precategory) → Set l2
-  hom-set-opposite-Precategory x y = {!!}
+  hom-set-opposite-Precategory = {!!}
 
   hom-opposite-Precategory : (x y : obj-opposite-Precategory) → UU l2
-  hom-opposite-Precategory x y = {!!}
+  hom-opposite-Precategory = {!!}
 
   comp-hom-opposite-Precategory :
     {x y z : obj-opposite-Precategory} →
@@ -88,7 +88,7 @@ module _
   right-unit-law-comp-hom-opposite-Precategory = {!!}
 
   opposite-Precategory : Precategory l1 l2
-  pr1 opposite-Precategory = {!!}
+  opposite-Precategory = {!!}
 ```
 
 ## Properties

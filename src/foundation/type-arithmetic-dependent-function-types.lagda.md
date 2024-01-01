@@ -43,7 +43,7 @@ module _
   where
 
   swap-Π : ((x : A) (y : B) → C x y) → ((y : B) (x : A) → C x y)
-  swap-Π f y x = {!!}
+  swap-Π = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : A → B → UU l3}
@@ -53,7 +53,7 @@ module _
   is-equiv-swap-Π = {!!}
 
   equiv-swap-Π : ((x : A) (y : B) → C x y) ≃ ((y : B) (x : A) → C x y)
-  pr1 equiv-swap-Π = {!!}
+  equiv-swap-Π = {!!}
 ```
 
 ## See also

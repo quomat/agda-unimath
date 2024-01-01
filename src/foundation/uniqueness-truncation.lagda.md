@@ -35,7 +35,7 @@ module _
   abstract
     is-equiv-is-truncation-is-truncation :
       is-truncation B f → is-truncation C g → is-equiv h
-    is-equiv-is-truncation-is-truncation K L = {!!}
+    is-equiv-is-truncation-is-truncation = {!!}
 
       is-equiv-is-invertible
         ( pr1 (center K))
@@ -85,19 +85,19 @@ module _
       ({l : Level} → is-set-truncation l B f) →
       ({l : Level} → is-set-truncation l C g) →
       is-equiv h
-    is-equiv-is-set-truncation-is-set-truncation Sf Sg = {!!}
+    is-equiv-is-set-truncation-is-set-truncation = {!!}
 
   abstract
     is-set-truncation-is-equiv-is-set-truncation :
       ({l : Level} → is-set-truncation l C g) → is-equiv h →
       {l : Level} → is-set-truncation l B f
-    is-set-truncation-is-equiv-is-set-truncation Sg Eh = {!!}
+    is-set-truncation-is-equiv-is-set-truncation = {!!}
 
   abstract
     is-set-truncation-is-set-truncation-is-equiv :
       is-equiv h → ({l : Level} → is-set-truncation l B f) →
       {l : Level} → is-set-truncation l C g
-    is-set-truncation-is-set-truncation-is-equiv Eh Sf = {!!}
+    is-set-truncation-is-set-truncation-is-equiv = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} (B : Set l2) (f : A → type-Set B)

@@ -53,17 +53,17 @@ module _
   is-property = {!!}
 
 subtype : {l1 : Level} (l : Level) (A : UU l1) → UU (l1 ⊔ lsuc l)
-subtype l A = {!!}
+subtype = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (P : subtype l2 A)
   where
 
   is-in-subtype : A → UU l2
-  is-in-subtype x = {!!}
+  is-in-subtype = {!!}
 
   is-prop-is-in-subtype : (x : A) → is-prop (is-in-subtype x)
-  is-prop-is-in-subtype x = {!!}
+  is-prop-is-in-subtype = {!!}
 
   type-subtype : UU (l1 ⊔ l2)
   type-subtype = {!!}
@@ -74,7 +74,7 @@ module _
   ap-inclusion-subtype :
     (x y : type-subtype) →
     x ＝ y → (inclusion-subtype x ＝ inclusion-subtype y)
-  ap-inclusion-subtype x y p = {!!}
+  ap-inclusion-subtype = {!!}
 
   is-in-subtype-inclusion-subtype :
     (x : type-subtype) → is-in-subtype (inclusion-subtype x)
@@ -82,15 +82,15 @@ module _
 
   eq-is-in-subtype :
     {x : A} {p q : is-in-subtype x} → p ＝ q
-  eq-is-in-subtype {x} = {!!}
+  eq-is-in-subtype = {!!}
 
   is-closed-under-eq-subtype :
     {x y : A} → is-in-subtype x → (x ＝ y) → is-in-subtype y
-  is-closed-under-eq-subtype p refl = {!!}
+  is-closed-under-eq-subtype = {!!}
 
   is-closed-under-eq-subtype' :
     {x y : A} → is-in-subtype y → (x ＝ y) → is-in-subtype x
-  is-closed-under-eq-subtype' p refl = {!!}
+  is-closed-under-eq-subtype' = {!!}
 ```
 
 ### The containment relation on subtypes
@@ -102,7 +102,7 @@ module _
 
   leq-prop-subtype :
     {l2 l3 : Level} → subtype l2 A → subtype l3 A → Prop (l1 ⊔ l2 ⊔ l3)
-  leq-prop-subtype P Q = {!!}
+  leq-prop-subtype = {!!}
 
   infix 5 _⊆_
   _⊆_ :
@@ -111,7 +111,7 @@ module _
 
   is-prop-leq-subtype :
     {l2 l3 : Level} (P : subtype l2 A) (Q : subtype l3 A) → is-prop (P ⊆ Q)
-  is-prop-leq-subtype P Q = {!!}
+  is-prop-leq-subtype = {!!}
 ```
 
 ## Properties
@@ -124,13 +124,13 @@ module _
   where
 
   refl-leq-subtype : {l2 : Level} (P : subtype l2 A) → P ⊆ P
-  refl-leq-subtype P x = {!!}
+  refl-leq-subtype = {!!}
 
   transitive-leq-subtype :
     {l2 l3 l4 : Level}
     (P : subtype l2 A) (Q : subtype l3 A) (R : subtype l4 A) →
     Q ⊆ R → P ⊆ Q → P ⊆ R
-  transitive-leq-subtype P Q R H K x = {!!}
+  transitive-leq-subtype = {!!}
 ```
 
 ### Equality in subtypes
@@ -141,15 +141,15 @@ module _
   where
 
   Eq-type-subtype : (x y : type-subtype P) → UU l1
-  Eq-type-subtype x y = {!!}
+  Eq-type-subtype = {!!}
 
   extensionality-type-subtype' :
     (a b : type-subtype P) → (a ＝ b) ≃ (pr1 a ＝ pr1 b)
-  extensionality-type-subtype' (a , p) = {!!}
+  extensionality-type-subtype' = {!!}
 
   eq-type-subtype :
     {a b : type-subtype P} → (pr1 a ＝ pr1 b) → a ＝ b
-  eq-type-subtype {a} {b} = {!!}
+  eq-type-subtype = {!!}
 ```
 
 ### If `B` is a subtype of `A`, then the projection map `Σ A B → A` is a propositional map
@@ -164,7 +164,7 @@ module _
     is-prop-map-inclusion-subtype = {!!}
 
   prop-map-subtype : prop-map (type-subtype B) A
-  pr1 prop-map-subtype = {!!}
+  prop-map-subtype = {!!}
 ```
 
 ### If `B` is a subtype of `A`, then the projection map `Σ A B → A` is an embedding
@@ -179,12 +179,12 @@ module _
     is-emb-inclusion-subtype = {!!}
 
   emb-subtype : type-subtype B ↪ A
-  pr1 emb-subtype = {!!}
+  emb-subtype = {!!}
 
   equiv-ap-inclusion-subtype :
     {s t : type-subtype B} →
     (s ＝ t) ≃ (inclusion-subtype B s ＝ inclusion-subtype B t)
-  pr1 (equiv-ap-inclusion-subtype {s} {t}) = {!!}
+  equiv-ap-inclusion-subtype = {!!}
 ```
 
 ### Restriction of a `k`-truncated map to a `k`-truncated map into a subtype
@@ -199,12 +199,12 @@ module _
       {f : X → A} → is-trunc-map k f →
       (p : (x : X) → is-in-subtype B (f x)) →
       is-trunc-map k {B = type-subtype B} (λ x → (f x , p x))
-    is-trunc-map-into-subtype H p (a , b) = {!!}
+    is-trunc-map-into-subtype = {!!}
 
   trunc-map-into-subtype :
     (f : trunc-map k X A) → ((x : X) → is-in-subtype B (map-trunc-map f x)) →
     trunc-map k X (type-subtype B)
-  pr1 (trunc-map-into-subtype f p) x = {!!}
+  trunc-map-into-subtype = {!!}
 ```
 
 ### Restriction of an embedding to an embedding into a subtype
@@ -216,14 +216,14 @@ module _
   where
 
   map-emb-into-subtype : X → type-subtype B
-  pr1 (map-emb-into-subtype x) = {!!}
+  map-emb-into-subtype = {!!}
 
   abstract
     is-emb-map-emb-into-subtype : is-emb map-emb-into-subtype
     is-emb-map-emb-into-subtype = {!!}
 
   emb-into-subtype : X ↪ type-subtype B
-  pr1 emb-into-subtype = {!!}
+  emb-into-subtype = {!!}
 ```
 
 ### If the projection map of a type family is an embedding, then the type family is a subtype
@@ -235,7 +235,7 @@ module _
 
   abstract
     is-subtype-is-emb-pr1 : is-emb (pr1 {B = B}) → is-subtype B
-    is-subtype-is-emb-pr1 H x = {!!}
+    is-subtype-is-emb-pr1 = {!!}
 ```
 
 ### A subtype of a `k+1`-truncated type is `k+1`-truncated
@@ -264,12 +264,12 @@ module _
 
 prop-subprop :
   {l1 l2 : Level} (A : Prop l1) (P : subtype l2 (type-Prop A)) → Prop (l1 ⊔ l2)
-pr1 (prop-subprop A P) = {!!}
+prop-subprop = {!!}
 pr2 (prop-subprop A P) = {!!}
 
 set-subset :
   {l1 l2 : Level} (A : Set l1) (P : subtype l2 (type-Set A)) → Set (l1 ⊔ l2)
-pr1 (set-subset A P) = {!!}
+set-subset = {!!}
 pr2 (set-subset A P) = {!!}
 ```
 
@@ -282,7 +282,7 @@ equiv-type-subtype :
   ( f : (x : A) → P x → Q x) →
   ( g : (x : A) → Q x → P x) →
   ( Σ A P) ≃ (Σ A Q)
-pr1 (equiv-type-subtype is-subtype-P is-subtype-Q f g) = {!!}
+equiv-type-subtype = {!!}
 pr2 (equiv-type-subtype is-subtype-P is-subtype-Q f g) = {!!}
 ```
 
@@ -295,7 +295,7 @@ equiv-subtype-equiv :
   (C : A → Prop l3) (D : B → Prop l4) →
   ((x : A) → type-Prop (C x) ↔ type-Prop (D (map-equiv e x))) →
   type-subtype C ≃ type-subtype D
-equiv-subtype-equiv e C D H = {!!}
+equiv-subtype-equiv = {!!}
 ```
 
 ```agda
@@ -306,7 +306,7 @@ abstract
     (is-subtype-P : is-subtype P) (is-subtype-Q : is-subtype Q)
     (f : A → B) (g : (x : A) → P x → Q (f x)) →
     is-equiv f → ((x : A) → (Q (f x)) → P x) → is-equiv (map-Σ Q f g)
-  is-equiv-subtype-is-equiv {Q = Q} is-subtype-P is-subtype-Q f g is-equiv-f h = {!!}
+  is-equiv-subtype-is-equiv = {!!}
 
 abstract
   is-equiv-subtype-is-equiv' :
@@ -317,6 +317,5 @@ abstract
     (is-equiv-f : is-equiv f) →
     ((y : B) → (Q y) → P (map-inv-is-equiv is-equiv-f y)) →
     is-equiv (map-Σ Q f g)
-  is-equiv-subtype-is-equiv' {P = P} {Q}
-    is-subtype-P is-subtype-Q f g is-equiv-f h = {!!}
+  is-equiv-subtype-is-equiv' = {!!}
 ```

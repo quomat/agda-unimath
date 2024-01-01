@@ -61,7 +61,7 @@ module _
   is-prop-is-full-on-isos-functor-Precategory = {!!}
 
   is-full-on-isos-prop-functor-Precategory : Prop (l1 ⊔ l2 ⊔ l4)
-  pr1 is-full-on-isos-prop-functor-Precategory = {!!}
+  is-full-on-isos-prop-functor-Precategory = {!!}
 ```
 
 ### The predicate of being pseudomonic

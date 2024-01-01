@@ -42,7 +42,7 @@ A type is said to be **locally small** with respect to a universe `UU l` if its
 ```agda
 is-locally-small :
   (l : Level) {l1 : Level} (A : UU l1) → UU (lsuc l ⊔ l1)
-is-locally-small l A = {!!}
+is-locally-small = {!!}
 
 module _
   {l l1 : Level} {A : UU l1} (H : is-locally-small l A) (x y : A)
@@ -68,7 +68,7 @@ module _
 
 ```agda
 Locally-Small-Type : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Locally-Small-Type l1 l2 = {!!}
+Locally-Small-Type = {!!}
 
 module _
   {l1 l2 : Level} (A : Locally-Small-Type l1 l2)
@@ -98,11 +98,11 @@ module _
 ```agda
 is-prop-is-locally-small :
   (l : Level) {l1 : Level} (A : UU l1) → is-prop (is-locally-small l A)
-is-prop-is-locally-small l A = {!!}
+is-prop-is-locally-small = {!!}
 
 is-locally-small-Prop :
   (l : Level) {l1 : Level} (A : UU l1) → Prop (lsuc l ⊔ l1)
-pr1 (is-locally-small-Prop l A) = {!!}
+is-locally-small-Prop = {!!}
 pr2 (is-locally-small-Prop l A) = {!!}
 ```
 
@@ -110,7 +110,7 @@ pr2 (is-locally-small-Prop l A) = {!!}
 
 ```agda
 is-locally-small' : {l : Level} {A : UU l} → is-locally-small l A
-is-locally-small' x y = {!!}
+is-locally-small' = {!!}
 ```
 
 ### Any small type is locally small
@@ -118,7 +118,7 @@ is-locally-small' x y = {!!}
 ```agda
 is-locally-small-is-small :
   {l l1 : Level} {A : UU l1} → is-small l A → is-locally-small l A
-pr1 (is-locally-small-is-small (X , e) x y) = {!!}
+is-locally-small-is-small = {!!}
 pr2 (is-locally-small-is-small (X , e) x y) = {!!}
 ```
 
@@ -127,7 +127,7 @@ pr2 (is-locally-small-is-small (X , e) x y) = {!!}
 ```agda
 is-locally-small-is-prop :
   (l : Level) {l1 : Level} {A : UU l1} → is-prop A → is-locally-small l A
-is-locally-small-is-prop l H x y = {!!}
+is-locally-small-is-prop = {!!}
 ```
 
 ### Any univalent universe is locally small
@@ -135,7 +135,7 @@ is-locally-small-is-prop l H x y = {!!}
 ```agda
 is-locally-small-UU :
   {l : Level} → is-locally-small l (UU l)
-pr1 (is-locally-small-UU X Y) = {!!}
+is-locally-small-UU = {!!}
 pr2 (is-locally-small-UU X Y) = {!!}
 ```
 
@@ -146,13 +146,13 @@ is-locally-small-Σ :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : A → UU l2} →
   is-locally-small l3 A → ((x : A) → is-locally-small l4 (B x)) →
   is-locally-small (l3 ⊔ l4) (Σ A B)
-is-locally-small-Σ {B = B} H K x y = {!!}
+is-locally-small-Σ = {!!}
 
 Σ-Locally-Small-Type :
   {l1 l2 l3 l4 : Level} (A : Locally-Small-Type l1 l2) →
   (type-Locally-Small-Type A → Locally-Small-Type l3 l4) →
   Locally-Small-Type (l1 ⊔ l3) (l2 ⊔ l4)
-pr1 (Σ-Locally-Small-Type A B) = {!!}
+Σ-Locally-Small-Type = {!!}
 pr2 (Σ-Locally-Small-Type A B) = {!!}
 ```
 
@@ -162,12 +162,12 @@ pr2 (Σ-Locally-Small-Type A B) = {!!}
 is-locally-small-type-subtype :
   {l1 l2 l3 : Level} {A : UU l1} (P : subtype l2 A) →
   is-locally-small l3 A → is-locally-small l3 (type-subtype P)
-is-locally-small-type-subtype {l3 = l3} P H = {!!}
+is-locally-small-type-subtype = {!!}
 
 type-subtype-Locally-Small-Type :
   {l1 l2 l3 : Level} (A : Locally-Small-Type l1 l2) →
   subtype l3 (type-Locally-Small-Type A) → Locally-Small-Type l1 (l2 ⊔ l3)
-pr1 (type-subtype-Locally-Small-Type A P) = {!!}
+type-subtype-Locally-Small-Type = {!!}
 pr2 (type-subtype-Locally-Small-Type A P) = {!!}
 ```
 
@@ -178,13 +178,13 @@ is-locally-small-Π :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : A → UU l2} →
   is-small l3 A → ((x : A) → is-locally-small l4 (B x)) →
   is-locally-small (l3 ⊔ l4) ((x : A) → B x)
-is-locally-small-Π H K f g = {!!}
+is-locally-small-Π = {!!}
 
 Π-Locally-Small-Type :
   {l1 l2 l3 l4 : Level} (A : Small-Type l1 l2) →
   (type-Small-Type A → Locally-Small-Type l3 l4) →
   Locally-Small-Type (l1 ⊔ l3) (l2 ⊔ l4)
-pr1 (Π-Locally-Small-Type A B) = {!!}
+Π-Locally-Small-Type = {!!}
 pr2 (Π-Locally-Small-Type A B) = {!!}
 ```
 
@@ -194,7 +194,7 @@ pr2 (Π-Locally-Small-Type A B) = {!!}
 is-locally-small-type-subuniverse :
   {l1 l2 : Level} (P : subuniverse l1 l2) →
   is-locally-small l1 (type-subuniverse P)
-is-locally-small-type-subuniverse P = {!!}
+is-locally-small-type-subuniverse = {!!}
 ```
 
 ### The type of locally small types is locally small
@@ -202,7 +202,7 @@ is-locally-small-type-subuniverse P = {!!}
 ```agda
 is-locally-small-Locally-Small-Type :
   {l1 l2 : Level} → is-locally-small l2 (Locally-Small-Type l1 l2)
-is-locally-small-Locally-Small-Type {l1} = {!!}
+is-locally-small-Locally-Small-Type = {!!}
 ```
 
 ### The type of truncated types is locally small
@@ -210,7 +210,7 @@ is-locally-small-Locally-Small-Type {l1} = {!!}
 ```agda
 is-locally-small-Truncated-Type :
   {l : Level} (k : 𝕋) → is-locally-small l (Truncated-Type l k)
-is-locally-small-Truncated-Type k = {!!}
+is-locally-small-Truncated-Type = {!!}
 ```
 
 ### The type of propositions is locally small
@@ -227,7 +227,7 @@ is-locally-small-type-Prop = {!!}
 is-locally-small-subtype :
   {l1 l2 l3 : Level} {A : UU l1} →
   is-small l2 A → is-locally-small (l2 ⊔ l3) (subtype l3 A)
-is-locally-small-subtype H = {!!}
+is-locally-small-subtype = {!!}
 ```
 
 ### The type of inhabited subtypes of a small type is locally small
@@ -236,7 +236,7 @@ is-locally-small-subtype H = {!!}
 is-locally-small-inhabited-subtype :
   {l1 l2 l3 : Level} {A : UU l1} →
   is-small l2 A → is-locally-small (l2 ⊔ l3) (inhabited-subtype l3 A)
-is-locally-small-inhabited-subtype H = {!!}
+is-locally-small-inhabited-subtype = {!!}
 ```
 
 ## See also

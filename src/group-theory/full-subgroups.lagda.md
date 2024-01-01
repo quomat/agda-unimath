@@ -75,7 +75,7 @@ is-closed-under-inverses-full-Subgroup :
 is-closed-under-inverses-full-Subgroup = {!!}
 
 full-Subgroup : {l1 : Level} (l2 : Level) (G : Group l1) → Subgroup l2 G
-pr1 (full-Subgroup l2 G) = {!!}
+full-Subgroup = {!!}
 pr1 (pr2 (full-Subgroup l2 G)) = {!!}
 pr1 (pr2 (pr2 (full-Subgroup l2 G))) {x} {y} = {!!}
 pr2 (pr2 (pr2 (full-Subgroup l2 G))) {x} = {!!}
@@ -91,7 +91,7 @@ module _
   is-equiv-inclusion-full-Subgroup = {!!}
 
   equiv-inclusion-full-Subgroup : type-full-Subgroup l2 G ≃ type-Group G
-  pr1 equiv-inclusion-full-Subgroup = {!!}
+  equiv-inclusion-full-Subgroup = {!!}
 
   group-full-Subgroup : Group (l1 ⊔ l2)
   group-full-Subgroup = {!!}
@@ -104,7 +104,7 @@ module _
   preserves-mul-inclusion-full-Subgroup = {!!}
 
   equiv-group-inclusion-full-Subgroup : equiv-Group group-full-Subgroup G
-  pr1 equiv-group-inclusion-full-Subgroup = {!!}
+  equiv-group-inclusion-full-Subgroup = {!!}
 
   iso-full-Subgroup : iso-Group group-full-Subgroup G
   iso-full-Subgroup = {!!}

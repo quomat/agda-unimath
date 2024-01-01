@@ -36,7 +36,7 @@ open import ring-theory.rings
 
 ```agda
 ℤ-Ring : Ring lzero
-pr1 ℤ-Ring = {!!}
+ℤ-Ring = {!!}
 pr1 (pr1 (pr2 ℤ-Ring)) = {!!}
 pr2 (pr1 (pr2 ℤ-Ring)) = {!!}
 pr1 (pr1 (pr2 (pr2 ℤ-Ring))) = {!!}
@@ -46,7 +46,7 @@ pr1 (pr2 (pr2 (pr2 ℤ-Ring))) = {!!}
 pr2 (pr2 (pr2 (pr2 ℤ-Ring))) = {!!}
 
 ℤ-Commutative-Ring : Commutative-Ring lzero
-pr1 ℤ-Commutative-Ring = {!!}
+ℤ-Commutative-Ring = {!!}
 pr2 ℤ-Commutative-Ring = {!!}
 ```
 
@@ -95,7 +95,7 @@ module _
   preserves-mul-initial-hom-Ring = {!!}
 
   initial-hom-Ring : hom-Ring ℤ-Ring R
-  pr1 initial-hom-Ring = {!!}
+  initial-hom-Ring = {!!}
 ```
 
 #### Any ring homomorphisms from `ℤ` to `R` is equal to the homomorphism `initial-hom-Ring`
@@ -118,7 +118,7 @@ module _
 
 ```agda
 is-initial-ℤ-Ring : is-initial-Ring ℤ-Ring
-pr1 (is-initial-ℤ-Ring S) = {!!}
+is-initial-ℤ-Ring = {!!}
 pr2 (is-initial-ℤ-Ring S) f = {!!}
 ```
 

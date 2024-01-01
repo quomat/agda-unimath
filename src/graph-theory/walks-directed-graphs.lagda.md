@@ -132,15 +132,13 @@ module _
   map-compute-total-walk-of-length-Directed-Graph :
     (x y : vertex-Directed-Graph G) →
     Σ ℕ (λ n → walk-of-length-Directed-Graph n x y) → walk-Directed-Graph G x y
-  map-compute-total-walk-of-length-Directed-Graph
-    x .x (zero-ℕ , map-raise refl) = {!!}
+  map-compute-total-walk-of-length-Directed-Graph = {!!}
   map-compute-total-walk-of-length-Directed-Graph x y (succ-ℕ n , z , e , w) = {!!}
 
   map-inv-compute-total-walk-of-length-Directed-Graph :
     (x y : vertex-Directed-Graph G) →
     walk-Directed-Graph G x y → Σ ℕ (λ n → walk-of-length-Directed-Graph n x y)
-  map-inv-compute-total-walk-of-length-Directed-Graph
-    x .x refl-walk-Directed-Graph = {!!}
+  map-inv-compute-total-walk-of-length-Directed-Graph = {!!}
   map-inv-compute-total-walk-of-length-Directed-Graph x y
     ( cons-walk-Directed-Graph {y = z} e w) = {!!}
 
@@ -148,15 +146,13 @@ module _
     (x y : vertex-Directed-Graph G) →
     ( map-compute-total-walk-of-length-Directed-Graph x y ∘
       map-inv-compute-total-walk-of-length-Directed-Graph x y) ~ id
-  is-section-map-inv-compute-total-walk-of-length-Directed-Graph
-    x .x refl-walk-Directed-Graph = {!!}
+  is-section-map-inv-compute-total-walk-of-length-Directed-Graph = {!!}
 
   is-retraction-map-inv-compute-total-walk-of-length-Directed-Graph :
     (x y : vertex-Directed-Graph G) →
     ( map-inv-compute-total-walk-of-length-Directed-Graph x y ∘
       map-compute-total-walk-of-length-Directed-Graph x y) ~ id
-  is-retraction-map-inv-compute-total-walk-of-length-Directed-Graph
-    x .x (zero-ℕ , map-raise refl) = {!!}
+  is-retraction-map-inv-compute-total-walk-of-length-Directed-Graph = {!!}
   is-retraction-map-inv-compute-total-walk-of-length-Directed-Graph
     x y (succ-ℕ n , (z , e , w)) = {!!}
 
@@ -261,7 +257,7 @@ module _
   where
 
   coproduct-walk-Directed-Graph : (x y : vertex-Directed-Graph G) → UU (l1 ⊔ l2)
-  coproduct-walk-Directed-Graph x y = {!!}
+  coproduct-walk-Directed-Graph = {!!}
 
   map-compute-coproduct-walk-Directed-Graph :
     (x y : vertex-Directed-Graph G) →
@@ -444,8 +440,7 @@ module _
         ( vertex-hom-Directed-Graph G H f x)
         ( vertex-hom-Directed-Graph G H f y))
       ( walk-hom-Directed-Graph G H f {x} {y})
-  square-compute-total-walk-of-length-hom-Directed-Graph
-    x .x (zero-ℕ , map-raise refl) = {!!}
+  square-compute-total-walk-of-length-hom-Directed-Graph = {!!}
 ```
 
 ### The action on walks of length `n` of equivalences of graphs
@@ -489,8 +484,7 @@ module _
         ( vertex-equiv-Directed-Graph G H e x)
         ( vertex-equiv-Directed-Graph G H e y))
       ( walk-equiv-Directed-Graph {x} {y})
-  square-compute-total-walk-of-length-equiv-Directed-Graph
-    x .x (zero-ℕ , map-raise refl) = {!!}
+  square-compute-total-walk-of-length-equiv-Directed-Graph = {!!}
 
   is-equiv-walk-equiv-Directed-Graph :
     {x y : vertex-Directed-Graph G} →
@@ -519,8 +513,7 @@ module _
     (u : walk-Directed-Graph G x y) (v : walk-Directed-Graph G y x) →
     ( concat-walk-Directed-Graph G u v ＝ refl-walk-Directed-Graph) →
     x ＝ y
-  eq-is-refl-concat-walk-Directed-Graph
-    refl-walk-Directed-Graph .refl-walk-Directed-Graph refl = {!!}
+  eq-is-refl-concat-walk-Directed-Graph = {!!}
 
   is-refl-left-is-refl-concat-walk-Directed-Graph :
     {x y : vertex-Directed-Graph G}
@@ -530,8 +523,7 @@ module _
       ( walk-Directed-Graph G x)
       ( eq-is-refl-concat-walk-Directed-Graph u v p)
       ( refl-walk-Directed-Graph) ＝ u
-  is-refl-left-is-refl-concat-walk-Directed-Graph
-    refl-walk-Directed-Graph .refl-walk-Directed-Graph refl = {!!}
+  is-refl-left-is-refl-concat-walk-Directed-Graph = {!!}
 
   is-refl-right-is-refl-concat-walk-Directed-Graph :
     {x y : vertex-Directed-Graph G}
@@ -541,8 +533,7 @@ module _
       ( walk-Directed-Graph G y)
       ( inv (eq-is-refl-concat-walk-Directed-Graph u v p))
       ( refl-walk-Directed-Graph) ＝ v
-  is-refl-right-is-refl-concat-walk-Directed-Graph
-    refl-walk-Directed-Graph .refl-walk-Directed-Graph refl = {!!}
+  is-refl-right-is-refl-concat-walk-Directed-Graph = {!!}
 ```
 
 ### The function `unit-walk` is injective

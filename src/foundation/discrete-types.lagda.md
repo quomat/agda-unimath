@@ -39,16 +39,16 @@ module _
   where
 
   rel-apart-Discrete-Type : Relation-Prop l (type-Discrete-Type X)
-  rel-apart-Discrete-Type x y = {!!}
+  rel-apart-Discrete-Type = {!!}
 
   apart-Discrete-Type : (x y : type-Discrete-Type X) → UU l
-  apart-Discrete-Type x y = {!!}
+  apart-Discrete-Type = {!!}
 
   antireflexive-apart-Discrete-Type : is-antireflexive rel-apart-Discrete-Type
-  antireflexive-apart-Discrete-Type x r = {!!}
+  antireflexive-apart-Discrete-Type = {!!}
 
   symmetric-apart-Discrete-Type : is-symmetric apart-Discrete-Type
-  symmetric-apart-Discrete-Type x y H p = {!!}
+  symmetric-apart-Discrete-Type = {!!}
 
   cotransitive-apart-Discrete-Type : is-cotransitive rel-apart-Discrete-Type
   cotransitive-apart-Discrete-Type x y z r
@@ -64,12 +64,12 @@ module _
   apartness-relation-Discrete-Type = {!!}
 
   type-with-apartness-Discrete-Type : Type-With-Apartness l l
-  pr1 type-with-apartness-Discrete-Type = {!!}
+  type-with-apartness-Discrete-Type = {!!}
 
   tight-apartness-relation-Discrete-Type :
     Tight-Apartness-Relation l (type-Discrete-Type X)
   tight-apartness-relation-Discrete-Type = {!!}
 
   type-with-tight-apartness-Discrete-Type : Type-With-Tight-Apartness l l
-  pr1 type-with-tight-apartness-Discrete-Type = {!!}
+  type-with-tight-apartness-Discrete-Type = {!!}
 ```

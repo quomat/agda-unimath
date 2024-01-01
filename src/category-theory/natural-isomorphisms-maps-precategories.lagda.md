@@ -291,7 +291,7 @@ module _
   is-set-natural-isomorphism-map-Precategory = {!!}
 
   natural-isomorphism-map-set-Precategory : Set (l1 ⊔ l2 ⊔ l4)
-  pr1 natural-isomorphism-map-set-Precategory = {!!}
+  natural-isomorphism-map-set-Precategory = {!!}
 ```
 
 ### Inverses of natural isomorphisms are natural isomorphisms
@@ -308,9 +308,7 @@ module _
   natural-transformation-map-inv-is-natural-isomorphism-map-Precategory :
     is-natural-isomorphism-map-Precategory C D F G f →
     natural-transformation-map-Precategory C D G F
-  pr1
-    ( natural-transformation-map-inv-is-natural-isomorphism-map-Precategory
-      ( is-iso-f)) = {!!}
+  natural-transformation-map-inv-is-natural-isomorphism-map-Precategory = {!!}
 
   is-section-natural-transformation-map-inv-is-natural-isomorphism-map-Precategory :
     (is-iso-f : is-natural-isomorphism-map-Precategory C D F G f) →
@@ -319,8 +317,7 @@ module _
       ( natural-transformation-map-inv-is-natural-isomorphism-map-Precategory
         ( is-iso-f)) ＝
     id-natural-transformation-map-Precategory C D G
-  is-section-natural-transformation-map-inv-is-natural-isomorphism-map-Precategory
-    is-iso-f = {!!}
+  is-section-natural-transformation-map-inv-is-natural-isomorphism-map-Precategory = {!!}
 
   is-retraction-natural-transformation-map-inv-is-natural-isomorphism-map-Precategory :
     (is-iso-f : is-natural-isomorphism-map-Precategory C D F G f) →
@@ -329,16 +326,14 @@ module _
         ( is-iso-f))
       ( f) ＝
     id-natural-transformation-map-Precategory C D F
-  is-retraction-natural-transformation-map-inv-is-natural-isomorphism-map-Precategory
-    is-iso-f = {!!}
+  is-retraction-natural-transformation-map-inv-is-natural-isomorphism-map-Precategory = {!!}
 
   is-natural-isomorphism-map-inv-is-natural-isomorphism-map-Precategory :
     (is-iso-f : is-natural-isomorphism-map-Precategory C D F G f) →
     is-natural-isomorphism-map-Precategory C D G F
       ( natural-transformation-map-inv-is-natural-isomorphism-map-Precategory
         ( is-iso-f))
-  is-natural-isomorphism-map-inv-is-natural-isomorphism-map-Precategory
-    is-iso-f = {!!}
+  is-natural-isomorphism-map-inv-is-natural-isomorphism-map-Precategory = {!!}
 ```
 
 ### Inverses of natural isomorphisms
@@ -399,8 +394,7 @@ module _
     is-natural-isomorphism-map-Precategory C D F G f →
     is-natural-isomorphism-map-Precategory C D F H
       ( comp-natural-transformation-map-Precategory C D F G H g f)
-  is-natural-isomorphism-map-comp-is-natural-isomorphism-map-Precategory
-    is-iso-g is-iso-f x = {!!}
+  is-natural-isomorphism-map-comp-is-natural-isomorphism-map-Precategory = {!!}
 ```
 
 ### The composition operation on natural isomorphisms

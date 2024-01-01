@@ -39,12 +39,12 @@ module _
   where
 
   htpy-equiv : A ≃ B → A ≃ B → UU (l1 ⊔ l2)
-  htpy-equiv e e' = {!!}
+  htpy-equiv = {!!}
 
   _~e_ = {!!}
 
   extensionality-equiv : (f g : A ≃ B) → (f ＝ g) ≃ htpy-equiv f g
-  extensionality-equiv f = {!!}
+  extensionality-equiv = {!!}
 
   abstract
     is-torsorial-htpy-equiv :
@@ -52,13 +52,13 @@ module _
     is-torsorial-htpy-equiv = {!!}
 
   refl-htpy-equiv : (e : A ≃ B) → htpy-equiv e e
-  refl-htpy-equiv e = {!!}
+  refl-htpy-equiv = {!!}
 
   eq-htpy-equiv : {e e' : A ≃ B} → htpy-equiv e e' → e ＝ e'
-  eq-htpy-equiv {e} {e'} = {!!}
+  eq-htpy-equiv = {!!}
 
   htpy-eq-equiv : {e e' : A ≃ B} → e ＝ e' → htpy-equiv e e'
-  htpy-eq-equiv {e} {e'} = {!!}
+  htpy-eq-equiv = {!!}
 
   htpy-eq-map-equiv :
     {e e' : A ≃ B} → (map-equiv e) ＝ (map-equiv e') → htpy-equiv e e'

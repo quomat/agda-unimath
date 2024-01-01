@@ -73,7 +73,7 @@ module _
   coherence-hom-codomain-cospan = {!!}
 
   hom-codomain-cospan : (c d : cospan l A B) → UU (l1 ⊔ l2 ⊔ l)
-  hom-codomain-cospan c d = {!!}
+  hom-codomain-cospan = {!!}
 ```
 
 ## Properties
@@ -86,13 +86,13 @@ module _
   where
 
   htpy-cospan : (c d : cospan l A B) → UU (l1 ⊔ l2 ⊔ l)
-  htpy-cospan c d = {!!}
+  htpy-cospan = {!!}
 
   refl-htpy-cospan : (c : cospan l A B) → htpy-cospan c c
-  pr1 (refl-htpy-cospan c) = {!!}
+  refl-htpy-cospan = {!!}
 
   htpy-eq-cospan : (c d : cospan l A B) → c ＝ d → htpy-cospan c d
-  htpy-eq-cospan c .c refl = {!!}
+  htpy-eq-cospan = {!!}
 
   is-torsorial-htpy-cospan :
     (c : cospan l A B) → is-torsorial (htpy-cospan c)
@@ -107,7 +107,7 @@ module _
   extensionality-cospan = {!!}
 
   eq-htpy-cospan : (c d : cospan l A B) → htpy-cospan c d → c ＝ d
-  eq-htpy-cospan c d = {!!}
+  eq-htpy-cospan = {!!}
 ```
 
 ## See also

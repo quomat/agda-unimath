@@ -61,7 +61,7 @@ module _
   where
 
   cofork : UU l3 → UU (l1 ⊔ l2 ⊔ l3)
-  cofork X = {!!}
+  cofork = {!!}
 
   module _
     { X : UU l3} (e : cofork X)
@@ -92,7 +92,7 @@ module _
   coherence-htpy-cofork = {!!}
 
   htpy-cofork : cofork f g X → cofork f g X → UU (l1 ⊔ l2 ⊔ l3)
-  htpy-cofork e e' = {!!}
+  htpy-cofork = {!!}
 ```
 
 ### Postcomposing coforks
@@ -114,7 +114,7 @@ module _
   where
 
   cofork-map : {l : Level} {Y : UU l} → (X → Y) → cofork f g Y
-  pr1 (cofork-map h) = {!!}
+  cofork-map = {!!}
 ```
 
 ## Properties
@@ -127,7 +127,7 @@ module _
   where
 
   reflexive-htpy-cofork : (e : cofork f g X) → htpy-cofork f g e e
-  pr1 (reflexive-htpy-cofork e) = {!!}
+  reflexive-htpy-cofork = {!!}
 
   htpy-cofork-eq :
     ( e e' : cofork f g X) → (e ＝ e') → htpy-cofork f g e e'
@@ -200,7 +200,7 @@ module _
   vertical-map-span-cocone-cofork = {!!}
 
   horizontal-map-span-cocone-cofork : A + A → B
-  horizontal-map-span-cocone-cofork (inl a) = {!!}
+  horizontal-map-span-cocone-cofork = {!!}
 
   module _
     { l3 : Level} {X : UU l3}
@@ -215,10 +215,10 @@ module _
     cofork-cocone-codiagonal = {!!}
 
     horizontal-map-cocone-cofork : cofork f g X → A → X
-    horizontal-map-cocone-cofork e = {!!}
+    horizontal-map-cocone-cofork = {!!}
 
     vertical-map-cocone-cofork : cofork f g X → B → X
-    vertical-map-cocone-cofork e = {!!}
+    vertical-map-cocone-cofork = {!!}
 
     coherence-square-cocone-cofork :
       ( e : cofork f g X) →
@@ -268,5 +268,5 @@ module _
         ( vertical-map-span-cocone-cofork)
         ( horizontal-map-span-cocone-cofork)
         ( cocone-codiagonal-cofork e))
-  triangle-cofork-cocone e h = {!!}
+  triangle-cofork-cocone = {!!}
 ```

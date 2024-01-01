@@ -97,7 +97,7 @@ module _
   associator-H-Space = {!!}
 
   is-unital-associator : (α : associator-H-Space) → UU l
-  is-unital-associator α111 = {!!}
+  is-unital-associator = {!!}
 
   unital-associator : UU l
   unital-associator = {!!}
@@ -107,7 +107,7 @@ module _
 
 ```agda
 Wild-Monoid : (l : Level) → UU (lsuc l)
-Wild-Monoid l = {!!}
+Wild-Monoid = {!!}
 
 module _
   {l : Level} (M : Wild-Monoid l)

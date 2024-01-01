@@ -33,7 +33,7 @@ An unordered pair of types is an unordered pair of elements in a universe
 
 ```agda
 unordered-pair-types : (l : Level) → UU (lsuc l)
-unordered-pair-types l = {!!}
+unordered-pair-types = {!!}
 ```
 
 ### Equivalences of unordered pairs of types
@@ -74,7 +74,7 @@ module _
   where
 
   id-equiv-unordered-pair-types : equiv-unordered-pair-types A A
-  pr1 id-equiv-unordered-pair-types = {!!}
+  id-equiv-unordered-pair-types = {!!}
 
   equiv-eq-unordered-pair-types :
     (B : unordered-pair-types l) → A ＝ B → equiv-unordered-pair-types A B

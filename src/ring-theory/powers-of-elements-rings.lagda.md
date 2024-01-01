@@ -34,7 +34,7 @@ iteratively multiplying `x` with itself `n` times.
 
 ```agda
 power-Ring : {l : Level} (R : Ring l) → ℕ → type-Ring R → type-Ring R
-power-Ring R = {!!}
+power-Ring = {!!}
 ```
 
 ## Properties

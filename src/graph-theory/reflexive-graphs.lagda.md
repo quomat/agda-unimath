@@ -22,7 +22,7 @@ such that there is an loop edge at every vertex.
 
 ```agda
 Reflexive-Graph : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Reflexive-Graph l1 l2 = {!!}
+Reflexive-Graph = {!!}
 
 module _
   {l1 l2 : Level} (G : Reflexive-Graph l1 l2)

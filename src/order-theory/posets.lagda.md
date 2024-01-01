@@ -40,7 +40,7 @@ is-antisymmetric-leq-Preorder :
 is-antisymmetric-leq-Preorder = {!!}
 
 Poset : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Poset l1 l2 = {!!}
+Poset = {!!}
 
 module _
   {l1 l2 : Level} (X : Poset l1 l2)
@@ -92,7 +92,7 @@ module _
   is-set-type-Poset = {!!}
 
   set-Poset : Set l1
-  pr1 set-Poset = {!!}
+  set-Poset = {!!}
 ```
 
 ## Reasoning with inequalities in posets
@@ -147,10 +147,10 @@ module _
   precategory-Poset = {!!}
 
   is-category-precategory-Poset : is-category-Precategory precategory-Poset
-  is-category-precategory-Poset x y = {!!}
+  is-category-precategory-Poset = {!!}
 
   category-Poset : Category l1 l2
-  pr1 category-Poset = {!!}
+  category-Poset = {!!}
 
 module _
   {l1 l2 : Level} (C : Category l1 l2)
@@ -161,7 +161,7 @@ module _
   preorder-is-prop-hom-Category = {!!}
 
   poset-is-prop-hom-Category : Poset l1 l2
-  pr1 poset-is-prop-hom-Category = {!!}
+  poset-is-prop-hom-Category = {!!}
 ```
 
 It remains to show that these constructions form inverses to eachother.

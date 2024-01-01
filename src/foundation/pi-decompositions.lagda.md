@@ -44,7 +44,7 @@ the matching correspondence of the Π-decomposition
 
 ```agda
 Π : {l1 l2 : Level} (X : UU l1) (Y : X → UU l2) → UU (l1 ⊔ l2)
-Π X Y = {!!}
+Π = {!!}
 ```
 
 ### General Π-decompositions
@@ -52,7 +52,7 @@ the matching correspondence of the Π-decomposition
 ```agda
 Π-Decomposition :
   {l1 : Level} (l2 l3 : Level) → UU l1 → UU (l1 ⊔ lsuc l2 ⊔ lsuc l3)
-Π-Decomposition l2 l3 A = {!!}
+Π-Decomposition = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} (D : Π-Decomposition l2 l3 A)
@@ -79,7 +79,7 @@ module _
 fibered-Π-Decomposition :
   {l1 : Level} (l2 l3 l4 l5 : Level) (A : UU l1) →
   UU (l1 ⊔ lsuc l2 ⊔ lsuc l3 ⊔ lsuc l4 ⊔ lsuc l5)
-fibered-Π-Decomposition l2 l3 l4 l5 A = {!!}
+fibered-Π-Decomposition = {!!}
 
 module _
   {l1 l2 l3 l4 l5 : Level} {A : UU l1}
@@ -143,7 +143,7 @@ module _
 displayed-Π-Decomposition :
   {l1 : Level} (l2 l3 l4 l5 : Level) (A : UU l1) →
   UU (l1 ⊔ lsuc l2 ⊔ lsuc l3 ⊔ lsuc l4 ⊔ lsuc l5)
-displayed-Π-Decomposition l2 l3 l4 l5 A = {!!}
+displayed-Π-Decomposition = {!!}
 
 module _
   {l1 l2 l3 l4 l5 : Level} {A : UU l1}
@@ -183,27 +183,27 @@ module _
   indexing-type-snd-displayed-Π-Decomposition :
     ( x : indexing-type-fst-displayed-Π-Decomposition) →
     UU l4
-  indexing-type-snd-displayed-Π-Decomposition x = {!!}
+  indexing-type-snd-displayed-Π-Decomposition = {!!}
 
   cotype-snd-displayed-Π-Decomposition :
     ( x : indexing-type-fst-displayed-Π-Decomposition) →
     indexing-type-snd-displayed-Π-Decomposition x →
     UU l5
-  cotype-snd-displayed-Π-Decomposition x = {!!}
+  cotype-snd-displayed-Π-Decomposition = {!!}
 
   matching-correspondence-snd-displayed-Π-Decomposition :
     ( x : indexing-type-fst-displayed-Π-Decomposition) →
     ( cotype-fst-displayed-Π-Decomposition x ≃
       Π ( indexing-type-snd-displayed-Π-Decomposition x)
         ( cotype-snd-displayed-Π-Decomposition x))
-  matching-correspondence-snd-displayed-Π-Decomposition x = {!!}
+  matching-correspondence-snd-displayed-Π-Decomposition = {!!}
 
   map-matching-correspondence-snd-displayed-Π-Decomposition :
     ( x : indexing-type-fst-displayed-Π-Decomposition) →
     cotype-fst-displayed-Π-Decomposition x →
     Π ( indexing-type-snd-displayed-Π-Decomposition x)
       ( cotype-snd-displayed-Π-Decomposition x)
-  map-matching-correspondence-snd-displayed-Π-Decomposition x = {!!}
+  map-matching-correspondence-snd-displayed-Π-Decomposition = {!!}
 ```
 
 ## Properties
@@ -216,7 +216,7 @@ equiv-Π-Decomposition :
   (X : Π-Decomposition l2 l3 A)
   (Y : Π-Decomposition l4 l5 A) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5)
-equiv-Π-Decomposition X Y = {!!}
+equiv-Π-Decomposition = {!!}
 
 module _
   {l1 l2 l3 l4 l5 : Level} {A : UU l1}
@@ -246,14 +246,14 @@ module _
     cotype-Π-Decomposition X x →
     cotype-Π-Decomposition Y
       ( map-equiv-indexing-type-equiv-Π-Decomposition x)
-  map-equiv-cotype-equiv-Π-Decomposition x = {!!}
+  map-equiv-cotype-equiv-Π-Decomposition = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} (X : Π-Decomposition l2 l3 A)
   where
 
   id-equiv-Π-Decomposition : equiv-Π-Decomposition X X
-  pr1 id-equiv-Π-Decomposition = {!!}
+  id-equiv-Π-Decomposition = {!!}
 
   is-torsorial-equiv-Π-Decomposition :
     is-torsorial (equiv-Π-Decomposition X)
@@ -262,7 +262,7 @@ module _
   equiv-eq-Π-Decomposition :
     (Y : Π-Decomposition l2 l3 A) →
     (X ＝ Y) → equiv-Π-Decomposition X Y
-  equiv-eq-Π-Decomposition .X refl = {!!}
+  equiv-eq-Π-Decomposition = {!!}
 
   is-equiv-equiv-eq-Π-Decomposition :
     (Y : Π-Decomposition l2 l3 A) →
@@ -272,12 +272,12 @@ module _
   extensionality-Π-Decomposition :
     (Y : Π-Decomposition l2 l3 A) →
     (X ＝ Y) ≃ equiv-Π-Decomposition X Y
-  pr1 (extensionality-Π-Decomposition Y) = {!!}
+  extensionality-Π-Decomposition = {!!}
 
   eq-equiv-Π-Decomposition :
     (Y : Π-Decomposition l2 l3 A) →
     equiv-Π-Decomposition X Y → (X ＝ Y)
-  eq-equiv-Π-Decomposition Y = {!!}
+  eq-equiv-Π-Decomposition = {!!}
 ```
 
 ### Invariance of Π-decompositions under equivalences
@@ -316,7 +316,7 @@ module _
   equiv-snd-fibered-Π-Decomposition :
     (e : equiv-fst-fibered-Π-Decomposition) →
     UU (l4 ⊔ l5 ⊔ l6 ⊔ l8 ⊔ l9)
-  equiv-snd-fibered-Π-Decomposition e = {!!}
+  equiv-snd-fibered-Π-Decomposition = {!!}
 
   equiv-fibered-Π-Decomposition :
     UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6 ⊔ l7 ⊔ l8 ⊔ l9)
@@ -347,12 +347,12 @@ module _
 
   id-equiv-fibered-Π-Decomposition :
     equiv-fibered-Π-Decomposition D D
-  pr1 id-equiv-fibered-Π-Decomposition = {!!}
+  id-equiv-fibered-Π-Decomposition = {!!}
 
   equiv-eq-fibered-Π-Decomposition :
     (D' : fibered-Π-Decomposition l2 l3 l4 l5 A) →
     (D ＝ D') → equiv-fibered-Π-Decomposition D D'
-  equiv-eq-fibered-Π-Decomposition .D refl = {!!}
+  equiv-eq-fibered-Π-Decomposition = {!!}
 
   is-equiv-equiv-eq-fibered-Π-Decomposition :
     (D' : fibered-Π-Decomposition l2 l3 l4 l5 A) →
@@ -362,12 +362,12 @@ module _
   extensionality-fibered-Π-Decomposition :
     (D' : fibered-Π-Decomposition l2 l3 l4 l5 A) →
     (D ＝ D') ≃ equiv-fibered-Π-Decomposition D D'
-  pr1 (extensionality-fibered-Π-Decomposition D') = {!!}
+  extensionality-fibered-Π-Decomposition = {!!}
 
   eq-equiv-fibered-Π-Decomposition :
     (D' : fibered-Π-Decomposition l2 l3 l4 l5 A) →
     (equiv-fibered-Π-Decomposition D D') → (D ＝ D')
-  eq-equiv-fibered-Π-Decomposition D' = {!!}
+  eq-equiv-fibered-Π-Decomposition = {!!}
 ```
 
 #### Characterization of identity type for displayed double Π-decompositions
@@ -386,7 +386,7 @@ module _
   equiv-snd-displayed-Π-Decomposition :
     (e : equiv-fst-displayed-Π-Decomposition) →
     UU (l2 ⊔ l4 ⊔ l5 ⊔ l7 ⊔ l8 ⊔ l9)
-  equiv-snd-displayed-Π-Decomposition e = {!!}
+  equiv-snd-displayed-Π-Decomposition = {!!}
 
   equiv-displayed-Π-Decomposition :
     UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6 ⊔ l7 ⊔ l8 ⊔ l9)
@@ -417,12 +417,12 @@ module _
 
   id-equiv-displayed-Π-Decomposition :
     equiv-displayed-Π-Decomposition disp-D disp-D
-  pr1 id-equiv-displayed-Π-Decomposition = {!!}
+  id-equiv-displayed-Π-Decomposition = {!!}
 
   equiv-eq-displayed-Π-Decomposition :
     (disp-D' : displayed-Π-Decomposition l2 l3 l4 l5 A) →
     (disp-D ＝ disp-D') → equiv-displayed-Π-Decomposition disp-D disp-D'
-  equiv-eq-displayed-Π-Decomposition .disp-D refl = {!!}
+  equiv-eq-displayed-Π-Decomposition = {!!}
 
   is-equiv-equiv-eq-displayed-Π-Decomposition :
     (disp-D' : displayed-Π-Decomposition l2 l3 l4 l5 A) →
@@ -432,11 +432,11 @@ module _
   extensionality-displayed-Π-Decomposition :
     (disp-D' : displayed-Π-Decomposition l2 l3 l4 l5 A) →
     (disp-D ＝ disp-D') ≃ equiv-displayed-Π-Decomposition disp-D disp-D'
-  pr1 (extensionality-displayed-Π-Decomposition D) = {!!}
+  extensionality-displayed-Π-Decomposition = {!!}
 
   eq-equiv-displayed-Π-Decomposition :
     (disp-D' : displayed-Π-Decomposition l2 l3 l4 l5 A) →
     (equiv-displayed-Π-Decomposition disp-D disp-D') →
     (disp-D ＝ disp-D')
-  eq-equiv-displayed-Π-Decomposition D = {!!}
+  eq-equiv-displayed-Π-Decomposition = {!!}
 ```

@@ -59,10 +59,10 @@ module _
   where
 
   mul-Ω : type-Ω A → type-Ω A → type-Ω A
-  mul-Ω x y = {!!}
+  mul-Ω = {!!}
 
   Ω-Magma : Magma l
-  pr1 Ω-Magma = {!!}
+  Ω-Magma = {!!}
 ```
 
 ### The H-space of loops on a pointed space
@@ -74,14 +74,14 @@ module _
 
   left-unit-law-mul-Ω :
     (x : type-Ω A) → Id (mul-Ω A (refl-Ω A) x) x
-  left-unit-law-mul-Ω x = {!!}
+  left-unit-law-mul-Ω = {!!}
 
   right-unit-law-mul-Ω :
     (x : type-Ω A) → Id (mul-Ω A x (refl-Ω A)) x
-  right-unit-law-mul-Ω x = {!!}
+  right-unit-law-mul-Ω = {!!}
 
   Ω-H-Space : H-Space l
-  pr1 Ω-H-Space = {!!}
+  Ω-H-Space = {!!}
 ```
 
 ### The wild quasigroup of loops on a pointed space
@@ -96,14 +96,14 @@ module _
 
   left-inverse-law-mul-Ω :
     (x : type-Ω A) → Id (mul-Ω A (inv-Ω x) x) (refl-Ω A)
-  left-inverse-law-mul-Ω x = {!!}
+  left-inverse-law-mul-Ω = {!!}
 
   right-inverse-law-mul-Ω :
     (x : type-Ω A) → Id (mul-Ω A x (inv-Ω x)) (refl-Ω A)
-  right-inverse-law-mul-Ω x = {!!}
+  right-inverse-law-mul-Ω = {!!}
 
   Ω-Wild-Quasigroup : Wild-Quasigroup l
-  pr1 Ω-Wild-Quasigroup = {!!}
+  Ω-Wild-Quasigroup = {!!}
 ```
 
 ### Associativity of concatenation on loop spaces
@@ -116,7 +116,7 @@ module _
   associative-mul-Ω :
     (x y z : type-Ω A) →
     Id (mul-Ω A (mul-Ω A x y) z) (mul-Ω A x (mul-Ω A y z))
-  associative-mul-Ω x y z = {!!}
+  associative-mul-Ω = {!!}
 ```
 
 We compute transport of `type-Ω`.
@@ -127,38 +127,38 @@ module _
   where
 
   equiv-tr-Ω : Id x y → Ω (pair A x) ≃∗ Ω (pair A y)
-  equiv-tr-Ω refl = {!!}
+  equiv-tr-Ω = {!!}
 
   equiv-tr-type-Ω : Id x y → type-Ω (pair A x) ≃ type-Ω (pair A y)
-  equiv-tr-type-Ω p = {!!}
+  equiv-tr-type-Ω = {!!}
 
   tr-type-Ω : Id x y → type-Ω (pair A x) → type-Ω (pair A y)
-  tr-type-Ω p = {!!}
+  tr-type-Ω = {!!}
 
   is-equiv-tr-type-Ω : (p : Id x y) → is-equiv (tr-type-Ω p)
-  is-equiv-tr-type-Ω p = {!!}
+  is-equiv-tr-type-Ω = {!!}
 
   preserves-refl-tr-Ω : (p : Id x y) → Id (tr-type-Ω p refl) refl
-  preserves-refl-tr-Ω refl = {!!}
+  preserves-refl-tr-Ω = {!!}
 
   preserves-mul-tr-Ω :
     (p : Id x y) (u v : type-Ω (pair A x)) →
     Id
       ( tr-type-Ω p (mul-Ω (pair A x) u v))
       ( mul-Ω (pair A y) (tr-type-Ω p u) (tr-type-Ω p v))
-  preserves-mul-tr-Ω refl u v = {!!}
+  preserves-mul-tr-Ω = {!!}
 
   preserves-inv-tr-Ω :
     (p : Id x y) (u : type-Ω (pair A x)) →
     Id
       ( tr-type-Ω p (inv-Ω (pair A x) u))
       ( inv-Ω (pair A y) (tr-type-Ω p u))
-  preserves-inv-tr-Ω refl u = {!!}
+  preserves-inv-tr-Ω = {!!}
 
   eq-tr-type-Ω :
     (p : Id x y) (q : type-Ω (pair A x)) →
     Id (tr-type-Ω p q) (inv p ∙ (q ∙ p))
-  eq-tr-type-Ω refl q = {!!}
+  eq-tr-type-Ω = {!!}
 ```
 
 ## Properties
@@ -173,5 +173,5 @@ module _
 
   pointed-equiv-loop-pointed-identity :
     ( pair (point-Pointed-Type A ＝ x) p) ≃∗ Ω A
-  pr1 pointed-equiv-loop-pointed-identity = {!!}
+  pointed-equiv-loop-pointed-identity = {!!}
 ```

@@ -79,7 +79,7 @@ module _
   coherence-hom-domain-span = {!!}
 
   hom-domain-span : (c d : span l A B) → UU (l1 ⊔ l2 ⊔ l)
-  hom-domain-span c d = {!!}
+  hom-domain-span = {!!}
 ```
 
 ### Characterizing equality of spans
@@ -90,13 +90,13 @@ module _
   where
 
   htpy-span : (c d : span l A B) → UU (l1 ⊔ l2 ⊔ l)
-  htpy-span c d = {!!}
+  htpy-span = {!!}
 
   refl-htpy-span : (c : span l A B) → htpy-span c c
-  pr1 (refl-htpy-span c) = {!!}
+  refl-htpy-span = {!!}
 
   htpy-eq-span : (c d : span l A B) → c ＝ d → htpy-span c d
-  htpy-eq-span c .c refl = {!!}
+  htpy-eq-span = {!!}
 
   is-torsorial-htpy-span :
     (c : span l A B) → is-torsorial (htpy-span c)
@@ -111,7 +111,7 @@ module _
   extensionality-span = {!!}
 
   eq-htpy-span : (c d : span l A B) → htpy-span c d → c ＝ d
-  eq-htpy-span c d = {!!}
+  eq-htpy-span = {!!}
 ```
 
 ### Spans are equivalent to binary relations

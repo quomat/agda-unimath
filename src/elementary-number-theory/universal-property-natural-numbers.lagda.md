@@ -69,12 +69,12 @@ module _
   eq-htpy-structure-preserving-map-ℕ = {!!}
 
   center-structure-preserving-map-ℕ : structure-preserving-map-ℕ
-  pr1 center-structure-preserving-map-ℕ = {!!}
+  center-structure-preserving-map-ℕ = {!!}
 
   contraction-structure-preserving-map-ℕ :
     (h : structure-preserving-map-ℕ) → center-structure-preserving-map-ℕ ＝ h
   contraction-structure-preserving-map-ℕ = {!!}
 
   is-contr-structure-preserving-map-ℕ : is-contr structure-preserving-map-ℕ
-  pr1 is-contr-structure-preserving-map-ℕ = {!!}
+  is-contr-structure-preserving-map-ℕ = {!!}
 ```

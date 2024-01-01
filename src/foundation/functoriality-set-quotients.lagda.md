@@ -54,10 +54,10 @@ module _
   where
 
   preserves-sim-prop-equivalence-relation : (f : A → B) → Prop (l1 ⊔ l2 ⊔ l4)
-  preserves-sim-prop-equivalence-relation f = {!!}
+  preserves-sim-prop-equivalence-relation = {!!}
 
   preserves-sim-equivalence-relation : (f : A → B) → UU (l1 ⊔ l2 ⊔ l4)
-  preserves-sim-equivalence-relation f = {!!}
+  preserves-sim-equivalence-relation = {!!}
 
   is-prop-preserves-sim-equivalence-relation :
     (f : A → B) → is-prop (preserves-sim-equivalence-relation f)
@@ -101,10 +101,10 @@ module _
   equiv-equiv-equivalence-relation = {!!}
 
   map-equiv-equivalence-relation : equiv-equivalence-relation → A → B
-  map-equiv-equivalence-relation e = {!!}
+  map-equiv-equivalence-relation = {!!}
 
   map-inv-equiv-equivalence-relation : equiv-equivalence-relation → B → A
-  map-inv-equiv-equivalence-relation e = {!!}
+  map-inv-equiv-equivalence-relation = {!!}
 
   is-equiv-map-equiv-equivalence-relation :
     (e : equiv-equivalence-relation) →

@@ -31,5 +31,5 @@ is-directed-complete-Poset-Prop :
 is-directed-complete-Poset-Prop = {!!}
 
 DCPO : (l1 l2 l3 : Level) → UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-DCPO l1 l2 l3 = {!!}
+DCPO = {!!}
 ```

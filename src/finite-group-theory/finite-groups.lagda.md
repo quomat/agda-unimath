@@ -63,7 +63,7 @@ A finite group is a group of which the underlying type is finite.
 ```agda
 Group-𝔽 :
   (l : Level) → UU (lsuc l)
-Group-𝔽 l = {!!}
+Group-𝔽 = {!!}
 
 module _
   {l : Level} (G : Group-𝔽 l)
@@ -79,7 +79,7 @@ module _
   is-group-Group-𝔽 = {!!}
 
   group-Group-𝔽 : Group l
-  pr1 group-Group-𝔽 = {!!}
+  group-Group-𝔽 = {!!}
 
   finite-type-Group-𝔽 : 𝔽 l
   finite-type-Group-𝔽 = {!!}
@@ -133,7 +133,7 @@ module _
 
   is-decidable-is-unit-Group-𝔽 :
     (x : type-Group-𝔽) → is-decidable (is-unit-Group-𝔽 x)
-  is-decidable-is-unit-Group-𝔽 x = {!!}
+  is-decidable-is-unit-Group-𝔽 = {!!}
 
   is-prop-is-unit-Group-𝔽 :
     (x : type-Group-𝔽) → is-prop (is-unit-Group-𝔽 x)
@@ -141,13 +141,13 @@ module _
 
   is-decidable-prop-is-unit-Group-𝔽 :
     (x : type-Group-𝔽) → is-decidable-prop (is-unit-Group-𝔽 x)
-  pr1 (is-decidable-prop-is-unit-Group-𝔽 x) = {!!}
+  is-decidable-prop-is-unit-Group-𝔽 = {!!}
 
   is-unit-prop-Group-𝔽 : type-Group-𝔽 → Prop l
   is-unit-prop-Group-𝔽 = {!!}
 
   is-unit-finite-group-Decidable-Prop : type-Group-𝔽 → Decidable-Prop l
-  pr1 (is-unit-finite-group-Decidable-Prop x) = {!!}
+  is-unit-finite-group-Decidable-Prop = {!!}
 
   left-unit-law-mul-Group-𝔽 :
     (x : type-Group-𝔽) → mul-Group-𝔽 unit-Group-𝔽 x ＝ x
@@ -264,7 +264,7 @@ module _
 
 ```agda
 Group-of-Order : (l : Level) (n : ℕ) → UU (lsuc l)
-Group-of-Order l n = {!!}
+Group-of-Order = {!!}
 ```
 
 ## Properties
@@ -275,19 +275,19 @@ Group-of-Order l n = {!!}
 is-finite-is-group :
   {l : Level} (n : ℕ) (G : Semigroup-of-Order l n) →
   is-finite {l} (is-group (pr1 G))
-is-finite-is-group {l} n G = {!!}
+is-finite-is-group = {!!}
 
 is-π-finite-Group-of-Order :
   {l : Level} (k n : ℕ) → is-π-finite k (Group-of-Order l n)
-is-π-finite-Group-of-Order {l} k n = {!!}
+is-π-finite-Group-of-Order = {!!}
 
 number-of-groups-of-order : ℕ → ℕ
-number-of-groups-of-order n = {!!}
+number-of-groups-of-order = {!!}
 
 mere-equiv-number-of-groups-of-order :
   (n : ℕ) →
   mere-equiv
     ( Fin (number-of-groups-of-order n))
     ( type-trunc-Set (Group-of-Order lzero n))
-mere-equiv-number-of-groups-of-order n = {!!}
+mere-equiv-number-of-groups-of-order = {!!}
 ```

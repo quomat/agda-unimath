@@ -38,7 +38,7 @@ is-1-type-Set : {l : Level} → is-1-type (Set l)
 is-1-type-Set = {!!}
 
 Set-1-Type : (l : Level) → 1-Type (lsuc l)
-pr1 (Set-1-Type l) = {!!}
+Set-1-Type = {!!}
 pr2 (Set-1-Type l) = {!!}
 ```
 
@@ -88,7 +88,7 @@ abstract
   is-prop-is-set = {!!}
 
 is-set-Prop : {l : Level} → UU l → Prop l
-pr1 (is-set-Prop A) = {!!}
+is-set-Prop = {!!}
 pr2 (is-set-Prop A) = {!!}
 ```
 
@@ -96,7 +96,7 @@ pr2 (is-set-Prop A) = {!!}
 
 ```agda
 emb-type-Set : (l : Level) → Set l ↪ UU l
-emb-type-Set l = {!!}
+emb-type-Set = {!!}
 ```
 
 ### Products of families of sets are sets
@@ -185,7 +185,7 @@ module _
   type-equiv-Set = {!!}
 
   equiv-Set : Set (l1 ⊔ l2)
-  pr1 equiv-Set = {!!}
+  equiv-Set = {!!}
 ```
 
 ### Extensionality of sets
@@ -207,10 +207,10 @@ module _
     is-equiv-equiv-eq-Set = {!!}
 
   eq-equiv-Set : (Y : Set l) → type-equiv-Set X Y → X ＝ Y
-  eq-equiv-Set Y = {!!}
+  eq-equiv-Set = {!!}
 
   extensionality-Set : (Y : Set l) → (X ＝ Y) ≃ type-equiv-Set X Y
-  pr1 (extensionality-Set Y) = {!!}
+  extensionality-Set = {!!}
 ```
 
 ### If a type embeds into a set, then it is a set
@@ -236,7 +236,7 @@ module _
   where
 
   is-emb-is-prop-is-set : is-prop A → is-set B → {f : A → B} → is-emb f
-  is-emb-is-prop-is-set is-prop-A is-set-B {f} = {!!}
+  is-emb-is-prop-is-set = {!!}
 ```
 
 ### Sets are `k+2`-truncated for any `k`

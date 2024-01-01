@@ -72,10 +72,10 @@ module _
   where
 
   map-distributive-Π-Σ : Π-total-fam C → universally-structured-Π C
-  pr1 (map-distributive-Π-Σ φ) x = {!!}
+  map-distributive-Π-Σ = {!!}
 
   map-inv-distributive-Π-Σ : universally-structured-Π C → Π-total-fam C
-  pr1 (map-inv-distributive-Π-Σ ψ x) = {!!}
+  map-inv-distributive-Π-Σ = {!!}
 
   is-section-map-inv-distributive-Π-Σ :
     map-distributive-Π-Σ ∘ map-inv-distributive-Π-Σ ~ id
@@ -90,14 +90,14 @@ module _
     is-equiv-map-distributive-Π-Σ = {!!}
 
   distributive-Π-Σ : Π-total-fam C ≃ universally-structured-Π C
-  pr1 distributive-Π-Σ = {!!}
+  distributive-Π-Σ = {!!}
 
   abstract
     is-equiv-map-inv-distributive-Π-Σ : is-equiv (map-inv-distributive-Π-Σ)
     is-equiv-map-inv-distributive-Π-Σ = {!!}
 
   inv-distributive-Π-Σ : universally-structured-Π C ≃ Π-total-fam C
-  pr1 inv-distributive-Π-Σ = {!!}
+  inv-distributive-Π-Σ = {!!}
 ```
 
 ### The distributivity of implicit Π over Σ

@@ -45,7 +45,7 @@ module _
   where
 
   product-Concrete-Group : Concrete-Group (l1 ⊔ l2)
-  pr1 product-Concrete-Group = {!!}
+  product-Concrete-Group = {!!}
   pr2 product-Concrete-Group = {!!}
 
   ∞-group-product-Concrete-Group : ∞-Group (l1 ⊔ l2)

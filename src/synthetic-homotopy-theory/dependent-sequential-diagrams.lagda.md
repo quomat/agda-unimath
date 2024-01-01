@@ -93,7 +93,7 @@ module _
   where
 
   constant-dependent-sequential-diagram : dependent-sequential-diagram A l2
-  pr1 constant-dependent-sequential-diagram n _ = {!!}
+  constant-dependent-sequential-diagram = {!!}
 ```
 
 ### Sections of dependent sequential diagrams

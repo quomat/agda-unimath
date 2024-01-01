@@ -60,15 +60,15 @@ module _
   is-decidable-leq-is-finite-Preorder :
     is-finite-Preorder →
     (x y : type-Preorder P) → is-decidable (leq-Preorder P x y)
-  is-decidable-leq-is-finite-Preorder H = {!!}
+  is-decidable-leq-is-finite-Preorder = {!!}
 
 Preorder-𝔽 : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Preorder-𝔽 l1 l2 = {!!}
+Preorder-𝔽 = {!!}
 
 finite-preorder-is-finite-Preorder :
   {l1 l2 : Level} (P : Preorder l1 l2) → is-finite-Preorder P →
   Preorder-𝔽 l1 l2
-pr1 (pr1 (finite-preorder-is-finite-Preorder P H)) = {!!}
+finite-preorder-is-finite-Preorder = {!!}
 pr2 (pr1 (finite-preorder-is-finite-Preorder P H)) = {!!}
 pr1 (pr1 (pr2 (finite-preorder-is-finite-Preorder P H)) x y) = {!!}
 pr1 (pr2 (pr1 (pr2 (finite-preorder-is-finite-Preorder P H)) x y)) = {!!}
@@ -108,24 +108,24 @@ module _
   leq-finite-preorder-Decidable-Prop = {!!}
 
   leq-Preorder-𝔽 : (x y : type-Preorder-𝔽) → UU l2
-  leq-Preorder-𝔽 x y = {!!}
+  leq-Preorder-𝔽 = {!!}
 
   is-decidable-prop-leq-Preorder-𝔽 :
     (x y : type-Preorder-𝔽) →
     is-decidable-prop (leq-Preorder-𝔽 x y)
-  is-decidable-prop-leq-Preorder-𝔽 x y = {!!}
+  is-decidable-prop-leq-Preorder-𝔽 = {!!}
 
   is-decidable-leq-Preorder-𝔽 :
     (x y : type-Preorder-𝔽) → is-decidable (leq-Preorder-𝔽 x y)
-  is-decidable-leq-Preorder-𝔽 x y = {!!}
+  is-decidable-leq-Preorder-𝔽 = {!!}
 
   is-prop-leq-Preorder-𝔽 :
     (x y : type-Preorder-𝔽) → is-prop (leq-Preorder-𝔽 x y)
-  is-prop-leq-Preorder-𝔽 x y = {!!}
+  is-prop-leq-Preorder-𝔽 = {!!}
 
   leq-Preorder-𝔽-Prop :
     (x y : type-Preorder-𝔽) → Prop l2
-  pr1 (leq-Preorder-𝔽-Prop x y) = {!!}
+  leq-Preorder-𝔽-Prop = {!!}
 
   refl-leq-Preorder-𝔽 :
     (x : type-Preorder-𝔽) → leq-Preorder-𝔽 x x
@@ -135,11 +135,11 @@ module _
   transitive-leq-Preorder-𝔽 = {!!}
 
   preorder-Preorder-𝔽 : Preorder l1 l2
-  pr1 preorder-Preorder-𝔽 = {!!}
+  preorder-Preorder-𝔽 = {!!}
 
   is-finite-preorder-Preorder-𝔽 :
     is-finite-Preorder preorder-Preorder-𝔽
-  pr1 is-finite-preorder-Preorder-𝔽 = {!!}
+  is-finite-preorder-Preorder-𝔽 = {!!}
 ```
 
 ### Decidable sub-preorders of finite preorders
@@ -162,7 +162,7 @@ module _
 
   leq-finite-Subpreorder-Decidable-Prop :
     (x y : type-finite-Subpreorder) → Decidable-Prop l2
-  leq-finite-Subpreorder-Decidable-Prop x y = {!!}
+  leq-finite-Subpreorder-Decidable-Prop = {!!}
 
   leq-finite-Subpreorder-Prop :
     (x y : type-finite-Subpreorder) → Prop l2
@@ -189,8 +189,8 @@ module _
   where
 
   type-finite-Subpreorder-𝔽 : 𝔽 (l1 ⊔ l3)
-  pr1 type-finite-Subpreorder-𝔽 = {!!}
+  type-finite-Subpreorder-𝔽 = {!!}
 
   finite-Subpreorder : Preorder-𝔽 (l1 ⊔ l3) l2
-  pr1 finite-Subpreorder = {!!}
+  finite-Subpreorder = {!!}
 ```

@@ -36,7 +36,7 @@ module _
       ((y : B x) → lower-𝕎 (f y)) → lower-𝕎 (tree-𝕎 x f)
 
   inclusion-lower-𝕎 : {x : 𝕎 A B} → lower-𝕎 x → 𝕎 A B
-  inclusion-lower-𝕎 (lower-tree-𝕎 {a} {f} g) = {!!}
+  inclusion-lower-𝕎 = {!!}
 
   upper-bound-rank-inclusion-lower-𝕎 :
     {x : 𝕎 A B} (y : lower-𝕎 x) → inclusion-lower-𝕎 y ≼-𝕎 x

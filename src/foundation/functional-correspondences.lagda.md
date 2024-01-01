@@ -40,22 +40,22 @@ dependent correspondences.
 is-functional-correspondence-Prop :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} (C : (a : A) → B a → UU l3) →
   Prop (l1 ⊔ l2 ⊔ l3)
-is-functional-correspondence-Prop {A = A} {B} C = {!!}
+is-functional-correspondence-Prop = {!!}
 
 is-functional-correspondence :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} (C : (a : A) → B a → UU l3) →
   UU (l1 ⊔ l2 ⊔ l3)
-is-functional-correspondence C = {!!}
+is-functional-correspondence = {!!}
 
 is-prop-is-functional-correspondence :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} (C : (a : A) → B a → UU l3) →
   is-prop (is-functional-correspondence C)
-is-prop-is-functional-correspondence C = {!!}
+is-prop-is-functional-correspondence = {!!}
 
 functional-correspondence :
   {l1 l2 : Level} (l3 : Level) (A : UU l1) (B : A → UU l2) →
   UU (l1 ⊔ l2 ⊔ lsuc l3)
-functional-correspondence l3 A B = {!!}
+functional-correspondence = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2}
@@ -82,7 +82,7 @@ equiv-functional-correspondence :
   (C : functional-correspondence l3 A B)
   (D : functional-correspondence l4 A B) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-equiv-functional-correspondence {A = A} {B} C D = {!!}
+equiv-functional-correspondence = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2}
@@ -91,7 +91,7 @@ module _
 
   id-equiv-functional-correspondence :
     equiv-functional-correspondence C C
-  id-equiv-functional-correspondence x y = {!!}
+  id-equiv-functional-correspondence = {!!}
 
   is-torsorial-equiv-functional-correspondence :
     is-torsorial (equiv-functional-correspondence C)
@@ -100,7 +100,7 @@ module _
   equiv-eq-functional-correspondence :
     (D : functional-correspondence l3 A B) →
     (C ＝ D) → equiv-functional-correspondence C D
-  equiv-eq-functional-correspondence .C refl = {!!}
+  equiv-eq-functional-correspondence = {!!}
 
   is-equiv-equiv-eq-functional-correspondence :
     (D : functional-correspondence l3 A B) →
@@ -110,12 +110,12 @@ module _
   extensionality-functional-correspondence :
     (D : functional-correspondence l3 A B) →
     (C ＝ D) ≃ equiv-functional-correspondence C D
-  pr1 (extensionality-functional-correspondence D) = {!!}
+  extensionality-functional-correspondence = {!!}
 
   eq-equiv-functional-correspondence :
     (D : functional-correspondence l3 A B) →
     equiv-functional-correspondence C D → C ＝ D
-  eq-equiv-functional-correspondence D = {!!}
+  eq-equiv-functional-correspondence = {!!}
 ```
 
 ### The type of dependent functions `(x : A) → B x` is equivalent to the type of functional dependent correspondences from `A` to `B`
@@ -127,17 +127,17 @@ module _
 
   functional-correspondence-function :
     ((x : A) → B x) → functional-correspondence l2 A B
-  pr1 (functional-correspondence-function f) x y = {!!}
+  functional-correspondence-function = {!!}
 
   function-functional-correspondence :
     {l3 : Level} → functional-correspondence l3 A B → ((x : A) → B x)
-  function-functional-correspondence C x = {!!}
+  function-functional-correspondence = {!!}
 
   is-retraction-function-functional-correspondence :
     (f : (x : A) → B x) →
     function-functional-correspondence
       ( functional-correspondence-function f) ＝ f
-  is-retraction-function-functional-correspondence f = {!!}
+  is-retraction-function-functional-correspondence = {!!}
 
   module _
     {l3 : Level} (C : functional-correspondence l3 A B)
@@ -147,26 +147,25 @@ module _
       (x : A) (y : B x) →
       function-functional-correspondence C x ＝ y →
       correspondence-functional-correspondence C x y
-    map-is-section-function-functional-correspondence x ._ refl = {!!}
+    map-is-section-function-functional-correspondence = {!!}
 
     is-equiv-map-is-section-function-functional-correspondence :
       (x : A) (y : B x) →
       is-equiv (map-is-section-function-functional-correspondence x y)
-    is-equiv-map-is-section-function-functional-correspondence
-      x = {!!}
+    is-equiv-map-is-section-function-functional-correspondence = {!!}
 
     equiv-is-section-function-functional-correspondence :
       equiv-functional-correspondence
         ( functional-correspondence-function
           ( function-functional-correspondence C))
         ( C)
-    pr1 ( equiv-is-section-function-functional-correspondence x y) = {!!}
+    equiv-is-section-function-functional-correspondence = {!!}
 
   is-section-function-functional-correspondence :
     (C : functional-correspondence l2 A B) →
     functional-correspondence-function (function-functional-correspondence C) ＝
     C
-  is-section-function-functional-correspondence C = {!!}
+  is-section-function-functional-correspondence = {!!}
 
   is-equiv-functional-correspondence-function :
     is-equiv functional-correspondence-function
@@ -174,5 +173,5 @@ module _
 
   equiv-functional-correspondence-function :
     ((x : A) → B x) ≃ functional-correspondence l2 A B
-  pr1 equiv-functional-correspondence-function = {!!}
+  equiv-functional-correspondence-function = {!!}
 ```

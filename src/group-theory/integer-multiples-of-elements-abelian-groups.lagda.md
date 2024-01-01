@@ -263,7 +263,7 @@ module _
   where
 
   hom-integer-multiple-Ab : hom-Ab A A
-  pr1 hom-integer-multiple-Ab = {!!}
+  hom-integer-multiple-Ab = {!!}
 ```
 
 ### Multiples by products of integers are iterated integer multiples

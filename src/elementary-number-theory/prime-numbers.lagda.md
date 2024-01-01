@@ -48,7 +48,7 @@ This is a direct interpretation of what it means to be prime.
 
 ```agda
 is-prime-ℕ : ℕ → UU lzero
-is-prime-ℕ n = {!!}
+is-prime-ℕ = {!!}
 
 Prime-ℕ : UU lzero
 Prime-ℕ = {!!}
@@ -71,17 +71,17 @@ the definition.
 
 ```agda
 is-one-is-proper-divisor-ℕ : ℕ → UU lzero
-is-one-is-proper-divisor-ℕ n = {!!}
+is-one-is-proper-divisor-ℕ = {!!}
 
 is-prime-easy-ℕ : ℕ → UU lzero
-is-prime-easy-ℕ n = {!!}
+is-prime-easy-ℕ = {!!}
 ```
 
 ### Third definition of prime numbers
 
 ```agda
 has-unique-proper-divisor-ℕ : ℕ → UU lzero
-has-unique-proper-divisor-ℕ n = {!!}
+has-unique-proper-divisor-ℕ = {!!}
 ```
 
 ## Properties
@@ -98,7 +98,7 @@ is-nonzero-is-prime-ℕ = {!!}
 
 ```agda
 is-not-one-is-prime-ℕ : (n : ℕ) → is-prime-ℕ n → is-not-one-ℕ n
-is-not-one-is-prime-ℕ n H p = {!!}
+is-not-one-is-prime-ℕ = {!!}
 ```
 
 ### A prime is strictly greater than `1`
@@ -129,11 +129,11 @@ is-prop-has-unique-proper-divisor-ℕ = {!!}
 
 ```agda
 is-prime-easy-is-prime-ℕ : (n : ℕ) → is-prime-ℕ n → is-prime-easy-ℕ n
-pr1 (is-prime-easy-is-prime-ℕ n H) = {!!}
+is-prime-easy-is-prime-ℕ = {!!}
 pr2 (is-prime-easy-is-prime-ℕ n H) x = {!!}
 
 is-prime-is-prime-easy-ℕ : (n : ℕ) → is-prime-easy-ℕ n → is-prime-ℕ n
-pr1 (is-prime-is-prime-easy-ℕ n H x) = {!!}
+is-prime-is-prime-easy-ℕ = {!!}
 pr1 (pr2 (is-prime-is-prime-easy-ℕ n H .(succ-ℕ zero-ℕ)) refl) q = {!!}
 pr2 (pr2 (is-prime-is-prime-easy-ℕ n H .(succ-ℕ zero-ℕ)) refl) = {!!}
 
@@ -150,24 +150,24 @@ is-prime-has-unique-proper-divisor-ℕ = {!!}
 
 ```agda
 is-decidable-is-prime-easy-ℕ : (n : ℕ) → is-decidable (is-prime-easy-ℕ n)
-is-decidable-is-prime-easy-ℕ zero-ℕ = {!!}
+is-decidable-is-prime-easy-ℕ = {!!}
 is-decidable-is-prime-easy-ℕ (succ-ℕ n) = {!!}
 
 is-decidable-is-prime-ℕ : (n : ℕ) → is-decidable (is-prime-ℕ n)
-is-decidable-is-prime-ℕ n = {!!}
+is-decidable-is-prime-ℕ = {!!}
 ```
 
 ### The number `2` is a prime
 
 ```agda
 is-one-is-proper-divisor-two-ℕ : is-one-is-proper-divisor-ℕ 2
-is-one-is-proper-divisor-two-ℕ zero-ℕ (pair f (pair k p)) = {!!}
+is-one-is-proper-divisor-two-ℕ = {!!}
 is-one-is-proper-divisor-two-ℕ (succ-ℕ zero-ℕ) (pair f H) = {!!}
 is-one-is-proper-divisor-two-ℕ (succ-ℕ (succ-ℕ zero-ℕ)) (pair f H) = {!!}
 is-one-is-proper-divisor-two-ℕ (succ-ℕ (succ-ℕ (succ-ℕ x))) (pair f H) = {!!}
 
 is-prime-easy-two-ℕ : is-prime-easy-ℕ 2
-pr1 is-prime-easy-two-ℕ = {!!}
+is-prime-easy-two-ℕ = {!!}
 pr2 is-prime-easy-two-ℕ = {!!}
 
 is-prime-two-ℕ : is-prime-ℕ 2

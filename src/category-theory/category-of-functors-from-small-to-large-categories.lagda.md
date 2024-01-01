@@ -56,8 +56,7 @@ module _
     ( natural-isomorphism-Precategory C (precategory-Large-Precategory D γ)
       ( F)
       ( G))
-  equiv-natural-isomorphism-htpy-functor-is-large-category-Small-Large-Precategory
-    { γ} F G = {!!}
+  equiv-natural-isomorphism-htpy-functor-is-large-category-Small-Large-Precategory = {!!}
 
   extensionality-functor-is-category-Small-Large-Precategory :
     {γ : Level}
@@ -83,8 +82,7 @@ module _
     is-large-category-functor-large-precategory-is-large-category-Small-Large-Precategory :
       is-large-category-Large-Precategory
         ( functor-large-precategory-Small-Large-Precategory C D)
-    is-large-category-functor-large-precategory-is-large-category-Small-Large-Precategory
-      { γ} F G = {!!}
+    is-large-category-functor-large-precategory-is-large-category-Small-Large-Precategory = {!!}
 ```
 
 ## Definition

@@ -51,14 +51,14 @@ type on any loop space is [contractible](foundation.contractible-types.md).
 
 ```agda
 structure-Hatcher-Acyclic-Type : {l : Level} → Pointed-Type l → UU l
-structure-Hatcher-Acyclic-Type A = {!!}
+structure-Hatcher-Acyclic-Type = {!!}
 ```
 
 ### Algebras with the structure of Hatcher's acyclic type
 
 ```agda
 algebra-Hatcher-Acyclic-Type : (l : Level) → UU (lsuc l)
-algebra-Hatcher-Acyclic-Type l = {!!}
+algebra-Hatcher-Acyclic-Type = {!!}
 ```
 
 ### Morphisms of types equipped with the structure of Hatcher's acyclic type
@@ -67,8 +67,7 @@ algebra-Hatcher-Acyclic-Type l = {!!}
 hom-algebra-Hatcher-Acyclic-Type :
   {l1 l2 : Level} → algebra-Hatcher-Acyclic-Type l1 →
   algebra-Hatcher-Acyclic-Type l2 → UU (l1 ⊔ l2)
-hom-algebra-Hatcher-Acyclic-Type
-  (A , a1 , a2 , r1 , r2) (B , b1 , b2 , s1 , s2) = {!!}
+hom-algebra-Hatcher-Acyclic-Type = {!!}
 ```
 
 ### The Hatcher acyclic type is the initial Hatcher acyclic algebra

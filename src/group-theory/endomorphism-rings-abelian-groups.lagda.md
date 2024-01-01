@@ -38,5 +38,5 @@ module _
   ab-endomorphism-ring-Ab = {!!}
 
   endomorphism-ring-Ab : Ring l
-  pr1 endomorphism-ring-Ab = {!!}
+  endomorphism-ring-Ab = {!!}
 ```

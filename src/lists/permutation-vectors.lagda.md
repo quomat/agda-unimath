@@ -51,25 +51,25 @@ module _
   where
 
   permute-vec : (n : ℕ) → vec A n → Permutation n → vec A n
-  permute-vec n v s = {!!}
+  permute-vec = {!!}
 ```
 
 ### The predicate that a function from `vec` to `vec` is just permuting vectors
 
 ```agda
   is-permutation-vec : (n : ℕ) → (vec A n → vec A n) → UU l
-  is-permutation-vec n f = {!!}
+  is-permutation-vec = {!!}
 
   permutation-is-permutation-vec :
     (n : ℕ) (f : vec A n → vec A n) → is-permutation-vec n f →
     (v : vec A n) → Permutation n
-  permutation-is-permutation-vec n f P v = {!!}
+  permutation-is-permutation-vec = {!!}
 
   eq-permute-vec-permutation-is-permutation-vec :
     (n : ℕ) (f : vec A n → vec A n) → (P : is-permutation-vec n f) →
     (v : vec A n) →
     (f v ＝ permute-vec n v (permutation-is-permutation-vec n f P v))
-  eq-permute-vec-permutation-is-permutation-vec n f P v = {!!}
+  eq-permute-vec-permutation-is-permutation-vec = {!!}
 ```
 
 ## Properties
@@ -81,14 +81,14 @@ module _
     (n : ℕ)
     (v : vec A n) →
     permute-vec n v id-equiv ＝ v
-  compute-permute-vec-id-equiv n v = {!!}
+  compute-permute-vec-id-equiv = {!!}
 
   compute-composition-permute-vec :
     (n : ℕ)
     (v : vec A n) →
     (a b : Permutation n) →
     permute-vec n v (a ∘e b) ＝ permute-vec n (permute-vec n v a) b
-  compute-composition-permute-vec n v a b = {!!}
+  compute-composition-permute-vec = {!!}
 
   compute-swap-two-last-elements-transposition-Fin-permute-vec :
     (n : ℕ)
@@ -99,7 +99,7 @@ module _
       (x ∷ y ∷ v)
       (swap-two-last-elements-transposition-Fin n) ＝
     (y ∷ x ∷ v)
-  compute-swap-two-last-elements-transposition-Fin-permute-vec n v x y = {!!}
+  compute-swap-two-last-elements-transposition-Fin-permute-vec = {!!}
 
   compute-equiv-coprod-permutation-id-equiv-permute-vec :
     (n : ℕ)
@@ -108,7 +108,7 @@ module _
     (t : Permutation n) →
     permute-vec (succ-ℕ n) (x ∷ v) (equiv-coprod t id-equiv) ＝
     (x ∷ permute-vec n v t)
-  compute-equiv-coprod-permutation-id-equiv-permute-vec n v x t = {!!}
+  compute-equiv-coprod-permutation-id-equiv-permute-vec = {!!}
 
   ap-permute-vec :
     {n : ℕ}
@@ -116,7 +116,7 @@ module _
     {v w : vec A n} →
     v ＝ w →
     permute-vec n v a ＝ permute-vec n w a
-  ap-permute-vec a refl = {!!}
+  ap-permute-vec = {!!}
 ```
 
 ### `x` is in a vector `v` iff it is in `permute v t`
@@ -125,22 +125,22 @@ module _
   is-in-functional-vec-is-in-permute-functional-vec :
     (n : ℕ) (v : Fin n → A) (t : Permutation n) (x : A) →
     in-functional-vec n x (v ∘ map-equiv t) → in-functional-vec n x v
-  is-in-functional-vec-is-in-permute-functional-vec n v t x (k , refl) = {!!}
+  is-in-functional-vec-is-in-permute-functional-vec = {!!}
 
   is-in-vec-is-in-permute-vec :
     (n : ℕ) (v : vec A n) (t : Permutation n) (x : A) →
     x ∈-vec (permute-vec n v t) → x ∈-vec v
-  is-in-vec-is-in-permute-vec n v t x I = {!!}
+  is-in-vec-is-in-permute-vec = {!!}
 
   is-in-permute-functional-vec-is-in-functional-vec :
     (n : ℕ) (v : Fin n → A) (t : Permutation n) (x : A) →
     in-functional-vec n x v → in-functional-vec n x (v ∘ map-equiv t)
-  is-in-permute-functional-vec-is-in-functional-vec n v t x (k , refl) = {!!}
+  is-in-permute-functional-vec-is-in-functional-vec = {!!}
 
   is-in-permute-vec-is-in-vec :
     (n : ℕ) (v : vec A n) (t : Permutation n) (x : A) →
     x ∈-vec v → x ∈-vec (permute-vec n v t)
-  is-in-permute-vec-is-in-vec n v t x I = {!!}
+  is-in-permute-vec-is-in-vec = {!!}
 ```
 
 ### If `μ : A → (B → B)` satisfies a commutativity property, then `fold-vec b μ` is invariant under permutation for every `b : B`
@@ -169,13 +169,13 @@ module _
       ( permute-vec (succ-ℕ (succ-ℕ n))
       ( v)
       ( swap-two-last-elements-transposition-Fin n))
-  invariant-swap-two-last-elements-transposition-fold-vec {n} (y ∷ z ∷ v) = {!!}
+  invariant-swap-two-last-elements-transposition-fold-vec = {!!}
 
   invariant-adjacent-transposition-fold-vec :
     {n : ℕ} → (v : vec A (succ-ℕ n)) → (k : Fin n) →
     fold-vec b μ v ＝
     fold-vec b μ (permute-vec (succ-ℕ n) v (adjacent-transposition-Fin n k))
-  invariant-adjacent-transposition-fold-vec {succ-ℕ n} (x ∷ v) (inl k) = {!!}
+  invariant-adjacent-transposition-fold-vec = {!!}
   invariant-adjacent-transposition-fold-vec {succ-ℕ n} (x ∷ v) (inr _) = {!!}
 
   invariant-list-adjacent-transpositions-fold-vec :
@@ -188,7 +188,7 @@ module _
         ( succ-ℕ n)
         ( v)
         ( permutation-list-adjacent-transpositions n l))
-  invariant-list-adjacent-transpositions-fold-vec {n} v nil = {!!}
+  invariant-list-adjacent-transpositions-fold-vec = {!!}
   invariant-list-adjacent-transpositions-fold-vec {n} v (cons x l) = {!!}
 
   invariant-transposition-fold-vec :
@@ -198,7 +198,7 @@ module _
       ( b)
       ( μ)
       ( permute-vec (succ-ℕ n) v (transposition-Fin (succ-ℕ n) i j neq))
-  invariant-transposition-fold-vec {n} v i j neq = {!!}
+  invariant-transposition-fold-vec = {!!}
 
   invariant-list-transpositions-fold-vec :
     {n : ℕ}
@@ -212,13 +212,13 @@ module _
         ( n)
         ( v)
         ( permutation-list-standard-transpositions-Fin n l))
-  invariant-list-transpositions-fold-vec {n} v nil = {!!}
+  invariant-list-transpositions-fold-vec = {!!}
   invariant-list-transpositions-fold-vec {0} v (cons _ _) = {!!}
 
   invariant-permutation-fold-vec :
     {n : ℕ} → (v : vec A n) → (f : Permutation n) →
     fold-vec b μ v ＝ fold-vec b μ (permute-vec n v f)
-  invariant-permutation-fold-vec {n} v f = {!!}
+  invariant-permutation-fold-vec = {!!}
 ```
 
 ### `map-vec` of the permutation of a vector
@@ -229,5 +229,5 @@ eq-map-vec-permute-vec :
   (f : A → B) {n : ℕ} (v : vec A n) (t : Permutation n) →
   permute-vec n (map-vec f v) t ＝
   map-vec f (permute-vec n v t)
-eq-map-vec-permute-vec f {n} v t = {!!}
+eq-map-vec-permute-vec = {!!}
 ```

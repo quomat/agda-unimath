@@ -28,7 +28,7 @@ open import foundation-core.propositions
 
 ```agda
 Slice-emb : (l : Level) {l1 : Level} (A : UU l1) → UU (lsuc l ⊔ l1)
-Slice-emb l A = {!!}
+Slice-emb = {!!}
 
 equiv-Fiber-Prop :
   (l : Level) {l1 : Level} (A : UU l1) →
@@ -36,7 +36,7 @@ equiv-Fiber-Prop :
 equiv-Fiber-Prop = {!!}
 
 Slice-surjection : (l : Level) {l1 : Level} (A : UU l1) → UU (lsuc l ⊔ l1)
-Slice-surjection l A = {!!}
+Slice-surjection = {!!}
 
 equiv-Fiber-trunc-Prop :
   (l : Level) {l1 : Level} (A : UU l1) →

@@ -40,7 +40,7 @@ show that this predicate characterizes the identit type of the integers
 
 ```agda
 Eq-ℤ : ℤ → ℤ → UU lzero
-Eq-ℤ (inl x) (inl y) = {!!}
+Eq-ℤ = {!!}
 Eq-ℤ (inl x) (inr y) = {!!}
 Eq-ℤ (inr x) (inl y) = {!!}
 Eq-ℤ (inr (inl x)) (inr (inl y)) = {!!}
@@ -49,15 +49,15 @@ Eq-ℤ (inr (inr x)) (inr (inl y)) = {!!}
 Eq-ℤ (inr (inr x)) (inr (inr y)) = {!!}
 
 refl-Eq-ℤ : (x : ℤ) → Eq-ℤ x x
-refl-Eq-ℤ (inl x) = {!!}
+refl-Eq-ℤ = {!!}
 refl-Eq-ℤ (inr (inl x)) = {!!}
 refl-Eq-ℤ (inr (inr x)) = {!!}
 
 Eq-eq-ℤ : {x y : ℤ} → x ＝ y → Eq-ℤ x y
-Eq-eq-ℤ {x} {.x} refl = {!!}
+Eq-eq-ℤ = {!!}
 
 eq-Eq-ℤ : (x y : ℤ) → Eq-ℤ x y → x ＝ y
-eq-Eq-ℤ (inl x) (inl y) e = {!!}
+eq-Eq-ℤ = {!!}
 eq-Eq-ℤ (inr (inl star)) (inr (inl star)) e = {!!}
 eq-Eq-ℤ (inr (inr x)) (inr (inr y)) e = {!!}
 ```
@@ -83,7 +83,7 @@ is-decidable-is-neg-one-ℤ :
 is-decidable-is-neg-one-ℤ = {!!}
 
 ℤ-Discrete-Type : Discrete-Type lzero
-pr1 ℤ-Discrete-Type = {!!}
+ℤ-Discrete-Type = {!!}
 pr2 ℤ-Discrete-Type = {!!}
 ```
 

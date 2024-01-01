@@ -44,14 +44,14 @@ module _
 
   abstract
     is-section-ind-Maybe : (ev-Maybe ∘ ind-Maybe) ~ id
-    is-section-ind-Maybe (pair h b) = {!!}
+    is-section-ind-Maybe = {!!}
 
     is-retraction-ind-Maybe' :
       (h : (x : Maybe A) → B x) → (ind-Maybe (ev-Maybe h)) ~ h
     is-retraction-ind-Maybe' = {!!}
 
     is-retraction-ind-Maybe : (ind-Maybe ∘ ev-Maybe) ~ id
-    is-retraction-ind-Maybe h = {!!}
+    is-retraction-ind-Maybe = {!!}
 
     dependent-universal-property-Maybe :
       is-equiv ev-Maybe

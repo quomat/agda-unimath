@@ -36,7 +36,7 @@ of `n` with itself.
 
 ```agda
 cube-ℕ : ℕ → ℕ
-cube-ℕ n = {!!}
+cube-ℕ = {!!}
 ```
 
 ### The predicate of being a cube of natural numbers
@@ -50,7 +50,7 @@ is-cube-ℕ = {!!}
 
 ```agda
 cubic-root-ℕ : (n : ℕ) → is-cube-ℕ n → ℕ
-cubic-root-ℕ n = {!!}
+cubic-root-ℕ = {!!}
 ```
 
 ## See also

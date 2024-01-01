@@ -40,7 +40,7 @@ data Fin : ℕ → UU lzero where
   succ-Fin : ∀ {n} → Fin n → Fin (succ-ℕ n)
 
 finEq : ∀ {n} → (a b : Fin n) → is-decidable (Id a b)
-finEq zero-Fin zero-Fin = {!!}
+finEq = {!!}
 finEq zero-Fin (succ-Fin b) = {!!}
 finEq (succ-Fin a) zero-Fin = {!!}
 finEq (succ-Fin a) (succ-Fin b) with finEq a b
@@ -48,7 +48,7 @@ finEq (succ-Fin a) (succ-Fin b) with finEq a b
 ... | inr neq = {!!}
 
 getVec : ∀ {n} {l} {A : UU l} → vec A n → Fin n → A
-getVec (x ∷ v) zero-Fin = {!!}
+getVec = {!!}
 getVec (x ∷ v) (succ-Fin k) = {!!}
 
 data GroupSyntax (n : ℕ) : UU where
@@ -62,30 +62,30 @@ data SimpleElem (n : ℕ) : UU where
   pure-SE : Fin n → SimpleElem n
 
 inv-SE' : ∀ {n} → SimpleElem n → SimpleElem n
-inv-SE' (inv-SE k) = {!!}
+inv-SE' = {!!}
 inv-SE' (pure-SE k) = {!!}
 
 Simple : (n : ℕ) → UU
-Simple n = {!!}
+Simple = {!!}
 
 module _ {n : ℕ} where
   unquoteSimpleElem : SimpleElem n → GroupSyntax n
-  unquoteSimpleElem (inv-SE x) = {!!}
+  unquoteSimpleElem = {!!}
 
   unquoteSimpleNonEmpty : Simple n → GroupSyntax n → GroupSyntax n
-  unquoteSimpleNonEmpty nil x = {!!}
+  unquoteSimpleNonEmpty = {!!}
 
   unquoteSimple : Simple n → GroupSyntax n
-  unquoteSimple nil = {!!}
+  unquoteSimple = {!!}
 
   elim-inverses : SimpleElem n → Simple n → Simple n
-  elim-inverses x nil = {!!}
+  elim-inverses = {!!}
 
   concat-simplify : Simple n → Simple n → Simple n
-  concat-simplify nil b = {!!}
+  concat-simplify = {!!}
 
   simplifyGS : GroupSyntax n → Simple n
-  simplifyGS gUnit = {!!}
+  simplifyGS = {!!}
 
   data GroupEqualityElem : GroupSyntax n → GroupSyntax n → UU where
     -- equivalence relation
@@ -127,29 +127,29 @@ module _ {n : ℕ} where
   module _ where
     -- equivalence relation
     singleton-GE : ∀ {x y} → GroupEqualityElem x y → GroupEquality x y
-    singleton-GE x = {!!}
+    singleton-GE = {!!}
 
     _∙GE_ :
       ∀ {x} {y} {z} → GroupEquality x y → GroupEquality y z → GroupEquality x z
     refl-GE ∙GE b = {!!}
 
     sym-GE : ∀ {x} {y} → GroupEquality x y → GroupEquality y x
-    sym-GE refl-GE = {!!}
+    sym-GE = {!!}
 
     -- Variations on ap
     ap-gInv : ∀ {x} {y} → GroupEquality x y → GroupEquality (gInv x) (gInv y)
-    ap-gInv refl-GE = {!!}
+    ap-gInv = {!!}
 
     -- Group laws
     assoc-GE : ∀ x y z → GroupEquality (gMul (gMul x y) z) (gMul x (gMul y z))
-    assoc-GE x y z = {!!}
+    assoc-GE = {!!}
 
     -- Theorems that are provable from the others
     inv-unit-GE : GroupEquality (gInv gUnit) gUnit
     inv-unit-GE = {!!}
 
   assoc-GE' : ∀ x y z → GroupEquality (gMul x (gMul y z)) (gMul (gMul x y) z)
-  assoc-GE' x y z = {!!}
+  assoc-GE' = {!!}
 
   elim-inverses-remove-valid :
     (b : list (SimpleElem n)) (w u : GroupSyntax n) →
@@ -222,14 +222,14 @@ module _ {n : ℕ} where
   -- simplifyValid gUnit = {!!}
 
   Env : ∀ {l} → ℕ → UU l → UU l
-  Env n A = {!!}
+  Env = {!!}
 
   module _
     {l : Level} (G : Group l)
     where
 
     unQuoteGS : ∀ {n} → GroupSyntax n → Env n (type-Group G) → type-Group G
-    unQuoteGS gUnit e = {!!}
+    unQuoteGS = {!!}
 
     private
       -- Shorter names to make the proofs less verbose
@@ -252,7 +252,7 @@ module _ {n : ℕ} where
 
     -- Variadic functions
     n-args : (n : ℕ) (A B : UU) → UU
-    n-args zero-ℕ A B = {!!}
+    n-args = {!!}
 
     -- A variation of simplifyExpression which takes a function from the free variables to expr
     -- simplifyExpr :

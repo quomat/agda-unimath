@@ -50,7 +50,7 @@ of universe level `l₀ ⊔ l₁ ⊔ l₂ ⊔ l₃`.
 
 ```agda
 iterated-Σ : {l : Level} {n : ℕ} → telescope l n → UU l
-iterated-Σ (base-telescope A) = {!!}
+iterated-Σ = {!!}
 iterated-Σ (cons-telescope {X = X} A) = {!!}
 ```
 
@@ -82,7 +82,7 @@ iterated-pair = {!!}
 
 ```agda
 is-contr-Σ-telescope : {l : Level} {n : ℕ} → telescope l n → UU l
-is-contr-Σ-telescope (base-telescope A) = {!!}
+is-contr-Σ-telescope = {!!}
 is-contr-Σ-telescope (cons-telescope {X = X} A) = {!!}
 
 is-contr-iterated-Σ :
@@ -93,7 +93,7 @@ is-contr-iterated-Σ = {!!}
 
 ```agda
 is-contr-Σ-telescope' : {l : Level} {n : ℕ} → telescope l n → UU l
-is-contr-Σ-telescope' (base-telescope A) = {!!}
+is-contr-Σ-telescope' = {!!}
 is-contr-Σ-telescope' (cons-telescope {X = X} A) = {!!}
 
 is-contr-iterated-Σ' :

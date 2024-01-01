@@ -79,7 +79,7 @@ module _
   is-surjective-quotient-map = {!!}
 
   surjection-quotient-map : A ↠ set-quotient
-  pr1 surjection-quotient-map = {!!}
+  surjection-quotient-map = {!!}
 
   emb-subtype-set-quotient : set-quotient ↪ subtype l2 A
   emb-subtype-set-quotient = {!!}
@@ -111,7 +111,7 @@ module _
   is-set-set-quotient = {!!}
 
   quotient-Set : Set (l1 ⊔ l2)
-  pr1 quotient-Set = {!!}
+  quotient-Set = {!!}
 
   unit-im-set-quotient :
     hom-slice (prop-equivalence-relation R) subtype-set-quotient
@@ -133,7 +133,7 @@ module _
   where
 
   is-effective-quotient-map : is-effective R (quotient-map R)
-  is-effective-quotient-map x y = {!!}
+  is-effective-quotient-map = {!!}
 
   apply-effectiveness-quotient-map :
     {x y : A} → quotient-map R x ＝ quotient-map R y →

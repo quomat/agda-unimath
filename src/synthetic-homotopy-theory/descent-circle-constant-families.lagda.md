@@ -36,10 +36,10 @@ module _
   where
 
   descent-data-circle-constant-type : descent-data-circle l2
-  pr1 descent-data-circle-constant-type = {!!}
+  descent-data-circle-constant-type = {!!}
 
   family-descent-data-circle-constant-type : S → UU l2
-  family-descent-data-circle-constant-type x = {!!}
+  family-descent-data-circle-constant-type = {!!}
 ```
 
 ## Properties

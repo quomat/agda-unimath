@@ -35,7 +35,7 @@ module _
   subtype-center-Semigroup = {!!}
 
   center-Semigroup : Subsemigroup l G
-  pr1 center-Semigroup = {!!}
+  center-Semigroup = {!!}
 
   semigroup-center-Semigroup : Semigroup l
   semigroup-center-Semigroup = {!!}

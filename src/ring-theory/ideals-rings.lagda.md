@@ -66,7 +66,7 @@ module _
   subset-ideal-Ring = {!!}
 
   is-in-ideal-Ring : type-Ring R → UU l2
-  is-in-ideal-Ring x = {!!}
+  is-in-ideal-Ring = {!!}
 
   type-ideal-Ring : UU (l1 ⊔ l2)
   type-ideal-Ring = {!!}
@@ -119,16 +119,16 @@ module _
   is-closed-under-right-multiplication-ideal-Ring = {!!}
 
   subgroup-ideal-Ring : Subgroup-Ab l2 (ab-Ring R)
-  pr1 subgroup-ideal-Ring = {!!}
+  subgroup-ideal-Ring = {!!}
 
   normal-subgroup-ideal-Ring : Normal-Subgroup-Ab l2 (ab-Ring R)
   normal-subgroup-ideal-Ring = {!!}
 
   left-ideal-ideal-Ring : left-ideal-Ring l2 R
-  pr1 left-ideal-ideal-Ring = {!!}
+  left-ideal-ideal-Ring = {!!}
 
   right-ideal-ideal-Ring : right-ideal-Ring l2 R
-  pr1 right-ideal-ideal-Ring = {!!}
+  right-ideal-ideal-Ring = {!!}
 ```
 
 ## Properties
@@ -141,7 +141,7 @@ module _
   where
 
   has-same-elements-ideal-Ring : (J : ideal-Ring l3 R) → UU (l1 ⊔ l2 ⊔ l3)
-  has-same-elements-ideal-Ring J = {!!}
+  has-same-elements-ideal-Ring = {!!}
 
 module _
   {l1 l2 : Level} (R : Ring l1) (I : ideal-Ring l2 R)
@@ -307,7 +307,7 @@ module _
   is-additive-subgroup-congruence-Ring = {!!}
 
   ideal-congruence-Ring : ideal-Ring l2 R
-  pr1 ideal-congruence-Ring = {!!}
+  ideal-congruence-Ring = {!!}
 ```
 
 #### The ideal obtained from the congruence relation of an ideal `I` is `I` itself

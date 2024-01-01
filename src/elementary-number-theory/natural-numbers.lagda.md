@@ -44,28 +44,28 @@ definitions.
 
 ```agda
 is-zero-ℕ : ℕ → UU lzero
-is-zero-ℕ n = {!!}
+is-zero-ℕ = {!!}
 
 is-zero-ℕ' : ℕ → UU lzero
-is-zero-ℕ' n = {!!}
+is-zero-ℕ' = {!!}
 
 is-successor-ℕ : ℕ → UU lzero
-is-successor-ℕ n = {!!}
+is-successor-ℕ = {!!}
 
 is-nonzero-ℕ : ℕ → UU lzero
-is-nonzero-ℕ n = {!!}
+is-nonzero-ℕ = {!!}
 
 is-one-ℕ : ℕ → UU lzero
-is-one-ℕ n = {!!}
+is-one-ℕ = {!!}
 
 is-one-ℕ' : ℕ → UU lzero
-is-one-ℕ' n = {!!}
+is-one-ℕ' = {!!}
 
 is-not-one-ℕ : ℕ → UU lzero
-is-not-one-ℕ n = {!!}
+is-not-one-ℕ = {!!}
 
 is-not-one-ℕ' : ℕ → UU lzero
-is-not-one-ℕ' n = {!!}
+is-not-one-ℕ' = {!!}
 ```
 
 ## Properties
@@ -90,7 +90,7 @@ rec-ℕ = {!!}
 
 ```agda
 is-injective-succ-ℕ : is-injective succ-ℕ
-is-injective-succ-ℕ refl = {!!}
+is-injective-succ-ℕ = {!!}
 ```
 
 ### Successors are nonzero
@@ -103,7 +103,7 @@ is-nonzero-is-successor-ℕ : {x : ℕ} → is-successor-ℕ x → is-nonzero-�
 is-nonzero-is-successor-ℕ (x , refl) ()
 
 is-successor-is-nonzero-ℕ : {x : ℕ} → is-nonzero-ℕ x → is-successor-ℕ x
-is-successor-is-nonzero-ℕ {zero-ℕ} H = {!!}
+is-successor-is-nonzero-ℕ = {!!}
 pr1 (is-successor-is-nonzero-ℕ {succ-ℕ x} H) = {!!}
 pr2 (is-successor-is-nonzero-ℕ {succ-ℕ x} H) = {!!}
 

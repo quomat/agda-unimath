@@ -53,15 +53,15 @@ module _
   classifying-type-subgroup-∞-Group = {!!}
 
   shape-subgroup-∞-Group : classifying-type-subgroup-∞-Group
-  pr1 shape-subgroup-∞-Group = {!!}
+  shape-subgroup-∞-Group = {!!}
 
   classifying-pointed-type-subgroup-∞-Group : Pointed-Type (l1 ⊔ l2)
-  pr1 classifying-pointed-type-subgroup-∞-Group = {!!}
+  classifying-pointed-type-subgroup-∞-Group = {!!}
 
   is-connected-classifying-type-subgroup-∞-Group :
     is-0-connected classifying-type-subgroup-∞-Group
   is-connected-classifying-type-subgroup-∞-Group = {!!}
 
   ∞-group-subgroup-∞-Group : ∞-Group (l1 ⊔ l2)
-  pr1 ∞-group-subgroup-∞-Group = {!!}
+  ∞-group-subgroup-∞-Group = {!!}
 ```

@@ -68,7 +68,7 @@ module _
   is-prop-contains-id-subtype-Precategory = {!!}
 
   contains-id-prop-subtype-Precategory : Prop (l1 ⊔ l3 ⊔ l4)
-  pr1 contains-id-prop-subtype-Precategory = {!!}
+  contains-id-prop-subtype-Precategory = {!!}
 
   is-closed-under-composition-subtype-Precategory : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
   is-closed-under-composition-subtype-Precategory = {!!}
@@ -173,7 +173,7 @@ module _
   subtype-hom-obj-subprecategory-Subprecategory = {!!}
 
   hom-Subprecategory : (x y : obj-Subprecategory C P) → UU (l2 ⊔ l4)
-  hom-Subprecategory x y = {!!}
+  hom-Subprecategory = {!!}
 
   inclusion-hom-Subprecategory :
     (x y : obj-Subprecategory C P) →
@@ -267,7 +267,7 @@ module _
   where
 
   hom-set-Subprecategory : (x y : obj-Subprecategory C P) → Set (l2 ⊔ l4)
-  hom-set-Subprecategory x y = {!!}
+  hom-set-Subprecategory = {!!}
 
   is-set-hom-Subprecategory :
     (x y : obj-Subprecategory C P) → is-set (hom-Subprecategory C P x y)
@@ -331,7 +331,7 @@ module _
   is-unital-composition-operation-Subprecategory = {!!}
 
   precategory-Subprecategory : Precategory (l1 ⊔ l3) (l2 ⊔ l4)
-  pr1 precategory-Subprecategory = {!!}
+  precategory-Subprecategory = {!!}
 ```
 
 ### The inclusion functor of a subprecategory

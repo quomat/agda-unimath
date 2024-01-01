@@ -51,7 +51,7 @@ abstract
   is-equiv-ev-refl :
     {l1 l2 : Level} {A : UU l1} (a : A)
     {B : (x : A) → a ＝ x → UU l2} → is-equiv (ev-refl a {B = B})
-  is-equiv-ev-refl a = {!!}
+  is-equiv-ev-refl = {!!}
 
 equiv-ev-refl :
   {l1 l2 : Level} {A : UU l1} (a : A) {B : (x : A) → a ＝ x → UU l2} →
@@ -112,7 +112,7 @@ module _
   emb-fiber-Id-preunivalent-Id = {!!}
 
   is-emb-Id-preunivalent-Id : is-emb (Id {A = A})
-  is-emb-Id-preunivalent-Id a = {!!}
+  is-emb-Id-preunivalent-Id = {!!}
 
 module _
   (L : preunivalence-axiom) {l : Level} (A : UU l)

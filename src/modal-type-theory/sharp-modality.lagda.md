@@ -160,7 +160,7 @@ compute-rec-subuniverse-sharp = {!!}
 
 ```agda
 ap-sharp : {l1 l2 : Level} {A : UU l1} {B : UU l2} → (A → B) → (♯ A → ♯ B)
-ap-sharp f = {!!}
+ap-sharp = {!!}
 ```
 
 ## See also

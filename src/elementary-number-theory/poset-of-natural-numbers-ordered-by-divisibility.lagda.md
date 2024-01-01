@@ -56,28 +56,28 @@ propositions by identifying all witnesses of divisibility.
 
 ```agda
 leq-prop-ℕ-Div : ℕ → ℕ → Prop lzero
-leq-prop-ℕ-Div m n = {!!}
+leq-prop-ℕ-Div = {!!}
 
 leq-ℕ-Div : ℕ → ℕ → UU lzero
-leq-ℕ-Div m n = {!!}
+leq-ℕ-Div = {!!}
 
 refl-leq-ℕ-Div : (n : ℕ) → leq-ℕ-Div n n
-refl-leq-ℕ-Div n = {!!}
+refl-leq-ℕ-Div = {!!}
 
 antisymmetric-leq-ℕ-Div : (m n : ℕ) → leq-ℕ-Div m n → leq-ℕ-Div n m → m ＝ n
-antisymmetric-leq-ℕ-Div m n H K = {!!}
+antisymmetric-leq-ℕ-Div = {!!}
 
 transitive-leq-ℕ-Div :
   (m n o : ℕ) → leq-ℕ-Div n o → leq-ℕ-Div m n → leq-ℕ-Div m o
 transitive-leq-ℕ-Div = {!!}
 
 ℕ-Div-Preorder : Preorder lzero lzero
-pr1 ℕ-Div-Preorder = {!!}
+ℕ-Div-Preorder = {!!}
 pr1 (pr2 ℕ-Div-Preorder) = {!!}
 pr1 (pr2 (pr2 ℕ-Div-Preorder)) = {!!}
 pr2 (pr2 (pr2 ℕ-Div-Preorder)) = {!!}
 
 ℕ-Div-Poset : Poset lzero lzero
-pr1 ℕ-Div-Poset = {!!}
+ℕ-Div-Poset = {!!}
 pr2 ℕ-Div-Poset = {!!}
 ```

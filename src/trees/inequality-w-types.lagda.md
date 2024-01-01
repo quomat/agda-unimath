@@ -55,7 +55,7 @@ module _
     propagate-leq-𝕎 : {y z : 𝕎 A B} → y ∈-𝕎 z → x ≤-𝕎 y → x ≤-𝕎 z
 
   leq-∈-𝕎 : {x y : 𝕎 A B} → x ∈-𝕎 y → x ≤-𝕎 y
-  leq-∈-𝕎 H = {!!}
+  leq-∈-𝕎 = {!!}
 ```
 
 ### Walks in W-types
@@ -72,7 +72,7 @@ module _
       walk-𝕎 (f b) → walk-𝕎 (tree-𝕎 a f)
 
   length-walk-𝕎 : (w : 𝕎 A B) → walk-𝕎 w → ℕ
-  length-walk-𝕎 w (root .w) = {!!}
+  length-walk-𝕎 = {!!}
 ```
 
 ## Properties
@@ -85,7 +85,7 @@ module _
   where
 
   transitive-le-𝕎 : {x y z : 𝕎 A B} → y <-𝕎 z → x <-𝕎 y → x <-𝕎 z
-  transitive-le-𝕎 {x = x} {y} {z} (le-∈-𝕎 H) K = {!!}
+  transitive-le-𝕎 = {!!}
 ```
 
 ### The strict ordering on W-types is irreflexive

@@ -47,8 +47,7 @@ module _
   obj-is-split-essentially-surjective-functor-Precategory :
     is-split-essentially-surjective-functor-Precategory →
     obj-Precategory D → obj-Precategory C
-  obj-is-split-essentially-surjective-functor-Precategory
-    is-split-ess-surj-F y = {!!}
+  obj-is-split-essentially-surjective-functor-Precategory = {!!}
 
   iso-is-split-essentially-surjective-functor-Precategory :
     ( is-split-ess-surj-F :
@@ -60,8 +59,7 @@ module _
           ( is-split-ess-surj-F)
           ( y)))
       ( y)
-  iso-is-split-essentially-surjective-functor-Precategory
-    is-split-ess-surj-F y = {!!}
+  iso-is-split-essentially-surjective-functor-Precategory = {!!}
 ```
 
 We also record a variant with the opposite variance:
@@ -73,8 +71,7 @@ We also record a variant with the opposite variance:
   obj-is-split-essentially-surjective-functor-Precategory' :
     is-split-essentially-surjective-functor-Precategory' →
     obj-Precategory D → obj-Precategory C
-  obj-is-split-essentially-surjective-functor-Precategory'
-    is-split-ess-surj-F' y = {!!}
+  obj-is-split-essentially-surjective-functor-Precategory' = {!!}
 
   iso-is-split-essentially-surjective-functor-Precategory' :
     ( is-split-ess-surj-F' :
@@ -86,8 +83,7 @@ We also record a variant with the opposite variance:
         ( obj-is-split-essentially-surjective-functor-Precategory'
           ( is-split-ess-surj-F')
           ( y)))
-  iso-is-split-essentially-surjective-functor-Precategory'
-    is-split-ess-surj-F' y = {!!}
+  iso-is-split-essentially-surjective-functor-Precategory' = {!!}
 ```
 
 ### The type of split essentially surjective functors
@@ -142,8 +138,7 @@ module _
     (is-split-ess-surj-F :
         is-split-essentially-surjective-functor-Precategory C D F) →
     is-essentially-surjective-functor-Precategory C D F
-  is-essentially-surjective-is-split-essentially-surjective-functor-Precategory
-    F is-split-ess-surj-F = {!!}
+  is-essentially-surjective-is-split-essentially-surjective-functor-Precategory = {!!}
 
   essentially-surjective-functor-split-essentially-surjective-functor-Precategory :
     split-essentially-surjective-functor-Precategory C D →

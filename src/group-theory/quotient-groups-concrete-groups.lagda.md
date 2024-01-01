@@ -92,7 +92,7 @@ module _
   is-set-type-quotient-Concrete-Group = {!!}
 
   ∞-group-quotient-Concrete-Group : ∞-Group (l1 ⊔ lsuc l2)
-  pr1 ∞-group-quotient-Concrete-Group = {!!}
+  ∞-group-quotient-Concrete-Group = {!!}
 
   concrete-group-quotient-Concrete-Group :
     Concrete-Group (l1 ⊔ lsuc l2)

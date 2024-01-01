@@ -47,14 +47,14 @@ be subject to change in the future.
 
 ```agda
 is-sharp-codiscrete : {l : Level} (A : UU l) → UU l
-is-sharp-codiscrete {l} A = {!!}
+is-sharp-codiscrete = {!!}
 
 is-sharp-codiscrete-family :
   {l1 l2 : Level} {A : UU l1} (B : A → UU l2) → UU (l1 ⊔ l2)
 is-sharp-codiscrete-family = {!!}
 
 Sharp-Codiscrete : (l : Level) → UU (lsuc l)
-Sharp-Codiscrete l = {!!}
+Sharp-Codiscrete = {!!}
 ```
 
 ## Postulates
@@ -129,14 +129,14 @@ module _
   is-higher-modality-sharp = {!!}
 
   sharp-higher-modality : higher-modality l l
-  pr1 sharp-higher-modality = {!!}
+  sharp-higher-modality = {!!}
 ```
 
 ### Types in the image of `♯` are codiscrete
 
 ```agda
 is-sharp-codiscrete-sharp : {l : Level} (X : UU l) → is-sharp-codiscrete (♯ X)
-is-sharp-codiscrete-sharp {l} = {!!}
+is-sharp-codiscrete-sharp = {!!}
 ```
 
 ## See also

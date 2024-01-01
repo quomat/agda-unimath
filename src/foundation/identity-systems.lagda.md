@@ -41,7 +41,7 @@ ev-refl-identity-system :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} {a : A} (b : B a)
   {P : (x : A) (y : B x) → UU l3} →
   ((x : A) (y : B x) → P x y) → P a b
-ev-refl-identity-system {a = a} b f = {!!}
+ev-refl-identity-system = {!!}
 ```
 
 ### The predicate of being an identity system with respect to a universe level
@@ -81,18 +81,18 @@ module _
   abstract
     is-identity-system-is-torsorial :
       (H : is-torsorial B) → is-identity-system B a b
-    pr1 (is-identity-system-is-torsorial H P) p x y = {!!}
+    is-identity-system-is-torsorial = {!!}
 
   abstract
     is-torsorial-is-identity-system :
       is-identity-system B a b → is-torsorial B
-    pr1 (pr1 (is-torsorial-is-identity-system H)) = {!!}
+    is-torsorial-is-identity-system = {!!}
 
   abstract
     fundamental-theorem-id-is-identity-system :
       is-identity-system B a b →
       (f : (x : A) → a ＝ x → B x) → is-fiberwise-equiv f
-    fundamental-theorem-id-is-identity-system H = {!!}
+    fundamental-theorem-id-is-identity-system = {!!}
 ```
 
 ## External links

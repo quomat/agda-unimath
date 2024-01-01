@@ -72,5 +72,5 @@ module _
   where
 
   div-order-element-Group : (x y : type-Group G) → UU l
-  div-order-element-Group x y = {!!}
+  div-order-element-Group = {!!}
 ```

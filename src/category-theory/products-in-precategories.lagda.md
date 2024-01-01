@@ -51,7 +51,7 @@ module _
   is-product-Precategory = {!!}
 
   product-Precategory : obj-Precategory C → obj-Precategory C → UU (l1 ⊔ l2)
-  product-Precategory x y = {!!}
+  product-Precategory = {!!}
 
   has-all-binary-products-Precategory : UU (l1 ⊔ l2)
   has-all-binary-products-Precategory = {!!}
@@ -115,7 +115,7 @@ module _
   is-prop-is-product-Precategory = {!!}
 
   is-product-prop-Precategory : Prop (l1 ⊔ l2)
-  pr1 is-product-prop-Precategory = {!!}
+  is-product-prop-Precategory = {!!}
 ```
 
 ## Properties

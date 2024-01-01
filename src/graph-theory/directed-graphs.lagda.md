@@ -45,7 +45,7 @@ $$
 
 ```agda
 Directed-Graph : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Directed-Graph l1 l2 = {!!}
+Directed-Graph = {!!}
 
 module _
   {l1 l2 : Level} (G : Directed-Graph l1 l2)
@@ -90,7 +90,7 @@ module _
 module alternative where
 
   Directed-Graph' : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-  Directed-Graph' l1 l2 = {!!}
+  Directed-Graph' = {!!}
 
   module _
     {l1 l2 : Level} (G : Directed-Graph' l1 l2)

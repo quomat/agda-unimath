@@ -42,5 +42,5 @@ module _
   where
 
   fam-Σω : ((x : A) → B x → UU l) → Σω A B → UU l
-  fam-Σω C (pairω x y) = {!!}
+  fam-Σω = {!!}
 ```

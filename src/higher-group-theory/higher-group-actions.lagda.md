@@ -26,7 +26,7 @@ type is just a type family over `BG`.
 ```agda
 action-∞-Group :
   {l1 : Level} (l2 : Level) (G : ∞-Group l1) → UU (l1 ⊔ lsuc l2)
-action-∞-Group l2 G = {!!}
+action-∞-Group = {!!}
 
 module _
   {l1 l2 : Level} (G : ∞-Group l1) (X : action-∞-Group l2 G)
@@ -47,5 +47,5 @@ module _
 
   unit-law-mul-action-∞-Group :
     (x : type-action-∞-Group) → mul-action-∞-Group refl x ＝ x
-  unit-law-mul-action-∞-Group x = {!!}
+  unit-law-mul-action-∞-Group = {!!}
 ```

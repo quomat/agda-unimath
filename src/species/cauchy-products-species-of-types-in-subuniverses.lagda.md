@@ -59,7 +59,7 @@ module _
     (S : species-subuniverse P (subuniverse-global-subuniverse Q l3))
     (T : species-subuniverse P (subuniverse-global-subuniverse Q l4))
     (X : type-subuniverse P) → UU (lsuc l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  type-cauchy-product-species-subuniverse S T X = {!!}
+  type-cauchy-product-species-subuniverse = {!!}
 ```
 
 ### Subuniverses closed under the Cauchy product of species in a subuniverse
@@ -68,7 +68,7 @@ module _
 is-closed-under-cauchy-product-species-subuniverse :
   {l1 l2 : Level} (P : subuniverse l1 l2) (Q : global-subuniverse (λ l → l)) →
   UUω
-is-closed-under-cauchy-product-species-subuniverse {l1} {l2} P Q = {!!}
+is-closed-under-cauchy-product-species-subuniverse = {!!}
 ```
 
 ### The Cauchy product of species in a subuniverse
@@ -85,7 +85,7 @@ module _
     species-subuniverse P (subuniverse-global-subuniverse Q l4) →
     species-subuniverse P
       ( subuniverse-global-subuniverse Q (lsuc l1 ⊔ l2 ⊔ l3 ⊔ l4))
-  pr1 (cauchy-product-species-subuniverse S T X) = {!!}
+  cauchy-product-species-subuniverse = {!!}
 ```
 
 ## Properties
@@ -192,7 +192,7 @@ module _
     (X : type-subuniverse P) →
     type-cauchy-product-species-subuniverse P Q S T X ≃
     type-cauchy-product-species-subuniverse P Q T S X
-  equiv-commutative-cauchy-product-species-subuniverse X = {!!}
+  equiv-commutative-cauchy-product-species-subuniverse = {!!}
 
   commutative-cauchy-product-species-subuniverse :
     cauchy-product-species-subuniverse P Q C1 S T ＝
@@ -208,7 +208,7 @@ unit-cauchy-product-species-subuniverse :
   ( (X : type-subuniverse P) →
     is-in-subuniverse Q ( is-empty (inclusion-subuniverse P X))) →
   species-subuniverse P Q
-unit-cauchy-product-species-subuniverse P Q C X = {!!}
+unit-cauchy-product-species-subuniverse = {!!}
 
 module _
   {l1 l2 l3 : Level} (P : subuniverse l1 l2) (Q : global-subuniverse (λ l → l))
@@ -232,7 +232,7 @@ module _
         ( C3))
       ( X) ≃
     inclusion-subuniverse (subuniverse-global-subuniverse Q l3) (S X)
-  equiv-right-unit-law-cauchy-product-species-subuniverse X = {!!}
+  equiv-right-unit-law-cauchy-product-species-subuniverse = {!!}
 
   equiv-left-unit-law-cauchy-product-species-subuniverse :
     (X : type-subuniverse P) →
@@ -244,7 +244,7 @@ module _
       ( S)
       ( X) ≃
     inclusion-subuniverse (subuniverse-global-subuniverse Q l3) (S X)
-  equiv-left-unit-law-cauchy-product-species-subuniverse X = {!!}
+  equiv-left-unit-law-cauchy-product-species-subuniverse = {!!}
 ```
 
 ### Equivalent form with species of types
@@ -278,7 +278,7 @@ module _
               inclusion-subuniverse
                 ( subuniverse-global-subuniverse Q l4)
                 ( T (B , pB))))
-    pr1 reassociate (pX , ((A , pA) , (B , pB) , e) , s , t) = {!!}
+    reassociate = {!!}
 
     reassociate' :
       Σ ( binary-coproduct-Decomposition l1 l1 X)
@@ -292,7 +292,7 @@ module _
       ( Σ-extension-species-subuniverse P
         ( subuniverse-global-subuniverse Q l4) T)
       X
-    pr1 reassociate' (d , (pA , pB) , s , t) = {!!}
+    reassociate' = {!!}
 
   equiv-cauchy-product-Σ-extension-species-subuniverse :
     Σ-extension-species-subuniverse

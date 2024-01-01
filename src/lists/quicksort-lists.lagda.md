@@ -87,11 +87,7 @@ module _
       (l : list (type-Decidable-Total-Order X)) →
       length-list (helper-quicksort-list-divide-strict-greater x y p l) ≤-ℕ
       length-list (cons y l)
-    helper-inequality-length-quicksort-list-divide-strict-greater
-      ( x)
-      ( y)
-      ( inl _)
-      ( l) = {!!}
+    helper-inequality-length-quicksort-list-divide-strict-greater = {!!}
 
     inequality-length-quicksort-list-divide-strict-greater :
       (x : type-Decidable-Total-Order X) →

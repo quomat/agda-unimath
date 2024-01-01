@@ -73,13 +73,11 @@ module _
 
   left-distributive-mul-add-transport-ring-structure-iso-Ab :
     (x y z : type-Ab A) → mul x (add-Ab A y z) ＝ add-Ab A (mul x y) (mul x z)
-  left-distributive-mul-add-transport-ring-structure-iso-Ab
-    x y z = {!!}
+  left-distributive-mul-add-transport-ring-structure-iso-Ab = {!!}
 
   right-distributive-mul-add-transport-ring-structure-iso-Ab :
     (x y z : type-Ab A) → mul (add-Ab A x y) z ＝ add-Ab A (mul x z) (mul y z)
-  right-distributive-mul-add-transport-ring-structure-iso-Ab
-    x y z = {!!}
+  right-distributive-mul-add-transport-ring-structure-iso-Ab = {!!}
 
   has-associative-mul-transport-ring-structure-iso-Ab :
     has-associative-mul-Set (set-Ab A)
@@ -90,7 +88,7 @@ module _
   is-unital-transport-ring-structure-iso-Ab = {!!}
 
   transport-ring-structure-iso-Ab : Ring l2
-  pr1 transport-ring-structure-iso-Ab = {!!}
+  transport-ring-structure-iso-Ab = {!!}
 
   preserves-mul-transport-ring-structure-iso-Ab :
     preserves-mul-hom-Ab

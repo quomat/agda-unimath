@@ -45,7 +45,7 @@ is-trunc-1-Type : {l : Level} → is-trunc two-𝕋 (1-Type l)
 is-trunc-1-Type = {!!}
 
 1-Type-Truncated-Type : (l : Level) → Truncated-Type (lsuc l) two-𝕋
-1-Type-Truncated-Type l = {!!}
+1-Type-Truncated-Type = {!!}
 ```
 
 ### Products of families of 1-types are 1-types
@@ -155,7 +155,7 @@ module _
   where
 
   type-equiv-1-Type : {l2 : Level} (Y : 1-Type l2) → UU (l ⊔ l2)
-  type-equiv-1-Type Y = {!!}
+  type-equiv-1-Type = {!!}
 
   equiv-eq-1-Type : (Y : 1-Type l) → X ＝ Y → type-equiv-1-Type Y
   equiv-eq-1-Type = {!!}
@@ -174,5 +174,5 @@ module _
   extensionality-1-Type = {!!}
 
   eq-equiv-1-Type : (Y : 1-Type l) → type-equiv-1-Type Y → X ＝ Y
-  eq-equiv-1-Type Y = {!!}
+  eq-equiv-1-Type = {!!}
 ```

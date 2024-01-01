@@ -24,7 +24,7 @@ type `A` is the type `A → empty`.
 
 ```agda
 ¬ : {l : Level} → UU l → UU l
-¬ A = {!!}
+¬ = {!!}
 
 map-neg :
   {l1 l2 : Level} {P : UU l1} {Q : UU l2} →

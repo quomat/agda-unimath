@@ -102,7 +102,7 @@ module _
 ```agda
 is-equiv-inr-join-empty :
   {l : Level} (X : UU l) → is-equiv (inr-join {A = empty} {B = X})
-is-equiv-inr-join-empty X = {!!}
+is-equiv-inr-join-empty = {!!}
 
 left-unit-law-join :
   {l : Level} (X : UU l) → X ≃ (empty * X)
@@ -111,7 +111,7 @@ left-unit-law-join = {!!}
 is-equiv-inr-join-is-empty :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   is-empty A → is-equiv (inr-join {A = A} {B = B})
-is-equiv-inr-join-is-empty {A = A} {B = B} is-empty-A = {!!}
+is-equiv-inr-join-is-empty = {!!}
 
 left-unit-law-join-is-empty :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
@@ -124,7 +124,7 @@ left-unit-law-join-is-empty = {!!}
 ```agda
 is-equiv-inl-join-empty :
   {l : Level} (X : UU l) → is-equiv (inl-join {A = X} {B = empty})
-is-equiv-inl-join-empty X = {!!}
+is-equiv-inl-join-empty = {!!}
 
 right-unit-law-join :
   {l : Level} (X : UU l) → X ≃ (X * empty)
@@ -133,7 +133,7 @@ right-unit-law-join = {!!}
 is-equiv-inl-join-is-empty :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   is-empty B → is-equiv (inl-join {A = A} {B = B})
-is-equiv-inl-join-is-empty {A = A} {B = B} is-empty-B = {!!}
+is-equiv-inl-join-is-empty = {!!}
 
 right-unit-law-join-is-empty :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
@@ -146,7 +146,7 @@ right-unit-law-join-is-empty = {!!}
 ```agda
 is-equiv-inl-join-unit :
   {l : Level} (X : UU l) → is-equiv (inl-join {A = unit} {B = X})
-is-equiv-inl-join-unit X = {!!}
+is-equiv-inl-join-unit = {!!}
 
 left-zero-law-join :
   {l : Level} (X : UU l) → is-contr (unit * X)
@@ -155,7 +155,7 @@ left-zero-law-join = {!!}
 is-equiv-inl-join-is-contr :
   {l1 l2 : Level} (A : UU l1) (B : UU l2) →
   is-contr A → is-equiv (inl-join {A = A} {B = B})
-is-equiv-inl-join-is-contr A B is-contr-A = {!!}
+is-equiv-inl-join-is-contr = {!!}
 
 left-zero-law-join-is-contr :
   {l1 l2 : Level} (A : UU l1) (B : UU l2) → is-contr A → is-contr (A * B)
@@ -167,7 +167,7 @@ left-zero-law-join-is-contr = {!!}
 ```agda
 is-equiv-inr-join-unit :
   {l : Level} (X : UU l) → is-equiv (inr-join {A = X} {B = unit})
-is-equiv-inr-join-unit X = {!!}
+is-equiv-inr-join-unit = {!!}
 
 right-zero-law-join :
   {l : Level} (X : UU l) → is-contr (X * unit)
@@ -176,7 +176,7 @@ right-zero-law-join = {!!}
 is-equiv-inr-join-is-contr :
   {l1 l2 : Level} (A : UU l1) (B : UU l2) →
   is-contr B → is-equiv (inr-join {A = A} {B = B})
-is-equiv-inr-join-is-contr A B is-contr-B = {!!}
+is-equiv-inr-join-is-contr = {!!}
 
 right-zero-law-join-is-contr :
   {l1 l2 : Level} (A : UU l1) (B : UU l2) → is-contr B → is-contr (A * B)
@@ -192,8 +192,7 @@ module _
 
   is-proof-irrelevant-join-is-proof-irrelevant :
     is-proof-irrelevant A → is-proof-irrelevant B → is-proof-irrelevant (A * B)
-  is-proof-irrelevant-join-is-proof-irrelevant
-    is-proof-irrelevant-A is-proof-irrelevant-B = {!!}
+  is-proof-irrelevant-join-is-proof-irrelevant = {!!}
 
   is-prop-join-is-prop :
     is-prop A → is-prop B → is-prop (A * B)
@@ -204,7 +203,7 @@ module _
   where
 
   join-Prop : Prop (l1 ⊔ l2)
-  pr1 join-Prop = {!!}
+  join-Prop = {!!}
 
   type-join-Prop : UU (l1 ⊔ l2)
   type-join-Prop = {!!}
@@ -227,7 +226,7 @@ module _
   where
 
   cocone-disjunction : cocone pr1 pr2 (type-disjunction-Prop A B)
-  pr1 cocone-disjunction = {!!}
+  cocone-disjunction = {!!}
 
   map-disjunction-join-Prop : type-join-Prop A B → type-disjunction-Prop A B
   map-disjunction-join-Prop = {!!}

@@ -32,10 +32,10 @@ holds or `Q` holds.
 
 ```agda
 disjunction-Prop : {l1 l2 : Level} → Prop l1 → Prop l2 → Prop (l1 ⊔ l2)
-disjunction-Prop P Q = {!!}
+disjunction-Prop = {!!}
 
 type-disjunction-Prop : {l1 l2 : Level} → Prop l1 → Prop l2 → UU (l1 ⊔ l2)
-type-disjunction-Prop P Q = {!!}
+type-disjunction-Prop = {!!}
 
 abstract
   is-prop-type-disjunction-Prop :

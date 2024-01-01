@@ -232,5 +232,5 @@ module _
   is-1-type-transitive-action-Concrete-Group = {!!}
 
   transitive-action-1-type-Concrete-Group : 1-Type (l1 ⊔ lsuc l2)
-  pr1 transitive-action-1-type-Concrete-Group = {!!}
+  transitive-action-1-type-Concrete-Group = {!!}
 ```

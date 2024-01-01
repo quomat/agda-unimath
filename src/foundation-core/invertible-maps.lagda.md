@@ -36,7 +36,7 @@ module _
   where
 
   is-inverse : (A → B) → (B → A) → UU (l1 ⊔ l2)
-  is-inverse f g = {!!}
+  is-inverse = {!!}
 
   is-section-is-inverse :
     {f : A → B} {g : B → A} → is-inverse f g → (f ∘ g) ~ id
@@ -52,7 +52,7 @@ module _
 ```agda
 is-invertible :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → (A → B) → UU (l1 ⊔ l2)
-is-invertible {A = A} {B} f = {!!}
+is-invertible = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} (g : is-invertible f)
@@ -71,17 +71,17 @@ module _
   is-section-is-invertible = {!!}
 
   section-is-invertible : section f
-  pr1 section-is-invertible = {!!}
+  section-is-invertible = {!!}
 
   retraction-is-invertible : retraction f
-  pr1 retraction-is-invertible = {!!}
+  retraction-is-invertible = {!!}
 ```
 
 ### The type of invertible maps
 
 ```agda
 invertible-map : {l1 l2 : Level} (A : UU l1) (B : UU l2) → UU (l1 ⊔ l2)
-invertible-map A B = {!!}
+invertible-map = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
@@ -118,11 +118,11 @@ module _
   where
 
   inv-is-inverse : {g : B → A} → is-inverse f g → is-inverse g f
-  pr1 (inv-is-inverse {g} H) = {!!}
+  inv-is-inverse = {!!}
 
   inv-is-invertible :
     (g : is-invertible f) → is-invertible (map-inv-is-invertible g)
-  pr1 (inv-is-invertible g) = {!!}
+  inv-is-invertible = {!!}
 ```
 
 ## See also

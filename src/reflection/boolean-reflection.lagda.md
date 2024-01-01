@@ -36,7 +36,7 @@ and that `refl` is indeed an identification `Id (booleanization d) true`.
 
 ```agda
 booleanization : {l : Level} {A : UU l} → is-decidable A → bool
-booleanization (inl a) = {!!}
+booleanization = {!!}
 booleanization (inr f) = {!!}
 
 inv-boolean-reflection :

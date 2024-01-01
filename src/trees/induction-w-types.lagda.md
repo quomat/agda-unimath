@@ -43,7 +43,7 @@ module _
   where
 
   □-∈-𝕎 : (𝕎 A B → UU l3) → (𝕎 A B → UU (l1 ⊔ l2 ⊔ l3))
-  □-∈-𝕎 P x = {!!}
+  □-∈-𝕎 = {!!}
 
   η-□-∈-𝕎 :
     (P : 𝕎 A B → UU l3) → ((x : 𝕎 A B) → P x) → ((x : 𝕎 A B) → □-∈-𝕎 P x)
@@ -86,7 +86,7 @@ module _
   where
 
   □-𝕎 : 𝕎 A B → UU (l1 ⊔ l2 ⊔ l3)
-  □-𝕎 x = {!!}
+  □-𝕎 = {!!}
 ```
 
 #### The unit of □-𝕎 takes sections of P to sections of □-𝕎 P
@@ -97,7 +97,7 @@ module _
   where
 
   unit-□-𝕎 : ((x : 𝕎 A B) → P x) → ((x : 𝕎 A B) → □-𝕎 P x)
-  unit-□-𝕎 f x y p = {!!}
+  unit-□-𝕎 = {!!}
 ```
 
 #### The reflector (counit) of □-𝕎 is dual, with an extra hypothesis

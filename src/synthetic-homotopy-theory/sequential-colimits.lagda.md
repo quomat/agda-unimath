@@ -62,7 +62,7 @@ sequential colimits exist.
 ```agda
 abstract
   standard-sequential-colimit : {l : Level} (A : sequential-diagram l) → UU l
-  standard-sequential-colimit A = {!!}
+  standard-sequential-colimit = {!!}
 
   cocone-standard-sequential-colimit :
     { l : Level} (A : sequential-diagram l) →
@@ -154,7 +154,7 @@ module _
   is-prop-is-sequential-colimit = {!!}
 
   is-sequential-colimit-Prop : Prop (l1 ⊔ l2)
-  pr1 is-sequential-colimit-Prop = {!!}
+  is-sequential-colimit-Prop = {!!}
 ```
 
 ### Homotopies between maps from the standard sequential colimit

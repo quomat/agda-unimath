@@ -55,10 +55,10 @@ because only nonzero elements are assumed to be invertible.
 
 ```agda
 is-finite-field-Commutative-Ring-𝔽 : {l : Level} → Commutative-Ring-𝔽 l → UU l
-is-finite-field-Commutative-Ring-𝔽 A = {!!}
+is-finite-field-Commutative-Ring-𝔽 = {!!}
 
 Field-𝔽 : (l : Level) → UU (lsuc l)
-Field-𝔽 l = {!!}
+Field-𝔽 = {!!}
 
 module _
   {l : Level} (A : Field-𝔽 l)
@@ -159,7 +159,7 @@ module _
   is-equiv-add-Field-𝔽' = {!!}
 
   is-binary-equiv-add-Field-𝔽 : is-binary-equiv add-Field-𝔽
-  pr1 is-binary-equiv-add-Field-𝔽 = {!!}
+  is-binary-equiv-add-Field-𝔽 = {!!}
 
   is-binary-emb-add-Field-𝔽 : is-binary-emb add-Field-𝔽
   is-binary-emb-add-Field-𝔽 = {!!}
@@ -261,7 +261,7 @@ module _
   ap-mul-Field-𝔽 :
     {x x' y y' : type-Field-𝔽} (p : Id x x') (q : Id y y') →
     Id (mul-Field-𝔽 x y) (mul-Field-𝔽 x' y')
-  ap-mul-Field-𝔽 p q = {!!}
+  ap-mul-Field-𝔽 = {!!}
 
   associative-mul-Field-𝔽 :
     (x y z : type-Field-𝔽) →
@@ -270,7 +270,7 @@ module _
   associative-mul-Field-𝔽 = {!!}
 
   multiplicative-semigroup-Field-𝔽 : Semigroup l
-  pr1 multiplicative-semigroup-Field-𝔽 = {!!}
+  multiplicative-semigroup-Field-𝔽 = {!!}
 
   left-distributive-mul-add-Field-𝔽 :
     (x y z : type-Field-𝔽) →

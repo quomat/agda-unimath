@@ -34,7 +34,7 @@ is-large-category-Ring-Large-Category :
 is-large-category-Ring-Large-Category = {!!}
 
 Ring-Large-Category : Large-Category lsuc _⊔_
-large-precategory-Large-Category Ring-Large-Category = {!!}
+Ring-Large-Category = {!!}
 is-large-category-Large-Category Ring-Large-Category = {!!}
 ```
 

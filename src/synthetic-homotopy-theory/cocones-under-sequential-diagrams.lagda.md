@@ -340,7 +340,7 @@ module _
         ( bottom-map-cofork-cocone-sequential-diagram)
         ( top-map-cofork-cocone-sequential-diagram)
         ( cofork-cocone-sequential-diagram c))
-  triangle-cocone-sequential-diagram-cofork c h = {!!}
+  triangle-cocone-sequential-diagram-cofork = {!!}
 ```
 
 ## References

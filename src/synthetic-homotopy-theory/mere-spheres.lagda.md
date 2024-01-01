@@ -48,7 +48,7 @@ module _
 
 ```agda
 mere-sphere : (l : Level) (n : ℕ) → UU (lsuc l)
-mere-sphere l n = {!!}
+mere-sphere = {!!}
 
 module _
   {l : Level} (n : ℕ) (X : mere-sphere l n)

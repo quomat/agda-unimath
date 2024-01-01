@@ -54,7 +54,7 @@ A permutation of `Fin n` is an automorphism of `Fin n`.
 
 ```agda
 Permutation : (n : ℕ) → UU lzero
-Permutation n = {!!}
+Permutation = {!!}
 ```
 
 ## Properties
@@ -92,8 +92,7 @@ abstract
           ( list-transpositions-permutation-Fin (succ-ℕ n) f))
         ( y))
       ( map-equiv f y)
-  retraction-permutation-list-transpositions-Fin'
-    zero-ℕ f (inr star) p (inr star) z q = {!!}
+  retraction-permutation-list-transpositions-Fin' = {!!}
 
   retraction-permutation-list-transpositions-Fin :
     (n : ℕ) (f : Permutation n) →

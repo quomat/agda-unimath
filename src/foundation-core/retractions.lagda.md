@@ -35,17 +35,17 @@ module _
   where
 
   is-retraction : (f : A → B) (g : B → A) → UU l1
-  is-retraction f g = {!!}
+  is-retraction = {!!}
 
   retraction : (f : A → B) → UU (l1 ⊔ l2)
-  retraction f = {!!}
+  retraction = {!!}
 
   map-retraction : (f : A → B) → retraction f → B → A
-  map-retraction f = {!!}
+  map-retraction = {!!}
 
   is-retraction-map-retraction :
     (f : A → B) (r : retraction f) → map-retraction f r ∘ f ~ id
-  is-retraction-map-retraction f = {!!}
+  is-retraction-map-retraction = {!!}
 ```
 
 ## Properties
@@ -81,16 +81,16 @@ module _
   ap-retraction :
     (i : A → B) (r : B → A) (H : r ∘ i ~ id)
     (x y : A) → i x ＝ i y → x ＝ y
-  ap-retraction i r H x y p = {!!}
+  ap-retraction = {!!}
 
   is-retraction-ap-retraction :
     (i : A → B) (r : B → A) (H : r ∘ i ~ id)
     (x y : A) → ((ap-retraction i r H x y) ∘ (ap i {x} {y})) ~ id
-  is-retraction-ap-retraction i r H x .x refl = {!!}
+  is-retraction-ap-retraction = {!!}
 
   retraction-ap :
     (i : A → B) → retraction i → (x y : A) → retraction (ap i {x} {y})
-  pr1 (retraction-ap i (pair r H) x y) = {!!}
+  retraction-ap = {!!}
 ```
 
 ### Composites of retractions are retractions
@@ -108,7 +108,7 @@ module _
   is-retraction-map-retraction-comp = {!!}
 
   retraction-comp : retraction (g ∘ h)
-  pr1 retraction-comp = {!!}
+  retraction-comp = {!!}
 ```
 
 ### If `g ∘ f` has a retraction then `f` has a retraction
@@ -127,7 +127,7 @@ module _
   is-retraction-map-retraction-right-factor = {!!}
 
   retraction-right-factor : retraction h
-  pr1 retraction-right-factor = {!!}
+  retraction-right-factor = {!!}
 ```
 
 ### In a commuting triangle `f ~ g ∘ h`, any retraction of the left map `f` induces a retraction of the top map `h`
@@ -166,7 +166,7 @@ module _
   is-retraction-map-retraction-top-map-triangle = {!!}
 
   retraction-top-map-triangle : retraction h
-  pr1 retraction-top-map-triangle = {!!}
+  retraction-top-map-triangle = {!!}
 ```
 
 ### In a commuting triangle `f ~ g ∘ h`, retractions of `g` and `h` compose to a retraction of `f`
@@ -202,7 +202,7 @@ module _
   is-retraction-map-retraction-left-map-triangle = {!!}
 
   retraction-left-map-triangle : retraction f
-  pr1 retraction-left-map-triangle = {!!}
+  retraction-left-map-triangle = {!!}
 ```
 
 ## See also

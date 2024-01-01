@@ -52,10 +52,7 @@ module _
     is-in-intersection-Subgroup x →
     is-in-intersection-Subgroup y →
     is-in-intersection-Subgroup (mul-Group G x y)
-  pr1
-    ( is-closed-under-multiplication-intersection-Subgroup
-      ( pH , pK)
-      ( qH , qK)) = {!!}
+  is-closed-under-multiplication-intersection-Subgroup = {!!}
 
   is-closed-under-inverses-intersection-Subgroup :
     {x : type-Group G} →
@@ -67,7 +64,7 @@ module _
   is-subgroup-intersection-Subgroup = {!!}
 
   intersection-Subgroup : Subgroup (l2 ⊔ l3) G
-  pr1 intersection-Subgroup = {!!}
+  intersection-Subgroup = {!!}
 ```
 
 ### The intersection of a family of subgroups
@@ -102,7 +99,7 @@ module _
   is-subgroup-intersection-family-of-subgroups-Group = {!!}
 
   intersection-family-of-subgroups-Group : Subgroup (l2 ⊔ l3) G
-  pr1 intersection-family-of-subgroups-Group = {!!}
+  intersection-family-of-subgroups-Group = {!!}
 ```
 
 ## Properties

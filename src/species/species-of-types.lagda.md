@@ -26,7 +26,7 @@ A **species of types** is defined to be a map from a universe to a universe.
 
 ```agda
 species-types : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-species-types l1 l2 = {!!}
+species-types = {!!}
 ```
 
 ### The predicate that a species preserves cartesian products

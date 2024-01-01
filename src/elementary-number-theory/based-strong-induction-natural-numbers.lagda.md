@@ -53,17 +53,17 @@ satisfying
 
 ```agda
 based-□-≤-ℕ : {l : Level} (k : ℕ) → (ℕ → UU l) → ℕ → UU l
-based-□-≤-ℕ k P n = {!!}
+based-□-≤-ℕ = {!!}
 
 η-based-□-≤-ℕ :
   {l : Level} (k : ℕ) {P : ℕ → UU l} → ((n : ℕ) → k ≤-ℕ n → P n) →
   (n : ℕ) → k ≤-ℕ n → based-□-≤-ℕ k P n
-η-based-□-≤-ℕ k f n N m M p = {!!}
+η-based-□-≤-ℕ = {!!}
 
 ε-based-□-≤-ℕ :
   {l : Level} (k : ℕ) {P : ℕ → UU l} → ((n : ℕ) → k ≤-ℕ n → based-□-≤-ℕ k P n) →
   ((n : ℕ) → k ≤-ℕ n → P n)
-ε-based-□-≤-ℕ k f n N = {!!}
+ε-based-□-≤-ℕ = {!!}
 ```
 
 ## Theorem
@@ -73,13 +73,13 @@ based-□-≤-ℕ k P n = {!!}
 ```agda
 base-based-strong-ind-ℕ :
   {l : Level} (k : ℕ) (P : ℕ → UU l) → P k → based-□-≤-ℕ k P k
-base-based-strong-ind-ℕ zero-ℕ P p zero-ℕ M H = {!!}
+base-based-strong-ind-ℕ = {!!}
 base-based-strong-ind-ℕ (succ-ℕ k) P p0 (succ-ℕ m) = {!!}
 
 eq-base-based-strong-ind-ℕ :
   {l : Level} (k : ℕ) (P : ℕ → UU l) (p : P k)
   (s t : leq-ℕ k k) → base-based-strong-ind-ℕ k P p k s t ＝ p
-eq-base-based-strong-ind-ℕ zero-ℕ P p0 M H = {!!}
+eq-base-based-strong-ind-ℕ = {!!}
 eq-base-based-strong-ind-ℕ (succ-ℕ k) P = {!!}
 ```
 
@@ -91,14 +91,14 @@ cases-succ-based-strong-ind-ℕ :
   (pS : (n : ℕ) → k ≤-ℕ n → based-□-≤-ℕ k P n → P (succ-ℕ n))
   (n : ℕ) (N : k ≤-ℕ n) (f : based-□-≤-ℕ k P n)
   (m : ℕ) (M : k ≤-ℕ m) (c : (leq-ℕ m n) + (m ＝ succ-ℕ n)) → P m
-cases-succ-based-strong-ind-ℕ k P pS n N f m M (inl H') = {!!}
+cases-succ-based-strong-ind-ℕ = {!!}
 cases-succ-based-strong-ind-ℕ k P pS n N f .(succ-ℕ n) M (inr refl) = {!!}
 
 succ-based-strong-ind-ℕ :
   {l : Level} (k : ℕ) (P : ℕ → UU l) →
   ((x : ℕ) → leq-ℕ k x → based-□-≤-ℕ k P x → P (succ-ℕ x)) →
   (n : ℕ) → leq-ℕ k n → based-□-≤-ℕ k P n → based-□-≤-ℕ k P (succ-ℕ n)
-succ-based-strong-ind-ℕ k P pS n N f m M H = {!!}
+succ-based-strong-ind-ℕ = {!!}
 
 cases-htpy-succ-based-strong-ind-ℕ :
   {l : Level} (k : ℕ) (P : ℕ → UU l)
@@ -107,7 +107,7 @@ cases-htpy-succ-based-strong-ind-ℕ :
   (m : ℕ) (M : k ≤-ℕ m) (c : (leq-ℕ m n) + (m ＝ succ-ℕ n)) →
   (H : leq-ℕ m n) →
   cases-succ-based-strong-ind-ℕ k P pS n N f m M c ＝ f m M H
-cases-htpy-succ-based-strong-ind-ℕ k P pS n N f m M (inl p) H = {!!}
+cases-htpy-succ-based-strong-ind-ℕ = {!!}
 cases-htpy-succ-based-strong-ind-ℕ k P pS n N f m M (inr α) H = {!!}
 
 htpy-succ-based-strong-ind-ℕ :
@@ -116,7 +116,7 @@ htpy-succ-based-strong-ind-ℕ :
   (n : ℕ) (N : k ≤-ℕ n) (f : based-□-≤-ℕ k P n)
   (m : ℕ) (M : k ≤-ℕ m) (H : leq-ℕ m (succ-ℕ n)) (K : leq-ℕ m n) →
   succ-based-strong-ind-ℕ k P pS n N f m M H ＝ f m M K
-htpy-succ-based-strong-ind-ℕ k P pS n N f m M H = {!!}
+htpy-succ-based-strong-ind-ℕ = {!!}
 
 cases-eq-succ-based-strong-ind-ℕ :
   {l : Level} (k : ℕ) (P : ℕ → UU l)
@@ -124,7 +124,7 @@ cases-eq-succ-based-strong-ind-ℕ :
   (n : ℕ) (N : k ≤-ℕ n) (f : based-□-≤-ℕ k P n) (M : k ≤-ℕ succ-ℕ n)
   (c : (leq-ℕ (succ-ℕ n) n) + (succ-ℕ n ＝ succ-ℕ n)) →
   cases-succ-based-strong-ind-ℕ k P pS n N f (succ-ℕ n) M c ＝ pS n N f
-cases-eq-succ-based-strong-ind-ℕ k P pS n N f M (inl H) = {!!}
+cases-eq-succ-based-strong-ind-ℕ = {!!}
 cases-eq-succ-based-strong-ind-ℕ k P pS n N f M (inr α) = {!!}
 
 eq-succ-based-strong-ind-ℕ :
@@ -133,7 +133,7 @@ eq-succ-based-strong-ind-ℕ :
   (n : ℕ) (N : k ≤-ℕ n) (f : based-□-≤-ℕ k P n) (M : k ≤-ℕ succ-ℕ n)
   (H : leq-ℕ (succ-ℕ n) (succ-ℕ n)) →
   succ-based-strong-ind-ℕ k P pS n N f (succ-ℕ n) M H ＝ pS n N f
-eq-succ-based-strong-ind-ℕ k P pS n N f M H = {!!}
+eq-succ-based-strong-ind-ℕ = {!!}
 ```
 
 ### The inductive step in the proof of based strong induction
@@ -150,21 +150,21 @@ module _
   compute-base-inductive-step-based-strong-ind-ℕ :
     (K : k ≤-ℕ k) (m : ℕ) (M : k ≤-ℕ m) (H : m ≤-ℕ k) →
     inductive-step-based-strong-ind-ℕ k K m M H ＝ z m M H
-  compute-base-inductive-step-based-strong-ind-ℕ K m M = {!!}
+  compute-base-inductive-step-based-strong-ind-ℕ = {!!}
 
   compute-succ-inductive-step-based-strong-ind-ℕ :
     (n : ℕ) (N : k ≤-ℕ n) (N' : k ≤-ℕ succ-ℕ n) →
     (m : ℕ) (M : k ≤-ℕ m) (H : m ≤-ℕ succ-ℕ n) →
     inductive-step-based-strong-ind-ℕ (succ-ℕ n) N' m M H ＝
     s n N (inductive-step-based-strong-ind-ℕ n N) m M H
-  compute-succ-inductive-step-based-strong-ind-ℕ n N N' m M = {!!}
+  compute-succ-inductive-step-based-strong-ind-ℕ = {!!}
 
   ap-inductive-step-based-strong-ind-ℕ :
     {n n' : ℕ} (p : n ＝ n') (N : k ≤-ℕ n) (N' : k ≤-ℕ n')
     (m : ℕ) (M : k ≤-ℕ m) (H : m ≤-ℕ n) (H' : m ≤-ℕ n') →
     inductive-step-based-strong-ind-ℕ n N m M H ＝
     inductive-step-based-strong-ind-ℕ n' N' m M H'
-  ap-inductive-step-based-strong-ind-ℕ refl N N' m M H H' = {!!}
+  ap-inductive-step-based-strong-ind-ℕ = {!!}
 ```
 
 ### The based strong induction principle
@@ -174,13 +174,13 @@ based-strong-ind-ℕ :
   {l : Level} (k : ℕ) (P : ℕ → UU l) (p0 : P k) →
   (pS : (x : ℕ) → k ≤-ℕ x → based-□-≤-ℕ k P x → P (succ-ℕ x))
   (n : ℕ) → k ≤-ℕ n → P n
-based-strong-ind-ℕ k P p0 pS = {!!}
+based-strong-ind-ℕ = {!!}
 
 compute-base-based-strong-ind-ℕ :
   {l : Level} (k : ℕ) (P : ℕ → UU l) (p0 : P k) →
   (pS : (x : ℕ) → k ≤-ℕ x → (based-□-≤-ℕ k P x) → P (succ-ℕ x)) →
   based-strong-ind-ℕ k P p0 pS k (refl-leq-ℕ k) ＝ p0
-compute-base-based-strong-ind-ℕ k P p0 pS = {!!}
+compute-base-based-strong-ind-ℕ = {!!}
 
 cases-eq-inductive-step-compute-succ-based-strong-ind-ℕ :
   { l : Level} (k : ℕ) (P : ℕ → UU l) (p0 : P k) →
@@ -222,8 +222,7 @@ cases-eq-inductive-step-compute-succ-based-strong-ind-ℕ :
     ( m)
     ( M)
     ( refl-leq-ℕ m)
-cases-eq-inductive-step-compute-succ-based-strong-ind-ℕ
-  k P p0 pS n N N' m M H (inl H') α = {!!}
+cases-eq-inductive-step-compute-succ-based-strong-ind-ℕ = {!!}
 cases-eq-inductive-step-compute-succ-based-strong-ind-ℕ
   k P p0 pS n N N' m M H (inr p) α = {!!}
 
@@ -248,7 +247,7 @@ eq-inductive-step-compute-succ-based-strong-ind-ℕ :
     ( m)
     ( M)
     ( refl-leq-ℕ m)
-eq-inductive-step-compute-succ-based-strong-ind-ℕ k P p0 pS n N m M = {!!}
+eq-inductive-step-compute-succ-based-strong-ind-ℕ = {!!}
 
 compute-succ-based-strong-ind-ℕ :
   { l : Level} (k : ℕ) (P : ℕ → UU l) (p0 : P k) →
@@ -256,7 +255,7 @@ compute-succ-based-strong-ind-ℕ :
   ( n : ℕ) (N : k ≤-ℕ n) (N' : k ≤-ℕ succ-ℕ n) →
   based-strong-ind-ℕ k P p0 pS (succ-ℕ n) N' ＝
   pS n N (λ m M H → based-strong-ind-ℕ k P p0 pS m M)
-compute-succ-based-strong-ind-ℕ k P p0 pS n N N' = {!!}
+compute-succ-based-strong-ind-ℕ = {!!}
 ```
 
 ## Corollaries
@@ -265,13 +264,13 @@ compute-succ-based-strong-ind-ℕ k P p0 pS n N N' = {!!}
 
 ```agda
 based-□-≤-ℕ' : {l : Level} (k : ℕ) → ((n : ℕ) → (k ≤-ℕ n) → UU l) → ℕ → UU l
-based-□-≤-ℕ' k P x = {!!}
+based-□-≤-ℕ' = {!!}
 
 compute-base-□-≤-ℕ' :
   {l : Level} (k : ℕ) (P : (n : ℕ) → (k ≤-ℕ n) → UU l) (x : ℕ) →
   based-□-≤-ℕ k (λ n → (H : k ≤-ℕ n) → P n H) x →
   based-□-≤-ℕ' k P x
-compute-base-□-≤-ℕ' k P x p m H I = {!!}
+compute-base-□-≤-ℕ' = {!!}
 
 based-strong-ind-ℕ' :
   {l : Level} (k : ℕ) (P : (n : ℕ) → (k ≤-ℕ n → UU l))
@@ -280,5 +279,5 @@ based-strong-ind-ℕ' :
     based-□-≤-ℕ' k P x →
     P (succ-ℕ x) (preserves-leq-succ-ℕ k x H))
   (n : ℕ) → (H : k ≤-ℕ n) → P n H
-based-strong-ind-ℕ' {l} k P p0 pS n H = {!!}
+based-strong-ind-ℕ' = {!!}
 ```

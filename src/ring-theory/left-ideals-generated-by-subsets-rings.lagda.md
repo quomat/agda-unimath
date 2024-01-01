@@ -98,7 +98,7 @@ module _
 
   ev-left-formal-combination-subset-Ring :
     left-formal-combination-subset-Ring → type-Ring R
-  ev-left-formal-combination-subset-Ring nil = {!!}
+  ev-left-formal-combination-subset-Ring = {!!}
 
   preserves-concat-ev-left-formal-combination-subset-Ring :
     (u v : left-formal-combination-subset-Ring) →
@@ -106,28 +106,28 @@ module _
     add-Ring R
       ( ev-left-formal-combination-subset-Ring u)
       ( ev-left-formal-combination-subset-Ring v)
-  preserves-concat-ev-left-formal-combination-subset-Ring nil v = {!!}
+  preserves-concat-ev-left-formal-combination-subset-Ring = {!!}
   preserves-concat-ev-left-formal-combination-subset-Ring
     ( cons (pair r s) u) v = {!!}
 
   mul-left-formal-combination-subset-Ring :
     type-Ring R →
     left-formal-combination-subset-Ring → left-formal-combination-subset-Ring
-  mul-left-formal-combination-subset-Ring r = {!!}
+  mul-left-formal-combination-subset-Ring = {!!}
 
   preserves-mul-ev-left-formal-combination-subset-Ring :
     (r : type-Ring R) (u : left-formal-combination-subset-Ring) →
     ev-left-formal-combination-subset-Ring
       ( mul-left-formal-combination-subset-Ring r u) ＝
     mul-Ring R r (ev-left-formal-combination-subset-Ring u)
-  preserves-mul-ev-left-formal-combination-subset-Ring r nil = {!!}
+  preserves-mul-ev-left-formal-combination-subset-Ring = {!!}
   preserves-mul-ev-left-formal-combination-subset-Ring r (cons x u) = {!!}
 
   subset-left-ideal-subset-Ring' : type-Ring R → UU (l1 ⊔ l2)
-  subset-left-ideal-subset-Ring' x = {!!}
+  subset-left-ideal-subset-Ring' = {!!}
 
   subset-left-ideal-subset-Ring : subset-Ring (l1 ⊔ l2) R
-  subset-left-ideal-subset-Ring x = {!!}
+  subset-left-ideal-subset-Ring = {!!}
 
   is-in-left-ideal-subset-Ring : type-Ring R → UU (l1 ⊔ l2)
   is-in-left-ideal-subset-Ring = {!!}
@@ -140,23 +140,19 @@ module _
     (x y : type-Ring R) →
     subset-left-ideal-subset-Ring' x → subset-left-ideal-subset-Ring' y →
     subset-left-ideal-subset-Ring' (add-Ring R x y)
-  pr1
-    ( is-closed-under-addition-left-ideal-subset-Ring' x y
-      ( pair l p) (pair k q)) = {!!}
+  is-closed-under-addition-left-ideal-subset-Ring' = {!!}
   pr2
     ( is-closed-under-addition-left-ideal-subset-Ring' x y
       ( pair l p) (pair k q)) = {!!}
 
   is-closed-under-addition-left-ideal-subset-Ring :
     is-closed-under-addition-subset-Ring R subset-left-ideal-subset-Ring
-  is-closed-under-addition-left-ideal-subset-Ring {x} {y} H K = {!!}
+  is-closed-under-addition-left-ideal-subset-Ring = {!!}
 
   is-closed-under-left-multiplication-left-ideal-subset-Ring' :
     (r x : type-Ring R) → subset-left-ideal-subset-Ring' x →
     subset-left-ideal-subset-Ring' (mul-Ring R r x)
-  pr1
-    ( is-closed-under-left-multiplication-left-ideal-subset-Ring' r x
-      ( pair l p)) = {!!}
+  is-closed-under-left-multiplication-left-ideal-subset-Ring' = {!!}
   pr2
     ( is-closed-under-left-multiplication-left-ideal-subset-Ring' r x
       ( pair l p)) = {!!}
@@ -164,24 +160,24 @@ module _
   is-closed-under-left-multiplication-left-ideal-subset-Ring :
     is-closed-under-left-multiplication-subset-Ring R
       subset-left-ideal-subset-Ring
-  is-closed-under-left-multiplication-left-ideal-subset-Ring r x H = {!!}
+  is-closed-under-left-multiplication-left-ideal-subset-Ring = {!!}
 
   is-closed-under-negatives-left-ideal-subset-Ring :
     is-closed-under-negatives-subset-Ring R subset-left-ideal-subset-Ring
-  is-closed-under-negatives-left-ideal-subset-Ring {x} H = {!!}
+  is-closed-under-negatives-left-ideal-subset-Ring = {!!}
 
   left-ideal-subset-Ring : left-ideal-Ring (l1 ⊔ l2) R
-  pr1 left-ideal-subset-Ring = {!!}
+  left-ideal-subset-Ring = {!!}
 
   contains-subset-left-ideal-subset-Ring :
     S ⊆ subset-left-ideal-subset-Ring
-  contains-subset-left-ideal-subset-Ring s H = {!!}
+  contains-subset-left-ideal-subset-Ring = {!!}
 
   contains-left-formal-combinations-left-ideal-subset-Ring :
     {l3 : Level} (I : left-ideal-Ring l3 R) → S ⊆ subset-left-ideal-Ring R I →
     (x : left-formal-combination-subset-Ring) →
     is-in-left-ideal-Ring R I (ev-left-formal-combination-subset-Ring x)
-  contains-left-formal-combinations-left-ideal-subset-Ring I H nil = {!!}
+  contains-left-formal-combinations-left-ideal-subset-Ring = {!!}
   contains-left-formal-combinations-left-ideal-subset-Ring I H
     ( cons (pair r (pair s K)) c) = {!!}
 
@@ -189,7 +185,7 @@ module _
     is-left-ideal-generated-by-subset-Ring R S
       ( left-ideal-subset-Ring)
       ( contains-subset-left-ideal-subset-Ring)
-  is-left-ideal-generated-by-subset-left-ideal-subset-Ring {l} J K x H = {!!}
+  is-left-ideal-generated-by-subset-left-ideal-subset-Ring = {!!}
 
   is-closed-under-eq-left-ideal-subset-Ring :
     {x y : type-Ring R} → is-in-left-ideal-subset-Ring x →
@@ -215,14 +211,14 @@ module _
     leq-left-ideal-Ring A
       ( left-ideal-subset-Ring A S)
       ( left-ideal-subset-Ring A T)
-  preserves-order-left-ideal-subset-Ring S T H = {!!}
+  preserves-order-left-ideal-subset-Ring = {!!}
 
   left-ideal-subset-hom-large-poset-Ring :
     hom-Large-Poset
       ( λ l2 → l1 ⊔ l2)
       ( powerset-Large-Poset (type-Ring A))
       ( left-ideal-Ring-Large-Poset A)
-  map-hom-Large-Preorder left-ideal-subset-hom-large-poset-Ring = {!!}
+  left-ideal-subset-hom-large-poset-Ring = {!!}
   preserves-order-hom-Large-Preorder left-ideal-subset-hom-large-poset-Ring = {!!}
 ```
 
@@ -237,7 +233,7 @@ module _
     {l2 l3 : Level} (S : subset-Ring l2 A) (I : left-ideal-Ring l3 A) →
     leq-left-ideal-Ring A (left-ideal-subset-Ring A S) I ↔
     (S ⊆ subset-left-ideal-Ring A I)
-  pr1 (adjoint-relation-left-ideal-subset-Ring S I) H = {!!}
+  adjoint-relation-left-ideal-subset-Ring = {!!}
   pr2 (adjoint-relation-left-ideal-subset-Ring S I) = {!!}
 
   left-ideal-subset-galois-connection-Ring :
@@ -245,8 +241,7 @@ module _
       ( l1 ⊔_) (λ l → l)
       ( powerset-Large-Poset (type-Ring A))
       ( left-ideal-Ring-Large-Poset A)
-  lower-adjoint-galois-connection-Large-Poset
-    left-ideal-subset-galois-connection-Ring = {!!}
+  left-ideal-subset-galois-connection-Ring = {!!}
   upper-adjoint-galois-connection-Large-Poset
     left-ideal-subset-galois-connection-Ring = {!!}
   adjoint-relation-galois-connection-Large-Poset
@@ -265,28 +260,27 @@ module _
     leq-left-ideal-Ring A
       ( left-ideal-subset-Ring A (subset-left-ideal-Ring A I))
       ( I)
-  forward-inclusion-is-reflective-left-ideal-subset-galois-connection-Ring I = {!!}
+  forward-inclusion-is-reflective-left-ideal-subset-galois-connection-Ring = {!!}
 
   backward-inclusion-is-reflective-left-ideal-subset-galois-connection-Ring :
     {l2 : Level} (I : left-ideal-Ring l2 A) →
     leq-left-ideal-Ring A I
       ( left-ideal-subset-Ring A (subset-left-ideal-Ring A I))
-  backward-inclusion-is-reflective-left-ideal-subset-galois-connection-Ring I = {!!}
+  backward-inclusion-is-reflective-left-ideal-subset-galois-connection-Ring = {!!}
 
   is-reflective-left-ideal-subset-galois-connection-Ring :
     is-reflective-galois-connection-Large-Poset
       ( powerset-Large-Poset (type-Ring A))
       ( left-ideal-Ring-Large-Poset A)
       ( left-ideal-subset-galois-connection-Ring A)
-  pr1 (is-reflective-left-ideal-subset-galois-connection-Ring I) = {!!}
+  is-reflective-left-ideal-subset-galois-connection-Ring = {!!}
   pr2 (is-reflective-left-ideal-subset-galois-connection-Ring I) = {!!}
 
   left-ideal-subset-reflective-galois-connection-Ring :
     reflective-galois-connection-Large-Poset
       ( powerset-Large-Poset (type-Ring A))
       ( left-ideal-Ring-Large-Poset A)
-  galois-connection-reflective-galois-connection-Large-Poset
-    left-ideal-subset-reflective-galois-connection-Ring = {!!}
+  left-ideal-subset-reflective-galois-connection-Ring = {!!}
   is-reflective-reflective-galois-connection-Large-Poset
     left-ideal-subset-reflective-galois-connection-Ring = {!!}
 ```
@@ -300,7 +294,7 @@ module _
 
   generating-subset-left-ideal-family-of-subsets-Ring :
     subset-Ring (l2 ⊔ l3) R
-  generating-subset-left-ideal-family-of-subsets-Ring x = {!!}
+  generating-subset-left-ideal-family-of-subsets-Ring = {!!}
 
   left-ideal-family-of-subsets-Ring : left-ideal-Ring (l1 ⊔ l2 ⊔ l3) R
   left-ideal-family-of-subsets-Ring = {!!}
@@ -313,14 +307,13 @@ module _
 
   contains-subset-left-ideal-family-of-subsets-Ring :
     {α : U} → (S α) ⊆ subset-left-ideal-family-of-subsets-Ring
-  contains-subset-left-ideal-family-of-subsets-Ring {α} x H = {!!}
+  contains-subset-left-ideal-family-of-subsets-Ring = {!!}
 
   is-left-ideal-generated-by-family-of-subsets-left-ideal-family-of-subsets-Ring :
     is-left-ideal-generated-by-family-of-subsets-Ring R S
       ( left-ideal-family-of-subsets-Ring)
       ( λ α → contains-subset-left-ideal-family-of-subsets-Ring)
-  is-left-ideal-generated-by-family-of-subsets-left-ideal-family-of-subsets-Ring
-    J H = {!!}
+  is-left-ideal-generated-by-family-of-subsets-left-ideal-family-of-subsets-Ring = {!!}
 ```
 
 ### The left ideal generated by a family of elements in a ring
@@ -331,7 +324,7 @@ module _
   where
 
   generating-subset-left-ideal-family-of-elements-Ring : subset-Ring l1 R
-  generating-subset-left-ideal-family-of-elements-Ring x = {!!}
+  generating-subset-left-ideal-family-of-elements-Ring = {!!}
 
   left-ideal-family-of-elements-Ring : left-ideal-Ring l1 R
   left-ideal-family-of-elements-Ring = {!!}
@@ -344,15 +337,14 @@ module _
 
   contains-element-left-ideal-family-of-elements-Ring :
     (i : I) → is-in-left-ideal-family-of-elements-Ring (a i)
-  contains-element-left-ideal-family-of-elements-Ring i = {!!}
+  contains-element-left-ideal-family-of-elements-Ring = {!!}
 
   abstract
     is-left-ideal-generated-by-family-of-elements-left-ideal-family-of-elements-Ring :
       is-left-ideal-generated-by-family-of-elements-Ring R a
         left-ideal-family-of-elements-Ring
         contains-element-left-ideal-family-of-elements-Ring
-    is-left-ideal-generated-by-family-of-elements-left-ideal-family-of-elements-Ring
-      J H = {!!}
+    is-left-ideal-generated-by-family-of-elements-left-ideal-family-of-elements-Ring = {!!}
 ```
 
 ## Properties
@@ -368,7 +360,7 @@ module _
     (l : left-formal-combination-subset-Ring R (subset-left-ideal-Ring R I)) →
     is-in-left-ideal-Ring R I
       ( ev-left-formal-combination-subset-Ring R (subset-left-ideal-Ring R I) l)
-  cases-forward-inclusion-idempotent-left-ideal-subset-Ring nil = {!!}
+  cases-forward-inclusion-idempotent-left-ideal-subset-Ring = {!!}
   cases-forward-inclusion-idempotent-left-ideal-subset-Ring
     ( cons (x , y , u) l) = {!!}
 
@@ -377,7 +369,7 @@ module _
       leq-left-ideal-Ring R
         ( left-ideal-subset-Ring R (subset-left-ideal-Ring R I))
         ( I)
-    forward-inclusion-idempotent-left-ideal-subset-Ring x H = {!!}
+    forward-inclusion-idempotent-left-ideal-subset-Ring = {!!}
 
   backward-inclusion-idempotent-left-ideal-subset-Ring :
     leq-left-ideal-Ring R
@@ -389,7 +381,7 @@ module _
     has-same-elements-left-ideal-Ring R
       ( left-ideal-subset-Ring R (subset-left-ideal-Ring R I))
       ( I)
-  pr1 (idempotent-left-ideal-subset-Ring x) = {!!}
+  idempotent-left-ideal-subset-Ring = {!!}
   pr2 (idempotent-left-ideal-subset-Ring x) = {!!}
 ```
 

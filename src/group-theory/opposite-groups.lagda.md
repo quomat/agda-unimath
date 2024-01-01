@@ -32,13 +32,13 @@ module _
   where
 
   is-unital-op-Group : is-unital-Semigroup (op-Semigroup (semigroup-Group G))
-  pr1 is-unital-op-Group = {!!}
+  is-unital-op-Group = {!!}
 
   is-group-op-Group : is-group (op-Semigroup (semigroup-Group G))
-  pr1 is-group-op-Group = {!!}
+  is-group-op-Group = {!!}
 
   op-Group : Group l
-  pr1 op-Group = {!!}
+  op-Group = {!!}
 ```
 
 ## Properties
@@ -51,7 +51,7 @@ module _
   where
 
   equiv-inv-Group : equiv-Group G (op-Group G)
-  pr1 equiv-inv-Group = {!!}
+  equiv-inv-Group = {!!}
 
   iso-inv-Group : iso-Group G (op-Group G)
   iso-inv-Group = {!!}

@@ -29,16 +29,16 @@ infrastructure of equivalences for automorphisms.
 
 ```agda
 Aut : {l : Level} → UU l → UU l
-Aut Y = {!!}
+Aut = {!!}
 
 is-set-Aut : {l : Level} {A : UU l} → is-set A → is-set (Aut A)
-is-set-Aut H = {!!}
+is-set-Aut = {!!}
 
 Aut-Set : {l : Level} → Set l → Set l
-pr1 (Aut-Set A) = {!!}
+Aut-Set = {!!}
 pr2 (Aut-Set A) = {!!}
 
 Aut-Pointed-Type : {l : Level} → UU l → Pointed-Type l
-pr1 (Aut-Pointed-Type A) = {!!}
+Aut-Pointed-Type = {!!}
 pr2 (Aut-Pointed-Type A) = {!!}
 ```

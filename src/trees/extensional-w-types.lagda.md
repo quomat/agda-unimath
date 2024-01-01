@@ -68,13 +68,13 @@ module _
   where
 
   Eq-ext-𝕎 : 𝕎 A B → 𝕎 A B → UU (l1 ⊔ l2)
-  Eq-ext-𝕎 x y = {!!}
+  Eq-ext-𝕎 = {!!}
 
   refl-Eq-ext-𝕎 : (x : 𝕎 A B) → Eq-ext-𝕎 x x
-  refl-Eq-ext-𝕎 x z = {!!}
+  refl-Eq-ext-𝕎 = {!!}
 
   Eq-ext-eq-𝕎 : {x y : 𝕎 A B} → x ＝ y → Eq-ext-𝕎 x y
-  Eq-ext-eq-𝕎 {x} refl = {!!}
+  Eq-ext-eq-𝕎 = {!!}
 ```
 
 ## Properties
@@ -85,10 +85,10 @@ module _
   where
 
   Eq-Eq-ext-𝕎 : (x y : 𝕎 A B) (u v : Eq-ext-𝕎 x y) → UU (l1 ⊔ l2)
-  Eq-Eq-ext-𝕎 x y u v = {!!}
+  Eq-Eq-ext-𝕎 = {!!}
 
   refl-Eq-Eq-ext-𝕎 : (x y : 𝕎 A B) (u : Eq-ext-𝕎 x y) → Eq-Eq-ext-𝕎 x y u u
-  refl-Eq-Eq-ext-𝕎 x y u z = {!!}
+  refl-Eq-Eq-ext-𝕎 = {!!}
 
   is-torsorial-Eq-Eq-ext-𝕎 :
     (x y : 𝕎 A B) (u : Eq-ext-𝕎 x y) → is-torsorial (Eq-Eq-ext-𝕎 x y u)

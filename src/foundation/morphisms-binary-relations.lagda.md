@@ -32,7 +32,7 @@ module _
   where
 
   hom-Relation : Relation l2 A → Relation l3 A → UU (l1 ⊔ l2 ⊔ l3)
-  hom-Relation R S = {!!}
+  hom-Relation = {!!}
 ```
 
 ## Properties

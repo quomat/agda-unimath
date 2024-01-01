@@ -32,16 +32,16 @@ open import foundation-core.transport-along-identifications
 
 ```agda
 square-ℤ : ℤ → ℤ
-square-ℤ a = {!!}
+square-ℤ = {!!}
 
 cube-ℤ : ℤ → ℤ
-cube-ℤ a = {!!}
+cube-ℤ = {!!}
 
 is-square-ℤ : ℤ → UU lzero
-is-square-ℤ a = {!!}
+is-square-ℤ = {!!}
 
 square-root-ℤ : (a : ℤ) → is-square-ℤ a → ℤ
-square-root-ℤ _ (root , _) = {!!}
+square-root-ℤ = {!!}
 ```
 
 ## Properties
@@ -56,17 +56,17 @@ is-decidable-is-nonnegative-square-ℤ :
 is-decidable-is-nonnegative-square-ℤ = {!!}
 
 is-nonnegative-square-ℤ : (a : ℤ) → is-nonnegative-ℤ (square-ℤ a)
-is-nonnegative-square-ℤ a = {!!}
+is-nonnegative-square-ℤ = {!!}
 ```
 
 ### The squares in ℤ are exactly the squares in ℕ
 
 ```agda
 is-square-int-is-square-nat : {n : ℕ} → is-square-ℕ n → is-square-ℤ (int-ℕ n)
-is-square-int-is-square-nat (root , pf-square) = {!!}
+is-square-int-is-square-nat = {!!}
 
 is-square-nat-is-square-int : {a : ℤ} → is-square-ℤ a → is-square-ℕ (abs-ℤ a)
-is-square-nat-is-square-int (root , pf-square) = {!!}
+is-square-nat-is-square-int = {!!}
 
 iff-is-square-int-is-square-nat :
   (n : ℕ) → is-square-ℕ n ↔ is-square-ℤ (int-ℕ n)
@@ -81,7 +81,7 @@ iff-is-nonneg-square-nat-is-square-int = {!!}
 
 ```agda
 is-decidable-is-square-ℤ : (a : ℤ) → is-decidable (is-square-ℤ a)
-is-decidable-is-square-ℤ (inl n) = {!!}
+is-decidable-is-square-ℤ = {!!}
 is-decidable-is-square-ℤ (inr (inl n)) = {!!}
 is-decidable-is-square-ℤ (inr (inr n)) = {!!}
 ```

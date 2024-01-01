@@ -67,18 +67,18 @@ module _
   ind-modality = {!!}
 
   compute-ind-modality : ind-modality → UU (lsuc l1 ⊔ l2)
-  compute-ind-modality ind-○ = {!!}
+  compute-ind-modality = {!!}
 
   induction-principle-modality : UU (lsuc l1 ⊔ l2)
   induction-principle-modality = {!!}
 
   ind-induction-principle-modality : induction-principle-modality → ind-modality
-  ind-induction-principle-modality I P = {!!}
+  ind-induction-principle-modality = {!!}
 
   compute-ind-induction-principle-modality :
     (I : induction-principle-modality) →
     compute-ind-modality (ind-induction-principle-modality I)
-  compute-ind-induction-principle-modality I P = {!!}
+  compute-ind-induction-principle-modality = {!!}
 ```
 
 ### Modal recursion
@@ -94,18 +94,18 @@ module _
   rec-modality = {!!}
 
   compute-rec-modality : rec-modality → UU (lsuc l1 ⊔ l2)
-  compute-rec-modality rec-○ = {!!}
+  compute-rec-modality = {!!}
 
   recursion-principle-modality : UU (lsuc l1 ⊔ l2)
   recursion-principle-modality = {!!}
 
   rec-recursion-principle-modality : recursion-principle-modality → rec-modality
-  rec-recursion-principle-modality I {Y = Y} = {!!}
+  rec-recursion-principle-modality = {!!}
 
   compute-rec-recursion-principle-modality :
     (I : recursion-principle-modality) →
     compute-rec-modality (rec-recursion-principle-modality I)
-  compute-rec-recursion-principle-modality I {Y = Y} = {!!}
+  compute-rec-recursion-principle-modality = {!!}
 ```
 
 ## Properties
@@ -120,17 +120,17 @@ module _
   where
 
   rec-ind-modality : ind-modality unit-○ → rec-modality unit-○
-  rec-ind-modality ind {Y = Y} = {!!}
+  rec-ind-modality = {!!}
 
   compute-rec-compute-ind-modality :
     (ind-○ : ind-modality unit-○) →
     compute-ind-modality unit-○ ind-○ →
     compute-rec-modality unit-○ (rec-ind-modality ind-○)
-  compute-rec-compute-ind-modality ind-○ compute-ind-○ {Y = Y} = {!!}
+  compute-rec-compute-ind-modality = {!!}
 
   recursion-principle-induction-principle-modality :
     induction-principle-modality unit-○ → recursion-principle-modality unit-○
-  recursion-principle-induction-principle-modality I {Y = Y} = {!!}
+  recursion-principle-induction-principle-modality = {!!}
 ```
 
 ### Modal induction gives an inverse to the unit
@@ -143,7 +143,7 @@ is-section-ind-modality :
   (ind-○ : ind-modality unit-○)
   (compute-ind-○ : compute-ind-modality unit-○ ind-○)
   {X : UU l1} {P : ○ X → UU l1} → (precomp-Π unit-○ (○ ∘ P) ∘ ind-○ P) ~ id
-is-section-ind-modality unit-○ ind-○ compute-ind-○ {X} {P} = {!!}
+is-section-ind-modality = {!!}
 
 is-retraction-ind-id-modality :
   {l : Level}
@@ -152,7 +152,7 @@ is-retraction-ind-id-modality :
   (ind-○ : ind-modality unit-○)
   (compute-ind-○ : compute-ind-modality unit-○ ind-○)
   {X : UU l} → (ind-○ (λ _ → X) id ∘ unit-○) ~ id
-is-retraction-ind-id-modality {○ = ○} unit-○ ind-○ compute-ind-○ {X} = {!!}
+is-retraction-ind-id-modality = {!!}
 
 module _
   {l1 l2 : Level}
@@ -165,17 +165,17 @@ module _
   is-retraction-rec-map-modality :
     {X Y : UU l1} (f : ○ X → Y) (r : retraction f) →
     (rec-○ (map-retraction f r) ∘ (unit-○ ∘ f)) ~ id
-  is-retraction-rec-map-modality {X} {Y} f r = {!!}
+  is-retraction-rec-map-modality = {!!}
 
   retraction-rec-map-modality :
     {X Y : UU l1} (f : ○ X → Y) →
     retraction f → retraction (unit-○ ∘ f)
-  pr1 (retraction-rec-map-modality {X} {Y} f r) = {!!}
+  retraction-rec-map-modality = {!!}
 
   section-rec-map-modality :
     {X Y : UU l1} (f : X → ○ Y) →
     section f → section (rec-○ f)
-  pr1 (section-rec-map-modality f s) = {!!}
+  section-rec-map-modality = {!!}
 ```
 
 ### A modal induction principle consists precisely of an induction rule and a computation rule
@@ -191,7 +191,7 @@ equiv-section-unit-induction-principle-modality :
     ( λ I →
       {X : UU l1} (P : ○ X → UU l1) (f : (x : X) → ○ (P (unit-○ x))) →
       I P f ∘ unit-○ ~ f)
-equiv-section-unit-induction-principle-modality unit-○ = {!!}
+equiv-section-unit-induction-principle-modality = {!!}
 
 equiv-section-unit-recursion-principle-modality :
   { l1 l2 : Level}
@@ -200,7 +200,7 @@ equiv-section-unit-recursion-principle-modality :
   ( recursion-principle-modality unit-○) ≃
     Σ ( {X Y : UU l1} → (X → ○ Y) → ○ X → ○ Y)
     ( λ I → {X Y : UU l1} (f : X → ○ Y) → I f ∘ unit-○ ~ f)
-equiv-section-unit-recursion-principle-modality unit-○ = {!!}
+equiv-section-unit-recursion-principle-modality = {!!}
 ```
 
 ### The modal operator's action on maps
@@ -214,11 +214,11 @@ module _
 
   ap-map-rec-modality :
     rec-modality unit-○ → {X Y : UU l1} → (X → Y) → ○ X → ○ Y
-  ap-map-rec-modality rec-○ f = {!!}
+  ap-map-rec-modality = {!!}
 
   ap-map-ind-modality :
     ind-modality unit-○ → {X Y : UU l1} → (X → Y) → ○ X → ○ Y
-  ap-map-ind-modality ind-○ = {!!}
+  ap-map-ind-modality = {!!}
 ```
 
 ### Naturality of the unit
@@ -248,12 +248,12 @@ module _
   naturality-unit-rec-modality :
     {X Y : UU l1} (f : X → Y) →
     (ap-map-rec-modality unit-○ rec-○ f ∘ unit-○) ~ (unit-○ ∘ f)
-  naturality-unit-rec-modality f = {!!}
+  naturality-unit-rec-modality = {!!}
 
   naturality-unit-rec-modality' :
     {X Y : UU l1} (f : X → Y) {x x' : X} →
     unit-○ x ＝ unit-○ x' → unit-○ (f x) ＝ unit-○ (f x')
-  naturality-unit-rec-modality' f {x} {x'} p = {!!}
+  naturality-unit-rec-modality' = {!!}
 
 module _
   {l1 l2 : Level}

@@ -37,7 +37,7 @@ open import foundation-core.torsorial-type-families
 
 ```agda
 Subtype : {l1 : Level} (l2 l3 : Level) (A : UU l1) → UU (l1 ⊔ lsuc l2 ⊔ lsuc l3)
-Subtype l2 l3 A = {!!}
+Subtype = {!!}
 ```
 
 ## Properties
@@ -65,7 +65,7 @@ module _
   has-same-elements-subtype-Prop = {!!}
 
   has-same-elements-subtype : {l3 : Level} → subtype l3 A → UU (l1 ⊔ l2 ⊔ l3)
-  has-same-elements-subtype Q = {!!}
+  has-same-elements-subtype = {!!}
 
   is-prop-has-same-elements-subtype :
     {l3 : Level} (Q : subtype l3 A) →
@@ -73,7 +73,7 @@ module _
   is-prop-has-same-elements-subtype = {!!}
 
   refl-has-same-elements-subtype : has-same-elements-subtype P
-  pr1 (refl-has-same-elements-subtype x) = {!!}
+  refl-has-same-elements-subtype = {!!}
 
   is-torsorial-has-same-elements-subtype :
     is-torsorial has-same-elements-subtype
@@ -143,7 +143,7 @@ is-set-subtype :
 is-set-subtype = {!!}
 
 subtype-Set : {l1 : Level} (l2 : Level) → UU l1 → Set (l1 ⊔ lsuc l2)
-pr1 (subtype-Set l2 A) = {!!}
+subtype-Set = {!!}
 pr2 (subtype-Set l2 A) = {!!}
 ```
 

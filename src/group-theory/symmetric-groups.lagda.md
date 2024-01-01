@@ -37,10 +37,10 @@ open import group-theory.symmetric-concrete-groups
 
 ```agda
 set-symmetric-Group : {l : Level} (X : Set l) → Set l
-set-symmetric-Group X = {!!}
+set-symmetric-Group = {!!}
 
 type-symmetric-Group : {l : Level} (X : Set l) → UU l
-type-symmetric-Group X = {!!}
+type-symmetric-Group = {!!}
 
 is-set-type-symmetric-Group :
   {l : Level} (X : Set l) → is-set (type-symmetric-Group X)

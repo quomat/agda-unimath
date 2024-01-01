@@ -40,7 +40,7 @@ module _
   where
 
   ev-free-loop : (X → Y) → free-loop Y
-  pr1 (ev-free-loop f) = {!!}
+  ev-free-loop = {!!}
 ```
 
 ### The universal property of the circle
@@ -62,7 +62,7 @@ module _
   where
 
   ev-free-loop-Π : ((x : X) → P x) → free-dependent-loop α P
-  pr1 (ev-free-loop-Π f) = {!!}
+  ev-free-loop-Π = {!!}
 ```
 
 ### The induction principle of the circle

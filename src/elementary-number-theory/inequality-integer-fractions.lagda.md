@@ -29,24 +29,24 @@ A fraction `m/n` is less (or equal) to a fraction `m'/n'` iff `m * n'` is less
 
 ```agda
 leq-fraction-ℤ-Prop : fraction-ℤ → fraction-ℤ → Prop lzero
-leq-fraction-ℤ-Prop (m , n , p) (m' , n' , p') = {!!}
+leq-fraction-ℤ-Prop = {!!}
 
 leq-fraction-ℤ : fraction-ℤ → fraction-ℤ → UU lzero
-leq-fraction-ℤ x y = {!!}
+leq-fraction-ℤ = {!!}
 
 is-prop-leq-fraction-ℤ : (x y : fraction-ℤ) → is-prop (leq-fraction-ℤ x y)
-is-prop-leq-fraction-ℤ x y = {!!}
+is-prop-leq-fraction-ℤ = {!!}
 ```
 
 ### Strict inequality of integer fractions
 
 ```agda
 le-fraction-ℤ-Prop : fraction-ℤ → fraction-ℤ → Prop lzero
-le-fraction-ℤ-Prop (m , n , p) (m' , n' , p') = {!!}
+le-fraction-ℤ-Prop = {!!}
 
 le-fraction-ℤ : fraction-ℤ → fraction-ℤ → UU lzero
-le-fraction-ℤ x y = {!!}
+le-fraction-ℤ = {!!}
 
 is-prop-le-fraction-ℤ : (x y : fraction-ℤ) → is-prop (le-fraction-ℤ x y)
-is-prop-le-fraction-ℤ x y = {!!}
+is-prop-le-fraction-ℤ = {!!}
 ```

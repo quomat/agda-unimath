@@ -34,7 +34,7 @@ module _
 
   comp-endo-Precategory :
     type-endo-Precategory → type-endo-Precategory → type-endo-Precategory
-  comp-endo-Precategory g f = {!!}
+  comp-endo-Precategory = {!!}
 
   id-endo-Precategory : type-endo-Precategory
   id-endo-Precategory = {!!}
@@ -59,8 +59,8 @@ module _
   set-endo-Precategory = {!!}
 
   semigroup-endo-Precategory : Semigroup l2
-  pr1 semigroup-endo-Precategory = {!!}
+  semigroup-endo-Precategory = {!!}
 
   monoid-endo-Precategory : Monoid l2
-  pr1 monoid-endo-Precategory = {!!}
+  monoid-endo-Precategory = {!!}
 ```

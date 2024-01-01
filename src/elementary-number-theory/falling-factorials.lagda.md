@@ -21,7 +21,7 @@ The falling factorial (n)\_m is the number n(n-1)⋯(n-m+1)
 
 ```agda
 falling-factorial-ℕ : ℕ → ℕ → ℕ
-falling-factorial-ℕ zero-ℕ zero-ℕ = {!!}
+falling-factorial-ℕ = {!!}
 falling-factorial-ℕ zero-ℕ (succ-ℕ m) = {!!}
 falling-factorial-ℕ (succ-ℕ n) zero-ℕ = {!!}
 falling-factorial-ℕ (succ-ℕ n) (succ-ℕ m) = {!!}

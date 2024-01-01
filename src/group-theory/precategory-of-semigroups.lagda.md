@@ -28,5 +28,5 @@ Semigroups and semigroup homomorphisms form a precategory.
 ```agda
 instance
   Semigroup-Large-Precategory : Large-Precategory lsuc (_⊔_)
-  obj-Large-Precategory Semigroup-Large-Precategory = {!!}
+  Semigroup-Large-Precategory = {!!}
 ```

@@ -72,12 +72,12 @@ module _
   compute-eq-htpy-htpy-eq-right-whisk :
     ( p : f ＝ g) →
     eq-htpy ((htpy-eq p) ·r h) ＝ ap (precomp h C) p
-  compute-eq-htpy-htpy-eq-right-whisk refl = {!!}
+  compute-eq-htpy-htpy-eq-right-whisk = {!!}
 
   compute-eq-htpy-right-whisk :
     ( H : f ~ g) →
     eq-htpy (H ·r h) ＝ ap (precomp h C) (eq-htpy H)
-  compute-eq-htpy-right-whisk H = {!!}
+  compute-eq-htpy-right-whisk = {!!}
 ```
 
 ```agda
@@ -88,12 +88,12 @@ module _
 
   compute-eq-htpy-htpy-eq-left-whisk :
     ( p : f ＝ g) → eq-htpy (h ·l (htpy-eq p)) ＝ ap (postcomp A h) p
-  compute-eq-htpy-htpy-eq-left-whisk refl = {!!}
+  compute-eq-htpy-htpy-eq-left-whisk = {!!}
 
   compute-eq-htpy-left-whisk :
     (H : f ~ g) →
     eq-htpy (h ·l H) ＝ ap (postcomp A h) (eq-htpy H)
-  compute-eq-htpy-left-whisk H = {!!}
+  compute-eq-htpy-left-whisk = {!!}
 ```
 
 ### Whiskering a square of homotopies by a homotopy is an equivalence
@@ -235,7 +235,7 @@ module _
   ap-left-whisk-coherence-square-homotopies :
     coherence-square-homotopies H H' K K' →
     coherence-square-homotopies (f ·l H) (f ·l H') (f ·l K) (f ·l K')
-  ap-left-whisk-coherence-square-homotopies α a = {!!}
+  ap-left-whisk-coherence-square-homotopies = {!!}
 
 module _
   { l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : UU l3}
@@ -246,5 +246,5 @@ module _
   ap-right-whisk-coherence-square-homotopies :
     coherence-square-homotopies H H' K K' →
     coherence-square-homotopies (H ·r f) (H' ·r f) (K ·r f) (K' ·r f)
-  ap-right-whisk-coherence-square-homotopies α = {!!}
+  ap-right-whisk-coherence-square-homotopies = {!!}
 ```

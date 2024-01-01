@@ -48,6 +48,5 @@ module _
     (top : x ＝ y)
     (top-left : x ＝ z) (top-right : y ＝ w)
     (bottom-left : z ＝ v) (bottom-right : w ＝ v) → UU l
-  coherence-pentagon-identifications
-    top top-left top-right bottom-left bottom-right = {!!}
+  coherence-pentagon-identifications = {!!}
 ```

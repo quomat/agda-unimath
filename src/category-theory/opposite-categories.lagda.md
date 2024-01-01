@@ -111,7 +111,7 @@ module _
   precategory-opposite-Category = {!!}
 
   opposite-Category : Category l1 l2
-  pr1 opposite-Category = {!!}
+  opposite-Category = {!!}
 ```
 
 ## Properties

@@ -32,21 +32,21 @@ type `A` is the type `A → empty`.
 
 ```agda
 is-prop-neg : {l : Level} {A : UU l} → is-prop (¬ A)
-is-prop-neg {A = A} = {!!}
+is-prop-neg = {!!}
 
 neg-Prop' : {l1 : Level} → UU l1 → Prop l1
-pr1 (neg-Prop' A) = {!!}
+neg-Prop' = {!!}
 pr2 (neg-Prop' A) = {!!}
 
 neg-Prop : {l1 : Level} → Prop l1 → Prop l1
-neg-Prop P = {!!}
+neg-Prop = {!!}
 ```
 
 ### Reductio ad absurdum
 
 ```agda
 reductio-ad-absurdum : {l1 l2 : Level} {P : UU l1} {Q : UU l2} → P → ¬ P → Q
-reductio-ad-absurdum p np = {!!}
+reductio-ad-absurdum = {!!}
 ```
 
 ### Equivalent types have equivalent negations

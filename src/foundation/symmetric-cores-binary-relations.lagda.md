@@ -70,7 +70,7 @@ module _
   where
 
   symmetric-core-Relation : Symmetric-Relation l2 A
-  symmetric-core-Relation p = {!!}
+  symmetric-core-Relation = {!!}
 
   counit-symmetric-core-Relation :
     {x y : A} →

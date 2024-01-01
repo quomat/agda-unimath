@@ -26,7 +26,7 @@ binary operation.
 
 ```agda
 has-associative-mul : {l : Level} (X : UU l) → UU l
-has-associative-mul X = {!!}
+has-associative-mul = {!!}
 
 has-associative-mul-Set :
   {l : Level} (X : Set l) → UU l
@@ -56,7 +56,7 @@ module _
   mul-Semigroup = {!!}
 
   mul-Semigroup' : type-Semigroup → type-Semigroup → type-Semigroup
-  mul-Semigroup' x y = {!!}
+  mul-Semigroup' = {!!}
 
   ap-mul-Semigroup :
     {x x' y y' : type-Semigroup} →

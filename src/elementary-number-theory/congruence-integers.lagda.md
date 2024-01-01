@@ -32,47 +32,47 @@ open import foundation.universe-levels
 
 ```agda
 cong-ℤ : ℤ → ℤ → ℤ → UU lzero
-cong-ℤ k x y = {!!}
+cong-ℤ = {!!}
 
 is-cong-zero-ℤ : ℤ → ℤ → UU lzero
-is-cong-zero-ℤ k x = {!!}
+is-cong-zero-ℤ = {!!}
 ```
 
 ## Properties
 
 ```agda
 is-cong-zero-div-ℤ : (k x : ℤ) → div-ℤ k x → is-cong-zero-ℤ k x
-pr1 (is-cong-zero-div-ℤ k x (pair d p)) = {!!}
+is-cong-zero-div-ℤ = {!!}
 pr2 (is-cong-zero-div-ℤ k x (pair d p)) = {!!}
 
 div-is-cong-zero-ℤ : (k x : ℤ) → is-cong-zero-ℤ k x → div-ℤ k x
-pr1 (div-is-cong-zero-ℤ k x (pair d p)) = {!!}
+div-is-cong-zero-ℤ = {!!}
 pr2 (div-is-cong-zero-ℤ k x (pair d p)) = {!!}
 
 is-indiscrete-cong-ℤ : (k : ℤ) → is-unit-ℤ k → (x y : ℤ) → cong-ℤ k x y
-is-indiscrete-cong-ℤ k H x y = {!!}
+is-indiscrete-cong-ℤ = {!!}
 
 is-discrete-cong-ℤ : (k : ℤ) → is-zero-ℤ k → (x y : ℤ) → cong-ℤ k x y → x ＝ y
-is-discrete-cong-ℤ .zero-ℤ refl x y K = {!!}
+is-discrete-cong-ℤ = {!!}
 
 is-unit-cong-succ-ℤ : (k x : ℤ) → cong-ℤ k x (succ-ℤ x) → is-unit-ℤ k
-pr1 (is-unit-cong-succ-ℤ k x (pair y p)) = {!!}
+is-unit-cong-succ-ℤ = {!!}
 pr2 (is-unit-cong-succ-ℤ k x (pair y p)) = {!!}
 
 is-unit-cong-pred-ℤ : (k x : ℤ) → cong-ℤ k x (pred-ℤ x) → is-unit-ℤ k
-pr1 (is-unit-cong-pred-ℤ k x (pair y p)) = {!!}
+is-unit-cong-pred-ℤ = {!!}
 pr2 (is-unit-cong-pred-ℤ k x (pair y p)) = {!!}
 
 refl-cong-ℤ : (k : ℤ) → is-reflexive (cong-ℤ k)
-pr1 (refl-cong-ℤ k x) = {!!}
+refl-cong-ℤ = {!!}
 pr2 (refl-cong-ℤ k x) = {!!}
 
 symmetric-cong-ℤ : (k : ℤ) → is-symmetric (cong-ℤ k)
-pr1 (symmetric-cong-ℤ k x y (pair d p)) = {!!}
+symmetric-cong-ℤ = {!!}
 pr2 (symmetric-cong-ℤ k x y (pair d p)) = {!!}
 
 transitive-cong-ℤ : (k : ℤ) → is-transitive (cong-ℤ k)
-pr1 (transitive-cong-ℤ k x y z (pair e q) (pair d p)) = {!!}
+transitive-cong-ℤ = {!!}
 pr2 (transitive-cong-ℤ k x y z (pair e q) (pair d p)) = {!!}
 
 concatenate-eq-cong-ℤ :
@@ -96,11 +96,11 @@ concatenate-cong-cong-cong-ℤ :
 concatenate-cong-cong-cong-ℤ = {!!}
 
 cong-cong-neg-ℤ : (k x y : ℤ) → cong-ℤ k (neg-ℤ x) (neg-ℤ y) → cong-ℤ k x y
-pr1 (cong-cong-neg-ℤ k x y (pair d p)) = {!!}
+cong-cong-neg-ℤ = {!!}
 pr2 (cong-cong-neg-ℤ k x y (pair d p)) = {!!}
 
 cong-neg-cong-ℤ : (k x y : ℤ) → cong-ℤ k x y → cong-ℤ k (neg-ℤ x) (neg-ℤ y)
-pr1 (cong-neg-cong-ℤ k x y (pair d p)) = {!!}
+cong-neg-cong-ℤ = {!!}
 pr2 (cong-neg-cong-ℤ k x y (pair d p)) = {!!}
 ```
 

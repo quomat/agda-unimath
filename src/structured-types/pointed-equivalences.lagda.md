@@ -50,7 +50,7 @@ module _
   where
 
   is-equiv-pointed-map : (A →∗ B) → UU (l1 ⊔ l2)
-  is-equiv-pointed-map f = {!!}
+  is-equiv-pointed-map = {!!}
 
   is-prop-is-equiv-pointed-map : (f : A →∗ B) → is-prop (is-equiv-pointed-map f)
   is-prop-is-equiv-pointed-map = {!!}
@@ -60,7 +60,7 @@ module _
 
 pointed-equiv :
   {l1 l2 : Level} (A : Pointed-Type l1) (B : Pointed-Type l2) → UU (l1 ⊔ l2)
-pointed-equiv A B = {!!}
+pointed-equiv = {!!}
 
 infix 6 _≃∗_
 _≃∗_ = {!!}
@@ -68,12 +68,12 @@ _≃∗_ = {!!}
 compute-pointed-equiv :
   {l1 l2 : Level} (A : Pointed-Type l1) (B : Pointed-Type l2) →
   (A ≃∗ B) ≃ Σ (A →∗ B) (is-equiv-pointed-map {A = A} {B})
-compute-pointed-equiv A B = {!!}
+compute-pointed-equiv = {!!}
 
 inv-compute-pointed-equiv :
   {l1 l2 : Level} (A : Pointed-Type l1) (B : Pointed-Type l2) →
   Σ (A →∗ B) (is-equiv-pointed-map {A = A} {B}) ≃ (A ≃∗ B)
-inv-compute-pointed-equiv A B = {!!}
+inv-compute-pointed-equiv = {!!}
 
 module _
   {l1 l2 : Level} {A : Pointed-Type l1} {B : Pointed-Type l2} (e : A ≃∗ B)
@@ -93,7 +93,7 @@ module _
   preserves-point-equiv-pointed-equiv = {!!}
 
   pointed-map-pointed-equiv : A →∗ B
-  pr1 pointed-map-pointed-equiv = {!!}
+  pointed-map-pointed-equiv = {!!}
 
   is-equiv-pointed-map-pointed-equiv :
     is-equiv-pointed-map pointed-map-pointed-equiv
@@ -108,7 +108,7 @@ module _
   where
 
   id-pointed-equiv : A ≃∗ A
-  pr1 id-pointed-equiv = {!!}
+  id-pointed-equiv = {!!}
 ```
 
 ### Composition of pointed equivalences
@@ -120,7 +120,7 @@ module _
   where
 
   comp-pointed-equiv : (B ≃∗ C) → (A ≃∗ B) → (A ≃∗ C)
-  pr1 (comp-pointed-equiv f e) = {!!}
+  comp-pointed-equiv = {!!}
 ```
 
 ### Pointed isomorphisms
@@ -157,7 +157,7 @@ module _
   extensionality-Pointed-Type = {!!}
 
   eq-pointed-equiv : (B : Pointed-Type l1) → A ≃∗ B → Id A B
-  eq-pointed-equiv B = {!!}
+  eq-pointed-equiv = {!!}
 ```
 
 ### Being a pointed equivalence is equivalent to being a pointed isomorphism
@@ -169,30 +169,30 @@ module _
 
   is-contr-section-is-equiv-pointed-map :
     is-equiv-pointed-map f → is-contr (section-pointed-map f)
-  is-contr-section-is-equiv-pointed-map H = {!!}
+  is-contr-section-is-equiv-pointed-map = {!!}
 
   is-contr-retraction-is-equiv-pointed-map :
     is-equiv-pointed-map f → is-contr (retraction-pointed-map f)
-  is-contr-retraction-is-equiv-pointed-map H = {!!}
+  is-contr-retraction-is-equiv-pointed-map = {!!}
 
   is-contr-is-iso-is-equiv-pointed-map :
     is-equiv-pointed-map f → is-contr (is-iso-pointed-map f)
-  is-contr-is-iso-is-equiv-pointed-map H = {!!}
+  is-contr-is-iso-is-equiv-pointed-map = {!!}
 
   is-iso-is-equiv-pointed-map :
     is-equiv-pointed-map f → is-iso-pointed-map f
-  is-iso-is-equiv-pointed-map H = {!!}
+  is-iso-is-equiv-pointed-map = {!!}
 
   is-equiv-is-iso-pointed-map :
     is-iso-pointed-map f → is-equiv-pointed-map f
-  pr1 (pr1 (is-equiv-is-iso-pointed-map H)) = {!!}
+  is-equiv-is-iso-pointed-map = {!!}
 
   is-prop-is-iso-pointed-map : is-prop (is-iso-pointed-map f)
   is-prop-is-iso-pointed-map = {!!}
 
   equiv-is-iso-is-equiv-pointed-map :
     is-equiv-pointed-map f ≃ (is-iso-pointed-map f)
-  pr1 equiv-is-iso-is-equiv-pointed-map = {!!}
+  equiv-is-iso-is-equiv-pointed-map = {!!}
 ```
 
 ### Precomposing by pointed equivalences is a pointed equivalence
@@ -205,17 +205,17 @@ module _
   is-equiv-is-equiv-precomp-pointed-map :
     ( {l : Level} (C : Pointed-Type l) → is-equiv (precomp-pointed-map C f)) →
     is-equiv-pointed-map f
-  is-equiv-is-equiv-precomp-pointed-map H = {!!}
+  is-equiv-is-equiv-precomp-pointed-map = {!!}
 
   is-equiv-precomp-is-equiv-pointed-map :
     is-equiv-pointed-map f →
     {l : Level} → (C : Pointed-Type l) → is-equiv (precomp-pointed-map C f)
-  is-equiv-precomp-is-equiv-pointed-map E C = {!!}
+  is-equiv-precomp-is-equiv-pointed-map = {!!}
 
 equiv-precomp-pointed-map :
   {l1 l2 l3 : Level} {A : Pointed-Type l1} {B : Pointed-Type l2}
   (C : Pointed-Type l3) → (A ≃∗ B) → (B →∗ C) ≃ (A →∗ C)
-pr1 (equiv-precomp-pointed-map C f) g = {!!}
+equiv-precomp-pointed-map = {!!}
 pr2 (equiv-precomp-pointed-map C f) = {!!}
 ```
 
@@ -229,10 +229,10 @@ module _
   is-equiv-is-equiv-comp-pointed-map :
     ({l : Level} (X : Pointed-Type l) → is-equiv (comp-pointed-map {A = X} f)) →
     is-equiv-pointed-map f
-  is-equiv-is-equiv-comp-pointed-map H = {!!}
+  is-equiv-is-equiv-comp-pointed-map = {!!}
 
   is-equiv-comp-is-equiv-pointed-map :
     is-equiv-pointed-map f →
     {l : Level} (X : Pointed-Type l) → is-equiv (comp-pointed-map {A = X} f)
-  is-equiv-comp-is-equiv-pointed-map E X = {!!}
+  is-equiv-comp-is-equiv-pointed-map = {!!}
 ```

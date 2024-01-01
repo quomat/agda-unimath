@@ -23,8 +23,7 @@ open import group-theory.homomorphisms-concrete-groups
 
 ```agda
 Concrete-Group-Large-Precategory : Large-Precategory lsuc (_⊔_)
-obj-Large-Precategory
-  Concrete-Group-Large-Precategory = {!!}
+Concrete-Group-Large-Precategory = {!!}
 hom-set-Large-Precategory
   Concrete-Group-Large-Precategory = {!!}
 comp-hom-Large-Precategory

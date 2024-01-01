@@ -60,7 +60,7 @@ module _
   where
 
   id-map-Set-Magmoid : map-Set-Magmoid A A
-  pr1 id-map-Set-Magmoid = {!!}
+  id-map-Set-Magmoid = {!!}
 ```
 
 ### Composition of maps on set-magmoids
@@ -87,7 +87,7 @@ module _
   hom-comp-map-Set-Magmoid = {!!}
 
   comp-map-Set-Magmoid : map-Set-Magmoid A C
-  pr1 comp-map-Set-Magmoid = {!!}
+  comp-map-Set-Magmoid = {!!}
 ```
 
 ## Properties

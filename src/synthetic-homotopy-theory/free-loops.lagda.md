@@ -36,7 +36,7 @@ in `X` is [equivalent](foundation-core.equivalences.md) to the type of maps
 
 ```agda
 free-loop : {l1 : Level} (X : UU l1) → UU l1
-free-loop X = {!!}
+free-loop = {!!}
 
 module _
   {l1 : Level} {X : UU l1}
@@ -79,13 +79,13 @@ module _
   where
 
   Eq-free-loop : (α α' : free-loop X) → UU l1
-  Eq-free-loop (pair x α) α' = {!!}
+  Eq-free-loop = {!!}
 
   refl-Eq-free-loop : (α : free-loop X) → Eq-free-loop α α
-  pr1 (refl-Eq-free-loop (pair x α)) = {!!}
+  refl-Eq-free-loop = {!!}
 
   Eq-eq-free-loop : (α α' : free-loop X) → Id α α' → Eq-free-loop α α'
-  Eq-eq-free-loop α .α refl = {!!}
+  Eq-eq-free-loop = {!!}
 
   abstract
     is-torsorial-Eq-free-loop :
@@ -106,7 +106,7 @@ module _
   where
 
   Eq-free-dependent-loop : (p p' : free-dependent-loop α P) → UU l2
-  Eq-free-dependent-loop (pair y p) p' = {!!}
+  Eq-free-dependent-loop = {!!}
 
   refl-Eq-free-dependent-loop :
     (p : free-dependent-loop α P) → Eq-free-dependent-loop p p

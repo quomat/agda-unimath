@@ -149,7 +149,7 @@ module _
   where
 
   Eq-Σ²' : (s t : Σ (Σ A B) C) → UU (l1 ⊔ l2 ⊔ l3)
-  Eq-Σ²' s t = {!!}
+  Eq-Σ²' = {!!}
 
   equiv-triple-eq-Σ' :
     (s t : Σ (Σ A B) C) →

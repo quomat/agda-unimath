@@ -38,7 +38,7 @@ module _
   where
 
   is-not-injective : (A → B) → UU (l1 ⊔ l2)
-  is-not-injective f = {!!}
+  is-not-injective = {!!}
 ```
 
 ### Any map out of an empty type is injective

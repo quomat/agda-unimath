@@ -25,5 +25,5 @@ Constant matrices are matrices in which all elements are the same.
 
 ```agda
 constant-matrix : {l : Level} {A : UU l} {m n : ℕ} → A → matrix A m n
-constant-matrix a = {!!}
+constant-matrix = {!!}
 ```

@@ -50,7 +50,7 @@ to `Y` in the subprecategory is [full](foundation.full-subtypes.md).
 ```agda
 Full-Subprecategory :
   {l1 l2 : Level} (l3 : Level) (C : Precategory l1 l2) → UU (l1 ⊔ lsuc l3)
-Full-Subprecategory l3 C = {!!}
+Full-Subprecategory = {!!}
 
 module _
   {l1 l2 l3 : Level}
@@ -91,14 +91,14 @@ module _
   where
 
   hom-set-Full-Subprecategory : (x y : obj-Full-Subprecategory C P) → Set l2
-  hom-set-Full-Subprecategory x y = {!!}
+  hom-set-Full-Subprecategory = {!!}
 
   hom-Full-Subprecategory : (x y : obj-Full-Subprecategory C P) → UU l2
-  hom-Full-Subprecategory x y = {!!}
+  hom-Full-Subprecategory = {!!}
 
   is-set-hom-Full-Subprecategory :
     (x y : obj-Full-Subprecategory C P) → is-set (hom-Full-Subprecategory x y)
-  is-set-hom-Full-Subprecategory x y = {!!}
+  is-set-hom-Full-Subprecategory = {!!}
 
   id-hom-Full-Subprecategory :
     {x : obj-Full-Subprecategory C P} → hom-Full-Subprecategory x x
@@ -158,16 +158,16 @@ module _
   associative-composition-operation-Full-Subprecategory :
     associative-composition-operation-binary-family-Set
       hom-set-Full-Subprecategory
-  pr1 associative-composition-operation-Full-Subprecategory {x} {y} {z} = {!!}
+  associative-composition-operation-Full-Subprecategory = {!!}
 
   is-unital-composition-operation-Full-Subprecategory :
     is-unital-composition-operation-binary-family-Set
       ( hom-set-Full-Subprecategory)
       ( λ {x} {y} {z} → comp-hom-Full-Subprecategory {x} {y} {z})
-  pr1 is-unital-composition-operation-Full-Subprecategory x = {!!}
+  is-unital-composition-operation-Full-Subprecategory = {!!}
 
   precategory-Full-Subprecategory : Precategory (l1 ⊔ l3) l2
-  pr1 precategory-Full-Subprecategory = {!!}
+  precategory-Full-Subprecategory = {!!}
 ```
 
 ### Isomorphisms in full subprecategories
@@ -181,7 +181,7 @@ module _
 
   iso-Full-Subprecategory :
     (X Y : obj-Full-Subprecategory C P) → UU l2
-  iso-Full-Subprecategory X Y = {!!}
+  iso-Full-Subprecategory = {!!}
 
   iso-eq-Full-Subprecategory :
     (X Y : obj-Full-Subprecategory C P) → X ＝ Y → iso-Full-Subprecategory X Y
@@ -199,18 +199,18 @@ module _
 
   inclusion-map-Full-Subprecategory :
     map-Precategory (precategory-Full-Subprecategory C P) C
-  pr1 inclusion-map-Full-Subprecategory = {!!}
+  inclusion-map-Full-Subprecategory = {!!}
 
   is-functor-inclusion-Full-Subprecategory :
     is-functor-map-Precategory
       ( precategory-Full-Subprecategory C P)
       ( C)
       ( inclusion-map-Full-Subprecategory)
-  pr1 is-functor-inclusion-Full-Subprecategory g f = {!!}
+  is-functor-inclusion-Full-Subprecategory = {!!}
 
   inclusion-Full-Subprecategory :
     functor-Precategory (precategory-Full-Subprecategory C P) C
-  pr1 inclusion-Full-Subprecategory = {!!}
+  inclusion-Full-Subprecategory = {!!}
 ```
 
 ## Properties
@@ -227,7 +227,7 @@ module _
   is-category-precategory-is-category-Full-Subprecategory :
     is-category-Precategory C →
     is-category-Precategory (precategory-Full-Subprecategory C P)
-  is-category-precategory-is-category-Full-Subprecategory is-category-C X = {!!}
+  is-category-precategory-is-category-Full-Subprecategory = {!!}
 ```
 
 ### The inclusion functor is an embedding
@@ -244,7 +244,7 @@ module _
       ( precategory-Full-Subprecategory C P)
       ( C)
       ( inclusion-Full-Subprecategory C P)
-  is-fully-faithful-inclusion-Full-Subprecategory x y = {!!}
+  is-fully-faithful-inclusion-Full-Subprecategory = {!!}
 
   is-emb-obj-inclusion-Full-Subprecategory :
     is-emb
@@ -259,13 +259,13 @@ module _
       ( precategory-Full-Subprecategory C P)
       ( C)
       ( inclusion-Full-Subprecategory C P)
-  pr1 is-embedding-inclusion-Full-Subprecategory = {!!}
+  is-embedding-inclusion-Full-Subprecategory = {!!}
 
   embedding-Full-Subprecategory :
     embedding-Precategory
       ( precategory-Full-Subprecategory C P)
       ( C)
-  pr1 embedding-Full-Subprecategory = {!!}
+  embedding-Full-Subprecategory = {!!}
 ```
 
 ## See also

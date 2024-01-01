@@ -80,10 +80,10 @@ module _
   where
 
   is-in-global-subuniverse : {l : Level} → UU l → UU (α l)
-  is-in-global-subuniverse {l} X = {!!}
+  is-in-global-subuniverse = {!!}
 
   type-global-subuniverse : (l : Level) → UU (α l ⊔ lsuc l)
-  type-global-subuniverse l = {!!}
+  type-global-subuniverse = {!!}
 
   inclusion-global-subuniverse :
     {l : Level} → type-global-subuniverse l → UU l
@@ -102,7 +102,7 @@ module _
   where
 
   is-in-map-global-subuniverse : (A → B) → UU (α (l1 ⊔ l2) ⊔ l2)
-  is-in-map-global-subuniverse f = {!!}
+  is-in-map-global-subuniverse = {!!}
 ```
 
 ### The predicate of essentially being in a subuniverse

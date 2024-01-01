@@ -28,5 +28,5 @@ module _
   where
 
   discrete-precategory-Set : Precategory l l
-  pr1 discrete-precategory-Set = {!!}
+  discrete-precategory-Set = {!!}
 ```

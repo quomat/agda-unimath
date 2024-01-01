@@ -100,7 +100,7 @@ module _
   domain-pushout-product = {!!}
 
   cocone-pushout-product : cocone (map-prod id g) (map-prod f id) (X × Y)
-  pr1 cocone-pushout-product = {!!}
+  cocone-pushout-product = {!!}
 
   abstract
     uniqueness-pushout-product :

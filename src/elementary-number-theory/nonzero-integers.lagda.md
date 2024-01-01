@@ -38,13 +38,13 @@ holds.
 
 ```agda
 is-nonzero-prop-ℤ : ℤ → Prop lzero
-is-nonzero-prop-ℤ k = {!!}
+is-nonzero-prop-ℤ = {!!}
 
 is-nonzero-ℤ : ℤ → UU lzero
-is-nonzero-ℤ k = {!!}
+is-nonzero-ℤ = {!!}
 
 is-prop-is-nonzero-ℤ : (k : ℤ) → is-prop (is-nonzero-ℤ k)
-is-prop-is-nonzero-ℤ k = {!!}
+is-prop-is-nonzero-ℤ = {!!}
 ```
 
 ### The nonzero integers
@@ -71,7 +71,7 @@ is-nonzero-one-ℤ : is-nonzero-ℤ one-ℤ
 is-nonzero-one-ℤ ()
 
 one-nonzero-ℤ : nonzero-ℤ
-pr1 one-nonzero-ℤ = {!!}
+one-nonzero-ℤ = {!!}
 pr2 one-nonzero-ℤ = {!!}
 ```
 
@@ -81,7 +81,7 @@ pr2 one-nonzero-ℤ = {!!}
 
 ```agda
 is-nonzero-int-ℕ : (n : ℕ) → is-nonzero-ℕ n → is-nonzero-ℤ (int-ℕ n)
-is-nonzero-int-ℕ zero-ℕ H p = {!!}
+is-nonzero-int-ℕ = {!!}
 ```
 
 ### Positive integers are nonzero

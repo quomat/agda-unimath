@@ -49,7 +49,7 @@ is-nonzero-nat-nonzero-ℕ = {!!}
 
 ```agda
 one-nonzero-ℕ : nonzero-ℕ
-pr1 one-nonzero-ℕ = {!!}
+one-nonzero-ℕ = {!!}
 pr2 one-nonzero-ℕ = {!!}
 ```
 
@@ -57,7 +57,7 @@ pr2 one-nonzero-ℕ = {!!}
 
 ```agda
 succ-nonzero-ℕ : nonzero-ℕ → nonzero-ℕ
-pr1 (succ-nonzero-ℕ (pair x _)) = {!!}
+succ-nonzero-ℕ = {!!}
 pr2 (succ-nonzero-ℕ (pair x _)) = {!!}
 ```
 
@@ -65,7 +65,7 @@ pr2 (succ-nonzero-ℕ (pair x _)) = {!!}
 
 ```agda
 succ-nonzero-ℕ' : ℕ → nonzero-ℕ
-pr1 (succ-nonzero-ℕ' n) = {!!}
+succ-nonzero-ℕ' = {!!}
 pr2 (succ-nonzero-ℕ' n) = {!!}
 ```
 

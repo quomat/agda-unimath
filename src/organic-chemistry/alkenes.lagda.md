@@ -34,5 +34,5 @@ is branched, thus has a different geometry).
 
 ```agda
 n-alkene : {l1 l2 : Level} → hydrocarbon l1 l2 → ℕ → UU (lsuc lzero ⊔ l1 ⊔ l2)
-n-alkene H n = {!!}
+n-alkene = {!!}
 ```

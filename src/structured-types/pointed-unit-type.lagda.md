@@ -27,7 +27,7 @@ The pointed unit type is the initial pointed type.
 
 ```agda
 unit-Pointed-Type : Pointed-Type lzero
-pr1 unit-Pointed-Type = {!!}
+unit-Pointed-Type = {!!}
 pr2 unit-Pointed-Type = {!!}
 ```
 
@@ -39,7 +39,7 @@ module _
   where
 
   terminal-pointed-map : X →∗ unit-Pointed-Type
-  pr1 terminal-pointed-map _ = {!!}
+  terminal-pointed-map = {!!}
 
   map-terminal-pointed-map : type-Pointed-Type X → unit
   map-terminal-pointed-map = {!!}

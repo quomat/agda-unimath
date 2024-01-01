@@ -27,10 +27,10 @@ We define double negation and triple negation
 
 ```agda
 ¬¬ : {l : Level} → UU l → UU l
-¬¬ P = {!!}
+¬¬ = {!!}
 
 ¬¬¬ : {l : Level} → UU l → UU l
-¬¬¬ P = {!!}
+¬¬¬ = {!!}
 ```
 
 We also define the introduction rule for double negation, and the action on maps
@@ -38,11 +38,11 @@ of double negation.
 
 ```agda
 intro-double-negation : {l : Level} {P : UU l} → P → ¬¬ P
-intro-double-negation p f = {!!}
+intro-double-negation = {!!}
 
 map-double-negation :
   {l1 l2 : Level} {P : UU l1} {Q : UU l2} → (P → Q) → (¬¬ P → ¬¬ Q)
-map-double-negation f = {!!}
+map-double-negation = {!!}
 ```
 
 ## Properties
@@ -52,11 +52,11 @@ map-double-negation f = {!!}
 ```agda
 double-negation-Prop' :
   {l : Level} (A : UU l) → Prop l
-double-negation-Prop' A = {!!}
+double-negation-Prop' = {!!}
 
 double-negation-Prop :
   {l : Level} (P : Prop l) → Prop l
-double-negation-Prop P = {!!}
+double-negation-Prop = {!!}
 
 is-prop-double-negation :
   {l : Level} {A : UU l} → is-prop (¬¬ A)
@@ -68,39 +68,39 @@ is-prop-double-negation = {!!}
 ```agda
 double-negation-double-negation-elim :
   {l : Level} {P : UU l} → ¬¬ (¬¬ P → P)
-double-negation-double-negation-elim {P = P} f = {!!}
+double-negation-double-negation-elim = {!!}
 
 double-negation-Peirces-law :
   {l1 l2 : Level} {P : UU l1} {Q : UU l2} → ¬¬ (((P → Q) → P) → P)
-double-negation-Peirces-law {P = P} f = {!!}
+double-negation-Peirces-law = {!!}
 
 double-negation-linearity-implication :
   {l1 l2 : Level} {P : UU l1} {Q : UU l2} →
   ¬¬ ((P → Q) + (Q → P))
-double-negation-linearity-implication {P = P} {Q = Q} f = {!!}
+double-negation-linearity-implication = {!!}
 ```
 
 ### Cases of double negation elimination
 
 ```agda
 double-negation-elim-neg : {l : Level} (P : UU l) → ¬¬¬ P → ¬ P
-double-negation-elim-neg P f p = {!!}
+double-negation-elim-neg = {!!}
 
 double-negation-elim-prod :
   {l1 l2 : Level} {P : UU l1} {Q : UU l2} →
   ¬¬ ((¬¬ P) × (¬¬ Q)) → (¬¬ P) × (¬¬ Q)
-pr1 (double-negation-elim-prod {P = P} {Q = Q} f) = {!!}
+double-negation-elim-prod = {!!}
 pr2 (double-negation-elim-prod {P = P} {Q = Q} f) = {!!}
 
 double-negation-elim-exp :
   {l1 l2 : Level} {P : UU l1} {Q : UU l2} →
   ¬¬ (P → ¬¬ Q) → (P → ¬¬ Q)
-double-negation-elim-exp {P = P} {Q = Q} f p = {!!}
+double-negation-elim-exp = {!!}
 
 double-negation-elim-forall :
   {l1 l2 : Level} {P : UU l1} {Q : P → UU l2} →
   ¬¬ ((p : P) → ¬¬ (Q p)) → (p : P) → ¬¬ (Q p)
-double-negation-elim-forall {P = P} {Q = Q} f p = {!!}
+double-negation-elim-forall = {!!}
 ```
 
 ### Maps into double negations extend along `intro-double-negation`
@@ -109,7 +109,7 @@ double-negation-elim-forall {P = P} {Q = Q} f p = {!!}
 double-negation-extend :
   {l1 l2 : Level} {P : UU l1} {Q : UU l2} →
   (P → ¬¬ Q) → (¬¬ P → ¬¬ Q)
-double-negation-extend {P = P} {Q = Q} f = {!!}
+double-negation-extend = {!!}
 ```
 
 ### The double negation of a type is logically equivalent to the double negation of its propositional truncation
@@ -118,7 +118,7 @@ double-negation-extend {P = P} {Q = Q} f = {!!}
 abstract
   double-negation-double-negation-type-trunc-Prop :
     {l : Level} (A : UU l) → ¬¬ (type-trunc-Prop A) → ¬¬ A
-  double-negation-double-negation-type-trunc-Prop A = {!!}
+  double-negation-double-negation-type-trunc-Prop = {!!}
 
 abstract
   double-negation-type-trunc-Prop-double-negation :

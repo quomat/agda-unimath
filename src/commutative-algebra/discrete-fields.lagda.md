@@ -25,5 +25,5 @@ because only nonzero elements are assumed to be invertible.
 
 ```agda
 is-discrete-field-Commutative-Ring : {l : Level} → Commutative-Ring l → UU l
-is-discrete-field-Commutative-Ring A = {!!}
+is-discrete-field-Commutative-Ring = {!!}
 ```

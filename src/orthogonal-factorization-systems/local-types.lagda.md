@@ -55,10 +55,10 @@ module _
   where
 
   is-local-dependent-type : {l : Level} → (X → UU l) → UU (l1 ⊔ l2 ⊔ l)
-  is-local-dependent-type A = {!!}
+  is-local-dependent-type = {!!}
 
   is-local : {l : Level} → UU l → UU (l1 ⊔ l2 ⊔ l)
-  is-local A = {!!}
+  is-local = {!!}
 ```
 
 ## Properties
@@ -127,13 +127,13 @@ module _
   where
 
   section-is-local-domains' : section (precomp f Y) → is-local f X → section f
-  pr1 (section-is-local-domains' section-precomp-Y is-local-X) = {!!}
+  section-is-local-domains' = {!!}
 
   is-equiv-is-local-domains' : section (precomp f Y) → is-local f X → is-equiv f
-  pr1 (is-equiv-is-local-domains' section-precomp-Y is-local-X) = {!!}
+  is-equiv-is-local-domains' = {!!}
 
   is-equiv-is-local-domains : is-local f Y → is-local f X → is-equiv f
-  is-equiv-is-local-domains is-local-Y = {!!}
+  is-equiv-is-local-domains = {!!}
 ```
 
 ### Propositions are `f`-local if `_∘ f` has a converse

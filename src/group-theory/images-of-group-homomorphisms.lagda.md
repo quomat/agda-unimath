@@ -112,7 +112,7 @@ module _
   is-subgroup-image-hom-Group = {!!}
 
   image-hom-Group : Subgroup (l1 ⊔ l2) H
-  pr1 image-hom-Group = {!!}
+  image-hom-Group = {!!}
 
   is-image-image-hom-Group :
     is-image-hom-Group G H f image-hom-Group
@@ -159,7 +159,7 @@ module _
     is-closed-under-inverses-im-hom-Subgroup = {!!}
 
   im-hom-Subgroup : Subgroup (l1 ⊔ l2 ⊔ l3) H
-  pr1 im-hom-Subgroup = {!!}
+  im-hom-Subgroup = {!!}
 
   forward-implication-is-image-subgroup-im-hom-Subgroup :
     {l : Level} (U : Subgroup l H) →

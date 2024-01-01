@@ -60,13 +60,13 @@ htpy-id-id-base-𝕊¹ = {!!}
 
 ```agda
 Mul-Π-𝕊¹ : 𝕊¹ → UU lzero
-Mul-Π-𝕊¹ x = {!!}
+Mul-Π-𝕊¹ = {!!}
 
 dependent-identification-Mul-Π-𝕊¹ :
   {x : 𝕊¹} (p : Id base-𝕊¹ x) (q : Mul-Π-𝕊¹ base-𝕊¹) (r : Mul-Π-𝕊¹ x) →
   (H : pr1 q ~ pr1 r) → Id (pr2 q ∙ p) (H base-𝕊¹ ∙ pr2 r) →
   Id (tr Mul-Π-𝕊¹ p q) r
-dependent-identification-Mul-Π-𝕊¹ {x} refl q r H u = {!!}
+dependent-identification-Mul-Π-𝕊¹ = {!!}
 
 eq-id-id-𝕊¹-Pointed-Type :
   Id (tr Mul-Π-𝕊¹ loop-𝕊¹ id-pointed-map) id-pointed-map
@@ -76,11 +76,11 @@ mul-Π-𝕊¹ : Π-𝕊¹ (Mul-Π-𝕊¹) (id-pointed-map) (eq-id-id-𝕊¹-Poin
 mul-Π-𝕊¹ = {!!}
 
 mul-𝕊¹ : 𝕊¹ → 𝕊¹ → 𝕊¹
-mul-𝕊¹ x = {!!}
+mul-𝕊¹ = {!!}
 
 left-unit-law-mul-𝕊¹ : (x : 𝕊¹) → Id (mul-𝕊¹ base-𝕊¹ x) x
 left-unit-law-mul-𝕊¹ = {!!}
 
 right-unit-law-mul-𝕊¹ : (x : 𝕊¹) → Id (mul-𝕊¹ x base-𝕊¹) x
-right-unit-law-mul-𝕊¹ x = {!!}
+right-unit-law-mul-𝕊¹ = {!!}
 ```

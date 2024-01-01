@@ -39,10 +39,10 @@ to prove the infinitude of primes.
 
 ```agda
 is-one-is-divisor-below-ℕ : ℕ → ℕ → UU lzero
-is-one-is-divisor-below-ℕ n a = {!!}
+is-one-is-divisor-below-ℕ = {!!}
 
 in-sieve-of-eratosthenes-ℕ : ℕ → ℕ → UU lzero
-in-sieve-of-eratosthenes-ℕ n a = {!!}
+in-sieve-of-eratosthenes-ℕ = {!!}
 
 le-in-sieve-of-eratosthenes-ℕ :
   (n a : ℕ) → in-sieve-of-eratosthenes-ℕ n a → le-ℕ n a

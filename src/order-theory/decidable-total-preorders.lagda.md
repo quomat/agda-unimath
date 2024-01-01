@@ -36,7 +36,7 @@ relation is decidable.
 
 ```agda
 Decidable-Total-Preorder : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Decidable-Total-Preorder l1 l2 = {!!}
+Decidable-Total-Preorder = {!!}
 
 module _
   {l1 l2 : Level} (X : Decidable-Total-Preorder l1 l2)
@@ -54,7 +54,7 @@ module _
   is-decidable-leq-Decidable-Total-Preorder = {!!}
 
   decidable-preorder-Decidable-Total-Preorder : Decidable-Preorder l1 l2
-  pr1 decidable-preorder-Decidable-Total-Preorder = {!!}
+  decidable-preorder-Decidable-Total-Preorder = {!!}
 
   type-Decidable-Total-Preorder : UU l1
   type-Decidable-Total-Preorder = {!!}

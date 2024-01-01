@@ -31,7 +31,7 @@ and `Q` is the proposition that both `P` and `Q` hold.
 conjunction-Prop = {!!}
 
 type-conjunction-Prop : {l1 l2 : Level} → Prop l1 → Prop l2 → UU (l1 ⊔ l2)
-type-conjunction-Prop P Q = {!!}
+type-conjunction-Prop = {!!}
 
 abstract
   is-prop-type-conjunction-Prop :

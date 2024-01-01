@@ -75,6 +75,5 @@ module _
       ( radical-ideal-subset-Commutative-Ring)
       ( contains-subset-radical-ideal-subset-Commutative-Ring)
       ( l)
-  is-radical-ideal-generated-by-subset-radical-ideal-subset-Commutative-Ring
-    K H = {!!}
+  is-radical-ideal-generated-by-subset-radical-ideal-subset-Commutative-Ring = {!!}
 ```

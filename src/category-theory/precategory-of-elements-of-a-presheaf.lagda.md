@@ -48,26 +48,24 @@ module _
 
   hom-set-precategory-of-elements-presheaf-Precategory :
     (A B : obj-precategory-of-elements-presheaf-Precategory) → Set (l2 ⊔ l3)
-  hom-set-precategory-of-elements-presheaf-Precategory (A , a) (B , b) = {!!}
+  hom-set-precategory-of-elements-presheaf-Precategory = {!!}
 
   hom-precategory-of-elements-presheaf-Precategory :
     (A B : obj-precategory-of-elements-presheaf-Precategory) → UU (l2 ⊔ l3)
-  hom-precategory-of-elements-presheaf-Precategory A B = {!!}
+  hom-precategory-of-elements-presheaf-Precategory = {!!}
 
   eq-hom-precategory-of-elements-presheaf-Precategory :
     {X Y : obj-precategory-of-elements-presheaf-Precategory}
     (f g : hom-precategory-of-elements-presheaf-Precategory X Y) →
     (pr1 f ＝ pr1 g) → f ＝ g
-  eq-hom-precategory-of-elements-presheaf-Precategory f g = {!!}
+  eq-hom-precategory-of-elements-presheaf-Precategory = {!!}
 
   comp-hom-precategory-of-elements-presheaf-Precategory :
     {X Y Z : obj-precategory-of-elements-presheaf-Precategory} →
     hom-precategory-of-elements-presheaf-Precategory Y Z →
     hom-precategory-of-elements-presheaf-Precategory X Y →
     hom-precategory-of-elements-presheaf-Precategory X Z
-  comp-hom-precategory-of-elements-presheaf-Precategory
-    ( g , q)
-    ( f , p) = {!!}
+  comp-hom-precategory-of-elements-presheaf-Precategory = {!!}
 
   associative-comp-hom-precategory-of-elements-presheaf-Precategory :
     {X Y Z W : obj-precategory-of-elements-presheaf-Precategory} →
@@ -80,7 +78,7 @@ module _
     comp-hom-precategory-of-elements-presheaf-Precategory
       ( h)
       ( comp-hom-precategory-of-elements-presheaf-Precategory g f)
-  associative-comp-hom-precategory-of-elements-presheaf-Precategory h g f = {!!}
+  associative-comp-hom-precategory-of-elements-presheaf-Precategory = {!!}
 
   inv-associative-comp-hom-precategory-of-elements-presheaf-Precategory :
     {X Y Z W : obj-precategory-of-elements-presheaf-Precategory} →
@@ -93,12 +91,12 @@ module _
     comp-hom-precategory-of-elements-presheaf-Precategory
       ( comp-hom-precategory-of-elements-presheaf-Precategory h g)
       ( f)
-  inv-associative-comp-hom-precategory-of-elements-presheaf-Precategory h g f = {!!}
+  inv-associative-comp-hom-precategory-of-elements-presheaf-Precategory = {!!}
 
   id-hom-precategory-of-elements-presheaf-Precategory :
     {X : obj-precategory-of-elements-presheaf-Precategory} →
     hom-precategory-of-elements-presheaf-Precategory X X
-  pr1 id-hom-precategory-of-elements-presheaf-Precategory = {!!}
+  id-hom-precategory-of-elements-presheaf-Precategory = {!!}
 
   left-unit-law-comp-hom-precategory-of-elements-presheaf-Precategory :
     {X Y : obj-precategory-of-elements-presheaf-Precategory} →
@@ -107,7 +105,7 @@ module _
       ( id-hom-precategory-of-elements-presheaf-Precategory)
       ( f) ＝
     f
-  left-unit-law-comp-hom-precategory-of-elements-presheaf-Precategory f = {!!}
+  left-unit-law-comp-hom-precategory-of-elements-presheaf-Precategory = {!!}
 
   right-unit-law-comp-hom-precategory-of-elements-presheaf-Precategory :
     {X Y : obj-precategory-of-elements-presheaf-Precategory} →
@@ -116,10 +114,10 @@ module _
       ( f)
       ( id-hom-precategory-of-elements-presheaf-Precategory) ＝
     f
-  right-unit-law-comp-hom-precategory-of-elements-presheaf-Precategory f = {!!}
+  right-unit-law-comp-hom-precategory-of-elements-presheaf-Precategory = {!!}
 
   precategory-of-elements-presheaf-Precategory : Precategory (l1 ⊔ l3) (l2 ⊔ l3)
-  pr1 precategory-of-elements-presheaf-Precategory = {!!}
+  precategory-of-elements-presheaf-Precategory = {!!}
 ```
 
 ### The projection from the category of elements of a presheaf to the base category
@@ -131,5 +129,5 @@ module _ {l1 l2 l3} (C : Precategory l1 l2)
 
   proj-functor-precategory-of-elements-presheaf-Precategory :
     functor-Precategory (precategory-of-elements-presheaf-Precategory C F) C
-  pr1 proj-functor-precategory-of-elements-presheaf-Precategory X = {!!}
+  proj-functor-precategory-of-elements-presheaf-Precategory = {!!}
 ```

@@ -58,7 +58,7 @@ module _
   subset-right-ideal-Ring = {!!}
 
   is-in-right-ideal-Ring : type-Ring R → UU l2
-  is-in-right-ideal-Ring x = {!!}
+  is-in-right-ideal-Ring = {!!}
 
   type-right-ideal-Ring : UU (l1 ⊔ l2)
   type-right-ideal-Ring = {!!}

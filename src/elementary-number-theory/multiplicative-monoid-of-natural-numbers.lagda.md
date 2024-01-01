@@ -33,7 +33,7 @@ of the natural numbers as its multiplicative structure.
 
 ```agda
 ℕ*-Semigroup : Semigroup lzero
-pr1 ℕ*-Semigroup = {!!}
+ℕ*-Semigroup = {!!}
 pr1 (pr2 ℕ*-Semigroup) = {!!}
 pr2 (pr2 ℕ*-Semigroup) = {!!}
 ```
@@ -42,7 +42,7 @@ pr2 (pr2 ℕ*-Semigroup) = {!!}
 
 ```agda
 ℕ*-Monoid : Monoid lzero
-pr1 ℕ*-Monoid = {!!}
+ℕ*-Monoid = {!!}
 pr1 (pr2 ℕ*-Monoid) = {!!}
 pr1 (pr2 (pr2 ℕ*-Monoid)) = {!!}
 pr2 (pr2 (pr2 ℕ*-Monoid)) = {!!}

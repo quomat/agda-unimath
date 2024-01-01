@@ -80,7 +80,7 @@ module _
   naturality-equiv-sequential-diagram = {!!}
 
   hom-equiv-sequential-diagram : hom-sequential-diagram A B
-  pr1 hom-equiv-sequential-diagram = {!!}
+  hom-equiv-sequential-diagram = {!!}
 
   is-equiv-map-equiv-sequential-diagram :
     ( n : ℕ) →
@@ -96,7 +96,7 @@ module _
   where
 
   id-equiv-sequential-diagram : equiv-sequential-diagram A A
-  pr1 id-equiv-sequential-diagram n = {!!}
+  id-equiv-sequential-diagram = {!!}
 ```
 
 ### Composition of equivalences of sequential diagrams
@@ -123,7 +123,7 @@ module _
   where
 
   inv-equiv-sequential-diagram : equiv-sequential-diagram B A
-  pr1 inv-equiv-sequential-diagram n = {!!}
+  inv-equiv-sequential-diagram = {!!}
 
   map-inv-equiv-sequential-diagram :
     ( n : ℕ) →
@@ -151,7 +151,7 @@ abstract
   is-torsorial-equiv-sequential-diagram :
     { l1 : Level} (A : sequential-diagram l1) →
     is-torsorial (equiv-sequential-diagram {l2 = l1} A)
-  is-torsorial-equiv-sequential-diagram A = {!!}
+  is-torsorial-equiv-sequential-diagram = {!!}
 
   is-equiv-equiv-eq-sequential-diagram :
     { l1 : Level} (A B : sequential-diagram l1) →

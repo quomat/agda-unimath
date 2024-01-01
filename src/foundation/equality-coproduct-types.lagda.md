@@ -63,23 +63,23 @@ module _
   where
 
   refl-Eq-coprod : (x : A + B) → Eq-coprod x x
-  refl-Eq-coprod (inl x) = {!!}
+  refl-Eq-coprod = {!!}
 
   Eq-eq-coprod : (x y : A + B) → x ＝ y → Eq-coprod x y
-  Eq-eq-coprod x .x refl = {!!}
+  Eq-eq-coprod = {!!}
 
   eq-Eq-coprod : (x y : A + B) → Eq-coprod x y → x ＝ y
-  eq-Eq-coprod .(inl x) .(inl x) (Eq-eq-coprod-inl {x} {.x} refl) = {!!}
+  eq-Eq-coprod = {!!}
 
   is-torsorial-Eq-coprod :
     (x : A + B) → is-torsorial (Eq-coprod x)
   is-torsorial-Eq-coprod = {!!}
 
   is-equiv-Eq-eq-coprod : (x y : A + B) → is-equiv (Eq-eq-coprod x y)
-  is-equiv-Eq-eq-coprod x = {!!}
+  is-equiv-Eq-eq-coprod = {!!}
 
   extensionality-coprod : (x y : A + B) → (x ＝ y) ≃ Eq-coprod x y
-  pr1 (extensionality-coprod x y) = {!!}
+  extensionality-coprod = {!!}
 ```
 
 Now we use the characterization of the identity type to obtain the desired
@@ -95,7 +95,7 @@ module _
     where
 
     map-compute-Eq-coprod-inl-inl : Eq-coprod {B = B} (inl x) (inl y) → (x ＝ y)
-    map-compute-Eq-coprod-inl-inl (Eq-eq-coprod-inl p) = {!!}
+    map-compute-Eq-coprod-inl-inl = {!!}
 
     is-section-Eq-eq-coprod-inl :
       (map-compute-Eq-coprod-inl-inl ∘ Eq-eq-coprod-inl) ~ id
@@ -110,7 +110,7 @@ module _
     is-equiv-map-compute-Eq-coprod-inl-inl = {!!}
 
     compute-Eq-coprod-inl-inl : Eq-coprod (inl x) (inl y) ≃ (x ＝ y)
-    pr1 compute-Eq-coprod-inl-inl = {!!}
+    compute-Eq-coprod-inl-inl = {!!}
 
     compute-eq-coprod-inl-inl : Id {A = A + B} (inl x) (inl y) ≃ (x ＝ y)
     compute-eq-coprod-inl-inl = {!!}
@@ -130,7 +130,7 @@ module _
     is-equiv-map-compute-Eq-coprod-inl-inr = {!!}
 
     compute-Eq-coprod-inl-inr : Eq-coprod (inl x) (inr y) ≃ empty
-    pr1 compute-Eq-coprod-inl-inr = {!!}
+    compute-Eq-coprod-inl-inr = {!!}
 
     compute-eq-coprod-inl-inr : Id {A = A + B} (inl x) (inr y) ≃ empty
     compute-eq-coprod-inl-inr = {!!}
@@ -150,7 +150,7 @@ module _
     is-equiv-map-compute-Eq-coprod-inr-inl = {!!}
 
     compute-Eq-coprod-inr-inl : Eq-coprod (inr x) (inl y) ≃ empty
-    pr1 compute-Eq-coprod-inr-inl = {!!}
+    compute-Eq-coprod-inr-inl = {!!}
 
     compute-eq-coprod-inr-inl : Id {A = A + B} (inr x) (inl y) ≃ empty
     compute-eq-coprod-inr-inl = {!!}
@@ -163,7 +163,7 @@ module _
     where
 
     map-compute-Eq-coprod-inr-inr : Eq-coprod {A = A} (inr x) (inr y) → x ＝ y
-    map-compute-Eq-coprod-inr-inr (Eq-eq-coprod-inr p) = {!!}
+    map-compute-Eq-coprod-inr-inr = {!!}
 
     is-section-Eq-eq-coprod-inr :
       (map-compute-Eq-coprod-inr-inr ∘ Eq-eq-coprod-inr) ~ id
@@ -178,7 +178,7 @@ module _
     is-equiv-map-compute-Eq-coprod-inr-inr = {!!}
 
     compute-Eq-coprod-inr-inr : Eq-coprod (inr x) (inr y) ≃ (x ＝ y)
-    pr1 compute-Eq-coprod-inr-inr = {!!}
+    compute-Eq-coprod-inr-inr = {!!}
 
     compute-eq-coprod-inr-inr : Id {A = A + B} (inr x) (inr y) ≃ (x ＝ y)
     compute-eq-coprod-inr-inr = {!!}
@@ -196,17 +196,17 @@ module _
 
   abstract
     is-emb-inl : is-emb (inl {A = A} {B = B})
-    is-emb-inl x = {!!}
+    is-emb-inl = {!!}
 
   emb-inl : A ↪ (A + B)
-  pr1 emb-inl = {!!}
+  emb-inl = {!!}
 
   abstract
     is-emb-inr : is-emb (inr {A = A} {B = B})
-    is-emb-inr x = {!!}
+    is-emb-inr = {!!}
 
   emb-inr : B ↪ (A + B)
-  pr1 emb-inr = {!!}
+  emb-inr = {!!}
 ```
 
 ### A map `A + B → C` defined by maps `f : A → C` and `B → C` is an embedding if both `f` and `g` are embeddings and they don't overlap

@@ -64,8 +64,7 @@ module _
     comp-natural-transformation-map-Small-Large-Precategory C D F H I
       ( h)
       ( comp-natural-transformation-map-Small-Large-Precategory C D F G H g f)
-  associative-comp-hom-map-large-precategory-Small-Large-Precategory
-    {F = F} {G} {H} {I} h g f = {!!}
+  associative-comp-hom-map-large-precategory-Small-Large-Precategory = {!!}
 
   inv-associative-comp-hom-map-large-precategory-Small-Large-Precategory :
     {γF γG γH γI : Level}
@@ -82,8 +81,7 @@ module _
     comp-natural-transformation-map-Small-Large-Precategory C D F G I
       ( comp-natural-transformation-map-Small-Large-Precategory C D G H I h g)
       ( f)
-  inv-associative-comp-hom-map-large-precategory-Small-Large-Precategory
-    {F = F} {G} {H} {I} h g f = {!!}
+  inv-associative-comp-hom-map-large-precategory-Small-Large-Precategory = {!!}
 
   id-hom-map-large-precategory-Small-Large-Precategory :
     {γF : Level} {F : map-Small-Large-Precategory C D γF} →
@@ -98,8 +96,7 @@ module _
     ( comp-natural-transformation-map-Small-Large-Precategory C D F G G
       ( id-natural-transformation-map-Small-Large-Precategory C D G) a) ＝
     ( a)
-  left-unit-law-comp-hom-map-large-precategory-Small-Large-Precategory
-    { F = F} {G} = {!!}
+  left-unit-law-comp-hom-map-large-precategory-Small-Large-Precategory = {!!}
 
   right-unit-law-comp-hom-map-large-precategory-Small-Large-Precategory :
     {γF γG : Level}
@@ -109,8 +106,7 @@ module _
     ( comp-natural-transformation-map-Small-Large-Precategory C D F F G
         a (id-natural-transformation-map-Small-Large-Precategory C D F)) ＝
     ( a)
-  right-unit-law-comp-hom-map-large-precategory-Small-Large-Precategory
-    { F = F} {G} = {!!}
+  right-unit-law-comp-hom-map-large-precategory-Small-Large-Precategory = {!!}
 
   map-large-precategory-Small-Large-Precategory :
     Large-Precategory (λ l → l1 ⊔ l2 ⊔ α l ⊔ β l l) (λ l l' → l1 ⊔ l2 ⊔ β l l')

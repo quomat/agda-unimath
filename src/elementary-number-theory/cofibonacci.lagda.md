@@ -43,14 +43,14 @@ the property that
 
 ```agda
 is-multiple-of-cofibonacci : (m x : ℕ) → UU lzero
-is-multiple-of-cofibonacci m x = {!!}
+is-multiple-of-cofibonacci = {!!}
 
 is-decidable-is-multiple-of-cofibonacci :
   (m x : ℕ) → is-decidable (is-multiple-of-cofibonacci m x)
 is-decidable-is-multiple-of-cofibonacci = {!!}
 
 cofibonacci-multiple : (m : ℕ) → Σ ℕ (is-multiple-of-cofibonacci m)
-cofibonacci-multiple zero-ℕ = {!!}
+cofibonacci-multiple = {!!}
 cofibonacci-multiple (succ-ℕ m) = {!!}
 ```
 
@@ -62,7 +62,7 @@ least-multiple-of-cofibonacci :
 least-multiple-of-cofibonacci = {!!}
 
 cofibonacci : ℕ → ℕ
-cofibonacci m = {!!}
+cofibonacci = {!!}
 
 is-multiple-of-cofibonacci-cofibonacci :
   (m : ℕ) → is-multiple-of-cofibonacci m (cofibonacci m)

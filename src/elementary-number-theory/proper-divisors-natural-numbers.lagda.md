@@ -36,19 +36,19 @@ divides `n`.
 
 ```agda
 is-proper-divisor-ℕ : ℕ → ℕ → UU lzero
-is-proper-divisor-ℕ n d = {!!}
+is-proper-divisor-ℕ = {!!}
 
 is-decidable-is-proper-divisor-ℕ :
   (n d : ℕ) → is-decidable (is-proper-divisor-ℕ n d)
-is-decidable-is-proper-divisor-ℕ n d = {!!}
+is-decidable-is-proper-divisor-ℕ = {!!}
 
 is-proper-divisor-zero-succ-ℕ : (n : ℕ) → is-proper-divisor-ℕ zero-ℕ (succ-ℕ n)
-pr1 (is-proper-divisor-zero-succ-ℕ n) = {!!}
+is-proper-divisor-zero-succ-ℕ = {!!}
 pr2 (is-proper-divisor-zero-succ-ℕ n) = {!!}
 
 le-is-proper-divisor-ℕ :
   (x y : ℕ) → is-nonzero-ℕ y → is-proper-divisor-ℕ y x → le-ℕ x y
-le-is-proper-divisor-ℕ x y H K = {!!}
+le-is-proper-divisor-ℕ = {!!}
 ```
 
 ## Properties
@@ -57,7 +57,7 @@ le-is-proper-divisor-ℕ x y H K = {!!}
 
 ```agda
 is-prop-is-proper-divisor-ℕ : (n d : ℕ) → is-prop (is-proper-divisor-ℕ n d)
-is-prop-is-proper-divisor-ℕ n zero-ℕ (pair f g) = {!!}
+is-prop-is-proper-divisor-ℕ = {!!}
 is-prop-is-proper-divisor-ℕ n (succ-ℕ d) = {!!}
 ```
 
@@ -66,7 +66,7 @@ is-prop-is-proper-divisor-ℕ n (succ-ℕ d) = {!!}
 ```agda
 is-proper-divisor-one-is-proper-divisor-ℕ :
   {n x : ℕ} → is-proper-divisor-ℕ n x → is-proper-divisor-ℕ n 1
-pr1 (is-proper-divisor-one-is-proper-divisor-ℕ {.1} {x} H) refl = {!!}
+is-proper-divisor-one-is-proper-divisor-ℕ = {!!}
 pr1 (pr2 (is-proper-divisor-one-is-proper-divisor-ℕ {n} {x} H)) = {!!}
 pr2 (pr2 (is-proper-divisor-one-is-proper-divisor-ℕ {n} {x} H)) = {!!}
 ```
@@ -77,5 +77,5 @@ pr2 (pr2 (is-proper-divisor-one-is-proper-divisor-ℕ {n} {x} H)) = {!!}
 le-one-quotient-div-is-proper-divisor-ℕ :
   (d x : ℕ) → is-nonzero-ℕ x → (H : div-ℕ d x) →
   d ≠ x → le-ℕ 1 (quotient-div-ℕ d x H)
-le-one-quotient-div-is-proper-divisor-ℕ d x f H g = {!!}
+le-one-quotient-div-is-proper-divisor-ℕ = {!!}
 ```

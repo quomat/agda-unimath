@@ -27,12 +27,12 @@ that the properties only hold up to fraction similarity.
 
 ```agda
 add-fraction-ℤ : fraction-ℤ → fraction-ℤ → fraction-ℤ
-pr1 (add-fraction-ℤ (m , n , n-pos) (m' , n' , n'-pos)) = {!!}
+add-fraction-ℤ = {!!}
 pr1 (pr2 (add-fraction-ℤ (m , n , n-pos) (m' , n' , n'-pos))) = {!!}
 pr2 (pr2 (add-fraction-ℤ (m , n , n-pos) (m' , n' , n'-pos))) = {!!}
 
 add-fraction-ℤ' : fraction-ℤ → fraction-ℤ → fraction-ℤ
-add-fraction-ℤ' x y = {!!}
+add-fraction-ℤ' = {!!}
 
 infixl 35 _+fraction-ℤ_
 _+fraction-ℤ_ = {!!}
@@ -53,9 +53,7 @@ sim-fraction-add-fraction-ℤ :
   sim-fraction-ℤ x x' →
   sim-fraction-ℤ y y' →
   sim-fraction-ℤ (x +fraction-ℤ y) (x' +fraction-ℤ y')
-sim-fraction-add-fraction-ℤ
-  {(nx , dx , dxp)} {(nx' , dx' , dx'p)}
-  {(ny , dy , dyp)} {(ny' , dy' , dy'p)} p q = {!!}
+sim-fraction-add-fraction-ℤ = {!!}
 ```
 
 ### Unit laws

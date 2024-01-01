@@ -199,7 +199,7 @@ module _
   is-category-Large-Category = {!!}
 
   category-Large-Category : (l : Level) → Category (α l) (β l l)
-  pr1 (category-Large-Category l) = {!!}
+  category-Large-Category = {!!}
 ```
 
 ### Equalities induce morphisms

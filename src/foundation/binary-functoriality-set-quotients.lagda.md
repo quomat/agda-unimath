@@ -61,15 +61,15 @@ module _
 
   preserves-sim-prop-binary-map-equivalence-relation :
     (A → B → C) → Prop (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l6)
-  preserves-sim-prop-binary-map-equivalence-relation f = {!!}
+  preserves-sim-prop-binary-map-equivalence-relation = {!!}
 
   preserves-sim-binary-map-equivalence-relation :
     (A → B → C) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l6)
-  preserves-sim-binary-map-equivalence-relation f = {!!}
+  preserves-sim-binary-map-equivalence-relation = {!!}
 
   is-prop-preserves-sim-binary-map-equivalence-relation :
     (f : A → B → C) → is-prop (preserves-sim-binary-map-equivalence-relation f)
-  is-prop-preserves-sim-binary-map-equivalence-relation f = {!!}
+  is-prop-preserves-sim-binary-map-equivalence-relation = {!!}
 
   binary-hom-equivalence-relation : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6)
   binary-hom-equivalence-relation = {!!}
@@ -99,37 +99,37 @@ module _
 
   binary-htpy-hom-equivalence-relation :
     (f g : binary-hom-equivalence-relation R S T) → UU (l1 ⊔ l3 ⊔ l5)
-  binary-htpy-hom-equivalence-relation f g = {!!}
+  binary-htpy-hom-equivalence-relation = {!!}
 
   refl-binary-htpy-hom-equivalence-relation :
     (f : binary-hom-equivalence-relation R S T) →
     binary-htpy-hom-equivalence-relation f f
-  refl-binary-htpy-hom-equivalence-relation f = {!!}
+  refl-binary-htpy-hom-equivalence-relation = {!!}
 
   binary-htpy-eq-hom-equivalence-relation :
     (f g : binary-hom-equivalence-relation R S T) →
     (f ＝ g) → binary-htpy-hom-equivalence-relation f g
-  binary-htpy-eq-hom-equivalence-relation f .f refl = {!!}
+  binary-htpy-eq-hom-equivalence-relation = {!!}
 
   is-torsorial-binary-htpy-hom-equivalence-relation :
     (f : binary-hom-equivalence-relation R S T) →
     is-torsorial (binary-htpy-hom-equivalence-relation f)
-  is-torsorial-binary-htpy-hom-equivalence-relation f = {!!}
+  is-torsorial-binary-htpy-hom-equivalence-relation = {!!}
 
   is-equiv-binary-htpy-eq-hom-equivalence-relation :
     (f g : binary-hom-equivalence-relation R S T) →
     is-equiv (binary-htpy-eq-hom-equivalence-relation f g)
-  is-equiv-binary-htpy-eq-hom-equivalence-relation f = {!!}
+  is-equiv-binary-htpy-eq-hom-equivalence-relation = {!!}
 
   extensionality-binary-hom-equivalence-relation :
     (f g : binary-hom-equivalence-relation R S T) →
     (f ＝ g) ≃ binary-htpy-hom-equivalence-relation f g
-  pr1 (extensionality-binary-hom-equivalence-relation f g) = {!!}
+  extensionality-binary-hom-equivalence-relation = {!!}
 
   eq-binary-htpy-hom-equivalence-relation :
     (f g : binary-hom-equivalence-relation R S T) →
     binary-htpy-hom-equivalence-relation f g → f ＝ g
-  eq-binary-htpy-hom-equivalence-relation f g = {!!}
+  eq-binary-htpy-hom-equivalence-relation = {!!}
 ```
 
 ### The type `binary-hom-equivalence-relation R S T` is equivalent to the type `hom-equivalence-relation R (equivalence-relation-hom-equivalence-relation S T)`
@@ -144,26 +144,26 @@ module _
 
   map-hom-binary-hom-equivalence-relation :
     binary-hom-equivalence-relation R S T → A → hom-equivalence-relation S T
-  pr1 (map-hom-binary-hom-equivalence-relation f a) = {!!}
+  map-hom-binary-hom-equivalence-relation = {!!}
 
   preserves-sim-hom-binary-hom-equivalence-relation :
     (f : binary-hom-equivalence-relation R S T) →
     preserves-sim-equivalence-relation R
       ( equivalence-relation-hom-equivalence-relation S T)
       ( map-hom-binary-hom-equivalence-relation f)
-  preserves-sim-hom-binary-hom-equivalence-relation f r b = {!!}
+  preserves-sim-hom-binary-hom-equivalence-relation = {!!}
 
   hom-binary-hom-equivalence-relation :
     binary-hom-equivalence-relation R S T →
     hom-equivalence-relation R
       ( equivalence-relation-hom-equivalence-relation S T)
-  pr1 (hom-binary-hom-equivalence-relation f) = {!!}
+  hom-binary-hom-equivalence-relation = {!!}
 
   map-binary-hom-hom-equivalence-relation :
     hom-equivalence-relation R
       ( equivalence-relation-hom-equivalence-relation S T) →
     A → B → C
-  map-binary-hom-hom-equivalence-relation f x = {!!}
+  map-binary-hom-hom-equivalence-relation = {!!}
 
   preserves-sim-binary-hom-hom-equivalence-relation :
     (f :
@@ -171,25 +171,25 @@ module _
         ( equivalence-relation-hom-equivalence-relation S T)) →
     preserves-sim-binary-map-equivalence-relation R S T
       ( map-binary-hom-hom-equivalence-relation f)
-  preserves-sim-binary-hom-hom-equivalence-relation f {x} {x'} {y} {y'} r s = {!!}
+  preserves-sim-binary-hom-hom-equivalence-relation = {!!}
 
   binary-hom-hom-equivalence-relation :
     hom-equivalence-relation R
       ( equivalence-relation-hom-equivalence-relation S T) →
     binary-hom-equivalence-relation R S T
-  pr1 (binary-hom-hom-equivalence-relation f) = {!!}
+  binary-hom-hom-equivalence-relation = {!!}
 
   is-section-binary-hom-hom-equivalence-relation :
     ( hom-binary-hom-equivalence-relation ∘
       binary-hom-hom-equivalence-relation) ~
     id
-  is-section-binary-hom-hom-equivalence-relation f = {!!}
+  is-section-binary-hom-hom-equivalence-relation = {!!}
 
   is-retraction-binary-hom-hom-equivalence-relation :
     ( binary-hom-hom-equivalence-relation ∘
       hom-binary-hom-equivalence-relation) ~
     id
-  is-retraction-binary-hom-hom-equivalence-relation f = {!!}
+  is-retraction-binary-hom-hom-equivalence-relation = {!!}
 
   is-equiv-hom-binary-hom-equivalence-relation :
     is-equiv hom-binary-hom-equivalence-relation
@@ -199,7 +199,7 @@ module _
     binary-hom-equivalence-relation R S T ≃
     hom-equivalence-relation R
       ( equivalence-relation-hom-equivalence-relation S T)
-  pr1 equiv-hom-binary-hom-equivalence-relation = {!!}
+  equiv-hom-binary-hom-equivalence-relation = {!!}
 ```
 
 ### Binary functoriality of types that satisfy the universal property of set quotients
@@ -231,7 +231,7 @@ module _
         ( quotient-map-hom-equivalence-relation S T
           ( map-hom-binary-hom-equivalence-relation R S T f x))
         ( map-reflecting-map-equivalence-relation S qS y)
-    p x y = {!!}
+    p = {!!}
 
   unique-binary-map-is-set-quotient :
     is-contr

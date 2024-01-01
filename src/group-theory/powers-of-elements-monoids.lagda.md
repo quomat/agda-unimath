@@ -39,7 +39,7 @@ module _
   where
 
   power-Monoid : ℕ → type-Monoid M → type-Monoid M
-  power-Monoid zero-ℕ x = {!!}
+  power-Monoid = {!!}
 ```
 
 ### The predicate of being a power of an element of a monoid
@@ -54,10 +54,10 @@ module _
   where
 
   is-power-of-element-prop-Monoid : (x y : type-Monoid M) → Prop l
-  is-power-of-element-prop-Monoid x y = {!!}
+  is-power-of-element-prop-Monoid = {!!}
 
   is-power-of-element-Monoid : (x y : type-Monoid M) → UU l
-  is-power-of-element-Monoid x y = {!!}
+  is-power-of-element-Monoid = {!!}
 
   is-prop-is-power-of-element-Monoid :
     (x y : type-Monoid M) → is-prop (is-power-of-element-Monoid x y)

@@ -61,14 +61,14 @@ of any two nonzero elements in `R` is nonzero. Equivalently, a commutative ring
 ```agda
 cancellation-property-Commutative-Ring :
   {l : Level} (R : Commutative-Ring l) → UU l
-cancellation-property-Commutative-Ring R = {!!}
+cancellation-property-Commutative-Ring = {!!}
 ```
 
 ### Integral domains
 
 ```agda
 Integral-Domain : (l : Level) → UU (lsuc l)
-Integral-Domain l = {!!}
+Integral-Domain = {!!}
 
 module _
   {l : Level} (R : Integral-Domain l)
@@ -171,7 +171,7 @@ module _
   is-equiv-add-Integral-Domain' = {!!}
 
   is-binary-equiv-add-Integral-Domain : is-binary-equiv add-Integral-Domain
-  pr1 is-binary-equiv-add-Integral-Domain = {!!}
+  is-binary-equiv-add-Integral-Domain = {!!}
 
   is-binary-emb-add-Integral-Domain : is-binary-emb add-Integral-Domain
   is-binary-emb-add-Integral-Domain = {!!}
@@ -209,10 +209,10 @@ module _
   is-nonzero-Integral-Domain = {!!}
 
   is-zero-integral-domain-Prop : type-Integral-Domain → Prop l
-  is-zero-integral-domain-Prop x = {!!}
+  is-zero-integral-domain-Prop = {!!}
 
   is-nonzero-integral-domain-Prop : type-Integral-Domain → Prop l
-  is-nonzero-integral-domain-Prop x = {!!}
+  is-nonzero-integral-domain-Prop = {!!}
 
   left-unit-law-add-Integral-Domain :
     (x : type-Integral-Domain) →
@@ -275,7 +275,7 @@ module _
   ap-mul-Integral-Domain :
     {x x' y y' : type-Integral-Domain} (p : Id x x') (q : Id y y') →
     Id (mul-Integral-Domain x y) (mul-Integral-Domain x' y')
-  ap-mul-Integral-Domain p q = {!!}
+  ap-mul-Integral-Domain = {!!}
 
   associative-mul-Integral-Domain :
     (x y z : type-Integral-Domain) →
@@ -334,13 +334,13 @@ module _
     (x y z : type-Integral-Domain) →
     mul-Integral-Domain (mul-Integral-Domain x y) z ＝
     mul-Integral-Domain (mul-Integral-Domain x z) y
-  right-swap-mul-Integral-Domain x y z = {!!}
+  right-swap-mul-Integral-Domain = {!!}
 
   left-swap-mul-Integral-Domain :
     (x y z : type-Integral-Domain) →
     mul-Integral-Domain x (mul-Integral-Domain y z) ＝
     mul-Integral-Domain y (mul-Integral-Domain x z)
-  left-swap-mul-Integral-Domain x y z = {!!}
+  left-swap-mul-Integral-Domain = {!!}
 
   interchange-mul-mul-Integral-Domain :
     (x y z w : type-Integral-Domain) →

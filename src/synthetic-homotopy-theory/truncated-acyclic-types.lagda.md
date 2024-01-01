@@ -59,12 +59,12 @@ notion we're interested in.
 is-truncated-acyclic-equiv :
   {l1 l2 : Level} {k : 𝕋} {A : UU l1} {B : UU l2} →
   A ≃ B → is-truncated-acyclic k B → is-truncated-acyclic k A
-is-truncated-acyclic-equiv {k = k} {B = B} e ac = {!!}
+is-truncated-acyclic-equiv = {!!}
 
 is-truncated-acyclic-equiv' :
   {l1 l2 : Level} {k : 𝕋} {A : UU l1} {B : UU l2} →
   A ≃ B → is-truncated-acyclic k A → is-truncated-acyclic k B
-is-truncated-acyclic-equiv' e = {!!}
+is-truncated-acyclic-equiv' = {!!}
 ```
 
 ### `k`-acyclic types are closed under retracts
@@ -78,7 +78,7 @@ module _
     A retract-of B →
     is-truncated-acyclic k B →
     is-truncated-acyclic k A
-  is-truncated-acyclic-retract-of R ac = {!!}
+  is-truncated-acyclic-retract-of = {!!}
 ```
 
 ### Every `k`-connected type is `(k+1)`-acyclic
@@ -98,7 +98,7 @@ module _
 ```agda
 is-truncated-acyclic-is-contr :
   {l : Level} {k : 𝕋} (A : UU l) → is-contr A → is-truncated-acyclic k A
-is-truncated-acyclic-is-contr {k = k} A c = {!!}
+is-truncated-acyclic-is-contr = {!!}
 
 is-truncated-acyclic-unit : {k : 𝕋} → is-truncated-acyclic k unit
 is-truncated-acyclic-unit = {!!}

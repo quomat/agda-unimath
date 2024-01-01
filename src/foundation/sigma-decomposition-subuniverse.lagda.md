@@ -38,7 +38,7 @@ indexed over `X`, equipped with an equivalence
 is-in-subuniverse-Σ-Decomposition :
   {l1 l2 l3 : Level} (P : subuniverse l1 l2) {A : UU l3} →
   Relaxed-Σ-Decomposition l1 l1 A → UU (l1 ⊔ l2)
-is-in-subuniverse-Σ-Decomposition P D = {!!}
+is-in-subuniverse-Σ-Decomposition = {!!}
 ```
 
 ### Σ-decompositions in a subuniverse
@@ -47,7 +47,7 @@ is-in-subuniverse-Σ-Decomposition P D = {!!}
 Σ-Decomposition-Subuniverse :
   {l1 l2 : Level} (P : subuniverse l1 l2) →
   type-subuniverse P → UU (lsuc l1 ⊔ l2)
-Σ-Decomposition-Subuniverse P A = {!!}
+Σ-Decomposition-Subuniverse = {!!}
 
 module _
   {l1 l2 : Level} (P : subuniverse l1 l2) (A : type-subuniverse P)
@@ -70,12 +70,12 @@ module _
 
   cotype-Σ-Decomposition-Subuniverse :
     (indexing-type-Σ-Decomposition-Subuniverse → UU l1)
-  cotype-Σ-Decomposition-Subuniverse X = {!!}
+  cotype-Σ-Decomposition-Subuniverse = {!!}
 
   is-in-subuniverse-cotype-Σ-Decomposition-Subuniverse :
     ((x : indexing-type-Σ-Decomposition-Subuniverse) →
     type-Prop (P (cotype-Σ-Decomposition-Subuniverse x)))
-  is-in-subuniverse-cotype-Σ-Decomposition-Subuniverse x = {!!}
+  is-in-subuniverse-cotype-Σ-Decomposition-Subuniverse = {!!}
 
   matching-correspondence-Σ-Decomposition-Subuniverse :
     inclusion-subuniverse P A ≃
@@ -94,20 +94,20 @@ map-equiv-total-is-in-subuniverse-Σ-Decomposition :
   Σ-Decomposition-Subuniverse P A →
   Σ ( Relaxed-Σ-Decomposition l1 l1 (inclusion-subuniverse P A))
     ( is-in-subuniverse-Σ-Decomposition P)
-map-equiv-total-is-in-subuniverse-Σ-Decomposition P A D = {!!}
+map-equiv-total-is-in-subuniverse-Σ-Decomposition = {!!}
 
 map-inv-equiv-Relaxed-Σ-Decomposition-Σ-Decomposition-Subuniverse :
   {l1 l2 : Level} (P : subuniverse l1 l2) (A : type-subuniverse P) →
   Σ ( Relaxed-Σ-Decomposition l1 l1 (inclusion-subuniverse P A))
     ( is-in-subuniverse-Σ-Decomposition P) →
   Σ-Decomposition-Subuniverse P A
-map-inv-equiv-Relaxed-Σ-Decomposition-Σ-Decomposition-Subuniverse P A X = {!!}
+map-inv-equiv-Relaxed-Σ-Decomposition-Σ-Decomposition-Subuniverse = {!!}
 
 equiv-total-is-in-subuniverse-Σ-Decomposition :
   {l1 l2 : Level} (P : subuniverse l1 l2) (A : type-subuniverse P) →
   ( Σ-Decomposition-Subuniverse P A) ≃
   ( Σ ( Relaxed-Σ-Decomposition l1 l1 (inclusion-subuniverse P A))
       ( is-in-subuniverse-Σ-Decomposition P))
-pr1 (equiv-total-is-in-subuniverse-Σ-Decomposition P A) = {!!}
+equiv-total-is-in-subuniverse-Σ-Decomposition = {!!}
 pr2 (equiv-total-is-in-subuniverse-Σ-Decomposition P A) = {!!}
 ```

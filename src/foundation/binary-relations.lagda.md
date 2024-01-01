@@ -41,7 +41,7 @@ _proof-relevant_ relation.
 
 ```agda
 Relation : {l1 : Level} (l : Level) (A : UU l1) → UU (l1 ⊔ lsuc l)
-Relation l A = {!!}
+Relation = {!!}
 
 total-space-Relation :
   {l1 l : Level} {A : UU l1} → Relation l A → UU (l1 ⊔ l)
@@ -233,24 +233,24 @@ module _
   where
 
   id-equiv-Relation : equiv-Relation R R
-  id-equiv-Relation x y = {!!}
+  id-equiv-Relation = {!!}
 
   is-torsorial-equiv-Relation :
     is-torsorial (equiv-Relation R)
   is-torsorial-equiv-Relation = {!!}
 
   equiv-eq-Relation : (S : Relation l2 A) → (R ＝ S) → equiv-Relation R S
-  equiv-eq-Relation .R refl = {!!}
+  equiv-eq-Relation = {!!}
 
   is-equiv-equiv-eq-Relation :
     (S : Relation l2 A) → is-equiv (equiv-eq-Relation S)
   is-equiv-equiv-eq-Relation = {!!}
 
   extensionality-Relation : (S : Relation l2 A) → (R ＝ S) ≃ equiv-Relation R S
-  pr1 (extensionality-Relation S) = {!!}
+  extensionality-Relation = {!!}
 
   eq-equiv-Relation : (S : Relation l2 A) → equiv-Relation R S → (R ＝ S)
-  eq-equiv-Relation S = {!!}
+  eq-equiv-Relation = {!!}
 ```
 
 ### Characterization of equality of prop-valued binary relations
@@ -303,7 +303,7 @@ module _
   where
 
   is-irreflexive-is-asymmetric : is-asymmetric R → is-irreflexive R
-  is-irreflexive-is-asymmetric H x r = {!!}
+  is-irreflexive-is-asymmetric = {!!}
 ```
 
 ### Asymmetric relations are antisymmetric
@@ -314,7 +314,7 @@ module _
   where
 
   is-antisymmetric-is-asymmetric : is-asymmetric R → is-antisymmetric R
-  is-antisymmetric-is-asymmetric H x y r s = {!!}
+  is-antisymmetric-is-asymmetric = {!!}
 ```
 
 ## See also

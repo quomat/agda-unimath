@@ -38,25 +38,25 @@ module _
 
   mul-fin-Commutative-Monoid :
     (n : ℕ) → (Fin n → type-Commutative-Monoid M) → type-Commutative-Monoid M
-  mul-fin-Commutative-Monoid zero-ℕ x = {!!}
+  mul-fin-Commutative-Monoid = {!!}
 
   mul-count-Commutative-Monoid :
     {l2 : Level} {A : UU l2} → count A →
     (A → type-Commutative-Monoid M) → type-Commutative-Monoid M
-  mul-count-Commutative-Monoid e x = {!!}
+  mul-count-Commutative-Monoid = {!!}
 
 {-
   compute-permutation-mul-fin-Commutative-Monoid :
     (n : ℕ) (e : Fin n ≃ Fin n) (x : Fin n → type-Commutative-Monoid M) →
     Id ( mul-fin-Commutative-Monoid n (x ∘ map-equiv e))
        ( mul-fin-Commutative-Monoid n x)
-  compute-permutation-mul-fin-Commutative-Monoid zero-ℕ e x = {!!}
+  compute-permutation-mul-fin-Commutative-Monoid = {!!}
 
   compute-mul-double-counting-Commutative-Monoid :
     {l2 : Level} {A : UU l2} (e1 : count A) (e2 : count A) →
     (x : A → type-Commutative-Monoid M) →
     Id (mul-count-Commutative-Monoid e1 x) (mul-count-Commutative-Monoid e2 x)
-  compute-mul-double-counting-Commutative-Monoid e1 e2 x = {!!}
+  compute-mul-double-counting-Commutative-Monoid = {!!}
 -}
 ```
 
@@ -70,6 +70,6 @@ module _
 {-
   mul-tuple-Commutative-Monoid :
     {n : ℕ} → unordered-tuple-Commutative-Monoid n M → type-Commutative-Monoid M
-  mul-tuple-Commutative-Monoid {n} (pair I x) = {!!}
+  mul-tuple-Commutative-Monoid = {!!}
 -}
 ```

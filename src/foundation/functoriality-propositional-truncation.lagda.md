@@ -70,7 +70,7 @@ abstract
 abstract
   id-map-trunc-Prop :
     { l1 : Level} {A : UU l1} → map-trunc-Prop (id {A = A}) ~ id
-  id-map-trunc-Prop {l1} {A} = {!!}
+  id-map-trunc-Prop = {!!}
 ```
 
 ### The propositional truncation of a composite is the composite of the propositional truncations

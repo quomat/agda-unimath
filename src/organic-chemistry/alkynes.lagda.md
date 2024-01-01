@@ -30,5 +30,5 @@ which has a triple bond.
 
 ```agda
 n-alkyne : {l1 l2 : Level} → hydrocarbon l1 l2 → ℕ → UU (lsuc l1 ⊔ l2)
-n-alkyne {l1} {l2} H n = {!!}
+n-alkyne = {!!}
 ```

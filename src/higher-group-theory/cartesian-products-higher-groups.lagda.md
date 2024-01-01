@@ -40,7 +40,7 @@ module _
   where
 
   product-∞-Group : ∞-Group (l1 ⊔ l2)
-  pr1 product-∞-Group = {!!}
+  product-∞-Group = {!!}
   pr2 product-∞-Group = {!!}
 
   classifying-pointed-type-product-∞-Group : Pointed-Type (l1 ⊔ l2)

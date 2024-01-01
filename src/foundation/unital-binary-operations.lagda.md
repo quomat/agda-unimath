@@ -42,7 +42,7 @@ module _
   right-unit-law = {!!}
 
   coh-unit-laws : left-unit-law → right-unit-law → UU l
-  coh-unit-laws α β = {!!}
+  coh-unit-laws = {!!}
 
   unit-laws : UU l
   unit-laws = {!!}
@@ -55,14 +55,14 @@ module _
 
 ```agda
 is-unital : {l : Level} {A : UU l} (μ : A → A → A) → UU l
-is-unital {A = A} μ = {!!}
+is-unital = {!!}
 ```
 
 ### Coherently unital binary operations
 
 ```agda
 is-coherently-unital : {l : Level} {A : UU l} (μ : A → A → A) → UU l
-is-coherently-unital {A = A} μ = {!!}
+is-coherently-unital = {!!}
 ```
 
 ## Properties
@@ -75,12 +75,12 @@ module _
   where
 
   coherent-unit-laws-unit-laws : unit-laws μ e → coherent-unit-laws μ e
-  pr1 (coherent-unit-laws-unit-laws (pair H K)) = {!!}
+  coherent-unit-laws-unit-laws = {!!}
 
 module _
   {l : Level} {A : UU l} {μ : A → A → A}
   where
 
   is-coherently-unital-is-unital : is-unital μ → is-coherently-unital μ
-  pr1 (is-coherently-unital-is-unital (pair e H)) = {!!}
+  is-coherently-unital-is-unital = {!!}
 ```

@@ -59,7 +59,7 @@ module _
   is-prop-is-cyclic-Group = {!!}
 
 Cyclic-Group : (l : Level) → UU (lsuc l)
-Cyclic-Group l = {!!}
+Cyclic-Group = {!!}
 
 module _
   {l : Level} (C : Cyclic-Group l)
@@ -98,7 +98,7 @@ module _
   commutative-add-Cyclic-Group = {!!}
 
   ab-Cyclic-Group : Ab l
-  pr1 ab-Cyclic-Group = {!!}
+  ab-Cyclic-Group = {!!}
 ```
 
 #### The definition where `G` has a generating element

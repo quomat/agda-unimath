@@ -61,7 +61,7 @@ module _
   htpy-left-whisk :
     (h : {x : A} → B x → C x)
     {f g : (x : A) → B x} → f ~ g → h ∘ f ~ h ∘ g
-  htpy-left-whisk h H x = {!!}
+  htpy-left-whisk = {!!}
 
   infixr 17 _·l_
   _·l_ = {!!}
@@ -93,10 +93,10 @@ module _
   where
 
   htpy-comp-horizontal : f ~ f' → ({x : A} → g {x} ~ g' {x}) → g ∘ f ~ g' ∘ f'
-  htpy-comp-horizontal F G = {!!}
+  htpy-comp-horizontal = {!!}
 
   htpy-comp-horizontal' : f ~ f' → ({x : A} → g {x} ~ g' {x}) → g ∘ f ~ g' ∘ f'
-  htpy-comp-horizontal' F G = {!!}
+  htpy-comp-horizontal' = {!!}
 ```
 
 ## Properties
@@ -114,7 +114,7 @@ module _
 
   left-unit-law-left-whisk-htpy :
     {f f' : (x : A) → B x} → (H : f ~ f') → id ·l H ~ H
-  left-unit-law-left-whisk-htpy H x = {!!}
+  left-unit-law-left-whisk-htpy = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} {C : A → UU l3}
@@ -123,7 +123,7 @@ module _
   right-unit-law-left-whisk-htpy :
     {f : (x : A) → B x} (g : {x : A} → B x → C x) →
     g ·l refl-htpy {f = f} ~ refl-htpy
-  right-unit-law-left-whisk-htpy g = {!!}
+  right-unit-law-left-whisk-htpy = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} {C : (x : A) → B x → UU l3}
@@ -140,7 +140,7 @@ module _
 
   right-unit-law-right-whisk-htpy :
     {f f' : (x : A) → B x} → (H : f ~ f') → H ·r id ~ H
-  right-unit-law-right-whisk-htpy H = {!!}
+  right-unit-law-right-whisk-htpy = {!!}
 ```
 
 ### Laws for whiskering an inverted homotopy
@@ -152,7 +152,7 @@ module _
   where
 
   left-whisk-inv-htpy : g ·l (inv-htpy H) ~ inv-htpy (g ·l H)
-  left-whisk-inv-htpy x = {!!}
+  left-whisk-inv-htpy = {!!}
 
   inv-htpy-left-whisk-inv-htpy : inv-htpy (g ·l H) ~ g ·l (inv-htpy H)
   inv-htpy-left-whisk-inv-htpy = {!!}
@@ -181,7 +181,7 @@ module _
     { f g h : (x : A) → B x} (k : {x : A} → B x → C x) →
     ( H : f ~ g) (K : g ~ h) →
     k ·l (H ∙h K) ~ (k ·l H) ∙h (k ·l K)
-  distributive-left-whisk-concat-htpy k H K a = {!!}
+  distributive-left-whisk-concat-htpy = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} {C : (x : A) → B x → UU l3}
@@ -206,7 +206,7 @@ module _
     ( k : {x : A} → C x → D x) (h : {x : A} → B x → C x) {f g : (x : A) → B x}
     ( H : f ~ g) →
     k ·l (h ·l H) ~ (k ∘ h) ·l H
-  associative-left-whisk-comp k h H x = {!!}
+  associative-left-whisk-comp = {!!}
 
 module _
   { l1 l2 l3 l4 : Level}
@@ -229,7 +229,7 @@ module _
   where
 
   coh-htpy-id : H ·r f ~ f ·l H
-  coh-htpy-id x = {!!}
+  coh-htpy-id = {!!}
 
   inv-htpy-coh-htpy-id : f ·l H ~ H ·r f
   inv-htpy-coh-htpy-id = {!!}
@@ -245,7 +245,7 @@ module _
 
   ap-left-whisk-htpy :
     (h : {x : A} → B x → C x) {H H' : f ~ g} (α : H ~ H') → h ·l H ~ h ·l H'
-  ap-left-whisk-htpy h α = {!!}
+  ap-left-whisk-htpy = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} {C : (x : A) → B x → UU l3}
@@ -254,7 +254,7 @@ module _
 
   ap-right-whisk-htpy :
     (α : {x : A} → H {x} ~ H' {x}) (h : (x : A) → B x) → H ·r h ~ H' ·r h
-  ap-right-whisk-htpy α h = {!!}
+  ap-right-whisk-htpy = {!!}
 ```
 
 ### The left and right whiskering operations commute
@@ -280,5 +280,5 @@ module _
     (H : {x : A} → f {x} ~ g {x})
     (h' : (x : A) → B x) →
     (h ·l H) ·r h' ~ h ·l (H ·r h')
-  coherence-left-right-whisk-htpy h H h' = {!!}
+  coherence-left-right-whisk-htpy = {!!}
 ```

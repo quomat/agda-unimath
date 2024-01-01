@@ -101,8 +101,7 @@ module _
     is-closed-under-conjugation-generating-subset-commutator-subgroup-Group :
       is-closed-under-conjugation-subset-Group G
         generating-subset-commutator-subgroup-Group
-    is-closed-under-conjugation-generating-subset-commutator-subgroup-Group
-      x y H = {!!}
+    is-closed-under-conjugation-generating-subset-commutator-subgroup-Group = {!!}
 
   abstract
     is-normal-commutator-subgroup-Group :
@@ -110,7 +109,7 @@ module _
     is-normal-commutator-subgroup-Group = {!!}
 
   commutator-normal-subgroup-Group : Normal-Subgroup l G
-  pr1 commutator-normal-subgroup-Group = {!!}
+  commutator-normal-subgroup-Group = {!!}
 ```
 
 ## Properties

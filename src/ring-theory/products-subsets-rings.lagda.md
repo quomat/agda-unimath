@@ -35,7 +35,7 @@ module _
   where
 
   product-subset-Ring : subset-Ring (l1 ⊔ l2 ⊔ l3) A
-  product-subset-Ring x = {!!}
+  product-subset-Ring = {!!}
 ```
 
 ## Properties

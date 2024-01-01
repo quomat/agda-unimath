@@ -76,7 +76,7 @@ module _
     element-set-presheaf-Precategory = {!!}
 
     element-presheaf-Precategory : obj-Precategory C → UU l3
-    element-presheaf-Precategory X = {!!}
+    element-presheaf-Precategory = {!!}
 
     action-presheaf-Precategory :
       {X Y : obj-Precategory C} →

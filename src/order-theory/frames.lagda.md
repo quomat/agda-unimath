@@ -98,7 +98,7 @@ instance-distributive-law-meet-sup-Meet-Semilattice :
       ( poset-Meet-Semilattice L)
       ( λ i → meet-Meet-Semilattice L x (y i))) →
   UU l1
-instance-distributive-law-meet-sup-Meet-Semilattice L x {y} H = {!!}
+instance-distributive-law-meet-sup-Meet-Semilattice = {!!}
 ```
 
 #### Statement of the distributive law in meet-suplattices
@@ -143,7 +143,7 @@ module _
 
 ```agda
 Frame : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Frame l1 l2 = {!!}
+Frame = {!!}
 
 module _
   {l1 l2 : Level} (A : Frame l1 l2)

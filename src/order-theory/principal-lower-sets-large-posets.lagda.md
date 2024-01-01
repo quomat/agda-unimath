@@ -68,7 +68,7 @@ module _
   is-closed-under-sim-principal-lower-set-element-Large-Poset = {!!}
 
   principal-lower-set-element-Large-Poset : Large-Subposet (λ l → β l l1) P
-  large-subpreorder-Large-Subposet principal-lower-set-element-Large-Poset = {!!}
+  principal-lower-set-element-Large-Poset = {!!}
 ```
 
 ## Properties

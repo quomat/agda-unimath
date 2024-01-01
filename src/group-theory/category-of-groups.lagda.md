@@ -30,10 +30,10 @@ is-large-category-Group :
 is-large-category-Group = {!!}
 
 eq-iso-Group : {l : Level} (G H : Group l) → iso-Group G H → Id G H
-eq-iso-Group G H = {!!}
+eq-iso-Group = {!!}
 
 Group-Large-Category : Large-Category lsuc (_⊔_)
-large-precategory-Large-Category Group-Large-Category = {!!}
+Group-Large-Category = {!!}
 is-large-category-Large-Category Group-Large-Category = {!!}
 
 Group-Category : (l : Level) → Category (lsuc l) l

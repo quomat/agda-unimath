@@ -51,7 +51,7 @@ module _
   is-prop-is-faithful-map-Precategory = {!!}
 
   is-faithful-prop-map-Precategory : Prop (l1 ⊔ l2 ⊔ l4)
-  pr1 is-faithful-prop-map-Precategory = {!!}
+  is-faithful-prop-map-Precategory = {!!}
 ```
 
 ### The type of faithful maps between two precategories
@@ -106,7 +106,7 @@ module _
   is-prop-is-injective-hom-map-Precategory = {!!}
 
   is-injective-hom-prop-map-Precategory : Prop (l1 ⊔ l2 ⊔ l4)
-  pr1 is-injective-hom-prop-map-Precategory = {!!}
+  is-injective-hom-prop-map-Precategory = {!!}
 ```
 
 ## Properties

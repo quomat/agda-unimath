@@ -127,12 +127,12 @@ module _
   sup-Large-Suplattice :
     {l1 l2 : Level} {I : UU l1} (x : I → type-Large-Suplattice l2) →
     type-Large-Suplattice (γ ⊔ l1 ⊔ l2)
-  sup-Large-Suplattice x = {!!}
+  sup-Large-Suplattice = {!!}
 
   is-upper-bound-family-of-elements-Large-Suplattice :
     {l1 l2 l3 : Level} {I : UU l1} (x : I → type-Large-Suplattice l2)
     (y : type-Large-Suplattice l3) → UU (β l2 l3 ⊔ l1)
-  is-upper-bound-family-of-elements-Large-Suplattice x y = {!!}
+  is-upper-bound-family-of-elements-Large-Suplattice = {!!}
 
   is-least-upper-bound-family-of-elements-Large-Suplattice :
     {l1 l2 l3 : Level} {I : UU l1} (x : I → type-Large-Suplattice l2) →
@@ -143,13 +143,13 @@ module _
     {l1 l2 : Level} {I : UU l1} (x : I → type-Large-Suplattice l2) →
     is-least-upper-bound-family-of-elements-Large-Suplattice x
       ( sup-Large-Suplattice x)
-  is-least-upper-bound-sup-Large-Suplattice x = {!!}
+  is-least-upper-bound-sup-Large-Suplattice = {!!}
 
   is-upper-bound-sup-Large-Suplattice :
     {l1 l2 : Level} {I : UU l1} (x : I → type-Large-Suplattice l2) →
     is-upper-bound-family-of-elements-Large-Suplattice x
       ( sup-Large-Suplattice x)
-  is-upper-bound-sup-Large-Suplattice x = {!!}
+  is-upper-bound-sup-Large-Suplattice = {!!}
 ```
 
 ## Properties
@@ -170,7 +170,7 @@ module _
     leq-Large-Suplattice L
       ( sup-Large-Suplattice L x)
       ( sup-Large-Suplattice L y)
-  preserves-order-sup-Large-Suplattice {x = x} {y} H = {!!}
+  preserves-order-sup-Large-Suplattice = {!!}
 ```
 
 ### Small suplattices from large suplattices
@@ -187,12 +187,12 @@ module _
   is-suplattice-poset-Large-Suplattice :
     (l1 l2 : Level) →
     is-suplattice-Poset l1 (poset-Large-Suplattice (γ ⊔ l1 ⊔ l2))
-  pr1 (is-suplattice-poset-Large-Suplattice l1 l2 I f) = {!!}
+  is-suplattice-poset-Large-Suplattice = {!!}
   pr2 (is-suplattice-poset-Large-Suplattice l1 l2 I f) = {!!}
 
   suplattice-Large-Suplattice :
     (l1 l2 : Level) →
     Suplattice (α (γ ⊔ l1 ⊔ l2)) (β (γ ⊔ l1 ⊔ l2) (γ ⊔ l1 ⊔ l2)) (l1)
-  pr1 (suplattice-Large-Suplattice l1 l2) = {!!}
+  suplattice-Large-Suplattice = {!!}
   pr2 (suplattice-Large-Suplattice l1 l2) = {!!}
 ```

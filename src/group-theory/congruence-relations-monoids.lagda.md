@@ -33,21 +33,21 @@ semigroup of `M`.
 is-congruence-prop-Monoid :
   {l1 l2 : Level} (M : Monoid l1) →
   equivalence-relation l2 (type-Monoid M) → Prop (l1 ⊔ l2)
-is-congruence-prop-Monoid M = {!!}
+is-congruence-prop-Monoid = {!!}
 
 is-congruence-Monoid :
   {l1 l2 : Level} (M : Monoid l1) →
   equivalence-relation l2 (type-Monoid M) → UU (l1 ⊔ l2)
-is-congruence-Monoid M R = {!!}
+is-congruence-Monoid = {!!}
 
 is-prop-is-congruence-Monoid :
   {l1 l2 : Level} (M : Monoid l1)
   (R : equivalence-relation l2 (type-Monoid M)) →
   is-prop (is-congruence-Monoid M R)
-is-prop-is-congruence-Monoid M = {!!}
+is-prop-is-congruence-Monoid = {!!}
 
 congruence-Monoid : {l : Level} (l2 : Level) (M : Monoid l) → UU (l ⊔ lsuc l2)
-congruence-Monoid l2 M = {!!}
+congruence-Monoid = {!!}
 
 module _
   {l1 l2 : Level} (M : Monoid l1) (R : congruence-Monoid l2 M)
@@ -70,17 +70,17 @@ module _
   concatenate-sim-eq-congruence-Monoid :
     {x y z : type-Monoid M} → sim-congruence-Monoid x y → y ＝ z →
     sim-congruence-Monoid x z
-  concatenate-sim-eq-congruence-Monoid H refl = {!!}
+  concatenate-sim-eq-congruence-Monoid = {!!}
 
   concatenate-eq-sim-congruence-Monoid :
     {x y z : type-Monoid M} → x ＝ y → sim-congruence-Monoid y z →
     sim-congruence-Monoid x z
-  concatenate-eq-sim-congruence-Monoid refl H = {!!}
+  concatenate-eq-sim-congruence-Monoid = {!!}
 
   concatenate-eq-sim-eq-congruence-Monoid :
     {x y z w : type-Monoid M} → x ＝ y → sim-congruence-Monoid y z →
     z ＝ w → sim-congruence-Monoid x w
-  concatenate-eq-sim-eq-congruence-Monoid refl H refl = {!!}
+  concatenate-eq-sim-eq-congruence-Monoid = {!!}
 
   refl-congruence-Monoid : is-reflexive sim-congruence-Monoid
   refl-congruence-Monoid = {!!}
@@ -91,7 +91,7 @@ module _
   equiv-symmetric-congruence-Monoid :
     (x y : type-Monoid M) →
     sim-congruence-Monoid x y ≃ sim-congruence-Monoid y x
-  equiv-symmetric-congruence-Monoid x y = {!!}
+  equiv-symmetric-congruence-Monoid = {!!}
 
   transitive-congruence-Monoid : is-transitive sim-congruence-Monoid
   transitive-congruence-Monoid = {!!}
@@ -109,35 +109,35 @@ module _
 relate-same-elements-congruence-Monoid :
   {l1 l2 l3 : Level} (M : Monoid l1) (R : congruence-Monoid l2 M)
   (S : congruence-Monoid l3 M) → UU (l1 ⊔ l2 ⊔ l3)
-relate-same-elements-congruence-Monoid M = {!!}
+relate-same-elements-congruence-Monoid = {!!}
 
 refl-relate-same-elements-congruence-Monoid :
   {l1 l2 : Level} (M : Monoid l1) (R : congruence-Monoid l2 M) →
   relate-same-elements-congruence-Monoid M R R
-refl-relate-same-elements-congruence-Monoid M = {!!}
+refl-relate-same-elements-congruence-Monoid = {!!}
 
 is-torsorial-relate-same-elements-congruence-Monoid :
   {l1 l2 : Level} (M : Monoid l1) (R : congruence-Monoid l2 M) →
   is-torsorial (relate-same-elements-congruence-Monoid M R)
-is-torsorial-relate-same-elements-congruence-Monoid M = {!!}
+is-torsorial-relate-same-elements-congruence-Monoid = {!!}
 
 relate-same-elements-eq-congruence-Monoid :
   {l1 l2 : Level} (M : Monoid l1) (R S : congruence-Monoid l2 M) →
   R ＝ S → relate-same-elements-congruence-Monoid M R S
-relate-same-elements-eq-congruence-Monoid M = {!!}
+relate-same-elements-eq-congruence-Monoid = {!!}
 
 is-equiv-relate-same-elements-eq-congruence-Monoid :
   {l1 l2 : Level} (M : Monoid l1) (R S : congruence-Monoid l2 M) →
   is-equiv (relate-same-elements-eq-congruence-Monoid M R S)
-is-equiv-relate-same-elements-eq-congruence-Monoid M = {!!}
+is-equiv-relate-same-elements-eq-congruence-Monoid = {!!}
 
 extensionality-congruence-Monoid :
   {l1 l2 : Level} (M : Monoid l1) (R S : congruence-Monoid l2 M) →
   (R ＝ S) ≃ relate-same-elements-congruence-Monoid M R S
-extensionality-congruence-Monoid M = {!!}
+extensionality-congruence-Monoid = {!!}
 
 eq-relate-same-elements-congruence-Monoid :
   {l1 l2 : Level} (M : Monoid l1) (R S : congruence-Monoid l2 M) →
   relate-same-elements-congruence-Monoid M R S → R ＝ S
-eq-relate-same-elements-congruence-Monoid M = {!!}
+eq-relate-same-elements-congruence-Monoid = {!!}
 ```

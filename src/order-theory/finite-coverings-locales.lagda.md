@@ -32,7 +32,7 @@ module _
   where
 
   is-finite-covering-Locale : (v : covering-Locale L u) → UU l2
-  is-finite-covering-Locale v = {!!}
+  is-finite-covering-Locale = {!!}
 
   finite-covering-Locale : UU (l1 ⊔ lsuc l2)
   finite-covering-Locale = {!!}
@@ -54,7 +54,7 @@ module _
   is-covering-finite-covering-Locale = {!!}
 
   covering-finite-covering-Locale : covering-Locale L u
-  pr1 covering-finite-covering-Locale = {!!}
+  covering-finite-covering-Locale = {!!}
 
   is-finite-covering-covering-Locale :
     is-finite-covering-Locale L u covering-finite-covering-Locale

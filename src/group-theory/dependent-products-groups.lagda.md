@@ -54,38 +54,38 @@ module _
   associative-mul-Π-Group = {!!}
 
   unit-Π-Group : type-Π-Group
-  unit-Π-Group i = {!!}
+  unit-Π-Group = {!!}
 
   left-unit-law-mul-Π-Group :
     (f : type-Π-Group) → mul-Π-Group unit-Π-Group f ＝ f
-  left-unit-law-mul-Π-Group f = {!!}
+  left-unit-law-mul-Π-Group = {!!}
 
   right-unit-law-mul-Π-Group :
     (f : type-Π-Group) → mul-Π-Group f unit-Π-Group ＝ f
-  right-unit-law-mul-Π-Group f = {!!}
+  right-unit-law-mul-Π-Group = {!!}
 
   is-unital-Π-Group : is-unital-Semigroup semigroup-Π-Group
-  pr1 is-unital-Π-Group = {!!}
+  is-unital-Π-Group = {!!}
 
   monoid-Π-Group : Monoid (l1 ⊔ l2)
-  pr1 monoid-Π-Group = {!!}
+  monoid-Π-Group = {!!}
 
   inv-Π-Group : type-Π-Group → type-Π-Group
-  inv-Π-Group f x = {!!}
+  inv-Π-Group = {!!}
 
   left-inverse-law-mul-Π-Group :
     (f : type-Π-Group) →
     mul-Π-Group (inv-Π-Group f) f ＝ unit-Π-Group
-  left-inverse-law-mul-Π-Group f = {!!}
+  left-inverse-law-mul-Π-Group = {!!}
 
   right-inverse-law-mul-Π-Group :
     (f : type-Π-Group) →
     mul-Π-Group f (inv-Π-Group f) ＝ unit-Π-Group
-  right-inverse-law-mul-Π-Group f = {!!}
+  right-inverse-law-mul-Π-Group = {!!}
 
   is-group-Π-Group : is-group semigroup-Π-Group
-  pr1 is-group-Π-Group = {!!}
+  is-group-Π-Group = {!!}
 
   Π-Group : Group (l1 ⊔ l2)
-  pr1 Π-Group = {!!}
+  Π-Group = {!!}
 ```

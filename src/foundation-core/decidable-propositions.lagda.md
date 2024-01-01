@@ -37,7 +37,7 @@ that has a [decidable](foundation.decidable-types.md) underlying type.
 
 ```agda
 is-decidable-prop : {l : Level} → UU l → UU l
-is-decidable-prop A = {!!}
+is-decidable-prop = {!!}
 
 is-prop-is-decidable :
   {l : Level} {A : UU l} → is-prop A → is-prop (is-decidable A)
@@ -84,18 +84,18 @@ module _
   is-decidable-prop-type-Decidable-Prop = {!!}
 
   is-decidable-prop-Decidable-Prop : Prop l
-  pr1 is-decidable-prop-Decidable-Prop = {!!}
+  is-decidable-prop-Decidable-Prop = {!!}
 ```
 
 ### The empty type is a decidable proposition
 
 ```agda
 is-decidable-prop-empty : is-decidable-prop empty
-pr1 is-decidable-prop-empty = {!!}
+is-decidable-prop-empty = {!!}
 pr2 is-decidable-prop-empty = {!!}
 
 empty-Decidable-Prop : Decidable-Prop lzero
-pr1 empty-Decidable-Prop = {!!}
+empty-Decidable-Prop = {!!}
 pr2 empty-Decidable-Prop = {!!}
 ```
 
@@ -103,11 +103,11 @@ pr2 empty-Decidable-Prop = {!!}
 
 ```agda
 is-decidable-prop-unit : is-decidable-prop unit
-pr1 is-decidable-prop-unit = {!!}
+is-decidable-prop-unit = {!!}
 pr2 is-decidable-prop-unit = {!!}
 
 unit-Decidable-Prop : Decidable-Prop lzero
-pr1 unit-Decidable-Prop = {!!}
+unit-Decidable-Prop = {!!}
 pr2 unit-Decidable-Prop = {!!}
 ```
 
@@ -120,7 +120,7 @@ abstract
   is-prop-is-decidable-trunc-Prop = {!!}
 
 is-decidable-trunc-Prop : {l : Level} → UU l → Prop l
-pr1 (is-decidable-trunc-Prop A) = {!!}
+is-decidable-trunc-Prop = {!!}
 pr2 (is-decidable-trunc-Prop A) = {!!}
 
 is-decidable-trunc-Prop-is-merely-decidable :

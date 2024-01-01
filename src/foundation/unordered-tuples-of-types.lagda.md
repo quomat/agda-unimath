@@ -35,7 +35,7 @@ An unordered tuple of types is an unordered tuple of elements in a universe
 
 ```agda
 unordered-tuple-types : (l : Level) → ℕ → UU (lsuc l)
-unordered-tuple-types l n = {!!}
+unordered-tuple-types = {!!}
 ```
 
 ### Equivalences of unordered pairs of types
@@ -78,7 +78,7 @@ module _
   where
 
   id-equiv-unordered-tuple-types : equiv-unordered-tuple-types n A A
-  pr1 id-equiv-unordered-tuple-types = {!!}
+  id-equiv-unordered-tuple-types = {!!}
 
   equiv-eq-unordered-tuple-types :
     (B : unordered-tuple-types l n) → A ＝ B → equiv-unordered-tuple-types n A B

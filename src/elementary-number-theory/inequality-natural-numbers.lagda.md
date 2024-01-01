@@ -44,7 +44,7 @@ less than any natural number, and such that `m+1 ≤ n+1` is equivalent to
 
 ```agda
 leq-ℕ : ℕ → ℕ → UU lzero
-leq-ℕ zero-ℕ m = {!!}
+leq-ℕ = {!!}
 leq-ℕ (succ-ℕ n) zero-ℕ = {!!}
 leq-ℕ (succ-ℕ n) (succ-ℕ m) = {!!}
 
@@ -67,13 +67,13 @@ data leq-ℕ' : ℕ → ℕ → UU lzero where
 ```agda
 is-prop-leq-ℕ :
   (m n : ℕ) → is-prop (leq-ℕ m n)
-is-prop-leq-ℕ zero-ℕ zero-ℕ = {!!}
+is-prop-leq-ℕ = {!!}
 is-prop-leq-ℕ zero-ℕ (succ-ℕ n) = {!!}
 is-prop-leq-ℕ (succ-ℕ m) zero-ℕ = {!!}
 is-prop-leq-ℕ (succ-ℕ m) (succ-ℕ n) = {!!}
 
 leq-ℕ-Prop : ℕ → ℕ → Prop lzero
-pr1 (leq-ℕ-Prop m n) = {!!}
+leq-ℕ-Prop = {!!}
 pr2 (leq-ℕ-Prop m n) = {!!}
 ```
 
@@ -82,7 +82,7 @@ pr2 (leq-ℕ-Prop m n) = {!!}
 ```agda
 is-decidable-leq-ℕ :
   (m n : ℕ) → is-decidable (leq-ℕ m n)
-is-decidable-leq-ℕ zero-ℕ zero-ℕ = {!!}
+is-decidable-leq-ℕ = {!!}
 is-decidable-leq-ℕ zero-ℕ (succ-ℕ n) = {!!}
 is-decidable-leq-ℕ (succ-ℕ m) zero-ℕ = {!!}
 is-decidable-leq-ℕ (succ-ℕ m) (succ-ℕ n) = {!!}
@@ -93,33 +93,33 @@ is-decidable-leq-ℕ (succ-ℕ m) (succ-ℕ n) = {!!}
 ```agda
 concatenate-eq-leq-eq-ℕ :
   {x' x y y' : ℕ} → x' ＝ x → x ≤-ℕ y → y ＝ y' → x' ≤-ℕ y'
-concatenate-eq-leq-eq-ℕ refl H refl = {!!}
+concatenate-eq-leq-eq-ℕ = {!!}
 
 concatenate-leq-eq-ℕ :
   (m : ℕ) {n n' : ℕ} → m ≤-ℕ n → n ＝ n' → m ≤-ℕ n'
-concatenate-leq-eq-ℕ m H refl = {!!}
+concatenate-leq-eq-ℕ = {!!}
 
 concatenate-eq-leq-ℕ :
   {m m' : ℕ} (n : ℕ) → m' ＝ m → m ≤-ℕ n → m' ≤-ℕ n
-concatenate-eq-leq-ℕ n refl H = {!!}
+concatenate-eq-leq-ℕ = {!!}
 ```
 
 ### Reflexivity
 
 ```agda
 refl-leq-ℕ : (n : ℕ) → n ≤-ℕ n
-refl-leq-ℕ zero-ℕ = {!!}
+refl-leq-ℕ = {!!}
 refl-leq-ℕ (succ-ℕ n) = {!!}
 
 leq-eq-ℕ : (m n : ℕ) → m ＝ n → m ≤-ℕ n
-leq-eq-ℕ m .m refl = {!!}
+leq-eq-ℕ = {!!}
 ```
 
 ### Transitivity
 
 ```agda
 transitive-leq-ℕ : is-transitive leq-ℕ
-transitive-leq-ℕ zero-ℕ m l p q = {!!}
+transitive-leq-ℕ = {!!}
 transitive-leq-ℕ (succ-ℕ n) (succ-ℕ m) (succ-ℕ l) p q = {!!}
 ```
 
@@ -127,7 +127,7 @@ transitive-leq-ℕ (succ-ℕ n) (succ-ℕ m) (succ-ℕ l) p q = {!!}
 
 ```agda
 antisymmetric-leq-ℕ : (m n : ℕ) → m ≤-ℕ n → n ≤-ℕ m → m ＝ n
-antisymmetric-leq-ℕ zero-ℕ zero-ℕ p q = {!!}
+antisymmetric-leq-ℕ = {!!}
 antisymmetric-leq-ℕ (succ-ℕ m) (succ-ℕ n) p q = {!!}
 ```
 
@@ -135,13 +135,13 @@ antisymmetric-leq-ℕ (succ-ℕ m) (succ-ℕ n) p q = {!!}
 
 ```agda
 ℕ-Preorder : Preorder lzero lzero
-pr1 ℕ-Preorder = {!!}
+ℕ-Preorder = {!!}
 pr1 (pr2 ℕ-Preorder) = {!!}
 pr1 (pr2 (pr2 ℕ-Preorder)) = {!!}
 pr2 (pr2 (pr2 ℕ-Preorder)) = {!!}
 
 ℕ-Poset : Poset lzero lzero
-pr1 ℕ-Poset = {!!}
+ℕ-Poset = {!!}
 pr2 ℕ-Poset = {!!}
 ```
 
@@ -150,7 +150,7 @@ pr2 ℕ-Poset = {!!}
 ```agda
 linear-leq-ℕ :
   (m n : ℕ) → (m ≤-ℕ n) + (n ≤-ℕ m)
-linear-leq-ℕ zero-ℕ zero-ℕ = {!!}
+linear-leq-ℕ = {!!}
 linear-leq-ℕ zero-ℕ (succ-ℕ n) = {!!}
 linear-leq-ℕ (succ-ℕ m) zero-ℕ = {!!}
 linear-leq-ℕ (succ-ℕ m) (succ-ℕ n) = {!!}
@@ -161,11 +161,11 @@ linear-leq-ℕ (succ-ℕ m) (succ-ℕ n) = {!!}
 ```agda
 cases-order-three-elements-ℕ :
   (x y z : ℕ) → UU lzero
-cases-order-three-elements-ℕ x y z = {!!}
+cases-order-three-elements-ℕ = {!!}
 
 order-three-elements-ℕ :
   (x y z : ℕ) → cases-order-three-elements-ℕ x y z
-order-three-elements-ℕ zero-ℕ zero-ℕ zero-ℕ = {!!}
+order-three-elements-ℕ = {!!}
 order-three-elements-ℕ zero-ℕ zero-ℕ (succ-ℕ z) = {!!}
 order-three-elements-ℕ zero-ℕ (succ-ℕ y) zero-ℕ = {!!}
 order-three-elements-ℕ zero-ℕ (succ-ℕ y) (succ-ℕ z) = {!!}
@@ -180,7 +180,7 @@ order-three-elements-ℕ (succ-ℕ x) (succ-ℕ y) (succ-ℕ z) = {!!}
 ```agda
 leq-zero-ℕ :
   (n : ℕ) → zero-ℕ ≤-ℕ n
-leq-zero-ℕ n = {!!}
+leq-zero-ℕ = {!!}
 ```
 
 ### Any natural number less than zero is zero
@@ -188,11 +188,11 @@ leq-zero-ℕ n = {!!}
 ```agda
 is-zero-leq-zero-ℕ :
   (x : ℕ) → x ≤-ℕ zero-ℕ → is-zero-ℕ x
-is-zero-leq-zero-ℕ zero-ℕ star = {!!}
+is-zero-leq-zero-ℕ = {!!}
 
 is-zero-leq-zero-ℕ' :
   (x : ℕ) → x ≤-ℕ zero-ℕ → is-zero-ℕ' x
-is-zero-leq-zero-ℕ' zero-ℕ star = {!!}
+is-zero-leq-zero-ℕ' = {!!}
 ```
 
 ### Any number is nonzero natural number if it is at least `1`
@@ -200,7 +200,7 @@ is-zero-leq-zero-ℕ' zero-ℕ star = {!!}
 ```agda
 leq-one-is-nonzero-ℕ :
   (x : ℕ) → is-nonzero-ℕ x → leq-ℕ 1 x
-leq-one-is-nonzero-ℕ zero-ℕ H = {!!}
+leq-one-is-nonzero-ℕ = {!!}
 leq-one-is-nonzero-ℕ (succ-ℕ x) H = {!!}
 
 is-nonzero-leq-one-ℕ :
@@ -212,7 +212,7 @@ is-nonzero-leq-one-ℕ .zero-ℕ () refl
 
 ```agda
 succ-leq-ℕ : (n : ℕ) → n ≤-ℕ (succ-ℕ n)
-succ-leq-ℕ zero-ℕ = {!!}
+succ-leq-ℕ = {!!}
 succ-leq-ℕ (succ-ℕ n) = {!!}
 ```
 
@@ -221,7 +221,7 @@ succ-leq-ℕ (succ-ℕ n) = {!!}
 ```agda
 decide-leq-succ-ℕ :
   (m n : ℕ) → m ≤-ℕ (succ-ℕ n) → (m ≤-ℕ n) + (m ＝ succ-ℕ n)
-decide-leq-succ-ℕ zero-ℕ zero-ℕ l = {!!}
+decide-leq-succ-ℕ = {!!}
 decide-leq-succ-ℕ zero-ℕ (succ-ℕ n) l = {!!}
 decide-leq-succ-ℕ (succ-ℕ m) zero-ℕ l = {!!}
 decide-leq-succ-ℕ (succ-ℕ m) (succ-ℕ n) l = {!!}
@@ -232,7 +232,7 @@ decide-leq-succ-ℕ (succ-ℕ m) (succ-ℕ n) l = {!!}
 ```agda
 preserves-leq-succ-ℕ :
   (m n : ℕ) → m ≤-ℕ n → m ≤-ℕ (succ-ℕ n)
-preserves-leq-succ-ℕ m n p = {!!}
+preserves-leq-succ-ℕ = {!!}
 ```
 
 ### The successor of `n` is not less than or equal to `n`
@@ -240,7 +240,7 @@ preserves-leq-succ-ℕ m n p = {!!}
 ```agda
 neg-succ-leq-ℕ :
   (n : ℕ) → ¬ (leq-ℕ (succ-ℕ n) n)
-neg-succ-leq-ℕ zero-ℕ = {!!}
+neg-succ-leq-ℕ = {!!}
 neg-succ-leq-ℕ (succ-ℕ n) = {!!}
 ```
 
@@ -249,13 +249,13 @@ neg-succ-leq-ℕ (succ-ℕ n) = {!!}
 ```agda
 cases-leq-succ-ℕ :
   {m n : ℕ} → leq-ℕ m (succ-ℕ n) → (leq-ℕ m n) + (m ＝ succ-ℕ n)
-cases-leq-succ-ℕ {zero-ℕ} {n} star = {!!}
+cases-leq-succ-ℕ = {!!}
 cases-leq-succ-ℕ {succ-ℕ m} {zero-ℕ} p = {!!}
 cases-leq-succ-ℕ {succ-ℕ m} {succ-ℕ n} p = {!!}
 
 cases-leq-succ-reflexive-leq-ℕ :
   {n : ℕ} → cases-leq-succ-ℕ {succ-ℕ n} {n} (refl-leq-ℕ n) ＝ inr refl
-cases-leq-succ-reflexive-leq-ℕ {zero-ℕ} = {!!}
+cases-leq-succ-reflexive-leq-ℕ = {!!}
 cases-leq-succ-reflexive-leq-ℕ {succ-ℕ n} = {!!}
 ```
 
@@ -263,10 +263,10 @@ cases-leq-succ-reflexive-leq-ℕ {succ-ℕ n} = {!!}
 
 ```agda
 contradiction-leq-ℕ : (m n : ℕ) → m ≤-ℕ n → ¬ ((succ-ℕ n) ≤-ℕ m)
-contradiction-leq-ℕ (succ-ℕ m) (succ-ℕ n) H K = {!!}
+contradiction-leq-ℕ = {!!}
 
 contradiction-leq-ℕ' : (m n : ℕ) → (succ-ℕ n) ≤-ℕ m → ¬ (m ≤-ℕ n)
-contradiction-leq-ℕ' m n K H = {!!}
+contradiction-leq-ℕ' = {!!}
 ```
 
 ### Addition preserves inequality
@@ -274,15 +274,15 @@ contradiction-leq-ℕ' m n K H = {!!}
 ```agda
 left-law-leq-add-ℕ :
   (k m n : ℕ) → m ≤-ℕ n → (m +ℕ k) ≤-ℕ (n +ℕ k)
-left-law-leq-add-ℕ zero-ℕ m n = {!!}
+left-law-leq-add-ℕ = {!!}
 left-law-leq-add-ℕ (succ-ℕ k) m n H = {!!}
 
 right-law-leq-add-ℕ : (k m n : ℕ) → m ≤-ℕ n → (k +ℕ m) ≤-ℕ (k +ℕ n)
-right-law-leq-add-ℕ k m n H = {!!}
+right-law-leq-add-ℕ = {!!}
 
 preserves-leq-add-ℕ :
   {m m' n n' : ℕ} → m ≤-ℕ m' → n ≤-ℕ n' → (m +ℕ n) ≤-ℕ (m' +ℕ n')
-preserves-leq-add-ℕ {m} {m'} {n} {n'} H K = {!!}
+preserves-leq-add-ℕ = {!!}
 ```
 
 ### Addition reflects the ordering on ℕ
@@ -290,34 +290,34 @@ preserves-leq-add-ℕ {m} {m'} {n} {n'} H K = {!!}
 ```agda
 reflects-order-add-ℕ :
   (k m n : ℕ) → (m +ℕ k) ≤-ℕ (n +ℕ k) → m ≤-ℕ n
-reflects-order-add-ℕ zero-ℕ m n = {!!}
+reflects-order-add-ℕ = {!!}
 reflects-order-add-ℕ (succ-ℕ k) m n = {!!}
 
 reflects-order-add-ℕ' :
   (k m n : ℕ) → (k +ℕ m) ≤-ℕ (k +ℕ n) → m ≤-ℕ n
-reflects-order-add-ℕ' k m n H = {!!}
+reflects-order-add-ℕ' = {!!}
 ```
 
 ### `m ≤ m + n` for any two natural numbers `m` and `n`
 
 ```agda
 leq-add-ℕ : (m n : ℕ) → m ≤-ℕ (m +ℕ n)
-leq-add-ℕ m zero-ℕ = {!!}
+leq-add-ℕ = {!!}
 leq-add-ℕ m (succ-ℕ n) = {!!}
 
 leq-add-ℕ' : (m n : ℕ) → m ≤-ℕ (n +ℕ m)
-leq-add-ℕ' m n = {!!}
+leq-add-ℕ' = {!!}
 ```
 
 ### We have `n ≤ m` if and only if there is a number `l` such that `l+n= {!!}
 
 ```agda
 subtraction-leq-ℕ : (n m : ℕ) → n ≤-ℕ m → Σ ℕ (λ l → l +ℕ n ＝ m)
-subtraction-leq-ℕ zero-ℕ m p = {!!}
+subtraction-leq-ℕ = {!!}
 subtraction-leq-ℕ (succ-ℕ n) (succ-ℕ m) p = {!!}
 
 leq-subtraction-ℕ : (n m l : ℕ) → l +ℕ n ＝ m → n ≤-ℕ m
-leq-subtraction-ℕ zero-ℕ m l p = {!!}
+leq-subtraction-ℕ = {!!}
 leq-subtraction-ℕ (succ-ℕ n) (succ-ℕ m) l p = {!!}
 ```
 
@@ -326,12 +326,12 @@ leq-subtraction-ℕ (succ-ℕ n) (succ-ℕ m) l p = {!!}
 ```agda
 preserves-order-mul-ℕ :
   (k m n : ℕ) → m ≤-ℕ n → (m *ℕ k) ≤-ℕ (n *ℕ k)
-preserves-order-mul-ℕ k zero-ℕ n p = {!!}
+preserves-order-mul-ℕ = {!!}
 preserves-order-mul-ℕ k (succ-ℕ m) (succ-ℕ n) p = {!!}
 
 preserves-order-mul-ℕ' :
   (k m n : ℕ) → m ≤-ℕ n → (k *ℕ m) ≤-ℕ (k *ℕ n)
-preserves-order-mul-ℕ' k m n H = {!!}
+preserves-order-mul-ℕ' = {!!}
 ```
 
 ### Multiplication preserves inequality
@@ -339,7 +339,7 @@ preserves-order-mul-ℕ' k m n H = {!!}
 ```agda
 preserves-leq-mul-ℕ :
   (m m' n n' : ℕ) → m ≤-ℕ m' → n ≤-ℕ n' → (m *ℕ n) ≤-ℕ (m' *ℕ n')
-preserves-leq-mul-ℕ m m' n n' H K = {!!}
+preserves-leq-mul-ℕ = {!!}
 ```
 
 ### Multiplication by a nonzero element reflects the ordering on ℕ
@@ -347,12 +347,12 @@ preserves-leq-mul-ℕ m m' n n' H K = {!!}
 ```agda
 reflects-order-mul-ℕ :
   (k m n : ℕ) → (m *ℕ (succ-ℕ k)) ≤-ℕ (n *ℕ (succ-ℕ k)) → m ≤-ℕ n
-reflects-order-mul-ℕ k zero-ℕ n p = {!!}
+reflects-order-mul-ℕ = {!!}
 reflects-order-mul-ℕ k (succ-ℕ m) (succ-ℕ n) p = {!!}
 
 reflects-order-mul-ℕ' :
   (k m n : ℕ) → ((succ-ℕ k) *ℕ m) ≤-ℕ ((succ-ℕ k) *ℕ n) → m ≤-ℕ n
-reflects-order-mul-ℕ' k m n H = {!!}
+reflects-order-mul-ℕ' = {!!}
 ```
 
 ### Any number `x` is less than a nonzero multiple of itself
@@ -360,11 +360,11 @@ reflects-order-mul-ℕ' k m n H = {!!}
 ```agda
 leq-mul-ℕ :
   (k x : ℕ) → x ≤-ℕ (x *ℕ (succ-ℕ k))
-leq-mul-ℕ k x = {!!}
+leq-mul-ℕ = {!!}
 
 leq-mul-ℕ' :
   (k x : ℕ) → x ≤-ℕ ((succ-ℕ k) *ℕ x)
-leq-mul-ℕ' k x = {!!}
+leq-mul-ℕ' = {!!}
 
 leq-mul-is-nonzero-ℕ :
   (k x : ℕ) → is-nonzero-ℕ k → x ≤-ℕ (x *ℕ k)

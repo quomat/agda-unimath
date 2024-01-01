@@ -77,8 +77,7 @@ abstract
     { P : X → UU l2} {Q : X → UU l3} {f : (x : X) → P x → Q x}
     ( is-equiv-f : (x : X) → is-equiv (f x)) →
     is-equiv (functor-free-dependent-loop l f)
-  is-equiv-functor-free-dependent-loop-is-fiberwise-equiv
-    (pair x l) {P} {Q} {f} is-equiv-f = {!!}
+  is-equiv-functor-free-dependent-loop-is-fiberwise-equiv = {!!}
 
 abstract
   lower-dependent-universal-property-circle :
@@ -153,7 +152,7 @@ contraction-total-space = {!!}
 path-total-path-fiber :
   { l1 l2 : Level} {A : UU l1} (B : A → UU l2) (x : A) →
   { y y' : B x} (q : Id y' y) → Id {A = Σ A B} (pair x y) (pair x y')
-path-total-path-fiber B x q = {!!}
+path-total-path-fiber = {!!}
 
 tr-path-total-path-fiber :
   { l1 l2 : Level} {A : UU l1} {B : A → UU l2} (c : Σ A B) (x : A) →
@@ -222,8 +221,7 @@ dependent-identification-contraction-total-space' :
   (h : (y : F) → Id c (pair x (map-equiv e y))) →
   (h' : (y' : F') → Id c (pair x' (map-equiv e' y'))) →
   UU (l1 ⊔ l2 ⊔ l3)
-dependent-identification-contraction-total-space'
-  c {x} {x'} p {F} {F'} f e e' H h h' = {!!}
+dependent-identification-contraction-total-space' = {!!}
 
 map-dependent-identification-contraction-total-space' :
     { l1 l2 l3 l4 : Level} {A : UU l1} {B : A → UU l2} (c : Σ A B) →
@@ -236,8 +234,7 @@ map-dependent-identification-contraction-total-space' :
     ( dependent-identification (contraction-total-space c) p
       ( map-inv-equiv (equiv-contraction-total-space c x e) h)
       ( map-inv-equiv (equiv-contraction-total-space c x' e') h'))
-map-dependent-identification-contraction-total-space'
-  c {x} {.x} refl f e e' H h h' α = {!!}
+map-dependent-identification-contraction-total-space' = {!!}
 
 equiv-dependent-identification-contraction-total-space' :
   { l1 l2 l3 l4 : Level} {A : UU l1} {B : A → UU l2} (c : Σ A B) →
@@ -250,8 +247,7 @@ equiv-dependent-identification-contraction-total-space' :
     ( map-inv-equiv (equiv-contraction-total-space c x e) h)
     ( map-inv-equiv (equiv-contraction-total-space c x' e') h')) ≃
   ( dependent-identification-contraction-total-space' c p f e e' H h h')
-equiv-dependent-identification-contraction-total-space'
-  c {x} {.x} refl f e e' H h h' = {!!}
+equiv-dependent-identification-contraction-total-space' = {!!}
 ```
 
 We use the above construction to provide sufficient conditions for the total
@@ -298,8 +294,7 @@ dependent-identification-loop-contraction-total-fundamental-cover-circle :
         ( base-free-loop l)
         ( compute-fiber-fundamental-cover-circle l dup-circle))
       ( h))
-dependent-identification-loop-contraction-total-fundamental-cover-circle
-  l dup-circle h p = {!!}
+dependent-identification-loop-contraction-total-fundamental-cover-circle = {!!}
 
 contraction-total-fundamental-cover-circle-data :
   { l1 : Level} {X : UU l1} (l : free-loop X) →
@@ -321,8 +316,7 @@ contraction-total-fundamental-cover-circle-data :
       ( h)) →
   ( t : Σ X (fundamental-cover-circle l dup-circle)) →
   Id (center-total-fundamental-cover-circle l dup-circle) t
-contraction-total-fundamental-cover-circle-data
-  {l1} l dup-circle h p (pair x y) = {!!}
+contraction-total-fundamental-cover-circle-data = {!!}
 
 is-torsorial-fundamental-cover-circle-data :
   { l1 : Level} {X : UU l1} (l : free-loop X) →
@@ -363,7 +357,7 @@ path-total-fundamental-cover-circle :
       ( map-equiv
         ( compute-fiber-fundamental-cover-circle l dup-circle)
         ( succ-ℤ k)))
-path-total-fundamental-cover-circle l dup-circle k = {!!}
+path-total-fundamental-cover-circle = {!!}
 
 CONTRACTION-fundamental-cover-circle :
   { l1 : Level} {X : UU l1} (l : free-loop X) →

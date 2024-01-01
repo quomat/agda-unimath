@@ -45,14 +45,14 @@ module _
   vec-Semiring = {!!}
 
   head-vec-Semiring : {n : ℕ} → vec-Semiring (succ-ℕ n) → type-Semiring R
-  head-vec-Semiring v = {!!}
+  head-vec-Semiring = {!!}
 
   tail-vec-Semiring : {n : ℕ} → vec-Semiring (succ-ℕ n) → vec-Semiring n
-  tail-vec-Semiring v = {!!}
+  tail-vec-Semiring = {!!}
 
   snoc-vec-Semiring :
     {n : ℕ} → vec-Semiring n → type-Semiring R → vec-Semiring (succ-ℕ n)
-  snoc-vec-Semiring v r = {!!}
+  snoc-vec-Semiring = {!!}
 ```
 
 ### Functional vectors on rings
@@ -67,7 +67,7 @@ module _
 
   head-functional-vec-Semiring :
     (n : ℕ) → functional-vec-Semiring (succ-ℕ n) → type-Semiring R
-  head-functional-vec-Semiring n v = {!!}
+  head-functional-vec-Semiring = {!!}
 
   tail-functional-vec-Semiring :
     (n : ℕ) → functional-vec-Semiring (succ-ℕ n) → functional-vec-Semiring n
@@ -105,7 +105,7 @@ module _
   where
 
   zero-functional-vec-Semiring : (n : ℕ) → functional-vec-Semiring R n
-  zero-functional-vec-Semiring n i = {!!}
+  zero-functional-vec-Semiring = {!!}
 ```
 
 ### Pointwise addition of vectors on a ring
@@ -125,31 +125,31 @@ module _
     {n : ℕ} (v1 v2 v3 : vec-Semiring R n) →
     add-vec-Semiring (add-vec-Semiring v1 v2) v3 ＝
     add-vec-Semiring v1 (add-vec-Semiring v2 v3)
-  associative-add-vec-Semiring empty-vec empty-vec empty-vec = {!!}
+  associative-add-vec-Semiring = {!!}
 
   vec-Semiring-Semigroup : ℕ → Semigroup l
-  pr1 (vec-Semiring-Semigroup n) = {!!}
+  vec-Semiring-Semigroup = {!!}
 
   left-unit-law-add-vec-Semiring :
     {n : ℕ} (v : vec-Semiring R n) →
     add-vec-Semiring (zero-vec-Semiring R) v ＝ v
-  left-unit-law-add-vec-Semiring empty-vec = {!!}
+  left-unit-law-add-vec-Semiring = {!!}
 
   right-unit-law-add-vec-Semiring :
     {n : ℕ} (v : vec-Semiring R n) →
     add-vec-Semiring v (zero-vec-Semiring R) ＝ v
-  right-unit-law-add-vec-Semiring empty-vec = {!!}
+  right-unit-law-add-vec-Semiring = {!!}
 
   vec-Semiring-Monoid : ℕ → Monoid l
-  pr1 (vec-Semiring-Monoid n) = {!!}
+  vec-Semiring-Monoid = {!!}
 
   commutative-add-vec-Semiring :
     {n : ℕ} (v w : vec-Semiring R n) →
     add-vec-Semiring v w ＝ add-vec-Semiring w v
-  commutative-add-vec-Semiring empty-vec empty-vec = {!!}
+  commutative-add-vec-Semiring = {!!}
 
   vec-Semiring-Commutative-Monoid : ℕ → Commutative-Monoid l
-  pr1 (vec-Semiring-Commutative-Monoid n) = {!!}
+  vec-Semiring-Commutative-Monoid = {!!}
 ```
 
 #### Pointwise addition of functional vectors on a ring
@@ -161,35 +161,35 @@ module _
 
   add-functional-vec-Semiring :
     (n : ℕ) (v w : functional-vec-Semiring R n) → functional-vec-Semiring R n
-  add-functional-vec-Semiring n = {!!}
+  add-functional-vec-Semiring = {!!}
 
   associative-add-functional-vec-Semiring :
     (n : ℕ) (v1 v2 v3 : functional-vec-Semiring R n) →
     ( add-functional-vec-Semiring n (add-functional-vec-Semiring n v1 v2) v3) ＝
     ( add-functional-vec-Semiring n v1 (add-functional-vec-Semiring n v2 v3))
-  associative-add-functional-vec-Semiring n v1 v2 v3 = {!!}
+  associative-add-functional-vec-Semiring = {!!}
 
   functional-vec-Semiring-Semigroup : ℕ → Semigroup l
-  pr1 (functional-vec-Semiring-Semigroup n) = {!!}
+  functional-vec-Semiring-Semigroup = {!!}
 
   left-unit-law-add-functional-vec-Semiring :
     (n : ℕ) (v : functional-vec-Semiring R n) →
     add-functional-vec-Semiring n (zero-functional-vec-Semiring R n) v ＝ v
-  left-unit-law-add-functional-vec-Semiring n v = {!!}
+  left-unit-law-add-functional-vec-Semiring = {!!}
 
   right-unit-law-add-functional-vec-Semiring :
     (n : ℕ) (v : functional-vec-Semiring R n) →
     add-functional-vec-Semiring n v (zero-functional-vec-Semiring R n) ＝ v
-  right-unit-law-add-functional-vec-Semiring n v = {!!}
+  right-unit-law-add-functional-vec-Semiring = {!!}
 
   functional-vec-Semiring-Monoid : ℕ → Monoid l
-  pr1 (functional-vec-Semiring-Monoid n) = {!!}
+  functional-vec-Semiring-Monoid = {!!}
 
   commutative-add-functional-vec-Semiring :
     (n : ℕ) (v w : functional-vec-Semiring R n) →
     add-functional-vec-Semiring n v w ＝ add-functional-vec-Semiring n w v
-  commutative-add-functional-vec-Semiring n v w = {!!}
+  commutative-add-functional-vec-Semiring = {!!}
 
   functional-vec-Semiring-Commutative-Monoid : ℕ → Commutative-Monoid l
-  pr1 (functional-vec-Semiring-Commutative-Monoid n) = {!!}
+  functional-vec-Semiring-Commutative-Monoid = {!!}
 ```

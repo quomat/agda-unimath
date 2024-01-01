@@ -91,20 +91,20 @@ module _
       is-0-connected A →
       ((f : (x : A) → (a ＝ x) → B x) (x : A) → is-in-subuniverse-map P (f x)) →
       is-separated P (Σ A B)
-    forward-implication-extended-fundamental-theorem-id H K (x , y) (x' , y') = {!!}
+    forward-implication-extended-fundamental-theorem-id = {!!}
 
   abstract
     backward-implication-extended-fundamental-theorem-id :
       is-separated P (Σ A B) →
       (f : (x : A) → (a ＝ x) → B x) (x : A) → is-in-subuniverse-map P (f x)
-    backward-implication-extended-fundamental-theorem-id K f x y = {!!}
+    backward-implication-extended-fundamental-theorem-id = {!!}
 
   abstract
     extended-fundamental-theorem-id :
       is-0-connected A →
       ((f : (x : A) → (a ＝ x) → B x) (x : A) → is-in-subuniverse-map P (f x)) ↔
       is-separated P (Σ A B)
-    pr1 (extended-fundamental-theorem-id H) = {!!}
+    extended-fundamental-theorem-id = {!!}
 ```
 
 ## Corollaries
@@ -120,18 +120,18 @@ module _
     is-0-connected A →
     ( (f : (x : A) → (a ＝ x) → B x) → (x : A) → is-surjective (f x)) →
     is-inhabited (B a) → is-0-connected (Σ A B)
-  forward-implication-extended-fundamental-theorem-id-surjective H K L = {!!}
+  forward-implication-extended-fundamental-theorem-id-surjective = {!!}
 
   backward-implication-extended-fundamental-theorem-id-surjective :
     is-0-connected (Σ A B) →
     (f : (x : A) → (a ＝ x) → B x) (x : A) → is-surjective (f x)
-  backward-implication-extended-fundamental-theorem-id-surjective L = {!!}
+  backward-implication-extended-fundamental-theorem-id-surjective = {!!}
 
   extended-fundamental-theorem-id-surjective :
     is-0-connected A → is-inhabited (B a) →
     ( (f : (x : A) → (a ＝ x) → B x) → (x : A) → is-surjective (f x)) ↔
     is-0-connected (Σ A B)
-  pr1 (extended-fundamental-theorem-id-surjective H K) L = {!!}
+  extended-fundamental-theorem-id-surjective = {!!}
 ```
 
 ### Characterizing families of connected maps out of identity types
@@ -145,18 +145,18 @@ module _
   forward-implication-extended-fundamental-theorem-id-connected :
     ( (f : (x : A) → (a ＝ x) → B x) → (x : A) → is-connected-map k (f x)) →
     is-inhabited (B a) → is-connected (succ-𝕋 k) (Σ A B)
-  forward-implication-extended-fundamental-theorem-id-connected K L = {!!}
+  forward-implication-extended-fundamental-theorem-id-connected = {!!}
 
   backward-implication-extended-fundamental-theorem-id-connected :
     is-connected (succ-𝕋 k) (Σ A B) →
     (f : (x : A) → (a ＝ x) → B x) (x : A) → is-connected-map k (f x)
-  backward-implication-extended-fundamental-theorem-id-connected K = {!!}
+  backward-implication-extended-fundamental-theorem-id-connected = {!!}
 
   extended-fundamental-theorem-id-connected :
     is-0-connected A → is-inhabited (B a) →
     ((f : (x : A) → (a ＝ x) → B x) (x : A) → is-connected-map k (f x)) ↔
     is-connected (succ-𝕋 k) (Σ A B)
-  pr1 (extended-fundamental-theorem-id-connected H K) L = {!!}
+  extended-fundamental-theorem-id-connected = {!!}
 ```
 
 ### Characterizing families of truncated maps out of identity types
@@ -181,7 +181,7 @@ module _
     is-0-connected A →
     ((f : (x : A) → (a ＝ x) → B x) (x : A) → is-trunc-map k (f x)) ↔
     is-trunc (succ-𝕋 k) (Σ A B)
-  pr1 (extended-fundamental-theorem-id-truncated H) = {!!}
+  extended-fundamental-theorem-id-truncated = {!!}
 ```
 
 ## See also

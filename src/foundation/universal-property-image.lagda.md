@@ -175,7 +175,7 @@ module _
   backward-implication-is-image-subtype-subtype-im = {!!}
 
   is-image-subtype-subtype-im : is-image-subtype f (subtype-im f)
-  pr1 (is-image-subtype-subtype-im B) = {!!}
+  is-image-subtype-subtype-im = {!!}
 ```
 
 ### The identity embedding is the image inclusion of any map that has a section
@@ -211,7 +211,7 @@ module _
   fiberwise-map-is-image-im = {!!}
 
   map-is-image-im : im f → B
-  map-is-image-im (x , t) = {!!}
+  map-is-image-im = {!!}
 
   inv-triangle-is-image-im :
     map-emb m ∘ map-is-image-im ~ inclusion-im f

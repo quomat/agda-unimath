@@ -29,7 +29,7 @@ are derived there.
 
 ```agda
 diff-ℤ : ℤ → ℤ → ℤ
-diff-ℤ x y = {!!}
+diff-ℤ = {!!}
 
 infixl 36 _-ℤ_
 _-ℤ_ = {!!}
@@ -39,10 +39,10 @@ _-ℤ_ = {!!}
 
 ```agda
 ap-diff-ℤ : {x x' y y' : ℤ} → x ＝ x' → y ＝ y' → x -ℤ y ＝ x' -ℤ y'
-ap-diff-ℤ p q = {!!}
+ap-diff-ℤ = {!!}
 
 eq-diff-ℤ : {x y : ℤ} → is-zero-ℤ (x -ℤ y) → x ＝ y
-eq-diff-ℤ {x} {y} H = {!!}
+eq-diff-ℤ = {!!}
 
 is-zero-diff-ℤ' : (x : ℤ) → is-zero-ℤ (x -ℤ x)
 is-zero-diff-ℤ' = {!!}
@@ -52,10 +52,10 @@ is-zero-diff-ℤ :
 is-zero-diff-ℤ = {!!}
 
 left-zero-law-diff-ℤ : (x : ℤ) → zero-ℤ -ℤ x ＝ neg-ℤ x
-left-zero-law-diff-ℤ x = {!!}
+left-zero-law-diff-ℤ = {!!}
 
 right-zero-law-diff-ℤ : (x : ℤ) → x -ℤ zero-ℤ ＝ x
-right-zero-law-diff-ℤ x = {!!}
+right-zero-law-diff-ℤ = {!!}
 
 left-successor-law-diff-ℤ :
   (x y : ℤ) → (succ-ℤ x) -ℤ y ＝ succ-ℤ (x -ℤ y)
@@ -82,10 +82,10 @@ distributive-neg-diff-ℤ :
 distributive-neg-diff-ℤ = {!!}
 
 interchange-law-add-diff-ℤ : interchange-law add-ℤ diff-ℤ
-interchange-law-add-diff-ℤ x y u v = {!!}
+interchange-law-add-diff-ℤ = {!!}
 
 interchange-law-diff-add-ℤ : interchange-law diff-ℤ add-ℤ
-interchange-law-diff-add-ℤ x y u v = {!!}
+interchange-law-diff-add-ℤ = {!!}
 
 left-translation-diff-ℤ :
   (x y z : ℤ) → (z +ℤ x) -ℤ (z +ℤ y) ＝ x -ℤ y
@@ -98,5 +98,5 @@ right-translation-diff-ℤ = {!!}
 
 ```agda
 diff-succ-ℤ : (x y : ℤ) → (succ-ℤ x) -ℤ (succ-ℤ y) ＝ x -ℤ y
-diff-succ-ℤ x y = {!!}
+diff-succ-ℤ = {!!}
 ```

@@ -43,7 +43,7 @@ module _
   where
 
   action-Group : (l : Level) → UU (l1 ⊔ lsuc l)
-  action-Group l = {!!}
+  action-Group = {!!}
 
 module _
   {l1 l2 : Level} (G : Group l1) (X : action-Group G l2)
@@ -62,10 +62,10 @@ module _
   equiv-mul-action-Group = {!!}
 
   mul-action-Group : type-Group G → type-action-Group → type-action-Group
-  mul-action-Group g = {!!}
+  mul-action-Group = {!!}
 
   mul-action-Group' : type-action-Group → type-Group G → type-action-Group
-  mul-action-Group' x g = {!!}
+  mul-action-Group' = {!!}
 
   preserves-unit-mul-action-Group : mul-action-Group (unit-Group G) ~ id
   preserves-unit-mul-action-Group = {!!}
@@ -95,7 +95,7 @@ module _
   where
 
   trivial-action-Group : action-Group G l2
-  pr1 trivial-action-Group = {!!}
+  trivial-action-Group = {!!}
 ```
 
 ## External links

@@ -118,7 +118,7 @@ module _
 
   large-meet-semilattice-Large-Frame :
     Large-Meet-Semilattice α β
-  large-poset-Large-Meet-Semilattice large-meet-semilattice-Large-Frame = {!!}
+  large-meet-semilattice-Large-Frame = {!!}
   is-large-meet-semilattice-Large-Meet-Semilattice
     large-meet-semilattice-Large-Frame = {!!}
 
@@ -173,7 +173,7 @@ module _
   is-least-upper-bound-sup-Large-Frame = {!!}
 
   large-suplattice-Large-Frame : Large-Suplattice α β γ
-  large-poset-Large-Suplattice large-suplattice-Large-Frame = {!!}
+  large-suplattice-Large-Frame = {!!}
   is-large-suplattice-Large-Suplattice large-suplattice-Large-Frame = {!!}
 
   is-upper-bound-sup-Large-Frame :
@@ -203,22 +203,22 @@ module _
 
   is-suplattice-poset-Large-Frame :
     (l1 l2 : Level) → is-suplattice-Poset l1 (poset-Large-Frame (γ ⊔ l1 ⊔ l2))
-  pr1 (is-suplattice-poset-Large-Frame l1 l2 I y) = {!!}
+  is-suplattice-poset-Large-Frame = {!!}
   pr2 (is-suplattice-poset-Large-Frame l1 l2 I y) = {!!}
 
   suplattice-Large-Frame :
     (l1 l2 : Level) →
     Suplattice (α (γ ⊔ l1 ⊔ l2)) (β (γ ⊔ l1 ⊔ l2) (γ ⊔ l1 ⊔ l2)) l1
-  pr1 (suplattice-Large-Frame l1 l2) = {!!}
+  suplattice-Large-Frame = {!!}
 
   is-meet-semilattice-poset-Large-Frame :
     (l : Level) → is-meet-semilattice-Poset (poset-Large-Frame l)
-  pr1 (is-meet-semilattice-poset-Large-Frame l x y) = {!!}
+  is-meet-semilattice-poset-Large-Frame = {!!}
   pr2 (is-meet-semilattice-poset-Large-Frame l x y) = {!!}
 
   order-theoretic-meet-semilattice-Large-Frame :
     (l : Level) → Order-Theoretic-Meet-Semilattice (α l) (β l l)
-  pr1 (order-theoretic-meet-semilattice-Large-Frame l) = {!!}
+  order-theoretic-meet-semilattice-Large-Frame = {!!}
   pr2 (order-theoretic-meet-semilattice-Large-Frame l) = {!!}
 
   meet-semilattice-Large-Frame : (l : Level) → Meet-Semilattice (α l)

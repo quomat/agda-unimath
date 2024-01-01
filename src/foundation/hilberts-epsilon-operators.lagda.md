@@ -26,7 +26,7 @@ to Hilbert, we will not assume that such an operator exists for each type `A`.
 
 ```agda
 ε-operator-Hilbert : {l : Level} → UU l → UU l
-ε-operator-Hilbert A = {!!}
+ε-operator-Hilbert = {!!}
 ```
 
 ## Properties

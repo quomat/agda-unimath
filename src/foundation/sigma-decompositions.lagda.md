@@ -59,7 +59,7 @@ equivalent to the type of equivalence relations on `A`.
 ```agda
 Σ-Decomposition :
   {l1 : Level} (l2 l3 : Level) → UU l1 → UU (l1 ⊔ lsuc l2 ⊔ lsuc l3)
-Σ-Decomposition l2 l3 A = {!!}
+Σ-Decomposition = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} (D : Σ-Decomposition l2 l3 A)
@@ -78,7 +78,7 @@ module _
   is-inhabited-cotype-Σ-Decomposition :
     (x : indexing-type-Σ-Decomposition) →
     is-inhabited (cotype-Σ-Decomposition x)
-  is-inhabited-cotype-Σ-Decomposition x = {!!}
+  is-inhabited-cotype-Σ-Decomposition = {!!}
 
   matching-correspondence-Σ-Decomposition :
     A ≃ Σ indexing-type-Σ-Decomposition cotype-Σ-Decomposition
@@ -90,15 +90,15 @@ module _
 
   is-inhabited-indexing-type-inhabited-Σ-Decomposition :
     (p : is-inhabited A) → (is-inhabited (indexing-type-Σ-Decomposition))
-  is-inhabited-indexing-type-inhabited-Σ-Decomposition p = {!!}
+  is-inhabited-indexing-type-inhabited-Σ-Decomposition = {!!}
 
   inhabited-indexing-type-inhabited-Σ-Decomposition :
     (p : is-inhabited A) → (Inhabited-Type l2)
-  pr1 (inhabited-indexing-type-inhabited-Σ-Decomposition p) = {!!}
+  inhabited-indexing-type-inhabited-Σ-Decomposition = {!!}
 
   is-inhabited-base-is-inhabited-indexing-type-Σ-Decomposition :
     (is-inhabited (indexing-type-Σ-Decomposition)) → (is-inhabited A)
-  is-inhabited-base-is-inhabited-indexing-type-Σ-Decomposition p = {!!}
+  is-inhabited-base-is-inhabited-indexing-type-Σ-Decomposition = {!!}
 ```
 
 ### Set-indexed Σ-decompositions
@@ -106,7 +106,7 @@ module _
 ```agda
 Set-Indexed-Σ-Decomposition :
   {l1 : Level} (l2 l3 : Level) → UU l1 → UU (l1 ⊔ lsuc l2 ⊔ lsuc l3)
-Set-Indexed-Σ-Decomposition l2 l3 A = {!!}
+Set-Indexed-Σ-Decomposition = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} (D : Set-Indexed-Σ-Decomposition l2 l3 A)
@@ -124,12 +124,12 @@ module _
 
   cotype-Set-Indexed-Σ-Decomposition :
     indexing-type-Set-Indexed-Σ-Decomposition → UU l3
-  cotype-Set-Indexed-Σ-Decomposition x = {!!}
+  cotype-Set-Indexed-Σ-Decomposition = {!!}
 
   is-inhabited-cotype-Set-Indexed-Σ-Decomposition :
     (x : indexing-type-Set-Indexed-Σ-Decomposition) →
     is-inhabited (cotype-Set-Indexed-Σ-Decomposition x)
-  is-inhabited-cotype-Set-Indexed-Σ-Decomposition x = {!!}
+  is-inhabited-cotype-Set-Indexed-Σ-Decomposition = {!!}
 
   matching-correspondence-Set-Indexed-Σ-Decomposition :
     A ≃
@@ -145,7 +145,7 @@ module _
 
   index-Set-Indexed-Σ-Decomposition :
     A → indexing-type-Set-Indexed-Σ-Decomposition
-  index-Set-Indexed-Σ-Decomposition a = {!!}
+  index-Set-Indexed-Σ-Decomposition = {!!}
 ```
 
 ### Fibered double Σ-decompositions
@@ -154,7 +154,7 @@ module _
 fibered-Σ-Decomposition :
   {l1 : Level} (l2 l3 l4 l5 : Level) (A : UU l1) →
   UU (l1 ⊔ lsuc l2 ⊔ lsuc l3 ⊔ lsuc l4 ⊔ lsuc l5)
-fibered-Σ-Decomposition l2 l3 l4 l5 A = {!!}
+fibered-Σ-Decomposition = {!!}
 
 module _
   {l1 l2 l3 l4 l5 : Level} {A : UU l1}
@@ -221,7 +221,7 @@ module _
 displayed-Σ-Decomposition :
   {l1 : Level} (l2 l3 l4 l5 : Level) (A : UU l1) →
   UU (l1 ⊔ lsuc l2 ⊔ lsuc l3 ⊔ lsuc l4 ⊔ lsuc l5)
-displayed-Σ-Decomposition l2 l3 l4 l5 A = {!!}
+displayed-Σ-Decomposition = {!!}
 
 module _
   {l1 l2 l3 l4 l5 : Level} {A : UU l1}
@@ -262,32 +262,32 @@ module _
   indexing-type-snd-displayed-Σ-Decomposition :
     ( x : indexing-type-fst-displayed-Σ-Decomposition) →
     UU l4
-  indexing-type-snd-displayed-Σ-Decomposition x = {!!}
+  indexing-type-snd-displayed-Σ-Decomposition = {!!}
 
   inhabited-cotype-snd-displayed-Σ-Decomposition :
     ( x : indexing-type-fst-displayed-Σ-Decomposition) →
     indexing-type-snd-displayed-Σ-Decomposition x → Inhabited-Type l5
-  inhabited-cotype-snd-displayed-Σ-Decomposition x = {!!}
+  inhabited-cotype-snd-displayed-Σ-Decomposition = {!!}
 
   cotype-snd-displayed-Σ-Decomposition :
     ( x : indexing-type-fst-displayed-Σ-Decomposition) →
     indexing-type-snd-displayed-Σ-Decomposition x →
     UU l5
-  cotype-snd-displayed-Σ-Decomposition x = {!!}
+  cotype-snd-displayed-Σ-Decomposition = {!!}
 
   matching-correspondence-snd-displayed-Σ-Decomposition :
     ( x : indexing-type-fst-displayed-Σ-Decomposition) →
     ( cotype-fst-displayed-Σ-Decomposition x ≃
       Σ ( indexing-type-snd-displayed-Σ-Decomposition x)
         ( cotype-snd-displayed-Σ-Decomposition x))
-  matching-correspondence-snd-displayed-Σ-Decomposition x = {!!}
+  matching-correspondence-snd-displayed-Σ-Decomposition = {!!}
 
   map-matching-correspondence-snd-displayed-Σ-Decomposition :
     ( x : indexing-type-fst-displayed-Σ-Decomposition) →
     cotype-fst-displayed-Σ-Decomposition x →
     Σ ( indexing-type-snd-displayed-Σ-Decomposition x)
       ( cotype-snd-displayed-Σ-Decomposition x)
-  map-matching-correspondence-snd-displayed-Σ-Decomposition x = {!!}
+  map-matching-correspondence-snd-displayed-Σ-Decomposition = {!!}
 ```
 
 ## Properties
@@ -299,7 +299,7 @@ equiv-Σ-Decomposition :
   {l1 l2 l3 l4 l5 : Level} {A : UU l1}
   (X : Σ-Decomposition l2 l3 A) (Y : Σ-Decomposition l4 l5 A) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5)
-equiv-Σ-Decomposition X Y = {!!}
+equiv-Σ-Decomposition = {!!}
 
 module _
   {l1 l2 l3 l4 l5 : Level} {A : UU l1}
@@ -325,14 +325,14 @@ module _
     (x : indexing-type-Σ-Decomposition X) →
     cotype-Σ-Decomposition X x →
     cotype-Σ-Decomposition Y (map-equiv-indexing-type-equiv-Σ-Decomposition x)
-  map-equiv-cotype-equiv-Σ-Decomposition x = {!!}
+  map-equiv-cotype-equiv-Σ-Decomposition = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} (X : Σ-Decomposition l2 l3 A)
   where
 
   id-equiv-Σ-Decomposition : equiv-Σ-Decomposition X X
-  pr1 id-equiv-Σ-Decomposition = {!!}
+  id-equiv-Σ-Decomposition = {!!}
 
   is-torsorial-equiv-Σ-Decomposition :
     is-torsorial (equiv-Σ-Decomposition X)
@@ -340,7 +340,7 @@ module _
 
   equiv-eq-Σ-Decomposition :
     (Y : Σ-Decomposition l2 l3 A) → (X ＝ Y) → equiv-Σ-Decomposition X Y
-  equiv-eq-Σ-Decomposition .X refl = {!!}
+  equiv-eq-Σ-Decomposition = {!!}
 
   is-equiv-equiv-eq-Σ-Decomposition :
     (Y : Σ-Decomposition l2 l3 A) → is-equiv (equiv-eq-Σ-Decomposition Y)
@@ -348,11 +348,11 @@ module _
 
   extensionality-Σ-Decomposition :
     (Y : Σ-Decomposition l2 l3 A) → (X ＝ Y) ≃ equiv-Σ-Decomposition X Y
-  pr1 (extensionality-Σ-Decomposition Y) = {!!}
+  extensionality-Σ-Decomposition = {!!}
 
   eq-equiv-Σ-Decomposition :
     (Y : Σ-Decomposition l2 l3 A) → equiv-Σ-Decomposition X Y → (X ＝ Y)
-  eq-equiv-Σ-Decomposition Y = {!!}
+  eq-equiv-Σ-Decomposition = {!!}
 ```
 
 ### Invariance of Σ-decompositions under equivalences
@@ -379,14 +379,14 @@ equiv-Set-Indexed-Σ-Decomposition :
   (X : Set-Indexed-Σ-Decomposition l2 l3 A)
   (Y : Set-Indexed-Σ-Decomposition l4 l5 A) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5)
-equiv-Set-Indexed-Σ-Decomposition X Y = {!!}
+equiv-Set-Indexed-Σ-Decomposition = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} (X : Set-Indexed-Σ-Decomposition l2 l3 A)
   where
 
   id-equiv-Set-Indexed-Σ-Decomposition : equiv-Set-Indexed-Σ-Decomposition X X
-  pr1 id-equiv-Set-Indexed-Σ-Decomposition = {!!}
+  id-equiv-Set-Indexed-Σ-Decomposition = {!!}
 
   is-torsorial-equiv-Set-Indexed-Σ-Decomposition :
     is-torsorial (equiv-Set-Indexed-Σ-Decomposition X)
@@ -395,7 +395,7 @@ module _
   equiv-eq-Set-Indexed-Σ-Decomposition :
     (Y : Set-Indexed-Σ-Decomposition l2 l3 A) →
     (X ＝ Y) → equiv-Set-Indexed-Σ-Decomposition X Y
-  equiv-eq-Set-Indexed-Σ-Decomposition .X refl = {!!}
+  equiv-eq-Set-Indexed-Σ-Decomposition = {!!}
 
   is-equiv-equiv-eq-Set-Indexed-Σ-Decomposition :
     (Y : Set-Indexed-Σ-Decomposition l2 l3 A) →
@@ -405,12 +405,12 @@ module _
   extensionality-Set-Indexed-Σ-Decomposition :
     (Y : Set-Indexed-Σ-Decomposition l2 l3 A) →
     (X ＝ Y) ≃ equiv-Set-Indexed-Σ-Decomposition X Y
-  pr1 (extensionality-Set-Indexed-Σ-Decomposition Y) = {!!}
+  extensionality-Set-Indexed-Σ-Decomposition = {!!}
 
   eq-equiv-Set-Indexed-Σ-Decomposition :
     (Y : Set-Indexed-Σ-Decomposition l2 l3 A) →
     equiv-Set-Indexed-Σ-Decomposition X Y → (X ＝ Y)
-  eq-equiv-Set-Indexed-Σ-Decomposition Y = {!!}
+  eq-equiv-Set-Indexed-Σ-Decomposition = {!!}
 ```
 
 ### Iterated Σ-decompositions
@@ -431,7 +431,7 @@ module _
   equiv-snd-fibered-Σ-Decomposition :
     (e : equiv-fst-fibered-Σ-Decomposition) →
     UU (l4 ⊔ l5 ⊔ l6 ⊔ l8 ⊔ l9)
-  equiv-snd-fibered-Σ-Decomposition e = {!!}
+  equiv-snd-fibered-Σ-Decomposition = {!!}
 
   equiv-fibered-Σ-Decomposition :
     UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6 ⊔ l7 ⊔ l8 ⊔ l9)
@@ -462,12 +462,12 @@ module _
 
   id-equiv-fibered-Σ-Decomposition :
     equiv-fibered-Σ-Decomposition D D
-  pr1 id-equiv-fibered-Σ-Decomposition = {!!}
+  id-equiv-fibered-Σ-Decomposition = {!!}
 
   equiv-eq-fibered-Σ-Decomposition :
     (D' : fibered-Σ-Decomposition l2 l3 l4 l5 A) →
     (D ＝ D') → equiv-fibered-Σ-Decomposition D D'
-  equiv-eq-fibered-Σ-Decomposition .D refl = {!!}
+  equiv-eq-fibered-Σ-Decomposition = {!!}
 
   is-equiv-equiv-eq-fibered-Σ-Decomposition :
     (D' : fibered-Σ-Decomposition l2 l3 l4 l5 A) →
@@ -477,12 +477,12 @@ module _
   extensionality-fibered-Σ-Decomposition :
     (D' : fibered-Σ-Decomposition l2 l3 l4 l5 A) →
     (D ＝ D') ≃ equiv-fibered-Σ-Decomposition D D'
-  pr1 (extensionality-fibered-Σ-Decomposition D') = {!!}
+  extensionality-fibered-Σ-Decomposition = {!!}
 
   eq-equiv-fibered-Σ-Decomposition :
     (D' : fibered-Σ-Decomposition l2 l3 l4 l5 A) →
     (equiv-fibered-Σ-Decomposition D D') → (D ＝ D')
-  eq-equiv-fibered-Σ-Decomposition D' = {!!}
+  eq-equiv-fibered-Σ-Decomposition = {!!}
 ```
 
 #### Characterization of identity type for displayed double Σ-decompositions
@@ -501,7 +501,7 @@ module _
   equiv-snd-displayed-Σ-Decomposition :
     (e : equiv-fst-displayed-Σ-Decomposition) →
     UU (l2 ⊔ l4 ⊔ l5 ⊔ l7 ⊔ l8 ⊔ l9)
-  equiv-snd-displayed-Σ-Decomposition e = {!!}
+  equiv-snd-displayed-Σ-Decomposition = {!!}
 
   equiv-displayed-Σ-Decomposition :
     UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6 ⊔ l7 ⊔ l8 ⊔ l9)
@@ -532,12 +532,12 @@ module _
 
   id-equiv-displayed-Σ-Decomposition :
     equiv-displayed-Σ-Decomposition disp-D disp-D
-  pr1 id-equiv-displayed-Σ-Decomposition = {!!}
+  id-equiv-displayed-Σ-Decomposition = {!!}
 
   equiv-eq-displayed-Σ-Decomposition :
     (disp-D' : displayed-Σ-Decomposition l2 l3 l4 l5 A) →
     (disp-D ＝ disp-D') → equiv-displayed-Σ-Decomposition disp-D disp-D'
-  equiv-eq-displayed-Σ-Decomposition .disp-D refl = {!!}
+  equiv-eq-displayed-Σ-Decomposition = {!!}
 
   is-equiv-equiv-eq-displayed-Σ-Decomposition :
     (disp-D' : displayed-Σ-Decomposition l2 l3 l4 l5 A) →
@@ -547,12 +547,12 @@ module _
   extensionality-displayed-Σ-Decomposition :
     (disp-D' : displayed-Σ-Decomposition l2 l3 l4 l5 A) →
     (disp-D ＝ disp-D') ≃ equiv-displayed-Σ-Decomposition disp-D disp-D'
-  pr1 (extensionality-displayed-Σ-Decomposition D) = {!!}
+  extensionality-displayed-Σ-Decomposition = {!!}
 
   eq-equiv-displayed-Σ-Decomposition :
     (disp-D' : displayed-Σ-Decomposition l2 l3 l4 l5 A) →
     (equiv-displayed-Σ-Decomposition disp-D disp-D') → (disp-D ＝ disp-D')
-  eq-equiv-displayed-Σ-Decomposition D = {!!}
+  eq-equiv-displayed-Σ-Decomposition = {!!}
 ```
 
 #### Equivalence between fibered double Σ-decompositions and displayed double Σ-decompositions
@@ -604,7 +604,7 @@ module _
           ( matching-correspondence-inv-displayed-fibered-Σ-Decomposition
             ( disp-D)))) ~
       ( map-equiv e)
-    htpy-matching-correspondence a = {!!}
+    htpy-matching-correspondence = {!!}
 
   is-retraction-map-inv-displayed-fibered-Σ-Decomposition :
     map-inv-displayed-fibered-Σ-Decomposition
@@ -625,7 +625,7 @@ module _
           matching-correspondence-displayed-fibered-Σ-Decomposition
             (fib-D)) ~
       map-equiv s
-    htpy-matching-correspondence x = {!!}
+    htpy-matching-correspondence = {!!}
 
   is-section-map-inv-displayed-fibered-Σ-Decomposition :
     ( map-displayed-fibered-Σ-Decomposition
@@ -643,6 +643,6 @@ equiv-displayed-fibered-Σ-Decomposition :
   {l1 l : Level} → {A : UU l1} →
   fibered-Σ-Decomposition l l l l A ≃
   displayed-Σ-Decomposition l l l l A
-pr1 equiv-displayed-fibered-Σ-Decomposition = {!!}
+equiv-displayed-fibered-Σ-Decomposition = {!!}
 pr2 equiv-displayed-fibered-Σ-Decomposition = {!!}
 ```

@@ -38,7 +38,7 @@ indexed over `X`, equipped with an equivalence
 is-in-subuniverse-Π-Decomposition :
   {l1 l2 l3 : Level} (P : subuniverse l1 l2) {A : UU l3} →
   Π-Decomposition l1 l1 A → UU (l1 ⊔ l2)
-is-in-subuniverse-Π-Decomposition P D = {!!}
+is-in-subuniverse-Π-Decomposition = {!!}
 ```
 
 ### Π-decompositions in a subuniverse
@@ -47,7 +47,7 @@ is-in-subuniverse-Π-Decomposition P D = {!!}
 Π-Decomposition-Subuniverse :
   {l1 l2 : Level} (P : subuniverse l1 l2) →
   type-subuniverse P → UU (lsuc l1 ⊔ l2)
-Π-Decomposition-Subuniverse P A = {!!}
+Π-Decomposition-Subuniverse = {!!}
 
 module _
   {l1 l2 : Level} (P : subuniverse l1 l2) (A : type-subuniverse P)
@@ -70,12 +70,12 @@ module _
 
   cotype-Π-Decomposition-Subuniverse :
     (indexing-type-Π-Decomposition-Subuniverse → UU l1)
-  cotype-Π-Decomposition-Subuniverse X = {!!}
+  cotype-Π-Decomposition-Subuniverse = {!!}
 
   is-in-subuniverse-cotype-Π-Decomposition-Subuniverse :
     ((x : indexing-type-Π-Decomposition-Subuniverse) →
     type-Prop (P (cotype-Π-Decomposition-Subuniverse x)))
-  is-in-subuniverse-cotype-Π-Decomposition-Subuniverse x = {!!}
+  is-in-subuniverse-cotype-Π-Decomposition-Subuniverse = {!!}
 
   matching-correspondence-Π-Decomposition-Subuniverse :
     inclusion-subuniverse P A ≃
@@ -94,20 +94,20 @@ map-equiv-total-is-in-subuniverse-Π-Decomposition :
   Π-Decomposition-Subuniverse P A →
   Σ ( Π-Decomposition l1 l1 (inclusion-subuniverse P A))
     ( is-in-subuniverse-Π-Decomposition P)
-map-equiv-total-is-in-subuniverse-Π-Decomposition P A D = {!!}
+map-equiv-total-is-in-subuniverse-Π-Decomposition = {!!}
 
 map-inv-equiv-Π-Decomposition-Π-Decomposition-Subuniverse :
   {l1 l2 : Level} (P : subuniverse l1 l2) (A : type-subuniverse P) →
   Σ ( Π-Decomposition l1 l1 (inclusion-subuniverse P A))
     ( is-in-subuniverse-Π-Decomposition P) →
   Π-Decomposition-Subuniverse P A
-map-inv-equiv-Π-Decomposition-Π-Decomposition-Subuniverse P A X = {!!}
+map-inv-equiv-Π-Decomposition-Π-Decomposition-Subuniverse = {!!}
 
 equiv-total-is-in-subuniverse-Π-Decomposition :
   {l1 l2 : Level} (P : subuniverse l1 l2) (A : type-subuniverse P) →
   ( Π-Decomposition-Subuniverse P A) ≃
   ( Σ ( Π-Decomposition l1 l1 (inclusion-subuniverse P A))
       ( is-in-subuniverse-Π-Decomposition P))
-pr1 (equiv-total-is-in-subuniverse-Π-Decomposition P A) = {!!}
+equiv-total-is-in-subuniverse-Π-Decomposition = {!!}
 pr2 (equiv-total-is-in-subuniverse-Π-Decomposition P A) = {!!}
 ```

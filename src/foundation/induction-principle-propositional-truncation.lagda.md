@@ -58,6 +58,5 @@ abstract
     ( B : type-Prop P → UU l) →
     ( (p : type-Prop P) → is-prop (B p)) →
     case-paths-induction-principle-propositional-truncation P α f B
-  case-paths-induction-principle-propositional-truncation-is-prop
-    P α f B is-prop-B p q x y = {!!}
+  case-paths-induction-principle-propositional-truncation-is-prop = {!!}
 ```

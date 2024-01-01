@@ -32,7 +32,7 @@ module _
   where
 
   diagonal-matrix-Ring : (n : ℕ) → vec-Ring R n → matrix-Ring R n n
-  diagonal-matrix-Ring zero-ℕ v = {!!}
+  diagonal-matrix-Ring = {!!}
 ```
 
 ### Scalar matrices
@@ -43,8 +43,8 @@ module _
   where
 
   scalar-matrix-Ring : (n : ℕ) → type-Ring R → matrix-Ring R n n
-  scalar-matrix-Ring n x = {!!}
+  scalar-matrix-Ring = {!!}
 
   identity-matrix-Ring : (n : ℕ) → matrix-Ring R n n
-  identity-matrix-Ring n = {!!}
+  identity-matrix-Ring = {!!}
 ```

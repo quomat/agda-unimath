@@ -61,7 +61,7 @@ module _
   where
 
   sign-homomorphism-Fin-two : Aut (type-UU-Fin n X) → Fin 2
-  sign-homomorphism-Fin-two f = {!!}
+  sign-homomorphism-Fin-two = {!!}
 
   preserves-add-sign-homomorphism-Fin-two :
     (f g : (type-UU-Fin n X) ≃ (type-UU-Fin n X)) →
@@ -98,7 +98,7 @@ module _
   where
 
   map-sign-homomorphism : Aut (type-UU-Fin n X) → Aut (Fin 2)
-  map-sign-homomorphism f = {!!}
+  map-sign-homomorphism = {!!}
 
   preserves-comp-map-sign-homomorphism :
     preserves-mul _∘e_ _∘e_ map-sign-homomorphism

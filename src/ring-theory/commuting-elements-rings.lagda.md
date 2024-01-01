@@ -79,7 +79,7 @@ module _
   where
 
   commute-zero-Ring : (x : type-Ring R) → commute-Ring R (zero-Ring R) x
-  commute-zero-Ring x = {!!}
+  commute-zero-Ring = {!!}
 ```
 
 ### The multiplicative unit element commutes with every element of the ring

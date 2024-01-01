@@ -44,7 +44,7 @@ module _
   is-prop-is-decidable-leq-Poset = {!!}
 
 Decidable-Poset : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Decidable-Poset l1 l2 = {!!}
+Decidable-Poset = {!!}
 
 module _
   {l1 l2 : Level} (X : Decidable-Poset l1 l2)
@@ -74,7 +74,7 @@ module _
   is-prop-leq-Decidable-Poset = {!!}
 
   decidable-preorder-Decidable-Poset : Decidable-Preorder l1 l2
-  pr1 decidable-preorder-Decidable-Poset = {!!}
+  decidable-preorder-Decidable-Poset = {!!}
 
   leq-decidable-poset-decidable-Prop :
     (x y : type-Decidable-Poset) → Decidable-Prop l2

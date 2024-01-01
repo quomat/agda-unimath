@@ -61,26 +61,26 @@ module _
   vertex-ethane = {!!}
 
   edge-ethane-Prop : unordered-pair vertex-ethane → Prop lzero
-  edge-ethane-Prop p = {!!}
+  edge-ethane-Prop = {!!}
 
   edge-ethane : unordered-pair vertex-ethane → UU lzero
-  edge-ethane p = {!!}
+  edge-ethane = {!!}
 
   abstract
     is-prop-edge-ethane :
       (p : unordered-pair vertex-ethane) → is-prop (edge-ethane p)
-    is-prop-edge-ethane p = {!!}
+    is-prop-edge-ethane = {!!}
 
   standard-edge-ethane-Prop : (c c' : vertex-ethane) → Prop lzero
-  standard-edge-ethane-Prop c c' = {!!}
+  standard-edge-ethane-Prop = {!!}
 
   standard-edge-ethane : (c c' : vertex-ethane) → UU lzero
-  standard-edge-ethane c c' = {!!}
+  standard-edge-ethane = {!!}
 
   abstract
     is-prop-standard-edge-ethane :
       (c c' : vertex-ethane) → is-prop (standard-edge-ethane c c')
-    is-prop-standard-edge-ethane c c' = {!!}
+    is-prop-standard-edge-ethane = {!!}
 
   abstract
     is-decidable-edge-ethane-eq-Fin-two :
@@ -97,50 +97,49 @@ module _
 
   is-decidable-standard-edge-ethane :
     (c c' : vertex-ethane) → is-decidable (standard-edge-ethane c c')
-  is-decidable-standard-edge-ethane c c' = {!!}
+  is-decidable-standard-edge-ethane = {!!}
 
   abstract
     is-finite-edge-ethane :
       (p : unordered-pair vertex-ethane) → is-finite (edge-ethane p)
-    is-finite-edge-ethane p = {!!}
+    is-finite-edge-ethane = {!!}
 
   edge-ethane-𝔽 : unordered-pair vertex-ethane → 𝔽 lzero
-  pr1 (edge-ethane-𝔽 p) = {!!}
+  edge-ethane-𝔽 = {!!}
 
   finite-graph-ethane : Undirected-Graph-𝔽 lzero lzero
-  pr1 finite-graph-ethane = {!!}
+  finite-graph-ethane = {!!}
 
   bonding-ethane :
     (c : vertex-ethane) →
     Σ (vertex-ethane) (λ c' → standard-edge-ethane c c') →
     vertex-tetrahedron-in-3-space t
-  bonding-ethane c e = {!!}
+  bonding-ethane = {!!}
 
   abstract
     is-torsorial-standard-edge-ethane :
       (c : vertex-ethane) → is-torsorial (λ c' → standard-edge-ethane c c')
-    pr1 (pr1 (is-torsorial-standard-edge-ethane (inl (inr _)))) = {!!}
+    is-torsorial-standard-edge-ethane = {!!}
 
   abstract
     is-emb-bonding-ethane : (c : vertex-ethane) → is-emb (bonding-ethane c)
-    is-emb-bonding-ethane c = {!!}
+    is-emb-bonding-ethane = {!!}
 
   emb-bonding-ethane :
     (c : vertex-ethane) →
     Σ (vertex-ethane) (λ c' → standard-edge-ethane c c') ↪
     vertex-tetrahedron-in-3-space t
-  pr1 (emb-bonding-ethane c) = {!!}
+  emb-bonding-ethane = {!!}
 
   count-standard-edge-ethane :
     (c c' : vertex-ethane) → count (standard-edge-ethane c c')
-  count-standard-edge-ethane c c' = {!!}
+  count-standard-edge-ethane = {!!}
 
   abstract
     number-of-elements-count-standard-edge-ethane-leq-3 :
       (c c' : vertex-ethane) →
       number-of-elements-count (count-standard-edge-ethane c c') ≤-ℕ 3
-    number-of-elements-count-standard-edge-ethane-leq-3
-      (inl (inr _)) (inl (inr _)) = {!!}
+    number-of-elements-count-standard-edge-ethane-leq-3 = {!!}
     number-of-elements-count-standard-edge-ethane-leq-3
       (inl (inr _)) (inr _) = {!!}
     number-of-elements-count-standard-edge-ethane-leq-3
@@ -149,7 +148,7 @@ module _
       (inr _) (inr _) = {!!}
 
   ethane : hydrocarbon lzero lzero
-  pr1 ethane = {!!}
+  ethane = {!!}
 
   is-alkane-ethane : is-alkane-hydrocarbon ethane
   is-alkane-ethane = {!!}

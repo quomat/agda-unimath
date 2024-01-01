@@ -40,7 +40,7 @@ A type `A` is said to have **decidable equality** if `x ＝ y` is a
 
 ```agda
 has-decidable-equality : {l : Level} (A : UU l) → UU l
-has-decidable-equality A = {!!}
+has-decidable-equality = {!!}
 ```
 
 ## Examples
@@ -191,7 +191,7 @@ module _
 
   abstract
     is-set-has-decidable-equality : has-decidable-equality A → is-set A
-    is-set-has-decidable-equality d = {!!}
+    is-set-has-decidable-equality = {!!}
 ```
 
 ### Having decidable equality is a property

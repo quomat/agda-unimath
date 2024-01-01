@@ -77,7 +77,7 @@ module _
     element-set-copresheaf-Precategory = {!!}
 
     element-copresheaf-Precategory : obj-Precategory C → UU l
-    element-copresheaf-Precategory X = {!!}
+    element-copresheaf-Precategory = {!!}
 
     action-copresheaf-Precategory :
       {X Y : obj-Precategory C} →

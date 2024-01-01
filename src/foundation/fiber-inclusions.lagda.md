@@ -49,11 +49,11 @@ module _
   where
 
   fiber-inclusion : (x : A) → B x → Σ A B
-  pr1 (fiber-inclusion x y) = {!!}
+  fiber-inclusion = {!!}
 
   fiber-fiber-inclusion :
     (a : A) (t : Σ A B) → fiber (fiber-inclusion a) t ≃ (a ＝ pr1 t)
-  fiber-fiber-inclusion a t = {!!}
+  fiber-fiber-inclusion = {!!}
 ```
 
 ## Properties
@@ -68,12 +68,12 @@ module _
   is-trunc-is-trunc-map-fiber-inclusion :
     ((B : A → UU l2) (a : A) → is-trunc-map k (fiber-inclusion B a)) →
     is-trunc (succ-𝕋 k) A
-  is-trunc-is-trunc-map-fiber-inclusion H x y = {!!}
+  is-trunc-is-trunc-map-fiber-inclusion = {!!}
 
   is-trunc-map-fiber-inclusion-is-trunc :
     (B : A → UU l2) (a : A) →
     is-trunc (succ-𝕋 k) A → is-trunc-map k (fiber-inclusion B a)
-  is-trunc-map-fiber-inclusion-is-trunc B a H t = {!!}
+  is-trunc-map-fiber-inclusion-is-trunc = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (B : A → UU l2)
@@ -92,25 +92,25 @@ module _
   is-0-map-fiber-inclusion = {!!}
 
   is-emb-fiber-inclusion : is-set A → (x : A) → is-emb (fiber-inclusion B x)
-  is-emb-fiber-inclusion H x = {!!}
+  is-emb-fiber-inclusion = {!!}
 
   emb-fiber-inclusion : is-set A → (x : A) → B x ↪ Σ A B
-  pr1 (emb-fiber-inclusion H x) = {!!}
+  emb-fiber-inclusion = {!!}
 
   is-faithful-fiber-inclusion :
     is-1-type A → (x : A) → is-faithful (fiber-inclusion B x)
-  is-faithful-fiber-inclusion H x = {!!}
+  is-faithful-fiber-inclusion = {!!}
 
 fiber-inclusion-emb :
   {l1 l2 : Level} (A : Set l1) (B : type-Set A → UU l2) →
   (x : type-Set A) → B x ↪ Σ (type-Set A) B
-pr1 (fiber-inclusion-emb A B x) = {!!}
+fiber-inclusion-emb = {!!}
 pr2 (fiber-inclusion-emb A B x) = {!!}
 
 fiber-inclusion-faithful-map :
   {l1 l2 : Level} (A : 1-Type l1) (B : type-1-Type A → UU l2) →
   (x : type-1-Type A) → faithful-map (B x) (Σ (type-1-Type A) B)
-pr1 (fiber-inclusion-faithful-map A B x) = {!!}
+fiber-inclusion-faithful-map = {!!}
 pr2 (fiber-inclusion-faithful-map A B x) = {!!}
 ```
 
@@ -122,7 +122,7 @@ module _
   where
 
   cone-fiber-fam : cone (pr1 {B = B}) (point a) (B a)
-  pr1 cone-fiber-fam = {!!}
+  cone-fiber-fam = {!!}
 
   abstract
     is-pullback-cone-fiber-fam :

@@ -32,7 +32,7 @@ is the pointed connected type itself.
 
 ```agda
 ∞-Group : (l : Level) → UU (lsuc l)
-∞-Group l = {!!}
+∞-Group = {!!}
 
 module _
   {l : Level} (G : ∞-Group l)

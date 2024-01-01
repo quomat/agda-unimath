@@ -122,7 +122,7 @@ module _
   is-subgroup-subset-Decidable-Subgroup = {!!}
 
   subgroup-Decidable-Subgroup : Subgroup l2 G
-  pr1 subgroup-Decidable-Subgroup = {!!}
+  subgroup-Decidable-Subgroup = {!!}
 
   type-Decidable-Subgroup : UU (l1 ⊔ l2)
   type-Decidable-Subgroup = {!!}
@@ -169,7 +169,7 @@ module _
 is-emb-decidable-subset-Decidable-Subgroup :
   {l1 l2 : Level} (G : Group l1) →
     is-emb (decidable-subset-Decidable-Subgroup {l2 = l2} G)
-is-emb-decidable-subset-Decidable-Subgroup G = {!!}
+is-emb-decidable-subset-Decidable-Subgroup = {!!}
 ```
 
 ### The underlying group of a decidable subgroup

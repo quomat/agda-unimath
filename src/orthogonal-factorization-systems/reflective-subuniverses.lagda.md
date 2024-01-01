@@ -77,7 +77,7 @@ module _
 
 ```agda
 reflective-subuniverse : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-reflective-subuniverse l1 l2 = {!!}
+reflective-subuniverse = {!!}
 ```
 
 ```agda

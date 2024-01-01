@@ -112,7 +112,7 @@ module _
 
 ```agda
 Gaunt-Category : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Gaunt-Category l1 l2 = {!!}
+Gaunt-Category = {!!}
 
 module _
   {l1 l2 : Level} (C : Gaunt-Category l1 l2)

@@ -57,7 +57,7 @@ module _
 
 ```agda
 wide-function-class : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-wide-function-class l1 l2 = {!!}
+wide-function-class = {!!}
 
 module _
   {l1 l2 : Level} (P : wide-function-class l1 l2)

@@ -55,5 +55,5 @@ module _
   where
 
   semigroup-Large-Semigroup : (l : Level) → Semigroup (α l)
-  pr1 (semigroup-Large-Semigroup l) = {!!}
+  semigroup-Large-Semigroup = {!!}
 ```

@@ -27,7 +27,7 @@ collatz n with is-decidable-div-ℕ 2 n
 ... | inr f = {!!}
 
 iterate-collatz : ℕ → ℕ → ℕ
-iterate-collatz zero-ℕ n = {!!}
+iterate-collatz = {!!}
 iterate-collatz (succ-ℕ k) n = {!!}
 
 Collatz-conjecture : UU lzero

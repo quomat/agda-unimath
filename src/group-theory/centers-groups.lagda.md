@@ -36,7 +36,7 @@ module _
   subtype-center-Group = {!!}
 
   subgroup-center-Group : Subgroup l G
-  pr1 subgroup-center-Group = {!!}
+  subgroup-center-Group = {!!}
   pr1 (pr2 subgroup-center-Group) = {!!}
   pr1 (pr2 (pr2 subgroup-center-Group)) = {!!}
   pr2 (pr2 (pr2 subgroup-center-Group)) = {!!}
@@ -64,7 +64,7 @@ module _
   is-central-element-inclusion-center-Group :
     (x : type-center-Group) →
     is-central-element-Group G (inclusion-center-Group x)
-  is-central-element-inclusion-center-Group x = {!!}
+  is-central-element-inclusion-center-Group = {!!}
 
   preserves-mul-inclusion-center-Group :
     {x y : type-center-Group} →
@@ -72,7 +72,7 @@ module _
     mul-Group G
       ( inclusion-center-Group x)
       ( inclusion-center-Group y)
-  preserves-mul-inclusion-center-Group {x} {y} = {!!}
+  preserves-mul-inclusion-center-Group = {!!}
 
   hom-inclusion-center-Group :
     hom-Group group-center-Group G
@@ -80,8 +80,8 @@ module _
 
   is-normal-subgroup-center-Group :
     is-normal-Subgroup G subgroup-center-Group
-  is-normal-subgroup-center-Group x y = {!!}
+  is-normal-subgroup-center-Group = {!!}
 
   center-Group : Normal-Subgroup l G
-  pr1 center-Group = {!!}
+  center-Group = {!!}
 ```

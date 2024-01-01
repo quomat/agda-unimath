@@ -37,7 +37,7 @@ sometimes called **cotowers**.
 
 ```agda
 sequential-diagram : (l : Level) → UU (lsuc l)
-sequential-diagram l = {!!}
+sequential-diagram = {!!}
 
 module _
   { l : Level} (A : sequential-diagram l)
@@ -57,7 +57,7 @@ module _
   where
 
   constant-sequential-diagram : sequential-diagram l
-  pr1 constant-sequential-diagram _ = {!!}
+  constant-sequential-diagram = {!!}
 ```
 
 ## Properties
@@ -82,7 +82,7 @@ module _
   where
 
   postcomp-sequential-diagram : sequential-diagram (l1 ⊔ l2)
-  pr1 postcomp-sequential-diagram n = {!!}
+  postcomp-sequential-diagram = {!!}
 ```
 
 ## References

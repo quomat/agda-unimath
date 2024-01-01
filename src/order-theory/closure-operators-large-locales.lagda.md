@@ -188,8 +188,7 @@ module _
     is-closed-element-closure-operator-Large-Locale y →
     leq-Large-Locale L x y →
     leq-Large-Locale L (map-closure-operator-Large-Locale L j x) y
-  forward-implication-adjoint-relation-closure-operator-Large-Locale
-    {x = x} {y} H K = {!!}
+  forward-implication-adjoint-relation-closure-operator-Large-Locale = {!!}
 
   backward-implication-adjoint-relation-closure-operator-Large-Locale :
     {l1 l2 : Level}
@@ -197,8 +196,7 @@ module _
     {y : type-Large-Locale L l2} →
     leq-Large-Locale L (map-closure-operator-Large-Locale L j x) y →
     leq-Large-Locale L x y
-  backward-implication-adjoint-relation-closure-operator-Large-Locale
-    {x = x} {y} H = {!!}
+  backward-implication-adjoint-relation-closure-operator-Large-Locale = {!!}
 
   adjoint-relation-closure-operator-Large-Locale :
     {l1 l2 : Level}

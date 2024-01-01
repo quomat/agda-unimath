@@ -80,8 +80,7 @@ module _
   associative-composition-operation-map-precategory-Precategory :
     associative-composition-operation-binary-family-Set
       ( natural-transformation-map-set-Precategory C D)
-  pr1 associative-composition-operation-map-precategory-Precategory
-    {F} {G} {H} = {!!}
+  associative-composition-operation-map-precategory-Precategory = {!!}
 
   id-hom-map-precategory-Precategory :
     (F : map-Precategory C D) → natural-transformation-map-Precategory C D F F

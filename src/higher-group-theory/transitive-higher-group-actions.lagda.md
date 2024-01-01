@@ -95,7 +95,7 @@ module _
 ```agda
 transitive-action-∞-Group :
   {l1 : Level} (l2 : Level) (G : ∞-Group l1) → UU (l1 ⊔ lsuc l2)
-transitive-action-∞-Group l2 G = {!!}
+transitive-action-∞-Group = {!!}
 
 module _
   {l1 l2 : Level} (G : ∞-Group l1) (X : transitive-action-∞-Group l2 G)
@@ -143,7 +143,7 @@ module _
       (u : classifying-type-∞-Group G)
       (x : X (shape-∞-Group G)) →
       is-surjective (λ (p : shape-∞-Group G ＝ u) → tr X p x)
-    is-surjective-tr-is-abstractly-transitive-action-∞-Group H u x = {!!}
+    is-surjective-tr-is-abstractly-transitive-action-∞-Group = {!!}
 ```
 
 ### An action is transitive if and only if it is abstractly transitive
@@ -156,23 +156,23 @@ module _
   is-transitive-is-abstractly-transitive-action-∞-Group :
     is-abstractly-transitive-action-∞-Group G X →
     is-transitive-action-∞-Group G X
-  is-transitive-is-abstractly-transitive-action-∞-Group (H , K) = {!!}
+  is-transitive-is-abstractly-transitive-action-∞-Group = {!!}
 
   abstract
     is-inhabited-is-transitive-action-∞-Group :
       is-transitive-action-∞-Group G X → is-inhabited (type-action-∞-Group G X)
-    is-inhabited-is-transitive-action-∞-Group H = {!!}
+    is-inhabited-is-transitive-action-∞-Group = {!!}
 
   is-surjective-mul-right-is-transitive-action-∞-Group :
     is-transitive-action-∞-Group G X →
     (x : type-action-∞-Group G X) →
     is-surjective (λ g → mul-action-∞-Group G X g x)
-  is-surjective-mul-right-is-transitive-action-∞-Group H x = {!!}
+  is-surjective-mul-right-is-transitive-action-∞-Group = {!!}
 
   is-abstractly-transitive-is-transitive-action-∞-Group :
     is-transitive-action-∞-Group G X →
     is-abstractly-transitive-action-∞-Group G X
-  pr1 (is-abstractly-transitive-is-transitive-action-∞-Group H) = {!!}
+  is-abstractly-transitive-is-transitive-action-∞-Group = {!!}
   pr2 (is-abstractly-transitive-is-transitive-action-∞-Group H) = {!!}
 
 module _
@@ -185,7 +185,7 @@ module _
 
   inhabited-type-transitive-action-∞-Group :
     Inhabited-Type l2
-  pr1 inhabited-type-transitive-action-∞-Group = {!!}
+  inhabited-type-transitive-action-∞-Group = {!!}
   pr2 inhabited-type-transitive-action-∞-Group = {!!}
 
   is-abstractly-transitive-transitive-action-∞-Group :

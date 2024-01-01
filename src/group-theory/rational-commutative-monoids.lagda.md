@@ -60,7 +60,7 @@ module _
 
 ```agda
 Rational-Commutative-Monoid : (l : Level) → UU (lsuc l)
-Rational-Commutative-Monoid l = {!!}
+Rational-Commutative-Monoid = {!!}
 
 module _
   {l : Level} (M : Rational-Commutative-Monoid l)

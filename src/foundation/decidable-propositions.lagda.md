@@ -55,7 +55,7 @@ is-emb-prop-Decidable-Prop : {l : Level} → is-emb (prop-Decidable-Prop {l})
 is-emb-prop-Decidable-Prop = {!!}
 
 emb-prop-Decidable-Prop : {l : Level} → Decidable-Prop l ↪ Prop l
-pr1 emb-prop-Decidable-Prop = {!!}
+emb-prop-Decidable-Prop = {!!}
 pr2 emb-prop-Decidable-Prop = {!!}
 ```
 
@@ -126,10 +126,10 @@ iff-universes-Decidable-Prop = {!!}
 
 ```agda
 is-set-Decidable-Prop : {l : Level} → is-set (Decidable-Prop l)
-is-set-Decidable-Prop {l} = {!!}
+is-set-Decidable-Prop = {!!}
 
 Decidable-Prop-Set : (l : Level) → Set (lsuc l)
-pr1 (Decidable-Prop-Set l) = {!!}
+Decidable-Prop-Set = {!!}
 pr2 (Decidable-Prop-Set l) = {!!}
 ```
 
@@ -190,10 +190,10 @@ is-finite-type-Decidable-Prop = {!!}
 
 ```agda
 is-finite-Decidable-Prop : {l : Level} → is-finite (Decidable-Prop l)
-is-finite-Decidable-Prop {l} = {!!}
+is-finite-Decidable-Prop = {!!}
 
 decidable-Prop-𝔽 : (l : Level) → 𝔽 (lsuc l)
-pr1 (decidable-Prop-𝔽 l) = {!!}
+decidable-Prop-𝔽 = {!!}
 pr2 (decidable-Prop-𝔽 l) = {!!}
 ```
 

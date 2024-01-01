@@ -44,16 +44,16 @@ module _
 
   is-faithful-hom-undirected-graph-Prop :
     hom-Undirected-Graph G H → Prop (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l4)
-  is-faithful-hom-undirected-graph-Prop f = {!!}
+  is-faithful-hom-undirected-graph-Prop = {!!}
 
   is-faithful-hom-Undirected-Graph :
     hom-Undirected-Graph G H → UU (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l4)
-  is-faithful-hom-Undirected-Graph f = {!!}
+  is-faithful-hom-Undirected-Graph = {!!}
 
   is-prop-is-faithful-hom-Undirected-Graph :
     (f : hom-Undirected-Graph G H) →
     is-prop (is-faithful-hom-Undirected-Graph f)
-  is-prop-is-faithful-hom-Undirected-Graph f = {!!}
+  is-prop-is-faithful-hom-Undirected-Graph = {!!}
 
   faithful-hom-Undirected-Graph : UU (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l3 ⊔ l4)
   faithful-hom-Undirected-Graph = {!!}
@@ -97,7 +97,7 @@ module _
     edge-Undirected-Graph G p ↪
     edge-Undirected-Graph H
       ( unordered-pair-vertices-faithful-hom-Undirected-Graph p)
-  pr1 (emb-edge-faithful-hom-Undirected-Graph p) = {!!}
+  emb-edge-faithful-hom-Undirected-Graph = {!!}
   pr2 (emb-edge-faithful-hom-Undirected-Graph p) = {!!}
 ```
 

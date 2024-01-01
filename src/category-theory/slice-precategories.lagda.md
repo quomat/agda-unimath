@@ -142,7 +142,7 @@ module _
 
 ```agda
   Slice-Precategory : Precategory (l1 ⊔ l2) l2
-  pr1 Slice-Precategory = {!!}
+  Slice-Precategory = {!!}
 ```
 
 ## Properties
@@ -183,8 +183,7 @@ module _
       is-pullback-Precategory C A X Y f g W p₁ p₂ α →
       is-product-Precategory
         (Slice-Precategory C A) (X , f) (Y , g) (W , p) (p₁ , α₁) (p₂ , α₂)
-    map-is-pullback-is-product-Slice-Precategory
-      ϕ (Z , .(comp-hom-Precategory C f h₁)) (h₁ , refl) (h₂ , β₂) = {!!}
+    map-is-pullback-is-product-Slice-Precategory = {!!}
 
       d :
         ( ( comp-hom-Precategory (Slice-Precategory C A) (p₁ , α₁) c) ＝
@@ -257,20 +256,17 @@ module _
   map-inv-pullback-product-Slice-Precategory :
     product-Precategory (Slice-Precategory C A) (X , f) (Y , g) →
     pullback-Precategory C A X Y f g
-  pr1 (map-inv-pullback-product-Slice-Precategory
-    ((Z , h) , (h₁ , β₁) , (h₂ , β₂) , q)) = {!!}
+  map-inv-pullback-product-Slice-Precategory = {!!}
 
   is-section-map-inv-pullback-product-Slice-Precategory :
     ( map-pullback-product-Slice-Precategory ∘
       map-inv-pullback-product-Slice-Precategory) ~ id
-  is-section-map-inv-pullback-product-Slice-Precategory
-    ((Z , .(comp-hom-Precategory C f h₁)) , (h₁ , refl) , (h₂ , β₂) , q) = {!!}
+  is-section-map-inv-pullback-product-Slice-Precategory = {!!}
 
   is-retraction-map-inv-pullback-product-Slice-Precategory :
     ( map-inv-pullback-product-Slice-Precategory ∘
       map-pullback-product-Slice-Precategory) ~ id
-  is-retraction-map-inv-pullback-product-Slice-Precategory
-    ( W , p₁ , p₂ , α , q) = {!!}
+  is-retraction-map-inv-pullback-product-Slice-Precategory = {!!}
 
   equiv-pullback-product-Slice-Precategory :
     pullback-Precategory C A X Y f g ≃

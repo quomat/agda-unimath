@@ -34,7 +34,7 @@ that type is an [equivalence](foundation-core.equivalences.md).
 
 ```agda
 is-flat-discrete : {@♭ l : Level} (@♭ A : UU l) → UU l
-is-flat-discrete {l} A = {!!}
+is-flat-discrete = {!!}
 ```
 
 ## Properties
@@ -47,7 +47,7 @@ is-property-is-flat-discrete :
 is-property-is-flat-discrete = {!!}
 
 is-flat-discrete-Prop : {@♭ l : Level} (@♭ A : UU l) → Prop l
-is-flat-discrete-Prop {l} A = {!!}
+is-flat-discrete-Prop = {!!}
 ```
 
 ### The empty type is flat
@@ -65,7 +65,7 @@ is-section-map-is-flat-discrete-empty = {!!}
 
 ```agda
 map-is-flat-discrete-unit : unit → ♭ unit
-map-is-flat-discrete-unit star = {!!}
+map-is-flat-discrete-unit = {!!}
 
 is-section-map-is-flat-discrete-unit :
   counit-flat ∘ map-is-flat-discrete-unit ~ id

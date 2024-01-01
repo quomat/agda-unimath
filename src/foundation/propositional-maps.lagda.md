@@ -34,10 +34,10 @@ module _
   where
 
   is-prop-is-prop-map : (f : A → B) → is-prop (is-prop-map f)
-  is-prop-is-prop-map f = {!!}
+  is-prop-is-prop-map = {!!}
 
   is-prop-map-Prop : (A → B) → Prop (l1 ⊔ l2)
-  pr1 (is-prop-map-Prop f) = {!!}
+  is-prop-map-Prop = {!!}
 ```
 
 ### Being a propositional map is equivalent to being an embedding
@@ -48,10 +48,10 @@ module _
   where
 
   equiv-is-emb-is-prop-map : (f : A → B) → is-prop-map f ≃ is-emb f
-  equiv-is-emb-is-prop-map f = {!!}
+  equiv-is-emb-is-prop-map = {!!}
 
   equiv-is-prop-map-is-emb : (f : A → B) → is-emb f ≃ is-prop-map f
-  equiv-is-prop-map-is-emb f = {!!}
+  equiv-is-prop-map-is-emb = {!!}
 ```
 
 ### Propositional maps are closed under homotopies

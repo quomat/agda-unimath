@@ -30,7 +30,7 @@ The **law of excluded middle** asserts that any
 
 ```agda
 LEM : (l : Level) → UU (lsuc l)
-LEM l = {!!}
+LEM = {!!}
 ```
 
 ## Properties

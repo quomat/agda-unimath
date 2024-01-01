@@ -29,8 +29,7 @@ homomorphisms of commutative rings.
 
 ```agda
 Commutative-Ring-Large-Precategory : Large-Precategory lsuc _⊔_
-obj-Large-Precategory
-  Commutative-Ring-Large-Precategory = {!!}
+Commutative-Ring-Large-Precategory = {!!}
 hom-set-Large-Precategory
   Commutative-Ring-Large-Precategory = {!!}
 comp-hom-Large-Precategory

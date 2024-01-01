@@ -40,13 +40,13 @@ module _
   where
 
   map-Ω : type-Ω A → type-Ω B
-  map-Ω p = {!!}
+  map-Ω = {!!}
 
   preserves-refl-map-Ω : map-Ω refl ＝ refl
   preserves-refl-map-Ω = {!!}
 
   pointed-map-Ω : Ω A →∗ Ω B
-  pr1 pointed-map-Ω = {!!}
+  pointed-map-Ω = {!!}
 
   preserves-mul-map-Ω :
     {x y : type-Ω A} → map-Ω (mul-Ω A x y) ＝ mul-Ω B (map-Ω x) (map-Ω y)
@@ -85,10 +85,10 @@ module _
   is-equiv-map-Ω-is-emb = {!!}
 
   equiv-map-Ω-is-emb : type-Ω A ≃ type-Ω B
-  pr1 equiv-map-Ω-is-emb = {!!}
+  equiv-map-Ω-is-emb = {!!}
 
   pointed-equiv-pointed-map-Ω-is-emb : Ω A ≃∗ Ω B
-  pr1 pointed-equiv-pointed-map-Ω-is-emb = {!!}
+  pointed-equiv-pointed-map-Ω-is-emb = {!!}
 ```
 
 ### The operator `pointed-map-Ω` preserves equivalences

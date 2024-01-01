@@ -86,7 +86,7 @@ module _
   is-torsion-element-unit-Group = {!!}
 
   unit-torsion-element-Group : torsion-element-Group G
-  pr1 unit-torsion-element-Group = {!!}
+  unit-torsion-element-Group = {!!}
 ```
 
 ## See also

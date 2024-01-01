@@ -65,7 +65,7 @@ module _
   where
 
   map-hom-element-Group : ℤ → type-Group G
-  map-hom-element-Group k = {!!}
+  map-hom-element-Group = {!!}
 
   preserves-unit-hom-element-Group :
     map-hom-element-Group zero-ℤ ＝ unit-Group G
@@ -78,7 +78,7 @@ module _
   preserves-mul-map-hom-element-Group = {!!}
 
   hom-element-Group : hom-Group ℤ-Group G
-  pr1 hom-element-Group = {!!}
+  hom-element-Group = {!!}
 
   htpy-hom-element-Group :
     (h : hom-Group ℤ-Group G) → map-hom-Group ℤ-Group G h one-ℤ ＝ g →

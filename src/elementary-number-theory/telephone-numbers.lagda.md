@@ -25,7 +25,7 @@ problems.
 
 ```agda
 telephone-number : ℕ → ℕ
-telephone-number zero-ℕ = {!!}
+telephone-number = {!!}
 telephone-number (succ-ℕ zero-ℕ) = {!!}
 telephone-number (succ-ℕ (succ-ℕ n)) = {!!}
 ```

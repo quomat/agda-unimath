@@ -126,10 +126,10 @@ module _
   preserves-mul-ev-formal-combination-subset-Ring = {!!}
 
   subset-ideal-subset-Ring' : type-Ring R → UU (l1 ⊔ l2)
-  subset-ideal-subset-Ring' x = {!!}
+  subset-ideal-subset-Ring' = {!!}
 
   subset-ideal-subset-Ring : subset-Ring (l1 ⊔ l2) R
-  subset-ideal-subset-Ring x = {!!}
+  subset-ideal-subset-Ring = {!!}
 
   is-in-ideal-subset-Ring : type-Ring R → UU (l1 ⊔ l2)
   is-in-ideal-subset-Ring = {!!}
@@ -166,7 +166,7 @@ module _
   is-closed-under-negatives-ideal-subset-Ring = {!!}
 
   ideal-subset-Ring : ideal-Ring (l1 ⊔ l2) R
-  pr1 ideal-subset-Ring = {!!}
+  ideal-subset-Ring = {!!}
 
   contains-subset-ideal-subset-Ring :
     S ⊆ subset-ideal-subset-Ring
@@ -309,7 +309,7 @@ module _
   where
 
   generating-subset-ideal-family-of-elements-Ring : subset-Ring l1 R
-  generating-subset-ideal-family-of-elements-Ring x = {!!}
+  generating-subset-ideal-family-of-elements-Ring = {!!}
 
   ideal-family-of-elements-Ring : ideal-Ring l1 R
   ideal-family-of-elements-Ring = {!!}

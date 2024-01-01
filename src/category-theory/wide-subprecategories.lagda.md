@@ -95,7 +95,7 @@ module _
 
   is-closed-under-composition-prop-subtype-hom-wide-Precategory :
     Prop (l1 ⊔ l2 ⊔ l3)
-  pr1 is-closed-under-composition-prop-subtype-hom-wide-Precategory = {!!}
+  is-closed-under-composition-prop-subtype-hom-wide-Precategory = {!!}
 ```
 
 ### The predicate on a subtype of the hom-sets of being a wide subprecategory
@@ -133,7 +133,7 @@ Wide-Subprecategory :
   {l1 l2 : Level} (l3 : Level)
   (C : Precategory l1 l2) →
   UU (l1 ⊔ l2 ⊔ lsuc l3)
-Wide-Subprecategory l3 C = {!!}
+Wide-Subprecategory = {!!}
 ```
 
 #### Objects in wide subprecategories
@@ -146,7 +146,7 @@ module _
   where
 
   subtype-obj-Wide-Subprecategory : subtype lzero (obj-Precategory C)
-  subtype-obj-Wide-Subprecategory _ = {!!}
+  subtype-obj-Wide-Subprecategory = {!!}
 
   obj-Wide-Subprecategory : UU l1
   obj-Wide-Subprecategory = {!!}
@@ -169,7 +169,7 @@ module _
   subtype-hom-Wide-Subprecategory = {!!}
 
   hom-Wide-Subprecategory : (x y : obj-Wide-Subprecategory C P) → UU (l2 ⊔ l3)
-  hom-Wide-Subprecategory x y = {!!}
+  hom-Wide-Subprecategory = {!!}
 
   inclusion-hom-Wide-Subprecategory :
     (x y : obj-Wide-Subprecategory C P) →
@@ -177,7 +177,7 @@ module _
     hom-Precategory C
       ( inclusion-obj-Wide-Subprecategory C P x)
       ( inclusion-obj-Wide-Subprecategory C P y)
-  inclusion-hom-Wide-Subprecategory x y = {!!}
+  inclusion-hom-Wide-Subprecategory = {!!}
 ```
 
 The predicate on a morphism between any objects of being contained in the wide
@@ -186,12 +186,12 @@ subprecategory:
 ```agda
   is-in-hom-Wide-Subprecategory :
     (x y : obj-Precategory C) (f : hom-Precategory C x y) → UU l3
-  is-in-hom-Wide-Subprecategory x y = {!!}
+  is-in-hom-Wide-Subprecategory = {!!}
 
   is-prop-is-in-hom-Wide-Subprecategory :
     (x y : obj-Precategory C) (f : hom-Precategory C x y) →
     is-prop (is-in-hom-Wide-Subprecategory x y f)
-  is-prop-is-in-hom-Wide-Subprecategory x y = {!!}
+  is-prop-is-in-hom-Wide-Subprecategory = {!!}
 
   is-in-hom-inclusion-hom-Wide-Subprecategory :
     (x y : obj-Wide-Subprecategory C P)
@@ -200,7 +200,7 @@ subprecategory:
       ( inclusion-obj-Wide-Subprecategory C P x)
       ( inclusion-obj-Wide-Subprecategory C P y)
       ( inclusion-hom-Wide-Subprecategory x y f)
-  is-in-hom-inclusion-hom-Wide-Subprecategory x y = {!!}
+  is-in-hom-inclusion-hom-Wide-Subprecategory = {!!}
 ```
 
 Wide subprecategories are wide subprecategories:
@@ -226,20 +226,20 @@ Wide subprecategories are subprecategories:
 ```agda
   subtype-hom-subprecategory-Wide-Subprecategory :
     subtype-hom-Precategory l3 C (subtype-obj-Wide-Subprecategory C P)
-  subtype-hom-subprecategory-Wide-Subprecategory x y _ _ = {!!}
+  subtype-hom-subprecategory-Wide-Subprecategory = {!!}
 
   is-subprecategory-Wide-Subprecategory :
     is-subprecategory C
       ( subtype-obj-Wide-Subprecategory C P)
       ( subtype-hom-subprecategory-Wide-Subprecategory)
-  pr1 is-subprecategory-Wide-Subprecategory x _ = {!!}
+  is-subprecategory-Wide-Subprecategory = {!!}
 
   subprecategory-Wide-Subprecategory : Subprecategory lzero l3 C
-  pr1 subprecategory-Wide-Subprecategory = {!!}
+  subprecategory-Wide-Subprecategory = {!!}
 
   is-wide-Wide-Subprecategory :
     is-wide-Subprecategory C (subprecategory-Wide-Subprecategory)
-  is-wide-Wide-Subprecategory _ = {!!}
+  is-wide-Wide-Subprecategory = {!!}
 ```
 
 ### The underlying precategory of a wide subprecategory
@@ -253,23 +253,23 @@ module _
 
   hom-set-Wide-Subprecategory :
     (x y : obj-Wide-Subprecategory C P) → Set (l2 ⊔ l3)
-  hom-set-Wide-Subprecategory x y = {!!}
+  hom-set-Wide-Subprecategory = {!!}
 
   is-set-hom-Wide-Subprecategory :
     (x y : obj-Wide-Subprecategory C P) →
     is-set (hom-Wide-Subprecategory C P x y)
-  is-set-hom-Wide-Subprecategory x y = {!!}
+  is-set-hom-Wide-Subprecategory = {!!}
 
   id-hom-Wide-Subprecategory :
     {x : obj-Wide-Subprecategory C P} → hom-Wide-Subprecategory C P x x
-  pr1 id-hom-Wide-Subprecategory = {!!}
+  id-hom-Wide-Subprecategory = {!!}
 
   comp-hom-Wide-Subprecategory :
     {x y z : obj-Wide-Subprecategory C P} →
     hom-Wide-Subprecategory C P y z →
     hom-Wide-Subprecategory C P x y →
     hom-Wide-Subprecategory C P x z
-  pr1 (comp-hom-Wide-Subprecategory {x} {y} {z} g f) = {!!}
+  comp-hom-Wide-Subprecategory = {!!}
 
   associative-comp-hom-Wide-Subprecategory :
     {x y z w : obj-Wide-Subprecategory C P}
@@ -278,7 +278,7 @@ module _
     (f : hom-Wide-Subprecategory C P x y) →
     comp-hom-Wide-Subprecategory (comp-hom-Wide-Subprecategory h g) f ＝
     comp-hom-Wide-Subprecategory h (comp-hom-Wide-Subprecategory g f)
-  associative-comp-hom-Wide-Subprecategory {x} {y} {z} {w} h g f = {!!}
+  associative-comp-hom-Wide-Subprecategory = {!!}
 
   inv-associative-comp-hom-Wide-Subprecategory :
     {x y z w : obj-Wide-Subprecategory C P}
@@ -296,27 +296,27 @@ module _
     {x y : obj-Wide-Subprecategory C P}
     (f : hom-Wide-Subprecategory C P x y) →
     comp-hom-Wide-Subprecategory (id-hom-Wide-Subprecategory) f ＝ f
-  left-unit-law-comp-hom-Wide-Subprecategory {x} {y} f = {!!}
+  left-unit-law-comp-hom-Wide-Subprecategory = {!!}
 
   right-unit-law-comp-hom-Wide-Subprecategory :
     {x y : obj-Wide-Subprecategory C P}
     (f : hom-Wide-Subprecategory C P x y) →
     comp-hom-Wide-Subprecategory f (id-hom-Wide-Subprecategory) ＝ f
-  right-unit-law-comp-hom-Wide-Subprecategory {x} {y} f = {!!}
+  right-unit-law-comp-hom-Wide-Subprecategory = {!!}
 
   associative-composition-operation-Wide-Subprecategory :
     associative-composition-operation-binary-family-Set
       ( hom-set-Wide-Subprecategory)
-  pr1 associative-composition-operation-Wide-Subprecategory = {!!}
+  associative-composition-operation-Wide-Subprecategory = {!!}
 
   is-unital-composition-operation-Wide-Subprecategory :
     is-unital-composition-operation-binary-family-Set
       ( hom-set-Wide-Subprecategory)
       ( comp-hom-Wide-Subprecategory)
-  pr1 is-unital-composition-operation-Wide-Subprecategory x = {!!}
+  is-unital-composition-operation-Wide-Subprecategory = {!!}
 
   precategory-Wide-Subprecategory : Precategory l1 (l2 ⊔ l3)
-  pr1 precategory-Wide-Subprecategory = {!!}
+  precategory-Wide-Subprecategory = {!!}
 ```
 
 ### The inclusion functor of a wide subprecategory
@@ -330,18 +330,18 @@ module _
 
   inclusion-map-Wide-Subprecategory :
     map-Precategory (precategory-Wide-Subprecategory C P) C
-  pr1 inclusion-map-Wide-Subprecategory = {!!}
+  inclusion-map-Wide-Subprecategory = {!!}
 
   is-functor-inclusion-Wide-Subprecategory :
     is-functor-map-Precategory
       ( precategory-Wide-Subprecategory C P)
       ( C)
       ( inclusion-map-Wide-Subprecategory)
-  pr1 is-functor-inclusion-Wide-Subprecategory g f = {!!}
+  is-functor-inclusion-Wide-Subprecategory = {!!}
 
   inclusion-Wide-Subprecategory :
     functor-Precategory (precategory-Wide-Subprecategory C P) C
-  pr1 inclusion-Wide-Subprecategory = {!!}
+  inclusion-Wide-Subprecategory = {!!}
 ```
 
 ## Properties
@@ -360,7 +360,7 @@ module _
       ( precategory-Wide-Subprecategory C P)
       ( C)
       ( inclusion-Wide-Subprecategory C P)
-  is-faithful-inclusion-Wide-Subprecategory x y = {!!}
+  is-faithful-inclusion-Wide-Subprecategory = {!!}
 
   is-equiv-obj-inclusion-Wide-Subprecategory :
     is-equiv

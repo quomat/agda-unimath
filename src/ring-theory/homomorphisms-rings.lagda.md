@@ -43,13 +43,13 @@ Ring homomorphisms are maps between rings that preserve the ring structure
 preserves-mul-hom-Ab :
   {l1 l2 : Level} (R : Ring l1) (S : Ring l2) →
   hom-Ab (ab-Ring R) (ab-Ring S) → UU (l1 ⊔ l2)
-preserves-mul-hom-Ab R S f = {!!}
+preserves-mul-hom-Ab = {!!}
 
 is-prop-preserves-mul-hom-Ab :
   {l1 l2 : Level} (R : Ring l1) (S : Ring l2) →
   ( f : hom-Ab (ab-Ring R) (ab-Ring S)) →
   is-prop (preserves-mul-hom-Ab R S f)
-is-prop-preserves-mul-hom-Ab R S f = {!!}
+is-prop-preserves-mul-hom-Ab = {!!}
 ```
 
 ### The predicate that a group homomorphism between rings preserves the unit
@@ -58,13 +58,13 @@ is-prop-preserves-mul-hom-Ab R S f = {!!}
 preserves-unit-hom-Ab :
   {l1 l2 : Level} (R : Ring l1) (S : Ring l2) →
   hom-Ab (ab-Ring R) (ab-Ring S) → UU l2
-preserves-unit-hom-Ab R S f = {!!}
+preserves-unit-hom-Ab = {!!}
 
 is-prop-preserves-unit-hom-Ab :
   {l1 l2 : Level} (R : Ring l1) (S : Ring l2) →
   ( f : hom-Ab (ab-Ring R) (ab-Ring S)) →
   is-prop (preserves-unit-hom-Ab R S f)
-is-prop-preserves-unit-hom-Ab R S f = {!!}
+is-prop-preserves-unit-hom-Ab = {!!}
 ```
 
 ### The predicate of being a ring homomorphism
@@ -76,16 +76,16 @@ module _
 
   is-ring-homomorphism-hom-Ab-Prop :
     hom-Ab (ab-Ring R) (ab-Ring S) → Prop (l1 ⊔ l2)
-  is-ring-homomorphism-hom-Ab-Prop f = {!!}
+  is-ring-homomorphism-hom-Ab-Prop = {!!}
 
   is-ring-homomorphism-hom-Ab :
     hom-Ab (ab-Ring R) (ab-Ring S) → UU (l1 ⊔ l2)
-  is-ring-homomorphism-hom-Ab f = {!!}
+  is-ring-homomorphism-hom-Ab = {!!}
 
   is-prop-is-ring-homomorphism-hom-Ab :
     (f : hom-Ab (ab-Ring R) (ab-Ring S)) →
     is-prop (is-ring-homomorphism-hom-Ab f)
-  is-prop-is-ring-homomorphism-hom-Ab f = {!!}
+  is-prop-is-ring-homomorphism-hom-Ab = {!!}
 ```
 
 ### Ring homomorphisms
@@ -143,7 +143,7 @@ module _
 
     is-ring-homomorphism-hom-Ring :
       is-ring-homomorphism-hom-Ab R S hom-ab-hom-Ring
-    pr1 is-ring-homomorphism-hom-Ring = {!!}
+    is-ring-homomorphism-hom-Ring = {!!}
 
     hom-multiplicative-monoid-hom-Ring :
       hom-Monoid
@@ -153,7 +153,7 @@ module _
 
     hom-semiring-hom-Ring :
       hom-Semiring (semiring-Ring R) (semiring-Ring S)
-    pr1 hom-semiring-hom-Ring = {!!}
+    hom-semiring-hom-Ring = {!!}
 ```
 
 ### The identity ring homomorphism
@@ -171,10 +171,10 @@ module _
 
   is-ring-homomorphism-id-hom-Ring :
     is-ring-homomorphism-hom-Ab R R (id-hom-Ab (ab-Ring R))
-  pr1 is-ring-homomorphism-id-hom-Ring = {!!}
+  is-ring-homomorphism-id-hom-Ring = {!!}
 
   id-hom-Ring : hom-Ring R R
-  pr1 id-hom-Ring = {!!}
+  id-hom-Ring = {!!}
 ```
 
 ### Composition of ring homomorphisms
@@ -203,10 +203,10 @@ module _
 
   is-ring-homomorphism-comp-hom-Ring :
     is-ring-homomorphism-hom-Ab R T hom-ab-comp-hom-Ring
-  pr1 is-ring-homomorphism-comp-hom-Ring = {!!}
+  is-ring-homomorphism-comp-hom-Ring = {!!}
 
   comp-hom-Ring : hom-Ring R T
-  pr1 comp-hom-Ring = {!!}
+  comp-hom-Ring = {!!}
 ```
 
 ### Homotopies of ring homomorphisms
@@ -217,10 +217,10 @@ module _
   where
 
   htpy-hom-Ring : hom-Ring R S → hom-Ring R S → UU (l1 ⊔ l2)
-  htpy-hom-Ring f g = {!!}
+  htpy-hom-Ring = {!!}
 
   refl-htpy-hom-Ring : (f : hom-Ring R S) → htpy-hom-Ring f f
-  refl-htpy-hom-Ring f = {!!}
+  refl-htpy-hom-Ring = {!!}
 ```
 
 ### Evaluating ring homomorphisms at an element
@@ -231,7 +231,7 @@ module _
   where
 
   ev-element-hom-Ring : type-Ring R → hom-Ring R S → type-Ring S
-  ev-element-hom-Ring x f = {!!}
+  ev-element-hom-Ring = {!!}
 ```
 
 ## Properties
@@ -245,7 +245,7 @@ module _
 
   htpy-eq-hom-Ring :
     (g : hom-Ring R S) → (f ＝ g) → htpy-hom-Ring R S f g
-  htpy-eq-hom-Ring .f refl = {!!}
+  htpy-eq-hom-Ring = {!!}
 
   is-torsorial-htpy-hom-Ring :
     is-torsorial (htpy-hom-Ring R S f)
@@ -257,11 +257,11 @@ module _
 
   extensionality-hom-Ring :
     (g : hom-Ring R S) → (f ＝ g) ≃ htpy-hom-Ring R S f g
-  pr1 (extensionality-hom-Ring g) = {!!}
+  extensionality-hom-Ring = {!!}
 
   eq-htpy-hom-Ring :
     (g : hom-Ring R S) → htpy-hom-Ring R S f g → f ＝ g
-  eq-htpy-hom-Ring g = {!!}
+  eq-htpy-hom-Ring = {!!}
 ```
 
 ### Associativity of composition of ring homomorphisms
@@ -306,7 +306,7 @@ module _
 id-law-ab-Ring :
   { l1 : Level} (R : Ring l1) →
   hom-ab-hom-Ring R R (id-hom-Ring R) ＝ id-hom-Ab (ab-Ring R)
-id-law-ab-Ring R = {!!}
+id-law-ab-Ring = {!!}
 ```
 
 ### The underlying morphism of abelian groups of a composition of ring homomorphisms is a composition of homomorphisms of abelian groups
@@ -322,7 +322,7 @@ comp-law-ab-Ring :
     ( ab-Ring T)
     ( hom-ab-hom-Ring S T g)
     ( hom-ab-hom-Ring R S f)
-comp-law-ab-Ring R S T g f = {!!}
+comp-law-ab-Ring = {!!}
 ```
 
 ### Any ring homomorphism preserves invertible elements

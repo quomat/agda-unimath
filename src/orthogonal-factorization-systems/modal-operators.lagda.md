@@ -31,14 +31,14 @@ a **modal unit** that compares every type `X` to its modal type `○ X`
 
 ```agda
 operator-modality : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-operator-modality l1 l2 = {!!}
+operator-modality = {!!}
 ```
 
 ### Modal units
 
 ```agda
 unit-modality : {l1 l2 : Level} → operator-modality l1 l2 → UU (lsuc l1 ⊔ l2)
-unit-modality {l1} ○ = {!!}
+unit-modality = {!!}
 ```
 
 ### The subuniverse of modal types
@@ -49,19 +49,19 @@ module _
   where
 
   is-modal : (X : UU l1) → UU (l1 ⊔ l2)
-  is-modal X = {!!}
+  is-modal = {!!}
 
   is-modal-family : {l3 : Level} {X : UU l3} (P : X → UU l1) → UU (l1 ⊔ l2 ⊔ l3)
-  is-modal-family {X = X} P = {!!}
+  is-modal-family = {!!}
 
   modal-type : UU (lsuc l1 ⊔ l2)
   modal-type = {!!}
 
   is-modal-Prop : (X : UU l1) → Prop (l1 ⊔ l2)
-  is-modal-Prop X = {!!}
+  is-modal-Prop = {!!}
 
   is-property-is-modal : (X : UU l1) → is-prop (is-modal X)
-  is-property-is-modal X = {!!}
+  is-property-is-modal = {!!}
 
   is-subuniverse-is-modal : is-subuniverse is-modal
   is-subuniverse-is-modal = {!!}

@@ -25,17 +25,17 @@ open import univalent-combinatorics.fibers-of-maps
 
 ```agda
 square-ℤ-Mod : (p : ℕ) → ℤ-Mod p → ℤ-Mod p
-square-ℤ-Mod p a = {!!}
+square-ℤ-Mod = {!!}
 
 cube-ℤ-Mod : (p : ℕ) → ℤ-Mod p → ℤ-Mod p
-cube-ℤ-Mod p k = {!!}
+cube-ℤ-Mod = {!!}
 
 is-square-ℤ-Mod : (p : ℕ) → ℤ-Mod p → UU lzero
-is-square-ℤ-Mod 0 k = {!!}
+is-square-ℤ-Mod = {!!}
 is-square-ℤ-Mod (succ-ℕ p) k = {!!}
 
 square-root-ℤ-Mod : {p : ℕ} → (k : ℤ-Mod p) → is-square-ℤ-Mod p k → ℤ-Mod p
-square-root-ℤ-Mod {0} _ (root , _) = {!!}
+square-root-ℤ-Mod = {!!}
 square-root-ℤ-Mod {succ-ℕ p} _ (root , _) = {!!}
 ```
 

@@ -37,23 +37,23 @@ module _
   where
 
   binary-tr : (p : x ＝ x') (q : y ＝ y') → C x y → C x' y'
-  binary-tr refl refl = {!!}
+  binary-tr = {!!}
 
   is-equiv-binary-tr : (p : x ＝ x') (q : y ＝ y') → is-equiv (binary-tr p q)
-  is-equiv-binary-tr refl refl = {!!}
+  is-equiv-binary-tr = {!!}
 
   equiv-binary-tr : (p : x ＝ x') (q : y ＝ y') → C x y ≃ C x' y'
-  pr1 (equiv-binary-tr p q) = {!!}
+  equiv-binary-tr = {!!}
 
   compute-binary-tr :
     (p : x ＝ x') (q : y ＝ y') (u : C x y) →
     tr (λ a → C a y') p (tr (C x) q u) ＝ binary-tr p q u
-  compute-binary-tr refl refl u = {!!}
+  compute-binary-tr = {!!}
 
   compute-binary-tr' :
     (p : x ＝ x') (q : y ＝ y') (u : C x y) →
     tr (C x') q (tr (λ a → C a y) p u) ＝ binary-tr p q u
-  compute-binary-tr' refl refl u = {!!}
+  compute-binary-tr' = {!!}
 ```
 
 ## Properties
@@ -69,13 +69,13 @@ module _
     {x1 x2 : A} (p : x1 ＝ x2) {y1 y2 : B} (q : y1 ＝ y2)
     {c1 : C x1 y1} {c2 : C x2 y2} →
     c2 ＝ binary-tr C p q c1 → binary-tr C (inv p) (inv q) c2 ＝ c1
-  transpose-binary-path-over refl refl = {!!}
+  transpose-binary-path-over = {!!}
 
   transpose-binary-path-over' :
     {x1 x2 : A} (p : x1 ＝ x2) {y1 y2 : B} (q : y1 ＝ y2)
     {c1 : C x1 y1} {c2 : C x2 y2} →
     c1 ＝ binary-tr C (inv p) (inv q) c2 → binary-tr C p q c1 ＝ c2
-  transpose-binary-path-over' refl refl = {!!}
+  transpose-binary-path-over' = {!!}
 ```
 
 ### Binary transport along concatenated paths
@@ -91,7 +91,7 @@ module _
     (c : C x1 y1) →
     binary-tr C (p ∙ p') (q ∙ q') c ＝
     binary-tr C p' q' (binary-tr C p q c)
-  binary-tr-concat refl refl refl refl c = {!!}
+  binary-tr-concat = {!!}
 ```
 
 ### Binary transport along paths of the form `ap f p` and `ap g q`
@@ -107,5 +107,5 @@ module _
     {x x' : A} (p : x ＝ x') {y y' : C} (q : y ＝ y') →
     {u : E x y} {v : E x' y'} (r : binary-tr E p q u ＝ v) →
     binary-tr F (ap f p) (ap g q) (h x y u) ＝ h x' y' v
-  binary-tr-ap refl refl refl = {!!}
+  binary-tr-ap = {!!}
 ```

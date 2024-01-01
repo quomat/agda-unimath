@@ -38,7 +38,7 @@ module _
   where
 
   is-emb : (A → B) → UU (l1 ⊔ l2)
-  is-emb f = {!!}
+  is-emb = {!!}
 
   equiv-ap-is-emb :
     {f : A → B} (e : is-emb f) {x y : A} → (x ＝ y) ≃ (f x ＝ f y)
@@ -82,10 +82,10 @@ module _
   where
 
   is-emb-id : is-emb (id {A = A})
-  is-emb-id x y = {!!}
+  is-emb-id = {!!}
 
   id-emb : A ↪ A
-  pr1 id-emb = {!!}
+  id-emb = {!!}
 ```
 
 ### To prove that a map is an embedding, a point in the domain may be assumed
@@ -97,5 +97,5 @@ module _
 
   abstract
     is-emb-is-emb : (A → is-emb f) → is-emb f
-    is-emb-is-emb H x y = {!!}
+    is-emb-is-emb = {!!}
 ```

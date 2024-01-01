@@ -38,5 +38,5 @@ module _
     is-prop-is-weakly-constant-map-Set = {!!}
 
   is-weakly-constant-map-Prop : Prop (l1 ⊔ l2)
-  pr1 is-weakly-constant-map-Prop = {!!}
+  is-weakly-constant-map-Prop = {!!}
 ```

@@ -67,7 +67,7 @@ module _
   is-finite-type-Π-Ring-𝔽 = {!!}
 
   finite-type-Π-Ring-𝔽 : 𝔽 (l1 ⊔ l2)
-  pr1 finite-type-Π-Ring-𝔽 = {!!}
+  finite-type-Π-Ring-𝔽 = {!!}
 
   is-set-type-Π-Ring-𝔽 : is-set type-Π-Ring-𝔽
   is-set-type-Π-Ring-𝔽 = {!!}

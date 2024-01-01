@@ -63,7 +63,7 @@ module _
     is-equiv-map-equiv-Π = {!!}
 
   equiv-Π : ((a' : A') → B' a') ≃ ((a : A) → B a)
-  pr1 equiv-Π = {!!}
+  equiv-Π = {!!}
 ```
 
 #### Computing `map-equiv-Π`
@@ -72,12 +72,12 @@ module _
   compute-map-equiv-Π :
     (h : (a' : A') → B' a') (a' : A') →
     map-equiv-Π h (map-equiv e a') ＝ map-equiv (f a') (h a')
-  compute-map-equiv-Π h a' = {!!}
+  compute-map-equiv-Π = {!!}
 
 id-map-equiv-Π :
   { l1 l2 : Level} {A : UU l1} (B : A → UU l2) →
   ( map-equiv-Π B (id-equiv {A = A}) (λ a → id-equiv {A = B a})) ~ id
-id-map-equiv-Π B h = {!!}
+id-map-equiv-Π = {!!}
 ```
 
 ### Two maps being homotopic is equivalent to them being homotopic after pre- or postcomposition by an equivalence
@@ -91,7 +91,7 @@ module _
     { B : A → UU l2} {C : A → UU l3} →
     ( e : fam-equiv B C) (f g : (a : A) → B a) →
     ( f ~ g) ≃ (map-Π (map-fam-equiv e) f ~ map-Π (map-fam-equiv e) g)
-  equiv-htpy-map-Π-fam-equiv e f g = {!!}
+  equiv-htpy-map-Π-fam-equiv = {!!}
 ```
 
 ### Truncated families of maps induce truncated maps on dependent function types
@@ -102,19 +102,19 @@ abstract
     (k : 𝕋) {l1 l2 l3 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3}
     (f : (i : I) → A i → B i) →
     ((i : I) → is-trunc-map k (f i)) → is-trunc-map k (map-Π f)
-  is-trunc-map-map-Π k {I = I} f H h = {!!}
+  is-trunc-map-map-Π = {!!}
 
 abstract
   is-emb-map-Π :
     {l1 l2 l3 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3}
     {f : (i : I) → A i → B i} →
     ((i : I) → is-emb (f i)) → is-emb (map-Π f)
-  is-emb-map-Π {f = f} H = {!!}
+  is-emb-map-Π = {!!}
 
 emb-Π :
   {l1 l2 l3 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3} →
   ((i : I) → A i ↪ B i) → ((i : I) → A i) ↪ ((i : I) → B i)
-pr1 (emb-Π f) = {!!}
+emb-Π = {!!}
 pr2 (emb-Π f) = {!!}
 ```
 
@@ -125,20 +125,20 @@ is-trunc-map-map-Π-is-trunc-map' :
   (k : 𝕋) {l1 l2 l3 l4 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3}
   {J : UU l4} (α : J → I) (f : (i : I) → A i → B i) →
   ((i : I) → is-trunc-map k (f i)) → is-trunc-map k (map-Π' α f)
-is-trunc-map-map-Π-is-trunc-map' k {J = J} α f H h = {!!}
+is-trunc-map-map-Π-is-trunc-map' = {!!}
 
 is-trunc-map-is-trunc-map-map-Π' :
   (k : 𝕋) {l1 l2 l3 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3}
   (f : (i : I) → A i → B i) →
   ({l : Level} {J : UU l} (α : J → I) → is-trunc-map k (map-Π' α f)) →
   (i : I) → is-trunc-map k (f i)
-is-trunc-map-is-trunc-map-map-Π' k {A = A} {B} f H i b = {!!}
+is-trunc-map-is-trunc-map-map-Π' = {!!}
 
 is-emb-map-Π-is-emb' :
   {l1 l2 l3 l4 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3} →
   {J : UU l4} (α : J → I) (f : (i : I) → A i → B i) →
   ((i : I) → is-emb (f i)) → is-emb (map-Π' α f)
-is-emb-map-Π-is-emb' α f H = {!!}
+is-emb-map-Π-is-emb' = {!!}
 ```
 
 ###
@@ -149,14 +149,14 @@ HTPY-map-equiv-Π :
   { A' : UU l1} (B' : A' → UU l2) {A : UU l3} (B : A → UU l4)
   ( e e' : A' ≃ A) (H : htpy-equiv e e') →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-HTPY-map-equiv-Π {A' = A'} B' {A} B e e' H = {!!}
+HTPY-map-equiv-Π = {!!}
 
 htpy-map-equiv-Π-refl-htpy :
   { l1 l2 l3 l4 : Level}
   { A' : UU l1} {B' : A' → UU l2} {A : UU l3} (B : A → UU l4)
   ( e : A' ≃ A) →
   HTPY-map-equiv-Π B' B e e (refl-htpy-equiv e)
-htpy-map-equiv-Π-refl-htpy {B' = B'} B e f f' K = {!!}
+htpy-map-equiv-Π-refl-htpy = {!!}
 
 abstract
   htpy-map-equiv-Π :
@@ -164,7 +164,7 @@ abstract
     { A' : UU l1} {B' : A' → UU l2} {A : UU l3} (B : A → UU l4)
     ( e e' : A' ≃ A) (H : htpy-equiv e e') →
     HTPY-map-equiv-Π B' B e e' H
-  htpy-map-equiv-Π {B' = B'} B e e' H f f' K = {!!}
+  htpy-map-equiv-Π = {!!}
 
   compute-htpy-map-equiv-Π :
     { l1 l2 l3 l4 : Level}
@@ -172,26 +172,26 @@ abstract
     ( e : A' ≃ A) →
     ( htpy-map-equiv-Π {B' = B'} B e e (refl-htpy-equiv e)) ＝
     ( ( htpy-map-equiv-Π-refl-htpy B e))
-  compute-htpy-map-equiv-Π {B' = B'} B e = {!!}
+  compute-htpy-map-equiv-Π = {!!}
 
 map-automorphism-Π :
   { l1 l2 : Level} {A : UU l1} {B : A → UU l2}
   ( e : A ≃ A) (f : (a : A) → B a ≃ B (map-equiv e a)) →
   ( (a : A) → B a) → ((a : A) → B a)
-map-automorphism-Π {B = B} e f = {!!}
+map-automorphism-Π = {!!}
 
 abstract
   is-equiv-map-automorphism-Π :
     { l1 l2 : Level} {A : UU l1} {B : A → UU l2}
     ( e : A ≃ A) (f : (a : A) → B a ≃ B (map-equiv e a)) →
     is-equiv (map-automorphism-Π e f)
-  is-equiv-map-automorphism-Π {B = B} e f = {!!}
+  is-equiv-map-automorphism-Π = {!!}
 
 automorphism-Π :
   { l1 l2 : Level} {A : UU l1} {B : A → UU l2}
   ( e : A ≃ A) (f : (a : A) → B a ≃ B (map-equiv e a)) →
   ( (a : A) → B a) ≃ ((a : A) → B a)
-pr1 (automorphism-Π e f) = {!!}
+automorphism-Π = {!!}
 pr2 (automorphism-Π e f) = {!!}
 ```
 

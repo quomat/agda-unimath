@@ -40,14 +40,14 @@ a set, the type of sections of that family is inhabited.
 
 ```agda
 AC-Set : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-AC-Set l1 l2 = {!!}
+AC-Set = {!!}
 ```
 
 ### The axiom of choice
 
 ```agda
 AC-0 : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-AC-0 l1 l2 = {!!}
+AC-0 = {!!}
 ```
 
 ## Properties

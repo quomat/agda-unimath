@@ -65,7 +65,7 @@ module _
   where
 
   refl-sim-hom-Large-Preorder : sim-hom-Large-Preorder P Q f f
-  refl-sim-hom-Large-Preorder x = {!!}
+  refl-sim-hom-Large-Preorder = {!!}
 ```
 
 ## Properties

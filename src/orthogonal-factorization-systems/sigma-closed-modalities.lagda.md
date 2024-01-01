@@ -32,7 +32,7 @@ is-closed-under-Σ-modality :
 is-closed-under-Σ-modality = {!!}
 
 closed-under-Σ-modality : (l : Level) → UU (lsuc l)
-closed-under-Σ-modality l = {!!}
+closed-under-Σ-modality = {!!}
 ```
 
 ## See also

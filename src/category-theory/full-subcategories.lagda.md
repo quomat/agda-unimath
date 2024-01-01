@@ -194,7 +194,7 @@ module _
   is-category-precategory-Full-Subcategory = {!!}
 
   category-Full-Subcategory : Category (l1 ⊔ l3) l2
-  pr1 category-Full-Subcategory = {!!}
+  category-Full-Subcategory = {!!}
 ```
 
 ## Properties

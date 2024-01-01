@@ -43,7 +43,7 @@ module _
   double-powerset-Poset = {!!}
 
   double-powerset : (l3 : Level) → UU l1 → UU (l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  double-powerset l3 A = {!!}
+  double-powerset = {!!}
 ```
 
 ## Operations on the double powerset

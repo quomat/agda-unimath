@@ -35,22 +35,22 @@ We define the operation of maximum (least upper bound) for the natural numbers.
 
 ```agda
 max-ℕ : ℕ → (ℕ → ℕ)
-max-ℕ 0 n = {!!}
+max-ℕ = {!!}
 max-ℕ (succ-ℕ m) 0 = {!!}
 max-ℕ (succ-ℕ m) (succ-ℕ n) = {!!}
 
 ap-max-ℕ : {x x' y y' : ℕ} → x ＝ x' → y ＝ y' → max-ℕ x y ＝ max-ℕ x' y'
-ap-max-ℕ p q = {!!}
+ap-max-ℕ = {!!}
 
 max-ℕ' : ℕ → (ℕ → ℕ)
-max-ℕ' x y = {!!}
+max-ℕ' = {!!}
 ```
 
 ### Maximum of elements of standard finite types
 
 ```agda
 max-Fin-ℕ : (n : ℕ) → (Fin n → ℕ) → ℕ
-max-Fin-ℕ zero-ℕ f = {!!}
+max-Fin-ℕ = {!!}
 max-Fin-ℕ (succ-ℕ n) f = {!!}
 ```
 
@@ -88,10 +88,10 @@ associative-max-ℕ = {!!}
 
 ```agda
 left-unit-law-max-ℕ : (x : ℕ) → max-ℕ 0 x ＝ x
-left-unit-law-max-ℕ x = {!!}
+left-unit-law-max-ℕ = {!!}
 
 right-unit-law-max-ℕ : (x : ℕ) → max-ℕ x 0 ＝ x
-right-unit-law-max-ℕ zero-ℕ = {!!}
+right-unit-law-max-ℕ = {!!}
 right-unit-law-max-ℕ (succ-ℕ x) = {!!}
 ```
 
@@ -99,7 +99,7 @@ right-unit-law-max-ℕ (succ-ℕ x) = {!!}
 
 ```agda
 commutative-max-ℕ : (x y : ℕ) → max-ℕ x y ＝ max-ℕ y x
-commutative-max-ℕ zero-ℕ zero-ℕ = {!!}
+commutative-max-ℕ = {!!}
 commutative-max-ℕ zero-ℕ (succ-ℕ y) = {!!}
 commutative-max-ℕ (succ-ℕ x) zero-ℕ = {!!}
 commutative-max-ℕ (succ-ℕ x) (succ-ℕ y) = {!!}
@@ -109,7 +109,7 @@ commutative-max-ℕ (succ-ℕ x) (succ-ℕ y) = {!!}
 
 ```agda
 idempotent-max-ℕ : (x : ℕ) → max-ℕ x x ＝ x
-idempotent-max-ℕ zero-ℕ = {!!}
+idempotent-max-ℕ = {!!}
 idempotent-max-ℕ (succ-ℕ x) = {!!}
 ```
 
@@ -117,11 +117,11 @@ idempotent-max-ℕ (succ-ℕ x) = {!!}
 
 ```agda
 left-successor-diagonal-law-max-ℕ : (x : ℕ) → max-ℕ (succ-ℕ x) x ＝ succ-ℕ x
-left-successor-diagonal-law-max-ℕ zero-ℕ = {!!}
+left-successor-diagonal-law-max-ℕ = {!!}
 left-successor-diagonal-law-max-ℕ (succ-ℕ x) = {!!}
 
 right-successor-diagonal-law-max-ℕ : (x : ℕ) → max-ℕ x (succ-ℕ x) ＝ succ-ℕ x
-right-successor-diagonal-law-max-ℕ zero-ℕ = {!!}
+right-successor-diagonal-law-max-ℕ = {!!}
 right-successor-diagonal-law-max-ℕ (succ-ℕ x) = {!!}
 ```
 

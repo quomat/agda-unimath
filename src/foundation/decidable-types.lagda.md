@@ -45,18 +45,18 @@ type is expressed using the
 
 ```agda
 is-decidable : {l : Level} (A : UU l) → UU l
-is-decidable A = {!!}
+is-decidable = {!!}
 
 is-decidable-fam :
   {l1 l2 : Level} {A : UU l1} (P : A → UU l2) → UU (l1 ⊔ l2)
-is-decidable-fam {A = A} P = {!!}
+is-decidable-fam = {!!}
 ```
 
 ### The predicate that a type is inhabited or empty
 
 ```agda
 is-inhabited-or-empty : {l1 : Level} → UU l1 → UU l1
-is-inhabited-or-empty A = {!!}
+is-inhabited-or-empty = {!!}
 ```
 
 ### Merely decidable types
@@ -67,10 +67,10 @@ of `type-trunc-Prop (is-decidable A)`.
 ```agda
 is-merely-Decidable-Prop :
   {l : Level} → UU l → Prop l
-is-merely-Decidable-Prop A = {!!}
+is-merely-Decidable-Prop = {!!}
 
 is-merely-decidable : {l : Level} → UU l → UU l
-is-merely-decidable A = {!!}
+is-merely-decidable = {!!}
 ```
 
 ## Examples
@@ -93,7 +93,7 @@ is-decidable-empty = {!!}
 is-decidable-coprod :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   is-decidable A → is-decidable B → is-decidable (A + B)
-is-decidable-coprod (inl a) y = {!!}
+is-decidable-coprod = {!!}
 is-decidable-coprod (inr na) (inl b) = {!!}
 is-decidable-coprod (inr na) (inr nb) = {!!}
 ```
@@ -104,7 +104,7 @@ is-decidable-coprod (inr na) (inr nb) = {!!}
 is-decidable-prod :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   is-decidable A → is-decidable B → is-decidable (A × B)
-is-decidable-prod (inl a) (inl b) = {!!}
+is-decidable-prod = {!!}
 is-decidable-prod (inl a) (inr g) = {!!}
 is-decidable-prod (inr f) (inl b) = {!!}
 is-decidable-prod (inr f) (inr g) = {!!}
@@ -120,13 +120,13 @@ is-decidable-prod' (inr na) d = {!!}
 is-decidable-left-factor :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   is-decidable (A × B) → B → is-decidable A
-is-decidable-left-factor (inl (pair x y)) b = {!!}
+is-decidable-left-factor = {!!}
 is-decidable-left-factor (inr f) b = {!!}
 
 is-decidable-right-factor :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   is-decidable (A × B) → A → is-decidable B
-is-decidable-right-factor (inl (pair x y)) a = {!!}
+is-decidable-right-factor = {!!}
 is-decidable-right-factor (inr f) a = {!!}
 ```
 
@@ -136,7 +136,7 @@ is-decidable-right-factor (inr f) a = {!!}
 is-decidable-function-type :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   is-decidable A → is-decidable B → is-decidable (A → B)
-is-decidable-function-type (inl a) (inl b) = {!!}
+is-decidable-function-type = {!!}
 is-decidable-function-type (inl a) (inr g) = {!!}
 is-decidable-function-type (inr f) (inl b) = {!!}
 is-decidable-function-type (inr f) (inr g) = {!!}
@@ -155,7 +155,7 @@ is-decidable-function-type' (inr na) d = {!!}
 ```agda
 is-decidable-neg :
   {l : Level} {A : UU l} → is-decidable A → is-decidable (¬ A)
-is-decidable-neg d = {!!}
+is-decidable-neg = {!!}
 ```
 
 ### Decidable types are closed under coinhabited types; retracts, and equivalences
@@ -167,7 +167,7 @@ module _
 
   is-decidable-iff :
     (A → B) → (B → A) → is-decidable A → is-decidable B
-  is-decidable-iff f g (inl a) = {!!}
+  is-decidable-iff = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
@@ -175,20 +175,20 @@ module _
 
   is-decidable-retract-of :
     A retract-of B → is-decidable B → is-decidable A
-  is-decidable-retract-of (pair i (pair r H)) (inl b) = {!!}
+  is-decidable-retract-of = {!!}
 
   is-decidable-is-equiv :
     {f : A → B} → is-equiv f → is-decidable B → is-decidable A
-  is-decidable-is-equiv {f} (pair (pair g G) (pair h H)) = {!!}
+  is-decidable-is-equiv = {!!}
 
   is-decidable-equiv :
     (e : A ≃ B) → is-decidable B → is-decidable A
-  is-decidable-equiv e = {!!}
+  is-decidable-equiv = {!!}
 
 is-decidable-equiv' :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (e : A ≃ B) →
   is-decidable A → is-decidable B
-is-decidable-equiv' e = {!!}
+is-decidable-equiv' = {!!}
 ```
 
 ### Decidability implies double negation elimination
@@ -196,7 +196,7 @@ is-decidable-equiv' e = {!!}
 ```agda
 double-negation-elim-is-decidable :
   {l : Level} {P : UU l} → is-decidable P → (¬¬ P → P)
-double-negation-elim-is-decidable (inl x) p = {!!}
+double-negation-elim-is-decidable = {!!}
 double-negation-elim-is-decidable (inr x) p = {!!}
 ```
 
@@ -204,7 +204,7 @@ double-negation-elim-is-decidable (inr x) p = {!!}
 
 ```agda
 double-negation-is-decidable : {l : Level} {P : UU l} → ¬¬ (is-decidable P)
-double-negation-is-decidable {P = P} f = {!!}
+double-negation-is-decidable = {!!}
 ```
 
 ### Decidable types have ε-operators
@@ -212,7 +212,7 @@ double-negation-is-decidable {P = P} f = {!!}
 ```agda
 elim-trunc-Prop-is-decidable :
   {l : Level} {A : UU l} → is-decidable A → ε-operator-Hilbert A
-elim-trunc-Prop-is-decidable (inl a) x = {!!}
+elim-trunc-Prop-is-decidable = {!!}
 elim-trunc-Prop-is-decidable (inr f) x = {!!}
 ```
 
@@ -221,7 +221,7 @@ elim-trunc-Prop-is-decidable (inr f) x = {!!}
 ```agda
 idempotent-is-decidable :
   {l : Level} (P : UU l) → is-decidable (is-decidable P) → is-decidable P
-idempotent-is-decidable P (inl (inl p)) = {!!}
+idempotent-is-decidable = {!!}
 idempotent-is-decidable P (inl (inr np)) = {!!}
 idempotent-is-decidable P (inr np) = {!!}
 ```
@@ -232,10 +232,10 @@ idempotent-is-decidable P (inr np) = {!!}
 abstract
   is-prop-is-inhabited-or-empty :
     {l1 : Level} (A : UU l1) → is-prop (is-inhabited-or-empty A)
-  is-prop-is-inhabited-or-empty A = {!!}
+  is-prop-is-inhabited-or-empty = {!!}
 
 is-inhabited-or-empty-Prop : {l1 : Level} → UU l1 → Prop l1
-pr1 (is-inhabited-or-empty-Prop A) = {!!}
+is-inhabited-or-empty-Prop = {!!}
 pr2 (is-inhabited-or-empty-Prop A) = {!!}
 ```
 
@@ -244,7 +244,7 @@ pr2 (is-inhabited-or-empty-Prop A) = {!!}
 ```agda
 is-fixed-point-is-decidable-is-inhabited :
   {l : Level} {X : UU l} → type-trunc-Prop X → is-decidable X ≃ X
-is-fixed-point-is-decidable-is-inhabited {l} {X} t = {!!}
+is-fixed-point-is-decidable-is-inhabited = {!!}
 ```
 
 ### Raising types converves decidability
@@ -255,5 +255,5 @@ module _
   where
 
   is-decidable-raise : is-decidable A → is-decidable (raise l A)
-  is-decidable-raise (inl p) = {!!}
+  is-decidable-raise = {!!}
 ```

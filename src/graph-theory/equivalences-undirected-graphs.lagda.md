@@ -132,7 +132,7 @@ module _
   where
 
   id-equiv-Undirected-Graph : equiv-Undirected-Graph G G
-  pr1 id-equiv-Undirected-Graph = {!!}
+  id-equiv-Undirected-Graph = {!!}
 
   edge-standard-unordered-pair-vertices-id-equiv-Undirected-Graph :
     (x y : vertex-Undirected-Graph G) →

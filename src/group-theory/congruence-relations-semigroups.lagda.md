@@ -35,22 +35,22 @@ such that for every `x1 x2 y1 y2 : G` such that `x1 ≡ x2` and `y1 ≡ y2` we h
 is-congruence-prop-Semigroup :
   {l1 l2 : Level} (G : Semigroup l1) →
   equivalence-relation l2 (type-Semigroup G) → Prop (l1 ⊔ l2)
-is-congruence-prop-Semigroup G R = {!!}
+is-congruence-prop-Semigroup = {!!}
 
 is-congruence-Semigroup :
   {l1 l2 : Level} (G : Semigroup l1) →
   equivalence-relation l2 (type-Semigroup G) → UU (l1 ⊔ l2)
-is-congruence-Semigroup G R = {!!}
+is-congruence-Semigroup = {!!}
 
 is-prop-is-congruence-Semigroup :
   {l1 l2 : Level} (G : Semigroup l1)
   (R : equivalence-relation l2 (type-Semigroup G)) →
   is-prop (is-congruence-Semigroup G R)
-is-prop-is-congruence-Semigroup G R = {!!}
+is-prop-is-congruence-Semigroup = {!!}
 
 congruence-Semigroup :
   {l : Level} (l2 : Level) (G : Semigroup l) → UU (l ⊔ lsuc l2)
-congruence-Semigroup l2 G = {!!}
+congruence-Semigroup = {!!}
 
 module _
   {l1 l2 : Level} (G : Semigroup l1) (R : congruence-Semigroup l2 G)
@@ -79,7 +79,7 @@ module _
   equiv-symmetric-congruence-Semigroup :
     (x y : type-Semigroup G) →
     sim-congruence-Semigroup x y ≃ sim-congruence-Semigroup y x
-  equiv-symmetric-congruence-Semigroup x y = {!!}
+  equiv-symmetric-congruence-Semigroup = {!!}
 
   transitive-congruence-Semigroup : is-transitive sim-congruence-Semigroup
   transitive-congruence-Semigroup = {!!}
@@ -97,36 +97,36 @@ module _
 relate-same-elements-congruence-Semigroup :
   {l1 l2 l3 : Level} (G : Semigroup l1) →
   congruence-Semigroup l2 G → congruence-Semigroup l3 G → UU (l1 ⊔ l2 ⊔ l3)
-relate-same-elements-congruence-Semigroup G R S = {!!}
+relate-same-elements-congruence-Semigroup = {!!}
 
 refl-relate-same-elements-congruence-Semigroup :
   {l1 l2 : Level} (G : Semigroup l1) (R : congruence-Semigroup l2 G) →
   relate-same-elements-congruence-Semigroup G R R
-refl-relate-same-elements-congruence-Semigroup G R = {!!}
+refl-relate-same-elements-congruence-Semigroup = {!!}
 
 is-torsorial-relate-same-elements-congruence-Semigroup :
   {l1 l2 : Level} (G : Semigroup l1) (R : congruence-Semigroup l2 G) →
   is-torsorial (relate-same-elements-congruence-Semigroup G R)
-is-torsorial-relate-same-elements-congruence-Semigroup G R = {!!}
+is-torsorial-relate-same-elements-congruence-Semigroup = {!!}
 
 relate-same-elements-eq-congruence-Semigroup :
   {l1 l2 : Level} (G : Semigroup l1) (R S : congruence-Semigroup l2 G) →
   R ＝ S → relate-same-elements-congruence-Semigroup G R S
-relate-same-elements-eq-congruence-Semigroup G R .R refl = {!!}
+relate-same-elements-eq-congruence-Semigroup = {!!}
 
 is-equiv-relate-same-elements-eq-congruence-Semigroup :
   {l1 l2 : Level} (G : Semigroup l1) (R S : congruence-Semigroup l2 G) →
   is-equiv (relate-same-elements-eq-congruence-Semigroup G R S)
-is-equiv-relate-same-elements-eq-congruence-Semigroup G R = {!!}
+is-equiv-relate-same-elements-eq-congruence-Semigroup = {!!}
 
 extensionality-congruence-Semigroup :
   {l1 l2 : Level} (G : Semigroup l1) (R S : congruence-Semigroup l2 G) →
   (R ＝ S) ≃ relate-same-elements-congruence-Semigroup G R S
-pr1 (extensionality-congruence-Semigroup G R S) = {!!}
+extensionality-congruence-Semigroup = {!!}
 pr2 (extensionality-congruence-Semigroup G R S) = {!!}
 
 eq-relate-same-elements-congruence-Semigroup :
   {l1 l2 : Level} (G : Semigroup l1) (R S : congruence-Semigroup l2 G) →
   relate-same-elements-congruence-Semigroup G R S → R ＝ S
-eq-relate-same-elements-congruence-Semigroup G R S = {!!}
+eq-relate-same-elements-congruence-Semigroup = {!!}
 ```

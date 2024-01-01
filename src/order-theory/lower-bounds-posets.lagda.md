@@ -61,10 +61,10 @@ module _
   where
 
   is-lower-bound-family-of-elements-Poset-Prop : type-Poset P → Prop (l2 ⊔ l3)
-  is-lower-bound-family-of-elements-Poset-Prop z = {!!}
+  is-lower-bound-family-of-elements-Poset-Prop = {!!}
 
   is-lower-bound-family-of-elements-Poset : type-Poset P → UU (l2 ⊔ l3)
-  is-lower-bound-family-of-elements-Poset z = {!!}
+  is-lower-bound-family-of-elements-Poset = {!!}
 
   is-prop-is-lower-bound-family-of-elements-Poset :
     (z : type-Poset P) → is-prop (is-lower-bound-family-of-elements-Poset z)

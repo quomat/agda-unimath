@@ -46,7 +46,7 @@ module _
   coherence-is-coherently-invertible = {!!}
 
   is-coherently-invertible : (A → B) → UU (l1 ⊔ l2)
-  is-coherently-invertible f = {!!}
+  is-coherently-invertible = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B}
@@ -72,13 +72,13 @@ module _
   coh-is-coherently-invertible = {!!}
 
   is-invertible-is-coherently-invertible : is-invertible f
-  pr1 is-invertible-is-coherently-invertible = {!!}
+  is-invertible-is-coherently-invertible = {!!}
 
   section-is-coherently-invertible : section f
-  pr1 section-is-coherently-invertible = {!!}
+  section-is-coherently-invertible = {!!}
 
   retraction-is-coherently-invertible : retraction f
-  pr1 retraction-is-coherently-invertible = {!!}
+  retraction-is-coherently-invertible = {!!}
 ```
 
 ## Properties

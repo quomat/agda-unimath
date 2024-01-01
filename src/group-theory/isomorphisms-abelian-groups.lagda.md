@@ -152,7 +152,7 @@ module _
 
 ```agda
 id-iso-Ab : {l : Level} (A : Ab l) → iso-Ab A A
-id-iso-Ab A = {!!}
+id-iso-Ab = {!!}
 ```
 
 ## Properties

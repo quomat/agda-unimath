@@ -53,5 +53,5 @@ module _
   has-associative-mul-Π-Semigroup = {!!}
 
   Π-Semigroup : Semigroup (l1 ⊔ l2)
-  pr1 Π-Semigroup = {!!}
+  Π-Semigroup = {!!}
 ```

@@ -39,7 +39,7 @@ form a [large locale](order-theory.large-locales.md).
 
 ```agda
 Prop-Large-Preorder : Large-Preorder lsuc _⊔_
-type-Large-Preorder Prop-Large-Preorder = {!!}
+Prop-Large-Preorder = {!!}
 leq-prop-Large-Preorder Prop-Large-Preorder = {!!}
 refl-leq-Large-Preorder Prop-Large-Preorder P = {!!}
 transitive-leq-Large-Preorder Prop-Large-Preorder P Q R g f = {!!}
@@ -49,7 +49,7 @@ transitive-leq-Large-Preorder Prop-Large-Preorder P Q R g f = {!!}
 
 ```agda
 Prop-Large-Poset : Large-Poset lsuc _⊔_
-large-preorder-Large-Poset Prop-Large-Poset = {!!}
+Prop-Large-Poset = {!!}
 antisymmetric-leq-Large-Poset Prop-Large-Poset P Q = {!!}
 ```
 
@@ -89,7 +89,7 @@ is-large-suplattice-Prop-Large-Locale = {!!}
 
 ```agda
 Prop-Large-Frame : Large-Frame lsuc _⊔_ lzero
-large-poset-Large-Frame Prop-Large-Frame = {!!}
+Prop-Large-Frame = {!!}
 is-large-meet-semilattice-Large-Frame Prop-Large-Frame = {!!}
 is-large-suplattice-Large-Frame Prop-Large-Frame = {!!}
 distributive-meet-sup-Large-Frame Prop-Large-Frame = {!!}

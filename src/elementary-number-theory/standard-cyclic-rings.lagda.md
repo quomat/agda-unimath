@@ -48,7 +48,7 @@ The **standard cyclic rings** `ℤ/n` are the [rings](ring-theory.rings.md) of
 
 ```agda
 ℤ-Mod-Ring : ℕ → Ring lzero
-pr1 (ℤ-Mod-Ring n) = {!!}
+ℤ-Mod-Ring = {!!}
 pr1 (pr1 (pr2 (ℤ-Mod-Ring n))) = {!!}
 pr2 (pr1 (pr2 (ℤ-Mod-Ring n))) = {!!}
 pr1 (pr1 (pr2 (pr2 (ℤ-Mod-Ring n)))) = {!!}
@@ -58,7 +58,7 @@ pr1 (pr2 (pr2 (pr2 (ℤ-Mod-Ring n)))) = {!!}
 pr2 (pr2 (pr2 (pr2 (ℤ-Mod-Ring n)))) = {!!}
 
 ℤ-Mod-Commutative-Ring : ℕ → Commutative-Ring lzero
-pr1 (ℤ-Mod-Commutative-Ring n) = {!!}
+ℤ-Mod-Commutative-Ring = {!!}
 pr2 (ℤ-Mod-Commutative-Ring n) = {!!}
 ```
 

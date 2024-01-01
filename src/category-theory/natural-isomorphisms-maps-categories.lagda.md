@@ -285,7 +285,7 @@ module _
   is-set-natural-isomorphism-map-Category = {!!}
 
   natural-isomorphism-map-set-Category : Set (l1 ⊔ l2 ⊔ l4)
-  pr1 natural-isomorphism-map-set-Category = {!!}
+  natural-isomorphism-map-set-Category = {!!}
 ```
 
 ### Inverses of natural isomorphisms are natural isomorphisms
@@ -311,8 +311,7 @@ module _
       ( natural-transformation-map-inv-is-natural-isomorphism-map-Category
         ( is-iso-f)) ＝
     id-natural-transformation-map-Category C D G
-  is-section-natural-transformation-map-inv-is-natural-isomorphism-map-Category
-    is-iso-f = {!!}
+  is-section-natural-transformation-map-inv-is-natural-isomorphism-map-Category = {!!}
 
   is-retraction-natural-transformation-map-inv-is-natural-isomorphism-map-Category :
     (is-iso-f : is-natural-isomorphism-map-Category C D F G f) →
@@ -321,8 +320,7 @@ module _
         ( is-iso-f))
       ( f) ＝
     id-natural-transformation-map-Category C D F
-  is-retraction-natural-transformation-map-inv-is-natural-isomorphism-map-Category
-    is-iso-f = {!!}
+  is-retraction-natural-transformation-map-inv-is-natural-isomorphism-map-Category = {!!}
 
   is-natural-isomorphism-map-inv-is-natural-isomorphism-map-Category :
     (is-iso-f : is-natural-isomorphism-map-Category C D F G f) →
@@ -389,8 +387,7 @@ module _
     is-natural-isomorphism-map-Category C D F G f →
     is-natural-isomorphism-map-Category C D F H
       ( comp-natural-transformation-map-Category C D F G H g f)
-  is-natural-isomorphism-map-comp-is-natural-isomorphism-map-Category
-    is-iso-g is-iso-f x = {!!}
+  is-natural-isomorphism-map-comp-is-natural-isomorphism-map-Category = {!!}
 ```
 
 ### The composition operation on natural isomorphisms

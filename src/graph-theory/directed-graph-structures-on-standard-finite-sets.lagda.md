@@ -33,14 +33,14 @@ is a [binary type-valued relation](foundation.binary-relations.md)
 
 ```agda
 structure-directed-graph-Fin : (l : Level) (n : ℕ) → UU (lsuc l)
-structure-directed-graph-Fin l n = {!!}
+structure-directed-graph-Fin = {!!}
 ```
 
 ### Directed graphs on standard finite sets
 
 ```agda
 Directed-Graph-Fin : (l : Level) → UU (lsuc l)
-Directed-Graph-Fin l = {!!}
+Directed-Graph-Fin = {!!}
 ```
 
 ### Labeled finite directed graphs on standard finite sets

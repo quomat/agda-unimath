@@ -150,7 +150,7 @@ module _
 
 is-emb-subset-Subgroup-Ab :
   {l1 l2 : Level} (A : Ab l1) → is-emb (subset-Subgroup-Ab {l2 = l2} A)
-is-emb-subset-Subgroup-Ab A = {!!}
+is-emb-subset-Subgroup-Ab = {!!}
 ```
 
 ### The underlying abelian group of a subgroup of an abelian group
@@ -230,7 +230,7 @@ module _
   group-Subgroup-Ab = {!!}
 
   ab-Subgroup-Ab : Ab (l1 ⊔ l2)
-  pr1 ab-Subgroup-Ab = {!!}
+  ab-Subgroup-Ab = {!!}
 ```
 
 ### The inclusion of the underlying group of a subgroup into the ambient abelian group
@@ -353,10 +353,10 @@ module _
   where
 
   is-normal-Subgroup-Ab : is-normal-Subgroup (group-Ab A) B
-  is-normal-Subgroup-Ab x y = {!!}
+  is-normal-Subgroup-Ab = {!!}
 
   normal-subgroup-Subgroup-Ab : Normal-Subgroup-Ab l2 A
-  pr1 normal-subgroup-Subgroup-Ab = {!!}
+  normal-subgroup-Subgroup-Ab = {!!}
 
   closure-property-Subgroup-Ab :
     {x y z : type-Ab A} →

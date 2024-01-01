@@ -29,20 +29,20 @@ Trivial rings are rings in which `0 = {!!}
 
 ```agda
 is-trivial-ring-Prop : {l : Level} → Ring l → Prop l
-is-trivial-ring-Prop R = {!!}
+is-trivial-ring-Prop = {!!}
 
 is-trivial-Ring : {l : Level} → Ring l → UU l
-is-trivial-Ring R = {!!}
+is-trivial-Ring = {!!}
 
 is-prop-is-trivial-Ring :
   {l : Level} (R : Ring l) → is-prop (is-trivial-Ring R)
 is-prop-is-trivial-Ring = {!!}
 
 is-nontrivial-ring-Prop : {l : Level} → Ring l → Prop l
-is-nontrivial-ring-Prop R = {!!}
+is-nontrivial-ring-Prop = {!!}
 
 is-nontrivial-Ring : {l : Level} → Ring l → UU l
-is-nontrivial-Ring R = {!!}
+is-nontrivial-Ring = {!!}
 
 is-prop-is-nontrivial-Ring :
   {l : Level} (R : Ring l) → is-prop (is-nontrivial-Ring R)

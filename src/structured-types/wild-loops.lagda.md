@@ -30,7 +30,7 @@ A wild loop is a wild quasigroup equipped with a unit element.
 
 ```agda
 Wild-Loop : (l : Level) → UU (lsuc l)
-Wild-Loop l = {!!}
+Wild-Loop = {!!}
 
 module _
   {l : Level} (L : Wild-Loop l)
@@ -83,7 +83,7 @@ module _
   is-binary-equiv-mul-Wild-Loop = {!!}
 
   wild-quasigroup-Wild-Loop : Wild-Quasigroup l
-  pr1 wild-quasigroup-Wild-Loop = {!!}
+  wild-quasigroup-Wild-Loop = {!!}
 
   is-equiv-mul-Wild-Loop : (x : type-Wild-Loop) → is-equiv (mul-Wild-Loop x)
   is-equiv-mul-Wild-Loop = {!!}

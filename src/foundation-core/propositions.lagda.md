@@ -33,7 +33,7 @@ at most one element.
 
 ```agda
 is-prop : {l : Level} (A : UU l) → UU l
-is-prop A = {!!}
+is-prop = {!!}
 
 Prop :
   (l : Level) → UU (lsuc l)
@@ -44,11 +44,11 @@ module _
   where
 
   type-Prop : Prop l → UU l
-  type-Prop P = {!!}
+  type-Prop = {!!}
 
   abstract
     is-prop-type-Prop : (P : Prop l) → is-prop (type-Prop P)
-    is-prop-type-Prop P = {!!}
+    is-prop-type-Prop = {!!}
 ```
 
 ## Examples
@@ -91,15 +91,15 @@ module _
 
   abstract
     is-prop-all-elements-equal : all-elements-equal A → is-prop A
-    pr1 (is-prop-all-elements-equal H x y) = {!!}
+    is-prop-all-elements-equal = {!!}
 
   abstract
     eq-is-prop' : is-prop A → all-elements-equal A
-    eq-is-prop' H x y = {!!}
+    eq-is-prop' = {!!}
 
   abstract
     eq-is-prop : is-prop A → {x y : A} → x ＝ y
-    eq-is-prop H {x} {y} = {!!}
+    eq-is-prop = {!!}
 
   abstract
     is-proof-irrelevant-all-elements-equal :
@@ -112,7 +112,7 @@ module _
 
   abstract
     is-prop-is-proof-irrelevant : is-proof-irrelevant A → is-prop A
-    is-prop-is-proof-irrelevant H x y = {!!}
+    is-prop-is-proof-irrelevant = {!!}
 
   abstract
     eq-is-proof-irrelevant : is-proof-irrelevant A → all-elements-equal A
@@ -133,7 +133,7 @@ module _
 
   abstract
     equiv-prop : is-prop A → is-prop B → (A → B) → (B → A) → A ≃ B
-    pr1 (equiv-prop is-prop-A is-prop-B f g) = {!!}
+    equiv-prop = {!!}
 ```
 
 ### Propositions are closed under equivalences
@@ -145,11 +145,11 @@ module _
 
   abstract
     is-prop-is-equiv : {f : A → B} → is-equiv f → is-prop B → is-prop A
-    is-prop-is-equiv {f} E H = {!!}
+    is-prop-is-equiv = {!!}
 
   abstract
     is-prop-equiv : A ≃ B → is-prop B → is-prop A
-    is-prop-equiv (f , is-equiv-f) = {!!}
+    is-prop-equiv = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
@@ -157,11 +157,11 @@ module _
 
   abstract
     is-prop-is-equiv' : {f : A → B} → is-equiv f → is-prop A → is-prop B
-    is-prop-is-equiv' E H = {!!}
+    is-prop-is-equiv' = {!!}
 
   abstract
     is-prop-equiv' : A ≃ B → is-prop A → is-prop B
-    is-prop-equiv' (f , is-equiv-f) = {!!}
+    is-prop-equiv' = {!!}
 ```
 
 ### Propositions are closed under dependent pair types
@@ -189,7 +189,7 @@ abstract
   is-prop-prod = {!!}
 
 prod-Prop : {l1 l2 : Level} → Prop l1 → Prop l2 → Prop (l1 ⊔ l2)
-pr1 (prod-Prop P Q) = {!!}
+prod-Prop = {!!}
 pr2 (prod-Prop P Q) = {!!}
 ```
 
@@ -234,7 +234,7 @@ is-prop-type-Π-Prop' :
 is-prop-type-Π-Prop' = {!!}
 
 Π-Prop' : {l1 l2 : Level} (A : UU l1) (P : A → Prop l2) → Prop (l1 ⊔ l2)
-pr1 (Π-Prop' A P) = {!!}
+Π-Prop' = {!!}
 pr2 (Π-Prop' A P) = {!!}
 ```
 
@@ -293,7 +293,7 @@ module _
   where
 
   is-prop-equiv-is-prop : is-prop A → is-prop B → is-prop (A ≃ B)
-  is-prop-equiv-is-prop H K = {!!}
+  is-prop-equiv-is-prop = {!!}
 
 type-equiv-Prop :
   { l1 l2 : Level} (P : Prop l1) (Q : Prop l2) → UU (l1 ⊔ l2)
@@ -333,6 +333,6 @@ abstract
   is-prop-is-prop = {!!}
 
 is-prop-Prop : {l : Level} (A : UU l) → Prop l
-pr1 (is-prop-Prop A) = {!!}
+is-prop-Prop = {!!}
 pr2 (is-prop-Prop A) = {!!}
 ```

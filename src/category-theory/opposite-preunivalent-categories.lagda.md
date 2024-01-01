@@ -130,7 +130,7 @@ module _
   precategory-opposite-Preunivalent-Category = {!!}
 
   opposite-Preunivalent-Category : Preunivalent-Category l1 l2
-  pr1 opposite-Preunivalent-Category = {!!}
+  opposite-Preunivalent-Category = {!!}
 ```
 
 ## Properties

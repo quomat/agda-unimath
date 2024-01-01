@@ -33,7 +33,7 @@ choice_ if there is such a map.
 
 ```agda
 Global-Choice : (l : Level) → UU (lsuc l)
-Global-Choice l = {!!}
+Global-Choice = {!!}
 ```
 
 ## Properties

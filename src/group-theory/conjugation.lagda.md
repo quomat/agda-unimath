@@ -50,16 +50,16 @@ module _
   where
 
   equiv-conjugation-Group : (x : type-Group G) → type-Group G ≃ type-Group G
-  equiv-conjugation-Group x = {!!}
+  equiv-conjugation-Group = {!!}
 
   conjugation-Group : (x : type-Group G) → type-Group G → type-Group G
-  conjugation-Group x = {!!}
+  conjugation-Group = {!!}
 
   equiv-conjugation-Group' : (x : type-Group G) → type-Group G ≃ type-Group G
-  equiv-conjugation-Group' x = {!!}
+  equiv-conjugation-Group' = {!!}
 
   conjugation-Group' : (x : type-Group G) → type-Group G → type-Group G
-  conjugation-Group' x = {!!}
+  conjugation-Group' = {!!}
 ```
 
 ### The conjugation action of a group on itself
@@ -70,7 +70,7 @@ module _
   where
 
   conjugation-action-Group : action-Group G l1
-  pr1 conjugation-action-Group = {!!}
+  conjugation-action-Group = {!!}
 ```
 
 ### The predicate on subsets of groups of being closed under conjugation
@@ -227,13 +227,13 @@ module _
   where
 
   conjugation-hom-Group : type-Group G → hom-Group G G
-  pr1 (conjugation-hom-Group x) = {!!}
+  conjugation-hom-Group = {!!}
 
   conjugation-equiv-Group : type-Group G → equiv-Group G G
-  pr1 (conjugation-equiv-Group x) = {!!}
+  conjugation-equiv-Group = {!!}
 
   conjugation-iso-Group : type-Group G → iso-Group G G
-  conjugation-iso-Group x = {!!}
+  conjugation-iso-Group = {!!}
 
   preserves-integer-powers-conjugation-Group :
     (k : ℤ) (g x : type-Group G) →

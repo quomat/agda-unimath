@@ -53,7 +53,7 @@ unit-law-011-associative-concat-list :
 unit-law-011-associative-concat-list = {!!}
 
 concat-list' : {l : Level} {A : UU l} → list A → list A → list A
-concat-list' x y = {!!}
+concat-list' = {!!}
 
 unit-law-101-associative-concat-list :
   {l1 : Level} {X : UU l1} (x z : list X) →
@@ -72,7 +72,7 @@ unit-law-110-associative-concat-list :
 unit-law-110-associative-concat-list = {!!}
 
 list-Wild-Monoid : {l : Level} → UU l → Wild-Monoid l
-list-Wild-Monoid X = {!!}
+list-Wild-Monoid = {!!}
 ```
 
 ## Properties
@@ -133,8 +133,7 @@ preserves-coh-unit-laws-map-elim-list-Wild-Monoid :
     ( λ {x} {y} → preserves-mul-map-elim-list-Wild-Monoid M f x y)
     ( preserves-left-unit-law-map-elim-list-Wild-Monoid M f)
     ( preserves-right-unit-law-map-elim-list-Wild-Monoid M f)
-preserves-coh-unit-laws-map-elim-list-Wild-Monoid
-  (pair (pair (pair M eM) (pair μ (pair lM (pair rM cM)))) αM) f = {!!}
+preserves-coh-unit-laws-map-elim-list-Wild-Monoid = {!!}
 
 elim-list-Wild-Monoid :
   {l1 l2 : Level} {X : UU l1} (M : Wild-Monoid l2)

@@ -37,7 +37,7 @@ module _
   type-op-Semigroup = {!!}
 
   mul-op-Semigroup : type-op-Semigroup → type-op-Semigroup → type-op-Semigroup
-  mul-op-Semigroup x y = {!!}
+  mul-op-Semigroup = {!!}
 
   associative-mul-op-Semigroup :
     (x y z : type-op-Semigroup) →
@@ -46,5 +46,5 @@ module _
   associative-mul-op-Semigroup = {!!}
 
   op-Semigroup : Semigroup l
-  pr1 op-Semigroup = {!!}
+  op-Semigroup = {!!}
 ```

@@ -80,7 +80,7 @@ module _
   hom-set-Precategory = {!!}
 
   hom-Precategory : (x y : obj-Precategory) → UU l2
-  hom-Precategory x y = {!!}
+  hom-Precategory = {!!}
 
   is-set-hom-Precategory :
     (x y : obj-Precategory) → is-set (hom-Precategory x y)
@@ -129,7 +129,7 @@ module _
   is-unital-composition-operation-Precategory = {!!}
 
   id-hom-Precategory : {x : obj-Precategory} → hom-Precategory x x
-  id-hom-Precategory {x} = {!!}
+  id-hom-Precategory = {!!}
 
   left-unit-law-comp-hom-Precategory :
     {x y : obj-Precategory} (f : hom-Precategory x y) →
@@ -150,7 +150,7 @@ module _
   where
 
   nonunital-precategory-Precategory : Nonunital-Precategory l1 l2
-  pr1 nonunital-precategory-Precategory = {!!}
+  nonunital-precategory-Precategory = {!!}
 ```
 
 ### The underlying set-magmoid of a precategory
@@ -204,7 +204,7 @@ module _
   where
 
   precomp-hom-Precategory : hom-Precategory C y z → hom-Precategory C x z
-  precomp-hom-Precategory g = {!!}
+  precomp-hom-Precategory = {!!}
 
   postcomp-hom-Precategory : hom-Precategory C z x → hom-Precategory C z y
   postcomp-hom-Precategory = {!!}

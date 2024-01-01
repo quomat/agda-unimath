@@ -47,8 +47,7 @@ module _
     is-large-category-Π-Large-Category = {!!}
 
   Π-Large-Category : Large-Category (λ l2 → l1 ⊔ α l2) (λ l2 l3 → l1 ⊔ β l2 l3)
-  large-precategory-Large-Category
-    Π-Large-Category = {!!}
+  Π-Large-Category = {!!}
 
   obj-Π-Large-Category : (l2 : Level) → UU (l1 ⊔ α l2)
   obj-Π-Large-Category = {!!}

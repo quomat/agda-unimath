@@ -97,7 +97,7 @@ module _
   where
 
   id-hom-arrow : hom-arrow f f
-  pr1 id-hom-arrow = {!!}
+  id-hom-arrow = {!!}
 ```
 
 ### Composition of morphisms of arrows
@@ -139,7 +139,7 @@ module _
   coh-comp-hom-arrow = {!!}
 
   comp-hom-arrow : hom-arrow f h
-  pr1 comp-hom-arrow = {!!}
+  comp-hom-arrow = {!!}
 ```
 
 ### Homotopies of morphsims of arrows
@@ -199,14 +199,14 @@ module _
     coh-htpy-hom-arrow = {!!}
 
   refl-htpy-hom-arrow : htpy-hom-arrow α
-  pr1 refl-htpy-hom-arrow = {!!}
+  refl-htpy-hom-arrow = {!!}
 
   is-torsorial-htpy-hom-arrow :
     is-torsorial htpy-hom-arrow
   is-torsorial-htpy-hom-arrow = {!!}
 
   htpy-eq-hom-arrow : (β : hom-arrow f g) → (α ＝ β) → htpy-hom-arrow β
-  htpy-eq-hom-arrow β refl = {!!}
+  htpy-eq-hom-arrow = {!!}
 
   is-equiv-htpy-eq-hom-arrow :
     (β : hom-arrow f g) → is-equiv (htpy-eq-hom-arrow β)
@@ -245,7 +245,7 @@ module _
   coh-concat-htpy-hom-arrow = {!!}
 
   concat-htpy-hom-arrow : htpy-hom-arrow f g α γ
-  pr1 concat-htpy-hom-arrow = {!!}
+  concat-htpy-hom-arrow = {!!}
 ```
 
 ### Inverses of homotopies of morphisms of arrows
@@ -271,7 +271,7 @@ module _
   coh-inv-htpy-hom-arrow = {!!}
 
   inv-htpy-hom-arrow : htpy-hom-arrow f g β α
-  pr1 inv-htpy-hom-arrow = {!!}
+  inv-htpy-hom-arrow = {!!}
 ```
 
 ### Whiskering of homotopies of morphisms of arrows

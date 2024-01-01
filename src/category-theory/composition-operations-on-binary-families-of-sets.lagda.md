@@ -115,9 +115,7 @@ module _
       (f : type-Set (hom-set x y)) →
       comp-hom (comp-hom h g) f ＝ comp-hom h (comp-hom g f)) →
     is-associative-composition-operation-binary-family-Set hom-set comp-hom
-  pr1
-    ( is-associative-witness-associative-composition-operation-binary-family-Set
-        H h g f) = {!!}
+  is-associative-witness-associative-composition-operation-binary-family-Set = {!!}
 
   is-associative-inv-witness-associative-composition-operation-binary-family-Set :
     ( {x y z w : A}
@@ -126,9 +124,7 @@ module _
       (f : type-Set (hom-set x y)) →
       comp-hom h (comp-hom g f) ＝ comp-hom (comp-hom h g) f) →
     is-associative-composition-operation-binary-family-Set hom-set comp-hom
-  pr1
-    ( is-associative-inv-witness-associative-composition-operation-binary-family-Set
-        H h g f) = {!!}
+  is-associative-inv-witness-associative-composition-operation-binary-family-Set = {!!}
 ```
 
 ### Unital composition operations in binary families of sets
@@ -159,7 +155,7 @@ module _
   is-prop-is-associative-composition-operation-binary-family-Set = {!!}
 
   is-associative-prop-composition-operation-binary-family-Set : Prop (l1 ⊔ l2)
-  pr1 is-associative-prop-composition-operation-binary-family-Set = {!!}
+  is-associative-prop-composition-operation-binary-family-Set = {!!}
 ```
 
 ### Being unital is a property of composition operations in binary families of sets
@@ -182,9 +178,7 @@ module _
     all-elements-equal-is-unital-composition-operation-binary-family-Set :
       all-elements-equal
         ( is-unital-composition-operation-binary-family-Set hom-set comp-hom)
-    all-elements-equal-is-unital-composition-operation-binary-family-Set
-      ( e , left-unit-law-e , right-unit-law-e)
-      ( e' , left-unit-law-e' , right-unit-law-e') = {!!}
+    all-elements-equal-is-unital-composition-operation-binary-family-Set = {!!}
 
   abstract
     is-prop-is-unital-composition-operation-binary-family-Set :
@@ -193,7 +187,7 @@ module _
     is-prop-is-unital-composition-operation-binary-family-Set = {!!}
 
   is-unital-prop-composition-operation-binary-family-Set : Prop (l1 ⊔ l2)
-  pr1 is-unital-prop-composition-operation-binary-family-Set = {!!}
+  is-unital-prop-composition-operation-binary-family-Set = {!!}
 ```
 
 ## See also

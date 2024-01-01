@@ -44,7 +44,7 @@ module _
   is-prop-inverts-element-hom-Ring = {!!}
 
   inverts-element-hom-ring-Prop : Prop l2
-  pr1 inverts-element-hom-ring-Prop = {!!}
+  inverts-element-hom-ring-Prop = {!!}
 
 inv-inverts-element-hom-Ring :
   {l1 l2 : Level} (R : Ring l1) (S : Ring l2) (x : type-Ring R)
@@ -112,8 +112,7 @@ center-unique-extension-universal-property-localization-Ring :
   universal-property-localization-Ring l3 R S x f H →
   (h : hom-Ring R T) (K : inverts-element-hom-Ring R T x h) →
   Σ (hom-Ring S T) (λ g → htpy-hom-Ring R T (comp-hom-Ring R S T g f) h)
-center-unique-extension-universal-property-localization-Ring
-  R S T x f H up-f h K = {!!}
+center-unique-extension-universal-property-localization-Ring = {!!}
 
 map-universal-property-localization-Ring :
   {l1 l2 l3 : Level} (R : Ring l1) (S : Ring l2) (T : Ring l3) (x : type-Ring R)
@@ -153,8 +152,7 @@ is-equiv-up-localization-up-localization-Ring :
   ({l : Level} → universal-property-localization-Ring l R S x f inverts-f) →
   ({l : Level} → universal-property-localization-Ring l R T x g inverts-g) →
   is-iso-Ring S T h
-is-equiv-up-localization-up-localization-Ring
-  R S T x f inverts-f g inverts-g h H up-f up-g = {!!}
+is-equiv-up-localization-up-localization-Ring = {!!}
 -}
 ```
 

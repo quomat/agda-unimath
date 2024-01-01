@@ -37,18 +37,18 @@ module _
   where
 
   iterate-automorphism-ℕ : ℕ → Aut X → Aut X
-  iterate-automorphism-ℕ zero-ℕ e = {!!}
+  iterate-automorphism-ℕ = {!!}
 
   map-iterate-automorphism : ℕ → Aut X → X → X
-  map-iterate-automorphism n e = {!!}
+  map-iterate-automorphism = {!!}
 
   is-equiv-map-iterate-automorphism :
     (n : ℕ) (e : Aut X) → is-equiv (map-iterate-automorphism n e)
-  is-equiv-map-iterate-automorphism n e = {!!}
+  is-equiv-map-iterate-automorphism = {!!}
 
   compute-map-iterate-automorphism :
     (n : ℕ) (e : Aut X) → map-iterate-automorphism n e ~ iterate n (map-equiv e)
-  compute-map-iterate-automorphism zero-ℕ e = {!!}
+  compute-map-iterate-automorphism = {!!}
 ```
 
 #### Iterating by precomposition using a natural number
@@ -59,19 +59,19 @@ module _
   where
 
   iterate-automorphism-ℕ' : ℕ → Aut X → Aut X
-  iterate-automorphism-ℕ' zero-ℕ e = {!!}
+  iterate-automorphism-ℕ' = {!!}
 
   map-iterate-automorphism-ℕ' : ℕ → Aut X → X → X
-  map-iterate-automorphism-ℕ' n e = {!!}
+  map-iterate-automorphism-ℕ' = {!!}
 
   is-equiv-map-iterate-automorphism-ℕ' :
     (n : ℕ) (e : Aut X) → is-equiv (map-iterate-automorphism-ℕ' n e)
-  is-equiv-map-iterate-automorphism-ℕ' n e = {!!}
+  is-equiv-map-iterate-automorphism-ℕ' = {!!}
 
   compute-map-iterate-automorphism-ℕ' :
     (n : ℕ) (e : Aut X) →
     map-iterate-automorphism-ℕ' n e ~ iterate' n (map-equiv e)
-  compute-map-iterate-automorphism-ℕ' zero-ℕ e = {!!}
+  compute-map-iterate-automorphism-ℕ' = {!!}
 ```
 
 #### Iterating by postcomposition using an integer
@@ -82,27 +82,27 @@ module _
   where
 
   iterate-automorphism-ℤ : ℤ → Aut X → Aut X
-  iterate-automorphism-ℤ (inl zero-ℕ) e = {!!}
+  iterate-automorphism-ℤ = {!!}
 
   map-iterate-automorphism-ℤ : ℤ → Aut X → X → X
-  map-iterate-automorphism-ℤ k e = {!!}
+  map-iterate-automorphism-ℤ = {!!}
 
   is-equiv-map-iterate-automorphism-ℤ :
     (k : ℤ) (e : Aut X) → is-equiv (map-iterate-automorphism-ℤ k e)
-  is-equiv-map-iterate-automorphism-ℤ k e = {!!}
+  is-equiv-map-iterate-automorphism-ℤ = {!!}
 
   map-inv-iterate-automorphism-ℤ : ℤ → Aut X → X → X
-  map-inv-iterate-automorphism-ℤ k e = {!!}
+  map-inv-iterate-automorphism-ℤ = {!!}
 
   is-section-map-inv-iterate-automorphism-ℤ :
     (k : ℤ) (e : Aut X) →
     (map-iterate-automorphism-ℤ k e ∘ map-inv-iterate-automorphism-ℤ k e) ~ id
-  is-section-map-inv-iterate-automorphism-ℤ k e = {!!}
+  is-section-map-inv-iterate-automorphism-ℤ = {!!}
 
   is-retraction-map-inv-iterate-automorphism-ℤ :
     (k : ℤ) (e : Aut X) →
     (map-inv-iterate-automorphism-ℤ k e ∘ map-iterate-automorphism-ℤ k e) ~ id
-  is-retraction-map-inv-iterate-automorphism-ℤ k e = {!!}
+  is-retraction-map-inv-iterate-automorphism-ℤ = {!!}
 ```
 
 #### Iterating by precomposition using an integer
@@ -113,7 +113,7 @@ module _
   where
 
   iterate-automorphism-ℤ' : ℤ → Aut X → Aut X
-  iterate-automorphism-ℤ' (inl zero-ℕ) e = {!!}
+  iterate-automorphism-ℤ' = {!!}
 ```
 
 ## Properties
@@ -128,7 +128,7 @@ module _
   iterate-automorphism-int-ℕ :
     (n : ℕ) (e : Aut X) →
     htpy-equiv (iterate-automorphism-ℕ n e) (iterate-automorphism-ℤ (int-ℕ n) e)
-  iterate-automorphism-int-ℕ zero-ℕ e = {!!}
+  iterate-automorphism-int-ℕ = {!!}
 ```
 
 ### Iterating by postcomposition is homotopic to iterating by precomposition
@@ -145,12 +145,12 @@ module _
     htpy-equiv
       ( iterate-automorphism-ℕ (succ-ℕ n) e)
       ( iterate-automorphism-ℕ n e ∘e e)
-  iterate-automorphism-succ-ℕ zero-ℕ e = {!!}
+  iterate-automorphism-succ-ℕ = {!!}
 
   reassociate-iterate-automorphism-ℕ :
     (n : ℕ) (e : Aut X) →
     htpy-equiv (iterate-automorphism-ℕ n e) (iterate-automorphism-ℕ' n e)
-  reassociate-iterate-automorphism-ℕ zero-ℕ e = {!!}
+  reassociate-iterate-automorphism-ℕ = {!!}
 ```
 
 #### For the integers
@@ -165,7 +165,7 @@ module _
     htpy-equiv
       ( iterate-automorphism-ℤ (succ-ℤ k) e)
       ( iterate-automorphism-ℤ k e ∘e e)
-  iterate-automorphism-succ-ℤ (inl zero-ℕ) e = {!!}
+  iterate-automorphism-succ-ℤ = {!!}
   iterate-automorphism-succ-ℤ (inl (succ-ℕ zero-ℕ)) e = {!!}
   iterate-automorphism-succ-ℤ (inl (succ-ℕ (succ-ℕ x))) e = {!!}
   iterate-automorphism-succ-ℤ (inr (inl _)) e = {!!}
@@ -175,7 +175,7 @@ module _
     htpy-equiv
       ( iterate-automorphism-ℤ (succ-ℤ k) e)
       ( e ∘e iterate-automorphism-ℤ k e)
-  iterate-automorphism-succ-ℤ' (inl zero-ℕ) e = {!!}
+  iterate-automorphism-succ-ℤ' = {!!}
   iterate-automorphism-succ-ℤ' (inl (succ-ℕ x)) e = {!!}
   iterate-automorphism-succ-ℤ' (inr (inl _)) e = {!!}
 
@@ -184,19 +184,19 @@ module _
     htpy-equiv
       ( iterate-automorphism-ℤ (pred-ℤ k) e)
       ( iterate-automorphism-ℤ k e ∘e inv-equiv e)
-  iterate-automorphism-pred-ℤ (inl zero-ℕ) e = {!!}
+  iterate-automorphism-pred-ℤ = {!!}
 
   iterate-automorphism-pred-ℤ' :
     (k : ℤ) (e : Aut X) →
     htpy-equiv
       ( iterate-automorphism-ℤ (pred-ℤ k) e)
       ( inv-equiv e ∘e iterate-automorphism-ℤ k e)
-  iterate-automorphism-pred-ℤ' (inl zero-ℕ) e = {!!}
+  iterate-automorphism-pred-ℤ' = {!!}
 
   reassociate-iterate-automorphism-ℤ :
     (k : ℤ) (e : Aut X) →
     htpy-equiv (iterate-automorphism-ℤ k e) (iterate-automorphism-ℤ' k e)
-  reassociate-iterate-automorphism-ℤ (inl zero-ℕ) e = {!!}
+  reassociate-iterate-automorphism-ℤ = {!!}
 ```
 
 ### Iterating an automorphism `k+l` times
@@ -211,5 +211,5 @@ module _
     htpy-equiv
       ( iterate-automorphism-ℤ (k +ℤ l) e)
       ( iterate-automorphism-ℤ k e ∘e iterate-automorphism-ℤ l e)
-  iterate-automorphism-add-ℤ (inl zero-ℕ) l e = {!!}
+  iterate-automorphism-add-ℤ = {!!}
 ```

@@ -68,7 +68,7 @@ module _
 
 ```agda
 Join-Semilattice : (l : Level) → UU (lsuc l)
-Join-Semilattice l = {!!}
+Join-Semilattice = {!!}
 
 module _
   {l : Level} (X : Join-Semilattice l)
@@ -90,7 +90,7 @@ module _
   join-Join-Semilattice = {!!}
 
   join-Join-Semilattice' : (x y : type-Join-Semilattice) → type-Join-Semilattice
-  join-Join-Semilattice' x y = {!!}
+  join-Join-Semilattice' = {!!}
 
   private
     _∨_ = {!!}
@@ -127,19 +127,19 @@ module _
     _≤_ = {!!}
 
   refl-leq-Join-Semilattice : is-reflexive leq-Join-Semilattice
-  refl-leq-Join-Semilattice x = {!!}
+  refl-leq-Join-Semilattice = {!!}
 
   transitive-leq-Join-Semilattice : is-transitive leq-Join-Semilattice
-  transitive-leq-Join-Semilattice x y z H K = {!!}
+  transitive-leq-Join-Semilattice = {!!}
 
   antisymmetric-leq-Join-Semilattice : is-antisymmetric leq-Join-Semilattice
-  antisymmetric-leq-Join-Semilattice x y H K = {!!}
+  antisymmetric-leq-Join-Semilattice = {!!}
 
   preorder-Join-Semilattice : Preorder l l
-  pr1 preorder-Join-Semilattice = {!!}
+  preorder-Join-Semilattice = {!!}
 
   poset-Join-Semilattice : Poset l l
-  pr1 poset-Join-Semilattice = {!!}
+  poset-Join-Semilattice = {!!}
 
   is-binary-upper-bound-join-Join-Semilattice :
     (x y : type-Join-Semilattice) →
@@ -196,7 +196,7 @@ module _
 
 ```agda
 Order-Theoretic-Join-Semilattice : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Order-Theoretic-Join-Semilattice l1 l2 = {!!}
+Order-Theoretic-Join-Semilattice = {!!}
 
 module _
   {l1 l2 : Level} (A : Order-Theoretic-Join-Semilattice l1 l2)
@@ -393,7 +393,7 @@ module _
   where
 
   semigroup-Order-Theoretic-Join-Semilattice : Semigroup l1
-  pr1 semigroup-Order-Theoretic-Join-Semilattice = {!!}
+  semigroup-Order-Theoretic-Join-Semilattice = {!!}
 
   join-semilattice-Order-Theoretic-Join-Semilattice :
     Join-Semilattice l1

@@ -39,18 +39,18 @@ construct a section of `B` it suffices to provide an element of `B a` for some
 ```agda
 is-subsingleton :
   (l1 : Level) {l2 : Level} (A : UU l2) → UU (lsuc l1 ⊔ l2)
-is-subsingleton l A = {!!}
+is-subsingleton = {!!}
 
 ind-is-subsingleton :
   {l1 l2 : Level} {A : UU l1} →
   ({l : Level} → is-subsingleton l A) → {B : A → UU l2} (a : A) →
   B a → (x : A) → B x
-ind-is-subsingleton is-subsingleton-A a = {!!}
+ind-is-subsingleton = {!!}
 
 compute-ind-is-subsingleton :
   {l1 l2 : Level} {A : UU l1} (H : {l : Level} → is-subsingleton l A) →
   {B : A → UU l2} (a : A) → ev-point a {B} ∘ ind-is-subsingleton H {B} a ~ id
-compute-ind-is-subsingleton is-subsingleton-A a = {!!}
+compute-ind-is-subsingleton = {!!}
 ```
 
 ## Properties
@@ -62,14 +62,14 @@ abstract
   ind-subsingleton :
     {l1 l2 : Level} {A : UU l1} (is-prop-A : is-prop A)
     {B : A → UU l2} (a : A) → B a → (x : A) → B x
-  ind-subsingleton is-prop-A {B} a = {!!}
+  ind-subsingleton = {!!}
 
 abstract
   compute-ind-subsingleton :
     {l1 l2 : Level} {A : UU l1}
     (is-prop-A : is-prop A) {B : A → UU l2} (a : A) →
     ev-point a {B} ∘ ind-subsingleton is-prop-A {B} a ~ id
-  compute-ind-subsingleton is-prop-A {B} a = {!!}
+  compute-ind-subsingleton = {!!}
 ```
 
 ### A type satisfies subsingleton induction if and only if it is a proposition
@@ -77,16 +77,16 @@ abstract
 ```agda
 is-subsingleton-is-prop :
   {l1 l2 : Level} {A : UU l1} → is-prop A → is-subsingleton l2 A
-is-subsingleton-is-prop is-prop-A {B} a = {!!}
+is-subsingleton-is-prop = {!!}
 
 abstract
   is-prop-ind-subsingleton :
     {l1 : Level} (A : UU l1) →
     ({l2 : Level} {B : A → UU l2} (a : A) → B a → (x : A) → B x) → is-prop A
-  is-prop-ind-subsingleton A S = {!!}
+  is-prop-ind-subsingleton = {!!}
 
 abstract
   is-prop-is-subsingleton :
     {l1 : Level} (A : UU l1) → ({l2 : Level} → is-subsingleton l2 A) → is-prop A
-  is-prop-is-subsingleton A S = {!!}
+  is-prop-is-subsingleton = {!!}
 ```

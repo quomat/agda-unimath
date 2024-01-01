@@ -29,7 +29,7 @@ times.
 
 ```agda
 exp-ℕ : ℕ → ℕ → ℕ
-exp-ℕ m 0 = {!!}
+exp-ℕ = {!!}
 exp-ℕ m (succ-ℕ n) = {!!}
 
 infixr 45 _^ℕ_
@@ -47,7 +47,7 @@ power-ℕ = {!!}
 
 ```agda
 annihilation-law-exp-ℕ : (n : ℕ) → 1 ^ℕ n ＝ 1
-annihilation-law-exp-ℕ zero-ℕ = {!!}
+annihilation-law-exp-ℕ = {!!}
 annihilation-law-exp-ℕ (succ-ℕ n) = {!!}
 
 left-distributive-exp-add-ℕ :
@@ -59,7 +59,7 @@ right-distributive-exp-mul-ℕ :
 right-distributive-exp-mul-ℕ = {!!}
 
 exp-mul-ℕ : (x y z : ℕ) → x ^ℕ (y *ℕ z) ＝ (x ^ℕ y) ^ℕ z
-exp-mul-ℕ x zero-ℕ z = {!!}
+exp-mul-ℕ = {!!}
 exp-mul-ℕ x (succ-ℕ y) z = {!!}
 ```
 

@@ -32,7 +32,7 @@ valued in propositions.
 
 ```agda
 Preorder : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Preorder l1 l2 = {!!}
+Preorder = {!!}
 
 module _
   {l1 l2 : Level} (X : Preorder l1 l2)
@@ -45,7 +45,7 @@ module _
   leq-Preorder-Prop = {!!}
 
   leq-Preorder : (x y : type-Preorder) → UU l2
-  leq-Preorder x y = {!!}
+  leq-Preorder = {!!}
 
   is-prop-leq-Preorder : (x y : type-Preorder) → is-prop (leq-Preorder x y)
   is-prop-leq-Preorder = {!!}
@@ -59,10 +59,10 @@ module _
   concatenate-leq-eq-Preorder = {!!}
 
   le-Preorder-Prop : Relation-Prop (l1 ⊔ l2) type-Preorder
-  le-Preorder-Prop x y = {!!}
+  le-Preorder-Prop = {!!}
 
   le-Preorder : Relation (l1 ⊔ l2) type-Preorder
-  le-Preorder x y = {!!}
+  le-Preorder = {!!}
 
   is-prop-le-Preorder : (x y : type-Preorder) → is-prop (le-Preorder x y)
   is-prop-le-Preorder = {!!}
@@ -129,7 +129,7 @@ module _
   where
 
   precategory-Preorder : Precategory l1 l2
-  pr1 precategory-Preorder = {!!}
+  precategory-Preorder = {!!}
 
 module _
   {l1 l2 : Level} (C : Precategory l1 l2)
@@ -137,7 +137,7 @@ module _
   where
 
   preorder-is-prop-hom-Precategory : Preorder l1 l2
-  pr1 preorder-is-prop-hom-Precategory = {!!}
+  preorder-is-prop-hom-Precategory = {!!}
 ```
 
 It remains to show that these constructions form inverses to eachother.

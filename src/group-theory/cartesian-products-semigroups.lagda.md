@@ -51,5 +51,5 @@ module _
   associative-mul-prod-Semigroup = {!!}
 
   prod-Semigroup : Semigroup (l1 ⊔ l2)
-  pr1 prod-Semigroup = {!!}
+  prod-Semigroup = {!!}
 ```

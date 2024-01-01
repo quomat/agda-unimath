@@ -122,7 +122,7 @@ module _ {l1 l2} {X : UU l1} (_<_ : Relation l2 X) where
   is-prop-is-accessible-element-Relation = {!!}
 
   is-accessible-element-prop-Relation : (x : X) → Prop (l1 ⊔ l2)
-  pr1 (is-accessible-element-prop-Relation x) = {!!}
+  is-accessible-element-prop-Relation = {!!}
 ```
 
 ### If `x` is an `<`-accessible element, then `<` is antisymmetric at `x`

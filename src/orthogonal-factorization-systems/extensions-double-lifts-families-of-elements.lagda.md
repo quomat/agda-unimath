@@ -210,8 +210,7 @@ module _
 
   family-of-elements-comp-extension-dependent-double-lift-family-of-elements :
     (i : I) (x : A i) → B i x → D i x
-  family-of-elements-comp-extension-dependent-double-lift-family-of-elements
-    i x = {!!}
+  family-of-elements-comp-extension-dependent-double-lift-family-of-elements = {!!}
 
   is-extension-comp-extension-dependent-double-lift-family-of-elements :
     is-extension-dependent-double-lift-family-of-elements b

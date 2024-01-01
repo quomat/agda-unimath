@@ -30,7 +30,7 @@ The `n`-th **join power** of a type `A` is defined by taking the
 
 ```agda
 join-power : {l1 : Level} → ℕ → UU l1 → UU l1
-join-power n A = {!!}
+join-power = {!!}
 ```
 
 ### Join powers of type families

@@ -40,10 +40,10 @@ maps between general types it is recommended to use the notion of
 
 ```agda
 is-injective : {l1 l2 : Level} {A : UU l1} {B : UU l2} → (A → B) → UU (l1 ⊔ l2)
-is-injective {l1} {l2} {A} {B} f = {!!}
+is-injective = {!!}
 
 injection : {l1 l2 : Level} (A : UU l1) (B : UU l2) → UU (l1 ⊔ l2)
-injection A B = {!!}
+injection = {!!}
 ```
 
 ## Examples
@@ -52,10 +52,10 @@ injection A B = {!!}
 
 ```agda
 is-injective-id : {l1 : Level} {A : UU l1} → is-injective (id {A = A})
-is-injective-id p = {!!}
+is-injective-id = {!!}
 
 id-injection : {l1 : Level} {A : UU l1} → injection A A
-pr1 id-injection = {!!}
+id-injection = {!!}
 pr2 id-injection = {!!}
 ```
 
@@ -106,11 +106,11 @@ module _
 
   abstract
     is-injective-is-equiv : {f : A → B} → is-equiv f → is-injective f
-    is-injective-is-equiv H {x} {y} p = {!!}
+    is-injective-is-equiv = {!!}
 
   abstract
     is-injective-map-equiv : (e : A ≃ B) → is-injective (map-equiv e)
-    is-injective-map-equiv (pair f H) = {!!}
+    is-injective-map-equiv = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
@@ -118,10 +118,10 @@ module _
 
   abstract
     is-injective-map-inv-equiv : (e : A ≃ B) → is-injective (map-inv-equiv e)
-    is-injective-map-inv-equiv e = {!!}
+    is-injective-map-inv-equiv = {!!}
 
   is-equiv-is-injective : {f : A → B} → section f → is-injective f → is-equiv f
-  is-equiv-is-injective {f} (pair g G) H = {!!}
+  is-equiv-is-injective = {!!}
 ```
 
 ### Any embedding is injective
@@ -132,10 +132,10 @@ module _
   where
 
   is-injective-is-emb : {f : A → B} → is-emb f → is-injective f
-  is-injective-is-emb is-emb-f {x} {y} = {!!}
+  is-injective-is-emb = {!!}
 
   is-injective-emb : (e : A ↪ B) → is-injective (map-emb e)
-  is-injective-emb e {x} {y} = {!!}
+  is-injective-emb = {!!}
 ```
 
 ### Any injective map between sets is an embedding
@@ -176,7 +176,7 @@ module _
   is-prop-is-injective = {!!}
 
   is-injective-Prop : is-set A → (A → B) → Prop (l1 ⊔ l2)
-  pr1 (is-injective-Prop H f) = {!!}
+  is-injective-Prop = {!!}
 ```
 
 ### Any map out of a contractible type is injective

@@ -44,7 +44,7 @@ module _
   is-prop-is-pregroupoid-Precategory = {!!}
 
   is-pregroupoid-prop-Precategory : Prop (l1 ⊔ l2)
-  pr1 is-pregroupoid-prop-Precategory = {!!}
+  is-pregroupoid-prop-Precategory = {!!}
 ```
 
 ### The type of pregroupoids

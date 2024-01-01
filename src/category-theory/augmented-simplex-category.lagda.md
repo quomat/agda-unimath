@@ -130,7 +130,7 @@ pr1 (pr2 is-unital-composition-operation-augmented-simplex-Category) {n} {m} = {
 pr2 (pr2 is-unital-composition-operation-augmented-simplex-Category) {n} {m} = {!!}
 
 augmented-simplex-Precategory : Precategory lzero lzero
-pr1 augmented-simplex-Precategory = {!!}
+augmented-simplex-Precategory = {!!}
 pr1 (pr2 augmented-simplex-Precategory) = {!!}
 pr1 (pr2 (pr2 augmented-simplex-Precategory)) = {!!}
 pr2 (pr2 (pr2 augmented-simplex-Precategory)) = {!!}

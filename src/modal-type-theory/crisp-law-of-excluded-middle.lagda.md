@@ -30,7 +30,7 @@ The **crisp law of excluded middle** asserts that any crisp
 
 ```agda
 Crisp-LEM : (@♭ l : Level) → UU (lsuc l)
-Crisp-LEM l = {!!}
+Crisp-LEM = {!!}
 ```
 
 ## Properties

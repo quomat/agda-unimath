@@ -61,14 +61,14 @@ module _
 
   edge-finite-type-complete-multipartite-Undirected-Graph-𝔽 :
     unordered-pair-vertices-complete-multipartite-Undirected-Graph-𝔽 → 𝔽 l1
-  edge-finite-type-complete-multipartite-Undirected-Graph-𝔽 p = {!!}
+  edge-finite-type-complete-multipartite-Undirected-Graph-𝔽 = {!!}
 
   edge-complete-multipartite-Undirected-Graph-𝔽 :
     unordered-pair-vertices-complete-multipartite-Undirected-Graph-𝔽 → UU l1
-  edge-complete-multipartite-Undirected-Graph-𝔽 p = {!!}
+  edge-complete-multipartite-Undirected-Graph-𝔽 = {!!}
 
   complete-multipartite-Undirected-Graph-𝔽 : Undirected-Graph-𝔽 (l1 ⊔ l2) l1
-  pr1 complete-multipartite-Undirected-Graph-𝔽 = {!!}
+  complete-multipartite-Undirected-Graph-𝔽 = {!!}
   pr2 complete-multipartite-Undirected-Graph-𝔽 = {!!}
 ```
 

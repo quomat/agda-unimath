@@ -41,7 +41,7 @@ its identity types are `k`-truncated.
 
 ```agda
 is-trunc : {l : Level} (k : 𝕋) → UU l → UU l
-is-trunc neg-two-𝕋 A = {!!}
+is-trunc = {!!}
 is-trunc (succ-𝕋 k) A = {!!}
 
 is-trunc-eq :
@@ -53,7 +53,7 @@ is-trunc-eq = {!!}
 
 ```agda
 Truncated-Type : (l : Level) → 𝕋 → UU (lsuc l)
-Truncated-Type l k = {!!}
+Truncated-Type = {!!}
 
 module _
   {k : 𝕋} {l : Level}
@@ -300,7 +300,7 @@ abstract
   is-prop-is-trunc = {!!}
 
 is-trunc-Prop : {l : Level} (k : 𝕋) (A : UU l) → Σ (UU l) (is-trunc neg-one-𝕋)
-pr1 (is-trunc-Prop k A) = {!!}
+is-trunc-Prop = {!!}
 pr2 (is-trunc-Prop k A) = {!!}
 ```
 

@@ -82,7 +82,7 @@ module _
   where
 
   iso-iterative-groupoid-automorphism-𝔽 : (x y : type-𝔽 X) → UU l
-  iso-iterative-groupoid-automorphism-𝔽 x y = {!!}
+  iso-iterative-groupoid-automorphism-𝔽 = {!!}
 
   natural-isomorphism-iterative-groupoid-automorphism-𝔽 :
     (x y : type-𝔽 X) (f : iso-iterative-groupoid-automorphism-𝔽 x y) → ℕ
@@ -128,7 +128,7 @@ module _
   point2-iterate-ℕ = {!!}
 
   neq-points-iterate-ℕ : point1-iterate-ℕ ≠ point2-iterate-ℕ
-  neq-points-iterate-ℕ p = {!!}
+  neq-points-iterate-ℕ = {!!}
 
   two-points-iterate-ordered-ℕ :
     ( point1-iterate-ℕ ≤-ℕ point2-iterate-ℕ) +
@@ -253,7 +253,7 @@ module _
   where
 
   composition-transposition-a-b : (X ≃ X) → (X ≃ X)
-  composition-transposition-a-b g = {!!}
+  composition-transposition-a-b = {!!}
 
   composition-transposition-a-b-involution :
     ( g : X ≃ X) →

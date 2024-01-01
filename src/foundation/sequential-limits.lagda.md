@@ -95,7 +95,7 @@ module _
   where
 
   cone-standard-sequential-limit : cone-tower A (standard-sequential-limit A)
-  pr1 cone-standard-sequential-limit n x = {!!}
+  cone-standard-sequential-limit = {!!}
 ```
 
 ### The gap map into the standard sequential limit
@@ -109,7 +109,7 @@ module _
   where
 
   gap-tower : cone-tower A X → X → standard-sequential-limit A
-  pr1 (gap-tower c x) n = {!!}
+  gap-tower = {!!}
 ```
 
 ### The property of being a sequential limit
@@ -126,14 +126,14 @@ module _
   where
 
   is-sequential-limit : cone-tower A X → UU (l1 ⊔ l2)
-  is-sequential-limit c = {!!}
+  is-sequential-limit = {!!}
 
   is-property-is-sequential-limit :
     (c : cone-tower A X) → is-prop (is-sequential-limit c)
   is-property-is-sequential-limit = {!!}
 
   is-sequential-limit-Prop : (c : cone-tower A X) → Prop (l1 ⊔ l2)
-  pr1 (is-sequential-limit-Prop c) = {!!}
+  is-sequential-limit-Prop = {!!}
 ```
 
 ## Properties
@@ -146,7 +146,7 @@ module _
   where
 
   Eq-standard-sequential-limit : (s t : standard-sequential-limit A) → UU l
-  Eq-standard-sequential-limit s t = {!!}
+  Eq-standard-sequential-limit = {!!}
 
   refl-Eq-standard-sequential-limit :
     (s : standard-sequential-limit A) → Eq-standard-sequential-limit s s
@@ -192,12 +192,12 @@ module _
   is-retraction-gap-tower :
     {l : Level} {Y : UU l} →
     gap-tower A ∘ cone-map-standard-sequential-limit {Y = Y} ~ id
-  is-retraction-gap-tower x = {!!}
+  is-retraction-gap-tower = {!!}
 
   is-section-gap-tower :
     {l : Level} {Y : UU l} →
     cone-map-standard-sequential-limit {Y = Y} ∘ gap-tower A ~ id
-  is-section-gap-tower x = {!!}
+  is-section-gap-tower = {!!}
 
   universal-property-standard-sequential-limit :
     universal-property-sequential-limit A (cone-standard-sequential-limit A)

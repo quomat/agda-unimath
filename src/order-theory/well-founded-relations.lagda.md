@@ -58,7 +58,7 @@ module _
 
 ```agda
 Well-Founded-Relation : {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-Well-Founded-Relation l X = {!!}
+Well-Founded-Relation = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} (R : Well-Founded-Relation l2 X)

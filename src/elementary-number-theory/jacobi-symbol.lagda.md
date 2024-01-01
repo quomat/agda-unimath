@@ -39,7 +39,7 @@ possible that `pᵢ = {!!}
 
 ```agda
 jacobi-symbol : ℤ → ℕ → ℤ
-jacobi-symbol a 0 = {!!}
+jacobi-symbol = {!!}
 jacobi-symbol a 1 = {!!}
 jacobi-symbol a (succ-ℕ (succ-ℕ n)) = {!!}
 ```

@@ -58,7 +58,7 @@ module _
   is-set-prod-set-quotient = {!!}
 
   prod-set-quotient-map : (A × B) → prod-set-quotient
-  prod-set-quotient-map (a , b) = {!!}
+  prod-set-quotient-map = {!!}
 
   reflecting-map-prod-quotient-map :
     reflecting-map-equivalence-relation

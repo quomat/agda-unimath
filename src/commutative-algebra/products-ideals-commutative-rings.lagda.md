@@ -116,7 +116,7 @@ module _
     leq-ideal-Commutative-Ring A
       ( product-ideal-Commutative-Ring A I K)
       ( product-ideal-Commutative-Ring A J L)
-  preserves-order-product-ideal-Commutative-Ring p q = {!!}
+  preserves-order-product-ideal-Commutative-Ring = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} (A : Commutative-Ring l1)
@@ -130,7 +130,7 @@ module _
     leq-ideal-Commutative-Ring A
       ( product-ideal-Commutative-Ring A I K)
       ( product-ideal-Commutative-Ring A J K)
-  preserves-order-left-product-ideal-Commutative-Ring p = {!!}
+  preserves-order-left-product-ideal-Commutative-Ring = {!!}
 
   preserves-order-right-product-ideal-Commutative-Ring :
     leq-ideal-Commutative-Ring A J K →
@@ -169,8 +169,7 @@ module _
       ( mul-Commutative-Ring A
         ( mul-Commutative-Ring A (mul-Commutative-Ring A x s) y)
         ( ev-formal-combination-subset-Commutative-Ring A T l))
-  left-backward-inclusion-preserves-product-ideal-subset-Commutative-Ring
-    H nil = {!!}
+  left-backward-inclusion-preserves-product-ideal-subset-Commutative-Ring = {!!}
 
   right-backward-inclusion-preserves-product-ideal-subset-Commutative-Ring :
     {u t v : type-Commutative-Ring A} →
@@ -181,8 +180,7 @@ module _
       ( mul-Commutative-Ring A
         ( ev-formal-combination-subset-Commutative-Ring A S k)
         ( mul-Commutative-Ring A (mul-Commutative-Ring A u t) v))
-  right-backward-inclusion-preserves-product-ideal-subset-Commutative-Ring
-    Ht nil = {!!}
+  right-backward-inclusion-preserves-product-ideal-subset-Commutative-Ring = {!!}
 
   backward-inclusion-preserves-product-ideal-subset-Commutative-Ring' :
     ( s t : type-Commutative-Ring A)
@@ -191,8 +189,7 @@ module _
     is-in-ideal-subset-Commutative-Ring A
       ( product-subset-Commutative-Ring A S T)
       ( mul-Commutative-Ring A s t)
-  backward-inclusion-preserves-product-ideal-subset-Commutative-Ring' ._ t
-    ( nil , refl) l = {!!}
+  backward-inclusion-preserves-product-ideal-subset-Commutative-Ring' = {!!}
 
   backward-inclusion-preserves-product-ideal-subset-Commutative-Ring :
     leq-ideal-Commutative-Ring A
@@ -303,7 +300,7 @@ module _
       ( product-ideal-Commutative-Ring A
         ( I)
         ( product-ideal-Commutative-Ring A J K))
-  forward-inclusion-associative-product-ideal-Commutative-Ring x H = {!!}
+  forward-inclusion-associative-product-ideal-Commutative-Ring = {!!}
 
   backward-inclusion-associative-product-ideal-Commutative-Ring :
     leq-ideal-Commutative-Ring A
@@ -312,7 +309,7 @@ module _
       ( product-ideal-Commutative-Ring A
         ( product-ideal-Commutative-Ring A I J)
         ( K))
-  backward-inclusion-associative-product-ideal-Commutative-Ring x H = {!!}
+  backward-inclusion-associative-product-ideal-Commutative-Ring = {!!}
 
   associative-product-ideal-Commutative-Ring :
     product-ideal-Commutative-Ring A (product-ideal-Commutative-Ring A I J) K ＝

@@ -37,10 +37,10 @@ which the inequality [relation](foundation.binary-relations.md) is
 
 ```agda
 is-decidable-total-prop-Poset : {l1 l2 : Level} → Poset l1 l2 → Prop (l1 ⊔ l2)
-is-decidable-total-prop-Poset P = {!!}
+is-decidable-total-prop-Poset = {!!}
 
 is-decidable-total-Poset : {l1 l2 : Level} → Poset l1 l2 → UU (l1 ⊔ l2)
-is-decidable-total-Poset P = {!!}
+is-decidable-total-Poset = {!!}
 
 is-prop-is-decidable-total-Poset :
   {l1 l2 : Level} (P : Poset l1 l2) → is-prop (is-decidable-total-Poset P)
@@ -51,7 +51,7 @@ is-prop-is-decidable-total-Poset = {!!}
 
 ```agda
 Decidable-Total-Order : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Decidable-Total-Order l1 l2 = {!!}
+Decidable-Total-Order = {!!}
 
 module _
   {l1 l2 : Level} (P : Decidable-Total-Order l1 l2)
@@ -98,7 +98,7 @@ module _
   is-prop-le-Decidable-Total-Order = {!!}
 
   decidable-poset-Decidable-Total-Order : Decidable-Poset l1 l2
-  pr1 decidable-poset-Decidable-Total-Order = {!!}
+  decidable-poset-Decidable-Total-Order = {!!}
 
   leq-total-decidable-poset-decidable-Prop :
     (x y : type-Decidable-Total-Order) → Decidable-Prop l2

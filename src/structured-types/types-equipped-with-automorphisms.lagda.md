@@ -28,7 +28,7 @@ an [automorphism](foundation.automorphisms.md) on `e : A ≃ A`.
 
 ```agda
 Type-With-Automorphism : (l : Level) → UU (lsuc l)
-Type-With-Automorphism l = {!!}
+Type-With-Automorphism = {!!}
 
 module _
   {l : Level} (A : Type-With-Automorphism l)
@@ -45,14 +45,14 @@ module _
   map-Type-With-Automorphism = {!!}
 
   type-with-endomorphism-Type-With-Automorphism : Type-With-Endomorphism l
-  pr1 type-with-endomorphism-Type-With-Automorphism = {!!}
+  type-with-endomorphism-Type-With-Automorphism = {!!}
 ```
 
 ### Types equipped with the identity automorphism
 
 ```agda
 trivial-Type-With-Automorphism : {l : Level} → UU l → Type-With-Automorphism l
-pr1 (trivial-Type-With-Automorphism X) = {!!}
+trivial-Type-With-Automorphism = {!!}
 pr2 (trivial-Type-With-Automorphism X) = {!!}
 ```
 

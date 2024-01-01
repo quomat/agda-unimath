@@ -52,5 +52,5 @@ module _
   where
 
   trivial-hom-Group : hom-Group G H
-  pr1 trivial-hom-Group x = {!!}
+  trivial-hom-Group = {!!}
 ```

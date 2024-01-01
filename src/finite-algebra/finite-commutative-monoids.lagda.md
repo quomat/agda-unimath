@@ -38,10 +38,10 @@ all `x y : M`.
 ```agda
 is-commutative-Monoid-𝔽 :
   {l : Level} (M : Monoid-𝔽 l) → UU l
-is-commutative-Monoid-𝔽 M = {!!}
+is-commutative-Monoid-𝔽 = {!!}
 
 Commutative-Monoid-𝔽 : (l : Level) → UU (lsuc l)
-Commutative-Monoid-𝔽 l = {!!}
+Commutative-Monoid-𝔽 = {!!}
 
 module _
   {l : Level} (M : Commutative-Monoid-𝔽 l)
@@ -105,7 +105,7 @@ module _
   commutative-mul-Commutative-Monoid-𝔽 = {!!}
 
   commutative-monoid-Commutative-Monoid-𝔽 : Commutative-Monoid l
-  pr1 commutative-monoid-Commutative-Monoid-𝔽 = {!!}
+  commutative-monoid-Commutative-Monoid-𝔽 = {!!}
 
   interchange-mul-mul-Commutative-Monoid-𝔽 :
     (x y x' y' : type-Commutative-Monoid-𝔽) →
@@ -169,7 +169,7 @@ module _
 
   compute-structure-commutative-monoid-𝔽 :
     structure-commutative-monoid-𝔽 → Commutative-Monoid-𝔽 l
-  pr1 (compute-structure-commutative-monoid-𝔽 (m , c)) = {!!}
+  compute-structure-commutative-monoid-𝔽 = {!!}
 
   is-finite-structure-commutative-monoid-𝔽 :
     is-finite structure-commutative-monoid-𝔽

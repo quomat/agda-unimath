@@ -118,7 +118,7 @@ module _
 
 ```agda
 higher-modality : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-higher-modality l1 l2 = {!!}
+higher-modality = {!!}
 ```
 
 ### Components of a higher modality

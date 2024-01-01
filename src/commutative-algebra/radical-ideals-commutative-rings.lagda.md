@@ -44,16 +44,16 @@ module _
 
   is-radical-ideal-prop-Commutative-Ring :
     (I : ideal-Commutative-Ring l2 A) → Prop (l1 ⊔ l2)
-  is-radical-ideal-prop-Commutative-Ring I = {!!}
+  is-radical-ideal-prop-Commutative-Ring = {!!}
 
   is-radical-ideal-Commutative-Ring :
     (I : ideal-Commutative-Ring l2 A) → UU (l1 ⊔ l2)
-  is-radical-ideal-Commutative-Ring I = {!!}
+  is-radical-ideal-Commutative-Ring = {!!}
 
   is-prop-is-radical-ideal-Commutative-Ring :
     (I : ideal-Commutative-Ring l2 A) →
     is-prop (is-radical-ideal-Commutative-Ring I)
-  is-prop-is-radical-ideal-Commutative-Ring I = {!!}
+  is-prop-is-radical-ideal-Commutative-Ring = {!!}
 ```
 
 ### Radical ideals
@@ -61,7 +61,7 @@ module _
 ```agda
 radical-ideal-Commutative-Ring :
   {l1 : Level} (l2 : Level) → Commutative-Ring l1 → UU (l1 ⊔ lsuc l2)
-radical-ideal-Commutative-Ring l2 A = {!!}
+radical-ideal-Commutative-Ring = {!!}
 
 module _
   {l1 l2 : Level} (A : Commutative-Ring l1)
@@ -141,36 +141,36 @@ module _
     {l2 l3 : Level} →
     radical-ideal-Commutative-Ring l2 A →
     radical-ideal-Commutative-Ring l3 A → UU (l1 ⊔ l2 ⊔ l3)
-  has-same-elements-radical-ideal-Commutative-Ring I J = {!!}
+  has-same-elements-radical-ideal-Commutative-Ring = {!!}
 
   refl-has-same-elements-radical-ideal-Commutative-Ring :
     {l2 : Level} (I : radical-ideal-Commutative-Ring l2 A) →
     has-same-elements-radical-ideal-Commutative-Ring I I
-  refl-has-same-elements-radical-ideal-Commutative-Ring I = {!!}
+  refl-has-same-elements-radical-ideal-Commutative-Ring = {!!}
 
   is-torsorial-has-same-elements-radical-ideal-Commutative-Ring :
     {l2 : Level} (I : radical-ideal-Commutative-Ring l2 A) →
     is-torsorial
       ( has-same-elements-radical-ideal-Commutative-Ring I)
-  is-torsorial-has-same-elements-radical-ideal-Commutative-Ring I = {!!}
+  is-torsorial-has-same-elements-radical-ideal-Commutative-Ring = {!!}
 
   has-same-elements-eq-radical-ideal-Commutative-Ring :
     {l2 : Level} (I J : radical-ideal-Commutative-Ring l2 A) →
     (I ＝ J) → has-same-elements-radical-ideal-Commutative-Ring I J
-  has-same-elements-eq-radical-ideal-Commutative-Ring I .I refl = {!!}
+  has-same-elements-eq-radical-ideal-Commutative-Ring = {!!}
 
   is-equiv-has-same-elements-eq-radical-ideal-Commutative-Ring :
     {l2 : Level} (I J : radical-ideal-Commutative-Ring l2 A) →
     is-equiv (has-same-elements-eq-radical-ideal-Commutative-Ring I J)
-  is-equiv-has-same-elements-eq-radical-ideal-Commutative-Ring I = {!!}
+  is-equiv-has-same-elements-eq-radical-ideal-Commutative-Ring = {!!}
 
   extensionality-radical-ideal-Commutative-Ring :
     {l2 : Level} (I J : radical-ideal-Commutative-Ring l2 A) →
     (I ＝ J) ≃ has-same-elements-radical-ideal-Commutative-Ring I J
-  pr1 (extensionality-radical-ideal-Commutative-Ring I J) = {!!}
+  extensionality-radical-ideal-Commutative-Ring = {!!}
 
   eq-has-same-elements-radical-ideal-Commutative-Ring :
     {l2 : Level} (I J : radical-ideal-Commutative-Ring l2 A) →
     has-same-elements-radical-ideal-Commutative-Ring I J → I ＝ J
-  eq-has-same-elements-radical-ideal-Commutative-Ring I J = {!!}
+  eq-has-same-elements-radical-ideal-Commutative-Ring = {!!}
 ```

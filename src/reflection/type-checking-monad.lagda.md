@@ -209,7 +209,7 @@ adapted from alhassy's
 ```agda
 private
   numTCM : Term → TC unit
-  numTCM h = {!!}
+  numTCM = {!!}
 
   _ : unquote numTCM ＝ 314
   _ = {!!}
@@ -220,7 +220,7 @@ private
 ```agda
   macro
     numTCM' : Term → TC unit
-    numTCM' h = {!!}
+    numTCM' = {!!}
 
   _ : numTCM' ＝ 1
   _ = {!!}
@@ -231,13 +231,13 @@ private
 ```agda
   macro
     swap-add : Term → Term → TC unit
-    swap-add (def (quote add-ℕ) (cons a (cons b nil))) hole = {!!}
+    swap-add = {!!}
 
   ex1 : (a b : ℕ) → swap-add (add-ℕ a b) ＝ (add-ℕ b a)
-  ex1 a b = {!!}
+  ex1 = {!!}
 
   ex2 : (a b : ℕ) → swap-add a ＝ a
-  ex2 a b = {!!}
+  ex2 = {!!}
 ```
 
 ### Trying a path
@@ -251,12 +251,11 @@ example was addapted from
     pattern _∷_ x xs = {!!}
 
   ＝-type-info : Term → TC (Arg Term × (Arg Term × (Term × Term)))
-  ＝-type-info
-    ( def (quote _＝_) (𝓁 ∷ 𝒯 ∷ (arg _ l) ∷ (arg _ r) ∷ nil)) = {!!}
+  ＝-type-info = {!!}
 
   macro
     try-path! : Term → Term → TC unit
-    try-path! p goal = {!!}
+    try-path! = {!!}
 
   module _ (a b : ℕ) (p : a ＝ b) where
     ex3 : Id a b
@@ -270,9 +269,6 @@ example was addapted from
 
 ```agda
 boundary-TCM : Term → TC (Term × Term)
-boundary-TCM
-  ( def
-    ( quote Id)
-    ( 𝓁 ∷ 𝒯 ∷ arg _ l ∷ arg _ r ∷ nil)) = {!!}
+boundary-TCM = {!!}
 boundary-TCM t = {!!}
 ```

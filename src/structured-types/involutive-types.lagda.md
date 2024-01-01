@@ -30,7 +30,7 @@ over `2-Element-Type lzero` equipped with an equivalence `X ≃ Y (Fin 2)`.
 
 ```agda
 Involutive-Type : (l : Level) → UU (lsuc l)
-Involutive-Type l = {!!}
+Involutive-Type = {!!}
 
 module _
   {l : Level} (X : Involutive-Type l)

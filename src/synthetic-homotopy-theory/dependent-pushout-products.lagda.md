@@ -68,7 +68,7 @@ module _
       ( map-Σ (Y ∘ f) id (g ∘ f))
       ( map-Σ B f (λ a → id))
       ( Σ X Y)
-  pr1 cocone-dependent-pushout-product = {!!}
+  cocone-dependent-pushout-product = {!!}
 
   abstract
     uniqueness-dependent-pushout-product :

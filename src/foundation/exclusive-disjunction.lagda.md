@@ -84,10 +84,10 @@ module _
 ```agda
 predicate-symmetric-xor :
   {l : Level} (p : unordered-pair (UU l)) → type-unordered-pair p → UU l
-predicate-symmetric-xor p x = {!!}
+predicate-symmetric-xor = {!!}
 
 symmetric-xor : {l : Level} → symmetric-operation (UU l) (UU l)
-symmetric-xor p = {!!}
+symmetric-xor = {!!}
 ```
 
 ### The symmetric operation of exclusive disjunction of propositions
@@ -96,25 +96,25 @@ symmetric-xor p = {!!}
 predicate-symmetric-xor-Prop :
   {l : Level} (p : unordered-pair (Prop l)) →
   type-unordered-pair p → UU l
-predicate-symmetric-xor-Prop p = {!!}
+predicate-symmetric-xor-Prop = {!!}
 
 type-symmetric-xor-Prop :
   {l : Level} → symmetric-operation (Prop l) (UU l)
-type-symmetric-xor-Prop p = {!!}
+type-symmetric-xor-Prop = {!!}
 
 all-elements-equal-type-symmetric-xor-Prop :
   {l : Level} (p : unordered-pair (Prop l)) →
   all-elements-equal (type-symmetric-xor-Prop p)
-all-elements-equal-type-symmetric-xor-Prop (pair X P) x y = {!!}
+all-elements-equal-type-symmetric-xor-Prop = {!!}
 
 is-prop-type-symmetric-xor-Prop :
   {l : Level} (p : unordered-pair (Prop l)) →
   is-prop (type-symmetric-xor-Prop p)
-is-prop-type-symmetric-xor-Prop p = {!!}
+is-prop-type-symmetric-xor-Prop = {!!}
 
 symmetric-xor-Prop :
   {l : Level} → symmetric-operation (Prop l) (Prop l)
-pr1 (symmetric-xor-Prop E) = {!!}
+symmetric-xor-Prop = {!!}
 pr2 (symmetric-xor-Prop E) = {!!}
 ```
 
@@ -142,7 +142,7 @@ module _
   where
 
   map-equiv-xor-Prop : type-xor-Prop' P Q → type-xor-Prop P Q
-  map-equiv-xor-Prop (pair (inl p) H) = {!!}
+  map-equiv-xor-Prop = {!!}
 
   equiv-xor-Prop : type-xor-Prop' P Q ≃ type-xor-Prop P Q
   equiv-xor-Prop = {!!}
@@ -157,11 +157,11 @@ module _
 
   xor-symmetric-xor :
     symmetric-xor (standard-unordered-pair A B) → xor A B
-  xor-symmetric-xor (pair (inl (inr _)) (pair p nq)) = {!!}
+  xor-symmetric-xor = {!!}
 
   symmetric-xor-xor :
     xor A B → symmetric-xor (standard-unordered-pair A B)
-  pr1 (symmetric-xor-xor (inl (pair a nb))) = {!!}
+  symmetric-xor-xor = {!!}
 
 {-
   eq-equiv-Prop
@@ -247,18 +247,18 @@ module _
     type-hom-Prop
       ( symmetric-xor-Prop (standard-unordered-pair P Q))
       ( xor-Prop P Q)
-  xor-symmetric-xor-Prop (pair (inl (inr _)) (pair p nq)) = {!!}
+  xor-symmetric-xor-Prop = {!!}
 
   symmetric-xor-xor-Prop :
     type-hom-Prop
       ( xor-Prop P Q)
       ( symmetric-xor-Prop (standard-unordered-pair P Q))
-  pr1 (symmetric-xor-xor-Prop (inl (pair p nq))) = {!!}
+  symmetric-xor-xor-Prop = {!!}
 
 eq-commmutative-xor-xor :
   {l : Level} (P Q : Prop l) →
   symmetric-xor-Prop (standard-unordered-pair P Q) ＝ xor-Prop P Q
-eq-commmutative-xor-xor P Q = {!!}
+eq-commmutative-xor-xor = {!!}
 ```
 
 ### Exclusive disjunction of decidable propositions
@@ -267,12 +267,12 @@ eq-commmutative-xor-xor P Q = {!!}
 is-decidable-xor :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   is-decidable A → is-decidable B → is-decidable (xor A B)
-is-decidable-xor d e = {!!}
+is-decidable-xor = {!!}
 
 xor-Decidable-Prop :
   {l1 l2 : Level} → Decidable-Prop l1 → Decidable-Prop l2 →
   Decidable-Prop (l1 ⊔ l2)
-pr1 (xor-Decidable-Prop P Q) = {!!}
+xor-Decidable-Prop = {!!}
 pr1 (pr2 (xor-Decidable-Prop P Q)) = {!!}
 pr2 (pr2 (xor-Decidable-Prop P Q)) = {!!}
 ```

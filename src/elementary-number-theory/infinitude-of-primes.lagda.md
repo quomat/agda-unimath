@@ -59,7 +59,7 @@ minimal-element-in-sieve-of-eratosthenes-ℕ :
 minimal-element-in-sieve-of-eratosthenes-ℕ = {!!}
 
 larger-prime-ℕ : ℕ → ℕ
-larger-prime-ℕ n = {!!}
+larger-prime-ℕ = {!!}
 
 in-sieve-of-eratosthenes-larger-prime-ℕ :
   (n : ℕ) → in-sieve-of-eratosthenes-ℕ n (larger-prime-ℕ n)
@@ -70,10 +70,10 @@ is-one-is-divisor-below-larger-prime-ℕ :
 is-one-is-divisor-below-larger-prime-ℕ = {!!}
 
 le-larger-prime-ℕ : (n : ℕ) → le-ℕ n (larger-prime-ℕ n)
-le-larger-prime-ℕ n = {!!}
+le-larger-prime-ℕ = {!!}
 
 is-nonzero-larger-prime-ℕ : (n : ℕ) → is-nonzero-ℕ (larger-prime-ℕ n)
-is-nonzero-larger-prime-ℕ n = {!!}
+is-nonzero-larger-prime-ℕ = {!!}
 
 is-lower-bound-larger-prime-ℕ :
   (n : ℕ) → is-lower-bound-ℕ (in-sieve-of-eratosthenes-ℕ n) (larger-prime-ℕ n)
@@ -110,10 +110,10 @@ The function `prime-ℕ` is defined to start at `prime-ℕ 0 := {!!}
 
 ```agda
 prime-ℕ : ℕ → ℕ
-prime-ℕ n = {!!}
+prime-ℕ = {!!}
 
 is-prime-prime-ℕ : (n : ℕ) → is-prime-ℕ (prime-ℕ n)
-is-prime-prime-ℕ zero-ℕ = {!!}
+is-prime-prime-ℕ = {!!}
 is-prime-prime-ℕ (succ-ℕ n) = {!!}
 ```
 
@@ -128,6 +128,6 @@ prime-counting-succ-ℕ :
 prime-counting-succ-ℕ = {!!}
 
 prime-counting-ℕ : ℕ → ℕ
-prime-counting-ℕ zero-ℕ = {!!}
+prime-counting-ℕ = {!!}
 prime-counting-ℕ (succ-ℕ n) = {!!}
 ```

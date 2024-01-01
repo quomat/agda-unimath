@@ -43,7 +43,7 @@ module _
   is-prop-is-distributive-Lattice = {!!}
 
 Distributive-Lattice : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Distributive-Lattice l1 l2 = {!!}
+Distributive-Lattice = {!!}
 
 module _
   {l1 l2 : Level} (L : Distributive-Lattice l1 l2)

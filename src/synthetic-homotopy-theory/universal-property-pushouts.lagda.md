@@ -87,7 +87,7 @@ universal-property-pushout :
   {l1 l2 l3 l4 : Level} (l : Level) {S : UU l1} {A : UU l2} {B : UU l3}
   (f : S → A) (g : S → B) {X : UU l4} →
   cocone f g X → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ lsuc l)
-universal-property-pushout l f g c = {!!}
+universal-property-pushout = {!!}
 
 module _
   {l1 l2 l3 l4 l5 : Level}
@@ -142,25 +142,25 @@ module _
   triangle-map-cocone :
     { l6 : Level} (Z : UU l6) →
     ( cocone-map f g d) ~ (cocone-map f g c ∘ precomp h Z)
-  triangle-map-cocone Z k = {!!}
+  triangle-map-cocone = {!!}
 
   is-equiv-up-pushout-up-pushout :
     ( up-c : {l : Level} → universal-property-pushout l f g c) →
     ( up-d : {l : Level} → universal-property-pushout l f g d) →
     is-equiv h
-  is-equiv-up-pushout-up-pushout up-c up-d = {!!}
+  is-equiv-up-pushout-up-pushout = {!!}
 
   up-pushout-up-pushout-is-equiv :
     is-equiv h →
     ( up-c : {l : Level} → universal-property-pushout l f g c) →
     {l : Level} → universal-property-pushout l f g d
-  up-pushout-up-pushout-is-equiv is-equiv-h up-c Z = {!!}
+  up-pushout-up-pushout-is-equiv = {!!}
 
   up-pushout-is-equiv-up-pushout :
     ( up-d : {l : Level} → universal-property-pushout l f g d) →
     is-equiv h →
     {l : Level} → universal-property-pushout l f g c
-  up-pushout-is-equiv-up-pushout up-d is-equiv-h Z = {!!}
+  up-pushout-is-equiv-up-pushout = {!!}
 ```
 
 ### Pushouts are uniquely unique
@@ -174,7 +174,7 @@ uniquely-unique-pushout :
   ( up-d : {l : Level} → universal-property-pushout l f g d) →
   is-contr
     ( Σ (X ≃ Y) (λ e → htpy-cocone f g (cocone-map f g c (map-equiv e)) d))
-uniquely-unique-pushout f g c d up-c up-d = {!!}
+uniquely-unique-pushout = {!!}
 ```
 
 ### The universal property of pushouts is equivalent to the pullback property of pushouts
@@ -192,19 +192,19 @@ triangle-pullback-property-pushout-universal-property-pushout :
   ( cocone-map f g c) ~
   ( ( tot (λ i' → tot (λ j' → htpy-eq))) ∘
     ( gap (_∘ f) (_∘ g) (cone-pullback-property-pushout f g c Y)))
-triangle-pullback-property-pushout-universal-property-pushout f g c Y h = {!!}
+triangle-pullback-property-pushout-universal-property-pushout = {!!}
 
 pullback-property-pushout-universal-property-pushout :
   {l1 l2 l3 l4 l : Level} {S : UU l1} {A : UU l2}
   {B : UU l3} (f : S → A) (g : S → B) {X : UU l4} (c : cocone f g X) →
   universal-property-pushout l f g c → pullback-property-pushout l f g c
-pullback-property-pushout-universal-property-pushout f g c up-c Y = {!!}
+pullback-property-pushout-universal-property-pushout = {!!}
 
 universal-property-pushout-pullback-property-pushout :
   {l1 l2 l3 l4 : Level} (l : Level) {S : UU l1} {A : UU l2}
   {B : UU l3} (f : S → A) (g : S → B) {X : UU l4} (c : cocone f g X) →
   pullback-property-pushout l f g c → universal-property-pushout l f g c
-universal-property-pushout-pullback-property-pushout l f g c pb-c Y = {!!}
+universal-property-pushout-pullback-property-pushout = {!!}
 ```
 
 ### If the vertical map of a span is an equivalence, then the vertical map of a cocone on it is an equivalence if and only if the cocone is a pushout
@@ -215,14 +215,14 @@ is-equiv-universal-property-pushout :
   (f : S → A) (g : S → B) (c : cocone f g C) →
   is-equiv f →
   ({l : Level} → universal-property-pushout l f g c) → is-equiv (pr1 (pr2 c))
-is-equiv-universal-property-pushout f g (i , j , H) is-equiv-f up-c = {!!}
+is-equiv-universal-property-pushout = {!!}
 
 equiv-universal-property-pushout :
   {l1 l2 l3 l4 : Level} {S : UU l1} {A : UU l2} {B : UU l3} {C : UU l4}
   (e : S ≃ A) (g : S → B) (c : cocone (map-equiv e) g C) →
   ({l : Level} → universal-property-pushout l (map-equiv e) g c) →
   B ≃ C
-pr1 (equiv-universal-property-pushout e g c up-c) = {!!}
+equiv-universal-property-pushout = {!!}
 pr2 (equiv-universal-property-pushout e g c up-c) = {!!}
 
 universal-property-pushout-is-equiv :
@@ -230,8 +230,7 @@ universal-property-pushout-is-equiv :
   (f : S → A) (g : S → B) (c : cocone f g C) →
   is-equiv f → is-equiv (pr1 (pr2 c)) →
   ({l : Level} → universal-property-pushout l f g c)
-universal-property-pushout-is-equiv
-  f g (i , j , H) is-equiv-f is-equiv-j {l} = {!!}
+universal-property-pushout-is-equiv = {!!}
 ```
 
 ### If the horizontal map of a span is an equivalence, then the horizontal map of a cocone on it is an equivalence if and only if the cocone is a pushout
@@ -243,14 +242,14 @@ is-equiv-universal-property-pushout' :
   is-equiv g →
   ({l : Level} → universal-property-pushout l f g c) →
   is-equiv (horizontal-map-cocone f g c)
-is-equiv-universal-property-pushout' f g c is-equiv-g up-c = {!!}
+is-equiv-universal-property-pushout' = {!!}
 
 equiv-universal-property-pushout' :
   {l1 l2 l3 l4 : Level} {S : UU l1} {A : UU l2} {B : UU l3} {C : UU l4}
   (f : S → A) (e : S ≃ B) (c : cocone f (map-equiv e) C) →
   ({l : Level} → universal-property-pushout l f (map-equiv e) c) →
   A ≃ C
-pr1 (equiv-universal-property-pushout' f e c up-c) = {!!}
+equiv-universal-property-pushout' = {!!}
 pr2 (equiv-universal-property-pushout' f e c up-c) = {!!}
 
 universal-property-pushout-is-equiv' :
@@ -258,7 +257,7 @@ universal-property-pushout-is-equiv' :
   (f : S → A) (g : S → B) (c : cocone f g C) →
   is-equiv g → is-equiv (pr1 c) →
   ({l : Level} → universal-property-pushout l f g c)
-universal-property-pushout-is-equiv' f g (i , j , H) is-equiv-g is-equiv-i {l} = {!!}
+universal-property-pushout-is-equiv' = {!!}
 ```
 
 ### The pushout pasting lemmas
@@ -291,9 +290,7 @@ module _
       universal-property-pushout l (vertical-map-cocone f g c) k d) →
     ( {l : Level} →
       universal-property-pushout l f (k ∘ g) (cocone-comp-horizontal f g k c d))
-  universal-property-pushout-rectangle-universal-property-pushout-right
-    ( up-d)
-    { l} = {!!}
+  universal-property-pushout-rectangle-universal-property-pushout-right = {!!}
 
   universal-property-pushout-right-universal-property-pushout-rectangle :
     ( {l : Level} →
@@ -304,9 +301,7 @@ module _
         ( cocone-comp-horizontal f g k c d)) →
     ( {l : Level} →
       universal-property-pushout l (vertical-map-cocone f g c) k d)
-  universal-property-pushout-right-universal-property-pushout-rectangle
-    ( up-r)
-    { l} = {!!}
+  universal-property-pushout-right-universal-property-pushout-rectangle = {!!}
 ```
 
 #### Extending pushouts by equivalences on the left
@@ -345,12 +340,12 @@ module _
       ( f')
       ( g ∘ i)
       ( cocone-comp-horizontal' f' i g f j c coh)
-  universal-property-pushout-left-extended-by-equivalences ie je = {!!}
+  universal-property-pushout-left-extended-by-equivalences = {!!}
 
   universal-property-pushout-left-extension-by-equivalences :
     {l : Level} → is-equiv i → is-equiv j →
     Σ (cocone f' (g ∘ i) X) (universal-property-pushout l f' (g ∘ i))
-  pr1 (universal-property-pushout-left-extension-by-equivalences ie je) = {!!}
+  universal-property-pushout-left-extension-by-equivalences = {!!}
   pr2 (universal-property-pushout-left-extension-by-equivalences ie je) = {!!}
 ```
 
@@ -386,18 +381,14 @@ module _
       universal-property-pushout l k (horizontal-map-cocone f g c) d) →
     ( {l : Level} →
       universal-property-pushout l (k ∘ f) g (cocone-comp-vertical f g k c d))
-  universal-property-pushout-rectangle-universal-property-pushout-top
-    ( up-d)
-    { l} = {!!}
+  universal-property-pushout-rectangle-universal-property-pushout-top = {!!}
 
   universal-property-pushout-top-universal-property-pushout-rectangle :
     ( {l : Level} →
       universal-property-pushout l (k ∘ f) g (cocone-comp-vertical f g k c d)) →
     ( {l : Level} →
       universal-property-pushout l k (horizontal-map-cocone f g c) d)
-  universal-property-pushout-top-universal-property-pushout-rectangle
-    ( up-r)
-    { l} = {!!}
+  universal-property-pushout-top-universal-property-pushout-rectangle = {!!}
 ```
 
 #### Extending pushouts by equivalences at the top
@@ -438,12 +429,12 @@ module _
       ( f ∘ i)
       ( g')
       ( cocone-comp-vertical' i g' j g f c coh)
-  universal-property-pushout-top-extended-by-equivalences ie je = {!!}
+  universal-property-pushout-top-extended-by-equivalences = {!!}
 
   universal-property-pushout-top-extension-by-equivalences :
     {l : Level} → is-equiv i → is-equiv j →
     Σ (cocone (f ∘ i) g' X) (universal-property-pushout l (f ∘ i) g')
-  pr1 (universal-property-pushout-top-extension-by-equivalences ie je) = {!!}
+  universal-property-pushout-top-extension-by-equivalences = {!!}
   pr2 (universal-property-pushout-top-extension-by-equivalences ie je) = {!!}
 ```
 
@@ -495,7 +486,7 @@ module _
   universal-property-pushout-extension-by-equivalences :
     {l : Level} → is-equiv i → is-equiv j → is-equiv k →
     Σ (cocone f' g' X) (λ d → universal-property-pushout l f' g' d)
-  universal-property-pushout-extension-by-equivalences ie je ke = {!!}
+  universal-property-pushout-extension-by-equivalences = {!!}
 
   universal-property-pushout-extended-by-equivalences :
     is-equiv i → is-equiv j → is-equiv k →
@@ -504,7 +495,7 @@ module _
       ( f')
       ( g')
       ( comp-cocone-hom-span f g f' g' i j k c coh-l coh-r)
-  universal-property-pushout-extended-by-equivalences ie je ke = {!!}
+  universal-property-pushout-extended-by-equivalences = {!!}
 ```
 
 ### In a commuting cube where the vertical maps are equivalences, the bottom square is a pushout if and only if the top square is a pushout
@@ -540,16 +531,12 @@ module _
       universal-property-pushout l f g (h , k , bottom)) →
     ( {l : Level} →
       universal-property-pushout l f' g' (h' , k' , top))
-  universal-property-pushout-top-universal-property-pushout-bottom-cube-is-equiv
-    ( up-bottom)
-    { l = l} = {!!}
+  universal-property-pushout-top-universal-property-pushout-bottom-cube-is-equiv = {!!}
 
   universal-property-pushout-bottom-universal-property-pushout-top-cube-is-equiv :
     ( {l : Level} →
       universal-property-pushout l f' g' (h' , k' , top)) →
     ( {l : Level} →
       universal-property-pushout l f g (h , k , bottom))
-  universal-property-pushout-bottom-universal-property-pushout-top-cube-is-equiv
-    ( up-top)
-    { l = l} = {!!}
+  universal-property-pushout-bottom-universal-property-pushout-top-cube-is-equiv = {!!}
 ```

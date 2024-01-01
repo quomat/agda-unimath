@@ -40,7 +40,7 @@ universe level, and there is a
 
 ```agda
 Set-Large-Precategory : Large-Precategory lsuc (_⊔_)
-obj-Large-Precategory Set-Large-Precategory = {!!}
+Set-Large-Precategory = {!!}
 hom-set-Large-Precategory Set-Large-Precategory = {!!}
 comp-hom-Large-Precategory Set-Large-Precategory g f = {!!}
 id-hom-Large-Precategory Set-Large-Precategory = {!!}
@@ -68,7 +68,7 @@ is-large-category-Set-Large-Precategory :
 is-large-category-Set-Large-Precategory = {!!}
 
 Set-Large-Category : Large-Category lsuc (_⊔_)
-large-precategory-Large-Category Set-Large-Category = {!!}
+Set-Large-Category = {!!}
 is-large-category-Large-Category Set-Large-Category = {!!}
 ```
 

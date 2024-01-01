@@ -52,15 +52,15 @@ module _
 
 ideal-Commutative-Ring :
   {l1 : Level} (l2 : Level) → Commutative-Ring l1 → UU (l1 ⊔ lsuc l2)
-ideal-Commutative-Ring l2 R = {!!}
+ideal-Commutative-Ring = {!!}
 
 left-ideal-Commutative-Ring :
   {l1 : Level} (l2 : Level) → Commutative-Ring l1 → UU (l1 ⊔ lsuc l2)
-left-ideal-Commutative-Ring l2 R = {!!}
+left-ideal-Commutative-Ring = {!!}
 
 right-ideal-Commutative-Ring :
   {l1 : Level} (l2 : Level) → Commutative-Ring l1 → UU (l1 ⊔ lsuc l2)
-right-ideal-Commutative-Ring l2 R = {!!}
+right-ideal-Commutative-Ring = {!!}
 
 module _
   {l1 l2 : Level} (R : Commutative-Ring l1) (I : ideal-Commutative-Ring l2 R)
@@ -70,7 +70,7 @@ module _
   subset-ideal-Commutative-Ring = {!!}
 
   is-in-ideal-Commutative-Ring : type-Commutative-Ring R → UU l2
-  is-in-ideal-Commutative-Ring x = {!!}
+  is-in-ideal-Commutative-Ring = {!!}
 
   type-ideal-Commutative-Ring : UU (l1 ⊔ l2)
   type-ideal-Commutative-Ring = {!!}
@@ -138,7 +138,7 @@ module _
     (n : ℕ) (x : type-Commutative-Ring R) →
     is-in-ideal-Commutative-Ring x →
     is-in-ideal-Commutative-Ring (power-Commutative-Ring R (succ-ℕ n) x)
-  is-closed-under-powers-ideal-Commutative-Ring zero-ℕ x H = {!!}
+  is-closed-under-powers-ideal-Commutative-Ring = {!!}
 
   left-ideal-ideal-Commutative-Ring : left-ideal-Commutative-Ring l2 R
   left-ideal-ideal-Commutative-Ring = {!!}
@@ -154,7 +154,7 @@ ideal-left-ideal-Commutative-Ring :
   is-closed-under-negatives-subset-Commutative-Ring R S →
   is-closed-under-left-multiplication-subset-Commutative-Ring R S →
   ideal-Commutative-Ring l2 R
-pr1 (ideal-left-ideal-Commutative-Ring R S z a n m) = {!!}
+ideal-left-ideal-Commutative-Ring = {!!}
 pr1 (pr1 (pr2 (ideal-left-ideal-Commutative-Ring R S z a n m))) = {!!}
 pr1 (pr2 (pr1 (pr2 (ideal-left-ideal-Commutative-Ring R S z a n m)))) = {!!}
 pr2 (pr2 (pr1 (pr2 (ideal-left-ideal-Commutative-Ring R S z a n m)))) = {!!}
@@ -169,7 +169,7 @@ ideal-right-ideal-Commutative-Ring :
   is-closed-under-negatives-subset-Commutative-Ring R S →
   is-closed-under-right-multiplication-subset-Commutative-Ring R S →
   ideal-Commutative-Ring l2 R
-pr1 (ideal-right-ideal-Commutative-Ring R S z a n m) = {!!}
+ideal-right-ideal-Commutative-Ring = {!!}
 pr1 (pr1 (pr2 (ideal-right-ideal-Commutative-Ring R S z a n m))) = {!!}
 pr1 (pr2 (pr1 (pr2 (ideal-right-ideal-Commutative-Ring R S z a n m)))) = {!!}
 pr2 (pr2 (pr1 (pr2 (ideal-right-ideal-Commutative-Ring R S z a n m)))) = {!!}

@@ -25,5 +25,5 @@ natural number `x`.
 
 ```agda
 is-square-free-ℕ : ℕ → UU lzero
-is-square-free-ℕ n = {!!}
+is-square-free-ℕ = {!!}
 ```

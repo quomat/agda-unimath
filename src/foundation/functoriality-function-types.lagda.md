@@ -50,7 +50,7 @@ module _
   where
 
   map-equiv-function-type : (A' → B') → (A → B)
-  map-equiv-function-type h = {!!}
+  map-equiv-function-type = {!!}
 
   compute-map-equiv-function-type :
     (h : A' → B') (x : A') →
@@ -61,7 +61,7 @@ module _
   is-equiv-map-equiv-function-type = {!!}
 
   equiv-function-type : (A' → B') ≃ (A → B)
-  pr1 equiv-function-type = {!!}
+  equiv-function-type = {!!}
 ```
 
 ### A map is truncated iff postcomposition by it is truncated

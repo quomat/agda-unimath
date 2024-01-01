@@ -60,7 +60,7 @@ module _
   is-prop-preserves-comp-hom-Set-Magmoid = {!!}
 
   preserves-comp-hom-prop-Set-Magmoid : Prop (l1 ⊔ l2 ⊔ l4)
-  pr1 preserves-comp-hom-prop-Set-Magmoid = {!!}
+  preserves-comp-hom-prop-Set-Magmoid = {!!}
 ```
 
 ### The predicate on maps of set-magmoids of being a functor
@@ -112,7 +112,7 @@ module _
   hom-functor-Set-Magmoid = {!!}
 
   map-functor-Set-Magmoid : map-Set-Magmoid A B
-  pr1 map-functor-Set-Magmoid = {!!}
+  map-functor-Set-Magmoid = {!!}
 
   preserves-comp-functor-Set-Magmoid :
     {x y z : obj-Set-Magmoid A}
@@ -134,7 +134,7 @@ module _
   where
 
   id-functor-Set-Magmoid : functor-Set-Magmoid A A
-  pr1 id-functor-Set-Magmoid = {!!}
+  id-functor-Set-Magmoid = {!!}
 ```
 
 ### Composition of functors on set-magmoids
@@ -163,7 +163,7 @@ module _
   hom-comp-functor-Set-Magmoid = {!!}
 
   map-comp-functor-Set-Magmoid : map-Set-Magmoid A C
-  pr1 map-comp-functor-Set-Magmoid = {!!}
+  map-comp-functor-Set-Magmoid = {!!}
 
   preserves-comp-comp-functor-Set-Magmoid :
     preserves-comp-hom-Set-Magmoid A C
@@ -172,7 +172,7 @@ module _
   preserves-comp-comp-functor-Set-Magmoid = {!!}
 
   comp-functor-Set-Magmoid : functor-Set-Magmoid A C
-  pr1 comp-functor-Set-Magmoid = {!!}
+  comp-functor-Set-Magmoid = {!!}
 ```
 
 ## Properties

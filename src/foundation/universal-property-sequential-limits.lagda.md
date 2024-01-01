@@ -105,24 +105,21 @@ module _
       universal-property-sequential-limit A c →
       universal-property-sequential-limit A c' →
       is-equiv h
-    is-equiv-universal-property-sequential-limit-universal-property-sequential-limit
-      up up' = {!!}
+    is-equiv-universal-property-sequential-limit-universal-property-sequential-limit = {!!}
 
   abstract
     universal-property-sequential-limit-universal-property-sequential-limit-is-equiv :
       is-equiv h →
       universal-property-sequential-limit A c →
       universal-property-sequential-limit A c'
-    universal-property-sequential-limit-universal-property-sequential-limit-is-equiv
-      is-equiv-h up D = {!!}
+    universal-property-sequential-limit-universal-property-sequential-limit-is-equiv = {!!}
 
   abstract
     universal-property-sequential-limit-is-equiv-universal-property-sequential-limit :
       universal-property-sequential-limit A c' →
       is-equiv h →
       universal-property-sequential-limit A c
-    universal-property-sequential-limit-is-equiv-universal-property-sequential-limit
-      up' is-equiv-h D = {!!}
+    universal-property-sequential-limit-is-equiv-universal-property-sequential-limit = {!!}
 ```
 
 ### Uniqueness of maps obtained via the universal property of sequential limits

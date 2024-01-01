@@ -30,13 +30,13 @@ A type `A` is said to be **acyclic** if its
 
 ```agda
 is-acyclic-Prop : {l : Level} → UU l → Prop l
-is-acyclic-Prop A = {!!}
+is-acyclic-Prop = {!!}
 
 is-acyclic : {l : Level} → UU l → UU l
-is-acyclic A = {!!}
+is-acyclic = {!!}
 
 is-prop-is-acyclic : {l : Level} (A : UU l) → is-prop (is-acyclic A)
-is-prop-is-acyclic A = {!!}
+is-prop-is-acyclic = {!!}
 ```
 
 ## Properties
@@ -63,14 +63,14 @@ module _
   where
 
   is-acyclic-retract-of : A retract-of B → is-acyclic B → is-acyclic A
-  is-acyclic-retract-of R ac = {!!}
+  is-acyclic-retract-of = {!!}
 ```
 
 ### Contractible types are acyclic
 
 ```agda
 is-acyclic-is-contr : {l : Level} (A : UU l) → is-contr A → is-acyclic A
-is-acyclic-is-contr A = {!!}
+is-acyclic-is-contr = {!!}
 
 is-acyclic-unit : is-acyclic unit
 is-acyclic-unit = {!!}

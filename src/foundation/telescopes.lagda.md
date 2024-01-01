@@ -69,7 +69,7 @@ A very slight reformulation of `cons-telescope` for convenience:
 prepend-telescope :
   {l1 l2 : Level} {n : ℕ} →
   (A : UU l1) → ({x : A} → telescope l2 n) → telescope (l1 ⊔ l2) (succ-ℕ n)
-prepend-telescope A B = {!!}
+prepend-telescope = {!!}
 ```
 
 ### Telescopes at a universe level
@@ -100,7 +100,7 @@ Given an operation on universes, we can apply it at the base of the telescope.
 apply-base-telescope :
   {l1 : Level} {n : ℕ}
   (P : {l : Level} → UU l → UU l) → telescope l1 n → telescope l1 n
-apply-base-telescope P (base-telescope A) = {!!}
+apply-base-telescope = {!!}
 apply-base-telescope P (cons-telescope A) = {!!}
 ```
 
@@ -124,23 +124,23 @@ instance-telescope {{x}} = {!!}
 
 instance
   instance-telescope⁰ : {l : Level} {X : UU l} → telescope l 0
-  instance-telescope⁰ {X = X} = {!!}
+  instance-telescope⁰ = {!!}
 
   instance-telescope¹ :
     { l1 l : Level} {A1 : UU l1} {X : A1 → UU l} → telescope (l1 ⊔ l) 1
-  instance-telescope¹ {X = X} = {!!}
+  instance-telescope¹ = {!!}
 
   instance-telescope² :
     { l1 l2 l : Level} {A1 : UU l1} {A2 : A1 → UU l2}
     { X : (x1 : A1) → A2 x1 → UU l} → telescope (l1 ⊔ l2 ⊔ l) 2
-  instance-telescope² {X = X} = {!!}
+  instance-telescope² = {!!}
 
   instance-telescope³ :
     { l1 l2 l3 l : Level}
     { A1 : UU l1} {A2 : A1 → UU l2} {A3 : (x1 : A1) → A2 x1 → UU l3}
     { X : (x1 : A1) (x2 : A2 x1) (x2 : A3 x1 x2) → UU l} →
     telescope (l1 ⊔ l2 ⊔ l3 ⊔ l) 3
-  instance-telescope³ {X = X} = {!!}
+  instance-telescope³ = {!!}
 
   instance-telescope⁴ :
     { l1 l2 l3 l4 l : Level}
@@ -148,7 +148,7 @@ instance
     { A4 : (x1 : A1) (x2 : A2 x1) → A3 x1 x2 → UU l4}
     { X : (x1 : A1) (x2 : A2 x1) (x3 : A3 x1 x2) (x4 : A4 x1 x2 x3) → UU l} →
     telescope (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l) 4
-  instance-telescope⁴ {X = X} = {!!}
+  instance-telescope⁴ = {!!}
 
   instance-telescope⁵ :
     { l1 l2 l3 l4 l5 l : Level}

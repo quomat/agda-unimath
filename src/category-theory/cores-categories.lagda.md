@@ -98,7 +98,7 @@ module _
   is-groupoid-core-Category = {!!}
 
   core-groupoid-Category : Groupoid l1 l2
-  pr1 core-groupoid-Category = {!!}
+  core-groupoid-Category = {!!}
 ```
 
 ## Properties

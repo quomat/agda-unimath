@@ -47,19 +47,19 @@ module _
   where
 
   fiber-const : (x y : A) → fiber (const unit A x) y ≃ (x ＝ y)
-  fiber-const x y = {!!}
+  fiber-const = {!!}
 
   abstract
     is-trunc-map-const-is-trunc :
       (k : 𝕋) → is-trunc (succ-𝕋 k) A →
       (x : A) → is-trunc-map k (const unit A x)
-    is-trunc-map-const-is-trunc k is-trunc-A x y = {!!}
+    is-trunc-map-const-is-trunc = {!!}
 
   abstract
     is-trunc-is-trunc-map-const :
       (k : 𝕋) → ((x : A) → is-trunc-map k (const unit A x)) →
       is-trunc (succ-𝕋 k) A
-    is-trunc-is-trunc-map-const k is-trunc-const x y = {!!}
+    is-trunc-is-trunc-map-const = {!!}
 
   abstract
     is-contr-map-const-is-prop :
@@ -69,7 +69,7 @@ module _
   abstract
     is-equiv-const-is-prop :
       is-prop A → (x : A) → is-equiv (const unit A x)
-    is-equiv-const-is-prop H x = {!!}
+    is-equiv-const-is-prop = {!!}
 
   abstract
     is-prop-map-const-is-set :
@@ -78,7 +78,7 @@ module _
 
   abstract
     is-emb-const-is-set : is-set A → (x : A) → is-emb (const unit A x)
-    is-emb-const-is-set H x = {!!}
+    is-emb-const-is-set = {!!}
 
   abstract
     is-0-map-const-is-1-type : is-1-type A → (x : A) → is-0-map (const unit A x)
@@ -87,7 +87,7 @@ module _
   abstract
     is-faithful-const-is-1-type :
       is-1-type A → (x : A) → is-faithful (const unit A x)
-    is-faithful-const-is-1-type H x = {!!}
+    is-faithful-const-is-1-type = {!!}
 
   abstract
     is-prop-is-contr-map-const :
@@ -97,7 +97,7 @@ module _
   abstract
     is-prop-is-equiv-const :
       ((x : A) → is-equiv (const unit A x)) → is-prop A
-    is-prop-is-equiv-const H = {!!}
+    is-prop-is-equiv-const = {!!}
 
   abstract
     is-set-is-prop-map-const :
@@ -107,7 +107,7 @@ module _
   abstract
     is-set-is-emb-const :
       ((x : A) → is-emb (const unit A x)) → is-set A
-    is-set-is-emb-const H = {!!}
+    is-set-is-emb-const = {!!}
 
   abstract
     is-1-type-is-0-map-const :
@@ -117,22 +117,22 @@ module _
   abstract
     is-1-type-is-faithful-const :
       ((x : A) → is-faithful (const unit A x)) → is-1-type A
-    is-1-type-is-faithful-const H = {!!}
+    is-1-type-is-faithful-const = {!!}
 
 const-equiv :
   {l : Level} (A : Prop l) (x : type-Prop A) → unit ≃ type-Prop A
-pr1 (const-equiv A x) = {!!}
+const-equiv = {!!}
 pr2 (const-equiv A x) = {!!}
 
 const-emb :
   {l : Level} (A : Set l) (x : type-Set A) → unit ↪ type-Set A
-pr1 (const-emb A x) = {!!}
+const-emb = {!!}
 pr2 (const-emb A x) = {!!}
 
 const-faithful-map :
   {l : Level} (A : 1-Type l) (x : type-1-Type A) →
   faithful-map unit (type-1-Type A)
-pr1 (const-faithful-map A x) = {!!}
+const-faithful-map = {!!}
 pr2 (const-faithful-map A x) = {!!}
 ```
 
@@ -141,11 +141,11 @@ pr2 (const-faithful-map A x) = {!!}
 ```agda
 is-injective-const :
   {l1 l2 : Level} (A : UU l1) (B : UU l2) → A → is-injective (const A B)
-is-injective-const A B a p = {!!}
+is-injective-const = {!!}
 
 const-injection :
   {l1 l2 : Level} (A : UU l1) (B : UU l2) → A → injection B (A → B)
-pr1 (const-injection A B a) = {!!}
+const-injection = {!!}
 pr2 (const-injection A B a) = {!!}
 ```
 
@@ -155,10 +155,10 @@ pr2 (const-injection A B a) = {!!}
 htpy-diagonal-Id-ap-diagonal-htpy-eq :
   {l1 l2 : Level} (A : UU l1) {B : UU l2} (x y : B) →
   htpy-eq ∘ ap (const A B) {x} {y} ~ const A (x ＝ y)
-htpy-diagonal-Id-ap-diagonal-htpy-eq A x y refl = {!!}
+htpy-diagonal-Id-ap-diagonal-htpy-eq = {!!}
 
 htpy-ap-diagonal-htpy-eq-diagonal-Id :
   {l1 l2 : Level} (A : UU l1) {B : UU l2} (x y : B) →
   const A (x ＝ y) ~ htpy-eq ∘ ap (const A B) {x} {y}
-htpy-ap-diagonal-htpy-eq-diagonal-Id A x y = {!!}
+htpy-ap-diagonal-htpy-eq-diagonal-Id = {!!}
 ```

@@ -60,12 +60,12 @@ We will arbitrarily set the quotient of the euclidean division of `n` by `0` to
 
 ```agda
 array-quotient-euclidean-division-ℕ : ℕ → ℕ → ℕ → ℕ
-array-quotient-euclidean-division-ℕ k zero-ℕ m = {!!}
+array-quotient-euclidean-division-ℕ = {!!}
 array-quotient-euclidean-division-ℕ k (succ-ℕ n) zero-ℕ = {!!}
 array-quotient-euclidean-division-ℕ k (succ-ℕ n) (succ-ℕ m) = {!!}
 
 quotient-euclidean-division-ℕ' : ℕ → ℕ → ℕ
-quotient-euclidean-division-ℕ' zero-ℕ n = {!!}
+quotient-euclidean-division-ℕ' = {!!}
 quotient-euclidean-division-ℕ' (succ-ℕ k) n = {!!}
 ```
 
@@ -77,7 +77,7 @@ euclidean-division-ℕ :
 euclidean-division-ℕ = {!!}
 
 remainder-euclidean-division-ℕ : ℕ → ℕ → ℕ
-remainder-euclidean-division-ℕ k x = {!!}
+remainder-euclidean-division-ℕ = {!!}
 
 cong-euclidean-division-ℕ :
   (k x : ℕ) → cong-ℕ k x (remainder-euclidean-division-ℕ k x)
@@ -88,7 +88,7 @@ strict-upper-bound-remainder-euclidean-division-ℕ :
 strict-upper-bound-remainder-euclidean-division-ℕ = {!!}
 
 quotient-euclidean-division-ℕ : ℕ → ℕ → ℕ
-quotient-euclidean-division-ℕ k x = {!!}
+quotient-euclidean-division-ℕ = {!!}
 
 eq-quotient-euclidean-division-ℕ :
   (k x : ℕ) →
@@ -107,6 +107,6 @@ eq-euclidean-division-ℕ = {!!}
 
 ```agda
 map-extended-euclidean-algorithm : ℕ × ℕ → ℕ × ℕ
-pr1 (map-extended-euclidean-algorithm (pair x y)) = {!!}
+map-extended-euclidean-algorithm = {!!}
 pr2 (map-extended-euclidean-algorithm (pair x y)) = {!!}
 ```

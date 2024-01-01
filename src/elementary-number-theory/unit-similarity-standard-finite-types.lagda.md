@@ -52,7 +52,7 @@ sim-unit-ℕ = {!!}
 
 ```agda
 sim-unit-one-ℕ : (k x : ℕ) → UU lzero
-sim-unit-one-ℕ k x = {!!}
+sim-unit-one-ℕ = {!!}
 ```
 
 ## Properties
@@ -61,15 +61,15 @@ sim-unit-one-ℕ k x = {!!}
 
 ```agda
 refl-sim-unit-Fin : {k : ℕ} → is-reflexive (sim-unit-Fin k)
-pr1 (refl-sim-unit-Fin {succ-ℕ k} x) = {!!}
+refl-sim-unit-Fin = {!!}
 pr2 (refl-sim-unit-Fin {succ-ℕ k} x) = {!!}
 
 symmetric-sim-unit-Fin : {k : ℕ} → is-symmetric (sim-unit-Fin k)
-pr1 (symmetric-sim-unit-Fin {succ-ℕ k} x y (pair (pair u (pair v q)) p)) = {!!}
+symmetric-sim-unit-Fin = {!!}
 pr2 (symmetric-sim-unit-Fin {succ-ℕ k} x y (pair (pair u (pair v q)) p)) = {!!}
 
 transitive-sim-unit-Fin : {k : ℕ} → is-transitive (sim-unit-Fin k)
-pr1 (transitive-sim-unit-Fin {succ-ℕ k} x y z (pair v q) (pair u p)) = {!!}
+transitive-sim-unit-Fin = {!!}
 pr2 (transitive-sim-unit-Fin {succ-ℕ k} x y z (pair v q) (pair u p)) = {!!}
 ```
 

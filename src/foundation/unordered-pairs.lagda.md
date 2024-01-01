@@ -61,7 +61,7 @@ a map `X → A`.
 
 ```agda
 unordered-pair : {l : Level} (A : UU l) → UU (lsuc lzero ⊔ l)
-unordered-pair A = {!!}
+unordered-pair = {!!}
 ```
 
 ### Immediate structure on the type of unordered pairs
@@ -91,7 +91,7 @@ module _
   element-unordered-pair = {!!}
 
   other-element-unordered-pair : type-unordered-pair → A
-  other-element-unordered-pair x = {!!}
+  other-element-unordered-pair = {!!}
 ```
 
 ### The predicate of being in an unodered pair
@@ -99,16 +99,16 @@ module _
 ```agda
 is-in-unordered-pair-Prop :
   {l : Level} {A : UU l} (p : unordered-pair A) (a : A) → Prop l
-is-in-unordered-pair-Prop p a = {!!}
+is-in-unordered-pair-Prop = {!!}
 
 is-in-unordered-pair :
   {l : Level} {A : UU l} (p : unordered-pair A) (a : A) → UU l
-is-in-unordered-pair p a = {!!}
+is-in-unordered-pair = {!!}
 
 is-prop-is-in-unordered-pair :
   {l : Level} {A : UU l} (p : unordered-pair A) (a : A) →
   is-prop (is-in-unordered-pair p a)
-is-prop-is-in-unordered-pair p a = {!!}
+is-prop-is-in-unordered-pair = {!!}
 ```
 
 ### The condition of being a self-pairing
@@ -116,7 +116,7 @@ is-prop-is-in-unordered-pair p a = {!!}
 ```agda
 is-selfpairing-unordered-pair :
   {l : Level} {A : UU l} (p : unordered-pair A) → UU l
-is-selfpairing-unordered-pair p = {!!}
+is-selfpairing-unordered-pair = {!!}
 ```
 
 ### Standard unordered pairs
@@ -132,16 +132,16 @@ module _
   element-standard-unordered-pair = {!!}
 
   standard-unordered-pair : unordered-pair A
-  pr1 standard-unordered-pair = {!!}
+  standard-unordered-pair = {!!}
 
   other-element-standard-unordered-pair : Fin 2 → A
-  other-element-standard-unordered-pair (inl (inr _)) = {!!}
+  other-element-standard-unordered-pair = {!!}
 
   compute-other-element-standard-unordered-pair :
     (u : Fin 2) →
     other-element-unordered-pair standard-unordered-pair u ＝
     other-element-standard-unordered-pair u
-  compute-other-element-standard-unordered-pair (inl (inr x)) = {!!}
+  compute-other-element-standard-unordered-pair = {!!}
 ```
 
 ## Properties
@@ -154,52 +154,52 @@ module _
   where
 
   Eq-unordered-pair : (p q : unordered-pair A) → UU l1
-  Eq-unordered-pair p q = {!!}
+  Eq-unordered-pair = {!!}
 
   refl-Eq-unordered-pair : (p : unordered-pair A) → Eq-unordered-pair p p
-  pr1 (refl-Eq-unordered-pair (pair X p)) = {!!}
+  refl-Eq-unordered-pair = {!!}
 
   Eq-eq-unordered-pair :
     (p q : unordered-pair A) → p ＝ q → Eq-unordered-pair p q
-  Eq-eq-unordered-pair p .p refl = {!!}
+  Eq-eq-unordered-pair = {!!}
 
   is-torsorial-Eq-unordered-pair :
     (p : unordered-pair A) →
     is-torsorial (Eq-unordered-pair p)
-  is-torsorial-Eq-unordered-pair (pair X p) = {!!}
+  is-torsorial-Eq-unordered-pair = {!!}
 
   is-equiv-Eq-eq-unordered-pair :
     (p q : unordered-pair A) → is-equiv (Eq-eq-unordered-pair p q)
-  is-equiv-Eq-eq-unordered-pair p = {!!}
+  is-equiv-Eq-eq-unordered-pair = {!!}
 
   extensionality-unordered-pair :
     (p q : unordered-pair A) → (p ＝ q) ≃ Eq-unordered-pair p q
-  pr1 (extensionality-unordered-pair p q) = {!!}
+  extensionality-unordered-pair = {!!}
 
   eq-Eq-unordered-pair' :
     (p q : unordered-pair A) → Eq-unordered-pair p q → p ＝ q
-  eq-Eq-unordered-pair' p q = {!!}
+  eq-Eq-unordered-pair' = {!!}
 
   eq-Eq-unordered-pair :
     (p q : unordered-pair A)
     (e : type-unordered-pair p ≃ type-unordered-pair q) →
     (element-unordered-pair p ~ (element-unordered-pair q ∘ map-equiv e)) →
     (p ＝ q)
-  eq-Eq-unordered-pair p q e H = {!!}
+  eq-Eq-unordered-pair = {!!}
 
   is-retraction-eq-Eq-unordered-pair :
     (p q : unordered-pair A) →
     (eq-Eq-unordered-pair' p q ∘ Eq-eq-unordered-pair p q) ~ id
-  is-retraction-eq-Eq-unordered-pair p q = {!!}
+  is-retraction-eq-Eq-unordered-pair = {!!}
 
   is-section-eq-Eq-unordered-pair :
     (p q : unordered-pair A) →
     ( Eq-eq-unordered-pair p q ∘ eq-Eq-unordered-pair' p q) ~ id
-  is-section-eq-Eq-unordered-pair p q = {!!}
+  is-section-eq-Eq-unordered-pair = {!!}
 
   eq-Eq-refl-unordered-pair :
     (p : unordered-pair A) → eq-Eq-unordered-pair p p id-equiv refl-htpy ＝ refl
-  eq-Eq-refl-unordered-pair p = {!!}
+  eq-Eq-refl-unordered-pair = {!!}
 ```
 
 ### Induction on equality of unordered pairs
@@ -213,7 +213,7 @@ module _
   ev-refl-Eq-unordered-pair :
     ((q : unordered-pair A) (e : Eq-unordered-pair p q) → B q e) →
     B p (refl-Eq-unordered-pair p)
-  ev-refl-Eq-unordered-pair f = {!!}
+  ev-refl-Eq-unordered-pair = {!!}
 
   triangle-ev-refl-Eq-unordered-pair :
     coherence-triangle-maps
@@ -235,12 +235,12 @@ module _
     ind-Eq-unordered-pair :
       B p (refl-Eq-unordered-pair p) →
       ((q : unordered-pair A) (e : Eq-unordered-pair p q) → B q e)
-    ind-Eq-unordered-pair u = {!!}
+    ind-Eq-unordered-pair = {!!}
 
     compute-refl-ind-Eq-unordered-pair :
       (u : B p (refl-Eq-unordered-pair p)) →
       ind-Eq-unordered-pair u p (refl-Eq-unordered-pair p) ＝ u
-    compute-refl-ind-Eq-unordered-pair u = {!!}
+    compute-refl-ind-Eq-unordered-pair = {!!}
 ```
 
 ### Inverting extensional equality of unordered pairs
@@ -252,7 +252,7 @@ module _
 
   inv-Eq-unordered-pair :
     Eq-unordered-pair p q → Eq-unordered-pair q p
-  pr1 (inv-Eq-unordered-pair (e , H)) = {!!}
+  inv-Eq-unordered-pair = {!!}
 ```
 
 ### Mere equality of unordered pairs
@@ -263,18 +263,18 @@ module _
   where
 
   mere-Eq-unordered-pair-Prop : (p q : unordered-pair A) → Prop l1
-  mere-Eq-unordered-pair-Prop p q = {!!}
+  mere-Eq-unordered-pair-Prop = {!!}
 
   mere-Eq-unordered-pair : (p q : unordered-pair A) → UU l1
-  mere-Eq-unordered-pair p q = {!!}
+  mere-Eq-unordered-pair = {!!}
 
   is-prop-mere-Eq-unordered-pair :
     (p q : unordered-pair A) → is-prop (mere-Eq-unordered-pair p q)
-  is-prop-mere-Eq-unordered-pair p q = {!!}
+  is-prop-mere-Eq-unordered-pair = {!!}
 
   refl-mere-Eq-unordered-pair :
     (p : unordered-pair A) → mere-Eq-unordered-pair p p
-  refl-mere-Eq-unordered-pair p = {!!}
+  refl-mere-Eq-unordered-pair = {!!}
 ```
 
 ### A standard unordered pair `{x,y}` is equal to the standard unordered pair `{y,x}`
@@ -288,7 +288,7 @@ module _
     Eq-unordered-pair
       ( standard-unordered-pair x y)
       ( standard-unordered-pair y x)
-  pr1 swap-standard-unordered-pair = {!!}
+  swap-standard-unordered-pair = {!!}
 
   is-commutative-standard-unordered-pair :
     standard-unordered-pair x y ＝ standard-unordered-pair y x
@@ -312,7 +312,7 @@ module _
   ev-pointed-unordered-pair :
     ((p : unordered-pair A) (i : type-unordered-pair p) → B p i) →
     ((x y : A) → B (standard-unordered-pair x y) (zero-Fin 1))
-  ev-pointed-unordered-pair f x y = {!!}
+  ev-pointed-unordered-pair = {!!}
 
   abstract
     dependent-universal-property-pointed-unordered-pairs :
@@ -322,7 +322,7 @@ module _
   equiv-dependent-universal-property-pointed-unordered-pairs :
     ((p : unordered-pair A) (i : type-unordered-pair p) → B p i) ≃
     ((x y : A) → B (standard-unordered-pair x y) (zero-Fin 1))
-  pr1 equiv-dependent-universal-property-pointed-unordered-pairs = {!!}
+  equiv-dependent-universal-property-pointed-unordered-pairs = {!!}
 ```
 
 ### Functoriality of unordered pairs
@@ -331,14 +331,14 @@ module _
 map-unordered-pair :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
   unordered-pair A → unordered-pair B
-pr1 (map-unordered-pair f p) = {!!}
+map-unordered-pair = {!!}
 pr2 (map-unordered-pair f p) = {!!}
 
 preserves-comp-map-unordered-pair :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : UU l3}
   (g : B → C) (f : A → B) →
   map-unordered-pair (g ∘ f) ~ (map-unordered-pair g ∘ map-unordered-pair f)
-preserves-comp-map-unordered-pair g f p = {!!}
+preserves-comp-map-unordered-pair = {!!}
 
 preserves-id-map-unordered-pair :
   {l1 : Level} {A : UU l1} →
@@ -348,40 +348,40 @@ preserves-id-map-unordered-pair = {!!}
 htpy-unordered-pair :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} {f g : A → B} →
   (f ~ g) → (map-unordered-pair f ~ map-unordered-pair g)
-htpy-unordered-pair {f = f} {g = g} H (pair X p) = {!!}
+htpy-unordered-pair = {!!}
 
 preserves-refl-htpy-unordered-pair :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
   htpy-unordered-pair (refl-htpy {f = f}) ~ refl-htpy
-preserves-refl-htpy-unordered-pair f p = {!!}
+preserves-refl-htpy-unordered-pair = {!!}
 
 equiv-unordered-pair :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   (A ≃ B) → (unordered-pair A ≃ unordered-pair B)
-equiv-unordered-pair e = {!!}
+equiv-unordered-pair = {!!}
 
 map-equiv-unordered-pair :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   (A ≃ B) → (unordered-pair A → unordered-pair B)
-map-equiv-unordered-pair e = {!!}
+map-equiv-unordered-pair = {!!}
 
 is-equiv-map-equiv-unordered-pair :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   (e : A ≃ B) → is-equiv (map-equiv-unordered-pair e)
-is-equiv-map-equiv-unordered-pair e = {!!}
+is-equiv-map-equiv-unordered-pair = {!!}
 
 element-equiv-standard-unordered-pair :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (e : A ≃ B) (x y : A) →
   ( map-equiv e ∘ element-standard-unordered-pair x y) ~
   ( element-standard-unordered-pair (map-equiv e x) (map-equiv e y))
-element-equiv-standard-unordered-pair e x y (inl (inr _)) = {!!}
+element-equiv-standard-unordered-pair = {!!}
 element-equiv-standard-unordered-pair e x y (inr _) = {!!}
 
 equiv-standard-unordered-pair :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (e : A ≃ B) (x y : A) →
   map-equiv-unordered-pair e (standard-unordered-pair x y) ＝
   standard-unordered-pair (map-equiv e x) (map-equiv e y)
-equiv-standard-unordered-pair e x y = {!!}
+equiv-standard-unordered-pair = {!!}
 
 id-equiv-unordered-pair :
   {l : Level} {A : UU l} → map-equiv-unordered-pair (id-equiv {A = A}) ~ id
@@ -390,17 +390,17 @@ id-equiv-unordered-pair = {!!}
 element-id-equiv-standard-unordered-pair :
   {l : Level} {A : UU l} (x y : A) →
   element-equiv-standard-unordered-pair (id-equiv {A = A}) x y ~ refl-htpy
-element-id-equiv-standard-unordered-pair x y (inl (inr _)) = {!!}
+element-id-equiv-standard-unordered-pair = {!!}
 element-id-equiv-standard-unordered-pair x y (inr _) = {!!}
 
 id-equiv-standard-unordered-pair :
   {l : Level} {A : UU l} (x y : A) →
   equiv-standard-unordered-pair id-equiv x y ＝ refl
-id-equiv-standard-unordered-pair x y = {!!}
+id-equiv-standard-unordered-pair = {!!}
 
 unordered-distinct-pair :
   {l : Level} (A : UU l) → UU (lsuc lzero ⊔ l)
-unordered-distinct-pair A = {!!}
+unordered-distinct-pair = {!!}
 ```
 
 ### Every unordered pair is merely equal to a standard unordered pair
@@ -411,7 +411,7 @@ abstract
     {l : Level} {A : UU l} (p : unordered-pair A) →
     type-trunc-Prop
       ( Σ A (λ x → Σ A (λ y → standard-unordered-pair x y ＝ p)))
-  is-surjective-standard-unordered-pair (I , a) = {!!}
+  is-surjective-standard-unordered-pair = {!!}
 ```
 
 ### For every unordered pair `p` and every element `i` in its underlying type, `p` is equal to a standard unordered pair
@@ -427,7 +427,7 @@ module _
         ( element-unordered-pair p i)
         ( other-element-unordered-pair p i))
       ( p)
-  pr1 compute-standard-unordered-pair-element-unordered-pair = {!!}
+  compute-standard-unordered-pair-element-unordered-pair = {!!}
 
   eq-compute-standard-unordered-pair-element-unordered-pair :
     standard-unordered-pair

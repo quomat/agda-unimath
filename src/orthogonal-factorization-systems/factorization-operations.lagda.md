@@ -39,5 +39,5 @@ instance-factorization-operation :
 instance-factorization-operation = {!!}
 
 factorization-operation : (l1 l2 l3 : Level) → UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-factorization-operation l1 l2 l3 = {!!}
+factorization-operation = {!!}
 ```

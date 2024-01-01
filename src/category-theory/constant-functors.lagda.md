@@ -41,7 +41,7 @@ module _
   where
 
   constant-functor-Precategory : functor-Precategory C D
-  pr1 constant-functor-Precategory _ = {!!}
+  constant-functor-Precategory = {!!}
 ```
 
 ### Constant functors between categories
@@ -66,7 +66,7 @@ module _
   where
 
   constant-functor-Large-Precategory : functor-Large-Precategory (λ _ → l) C D
-  obj-functor-Large-Precategory constant-functor-Large-Precategory _ = {!!}
+  constant-functor-Large-Precategory = {!!}
 ```
 
 ### Constant functors between large categories

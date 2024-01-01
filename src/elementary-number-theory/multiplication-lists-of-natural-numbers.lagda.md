@@ -53,6 +53,6 @@ invariant-permutation-mul-list-ℕ = {!!}
 eq-mul-list-concat-list-ℕ :
   (p q : list ℕ) →
   (mul-list-ℕ (concat-list p q)) ＝ (mul-list-ℕ p) *ℕ (mul-list-ℕ q)
-eq-mul-list-concat-list-ℕ nil q = {!!}
+eq-mul-list-concat-list-ℕ = {!!}
 eq-mul-list-concat-list-ℕ (cons x p) q = {!!}
 ```

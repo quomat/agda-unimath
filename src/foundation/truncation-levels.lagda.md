@@ -25,7 +25,7 @@ open import foundation-core.identity-types
 
 ```agda
 truncation-level-minus-two-ℕ : ℕ → 𝕋
-truncation-level-minus-two-ℕ zero-ℕ = {!!}
+truncation-level-minus-two-ℕ = {!!}
 truncation-level-minus-two-ℕ (succ-ℕ n) = {!!}
 
 truncation-level-minus-one-ℕ : ℕ → 𝕋
@@ -39,7 +39,7 @@ truncation-level-ℕ = {!!}
 
 ```agda
 nat-succ-succ-𝕋 : 𝕋 → ℕ
-nat-succ-succ-𝕋 neg-two-𝕋 = {!!}
+nat-succ-succ-𝕋 = {!!}
 nat-succ-succ-𝕋 (succ-𝕋 k) = {!!}
 ```
 
@@ -47,7 +47,7 @@ nat-succ-succ-𝕋 (succ-𝕋 k) = {!!}
 
 ```agda
 add-𝕋 : 𝕋 → 𝕋 → 𝕋
-add-𝕋 neg-two-𝕋 neg-two-𝕋 = {!!}
+add-𝕋 = {!!}
 add-𝕋 neg-two-𝕋 (succ-𝕋 neg-two-𝕋) = {!!}
 add-𝕋 neg-two-𝕋 (succ-𝕋 (succ-𝕋 l)) = {!!}
 add-𝕋 (succ-𝕋 neg-two-𝕋) neg-two-𝕋 = {!!}
@@ -67,11 +67,11 @@ successor:
 
 ```agda
 iterated-succ-𝕋 : ℕ → 𝕋 → 𝕋
-iterated-succ-𝕋 zero-ℕ x = {!!}
+iterated-succ-𝕋 = {!!}
 iterated-succ-𝕋 (succ-ℕ n) x = {!!}
 
 iterated-succ-𝕋' : 𝕋 → ℕ → 𝕋
-iterated-succ-𝕋' x n = {!!}
+iterated-succ-𝕋' = {!!}
 ```
 
 ## Properties
@@ -80,13 +80,13 @@ iterated-succ-𝕋' x n = {!!}
 
 ```agda
 left-unit-law-add-𝕋 : (k : 𝕋) → zero-𝕋 +𝕋 k ＝ k
-left-unit-law-add-𝕋 neg-two-𝕋 = {!!}
+left-unit-law-add-𝕋 = {!!}
 left-unit-law-add-𝕋 (succ-𝕋 neg-two-𝕋) = {!!}
 left-unit-law-add-𝕋 (succ-𝕋 (succ-𝕋 neg-two-𝕋)) = {!!}
 left-unit-law-add-𝕋 (succ-𝕋 (succ-𝕋 (succ-𝕋 k))) = {!!}
 
 right-unit-law-add-𝕋 : (k : 𝕋) → k +𝕋 zero-𝕋 ＝ k
-right-unit-law-add-𝕋 neg-two-𝕋 = {!!}
+right-unit-law-add-𝕋 = {!!}
 right-unit-law-add-𝕋 (succ-𝕋 neg-two-𝕋) = {!!}
 right-unit-law-add-𝕋 (succ-𝕋 (succ-𝕋 k)) = {!!}
 ```

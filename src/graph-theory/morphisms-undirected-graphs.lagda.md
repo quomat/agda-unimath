@@ -45,13 +45,13 @@ module _
 
   vertex-hom-Undirected-Graph :
     hom-Undirected-Graph → vertex-Undirected-Graph G → vertex-Undirected-Graph H
-  vertex-hom-Undirected-Graph f = {!!}
+  vertex-hom-Undirected-Graph = {!!}
 
   unordered-pair-vertices-hom-Undirected-Graph :
     hom-Undirected-Graph →
     unordered-pair-vertices-Undirected-Graph G →
     unordered-pair-vertices-Undirected-Graph H
-  unordered-pair-vertices-hom-Undirected-Graph f = {!!}
+  unordered-pair-vertices-hom-Undirected-Graph = {!!}
 
   edge-hom-Undirected-Graph :
     (f : hom-Undirected-Graph)
@@ -59,7 +59,7 @@ module _
     edge-Undirected-Graph G p →
     edge-Undirected-Graph H
       ( unordered-pair-vertices-hom-Undirected-Graph f p)
-  edge-hom-Undirected-Graph f = {!!}
+  edge-hom-Undirected-Graph = {!!}
 ```
 
 ### Composition of morphisms of undirected graphs
@@ -74,7 +74,7 @@ module _
   comp-hom-Undirected-Graph :
     hom-Undirected-Graph H K → hom-Undirected-Graph G H →
     hom-Undirected-Graph G K
-  pr1 (comp-hom-Undirected-Graph (pair gV gE) (pair fV fE)) = {!!}
+  comp-hom-Undirected-Graph = {!!}
 ```
 
 ### Identity morphisms of undirected graphs
@@ -85,7 +85,7 @@ module _
   where
 
   id-hom-Undirected-Graph : hom-Undirected-Graph G G
-  pr1 id-hom-Undirected-Graph = {!!}
+  id-hom-Undirected-Graph = {!!}
 ```
 
 ## Properties
@@ -100,34 +100,34 @@ module _
 
   htpy-hom-Undirected-Graph :
     (f g : hom-Undirected-Graph G H) → UU (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  htpy-hom-Undirected-Graph f g = {!!}
+  htpy-hom-Undirected-Graph = {!!}
 
   refl-htpy-hom-Undirected-Graph :
     (f : hom-Undirected-Graph G H) → htpy-hom-Undirected-Graph f f
-  pr1 (refl-htpy-hom-Undirected-Graph f) = {!!}
+  refl-htpy-hom-Undirected-Graph = {!!}
 
   htpy-eq-hom-Undirected-Graph :
     (f g : hom-Undirected-Graph G H) → Id f g → htpy-hom-Undirected-Graph f g
-  htpy-eq-hom-Undirected-Graph f .f refl = {!!}
+  htpy-eq-hom-Undirected-Graph = {!!}
 
   abstract
     is-torsorial-htpy-hom-Undirected-Graph :
       (f : hom-Undirected-Graph G H) →
       is-torsorial (htpy-hom-Undirected-Graph f)
-    is-torsorial-htpy-hom-Undirected-Graph f = {!!}
+    is-torsorial-htpy-hom-Undirected-Graph = {!!}
 
   is-equiv-htpy-eq-hom-Undirected-Graph :
     (f g : hom-Undirected-Graph G H) →
     is-equiv (htpy-eq-hom-Undirected-Graph f g)
-  is-equiv-htpy-eq-hom-Undirected-Graph f = {!!}
+  is-equiv-htpy-eq-hom-Undirected-Graph = {!!}
 
   extensionality-hom-Undirected-Graph :
     (f g : hom-Undirected-Graph G H) → Id f g ≃ htpy-hom-Undirected-Graph f g
-  pr1 (extensionality-hom-Undirected-Graph f g) = {!!}
+  extensionality-hom-Undirected-Graph = {!!}
 
   eq-htpy-hom-Undirected-Graph :
     (f g : hom-Undirected-Graph G H) → htpy-hom-Undirected-Graph f g → Id f g
-  eq-htpy-hom-Undirected-Graph f g = {!!}
+  eq-htpy-hom-Undirected-Graph = {!!}
 ```
 
 ## External links

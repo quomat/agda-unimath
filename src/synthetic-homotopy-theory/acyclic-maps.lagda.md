@@ -67,13 +67,13 @@ module _
   where
 
   is-acyclic-map-Prop : (A → B) → Prop (l1 ⊔ l2)
-  is-acyclic-map-Prop f = {!!}
+  is-acyclic-map-Prop = {!!}
 
   is-acyclic-map : (A → B) → UU (l1 ⊔ l2)
-  is-acyclic-map f = {!!}
+  is-acyclic-map = {!!}
 
   is-prop-is-acyclic-map : (f : A → B) → is-prop (is-acyclic-map f)
-  is-prop-is-acyclic-map f = {!!}
+  is-prop-is-acyclic-map = {!!}
 ```
 
 ## Properties
@@ -86,10 +86,10 @@ module _
   where
 
   is-acyclic-map-is-epimorphism : is-epimorphism f → is-acyclic-map f
-  is-acyclic-map-is-epimorphism e b = {!!}
+  is-acyclic-map-is-epimorphism = {!!}
 
   is-epimorphism-is-acyclic-map : is-acyclic-map f → is-epimorphism f
-  is-epimorphism-is-acyclic-map ac = {!!}
+  is-epimorphism-is-acyclic-map = {!!}
 ```
 
 ### A type is acyclic if and only if its terminal map is an acyclic map
@@ -101,11 +101,11 @@ module _
 
   is-acyclic-map-terminal-map-is-acyclic :
     is-acyclic A → is-acyclic-map (terminal-map {A = A})
-  is-acyclic-map-terminal-map-is-acyclic ac u = {!!}
+  is-acyclic-map-terminal-map-is-acyclic = {!!}
 
   is-acyclic-is-acyclic-map-terminal-map :
     is-acyclic-map (terminal-map {A = A}) → is-acyclic A
-  is-acyclic-is-acyclic-map-terminal-map ac = {!!}
+  is-acyclic-is-acyclic-map-terminal-map = {!!}
 ```
 
 ### A type is acyclic if and only if the constant map from any type is an embedding

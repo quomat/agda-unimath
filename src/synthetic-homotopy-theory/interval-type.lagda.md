@@ -70,29 +70,29 @@ postulate
 
 ```agda
 Data-𝕀 : {l : Level} → (𝕀 → UU l) → UU l
-Data-𝕀 P = {!!}
+Data-𝕀 = {!!}
 
 ev-𝕀 : {l : Level} {P : 𝕀 → UU l} → ((x : 𝕀) → P x) → Data-𝕀 P
-ev-𝕀 f = {!!}
+ev-𝕀 = {!!}
 
 module _
   {l : Level} {P : 𝕀 → UU l}
   where
 
   Eq-Data-𝕀 : (x y : Data-𝕀 P) → UU l
-  Eq-Data-𝕀 x y = {!!}
+  Eq-Data-𝕀 = {!!}
 
   extensionality-Data-𝕀 : (x y : Data-𝕀 P) → Id x y ≃ Eq-Data-𝕀 x y
-  extensionality-Data-𝕀 (pair u (pair v α)) = {!!}
+  extensionality-Data-𝕀 = {!!}
 
   refl-Eq-Data-𝕀 : (x : Data-𝕀 P) → Eq-Data-𝕀 x x
-  refl-Eq-Data-𝕀 x = {!!}
+  refl-Eq-Data-𝕀 = {!!}
 
   Eq-eq-Data-𝕀 : {x y : Data-𝕀 P} → Id x y → Eq-Data-𝕀 x y
-  Eq-eq-Data-𝕀 {x = x} refl = {!!}
+  Eq-eq-Data-𝕀 = {!!}
 
   eq-Eq-Data-𝕀' : {x y : Data-𝕀 P} → Eq-Data-𝕀 x y → Id x y
-  eq-Eq-Data-𝕀' {x} {y} = {!!}
+  eq-Eq-Data-𝕀' = {!!}
 
   eq-Eq-Data-𝕀 :
     {x y : Data-𝕀 P} (α : pr1 x ＝ pr1 y) (β : pr1 (pr2 x) ＝ pr1 (pr2 y))
@@ -110,7 +110,7 @@ module _
 
 ```agda
 inv-ev-𝕀 : {l : Level} {P : 𝕀 → UU l} → Data-𝕀 P → (x : 𝕀) → P x
-inv-ev-𝕀 x = {!!}
+inv-ev-𝕀 = {!!}
 
 is-section-inv-ev-𝕀 :
   {l : Level} {P : 𝕀 → UU l} (x : Data-𝕀 P) → ev-𝕀 (inv-ev-𝕀 x) ＝ x
@@ -130,12 +130,12 @@ is-retraction-inv-ev-𝕀 = {!!}
 abstract
   is-equiv-ev-𝕀 :
     {l : Level} (P : 𝕀 → UU l) → is-equiv (ev-𝕀 {P = P})
-  is-equiv-ev-𝕀 P = {!!}
+  is-equiv-ev-𝕀 = {!!}
 
 contraction-𝕀 : (x : 𝕀) → Id source-𝕀 x
 contraction-𝕀 = {!!}
 
 abstract
   is-contr-𝕀 : is-contr 𝕀
-  pr1 is-contr-𝕀 = {!!}
+  is-contr-𝕀 = {!!}
 ```

@@ -61,10 +61,10 @@ module _
   connected-component = {!!}
 
   point-connected-component : connected-component
-  pr1 point-connected-component = {!!}
+  point-connected-component = {!!}
 
   connected-component-Pointed-Type : Pointed-Type l
-  pr1 connected-component-Pointed-Type = {!!}
+  connected-component-Pointed-Type = {!!}
 
   value-connected-component :
     connected-component → A

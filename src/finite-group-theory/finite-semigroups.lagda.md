@@ -43,7 +43,7 @@ Finite semigroups are semigroups of which the underlying type is finite.
 
 ```agda
 Semigroup-𝔽 : (l : Level) → UU (lsuc l)
-Semigroup-𝔽 l = {!!}
+Semigroup-𝔽 = {!!}
 
 module _
   {l : Level} (G : Semigroup-𝔽 l)
@@ -69,7 +69,7 @@ module _
   has-associative-mul-Semigroup-𝔽 = {!!}
 
   semigroup-Semigroup-𝔽 : Semigroup l
-  pr1 semigroup-Semigroup-𝔽 = {!!}
+  semigroup-Semigroup-𝔽 = {!!}
 
   mul-Semigroup-𝔽 :
     type-Semigroup-𝔽 → type-Semigroup-𝔽 → type-Semigroup-𝔽
@@ -90,10 +90,10 @@ module _
 
 ```agda
 Semigroup-of-Order' : (l : Level) (n : ℕ) → UU (lsuc l)
-Semigroup-of-Order' l n = {!!}
+Semigroup-of-Order' = {!!}
 
 Semigroup-of-Order : (l : Level) (n : ℕ) → UU (lsuc l)
-Semigroup-of-Order l n = {!!}
+Semigroup-of-Order = {!!}
 ```
 
 ## Properties
@@ -103,7 +103,7 @@ Semigroup-of-Order l n = {!!}
 ```agda
 is-finite-has-associative-mul :
   {l : Level} {X : UU l} → is-finite X → is-finite (has-associative-mul X)
-is-finite-has-associative-mul H = {!!}
+is-finite-has-associative-mul = {!!}
 ```
 
 ### The type of semigroups of order n is π-finite
@@ -111,23 +111,23 @@ is-finite-has-associative-mul H = {!!}
 ```agda
 is-π-finite-Semigroup-of-Order' :
   {l : Level} (k n : ℕ) → is-π-finite k (Semigroup-of-Order' l n)
-is-π-finite-Semigroup-of-Order' k n = {!!}
+is-π-finite-Semigroup-of-Order' = {!!}
 
 is-π-finite-Semigroup-of-Order :
   {l : Level} (k n : ℕ) → is-π-finite k (Semigroup-of-Order l n)
-is-π-finite-Semigroup-of-Order {l} k n = {!!}
+is-π-finite-Semigroup-of-Order = {!!}
 ```
 
 ### The function that returns for each `n` the number of semigroups of order `n` up to isomorphism
 
 ```agda
 number-of-semi-groups-of-order : ℕ → ℕ
-number-of-semi-groups-of-order n = {!!}
+number-of-semi-groups-of-order = {!!}
 
 mere-equiv-number-of-semi-groups-of-order :
   (n : ℕ) →
   mere-equiv
     ( Fin (number-of-semi-groups-of-order n))
     ( type-trunc-Set (Semigroup-of-Order lzero n))
-mere-equiv-number-of-semi-groups-of-order n = {!!}
+mere-equiv-number-of-semi-groups-of-order = {!!}
 ```

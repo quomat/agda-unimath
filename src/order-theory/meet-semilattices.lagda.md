@@ -68,7 +68,7 @@ module _
 
 ```agda
 Meet-Semilattice : (l : Level) → UU (lsuc l)
-Meet-Semilattice l = {!!}
+Meet-Semilattice = {!!}
 
 module _
   {l : Level} (X : Meet-Semilattice l)
@@ -90,7 +90,7 @@ module _
   meet-Meet-Semilattice = {!!}
 
   meet-Meet-Semilattice' : (x y : type-Meet-Semilattice) → type-Meet-Semilattice
-  meet-Meet-Semilattice' x y = {!!}
+  meet-Meet-Semilattice' = {!!}
 
   private
     _∧_ = {!!}
@@ -127,19 +127,19 @@ module _
     _≤_ = {!!}
 
   refl-leq-Meet-Semilattice : is-reflexive leq-Meet-Semilattice
-  refl-leq-Meet-Semilattice x = {!!}
+  refl-leq-Meet-Semilattice = {!!}
 
   transitive-leq-Meet-Semilattice : is-transitive leq-Meet-Semilattice
-  transitive-leq-Meet-Semilattice x y z H K = {!!}
+  transitive-leq-Meet-Semilattice = {!!}
 
   antisymmetric-leq-Meet-Semilattice : is-antisymmetric leq-Meet-Semilattice
-  antisymmetric-leq-Meet-Semilattice x y H K = {!!}
+  antisymmetric-leq-Meet-Semilattice = {!!}
 
   preorder-Meet-Semilattice : Preorder l l
-  pr1 preorder-Meet-Semilattice = {!!}
+  preorder-Meet-Semilattice = {!!}
 
   poset-Meet-Semilattice : Poset l l
-  pr1 poset-Meet-Semilattice = {!!}
+  poset-Meet-Semilattice = {!!}
 
   is-binary-lower-bound-meet-Meet-Semilattice :
     (x y : type-Meet-Semilattice) →
@@ -201,7 +201,7 @@ module _
 
 ```agda
 Order-Theoretic-Meet-Semilattice : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Order-Theoretic-Meet-Semilattice l1 l2 = {!!}
+Order-Theoretic-Meet-Semilattice = {!!}
 
 module _
   {l1 l2 : Level} (A : Order-Theoretic-Meet-Semilattice l1 l2)
@@ -398,7 +398,7 @@ module _
   where
 
   semigroup-Order-Theoretic-Meet-Semilattice : Semigroup l1
-  pr1 semigroup-Order-Theoretic-Meet-Semilattice = {!!}
+  semigroup-Order-Theoretic-Meet-Semilattice = {!!}
 
   meet-semilattice-Order-Theoretic-Meet-Semilattice :
     Meet-Semilattice l1

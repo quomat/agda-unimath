@@ -47,7 +47,7 @@ module _
 
 ```agda
 rigid-obj-Precategory : {l1 l2 : Level} (C : Precategory l1 l2) → UU (l1 ⊔ l2)
-rigid-obj-Precategory C = {!!}
+rigid-obj-Precategory = {!!}
 
 module _
   {l1 l2 : Level} (C : Precategory l1 l2)

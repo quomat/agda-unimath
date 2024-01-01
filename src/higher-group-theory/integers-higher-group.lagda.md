@@ -39,8 +39,8 @@ module _
   shape-ℤ-∞-Group = {!!}
 
   classifying-pointed-type-ℤ-∞-Group : Pointed-Type lzero
-  pr1 classifying-pointed-type-ℤ-∞-Group = {!!}
+  classifying-pointed-type-ℤ-∞-Group = {!!}
 
   ℤ-∞-Group : ∞-Group lzero
-  pr1 ℤ-∞-Group = {!!}
+  ℤ-∞-Group = {!!}
 ```

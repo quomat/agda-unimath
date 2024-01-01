@@ -79,9 +79,7 @@ module _
     ¬ ( walk-Directed-Tree T
         ( root-Directed-Tree T)
         ( node-base-Directed-Tree T b))
-  no-walk-to-base-root-Directed-Tree
-    ( pair .(root-Directed-Tree T) e)
-    refl-walk-Directed-Graph = {!!}
+  no-walk-to-base-root-Directed-Tree = {!!}
   no-walk-to-base-root-Directed-Tree b (cons-walk-Directed-Graph e w) = {!!}
 ```
 
@@ -166,9 +164,7 @@ module _
       is-root-Directed-Tree T x +
       Σ (base-Directed-Tree T) (walk-Directed-Tree T x ∘ pr1)) →
     cases-center-walk-to-base-Directed-Tree w ＝ u
-  cases-contraction-walk-to-base-Directed-Tree
-    ( refl-walk-Directed-Graph)
-    ( inl p) = {!!}
+  cases-contraction-walk-to-base-Directed-Tree = {!!}
   cases-contraction-walk-to-base-Directed-Tree refl-walk-Directed-Graph
     ( inr (b , w)) = {!!}
   cases-contraction-walk-to-base-Directed-Tree
@@ -241,7 +237,7 @@ module _
   is-prop-walk-to-base-Directed-Tree = {!!}
 
   walk-to-base-Directed-Tree-Prop : node-Directed-Tree T → Prop (l1 ⊔ l2)
-  pr1 (walk-to-base-Directed-Tree-Prop x) = {!!}
+  walk-to-base-Directed-Tree-Prop = {!!}
   pr2 (walk-to-base-Directed-Tree-Prop x) = {!!}
 ```
 

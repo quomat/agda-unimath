@@ -89,7 +89,7 @@ _ = {!!}
 
 private
   helper : (A : UU lzero) → A → A
-  helper A x = {!!}
+  helper = {!!}
 
   _ :
     quoteTerm (helper (ℕ → ℕ) (λ { zero-ℕ → zero-ℕ ; (succ-ℕ x) → x})) ＝

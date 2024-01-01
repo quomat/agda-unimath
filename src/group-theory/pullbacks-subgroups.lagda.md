@@ -85,7 +85,7 @@ module _
   is-subgroup-pullback-Subgroup = {!!}
 
   pullback-Subgroup : Subgroup l3 G
-  pr1 pullback-Subgroup = {!!}
+  pullback-Subgroup = {!!}
 ```
 
 ### The order preserving map `pullback-Subgroup`
@@ -161,5 +161,5 @@ module _
   is-normal-pullback-Normal-Subgroup = {!!}
 
   pullback-Normal-Subgroup : Normal-Subgroup l3 G
-  pr1 pullback-Normal-Subgroup = {!!}
+  pullback-Normal-Subgroup = {!!}
 ```

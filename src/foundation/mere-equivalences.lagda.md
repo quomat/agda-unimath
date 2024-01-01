@@ -54,7 +54,7 @@ abstract
 ```agda
 abstract
   refl-mere-equiv : {l1 : Level} → is-reflexive (mere-equiv {l1})
-  refl-mere-equiv X = {!!}
+  refl-mere-equiv = {!!}
 ```
 
 ### Mere equivalence is symmetric
@@ -84,10 +84,10 @@ module _
   where
 
   is-trunc-mere-equiv : (k : 𝕋) → mere-equiv X Y → is-trunc k Y → is-trunc k X
-  is-trunc-mere-equiv k e H = {!!}
+  is-trunc-mere-equiv = {!!}
 
   is-trunc-mere-equiv' : (k : 𝕋) → mere-equiv X Y → is-trunc k X → is-trunc k Y
-  is-trunc-mere-equiv' k e H = {!!}
+  is-trunc-mere-equiv' = {!!}
 ```
 
 ### Sets are closed under mere equivalence

@@ -25,7 +25,7 @@ open import univalent-combinatorics.standard-finite-types
 ```agda
 repeat-Fin :
   (k : ℕ) (x : Fin k) → Fin (succ-ℕ k) → Fin k
-repeat-Fin (succ-ℕ k) (inl x) (inl y) = {!!}
+repeat-Fin = {!!}
 repeat-Fin (succ-ℕ k) (inl x) (inr _) = {!!}
 repeat-Fin (succ-ℕ k) (inr _) (inl y) = {!!}
 repeat-Fin (succ-ℕ k) (inr _) (inr _) = {!!}
@@ -35,5 +35,5 @@ abstract
     (k : ℕ) (x : Fin k) {y z : Fin (succ-ℕ k)} →
     inl x ≠ y → inl x ≠ z →
     repeat-Fin k x y ＝ repeat-Fin k x z → y ＝ z
-  is-almost-injective-repeat-Fin (succ-ℕ k) (inl x) {inl y} {inl z} f g p = {!!}
+  is-almost-injective-repeat-Fin = {!!}
 ```

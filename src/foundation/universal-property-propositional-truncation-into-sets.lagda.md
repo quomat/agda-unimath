@@ -98,13 +98,13 @@ abstract
     {l1 l2 : Level} {A : UU l1} (B : Set l2) →
     ( ( precomp-universal-property-set-quotient-trunc-Prop {A = A} B) ∘
       ( map-universal-property-set-quotient-trunc-Prop' B)) ~ id
-  is-section-map-universal-property-set-quotient-trunc-Prop B (f , H) = {!!}
+  is-section-map-universal-property-set-quotient-trunc-Prop = {!!}
 
   is-retraction-map-universal-property-set-quotient-trunc-Prop :
     {l1 l2 : Level} {A : UU l1} (B : Set l2) →
     ( ( map-universal-property-set-quotient-trunc-Prop' B) ∘
       ( precomp-universal-property-set-quotient-trunc-Prop {A = A} B)) ~ id
-  is-retraction-map-universal-property-set-quotient-trunc-Prop B g = {!!}
+  is-retraction-map-universal-property-set-quotient-trunc-Prop = {!!}
 
   universal-property-set-quotient-trunc-Prop :
     {l1 l2 : Level} {A : UU l1} (B : Set l2) →

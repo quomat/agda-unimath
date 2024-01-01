@@ -81,8 +81,7 @@ module _
     equiv-eq-classifying-type-symmetric-Concrete-Group X Z (p ∙ q) ＝
     ( ( equiv-eq-classifying-type-symmetric-Concrete-Group Y Z q) ∘e
       ( equiv-eq-classifying-type-symmetric-Concrete-Group X Y p))
-  preserves-mul-equiv-eq-classifying-type-symmetric-Concrete-Group
-    X .X Z q refl = {!!}
+  preserves-mul-equiv-eq-classifying-type-symmetric-Concrete-Group = {!!}
 ```
 
 ### Equivalent sets have isomorphic symmetric concrete groups

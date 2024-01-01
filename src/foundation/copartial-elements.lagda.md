@@ -104,7 +104,7 @@ experimental.
 
 ```agda
 copartial-element : {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-copartial-element l2 A = {!!}
+copartial-element = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (a : copartial-element l2 A)
@@ -131,5 +131,5 @@ module _
   is-erased-unit-copartial-element = {!!}
 
   unit-copartial-element : copartial-element lzero A
-  pr1 unit-copartial-element = {!!}
+  unit-copartial-element = {!!}
 ```

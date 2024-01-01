@@ -177,7 +177,7 @@ module _
 is-emb-decidable-subset-Subgroup-𝔽 :
   {l1 l2 : Level} (G : Group-𝔽 l1) →
   is-emb (decidable-subset-Subgroup-𝔽 {l2 = l2} G)
-is-emb-decidable-subset-Subgroup-𝔽 G = {!!}
+is-emb-decidable-subset-Subgroup-𝔽 = {!!}
 ```
 
 ### The underlying group of a decidable subgroup
@@ -240,10 +240,10 @@ module _
   right-inverse-law-mul-Subgroup-𝔽 = {!!}
 
   finite-semigroup-Subgroup-𝔽 : Semigroup-𝔽 (l1 ⊔ l2)
-  pr1 finite-semigroup-Subgroup-𝔽 = {!!}
+  finite-semigroup-Subgroup-𝔽 = {!!}
 
   finite-group-Subgroup-𝔽 : Group-𝔽 (l1 ⊔ l2)
-  pr1 finite-group-Subgroup-𝔽 = {!!}
+  finite-group-Subgroup-𝔽 = {!!}
 
 semigroup-Subgroup-𝔽 :
   {l1 l2 : Level} (G : Group-𝔽 l1) → Subgroup-𝔽 l2 G → Semigroup (l1 ⊔ l2)

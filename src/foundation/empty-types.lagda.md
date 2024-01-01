@@ -39,10 +39,10 @@ empty type.
 
 ```agda
 raise-empty : (l : Level) → UU l
-raise-empty l = {!!}
+raise-empty = {!!}
 
 compute-raise-empty : (l : Level) → empty ≃ raise-empty l
-compute-raise-empty l = {!!}
+compute-raise-empty = {!!}
 
 raise-ex-falso :
   (l1 : Level) {l2 : Level} {A : UU l2} →
@@ -93,11 +93,11 @@ is-property-is-empty : {l : Level} {A : UU l} → is-prop (is-empty A)
 is-property-is-empty = {!!}
 
 is-empty-Prop : {l1 : Level} → UU l1 → Prop l1
-pr1 (is-empty-Prop A) = {!!}
+is-empty-Prop = {!!}
 pr2 (is-empty-Prop A) = {!!}
 
 is-nonempty-Prop : {l1 : Level} → UU l1 → Prop l1
-pr1 (is-nonempty-Prop A) = {!!}
+is-nonempty-Prop = {!!}
 pr2 (is-nonempty-Prop A) = {!!}
 ```
 

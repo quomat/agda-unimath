@@ -46,7 +46,7 @@ for each `n : ℕ`.
 
 ```agda
 is-spectrum-Prop : {l : Level} → Prespectrum l → Prop l
-is-spectrum-Prop A = {!!}
+is-spectrum-Prop = {!!}
 
 is-spectrum : {l : Level} → Prespectrum l → UU l
 is-spectrum = {!!}
@@ -59,7 +59,7 @@ is-prop-is-spectrum = {!!}
 
 ```agda
 Spectrum : (l : Level) → UU (lsuc l)
-Spectrum l = {!!}
+Spectrum = {!!}
 
 module _
   {l : Level} (A : Spectrum l)

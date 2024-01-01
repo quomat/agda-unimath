@@ -36,7 +36,7 @@ module _
   where
 
   map-Small-Large-Precategory : (γ : Level) → UU (l1 ⊔ l2 ⊔ α γ ⊔ β γ γ)
-  map-Small-Large-Precategory γ = {!!}
+  map-Small-Large-Precategory = {!!}
 
   obj-map-Small-Large-Precategory :
     {γ : Level} → map-Small-Large-Precategory γ →

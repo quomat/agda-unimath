@@ -51,5 +51,5 @@ module _
   is-prop-has-bottom-element-Poset = {!!}
 
   has-bottom-element-Poset-Prop : Prop (l1 ⊔ l2)
-  pr1 has-bottom-element-Poset-Prop = {!!}
+  has-bottom-element-Poset-Prop = {!!}
 ```

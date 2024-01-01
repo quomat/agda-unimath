@@ -45,7 +45,7 @@ We also introduce more intuitive infix notation `A retract-of B` to assert that
 
 ```agda
 retract : {l1 l2 : Level} → UU l1 → UU l2 → UU (l1 ⊔ l2)
-retract B A = {!!}
+retract = {!!}
 
 infix 6 _retract-of_
 
@@ -71,7 +71,7 @@ module _
   is-retraction-map-retraction-retract = {!!}
 
   section-retract : section map-retraction-retract
-  pr1 section-retract = {!!}
+  section-retract = {!!}
 ```
 
 ## Properties

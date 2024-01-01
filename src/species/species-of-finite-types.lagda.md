@@ -24,5 +24,5 @@ A **species of finite types** is a map from `𝔽` to a `𝔽`.
 
 ```agda
 species-𝔽 : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-species-𝔽 l1 l2 = {!!}
+species-𝔽 = {!!}
 ```

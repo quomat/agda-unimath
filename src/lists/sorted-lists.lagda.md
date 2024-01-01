@@ -40,10 +40,10 @@ module _
   where
 
   is-sorted-list-Prop : list (type-Decidable-Total-Order X) → Prop l2
-  is-sorted-list-Prop nil = {!!}
+  is-sorted-list-Prop = {!!}
 
   is-sorted-list : list (type-Decidable-Total-Order X) → UU l2
-  is-sorted-list l = {!!}
+  is-sorted-list = {!!}
 
   is-prop-is-sorted-list :
     (l : list (type-Decidable-Total-Order X)) → is-prop (is-sorted-list l)

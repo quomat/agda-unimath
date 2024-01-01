@@ -42,19 +42,19 @@ module _
   where
 
   inv-tr : x ＝ y → B y → B x
-  inv-tr p = {!!}
+  inv-tr = {!!}
 
   is-retraction-inv-tr : (p : x ＝ y) → (inv-tr p ∘ tr B p) ~ id
-  is-retraction-inv-tr refl b = {!!}
+  is-retraction-inv-tr = {!!}
 
   is-section-inv-tr : (p : x ＝ y) → (tr B p ∘ inv-tr p) ~ id
-  is-section-inv-tr refl b = {!!}
+  is-section-inv-tr = {!!}
 
   is-equiv-tr : (p : x ＝ y) → is-equiv (tr B p)
-  is-equiv-tr p = {!!}
+  is-equiv-tr = {!!}
 
   equiv-tr : x ＝ y → (B x) ≃ (B y)
-  pr1 (equiv-tr p) = {!!}
+  equiv-tr = {!!}
 ```
 
 ### Transporting along `refl` is the identity equivalence
@@ -63,7 +63,7 @@ module _
   equiv-tr-refl :
    {l1 l2 : Level} {A : UU l1} (B : A → UU l2) {x : A} →
    equiv-tr B refl ＝ id-equiv {A = B x}
-  equiv-tr-refl B = {!!}
+  equiv-tr-refl = {!!}
 ```
 
 ### Computing transport of loops

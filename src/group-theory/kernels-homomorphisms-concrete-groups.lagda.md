@@ -48,7 +48,7 @@ module _
   shape-kernel-hom-Concrete-Group = {!!}
 
   classifying-pointed-type-kernel-hom-Concrete-Group : Pointed-Type (l1 ⊔ l2)
-  pr1 classifying-pointed-type-kernel-hom-Concrete-Group = {!!}
+  classifying-pointed-type-kernel-hom-Concrete-Group = {!!}
   pr2 classifying-pointed-type-kernel-hom-Concrete-Group = {!!}
 
   is-0-connected-classifying-type-kernel-hom-Concrete-Group :
@@ -60,7 +60,7 @@ module _
   is-1-type-classifying-type-kernel-hom-Concrete-Group = {!!}
 
   ∞-group-kernel-hom-Concrete-Group : ∞-Group (l1 ⊔ l2)
-  pr1 ∞-group-kernel-hom-Concrete-Group = {!!}
+  ∞-group-kernel-hom-Concrete-Group = {!!}
   pr2 ∞-group-kernel-hom-Concrete-Group = {!!}
 
   type-kernel-hom-Concrete-Group : UU (l1 ⊔ l2)
@@ -71,6 +71,6 @@ module _
   is-set-type-kernel-hom-Concrete-Group = {!!}
 
   concrete-group-kernel-hom-Concrete-Group : Concrete-Group (l1 ⊔ l2)
-  pr1 concrete-group-kernel-hom-Concrete-Group = {!!}
+  concrete-group-kernel-hom-Concrete-Group = {!!}
   pr2 concrete-group-kernel-hom-Concrete-Group = {!!}
 ```

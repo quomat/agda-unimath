@@ -25,11 +25,11 @@ A **band** from $X$ to $Y$ is an element of the
 
 ```agda
 band : {l1 l2 : Level} → UU l1 → UU l2 → UU (l1 ⊔ l2)
-band A B = {!!}
+band = {!!}
 
 unit-band : {l1 l2 : Level} {A : UU l1} {B : UU l2} → (A ≃ B) → band A B
 unit-band = {!!}
 
 refl-band : {l : Level} (A : UU l) → band A A
-refl-band A = {!!}
+refl-band = {!!}
 ```

@@ -43,5 +43,5 @@ module _
   pr1 (pr1 methane) = {!!}
 
   is-alkane-methane : is-alkane-hydrocarbon methane
-  is-alkane-methane c c' e e' = {!!}
+  is-alkane-methane = {!!}
 ```

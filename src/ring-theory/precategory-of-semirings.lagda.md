@@ -30,8 +30,7 @@ semirings.
 
 ```agda
 Semiring-Large-Precategory : Large-Precategory lsuc _⊔_
-obj-Large-Precategory
-  Semiring-Large-Precategory = {!!}
+Semiring-Large-Precategory = {!!}
 hom-set-Large-Precategory
   Semiring-Large-Precategory = {!!}
 comp-hom-Large-Precategory

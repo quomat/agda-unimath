@@ -51,7 +51,7 @@ associated to `c`, satisfying the following conditions:
 
 ```agda
 hydrocarbon : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-hydrocarbon l1 l2 = {!!}
+hydrocarbon = {!!}
 
 module _
   {l1 l2 : Level} (H : hydrocarbon l1 l2)

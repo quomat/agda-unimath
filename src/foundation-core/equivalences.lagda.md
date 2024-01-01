@@ -51,7 +51,7 @@ module _
   where
 
   is-equiv : (A → B) → UU (l1 ⊔ l2)
-  is-equiv f = {!!}
+  is-equiv = {!!}
 ```
 
 ### Components of a proof of equivalence
@@ -142,7 +142,7 @@ module _
   pr1 (pr1 is-equiv-id) = {!!}
 
   id-equiv : A ≃ A
-  pr1 id-equiv = {!!}
+  id-equiv = {!!}
 ```
 
 ## Properties
@@ -169,7 +169,7 @@ module _
   where
 
   is-equiv-is-invertible' : is-invertible f → is-equiv f
-  pr1 (pr1 (is-equiv-is-invertible' (g , H , K))) = {!!}
+  is-equiv-is-invertible' = {!!}
 
   is-equiv-is-invertible :
     (g : B → A) (H : (f ∘ g) ~ id) (K : (g ∘ f) ~ id) → is-equiv f
@@ -180,7 +180,7 @@ module _
   is-retraction-map-section-is-equiv = {!!}
 
   is-invertible-is-equiv : is-equiv f → is-invertible f
-  pr1 (is-invertible-is-equiv H) = {!!}
+  is-invertible-is-equiv = {!!}
 ```
 
 ### Coherently invertible maps are equivalences
@@ -255,7 +255,7 @@ module _
   is-equiv-map-inv-equiv = {!!}
 
   inv-equiv : B ≃ A
-  pr1 inv-equiv = {!!}
+  inv-equiv = {!!}
 ```
 
 ### The 3-for-2 property of equivalences
@@ -296,7 +296,7 @@ module _
 
   abstract
     is-equiv-left-map-triangle : is-equiv h → is-equiv g → is-equiv f
-    pr1 (is-equiv-left-map-triangle H G) = {!!}
+    is-equiv-left-map-triangle = {!!}
 ```
 
 #### The right map in a commuting triangle is an equivalence if the other two maps are equivalences
@@ -310,9 +310,7 @@ module _
   abstract
     is-equiv-right-map-triangle :
       is-equiv f → is-equiv h → is-equiv g
-    is-equiv-right-map-triangle
-      ( section-f , retraction-f)
-      ( (sh , is-section-sh) , retraction-h) = {!!}
+    is-equiv-right-map-triangle = {!!}
 ```
 
 #### If the left and right maps in a commuting triangle are equivalences, then the top map is an equivalence
@@ -334,9 +332,7 @@ module _
   abstract
     is-equiv-top-map-triangle :
       is-equiv g → is-equiv f → is-equiv h
-    is-equiv-top-map-triangle
-      ( section-g , (rg , is-retraction-rg))
-      ( section-f , retraction-f) = {!!}
+    is-equiv-top-map-triangle = {!!}
 ```
 
 #### Composites of equivalences are equivalences
@@ -352,7 +348,7 @@ module _
     is-equiv-comp = {!!}
 
   equiv-comp : (B ≃ X) → (A ≃ B) → (A ≃ X)
-  pr1 (equiv-comp g h) = {!!}
+  equiv-comp = {!!}
 
   infixr 15 _∘e_
   _∘e_ : (B ≃ X) → (A ≃ B) → (A ≃ X)
@@ -402,14 +398,14 @@ module _
     is-equiv-htpy = {!!}
 
   is-equiv-htpy-equiv : {f : A → B} (e : A ≃ B) → f ~ map-equiv e → is-equiv f
-  is-equiv-htpy-equiv e H = {!!}
+  is-equiv-htpy-equiv = {!!}
 
   abstract
     is-equiv-htpy' : (f : A → B) {g : A → B} → f ~ g → is-equiv f → is-equiv g
-    is-equiv-htpy' f H = {!!}
+    is-equiv-htpy' = {!!}
 
   is-equiv-htpy-equiv' : (e : A ≃ B) {g : A → B} → map-equiv e ~ g → is-equiv g
-  is-equiv-htpy-equiv' e H = {!!}
+  is-equiv-htpy-equiv' = {!!}
 
   htpy-map-inv-is-equiv :
     {f g : A → B} (G : f ~ g) (H : is-equiv f) (K : is-equiv g) →

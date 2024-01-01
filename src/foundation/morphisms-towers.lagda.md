@@ -53,7 +53,7 @@ naturality-hom-tower :
 naturality-hom-tower = {!!}
 
 hom-tower : {l1 l2 : Level} (A : tower l1) (B : tower l2) → UU (l1 ⊔ l2)
-hom-tower A B = {!!}
+hom-tower = {!!}
 
 module _
   {l1 l2 : Level} (A : tower l1) (B : tower l2)
@@ -113,10 +113,10 @@ module _
   htpy-hom-tower = {!!}
 
   refl-htpy-hom-tower : (f : hom-tower A B) → htpy-hom-tower f f
-  pr1 (refl-htpy-hom-tower f) n = {!!}
+  refl-htpy-hom-tower = {!!}
 
   htpy-eq-hom-tower : (f g : hom-tower A B) → f ＝ g → htpy-hom-tower f g
-  htpy-eq-hom-tower f .f refl = {!!}
+  htpy-eq-hom-tower = {!!}
 
   is-torsorial-htpy-hom-tower :
     (f : hom-tower A B) → is-torsorial (htpy-hom-tower f)
@@ -131,7 +131,7 @@ module _
   extensionality-hom-tower = {!!}
 
   eq-htpy-hom-tower : (f g : hom-tower A B) → htpy-hom-tower f g → f ＝ g
-  eq-htpy-hom-tower f g = {!!}
+  eq-htpy-hom-tower = {!!}
 ```
 
 ## Table of files about sequential limits

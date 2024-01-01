@@ -55,10 +55,10 @@ module _
   where
 
   is-equivalence-class-Prop : subtype l2 A → Prop (l1 ⊔ l2)
-  is-equivalence-class-Prop P = {!!}
+  is-equivalence-class-Prop = {!!}
 
   is-equivalence-class : subtype l2 A → UU (l1 ⊔ l2)
-  is-equivalence-class P = {!!}
+  is-equivalence-class = {!!}
 
   is-prop-is-equivalence-class :
     (P : subtype l2 A) → is-prop (is-equivalence-class P)
@@ -80,7 +80,7 @@ module _
   equivalence-class = {!!}
 
   class : A → equivalence-class
-  pr1 (class x) = {!!}
+  class = {!!}
 
   emb-equivalence-class : equivalence-class ↪ subtype l2 A
   emb-equivalence-class = {!!}
@@ -101,7 +101,7 @@ module _
   inhabited-subtype-equivalence-class = {!!}
 
   is-in-equivalence-class : equivalence-class → (A → UU l2)
-  is-in-equivalence-class P x = {!!}
+  is-in-equivalence-class = {!!}
 
   abstract
     is-prop-is-in-equivalence-class :
@@ -110,21 +110,21 @@ module _
     is-prop-is-in-equivalence-class = {!!}
 
   is-in-equivalence-class-Prop : equivalence-class → (A → Prop l2)
-  pr1 (is-in-equivalence-class-Prop P x) = {!!}
+  is-in-equivalence-class-Prop = {!!}
 
   abstract
     is-set-equivalence-class : is-set equivalence-class
     is-set-equivalence-class = {!!}
 
   equivalence-class-Set : Set (l1 ⊔ lsuc l2)
-  pr1 equivalence-class-Set = {!!}
+  equivalence-class-Set = {!!}
 
   unit-im-equivalence-class :
     hom-slice (prop-equivalence-relation R) subtype-equivalence-class
   unit-im-equivalence-class = {!!}
 
   is-surjective-class : is-surjective class
-  is-surjective-class C = {!!}
+  is-surjective-class = {!!}
 
   is-image-equivalence-class :
     is-image
@@ -335,7 +335,7 @@ module _
   is-small-equivalence-class = {!!}
 
   equivalence-class-Small-Type : Small-Type (l1 ⊔ l2) (l1 ⊔ lsuc l2)
-  pr1 equivalence-class-Small-Type = {!!}
+  equivalence-class-Small-Type = {!!}
 
   small-equivalence-class : UU (l1 ⊔ l2)
   small-equivalence-class = {!!}

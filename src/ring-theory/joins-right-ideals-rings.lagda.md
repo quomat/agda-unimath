@@ -53,13 +53,13 @@ module _
     is-join-family-of-right-ideals-Ring J →
     (K : right-ideal-Ring l5 R) → ((α : U) → leq-right-ideal-Ring R (I α) K) →
     leq-right-ideal-Ring R J K
-  inclusion-is-join-family-of-right-ideals-Ring J H K = {!!}
+  inclusion-is-join-family-of-right-ideals-Ring = {!!}
 
   contains-right-ideal-is-join-family-of-right-ideals-Ring :
     {l4 : Level} (J : right-ideal-Ring l4 R) →
     is-join-family-of-right-ideals-Ring J →
     {α : U} → leq-right-ideal-Ring R (I α) J
-  contains-right-ideal-is-join-family-of-right-ideals-Ring J H {α} = {!!}
+  contains-right-ideal-is-join-family-of-right-ideals-Ring = {!!}
 ```
 
 ### The join of a family of right ideals
@@ -81,17 +81,17 @@ module _
     {l4 : Level} (K : right-ideal-Ring l4 R) →
     ((α : U) → leq-right-ideal-Ring R (I α) K) →
     leq-right-ideal-Ring R join-family-of-right-ideals-Ring K
-  forward-inclusion-is-join-join-family-of-right-ideals-Ring K H = {!!}
+  forward-inclusion-is-join-join-family-of-right-ideals-Ring = {!!}
 
   backward-inclusion-is-join-join-family-of-right-ideals-Ring :
     {l4 : Level} (K : right-ideal-Ring l4 R) →
     leq-right-ideal-Ring R join-family-of-right-ideals-Ring K →
     (α : U) → leq-right-ideal-Ring R (I α) K
-  backward-inclusion-is-join-join-family-of-right-ideals-Ring K H _ x p = {!!}
+  backward-inclusion-is-join-join-family-of-right-ideals-Ring = {!!}
 
   is-join-join-family-of-right-ideals-Ring :
     is-join-family-of-right-ideals-Ring R I join-family-of-right-ideals-Ring
-  pr1 (is-join-join-family-of-right-ideals-Ring K) = {!!}
+  is-join-join-family-of-right-ideals-Ring = {!!}
   pr2 (is-join-join-family-of-right-ideals-Ring K) = {!!}
 
   inclusion-join-family-of-right-ideals-Ring :
@@ -114,15 +114,13 @@ module _
 
   is-large-suplattice-right-ideal-Ring-Large-Poset :
     is-large-suplattice-Large-Poset l1 (right-ideal-Ring-Large-Poset R)
-  sup-has-least-upper-bound-family-of-elements-Large-Poset
-    ( is-large-suplattice-right-ideal-Ring-Large-Poset I) = {!!}
+  is-large-suplattice-right-ideal-Ring-Large-Poset = {!!}
   is-least-upper-bound-sup-has-least-upper-bound-family-of-elements-Large-Poset
     ( is-large-suplattice-right-ideal-Ring-Large-Poset I) = {!!}
 
   right-ideal-Ring-Large-Suplattice :
     Large-Suplattice (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3) l1
-  large-poset-Large-Suplattice
-    right-ideal-Ring-Large-Suplattice = {!!}
+  right-ideal-Ring-Large-Suplattice = {!!}
   is-large-suplattice-Large-Suplattice
     right-ideal-Ring-Large-Suplattice = {!!}
 ```

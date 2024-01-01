@@ -38,10 +38,10 @@ module _
   where
 
   is-trunc-map : {A : UU l1} {B : UU l2} → (A → B) → UU (l1 ⊔ l2)
-  is-trunc-map f = {!!}
+  is-trunc-map = {!!}
 
   trunc-map : (A : UU l1) (B : UU l2) → UU (l1 ⊔ l2)
-  trunc-map A B = {!!}
+  trunc-map = {!!}
 
 module _
   {l1 l2 : Level} {k : 𝕋} {A : UU l1} {B : UU l2}

@@ -37,7 +37,7 @@ module _
   where
 
   scalar-mul-vec-Ring : {n : ℕ} (r : type-Ring R) → vec-Ring R n → vec-Ring R n
-  scalar-mul-vec-Ring r empty-vec = {!!}
+  scalar-mul-vec-Ring = {!!}
 
   associative-scalar-mul-vec-Ring :
     {n : ℕ} (r s : type-Ring R) (v : vec-Ring R n) →
@@ -76,5 +76,5 @@ module _
   scalar-mul-hom-Ring = {!!}
 
   vec-left-module-Ring : (n : ℕ) → left-module-Ring l R
-  vec-left-module-Ring n = {!!}
+  vec-left-module-Ring = {!!}
 ```

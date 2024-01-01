@@ -61,7 +61,7 @@ module _
 
 ```agda
 Suplattice : (l1 l2 l3 : Level) → UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-Suplattice l1 l2 l3 = {!!}
+Suplattice = {!!}
 
 module _
   {l1 l2 l3 : Level} (A : Suplattice l1 l2 l3)

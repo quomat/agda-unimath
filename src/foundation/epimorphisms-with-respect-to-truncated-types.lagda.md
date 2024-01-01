@@ -155,25 +155,25 @@ module _
     is-epimorphism-Truncated-Type k f →
     {l : Level} (X : Truncated-Type l k) →
     is-equiv (horizontal-map-cocone {X = type-Truncated-Type X} f f)
-  is-equiv-horizontal-map-cocone-is-epimorphism-Truncated-Type e X = {!!}
+  is-equiv-horizontal-map-cocone-is-epimorphism-Truncated-Type = {!!}
 
   is-equiv-vertical-map-cocone-is-epimorphism-Truncated-Type :
     is-epimorphism-Truncated-Type k f →
     {l : Level} (X : Truncated-Type l k) →
     is-equiv (vertical-map-cocone {X = type-Truncated-Type X} f f)
-  is-equiv-vertical-map-cocone-is-epimorphism-Truncated-Type e X = {!!}
+  is-equiv-vertical-map-cocone-is-epimorphism-Truncated-Type = {!!}
 
   is-epimorphism-is-equiv-horizontal-map-cocone-Truncated-Type :
     ( {l : Level} (X : Truncated-Type l k) →
       is-equiv (horizontal-map-cocone {X = type-Truncated-Type X} f f)) →
     is-epimorphism-Truncated-Type k f
-  is-epimorphism-is-equiv-horizontal-map-cocone-Truncated-Type h X = {!!}
+  is-epimorphism-is-equiv-horizontal-map-cocone-Truncated-Type = {!!}
 
   is-epimorphism-is-equiv-vertical-map-cocone-Truncated-Type :
     ( {l : Level} (X : Truncated-Type l k) →
       is-equiv (vertical-map-cocone {X = type-Truncated-Type X} f f)) →
     is-epimorphism-Truncated-Type k f
-  is-epimorphism-is-equiv-vertical-map-cocone-Truncated-Type h = {!!}
+  is-epimorphism-is-equiv-vertical-map-cocone-Truncated-Type = {!!}
 ```
 
 ### The codiagonal of a `k`-epimorphism is a `k`-equivalence
@@ -217,7 +217,7 @@ module _
     is-truncation-equivalence k (codiagonal-map f) →
     {l : Level} (X : Truncated-Type l k) →
     is-equiv (horizontal-map-cocone {X = type-Truncated-Type X} f f)
-  is-equiv-horizontal-map-cocone-is-truncation-equivalence-codiagonal-map e X = {!!}
+  is-equiv-horizontal-map-cocone-is-truncation-equivalence-codiagonal-map = {!!}
 
   is-epimorphism-is-truncation-equivalence-codiagonal-map-Truncated-Type :
     is-truncation-equivalence k (codiagonal-map f) →

@@ -111,7 +111,7 @@ postulate
 cocone-pushout :
   {l1 l2 l3 : Level} {S : UU l1} {A : UU l2} {B : UU l3}
   (f : S → A) (g : S → B) → cocone f g (pushout f g)
-pr1 (cocone-pushout f g) = {!!}
+cocone-pushout = {!!}
 pr1 (pr2 (cocone-pushout f g)) = {!!}
 pr2 (pr2 (cocone-pushout f g)) = {!!}
 
@@ -124,7 +124,7 @@ postulate
 equiv-up-pushout :
   {l1 l2 l3 l4 : Level} {S : UU l1} {A : UU l2} {B : UU l3}
   (f : S → A) (g : S → B) (X : UU l4) → (pushout f g → X) ≃ (cocone f g X)
-pr1 (equiv-up-pushout f g X) = {!!}
+equiv-up-pushout = {!!}
 pr2 (equiv-up-pushout f g X) = {!!}
 ```
 
@@ -156,7 +156,7 @@ is-pushout :
   { l1 l2 l3 l4 : Level} {S : UU l1} {A : UU l2} {B : UU l3}
   ( f : S → A) (g : S → B) {X : UU l4} (c : cocone f g X) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-is-pushout f g c = {!!}
+is-pushout = {!!}
 ```
 
 ## Properties
@@ -171,7 +171,7 @@ module _
 
   universal-property-pushout-is-pushout :
     is-pushout f g c → {l : Level} → universal-property-pushout l f g c
-  universal-property-pushout-is-pushout po = {!!}
+  universal-property-pushout-is-pushout = {!!}
 
   is-pushout-universal-property-pushout :
     ({l : Level} → universal-property-pushout l f g c) → is-pushout f g c
@@ -193,7 +193,7 @@ module _
   equiv-dup-pushout :
     (P : pushout f g → UU l4) →
     ((x : pushout f g) → P x) ≃ dependent-cocone f g (cocone-pushout f g) P
-  pr1 (equiv-dup-pushout P) = {!!}
+  equiv-dup-pushout = {!!}
 ```
 
 ### Computation with the cogap map
@@ -344,7 +344,7 @@ fibers.
       { l : Level} →
       ( Σ ( cocone u v (fiber (cogap f g c) x))
           ( λ c → universal-property-pushout l u v c))
-    universal-property-pushout-cogap-fiber-up-to-equiv {l} = {!!}
+    universal-property-pushout-cogap-fiber-up-to-equiv = {!!}
 ```
 
 ### Swapping a pushout cocone yields another pushout cocone
@@ -358,9 +358,9 @@ module _
   universal-property-pushout-swap-cocone-universal-property-pushout :
     {l : Level} → universal-property-pushout l f g c →
     universal-property-pushout l g f (swap-cocone f g X c)
-  universal-property-pushout-swap-cocone-universal-property-pushout up Y = {!!}
+  universal-property-pushout-swap-cocone-universal-property-pushout = {!!}
 
   is-pushout-swap-cocone-is-pushout :
     is-pushout f g c → is-pushout g f (swap-cocone f g X c)
-  is-pushout-swap-cocone-is-pushout po = {!!}
+  is-pushout-swap-cocone-is-pushout = {!!}
 ```

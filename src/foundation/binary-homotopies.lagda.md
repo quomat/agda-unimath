@@ -41,7 +41,7 @@ module _
   binary-htpy = {!!}
 
   refl-binary-htpy : (f : (x : A) (y : B x) → C x y) → binary-htpy f f
-  refl-binary-htpy f x = {!!}
+  refl-binary-htpy = {!!}
 
   binary-htpy-eq :
     (f g : (x : A) (y : B x) → C x y) → (f ＝ g) → binary-htpy f g

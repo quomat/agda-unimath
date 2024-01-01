@@ -30,13 +30,13 @@ types.
 
 ```agda
 max-Fin : (k : ℕ) → Fin k → Fin k → Fin k
-max-Fin (succ-ℕ k) (inl x) (inl y) = {!!}
+max-Fin = {!!}
 max-Fin (succ-ℕ k) (inl x) (inr _) = {!!}
 max-Fin (succ-ℕ k) (inr _) (inl x) = {!!}
 max-Fin (succ-ℕ k) (inr _) (inr _) = {!!}
 
 max-Fin-Fin : (n k : ℕ) → (Fin (succ-ℕ n) → Fin k) → Fin k
-max-Fin-Fin zero-ℕ k f = {!!}
+max-Fin-Fin = {!!}
 max-Fin-Fin (succ-ℕ n) k f = {!!}
 ```
 

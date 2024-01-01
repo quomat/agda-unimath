@@ -46,14 +46,14 @@ module _
   where
 
   permute-list : (l : list A) → Permutation (length-list l) → list A
-  permute-list l s = {!!}
+  permute-list = {!!}
 ```
 
 ### The predicate that a function from `list` to `list` is permuting lists
 
 ```agda
   is-permutation-list : (list A → list A) → UU l
-  is-permutation-list f = {!!}
+  is-permutation-list = {!!}
 
   permutation-is-permutation-list :
     (f : list A → list A) → is-permutation-list f →

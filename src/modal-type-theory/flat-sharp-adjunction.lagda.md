@@ -100,14 +100,14 @@ crisp-rec-sharp :
   {@♭ l1 : Level} {l2 : Level} {@♭ A : UU l1} (C : UU l2) →
   (is-sharp-codiscrete C) →
   ((@♭ x : A) → C) → A → C
-crisp-rec-sharp C is-sharp-codiscrete-C = {!!}
+crisp-rec-sharp = {!!}
 
 compute-crisp-rec-sharp :
   {@♭ l1 : Level} {l2 : Level} {@♭ A : UU l1} (C : UU l2)
   (is-sharp-codiscrete-C : is-sharp-codiscrete C)
   (f : (@♭ x : A) → C) →
   (@♭ x : A) → crisp-rec-sharp C is-sharp-codiscrete-C f x ＝ f x
-compute-crisp-rec-sharp C is-sharp-codiscrete-C = {!!}
+compute-crisp-rec-sharp = {!!}
 ```
 
 ## Properties
@@ -116,7 +116,7 @@ compute-crisp-rec-sharp C is-sharp-codiscrete-C = {!!}
 crisp-tr-sharp :
   {@♭ l : Level} {@♭ A : UU l} {B : UU l} → (p : A ＝ B) →
   {@♭ x : ♯ A} → unit-sharp (tr (λ X → X) p (crisp-elim-sharp x)) ＝ tr ♯ p x
-crisp-tr-sharp refl {x} = {!!}
+crisp-tr-sharp = {!!}
 ```
 
 ### Crisp induction on `♯` implies typal induction
@@ -127,7 +127,7 @@ ind-crisp-ind-sharp :
   ((x : ♯ A) → is-sharp-codiscrete (C x)) →
   ((x : A) → C (unit-sharp x)) →
   (x : ♯ A) → C x
-ind-crisp-ind-sharp {A = A} C is-sharp-codiscrete-C f x' = {!!}
+ind-crisp-ind-sharp = {!!}
 ```
 
 The accompanying computation principle remains to be fully formalized.
@@ -138,7 +138,7 @@ compute-ind-crisp-ind-sharp :
   (is-sharp-codiscrete-C : (x : ♯ A) → is-sharp-codiscrete (C x)) →
   (f : (x : A) → C (unit-sharp x)) → (x : A) →
   ind-crisp-ind-sharp C is-sharp-codiscrete-C f (unit-sharp x) ＝ f x
-compute-ind-crisp-ind-sharp {A = A} C is-sharp-codiscrete-C f x = {!!}
+compute-ind-crisp-ind-sharp = {!!}
 ```
 
 ### Flat after sharp
@@ -155,23 +155,23 @@ module _
   ap-flat-unit-sharp = {!!}
 
   is-section-ap-flat-unit-sharp : ap-flat-elim-sharp ∘ ap-flat-unit-sharp ~ id
-  is-section-ap-flat-unit-sharp (cons-flat x) = {!!}
+  is-section-ap-flat-unit-sharp = {!!}
 
   is-retraction-ap-flat-unit-sharp :
     ap-flat-unit-sharp ∘ ap-flat-elim-sharp ~ id
-  is-retraction-ap-flat-unit-sharp (cons-flat x) = {!!}
+  is-retraction-ap-flat-unit-sharp = {!!}
 
   is-equiv-ap-flat-elim-sharp : is-equiv ap-flat-elim-sharp
   pr1 (pr1 is-equiv-ap-flat-elim-sharp) = {!!}
 
   equiv-ap-flat-elim-sharp : ♭ (♯ A) ≃ ♭ A
-  pr1 equiv-ap-flat-elim-sharp = {!!}
+  equiv-ap-flat-elim-sharp = {!!}
 
   is-equiv-ap-flat-unit-sharp : is-equiv ap-flat-unit-sharp
   pr1 (pr1 is-equiv-ap-flat-unit-sharp) = {!!}
 
   equiv-ap-flat-unit-sharp : ♭ A ≃ ♭ (♯ A)
-  pr1 equiv-ap-flat-unit-sharp = {!!}
+  equiv-ap-flat-unit-sharp = {!!}
 ```
 
 ### Sharp after flat
@@ -203,11 +203,11 @@ This remains to be formalized.
 map-crisp-retraction-precomp-unit-sharp :
   {l1 : Level} {l2 : Level} {X : UU l1} {P : ♯ X → UU l2} →
   ((x : ♯ X) → ♯ (P x)) → (x : X) → ♯ (P (unit-sharp x))
-map-crisp-retraction-precomp-unit-sharp {P = P} f = {!!}
+map-crisp-retraction-precomp-unit-sharp = {!!}
 
 crisp-elim-sharp' :
     {@♭ l : Level} {@♭ A : UU l} → @♭ ♯ A → A
-crisp-elim-sharp' {A = A} x = {!!}
+crisp-elim-sharp' = {!!}
 
 is-retraction-map-crisp-retraction-precomp-unit-sharp :
   {@♭ l1 : Level} {l2 : Level} {@♭ X : UU l1} {P : ♯ X → UU l2} →
@@ -216,7 +216,7 @@ is-retraction-map-crisp-retraction-precomp-unit-sharp = {!!}
 
 is-uniquely-eliminating-sharp :
   {l : Level} → is-uniquely-eliminating-modality (unit-sharp {l})
-is-uniquely-eliminating-sharp X P .pr1 = {!!}
+is-uniquely-eliminating-sharp = {!!}
 is-uniquely-eliminating-sharp {l} X P .pr2 .pr1 x = {!!}
 is-uniquely-eliminating-sharp X P .pr2 .pr2 f = {!!}
 ```

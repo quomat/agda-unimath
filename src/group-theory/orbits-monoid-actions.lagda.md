@@ -45,7 +45,7 @@ module _
   where
 
   hom-orbit-action-Monoid : (x y : type-action-Monoid M X) → UU (l1 ⊔ l2)
-  hom-orbit-action-Monoid x y = {!!}
+  hom-orbit-action-Monoid = {!!}
 
   element-hom-orbit-action-Monoid :
     {x y : type-action-Monoid M X} → hom-orbit-action-Monoid x y → type-Monoid M
@@ -133,5 +133,5 @@ module _
   right-unit-law-comp-hom-orbit-action-Monoid = {!!}
 
   orbit-monoid-action-Precategory : Precategory l2 (l1 ⊔ l2)
-  pr1 orbit-monoid-action-Precategory = {!!}
+  orbit-monoid-action-Precategory = {!!}
 ```

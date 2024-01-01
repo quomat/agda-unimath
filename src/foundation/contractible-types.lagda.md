@@ -37,7 +37,7 @@ open import foundation-core.truncation-levels
 
 ```agda
 is-contr-Prop : {l : Level} → UU l → Prop l
-pr1 (is-contr-Prop A) = {!!}
+is-contr-Prop = {!!}
 pr2 (is-contr-Prop A) = {!!}
 ```
 
@@ -45,28 +45,28 @@ pr2 (is-contr-Prop A) = {!!}
 
 ```agda
 Contr : (l : Level) → UU (lsuc l)
-Contr l = {!!}
+Contr = {!!}
 
 type-Contr : {l : Level} → Contr l → UU l
-type-Contr A = {!!}
+type-Contr = {!!}
 
 abstract
   is-contr-type-Contr :
     {l : Level} (A : Contr l) → is-contr (type-Contr A)
-  is-contr-type-Contr A = {!!}
+  is-contr-type-Contr = {!!}
 
 equiv-Contr :
   {l1 l2 : Level} (X : Contr l1) (Y : Contr l2) → UU (l1 ⊔ l2)
-equiv-Contr X Y = {!!}
+equiv-Contr = {!!}
 
 equiv-eq-Contr :
   {l1 : Level} (X Y : Contr l1) → (X ＝ Y) → equiv-Contr X Y
-equiv-eq-Contr X Y = {!!}
+equiv-eq-Contr = {!!}
 
 abstract
   is-equiv-equiv-eq-Contr :
     {l1 : Level} (X Y : Contr l1) → is-equiv (equiv-eq-Contr X Y)
-  is-equiv-equiv-eq-Contr X Y = {!!}
+  is-equiv-equiv-eq-Contr = {!!}
 
 eq-equiv-Contr :
   {l1 : Level} {X Y : Contr l1} → equiv-Contr X Y → (X ＝ Y)
@@ -74,15 +74,15 @@ eq-equiv-Contr = {!!}
 
 abstract
   center-Contr : (l : Level) → Contr l
-  center-Contr l = {!!}
+  center-Contr = {!!}
 
   contraction-Contr :
     {l : Level} (A : Contr l) → center-Contr l ＝ A
-  contraction-Contr A = {!!}
+  contraction-Contr = {!!}
 
 abstract
   is-contr-Contr : (l : Level) → is-contr (Contr l)
-  is-contr-Contr l = {!!}
+  is-contr-Contr = {!!}
 ```
 
 ### The predicate that a subuniverse contains any contractible types
@@ -90,7 +90,7 @@ abstract
 ```agda
 contains-contractible-types-subuniverse :
   {l1 l2 : Level} → subuniverse l1 l2 → UU (lsuc l1 ⊔ l2)
-contains-contractible-types-subuniverse {l1} P = {!!}
+contains-contractible-types-subuniverse = {!!}
 ```
 
 ### The predicate that a subuniverse is closed under the `is-contr` predicate
@@ -102,11 +102,11 @@ using a single universe
 is-closed-under-is-contr-subuniverses :
   {l1 l2 l3 : Level} (P : subuniverse l1 l2) (Q : subuniverse l1 l3) →
   UU (lsuc l1 ⊔ l2 ⊔ l3)
-is-closed-under-is-contr-subuniverses P Q = {!!}
+is-closed-under-is-contr-subuniverses = {!!}
 
 is-closed-under-is-contr-subuniverse :
   {l1 l2 : Level} (P : subuniverse l1 l2) → UU (lsuc l1 ⊔ l2)
-is-closed-under-is-contr-subuniverse P = {!!}
+is-closed-under-is-contr-subuniverse = {!!}
 ```
 
 ## Properties
@@ -116,7 +116,7 @@ is-closed-under-is-contr-subuniverse P = {!!}
 ```agda
 equiv-is-contr-equiv :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → A ≃ B → is-contr A ≃ is-contr B
-equiv-is-contr-equiv {A = A} {B = B} e = {!!}
+equiv-is-contr-equiv = {!!}
 ```
 
 ### Contractible types are `k`-truncated for any `k`
@@ -128,7 +128,7 @@ module _
 
   abstract
     is-trunc-is-contr : (k : 𝕋) → is-contr A → is-trunc k A
-    is-trunc-is-contr neg-two-𝕋 is-contr-A = {!!}
+    is-trunc-is-contr = {!!}
 ```
 
 ### Contractibility of Σ-types where the dependent type is a proposition
@@ -140,7 +140,7 @@ module _
 
   is-contr-Σ-is-prop :
     ((x : A) → is-prop (B x)) → ((x : A) → B x → a ＝ x) → is-contr (Σ A B)
-  pr1 (is-contr-Σ-is-prop p f) = {!!}
+  is-contr-Σ-is-prop = {!!}
 ```
 
 ### Equivalent characterizations of contractible types
@@ -151,90 +151,90 @@ module _
   where
 
   dependent-universal-property-contr : (l : Level) (a : A) → UU (l1 ⊔ lsuc l)
-  dependent-universal-property-contr l a = {!!}
+  dependent-universal-property-contr = {!!}
 
   universal-property-contr : (l : Level) (a : A) → UU (l1 ⊔ lsuc l)
-  universal-property-contr l a = {!!}
+  universal-property-contr = {!!}
 
   universal-property-dependent-universal-property-contr :
     (a : A) →
     ({l : Level} → dependent-universal-property-contr l a) →
     ({l : Level} → universal-property-contr l a)
-  universal-property-dependent-universal-property-contr a dup-contr {l} X = {!!}
+  universal-property-dependent-universal-property-contr = {!!}
 
   abstract
     is-equiv-ev-point-universal-property-contr :
       (a : A) → ({l : Level} → universal-property-contr l a) →
       is-equiv (ev-point' a {A})
-    is-equiv-ev-point-universal-property-contr a up-contr = {!!}
+    is-equiv-ev-point-universal-property-contr = {!!}
 
   abstract
     is-contr-is-equiv-ev-point :
       (a : A) → is-equiv (ev-point' a {A}) → is-contr A
-    pr1 (is-contr-is-equiv-ev-point a H) = {!!}
+    is-contr-is-equiv-ev-point = {!!}
 
   abstract
     is-contr-universal-property-contr :
       (a : A) →
       ({l : Level} → universal-property-contr l a) → is-contr A
-    is-contr-universal-property-contr a up-contr = {!!}
+    is-contr-universal-property-contr = {!!}
 
   abstract
     is-contr-dependent-universal-property-contr :
       (a : A) →
       ({l : Level} → dependent-universal-property-contr l a) → is-contr A
-    is-contr-dependent-universal-property-contr a dup-contr = {!!}
+    is-contr-dependent-universal-property-contr = {!!}
 
   abstract
     dependent-universal-property-contr-is-contr :
       (a : A) → is-contr A →
       {l : Level} → dependent-universal-property-contr l a
-    dependent-universal-property-contr-is-contr a H {l} P = {!!}
+    dependent-universal-property-contr-is-contr = {!!}
 
   equiv-dependent-universal-property-contr :
     (a : A) → is-contr A → {l : Level} (B : A → UU l) → ((x : A) → B x) ≃ B a
-  pr1 (equiv-dependent-universal-property-contr a H P) = {!!}
+  equiv-dependent-universal-property-contr = {!!}
 
   apply-dependent-universal-property-contr :
     (a : A) → is-contr A → {l : Level} (B : A → UU l) → (B a → ((x : A) → B x))
-  apply-dependent-universal-property-contr a H P = {!!}
+  apply-dependent-universal-property-contr = {!!}
 
   abstract
     universal-property-contr-is-contr :
       (a : A) → is-contr A → {l : Level} → universal-property-contr l a
-    universal-property-contr-is-contr a H = {!!}
+    universal-property-contr-is-contr = {!!}
 
   equiv-universal-property-contr :
     (a : A) → is-contr A → {l : Level} (X : UU l) → (A → X) ≃ X
-  pr1 (equiv-universal-property-contr a H X) = {!!}
+  equiv-universal-property-contr = {!!}
 
   apply-universal-property-contr :
     (a : A) → is-contr A → {l : Level} (X : UU l) → X → (A → X)
-  apply-universal-property-contr a H X = {!!}
+  apply-universal-property-contr = {!!}
 
   abstract
     is-equiv-self-diagonal-is-equiv-diagonal :
       ({l : Level} (X : UU l) → is-equiv (λ x → const A X x)) →
       is-equiv (λ x → const A A x)
-    is-equiv-self-diagonal-is-equiv-diagonal H = {!!}
+    is-equiv-self-diagonal-is-equiv-diagonal = {!!}
 
   abstract
     is-contr-is-equiv-self-diagonal :
       is-equiv (λ x → const A A x) → is-contr A
-    is-contr-is-equiv-self-diagonal H = {!!}
+    is-contr-is-equiv-self-diagonal = {!!}
 
   abstract
     is-contr-is-equiv-diagonal :
       ({l : Level} (X : UU l) → is-equiv (λ x → const A X x)) → is-contr A
-    is-contr-is-equiv-diagonal H = {!!}
+    is-contr-is-equiv-diagonal = {!!}
 
   abstract
     is-equiv-diagonal-is-contr :
       is-contr A →
       {l : Level} (X : UU l) → is-equiv (λ x → const A X x)
-    is-equiv-diagonal-is-contr H X = {!!}
+    is-equiv-diagonal-is-contr = {!!}
 
   equiv-diagonal-is-contr :
     {l : Level} (X : UU l) → is-contr A → X ≃ (A → X)
-  pr1 (equiv-diagonal-is-contr X H) = {!!}
+  equiv-diagonal-is-contr = {!!}
 ```

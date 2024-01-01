@@ -102,24 +102,24 @@ module _
     (f g h : type-Π-Semiring) →
     mul-Π-Semiring f (add-Π-Semiring g h) ＝
     add-Π-Semiring (mul-Π-Semiring f g) (mul-Π-Semiring f h)
-  left-distributive-mul-add-Π-Semiring f g h = {!!}
+  left-distributive-mul-add-Π-Semiring = {!!}
 
   right-distributive-mul-add-Π-Semiring :
     (f g h : type-Π-Semiring) →
     mul-Π-Semiring (add-Π-Semiring f g) h ＝
     add-Π-Semiring (mul-Π-Semiring f h) (mul-Π-Semiring g h)
-  right-distributive-mul-add-Π-Semiring f g h = {!!}
+  right-distributive-mul-add-Π-Semiring = {!!}
 
   left-zero-law-mul-Π-Semiring :
     (f : type-Π-Semiring) →
     mul-Π-Semiring zero-Π-Semiring f ＝ zero-Π-Semiring
-  left-zero-law-mul-Π-Semiring f = {!!}
+  left-zero-law-mul-Π-Semiring = {!!}
 
   right-zero-law-mul-Π-Semiring :
     (f : type-Π-Semiring) →
     mul-Π-Semiring f zero-Π-Semiring ＝ zero-Π-Semiring
-  right-zero-law-mul-Π-Semiring f = {!!}
+  right-zero-law-mul-Π-Semiring = {!!}
 
   Π-Semiring : Semiring (l1 ⊔ l2)
-  pr1 Π-Semiring = {!!}
+  Π-Semiring = {!!}
 ```

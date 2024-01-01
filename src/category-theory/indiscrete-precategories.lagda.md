@@ -145,7 +145,7 @@ module _
   is-unital-composition-operation-indiscrete-Precategory = {!!}
 
   indiscrete-Precategory : Precategory l lzero
-  pr1 indiscrete-Precategory = {!!}
+  indiscrete-Precategory = {!!}
 ```
 
 #### The pregroupoid structure of the indiscrete precategory associated to a type
@@ -171,7 +171,7 @@ module _
   is-pregroupoid-indiscrete-Precategory = {!!}
 
   indiscrete-Pregroupoid : Pregroupoid l lzero
-  pr1 indiscrete-Pregroupoid = {!!}
+  indiscrete-Pregroupoid = {!!}
 ```
 
 ### The predicate on a precategory of being indiscrete
@@ -191,7 +191,7 @@ module _
   is-prop-is-indiscrete-Precategory = {!!}
 
   is-indiscrete-prop-Precategory : Prop (l1 ⊔ l2)
-  pr1 is-indiscrete-prop-Precategory = {!!}
+  is-indiscrete-prop-Precategory = {!!}
 ```
 
 #### The indiscrete precategory associated to a type is indiscrete

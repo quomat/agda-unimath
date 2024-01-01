@@ -41,7 +41,7 @@ monoid action `μ` of `M` on `X` satisfies the following laws:
 
 ```agda
 action-Monoid : {l1 : Level} (l : Level) (M : Monoid l1) → UU (l1 ⊔ lsuc l)
-action-Monoid l M = {!!}
+action-Monoid = {!!}
 
 module _
   {l1 l2 : Level} (M : Monoid l1) (X : action-Monoid l2 M)

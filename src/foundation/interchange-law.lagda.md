@@ -55,7 +55,7 @@ module _
   where
 
   interchange-law : (X → X → X) → UU l
-  interchange-law ν = {!!}
+  interchange-law = {!!}
 
   interchange-law-commutative-and-associative :
     ((x y : X) → μ x y ＝ μ y x) → ((x y z : X) → μ (μ x y) z ＝ μ x (μ y z)) →

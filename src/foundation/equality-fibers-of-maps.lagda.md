@@ -62,13 +62,13 @@ module _
   fiber-ap-eq-fiber :
     (s t : fiber f b) → s ＝ t →
     fiber (ap f {x = pr1 s} {y = pr1 t}) (pr2 s ∙ inv (pr2 t))
-  pr1 (fiber-ap-eq-fiber s .s refl) = {!!}
+  fiber-ap-eq-fiber = {!!}
 
   triangle-fiber-ap-eq-fiber :
     (s t : fiber f b) →
     fiber-ap-eq-fiber s t ~
     tot (fiber-ap-eq-fiber-fiberwise s t) ∘ pair-eq-Σ {s = s} {t}
-  triangle-fiber-ap-eq-fiber (x , refl) .(x , refl) refl = {!!}
+  triangle-fiber-ap-eq-fiber = {!!}
 
   abstract
     is-equiv-fiber-ap-eq-fiber :
@@ -78,19 +78,19 @@ module _
   equiv-fiber-ap-eq-fiber :
     (s t : fiber f b) →
     (s ＝ t) ≃ fiber (ap f {x = pr1 s} {y = pr1 t}) (pr2 s ∙ inv (pr2 t))
-  pr1 (equiv-fiber-ap-eq-fiber s t) = {!!}
+  equiv-fiber-ap-eq-fiber = {!!}
 
   map-inv-fiber-ap-eq-fiber :
     (s t : fiber f b) →
     fiber (ap f {x = pr1 s} {y = pr1 t}) (pr2 s ∙ inv (pr2 t)) →
     s ＝ t
-  map-inv-fiber-ap-eq-fiber (x , refl) (.x , p) (refl , u) = {!!}
+  map-inv-fiber-ap-eq-fiber = {!!}
 
   ap-pr1-map-inv-fiber-ap-eq-fiber :
     (s t : fiber f b) →
     (v : fiber (ap f {x = pr1 s} {y = pr1 t}) (pr2 s ∙ inv (pr2 t))) →
     ap pr1 (map-inv-fiber-ap-eq-fiber s t v) ＝ pr1 v
-  ap-pr1-map-inv-fiber-ap-eq-fiber (x , refl) (.x , p) (refl , u) = {!!}
+  ap-pr1-map-inv-fiber-ap-eq-fiber = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) (x y : A)

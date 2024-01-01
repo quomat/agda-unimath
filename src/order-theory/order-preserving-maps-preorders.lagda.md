@@ -70,10 +70,10 @@ module _
   where
 
   htpy-hom-Preorder : (f g : hom-Preorder P Q) → UU (l1 ⊔ l3)
-  htpy-hom-Preorder f g = {!!}
+  htpy-hom-Preorder = {!!}
 
   refl-htpy-hom-Preorder : (f : hom-Preorder P Q) → htpy-hom-Preorder f f
-  refl-htpy-hom-Preorder f = {!!}
+  refl-htpy-hom-Preorder = {!!}
 
   htpy-eq-hom-Preorder :
     (f g : hom-Preorder P Q) → Id f g → htpy-hom-Preorder f g
@@ -105,10 +105,10 @@ module _
 
   preserves-order-id-Preorder :
     preserves-order-Preorder P P (id {A = type-Preorder P})
-  preserves-order-id-Preorder x y = {!!}
+  preserves-order-id-Preorder = {!!}
 
   id-hom-Preorder : hom-Preorder P P
-  pr1 id-hom-Preorder = {!!}
+  id-hom-Preorder = {!!}
 ```
 
 ### Composing order preserving maps

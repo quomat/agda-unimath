@@ -33,7 +33,7 @@ There is an element **zero** of the natural numbers.
 
 ```agda
 peano-axiom-1 : {l : Level} → UU l → UU l
-peano-axiom-1 N = {!!}
+peano-axiom-1 = {!!}
 
 peano-1-ℕ : peano-axiom-1 ℕ
 peano-1-ℕ = {!!}
@@ -46,10 +46,10 @@ natural number `x`, it is true that `x ＝ x`.
 
 ```agda
 peano-axiom-2 : {l : Level} → UU l → UU l
-peano-axiom-2 N = {!!}
+peano-axiom-2 = {!!}
 
 peano-2-ℕ : peano-axiom-2 ℕ
-peano-2-ℕ x = {!!}
+peano-2-ℕ = {!!}
 ```
 
 ### Peano's 3rd axiom
@@ -59,10 +59,10 @@ then `y ＝ x`.
 
 ```agda
 peano-axiom-3 : {l : Level} → UU l → UU l
-peano-axiom-3 N = {!!}
+peano-axiom-3 = {!!}
 
 peano-3-ℕ : peano-axiom-3 ℕ
-peano-3-ℕ x y = {!!}
+peano-3-ℕ = {!!}
 ```
 
 ### Peano's 4th axiom
@@ -72,10 +72,10 @@ The identity relation on the natural numbers is transitive. I.e. if `y ＝ z` an
 
 ```agda
 peano-axiom-4 : {l : Level} → UU l → UU l
-peano-axiom-4 N = {!!}
+peano-axiom-4 = {!!}
 
 peano-4-ℕ : peano-axiom-4 ℕ
-peano-4-ℕ x y z = {!!}
+peano-4-ℕ = {!!}
 ```
 
 ### Peano's 5th axiom
@@ -92,7 +92,7 @@ For every natural number, there is a **successor** natural number.
 
 ```agda
 peano-axiom-6 : {l : Level} → UU l → UU l
-peano-axiom-6 N = {!!}
+peano-axiom-6 = {!!}
 
 peano-6-ℕ : peano-axiom-6 ℕ
 peano-6-ℕ = {!!}
@@ -105,10 +105,10 @@ the successor of `y`, then `x` is identified with `y`.
 
 ```agda
 peano-axiom-7 : {l : Level} (N : UU l) → peano-axiom-6 N → UU l
-peano-axiom-7 N succ = {!!}
+peano-axiom-7 = {!!}
 
 peano-7-ℕ : peano-axiom-7 ℕ peano-6-ℕ
-pr1 (peano-7-ℕ x y) refl = {!!}
+peano-7-ℕ = {!!}
 pr2 (peano-7-ℕ x y) = {!!}
 ```
 
@@ -146,7 +146,7 @@ peano-axiom-9 :
 peano-axiom-9 = {!!}
 
 peano-9-ℕ : peano-axiom-9 ℕ peano-1-ℕ peano-6-ℕ
-peano-9-ℕ P = {!!}
+peano-9-ℕ = {!!}
 ```
 
 ## External links

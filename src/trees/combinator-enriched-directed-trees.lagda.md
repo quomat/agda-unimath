@@ -139,14 +139,12 @@ module _
         edge-combinator-Enriched-Directed-Tree y
           root-combinator-Directed-Tree) →
     B a
-  map-inv-root-enrichment-combinator-Enriched-Directed-Tree
-    (._ , edge-to-root-combinator-Directed-Tree b) = {!!}
+  map-inv-root-enrichment-combinator-Enriched-Directed-Tree = {!!}
 
   is-section-map-inv-root-enrichment-combinator-Enriched-Directed-Tree :
     ( map-root-enrichment-combinator-Enriched-Directed-Tree ∘
       map-inv-root-enrichment-combinator-Enriched-Directed-Tree) ~ id
-  is-section-map-inv-root-enrichment-combinator-Enriched-Directed-Tree
-    ( ._ , edge-to-root-combinator-Directed-Tree b) = {!!}
+  is-section-map-inv-root-enrichment-combinator-Enriched-Directed-Tree = {!!}
 
   is-retraction-map-inv-root-enrichment-combinator-Enriched-Directed-Tree :
     ( map-inv-root-enrichment-combinator-Enriched-Directed-Tree ∘

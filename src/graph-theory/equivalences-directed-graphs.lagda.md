@@ -310,10 +310,10 @@ module _
   edge-inv-equiv-Directed-Graph = {!!}
 
   hom-inv-equiv-Directed-Graph : hom-Directed-Graph H G
-  pr1 hom-inv-equiv-Directed-Graph = {!!}
+  hom-inv-equiv-Directed-Graph = {!!}
 
   inv-equiv-Directed-Graph : equiv-Directed-Graph H G
-  pr1 inv-equiv-Directed-Graph = {!!}
+  inv-equiv-Directed-Graph = {!!}
 
   vertex-is-section-inv-equiv-Directed-Graph :
     ( vertex-equiv-Directed-Graph G H f ∘ vertex-inv-equiv-Directed-Graph) ~ id

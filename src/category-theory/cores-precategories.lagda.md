@@ -45,7 +45,7 @@ module _
   where
 
   core-wide-subprecategory-Precategory : Wide-Subprecategory l2 C
-  pr1 core-wide-subprecategory-Precategory x y = {!!}
+  core-wide-subprecategory-Precategory = {!!}
 ```
 
 ### The core subprecategory
@@ -83,7 +83,7 @@ module _
   is-pregroupoid-core-Precategory = {!!}
 
   core-pregroupoid-Precategory : Pregroupoid l1 l2
-  pr1 core-pregroupoid-Precategory = {!!}
+  core-pregroupoid-Precategory = {!!}
 ```
 
 ## Properties

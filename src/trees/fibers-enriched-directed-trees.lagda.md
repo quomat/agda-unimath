@@ -81,7 +81,7 @@ module _
   enrichment-fiber-Enriched-Directed-Tree = {!!}
 
   fiber-Enriched-Directed-Tree : Enriched-Directed-Tree (l3 ⊔ l4) (l3 ⊔ l4) A B
-  pr1 fiber-Enriched-Directed-Tree = {!!}
+  fiber-Enriched-Directed-Tree = {!!}
 
   map-enrichment-fiber-Enriched-Directed-Tree :
     (y : node-fiber-Enriched-Directed-Tree) →

@@ -132,7 +132,7 @@ module _
   where
 
   equiv-subuniverse : (X Y : type-subuniverse P) → UU l1
-  equiv-subuniverse X Y = {!!}
+  equiv-subuniverse = {!!}
 
   equiv-eq-subuniverse :
     (X Y : type-subuniverse P) → X ＝ Y → equiv-subuniverse X Y

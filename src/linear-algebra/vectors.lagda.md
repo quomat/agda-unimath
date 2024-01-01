@@ -56,23 +56,23 @@ module _
   where
 
   head-vec : {n : ℕ} → vec A (succ-ℕ n) → A
-  head-vec (x ∷ v) = {!!}
+  head-vec = {!!}
 
   tail-vec : {n : ℕ} → vec A (succ-ℕ n) → vec A n
-  tail-vec (x ∷ v) = {!!}
+  tail-vec = {!!}
 
   snoc-vec : {n : ℕ} → vec A n → A → vec A (succ-ℕ n)
-  snoc-vec empty-vec a = {!!}
+  snoc-vec = {!!}
 
   revert-vec : {n : ℕ} → vec A n → vec A n
-  revert-vec empty-vec = {!!}
+  revert-vec = {!!}
 
   all-vec : {l2 : Level} {n : ℕ} → (P : A → UU l2) → vec A n → UU l2
-  all-vec P empty-vec = {!!}
+  all-vec = {!!}
 
   component-vec :
     (n : ℕ) → vec A n → Fin n → A
-  component-vec (succ-ℕ n) (a ∷ v) (inl k) = {!!}
+  component-vec = {!!}
 
   infix 6 _∈-vec_
   data _∈-vec_ : {n : ℕ} → A → vec A n → UU l where
@@ -80,19 +80,19 @@ module _
     is-in-tail : {n : ℕ} (a x : A) (l : vec A n) → a ∈-vec l → a ∈-vec (x ∷ l)
 
   index-in-vec : (n : ℕ) → (a : A) → (v : vec A n) → a ∈-vec v → Fin n
-  index-in-vec (succ-ℕ n) a (.a ∷ v) (is-head .a .v) = {!!}
+  index-in-vec = {!!}
 
   eq-component-vec-index-in-vec :
     (n : ℕ) (a : A) (v : vec A n) (I : a ∈-vec v) →
     a ＝ component-vec n v (index-in-vec n a v I)
-  eq-component-vec-index-in-vec (succ-ℕ n) a (.a ∷ v) (is-head .a .v) = {!!}
+  eq-component-vec-index-in-vec = {!!}
 ```
 
 ### The functional type of vectors
 
 ```agda
 functional-vec : {l : Level} → UU l → ℕ → UU l
-functional-vec A n = {!!}
+functional-vec = {!!}
 
 module _
   {l : Level} {A : UU l}
@@ -102,36 +102,36 @@ module _
   empty-functional-vec ()
 
   head-functional-vec : (n : ℕ) → functional-vec A (succ-ℕ n) → A
-  head-functional-vec n v = {!!}
+  head-functional-vec = {!!}
 
   tail-functional-vec :
     (n : ℕ) → functional-vec A (succ-ℕ n) → functional-vec A n
-  tail-functional-vec n v = {!!}
+  tail-functional-vec = {!!}
 
   cons-functional-vec :
     (n : ℕ) → A → functional-vec A n → functional-vec A (succ-ℕ n)
-  cons-functional-vec n a v (inl x) = {!!}
+  cons-functional-vec = {!!}
 
   snoc-functional-vec :
     (n : ℕ) → functional-vec A n → A → functional-vec A (succ-ℕ n)
-  snoc-functional-vec zero-ℕ v a i = {!!}
+  snoc-functional-vec = {!!}
 
   revert-functional-vec :
     (n : ℕ) → functional-vec A n → functional-vec A n
-  revert-functional-vec n v i = {!!}
+  revert-functional-vec = {!!}
 
   in-functional-vec : (n : ℕ) → A → functional-vec A n → UU l
-  in-functional-vec n a v = {!!}
+  in-functional-vec = {!!}
 
   index-in-functional-vec :
     (n : ℕ) (x : A) (v : functional-vec A n) →
     in-functional-vec n x v → Fin n
-  index-in-functional-vec n x v I = {!!}
+  index-in-functional-vec = {!!}
 
   eq-component-functional-vec-index-in-functional-vec :
     (n : ℕ) (x : A) (v : functional-vec A n) (I : in-functional-vec n x v) →
     x ＝ v (index-in-functional-vec n x v I)
-  eq-component-functional-vec-index-in-functional-vec n x v I = {!!}
+  eq-component-functional-vec-index-in-functional-vec = {!!}
 ```
 
 ## Properties
@@ -144,38 +144,38 @@ module _
   where
 
   Eq-vec : (n : ℕ) → vec A n → vec A n → UU l
-  Eq-vec zero-ℕ empty-vec empty-vec = {!!}
+  Eq-vec = {!!}
 
   refl-Eq-vec : (n : ℕ) → (u : vec A n) → Eq-vec n u u
-  refl-Eq-vec zero-ℕ empty-vec = {!!}
+  refl-Eq-vec = {!!}
 
   Eq-eq-vec : (n : ℕ) → (u v : vec A n) → Id u v → Eq-vec n u v
-  Eq-eq-vec n u .u refl = {!!}
+  Eq-eq-vec = {!!}
 
   eq-Eq-vec : (n : ℕ) → (u v : vec A n) → Eq-vec n u v → Id u v
-  eq-Eq-vec zero-ℕ empty-vec empty-vec eq-vec = {!!}
+  eq-Eq-vec = {!!}
 
   is-retraction-eq-Eq-vec :
     (n : ℕ) → (u v : vec A n) →
     (p : u ＝ v) → eq-Eq-vec n u v (Eq-eq-vec n u v p) ＝ p
-  is-retraction-eq-Eq-vec zero-ℕ empty-vec empty-vec refl = {!!}
+  is-retraction-eq-Eq-vec = {!!}
 
   square-Eq-eq-vec :
     (n : ℕ) (x : A) (u v : vec A n) (p : Id u v) →
     (Eq-eq-vec _ (x ∷ u) (x ∷ v) (ap (x ∷_) p)) ＝ (refl , (Eq-eq-vec n u v p))
-  square-Eq-eq-vec zero-ℕ x empty-vec empty-vec refl = {!!}
+  square-Eq-eq-vec = {!!}
 
   is-section-eq-Eq-vec :
     (n : ℕ) (u v : vec A n) →
     (p : Eq-vec n u v) → Eq-eq-vec n u v (eq-Eq-vec n u v p) ＝ p
-  is-section-eq-Eq-vec zero-ℕ empty-vec empty-vec (map-raise star) = {!!}
+  is-section-eq-Eq-vec = {!!}
 
   is-equiv-Eq-eq-vec :
     (n : ℕ) → (u v : vec A n) → is-equiv (Eq-eq-vec n u v)
-  is-equiv-Eq-eq-vec n u v = {!!}
+  is-equiv-Eq-eq-vec = {!!}
 
   extensionality-vec : (n : ℕ) → (u v : vec A n) → Id u v ≃ Eq-vec n u v
-  extensionality-vec n u v = {!!}
+  extensionality-vec = {!!}
 ```
 
 ### The types of listed vectors and functional vectors are equivalent
@@ -186,30 +186,30 @@ module _
   where
 
   listed-vec-functional-vec : (n : ℕ) → functional-vec A n → vec A n
-  listed-vec-functional-vec zero-ℕ v = {!!}
+  listed-vec-functional-vec = {!!}
 
   functional-vec-vec : (n : ℕ) → vec A n → functional-vec A n
-  functional-vec-vec zero-ℕ v = {!!}
+  functional-vec-vec = {!!}
 
   is-section-functional-vec-vec :
     (n : ℕ) → (listed-vec-functional-vec n ∘ functional-vec-vec n) ~ id
-  is-section-functional-vec-vec .zero-ℕ empty-vec = {!!}
+  is-section-functional-vec-vec = {!!}
 
   abstract
     is-retraction-functional-vec-vec :
       (n : ℕ) → (functional-vec-vec n ∘ listed-vec-functional-vec n) ~ id
-    is-retraction-functional-vec-vec zero-ℕ v = {!!}
+    is-retraction-functional-vec-vec = {!!}
 
   is-equiv-listed-vec-functional-vec :
     (n : ℕ) → is-equiv (listed-vec-functional-vec n)
-  is-equiv-listed-vec-functional-vec n = {!!}
+  is-equiv-listed-vec-functional-vec = {!!}
 
   is-equiv-functional-vec-vec :
     (n : ℕ) → is-equiv (functional-vec-vec n)
-  is-equiv-functional-vec-vec n = {!!}
+  is-equiv-functional-vec-vec = {!!}
 
   compute-vec : (n : ℕ) → functional-vec A n ≃ vec A n
-  pr1 (compute-vec n) = {!!}
+  compute-vec = {!!}
 ```
 
 ### Characterizing the elementhood predicate
@@ -218,12 +218,12 @@ module _
   is-in-functional-vec-is-in-vec :
     (n : ℕ) (v : vec A n) (x : A) →
     (x ∈-vec v) → (in-functional-vec n x (functional-vec-vec n v))
-  is-in-functional-vec-is-in-vec (succ-ℕ n) (y ∷ l) x (is-head .x l) = {!!}
+  is-in-functional-vec-is-in-vec = {!!}
 
   is-in-vec-is-in-functional-vec :
     (n : ℕ) (v : vec A n) (x : A) →
     (in-functional-vec n x (functional-vec-vec n v)) → (x ∈-vec v)
-  is-in-vec-is-in-functional-vec (succ-ℕ n) (y ∷ v) x (inl k , p) = {!!}
+  is-in-vec-is-in-functional-vec = {!!}
 ```
 
 ### The type of vectors of elements in a truncated type is truncated
@@ -238,28 +238,28 @@ module _
   is-trunc-Eq-vec :
     (k : 𝕋) (n : ℕ) → is-trunc (succ-𝕋 k) A →
     (u v : vec A n) → is-trunc (k) (Eq-vec n u v)
-  is-trunc-Eq-vec k zero-ℕ A-trunc empty-vec empty-vec = {!!}
+  is-trunc-Eq-vec = {!!}
 
   center-is-contr-vec :
     {n : ℕ} → is-contr A → vec A n
-  center-is-contr-vec {zero-ℕ} H = {!!}
+  center-is-contr-vec = {!!}
 
   contraction-is-contr-vec' :
     {n : ℕ} (H : is-contr A) → (v : vec A n) →
     Eq-vec n (center-is-contr-vec H) v
-  contraction-is-contr-vec' {zero-ℕ} H empty-vec = {!!}
+  contraction-is-contr-vec' = {!!}
 
   contraction-is-contr-vec :
     {n : ℕ} (H : is-contr A) → (v : vec A n) → (center-is-contr-vec H) ＝ v
-  contraction-is-contr-vec {n} H v = {!!}
+  contraction-is-contr-vec = {!!}
 
   is-contr-vec :
     {n : ℕ} → is-contr A → is-contr (vec A n)
-  pr1 (is-contr-vec H) = {!!}
+  is-contr-vec = {!!}
 
   is-trunc-vec :
     (k : 𝕋) → (n : ℕ) → is-trunc k A → is-trunc k (vec A n)
-  is-trunc-vec neg-two-𝕋 n H = {!!}
+  is-trunc-vec = {!!}
 ```
 
 #### The type of functional vectors of elements in a truncated type is truncated
@@ -271,7 +271,7 @@ module _
 
   is-trunc-functional-vec :
     (k : 𝕋) (n : ℕ) → is-trunc k A → is-trunc k (functional-vec A n)
-  is-trunc-functional-vec k n H = {!!}
+  is-trunc-functional-vec = {!!}
 ```
 
 ### The type of vectors of elements in a set is a set
@@ -287,7 +287,7 @@ module _
   is-set-vec = {!!}
 
 vec-Set : {l : Level} → Set l → ℕ → Set l
-pr1 (vec-Set A n) = {!!}
+vec-Set = {!!}
 pr2 (vec-Set A n) = {!!}
 ```
 
@@ -302,7 +302,7 @@ module _
   is-set-functional-vec = {!!}
 
 functional-vec-Set : {l : Level} → Set l → ℕ → Set l
-pr1 (functional-vec-Set A n) = {!!}
+functional-vec-Set = {!!}
 pr2 (functional-vec-Set A n) = {!!}
 ```
 
@@ -319,7 +319,7 @@ module _
     (n : ℕ) →
     (v : vec A (succ-ℕ n)) →
     ((head-vec v) ∷ (tail-vec v)) ＝ v
-  cons-head-tail-vec n (x ∷ v) = {!!}
+  cons-head-tail-vec = {!!}
 ```
 
 #### Adding the tail to the head gives the same functional vector
@@ -335,7 +335,7 @@ module _
       ( head-functional-vec n v)
       ( tail-functional-vec n v)) ~
       ( v)
-  htpy-cons-head-tail-functional-vec n v (inl x) = {!!}
+  htpy-cons-head-tail-functional-vec = {!!}
 
   cons-head-tail-functional-vec :
     ( n : ℕ) →
@@ -344,7 +344,7 @@ module _
       ( head-functional-vec n v)
       ( tail-functional-vec n v)) ＝
       ( v)
-  cons-head-tail-functional-vec n v = {!!}
+  cons-head-tail-functional-vec = {!!}
 ```
 
 ### Computing the transport of a vector over its size
@@ -355,5 +355,5 @@ compute-tr-vec :
   {n m : ℕ} (p : succ-ℕ n ＝ succ-ℕ m) (v : vec A n) (x : A) →
   tr (vec A) p (x ∷ v) ＝
   (x ∷ tr (vec A) (is-injective-succ-ℕ p) v)
-compute-tr-vec refl v x = {!!}
+compute-tr-vec = {!!}
 ```

@@ -50,7 +50,7 @@ specifying structure maps `Aₙ →∗ Ω Aₙ₊₁` is
 
 ```agda
 Prespectrum : (l : Level) → UU (lsuc l)
-Prespectrum l = {!!}
+Prespectrum = {!!}
 
 module _
   {l : Level} (A : Prespectrum l) (n : ℕ)

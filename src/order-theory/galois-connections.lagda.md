@@ -44,15 +44,15 @@ module _
 
   adjoint-relation-galois-connection-Prop :
     hom-Poset P Q → hom-Poset Q P → Prop (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  adjoint-relation-galois-connection-Prop f g = {!!}
+  adjoint-relation-galois-connection-Prop = {!!}
 
   is-lower-adjoint-Galois-Connection :
     hom-Poset P Q → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-lower-adjoint-Galois-Connection f = {!!}
+  is-lower-adjoint-Galois-Connection = {!!}
 
   is-upper-adjoint-Galois-Connection :
     hom-Poset Q P → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-upper-adjoint-Galois-Connection g = {!!}
+  is-upper-adjoint-Galois-Connection = {!!}
 
   Galois-Connection : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
   Galois-Connection = {!!}
@@ -97,17 +97,17 @@ module _
       (x : type-Poset P) (y : type-Poset Q) →
       leq-Poset Q (map-lower-adjoint-Galois-Connection x) y →
       leq-Poset P x (map-upper-adjoint-Galois-Connection y)
-    map-adjoint-relation-Galois-Connection x y = {!!}
+    map-adjoint-relation-Galois-Connection = {!!}
 
     map-inv-adjoint-relation-Galois-Connection :
       (x : type-Poset P) (y : type-Poset Q) →
       leq-Poset P x (map-upper-adjoint-Galois-Connection y) →
       leq-Poset Q (map-lower-adjoint-Galois-Connection x) y
-    map-inv-adjoint-relation-Galois-Connection x y = {!!}
+    map-inv-adjoint-relation-Galois-Connection = {!!}
 
     is-lower-adjoint-lower-adjoint-Galois-Connection :
       is-lower-adjoint-Galois-Connection lower-adjoint-Galois-Connection
-    pr1 is-lower-adjoint-lower-adjoint-Galois-Connection = {!!}
+    is-lower-adjoint-lower-adjoint-Galois-Connection = {!!}
     pr2 is-lower-adjoint-lower-adjoint-Galois-Connection = {!!}
 ```
 
@@ -123,33 +123,33 @@ module _
 
   htpy-is-lower-adjoint-Galois-Connection :
     (g h : is-lower-adjoint-Galois-Connection P Q f) → UU (l1 ⊔ l3)
-  htpy-is-lower-adjoint-Galois-Connection (g , G) (h , H) = {!!}
+  htpy-is-lower-adjoint-Galois-Connection = {!!}
 
   refl-htpy-is-lower-adjoint-Galois-Connection :
     (g : is-lower-adjoint-Galois-Connection P Q f) →
     htpy-is-lower-adjoint-Galois-Connection g g
-  refl-htpy-is-lower-adjoint-Galois-Connection (g , G) = {!!}
+  refl-htpy-is-lower-adjoint-Galois-Connection = {!!}
 
   extensionality-is-lower-adjoint-Galois-Connection :
     (g h : is-lower-adjoint-Galois-Connection P Q f) →
     (g ＝ h) ≃ htpy-is-lower-adjoint-Galois-Connection g h
-  extensionality-is-lower-adjoint-Galois-Connection (g , G) = {!!}
+  extensionality-is-lower-adjoint-Galois-Connection = {!!}
 
   eq-htpy-is-lower-adjoint-Galois-Connection :
     (g h : is-lower-adjoint-Galois-Connection P Q f) →
     htpy-is-lower-adjoint-Galois-Connection g h → g ＝ h
-  eq-htpy-is-lower-adjoint-Galois-Connection g h = {!!}
+  eq-htpy-is-lower-adjoint-Galois-Connection = {!!}
 
   all-elements-equal-is-lower-adjoint-Galois-Connection :
     (g h : is-lower-adjoint-Galois-Connection P Q f) → g ＝ h
-  all-elements-equal-is-lower-adjoint-Galois-Connection (g , G) (h , H) = {!!}
+  all-elements-equal-is-lower-adjoint-Galois-Connection = {!!}
 
   is-prop-is-lower-adjoint-Galois-Connection :
     is-prop (is-lower-adjoint-Galois-Connection P Q f)
   is-prop-is-lower-adjoint-Galois-Connection = {!!}
 
   is-lower-adjoint-galois-connection-Prop : Prop (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  pr1 is-lower-adjoint-galois-connection-Prop = {!!}
+  is-lower-adjoint-galois-connection-Prop = {!!}
   pr2 is-lower-adjoint-galois-connection-Prop = {!!}
 ```
 
@@ -163,33 +163,33 @@ module _
 
   htpy-is-upper-adjoint-Galois-Connection :
     (f h : is-upper-adjoint-Galois-Connection P Q g) → UU (l1 ⊔ l3)
-  htpy-is-upper-adjoint-Galois-Connection (f , F) (h , H) = {!!}
+  htpy-is-upper-adjoint-Galois-Connection = {!!}
 
   refl-htpy-is-upper-adjoint-Galois-Connection :
     (f : is-upper-adjoint-Galois-Connection P Q g) →
     htpy-is-upper-adjoint-Galois-Connection f f
-  refl-htpy-is-upper-adjoint-Galois-Connection (f , F) = {!!}
+  refl-htpy-is-upper-adjoint-Galois-Connection = {!!}
 
   extensionality-is-upper-adjoint-Galois-Connection :
     (f h : is-upper-adjoint-Galois-Connection P Q g) →
     (f ＝ h) ≃ htpy-is-upper-adjoint-Galois-Connection f h
-  extensionality-is-upper-adjoint-Galois-Connection (f , F) = {!!}
+  extensionality-is-upper-adjoint-Galois-Connection = {!!}
 
   eq-htpy-is-upper-adjoint-Galois-Connection :
     (f h : is-upper-adjoint-Galois-Connection P Q g) →
     htpy-is-upper-adjoint-Galois-Connection f h → f ＝ h
-  eq-htpy-is-upper-adjoint-Galois-Connection f h = {!!}
+  eq-htpy-is-upper-adjoint-Galois-Connection = {!!}
 
   all-elements-equal-is-upper-adjoint-Galois-Connection :
     (f h : is-upper-adjoint-Galois-Connection P Q g) → f ＝ h
-  all-elements-equal-is-upper-adjoint-Galois-Connection (f , F) (h , H) = {!!}
+  all-elements-equal-is-upper-adjoint-Galois-Connection = {!!}
 
   is-prop-is-upper-adjoint-Galois-Connection :
     is-prop (is-upper-adjoint-Galois-Connection P Q g)
   is-prop-is-upper-adjoint-Galois-Connection = {!!}
 
   is-upper-adjoint-galois-connection-Prop : Prop (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  pr1 is-upper-adjoint-galois-connection-Prop = {!!}
+  is-upper-adjoint-galois-connection-Prop = {!!}
   pr2 is-upper-adjoint-galois-connection-Prop = {!!}
 ```
 
@@ -204,22 +204,22 @@ module _
 
   htpy-upper-adjoint-Galois-Connection :
     (G H : Galois-Connection P Q) → UU (l1 ⊔ l3)
-  htpy-upper-adjoint-Galois-Connection G H = {!!}
+  htpy-upper-adjoint-Galois-Connection = {!!}
 
   is-prop-htpy-upper-adjoint-Galois-Connection :
     (G H : Galois-Connection P Q) →
     is-prop (htpy-upper-adjoint-Galois-Connection G H)
-  is-prop-htpy-upper-adjoint-Galois-Connection G H = {!!}
+  is-prop-htpy-upper-adjoint-Galois-Connection = {!!}
 
   extensionality-upper-adjoint-Galois-Connection :
     (G H : Galois-Connection P Q) →
     (G ＝ H) ≃ htpy-upper-adjoint-Galois-Connection G H
-  extensionality-upper-adjoint-Galois-Connection (g , G) = {!!}
+  extensionality-upper-adjoint-Galois-Connection = {!!}
 
   eq-htpy-upper-adjoint-Galois-Connection :
     (G H : Galois-Connection P Q) →
     htpy-upper-adjoint-Galois-Connection G H → G ＝ H
-  eq-htpy-upper-adjoint-Galois-Connection G H = {!!}
+  eq-htpy-upper-adjoint-Galois-Connection = {!!}
 ```
 
 #### Characterizing equalities of Galois connection by homotopies of their lower adjoints
@@ -231,46 +231,46 @@ module _
 
   htpy-lower-adjoint-Galois-Connection :
     (G H : Galois-Connection P Q) → UU (l1 ⊔ l3)
-  htpy-lower-adjoint-Galois-Connection G H = {!!}
+  htpy-lower-adjoint-Galois-Connection = {!!}
 
   is-prop-htpy-lower-adjoint-Galois-Connection :
     (G H : Galois-Connection P Q) →
     is-prop (htpy-lower-adjoint-Galois-Connection G H)
-  is-prop-htpy-lower-adjoint-Galois-Connection G H = {!!}
+  is-prop-htpy-lower-adjoint-Galois-Connection = {!!}
 
   htpy-upper-adjoint-htpy-lower-adjoint-Galois-Connection :
     (G H : Galois-Connection P Q) →
     htpy-lower-adjoint-Galois-Connection G H →
     htpy-upper-adjoint-Galois-Connection P Q G H
-  htpy-upper-adjoint-htpy-lower-adjoint-Galois-Connection G H K y = {!!}
+  htpy-upper-adjoint-htpy-lower-adjoint-Galois-Connection = {!!}
 
   htpy-lower-adjoint-htpy-upper-adjoint-Galois-Connection :
     (G H : Galois-Connection P Q) →
     htpy-upper-adjoint-Galois-Connection P Q G H →
     htpy-lower-adjoint-Galois-Connection G H
-  htpy-lower-adjoint-htpy-upper-adjoint-Galois-Connection G H K x = {!!}
+  htpy-lower-adjoint-htpy-upper-adjoint-Galois-Connection = {!!}
 
   is-equiv-htpy-upper-adjoint-htpy-lower-adjoint-Galois-Connection :
     (G H : Galois-Connection P Q) →
     is-equiv (htpy-upper-adjoint-htpy-lower-adjoint-Galois-Connection G H)
-  is-equiv-htpy-upper-adjoint-htpy-lower-adjoint-Galois-Connection G H = {!!}
+  is-equiv-htpy-upper-adjoint-htpy-lower-adjoint-Galois-Connection = {!!}
 
   is-equiv-htpy-lower-adjoint-htpy-upper-adjoint-Galois-Connection :
     (G H : Galois-Connection P Q) →
     is-equiv (htpy-lower-adjoint-htpy-upper-adjoint-Galois-Connection G H)
-  is-equiv-htpy-lower-adjoint-htpy-upper-adjoint-Galois-Connection G H = {!!}
+  is-equiv-htpy-lower-adjoint-htpy-upper-adjoint-Galois-Connection = {!!}
 
   equiv-htpy-lower-adjoint-htpy-upper-adjoint-Galois-Connection :
     (G H : Galois-Connection P Q) →
     htpy-upper-adjoint-Galois-Connection P Q G H ≃
     htpy-lower-adjoint-Galois-Connection G H
-  pr1 (equiv-htpy-lower-adjoint-htpy-upper-adjoint-Galois-Connection G H) = {!!}
+  equiv-htpy-lower-adjoint-htpy-upper-adjoint-Galois-Connection = {!!}
   pr2 (equiv-htpy-lower-adjoint-htpy-upper-adjoint-Galois-Connection G H) = {!!}
 
   extensionality-lower-adjoint-Galois-Connection :
     (G H : Galois-Connection P Q) →
     (G ＝ H) ≃ htpy-lower-adjoint-Galois-Connection G H
-  extensionality-lower-adjoint-Galois-Connection G H = {!!}
+  extensionality-lower-adjoint-Galois-Connection = {!!}
 ```
 
 ### `G y = {!!}
@@ -287,7 +287,7 @@ module _
     map-upper-adjoint-Galois-Connection P Q G
       ( map-lower-adjoint-Galois-Connection P Q G
         ( map-upper-adjoint-Galois-Connection P Q G y))
-  compute-upper-lower-upper-adjoint-Galois-Connection y = {!!}
+  compute-upper-lower-upper-adjoint-Galois-Connection = {!!}
 ```
 
 ### `F x = {!!}
@@ -304,7 +304,7 @@ module _
     map-lower-adjoint-Galois-Connection P Q G
       ( map-upper-adjoint-Galois-Connection P Q G
         ( map-lower-adjoint-Galois-Connection P Q G x))
-  compute-lower-upper-lower-adjoint-Galois-Connection x = {!!}
+  compute-lower-upper-lower-adjoint-Galois-Connection = {!!}
 ```
 
 ### The composite `FG` is idempotent for every Galois connection `(G , F)`
@@ -327,7 +327,7 @@ module _
       ( comp-hom-Poset Q P Q
         ( lower-adjoint-Galois-Connection P Q G)
         ( upper-adjoint-Galois-Connection P Q G))
-  htpy-idempotent-lower-upper-Galois-Connection x = {!!}
+  htpy-idempotent-lower-upper-Galois-Connection = {!!}
 ```
 
 ### The composite `GF` is idempotent for every Galois connection `(G , F)`
@@ -350,7 +350,7 @@ module _
       ( comp-hom-Poset P Q P
         ( upper-adjoint-Galois-Connection P Q G)
         ( lower-adjoint-Galois-Connection P Q G))
-  htpy-idempotent-upper-lower-Galois-Connection y = {!!}
+  htpy-idempotent-upper-lower-Galois-Connection = {!!}
 ```
 
 ## References

@@ -69,7 +69,7 @@ module _
 
 ```agda
 Small-Type : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Small-Type l1 l2 = {!!}
+Small-Type = {!!}
 
 module _
   {l1 l2 : Level} (A : Small-Type l1 l2)
@@ -107,7 +107,7 @@ is-small-Prop = {!!}
 
 ```agda
 is-small' : {l1 : Level} {A : UU l1} → is-small l1 A
-pr1 (is-small' {A = A}) = {!!}
+is-small' = {!!}
 pr2 is-small' = {!!}
 ```
 
@@ -119,7 +119,7 @@ module _
   where
 
   is-small-lmax : is-small (l1 ⊔ l2) X
-  pr1 is-small-lmax = {!!}
+  is-small-lmax = {!!}
 
   is-contr-is-small-lmax :
     is-contr (is-small (l1 ⊔ l2) X)
@@ -130,7 +130,7 @@ module _
 
 ```agda
 is-small-lsuc : {l : Level} (X : UU l) → is-small (lsuc l) X
-is-small-lsuc {l} X = {!!}
+is-small-lsuc = {!!}
 ```
 
 ### Small types are closed under equivalences

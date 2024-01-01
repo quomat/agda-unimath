@@ -92,8 +92,7 @@ triangle-map-standard-pullback-exponent :
       ( postcomp T f)
       ( postcomp T g)
       ( exponent-cone T f g c)))
-triangle-map-standard-pullback-exponent
-  {A = A} {B} T f g c h = {!!}
+triangle-map-standard-pullback-exponent = {!!}
 
 abstract
   is-pullback-exponent-is-pullback :
@@ -288,8 +287,7 @@ abstract
     {f f' : A → X} (Hf : f ~ f') {g g' : B → X} (Hg : g ~ g') →
     (c : cone f g C) →
     is-torsorial (htpy-parallel-cone Hf Hg c)
-  is-torsorial-htpy-parallel-cone
-    {A = A} {B} {X} {C} {f} {f'} Hf {g} {g'} Hg = {!!}
+  is-torsorial-htpy-parallel-cone = {!!}
 
 tr-tr-refl-htpy-cone :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} {C : UU l4}
@@ -351,8 +349,7 @@ abstract
     {f f' : A → X} (Hf : f ~ f') {g g' : B → X} (Hg : g ~ g') →
     (c : cone f g C) (c' : cone f' g' C) →
     is-equiv (htpy-parallel-cone-eq Hf Hg c c')
-  is-fiberwise-equiv-htpy-parallel-cone-eq
-    {A = A} {B} {X} {C} {f} {f'} Hf {g} {g'} Hg c c' = {!!}
+  is-fiberwise-equiv-htpy-parallel-cone-eq = {!!}
 
 eq-htpy-parallel-cone :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} {C : UU l4}
@@ -456,10 +453,7 @@ is-pullback-back-left-is-pullback-back-right-cube :
   is-pullback k hD (hC , k' , front-right) →
   is-pullback g hC (hA , g' , back-right) →
   is-pullback f hB (hA , f' , back-left)
-is-pullback-back-left-is-pullback-back-right-cube
-  {f = f} {g} {h} {k} {f' = f'} {g'} {h'} {k'} {hA = hA} {hB} {hC} {hD}
-  top back-left back-right front-left front-right bottom c
-  is-pb-front-left is-pb-front-right is-pb-back-right = {!!}
+is-pullback-back-left-is-pullback-back-right-cube = {!!}
 
 is-pullback-back-right-is-pullback-back-left-cube :
   {l1 l2 l3 l4 l1' l2' l3' l4' : Level}
@@ -482,10 +476,7 @@ is-pullback-back-right-is-pullback-back-left-cube :
   is-pullback k hD (hC , k' , front-right) →
   is-pullback f hB (hA , f' , back-left) →
   is-pullback g hC (hA , g' , back-right)
-is-pullback-back-right-is-pullback-back-left-cube
-  {f = f} {g} {h} {k} {f' = f'} {g'} {h'} {k'} {hA = hA} {hB} {hC} {hD}
-  top back-left back-right front-left front-right bottom c
-  is-pb-front-left is-pb-front-right is-pb-back-left = {!!}
+is-pullback-back-right-is-pullback-back-left-cube = {!!}
 ```
 
 ### In a commuting cube where the vertical maps are equivalences, the bottom square is a pullback if and only if the top square is a pullback
@@ -511,10 +502,7 @@ is-pullback-bottom-is-pullback-top-cube-is-equiv :
   is-equiv hA → is-equiv hB → is-equiv hC → is-equiv hD →
   is-pullback h' k' (f' , g' , top) →
   is-pullback h k (f , g , bottom)
-is-pullback-bottom-is-pullback-top-cube-is-equiv
-  f g h k f' g' h' k' hA hB hC hD
-  top back-left back-right front-left front-right bottom c
-  is-equiv-hA is-equiv-hB is-equiv-hC is-equiv-hD is-pb-top = {!!}
+is-pullback-bottom-is-pullback-top-cube-is-equiv = {!!}
 
 is-pullback-top-is-pullback-bottom-cube-is-equiv :
   {l1 l2 l3 l4 l1' l2' l3' l4' : Level}
@@ -536,10 +524,7 @@ is-pullback-top-is-pullback-bottom-cube-is-equiv :
   is-equiv hA → is-equiv hB → is-equiv hC → is-equiv hD →
   is-pullback h k (f , g , bottom) →
   is-pullback h' k' (f' , g' , top)
-is-pullback-top-is-pullback-bottom-cube-is-equiv
-  f g h k f' g' h' k' hA hB hC hD
-  top back-left back-right front-left front-right bottom c
-  is-equiv-hA is-equiv-hB is-equiv-hC is-equiv-hD is-pb-bottom = {!!}
+is-pullback-top-is-pullback-bottom-cube-is-equiv = {!!}
 ```
 
 ### In a commuting cube where the maps from back-right to front-left are equivalences, the back-right square is a pullback if and only if the front-left square is a pullback
@@ -565,10 +550,7 @@ is-pullback-front-left-is-pullback-back-right-cube-is-equiv :
   is-equiv f' → is-equiv f → is-equiv k' → is-equiv k →
   is-pullback g hC (hA , g' , back-right) →
   is-pullback h hD (hB , h' , front-left)
-is-pullback-front-left-is-pullback-back-right-cube-is-equiv
-  f g h k f' g' h' k' hA hB hC hD
-  top back-left back-right front-left front-right bottom c
-  is-equiv-f' is-equiv-f is-equiv-k' is-equiv-k is-pb-back-right = {!!}
+is-pullback-front-left-is-pullback-back-right-cube-is-equiv = {!!}
 
 is-pullback-front-right-is-pullback-back-left-cube-is-equiv :
   {l1 l2 l3 l4 l1' l2' l3' l4' : Level}
@@ -590,10 +572,7 @@ is-pullback-front-right-is-pullback-back-left-cube-is-equiv :
   is-equiv g' → is-equiv h' → is-equiv g → is-equiv h →
   is-pullback f hB (hA , f' , back-left) →
   is-pullback k hD (hC , k' , front-right)
-is-pullback-front-right-is-pullback-back-left-cube-is-equiv
-  f g h k f' g' h' k' hA hB hC hD
-  top back-left back-right front-left front-right bottom c
-  is-equiv-g' is-equiv-h' is-equiv-g is-equiv-h is-pb-back-left = {!!}
+is-pullback-front-right-is-pullback-back-left-cube-is-equiv = {!!}
 ```
 
 ### Identity types commute with pullbacks

@@ -36,7 +36,7 @@ module _
   subtype-center-Monoid = {!!}
 
   center-Monoid : Submonoid l M
-  pr1 center-Monoid = {!!}
+  center-Monoid = {!!}
 
   monoid-center-Monoid : Monoid l
   monoid-center-Monoid = {!!}

@@ -110,7 +110,7 @@ module _
   is-partition-is-equivalence-class-inhabited-subtype-equivalence-relation = {!!}
 
   partition-equivalence-relation : partition l2 (l1 ⊔ l2) A
-  pr1 partition-equivalence-relation = {!!}
+  partition-equivalence-relation = {!!}
 
   equiv-block-equivalence-class :
     equivalence-class R ≃ block-partition partition-equivalence-relation
@@ -125,29 +125,29 @@ module _
   where
 
   sim-partition : A → A → UU (l1 ⊔ l2)
-  sim-partition x y = {!!}
+  sim-partition = {!!}
 
   is-proof-irrelevant-sim-partition :
     (x y : A) → is-proof-irrelevant (sim-partition x y)
   is-proof-irrelevant-sim-partition = {!!}
 
   is-prop-sim-partition : (x y : A) → is-prop (sim-partition x y)
-  is-prop-sim-partition x y = {!!}
+  is-prop-sim-partition = {!!}
 
   prop-equivalence-relation-partition : Relation-Prop (l1 ⊔ l2) A
-  pr1 (prop-equivalence-relation-partition x y) = {!!}
+  prop-equivalence-relation-partition = {!!}
 
   refl-sim-partition : is-reflexive sim-partition
-  pr1 (refl-sim-partition x) = {!!}
+  refl-sim-partition = {!!}
 
   symmetric-sim-partition : is-symmetric sim-partition
-  pr1 (symmetric-sim-partition x y (Q , p , q)) = {!!}
+  symmetric-sim-partition = {!!}
 
   transitive-sim-partition : is-transitive sim-partition
-  pr1 (transitive-sim-partition x y z (B , p , q) (B' , p' , q')) = {!!}
+  transitive-sim-partition = {!!}
 
   equivalence-relation-partition : equivalence-relation (l1 ⊔ l2) A
-  pr1 equivalence-relation-partition = {!!}
+  equivalence-relation-partition = {!!}
 
   is-inhabited-subtype-prop-equivalence-relation-partition :
     (a : A) → is-inhabited-subtype (prop-equivalence-relation-partition a)
@@ -176,10 +176,7 @@ module _
     relate-same-elements-equivalence-relation
       ( equivalence-relation-partition (partition-equivalence-relation R))
       ( R)
-  pr1
-    ( relate-same-elements-equivalence-relation-partition-equivalence-relation
-      x y)
-    ( C , p , q) = {!!}
+  relate-same-elements-equivalence-relation-partition-equivalence-relation = {!!}
 
 is-section-equivalence-relation-partition-equivalence-relation :
   {l : Level} {A : UU l} (R : equivalence-relation l A) →
@@ -272,22 +269,22 @@ module _
   where
 
   rel-map-into-set : Relation-Prop l2 A
-  rel-map-into-set x y = {!!}
+  rel-map-into-set = {!!}
 
   sim-map-into-set : Relation l2 A
-  sim-map-into-set x y = {!!}
+  sim-map-into-set = {!!}
 
   refl-sim-map-into-set : is-reflexive sim-map-into-set
-  refl-sim-map-into-set x = {!!}
+  refl-sim-map-into-set = {!!}
 
   symmetric-sim-map-into-set : is-symmetric sim-map-into-set
-  symmetric-sim-map-into-set x y H = {!!}
+  symmetric-sim-map-into-set = {!!}
 
   transitive-sim-map-into-set : is-transitive sim-map-into-set
-  transitive-sim-map-into-set x y z H K = {!!}
+  transitive-sim-map-into-set = {!!}
 
   equivalence-relation-map-into-set : equivalence-relation l2 A
-  pr1 equivalence-relation-map-into-set = {!!}
+  equivalence-relation-map-into-set = {!!}
 
   is-effective-map-into-set :
     is-effective equivalence-relation-map-into-set f
@@ -318,8 +315,7 @@ module _
       ( equivalence-relation-Surjection-Into-Set
         ( surjection-into-set-equivalence-relation R))
       ( R)
-  relate-same-elements-equivalence-relation-surjection-into-set-equivalence-relation
-    x y = {!!}
+  relate-same-elements-equivalence-relation-surjection-into-set-equivalence-relation = {!!}
 
 is-retraction-equivalence-relation-Surjection-Into-Set :
   {l1 l2 : Level} {A : UU l1} (R : equivalence-relation (l1 ⊔ l2) A) →
@@ -370,7 +366,7 @@ module _
   where
 
   Id-equivalence-relation : equivalence-relation l1 (type-Set A)
-  pr1 Id-equivalence-relation = {!!}
+  Id-equivalence-relation = {!!}
 
   id-reflects-Id-equivalence-relation :
     reflects-equivalence-relation Id-equivalence-relation id

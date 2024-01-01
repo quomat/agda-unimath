@@ -37,14 +37,14 @@ module _
   where
 
   map-conjugation-Ω : {x y : A} (p : x ＝ y) → type-Ω (A , x) → type-Ω (A , y)
-  map-conjugation-Ω p ω = {!!}
+  map-conjugation-Ω = {!!}
 
   preserves-point-conjugation-Ω :
     {x y : A} (p : x ＝ y) → map-conjugation-Ω p refl ＝ refl
-  preserves-point-conjugation-Ω p = {!!}
+  preserves-point-conjugation-Ω = {!!}
 
   conjugation-Ω : {x y : A} (p : x ＝ y) → Ω (A , x) →∗ Ω (A , y)
-  pr1 (conjugation-Ω p) = {!!}
+  conjugation-Ω = {!!}
 ```
 
 ### A second definition of conjugation on loop spaces
@@ -55,14 +55,14 @@ module _
   where
 
   conjugation-Ω' : {x y : A} (p : x ＝ y) → Ω (A , x) →∗ Ω (A , y)
-  conjugation-Ω' refl = {!!}
+  conjugation-Ω' = {!!}
 
   map-conjugation-Ω' : {x y : A} (p : x ＝ y) → type-Ω (A , x) → type-Ω (A , y)
-  map-conjugation-Ω' p = {!!}
+  map-conjugation-Ω' = {!!}
 
   preserves-point-conjugation-Ω' :
     {x y : A} (p : x ＝ y) → map-conjugation-Ω' p refl ＝ refl
-  preserves-point-conjugation-Ω' p = {!!}
+  preserves-point-conjugation-Ω' = {!!}
 ```
 
 ## Properties
@@ -76,15 +76,15 @@ module _
 
   htpy-compute-conjugation-Ω :
     {x y : A} (p : x ＝ y) → map-conjugation-Ω p ~ map-conjugation-Ω' p
-  htpy-compute-conjugation-Ω refl ω = {!!}
+  htpy-compute-conjugation-Ω = {!!}
 
   preserves-point-compute-conjugation-Ω :
     {x y : A} (p : x ＝ y) →
     ( htpy-compute-conjugation-Ω p refl) ＝
     ( preserves-point-conjugation-Ω p ∙ inv (preserves-point-conjugation-Ω' p))
-  preserves-point-compute-conjugation-Ω refl = {!!}
+  preserves-point-compute-conjugation-Ω = {!!}
 
   compute-conjugation-Ω :
     {x y : A} (p : x ＝ y) → conjugation-Ω p ~∗ conjugation-Ω' p
-  pr1 (compute-conjugation-Ω p) = {!!}
+  compute-conjugation-Ω = {!!}
 ```

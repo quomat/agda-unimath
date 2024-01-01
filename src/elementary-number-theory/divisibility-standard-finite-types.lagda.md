@@ -33,7 +33,7 @@ element `u : Fin k` such that `mul-Fin u x = {!!}
 
 ```agda
 div-Fin : (k : ℕ) → Fin k → Fin k → UU lzero
-div-Fin k x y = {!!}
+div-Fin = {!!}
 ```
 
 ## Properties
@@ -42,7 +42,7 @@ div-Fin k x y = {!!}
 
 ```agda
 refl-div-Fin : {k : ℕ} (x : Fin k) → div-Fin k x x
-pr1 (refl-div-Fin {succ-ℕ k} x) = {!!}
+refl-div-Fin = {!!}
 pr2 (refl-div-Fin {succ-ℕ k} x) = {!!}
 ```
 
@@ -58,7 +58,7 @@ transitive-div-Fin = {!!}
 
 ```agda
 div-zero-Fin : (k : ℕ) (x : Fin (succ-ℕ k)) → div-Fin (succ-ℕ k) x (zero-Fin k)
-pr1 (div-zero-Fin k x) = {!!}
+div-zero-Fin = {!!}
 pr2 (div-zero-Fin k x) = {!!}
 ```
 
@@ -66,7 +66,7 @@ pr2 (div-zero-Fin k x) = {!!}
 
 ```agda
 div-one-Fin : (k : ℕ) (x : Fin (succ-ℕ k)) → div-Fin (succ-ℕ k) (one-Fin k) x
-pr1 (div-one-Fin k x) = {!!}
+div-one-Fin = {!!}
 pr2 (div-one-Fin k x) = {!!}
 ```
 
@@ -83,5 +83,5 @@ is-zero-div-zero-Fin = {!!}
 
 ```agda
 is-decidable-div-Fin : (k : ℕ) (x y : Fin k) → is-decidable (div-Fin k x y)
-is-decidable-div-Fin k x y = {!!}
+is-decidable-div-Fin = {!!}
 ```

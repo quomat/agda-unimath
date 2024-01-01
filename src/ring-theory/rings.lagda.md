@@ -56,10 +56,10 @@ and the multiplication is associative, unital, and distributive over addition.
 
 ```agda
 has-mul-Ab : {l1 : Level} (A : Ab l1) → UU l1
-has-mul-Ab A = {!!}
+has-mul-Ab = {!!}
 
 Ring : (l1 : Level) → UU (lsuc l1)
-Ring l1 = {!!}
+Ring = {!!}
 
 module _
   {l : Level} (R : Ring l)
@@ -251,16 +251,16 @@ module _
   zero-Ring = {!!}
 
   is-zero-Ring : type-Ring R → UU l
-  is-zero-Ring x = {!!}
+  is-zero-Ring = {!!}
 
   is-nonzero-Ring : type-Ring R → UU l
-  is-nonzero-Ring x = {!!}
+  is-nonzero-Ring = {!!}
 
   is-zero-ring-Prop : type-Ring R → Prop l
-  is-zero-ring-Prop x = {!!}
+  is-zero-ring-Prop = {!!}
 
   is-nonzero-ring-Prop : type-Ring R → Prop l
-  is-nonzero-ring-Prop x = {!!}
+  is-nonzero-ring-Prop = {!!}
 
   left-unit-law-add-Ring : (x : type-Ring R) → Id (add-Ring R zero-Ring x) x
   left-unit-law-add-Ring = {!!}
@@ -304,17 +304,17 @@ module _
   add-and-subtract-Ring :
     (x y z : type-Ring R) →
     add-Ring R (add-Ring R x y) (add-Ring R (neg-Ring y) z) ＝ add-Ring R x z
-  add-and-subtract-Ring x y z = {!!}
+  add-and-subtract-Ring = {!!}
 
   eq-is-unit-left-div-Ring :
     {x y : type-Ring R} →
     (is-zero-Ring R (add-Ring R (neg-Ring x) y)) → x ＝ y
-  eq-is-unit-left-div-Ring {x} {y} H = {!!}
+  eq-is-unit-left-div-Ring = {!!}
 
   is-unit-left-div-eq-Ring :
     {x y : type-Ring R} →
     x ＝ y → (is-zero-Ring R (add-Ring R (neg-Ring x) y))
-  is-unit-left-div-eq-Ring {x} {y} H = {!!}
+  is-unit-left-div-eq-Ring = {!!}
 ```
 
 ### Multiplication in a ring
@@ -331,12 +331,12 @@ module _
   mul-Ring = {!!}
 
   mul-Ring' : type-Ring R → type-Ring R → type-Ring R
-  mul-Ring' x y = {!!}
+  mul-Ring' = {!!}
 
   ap-mul-Ring :
     {x x' y y' : type-Ring R} (p : Id x x') (q : Id y y') →
     Id (mul-Ring x y) (mul-Ring x' y')
-  ap-mul-Ring p q = {!!}
+  ap-mul-Ring = {!!}
 
   associative-mul-Ring :
     (x y z : type-Ring R) →
@@ -344,7 +344,7 @@ module _
   associative-mul-Ring = {!!}
 
   multiplicative-semigroup-Ring : Semigroup l
-  pr1 multiplicative-semigroup-Ring = {!!}
+  multiplicative-semigroup-Ring = {!!}
 
   left-distributive-mul-add-Ring :
     (x y z : type-Ring R) →
@@ -368,7 +368,7 @@ module _
   is-unital-Ring = {!!}
 
   multiplicative-monoid-Ring : Monoid l
-  pr1 multiplicative-monoid-Ring = {!!}
+  multiplicative-monoid-Ring = {!!}
 
   one-Ring : type-Ring R
   one-Ring = {!!}
@@ -389,11 +389,11 @@ module _
 
   left-zero-law-mul-Ring :
     (x : type-Ring R) → Id (mul-Ring R (zero-Ring R) x) (zero-Ring R)
-  left-zero-law-mul-Ring x = {!!}
+  left-zero-law-mul-Ring = {!!}
 
   right-zero-law-mul-Ring :
     (x : type-Ring R) → Id (mul-Ring R x (zero-Ring R)) (zero-Ring R)
-  right-zero-law-mul-Ring x = {!!}
+  right-zero-law-mul-Ring = {!!}
 ```
 
 ### Rings are semirings
@@ -405,16 +405,16 @@ module _
 
   has-mul-Ring :
     has-mul-Commutative-Monoid (additive-commutative-monoid-Ring R)
-  pr1 has-mul-Ring = {!!}
+  has-mul-Ring = {!!}
 
   zero-laws-mul-Ring :
     zero-laws-Commutative-Monoid
       ( additive-commutative-monoid-Ring R)
       ( has-mul-Ring)
-  pr1 zero-laws-mul-Ring = {!!}
+  zero-laws-mul-Ring = {!!}
 
   semiring-Ring : Semiring l
-  pr1 semiring-Ring = {!!}
+  semiring-Ring = {!!}
 ```
 
 ### Computing multiplication with minus one in a ring
@@ -429,19 +429,19 @@ module _
 
   mul-neg-one-Ring :
     (x : type-Ring R) → mul-Ring R neg-one-Ring x ＝ neg-Ring R x
-  mul-neg-one-Ring x = {!!}
+  mul-neg-one-Ring = {!!}
 
   mul-neg-one-Ring' :
     (x : type-Ring R) → mul-Ring R x neg-one-Ring ＝ neg-Ring R x
-  mul-neg-one-Ring' x = {!!}
+  mul-neg-one-Ring' = {!!}
 
   is-involution-mul-neg-one-Ring :
     is-involution (mul-Ring R neg-one-Ring)
-  is-involution-mul-neg-one-Ring x = {!!}
+  is-involution-mul-neg-one-Ring = {!!}
 
   is-involution-mul-neg-one-Ring' :
     is-involution (mul-Ring' R neg-one-Ring)
-  is-involution-mul-neg-one-Ring' x = {!!}
+  is-involution-mul-neg-one-Ring' = {!!}
 ```
 
 ### Left and right negative laws for multiplication
@@ -454,17 +454,17 @@ module _
   left-negative-law-mul-Ring :
     (x y : type-Ring R) →
     mul-Ring R (neg-Ring R x) y ＝ neg-Ring R (mul-Ring R x y)
-  left-negative-law-mul-Ring x y = {!!}
+  left-negative-law-mul-Ring = {!!}
 
   right-negative-law-mul-Ring :
     (x y : type-Ring R) →
     mul-Ring R x (neg-Ring R y) ＝ neg-Ring R (mul-Ring R x y)
-  right-negative-law-mul-Ring x y = {!!}
+  right-negative-law-mul-Ring = {!!}
 
   mul-neg-Ring :
     (x y : type-Ring R) →
     mul-Ring R (neg-Ring R x) (neg-Ring R y) ＝ mul-Ring R x y
-  mul-neg-Ring x y = {!!}
+  mul-neg-Ring = {!!}
 ```
 
 ### Distributivity of multiplication over subtraction
@@ -478,25 +478,25 @@ module _
     (x y z : type-Ring R) →
     mul-Ring R x (left-subtraction-Ring R y z) ＝
     left-subtraction-Ring R (mul-Ring R x y) (mul-Ring R x z)
-  left-distributive-mul-left-subtraction-Ring x y z = {!!}
+  left-distributive-mul-left-subtraction-Ring = {!!}
 
   right-distributive-mul-left-subtraction-Ring :
     (x y z : type-Ring R) →
     mul-Ring R (left-subtraction-Ring R x y) z ＝
     left-subtraction-Ring R (mul-Ring R x z) (mul-Ring R y z)
-  right-distributive-mul-left-subtraction-Ring x y z = {!!}
+  right-distributive-mul-left-subtraction-Ring = {!!}
 
   left-distributive-mul-right-subtraction-Ring :
     (x y z : type-Ring R) →
     mul-Ring R x (right-subtraction-Ring R y z) ＝
     right-subtraction-Ring R (mul-Ring R x y) (mul-Ring R x z)
-  left-distributive-mul-right-subtraction-Ring x y z = {!!}
+  left-distributive-mul-right-subtraction-Ring = {!!}
 
   right-distributive-mul-right-subtraction-Ring :
     (x y z : type-Ring R) →
     mul-Ring R (right-subtraction-Ring R x y) z ＝
     right-subtraction-Ring R (mul-Ring R x z) (mul-Ring R y z)
-  right-distributive-mul-right-subtraction-Ring x y z = {!!}
+  right-distributive-mul-right-subtraction-Ring = {!!}
 ```
 
 ### Bidistributivity of multiplication over addition
@@ -590,10 +590,10 @@ module _
 ```agda
 structure-ring :
   {l1 : Level} → UU l1 → UU l1
-structure-ring X = {!!}
+structure-ring = {!!}
 
 compute-structure-ring :
   {l1 : Level} → (X : UU l1) → structure-ring X → Ring l1
-pr1 (compute-structure-ring X (p , q)) = {!!}
+compute-structure-ring = {!!}
 pr2 (compute-structure-ring X (p , q)) = {!!}
 ```

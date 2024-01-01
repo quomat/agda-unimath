@@ -40,7 +40,7 @@ module _
   is-prop-is-decidable-leq-Preorder = {!!}
 
 Decidable-Preorder : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Decidable-Preorder l1 l2 = {!!}
+Decidable-Preorder = {!!}
 
 module _
   {l1 l2 : Level} (X : Decidable-Preorder l1 l2)

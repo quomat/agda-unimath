@@ -26,7 +26,7 @@ vertices.
 
 ```agda
 Hypergraph : (l1 l2 : Level) (k : ℕ) → UU (lsuc l1 ⊔ lsuc l2)
-Hypergraph l1 l2 k = {!!}
+Hypergraph = {!!}
 
 module _
   {l1 l2 : Level} {k : ℕ} (G : Hypergraph l1 l2 k)

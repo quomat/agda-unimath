@@ -52,7 +52,7 @@ module _
   is-finite-type-prod-Ring-𝔽 = {!!}
 
   finite-type-prod-Ring-𝔽 : 𝔽 (l1 ⊔ l2)
-  pr1 finite-type-prod-Ring-𝔽 = {!!}
+  finite-type-prod-Ring-𝔽 = {!!}
 
   add-prod-Ring-𝔽 : type-prod-Ring-𝔽 → type-prod-Ring-𝔽 → type-prod-Ring-𝔽
   add-prod-Ring-𝔽 = {!!}

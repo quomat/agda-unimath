@@ -28,8 +28,7 @@ The **precategory of monoids** consists of monoids and homomorphisms of monoids.
 
 ```agda
 Monoid-Large-Precategory : Large-Precategory lsuc _⊔_
-obj-Large-Precategory
-  Monoid-Large-Precategory = {!!}
+Monoid-Large-Precategory = {!!}
 hom-set-Large-Precategory
   Monoid-Large-Precategory = {!!}
 comp-hom-Large-Precategory

@@ -126,10 +126,10 @@ module _
 
   is-iso-id-hom-Large-Precategory :
     is-iso-Large-Precategory C (id-hom-Large-Precategory C {X = X})
-  pr1 is-iso-id-hom-Large-Precategory = {!!}
+  is-iso-id-hom-Large-Precategory = {!!}
 
   id-iso-Large-Precategory : iso-Large-Precategory C X X
-  pr1 id-iso-Large-Precategory = {!!}
+  id-iso-Large-Precategory = {!!}
 ```
 
 ## Properties
@@ -151,16 +151,16 @@ module _
   all-elements-equal-is-iso-Large-Precategory :
     (f : hom-Large-Precategory C X Y)
     (H K : is-iso-Large-Precategory C f) → H ＝ K
-  all-elements-equal-is-iso-Large-Precategory f (g , p , q) (g' , p' , q') = {!!}
+  all-elements-equal-is-iso-Large-Precategory = {!!}
 
   is-prop-is-iso-Large-Precategory :
     (f : hom-Large-Precategory C X Y) →
     is-prop (is-iso-Large-Precategory C f)
-  is-prop-is-iso-Large-Precategory f = {!!}
+  is-prop-is-iso-Large-Precategory = {!!}
 
   is-iso-prop-Large-Precategory :
     (f : hom-Large-Precategory C X Y) → Prop (β l1 l1 ⊔ β l2 l1 ⊔ β l2 l2)
-  pr1 (is-iso-prop-Large-Precategory f) = {!!}
+  is-iso-prop-Large-Precategory = {!!}
 ```
 
 ### Equality of isomorphism is equality of their underlying morphisms
@@ -175,7 +175,7 @@ module _
   eq-iso-eq-hom-Large-Precategory :
     (f g : iso-Large-Precategory C X Y) →
     hom-iso-Large-Precategory C f ＝ hom-iso-Large-Precategory C g → f ＝ g
-  eq-iso-eq-hom-Large-Precategory f g = {!!}
+  eq-iso-eq-hom-Large-Precategory = {!!}
 ```
 
 ### The type of isomorphisms form a set
@@ -194,7 +194,7 @@ module _
   is-set-iso-Large-Precategory = {!!}
 
   iso-set-Large-Precategory : Set (β l1 l1 ⊔ β l1 l2 ⊔ β l2 l1 ⊔ β l2 l2)
-  pr1 iso-set-Large-Precategory = {!!}
+  iso-set-Large-Precategory = {!!}
 ```
 
 ### Equalities induce isomorphisms
@@ -212,13 +212,13 @@ module _
 
   iso-eq-Large-Precategory :
     (X Y : obj-Large-Precategory C l1) → X ＝ Y → iso-Large-Precategory C X Y
-  pr1 (iso-eq-Large-Precategory X Y p) = {!!}
+  iso-eq-Large-Precategory = {!!}
 
   compute-iso-eq-Large-Precategory :
     (X Y : obj-Large-Precategory C l1) →
     iso-eq-Precategory (precategory-Large-Precategory C l1) X Y ~
     iso-eq-Large-Precategory X Y
-  compute-iso-eq-Large-Precategory X Y p = {!!}
+  compute-iso-eq-Large-Precategory = {!!}
 ```
 
 ### Isomorphisms are closed under composition
@@ -238,7 +238,7 @@ module _
     is-iso-Large-Precategory C g →
     is-iso-Large-Precategory C f →
     hom-Large-Precategory C Z X
-  hom-comp-is-iso-Large-Precategory q p = {!!}
+  hom-comp-is-iso-Large-Precategory = {!!}
 
   is-section-comp-is-iso-Large-Precategory :
     (q : is-iso-Large-Precategory C g)
@@ -247,7 +247,7 @@ module _
       ( comp-hom-Large-Precategory C g f)
       ( hom-comp-is-iso-Large-Precategory q p) ＝
     id-hom-Large-Precategory C
-  is-section-comp-is-iso-Large-Precategory q p = {!!}
+  is-section-comp-is-iso-Large-Precategory = {!!}
 
   is-retraction-comp-is-iso-Large-Precategory :
     (q : is-iso-Large-Precategory C g)
@@ -256,12 +256,12 @@ module _
       ( hom-comp-is-iso-Large-Precategory q p)
       ( comp-hom-Large-Precategory C g f) ＝
     id-hom-Large-Precategory C
-  is-retraction-comp-is-iso-Large-Precategory q p = {!!}
+  is-retraction-comp-is-iso-Large-Precategory = {!!}
 
   is-iso-comp-is-iso-Large-Precategory :
     is-iso-Large-Precategory C g → is-iso-Large-Precategory C f →
     is-iso-Large-Precategory C (comp-hom-Large-Precategory C g f)
-  pr1 (is-iso-comp-is-iso-Large-Precategory q p) = {!!}
+  is-iso-comp-is-iso-Large-Precategory = {!!}
 ```
 
 ### Composition of isomorphisms
@@ -287,7 +287,7 @@ module _
 
   comp-iso-Large-Precategory :
     iso-Large-Precategory C X Z
-  pr1 comp-iso-Large-Precategory = {!!}
+  comp-iso-Large-Precategory = {!!}
 
   hom-inv-comp-iso-Large-Precategory :
     hom-Large-Precategory C Z X
@@ -321,7 +321,7 @@ module _
   is-iso-inv-is-iso-Large-Precategory :
     (p : is-iso-Large-Precategory C f) →
     is-iso-Large-Precategory C (hom-inv-iso-Large-Precategory C (f , p))
-  pr1 (is-iso-inv-is-iso-Large-Precategory p) = {!!}
+  is-iso-inv-is-iso-Large-Precategory = {!!}
 ```
 
 ### Inverses of isomorphisms
@@ -335,7 +335,7 @@ module _
 
   inv-iso-Large-Precategory :
     iso-Large-Precategory C X Y → iso-Large-Precategory C Y X
-  pr1 (inv-iso-Large-Precategory f) = {!!}
+  inv-iso-Large-Precategory = {!!}
 ```
 
 ### Composition of isomorphisms satisfies the unit laws
@@ -459,7 +459,7 @@ module _
 
   is-iso-is-equiv-precomp-hom-Large-Precategory :
     is-iso-Large-Precategory C f
-  pr1 is-iso-is-equiv-precomp-hom-Large-Precategory = {!!}
+  is-iso-is-equiv-precomp-hom-Large-Precategory = {!!}
 
 module _
   {α : Level → Level} {β : Level → Level → Level}
@@ -478,13 +478,13 @@ module _
     is-section
       ( precomp-hom-Large-Precategory C f Z)
       ( map-inv-precomp-hom-is-iso-Large-Precategory)
-  is-section-map-inv-precomp-hom-is-iso-Large-Precategory g = {!!}
+  is-section-map-inv-precomp-hom-is-iso-Large-Precategory = {!!}
 
   is-retraction-map-inv-precomp-hom-is-iso-Large-Precategory :
     is-retraction
       ( precomp-hom-Large-Precategory C f Z)
       ( map-inv-precomp-hom-is-iso-Large-Precategory)
-  is-retraction-map-inv-precomp-hom-is-iso-Large-Precategory g = {!!}
+  is-retraction-map-inv-precomp-hom-is-iso-Large-Precategory = {!!}
 
   is-equiv-precomp-hom-is-iso-Large-Precategory :
     is-equiv (precomp-hom-Large-Precategory C f Z)
@@ -492,7 +492,7 @@ module _
 
   equiv-precomp-hom-is-iso-Large-Precategory :
     hom-Large-Precategory C Y Z ≃ hom-Large-Precategory C X Z
-  pr1 equiv-precomp-hom-is-iso-Large-Precategory = {!!}
+  equiv-precomp-hom-is-iso-Large-Precategory = {!!}
 
 module _
   {α : Level → Level} {β : Level → Level → Level}
@@ -571,7 +571,7 @@ module _
 
   is-iso-is-equiv-postcomp-hom-Large-Precategory :
     is-iso-Large-Precategory C f
-  pr1 is-iso-is-equiv-postcomp-hom-Large-Precategory = {!!}
+  is-iso-is-equiv-postcomp-hom-Large-Precategory = {!!}
 
 module _
   {α : Level → Level} {β : Level → Level → Level}
@@ -590,13 +590,13 @@ module _
     is-section
       ( postcomp-hom-Large-Precategory C Z f)
       ( map-inv-postcomp-hom-is-iso-Large-Precategory)
-  is-section-map-inv-postcomp-hom-is-iso-Large-Precategory g = {!!}
+  is-section-map-inv-postcomp-hom-is-iso-Large-Precategory = {!!}
 
   is-retraction-map-inv-postcomp-hom-is-iso-Large-Precategory :
     is-retraction
       ( postcomp-hom-Large-Precategory C Z f)
       ( map-inv-postcomp-hom-is-iso-Large-Precategory)
-  is-retraction-map-inv-postcomp-hom-is-iso-Large-Precategory g = {!!}
+  is-retraction-map-inv-postcomp-hom-is-iso-Large-Precategory = {!!}
 
   is-equiv-postcomp-hom-is-iso-Large-Precategory :
     is-equiv (postcomp-hom-Large-Precategory C Z f)
@@ -604,7 +604,7 @@ module _
 
   equiv-postcomp-hom-is-iso-Large-Precategory :
     hom-Large-Precategory C Z X ≃ hom-Large-Precategory C Z Y
-  pr1 equiv-postcomp-hom-is-iso-Large-Precategory = {!!}
+  equiv-postcomp-hom-is-iso-Large-Precategory = {!!}
 
 module _
   {α : Level → Level} {β : Level → Level → Level}

@@ -22,5 +22,5 @@ is-wild-group-Wild-Monoid :
 is-wild-group-Wild-Monoid = {!!}
 
 Wild-Group : (l : Level) → UU (lsuc l)
-Wild-Group l = {!!}
+Wild-Group = {!!}
 ```

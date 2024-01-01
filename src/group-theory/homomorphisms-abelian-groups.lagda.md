@@ -83,10 +83,10 @@ module _
   map-hom-Ab = {!!}
 
   preserves-add-hom-Ab : (f : hom-Ab) → preserves-add-Ab A B (map-hom-Ab f)
-  preserves-add-hom-Ab f = {!!}
+  preserves-add-hom-Ab = {!!}
 
   preserves-zero-hom-Ab : (f : hom-Ab) → preserves-zero-Ab A B (map-hom-Ab f)
-  preserves-zero-hom-Ab f = {!!}
+  preserves-zero-hom-Ab = {!!}
 
   preserves-negatives-hom-Ab :
     (f : hom-Ab) → preserves-negatives-Ab A B (map-hom-Ab f)
@@ -112,13 +112,13 @@ module _
   where
 
   htpy-hom-Ab : (f g : hom-Ab A B) → UU (l1 ⊔ l2)
-  htpy-hom-Ab f g = {!!}
+  htpy-hom-Ab = {!!}
 
   refl-htpy-hom-Ab : (f : hom-Ab A B) → htpy-hom-Ab f f
-  refl-htpy-hom-Ab f = {!!}
+  refl-htpy-hom-Ab = {!!}
 
   htpy-eq-hom-Ab : (f g : hom-Ab A B) → Id f g → htpy-hom-Ab f g
-  htpy-eq-hom-Ab f g = {!!}
+  htpy-eq-hom-Ab = {!!}
 
   abstract
     is-torsorial-htpy-hom-Ab :
@@ -141,10 +141,10 @@ module _
 
 ```agda
 preserves-add-id : {l : Level} (A : Ab l) → preserves-add-Ab A A id
-preserves-add-id A = {!!}
+preserves-add-id = {!!}
 
 id-hom-Ab : {l1 : Level} (A : Ab l1) → hom-Ab A A
-id-hom-Ab A = {!!}
+id-hom-Ab = {!!}
 ```
 
 ### Composition of morphisms of abelian groups

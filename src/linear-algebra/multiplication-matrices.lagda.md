@@ -21,13 +21,13 @@ module linear-algebra.multiplication-matrices where
 mul-vector-matrix : {l : Level} → {K : UU l} → {m n : ℕ} →
                      (K → K → K) → (K → K → K) → K →
                      vec K m → Mat K m n → vec K n
-mul-vector-matrix _ _ zero empty-vec empty-vec = {!!}
+mul-vector-matrix = {!!}
 mul-vector-matrix mulK addK zero (x ∷ xs) (v ∷ vs) = {!!}
 
 mul-Mat : {l' : Level} → {K : UU l'} → {l m n : ℕ} →
           (K → K → K) → (K → K → K) → K →
           Mat K l m → Mat K m n → Mat K l n
-mul-Mat _ _ zero empty-vec _ = {!!}
+mul-Mat = {!!}
 mul-Mat mulK addK zero (v ∷ vs) m = {!!}
 -}
 ```
@@ -75,7 +75,7 @@ module _
     Id (mul-vector-matrix mulK addK zero a (add-Mat addK b c))
       (add-vec addK (mul-vector-matrix mulK addK zero a b)
                     (mul-vector-matrix mulK addK zero a c))
-  left-distributive-vector-matrix id-vec _ _ _ empty-vec empty-vec empty-vec = {!!}
+  left-distributive-vector-matrix = {!!}
 
   left-distributive-matrices :
     {n m p : ℕ} →
@@ -90,7 +90,7 @@ module _
     Id (mul-Mat mulK addK zero a (add-Mat addK b c))
        (add-Mat addK (mul-Mat mulK addK zero a b)
                      (mul-Mat mulK addK zero a c))
-  left-distributive-matrices _ _ _ _ empty-vec _ _ = {!!}
+  left-distributive-matrices = {!!}
 -}
 
 {- TODO: right distributivity
@@ -107,7 +107,7 @@ module _
     Id (mul-Mat mulK addK zero (add-Mat addK b c) d)
        (add-Mat addK (mul-Mat mulK addK zero b d)
                      (mul-Mat mulK addK zero c d))
-  right-distributive-matrices _ _ _ _ empty-vec empty-vec _ = {!!}
+  right-distributive-matrices = {!!}
 
   TODO: associativity
   associative-mul-matrices :

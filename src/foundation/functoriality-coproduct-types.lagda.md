@@ -57,7 +57,7 @@ module _
   where
 
   map-coprod : (A → A') → (B → B') → A + B → A' + B'
-  map-coprod f g (inl x) = {!!}
+  map-coprod = {!!}
 ```
 
 ## Properties
@@ -70,7 +70,7 @@ module _
   where
 
   id-map-coprod : (map-coprod (id {A = A}) (id {A = B})) ~ id
-  id-map-coprod (inl x) = {!!}
+  id-map-coprod = {!!}
 ```
 
 ### Functoriality of coproducts preserves composition
@@ -97,7 +97,7 @@ module _
   where
 
   htpy-map-coprod : (map-coprod f g) ~ (map-coprod f' g')
-  htpy-map-coprod (inl x) = {!!}
+  htpy-map-coprod = {!!}
 ```
 
 ### The fibers of `map-coprod`
@@ -170,11 +170,7 @@ module _
     is-equiv-map-coprod :
       {f : A → A'} {g : B → B'} →
       is-equiv f → is-equiv g → is-equiv (map-coprod f g)
-    pr1
-      ( pr1
-        ( is-equiv-map-coprod
-          ( pair (pair sf Sf) (pair rf Rf))
-          ( pair (pair sg Sg) (pair rg Rg)))) = {!!}
+    is-equiv-map-coprod = {!!}
 
   map-equiv-coprod :
     (A ≃ A') → (B ≃ B') → A + B → A' + B'
@@ -322,10 +318,10 @@ module _
   equiv-right-to-right = {!!}
 
   map-mutually-exclusive-coprod : (P + Q) ≃ (P' + Q') → (P ≃ P') × (Q ≃ Q')
-  pr1 (map-mutually-exclusive-coprod e) = {!!}
+  map-mutually-exclusive-coprod = {!!}
 
   map-inv-mutually-exclusive-coprod : (P ≃ P') × (Q ≃ Q') → (P + Q) ≃ (P' + Q')
-  map-inv-mutually-exclusive-coprod (pair e₁ e₂) = {!!}
+  map-inv-mutually-exclusive-coprod = {!!}
 
   is-retraction-map-inv-mutually-exclusive-coprod :
     (map-mutually-exclusive-coprod ∘ map-inv-mutually-exclusive-coprod) ~ id

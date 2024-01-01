@@ -86,7 +86,7 @@ module _
   is-ideal-intersection-ideal-Ring = {!!}
 
   intersection-ideal-Ring : ideal-Ring (l2 ⊔ l3) R
-  pr1 intersection-ideal-Ring = {!!}
+  intersection-ideal-Ring = {!!}
 
   is-intersection-intersection-ideal-Ring :
     is-intersection-ideal-Ring R I J intersection-ideal-Ring

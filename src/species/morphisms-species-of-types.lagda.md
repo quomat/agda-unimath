@@ -85,7 +85,7 @@ is-equiv-htpy-eq-hom-species-types :
   {l1 l2 l3 : Level} {F : species-types l1 l2} {G : species-types l1 l3}
   (f g : hom-species-types F G) →
   is-equiv (htpy-eq-hom-species-types {f = f} {g = g})
-is-equiv-htpy-eq-hom-species-types f = {!!}
+is-equiv-htpy-eq-hom-species-types = {!!}
 
 eq-htpy-hom-species-types :
   {l1 l2 l3 : Level} {F : species-types l1 l2} {G : species-types l1 l3}

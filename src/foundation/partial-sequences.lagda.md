@@ -35,7 +35,7 @@ from `ℕ` into the type of [partial elements](foundation.partial-elements.md) o
 
 ```agda
 partial-sequence : {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-partial-sequence l2 A = {!!}
+partial-sequence = {!!}
 ```
 
 ### Defined elements of partial sequences

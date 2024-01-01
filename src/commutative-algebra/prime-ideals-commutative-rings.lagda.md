@@ -52,7 +52,7 @@ module _
 
 prime-ideal-Commutative-Ring :
   {l1 : Level} (l2 : Level) → Commutative-Ring l1 → UU (l1 ⊔ lsuc l2)
-prime-ideal-Commutative-Ring l2 R = {!!}
+prime-ideal-Commutative-Ring = {!!}
 
 module _
   {l1 l2 : Level} (R : Commutative-Ring l1)
@@ -126,14 +126,14 @@ is-radical-prime-ideal-Commutative-Ring :
   {l : Level} (R : Commutative-Ring l)
   (P : prime-ideal-Commutative-Ring l R) →
   is-radical-ideal-Commutative-Ring R (ideal-prime-ideal-Commutative-Ring R P)
-is-radical-prime-ideal-Commutative-Ring R P x zero-ℕ p = {!!}
+is-radical-prime-ideal-Commutative-Ring = {!!}
 is-radical-prime-ideal-Commutative-Ring R P x (succ-ℕ n) p = {!!}
 
 radical-ideal-prime-ideal-Commutative-Ring :
   {l : Level} (R : Commutative-Ring l)
   (P : prime-ideal-Commutative-Ring l R) →
   radical-ideal-Commutative-Ring l R
-pr1 (radical-ideal-prime-ideal-Commutative-Ring R P) = {!!}
+radical-ideal-prime-ideal-Commutative-Ring = {!!}
 pr2 (radical-ideal-prime-ideal-Commutative-Ring R P) = {!!}
 
 is-prime-ideal-radical-ideal-prime-ideal-Commutative-Ring :
@@ -142,7 +142,7 @@ is-prime-ideal-radical-ideal-prime-ideal-Commutative-Ring :
   is-prime-ideal-Commutative-Ring R
     ( ideal-radical-ideal-Commutative-Ring R
       ( radical-ideal-prime-ideal-Commutative-Ring R P))
-is-prime-ideal-radical-ideal-prime-ideal-Commutative-Ring R P = {!!}
+is-prime-ideal-radical-ideal-prime-ideal-Commutative-Ring = {!!}
 
 is-in-prime-ideal-is-in-radical-ideal-Commutative-Ring :
   {l : Level} (R : Commutative-Ring l)
@@ -151,5 +151,5 @@ is-in-prime-ideal-is-in-radical-ideal-Commutative-Ring :
     ( radical-ideal-prime-ideal-Commutative-Ring R P)
     ( x) →
   is-in-prime-ideal-Commutative-Ring R P x
-is-in-prime-ideal-is-in-radical-ideal-Commutative-Ring R P x p = {!!}
+is-in-prime-ideal-is-in-radical-ideal-Commutative-Ring = {!!}
 ```

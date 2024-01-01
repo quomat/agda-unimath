@@ -51,7 +51,7 @@ definitions for types.
 
 ```agda
 Slice : (l : Level) {l1 : Level} (A : UU l1) → UU (l1 ⊔ lsuc l)
-Slice l = {!!}
+Slice = {!!}
 ```
 
 ### The morphisms in the slice category of types
@@ -63,16 +63,16 @@ module _
 
   hom-slice :
     (A → X) → (B → X) → UU (l1 ⊔ l2 ⊔ l3)
-  hom-slice f g = {!!}
+  hom-slice = {!!}
 
   map-hom-slice :
     (f : A → X) (g : B → X) → hom-slice f g → A → B
-  map-hom-slice f g h = {!!}
+  map-hom-slice = {!!}
 
   triangle-hom-slice :
     (f : A → X) (g : B → X) (h : hom-slice f g) →
     f ~ g ∘ map-hom-slice f g h
-  triangle-hom-slice f g h = {!!}
+  triangle-hom-slice = {!!}
 ```
 
 ## Properties
@@ -89,18 +89,18 @@ module _
     (h h' : hom-slice f g) →
     map-hom-slice f g h ~ map-hom-slice f g h' →
     UU (l1 ⊔ l2)
-  coherence-htpy-hom-slice h h' H = {!!}
+  coherence-htpy-hom-slice = {!!}
 
   htpy-hom-slice : (h h' : hom-slice f g) → UU (l1 ⊔ l2 ⊔ l3)
-  htpy-hom-slice h h' = {!!}
+  htpy-hom-slice = {!!}
 
   extensionality-hom-slice :
     (h h' : hom-slice f g) → (h ＝ h') ≃ htpy-hom-slice h h'
-  extensionality-hom-slice (pair h H) = {!!}
+  extensionality-hom-slice = {!!}
 
   eq-htpy-hom-slice :
     (h h' : hom-slice f g) → htpy-hom-slice h h' → h ＝ h'
-  eq-htpy-hom-slice h h' = {!!}
+  eq-htpy-hom-slice = {!!}
 ```
 
 ```agda
@@ -108,18 +108,18 @@ comp-hom-slice :
   {l1 l2 l3 l4 : Level} {X : UU l1} {A : UU l2} {B : UU l3} {C : UU l4}
   (f : A → X) (g : B → X) (h : C → X) →
   hom-slice g h → hom-slice f g → hom-slice f h
-pr1 (comp-hom-slice f g h j i) = {!!}
+comp-hom-slice = {!!}
 pr2 (comp-hom-slice f g h j i) = {!!}
 
 id-hom-slice :
   {l1 l2 : Level} {X : UU l1} {A : UU l2} (f : A → X) → hom-slice f f
-pr1 (id-hom-slice f) = {!!}
+id-hom-slice = {!!}
 pr2 (id-hom-slice f) = {!!}
 
 is-equiv-hom-slice :
   {l1 l2 l3 : Level} {X : UU l1} {A : UU l2} {B : UU l3}
   (f : A → X) (g : B → X) → hom-slice f g → UU (l2 ⊔ l3)
-is-equiv-hom-slice f g h = {!!}
+is-equiv-hom-slice = {!!}
 ```
 
 ### Morphisms in the slice are equivalently described as families of maps between fibers
@@ -130,7 +130,7 @@ module _
   where
 
   fiberwise-hom : (A → X) → (B → X) → UU (l1 ⊔ l2 ⊔ l3)
-  fiberwise-hom f g = {!!}
+  fiberwise-hom = {!!}
 
 module _
   {l1 l2 l3 : Level} {X : UU l1} {A : UU l2} {B : UU l3}
@@ -138,30 +138,30 @@ module _
   where
 
   fiberwise-hom-hom-slice : hom-slice f g → fiberwise-hom f g
-  fiberwise-hom-hom-slice (pair h H) = {!!}
+  fiberwise-hom-hom-slice = {!!}
 
   hom-slice-fiberwise-hom : fiberwise-hom f g → hom-slice f g
-  pr1 (hom-slice-fiberwise-hom α) a = {!!}
+  hom-slice-fiberwise-hom = {!!}
 
   is-section-hom-slice-fiberwise-hom-eq-htpy :
     (α : fiberwise-hom f g) (x : X) →
     (fiberwise-hom-hom-slice (hom-slice-fiberwise-hom α) x) ~ (α x)
-  is-section-hom-slice-fiberwise-hom-eq-htpy α .(f a) (pair a refl) = {!!}
+  is-section-hom-slice-fiberwise-hom-eq-htpy = {!!}
 
   is-section-hom-slice-fiberwise-hom :
     (fiberwise-hom-hom-slice ∘ hom-slice-fiberwise-hom) ~ id
-  is-section-hom-slice-fiberwise-hom α = {!!}
+  is-section-hom-slice-fiberwise-hom = {!!}
 
   is-retraction-hom-slice-fiberwise-hom :
     (hom-slice-fiberwise-hom ∘ fiberwise-hom-hom-slice) ~ id
-  is-retraction-hom-slice-fiberwise-hom (pair h H) = {!!}
+  is-retraction-hom-slice-fiberwise-hom = {!!}
 
   abstract
     is-equiv-fiberwise-hom-hom-slice : is-equiv (fiberwise-hom-hom-slice)
     is-equiv-fiberwise-hom-hom-slice = {!!}
 
   equiv-fiberwise-hom-hom-slice : hom-slice f g ≃ fiberwise-hom f g
-  pr1 equiv-fiberwise-hom-hom-slice = {!!}
+  equiv-fiberwise-hom-hom-slice = {!!}
 
   abstract
     is-equiv-hom-slice-fiberwise-hom : is-equiv hom-slice-fiberwise-hom
@@ -169,7 +169,7 @@ module _
 
   equiv-hom-slice-fiberwise-hom :
     fiberwise-hom f g ≃ hom-slice f g
-  pr1 equiv-hom-slice-fiberwise-hom = {!!}
+  equiv-hom-slice-fiberwise-hom = {!!}
 ```
 
 ### A morphism in the slice over `X` is an equivalence if and only if the induced map between fibers is a fiberwise equivalence
@@ -180,11 +180,11 @@ module _
   where
 
   equiv-slice : (A → X) → (B → X) → UU (l1 ⊔ l2 ⊔ l3)
-  equiv-slice f g = {!!}
+  equiv-slice = {!!}
 
   hom-equiv-slice :
     (f : A → X) (g : B → X) → equiv-slice f g → hom-slice f g
-  pr1 (hom-equiv-slice f g e) = {!!}
+  hom-equiv-slice = {!!}
 
 module _
   {l1 l2 l3 : Level} {X : UU l1} {A : UU l2} {B : UU l3}
@@ -195,15 +195,14 @@ module _
     is-fiberwise-equiv-fiberwise-equiv-equiv-slice :
       (t : hom-slice f g) → is-equiv (pr1 t) →
       is-fiberwise-equiv (fiberwise-hom-hom-slice f g t)
-    is-fiberwise-equiv-fiberwise-equiv-equiv-slice (pair h H) = {!!}
+    is-fiberwise-equiv-fiberwise-equiv-equiv-slice = {!!}
 
   abstract
     is-equiv-hom-slice-is-fiberwise-equiv-fiberwise-hom-hom-slice :
       (t : hom-slice f g) →
       ((x : X) → is-equiv (fiberwise-hom-hom-slice f g t x)) →
       is-equiv (pr1 t)
-    is-equiv-hom-slice-is-fiberwise-equiv-fiberwise-hom-hom-slice
-      (pair h H) = {!!}
+    is-equiv-hom-slice-is-fiberwise-equiv-fiberwise-hom-hom-slice = {!!}
 
   equiv-fiberwise-equiv-equiv-slice :
     equiv-slice f g ≃ fiberwise-equiv (fiber f) (fiber g)
@@ -232,14 +231,14 @@ module _
   abstract
     is-prop-hom-slice :
       (f : A → X) (i : B ↪ X) → is-prop (hom-slice f (map-emb i))
-    is-prop-hom-slice f i = {!!}
+    is-prop-hom-slice = {!!}
 
   abstract
     is-equiv-hom-slice-emb :
       (f : A ↪ X) (g : B ↪ X) (h : hom-slice (map-emb f) (map-emb g)) →
       hom-slice (map-emb g) (map-emb f) →
       is-equiv-hom-slice (map-emb f) (map-emb g) h
-    is-equiv-hom-slice-emb f g h i = {!!}
+    is-equiv-hom-slice-emb = {!!}
 ```
 
 ### Characterization of the identity type of `Slice l A`
@@ -250,13 +249,13 @@ module _
   where
 
   equiv-slice' : (f g : Slice l2 A) → UU (l1 ⊔ l2)
-  equiv-slice' f g = {!!}
+  equiv-slice' = {!!}
 
   id-equiv-Slice : (f : Slice l2 A) → equiv-slice' f f
-  pr1 (id-equiv-Slice f) = {!!}
+  id-equiv-Slice = {!!}
 
   equiv-eq-Slice : (f g : Slice l2 A) → f ＝ g → equiv-slice' f g
-  equiv-eq-Slice f .f refl = {!!}
+  equiv-eq-Slice = {!!}
 ```
 
 ### Univalence in a slice
@@ -269,20 +268,20 @@ module _
   abstract
     is-torsorial-equiv-slice' :
       (f : Slice l2 A) → is-torsorial (equiv-slice' f)
-    is-torsorial-equiv-slice' (pair X f) = {!!}
+    is-torsorial-equiv-slice' = {!!}
 
   abstract
     is-equiv-equiv-eq-Slice :
       (f g : Slice l2 A) → is-equiv (equiv-eq-Slice f g)
-    is-equiv-equiv-eq-Slice f = {!!}
+    is-equiv-equiv-eq-Slice = {!!}
 
   extensionality-Slice :
     (f g : Slice l2 A) → (f ＝ g) ≃ equiv-slice' f g
-  pr1 (extensionality-Slice f g) = {!!}
+  extensionality-Slice = {!!}
 
   eq-equiv-slice :
     (f g : Slice l2 A) → equiv-slice' f g → f ＝ g
-  eq-equiv-slice f g = {!!}
+  eq-equiv-slice = {!!}
 ```
 
 ## See also

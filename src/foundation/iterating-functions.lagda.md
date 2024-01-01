@@ -43,10 +43,10 @@ module _
   where
 
   iterate : ℕ → (X → X) → (X → X)
-  iterate zero-ℕ f x = {!!}
+  iterate = {!!}
 
   iterate' : ℕ → (X → X) → (X → X)
-  iterate' zero-ℕ f x = {!!}
+  iterate' = {!!}
 ```
 
 ### Homotopies of iterating functions
@@ -76,7 +76,7 @@ module _
   iterate-succ-ℕ = {!!}
 
   reassociate-iterate : (k : ℕ) (f : X → X) → iterate k f ~ iterate' k f
-  reassociate-iterate zero-ℕ f x = {!!}
+  reassociate-iterate = {!!}
 ```
 
 ### For any map `f : X → X`, iterating `f` defines a monoid action of ℕ on `X`
@@ -121,5 +121,5 @@ module _
   where
 
   iterative-action-Monoid : action-Monoid l ℕ*-Monoid
-  pr1 iterative-action-Monoid = {!!}
+  iterative-action-Monoid = {!!}
 ```

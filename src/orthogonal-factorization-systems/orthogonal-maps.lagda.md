@@ -36,7 +36,7 @@ module _
   where
 
   is-orthogonal : (A → X) → (B → Y) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-orthogonal f g = {!!}
+  is-orthogonal = {!!}
 
   _⊥_ = {!!}
 
@@ -56,7 +56,7 @@ A term of `is-left-orthogonal f g` asserts that `g` is left orthogonal to `f`.
 
 ```agda
   is-left-orthogonal : (A → X) → (B → Y) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-left-orthogonal g f = {!!}
+  is-left-orthogonal = {!!}
 ```
 
 ## Properties
@@ -73,5 +73,5 @@ module _
   is-property-is-orthogonal = {!!}
 
   is-orthogonal-Prop : Prop (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  pr1 is-orthogonal-Prop = {!!}
+  is-orthogonal-Prop = {!!}
 ```

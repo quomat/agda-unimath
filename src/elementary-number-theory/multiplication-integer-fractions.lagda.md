@@ -30,12 +30,12 @@ fraction similarity.
 
 ```agda
 mul-fraction-ℤ : fraction-ℤ → fraction-ℤ → fraction-ℤ
-pr1 (mul-fraction-ℤ (m , n , n-pos) (m' , n' , n'-pos)) = {!!}
+mul-fraction-ℤ = {!!}
 pr1 (pr2 (mul-fraction-ℤ (m , n , n-pos) (m' , n' , n'-pos))) = {!!}
 pr2 (pr2 (mul-fraction-ℤ (m , n , n-pos) (m' , n' , n'-pos))) = {!!}
 
 mul-fraction-ℤ' : fraction-ℤ → fraction-ℤ → fraction-ℤ
-mul-fraction-ℤ' x y = {!!}
+mul-fraction-ℤ' = {!!}
 
 infixl 40 _*fraction-ℤ_
 _*fraction-ℤ_ = {!!}
@@ -56,9 +56,7 @@ sim-fraction-mul-fraction-ℤ :
   sim-fraction-ℤ x x' →
   sim-fraction-ℤ y y' →
   sim-fraction-ℤ (x *fraction-ℤ y) (x' *fraction-ℤ y')
-sim-fraction-mul-fraction-ℤ
-  {(nx , dx , dxp)} {(nx' , dx' , dx'p)}
-  {(ny , dy , dyp)} {(ny' , dy' , dy'p)} p q = {!!}
+sim-fraction-mul-fraction-ℤ = {!!}
 ```
 
 ### Unit laws

@@ -63,7 +63,7 @@ module _
   mul-Monoid = {!!}
 
   mul-Monoid' : type-Monoid → type-Monoid → type-Monoid
-  mul-Monoid' y x = {!!}
+  mul-Monoid' = {!!}
 
   ap-mul-Monoid :
     {x x' y y' : type-Monoid} →
@@ -114,10 +114,7 @@ module _
 abstract
   all-elements-equal-is-unital-Semigroup :
     {l : Level} (G : Semigroup l) → all-elements-equal (is-unital-Semigroup G)
-  all-elements-equal-is-unital-Semigroup
-    ( X , μ , associative-μ)
-    ( e , left-unit-e , right-unit-e)
-    ( e' , left-unit-e' , right-unit-e') = {!!}
+  all-elements-equal-is-unital-Semigroup = {!!}
 
 abstract
   is-prop-is-unital-Semigroup :
@@ -125,7 +122,7 @@ abstract
   is-prop-is-unital-Semigroup = {!!}
 
 is-unital-prop-Semigroup : {l : Level} (G : Semigroup l) → Prop l
-pr1 (is-unital-prop-Semigroup G) = {!!}
+is-unital-prop-Semigroup = {!!}
 pr2 (is-unital-prop-Semigroup G) = {!!}
 ```
 
@@ -133,7 +130,7 @@ pr2 (is-unital-prop-Semigroup G) = {!!}
 
 ```agda
 h-space-Monoid : {l : Level} (M : Monoid l) → H-Space l
-pr1 (pr1 (h-space-Monoid M)) = {!!}
+h-space-Monoid = {!!}
 pr2 (pr1 (h-space-Monoid M)) = {!!}
 pr1 (pr2 (h-space-Monoid M)) = {!!}
 pr1 (pr2 (pr2 (h-space-Monoid M))) = {!!}
@@ -145,7 +142,7 @@ pr2 (pr2 (pr2 (pr2 (h-space-Monoid M)))) = {!!}
 
 ```agda
 wild-monoid-Monoid : {l : Level} (M : Monoid l) → Wild-Monoid l
-pr1 (wild-monoid-Monoid M) = {!!}
+wild-monoid-Monoid = {!!}
 pr1 (pr2 (wild-monoid-Monoid M)) = {!!}
 pr1 (pr2 (pr2 (wild-monoid-Monoid M))) y z = {!!}
 pr1 (pr2 (pr2 (pr2 (wild-monoid-Monoid M)))) x z = {!!}

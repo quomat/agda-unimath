@@ -45,7 +45,7 @@ The type of groups of order 2 is contractible
 
 ```agda
 Group-of-Order-2 : (l : Level) → UU (lsuc l)
-Group-of-Order-2 l = {!!}
+Group-of-Order-2 = {!!}
 
 module _
   {l : Level} (G : Group-of-Order-2 l)
@@ -70,14 +70,14 @@ module _
   has-two-elements-Group-of-Order-2 = {!!}
 
   2-element-type-Group-of-Order-2 : 2-Element-Type l
-  pr1 2-element-type-Group-of-Order-2 = {!!}
+  2-element-type-Group-of-Order-2 = {!!}
 ```
 
 ### The group ℤ/2 of order 2
 
 ```agda
 ℤ-Mod-2-Group-of-Order-2 : Group-of-Order-2 lzero
-pr1 ℤ-Mod-2-Group-of-Order-2 = {!!}
+ℤ-Mod-2-Group-of-Order-2 = {!!}
 pr2 ℤ-Mod-2-Group-of-Order-2 = {!!}
 ```
 
@@ -85,7 +85,7 @@ pr2 ℤ-Mod-2-Group-of-Order-2 = {!!}
 
 ```agda
 symmetric-Group-of-Order-2 : (l : Level) → Group-of-Order-2 l
-pr1 (symmetric-Group-of-Order-2 l) = {!!}
+symmetric-Group-of-Order-2 = {!!}
 pr2 (symmetric-Group-of-Order-2 l) = {!!}
 ```
 
@@ -97,7 +97,7 @@ pr2 (symmetric-Group-of-Order-2 l) = {!!}
 iso-Group-of-Order-2 :
   {l1 l2 : Level} (G : Group-of-Order-2 l1) (H : Group-of-Order-2 l2) →
   UU (l1 ⊔ l2)
-iso-Group-of-Order-2 G H = {!!}
+iso-Group-of-Order-2 = {!!}
 
 module _
   {l : Level} (G : Group-of-Order-2 l)
@@ -105,7 +105,7 @@ module _
 
   iso-eq-Group-of-Order-2 :
     (H : Group-of-Order-2 l) → Id G H → iso-Group-of-Order-2 G H
-  iso-eq-Group-of-Order-2 H p = {!!}
+  iso-eq-Group-of-Order-2 = {!!}
 
   is-torsorial-iso-Group-of-Order-2 :
     is-torsorial (iso-Group-of-Order-2 G)
@@ -117,7 +117,7 @@ module _
 
   eq-iso-Group-of-Order-2 :
     (H : Group-of-Order-2 l) → iso-Group-of-Order-2 G H → Id G H
-  eq-iso-Group-of-Order-2 H = {!!}
+  eq-iso-Group-of-Order-2 = {!!}
 ```
 
 ### A homomorphism from any group of order 2 to any group of order 2

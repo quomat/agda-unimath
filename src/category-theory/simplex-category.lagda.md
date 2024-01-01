@@ -90,7 +90,7 @@ associative-composition-operation-simplex-Category :
 associative-composition-operation-simplex-Category = {!!}
 
 id-hom-simplex-Category : (n : obj-simplex-Category) → hom-simplex-Category n n
-id-hom-simplex-Category n = {!!}
+id-hom-simplex-Category = {!!}
 
 left-unit-law-comp-hom-simplex-Category :
   {n m : obj-simplex-Category} (f : hom-simplex-Category n m) →
@@ -111,7 +111,7 @@ pr1 (pr2 is-unital-composition-operation-simplex-Category) {n} {m} = {!!}
 pr2 (pr2 is-unital-composition-operation-simplex-Category) {n} {m} = {!!}
 
 simplex-Precategory : Precategory lzero lzero
-pr1 simplex-Precategory = {!!}
+simplex-Precategory = {!!}
 pr1 (pr2 simplex-Precategory) = {!!}
 pr1 (pr2 (pr2 simplex-Precategory)) = {!!}
 pr2 (pr2 (pr2 simplex-Precategory)) = {!!}

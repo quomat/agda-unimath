@@ -33,10 +33,10 @@ module _
   where
 
   is-prop-is-trunc-map : (k : 𝕋) (f : A → B) → is-prop (is-trunc-map k f)
-  is-prop-is-trunc-map k f = {!!}
+  is-prop-is-trunc-map = {!!}
 
   is-trunc-map-Prop : (k : 𝕋) → (A → B) → Prop (l1 ⊔ l2)
-  pr1 (is-trunc-map-Prop k f) = {!!}
+  is-trunc-map-Prop = {!!}
 ```
 
 ### Pullbacks of truncated maps are truncated maps

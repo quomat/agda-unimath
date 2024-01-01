@@ -63,19 +63,19 @@ module _
   where
 
   is-map-over : (X → Y) → (A → B) → UU (l1 ⊔ l4)
-  is-map-over i h = {!!}
+  is-map-over = {!!}
 
   map-over : (X → Y) → UU (l1 ⊔ l2 ⊔ l4)
-  map-over i = {!!}
+  map-over = {!!}
 
   fibered-map : UU (l1 ⊔ l3 ⊔ l2 ⊔ l4)
   fibered-map = {!!}
 
   fiberwise-map-over : (X → Y) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  fiberwise-map-over i = {!!}
+  fiberwise-map-over = {!!}
 
   cone-fibered-map : (ihH : fibered-map) → cone (pr1 ihH) g A
-  pr1 (cone-fibered-map ihH) = {!!}
+  cone-fibered-map = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} {Y : UU l4}
@@ -83,12 +83,12 @@ module _
   where
 
   map-total-map-over : (i : X → Y) → map-over f g i → A → B
-  map-total-map-over i = {!!}
+  map-total-map-over = {!!}
 
   is-map-over-map-total-map-over :
     (i : X → Y) (m : map-over f g i) →
     is-map-over f g i (map-total-map-over i m)
-  is-map-over-map-total-map-over i = {!!}
+  is-map-over-map-total-map-over = {!!}
 
   map-over-fibered-map : (m : fibered-map f g) → map-over f g (pr1 m)
   map-over-fibered-map = {!!}
@@ -118,31 +118,31 @@ module _
   coherence-htpy-map-over :
     (m m' : map-over f g i) →
     map-total-map-over f g i m ~ map-total-map-over f g i m' → UU (l1 ⊔ l4)
-  coherence-htpy-map-over m m' K = {!!}
+  coherence-htpy-map-over = {!!}
 
   htpy-map-over : (m m' : map-over f g i) → UU (l1 ⊔ l2 ⊔ l4)
-  htpy-map-over m m' = {!!}
+  htpy-map-over = {!!}
 
   refl-htpy-map-over : (m : map-over f g i) → htpy-map-over m m
-  pr1 (refl-htpy-map-over m) = {!!}
+  refl-htpy-map-over = {!!}
 
   htpy-eq-map-over : (m m' : map-over f g i) → m ＝ m' → htpy-map-over m m'
-  htpy-eq-map-over m .m refl = {!!}
+  htpy-eq-map-over = {!!}
 
   is-torsorial-htpy-map-over :
     (m : map-over f g i) → is-torsorial (htpy-map-over m)
-  is-torsorial-htpy-map-over m = {!!}
+  is-torsorial-htpy-map-over = {!!}
 
   is-equiv-htpy-eq-map-over :
     (m m' : map-over f g i) → is-equiv (htpy-eq-map-over m m')
-  is-equiv-htpy-eq-map-over m = {!!}
+  is-equiv-htpy-eq-map-over = {!!}
 
   extensionality-map-over :
     (m m' : map-over f g i) → (m ＝ m') ≃ (htpy-map-over m m')
-  pr1 (extensionality-map-over m m') = {!!}
+  extensionality-map-over = {!!}
 
   eq-htpy-map-over : (m m' : map-over f g i) → htpy-map-over m m' → m ＝ m'
-  eq-htpy-map-over m m' = {!!}
+  eq-htpy-map-over = {!!}
 ```
 
 ### Identifications of fibered maps
@@ -157,33 +157,33 @@ module _
     (m m' : fibered-map f g) →
     map-base-fibered-map f g m ~ map-base-fibered-map f g m' →
     map-total-fibered-map f g m ~ map-total-fibered-map f g m' → UU (l1 ⊔ l4)
-  coherence-htpy-fibered-map m m' I H = {!!}
+  coherence-htpy-fibered-map = {!!}
 
   htpy-fibered-map : (m m' : fibered-map f g) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  htpy-fibered-map m m' = {!!}
+  htpy-fibered-map = {!!}
 
   refl-htpy-fibered-map : (m : fibered-map f g) → htpy-fibered-map m m
-  pr1 (refl-htpy-fibered-map m) = {!!}
+  refl-htpy-fibered-map = {!!}
 
   htpy-eq-fibered-map :
     (m m' : fibered-map f g) → m ＝ m' → htpy-fibered-map m m'
-  htpy-eq-fibered-map m .m refl = {!!}
+  htpy-eq-fibered-map = {!!}
 
   is-torsorial-htpy-fibered-map :
     (m : fibered-map f g) → is-torsorial (htpy-fibered-map m)
-  is-torsorial-htpy-fibered-map m = {!!}
+  is-torsorial-htpy-fibered-map = {!!}
 
   is-equiv-htpy-eq-fibered-map :
     (m m' : fibered-map f g) → is-equiv (htpy-eq-fibered-map m m')
-  is-equiv-htpy-eq-fibered-map m = {!!}
+  is-equiv-htpy-eq-fibered-map = {!!}
 
   extensionality-fibered-map :
     (m m' : fibered-map f g) → (m ＝ m') ≃ (htpy-fibered-map m m')
-  pr1 (extensionality-fibered-map m m') = {!!}
+  extensionality-fibered-map = {!!}
 
   eq-htpy-fibered-map :
     (m m' : fibered-map f g) → htpy-fibered-map m m' → m ＝ m'
-  eq-htpy-fibered-map m m' = {!!}
+  eq-htpy-fibered-map = {!!}
 ```
 
 ### Fibered maps and fiberwise maps over are equivalent notions
@@ -196,24 +196,24 @@ module _
 
   fiberwise-map-over-map-over :
     map-over f g i → fiberwise-map-over f g i
-  pr1 (fiberwise-map-over-map-over (h , H) .(f a) (a , refl)) = {!!}
+  fiberwise-map-over-map-over = {!!}
 
   map-over-fiberwise-map-over :
     fiberwise-map-over f g i → map-over f g i
-  pr1 (map-over-fiberwise-map-over α) a = {!!}
+  map-over-fiberwise-map-over = {!!}
 
   is-section-map-over-fiberwise-map-over-eq-htpy :
     (α : fiberwise-map-over f g i) (x : X) →
     fiberwise-map-over-map-over (map-over-fiberwise-map-over α) x ~ α x
-  is-section-map-over-fiberwise-map-over-eq-htpy α .(f a) (pair a refl) = {!!}
+  is-section-map-over-fiberwise-map-over-eq-htpy = {!!}
 
   is-section-map-over-fiberwise-map-over :
     fiberwise-map-over-map-over ∘ map-over-fiberwise-map-over ~ id
-  is-section-map-over-fiberwise-map-over α = {!!}
+  is-section-map-over-fiberwise-map-over = {!!}
 
   is-retraction-map-over-fiberwise-map-over :
     map-over-fiberwise-map-over ∘ fiberwise-map-over-map-over ~ id
-  is-retraction-map-over-fiberwise-map-over (pair h H) = {!!}
+  is-retraction-map-over-fiberwise-map-over = {!!}
 
   abstract
     is-equiv-fiberwise-map-over-map-over :
@@ -227,11 +227,11 @@ module _
 
   equiv-fiberwise-map-over-map-over :
     map-over f g i ≃ fiberwise-map-over f g i
-  pr1 equiv-fiberwise-map-over-map-over = {!!}
+  equiv-fiberwise-map-over-map-over = {!!}
 
   equiv-map-over-fiberwise-map-over :
     fiberwise-map-over f g i ≃ map-over f g i
-  pr1 equiv-map-over-fiberwise-map-over = {!!}
+  equiv-map-over-fiberwise-map-over = {!!}
 
   equiv-map-over-fiberwise-hom :
     fiberwise-hom (i ∘ f) g ≃ map-over f g i
@@ -243,7 +243,7 @@ module _
 
   is-small-fiberwise-map-over :
     is-small (l1 ⊔ l2 ⊔ l4) (fiberwise-map-over f g i)
-  pr1 is-small-fiberwise-map-over = {!!}
+  is-small-fiberwise-map-over = {!!}
 ```
 
 ### Slice maps are equal to fibered maps over
@@ -252,12 +252,12 @@ module _
 eq-map-over-id-hom-slice :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {X : UU l3}
   (f : A → X) (g : B → X) → hom-slice f g ＝ map-over f g id
-eq-map-over-id-hom-slice f g = {!!}
+eq-map-over-id-hom-slice = {!!}
 
 eq-map-over-hom-slice :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} {Y : UU l4}
   (f : A → X) (g : B → Y) (i : X → Y) → hom-slice (i ∘ f) g ＝ map-over f g i
-eq-map-over-hom-slice f g i = {!!}
+eq-map-over-hom-slice = {!!}
 ```
 
 ### Horizontal composition for fibered maps
@@ -274,16 +274,16 @@ module _
     {k : X → Y} {l : Y → Z} {i : A → B} {j : B → C} →
     is-map-over f g k i → is-map-over g h l j →
     is-map-over f h (l ∘ k) (j ∘ i)
-  is-map-over-pasting-horizontal {k} {l} {i} {j} = {!!}
+  is-map-over-pasting-horizontal = {!!}
 
   map-over-pasting-horizontal :
     {k : X → Y} {l : Y → Z} →
     map-over f g k → map-over g h l → map-over f h (l ∘ k)
-  pr1 (map-over-pasting-horizontal {k} {l} (i , I) (j , J)) = {!!}
+  map-over-pasting-horizontal = {!!}
 
   fibered-map-pasting-horizontal :
     fibered-map f g → fibered-map g h → fibered-map f h
-  pr1 (fibered-map-pasting-horizontal (k , iI) (l , jJ)) = {!!}
+  fibered-map-pasting-horizontal = {!!}
 ```
 
 ### Vertical composition for fibered maps
@@ -302,7 +302,7 @@ module _
     {f' : C → X} {g' : D → Y} →
     is-map-over f g j i → is-map-over f' g' k j →
     is-map-over (f' ∘ f) (g' ∘ g) k i
-  is-map-over-pasting-vertical {f} {g} {f'} {g'} = {!!}
+  is-map-over-pasting-vertical = {!!}
 ```
 
 ### The truncation level of the types of fibered maps is bounded by the truncation level of the codomains
@@ -316,17 +316,17 @@ module _
     (k : 𝕋) → is-trunc (succ-𝕋 k) Y →
     (f : A → X) (g : B → Y) (i : X → Y) (h : A → B) →
     is-trunc k (is-map-over f g i h)
-  is-trunc-is-map-over k is-trunc-Y f g i h = {!!}
+  is-trunc-is-map-over = {!!}
 
   is-trunc-map-over :
     (k : 𝕋) → is-trunc (succ-𝕋 k) Y → is-trunc k B →
     (f : A → X) (g : B → Y) (i : X → Y) → is-trunc k (map-over f g i)
-  is-trunc-map-over k is-trunc-Y is-trunc-B f g i = {!!}
+  is-trunc-map-over = {!!}
 
   is-trunc-fibered-map :
     (k : 𝕋) → is-trunc k Y → is-trunc k B →
     (f : A → X) (g : B → Y) → is-trunc k (fibered-map f g)
-  is-trunc-fibered-map k is-trunc-Y is-trunc-B f g = {!!}
+  is-trunc-fibered-map = {!!}
 ```
 
 ### The transpose of a fibered map
@@ -339,17 +339,17 @@ module _
   transpose-is-map-over :
     (f : A → X) (g : B → Y) (i : X → Y) (h : A → B) →
     is-map-over f g i h → is-map-over h i g f
-  transpose-is-map-over f g i h = {!!}
+  transpose-is-map-over = {!!}
 
   transpose-map-over :
     (f : A → X) (g : B → Y) (i : X → Y)
     (hH : map-over f g i) → map-over (pr1 hH) i g
-  pr1 (transpose-map-over f g i hH) = {!!}
+  transpose-map-over = {!!}
 
   transpose-fibered-map :
     (f : A → X) (g : B → Y)
     (ihH : fibered-map f g) → fibered-map (pr1 (pr2 ihH)) (pr1 ihH)
-  pr1 (transpose-fibered-map f g ihH) = {!!}
+  transpose-fibered-map = {!!}
 ```
 
 ### If the top left corner is empty, the type of fibered maps is equivalent to maps `X → Y`
@@ -435,19 +435,19 @@ module _
   is-fibered-over-self = {!!}
 
   self-map-over : map-over id id h
-  pr1 self-map-over = {!!}
+  self-map-over = {!!}
 
   self-fibered-map : fibered-map id id
-  pr1 self-fibered-map = {!!}
+  self-fibered-map = {!!}
 
   is-map-over-id : is-map-over h h id id
   is-map-over-id = {!!}
 
   id-map-over : map-over h h id
-  pr1 id-map-over = {!!}
+  id-map-over = {!!}
 
   id-fibered-map : fibered-map h h
-  pr1 id-fibered-map = {!!}
+  id-fibered-map = {!!}
 ```
 
 ## See also

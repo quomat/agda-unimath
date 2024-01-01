@@ -48,7 +48,7 @@ extend naturally to the first definition.
 
 ```agda
 eulers-totient-function-relatively-prime : ℕ → ℕ
-eulers-totient-function-relatively-prime n = {!!}
+eulers-totient-function-relatively-prime = {!!}
 ```
 
 ## See also

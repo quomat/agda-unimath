@@ -132,13 +132,13 @@ module _
   preorder-Large-Poset = {!!}
 
   poset-Large-Poset : (l : Level) → Poset (α l) (β l l)
-  pr1 (poset-Large-Poset l) = {!!}
+  poset-Large-Poset = {!!}
 
   set-Large-Poset : (l : Level) → Set (α l)
-  set-Large-Poset l = {!!}
+  set-Large-Poset = {!!}
 
   is-set-type-Large-Poset : {l : Level} → is-set (type-Large-Poset X l)
-  is-set-type-Large-Poset {l} = {!!}
+  is-set-type-Large-Poset = {!!}
 ```
 
 ## Properties
@@ -161,7 +161,7 @@ module _
   is-large-category-Large-Poset = {!!}
 
   large-category-Large-Poset : Large-Category α β
-  large-precategory-Large-Category large-category-Large-Poset = {!!}
+  large-category-Large-Poset = {!!}
 
   is-large-poset-large-category-Large-Poset :
     is-large-poset-Large-Category large-category-Large-Poset

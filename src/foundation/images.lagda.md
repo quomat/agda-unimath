@@ -48,7 +48,7 @@ module _
   where
 
   subtype-im : subtype (l1 ⊔ l2) X
-  subtype-im x = {!!}
+  subtype-im = {!!}
 
   is-in-subtype-im : X → UU (l1 ⊔ l2)
   is-in-subtype-im = {!!}
@@ -60,13 +60,13 @@ module _
   inclusion-im = {!!}
 
   map-unit-im : A → im
-  pr1 (map-unit-im a) = {!!}
+  map-unit-im = {!!}
 
   triangle-unit-im : coherence-triangle-maps f inclusion-im map-unit-im
-  triangle-unit-im a = {!!}
+  triangle-unit-im = {!!}
 
   unit-im : hom-slice f inclusion-im
-  pr1 unit-im = {!!}
+  unit-im = {!!}
 ```
 
 ## Properties
@@ -79,13 +79,13 @@ module _
   where
 
   Eq-im : im f → im f → UU l1
-  Eq-im x y = {!!}
+  Eq-im = {!!}
 
   refl-Eq-im : (x : im f) → Eq-im x x
-  refl-Eq-im x = {!!}
+  refl-Eq-im = {!!}
 
   Eq-eq-im : (x y : im f) → x ＝ y → Eq-im x y
-  Eq-eq-im x .x refl = {!!}
+  Eq-eq-im = {!!}
 
   abstract
     is-torsorial-Eq-im :
@@ -94,13 +94,13 @@ module _
 
   abstract
     is-equiv-Eq-eq-im : (x y : im f) → is-equiv (Eq-eq-im x y)
-    is-equiv-Eq-eq-im x = {!!}
+    is-equiv-Eq-eq-im = {!!}
 
   equiv-Eq-eq-im : (x y : im f) → (x ＝ y) ≃ Eq-im x y
-  pr1 (equiv-Eq-eq-im x y) = {!!}
+  equiv-Eq-eq-im = {!!}
 
   eq-Eq-im : (x y : im f) → Eq-im x y → x ＝ y
-  eq-Eq-im x y = {!!}
+  eq-Eq-im = {!!}
 ```
 
 ### The image inclusion is an embedding

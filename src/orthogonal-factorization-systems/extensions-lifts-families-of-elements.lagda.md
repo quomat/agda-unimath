@@ -73,7 +73,7 @@ module _
 
   ev-dependent-lift-family-of-elements :
     ((i : I) (x : A i) → B i x) → dependent-lift-family-of-elements a B
-  ev-dependent-lift-family-of-elements b i = {!!}
+  ev-dependent-lift-family-of-elements = {!!}
 
 module _
   {l1 l2 l3 : Level} {I : UU l1} {A : UU l2} (a : I → A) {B : A → UU l3}
@@ -81,7 +81,7 @@ module _
 
   ev-lift-family-of-elements :
     ((x : A) → B x) → lift-family-of-elements a B
-  ev-lift-family-of-elements b i = {!!}
+  ev-lift-family-of-elements = {!!}
 ```
 
 ### Dependent extensions of dependent lifts of families of elements
@@ -94,7 +94,7 @@ module _
 
   is-extension-dependent-lift-family-of-elements :
     (f : (i : I) (x : A i) → B i x) → UU (l1 ⊔ l3)
-  is-extension-dependent-lift-family-of-elements f = {!!}
+  is-extension-dependent-lift-family-of-elements = {!!}
 
   extension-dependent-lift-family-of-elements : UU (l1 ⊔ l2 ⊔ l3)
   extension-dependent-lift-family-of-elements = {!!}
@@ -124,7 +124,7 @@ module _
   where
 
   is-extension-lift-family-of-elements : (f : (x : A) → B x) → UU (l1 ⊔ l3)
-  is-extension-lift-family-of-elements f = {!!}
+  is-extension-lift-family-of-elements = {!!}
 
   extension-lift-family-of-elements : UU (l1 ⊔ l2 ⊔ l3)
   extension-lift-family-of-elements = {!!}
@@ -153,7 +153,7 @@ module _
 
   id-extension-dependent-lift-family-of-elements :
     extension-dependent-lift-family-of-elements a (λ i _ → A i) a
-  pr1 id-extension-dependent-lift-family-of-elements i = {!!}
+  id-extension-dependent-lift-family-of-elements = {!!}
 ```
 
 ### Identity extensions of lifts of families of elements
@@ -165,7 +165,7 @@ module _
 
   id-extension-lift-family-of-elements :
     extension-lift-family-of-elements a (λ _ → A) a
-  pr1 id-extension-lift-family-of-elements = {!!}
+  id-extension-lift-family-of-elements = {!!}
 ```
 
 ### Composition of extensions of dependent lifts of families of elements
@@ -217,18 +217,18 @@ module _
 
   family-of-elements-comp-extension-dependent-lift-family-of-elements :
     (i : I) → A i → C i
-  family-of-elements-comp-extension-dependent-lift-family-of-elements i = {!!}
+  family-of-elements-comp-extension-dependent-lift-family-of-elements = {!!}
 
   is-extension-comp-extension-dependent-lift-family-of-elements :
     is-extension-dependent-lift-family-of-elements a
       ( λ i _ → C i)
       ( c)
       ( family-of-elements-comp-extension-dependent-lift-family-of-elements)
-  is-extension-comp-extension-dependent-lift-family-of-elements i = {!!}
+  is-extension-comp-extension-dependent-lift-family-of-elements = {!!}
 
   comp-extension-dependent-lift-family-of-elements :
     extension-dependent-lift-family-of-elements a (λ i _ → C i) c
-  pr1 comp-extension-dependent-lift-family-of-elements = {!!}
+  comp-extension-dependent-lift-family-of-elements = {!!}
 ```
 
 ### Composition of extensions of lifts of families of elements
@@ -275,11 +275,11 @@ module _
       ( λ _ → C)
       ( c)
       ( map-comp-extension-lift-family-of-elements)
-  is-extension-comp-extension-lift-family-of-elements x = {!!}
+  is-extension-comp-extension-lift-family-of-elements = {!!}
 
   comp-extension-lift-family-of-elements :
     extension-lift-family-of-elements a (λ _ → C) c
-  pr1 comp-extension-lift-family-of-elements = {!!}
+  comp-extension-lift-family-of-elements = {!!}
 ```
 
 ## See also

@@ -46,10 +46,10 @@ baire-space = {!!}
 
 ```agda
 is-set-baire-space : is-set baire-space
-is-set-baire-space f g = {!!}
+is-set-baire-space = {!!}
 
 baire-space-Set : Set lzero
-pr1 baire-space-Set = {!!}
+baire-space-Set = {!!}
 pr2 baire-space-Set = {!!}
 ```
 
@@ -57,5 +57,5 @@ pr2 baire-space-Set = {!!}
 
 ```agda
 is-uncountable-baire-space : is-uncountable baire-space-Set
-is-uncountable-baire-space P = {!!}
+is-uncountable-baire-space = {!!}
 ```

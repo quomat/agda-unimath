@@ -46,20 +46,20 @@ module _
 
   mul-Π-H-Space :
     type-Π-H-Space → type-Π-H-Space → type-Π-H-Space
-  mul-Π-H-Space f g i = {!!}
+  mul-Π-H-Space = {!!}
 
   left-unit-law-mul-Π-H-Space :
     (f : type-Π-H-Space) →
     mul-Π-H-Space unit-Π-H-Space f ＝ f
-  left-unit-law-mul-Π-H-Space f = {!!}
+  left-unit-law-mul-Π-H-Space = {!!}
 
   right-unit-law-mul-Π-H-Space :
     (f : type-Π-H-Space) →
     mul-Π-H-Space f unit-Π-H-Space ＝ f
-  right-unit-law-mul-Π-H-Space f = {!!}
+  right-unit-law-mul-Π-H-Space = {!!}
 
   is-unital-mul-Π-H-Space : is-unital mul-Π-H-Space
-  pr1 is-unital-mul-Π-H-Space = {!!}
+  is-unital-mul-Π-H-Space = {!!}
 
   coh-unit-laws-mul-Π-H-Space :
     coh-unit-laws
@@ -71,18 +71,18 @@ module _
 
   coherent-unit-laws-mul-Π-H-Space :
     coherent-unit-laws mul-Π-H-Space unit-Π-H-Space
-  pr1 coherent-unit-laws-mul-Π-H-Space = {!!}
+  coherent-unit-laws-mul-Π-H-Space = {!!}
   pr1 (pr2 coherent-unit-laws-mul-Π-H-Space) = {!!}
   pr2 (pr2 coherent-unit-laws-mul-Π-H-Space) = {!!}
 
   is-coherently-unital-mul-Π-H-Space :
     is-coherently-unital mul-Π-H-Space
-  pr1 is-coherently-unital-mul-Π-H-Space = {!!}
+  is-coherently-unital-mul-Π-H-Space = {!!}
 
   coherent-unital-mul-Π-H-Space :
     coherent-unital-mul-Pointed-Type pointed-type-Π-H-Space
-  pr1 coherent-unital-mul-Π-H-Space = {!!}
+  coherent-unital-mul-Π-H-Space = {!!}
 
   Π-H-Space : H-Space (l1 ⊔ l2)
-  pr1 Π-H-Space = {!!}
+  Π-H-Space = {!!}
 ```

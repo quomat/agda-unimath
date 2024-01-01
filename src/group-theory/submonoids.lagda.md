@@ -100,7 +100,7 @@ module _
   contains-unit-Submonoid = {!!}
 
   unit-Submonoid : type-Submonoid
-  pr1 unit-Submonoid = {!!}
+  unit-Submonoid = {!!}
 
   is-closed-under-multiplication-Submonoid :
     {x y : type-Monoid M} →
@@ -109,7 +109,7 @@ module _
   is-closed-under-multiplication-Submonoid = {!!}
 
   mul-Submonoid : (x y : type-Submonoid) → type-Submonoid
-  pr1 (mul-Submonoid x y) = {!!}
+  mul-Submonoid = {!!}
 
   associative-mul-Submonoid :
     (x y z : type-Submonoid) →
@@ -118,7 +118,7 @@ module _
   associative-mul-Submonoid = {!!}
 
   semigroup-Submonoid : Semigroup (l1 ⊔ l2)
-  pr1 semigroup-Submonoid = {!!}
+  semigroup-Submonoid = {!!}
 
   left-unit-law-mul-Submonoid :
     (x : type-Submonoid) → mul-Submonoid unit-Submonoid x ＝ x
@@ -129,7 +129,7 @@ module _
   right-unit-law-mul-Submonoid = {!!}
 
   monoid-Submonoid : Monoid (l1 ⊔ l2)
-  pr1 monoid-Submonoid = {!!}
+  monoid-Submonoid = {!!}
 
   preserves-unit-inclusion-Submonoid :
     inclusion-Submonoid unit-Submonoid ＝ unit-Monoid M

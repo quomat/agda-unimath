@@ -29,7 +29,7 @@ is-boolean-Commutative-Ring :
 is-boolean-Commutative-Ring = {!!}
 
 Boolean-Ring : (l : Level) → UU (lsuc l)
-Boolean-Ring l = {!!}
+Boolean-Ring = {!!}
 
 module _
   {l : Level} (A : Boolean-Ring l)

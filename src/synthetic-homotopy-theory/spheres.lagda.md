@@ -35,17 +35,17 @@ of the
 
 ```agda
 sphere-Pointed-Type : ℕ → Pointed-Type lzero
-sphere-Pointed-Type n = {!!}
+sphere-Pointed-Type = {!!}
 
 sphere : ℕ → UU lzero
 sphere = {!!}
 
 north-sphere : (n : ℕ) → sphere n
-north-sphere zero-ℕ = {!!}
+north-sphere = {!!}
 north-sphere (succ-ℕ n) = {!!}
 
 south-sphere : (n : ℕ) → sphere n
-south-sphere zero-ℕ = {!!}
+south-sphere = {!!}
 south-sphere (succ-ℕ n) = {!!}
 
 meridian-sphere :

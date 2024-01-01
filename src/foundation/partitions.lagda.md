@@ -61,16 +61,16 @@ is contractible. In other words, it is a collection `P` of inhabited subtypes of
 is-partition-Prop :
   {l1 l2 l3 : Level} {A : UU l1} (P : subtype l3 (inhabited-subtype l2 A)) →
   Prop (l1 ⊔ lsuc l2 ⊔ l3)
-is-partition-Prop {l1} {l2} {l3} {A} P = {!!}
+is-partition-Prop = {!!}
 
 is-partition :
   {l1 l2 l3 : Level} {A : UU l1} (P : subtype l3 (inhabited-subtype l2 A)) →
   UU (l1 ⊔ lsuc l2 ⊔ l3)
-is-partition P = {!!}
+is-partition = {!!}
 
 partition :
   {l1 : Level} (l2 l3 : Level) → UU l1 → UU (l1 ⊔ lsuc l2 ⊔ lsuc l3)
-partition {l1} l2 l3 A = {!!}
+partition = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} (P : partition l2 l3 A)
@@ -122,29 +122,29 @@ reduce the universe level of this type. Therefore we call this type of blocks
   is-inhabited-subtype-block-partition-Large-Type :
     (B : block-partition-Large-Type) →
     is-inhabited-subtype (subtype-block-partition-Large-Type B)
-  is-inhabited-subtype-block-partition-Large-Type B = {!!}
+  is-inhabited-subtype-block-partition-Large-Type = {!!}
 
   type-block-partition-Large-Type : block-partition-Large-Type → UU (l1 ⊔ l2)
-  type-block-partition-Large-Type Q = {!!}
+  type-block-partition-Large-Type = {!!}
 
   inhabited-type-block-partition-Large-Type :
     block-partition-Large-Type → Inhabited-Type (l1 ⊔ l2)
-  inhabited-type-block-partition-Large-Type Q = {!!}
+  inhabited-type-block-partition-Large-Type = {!!}
 
   is-in-block-partition-Large-Type : block-partition-Large-Type → A → UU l2
-  is-in-block-partition-Large-Type Q = {!!}
+  is-in-block-partition-Large-Type = {!!}
 
   is-prop-is-in-block-partition-Large-Type :
     (Q : block-partition-Large-Type) (a : A) →
     is-prop (is-in-block-partition-Large-Type Q a)
-  is-prop-is-in-block-partition-Large-Type Q = {!!}
+  is-prop-is-in-block-partition-Large-Type = {!!}
 
   large-block-element-partition : A → block-partition-Large-Type
-  large-block-element-partition a = {!!}
+  large-block-element-partition = {!!}
 
   is-surjective-large-block-element-partition :
     is-surjective large-block-element-partition
-  is-surjective-large-block-element-partition B = {!!}
+  is-surjective-large-block-element-partition = {!!}
 
   is-locally-small-block-partition-Large-Type :
     is-locally-small (l1 ⊔ l2) block-partition-Large-Type
@@ -173,7 +173,7 @@ will have no more use for the large type of blocks of a partition.
 
   make-block-partition :
     (Q : inhabited-subtype l2 A) → is-block-partition Q → block-partition
-  make-block-partition Q H = {!!}
+  make-block-partition = {!!}
 
   map-inv-compute-block-partition : block-partition → block-partition-Large-Type
   map-inv-compute-block-partition = {!!}
@@ -195,67 +195,67 @@ will have no more use for the large type of blocks of a partition.
 
   emb-inhabited-subtype-block-partition :
     block-partition ↪ inhabited-subtype l2 A
-  pr1 emb-inhabited-subtype-block-partition = {!!}
+  emb-inhabited-subtype-block-partition = {!!}
 
   is-block-inhabited-subtype-block-partition :
     (B : block-partition) →
     is-block-partition (inhabited-subtype-block-partition B)
-  is-block-inhabited-subtype-block-partition B = {!!}
+  is-block-inhabited-subtype-block-partition = {!!}
 
   subtype-block-partition : block-partition → subtype l2 A
   subtype-block-partition = {!!}
 
   inhabited-type-block-partition : block-partition → Inhabited-Type (l1 ⊔ l2)
-  inhabited-type-block-partition B = {!!}
+  inhabited-type-block-partition = {!!}
 
   is-inhabited-subtype-block-partition :
     (B : block-partition) → is-inhabited-subtype (subtype-block-partition B)
-  is-inhabited-subtype-block-partition B = {!!}
+  is-inhabited-subtype-block-partition = {!!}
 
   type-block-partition : block-partition → UU (l1 ⊔ l2)
-  type-block-partition B = {!!}
+  type-block-partition = {!!}
 
   is-in-block-partition : (B : block-partition) → A → UU l2
-  is-in-block-partition B = {!!}
+  is-in-block-partition = {!!}
 
   is-prop-is-in-block-partition :
     (B : block-partition) (a : A) → is-prop (is-in-block-partition B a)
-  is-prop-is-in-block-partition B = {!!}
+  is-prop-is-in-block-partition = {!!}
 
   compute-is-in-block-partition :
     (B : inhabited-subtype l2 A) (H : is-block-partition B) (x : A) →
     is-in-inhabited-subtype B x ≃
     is-in-block-partition (make-block-partition B H) x
-  compute-is-in-block-partition B H x = {!!}
+  compute-is-in-block-partition = {!!}
 
   make-is-in-block-partition :
     (B : inhabited-subtype l2 A) (H : is-block-partition B) (x : A) →
     is-in-inhabited-subtype B x →
     is-in-block-partition (make-block-partition B H) x
-  make-is-in-block-partition B H x K = {!!}
+  make-is-in-block-partition = {!!}
 
   block-containing-element-partition : A → UU (l1 ⊔ l2)
-  block-containing-element-partition a = {!!}
+  block-containing-element-partition = {!!}
 
   is-contr-block-containing-element-partition :
     (a : A) → is-contr (block-containing-element-partition a)
-  is-contr-block-containing-element-partition a = {!!}
+  is-contr-block-containing-element-partition = {!!}
 
   center-block-containing-element-partition :
     (a : A) → block-containing-element-partition a
-  center-block-containing-element-partition a = {!!}
+  center-block-containing-element-partition = {!!}
 
   class-partition : A → block-partition
-  class-partition a = {!!}
+  class-partition = {!!}
 
   is-block-class-partition :
     (a : A) →
     is-block-partition (inhabited-subtype-block-partition (class-partition a))
-  is-block-class-partition a = {!!}
+  is-block-class-partition = {!!}
 
   is-in-block-class-partition :
     (a : A) → is-in-block-partition (class-partition a) a
-  is-in-block-class-partition a = {!!}
+  is-in-block-class-partition = {!!}
 
   compute-base-type-partition : Σ block-partition type-block-partition ≃ A
   compute-base-type-partition = {!!}
@@ -272,7 +272,7 @@ module _
 
   has-same-blocks-partition :
     {l4 : Level} (Q : partition l2 l4 A) → UU (l1 ⊔ lsuc l2 ⊔ l3 ⊔ l4)
-  has-same-blocks-partition Q = {!!}
+  has-same-blocks-partition = {!!}
 
   refl-has-same-blocks-partition : has-same-blocks-partition P
   refl-has-same-blocks-partition = {!!}
@@ -283,7 +283,7 @@ module _
 
   eq-has-same-blocks-partition :
     (Q : partition l2 l3 A) → has-same-blocks-partition Q → P ＝ Q
-  eq-has-same-blocks-partition Q = {!!}
+  eq-has-same-blocks-partition = {!!}
 ```
 
 ### Characterizing equality of blocks of partitions
@@ -295,15 +295,15 @@ module _
 
   has-same-elements-block-partition-Prop :
     block-partition P → Prop (l1 ⊔ l2)
-  has-same-elements-block-partition-Prop C = {!!}
+  has-same-elements-block-partition-Prop = {!!}
 
   has-same-elements-block-partition :
     block-partition P → UU (l1 ⊔ l2)
-  has-same-elements-block-partition C = {!!}
+  has-same-elements-block-partition = {!!}
 
   is-prop-has-same-elements-block-partition :
     (C : block-partition P) → is-prop (has-same-elements-block-partition C)
-  is-prop-has-same-elements-block-partition C = {!!}
+  is-prop-has-same-elements-block-partition = {!!}
 
   refl-has-same-elements-block-partition :
     has-same-elements-block-partition B
@@ -316,7 +316,7 @@ module _
   has-same-elements-eq-block-partition :
     (C : block-partition P) → (B ＝ C) →
     has-same-elements-block-partition C
-  has-same-elements-eq-block-partition .B refl = {!!}
+  has-same-elements-eq-block-partition = {!!}
 
   is-equiv-has-same-elements-eq-block-partition :
     (C : block-partition P) →
@@ -326,12 +326,12 @@ module _
   extensionality-block-partition :
     (C : block-partition P) →
     (B ＝ C) ≃ has-same-elements-block-partition C
-  pr1 (extensionality-block-partition C) = {!!}
+  extensionality-block-partition = {!!}
 
   eq-has-same-elements-block-partition :
     (C : block-partition P) →
     has-same-elements-block-partition C → B ＝ C
-  eq-has-same-elements-block-partition C = {!!}
+  eq-has-same-elements-block-partition = {!!}
 ```
 
 ### The type of blocks of a partition is a set
@@ -342,10 +342,10 @@ module _
   where
 
   is-set-block-partition : is-set (block-partition P)
-  is-set-block-partition B C = {!!}
+  is-set-block-partition = {!!}
 
   block-partition-Set : Set (l1 ⊔ l2)
-  pr1 block-partition-Set = {!!}
+  block-partition-Set = {!!}
 ```
 
 ### The inclusion of a block into the base type of a partition is an embedding
@@ -357,7 +357,7 @@ module _
 
   emb-inclusion-block-partition :
     (B : block-partition P) → type-block-partition P B ↪ A
-  emb-inclusion-block-partition B = {!!}
+  emb-inclusion-block-partition = {!!}
 ```
 
 ### Two blocks of a partition are equal if they share a common element
@@ -370,15 +370,15 @@ module _
 
   share-common-element-block-partition-Prop :
     (C : block-partition P) → Prop (l1 ⊔ l2)
-  share-common-element-block-partition-Prop C = {!!}
+  share-common-element-block-partition-Prop = {!!}
 
   share-common-element-block-partition :
     (C : block-partition P) → UU (l1 ⊔ l2)
-  share-common-element-block-partition C = {!!}
+  share-common-element-block-partition = {!!}
 
   eq-share-common-element-block-partition :
     (C : block-partition P) → share-common-element-block-partition C → B ＝ C
-  eq-share-common-element-block-partition C H = {!!}
+  eq-share-common-element-block-partition = {!!}
 ```
 
 ### The condition of being a partition is equivalent to the condition that the total space of all blocks is equivalent to the base type
@@ -408,7 +408,7 @@ module _
 
   set-indexed-Σ-decomposition-partition :
     Set-Indexed-Σ-Decomposition (l1 ⊔ l2) (l1 ⊔ l2) A
-  pr1 set-indexed-Σ-decomposition-partition = {!!}
+  set-indexed-Σ-decomposition-partition = {!!}
 ```
 
 #### The partition obtained from a set-indexed Σ-decomposition
@@ -420,25 +420,25 @@ module _
 
   is-block-partition-Set-Indexed-Σ-Decomposition :
     {l4 : Level} → inhabited-subtype l4 A → UU (l1 ⊔ l2 ⊔ l4)
-  is-block-partition-Set-Indexed-Σ-Decomposition Q = {!!}
+  is-block-partition-Set-Indexed-Σ-Decomposition = {!!}
 
   is-prop-is-block-partition-Set-Indexed-Σ-Decomposition :
     {l4 : Level} (Q : inhabited-subtype l4 A) →
     is-prop (is-block-partition-Set-Indexed-Σ-Decomposition Q)
-  is-prop-is-block-partition-Set-Indexed-Σ-Decomposition Q = {!!}
+  is-prop-is-block-partition-Set-Indexed-Σ-Decomposition = {!!}
 
   subtype-partition-Set-Indexed-Σ-Decomposition :
     {l4 : Level} → subtype (l1 ⊔ l2 ⊔ l4) (inhabited-subtype l4 A)
-  pr1 (subtype-partition-Set-Indexed-Σ-Decomposition Q) = {!!}
+  subtype-partition-Set-Indexed-Σ-Decomposition = {!!}
 
   is-partition-subtype-partition-Set-Indexed-Σ-Decomposition :
     is-partition (subtype-partition-Set-Indexed-Σ-Decomposition {l2})
-  is-partition-subtype-partition-Set-Indexed-Σ-Decomposition a = {!!}
+  is-partition-subtype-partition-Set-Indexed-Σ-Decomposition = {!!}
 
 partition-Set-Indexed-Σ-Decomposition :
   {l1 l2 l3 : Level} {A : UU l1} →
   Set-Indexed-Σ-Decomposition l2 l3 A → partition l2 (l1 ⊔ l2) A
-pr1 (partition-Set-Indexed-Σ-Decomposition D) = {!!}
+partition-Set-Indexed-Σ-Decomposition = {!!}
 pr2 (partition-Set-Indexed-Σ-Decomposition D) = {!!}
 ```
 

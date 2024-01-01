@@ -29,5 +29,5 @@ module _
   where
 
   op-Ring : Ring l
-  pr1 op-Ring = {!!}
+  op-Ring = {!!}
 ```

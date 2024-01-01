@@ -81,7 +81,7 @@ equiv-multivariable-explicit-implicit-htpy-implicit :
 equiv-multivariable-explicit-implicit-htpy-implicit = {!!}
 
 equiv-multivariable-implicit-explicit-htpy-implicit :
-equiv-multivariable-implicit-explicit-htpy-implicit = {!!} {!!}
+equiv-multivariable-implicit-explicit-htpy-implicit = {!!}
 ```
 
 ### Iterated function extensionality

@@ -149,8 +149,7 @@ is-torsorial-relate-same-elements-saturated-congruence-Commutative-Monoid :
   (R : saturated-congruence-Commutative-Monoid l2 M) →
   is-torsorial
     ( relate-same-elements-saturated-congruence-Commutative-Monoid M R)
-is-torsorial-relate-same-elements-saturated-congruence-Commutative-Monoid
-  M R = {!!}
+is-torsorial-relate-same-elements-saturated-congruence-Commutative-Monoid = {!!}
 
 relate-same-elements-eq-saturated-congruence-Commutative-Monoid :
   {l1 l2 : Level} (M : Commutative-Monoid l1)
@@ -175,8 +174,7 @@ eq-relate-same-elements-saturated-congruence-Commutative-Monoid :
   {l1 l2 : Level} (M : Commutative-Monoid l1)
   (R S : saturated-congruence-Commutative-Monoid l2 M) →
   relate-same-elements-saturated-congruence-Commutative-Monoid M R S → R ＝ S
-eq-relate-same-elements-saturated-congruence-Commutative-Monoid
-  M R S = {!!}
+eq-relate-same-elements-saturated-congruence-Commutative-Monoid = {!!}
 ```
 
 ## See also

@@ -111,7 +111,7 @@ module _
 is-trail-refl-walk-Undirected-Graph :
   {l1 l2 : Level} (G : Undirected-Graph l1 l2) {x : vertex-Undirected-Graph G} →
   is-trail-walk-Undirected-Graph G (refl-walk-Undirected-Graph {x = x})
-is-trail-refl-walk-Undirected-Graph G {x} = {!!}
+is-trail-refl-walk-Undirected-Graph = {!!}
 ```
 
 ### Both walks in the decomposition of a trail are trails

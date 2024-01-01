@@ -51,8 +51,7 @@ module _
   dependent-universal-property-identity-system-is-torsorial :
     is-torsorial B →
     dependent-universal-property-identity-system {B = B} b
-  dependent-universal-property-identity-system-is-torsorial
-    H P = {!!}
+  dependent-universal-property-identity-system-is-torsorial = {!!}
 
   equiv-dependent-universal-property-identity-system-is-torsorial :
     is-torsorial B →
@@ -63,7 +62,7 @@ module _
   is-torsorial-dependent-universal-property-identity-system :
     dependent-universal-property-identity-system {B = B} b →
     is-torsorial B
-  pr1 (is-torsorial-dependent-universal-property-identity-system H) = {!!}
+  is-torsorial-dependent-universal-property-identity-system = {!!}
 ```
 
 ### A type family satisfies the dependent universal property of identity systems if and only if it is an identity system
@@ -76,10 +75,10 @@ module _
   dependent-universal-property-identity-system-is-identity-system :
     is-identity-system B a b →
     dependent-universal-property-identity-system {B = B} b
-  dependent-universal-property-identity-system-is-identity-system H = {!!}
+  dependent-universal-property-identity-system-is-identity-system = {!!}
 
   is-identity-system-dependent-universal-property-identity-system :
     dependent-universal-property-identity-system {B = B} b →
     is-identity-system B a b
-  is-identity-system-dependent-universal-property-identity-system H P = {!!}
+  is-identity-system-dependent-universal-property-identity-system = {!!}
 ```

@@ -29,10 +29,10 @@ A type is a set if its identity types are propositions.
 
 ```agda
 is-set : {l : Level} → UU l → UU l
-is-set A = {!!}
+is-set = {!!}
 
 Set : (l : Level) → UU (lsuc l)
-Set l = {!!}
+Set = {!!}
 
 module _
   {l : Level} (X : Set l)
@@ -46,7 +46,7 @@ module _
     is-set-type-Set = {!!}
 
   Id-Prop : (x y : type-Set) → Prop l
-  pr1 (Id-Prop x y) = {!!}
+  Id-Prop = {!!}
 ```
 
 ## Properties
@@ -55,10 +55,10 @@ module _
 
 ```agda
 instance-axiom-K : {l : Level} → UU l → UU l
-instance-axiom-K A = {!!}
+instance-axiom-K = {!!}
 
 axiom-K-Level : (l : Level) → UU (lsuc l)
-axiom-K-Level l = {!!}
+axiom-K-Level = {!!}
 
 axiom-K : UUω
 axiom-K = {!!}
@@ -74,11 +74,11 @@ module _
 
   abstract
     is-set-axiom-K : instance-axiom-K A → is-set A
-    is-set-axiom-K H x y = {!!}
+    is-set-axiom-K = {!!}
 
   abstract
     axiom-K-is-set : is-set A → instance-axiom-K A
-    axiom-K-is-set H x p = {!!}
+    axiom-K-is-set = {!!}
 ```
 
 ### If a reflexive binary relation maps into the identity type of `A`, then `A` is a set
@@ -92,11 +92,11 @@ module _
 
   abstract
     is-equiv-prop-in-id : (x y : A) → is-equiv (i x y)
-    is-equiv-prop-in-id x = {!!}
+    is-equiv-prop-in-id = {!!}
 
   abstract
     is-set-prop-in-id : is-set A
-    is-set-prop-in-id x y = {!!}
+    is-set-prop-in-id = {!!}
 ```
 
 ### Any proposition is a set

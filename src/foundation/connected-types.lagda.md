@@ -39,10 +39,10 @@ A type is said to be **`k`-connected** if its `k`-truncation is contractible.
 
 ```agda
 is-connected-Prop : {l : Level} (k : 𝕋) → UU l → Prop l
-is-connected-Prop k A = {!!}
+is-connected-Prop = {!!}
 
 is-connected : {l : Level} (k : 𝕋) → UU l → UU l
-is-connected k A = {!!}
+is-connected = {!!}
 
 is-prop-is-connected :
   {l : Level} (k : 𝕋) (A : UU l) → is-prop (is-connected k A)
@@ -55,7 +55,7 @@ is-prop-is-connected = {!!}
 
 ```agda
 is-neg-two-connected : {l : Level} (A : UU l) → is-connected neg-two-𝕋 A
-is-neg-two-connected A = {!!}
+is-neg-two-connected = {!!}
 ```
 
 ### A type `A` is `k`-connected if and only if the map `B → (A → B)` is an equivalence for every `k`-truncated type `B`
@@ -83,7 +83,7 @@ module _
   where
 
   is-connected-is-contr : is-contr A → is-connected k A
-  is-connected-is-contr H = {!!}
+  is-connected-is-contr = {!!}
 ```
 
 ### A type that is `(k+1)`-connected is `k`-connected

@@ -60,7 +60,7 @@ module _
   is-prop-contains-iso-obj-Subprecategory = {!!}
 
   contains-iso-obj-prop-Subprecategory : Prop (l1 ⊔ l2 ⊔ l3)
-  pr1 contains-iso-obj-prop-Subprecategory = {!!}
+  contains-iso-obj-prop-Subprecategory = {!!}
 ```
 
 ### The predicate of being a replete subprecategory
@@ -80,7 +80,7 @@ module _
   is-prop-is-replete-Subprecategory = {!!}
 
   is-replete-prop-Subprecategory : Prop (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  pr1 is-replete-prop-Subprecategory = {!!}
+  is-replete-prop-Subprecategory = {!!}
 ```
 
 ### The type of replete subprecategories
@@ -128,7 +128,7 @@ module _
   is-prop-is-unfixed-replete-Subprecategory = {!!}
 
   is-unfixed-replete-prop-Subprecategory : Prop (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  pr1 is-unfixed-replete-prop-Subprecategory = {!!}
+  is-unfixed-replete-prop-Subprecategory = {!!}
 
   is-unfixed-replete-is-replete-Subprecategory :
     is-replete-Subprecategory C P → is-unfixed-replete-Subprecategory

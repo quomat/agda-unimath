@@ -29,21 +29,21 @@ The distance function between integers measures how far two integers are apart.
 
 ```agda
 dist-ℤ : ℤ → ℤ → ℕ
-dist-ℤ x y = {!!}
+dist-ℤ = {!!}
 
 ap-dist-ℤ :
   {x x' y y' : ℤ} → x ＝ x' → y ＝ y' → dist-ℤ x y ＝ dist-ℤ x' y'
-ap-dist-ℤ p q = {!!}
+ap-dist-ℤ = {!!}
 
 left-zero-law-dist-ℤ : (x : ℤ) → dist-ℤ zero-ℤ x ＝ abs-ℤ x
-left-zero-law-dist-ℤ x = {!!}
+left-zero-law-dist-ℤ = {!!}
 
 right-zero-law-dist-ℤ : (x : ℤ) → dist-ℤ x zero-ℤ ＝ abs-ℤ x
-right-zero-law-dist-ℤ x = {!!}
+right-zero-law-dist-ℤ = {!!}
 
 dist-int-ℕ :
   (x y : ℕ) → dist-ℤ (int-ℕ x) (int-ℕ y) ＝ dist-ℕ x y
-dist-int-ℕ zero-ℕ zero-ℕ = {!!}
+dist-int-ℕ = {!!}
 dist-int-ℕ zero-ℕ (succ-ℕ y) = {!!}
 dist-int-ℕ (succ-ℕ x) zero-ℕ = {!!}
 dist-int-ℕ (succ-ℕ x) (succ-ℕ y) = {!!}
@@ -51,7 +51,7 @@ dist-int-ℕ (succ-ℕ x) (succ-ℕ y) = {!!}
 dist-abs-ℤ :
   (x y : ℤ) → (H : is-nonnegative-ℤ x) → (K : is-nonnegative-ℤ y) →
   dist-ℕ (abs-ℤ x) (abs-ℤ y) ＝ dist-ℤ x y
-dist-abs-ℤ (inr (inl _)) y H K = {!!}
+dist-abs-ℤ = {!!}
 dist-abs-ℤ (inr (inr x)) (inr (inl _)) H K = {!!}
 dist-abs-ℤ (inr (inr x)) (inr (inr y)) H K = {!!}
 ```

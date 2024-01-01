@@ -120,8 +120,7 @@ module _
           ( comp-hom-Large-Precategory D g h)
           ( hom-functor-Large-Precategory F f))
       ( map-inv-equiv-is-adjoint-pair-Large-Precategory H X2 Y2)
-  naturality-inv-equiv-is-adjoint-pair-Large-Precategory
-    H {X1 = X1} {X2} {Y1} {Y2} f g = {!!}
+  naturality-inv-equiv-is-adjoint-pair-Large-Precategory = {!!}
 ```
 
 ### The predicate of being a left adjoint
@@ -208,7 +207,7 @@ module _
     hom-left-adjoint-Adjunction-Large-Precategory
       ( id-hom-Large-Precategory C {X = X}) ＝
     id-hom-Large-Precategory D
-  preserves-id-left-adjoint-Adjunction-Large-Precategory X = {!!}
+  preserves-id-left-adjoint-Adjunction-Large-Precategory = {!!}
 
   obj-right-adjoint-Adjunction-Large-Precategory :
     {l1 : Level} → obj-Large-Precategory D l1 → obj-Large-Precategory C (δ l1)
@@ -230,7 +229,7 @@ module _
     hom-right-adjoint-Adjunction-Large-Precategory
       ( id-hom-Large-Precategory D {X = Y}) ＝
     id-hom-Large-Precategory C
-  preserves-id-right-adjoint-Adjunction-Large-Precategory Y = {!!}
+  preserves-id-right-adjoint-Adjunction-Large-Precategory = {!!}
 
   equiv-is-adjoint-pair-Adjunction-Large-Precategory :
     {l1 l2 : Level}

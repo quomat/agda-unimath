@@ -28,13 +28,13 @@ open import group-theory.monoids
 
 ```agda
 is-one-object-prop-Precategory : {l1 l2 : Level} → Precategory l1 l2 → Prop l1
-is-one-object-prop-Precategory P = {!!}
+is-one-object-prop-Precategory = {!!}
 
 is-one-object-Precategory : {l1 l2 : Level} → Precategory l1 l2 → UU l1
-is-one-object-Precategory P = {!!}
+is-one-object-Precategory = {!!}
 
 One-Object-Precategory : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-One-Object-Precategory l1 l2 = {!!}
+One-Object-Precategory = {!!}
 
 module _
   {l1 l2 : Level} (P : One-Object-Precategory l1 l2)
@@ -87,8 +87,7 @@ module _
     comp-hom-one-object-precategory-Monoid
       ( h)
       ( comp-hom-one-object-precategory-Monoid g f)
-  associative-comp-hom-one-object-precategory-Monoid
-    {star} {star} {star} {star} = {!!}
+  associative-comp-hom-one-object-precategory-Monoid = {!!}
 
   associative-composition-operation-one-object-precategory-Monoid :
     associative-composition-operation-binary-family-Set
@@ -122,10 +121,10 @@ module _
   is-unital-composition-operation-one-object-precategory-Monoid = {!!}
 
   precategory-one-object-precategory-Monoid : Precategory lzero l
-  pr1 precategory-one-object-precategory-Monoid = {!!}
+  precategory-one-object-precategory-Monoid = {!!}
 
   one-object-precategory-Monoid : One-Object-Precategory lzero l
-  pr1 one-object-precategory-Monoid = {!!}
+  one-object-precategory-Monoid = {!!}
 ```
 
 ### Monoids from one-object precategories

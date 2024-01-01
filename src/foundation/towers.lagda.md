@@ -39,10 +39,10 @@ giving a sequential diagram of maps that extend infinitely to the left:
 
 ```agda
 sequence-map-tower : {l : Level} → (ℕ → UU l) → UU l
-sequence-map-tower A = {!!}
+sequence-map-tower = {!!}
 
 tower : (l : Level) → UU (lsuc l)
-tower l = {!!}
+tower = {!!}
 
 type-tower : {l : Level} → tower l → ℕ → UU l
 type-tower = {!!}
@@ -60,11 +60,11 @@ We can **right shift** a tower of types by forgetting the first terms.
 
 ```agda
 right-shift-tower : {l : Level} → tower l → tower l
-pr1 (right-shift-tower A) n = {!!}
+right-shift-tower = {!!}
 pr2 (right-shift-tower A) n = {!!}
 
 iterated-right-shift-tower : {l : Level} (n : ℕ) → tower l → tower l
-iterated-right-shift-tower n = {!!}
+iterated-right-shift-tower = {!!}
 ```
 
 ### Left shifting a tower
@@ -74,13 +74,13 @@ We can **left shift** a tower of types by padding it with the
 
 ```agda
 left-shift-tower : {l : Level} → tower l → tower l
-pr1 (left-shift-tower {l} A) zero-ℕ = {!!}
+left-shift-tower = {!!}
 pr1 (left-shift-tower A) (succ-ℕ n) = {!!}
 pr2 (left-shift-tower A) zero-ℕ = {!!}
 pr2 (left-shift-tower A) (succ-ℕ n) = {!!}
 
 iterated-left-shift-tower : {l : Level} (n : ℕ) → tower l → tower l
-iterated-left-shift-tower n = {!!}
+iterated-left-shift-tower = {!!}
 ```
 
 ### Postcomposition towers
@@ -99,7 +99,7 @@ module _
   where
 
   postcomp-tower : tower (l1 ⊔ l2)
-  pr1 postcomp-tower n = {!!}
+  postcomp-tower = {!!}
 ```
 
 ## Table of files about sequential limits

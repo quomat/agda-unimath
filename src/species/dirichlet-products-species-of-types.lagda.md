@@ -35,5 +35,5 @@ module _
   where
 
   dirichlet-product-species-types : species-types l1 (lsuc l1 ⊔ l2 ⊔ l3)
-  dirichlet-product-species-types X = {!!}
+  dirichlet-product-species-types = {!!}
 ```

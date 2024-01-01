@@ -38,7 +38,7 @@ module _
   where
 
   pointed-map : Pointed-Type l1 → Pointed-Type l2 → UU (l1 ⊔ l2)
-  pointed-map A B = {!!}
+  pointed-map = {!!}
 
   infixr 5 _→∗_
   _→∗_ = {!!}
@@ -51,7 +51,7 @@ the [asterisk](https://codepoints.net/U+002A) `*`.
 
 ```agda
   constant-pointed-map : (A : Pointed-Type l1) (B : Pointed-Type l2) → A →∗ B
-  pr1 (constant-pointed-map A B) = {!!}
+  constant-pointed-map = {!!}
 
   pointed-map-Pointed-Type :
     Pointed-Type l1 → Pointed-Type l2 → Pointed-Type (l1 ⊔ l2)
@@ -79,10 +79,10 @@ module _
   where
 
   precomp-Pointed-Fam : Pointed-Fam l3 A
-  pr1 precomp-Pointed-Fam = {!!}
+  precomp-Pointed-Fam = {!!}
 
   precomp-pointed-Π : pointed-Π B C → pointed-Π A precomp-Pointed-Fam
-  pr1 (precomp-pointed-Π g) x = {!!}
+  precomp-pointed-Π = {!!}
 ```
 
 ### Composing pointed maps
@@ -103,7 +103,7 @@ module _
   preserves-point-comp-pointed-map = {!!}
 
   comp-pointed-map : B →∗ C → A →∗ B → A →∗ C
-  pr1 (comp-pointed-map g f) = {!!}
+  comp-pointed-map = {!!}
 
 precomp-pointed-map :
   {l1 l2 l3 : Level}
@@ -127,5 +127,5 @@ module _
   where
 
   id-pointed-map : A →∗ A
-  pr1 id-pointed-map = {!!}
+  id-pointed-map = {!!}
 ```

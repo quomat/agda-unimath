@@ -133,7 +133,7 @@ module _
   is-iso-id-hom-Precategory = {!!}
 
   id-iso-Precategory : iso-Precategory C x x
-  pr1 id-iso-Precategory = {!!}
+  id-iso-Precategory = {!!}
 ```
 
 ### Equalities induce isomorphisms
@@ -225,7 +225,7 @@ module _
   is-set-iso-Precategory = {!!}
 
   iso-set-Precategory : Set l2
-  pr1 iso-set-Precategory = {!!}
+  iso-set-Precategory = {!!}
 ```
 
 ### Isomorphisms are closed under composition
@@ -289,7 +289,7 @@ module _
   is-iso-comp-iso-Precategory = {!!}
 
   comp-iso-Precategory : iso-Precategory C x z
-  pr1 comp-iso-Precategory = {!!}
+  comp-iso-Precategory = {!!}
 
   hom-inv-comp-iso-Precategory : hom-Precategory C z x
   hom-inv-comp-iso-Precategory = {!!}
@@ -482,7 +482,7 @@ module _
   is-section-hom-inv-is-iso-is-equiv-precomp-hom-Precategory = {!!}
 
   is-iso-is-equiv-precomp-hom-Precategory : is-iso-Precategory C f
-  pr1 is-iso-is-equiv-precomp-hom-Precategory = {!!}
+  is-iso-is-equiv-precomp-hom-Precategory = {!!}
 
 module _
   {l1 l2 : Level}
@@ -590,7 +590,7 @@ module _
   is-retraction-hom-inv-is-iso-is-equiv-postcomp-hom-Precategory = {!!}
 
   is-iso-is-equiv-postcomp-hom-Precategory : is-iso-Precategory C f
-  pr1 is-iso-is-equiv-postcomp-hom-Precategory = {!!}
+  is-iso-is-equiv-postcomp-hom-Precategory = {!!}
 
 module _
   {l1 l2 : Level}

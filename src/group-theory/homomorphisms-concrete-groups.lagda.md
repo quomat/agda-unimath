@@ -35,7 +35,7 @@ module _
   is-set-hom-Concrete-Group = {!!}
 
   hom-set-Concrete-Group : Set (l1 ⊔ l2)
-  pr1 hom-set-Concrete-Group = {!!}
+  hom-set-Concrete-Group = {!!}
 
   classifying-map-hom-Concrete-Group :
     hom-Concrete-Group →

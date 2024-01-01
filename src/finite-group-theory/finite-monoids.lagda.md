@@ -44,7 +44,7 @@ A finite monoid is a monoid of which the underlying type is finite.
 
 ```agda
 Monoid-of-Order : (l : Level) (n : ℕ) → UU (lsuc l)
-Monoid-of-Order l n = {!!}
+Monoid-of-Order = {!!}
 ```
 
 ## Properties
@@ -70,7 +70,7 @@ is-π-finite-Monoid-of-Order = {!!}
 
 ```agda
 number-of-monoids-of-order : ℕ → ℕ
-number-of-monoids-of-order n = {!!}
+number-of-monoids-of-order = {!!}
 
 mere-equiv-number-of-monoids-of-order :
   (n : ℕ) →

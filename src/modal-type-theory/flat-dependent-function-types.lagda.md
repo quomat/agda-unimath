@@ -39,7 +39,7 @@ module _
   where
 
   map-crisp-distributive-flat-Π : ♭ ((x : A) → B x) → ((@♭ x : A) → ♭ (B x))
-  map-crisp-distributive-flat-Π (cons-flat f) x = {!!}
+  map-crisp-distributive-flat-Π = {!!}
 
 module _
   {@♭ l1 l2 : Level} {@♭ A : UU l1} {@♭ B : UU l2}
@@ -49,7 +49,7 @@ module _
   map-crisp-distributive-flat-function-types = {!!}
 
   map-distributive-flat-function-types : ♭ (A → B) → (♭ A → ♭ B)
-  map-distributive-flat-function-types f (cons-flat x) = {!!}
+  map-distributive-flat-function-types = {!!}
 ```
 
 ## See also

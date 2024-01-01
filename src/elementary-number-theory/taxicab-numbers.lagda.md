@@ -58,7 +58,7 @@ cubes of arbitrary natural numbers.
 
 ```agda
 sum-of-cubes-decomposition-ℕ : ℕ → UU lzero
-sum-of-cubes-decomposition-ℕ x = {!!}
+sum-of-cubes-decomposition-ℕ = {!!}
 ```
 
 ### The predicate of being a sum of two cubes in exactly `n` distinct ways
@@ -75,14 +75,14 @@ type `sum-of-cubes-decomposition-ℕ x` of ways of writing `x` as a sum of cubes
 
 ```agda
 is-sum-of-cubes-in-number-of-distinct-ways-ℕ : ℕ → ℕ → UU lzero
-is-sum-of-cubes-in-number-of-distinct-ways-ℕ n x = {!!}
+is-sum-of-cubes-in-number-of-distinct-ways-ℕ = {!!}
 ```
 
 ### The predicate of being the `n`-th taxicab number
 
 ```agda
 is-taxicab-number-ℕ : ℕ → ℕ → UU lzero
-is-taxicab-number-ℕ n x = {!!}
+is-taxicab-number-ℕ = {!!}
 ```
 
 ## See also

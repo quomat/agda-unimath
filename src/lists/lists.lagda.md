@@ -53,13 +53,13 @@ data list {l : Level} (A : UU l) : UU l where
 
 ```agda
 is-nil-list : {l : Level} {A : UU l} → list A → UU l
-is-nil-list l = {!!}
+is-nil-list = {!!}
 
 is-nonnil-list : {l : Level} {A : UU l} → list A → UU l
-is-nonnil-list l = {!!}
+is-nonnil-list = {!!}
 
 is-cons-list : {l : Level} {A : UU l} → list A → UU l
-is-cons-list {l1} {A} l = {!!}
+is-cons-list = {!!}
 ```
 
 ## Operations
@@ -70,7 +70,7 @@ is-cons-list {l1} {A} l = {!!}
 fold-list :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (b : B) (μ : A → (B → B)) →
   list A → B
-fold-list b μ nil = {!!}
+fold-list = {!!}
 fold-list b μ (cons a l) = {!!}
 ```
 
@@ -78,7 +78,7 @@ fold-list b μ (cons a l) = {!!}
 
 ```agda
 snoc : {l : Level} {A : UU l} → list A → A → list A
-snoc nil a = {!!}
+snoc = {!!}
 snoc (cons b l) a = {!!}
 ```
 
@@ -86,7 +86,7 @@ snoc (cons b l) a = {!!}
 
 ```agda
 unit-list : {l : Level} {A : UU l} → A → list A
-unit-list a = {!!}
+unit-list = {!!}
 ```
 
 ### The length of a list
@@ -119,7 +119,7 @@ is-nonnil-cons-list a l ()
 is-nonnil-is-cons-list :
   {l : Level} {A : UU l} →
   (l : list A) → is-cons-list l → is-nonnil-list l
-is-nonnil-is-cons-list l ((a , l') , refl) q = {!!}
+is-nonnil-is-cons-list = {!!}
 ```
 
 ### A list that uses cons is not nil
@@ -128,40 +128,40 @@ is-nonnil-is-cons-list l ((a , l') , refl) q = {!!}
 is-cons-is-nonnil-list :
   {l : Level} {A : UU l} →
   (l : list A) → is-nonnil-list l → is-cons-list l
-is-cons-is-nonnil-list nil p = {!!}
+is-cons-is-nonnil-list = {!!}
 is-cons-is-nonnil-list (cons x l) p = {!!}
 
 head-is-nonnil-list :
   {l : Level} {A : UU l} →
   (l : list A) → is-nonnil-list l → A
-head-is-nonnil-list l p = {!!}
+head-is-nonnil-list = {!!}
 
 tail-is-nonnil-list :
   {l : Level} {A : UU l} →
   (l : list A) → is-nonnil-list l → list A
-tail-is-nonnil-list l p = {!!}
+tail-is-nonnil-list = {!!}
 ```
 
 ### Characterizing the identity type of lists
 
 ```agda
 Eq-list : {l1 : Level} {A : UU l1} → list A → list A → UU l1
-Eq-list {l1} nil nil = {!!}
+Eq-list = {!!}
 Eq-list {l1} nil (cons x l') = {!!}
 Eq-list {l1} (cons x l) nil = {!!}
 Eq-list {l1} (cons x l) (cons x' l') = {!!}
 
 refl-Eq-list : {l1 : Level} {A : UU l1} (l : list A) → Eq-list l l
-refl-Eq-list nil = {!!}
+refl-Eq-list = {!!}
 refl-Eq-list (cons x l) = {!!}
 
 Eq-eq-list :
   {l1 : Level} {A : UU l1} (l l' : list A) → Id l l' → Eq-list l l'
-Eq-eq-list l .l refl = {!!}
+Eq-eq-list = {!!}
 
 eq-Eq-list :
   {l1 : Level} {A : UU l1} (l l' : list A) → Eq-list l l' → Id l l'
-eq-Eq-list nil nil (map-raise star) = {!!}
+eq-Eq-list = {!!}
 eq-Eq-list nil (cons x l') (map-raise f) = {!!}
 eq-Eq-list (cons x l) nil (map-raise f) = {!!}
 eq-Eq-list (cons x l) (cons .x l') (pair refl e) = {!!}
@@ -171,12 +171,12 @@ square-eq-Eq-list :
   Id
     ( Eq-eq-list (cons x l) (cons x l') (ap (cons x) p))
     ( pair refl (Eq-eq-list l l' p))
-square-eq-Eq-list refl = {!!}
+square-eq-Eq-list = {!!}
 
 is-section-eq-Eq-list :
   {l1 : Level} {A : UU l1} (l l' : list A) (e : Eq-list l l') →
   Id (Eq-eq-list l l' (eq-Eq-list l l' e)) e
-is-section-eq-Eq-list nil nil e = {!!}
+is-section-eq-Eq-list = {!!}
 is-section-eq-Eq-list nil (cons x l') e = {!!}
 is-section-eq-Eq-list (cons x l) nil e = {!!}
 is-section-eq-Eq-list (cons x l) (cons .x l') (pair refl e) = {!!}
@@ -184,32 +184,32 @@ is-section-eq-Eq-list (cons x l) (cons .x l') (pair refl e) = {!!}
 eq-Eq-refl-Eq-list :
   {l1 : Level} {A : UU l1} (l : list A) →
   Id (eq-Eq-list l l (refl-Eq-list l)) refl
-eq-Eq-refl-Eq-list nil = {!!}
+eq-Eq-refl-Eq-list = {!!}
 eq-Eq-refl-Eq-list (cons x l) = {!!}
 
 is-retraction-eq-Eq-list :
   {l1 : Level} {A : UU l1} (l l' : list A) (p : Id l l') →
   Id (eq-Eq-list l l' (Eq-eq-list l l' p)) p
-is-retraction-eq-Eq-list nil .nil refl = {!!}
+is-retraction-eq-Eq-list = {!!}
 is-retraction-eq-Eq-list (cons x l) .(cons x l) refl = {!!}
 
 is-equiv-Eq-eq-list :
   {l1 : Level} {A : UU l1} (l l' : list A) → is-equiv (Eq-eq-list l l')
-is-equiv-Eq-eq-list l l' = {!!}
+is-equiv-Eq-eq-list = {!!}
 
 equiv-Eq-list :
   {l1 : Level} {A : UU l1} (l l' : list A) → Id l l' ≃ Eq-list l l'
-equiv-Eq-list l l' = {!!}
+equiv-Eq-list = {!!}
 
 is-torsorial-Eq-list :
   {l1 : Level} {A : UU l1} (l : list A) →
   is-torsorial (Eq-list l)
-is-torsorial-Eq-list {A = A} l = {!!}
+is-torsorial-Eq-list = {!!}
 
 is-trunc-Eq-list :
   (k : 𝕋) {l : Level} {A : UU l} → is-trunc (succ-𝕋 (succ-𝕋 k)) A →
   (l l' : list A) → is-trunc (succ-𝕋 k) (Eq-list l l')
-is-trunc-Eq-list k H nil nil = {!!}
+is-trunc-Eq-list = {!!}
 is-trunc-Eq-list k H nil (cons x l') = {!!}
 is-trunc-Eq-list k H (cons x l) nil = {!!}
 is-trunc-Eq-list k H (cons x l) (cons y l') = {!!}
@@ -217,14 +217,14 @@ is-trunc-Eq-list k H (cons x l) (cons y l') = {!!}
 is-trunc-list :
   (k : 𝕋) {l : Level} {A : UU l} → is-trunc (succ-𝕋 (succ-𝕋 k)) A →
   is-trunc (succ-𝕋 (succ-𝕋 k)) (list A)
-is-trunc-list k H l l' = {!!}
+is-trunc-list = {!!}
 
 is-set-list :
   {l : Level} {A : UU l} → is-set A → is-set (list A)
 is-set-list = {!!}
 
 list-Set : {l : Level} → Set l → Set l
-list-Set A = {!!}
+list-Set = {!!}
 ```
 
 ### The length operation behaves well with respect to the other list operations
@@ -240,14 +240,14 @@ is-nil-is-zero-length-list :
   (l : list A) →
   is-zero-ℕ (length-list l) →
   is-nil-list l
-is-nil-is-zero-length-list nil p = {!!}
+is-nil-is-zero-length-list = {!!}
 
 is-nonnil-is-nonzero-length-list :
   {l1 : Level} {A : UU l1}
   (l : list A) →
   is-nonzero-ℕ (length-list l) →
   is-nonnil-list l
-is-nonnil-is-nonzero-length-list nil p q = {!!}
+is-nonnil-is-nonzero-length-list = {!!}
 is-nonnil-is-nonzero-length-list (cons x l) p ()
 
 is-nonzero-length-is-nonnil-list :
@@ -255,14 +255,14 @@ is-nonzero-length-is-nonnil-list :
   (l : list A) →
   is-nonnil-list l →
   is-nonzero-ℕ (length-list l)
-is-nonzero-length-is-nonnil-list nil p q = {!!}
+is-nonzero-length-is-nonnil-list = {!!}
 
 lenght-tail-is-nonnil-list :
   {l1 : Level} {A : UU l1}
   (l : list A) → (p : is-nonnil-list l) →
   succ-ℕ (length-list (tail-is-nonnil-list l p)) ＝
     length-list l
-lenght-tail-is-nonnil-list nil p = {!!}
+lenght-tail-is-nonnil-list = {!!}
 lenght-tail-is-nonnil-list (cons x l) p = {!!}
 ```
 
@@ -274,22 +274,22 @@ and removing the last element from a list.
 ```agda
 head-snoc-list :
   {l : Level} {A : UU l} (l : list A) → A → A
-head-snoc-list nil a = {!!}
+head-snoc-list = {!!}
 head-snoc-list (cons h l) a = {!!}
 
 head-list :
   {l1 : Level} {A : UU l1} → list A → list A
-head-list nil = {!!}
+head-list = {!!}
 head-list (cons a x) = {!!}
 
 tail-list :
   {l1 : Level} {A : UU l1} → list A → list A
-tail-list nil = {!!}
+tail-list = {!!}
 tail-list (cons a x) = {!!}
 
 last-element-list :
   {l1 : Level} {A : UU l1} → list A → list A
-last-element-list nil = {!!}
+last-element-list = {!!}
 last-element-list (cons a nil) = {!!}
 last-element-list (cons a (cons b x)) = {!!}
 ```
@@ -299,7 +299,7 @@ last-element-list (cons a (cons b x)) = {!!}
 ```agda
 remove-last-element-list :
   {l1 : Level} {A : UU l1} → list A → list A
-remove-last-element-list nil = {!!}
+remove-last-element-list = {!!}
 remove-last-element-list (cons a nil) = {!!}
 remove-last-element-list (cons a (cons b x)) = {!!}
 ```
@@ -310,19 +310,19 @@ remove-last-element-list (cons a (cons b x)) = {!!}
 head-snoc-snoc-list :
   {l1 : Level} {A : UU l1} (x : list A) (a : A) (b : A) →
   head-list (snoc (snoc x a) b) ＝ head-list (snoc x a)
-head-snoc-snoc-list nil a b = {!!}
+head-snoc-snoc-list = {!!}
 head-snoc-snoc-list (cons c x) a b = {!!}
 
 tail-snoc-snoc-list :
   {l1 : Level} {A : UU l1} (x : list A) (a : A) (b : A) →
   tail-list (snoc (snoc x a) b) ＝ snoc (tail-list (snoc x a)) b
-tail-snoc-snoc-list nil a b = {!!}
+tail-snoc-snoc-list = {!!}
 tail-snoc-snoc-list (cons c x) a b = {!!}
 
 last-element-snoc :
   {l1 : Level} {A : UU l1} (x : list A) (a : A) →
   Id (last-element-list (snoc x a)) (unit-list a)
-last-element-snoc nil a = {!!}
+last-element-snoc = {!!}
 last-element-snoc (cons b nil) a = {!!}
 last-element-snoc (cons b (cons c x)) a = {!!}
 ```
@@ -333,28 +333,28 @@ last-element-snoc (cons b (cons c x)) a = {!!}
 map-algebra-list :
   {l1 : Level} (A : UU l1) →
   Maybe (A × list A) → list A
-map-algebra-list A (inl (a , x)) = {!!}
+map-algebra-list = {!!}
 map-algebra-list A (inr star) = {!!}
 
 inv-map-algebra-list :
   {l1 : Level} (A : UU l1) →
   list A → Maybe (A × list A)
-inv-map-algebra-list A nil = {!!}
+inv-map-algebra-list = {!!}
 inv-map-algebra-list A (cons a x) = {!!}
 
 is-section-inv-map-algebra-list :
   {l1 : Level} (A : UU l1) →
   (map-algebra-list A ∘ inv-map-algebra-list A) ~ id
-is-section-inv-map-algebra-list A nil = {!!}
+is-section-inv-map-algebra-list = {!!}
 is-section-inv-map-algebra-list A (cons a x) = {!!}
 
 is-retraction-inv-map-algebra-list :
   {l1 : Level} (A : UU l1) →
   (inv-map-algebra-list A ∘ map-algebra-list A) ~ id
-is-retraction-inv-map-algebra-list A (inl (a , x)) = {!!}
+is-retraction-inv-map-algebra-list = {!!}
 is-retraction-inv-map-algebra-list A (inr star) = {!!}
 
 is-equiv-map-algebra-list :
   {l1 : Level} (A : UU l1) → is-equiv (map-algebra-list A)
-is-equiv-map-algebra-list A = {!!}
+is-equiv-map-algebra-list = {!!}
 ```

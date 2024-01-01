@@ -33,10 +33,10 @@ module _
   where
 
   is-prop-is-contr-map : (f : A → B) → is-prop (is-contr-map f)
-  is-prop-is-contr-map f = {!!}
+  is-prop-is-contr-map = {!!}
 
   is-contr-map-Prop : (A → B) → Prop (l1 ⊔ l2)
-  pr1 (is-contr-map-Prop f) = {!!}
+  is-contr-map-Prop = {!!}
 ```
 
 ### Being a contractible map is equivalent to being an equivalence
@@ -47,10 +47,10 @@ module _
   where
 
   equiv-is-equiv-is-contr-map : (f : A → B) → is-contr-map f ≃ is-equiv f
-  equiv-is-equiv-is-contr-map f = {!!}
+  equiv-is-equiv-is-contr-map = {!!}
 
   equiv-is-contr-map-is-equiv : (f : A → B) → is-equiv f ≃ is-contr-map f
-  equiv-is-contr-map-is-equiv f = {!!}
+  equiv-is-contr-map-is-equiv = {!!}
 ```
 
 ### Contractible maps are closed under homotopies

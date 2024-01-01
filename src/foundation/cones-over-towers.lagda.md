@@ -55,7 +55,7 @@ module _
   where
 
   cone-tower : {l2 : Level} → UU l2 → UU (l1 ⊔ l2)
-  cone-tower X = {!!}
+  cone-tower = {!!}
 
   map-cone-tower :
     {l2 : Level} {X : UU l2} → cone-tower X → (n : ℕ) → X → type-tower A n
@@ -83,13 +83,13 @@ module _
   coherence-htpy-cone-tower = {!!}
 
   htpy-cone-tower : cone-tower A X → cone-tower A X → UU (l1 ⊔ l2)
-  htpy-cone-tower c c' = {!!}
+  htpy-cone-tower = {!!}
 
   refl-htpy-cone-tower : (c : cone-tower A X) → htpy-cone-tower c c
-  pr1 (refl-htpy-cone-tower c) n = {!!}
+  refl-htpy-cone-tower = {!!}
 
   htpy-eq-cone-tower : (c c' : cone-tower A X) → c ＝ c' → htpy-cone-tower c c'
-  htpy-eq-cone-tower c .c refl = {!!}
+  htpy-eq-cone-tower = {!!}
 
   is-torsorial-htpy-cone-tower :
     (c : cone-tower A X) → is-torsorial (htpy-cone-tower c)
@@ -104,7 +104,7 @@ module _
   extensionality-cone-tower = {!!}
 
   eq-htpy-cone-tower : (c c' : cone-tower A X) → htpy-cone-tower c c' → c ＝ c'
-  eq-htpy-cone-tower c c' = {!!}
+  eq-htpy-cone-tower = {!!}
 ```
 
 ### Precomposing cones over towers with a map
@@ -115,7 +115,7 @@ module _
   where
 
   cone-map-tower : cone-tower A X → (Y → X) → cone-tower A Y
-  pr1 (cone-map-tower c f) n x = {!!}
+  cone-map-tower = {!!}
 ```
 
 ### Postcomposition cones over postcomposition towers

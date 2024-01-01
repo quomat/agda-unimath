@@ -42,19 +42,19 @@ module _
   where
 
   htpy-pointed-Π : pointed-Π A B → UU (l1 ⊔ l2)
-  htpy-pointed-Π g = {!!}
+  htpy-pointed-Π = {!!}
 
   extensionality-pointed-Π : (g : pointed-Π A B) → Id f g ≃ htpy-pointed-Π g
   extensionality-pointed-Π = {!!}
 
   eq-htpy-pointed-Π :
     (g : pointed-Π A B) → (htpy-pointed-Π g) → Id f g
-  eq-htpy-pointed-Π g = {!!}
+  eq-htpy-pointed-Π = {!!}
 
 _~∗_ :
   {l1 l2 : Level} {A : Pointed-Type l1} {B : Pointed-Fam l2 A} →
   pointed-Π A B → pointed-Π A B → UU (l1 ⊔ l2)
-_~∗_ {A = A} {B} = {!!}
+_~∗_ = {!!}
 
 infix 6 _~∗_
 
@@ -62,7 +62,7 @@ htpy-pointed-htpy :
   {l1 l2 : Level} {A : Pointed-Type l1} {B : Pointed-Fam l2 A} →
   (f g : pointed-Π A B) → f ~∗ g →
   function-pointed-Π f ~ function-pointed-Π g
-htpy-pointed-htpy f g = {!!}
+htpy-pointed-htpy = {!!}
 
 triangle-pointed-htpy :
   {l1 l2 : Level} {A : Pointed-Type l1} {B : Pointed-Fam l2 A} →
@@ -70,7 +70,7 @@ triangle-pointed-htpy :
   ( htpy-pointed-htpy f g H (point-Pointed-Type A)) ＝
   ( ( preserves-point-function-pointed-Π f) ∙
     ( inv (preserves-point-function-pointed-Π g)))
-triangle-pointed-htpy f g = {!!}
+triangle-pointed-htpy = {!!}
 ```
 
 ## Properties
@@ -83,7 +83,7 @@ module _
   where
 
   refl-htpy-pointed-map : f ~∗ f
-  pr1 refl-htpy-pointed-map = {!!}
+  refl-htpy-pointed-map = {!!}
 
   htpy-pointed-map : (g : A →∗ B) → UU (l1 ⊔ l2)
   htpy-pointed-map = {!!}
@@ -92,7 +92,7 @@ module _
   extensionality-pointed-map = {!!}
 
   eq-htpy-pointed-map : (g : A →∗ B) → (htpy-pointed-map g) → Id f g
-  eq-htpy-pointed-map g = {!!}
+  eq-htpy-pointed-map = {!!}
 ```
 
 ### The category laws for pointed maps
@@ -121,8 +121,7 @@ module _
     htpy-pointed-map
       ( comp-pointed-map (comp-pointed-map h g) f)
       ( comp-pointed-map h (comp-pointed-map g f))
-  associative-comp-pointed-map
-    (pair h refl) (pair g refl) (pair f refl) = {!!}
+  associative-comp-pointed-map = {!!}
 
   inv-associative-comp-pointed-map :
     {A : Pointed-Type l1} {B : Pointed-Type l2}
@@ -131,8 +130,7 @@ module _
     htpy-pointed-map
       ( comp-pointed-map h (comp-pointed-map g f))
       ( comp-pointed-map (comp-pointed-map h g) f)
-  inv-associative-comp-pointed-map
-    (pair h refl) (pair g refl) (pair f refl) = {!!}
+  inv-associative-comp-pointed-map = {!!}
 ```
 
 ### The groupoid laws for pointed homotopies
@@ -145,11 +143,11 @@ module _
   concat-htpy-pointed-Π :
     (f g h : pointed-Π A B) →
     htpy-pointed-Π f g → htpy-pointed-Π g h → htpy-pointed-Π f h
-  concat-htpy-pointed-Π f g h G H = {!!}
+  concat-htpy-pointed-Π = {!!}
 
   inv-htpy-pointed-Π :
     (f g : pointed-Π A B) → htpy-pointed-Π f g → htpy-pointed-Π g f
-  inv-htpy-pointed-Π f g H = {!!}
+  inv-htpy-pointed-Π = {!!}
 
 module _
   {l1 l2 l3 : Level}
@@ -161,7 +159,7 @@ module _
     htpy-pointed-map
       ( comp-pointed-map g f1)
       ( comp-pointed-map g f2)
-  left-whisker-htpy-pointed-map g f1 f2 H = {!!}
+  left-whisker-htpy-pointed-map = {!!}
 
 module _
   {l1 l2 l3 : Level}
@@ -171,7 +169,7 @@ module _
   right-whisker-htpy-pointed-map :
     (g1 g2 : B →∗ C) (H : htpy-pointed-map g1 g2) (f : A →∗ B) →
     htpy-pointed-map (comp-pointed-map g1 f) (comp-pointed-map g2 f)
-  right-whisker-htpy-pointed-map g1 g2 H (pair f refl) = {!!}
+  right-whisker-htpy-pointed-map = {!!}
 
 module _
   {l1 l2 : Level} {A : Pointed-Type l1} {B : Pointed-Type l2}

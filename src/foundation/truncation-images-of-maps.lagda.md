@@ -47,7 +47,7 @@ module _
   trunc-im = {!!}
 
   unit-trunc-im : A → trunc-im
-  pr1 (unit-trunc-im x) = {!!}
+  unit-trunc-im = {!!}
 
   projection-trunc-im : trunc-im → B
   projection-trunc-im = {!!}
@@ -63,7 +63,7 @@ module _
   where
 
   Eq-unit-trunc-im : A → A → UU (l1 ⊔ l2)
-  Eq-unit-trunc-im x y = {!!}
+  Eq-unit-trunc-im = {!!}
 
   extensionality-trunc-im :
     (x y : A) →

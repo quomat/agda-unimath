@@ -26,7 +26,7 @@ module _
   where
 
   eq-large-value : X → UUω
-  eq-large-value x = {!!}
+  eq-large-value = {!!}
 ```
 
 ```agda
@@ -48,8 +48,8 @@ module _
   where
 
   refl-large-htpy : {f : (x : A) → B x} → f ~ω f
-  refl-large-htpy x = {!!}
+  refl-large-htpy = {!!}
 
   refl-large-htpy' : (f : (x : A) → B x) → f ~ω f
-  refl-large-htpy' f = {!!}
+  refl-large-htpy' = {!!}
 ```

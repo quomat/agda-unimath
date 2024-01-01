@@ -83,7 +83,7 @@ module _
   where
 
   retraction-section-precomp-domain : section (precomp f X) → retraction f
-  pr1 (retraction-section-precomp-domain s) = {!!}
+  retraction-section-precomp-domain = {!!}
 ```
 
 ### Equivalences induce an equivalence from the type of homotopies between two maps to the type of homotopies between their precomposites

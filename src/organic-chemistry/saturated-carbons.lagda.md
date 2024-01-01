@@ -35,7 +35,7 @@ module _
   {l1 l2 : Level} (H : hydrocarbon l1 l2)
   where
   is-saturated-carbon-hydrocarbon : vertex-hydrocarbon H → UU (l1 ⊔ l2)
-  is-saturated-carbon-hydrocarbon c = {!!}
+  is-saturated-carbon-hydrocarbon = {!!}
 ```
 
 Type-theoretically, the saturation condition on a carbon atom (fix one and call
@@ -47,13 +47,13 @@ hydrocarbon such that every carbon is saturated.
 
 ```agda
   double-bond-on-hydrocarbon : vertex-hydrocarbon H → UU (l1 ⊔ l2)
-  double-bond-on-hydrocarbon c = {!!}
+  double-bond-on-hydrocarbon = {!!}
 
   has-double-bond-hydrocarbon : vertex-hydrocarbon H → Prop (l1 ⊔ l2)
-  has-double-bond-hydrocarbon c = {!!}
+  has-double-bond-hydrocarbon = {!!}
 
   has-triple-bond-hydrocarbon : vertex-hydrocarbon H → UU (l1 ⊔ l2)
-  has-triple-bond-hydrocarbon c = {!!}
+  has-triple-bond-hydrocarbon = {!!}
 ```
 
 For a carbon atom `c` to have a double (respectively, a triple) bond, we must

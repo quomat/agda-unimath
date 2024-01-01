@@ -79,8 +79,7 @@ id-functor-Large-Precategory :
   {αC : Level → Level} {βC : Level → Level → Level} →
   (C : Large-Precategory αC βC) →
   functor-Large-Precategory (λ l → l) C C
-obj-functor-Large-Precategory
-  ( id-functor-Large-Precategory C) = {!!}
+id-functor-Large-Precategory = {!!}
 hom-functor-Large-Precategory
   ( id-functor-Large-Precategory C) = {!!}
 preserves-comp-functor-Large-Precategory
@@ -127,7 +126,7 @@ module _
     comp-hom-Large-Precategory E
       ( hom-comp-functor-Large-Precategory g)
       ( hom-comp-functor-Large-Precategory f)
-  preserves-comp-comp-functor-Large-Precategory g f = {!!}
+  preserves-comp-comp-functor-Large-Precategory = {!!}
 
   preserves-id-comp-functor-Large-Precategory :
     {l1 : Level} {X : obj-Large-Precategory C l1} →
@@ -137,6 +136,5 @@ module _
 
   comp-functor-Large-Precategory :
     functor-Large-Precategory (λ l → γG (γF l)) C E
-  obj-functor-Large-Precategory
-    comp-functor-Large-Precategory = {!!}
+  comp-functor-Large-Precategory = {!!}
 ```

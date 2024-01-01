@@ -36,7 +36,7 @@ is-commutative-Monoid :
 is-commutative-Monoid = {!!}
 
 Commutative-Monoid : (l : Level) → UU (lsuc l)
-Commutative-Monoid l = {!!}
+Commutative-Monoid = {!!}
 
 module _
   {l : Level} (M : Commutative-Monoid l)
@@ -137,8 +137,8 @@ module _
   right-unit-law-mul-Commutative-Monoid = {!!}
 
   is-unit-Commutative-Monoid : type-Commutative-Monoid M → UU l
-  is-unit-Commutative-Monoid x = {!!}
+  is-unit-Commutative-Monoid = {!!}
 
   is-unit-prop-Commutative-Monoid : type-Commutative-Monoid M → Prop l
-  is-unit-prop-Commutative-Monoid x = {!!}
+  is-unit-prop-Commutative-Monoid = {!!}
 ```

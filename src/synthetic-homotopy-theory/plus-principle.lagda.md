@@ -28,5 +28,5 @@ The **plus-principle** asserts that any
 
 ```agda
 plus-principle : (l : Level) → UU (lsuc l)
-plus-principle l = {!!}
+plus-principle = {!!}
 ```

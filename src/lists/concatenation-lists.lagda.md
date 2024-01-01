@@ -32,7 +32,7 @@ Two lists can be concatenated to form a single list.
 
 ```agda
 concat-list : {l : Level} {A : UU l} → list A → (list A → list A)
-concat-list {l} {A} = {!!}
+concat-list = {!!}
 ```
 
 ## Properties
@@ -59,7 +59,7 @@ right-unit-law-concat-list :
 right-unit-law-concat-list = {!!}
 
 list-Monoid : {l : Level} (X : Set l) → Monoid l
-list-Monoid X = {!!}
+list-Monoid = {!!}
 ```
 
 ### `snoc`-law for list concatenation

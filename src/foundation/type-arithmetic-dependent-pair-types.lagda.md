@@ -41,14 +41,14 @@ module _
   where
 
   map-inv-left-unit-law-Σ-is-contr : B a → Σ A B
-  pr1 (map-inv-left-unit-law-Σ-is-contr b) = {!!}
+  map-inv-left-unit-law-Σ-is-contr = {!!}
 
   map-left-unit-law-Σ-is-contr : Σ A B → B a
   map-left-unit-law-Σ-is-contr = {!!}
 
   is-section-map-inv-left-unit-law-Σ-is-contr :
     map-left-unit-law-Σ-is-contr ∘ map-inv-left-unit-law-Σ-is-contr ~ id
-  is-section-map-inv-left-unit-law-Σ-is-contr b = {!!}
+  is-section-map-inv-left-unit-law-Σ-is-contr = {!!}
 
   is-retraction-map-inv-left-unit-law-Σ-is-contr :
     map-inv-left-unit-law-Σ-is-contr ∘ map-left-unit-law-Σ-is-contr ~ id
@@ -59,7 +59,7 @@ module _
   is-equiv-map-left-unit-law-Σ-is-contr = {!!}
 
   left-unit-law-Σ-is-contr : Σ A B ≃ B a
-  pr1 left-unit-law-Σ-is-contr = {!!}
+  left-unit-law-Σ-is-contr = {!!}
 
   abstract
     is-equiv-map-inv-left-unit-law-Σ-is-contr :
@@ -67,7 +67,7 @@ module _
     is-equiv-map-inv-left-unit-law-Σ-is-contr = {!!}
 
   inv-left-unit-law-Σ-is-contr : B a ≃ Σ A B
-  pr1 inv-left-unit-law-Σ-is-contr = {!!}
+  inv-left-unit-law-Σ-is-contr = {!!}
 ```
 
 ### Right unit law for dependent pair types
@@ -79,40 +79,40 @@ module _
 
   abstract
     is-equiv-pr1-is-contr : ((a : A) → is-contr (B a)) → is-equiv (pr1 {B = B})
-    is-equiv-pr1-is-contr is-contr-B = {!!}
+    is-equiv-pr1-is-contr = {!!}
 
   equiv-pr1 : ((a : A) → is-contr (B a)) → (Σ A B) ≃ A
-  pr1 (equiv-pr1 is-contr-B) = {!!}
+  equiv-pr1 = {!!}
 
   right-unit-law-Σ-is-contr : ((a : A) → is-contr (B a)) → (Σ A B) ≃ A
   right-unit-law-Σ-is-contr = {!!}
 
   abstract
     is-contr-is-equiv-pr1 : is-equiv (pr1 {B = B}) → ((a : A) → is-contr (B a))
-    is-contr-is-equiv-pr1 is-equiv-pr1-B a = {!!}
+    is-contr-is-equiv-pr1 = {!!}
 
   map-inv-right-unit-law-Σ-is-contr :
     ((a : A) → is-contr (B a)) → A → Σ A B
-  map-inv-right-unit-law-Σ-is-contr H a = {!!}
+  map-inv-right-unit-law-Σ-is-contr = {!!}
 
   is-section-map-inv-right-unit-law-Σ-is-contr :
     (H : (a : A) → is-contr (B a)) →
     pr1 ∘ map-inv-right-unit-law-Σ-is-contr H ~ id
-  is-section-map-inv-right-unit-law-Σ-is-contr H = {!!}
+  is-section-map-inv-right-unit-law-Σ-is-contr = {!!}
 
   is-retraction-map-inv-right-unit-law-Σ-is-contr :
     (H : (a : A) → is-contr (B a)) →
     map-inv-right-unit-law-Σ-is-contr H ∘ pr1 ~ id
-  is-retraction-map-inv-right-unit-law-Σ-is-contr H (a , b) = {!!}
+  is-retraction-map-inv-right-unit-law-Σ-is-contr = {!!}
 
   is-equiv-map-inv-right-unit-law-Σ-is-contr :
     (H : (a : A) → is-contr (B a)) →
     is-equiv (map-inv-right-unit-law-Σ-is-contr H)
-  is-equiv-map-inv-right-unit-law-Σ-is-contr H = {!!}
+  is-equiv-map-inv-right-unit-law-Σ-is-contr = {!!}
 
   inv-right-unit-law-Σ-is-contr :
     (H : (a : A) → is-contr (B a)) → A ≃ Σ A B
-  pr1 (inv-right-unit-law-Σ-is-contr H) = {!!}
+  inv-right-unit-law-Σ-is-contr = {!!}
 ```
 
 ### Associativity of dependent pair types
@@ -126,28 +126,28 @@ module _
   where
 
   map-associative-Σ : Σ (Σ A B) C → Σ A (λ x → Σ (B x) (λ y → C (x , y)))
-  pr1 (map-associative-Σ ((x , y) , z)) = {!!}
+  map-associative-Σ = {!!}
 
   map-inv-associative-Σ : Σ A (λ x → Σ (B x) (λ y → C (x , y))) → Σ (Σ A B) C
-  pr1 (pr1 (map-inv-associative-Σ (x , y , z))) = {!!}
+  map-inv-associative-Σ = {!!}
 
   is-retraction-map-inv-associative-Σ :
     map-inv-associative-Σ ∘ map-associative-Σ ~ id
-  is-retraction-map-inv-associative-Σ ((x , y) , z) = {!!}
+  is-retraction-map-inv-associative-Σ = {!!}
 
   is-section-map-inv-associative-Σ :
     map-associative-Σ ∘ map-inv-associative-Σ ~ id
-  is-section-map-inv-associative-Σ (x , (y , z)) = {!!}
+  is-section-map-inv-associative-Σ = {!!}
 
   abstract
     is-equiv-map-associative-Σ : is-equiv map-associative-Σ
     is-equiv-map-associative-Σ = {!!}
 
   associative-Σ : Σ (Σ A B) C ≃ Σ A (λ x → Σ (B x) (λ y → C (x , y)))
-  pr1 associative-Σ = {!!}
+  associative-Σ = {!!}
 
   inv-associative-Σ : Σ A (λ x → Σ (B x) (λ y → C (x , y))) ≃ Σ (Σ A B) C
-  pr1 inv-associative-Σ = {!!}
+  inv-associative-Σ = {!!}
 ```
 
 ### Associativity, second formulation
@@ -159,30 +159,30 @@ module _
 
   map-associative-Σ' :
     Σ (Σ A B) (λ w → C (pr1 w) (pr2 w)) → Σ A (λ x → Σ (B x) (C x))
-  pr1 (map-associative-Σ' ((x , y) , z)) = {!!}
+  map-associative-Σ' = {!!}
 
   map-inv-associative-Σ' :
     Σ A (λ x → Σ (B x) (C x)) → Σ (Σ A B) (λ w → C (pr1 w) (pr2 w))
-  pr1 (pr1 (map-inv-associative-Σ' (x , y , z))) = {!!}
+  map-inv-associative-Σ' = {!!}
 
   is-section-map-inv-associative-Σ' :
     map-associative-Σ' ∘ map-inv-associative-Σ' ~ id
-  is-section-map-inv-associative-Σ' (x , (y , z)) = {!!}
+  is-section-map-inv-associative-Σ' = {!!}
 
   is-retraction-map-inv-associative-Σ' :
     map-inv-associative-Σ' ∘ map-associative-Σ' ~ id
-  is-retraction-map-inv-associative-Σ' ((x , y) , z) = {!!}
+  is-retraction-map-inv-associative-Σ' = {!!}
 
   is-equiv-map-associative-Σ' : is-equiv map-associative-Σ'
   is-equiv-map-associative-Σ' = {!!}
 
   associative-Σ' :
     Σ (Σ A B) (λ w → C (pr1 w) (pr2 w)) ≃ Σ A (λ x → Σ (B x) (C x))
-  pr1 associative-Σ' = {!!}
+  associative-Σ' = {!!}
 
   inv-associative-Σ' :
     Σ A (λ x → Σ (B x) (C x)) ≃ Σ (Σ A B) (λ w → C (pr1 w) (pr2 w))
-  pr1 inv-associative-Σ' = {!!}
+  inv-associative-Σ' = {!!}
 ```
 
 ### The interchange law
@@ -196,20 +196,20 @@ module _
   map-interchange-Σ-Σ :
     Σ (Σ A B) (λ t → Σ (C (pr1 t)) (D (pr1 t) (pr2 t))) →
     Σ (Σ A C) (λ t → Σ (B (pr1 t)) (λ y → D (pr1 t) y (pr2 t)))
-  pr1 (pr1 (map-interchange-Σ-Σ t)) = {!!}
+  map-interchange-Σ-Σ = {!!}
 
   map-inv-interchange-Σ-Σ :
     Σ (Σ A C) (λ t → Σ (B (pr1 t)) (λ y → D (pr1 t) y (pr2 t))) →
     Σ (Σ A B) (λ t → Σ (C (pr1 t)) (D (pr1 t) (pr2 t)))
-  pr1 (pr1 (map-inv-interchange-Σ-Σ t)) = {!!}
+  map-inv-interchange-Σ-Σ = {!!}
 
   is-section-map-inv-interchange-Σ-Σ :
     map-interchange-Σ-Σ ∘ map-inv-interchange-Σ-Σ ~ id
-  is-section-map-inv-interchange-Σ-Σ ((a , c) , (b , d)) = {!!}
+  is-section-map-inv-interchange-Σ-Σ = {!!}
 
   is-retraction-map-inv-interchange-Σ-Σ :
     map-inv-interchange-Σ-Σ ∘ map-interchange-Σ-Σ ~ id
-  is-retraction-map-inv-interchange-Σ-Σ ((a , b) , (c , d)) = {!!}
+  is-retraction-map-inv-interchange-Σ-Σ = {!!}
 
   abstract
     is-equiv-map-interchange-Σ-Σ : is-equiv map-interchange-Σ-Σ
@@ -218,7 +218,7 @@ module _
   interchange-Σ-Σ :
     Σ (Σ A B) (λ t → Σ (C (pr1 t)) (D (pr1 t) (pr2 t))) ≃
     Σ (Σ A C) (λ t → Σ (B (pr1 t)) (λ y → D (pr1 t) y (pr2 t)))
-  pr1 interchange-Σ-Σ = {!!}
+  interchange-Σ-Σ = {!!}
 
   interchange-Σ-Σ-Σ :
     Σ A (λ x → Σ (B x) (λ y → Σ (C x) (D x y))) ≃
@@ -230,7 +230,7 @@ module _
     {x y : Σ (C a) (D a b)} →
     map-equiv interchange-Σ-Σ ((a , b) , x) ＝
     map-equiv interchange-Σ-Σ ((a , b) , y)
-  eq-interchange-Σ-Σ-is-contr H = {!!}
+  eq-interchange-Σ-Σ-is-contr = {!!}
 ```
 
 ### Swapping the order of quantification in a Σ-type, on the left
@@ -241,25 +241,25 @@ module _
   where
 
   map-left-swap-Σ : Σ A (λ x → Σ B (C x)) → Σ B (λ y → Σ A (λ x → C x y))
-  pr1 (map-left-swap-Σ (a , b , c)) = {!!}
+  map-left-swap-Σ = {!!}
 
   map-inv-left-swap-Σ :
     Σ B (λ y → Σ A (λ x → C x y)) → Σ A (λ x → Σ B (C x))
-  pr1 (map-inv-left-swap-Σ (b , a , c)) = {!!}
+  map-inv-left-swap-Σ = {!!}
 
   is-retraction-map-inv-left-swap-Σ :
     map-inv-left-swap-Σ ∘ map-left-swap-Σ ~ id
-  is-retraction-map-inv-left-swap-Σ (a , (b , c)) = {!!}
+  is-retraction-map-inv-left-swap-Σ = {!!}
 
   is-section-map-inv-left-swap-Σ : map-left-swap-Σ ∘ map-inv-left-swap-Σ ~ id
-  is-section-map-inv-left-swap-Σ (b , (a , c)) = {!!}
+  is-section-map-inv-left-swap-Σ = {!!}
 
   abstract
     is-equiv-map-left-swap-Σ : is-equiv map-left-swap-Σ
     is-equiv-map-left-swap-Σ = {!!}
 
   equiv-left-swap-Σ : Σ A (λ a → Σ B (C a)) ≃ Σ B (λ b → Σ A (λ a → C a b))
-  pr1 equiv-left-swap-Σ = {!!}
+  equiv-left-swap-Σ = {!!}
 ```
 
 ### Swapping the order of quantification in a Σ-type, on the right
@@ -270,24 +270,24 @@ module _
   where
 
   map-right-swap-Σ : Σ (Σ A B) (C ∘ pr1) → Σ (Σ A C) (B ∘ pr1)
-  pr1 (pr1 (map-right-swap-Σ ((a , b) , c))) = {!!}
+  map-right-swap-Σ = {!!}
 
   map-inv-right-swap-Σ : Σ (Σ A C) (B ∘ pr1) → Σ (Σ A B) (C ∘ pr1)
-  pr1 (pr1 (map-inv-right-swap-Σ ((a , c) , b))) = {!!}
+  map-inv-right-swap-Σ = {!!}
 
   is-section-map-inv-right-swap-Σ :
     map-right-swap-Σ ∘ map-inv-right-swap-Σ ~ id
-  is-section-map-inv-right-swap-Σ ((x , y) , z) = {!!}
+  is-section-map-inv-right-swap-Σ = {!!}
 
   is-retraction-map-inv-right-swap-Σ :
     map-inv-right-swap-Σ ∘ map-right-swap-Σ ~ id
-  is-retraction-map-inv-right-swap-Σ ((x , z) , y) = {!!}
+  is-retraction-map-inv-right-swap-Σ = {!!}
 
   is-equiv-map-right-swap-Σ : is-equiv map-right-swap-Σ
   is-equiv-map-right-swap-Σ = {!!}
 
   equiv-right-swap-Σ : Σ (Σ A B) (C ∘ pr1) ≃ Σ (Σ A C) (B ∘ pr1)
-  pr1 equiv-right-swap-Σ = {!!}
+  equiv-right-swap-Σ = {!!}
 ```
 
 ### Distributive laws of cartesian products over Σ
@@ -301,7 +301,7 @@ left-distributive-prod-Σ = {!!}
 right-distributive-prod-Σ :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} {C : UU l3} →
   ((Σ A B) × C) ≃ Σ A (λ a → B a × C)
-right-distributive-prod-Σ {A} = {!!}
+right-distributive-prod-Σ = {!!}
 ```
 
 ## See also

@@ -60,13 +60,13 @@ module _
     walk-node-inclusion-fiber-Directed-Graph = {!!}
 
   root-fiber-Directed-Graph : node-fiber-Directed-Graph
-  pr1 root-fiber-Directed-Graph = {!!}
+  root-fiber-Directed-Graph = {!!}
 
   is-root-fiber-Directed-Graph : node-fiber-Directed-Graph → UU (l1 ⊔ l2)
-  is-root-fiber-Directed-Graph y = {!!}
+  is-root-fiber-Directed-Graph = {!!}
 
   edge-fiber-Directed-Graph : (y z : node-fiber-Directed-Graph) → UU (l1 ⊔ l2)
-  edge-fiber-Directed-Graph y z = {!!}
+  edge-fiber-Directed-Graph = {!!}
 
   module _
     (y z : node-fiber-Directed-Graph) (e : edge-fiber-Directed-Graph y z)
@@ -86,7 +86,7 @@ module _
     walk-edge-fiber-Directed-Graph = {!!}
 
   graph-fiber-Directed-Graph : Directed-Graph (l1 ⊔ l2) (l1 ⊔ l2)
-  pr1 graph-fiber-Directed-Graph = {!!}
+  graph-fiber-Directed-Graph = {!!}
 
   walk-fiber-Directed-Graph : (y z : node-fiber-Directed-Graph) → UU (l1 ⊔ l2)
   walk-fiber-Directed-Graph = {!!}
@@ -113,8 +113,7 @@ module _
     (y : node-fiber-Directed-Graph) →
     ( is-root-fiber-Directed-Graph y) +
     ( Σ ( node-fiber-Directed-Graph) ( edge-fiber-Directed-Graph y))
-  center-unique-direct-successor-fiber-Directed-Graph
-    ( y , refl-walk-Directed-Graph) = {!!}
+  center-unique-direct-successor-fiber-Directed-Graph = {!!}
 
   contraction-unique-direct-successor-fiber-Directed-Graph :
     (y : node-fiber-Directed-Graph) →
@@ -135,7 +134,7 @@ module _
   is-tree-fiber-Directed-Graph = {!!}
 
   fiber-Directed-Graph : Directed-Tree (l1 ⊔ l2) (l1 ⊔ l2)
-  pr1 fiber-Directed-Graph = {!!}
+  fiber-Directed-Graph = {!!}
 ```
 
 ### Computing the direct predecessors of a node in a fiber

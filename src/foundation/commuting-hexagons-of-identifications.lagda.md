@@ -28,7 +28,7 @@ coherence-hexagon :
   {l : Level} {A : UU l} {x u u' v v' y : A}
   (α : x ＝ u) (β : u ＝ u') (γ : u' ＝ y)
   (δ : x ＝ v) (ε : v ＝ v') (ζ : v' ＝ y) → UU l
-coherence-hexagon α β γ δ ε ζ = {!!}
+coherence-hexagon = {!!}
 ```
 
 ### Symmetries of hexagons of identifications
@@ -43,35 +43,35 @@ module _
     (δ : x ＝ v) (ε : v ＝ v') (ζ : v' ＝ y) →
     coherence-hexagon α β γ δ ε ζ →
     coherence-hexagon (inv ε) (inv δ) α ζ (inv γ) (inv β)
-  hexagon-rotate-120 refl refl refl refl refl .refl refl = {!!}
+  hexagon-rotate-120 = {!!}
 
   hexagon-rotate-240 :
     (α : x ＝ u) (β : u ＝ u') (γ : u' ＝ y)
     (δ : x ＝ v) (ε : v ＝ v') (ζ : v' ＝ y) →
     coherence-hexagon α β γ δ ε ζ →
     coherence-hexagon γ (inv ζ) (inv ε) (inv β) (inv α) δ
-  hexagon-rotate-240 refl refl refl refl refl .refl refl = {!!}
+  hexagon-rotate-240 = {!!}
 
   hexagon-mirror-A :
     (α : x ＝ u) (β : u ＝ u') (γ : u' ＝ y)
     (δ : x ＝ v) (ε : v ＝ v') (ζ : v' ＝ y) →
     coherence-hexagon α β γ δ ε ζ →
     coherence-hexagon ε ζ (inv γ) (inv δ) α β
-  hexagon-mirror-A refl refl refl refl refl .refl refl = {!!}
+  hexagon-mirror-A = {!!}
 
   hexagon-mirror-B :
     (α : x ＝ u) (β : u ＝ u') (γ : u' ＝ y)
     (δ : x ＝ v) (ε : v ＝ v') (ζ : v' ＝ y) →
     coherence-hexagon α β γ δ ε ζ →
     coherence-hexagon (inv α) δ ε β γ (inv ζ)
-  hexagon-mirror-B refl refl refl refl refl .refl refl = {!!}
+  hexagon-mirror-B = {!!}
 
   hexagon-mirror-C :
     (α : x ＝ u) (β : u ＝ u') (γ : u' ＝ y)
     (δ : x ＝ v) (ε : v ＝ v') (ζ : v' ＝ y) →
     coherence-hexagon α β γ δ ε ζ →
     coherence-hexagon (inv γ) (inv β) (inv α) (inv ζ) (inv ε) (inv δ)
-  hexagon-mirror-C refl refl refl refl refl .refl refl = {!!}
+  hexagon-mirror-C = {!!}
 ```
 
 ### Inversion of a hexagon
@@ -89,5 +89,5 @@ module _
     ( δ : x ＝ v) (ε : v ＝ v') (ζ : v' ＝ y) →
     coherence-hexagon α β γ δ ε ζ →
     coherence-hexagon δ ε ζ α β γ
-  inv-hexagon refl refl refl refl refl .refl refl = {!!}
+  inv-hexagon = {!!}
 ```

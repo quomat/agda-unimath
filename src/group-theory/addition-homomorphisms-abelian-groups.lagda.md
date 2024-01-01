@@ -42,10 +42,10 @@ module _
   add-hom-Ab = {!!}
 
   zero-hom-Ab : hom-Ab A B
-  pr1 zero-hom-Ab x = {!!}
+  zero-hom-Ab = {!!}
 
   neg-hom-Ab : hom-Ab A B → hom-Ab A B
-  pr1 (neg-hom-Ab f) x = {!!}
+  neg-hom-Ab = {!!}
 ```
 
 #### Associativity of pointwise addition of morphisms of abelian groups
@@ -116,13 +116,13 @@ module _
   where
 
   semigroup-hom-Ab : Semigroup (l1 ⊔ l2)
-  pr1 semigroup-hom-Ab = {!!}
+  semigroup-hom-Ab = {!!}
 
   group-hom-Ab : Group (l1 ⊔ l2)
-  pr1 group-hom-Ab = {!!}
+  group-hom-Ab = {!!}
 
   ab-hom-Ab : Ab (l1 ⊔ l2)
-  pr1 ab-hom-Ab = {!!}
+  ab-hom-Ab = {!!}
 ```
 
 ## Properties
@@ -155,7 +155,7 @@ module _
   where
 
   ev-element-hom-Ab : hom-Ab A B → type-Ab B
-  ev-element-hom-Ab f = {!!}
+  ev-element-hom-Ab = {!!}
 
   preserves-add-ev-element-hom-Ab :
     (f g : hom-Ab A B) →
@@ -164,5 +164,5 @@ module _
   preserves-add-ev-element-hom-Ab = {!!}
 
   hom-ev-element-hom-Ab : hom-Ab (ab-hom-Ab A B) B
-  pr1 hom-ev-element-hom-Ab = {!!}
+  hom-ev-element-hom-Ab = {!!}
 ```

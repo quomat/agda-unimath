@@ -181,8 +181,7 @@ module _
                 ( matching-correspondence-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ)
                 ( x))))
         ( λ z → pr1 (pr1 z) ＝ x)
-    compute-left-matching-correspondence-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ
-      x p = {!!}
+    compute-left-matching-correspondence-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ = {!!}
 
     compute-left-inv-matching-correspondence-binary-coporducd-Decomposition-map-into-Fin-Two-ℕ :
       (y : fiber f (inl (inr star))) →
@@ -190,8 +189,7 @@ module _
       map-inv-equiv
         ( matching-correspondence-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ)
         ( inl y)
-    compute-left-inv-matching-correspondence-binary-coporducd-Decomposition-map-into-Fin-Two-ℕ
-      y = {!!}
+    compute-left-inv-matching-correspondence-binary-coporducd-Decomposition-map-into-Fin-Two-ℕ = {!!}
 
     compute-right-matching-correspondence-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ :
       (x : X) →
@@ -203,8 +201,7 @@ module _
                 ( matching-correspondence-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ)
                 ( x))))
         ( λ z → pr1 (pr1 z) ＝ x)
-    compute-right-matching-correspondence-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ
-      x p = {!!}
+    compute-right-matching-correspondence-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ = {!!}
 
     compute-right-inv-matching-correspondence-binary-coporducd-Decomposition-map-into-Fin-Two-ℕ :
       (y : fiber f (inr star)) →
@@ -212,8 +209,7 @@ module _
       map-inv-equiv
         ( matching-correspondence-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ)
         ( inr y)
-    compute-right-inv-matching-correspondence-binary-coporducd-Decomposition-map-into-Fin-Two-ℕ
-      y = {!!}
+    compute-right-inv-matching-correspondence-binary-coporducd-Decomposition-map-into-Fin-Two-ℕ = {!!}
 
     map-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ :
       binary-coproduct-Decomposition l1 l1 X
@@ -226,8 +222,7 @@ module _
     ( left-summand-binary-coproduct-Decomposition d +
       right-summand-binary-coproduct-Decomposition d) →
     Fin 2
-  map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ-helper
-    d (inl _) = {!!}
+  map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ-helper = {!!}
   map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ-helper
     d (inr _) = {!!}
 
@@ -247,8 +242,7 @@ module _
         ( t)) →
     Σ ( left-summand-binary-coproduct-Decomposition d)
       ( λ a → inl a ＝ t)
-  compute-left-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ-helper
-    d (inl y) x = {!!}
+  compute-left-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ-helper = {!!}
 
   compute-left-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ :
     (d : binary-coproduct-Decomposition l1 l1 X) →
@@ -259,8 +253,7 @@ module _
       ( λ a →
         inl a ＝
         map-equiv (matching-correspondence-binary-coproduct-Decomposition d) x)
-  compute-left-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ
-    d x p = {!!}
+  compute-left-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ = {!!}
 
   compute-right-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ-helper :
     (d : binary-coproduct-Decomposition l1 l1 X) →
@@ -273,8 +266,7 @@ module _
         ( t)) →
     Σ ( right-summand-binary-coproduct-Decomposition d)
       ( λ a → inr a ＝ t)
-  compute-right-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ-helper
-    d (inr y) x = {!!}
+  compute-right-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ-helper = {!!}
 
   compute-right-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ :
     (d : binary-coproduct-Decomposition l1 l1 X) →
@@ -285,8 +277,7 @@ module _
       ( λ a →
         inr a ＝
         map-equiv (matching-correspondence-binary-coproduct-Decomposition d) x)
-  compute-right-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ
-    d x p = {!!}
+  compute-right-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ = {!!}
 
   is-retraction-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ-helper :
     (f : X → Fin 2) →
@@ -295,8 +286,7 @@ module _
     ( map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ
         ( map-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ f) x ＝
       f x)
-  is-retraction-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ-helper
-    f x (inl y) = {!!}
+  is-retraction-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ-helper = {!!}
   is-retraction-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ-helper
     f x (inr y) = {!!}
 
@@ -304,8 +294,7 @@ module _
     ( map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ ∘
       map-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ) ~
     id
-  is-retraction-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ
-    f = {!!}
+  is-retraction-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ = {!!}
 
   equiv-left-summand-is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ :
     (d : binary-coproduct-Decomposition l1 l1 X) →
@@ -313,8 +302,7 @@ module _
       ( map-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ
         ( map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ d)) ≃
     left-summand-binary-coproduct-Decomposition d
-  equiv-left-summand-is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ
-    d = {!!}
+  equiv-left-summand-is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ = {!!}
 
   equiv-right-summand-is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ :
     (d : binary-coproduct-Decomposition l1 l1 X) →
@@ -322,8 +310,7 @@ module _
       ( map-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ
         ( map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ d)) ≃
     right-summand-binary-coproduct-Decomposition d
-  equiv-right-summand-is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ
-    d = {!!}
+  equiv-right-summand-is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ = {!!}
 
   compute-equiv-left-summand-is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ :
     ( d : binary-coproduct-Decomposition l1 l1 X) →
@@ -333,8 +320,7 @@ module _
           ( d)))) ~
     ( ( map-equiv
         ( matching-correspondence-binary-coproduct-Decomposition d)) ∘ pr1)
-  compute-equiv-left-summand-is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ
-    d (x , p) = {!!}
+  compute-equiv-left-summand-is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ = {!!}
 
   compute-equiv-right-summand-is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ :
     ( d : binary-coproduct-Decomposition l1 l1 X) →
@@ -344,8 +330,7 @@ module _
           ( d)))) ~
     ( map-equiv
       ( matching-correspondence-binary-coproduct-Decomposition d) ∘ pr1)
-  compute-equiv-right-summand-is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ
-    d (x , p) = {!!}
+  compute-equiv-right-summand-is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ = {!!}
 
   matching-correspondence-htpy-is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ-helper :
     ( d : binary-coproduct-Decomposition l1 l1 X) →
@@ -370,8 +355,7 @@ module _
           ( map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ d)))
       ( x) ＝
     map-equiv (matching-correspondence-binary-coproduct-Decomposition d) x
-  matching-correspondence-htpy-is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ-helper
-    d x (inl p) = {!!}
+  matching-correspondence-htpy-is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ-helper = {!!}
   matching-correspondence-htpy-is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ-helper
     d x (inr p) = {!!}
 
@@ -400,8 +384,7 @@ module _
           (map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ
             ( d)))) ~
     map-equiv (matching-correspondence-binary-coproduct-Decomposition d)
-  matching-correspondence-htpy-is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ
-    d x = {!!}
+  matching-correspondence-htpy-is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ = {!!}
 
   is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ :
     ( map-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ ∘

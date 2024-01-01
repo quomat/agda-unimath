@@ -50,7 +50,7 @@ zero-laws-Commutative-Monoid :
 zero-laws-Commutative-Monoid = {!!}
 
 Semiring : (l : Level) → UU (lsuc l)
-Semiring l1 = {!!}
+Semiring = {!!}
 
 module _
   {l : Level} (R : Semiring l)
@@ -136,13 +136,13 @@ module _
   zero-Semiring = {!!}
 
   is-zero-Semiring : type-Semiring R → UU l
-  is-zero-Semiring x = {!!}
+  is-zero-Semiring = {!!}
 
   is-nonzero-Semiring : type-Semiring R → UU l
-  is-nonzero-Semiring x = {!!}
+  is-nonzero-Semiring = {!!}
 
   is-zero-semiring-Prop : type-Semiring R → Prop l
-  is-zero-semiring-Prop x = {!!}
+  is-zero-semiring-Prop = {!!}
 
   left-unit-law-add-Semiring :
     (x : type-Semiring R) → Id (add-Semiring R zero-Semiring x) x
@@ -167,7 +167,7 @@ module _
   mul-Semiring = {!!}
 
   mul-Semiring' : type-Semiring R → type-Semiring R → type-Semiring R
-  mul-Semiring' x y = {!!}
+  mul-Semiring' = {!!}
 
   ap-mul-Semiring :
     {x x' y y' : type-Semiring R} (p : Id x x') (q : Id y y') →
@@ -180,7 +180,7 @@ module _
   associative-mul-Semiring = {!!}
 
   multiplicative-semigroup-Semiring : Semigroup l
-  pr1 multiplicative-semigroup-Semiring = {!!}
+  multiplicative-semigroup-Semiring = {!!}
 
   left-distributive-mul-add-Semiring :
     (x y z : type-Semiring R) →
@@ -222,7 +222,7 @@ module _
   is-unital-Semiring = {!!}
 
   multiplicative-monoid-Semiring : Monoid l
-  pr1 multiplicative-monoid-Semiring = {!!}
+  multiplicative-monoid-Semiring = {!!}
 
   one-Semiring : type-Semiring R
   one-Semiring = {!!}
@@ -244,7 +244,7 @@ module _
   where
 
   mul-nat-scalar-Semiring : ℕ → type-Semiring R → type-Semiring R
-  mul-nat-scalar-Semiring zero-ℕ x = {!!}
+  mul-nat-scalar-Semiring = {!!}
 
   ap-mul-nat-scalar-Semiring :
     {m n : ℕ} {x y : type-Semiring R} →

@@ -80,7 +80,7 @@ module _
   where
 
   id-hom-Large-Preorder : hom-Large-Preorder (λ l → l) P P
-  map-hom-Large-Preorder id-hom-Large-Preorder = {!!}
+  id-hom-Large-Preorder = {!!}
 ```
 
 ### Composition of order preserving maps between large preorders
@@ -104,7 +104,7 @@ module _
   preserves-order-comp-hom-Large-Preorder = {!!}
 
   comp-hom-Large-Preorder : hom-Large-Preorder (λ l → γg (γf l)) P R
-  map-hom-Large-Preorder comp-hom-Large-Preorder = {!!}
+  comp-hom-Large-Preorder = {!!}
 ```
 
 ### Homotopies of order preserving maps between large preorders
@@ -120,7 +120,7 @@ module _
   where
 
   htpy-hom-Large-Preorder : (f g : hom-Large-Preorder γ P Q) → UUω
-  htpy-hom-Large-Preorder f g = {!!}
+  htpy-hom-Large-Preorder = {!!}
 
   refl-htpy-hom-Large-Preorder :
     (f : hom-Large-Preorder γ P Q) → htpy-hom-Large-Preorder f f

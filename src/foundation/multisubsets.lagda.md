@@ -35,7 +35,7 @@ module _
   where
 
   multisubset : Set l1 → UU (l1 ⊔ lsuc l2)
-  multisubset U = {!!}
+  multisubset = {!!}
 
   is-locally-finite-multisubset :
     (U : Set l1) → multisubset U → UU (l1 ⊔ l2)
@@ -50,7 +50,7 @@ module _
   where
 
   locally-finite-multisubset : Set l1 → UU l1
-  locally-finite-multisubset U = {!!}
+  locally-finite-multisubset = {!!}
 
   support-locally-finite-multisubset :
     (U : Set l1) → locally-finite-multisubset U → UU l1

@@ -40,25 +40,25 @@ Abelian groups are groups of which the group operation is commutative
 
 ```agda
 is-abelian-prop-Group-𝔽 : {l : Level} → Group-𝔽 l → Prop l
-is-abelian-prop-Group-𝔽 G = {!!}
+is-abelian-prop-Group-𝔽 = {!!}
 
 is-abelian-Group-𝔽 : {l : Level} → Group-𝔽 l → UU l
-is-abelian-Group-𝔽 G = {!!}
+is-abelian-Group-𝔽 = {!!}
 
 is-prop-is-abelian-Group-𝔽 :
   {l : Level} (G : Group-𝔽 l) → is-prop (is-abelian-Group-𝔽 G)
-is-prop-is-abelian-Group-𝔽 G = {!!}
+is-prop-is-abelian-Group-𝔽 = {!!}
 ```
 
 ### The type of abelian groups
 
 ```agda
 Ab-𝔽 : (l : Level) → UU (lsuc l)
-Ab-𝔽 l = {!!}
+Ab-𝔽 = {!!}
 
 compute-abelian-group-𝔽 :
   {l : Level} → (A : Ab l) → is-finite (type-Ab A) → Ab-𝔽 l
-pr1 (compute-abelian-group-𝔽 A f) = {!!}
+compute-abelian-group-𝔽 = {!!}
 pr2 (compute-abelian-group-𝔽 A f) = {!!}
 
 module _
@@ -99,7 +99,7 @@ module _
   commutative-add-Ab-𝔽 = {!!}
 
   ab-Ab-𝔽 : Ab l
-  pr1 ab-Ab-𝔽 = {!!}
+  ab-Ab-𝔽 = {!!}
 
   ap-add-Ab-𝔽 :
     {x y x' y' : type-Ab-𝔽} → x ＝ x' → y ＝ y' → add-Ab-𝔽 x y ＝ add-Ab-𝔽 x' y'
@@ -211,7 +211,7 @@ module _
 
   compute-structure-abelian-group-𝔽 :
     structure-abelian-group-𝔽 → Ab-𝔽 l
-  pr1 (compute-structure-abelian-group-𝔽 (m , c)) = {!!}
+  compute-structure-abelian-group-𝔽 = {!!}
 
   is-finite-structure-abelian-group-𝔽 :
     is-finite structure-abelian-group-𝔽

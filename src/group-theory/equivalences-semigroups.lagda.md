@@ -61,7 +61,7 @@ module _
   equiv-Semigroup = {!!}
 
   is-equiv-hom-Semigroup : hom-Semigroup G H → UU (l1 ⊔ l2)
-  is-equiv-hom-Semigroup f = {!!}
+  is-equiv-hom-Semigroup = {!!}
 ```
 
 ## Properties
@@ -83,8 +83,7 @@ module _
             ( λ μ →
               preserves-mul-Semigroup G (pair (set-Semigroup G) μ) id)) →
     Id center-total-preserves-mul-id-Semigroup t
-  contraction-total-preserves-mul-id-Semigroup
-    ( (μ-G' , associative-G') , μ-id) = {!!}
+  contraction-total-preserves-mul-id-Semigroup = {!!}
 
   is-torsorial-preserves-mul-id-Semigroup :
     is-torsorial

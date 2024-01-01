@@ -35,10 +35,10 @@ module _
   where
 
   is-0-map : {A : UU l1} {B : UU l2} → (A → B) → UU (l1 ⊔ l2)
-  is-0-map {A} {B} f = {!!}
+  is-0-map = {!!}
 
   0-map : (A : UU l1) (B : UU l2) → UU (l1 ⊔ l2)
-  0-map A B = {!!}
+  0-map = {!!}
 
   map-0-map : {A : UU l1} {B : UU l2} → 0-map A B → A → B
   map-0-map = {!!}
@@ -60,7 +60,7 @@ module _
   abstract
     is-0-map-pr1 :
       {B : A → UU l2} → ((x : A) → is-set (B x)) → is-0-map (pr1 {B = B})
-    is-0-map-pr1 {B} H x = {!!}
+    is-0-map-pr1 = {!!}
 
   pr1-0-map :
     (B : A → Set l2) → 0-map (Σ A (λ x → type-Set (B x))) A

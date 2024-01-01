@@ -126,7 +126,7 @@ module _
             ( f))
           ( x) ＝
         pr1 f (map-inv-equiv e x)
-      tr-total-equiv e refl x = {!!}
+      tr-total-equiv = {!!}
 
     compute-left-equiv-binary-coproduct-Decomposition-Σ-Decomposition :
       ( a : left-summand-binary-coproduct-Decomposition (pr2 D)) →

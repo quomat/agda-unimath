@@ -36,7 +36,7 @@ module _
   where
 
   commutator-Group : type-Group G → type-Group G → type-Group G
-  commutator-Group x y = {!!}
+  commutator-Group = {!!}
 ```
 
 ## Properties

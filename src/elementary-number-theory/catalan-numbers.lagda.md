@@ -32,5 +32,5 @@ catalan-numbers : ℕ → ℕ
 catalan-numbers = {!!}
 
 catalan-numbers-binomial : ℕ → ℕ
-catalan-numbers-binomial n = {!!}
+catalan-numbers-binomial = {!!}
 ```

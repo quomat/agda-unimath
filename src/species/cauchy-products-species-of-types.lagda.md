@@ -35,5 +35,5 @@ module _
   where
 
   cauchy-product-species-types : species-types l1 (lsuc l1 ⊔ l2 ⊔ l3)
-  cauchy-product-species-types X = {!!}
+  cauchy-product-species-types = {!!}
 ```

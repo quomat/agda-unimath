@@ -58,15 +58,15 @@ commutative, i.e., if `xy = {!!}
 ```agda
 is-commutative-Ring :
   { l : Level} → Ring l → UU l
-is-commutative-Ring A = {!!}
+is-commutative-Ring = {!!}
 
 is-prop-is-commutative-Ring :
   { l : Level} (A : Ring l) → is-prop (is-commutative-Ring A)
-is-prop-is-commutative-Ring A = {!!}
+is-prop-is-commutative-Ring = {!!}
 
 Commutative-Ring :
   ( l : Level) → UU (lsuc l)
-Commutative-Ring l = {!!}
+Commutative-Ring = {!!}
 
 module _
   {l : Level} (A : Commutative-Ring l)
@@ -196,7 +196,7 @@ module _
   equiv-add-Commutative-Ring' = {!!}
 
   is-binary-equiv-add-Commutative-Ring : is-binary-equiv add-Commutative-Ring
-  pr1 is-binary-equiv-add-Commutative-Ring = {!!}
+  is-binary-equiv-add-Commutative-Ring = {!!}
 
   is-binary-emb-add-Commutative-Ring : is-binary-emb add-Commutative-Ring
   is-binary-emb-add-Commutative-Ring = {!!}
@@ -234,10 +234,10 @@ module _
   is-nonzero-Commutative-Ring = {!!}
 
   is-zero-commutative-ring-Prop : type-Commutative-Ring → Prop l
-  is-zero-commutative-ring-Prop x = {!!}
+  is-zero-commutative-ring-Prop = {!!}
 
   is-nonzero-commutative-ring-Prop : type-Commutative-Ring → Prop l
-  is-nonzero-commutative-ring-Prop x = {!!}
+  is-nonzero-commutative-ring-Prop = {!!}
 
   left-unit-law-add-Commutative-Ring :
     (x : type-Commutative-Ring) →
@@ -298,7 +298,7 @@ module _
   ap-mul-Commutative-Ring :
     {x x' y y' : type-Commutative-Ring} (p : Id x x') (q : Id y y') →
     Id (mul-Commutative-Ring x y) (mul-Commutative-Ring x' y')
-  ap-mul-Commutative-Ring p q = {!!}
+  ap-mul-Commutative-Ring = {!!}
 
   associative-mul-Commutative-Ring :
     (x y z : type-Commutative-Ring) →
@@ -307,7 +307,7 @@ module _
   associative-mul-Commutative-Ring = {!!}
 
   multiplicative-semigroup-Commutative-Ring : Semigroup l
-  pr1 multiplicative-semigroup-Commutative-Ring = {!!}
+  multiplicative-semigroup-Commutative-Ring = {!!}
 
   left-distributive-mul-add-Commutative-Ring :
     (x y z : type-Commutative-Ring) →
@@ -371,13 +371,13 @@ module _
     (x y z : type-Commutative-Ring) →
     mul-Commutative-Ring (mul-Commutative-Ring x y) z ＝
     mul-Commutative-Ring (mul-Commutative-Ring x z) y
-  right-swap-mul-Commutative-Ring x y z = {!!}
+  right-swap-mul-Commutative-Ring = {!!}
 
   left-swap-mul-Commutative-Ring :
     (x y z : type-Commutative-Ring) →
     mul-Commutative-Ring x (mul-Commutative-Ring y z) ＝
     mul-Commutative-Ring y (mul-Commutative-Ring x z)
-  left-swap-mul-Commutative-Ring x y z = {!!}
+  left-swap-mul-Commutative-Ring = {!!}
 
   interchange-mul-mul-Commutative-Ring :
     (x y z w : type-Commutative-Ring) →
@@ -410,13 +410,13 @@ module _
 
 ```agda
   multiplicative-commutative-monoid-Commutative-Ring : Commutative-Monoid l
-  pr1 multiplicative-commutative-monoid-Commutative-Ring = {!!}
+  multiplicative-commutative-monoid-Commutative-Ring = {!!}
 
   semiring-Commutative-Ring : Semiring l
   semiring-Commutative-Ring = {!!}
 
   commutative-semiring-Commutative-Ring : Commutative-Semiring l
-  pr1 commutative-semiring-Commutative-Ring = {!!}
+  commutative-semiring-Commutative-Ring = {!!}
 ```
 
 ### Computing multiplication with minus one in a ring

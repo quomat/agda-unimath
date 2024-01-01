@@ -68,8 +68,7 @@ associative-comp-hom-representing-arrow-Category :
     { x} (comp-hom-representing-arrow-Category {y} h g) f) ＝
   ( comp-hom-representing-arrow-Category
     { x} h (comp-hom-representing-arrow-Category {x} g f))
-associative-comp-hom-representing-arrow-Category
-  { true} {true} {true} {true} h g f = {!!}
+associative-comp-hom-representing-arrow-Category = {!!}
 associative-comp-hom-representing-arrow-Category {false} h g f = {!!}
 
 inv-associative-comp-hom-representing-arrow-Category :
@@ -81,8 +80,7 @@ inv-associative-comp-hom-representing-arrow-Category :
     { x} h (comp-hom-representing-arrow-Category {x} g f)) ＝
   ( comp-hom-representing-arrow-Category
     { x} (comp-hom-representing-arrow-Category {y} h g) f)
-inv-associative-comp-hom-representing-arrow-Category
-  { true} {true} {true} {true} h g f = {!!}
+inv-associative-comp-hom-representing-arrow-Category = {!!}
 inv-associative-comp-hom-representing-arrow-Category {false} h g f = {!!}
 
 associative-composition-operation-representing-arrow-Category :
@@ -119,7 +117,7 @@ pr1 (pr2 is-unital-composition-operation-representing-arrow-Category) = {!!}
 pr2 (pr2 is-unital-composition-operation-representing-arrow-Category) = {!!}
 
 representing-arrow-Precategory : Precategory lzero lzero
-pr1 representing-arrow-Precategory = {!!}
+representing-arrow-Precategory = {!!}
 pr1 (pr2 representing-arrow-Precategory) = {!!}
 pr1 (pr2 (pr2 representing-arrow-Precategory)) = {!!}
 pr2 (pr2 (pr2 representing-arrow-Precategory)) = {!!}
@@ -133,7 +131,7 @@ is-category-representing-arrow-Category :
 is-category-representing-arrow-Category = {!!}
 
 representing-arrow-Category : Category lzero lzero
-pr1 representing-arrow-Category = {!!}
+representing-arrow-Category = {!!}
 pr2 representing-arrow-Category = {!!}
 ```
 

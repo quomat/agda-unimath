@@ -36,7 +36,7 @@ comes equipped with a
 
 ```agda
 Premanifold : (l : Level) (n : ℕ) → UU (lsuc l)
-Premanifold l n = {!!}
+Premanifold = {!!}
 
 module _
   {l : Level} (n : ℕ) (M : Premanifold l n)
@@ -46,10 +46,10 @@ module _
   type-Premanifold = {!!}
 
   tangent-sphere-Premanifold : (x : type-Premanifold) → mere-sphere lzero n
-  tangent-sphere-Premanifold x = {!!}
+  tangent-sphere-Premanifold = {!!}
 
   type-tangent-sphere-Premanifold : (x : type-Premanifold) → UU lzero
-  type-tangent-sphere-Premanifold x = {!!}
+  type-tangent-sphere-Premanifold = {!!}
 
   mere-equiv-tangent-sphere-Premanifold :
     (x : type-Premanifold) →
@@ -57,7 +57,7 @@ module _
   mere-equiv-tangent-sphere-Premanifold = {!!}
 
   complement-Premanifold : (x : type-Premanifold) → UU l
-  complement-Premanifold x = {!!}
+  complement-Premanifold = {!!}
 
   inclusion-tangent-sphere-Premanifold :
     (x : type-Premanifold) →

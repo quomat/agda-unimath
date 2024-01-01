@@ -64,8 +64,7 @@ module _
   abstract
     is-equiv-precomp-Π-is-coherently-invertible :
       is-coherently-invertible f → dependent-universal-property-equiv f
-    is-equiv-precomp-Π-is-coherently-invertible
-      ( g , is-section-g , is-retraction-g , coh) C = {!!}
+    is-equiv-precomp-Π-is-coherently-invertible = {!!}
 ```
 
 ### If `f` is an equivalence, then `f` satisfies the dependent universal property of equivalences

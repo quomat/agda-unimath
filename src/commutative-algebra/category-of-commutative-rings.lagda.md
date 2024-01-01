@@ -36,7 +36,7 @@ is-large-category-Commutative-Ring-Large-Category :
 is-large-category-Commutative-Ring-Large-Category = {!!}
 
 Commutative-Ring-Large-Category : Large-Category lsuc _⊔_
-large-precategory-Large-Category Commutative-Ring-Large-Category = {!!}
+Commutative-Ring-Large-Category = {!!}
 is-large-category-Large-Category Commutative-Ring-Large-Category = {!!}
 ```
 

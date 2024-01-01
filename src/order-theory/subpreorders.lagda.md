@@ -46,23 +46,23 @@ module _
   eq-type-Subpreorder = {!!}
 
   leq-Subpreorder-Prop : (x y : type-Subpreorder) → Prop l2
-  leq-Subpreorder-Prop x y = {!!}
+  leq-Subpreorder-Prop = {!!}
 
   leq-Subpreorder : (x y : type-Subpreorder) → UU l2
-  leq-Subpreorder x y = {!!}
+  leq-Subpreorder = {!!}
 
   is-prop-leq-Subpreorder :
     (x y : type-Subpreorder) → is-prop (leq-Subpreorder x y)
   is-prop-leq-Subpreorder = {!!}
 
   refl-leq-Subpreorder : is-reflexive leq-Subpreorder
-  refl-leq-Subpreorder x = {!!}
+  refl-leq-Subpreorder = {!!}
 
   transitive-leq-Subpreorder : is-transitive leq-Subpreorder
-  transitive-leq-Subpreorder x y z = {!!}
+  transitive-leq-Subpreorder = {!!}
 
   preorder-Subpreorder : Preorder (l1 ⊔ l3) l2
-  pr1 preorder-Subpreorder = {!!}
+  preorder-Subpreorder = {!!}
 ```
 
 ### Inclusions of subpreorders
@@ -100,5 +100,5 @@ module _
   transitive-inclusion-Subpreorder = {!!}
 
   Sub-Preorder : (l : Level) → Preorder (l1 ⊔ lsuc l) (l1 ⊔ l)
-  pr1 (Sub-Preorder l) = {!!}
+  Sub-Preorder = {!!}
 ```

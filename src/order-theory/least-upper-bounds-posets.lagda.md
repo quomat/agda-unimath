@@ -50,10 +50,10 @@ module _
   where
 
   is-least-binary-upper-bound-Poset-Prop : type-Poset P → Prop (l1 ⊔ l2)
-  is-least-binary-upper-bound-Poset-Prop x = {!!}
+  is-least-binary-upper-bound-Poset-Prop = {!!}
 
   is-least-binary-upper-bound-Poset : type-Poset P → UU (l1 ⊔ l2)
-  is-least-binary-upper-bound-Poset x = {!!}
+  is-least-binary-upper-bound-Poset = {!!}
 
   is-prop-is-least-binary-upper-bound-Poset :
     (x : type-Poset P) →
@@ -115,15 +115,14 @@ module _
 
   all-elements-equal-has-least-binary-upper-bound-Poset :
     all-elements-equal has-least-binary-upper-bound-Poset
-  all-elements-equal-has-least-binary-upper-bound-Poset
-    (pair u H) (pair v K) = {!!}
+  all-elements-equal-has-least-binary-upper-bound-Poset = {!!}
 
   is-prop-has-least-binary-upper-bound-Poset :
     is-prop has-least-binary-upper-bound-Poset
   is-prop-has-least-binary-upper-bound-Poset = {!!}
 
   has-least-binary-upper-bound-Poset-Prop : Prop (l1 ⊔ l2)
-  pr1 has-least-binary-upper-bound-Poset-Prop = {!!}
+  has-least-binary-upper-bound-Poset-Prop = {!!}
 
 module _
   {l1 l2 : Level} (P : Poset l1 l2) {a b : type-Poset P}
@@ -192,15 +191,14 @@ module _
 
   all-elements-equal-has-least-upper-bound-family-of-elements-Poset :
     all-elements-equal has-least-upper-bound-family-of-elements-Poset
-  all-elements-equal-has-least-upper-bound-family-of-elements-Poset
-    ( x , H) (y , K) = {!!}
+  all-elements-equal-has-least-upper-bound-family-of-elements-Poset = {!!}
 
   is-prop-has-least-upper-bound-family-of-elements-Poset :
     is-prop has-least-upper-bound-family-of-elements-Poset
   is-prop-has-least-upper-bound-family-of-elements-Poset = {!!}
 
   has-least-upper-bound-family-of-elements-Poset-Prop : Prop (l1 ⊔ l2 ⊔ l3)
-  pr1 has-least-upper-bound-family-of-elements-Poset-Prop = {!!}
+  has-least-upper-bound-family-of-elements-Poset-Prop = {!!}
 
 module _
   {l1 l2 l3 : Level} (P : Poset l1 l2) {I : UU l3} {a : I → type-Poset P}

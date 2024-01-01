@@ -104,7 +104,7 @@ module _
   where
 
   id-hom-sequential-diagram : hom-sequential-diagram A A
-  pr1 id-hom-sequential-diagram n = {!!}
+  id-hom-sequential-diagram = {!!}
 ```
 
 ### Composition of morphisms of sequential diagrams

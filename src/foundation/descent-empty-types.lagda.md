@@ -25,11 +25,11 @@ module _
   where
 
   cone-empty : is-empty C → (C → B) → cone ex-falso g C
-  cone-empty p q = {!!}
+  cone-empty = {!!}
 
   abstract
     descent-empty : (c : cone ex-falso g C) → is-pullback ex-falso g c
-    descent-empty c = {!!}
+    descent-empty = {!!}
 
   abstract
     descent-empty' :

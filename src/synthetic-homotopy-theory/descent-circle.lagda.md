@@ -79,7 +79,7 @@ by evaluation at `base` and
 descent-data-family-circle :
   { l1 l2 : Level} {S : UU l1} (l : free-loop S) →
   ( S → UU l2) → descent-data-circle l2
-pr1 (descent-data-family-circle l A) = {!!}
+descent-data-family-circle = {!!}
 pr2 (descent-data-family-circle l A) = {!!}
 ```
 
@@ -152,15 +152,15 @@ module _
 
   family-for-descent-data-circle :
     { l2 : Level} → descent-data-circle l2 → UU (l1 ⊔ lsuc l2)
-  family-for-descent-data-circle {l2} P = {!!}
+  family-for-descent-data-circle = {!!}
 
   descent-data-circle-for-family :
     { l2 : Level} → (S → UU l2) → UU (lsuc l2)
-  descent-data-circle-for-family {l2} A = {!!}
+  descent-data-circle-for-family = {!!}
 
   family-with-descent-data-circle :
     ( l2 : Level) → UU (l1 ⊔ lsuc l2)
-  family-with-descent-data-circle l2 = {!!}
+  family-with-descent-data-circle = {!!}
 
 module _
   { l1 l2 : Level} {S : UU l1} {l : free-loop S}
@@ -215,7 +215,7 @@ module _
   family-for-family-with-descent-data-circle :
     family-for-descent-data-circle l
       descent-data-family-with-descent-data-circle
-  pr1 family-for-family-with-descent-data-circle = {!!}
+  family-for-family-with-descent-data-circle = {!!}
 ```
 
 ## Properties
@@ -274,11 +274,11 @@ Given a type `X` and an automorphism `e : X ≃ X`, there is a unique type famil
 ```agda
 comparison-descent-data-circle :
   ( l1 : Level) → free-loop (UU l1) → descent-data-circle l1
-comparison-descent-data-circle l1 = {!!}
+comparison-descent-data-circle = {!!}
 
 is-equiv-comparison-descent-data-circle :
   ( l1 : Level) → is-equiv (comparison-descent-data-circle l1)
-is-equiv-comparison-descent-data-circle l1 = {!!}
+is-equiv-comparison-descent-data-circle = {!!}
 
 module _
   { l1 l2 : Level} {S : UU l1} (l : free-loop S)
@@ -289,17 +289,17 @@ module _
       ( descent-data-family-circle l)
       ( comparison-descent-data-circle l2)
       ( ev-free-loop l (UU l2))
-  triangle-comparison-descent-data-circle A = {!!}
+  triangle-comparison-descent-data-circle = {!!}
 
   is-equiv-descent-data-family-circle-universal-property-circle :
     ( up-circle : universal-property-circle (lsuc l2) l) →
     is-equiv (descent-data-family-circle l)
-  is-equiv-descent-data-family-circle-universal-property-circle up-circle = {!!}
+  is-equiv-descent-data-family-circle-universal-property-circle = {!!}
 
 unique-family-property-circle :
   { l1 : Level} (l2 : Level) {S : UU l1} (l : free-loop S) →
   UU (l1 ⊔ lsuc l2)
-unique-family-property-circle l2 {S} l = {!!}
+unique-family-property-circle = {!!}
 
 module _
   { l1 l2 : Level} {S : UU l1} (l : free-loop S)
@@ -308,15 +308,15 @@ module _
 
   unique-family-property-universal-property-circle :
     unique-family-property-circle l2 l
-  unique-family-property-universal-property-circle Q = {!!}
+  unique-family-property-universal-property-circle = {!!}
 
   family-for-descent-data-circle-descent-data :
     ( P : descent-data-circle l2) →
     family-for-descent-data-circle l P
-  family-for-descent-data-circle-descent-data P = {!!}
+  family-for-descent-data-circle-descent-data = {!!}
 
   family-with-descent-data-circle-descent-data :
     ( P : descent-data-circle l2) →
     ( family-with-descent-data-circle l l2)
-  pr1 (family-with-descent-data-circle-descent-data P) = {!!}
+  family-with-descent-data-circle-descent-data = {!!}
 ```

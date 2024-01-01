@@ -48,7 +48,7 @@ module _
     is-category-Π-Category = {!!}
 
   Π-Category : Category (l1 ⊔ l2) (l1 ⊔ l3)
-  pr1 Π-Category = {!!}
+  Π-Category = {!!}
 
   obj-Π-Category : UU (l1 ⊔ l2)
   obj-Π-Category = {!!}

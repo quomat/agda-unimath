@@ -52,13 +52,13 @@ module _
   where
 
   is-lift : {X : UU l3} → (X → B) → (X → A) → UU (l2 ⊔ l3)
-  is-lift f g = {!!}
+  is-lift = {!!}
 
   lift : {X : UU l3} → (X → B) → UU (l1 ⊔ l2 ⊔ l3)
-  lift {X} f = {!!}
+  lift = {!!}
 
   total-lift : (X : UU l3) → UU (l1 ⊔ l2 ⊔ l3)
-  total-lift X = {!!}
+  total-lift = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} (i : A → B)
@@ -97,7 +97,7 @@ module _
   where
 
   is-lift-comp-vertical : is-lift i f g → is-lift j h f → is-lift (j ∘ i) h g
-  is-lift-comp-vertical F H x = {!!}
+  is-lift-comp-vertical = {!!}
 ```
 
 ### Horizontal composition of lifts of maps
@@ -140,7 +140,7 @@ module _
   where
 
   is-lift-left-whisk : (h : B → S) → is-lift i f g → is-lift (h ∘ i) (h ∘ f) g
-  is-lift-left-whisk h H x = {!!}
+  is-lift-left-whisk = {!!}
 ```
 
 ## Right whiskering of lifts of maps
@@ -161,7 +161,7 @@ module _
   where
 
   is-lift-right-whisk : is-lift i f g → (h : S → X) → is-lift i (f ∘ h) (g ∘ h)
-  is-lift-right-whisk H h s = {!!}
+  is-lift-right-whisk = {!!}
 ```
 
 ## Properties
@@ -179,13 +179,13 @@ module _
   coherence-htpy-lift = {!!}
 
   htpy-lift : (l l' : lift i f) → UU (l1 ⊔ l2 ⊔ l3)
-  htpy-lift l l' = {!!}
+  htpy-lift = {!!}
 
   refl-htpy-lift : (l : lift i f) → htpy-lift l l
-  pr1 (refl-htpy-lift l) = {!!}
+  refl-htpy-lift = {!!}
 
   htpy-eq-lift : (l l' : lift i f) → l ＝ l' → htpy-lift l l'
-  htpy-eq-lift l .l refl = {!!}
+  htpy-eq-lift = {!!}
 
   is-torsorial-htpy-lift :
     (l : lift i f) → is-torsorial (htpy-lift l)
@@ -200,7 +200,7 @@ module _
   extensionality-lift = {!!}
 
   eq-htpy-lift : (l l' : lift i f) → htpy-lift l l' → l ＝ l'
-  eq-htpy-lift l l' = {!!}
+  eq-htpy-lift = {!!}
 ```
 
 ### The total type of lifts of maps is equivalent to `X → A`

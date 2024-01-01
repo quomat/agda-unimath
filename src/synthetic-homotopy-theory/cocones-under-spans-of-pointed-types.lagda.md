@@ -86,7 +86,7 @@ module _
   coherence-square-cocone-Pointed-Type = {!!}
 
   cocone-type-cocone-Pointed-Type : cocone (pr1 f) (pr1 g) (pr1 X)
-  pr1 cocone-type-cocone-Pointed-Type = {!!}
+  cocone-type-cocone-Pointed-Type = {!!}
 ```
 
 ## See also

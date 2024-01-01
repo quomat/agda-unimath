@@ -38,7 +38,7 @@ module _
   where
 
   obj-Π-Large-Precategory : (l2 : Level) → UU (l1 ⊔ α l2)
-  obj-Π-Large-Precategory l2 = {!!}
+  obj-Π-Large-Precategory = {!!}
 
   hom-set-Π-Large-Precategory :
     {l2 l3 : Level} →

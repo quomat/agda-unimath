@@ -39,7 +39,7 @@ module _
   where
 
   is-contr-map : (A → B) → UU (l1 ⊔ l2)
-  is-contr-map f = {!!}
+  is-contr-map = {!!}
 ```
 
 ## Properties
@@ -52,7 +52,7 @@ module _
   where
 
   map-inv-is-contr-map : is-contr-map f → B → A
-  map-inv-is-contr-map H y = {!!}
+  map-inv-is-contr-map = {!!}
 
   is-section-map-inv-is-contr-map :
     (H : is-contr-map f) → (f ∘ (map-inv-is-contr-map H)) ~ id
@@ -64,7 +64,7 @@ module _
 
   abstract
     is-equiv-is-contr-map : is-contr-map f → is-equiv f
-    is-equiv-is-contr-map H = {!!}
+    is-equiv-is-contr-map = {!!}
 ```
 
 ### Any coherently invertible map is a contractible map

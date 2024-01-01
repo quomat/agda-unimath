@@ -54,7 +54,7 @@ module _
 
 ```agda
 constant-type-family : {l1 l2 : Level} (A : UU l1) (B : UU l2) → A → UU l2
-constant-type-family A B a = {!!}
+constant-type-family = {!!}
 
 is-constant-type-family-constant-type-family :
   {l1 l2 : Level} (A : UU l1) (B : UU l2) →

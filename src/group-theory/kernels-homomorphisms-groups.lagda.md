@@ -42,10 +42,10 @@ module _
   where
 
   subset-kernel-hom-Group : subset-Group k G
-  subset-kernel-hom-Group x = {!!}
+  subset-kernel-hom-Group = {!!}
 
   is-in-kernel-hom-Group : type-Group G → UU k
-  is-in-kernel-hom-Group x = {!!}
+  is-in-kernel-hom-Group = {!!}
 
   contains-unit-subset-kernel-hom-Group :
     is-in-kernel-hom-Group (unit-Group G)
@@ -60,7 +60,7 @@ module _
   is-closed-under-inverses-subset-kernel-hom-Group = {!!}
 
   subgroup-kernel-hom-Group : Subgroup k G
-  pr1 subgroup-kernel-hom-Group = {!!}
+  subgroup-kernel-hom-Group = {!!}
 
   group-kernel-hom-Group : Group (l ⊔ k)
   group-kernel-hom-Group = {!!}
@@ -84,7 +84,7 @@ module _
   is-emb-inclusion-kernel-hom-Group = {!!}
 
   emb-inclusion-kernel-hom-Group : emb-Group group-kernel-hom-Group G
-  pr1 emb-inclusion-kernel-hom-Group = {!!}
+  emb-inclusion-kernel-hom-Group = {!!}
 ```
 
 ## Properties
@@ -99,5 +99,5 @@ module _
   is-normal-kernel-hom-Group = {!!}
 
   kernel-hom-Group : Normal-Subgroup l2 G
-  pr1 kernel-hom-Group = {!!}
+  kernel-hom-Group = {!!}
 ```

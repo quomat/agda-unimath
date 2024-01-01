@@ -23,7 +23,7 @@ from the standard `n`-element set to the standard `m`-element set
 
 ```agda
 stirling-number-second-kind : ℕ → ℕ → ℕ
-stirling-number-second-kind zero-ℕ zero-ℕ = {!!}
+stirling-number-second-kind = {!!}
 stirling-number-second-kind zero-ℕ (succ-ℕ n) = {!!}
 stirling-number-second-kind (succ-ℕ m) zero-ℕ = {!!}
 stirling-number-second-kind (succ-ℕ m) (succ-ℕ n) = {!!}

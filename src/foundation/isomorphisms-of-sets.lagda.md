@@ -34,7 +34,7 @@ module _
   where
 
   is-iso-Set : (f : hom-Set A B) → UU (l1 ⊔ l2)
-  is-iso-Set f = {!!}
+  is-iso-Set = {!!}
 
   iso-Set : UU (l1 ⊔ l2)
   iso-Set = {!!}
@@ -50,19 +50,19 @@ module _
   is-proof-irrelevant-is-iso-Set = {!!}
 
   is-prop-is-iso-Set : (f : hom-Set A B) → is-prop (is-iso-Set f)
-  is-prop-is-iso-Set f = {!!}
+  is-prop-is-iso-Set = {!!}
 
   is-iso-is-equiv-Set : {f : hom-Set A B} → is-equiv f → is-iso-Set f
-  pr1 (is-iso-is-equiv-Set H) = {!!}
+  is-iso-is-equiv-Set = {!!}
 
   is-equiv-is-iso-Set : {f : hom-Set A B} → is-iso-Set f → is-equiv f
-  is-equiv-is-iso-Set H = {!!}
+  is-equiv-is-iso-Set = {!!}
 
   iso-equiv-Set : type-equiv-Set A B → iso-Set
-  pr1 (iso-equiv-Set e) = {!!}
+  iso-equiv-Set = {!!}
 
   equiv-iso-Set : iso-Set → type-equiv-Set A B
-  pr1 (equiv-iso-Set f) = {!!}
+  equiv-iso-Set = {!!}
 
   equiv-iso-equiv-Set : type-equiv-Set A B ≃ iso-Set
   equiv-iso-equiv-Set = {!!}

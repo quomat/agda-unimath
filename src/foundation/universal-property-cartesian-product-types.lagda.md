@@ -60,7 +60,7 @@ module _
   where
 
   cone-prod : cone (const A unit star) (const B unit star) (A × B)
-  pr1 cone-prod = {!!}
+  cone-prod = {!!}
 ```
 
 Cartesian products are a special case of pullbacks.
@@ -75,11 +75,11 @@ Cartesian products are a special case of pullbacks.
 
   abstract
     is-section-inv-gap-prod : (gap-prod ∘ inv-gap-prod) ~ id
-    is-section-inv-gap-prod (pair a (pair b p)) = {!!}
+    is-section-inv-gap-prod = {!!}
 
   abstract
     is-retraction-inv-gap-prod : (inv-gap-prod ∘ gap-prod) ~ id
-    is-retraction-inv-gap-prod (pair a b) = {!!}
+    is-retraction-inv-gap-prod = {!!}
 
   abstract
     is-pullback-prod :

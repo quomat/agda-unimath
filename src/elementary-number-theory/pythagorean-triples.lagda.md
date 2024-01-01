@@ -26,5 +26,5 @@ A Pythagorean triple is a triple `(a,b,c)` of natural numbers such that
 
 ```agda
 is-pythagorean-triple : ℕ → ℕ → ℕ → UU lzero
-is-pythagorean-triple a b c = {!!}
+is-pythagorean-triple = {!!}
 ```

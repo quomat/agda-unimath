@@ -48,13 +48,13 @@ module _
   vec-Ring = {!!}
 
   head-vec-Ring : {n : ℕ} → vec-Ring (succ-ℕ n) → type-Ring R
-  head-vec-Ring v = {!!}
+  head-vec-Ring = {!!}
 
   tail-vec-Ring : {n : ℕ} → vec-Ring (succ-ℕ n) → vec-Ring n
-  tail-vec-Ring v = {!!}
+  tail-vec-Ring = {!!}
 
   snoc-vec-Ring : {n : ℕ} → vec-Ring n → type-Ring R → vec-Ring (succ-ℕ n)
-  snoc-vec-Ring v r = {!!}
+  snoc-vec-Ring = {!!}
 ```
 
 ### Functional vectors on rings
@@ -107,7 +107,7 @@ module _
   where
 
   zero-functional-vec-Ring : (n : ℕ) → functional-vec-Ring R n
-  zero-functional-vec-Ring n i = {!!}
+  zero-functional-vec-Ring = {!!}
 ```
 
 ### Pointwise addition of vectors on a ring
@@ -130,7 +130,7 @@ module _
   associative-add-vec-Ring = {!!}
 
   vec-Ring-Semigroup : ℕ → Semigroup l
-  pr1 (vec-Ring-Semigroup n) = {!!}
+  vec-Ring-Semigroup = {!!}
 
   left-unit-law-add-vec-Ring :
     {n : ℕ} (v : vec-Ring R n) → Id (add-vec-Ring (zero-vec-Ring R) v) v
@@ -141,14 +141,14 @@ module _
   right-unit-law-add-vec-Ring = {!!}
 
   vec-Ring-Monoid : ℕ → Monoid l
-  pr1 (vec-Ring-Monoid n) = {!!}
+  vec-Ring-Monoid = {!!}
 
   commutative-add-vec-Ring :
     {n : ℕ} (v w : vec-Ring R n) → Id (add-vec-Ring v w) (add-vec-Ring w v)
   commutative-add-vec-Ring = {!!}
 
   vec-Ring-Commutative-Monoid : ℕ → Commutative-Monoid l
-  pr1 (vec-Ring-Commutative-Monoid n) = {!!}
+  vec-Ring-Commutative-Monoid = {!!}
 ```
 
 #### Pointwise addition of functional vectors on a ring
@@ -169,7 +169,7 @@ module _
   associative-add-functional-vec-Ring = {!!}
 
   functional-vec-Ring-Semigroup : ℕ → Semigroup l
-  pr1 (functional-vec-Ring-Semigroup n) = {!!}
+  functional-vec-Ring-Semigroup = {!!}
 
   left-unit-law-add-functional-vec-Ring :
     (n : ℕ) (v : functional-vec-Ring R n) →
@@ -182,7 +182,7 @@ module _
   right-unit-law-add-functional-vec-Ring = {!!}
 
   functional-vec-Ring-Monoid : ℕ → Monoid l
-  pr1 (functional-vec-Ring-Monoid n) = {!!}
+  functional-vec-Ring-Monoid = {!!}
 
   commutative-add-functional-vec-Ring :
     (n : ℕ) (v w : functional-vec-Ring R n) →
@@ -190,7 +190,7 @@ module _
   commutative-add-functional-vec-Ring = {!!}
 
   functional-vec-Ring-Commutative-Monoid : ℕ → Commutative-Monoid l
-  pr1 (functional-vec-Ring-Commutative-Monoid n) = {!!}
+  functional-vec-Ring-Commutative-Monoid = {!!}
 ```
 
 ### The negative of a vector on a ring
@@ -214,14 +214,14 @@ module _
   right-inverse-law-add-vec-Ring = {!!}
 
   is-unital-vec-Ring : (n : ℕ) → is-unital (add-vec-Ring R {n})
-  pr1 (is-unital-vec-Ring n) = {!!}
+  is-unital-vec-Ring = {!!}
 
   is-group-vec-Ring : (n : ℕ) → is-group (vec-Ring-Semigroup R n)
-  pr1 (is-group-vec-Ring n) = {!!}
+  is-group-vec-Ring = {!!}
 
   vec-Ring-Group : ℕ → Group l
-  pr1 (vec-Ring-Group n) = {!!}
+  vec-Ring-Group = {!!}
 
   vec-Ring-Ab : ℕ → Ab l
-  pr1 (vec-Ring-Ab n) = {!!}
+  vec-Ring-Ab = {!!}
 ```

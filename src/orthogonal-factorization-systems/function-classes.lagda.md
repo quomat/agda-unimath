@@ -35,7 +35,7 @@ of all functions in a given universe.
 
 ```agda
 function-class : (l1 l2 l3 : Level) → UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-function-class l1 l2 l3 = {!!}
+function-class = {!!}
 
 module _
   {l1 l2 l3 : Level} (P : function-class l1 l2 l3)
@@ -49,7 +49,7 @@ module _
   is-prop-is-in-function-class = {!!}
 
   type-function-class : (A : UU l1) (B : UU l2) → UU (l1 ⊔ l2 ⊔ l3)
-  type-function-class A B = {!!}
+  type-function-class = {!!}
 
   inclusion-function-class :
     {A : UU l1} {B : UU l2} → type-function-class A B → A → B
@@ -96,7 +96,7 @@ module _
   is-prop-has-equivalences-function-class = {!!}
 
   has-equivalences-function-class-Prop : Prop (lsuc l1 ⊔ lsuc l2 ⊔ l3)
-  pr1 has-equivalences-function-class-Prop = {!!}
+  has-equivalences-function-class-Prop = {!!}
 ```
 
 ### Composition closed function classes
@@ -117,7 +117,7 @@ module _
   is-prop-is-closed-under-composition-function-class = {!!}
 
   is-closed-under-composition-function-class-Prop : Prop (lsuc l1 ⊔ l2)
-  pr1 is-closed-under-composition-function-class-Prop = {!!}
+  is-closed-under-composition-function-class-Prop = {!!}
 
 composition-closed-function-class :
   (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
@@ -155,7 +155,7 @@ module _
   is-prop-is-pullback-stable-function-class = {!!}
 
   is-pullback-stable-function-class-Prop : Prop (lsuc l1 ⊔ lsuc l2 ⊔ l3)
-  pr1 is-pullback-stable-function-class-Prop = {!!}
+  is-pullback-stable-function-class-Prop = {!!}
 
 pullback-stable-function-class :
   (l1 l2 l3 : Level) → UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)

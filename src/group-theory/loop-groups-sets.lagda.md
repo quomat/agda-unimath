@@ -50,13 +50,13 @@ module _
   is-set-type-loop-Set = {!!}
 
   set-loop-Set : Set (lsuc l)
-  pr1 set-loop-Set = {!!}
+  set-loop-Set = {!!}
 
   has-associative-mul-loop-Set : has-associative-mul-Set (set-loop-Set)
-  pr1 has-associative-mul-loop-Set = {!!}
+  has-associative-mul-loop-Set = {!!}
 
   loop-semigroup-Set : Semigroup (lsuc l)
-  pr1 loop-semigroup-Set = {!!}
+  loop-semigroup-Set = {!!}
 
   is-unital-Semigroup-loop-semigroup-Set :
     is-unital-Semigroup loop-semigroup-Set
@@ -67,7 +67,7 @@ module _
   is-group-loop-semigroup-Set' = {!!}
 
   loop-group-Set : Group (lsuc l)
-  pr1 loop-group-Set = {!!}
+  loop-group-Set = {!!}
 ```
 
 ## Properties

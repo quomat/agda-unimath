@@ -117,7 +117,7 @@ module _
   abstract
     is-emb-subgroup-prop-is-nontrivial-Group :
       is-nontrivial-Group G → is-emb (subgroup-Prop {l2 = l2} G)
-    is-emb-subgroup-prop-is-nontrivial-Group H = {!!}
+    is-emb-subgroup-prop-is-nontrivial-Group = {!!}
 ```
 
 ### If the map `subgroup-Prop G : Prop lzero → Subgroup l1 G` is an embedding, then `G` is not a trivial group
@@ -138,5 +138,5 @@ module _
 
   is-not-trivial-is-emb-subgroup-Prop :
     is-emb (subgroup-Prop {l2 = lzero} G) → is-not-trivial-Group G
-  is-not-trivial-is-emb-subgroup-Prop H K = {!!}
+  is-not-trivial-is-emb-subgroup-Prop = {!!}
 ```

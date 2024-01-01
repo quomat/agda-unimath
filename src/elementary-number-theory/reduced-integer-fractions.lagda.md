@@ -43,7 +43,7 @@ coprime.
 
 ```agda
 is-reduced-fraction-ℤ : fraction-ℤ → UU lzero
-is-reduced-fraction-ℤ x = {!!}
+is-reduced-fraction-ℤ = {!!}
 ```
 
 ## Properties and constructions
@@ -53,7 +53,7 @@ is-reduced-fraction-ℤ x = {!!}
 ```agda
 is-prop-is-reduced-fraction-ℤ :
   (x : fraction-ℤ) → is-prop (is-reduced-fraction-ℤ x)
-is-prop-is-reduced-fraction-ℤ x = {!!}
+is-prop-is-reduced-fraction-ℤ = {!!}
 ```
 
 ### Any fraction can be reduced
@@ -64,10 +64,10 @@ reduce-numerator-fraction-ℤ :
   div-ℤ
     ( gcd-ℤ (numerator-fraction-ℤ x) (denominator-fraction-ℤ x))
     ( numerator-fraction-ℤ x)
-reduce-numerator-fraction-ℤ x = {!!}
+reduce-numerator-fraction-ℤ = {!!}
 
 int-reduce-numerator-fraction-ℤ : fraction-ℤ → ℤ
-int-reduce-numerator-fraction-ℤ x = {!!}
+int-reduce-numerator-fraction-ℤ = {!!}
 
 eq-reduce-numerator-fraction-ℤ :
   (x : fraction-ℤ) →
@@ -75,17 +75,17 @@ eq-reduce-numerator-fraction-ℤ :
     ( int-reduce-numerator-fraction-ℤ x)
     ( gcd-ℤ (numerator-fraction-ℤ x) (denominator-fraction-ℤ x))) ＝
   ( numerator-fraction-ℤ x)
-eq-reduce-numerator-fraction-ℤ x = {!!}
+eq-reduce-numerator-fraction-ℤ = {!!}
 
 reduce-denominator-fraction-ℤ :
   (x : fraction-ℤ) →
   div-ℤ
     ( gcd-ℤ (numerator-fraction-ℤ x) (denominator-fraction-ℤ x))
     ( denominator-fraction-ℤ x)
-reduce-denominator-fraction-ℤ x = {!!}
+reduce-denominator-fraction-ℤ = {!!}
 
 int-reduce-denominator-fraction-ℤ : fraction-ℤ → ℤ
-int-reduce-denominator-fraction-ℤ x = {!!}
+int-reduce-denominator-fraction-ℤ = {!!}
 
 eq-reduce-denominator-fraction-ℤ :
   (x : fraction-ℤ) →
@@ -93,27 +93,27 @@ eq-reduce-denominator-fraction-ℤ :
     ( int-reduce-denominator-fraction-ℤ x)
     ( gcd-ℤ (numerator-fraction-ℤ x) (denominator-fraction-ℤ x))) ＝
   ( denominator-fraction-ℤ x)
-eq-reduce-denominator-fraction-ℤ x = {!!}
+eq-reduce-denominator-fraction-ℤ = {!!}
 
 is-positive-int-reduce-denominator-fraction-ℤ :
   (x : fraction-ℤ) → is-positive-ℤ (int-reduce-denominator-fraction-ℤ x)
-is-positive-int-reduce-denominator-fraction-ℤ x = {!!}
+is-positive-int-reduce-denominator-fraction-ℤ = {!!}
 
 reduce-fraction-ℤ : fraction-ℤ → fraction-ℤ
-reduce-fraction-ℤ x = {!!}
+reduce-fraction-ℤ = {!!}
 
 is-reduced-reduce-fraction-ℤ :
   (x : fraction-ℤ) → is-reduced-fraction-ℤ (reduce-fraction-ℤ x)
-is-reduced-reduce-fraction-ℤ x = {!!}
+is-reduced-reduce-fraction-ℤ = {!!}
 
 sim-reduced-fraction-ℤ :
   (x : fraction-ℤ) → (sim-fraction-ℤ x (reduce-fraction-ℤ x))
-sim-reduced-fraction-ℤ x = {!!}
+sim-reduced-fraction-ℤ = {!!}
 
 reduce-preserves-sim-ℤ :
   (x y : fraction-ℤ) (H : sim-fraction-ℤ x y) →
   sim-fraction-ℤ (reduce-fraction-ℤ x) (reduce-fraction-ℤ y)
-reduce-preserves-sim-ℤ x y H = {!!}
+reduce-preserves-sim-ℤ = {!!}
 ```
 
 ### Two similar fractions have equal reduced form
@@ -125,14 +125,14 @@ sim-unique-numerator-reduce-fraction-ℤ :
   sim-unit-ℤ
     ( int-reduce-numerator-fraction-ℤ x)
     ( int-reduce-numerator-fraction-ℤ y)
-sim-unique-numerator-reduce-fraction-ℤ x y H = {!!}
+sim-unique-numerator-reduce-fraction-ℤ = {!!}
 
 unique-numerator-reduce-fraction-ℤ :
   ( x y : fraction-ℤ) →
   ( H : sim-fraction-ℤ x y) →
   int-reduce-numerator-fraction-ℤ x ＝
   int-reduce-numerator-fraction-ℤ y
-unique-numerator-reduce-fraction-ℤ x y H = {!!}
+unique-numerator-reduce-fraction-ℤ = {!!}
 
       reduced-eqn :
         mul-ℤ
@@ -158,15 +158,15 @@ sim-unique-denominator-reduce-fraction-ℤ :
   sim-unit-ℤ
     ( int-reduce-denominator-fraction-ℤ x)
     ( int-reduce-denominator-fraction-ℤ y)
-sim-unique-denominator-reduce-fraction-ℤ x y H = {!!}
+sim-unique-denominator-reduce-fraction-ℤ = {!!}
 
 unique-denominator-reduce-fraction-ℤ :
   (x y : fraction-ℤ) → (H : sim-fraction-ℤ x y) →
   int-reduce-denominator-fraction-ℤ x ＝ int-reduce-denominator-fraction-ℤ y
-unique-denominator-reduce-fraction-ℤ x y H = {!!}
+unique-denominator-reduce-fraction-ℤ = {!!}
 
 unique-reduce-fraction-ℤ :
   (x y : fraction-ℤ) → (H : sim-fraction-ℤ x y) →
   reduce-fraction-ℤ x ＝ reduce-fraction-ℤ y
-unique-reduce-fraction-ℤ x y H = {!!}
+unique-reduce-fraction-ℤ = {!!}
 ```

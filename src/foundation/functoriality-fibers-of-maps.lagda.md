@@ -94,7 +94,7 @@ module _
     hom-arrow
       ( inclusion-fiber f {b})
       ( inclusion-fiber g {map-codomain-hom-arrow f g α b})
-  pr1 hom-arrow-fiber = {!!}
+  hom-arrow-fiber = {!!}
 ```
 
 ### Any cone induces a family of maps between the fibers of the vertical maps
@@ -119,7 +119,7 @@ module _
   tr-hom-arrow-inclusion-fiber :
     {b b' : B} (p : b ＝ b') →
     hom-arrow (inclusion-fiber f {b}) (inclusion-fiber f {b'})
-  pr1 (tr-hom-arrow-inclusion-fiber p) = {!!}
+  tr-hom-arrow-inclusion-fiber = {!!}
 ```
 
 ## Properties
@@ -133,7 +133,7 @@ module _
 
   preserves-id-map-fiber :
     map-domain-hom-arrow-fiber f f id-hom-arrow b ~ id
-  preserves-id-map-fiber (a , refl) = {!!}
+  preserves-id-map-fiber = {!!}
 
   coh-preserves-id-hom-arrow-fiber :
     coherence-square-homotopies
@@ -141,7 +141,7 @@ module _
       ( refl-htpy)
       ( coh-hom-arrow-fiber f f id-hom-arrow b)
       ( inclusion-fiber f ·l preserves-id-map-fiber)
-  coh-preserves-id-hom-arrow-fiber (a , refl) = {!!}
+  coh-preserves-id-hom-arrow-fiber = {!!}
 
   preserves-id-hom-arrow-fiber :
     htpy-hom-arrow
@@ -149,7 +149,7 @@ module _
       ( inclusion-fiber f)
       ( hom-arrow-fiber f f id-hom-arrow b)
       ( id-hom-arrow)
-  pr1 preserves-id-hom-arrow-fiber = {!!}
+  preserves-id-hom-arrow-fiber = {!!}
 ```
 
 ### The functorial action of `fiber` preserves composition of morphisms of arrows
@@ -165,11 +165,11 @@ module _
   preserves-comp-map-fiber :
     map-fiber f h (comp-hom-arrow f g h β α) b ~
     map-fiber g h β (map-codomain-hom-arrow f g α b) ∘ map-fiber f g α b
-  preserves-comp-map-fiber (a , refl) = {!!}
+  preserves-comp-map-fiber = {!!}
 
   compute-left-whisker-inclusion-fiber-preserves-comp-map-fiber :
     inclusion-fiber h ·l preserves-comp-map-fiber ~ refl-htpy
-  compute-left-whisker-inclusion-fiber-preserves-comp-map-fiber (a , refl) = {!!}
+  compute-left-whisker-inclusion-fiber-preserves-comp-map-fiber = {!!}
 
   coh-preserves-comp-hom-arrow-fiber :
     coherence-square-homotopies
@@ -188,7 +188,7 @@ module _
           ( hom-arrow-fiber g h β (map-codomain-hom-arrow f g α b))
           ( hom-arrow-fiber f g α b)))
       ( inclusion-fiber h ·l preserves-comp-map-fiber)
-  coh-preserves-comp-hom-arrow-fiber p = {!!}
+  coh-preserves-comp-hom-arrow-fiber = {!!}
 
   preserves-comp-hom-arrow-fiber :
     htpy-hom-arrow
@@ -201,7 +201,7 @@ module _
         ( inclusion-fiber h)
         ( hom-arrow-fiber g h β (map-codomain-hom-arrow f g α b))
         ( hom-arrow-fiber f g α b))
-  pr1 preserves-comp-hom-arrow-fiber = {!!}
+  preserves-comp-hom-arrow-fiber = {!!}
 ```
 
 ### The functorial action of `fiber` preserves homotopies of morphisms of fibers
@@ -319,12 +319,12 @@ module _
     ( tot (λ x → concat' (g x) (htpy-codomain-htpy-hom-arrow f g α β γ b)) ∘
       map-fiber f g α b) ~
     ( map-fiber f g β b)
-  htpy-fiber (a , refl) = {!!}
+  htpy-fiber = {!!}
 
   compute-left-whisker-inclusion-fiber-htpy-fiber :
     inclusion-fiber g ·l htpy-fiber ~
     htpy-domain-htpy-hom-arrow f g α β γ ·r inclusion-fiber f
-  compute-left-whisker-inclusion-fiber-htpy-fiber (a , refl) = {!!}
+  compute-left-whisker-inclusion-fiber-htpy-fiber = {!!}
 
   htpy-codomain-htpy-hom-arrow-fiber :
     map-codomain-hom-arrow-fiber f g α b ~
@@ -351,7 +351,7 @@ module _
           ( htpy-codomain-htpy-hom-arrow f g α β γ b))
         ( hom-arrow-fiber f g α b))
       ( hom-arrow-fiber f g β b)
-  pr1 htpy-hom-arrow-fiber = {!!}
+  htpy-hom-arrow-fiber = {!!}
 ```
 
 ### Computing `map-fiber-cone` of a horizontal pasting of cones
@@ -368,7 +368,7 @@ module _
     ( map-fiber-cone (j ∘ i) h (pasting-horizontal-cone i j h c d) x) ~
     ( map-fiber-cone j h c (i x) ∘
       map-fiber-cone i (vertical-map-cone j h c) d x)
-  preserves-pasting-horizontal-map-fiber-cone c d = {!!}
+  preserves-pasting-horizontal-map-fiber-cone = {!!}
 ```
 
 ### Computing `map-fiber-cone` of a horizontal pasting of cones
@@ -392,9 +392,7 @@ module _
         ( λ t → fiber h (pr1 t))
         ( map-fiber-cone f g c x)
         ( λ t → map-fiber-cone (pr1 (pr2 c)) h d (pr1 t))))
-  preserves-pasting-vertical-map-fiber-cone
-    (p , q , H) (p' , q' , H') .(p (p' a))
-    ((.(p' a) , refl) , (a , refl)) = {!!}
+  preserves-pasting-vertical-map-fiber-cone = {!!}
 ```
 
 ## See also

@@ -44,7 +44,7 @@ module _
   is-repetition-of-values = {!!}
 
   repetition-of-values : (A → B) → UU (l1 ⊔ l2)
-  repetition-of-values f = {!!}
+  repetition-of-values = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B)

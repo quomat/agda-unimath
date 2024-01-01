@@ -56,7 +56,7 @@ Truncated-Type-Truncated-Type = {!!}
 
 ```agda
 emb-type-Truncated-Type : (l : Level) (k : 𝕋) → Truncated-Type l k ↪ UU l
-emb-type-Truncated-Type l k = {!!}
+emb-type-Truncated-Type = {!!}
 ```
 
 ### If a type is `k`-truncated, then it is `k+r`-truncated
@@ -82,5 +82,5 @@ module _
   where
 
   equiv-is-trunc-equiv : A ≃ B → is-trunc k A ≃ is-trunc k B
-  equiv-is-trunc-equiv e = {!!}
+  equiv-is-trunc-equiv = {!!}
 ```

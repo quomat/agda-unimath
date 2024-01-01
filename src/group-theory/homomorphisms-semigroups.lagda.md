@@ -39,10 +39,10 @@ module _
   where
 
   preserves-mul : (μA : A → A → A) (μB : B → B → B) → (A → B) → UU (l1 ⊔ l2)
-  preserves-mul μA μB f = {!!}
+  preserves-mul = {!!}
 
   preserves-mul' : (μA : A → A → A) (μB : B → B → B) → (A → B) → UU (l1 ⊔ l2)
-  preserves-mul' μA μB f = {!!}
+  preserves-mul' = {!!}
 
 module _
   {l1 l2 : Level} (G : Semigroup l1) (H : Semigroup l2)
@@ -90,10 +90,10 @@ module _
 
 ```agda
   htpy-hom-Semigroup : (f g : hom-Semigroup) → UU (l1 ⊔ l2)
-  htpy-hom-Semigroup f g = {!!}
+  htpy-hom-Semigroup = {!!}
 
   refl-htpy-hom-Semigroup : (f : hom-Semigroup) → htpy-hom-Semigroup f f
-  refl-htpy-hom-Semigroup f = {!!}
+  refl-htpy-hom-Semigroup = {!!}
 
   htpy-eq-hom-Semigroup :
     (f g : hom-Semigroup) → Id f g → htpy-hom-Semigroup f g
@@ -114,10 +114,10 @@ module _
   eq-htpy-hom-Semigroup = {!!}
 
   is-set-hom-Semigroup : is-set hom-Semigroup
-  is-set-hom-Semigroup f g = {!!}
+  is-set-hom-Semigroup = {!!}
 
   hom-set-Semigroup : Set (l1 ⊔ l2)
-  pr1 hom-set-Semigroup = {!!}
+  hom-set-Semigroup = {!!}
 
 preserves-mul-id-Semigroup :
   {l : Level} (G : Semigroup l) → preserves-mul-Semigroup G G id
@@ -149,7 +149,7 @@ module _
   preserves-mul-comp-hom-Semigroup = {!!}
 
   comp-hom-Semigroup : hom-Semigroup G K
-  pr1 comp-hom-Semigroup = {!!}
+  comp-hom-Semigroup = {!!}
 ```
 
 ### Associativity of composition of homomorphisms of semigroups
@@ -185,6 +185,5 @@ right-unit-law-comp-hom-Semigroup :
   { l1 l2 : Level} (G : Semigroup l1) (H : Semigroup l2)
   ( f : hom-Semigroup G H) →
   Id ( comp-hom-Semigroup G G H f (id-hom-Semigroup G)) f
-right-unit-law-comp-hom-Semigroup
-  (pair (pair G is-set-G) (pair μ-G associative-G)) H (pair f μ-f) = {!!}
+right-unit-law-comp-hom-Semigroup = {!!}
 ```

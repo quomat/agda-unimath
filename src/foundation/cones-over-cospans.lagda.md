@@ -55,7 +55,7 @@ module _
   where
 
   cone : {l4 : Level} → UU l4 → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  cone C = {!!}
+  cone = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} {C : UU l4}
@@ -73,7 +73,7 @@ module _
   coherence-square-cone = {!!}
 
   hom-arrow-cone : hom-arrow vertical-map-cone g
-  pr1 hom-arrow-cone = {!!}
+  hom-arrow-cone = {!!}
 
   hom-arrow-cone' : hom-arrow horizontal-map-cone f
   hom-arrow-cone' = {!!}
@@ -107,26 +107,26 @@ module _
   coherence-htpy-cone = {!!}
 
   htpy-cone : cone f g C → cone f g C → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  htpy-cone c c' = {!!}
+  htpy-cone = {!!}
 
   refl-htpy-cone : (c : cone f g C) → htpy-cone c c
-  pr1 (refl-htpy-cone c) = {!!}
+  refl-htpy-cone = {!!}
 
   htpy-eq-cone : (c c' : cone f g C) → c ＝ c' → htpy-cone c c'
-  htpy-eq-cone c .c refl = {!!}
+  htpy-eq-cone = {!!}
 
   is-torsorial-htpy-cone :
     (c : cone f g C) → is-torsorial (htpy-cone c)
   is-torsorial-htpy-cone = {!!}
 
   is-equiv-htpy-eq-cone : (c c' : cone f g C) → is-equiv (htpy-eq-cone c c')
-  is-equiv-htpy-eq-cone c = {!!}
+  is-equiv-htpy-eq-cone = {!!}
 
   extensionality-cone : (c c' : cone f g C) → (c ＝ c') ≃ htpy-cone c c'
-  pr1 (extensionality-cone c c') = {!!}
+  extensionality-cone = {!!}
 
   eq-htpy-cone : (c c' : cone f g C) → htpy-cone c c' → c ＝ c'
-  eq-htpy-cone c c' = {!!}
+  eq-htpy-cone = {!!}
 ```
 
 ### Precomposing cones over cospans with a map

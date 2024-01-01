@@ -31,7 +31,7 @@ reversed order.
 
 ```agda
 reverse-list : {l : Level} {A : UU l} → list A → list A
-reverse-list nil = {!!}
+reverse-list = {!!}
 reverse-list (cons a l) = {!!}
 ```
 

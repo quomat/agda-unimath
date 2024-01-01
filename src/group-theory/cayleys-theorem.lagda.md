@@ -40,16 +40,16 @@ module _
   preserves-mul-map-Cayleys-theorem = {!!}
 
   hom-Cayleys-theorem : hom-Group G (symmetric-Group (set-Group G))
-  pr1 hom-Cayleys-theorem = {!!}
+  hom-Cayleys-theorem = {!!}
 
   is-injective-map-Cayleys-theorem : is-injective map-Cayleys-theorem
-  is-injective-map-Cayleys-theorem {x} {y} p = {!!}
+  is-injective-map-Cayleys-theorem = {!!}
 
   is-emb-map-Cayleys-theorem : is-emb map-Cayleys-theorem
   is-emb-map-Cayleys-theorem = {!!}
 
   Cayleys-theorem : emb-Group G (symmetric-Group (set-Group G))
-  pr1 Cayleys-theorem = {!!}
+  Cayleys-theorem = {!!}
 ```
 
 ### Cayley's theorem as a corollary of the Yoneda lemma

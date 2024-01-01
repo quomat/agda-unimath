@@ -109,12 +109,12 @@ module _
       ( map-dependent-cocone-sequential-diagram A P d n) ~
       ( map-dependent-cocone-sequential-diagram A P d' n)) →
     UU (l1 ⊔ l3)
-  coherence-htpy-dependent-cocone-sequential-diagram d d' K = {!!}
+  coherence-htpy-dependent-cocone-sequential-diagram = {!!}
 
   htpy-dependent-cocone-sequential-diagram :
     ( d d' : dependent-cocone-sequential-diagram A c P) →
     UU (l1 ⊔ l3)
-  htpy-dependent-cocone-sequential-diagram d d' = {!!}
+  htpy-dependent-cocone-sequential-diagram = {!!}
 ```
 
 ### Components of homotopies of dependent cocones under sequential diagrams
@@ -153,7 +153,7 @@ module _
   dependent-cocone-map-sequential-diagram :
     { l : Level} (P : X → UU l) →
     ( (x : X) → P x) → dependent-cocone-sequential-diagram A c P
-  pr1 (dependent-cocone-map-sequential-diagram P h) n = {!!}
+  dependent-cocone-map-sequential-diagram = {!!}
   pr2 (dependent-cocone-map-sequential-diagram P h) n = {!!}
 ```
 
@@ -173,34 +173,34 @@ module _
   reflexive-htpy-dependent-cocone-sequential-diagram :
     ( d : dependent-cocone-sequential-diagram A c P) →
     htpy-dependent-cocone-sequential-diagram A P d d
-  pr1 (reflexive-htpy-dependent-cocone-sequential-diagram d) n = {!!}
+  reflexive-htpy-dependent-cocone-sequential-diagram = {!!}
 
   htpy-eq-dependent-cocone-sequential-diagram :
     ( d d' : dependent-cocone-sequential-diagram A c P) →
     ( d ＝ d') → htpy-dependent-cocone-sequential-diagram A P d d'
-  htpy-eq-dependent-cocone-sequential-diagram d .d refl = {!!}
+  htpy-eq-dependent-cocone-sequential-diagram = {!!}
 
   abstract
     is-torsorial-htpy-dependent-cocone-sequential-diagram :
       ( d : dependent-cocone-sequential-diagram A c P) →
       is-torsorial (htpy-dependent-cocone-sequential-diagram A P d)
-    is-torsorial-htpy-dependent-cocone-sequential-diagram d = {!!}
+    is-torsorial-htpy-dependent-cocone-sequential-diagram = {!!}
 
     is-equiv-htpy-eq-dependent-cocone-sequential-diagram :
       ( d d' : dependent-cocone-sequential-diagram A c P) →
       is-equiv (htpy-eq-dependent-cocone-sequential-diagram d d')
-    is-equiv-htpy-eq-dependent-cocone-sequential-diagram d = {!!}
+    is-equiv-htpy-eq-dependent-cocone-sequential-diagram = {!!}
 
   extensionality-dependent-cocone-sequential-diagram :
     ( d d' : dependent-cocone-sequential-diagram A c P) →
     ( d ＝ d') ≃ htpy-dependent-cocone-sequential-diagram A P d d'
-  pr1 (extensionality-dependent-cocone-sequential-diagram d d') = {!!}
+  extensionality-dependent-cocone-sequential-diagram = {!!}
   pr2 (extensionality-dependent-cocone-sequential-diagram d d') = {!!}
 
   eq-htpy-dependent-cocone-sequential-diagram :
     ( d d' : dependent-cocone-sequential-diagram A c P) →
     htpy-dependent-cocone-sequential-diagram A P d d' → (d ＝ d')
-  eq-htpy-dependent-cocone-sequential-diagram d d' = {!!}
+  eq-htpy-dependent-cocone-sequential-diagram = {!!}
 ```
 
 ### Dependent cocones under sequential diagrams on fiberwise constant type families are equivalent to regular cocones under sequential diagrams
@@ -226,7 +226,7 @@ module _
       ( cocone-map-sequential-diagram A c)
       ( map-compute-dependent-cocone-sequential-diagram-constant-family)
       ( dependent-cocone-map-sequential-diagram A c (λ _ → Y))
-  triangle-compute-dependent-cocone-sequential-diagram-constant-family h = {!!}
+  triangle-compute-dependent-cocone-sequential-diagram-constant-family = {!!}
 ```
 
 ### Dependent cocones under sequential diagrams are special cases of dependent coforks
@@ -253,7 +253,7 @@ module _
         ( cofork-cocone-sequential-diagram A c)
         ( P) →
       dependent-cocone-sequential-diagram A c P
-    pr1 (dependent-cocone-sequential-diagram-dependent-cofork e) = {!!}
+    dependent-cocone-sequential-diagram-dependent-cofork = {!!}
     pr2 (dependent-cocone-sequential-diagram-dependent-cofork e) = {!!}
 
     dependent-cofork-dependent-cocone-sequential-diagram :
@@ -263,7 +263,7 @@ module _
         ( top-map-cofork-cocone-sequential-diagram A)
         ( cofork-cocone-sequential-diagram A c)
         ( P)
-    pr1 (dependent-cofork-dependent-cocone-sequential-diagram d) = {!!}
+    dependent-cofork-dependent-cocone-sequential-diagram = {!!}
     pr2 (dependent-cofork-dependent-cocone-sequential-diagram d) = {!!}
 
     abstract
@@ -271,13 +271,13 @@ module _
         ( dependent-cofork-dependent-cocone-sequential-diagram ∘
           dependent-cocone-sequential-diagram-dependent-cofork) ~
         ( id)
-      is-section-dependent-cocone-sequential-diagram-dependent-cofork e = {!!}
+      is-section-dependent-cocone-sequential-diagram-dependent-cofork = {!!}
 
       is-retraction-dependent-cocone-sequential-diagram-dependent-cofork :
         ( dependent-cocone-sequential-diagram-dependent-cofork ∘
           dependent-cofork-dependent-cocone-sequential-diagram) ~
         ( id)
-      is-retraction-dependent-cocone-sequential-diagram-dependent-cofork d = {!!}
+      is-retraction-dependent-cocone-sequential-diagram-dependent-cofork = {!!}
 
     is-equiv-dependent-cocone-sequential-diagram-dependent-cofork :
       is-equiv dependent-cocone-sequential-diagram-dependent-cofork
@@ -290,7 +290,7 @@ module _
         ( cofork-cocone-sequential-diagram A c)
         ( P) ≃
       dependent-cocone-sequential-diagram A c P
-    pr1 equiv-dependent-cocone-sequential-diagram-dependent-cofork = {!!}
+    equiv-dependent-cocone-sequential-diagram-dependent-cofork = {!!}
     pr2 equiv-dependent-cocone-sequential-diagram-dependent-cofork = {!!}
 
   triangle-dependent-cocone-sequential-diagram-dependent-cofork :
@@ -302,5 +302,5 @@ module _
         ( bottom-map-cofork-cocone-sequential-diagram A)
         ( top-map-cofork-cocone-sequential-diagram A)
         ( cofork-cocone-sequential-diagram A c))
-  triangle-dependent-cocone-sequential-diagram-dependent-cofork P h = {!!}
+  triangle-dependent-cocone-sequential-diagram-dependent-cofork = {!!}
 ```

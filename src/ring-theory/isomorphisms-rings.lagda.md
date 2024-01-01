@@ -78,7 +78,7 @@ module _
   is-retraction-hom-inv-is-iso-Ring = {!!}
 
   map-inv-is-iso-Ring : is-iso-Ring → type-Ring S → type-Ring R
-  map-inv-is-iso-Ring U = {!!}
+  map-inv-is-iso-Ring = {!!}
 
   is-section-map-inv-is-iso-Ring :
     (U : is-iso-Ring) → map-hom-Ring R S f ∘ map-inv-is-iso-Ring U ~ id
@@ -103,7 +103,7 @@ module _
   hom-iso-Ring = {!!}
 
   map-iso-Ring : iso-Ring → type-Ring R → type-Ring S
-  map-iso-Ring f = {!!}
+  map-iso-Ring = {!!}
 
   preserves-zero-iso-Ring :
     (f : iso-Ring) → map-iso-Ring f (zero-Ring R) ＝ zero-Ring S
@@ -138,7 +138,7 @@ module _
   hom-inv-iso-Ring = {!!}
 
   map-inv-iso-Ring : iso-Ring → type-Ring S → type-Ring R
-  map-inv-iso-Ring f = {!!}
+  map-inv-iso-Ring = {!!}
 
   preserves-zero-inv-iso-Ring :
     (f : iso-Ring) → map-inv-iso-Ring f (zero-Ring S) ＝ zero-Ring R
@@ -200,7 +200,7 @@ module _
   is-iso-id-hom-Ring = {!!}
 
   id-iso-Ring : iso-Ring R R
-  pr1 id-iso-Ring = {!!}
+  id-iso-Ring = {!!}
 ```
 
 ### Converting identifications of rings to isomorphisms of rings
@@ -228,7 +228,7 @@ module _
   iso-ab-iso-ab-Ring = {!!}
 
   is-iso-ab-hom-Ring : hom-Ring R S → UU (l1 ⊔ l2)
-  is-iso-ab-hom-Ring f = {!!}
+  is-iso-ab-hom-Ring = {!!}
 
   is-iso-ab-is-iso-Ring :
     (f : hom-Ring R S) →
@@ -297,10 +297,10 @@ module _
   is-equiv-iso-eq-Ring = {!!}
 
   extensionality-Ring : (S : Ring l) → (R ＝ S) ≃ iso-Ring R S
-  pr1 (extensionality-Ring S) = {!!}
+  extensionality-Ring = {!!}
 
   eq-iso-Ring : (S : Ring l) → iso-Ring R S → R ＝ S
-  eq-iso-Ring S = {!!}
+  eq-iso-Ring = {!!}
 ```
 
 ### Any ring isomorphism preserves and reflects invertible elements

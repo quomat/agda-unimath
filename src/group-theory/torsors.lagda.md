@@ -75,7 +75,7 @@ module _
   where
 
   Torsor-Group : (l : Level) → UU (l1 ⊔ lsuc l)
-  Torsor-Group l = {!!}
+  Torsor-Group = {!!}
 
 module _
   {l1 l : Level} (G : Group l1) (X : Torsor-Group G l)
@@ -114,7 +114,7 @@ module _
   where
 
   principal-Torsor-Group : Torsor-Group G l1
-  pr1 principal-Torsor-Group = {!!}
+  principal-Torsor-Group = {!!}
 ```
 
 ## Properties
@@ -424,7 +424,7 @@ module _
   pr1 (pr1 ∞-group-Group) = {!!}
 
   concrete-group-Group : Concrete-Group (lsuc l1)
-  pr1 concrete-group-Group = {!!}
+  concrete-group-Group = {!!}
 
   classifying-type-Group : UU (lsuc l1)
   classifying-type-Group = {!!}

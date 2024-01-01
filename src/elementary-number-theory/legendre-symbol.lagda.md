@@ -44,10 +44,10 @@ int-is-square-ℤ-Mod :
 int-is-square-ℤ-Mod = {!!}
 
 legendre-symbol-ℤ-Mod : (p : Prime-ℕ) → ℤ-Mod (nat-Prime-ℕ p) → ℤ
-legendre-symbol-ℤ-Mod (p , _) k = {!!}
+legendre-symbol-ℤ-Mod = {!!}
 
 legendre-symbol : Prime-ℕ → ℤ → ℤ
-legendre-symbol p a = {!!}
+legendre-symbol = {!!}
 
 is-periodic-legendre-symbol :
   (p : Prime-ℕ) (a b : ℤ) →

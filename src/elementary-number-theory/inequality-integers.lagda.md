@@ -30,13 +30,13 @@ open import foundation.universe-levels
 
 ```agda
 leq-ℤ-Prop : ℤ → ℤ → Prop lzero
-leq-ℤ-Prop x y = {!!}
+leq-ℤ-Prop = {!!}
 
 leq-ℤ : ℤ → ℤ → UU lzero
-leq-ℤ x y = {!!}
+leq-ℤ = {!!}
 
 is-prop-leq-ℤ : (x y : ℤ) → is-prop (leq-ℤ x y)
-is-prop-leq-ℤ x y = {!!}
+is-prop-leq-ℤ = {!!}
 
 infix 30 _≤-ℤ_
 _≤-ℤ_ = {!!}
@@ -46,48 +46,48 @@ _≤-ℤ_ = {!!}
 
 ```agda
 refl-leq-ℤ : (k : ℤ) → leq-ℤ k k
-refl-leq-ℤ k = {!!}
+refl-leq-ℤ = {!!}
 
 antisymmetric-leq-ℤ : {x y : ℤ} → leq-ℤ x y → leq-ℤ y x → x ＝ y
-antisymmetric-leq-ℤ {x} {y} H K = {!!}
+antisymmetric-leq-ℤ = {!!}
 
 transitive-leq-ℤ : (k l m : ℤ) → leq-ℤ k l → leq-ℤ l m → leq-ℤ k m
-transitive-leq-ℤ k l m p q = {!!}
+transitive-leq-ℤ = {!!}
 
 decide-leq-ℤ :
   {x y : ℤ} → (leq-ℤ x y) + (leq-ℤ y x)
-decide-leq-ℤ {x} {y} = {!!}
+decide-leq-ℤ = {!!}
 
 succ-leq-ℤ : (k : ℤ) → leq-ℤ k (succ-ℤ k)
-succ-leq-ℤ k = {!!}
+succ-leq-ℤ = {!!}
 
 leq-ℤ-succ-leq-ℤ : (k l : ℤ) → leq-ℤ k l → leq-ℤ k (succ-ℤ l)
-leq-ℤ-succ-leq-ℤ k l p = {!!}
+leq-ℤ-succ-leq-ℤ = {!!}
 
 concatenate-eq-leq-eq-ℤ :
   {x' x y y' : ℤ} → x' ＝ x → leq-ℤ x y → y ＝ y' → leq-ℤ x' y'
-concatenate-eq-leq-eq-ℤ refl H refl = {!!}
+concatenate-eq-leq-eq-ℤ = {!!}
 
 concatenate-leq-eq-ℤ :
   (x : ℤ) {y y' : ℤ} → leq-ℤ x y → y ＝ y' → leq-ℤ x y'
-concatenate-leq-eq-ℤ x H refl = {!!}
+concatenate-leq-eq-ℤ = {!!}
 
 concatenate-eq-leq-ℤ :
   {x x' : ℤ} (y : ℤ) → x' ＝ x → leq-ℤ x y → leq-ℤ x' y
-concatenate-eq-leq-ℤ y refl H = {!!}
+concatenate-eq-leq-ℤ = {!!}
 ```
 
 ### The strict ordering on ℤ
 
 ```agda
 le-ℤ-Prop : ℤ → ℤ → Prop lzero
-le-ℤ-Prop x y = {!!}
+le-ℤ-Prop = {!!}
 
 le-ℤ : ℤ → ℤ → UU lzero
-le-ℤ x y = {!!}
+le-ℤ = {!!}
 
 is-prop-le-ℤ : (x y : ℤ) → is-prop (le-ℤ x y)
-is-prop-le-ℤ x y = {!!}
+is-prop-le-ℤ = {!!}
 ```
 
 ### ℤ is an ordered ring
@@ -95,29 +95,29 @@ is-prop-le-ℤ x y = {!!}
 ```agda
 preserves-order-add-ℤ' :
   {x y : ℤ} (z : ℤ) → leq-ℤ x y → leq-ℤ (x +ℤ z) (y +ℤ z)
-preserves-order-add-ℤ' {x} {y} z = {!!}
+preserves-order-add-ℤ' = {!!}
 
 preserves-order-add-ℤ :
   {x y : ℤ} (z : ℤ) → leq-ℤ x y → leq-ℤ (z +ℤ x) (z +ℤ y)
-preserves-order-add-ℤ {x} {y} z = {!!}
+preserves-order-add-ℤ = {!!}
 
 preserves-leq-add-ℤ :
   {a b c d : ℤ} → leq-ℤ a b → leq-ℤ c d → leq-ℤ (a +ℤ c) (b +ℤ d)
-preserves-leq-add-ℤ {a} {b} {c} {d} H K = {!!}
+preserves-leq-add-ℤ = {!!}
 
 reflects-order-add-ℤ' :
   {x y z : ℤ} → leq-ℤ (x +ℤ z) (y +ℤ z) → leq-ℤ x y
-reflects-order-add-ℤ' {x} {y} {z} = {!!}
+reflects-order-add-ℤ' = {!!}
 
 reflects-order-add-ℤ :
   {x y z : ℤ} → leq-ℤ (z +ℤ x) (z +ℤ y) → leq-ℤ x y
-reflects-order-add-ℤ {x} {y} {z} = {!!}
+reflects-order-add-ℤ = {!!}
 ```
 
 ### Inclusion of ℕ into ℤ preserves order
 
 ```agda
 leq-int-ℕ : (x y : ℕ) → leq-ℕ x y → leq-ℤ (int-ℕ x) (int-ℕ y)
-leq-int-ℕ zero-ℕ y H = {!!}
+leq-int-ℕ = {!!}
 leq-int-ℕ (succ-ℕ x) (succ-ℕ y) H = {!!}
 ```

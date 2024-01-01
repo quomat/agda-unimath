@@ -30,13 +30,13 @@ finite types.
 
 ```agda
 min-Fin : (k : ℕ) → Fin k → Fin k → Fin k
-min-Fin (succ-ℕ k) (inl x) (inl y) = {!!}
+min-Fin = {!!}
 min-Fin (succ-ℕ k) (inl x) (inr _) = {!!}
 min-Fin (succ-ℕ k) (inr _) (inl x) = {!!}
 min-Fin (succ-ℕ k) (inr _) (inr _) = {!!}
 
 min-Fin-Fin : (n k : ℕ) → (Fin (succ-ℕ n) → Fin k) → Fin k
-min-Fin-Fin zero-ℕ k f = {!!}
+min-Fin-Fin = {!!}
 min-Fin-Fin (succ-ℕ n) k f = {!!}
 ```
 

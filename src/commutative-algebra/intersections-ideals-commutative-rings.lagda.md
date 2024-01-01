@@ -68,17 +68,12 @@ module _
   is-closed-under-addition-intersection-ideal-Commutative-Ring :
     is-closed-under-addition-subset-Commutative-Ring R
       ( subset-intersection-ideal-Commutative-Ring)
-  pr1
-    ( is-closed-under-addition-intersection-ideal-Commutative-Ring
-      ( H1 , H2)
-      ( K1 , K2)) = {!!}
+  is-closed-under-addition-intersection-ideal-Commutative-Ring = {!!}
 
   is-closed-under-negatives-intersection-ideal-Commutative-Ring :
     is-closed-under-negatives-subset-Commutative-Ring R
       ( subset-intersection-ideal-Commutative-Ring)
-  pr1
-    ( is-closed-under-negatives-intersection-ideal-Commutative-Ring
-      ( H1 , H2)) = {!!}
+  is-closed-under-negatives-intersection-ideal-Commutative-Ring = {!!}
 
   is-additive-subgroup-intersection-ideal-Commutative-Ring :
     is-additive-subgroup-subset-Commutative-Ring R
@@ -88,9 +83,7 @@ module _
   is-closed-under-left-multiplication-intersection-ideal-Commutative-Ring :
     is-closed-under-left-multiplication-subset-Commutative-Ring R
       ( subset-intersection-ideal-Commutative-Ring)
-  pr1
-    ( is-closed-under-left-multiplication-intersection-ideal-Commutative-Ring
-      x y (H1 , H2)) = {!!}
+  is-closed-under-left-multiplication-intersection-ideal-Commutative-Ring = {!!}
 
   intersection-ideal-Commutative-Ring : ideal-Commutative-Ring (l2 ⊔ l3) R
   intersection-ideal-Commutative-Ring = {!!}

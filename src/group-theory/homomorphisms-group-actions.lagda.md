@@ -65,7 +65,7 @@ module _
   is-prop-preserves-action-Group = {!!}
 
   preserves-action-prop-Group : Prop (l1 ⊔ l2 ⊔ l3)
-  pr1 preserves-action-prop-Group = {!!}
+  preserves-action-prop-Group = {!!}
 ```
 
 ### Morphisms of `G`-sets
@@ -97,7 +97,7 @@ module _
   where
 
   id-hom-action-Group : hom-action-Group G X X
-  pr1 id-hom-action-Group = {!!}
+  id-hom-action-Group = {!!}
 ```
 
 ### Composition of morphisms
@@ -175,7 +175,7 @@ module _
   is-set-hom-action-Group = {!!}
 
   hom-set-action-Group : Set (l1 ⊔ l2 ⊔ l3)
-  pr1 hom-set-action-Group = {!!}
+  hom-set-action-Group = {!!}
 ```
 
 ### Composition is associative

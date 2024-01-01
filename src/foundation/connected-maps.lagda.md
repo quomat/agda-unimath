@@ -53,23 +53,23 @@ A map is said to be **`k`-connected** if its
 ```agda
 is-connected-map-Prop :
   {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : UU l2} → (A → B) → Prop (l1 ⊔ l2)
-is-connected-map-Prop k {B = B} f = {!!}
+is-connected-map-Prop = {!!}
 
 is-connected-map :
   {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : UU l2} → (A → B) → UU (l1 ⊔ l2)
-is-connected-map k f = {!!}
+is-connected-map = {!!}
 
 is-prop-is-connected-map :
   {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : UU l2} (f : A → B) →
   is-prop (is-connected-map k f)
-is-prop-is-connected-map k f = {!!}
+is-prop-is-connected-map = {!!}
 ```
 
 ### The type of connected maps between two types
 
 ```agda
 connected-map : {l1 l2 : Level} (k : 𝕋) → UU l1 → UU l2 → UU (l1 ⊔ l2)
-connected-map k A B = {!!}
+connected-map = {!!}
 
 module _
   {l1 l2 : Level} {k : 𝕋} {A : UU l1} {B : UU l2}
@@ -86,30 +86,30 @@ module _
   emb-inclusion-connected-map = {!!}
 
   htpy-connected-map : (f g : connected-map k A B) → UU (l1 ⊔ l2)
-  htpy-connected-map f g = {!!}
+  htpy-connected-map = {!!}
 
   refl-htpy-connected-map : (f : connected-map k A B) → htpy-connected-map f f
-  refl-htpy-connected-map f = {!!}
+  refl-htpy-connected-map = {!!}
 
   is-torsorial-htpy-connected-map :
     (f : connected-map k A B) → is-torsorial (htpy-connected-map f)
-  is-torsorial-htpy-connected-map f = {!!}
+  is-torsorial-htpy-connected-map = {!!}
 
   htpy-eq-connected-map :
     (f g : connected-map k A B) → f ＝ g → htpy-connected-map f g
-  htpy-eq-connected-map f .f refl = {!!}
+  htpy-eq-connected-map = {!!}
 
   is-equiv-htpy-eq-connected-map :
     (f g : connected-map k A B) → is-equiv (htpy-eq-connected-map f g)
-  is-equiv-htpy-eq-connected-map f = {!!}
+  is-equiv-htpy-eq-connected-map = {!!}
 
   extensionality-connected-map :
     (f g : connected-map k A B) → (f ＝ g) ≃ htpy-connected-map f g
-  pr1 (extensionality-connected-map f g) = {!!}
+  extensionality-connected-map = {!!}
 
   eq-htpy-connected-map :
     (f g : connected-map k A B) → htpy-connected-map f g → (f ＝ g)
-  eq-htpy-connected-map f g = {!!}
+  eq-htpy-connected-map = {!!}
 ```
 
 ### The type of connected maps into a type
@@ -117,7 +117,7 @@ module _
 ```agda
 Connected-Map :
   {l1 : Level} (l2 : Level) (k : 𝕋) (A : UU l1) → UU (l1 ⊔ lsuc l2)
-Connected-Map l2 k A = {!!}
+Connected-Map = {!!}
 
 module _
   {l1 l2 : Level} {k : 𝕋} {A : UU l1} (f : Connected-Map l2 k A)
@@ -141,7 +141,7 @@ module _
 ```agda
 Connected-Map-Into-Truncated-Type :
   {l1 : Level} (l2 : Level) (k l : 𝕋) (A : UU l1) → UU (l1 ⊔ lsuc l2)
-Connected-Map-Into-Truncated-Type l2 k l A = {!!}
+Connected-Map-Into-Truncated-Type = {!!}
 
 module _
   {l1 l2 : Level} {k l : 𝕋} {A : UU l1}
@@ -181,7 +181,7 @@ module _
   where
 
   is-neg-two-connected-map : is-connected-map neg-two-𝕋 f
-  is-neg-two-connected-map b = {!!}
+  is-neg-two-connected-map = {!!}
 ```
 
 ### Equivalences are `k`-connected for any `k`
@@ -193,15 +193,15 @@ module _
 
   is-connected-map-is-equiv :
     {f : A → B} → is-equiv f → is-connected-map k f
-  is-connected-map-is-equiv H b = {!!}
+  is-connected-map-is-equiv = {!!}
 
   is-connected-map-equiv :
     (e : A ≃ B) → is-connected-map k (map-equiv e)
-  is-connected-map-equiv e = {!!}
+  is-connected-map-equiv = {!!}
 
   connected-map-equiv :
     (A ≃ B) → connected-map k A B
-  pr1 (connected-map-equiv e) = {!!}
+  connected-map-equiv = {!!}
 ```
 
 ### A `(k+1)`-connected map is `k`-connected
@@ -213,7 +213,7 @@ module _
 
   is-connected-map-is-connected-map-succ-𝕋 :
     is-connected-map (succ-𝕋 k) f → is-connected-map k f
-  is-connected-map-is-connected-map-succ-𝕋 H b = {!!}
+  is-connected-map-is-connected-map-succ-𝕋 = {!!}
 ```
 
 ### The composition of two `k`-connected maps is `k`-connected
@@ -226,11 +226,11 @@ module _
   is-connected-map-comp :
     {g : B → C} {f : A → B} →
     is-connected-map k g → is-connected-map k f → is-connected-map k (g ∘ f)
-  is-connected-map-comp K H c = {!!}
+  is-connected-map-comp = {!!}
 
   comp-connected-map :
     connected-map k B C → connected-map k A B → connected-map k A C
-  pr1 (comp-connected-map g f) = {!!}
+  comp-connected-map = {!!}
 ```
 
 ### The total map induced by a family of maps is `k`-connected if and only if all maps in the family are `k`-connected
@@ -244,12 +244,12 @@ module _
   is-connected-map-tot-is-fiberwise-connected-map :
     ((x : A) → is-connected-map k (f x)) →
     is-connected-map k (tot f)
-  is-connected-map-tot-is-fiberwise-connected-map H (x , y) = {!!}
+  is-connected-map-tot-is-fiberwise-connected-map = {!!}
 
   is-fiberwise-connected-map-is-connected-map-tot :
     is-connected-map k (tot f) →
     (x : A) → is-connected-map k (f x)
-  is-fiberwise-connected-map-is-connected-map-tot H x y = {!!}
+  is-fiberwise-connected-map-is-connected-map-tot = {!!}
 ```
 
 ### Dependent universal property for connected maps
@@ -268,7 +268,7 @@ module _
 
   dependent-universal-property-is-connected-map :
     is-connected-map k f → dependent-universal-property-connected-map k f
-  dependent-universal-property-is-connected-map H P = {!!}
+  dependent-universal-property-is-connected-map = {!!}
 
 module _
   {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : UU l2} (f : connected-map k A B)
@@ -278,7 +278,7 @@ module _
     {l3 : Level} (P : B → Truncated-Type l3 k) →
     ((b : B) → type-Truncated-Type (P b)) ≃
     ((a : A) → type-Truncated-Type (P (map-connected-map f a)))
-  pr1 (equiv-dependent-universal-property-is-connected-map P) = {!!}
+  equiv-dependent-universal-property-is-connected-map = {!!}
 ```
 
 ### A map that satisfies the dependent universal property for connected maps is a connected map
@@ -342,7 +342,7 @@ module _
   abstract
     is-connected-map-dependent-universal-property-connected-map :
       is-connected-map k f
-    pr1 (is-connected-map-dependent-universal-property-connected-map b) = {!!}
+    is-connected-map-dependent-universal-property-connected-map = {!!}
 ```
 
 ### The map `unit-trunc {k}` is `k`-connected
@@ -367,8 +367,7 @@ is-trunc-map-precomp-Π-is-connected-map :
   is-trunc-map
     ( n)
     ( precomp-Π f (λ b → type-Truncated-Type (P b)))
-is-trunc-map-precomp-Π-is-connected-map
-  {l1} {l2} {l3} k ._ neg-two-𝕋 refl {A} {B} H P = {!!}
+is-trunc-map-precomp-Π-is-connected-map = {!!}
 is-trunc-map-precomp-Π-is-connected-map k ._ (succ-𝕋 n) refl {A} {B} {f} H P = {!!}
 ```
 
@@ -378,14 +377,14 @@ is-trunc-map-precomp-Π-is-connected-map k ._ (succ-𝕋 n) refl {A} {B} {f} H P
 equiv-Connected-Map :
   {l1 l2 : Level} {k : 𝕋} {A : UU l1} →
   (f g : Connected-Map l2 k A) → UU (l1 ⊔ l2)
-equiv-Connected-Map f g = {!!}
+equiv-Connected-Map = {!!}
 
 module _
   {l1 l2 : Level} {k : 𝕋} {A : UU l1} (f : Connected-Map l2 k A)
   where
 
   id-equiv-Connected-Map : equiv-Connected-Map f f
-  pr1 id-equiv-Connected-Map = {!!}
+  id-equiv-Connected-Map = {!!}
 
   is-torsorial-equiv-Connected-Map :
     is-torsorial (equiv-Connected-Map f)
@@ -393,7 +392,7 @@ module _
 
   equiv-eq-Connected-Map :
     (g : Connected-Map l2 k A) → (f ＝ g) → equiv-Connected-Map f g
-  equiv-eq-Connected-Map .f refl = {!!}
+  equiv-eq-Connected-Map = {!!}
 
   is-equiv-equiv-eq-Connected-Map :
     (g : Connected-Map l2 k A) → is-equiv (equiv-eq-Connected-Map g)
@@ -401,11 +400,11 @@ module _
 
   extensionality-Connected-Map :
     (g : Connected-Map l2 k A) → (f ＝ g) ≃ equiv-Connected-Map f g
-  pr1 (extensionality-Connected-Map g) = {!!}
+  extensionality-Connected-Map = {!!}
 
   eq-equiv-Connected-Map :
     (g : Connected-Map l2 k A) → equiv-Connected-Map f g → (f ＝ g)
-  eq-equiv-Connected-Map g = {!!}
+  eq-equiv-Connected-Map = {!!}
 ```
 
 ### Characterization of the identity type of `Connected-Map-Into-Truncated-Type l2 k A`
@@ -414,7 +413,7 @@ module _
 equiv-Connected-Map-Into-Truncated-Type :
   {l1 l2 : Level} {k l : 𝕋} {A : UU l1} →
   (f g : Connected-Map-Into-Truncated-Type l2 k l A) → UU (l1 ⊔ l2)
-equiv-Connected-Map-Into-Truncated-Type f g = {!!}
+equiv-Connected-Map-Into-Truncated-Type = {!!}
 
 module _
   {l1 l2 : Level} {k l : 𝕋} {A : UU l1}
@@ -423,7 +422,7 @@ module _
 
   id-equiv-Connected-Map-Into-Truncated-Type :
     equiv-Connected-Map-Into-Truncated-Type f f
-  pr1 id-equiv-Connected-Map-Into-Truncated-Type = {!!}
+  id-equiv-Connected-Map-Into-Truncated-Type = {!!}
 
   is-torsorial-equiv-Connected-Map-Into-Truncated-Type :
     is-torsorial (equiv-Connected-Map-Into-Truncated-Type f)
@@ -432,7 +431,7 @@ module _
   equiv-eq-Connected-Map-Into-Truncated-Type :
     (g : Connected-Map-Into-Truncated-Type l2 k l A) →
     (f ＝ g) → equiv-Connected-Map-Into-Truncated-Type f g
-  equiv-eq-Connected-Map-Into-Truncated-Type .f refl = {!!}
+  equiv-eq-Connected-Map-Into-Truncated-Type = {!!}
 
   is-equiv-equiv-eq-Connected-Map-Into-Truncated-Type :
     (g : Connected-Map-Into-Truncated-Type l2 k l A) →
@@ -442,12 +441,12 @@ module _
   extensionality-Connected-Map-Into-Truncated-Type :
     (g : Connected-Map-Into-Truncated-Type l2 k l A) →
     (f ＝ g) ≃ equiv-Connected-Map-Into-Truncated-Type f g
-  pr1 (extensionality-Connected-Map-Into-Truncated-Type g) = {!!}
+  extensionality-Connected-Map-Into-Truncated-Type = {!!}
 
   eq-equiv-Connected-Map-Into-Truncated-Type :
     (g : Connected-Map-Into-Truncated-Type l2 k l A) →
       equiv-Connected-Map-Into-Truncated-Type f g → (f ＝ g)
-  eq-equiv-Connected-Map-Into-Truncated-Type g = {!!}
+  eq-equiv-Connected-Map-Into-Truncated-Type = {!!}
 ```
 
 ### The type `Connected-Map-Into-Truncated-Type l2 k k A` is contractible

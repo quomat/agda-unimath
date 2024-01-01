@@ -179,8 +179,7 @@ module _
       ( x)
       ( y)
       ( meet-Large-Meet-Subsemilattice x y)
-  is-greatest-binary-lower-bound-meet-Large-Meet-Subsemilattice
-    (x , p) (y , q) (z , r) = {!!}
+  is-greatest-binary-lower-bound-meet-Large-Meet-Subsemilattice = {!!}
 
   has-meets-Large-Meet-Subsemilattice :
     has-meets-Large-Poset

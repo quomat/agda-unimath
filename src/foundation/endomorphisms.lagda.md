@@ -35,7 +35,7 @@ An **endomorphism** on a type `A` is a map `A → A`.
 
 ```agda
 endo-Wild-Monoid : {l : Level} → UU l → Wild-Monoid l
-pr1 (pr1 (endo-Wild-Monoid A)) = {!!}
+endo-Wild-Monoid = {!!}
 pr1 (pr2 (pr1 (endo-Wild-Monoid A))) g f = {!!}
 pr1 (pr2 (pr2 (pr1 (endo-Wild-Monoid A)))) f = {!!}
 pr1 (pr2 (pr2 (pr2 (pr1 (endo-Wild-Monoid A))))) f = {!!}
@@ -47,12 +47,12 @@ pr1 (pr2 (pr2 (pr2 (pr2 (endo-Wild-Monoid A))))) g f = {!!}
 pr2 (pr2 (pr2 (pr2 (pr2 (endo-Wild-Monoid A))))) = {!!}
 
 endo-Semigroup : {l : Level} → Set l → Semigroup l
-pr1 (endo-Semigroup A) = {!!}
+endo-Semigroup = {!!}
 pr1 (pr2 (endo-Semigroup A)) g f = {!!}
 pr2 (pr2 (endo-Semigroup A)) h g f = {!!}
 
 endo-Monoid : {l : Level} → Set l → Monoid l
-pr1 (endo-Monoid A) = {!!}
+endo-Monoid = {!!}
 pr1 (pr2 (endo-Monoid A)) = {!!}
 pr1 (pr2 (pr2 (endo-Monoid A))) f = {!!}
 pr2 (pr2 (pr2 (endo-Monoid A))) f = {!!}

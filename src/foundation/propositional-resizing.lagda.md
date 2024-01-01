@@ -27,5 +27,5 @@ such that `Q u ≃ P`.
 
 ```agda
 propositional-resizing : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-propositional-resizing l1 l2 = {!!}
+propositional-resizing = {!!}
 ```

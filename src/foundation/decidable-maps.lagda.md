@@ -33,7 +33,7 @@ module _
   where
 
   is-decidable-map : (A → B) → UU (l1 ⊔ l2)
-  is-decidable-map f = {!!}
+  is-decidable-map = {!!}
 ```
 
 ```agda

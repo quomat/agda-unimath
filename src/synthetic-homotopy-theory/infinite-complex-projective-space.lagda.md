@@ -26,7 +26,7 @@ open import synthetic-homotopy-theory.circle
 ℂP∞ = {!!}
 
 point-ℂP∞ : ℂP∞
-pr1 point-ℂP∞ = {!!}
+point-ℂP∞ = {!!}
 pr2 point-ℂP∞ = {!!}
 ```
 

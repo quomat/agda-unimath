@@ -79,7 +79,7 @@ module _
     is-equiv-precomp-equiv = {!!}
 
   equiv-precomp : {l3 : Level} (C : UU l3) → (B → C) ≃ (A → C)
-  pr1 (equiv-precomp C) = {!!}
+  equiv-precomp = {!!}
 ```
 
 #### If precomposing by `f` is an equivalence, then `f` is an equivalence

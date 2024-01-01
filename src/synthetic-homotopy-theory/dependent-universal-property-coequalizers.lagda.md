@@ -113,9 +113,7 @@ module _
         ( cocone-codiagonal-cofork f g e)) →
     ( {l : Level} →
       dependent-universal-property-coequalizer l f g e)
-  dependent-universal-property-coequalizer-dependent-universal-property-pushout
-    ( dup-pushout)
-    ( P) = {!!}
+  dependent-universal-property-coequalizer-dependent-universal-property-pushout = {!!}
 
   dependent-universal-property-pushout-dependent-universal-property-coequalizer :
     ( {l : Level} →
@@ -125,9 +123,7 @@ module _
         ( vertical-map-span-cocone-cofork f g)
         ( horizontal-map-span-cocone-cofork f g)
         ( cocone-codiagonal-cofork f g e))
-  dependent-universal-property-pushout-dependent-universal-property-coequalizer
-    ( dup-coequalizer)
-    ( P) = {!!}
+  dependent-universal-property-pushout-dependent-universal-property-coequalizer = {!!}
 ```
 
 ### The universal property of coequalizers is equivalent to the dependent universal property of coequalizers
@@ -141,9 +137,7 @@ module _
   universal-property-dependent-universal-property-coequalizer :
     ( {l : Level} → dependent-universal-property-coequalizer l f g e) →
     ( {l : Level} → universal-property-coequalizer l f g e)
-  universal-property-dependent-universal-property-coequalizer
-    ( dup-coequalizer)
-    ( Y) = {!!}
+  universal-property-dependent-universal-property-coequalizer = {!!}
 
   dependent-universal-property-universal-property-coequalizer :
     ( {l : Level} → universal-property-coequalizer l f g e) →

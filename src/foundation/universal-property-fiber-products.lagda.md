@@ -41,7 +41,7 @@ module _
 
   cone-fiberwise-prod :
     cone (pr1 {B = P}) (pr1 {B = Q}) (Σ X (λ x → (P x) × (Q x)))
-  pr1 cone-fiberwise-prod = {!!}
+  cone-fiberwise-prod = {!!}
 ```
 
 We will show that the fiberwise product is a pullback by showing that the gap
@@ -55,7 +55,7 @@ map.
 
   inv-gap-fiberwise-prod :
     standard-pullback (pr1 {B = P}) (pr1 {B = Q}) → Σ X (λ x → (P x) × (Q x))
-  pr1 (inv-gap-fiberwise-prod ((x , p) , ((.x , q) , refl))) = {!!}
+  inv-gap-fiberwise-prod = {!!}
 
   abstract
     is-section-inv-gap-fiberwise-prod :
@@ -86,7 +86,7 @@ module _
   where
 
   cone-total-prod-fibers : cone f g (Σ X (λ x → (fiber f x) × (fiber g x)))
-  pr1 cone-total-prod-fibers (x , (a , p) , (b , q)) = {!!}
+  cone-total-prod-fibers = {!!}
 
   gap-total-prod-fibers :
     Σ X (λ x → (fiber f x) × (fiber g x)) → standard-pullback f g

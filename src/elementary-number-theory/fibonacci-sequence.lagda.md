@@ -28,7 +28,7 @@ open import foundation.transport-along-identifications
 
 ```agda
 Fibonacci-ℕ : ℕ → ℕ
-Fibonacci-ℕ 0 = {!!}
+Fibonacci-ℕ = {!!}
 Fibonacci-ℕ (succ-ℕ 0) = {!!}
 Fibonacci-ℕ (succ-ℕ (succ-ℕ n)) = {!!}
 ```
@@ -56,22 +56,22 @@ mimic the above idea, using $ℕ → ℕ$ instead of $ℕ²$.
 
 ```agda
 shift-one : ℕ → (ℕ → ℕ) → (ℕ → ℕ)
-shift-one n f = {!!}
+shift-one = {!!}
 
 shift-two : ℕ → ℕ → (ℕ → ℕ) → (ℕ → ℕ)
-shift-two m n f = {!!}
+shift-two = {!!}
 
 Fibo-zero-ℕ : ℕ → ℕ
 Fibo-zero-ℕ = {!!}
 
 Fibo-succ-ℕ : (ℕ → ℕ) → (ℕ → ℕ)
-Fibo-succ-ℕ f = {!!}
+Fibo-succ-ℕ = {!!}
 
 Fibo-function : ℕ → ℕ → ℕ
 Fibo-function = {!!}
 
 Fibo : ℕ → ℕ
-Fibo k = {!!}
+Fibo = {!!}
 ```
 
 ## Properties

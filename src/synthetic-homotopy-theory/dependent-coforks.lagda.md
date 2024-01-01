@@ -104,12 +104,12 @@ module _
     ( k k' : dependent-cofork f g e P) →
     ( K : map-dependent-cofork f g P k ~ map-dependent-cofork f g P k') →
     UU (l1 ⊔ l4)
-  coherence-htpy-dependent-cofork k k' K = {!!}
+  coherence-htpy-dependent-cofork = {!!}
 
   htpy-dependent-cofork :
     ( k k' : dependent-cofork f g e P) →
     UU (l1 ⊔ l2 ⊔ l4)
-  htpy-dependent-cofork k k' = {!!}
+  htpy-dependent-cofork = {!!}
 ```
 
 ### Obtaining dependent coforks as postcomposition of coforks with dependent maps
@@ -132,7 +132,7 @@ module _
 
   dependent-cofork-map :
     { l : Level} {P : X → UU l} → ((x : X) → P x) → dependent-cofork f g e P
-  pr1 (dependent-cofork-map h) = {!!}
+  dependent-cofork-map = {!!}
 ```
 
 ## Properties
@@ -148,28 +148,28 @@ module _
   reflexive-htpy-dependent-cofork :
     ( k : dependent-cofork f g e P) →
     htpy-dependent-cofork f g P k k
-  pr1 (reflexive-htpy-dependent-cofork k) = {!!}
+  reflexive-htpy-dependent-cofork = {!!}
 
   htpy-dependent-cofork-eq :
     ( k k' : dependent-cofork f g e P) →
     ( k ＝ k') → htpy-dependent-cofork f g P k k'
-  htpy-dependent-cofork-eq k .k refl = {!!}
+  htpy-dependent-cofork-eq = {!!}
 
   abstract
     is-torsorial-htpy-dependent-cofork :
       ( k : dependent-cofork f g e P) →
       is-torsorial (htpy-dependent-cofork f g P k)
-    is-torsorial-htpy-dependent-cofork k = {!!}
+    is-torsorial-htpy-dependent-cofork = {!!}
 
     is-equiv-htpy-dependent-cofork-eq :
       ( k k' : dependent-cofork f g e P) →
       is-equiv (htpy-dependent-cofork-eq k k')
-    is-equiv-htpy-dependent-cofork-eq k = {!!}
+    is-equiv-htpy-dependent-cofork-eq = {!!}
 
   eq-htpy-dependent-cofork :
     ( k k' : dependent-cofork f g e P) →
     htpy-dependent-cofork f g P k k' → k ＝ k'
-  eq-htpy-dependent-cofork k k' = {!!}
+  eq-htpy-dependent-cofork = {!!}
 ```
 
 ### Dependent coforks on constant type families are equivalent to regular coforks
@@ -193,7 +193,7 @@ module _
       ( cofork-map f g e)
       ( map-compute-dependent-cofork-constant-family)
       ( dependent-cofork-map f g e)
-  triangle-compute-dependent-cofork-constant-family h = {!!}
+  triangle-compute-dependent-cofork-constant-family = {!!}
 ```
 
 ### Dependent coforks are special cases of dependent cocones under spans
@@ -219,7 +219,7 @@ module _
         ( cocone-codiagonal-cofork f g e)
         ( P) →
       dependent-cofork f g e P
-    pr1 (dependent-cofork-dependent-cocone-codiagonal k) = {!!}
+    dependent-cofork-dependent-cocone-codiagonal = {!!}
     pr2 (dependent-cofork-dependent-cocone-codiagonal k) a = {!!}
 
     dependent-cocone-codiagonal-dependent-cofork :
@@ -229,7 +229,7 @@ module _
         ( horizontal-map-span-cocone-cofork f g)
         ( cocone-codiagonal-cofork f g e)
         ( P)
-    pr1 (dependent-cocone-codiagonal-dependent-cofork k) = {!!}
+    dependent-cocone-codiagonal-dependent-cofork = {!!}
     pr1 (pr2 (dependent-cocone-codiagonal-dependent-cofork k)) = {!!}
     pr2 (pr2 (dependent-cocone-codiagonal-dependent-cofork k)) (inl a) = {!!}
     pr2 (pr2 (dependent-cocone-codiagonal-dependent-cofork k)) (inr a) = {!!}
@@ -239,13 +239,13 @@ module _
         ( ( dependent-cofork-dependent-cocone-codiagonal) ∘
           ( dependent-cocone-codiagonal-dependent-cofork)) ~
         ( id)
-      is-section-dependent-cocone-codiagonal-dependent-cofork k = {!!}
+      is-section-dependent-cocone-codiagonal-dependent-cofork = {!!}
 
       is-retraction-dependent-cocone-codiagonal-dependent-cofork :
         ( ( dependent-cocone-codiagonal-dependent-cofork) ∘
           ( dependent-cofork-dependent-cocone-codiagonal)) ~
         ( id)
-      is-retraction-dependent-cocone-codiagonal-dependent-cofork d = {!!}
+      is-retraction-dependent-cocone-codiagonal-dependent-cofork = {!!}
 
     is-equiv-dependent-cofork-dependent-cocone-codiagonal :
       is-equiv dependent-cofork-dependent-cocone-codiagonal
@@ -258,7 +258,7 @@ module _
         ( cocone-codiagonal-cofork f g e)
         ( P) ≃
       dependent-cofork f g e P
-    pr1 equiv-dependent-cofork-dependent-cocone-codiagonal = {!!}
+    equiv-dependent-cofork-dependent-cocone-codiagonal = {!!}
     pr2 equiv-dependent-cofork-dependent-cocone-codiagonal = {!!}
 
   triangle-dependent-cofork-dependent-cocone-codiagonal :
@@ -271,5 +271,5 @@ module _
         ( horizontal-map-span-cocone-cofork f g)
         ( cocone-codiagonal-cofork f g e)
         ( P))
-  triangle-dependent-cofork-dependent-cocone-codiagonal P h = {!!}
+  triangle-dependent-cofork-dependent-cocone-codiagonal = {!!}
 ```

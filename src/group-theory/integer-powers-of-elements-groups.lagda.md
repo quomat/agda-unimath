@@ -59,7 +59,7 @@ module _
   where
 
   integer-power-Group : ℤ → type-Group G → type-Group G
-  integer-power-Group k g = {!!}
+  integer-power-Group = {!!}
 ```
 
 ### The predicate of being an integer power of an element in a group
@@ -100,8 +100,7 @@ module _
     (k : ℤ) (h1 h2 : type-Group G) →
     iterative-multiplication-by-element-Group G g k (mul-Group G h1 h2) ＝
     mul-Group G (iterative-multiplication-by-element-Group G g k h1) h2
-  associative-iterative-multiplication-by-element-Group
-    ( inl zero-ℕ) h1 h2 = {!!}
+  associative-iterative-multiplication-by-element-Group = {!!}
 ```
 
 ### `integer-power-Group G (int-ℕ n) g ＝ power-Group G n g`
@@ -230,7 +229,7 @@ module _
 
     infixr 50 _^_
     _^_ : (x : type-Group G) (k : ℤ) → type-Group G
-    _^_ x k = {!!}
+    _^_ = {!!}
 
     infix 55 _⁻¹
     _⁻¹ = {!!}
@@ -272,7 +271,7 @@ module _
 
     infixr 50 _^_
     _^_ : (x : type-Group G) (k : ℤ) → type-Group G
-    _^_ x k = {!!}
+    _^_ = {!!}
 
     infix 55 _⁻¹
     _⁻¹ = {!!}
@@ -304,7 +303,7 @@ module _
 
     infixr 50 _^_
     _^_ : (x : type-Group G) (k : ℤ) → type-Group G
-    _^_ x k = {!!}
+    _^_ = {!!}
 
     infix 55 _⁻¹
     _⁻¹ = {!!}
@@ -331,7 +330,7 @@ module _
 
     infixr 50 _^_
     _^_ : (x : type-Group G) (k : ℤ) → type-Group G
-    _^_ x k = {!!}
+    _^_ = {!!}
 
   integer-power-mul-Group :
     (k l : ℤ) (x : type-Group G) → x ^ (k * l) ＝ (x ^ k) ^ l

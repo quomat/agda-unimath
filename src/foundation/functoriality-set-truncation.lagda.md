@@ -84,7 +84,7 @@ module _
 
   binary-map-trunc-Set :
     type-trunc-Set A → type-trunc-Set B → type-trunc-Set C
-  binary-map-trunc-Set x y = {!!}
+  binary-map-trunc-Set = {!!}
 ```
 
 ## Properties
@@ -164,7 +164,7 @@ module _
   abstract
     is-injective-map-trunc-Set :
       is-injective f → is-injective (map-trunc-Set f)
-    is-injective-map-trunc-Set H {x} {y} = {!!}
+    is-injective-map-trunc-Set = {!!}
 ```
 
 ### The set truncation functor preserves surjective maps
@@ -177,7 +177,7 @@ module _
   abstract
     is-surjective-map-trunc-Set :
       is-surjective f → is-surjective (map-trunc-Set f)
-    is-surjective-map-trunc-Set H = {!!}
+    is-surjective-map-trunc-Set = {!!}
 ```
 
 ### If the set truncation of a map `f` is surjective, then `f` is surjective
@@ -186,7 +186,7 @@ module _
   abstract
     is-surjective-is-surjective-map-trunc-Set :
       is-surjective (map-trunc-Set f) → is-surjective f
-    is-surjective-is-surjective-map-trunc-Set H b = {!!}
+    is-surjective-is-surjective-map-trunc-Set = {!!}
 ```
 
 ### Set truncation preserves the image of a map
@@ -204,7 +204,7 @@ module _
     is-emb-inclusion-trunc-im-Set = {!!}
 
   emb-trunc-im-Set : type-trunc-Set (im f) ↪ type-trunc-Set B
-  pr1 emb-trunc-im-Set = {!!}
+  emb-trunc-im-Set = {!!}
 
   abstract
     is-injective-inclusion-trunc-im-Set : is-injective inclusion-trunc-im-Set
@@ -218,7 +218,7 @@ module _
   triangle-hom-slice-trunc-im-Set = {!!}
 
   hom-slice-trunc-im-Set : hom-slice (map-trunc-Set f) inclusion-trunc-im-Set
-  pr1 hom-slice-trunc-im-Set = {!!}
+  hom-slice-trunc-im-Set = {!!}
 
   abstract
     is-surjective-map-hom-slice-trunc-im-Set :
@@ -297,17 +297,17 @@ module _
 
   unit-im-map-trunc-Set :
     im f → im (map-trunc-Set f)
-  pr1 (unit-im-map-trunc-Set x) = {!!}
+  unit-im-map-trunc-Set = {!!}
 
   left-square-unit-im-map-trunc-Set :
     ( map-unit-im (map-trunc-Set f) ∘ unit-trunc-Set) ~
     ( unit-im-map-trunc-Set ∘ map-unit-im f)
-  left-square-unit-im-map-trunc-Set a = {!!}
+  left-square-unit-im-map-trunc-Set = {!!}
 
   right-square-unit-im-map-trunc-Set :
     ( inclusion-im (map-trunc-Set f) ∘ unit-im-map-trunc-Set) ~
     ( unit-trunc-Set ∘ inclusion-im f)
-  right-square-unit-im-map-trunc-Set x = {!!}
+  right-square-unit-im-map-trunc-Set = {!!}
 
   abstract
     is-set-truncation-im-map-trunc-Set :

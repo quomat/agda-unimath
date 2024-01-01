@@ -41,7 +41,7 @@ natural numbers `(u , v)`
 
 ```agda
 pair-expansion : ℕ → UU lzero
-pair-expansion n = {!!}
+pair-expansion = {!!}
 
 is-nonzero-pair-expansion :
   (u v : ℕ) →
@@ -61,7 +61,7 @@ abstract
     ( n)
 
 has-pair-expansion : (n : ℕ) → pair-expansion n
-has-pair-expansion n = {!!}
+has-pair-expansion = {!!}
 ```
 
 ### If `(u , v)` and `(u' , v')` are the pairs corresponding the same number `x`, then `u ＝ u'` and `v ＝ v'`
@@ -81,21 +81,21 @@ A pairing function is a bijection between `ℕ × ℕ` and `ℕ`.
 
 ```agda
 pairing-map : ℕ × ℕ → ℕ
-pairing-map (u , v) = {!!}
+pairing-map = {!!}
 ```
 
 ### Pairing function is split surjective
 
 ```agda
 is-split-surjective-pairing-map : is-split-surjective pairing-map
-is-split-surjective-pairing-map n = {!!}
+is-split-surjective-pairing-map = {!!}
 ```
 
 ### Pairing function is injective
 
 ```agda
 is-injecitve-pairing-map : is-injective pairing-map
-is-injecitve-pairing-map {u , v} {u' , v'} p = {!!}
+is-injecitve-pairing-map = {!!}
 ```
 
 ### Pairing function is equivalence

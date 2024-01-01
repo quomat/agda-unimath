@@ -190,13 +190,12 @@ module _
     adjoint-relation-hom-Large-Poset P R
       lower-adjoint-comp-galois-connection-Large-Poset
       upper-adjoint-comp-galois-connection-Large-Poset
-  pr1 (adjoint-relation-comp-galois-connection-Large-Poset x y) = {!!}
+  adjoint-relation-comp-galois-connection-Large-Poset = {!!}
   pr2 (adjoint-relation-comp-galois-connection-Large-Poset x y) = {!!}
 
   comp-galois-connection-Large-Poset :
     galois-connection-Large-Poset (λ l → γH (γG l)) (λ l → δG (δH l)) P R
-  lower-adjoint-galois-connection-Large-Poset
-    comp-galois-connection-Large-Poset = {!!}
+  comp-galois-connection-Large-Poset = {!!}
   upper-adjoint-galois-connection-Large-Poset
     comp-galois-connection-Large-Poset = {!!}
   adjoint-relation-galois-connection-Large-Poset
@@ -331,14 +330,12 @@ module _
   upper-sim-lower-sim-galois-connection-Large-Poset :
     lower-sim-galois-connection-Large-Poset P Q G H →
     upper-sim-galois-connection-Large-Poset P Q H G
-  upper-sim-lower-sim-galois-connection-Large-Poset
-    p x = {!!}
+  upper-sim-lower-sim-galois-connection-Large-Poset = {!!}
 
   lower-sim-upper-sim-galois-connection-Large-Poset :
     upper-sim-galois-connection-Large-Poset P Q H G →
     lower-sim-galois-connection-Large-Poset P Q G H
-  lower-sim-upper-sim-galois-connection-Large-Poset
-    p y = {!!}
+  lower-sim-upper-sim-galois-connection-Large-Poset = {!!}
 ```
 
 ### A homotopy between lower adjoints of a Galois connection induces a homotopy between upper adjoints, and vice versa
@@ -364,12 +361,12 @@ module _
   upper-htpy-lower-htpy-galois-connection-Large-Poset :
     lower-htpy-galois-connection-Large-Poset P Q G H →
     upper-htpy-galois-connection-Large-Poset P Q G H
-  upper-htpy-lower-htpy-galois-connection-Large-Poset p = {!!}
+  upper-htpy-lower-htpy-galois-connection-Large-Poset = {!!}
 
   lower-htpy-upper-htpy-galois-connection-Large-Poset :
     upper-htpy-galois-connection-Large-Poset P Q H G →
     lower-htpy-galois-connection-Large-Poset P Q G H
-  lower-htpy-upper-htpy-galois-connection-Large-Poset p = {!!}
+  lower-htpy-upper-htpy-galois-connection-Large-Poset = {!!}
 ```
 
 ### An element `x' : Q` satisfies the lower universal property with respect to `x : P` if and only if it is similar to the element `LG x`
@@ -388,7 +385,7 @@ module _
       ( map-lower-adjoint-galois-connection-Large-Poset P Q G x)
       ( x') →
     is-lower-element-galois-connection-Large-Poset P Q G x x'
-  pr1 (is-lower-element-sim-galois-connection-Large-Poset s y) p = {!!}
+  is-lower-element-sim-galois-connection-Large-Poset = {!!}
   pr2 (is-lower-element-sim-galois-connection-Large-Poset s y) p = {!!}
 
   sim-is-lower-element-galois-connection-Large-Poset :
@@ -396,7 +393,7 @@ module _
     sim-Large-Poset Q
       ( map-lower-adjoint-galois-connection-Large-Poset P Q G x)
       ( x')
-  sim-is-lower-element-galois-connection-Large-Poset l = {!!}
+  sim-is-lower-element-galois-connection-Large-Poset = {!!}
 ```
 
 ### An element `y' : P` satisfies the upper universal property with respect to `y : Q` if and only if it is similar to the element `UG y`
@@ -415,7 +412,7 @@ module _
       ( map-upper-adjoint-galois-connection-Large-Poset P Q G y)
       ( y') →
     is-upper-element-galois-connection-Large-Poset P Q G y y'
-  pr1 (is-upper-element-sim-galois-connection-Large-Poset s x) p = {!!}
+  is-upper-element-sim-galois-connection-Large-Poset = {!!}
   pr2 (is-upper-element-sim-galois-connection-Large-Poset s x) p = {!!}
 
   sim-is-upper-element-galois-connection-Large-Poset :
@@ -423,7 +420,7 @@ module _
     sim-Large-Poset P
       ( map-upper-adjoint-galois-connection-Large-Poset P Q G y)
       ( y')
-  sim-is-upper-element-galois-connection-Large-Poset u = {!!}
+  sim-is-upper-element-galois-connection-Large-Poset = {!!}
 ```
 
 ### The lower adjoint of a Galois connection preserves all existing joins
@@ -473,5 +470,5 @@ module _
     is-least-upper-bound-family-of-elements-Large-Poset Q
       ( λ α → f (x α))
       ( f y)
-  preserves-join-lower-adjoint-galois-connection-Large-Poset x y H z = {!!}
+  preserves-join-lower-adjoint-galois-connection-Large-Poset = {!!}
 ```

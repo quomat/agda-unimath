@@ -49,7 +49,7 @@ module _
       is-torsorial B → ((x : A) → is-prop (P x)) →
       (a : A) (b : B a) (p : P a) →
       is-torsorial (λ (t : Σ A P) → B (pr1 t))
-    is-torsorial-Eq-subtype {P = P} is-torsorial-B is-subtype-P a b p = {!!}
+    is-torsorial-Eq-subtype = {!!}
 ```
 
 ## Theorem
@@ -68,7 +68,7 @@ module _
       {f : (x : A) → a ＝ x → Eq-A x}
       (h : (z : (Σ A P)) → (a , p) ＝ z → Eq-A (pr1 z)) →
       ((x : A) → is-equiv (f x)) → (z : Σ A P) → is-equiv (h z)
-    subtype-identity-principle {f} h H = {!!}
+    subtype-identity-principle = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} (P : A → Prop l2) {Eq-A : A → UU l3}
@@ -78,10 +78,10 @@ module _
   map-extensionality-type-subtype :
     (f : (x : A) → (a ＝ x) ≃ Eq-A x) →
     (z : Σ A (type-Prop ∘ P)) → (a , p) ＝ z → Eq-A (pr1 z)
-  map-extensionality-type-subtype f .(a , p) refl = {!!}
+  map-extensionality-type-subtype = {!!}
 
   extensionality-type-subtype :
     (f : (x : A) → (a ＝ x) ≃ Eq-A x) →
     (z : Σ A (type-Prop ∘ P)) → ((a , p) ＝ z) ≃ Eq-A (pr1 z)
-  pr1 (extensionality-type-subtype f z) = {!!}
+  extensionality-type-subtype = {!!}
 ```

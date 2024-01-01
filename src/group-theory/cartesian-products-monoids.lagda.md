@@ -55,7 +55,7 @@ module _
   associative-mul-prod-Monoid = {!!}
 
   unit-prod-Monoid : type-prod-Monoid
-  pr1 unit-prod-Monoid = {!!}
+  unit-prod-Monoid = {!!}
 
   left-unit-law-mul-prod-Monoid :
     (x : type-prod-Monoid) → Id (mul-prod-Monoid unit-prod-Monoid x) x
@@ -66,5 +66,5 @@ module _
   right-unit-law-mul-prod-Monoid = {!!}
 
   prod-Monoid : Monoid (l1 ⊔ l2)
-  pr1 prod-Monoid = {!!}
+  prod-Monoid = {!!}
 ```

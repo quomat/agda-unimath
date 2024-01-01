@@ -103,7 +103,7 @@ module _
 
 ```agda
 Subgroup : (l : Level) {l1 : Level} (G : Group l1) → UU (lsuc l ⊔ l1)
-Subgroup l G = {!!}
+Subgroup = {!!}
 
 module _
   {l1 l2 : Level} (G : Group l1) (H : Subgroup l2 G)
@@ -183,12 +183,12 @@ module _
   is-closed-under-powers-int-Subgroup = {!!}
 
   subsemigroup-Subgroup : Subsemigroup l2 (semigroup-Group G)
-  pr1 subsemigroup-Subgroup = {!!}
+  subsemigroup-Subgroup = {!!}
 
 is-emb-subset-Subgroup :
   {l1 l2 : Level} (G : Group l1) →
   is-emb (subset-Subgroup {l2 = l2} G)
-is-emb-subset-Subgroup G = {!!}
+is-emb-subset-Subgroup = {!!}
 ```
 
 ### The underlying group of a subgroup
@@ -205,13 +205,13 @@ module _
   map-inclusion-Subgroup = {!!}
 
   eq-subgroup-eq-group : is-injective map-inclusion-Subgroup
-  eq-subgroup-eq-group {x} {y} = {!!}
+  eq-subgroup-eq-group = {!!}
 
   set-group-Subgroup : Set (l1 ⊔ l2)
-  pr1 set-group-Subgroup = {!!}
+  set-group-Subgroup = {!!}
 
   mul-Subgroup : (x y : type-group-Subgroup) → type-group-Subgroup
-  pr1 (mul-Subgroup x y) = {!!}
+  mul-Subgroup = {!!}
 
   associative-mul-Subgroup :
     (x y z : type-group-Subgroup) →
@@ -221,7 +221,7 @@ module _
   associative-mul-Subgroup = {!!}
 
   unit-Subgroup : type-group-Subgroup
-  pr1 unit-Subgroup = {!!}
+  unit-Subgroup = {!!}
 
   left-unit-law-mul-Subgroup :
     (x : type-group-Subgroup) → Id (mul-Subgroup unit-Subgroup x) x
@@ -232,7 +232,7 @@ module _
   right-unit-law-mul-Subgroup = {!!}
 
   inv-Subgroup : type-group-Subgroup → type-group-Subgroup
-  pr1 (inv-Subgroup x) = {!!}
+  inv-Subgroup = {!!}
 
   left-inverse-law-mul-Subgroup :
     ( x : type-group-Subgroup) →
@@ -249,10 +249,10 @@ module _
   right-inverse-law-mul-Subgroup = {!!}
 
   semigroup-Subgroup : Semigroup (l1 ⊔ l2)
-  pr1 semigroup-Subgroup = {!!}
+  semigroup-Subgroup = {!!}
 
   group-Subgroup : Group (l1 ⊔ l2)
-  pr1 group-Subgroup = {!!}
+  group-Subgroup = {!!}
 ```
 
 ### The inclusion of the underlying group of a subgroup into the ambient group
@@ -442,26 +442,26 @@ module _
   where
 
   right-sim-Subgroup : (x y : type-Group G) → UU l2
-  right-sim-Subgroup x y = {!!}
+  right-sim-Subgroup = {!!}
 
   is-prop-right-sim-Subgroup :
     (x y : type-Group G) → is-prop (right-sim-Subgroup x y)
   is-prop-right-sim-Subgroup = {!!}
 
   prop-right-equivalence-relation-Subgroup : (x y : type-Group G) → Prop l2
-  pr1 (prop-right-equivalence-relation-Subgroup x y) = {!!}
+  prop-right-equivalence-relation-Subgroup = {!!}
 
   refl-right-sim-Subgroup : is-reflexive right-sim-Subgroup
-  refl-right-sim-Subgroup x = {!!}
+  refl-right-sim-Subgroup = {!!}
 
   symmetric-right-sim-Subgroup : is-symmetric right-sim-Subgroup
-  symmetric-right-sim-Subgroup x y p = {!!}
+  symmetric-right-sim-Subgroup = {!!}
 
   transitive-right-sim-Subgroup : is-transitive right-sim-Subgroup
-  transitive-right-sim-Subgroup x y z p q = {!!}
+  transitive-right-sim-Subgroup = {!!}
 
   right-equivalence-relation-Subgroup : equivalence-relation l2 (type-Group G)
-  pr1 right-equivalence-relation-Subgroup = {!!}
+  right-equivalence-relation-Subgroup = {!!}
 ```
 
 #### The equivalence relation where `x ~ y` if and only if `xy⁻¹ ∈ H`
@@ -472,26 +472,26 @@ module _
   where
 
   left-sim-Subgroup : (x y : type-Group G) → UU l2
-  left-sim-Subgroup x y = {!!}
+  left-sim-Subgroup = {!!}
 
   is-prop-left-sim-Subgroup :
     (x y : type-Group G) → is-prop (left-sim-Subgroup x y)
   is-prop-left-sim-Subgroup = {!!}
 
   prop-left-equivalence-relation-Subgroup : (x y : type-Group G) → Prop l2
-  pr1 (prop-left-equivalence-relation-Subgroup x y) = {!!}
+  prop-left-equivalence-relation-Subgroup = {!!}
 
   refl-left-sim-Subgroup : is-reflexive left-sim-Subgroup
-  refl-left-sim-Subgroup x = {!!}
+  refl-left-sim-Subgroup = {!!}
 
   symmetric-left-sim-Subgroup : is-symmetric left-sim-Subgroup
-  symmetric-left-sim-Subgroup x y p = {!!}
+  symmetric-left-sim-Subgroup = {!!}
 
   transitive-left-sim-Subgroup : is-transitive left-sim-Subgroup
-  transitive-left-sim-Subgroup x y z p q = {!!}
+  transitive-left-sim-Subgroup = {!!}
 
   left-equivalence-relation-Subgroup : equivalence-relation l2 (type-Group G)
-  pr1 left-equivalence-relation-Subgroup = {!!}
+  left-equivalence-relation-Subgroup = {!!}
 ```
 
 ### Any proposition `P` induces a subgroup of any group `G`
@@ -507,7 +507,7 @@ module _
   where
 
   subset-subgroup-Prop : subset-Group (l1 ⊔ l2) G
-  subset-subgroup-Prop x = {!!}
+  subset-subgroup-Prop = {!!}
 
   contains-unit-subgroup-Prop :
     contains-unit-subset-Group G subset-subgroup-Prop
@@ -534,7 +534,7 @@ module _
   is-closed-under-inverses-subgroup-Prop = {!!}
 
   subgroup-Prop : Subgroup (l1 ⊔ l2) G
-  pr1 subgroup-Prop = {!!}
+  subgroup-Prop = {!!}
 
   group-subgroup-Prop : Group (l1 ⊔ l2)
   group-subgroup-Prop = {!!}

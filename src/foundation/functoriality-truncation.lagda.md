@@ -81,7 +81,7 @@ htpy-trunc = {!!}
 
 ```agda
 id-map-trunc : {l1 : Level} {A : UU l1} (k : 𝕋) → map-trunc k (id {A = A}) ~ id
-id-map-trunc k = {!!}
+id-map-trunc = {!!}
 ```
 
 ### The truncation of a composite is the composite of the truncations
@@ -112,7 +112,7 @@ module _
   is-equiv-map-equiv-trunc = {!!}
 
   equiv-trunc : (type-trunc k A ≃ type-trunc k B)
-  pr1 equiv-trunc = {!!}
+  equiv-trunc = {!!}
 ```
 
 ### Truncations preserve retracts

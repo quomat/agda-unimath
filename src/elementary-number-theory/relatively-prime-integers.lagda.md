@@ -28,7 +28,7 @@ is 1.
 
 ```agda
 is-relative-prime-ℤ : ℤ → ℤ → UU lzero
-is-relative-prime-ℤ x y = {!!}
+is-relative-prime-ℤ = {!!}
 ```
 
 ## Properties
@@ -37,7 +37,7 @@ is-relative-prime-ℤ x y = {!!}
 
 ```agda
 is-prop-is-relative-prime-ℤ : (x y : ℤ) → is-prop (is-relative-prime-ℤ x y)
-is-prop-is-relative-prime-ℤ x y = {!!}
+is-prop-is-relative-prime-ℤ = {!!}
 ```
 
 ### Two integers are relatively prime if and only if their absolute values are relatively prime natural numbers

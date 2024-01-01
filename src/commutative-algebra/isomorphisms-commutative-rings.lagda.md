@@ -77,17 +77,17 @@ module _
   map-inv-is-iso-Commutative-Ring :
     is-iso-Commutative-Ring →
     type-Commutative-Ring B → type-Commutative-Ring A
-  map-inv-is-iso-Commutative-Ring U = {!!}
+  map-inv-is-iso-Commutative-Ring = {!!}
 
   is-section-map-inv-is-iso-Commutative-Ring :
     (U : is-iso-Commutative-Ring) →
     map-hom-Commutative-Ring A B f ∘ map-inv-is-iso-Commutative-Ring U ~ id
-  is-section-map-inv-is-iso-Commutative-Ring U = {!!}
+  is-section-map-inv-is-iso-Commutative-Ring = {!!}
 
   is-retraction-map-inv-is-iso-Commutative-Ring :
     (U : is-iso-Commutative-Ring) →
     map-inv-is-iso-Commutative-Ring U ∘ map-hom-Commutative-Ring A B f ~ id
-  is-retraction-map-inv-is-iso-Commutative-Ring U = {!!}
+  is-retraction-map-inv-is-iso-Commutative-Ring = {!!}
 ```
 
 ### Isomorphisms of commutative rings
@@ -293,11 +293,11 @@ module _
 
   extensionality-Commutative-Ring :
     (B : Commutative-Ring l) → (A ＝ B) ≃ iso-Commutative-Ring A B
-  pr1 (extensionality-Commutative-Ring B) = {!!}
+  extensionality-Commutative-Ring = {!!}
 
   eq-iso-Commutative-Ring :
     (B : Commutative-Ring l) → iso-Commutative-Ring A B → A ＝ B
-  eq-iso-Commutative-Ring B = {!!}
+  eq-iso-Commutative-Ring = {!!}
 ```
 
 ### Any isomorphism of commutative rings preserves and reflects invertible elements

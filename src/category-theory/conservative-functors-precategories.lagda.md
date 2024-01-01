@@ -46,7 +46,7 @@ module _
   is-prop-is-conservative-functor-Precategory = {!!}
 
   is-conservative-prop-functor-Precategory : Prop (l1 ⊔ l2 ⊔ l4)
-  pr1 is-conservative-prop-functor-Precategory = {!!}
+  is-conservative-prop-functor-Precategory = {!!}
 ```
 
 ### The type of conservative functors

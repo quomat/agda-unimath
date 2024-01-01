@@ -50,24 +50,24 @@ that for every vertex `x : G` the type of walks from `x` to `r` is contractible.
 is-tree-Directed-Graph-Prop' :
   {l1 l2 : Level} (G : Directed-Graph l1 l2) (r : vertex-Directed-Graph G) →
   Prop (l1 ⊔ l2)
-is-tree-Directed-Graph-Prop' G r = {!!}
+is-tree-Directed-Graph-Prop' = {!!}
 
 is-tree-Directed-Graph' :
   {l1 l2 : Level} (G : Directed-Graph l1 l2) (r : vertex-Directed-Graph G) →
   UU (l1 ⊔ l2)
-is-tree-Directed-Graph' G r = {!!}
+is-tree-Directed-Graph' = {!!}
 
 is-prop-is-tree-Directed-Graph' :
   {l1 l2 : Level} (G : Directed-Graph l1 l2) (r : vertex-Directed-Graph G) →
   is-prop (is-tree-Directed-Graph' G r)
-is-prop-is-tree-Directed-Graph' G r = {!!}
+is-prop-is-tree-Directed-Graph' = {!!}
 
 is-tree-Directed-Graph :
   {l1 l2 : Level} → Directed-Graph l1 l2 → UU (l1 ⊔ l2)
-is-tree-Directed-Graph G = {!!}
+is-tree-Directed-Graph = {!!}
 
 Directed-Tree : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Directed-Tree l1 l2 = {!!}
+Directed-Tree = {!!}
 
 module _
   {l1 l2 : Level} (T : Directed-Tree l1 l2)
@@ -83,17 +83,17 @@ module _
   edge-Directed-Tree = {!!}
 
   direct-predecessor-Directed-Tree : node-Directed-Tree → UU (l1 ⊔ l2)
-  direct-predecessor-Directed-Tree x = {!!}
+  direct-predecessor-Directed-Tree = {!!}
 
   node-direct-predecessor-Directed-Tree :
     (x : node-Directed-Tree) →
     direct-predecessor-Directed-Tree x → node-Directed-Tree
-  node-direct-predecessor-Directed-Tree x = {!!}
+  node-direct-predecessor-Directed-Tree = {!!}
 
   edge-direct-predecessor-Directed-Tree :
     (x : node-Directed-Tree) (y : direct-predecessor-Directed-Tree x) →
     edge-Directed-Tree (node-direct-predecessor-Directed-Tree x y) x
-  edge-direct-predecessor-Directed-Tree x = {!!}
+  edge-direct-predecessor-Directed-Tree = {!!}
 
   walk-Directed-Tree : (x y : node-Directed-Tree) → UU (l1 ⊔ l2)
   walk-Directed-Tree = {!!}
@@ -131,7 +131,7 @@ module _
   root-Directed-Tree = {!!}
 
   is-root-Directed-Tree : node-Directed-Tree → UU l1
-  is-root-Directed-Tree x = {!!}
+  is-root-Directed-Tree = {!!}
 
   unique-walk-to-root-Directed-Tree :
     is-tree-Directed-Graph' graph-Directed-Tree root-Directed-Tree
@@ -139,16 +139,16 @@ module _
 
   walk-to-root-Directed-Tree :
     (x : node-Directed-Tree) → walk-Directed-Tree x root-Directed-Tree
-  walk-to-root-Directed-Tree x = {!!}
+  walk-to-root-Directed-Tree = {!!}
 
   unique-walk-to-root-Directed-Tree' :
     (x : node-Directed-Tree) →
     is-contr (walk-Directed-Tree' x root-Directed-Tree)
-  unique-walk-to-root-Directed-Tree' x = {!!}
+  unique-walk-to-root-Directed-Tree' = {!!}
 
   walk-to-root-Directed-Tree' :
     (x : node-Directed-Tree) → walk-Directed-Tree' x root-Directed-Tree
-  walk-to-root-Directed-Tree' x = {!!}
+  walk-to-root-Directed-Tree' = {!!}
 ```
 
 ### Proper nodes of directed trees
@@ -162,19 +162,19 @@ module _
   where
 
   is-proper-node-Directed-Tree-Prop : node-Directed-Tree T → Prop l1
-  is-proper-node-Directed-Tree-Prop x = {!!}
+  is-proper-node-Directed-Tree-Prop = {!!}
 
   is-proper-node-Directed-Tree : node-Directed-Tree T → UU l1
-  is-proper-node-Directed-Tree x = {!!}
+  is-proper-node-Directed-Tree = {!!}
 
   is-prop-is-proper-node-Directed-Tree :
     (x : node-Directed-Tree T) → is-prop (is-proper-node-Directed-Tree x)
-  is-prop-is-proper-node-Directed-Tree x = {!!}
+  is-prop-is-proper-node-Directed-Tree = {!!}
 
   is-proof-irrelevant-is-proper-node-Directed-Tree :
     (x : node-Directed-Tree T) →
     is-proof-irrelevant (is-proper-node-Directed-Tree x)
-  is-proof-irrelevant-is-proper-node-Directed-Tree x = {!!}
+  is-proof-irrelevant-is-proper-node-Directed-Tree = {!!}
 
   proper-node-Directed-Tree : UU l1
   proper-node-Directed-Tree = {!!}
@@ -200,19 +200,19 @@ module _
 
   uniqueness-root-is-tree-Directed-Graph :
     (H K : is-tree-Directed-Graph G) → pr1 H ＝ pr1 K
-  uniqueness-root-is-tree-Directed-Graph (r , H) (s , K) = {!!}
+  uniqueness-root-is-tree-Directed-Graph = {!!}
 
   is-prop-is-tree-Directed-Graph : is-prop (is-tree-Directed-Graph G)
   is-prop-is-tree-Directed-Graph = {!!}
 
   is-tree-directed-graph-Prop : Prop (l1 ⊔ l2)
-  pr1 is-tree-directed-graph-Prop = {!!}
+  is-tree-directed-graph-Prop = {!!}
 
 uniqueness-root-Directed-Tree :
   {l1 l2 : Level} (T : Directed-Tree l1 l2)
   (H : is-tree-Directed-Graph (graph-Directed-Tree T)) →
   is-root-Directed-Tree T (pr1 H)
-uniqueness-root-Directed-Tree T = {!!}
+uniqueness-root-Directed-Tree = {!!}
 ```
 
 ### The root in a tree is an isolated element
@@ -227,12 +227,12 @@ module _
       (x : node-Directed-Tree T)
       (w : walk-Directed-Tree T x (root-Directed-Tree T)) →
       is-decidable (is-root-Directed-Tree T x)
-    is-decidable-is-root-walk-Directed-Tree ._ refl-walk-Directed-Graph = {!!}
+    is-decidable-is-root-walk-Directed-Tree = {!!}
     is-decidable-is-root-walk-Directed-Tree x
       ( cons-walk-Directed-Graph {.x} {y} e w) = {!!}
 
   is-isolated-root-Directed-Tree : is-isolated (root-Directed-Tree T)
-  is-isolated-root-Directed-Tree x = {!!}
+  is-isolated-root-Directed-Tree = {!!}
 
   is-prop-is-root-Directed-Tree :
     (x : node-Directed-Tree T) → is-prop (is-root-Directed-Tree T x)
@@ -240,7 +240,7 @@ module _
 
   is-root-directed-tree-Prop :
     (x : node-Directed-Tree T) → Prop l1
-  pr1 (is-root-directed-tree-Prop x) = {!!}
+  is-root-directed-tree-Prop = {!!}
 
   is-contr-loop-space-root-Directed-Tree :
     is-contr (root-Directed-Tree T ＝ root-Directed-Tree T)
@@ -248,11 +248,11 @@ module _
 
   eq-refl-root-Directed-Tree :
     (p : root-Directed-Tree T ＝ root-Directed-Tree T) → p ＝ refl
-  eq-refl-root-Directed-Tree p = {!!}
+  eq-refl-root-Directed-Tree = {!!}
 
   eq-refl-root-Directed-Tree' :
     (p : root-Directed-Tree T ＝ root-Directed-Tree T) → refl ＝ p
-  eq-refl-root-Directed-Tree' p = {!!}
+  eq-refl-root-Directed-Tree' = {!!}
 ```
 
 ### The root has no direct successors
@@ -264,12 +264,12 @@ module _
 
   no-direct-successor-root-Directed-Tree :
     ¬ (Σ (node-Directed-Tree T) (edge-Directed-Tree T (root-Directed-Tree T)))
-  no-direct-successor-root-Directed-Tree (x , e) = {!!}
+  no-direct-successor-root-Directed-Tree = {!!}
 
   is-proper-node-direct-successor-Directed-Tree :
     {x y : node-Directed-Tree T} (e : edge-Directed-Tree T x y) →
     ¬ (is-root-Directed-Tree T x)
-  is-proper-node-direct-successor-Directed-Tree e refl = {!!}
+  is-proper-node-direct-successor-Directed-Tree = {!!}
 ```
 
 ### The type of edges to the root is a proposition
@@ -282,17 +282,17 @@ module _
   is-proof-irrelevant-edge-to-root-Directed-Tree :
     (x : node-Directed-Tree T) →
     is-proof-irrelevant (edge-Directed-Tree T x (root-Directed-Tree T))
-  pr1 (is-proof-irrelevant-edge-to-root-Directed-Tree x e) = {!!}
+  is-proof-irrelevant-edge-to-root-Directed-Tree = {!!}
 
   is-prop-edge-to-root-Directed-Tree :
     (x : node-Directed-Tree T) →
     is-prop (edge-Directed-Tree T x (root-Directed-Tree T))
-  is-prop-edge-to-root-Directed-Tree x = {!!}
+  is-prop-edge-to-root-Directed-Tree = {!!}
 
   eq-edge-to-root-Directed-Tree :
     (x : node-Directed-Tree T)
     (e e' : edge-Directed-Tree T x (root-Directed-Tree T)) → e ＝ e'
-  eq-edge-to-root-Directed-Tree x e e' = {!!}
+  eq-edge-to-root-Directed-Tree = {!!}
 ```
 
 ### Graphs in which vertices have unique direct-successors are trees if for every vertex `x` there is a walk from `x` to the root
@@ -308,16 +308,16 @@ module _
   no-direct-successor-root-unique-direct-successor-Directed-Graph :
     unique-direct-successor-Directed-Graph →
     is-empty (Σ (vertex-Directed-Graph G) (edge-Directed-Graph G r))
-  no-direct-successor-root-unique-direct-successor-Directed-Graph H = {!!}
+  no-direct-successor-root-unique-direct-successor-Directed-Graph = {!!}
 
   is-isolated-root-unique-direct-successor-Directed-Graph :
     unique-direct-successor-Directed-Graph → is-isolated r
-  is-isolated-root-unique-direct-successor-Directed-Graph H x = {!!}
+  is-isolated-root-unique-direct-successor-Directed-Graph = {!!}
 
   is-torsorial-walk-from-root-unique-direct-successor-Directed-Graph :
     unique-direct-successor-Directed-Graph →
     is-torsorial (walk-Directed-Graph G r)
-  pr1 (is-torsorial-walk-from-root-unique-direct-successor-Directed-Graph H) = {!!}
+  is-torsorial-walk-from-root-unique-direct-successor-Directed-Graph = {!!}
   pr2
     ( is-torsorial-walk-from-root-unique-direct-successor-Directed-Graph H)
     ( y , refl-walk-Directed-Graph) = {!!}
@@ -327,29 +327,26 @@ module _
 
   is-contr-loop-space-root-unique-direct-successor-Directed-Graph :
     unique-direct-successor-Directed-Graph → is-contr (r ＝ r)
-  is-contr-loop-space-root-unique-direct-successor-Directed-Graph H = {!!}
+  is-contr-loop-space-root-unique-direct-successor-Directed-Graph = {!!}
 
   is-not-root-has-unique-direct-successor-Directed-Graph :
     (x : vertex-Directed-Graph G) →
     is-contr
       ( (r ＝ x) + Σ (vertex-Directed-Graph G) (edge-Directed-Graph G x)) →
     Σ (vertex-Directed-Graph G) (edge-Directed-Graph G x) → r ≠ x
-  is-not-root-has-unique-direct-successor-Directed-Graph x H (y , e) = {!!}
+  is-not-root-has-unique-direct-successor-Directed-Graph = {!!}
 
   is-proof-irrelevant-direct-successor-has-unique-direct-successor-Directed-Graph :
     (x : vertex-Directed-Graph G) →
     is-contr
       ( (r ＝ x) + Σ (vertex-Directed-Graph G) (edge-Directed-Graph G x)) →
     is-proof-irrelevant (Σ (vertex-Directed-Graph G) (edge-Directed-Graph G x))
-  is-proof-irrelevant-direct-successor-has-unique-direct-successor-Directed-Graph
-    x H (y , e) = {!!}
+  is-proof-irrelevant-direct-successor-has-unique-direct-successor-Directed-Graph = {!!}
 
   is-proof-irrelevant-walk-unique-direct-successor-Directed-Graph :
     unique-direct-successor-Directed-Graph → (x : vertex-Directed-Graph G) →
     is-proof-irrelevant (walk-Directed-Graph G x r)
-  pr1
-    ( is-proof-irrelevant-walk-unique-direct-successor-Directed-Graph H x
-      refl-walk-Directed-Graph) = {!!}
+  is-proof-irrelevant-walk-unique-direct-successor-Directed-Graph = {!!}
   pr2
     ( is-proof-irrelevant-walk-unique-direct-successor-Directed-Graph H x
       refl-walk-Directed-Graph)
@@ -361,13 +358,13 @@ module _
     unique-direct-successor-Directed-Graph →
     ((x : vertex-Directed-Graph G) → walk-Directed-Graph G x r) →
     is-tree-Directed-Graph' G r
-  is-tree-unique-direct-successor-Directed-Graph' H w x = {!!}
+  is-tree-unique-direct-successor-Directed-Graph' = {!!}
 
   is-tree-unique-direct-successor-Directed-Graph :
     unique-direct-successor-Directed-Graph →
     ((x : vertex-Directed-Graph G) → walk-Directed-Graph G x r) →
     is-tree-Directed-Graph G
-  pr1 (is-tree-unique-direct-successor-Directed-Graph H w) = {!!}
+  is-tree-unique-direct-successor-Directed-Graph = {!!}
 ```
 
 ### Nodes in trees have unique direct-successors
@@ -382,8 +379,7 @@ module _
     (w : walk-Directed-Tree T x (root-Directed-Tree T)) →
     is-root-Directed-Tree T x +
     Σ (node-Directed-Tree T) (edge-Directed-Tree T x)
-  center-walk-unique-direct-successor-Directed-Tree .(root-Directed-Tree T)
-    refl-walk-Directed-Graph = {!!}
+  center-walk-unique-direct-successor-Directed-Tree = {!!}
   center-walk-unique-direct-successor-Directed-Tree x
     ( cons-walk-Directed-Graph {.x} {y} e w) = {!!}
 
@@ -391,7 +387,7 @@ module _
     (x : node-Directed-Tree T) →
     is-root-Directed-Tree T x +
     Σ (node-Directed-Tree T) (edge-Directed-Tree T x)
-  center-unique-direct-successor-Directed-Tree x = {!!}
+  center-unique-direct-successor-Directed-Tree = {!!}
 
   contraction-walk-unique-direct-successor-Directed-Tree :
     ( x : node-Directed-Tree T)
@@ -400,9 +396,7 @@ module _
       is-root-Directed-Tree T x +
       Σ (node-Directed-Tree T) (edge-Directed-Tree T x)) →
     center-walk-unique-direct-successor-Directed-Tree x w ＝ p
-  contraction-walk-unique-direct-successor-Directed-Tree ._
-    ( refl-walk-Directed-Graph)
-    ( inl p) = {!!}
+  contraction-walk-unique-direct-successor-Directed-Tree = {!!}
   contraction-walk-unique-direct-successor-Directed-Tree ._
     ( refl-walk-Directed-Graph)
     ( inr (y , e)) = {!!}
@@ -419,40 +413,40 @@ module _
       is-root-Directed-Tree T x +
       Σ (node-Directed-Tree T) (edge-Directed-Tree T x)) →
     center-unique-direct-successor-Directed-Tree x ＝ p
-  contraction-unique-direct-successor-Directed-Tree x = {!!}
+  contraction-unique-direct-successor-Directed-Tree = {!!}
 
   unique-direct-successor-Directed-Tree :
     unique-direct-successor-Directed-Graph
       ( graph-Directed-Tree T)
       ( root-Directed-Tree T)
-  pr1 (unique-direct-successor-Directed-Tree x) = {!!}
+  unique-direct-successor-Directed-Tree = {!!}
   pr2 (unique-direct-successor-Directed-Tree x) = {!!}
 
   unique-direct-successor-is-proper-node-Directed-Tree :
     (x : node-Directed-Tree T) → is-proper-node-Directed-Tree T x →
     is-contr (Σ (node-Directed-Tree T) (edge-Directed-Tree T x))
-  unique-direct-successor-is-proper-node-Directed-Tree x f = {!!}
+  unique-direct-successor-is-proper-node-Directed-Tree = {!!}
 
   abstract
     is-proof-irrelevant-direct-successor-Directed-Tree :
       (x : node-Directed-Tree T) →
       is-proof-irrelevant (Σ (node-Directed-Tree T) (edge-Directed-Tree T x))
-    is-proof-irrelevant-direct-successor-Directed-Tree x (y , e) = {!!}
+    is-proof-irrelevant-direct-successor-Directed-Tree = {!!}
 
   is-prop-direct-successor-Directed-Tree :
     (x : node-Directed-Tree T) →
     is-prop (Σ (node-Directed-Tree T) (edge-Directed-Tree T x))
-  is-prop-direct-successor-Directed-Tree x = {!!}
+  is-prop-direct-successor-Directed-Tree = {!!}
 
   eq-direct-successor-Directed-Tree :
     {x : node-Directed-Tree T}
     (u v : Σ (node-Directed-Tree T) (edge-Directed-Tree T x)) → u ＝ v
-  eq-direct-successor-Directed-Tree {x} = {!!}
+  eq-direct-successor-Directed-Tree = {!!}
 
   direct-successor-is-proper-node-Directed-Tree :
     (x : node-Directed-Tree T) → is-proper-node-Directed-Tree T x →
     Σ (node-Directed-Tree T) (edge-Directed-Tree T x)
-  direct-successor-is-proper-node-Directed-Tree x f = {!!}
+  direct-successor-is-proper-node-Directed-Tree = {!!}
 ```
 
 ### Transporting walks in directed trees
@@ -466,7 +460,7 @@ module _
     {x y : node-Directed-Tree T}
     (u v : Σ (node-Directed-Tree T) (edge-Directed-Tree T x)) →
     walk-Directed-Tree T (pr1 u) y → walk-Directed-Tree T (pr1 v) y
-  tr-walk-eq-direct-successor-Directed-Tree {x} {y} u v = {!!}
+  tr-walk-eq-direct-successor-Directed-Tree = {!!}
 
   eq-tr-walk-eq-direct-successor-Directed-Tree' :
     {x y : node-Directed-Tree T}
@@ -477,7 +471,7 @@ module _
       ( pr2 v)
       ( tr (λ r → walk-Directed-Tree T (pr1 r) y) p w) ＝
     cons-walk-Directed-Graph (pr2 u) w
-  eq-tr-walk-eq-direct-successor-Directed-Tree' u .u w refl = {!!}
+  eq-tr-walk-eq-direct-successor-Directed-Tree' = {!!}
 
   eq-tr-walk-eq-direct-successor-Directed-Tree :
     {x y : node-Directed-Tree T}
@@ -487,7 +481,7 @@ module _
       ( pr2 v)
       ( tr-walk-eq-direct-successor-Directed-Tree u v w) ＝
     cons-walk-Directed-Graph (pr2 u) w
-  eq-tr-walk-eq-direct-successor-Directed-Tree u v w = {!!}
+  eq-tr-walk-eq-direct-successor-Directed-Tree = {!!}
 ```
 
 ## See also

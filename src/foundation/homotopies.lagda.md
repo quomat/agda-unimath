@@ -46,7 +46,7 @@ equivalences, or other.
 is-equiv-inv-htpy :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2}
   (f g : (x : A) → B x) → is-equiv (inv-htpy {f = f} {g = g})
-is-equiv-inv-htpy f g = {!!}
+is-equiv-inv-htpy = {!!}
 
 equiv-inv-htpy :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2}
@@ -93,7 +93,7 @@ module _
   is-equiv-concat-htpy' = {!!}
 
   equiv-concat-htpy' : (f ~ g) ≃ (f ~ h)
-  pr1 equiv-concat-htpy' = {!!}
+  equiv-concat-htpy' = {!!}
 ```
 
 ### Binary concatenation
@@ -140,14 +140,14 @@ module _
   is-equiv-left-transpose-htpy-concat = {!!}
 
   equiv-left-transpose-htpy-concat : ((H ∙h K) ~ L) ≃ (K ~ ((inv-htpy H) ∙h L))
-  pr1 equiv-left-transpose-htpy-concat = {!!}
+  equiv-left-transpose-htpy-concat = {!!}
 
   is-equiv-right-transpose-htpy-concat :
     is-equiv (right-transpose-htpy-concat H K L)
   is-equiv-right-transpose-htpy-concat = {!!}
 
   equiv-right-transpose-htpy-concat : ((H ∙h K) ~ L) ≃ (H ~ (L ∙h (inv-htpy K)))
-  pr1 equiv-right-transpose-htpy-concat = {!!}
+  equiv-right-transpose-htpy-concat = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} {f g h : (x : A) → B x}
@@ -240,7 +240,7 @@ htpy-swap-nat-right-htpy = {!!}
 eckmann-hilton-htpy :
   {l : Level} {X : UU l} (H K : id {A = X} ~ id) →
   (H ∙h K) ~ (K ∙h H)
-eckmann-hilton-htpy H K x = {!!}
+eckmann-hilton-htpy = {!!}
 ```
 
 ### Action on identifications at `eq-htpy`

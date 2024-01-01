@@ -67,7 +67,7 @@ module _
 
 ```agda
 trivial-Concrete-Group : {l : Level} → Concrete-Group l
-pr1 trivial-Concrete-Group = {!!}
+trivial-Concrete-Group = {!!}
 pr2 trivial-Concrete-Group = {!!}
 
 has-contractible-classifying-type-trivial-Concrete-Group :

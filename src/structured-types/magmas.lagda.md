@@ -24,7 +24,7 @@ A **magma** is a type equipped with a binary operation.
 
 ```agda
 Magma : (l : Level) → UU (lsuc l)
-Magma l = {!!}
+Magma = {!!}
 
 module _
   {l : Level} (M : Magma l)
@@ -37,7 +37,7 @@ module _
   mul-Magma = {!!}
 
   mul-Magma' : type-Magma → type-Magma → type-Magma
-  mul-Magma' x y = {!!}
+  mul-Magma' = {!!}
 ```
 
 ## Structures
@@ -46,10 +46,10 @@ module _
 
 ```agda
 is-unital-Magma : {l : Level} (M : Magma l) → UU l
-is-unital-Magma M = {!!}
+is-unital-Magma = {!!}
 
 Unital-Magma : (l : Level) → UU (lsuc l)
-Unital-Magma l = {!!}
+Unital-Magma = {!!}
 
 magma-Unital-Magma :
   {l : Level} → Unital-Magma l → Magma l
@@ -64,21 +64,21 @@ is-unital-magma-Unital-Magma = {!!}
 
 ```agda
 is-semigroup-Magma : {l : Level} → Magma l → UU l
-is-semigroup-Magma M = {!!}
+is-semigroup-Magma = {!!}
 ```
 
 ### Commutative magmas
 
 ```agda
 is-commutative-Magma : {l : Level} → Magma l → UU l
-is-commutative-Magma M = {!!}
+is-commutative-Magma = {!!}
 ```
 
 ### The structure of a commutative monoid on magmas
 
 ```agda
 is-commutative-monoid-Magma : {l : Level} → Magma l → UU l
-is-commutative-monoid-Magma M = {!!}
+is-commutative-monoid-Magma = {!!}
 
 unit-is-commutative-monoid-Magma :
   {l : Level} (M : Magma l) → is-commutative-monoid-Magma M → type-Magma M

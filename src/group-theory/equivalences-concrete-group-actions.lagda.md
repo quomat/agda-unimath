@@ -43,7 +43,7 @@ module _
   equiv-action-Concrete-Group = {!!}
 
   id-equiv-action-Concrete-Group : equiv-action-Concrete-Group X
-  id-equiv-action-Concrete-Group u = {!!}
+  id-equiv-action-Concrete-Group = {!!}
 
   extensionality-action-Concrete-Group :
     (Y : action-Concrete-Group l2 G) → (X ＝ Y) ≃ equiv-action-Concrete-Group Y

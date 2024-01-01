@@ -36,12 +36,12 @@ pr1 (pr2 (pr2 has-mul-ℕ-Commutative-Monoid)) = {!!}
 pr2 (pr2 (pr2 has-mul-ℕ-Commutative-Monoid)) = {!!}
 
 ℕ-Semiring : Semiring lzero
-pr1 ℕ-Semiring = {!!}
+ℕ-Semiring = {!!}
 pr1 (pr2 ℕ-Semiring) = {!!}
 pr1 (pr2 (pr2 ℕ-Semiring)) = {!!}
 pr2 (pr2 (pr2 ℕ-Semiring)) = {!!}
 
 ℕ-Commutative-Semiring : Commutative-Semiring lzero
-pr1 ℕ-Commutative-Semiring = {!!}
+ℕ-Commutative-Semiring = {!!}
 pr2 ℕ-Commutative-Semiring = {!!}
 ```

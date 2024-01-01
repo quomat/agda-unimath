@@ -65,10 +65,10 @@ module _
   pr1 (map-prod t) = {!!}
 
   map-prod-pr1 : pr1 ∘ map-prod ~ f ∘ pr1
-  map-prod-pr1 (a , c) = {!!}
+  map-prod-pr1 = {!!}
 
   map-prod-pr2 : pr2 ∘ map-prod ~ g ∘ pr2
-  map-prod-pr2 (a , c) = {!!}
+  map-prod-pr2 = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {C : UU l3} {D : UU l4}
@@ -92,7 +92,7 @@ module _
 map-prod-id :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   map-prod (id {A = A}) (id {A = B}) ~ id
-map-prod-id (a , b) = {!!}
+map-prod-id = {!!}
 ```
 
 ### Functoriality of products preserves composition
@@ -142,7 +142,7 @@ module _
   is-equiv-map-prod = {!!}
 
   equiv-prod : A ≃ C → B ≃ D → A × B ≃ C × D
-  pr1 (equiv-prod (f , is-equiv-f) (g , is-equiv-g)) = {!!}
+  equiv-prod = {!!}
 ```
 
 ### Functoriality of products preserves equivalences in either factor
@@ -153,7 +153,7 @@ module _
   where
 
   equiv-prod-left : A ≃ C → A × B ≃ C × B
-  equiv-prod-left f = {!!}
+  equiv-prod-left = {!!}
 
   equiv-prod-right : B ≃ C → A × B ≃ A × C
   equiv-prod-right = {!!}

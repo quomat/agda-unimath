@@ -50,7 +50,7 @@ noncoherent-h-space-structure :
 noncoherent-h-space-structure = {!!}
 
 Noncoherent-H-Space : (l : Level) → UU (lsuc l)
-Noncoherent-H-Space l = {!!}
+Noncoherent-H-Space = {!!}
 
 module _
   {l : Level} (A : Noncoherent-H-Space l)

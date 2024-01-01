@@ -185,7 +185,7 @@ module _
   is-radical-full-ideal-Commutative-Ring = {!!}
 
   full-radical-ideal-Commutative-Ring : radical-ideal-Commutative-Ring lzero A
-  pr1 full-radical-ideal-Commutative-Ring = {!!}
+  full-radical-ideal-Commutative-Ring = {!!}
 
   is-top-element-full-radical-ideal-Commutative-Ring :
     is-top-element-Large-Poset

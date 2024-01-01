@@ -32,7 +32,7 @@ instance-replacement :
 instance-replacement = {!!}
 
 replacement-axiom-Level : (l l1 l2 : Level) → UU (lsuc l ⊔ lsuc l1 ⊔ lsuc l2)
-replacement-axiom-Level l l1 l2 = {!!}
+replacement-axiom-Level = {!!}
 
 replacement-axiom : UUω
 replacement-axiom = {!!}

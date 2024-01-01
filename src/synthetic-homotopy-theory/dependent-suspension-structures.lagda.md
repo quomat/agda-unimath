@@ -151,8 +151,7 @@ module _
   htpy-map-inv-equiv-dependent-suspension-structure-suspension-cocone-cocone-dependent-cocone-dependent-suspension-structure :
     map-inv-equiv equiv-dependent-suspension-structure-suspension-cocone ~
     dependent-cocone-dependent-suspension-structure
-  htpy-map-inv-equiv-dependent-suspension-structure-suspension-cocone-cocone-dependent-cocone-dependent-suspension-structure
-    ( d) = {!!}
+  htpy-map-inv-equiv-dependent-suspension-structure-suspension-cocone-cocone-dependent-cocone-dependent-suspension-structure = {!!}
 ```
 
 #### Characterizing equality of dependent suspension structures

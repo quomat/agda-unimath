@@ -35,11 +35,11 @@ An **algebra** over a [ring](ring-theory.rings.md) `R` consists of an
 ```agda
 has-bilinear-mul-left-module-Ring :
   {l1 l2 : Level} (R : Ring l1) (M : left-module-Ring l2 R) → UU (l1 ⊔ l2)
-has-bilinear-mul-left-module-Ring R M = {!!}
+has-bilinear-mul-left-module-Ring = {!!}
 
 Nonunital-Left-Algebra-Ring :
   {l1 : Level} (l2 : Level) (R : Ring l1) → UU (l1 ⊔ lsuc l2)
-Nonunital-Left-Algebra-Ring l2 R = {!!}
+Nonunital-Left-Algebra-Ring = {!!}
 
 module _
   {l1 l2 : Level} (R : Ring l1) (A : Nonunital-Left-Algebra-Ring l2 R)

@@ -145,7 +145,7 @@ module _
   where
 
   is-surjective-hom-element-Group : type-Group G → UU l
-  is-surjective-hom-element-Group g = {!!}
+  is-surjective-hom-element-Group = {!!}
 ```
 
 #### The definition where the evaluation map `hom(G,H) → H` at `g` is an embedding for every `H`
@@ -156,7 +156,7 @@ module _
   where
 
   is-emb-ev-element-hom-Group' : (l : Level) → UU (l1 ⊔ lsuc l)
-  is-emb-ev-element-hom-Group' l = {!!}
+  is-emb-ev-element-hom-Group' = {!!}
 
   is-emb-ev-element-hom-Group : UUω
   is-emb-ev-element-hom-Group = {!!}
@@ -173,14 +173,14 @@ module _
   where
 
   generating-element-Group : subset-Group l G
-  generating-element-Group x = {!!}
+  generating-element-Group = {!!}
 ```
 
 ### Groups equipped with a generating element
 
 ```agda
 Group-With-Generating-Element : (l : Level) → UU (lsuc l)
-Group-With-Generating-Element l = {!!}
+Group-With-Generating-Element = {!!}
 
 module _
   {l : Level} (G : Group-With-Generating-Element l)
@@ -233,12 +233,7 @@ module _
   is-subgroup-generated-by-element-full-subgroup-is-generating-element-Group :
     is-generating-element-Group G g →
     is-subgroup-generated-by-element-full-Subgroup G g
-  pr1
-    ( is-subgroup-generated-by-element-full-subgroup-is-generating-element-Group
-      H K)
-    ( u)
-    ( x)
-    ( v) = {!!}
+  is-subgroup-generated-by-element-full-subgroup-is-generating-element-Group = {!!}
 
 is-subgroup-generated-by-element-full-subgroup-Group-With-Generating-Element :
   {l : Level} (G : Group-With-Generating-Element l) →
@@ -303,7 +298,7 @@ module _
 
   private
     N : Normal-Subgroup l G
-    pr1 N = {!!}
+    N = {!!}
 
     H : Group l
     H = {!!}
@@ -372,7 +367,7 @@ module _
   where
 
   abelian-group-Group-With-Generating-Element : Ab l
-  pr1 abelian-group-Group-With-Generating-Element = {!!}
+  abelian-group-Group-With-Generating-Element = {!!}
 
   zero-Group-With-Generating-Element :
     type-Group-With-Generating-Element G
@@ -492,7 +487,7 @@ module _
     commutative-mul-Group-With-Generating-Element = {!!}
 
   commutative-ring-Group-With-Generating-Element : Commutative-Ring l
-  pr1 commutative-ring-Group-With-Generating-Element = {!!}
+  commutative-ring-Group-With-Generating-Element = {!!}
 ```
 
 ## See also

@@ -290,17 +290,17 @@ module _
       where
 
       P-Prop : (b : type-Set B) (x : type-Set X) → Prop (l1 ⊔ l3 ⊔ l)
-      P-Prop b x = {!!}
+      P-Prop = {!!}
 
       P : (b : type-Set B) (x : type-Set X) → UU (l1 ⊔ l3 ⊔ l)
-      P b x = {!!}
+      P = {!!}
 
       all-elements-equal-total-P :
         (b : type-Set B) → all-elements-equal (Σ (type-Set X) (P b))
       all-elements-equal-total-P = {!!}
 
       is-prop-total-P : (b : type-Set B) → is-prop (Σ (type-Set X) (P b))
-      is-prop-total-P b = {!!}
+      is-prop-total-P = {!!}
 
       α : (b : type-Set B) → Σ (type-Set X) (P b)
       α = {!!}
@@ -395,8 +395,7 @@ module _
       sim-equivalence-relation R x y) →
     is-injective
       ( map-universal-property-set-quotient-is-set-quotient R Q q U B f)
-  is-injective-map-universal-property-set-quotient-is-set-quotient
-    B f H {x} {y} = {!!}
+  is-injective-map-universal-property-set-quotient-is-set-quotient = {!!}
 
   is-emb-map-universal-property-set-quotient-is-set-quotient :
     {l4 : Level} (B : Set l4)
@@ -461,7 +460,7 @@ module _
       e = {!!}
 
       is-prop-P : (b : B) → is-prop (P b)
-      is-prop-P b = {!!}
+      is-prop-P = {!!}
 
   equiv-equalizes-equal-values-extension-along-surjection-Set :
     extension-along-surjection-Set f C g ≃ equalizes-equal-values-surjection-Set

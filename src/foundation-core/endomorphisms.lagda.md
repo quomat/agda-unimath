@@ -28,10 +28,10 @@ An endomorphism on a type `A` is a map `A → A`.
 
 ```agda
 endo : {l : Level} → UU l → UU l
-endo A = {!!}
+endo = {!!}
 
 endo-Pointed-Type : {l : Level} → UU l → Pointed-Type l
-pr1 (endo-Pointed-Type A) = {!!}
+endo-Pointed-Type = {!!}
 pr2 (endo-Pointed-Type A) = {!!}
 ```
 
@@ -41,10 +41,10 @@ pr2 (endo-Pointed-Type A) = {!!}
 
 ```agda
 is-set-endo : {l : Level} {A : UU l} → is-set A → is-set (endo A)
-is-set-endo is-set-A = {!!}
+is-set-endo = {!!}
 
 endo-Set : {l : Level} → Set l → Set l
-pr1 (endo-Set A) = {!!}
+endo-Set = {!!}
 pr2 (endo-Set A) = {!!}
 ```
 

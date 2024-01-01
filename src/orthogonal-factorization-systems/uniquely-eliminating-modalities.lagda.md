@@ -45,10 +45,10 @@ an equivalence for type families over types in the image of the operator:
 is-uniquely-eliminating-modality :
   {l1 l2 : Level} {○ : operator-modality l1 l2} →
   unit-modality ○ → UU (lsuc l1 ⊔ l2)
-is-uniquely-eliminating-modality {l1} {l2} {○} unit-○ = {!!}
+is-uniquely-eliminating-modality = {!!}
 
 uniquely-eliminating-modality : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-uniquely-eliminating-modality l1 l2 = {!!}
+uniquely-eliminating-modality = {!!}
 ```
 
 ### Components of a uniquely eliminating modality
@@ -62,12 +62,12 @@ module _
   ind-modality-is-uniquely-eliminating-modality :
     {X : UU l1} (P : ○ X → UU l1) →
     ((x : X) → ○ (P (unit-○ x))) → (x' : ○ X) → ○ (P x')
-  ind-modality-is-uniquely-eliminating-modality P = {!!}
+  ind-modality-is-uniquely-eliminating-modality = {!!}
 
   compute-ind-modality-is-uniquely-eliminating-modality :
     {X : UU l1} (P : ○ X → UU l1) (f : (x : X) → ○ (P (unit-○ x))) →
     (pr1 (pr1 (is-uem-○ P)) f ∘ unit-○) ~ f
-  compute-ind-modality-is-uniquely-eliminating-modality P = {!!}
+  compute-ind-modality-is-uniquely-eliminating-modality = {!!}
 
 module _
   {l1 l2 : Level}
@@ -99,7 +99,7 @@ module _
   is-prop-is-uniquely-eliminating-modality = {!!}
 
   is-uniquely-eliminating-modality-Prop : Prop (lsuc l1 ⊔ l2)
-  pr1 is-uniquely-eliminating-modality-Prop = {!!}
+  is-uniquely-eliminating-modality-Prop = {!!}
   pr2 is-uniquely-eliminating-modality-Prop = {!!}
 ```
 
@@ -143,17 +143,17 @@ module _
 
   htpy-uniquely-eliminating-modality :
     (○ ● : uniquely-eliminating-modality l1 l2) → UU (lsuc l1 ⊔ l2)
-  htpy-uniquely-eliminating-modality ○ ● = {!!}
+  htpy-uniquely-eliminating-modality = {!!}
 
   refl-htpy-uniquely-eliminating-modality :
     (○ : uniquely-eliminating-modality l1 l2) →
     htpy-uniquely-eliminating-modality ○ ○
-  refl-htpy-uniquely-eliminating-modality ○ X = {!!}
+  refl-htpy-uniquely-eliminating-modality = {!!}
 
   htpy-eq-uniquely-eliminating-modality :
     (○ ● : uniquely-eliminating-modality l1 l2) →
     ○ ＝ ● → htpy-uniquely-eliminating-modality ○ ●
-  htpy-eq-uniquely-eliminating-modality ○ .○ refl = {!!}
+  htpy-eq-uniquely-eliminating-modality = {!!}
 ```
 
 It remains to show that `htpy-eq-uniquely-eliminating-modality` is an

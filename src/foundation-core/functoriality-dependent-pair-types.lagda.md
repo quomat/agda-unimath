@@ -49,7 +49,7 @@ Any family of maps induces a map on the total spaces.
 
 ```agda
   tot : Σ A B → Σ A C
-  pr1 (tot t) = {!!}
+  tot = {!!}
 ```
 
 ### Any map `f : A → B` induces a map `Σ A (C ∘ f) → Σ B C`
@@ -60,7 +60,7 @@ module _
   where
 
   map-Σ-map-base : Σ A (λ x → C (f x)) → Σ B C
-  pr1 (map-Σ-map-base s) = {!!}
+  map-Σ-map-base = {!!}
 ```
 
 ### The functorial action of dependent pair types, and its defining homotopy
@@ -161,7 +161,7 @@ module _
     is-equiv-map-compute-fiber-tot = {!!}
 
   compute-fiber-tot : (t : Σ A C) → fiber (tot f) t ≃ fiber (f (pr1 t)) (pr2 t)
-  pr1 (compute-fiber-tot t) = {!!}
+  compute-fiber-tot = {!!}
 
   abstract
     is-equiv-map-inv-compute-fiber-tot :
@@ -183,11 +183,11 @@ module _
 
   abstract
     is-equiv-tot-is-fiberwise-equiv : is-fiberwise-equiv f → is-equiv (tot f)
-    is-equiv-tot-is-fiberwise-equiv H = {!!}
+    is-equiv-tot-is-fiberwise-equiv = {!!}
 
   abstract
     is-fiberwise-equiv-is-equiv-tot : is-equiv (tot f) → is-fiberwise-equiv f
-    is-fiberwise-equiv-is-equiv-tot is-equiv-tot-f x = {!!}
+    is-fiberwise-equiv-is-equiv-tot = {!!}
 ```
 
 ### The action of `tot` on equivalences
@@ -198,7 +198,7 @@ module _
   where
 
   equiv-tot : ((x : A) → B x ≃ C x) → (Σ A B) ≃ (Σ A C)
-  pr1 (equiv-tot e) = {!!}
+  equiv-tot = {!!}
 ```
 
 ### The fibers of `map-Σ-map-base`
@@ -214,9 +214,7 @@ module _
 
   fiber-fiber-map-Σ-map-base :
     (t : Σ B C) → fiber (map-Σ-map-base f C) t → fiber f (pr1 t)
-  pr1
-    ( fiber-fiber-map-Σ-map-base
-      .(map-Σ-map-base f C (pair x z)) (pair (pair x z) refl)) = {!!}
+  fiber-fiber-map-Σ-map-base = {!!}
 
   is-section-fiber-fiber-map-Σ-map-base :
     (t : Σ B C) →
@@ -260,7 +258,7 @@ module _
 
   abstract
     is-equiv-map-Σ-map-base : is-equiv f → is-equiv (map-Σ-map-base f C)
-    is-equiv-map-Σ-map-base is-equiv-f = {!!}
+    is-equiv-map-Σ-map-base = {!!}
 
 equiv-Σ-equiv-base :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} (C : B → UU l3) (e : A ≃ B) →

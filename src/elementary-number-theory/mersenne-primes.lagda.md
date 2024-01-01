@@ -28,8 +28,8 @@ A Mersenne prime is a prime number that is one less than a power of two.
 
 ```agda
 is-mersenne-prime : ℕ → UU lzero
-is-mersenne-prime n = {!!}
+is-mersenne-prime = {!!}
 
 is-mersenne-prime-power : ℕ → UU lzero
-is-mersenne-prime-power k = {!!}
+is-mersenne-prime-power = {!!}
 ```

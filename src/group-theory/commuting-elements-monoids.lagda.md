@@ -77,7 +77,7 @@ module _
   where
 
   commute-unit-Monoid : (x : type-Monoid M) → commute-Monoid M x (unit-Monoid M)
-  commute-unit-Monoid x = {!!}
+  commute-unit-Monoid = {!!}
 ```
 
 ### If `x` commutes with `y`, then `x * (y * z) ＝ y * (x * z)` for any element `z`

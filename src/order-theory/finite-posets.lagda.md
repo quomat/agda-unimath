@@ -51,7 +51,7 @@ module _
   is-decidable-leq-is-finite-Poset = {!!}
 
 Poset-𝔽 : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Poset-𝔽 l1 l2 = {!!}
+Poset-𝔽 = {!!}
 
 preorder-𝔽-Poset-𝔽 : {l1 l2 : Level} → Poset-𝔽 l1 l2 → Preorder-𝔽 l1 l2
 preorder-𝔽-Poset-𝔽 = {!!}
@@ -65,6 +65,6 @@ is-antisymmetric-leq-Poset-𝔽 :
 is-antisymmetric-leq-Poset-𝔽 = {!!}
 
 poset-Poset-𝔽 : {l1 l2 : Level} → Poset-𝔽 l1 l2 → Poset l1 l2
-pr1 (poset-Poset-𝔽 P) = {!!}
+poset-Poset-𝔽 = {!!}
 pr2 (poset-Poset-𝔽 P) = {!!}
 ```

@@ -39,7 +39,7 @@ is also common to call such graphs _multigraphs_.
 
 ```agda
 Undirected-Graph-𝔽 : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Undirected-Graph-𝔽 l1 l2 = {!!}
+Undirected-Graph-𝔽 = {!!}
 
 module _
   {l1 l2 : Level} (G : Undirected-Graph-𝔽 l1 l2)
@@ -67,14 +67,14 @@ module _
   total-edge-Undirected-Graph-𝔽 = {!!}
 
   undirected-graph-Undirected-Graph-𝔽 : Undirected-Graph l1 l2
-  pr1 undirected-graph-Undirected-Graph-𝔽 = {!!}
+  undirected-graph-Undirected-Graph-𝔽 = {!!}
 ```
 
 ### The following type is expected to be equivalent to Undirected-Graph-𝔽
 
 ```agda
 Undirected-Graph-𝔽' : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Undirected-Graph-𝔽' l1 l2 = {!!}
+Undirected-Graph-𝔽' = {!!}
 ```
 
 The degree of a vertex x of a graph G is the set of occurences of x as an

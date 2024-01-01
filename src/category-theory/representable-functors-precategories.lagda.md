@@ -55,7 +55,7 @@ module _
   hom-representable-functor-Precategory = {!!}
 
   representable-map-Precategory : map-Precategory C (Set-Precategory l2)
-  pr1 representable-map-Precategory = {!!}
+  representable-map-Precategory = {!!}
 
   preserves-comp-representable-functor-Precategory :
     preserves-comp-hom-map-Precategory
@@ -72,7 +72,7 @@ module _
   preserves-id-representable-functor-Precategory = {!!}
 
   representable-functor-Precategory : functor-Precategory C (Set-Precategory l2)
-  pr1 representable-functor-Precategory = {!!}
+  representable-functor-Precategory = {!!}
 ```
 
 ## Natural transformations between representable functors

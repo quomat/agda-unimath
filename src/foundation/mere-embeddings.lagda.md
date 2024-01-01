@@ -25,10 +25,10 @@ open import order-theory.large-preorders
 
 ```agda
 mere-emb-Prop : {l1 l2 : Level} → UU l1 → UU l2 → Prop (l1 ⊔ l2)
-mere-emb-Prop X Y = {!!}
+mere-emb-Prop = {!!}
 
 mere-emb : {l1 l2 : Level} → UU l1 → UU l2 → UU (l1 ⊔ l2)
-mere-emb X Y = {!!}
+mere-emb = {!!}
 
 is-prop-mere-emb :
   {l1 l2 : Level} (X : UU l1) (Y : UU l2) → is-prop (mere-emb X Y)
@@ -41,7 +41,7 @@ is-prop-mere-emb = {!!}
 
 ```agda
 refl-mere-emb : {l1 : Level} (X : UU l1) → mere-emb X X
-refl-mere-emb X = {!!}
+refl-mere-emb = {!!}
 
 transitive-mere-emb :
   {l1 l2 l3 : Level} {X : UU l1} {Y : UU l2} {Z : UU l3} →
@@ -49,7 +49,7 @@ transitive-mere-emb :
 transitive-mere-emb = {!!}
 
 mere-emb-Large-Preorder : Large-Preorder lsuc _⊔_
-type-Large-Preorder mere-emb-Large-Preorder l = {!!}
+mere-emb-Large-Preorder = {!!}
 leq-prop-Large-Preorder mere-emb-Large-Preorder = {!!}
 refl-leq-Large-Preorder mere-emb-Large-Preorder = {!!}
 transitive-leq-Large-Preorder mere-emb-Large-Preorder X Y Z = {!!}

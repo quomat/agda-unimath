@@ -27,10 +27,10 @@ We define a bijection of Collatz
 
 ```agda
 cases-map-collatz-bijection : (n : ℕ) (x : ℤ-Mod 3) (p : mod-ℕ 3 n ＝ x) → ℕ
-cases-map-collatz-bijection n (inl (inl (inr _))) p = {!!}
+cases-map-collatz-bijection = {!!}
 cases-map-collatz-bijection n (inl (inr _)) p = {!!}
 cases-map-collatz-bijection n (inr _) p = {!!}
 
 map-collatz-bijection : ℕ → ℕ
-map-collatz-bijection n = {!!}
+map-collatz-bijection = {!!}
 ```

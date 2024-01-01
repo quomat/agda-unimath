@@ -60,7 +60,7 @@ module _
   is-apartness-relation = {!!}
 
 Apartness-Relation : {l1 : Level} (l2 : Level) (A : UU l1) → UU (l1 ⊔ lsuc l2)
-Apartness-Relation l2 A = {!!}
+Apartness-Relation = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (R : Apartness-Relation l2 A)
@@ -70,13 +70,13 @@ module _
   rel-Apartness-Relation = {!!}
 
   apart-Apartness-Relation : A → A → UU l2
-  apart-Apartness-Relation x y = {!!}
+  apart-Apartness-Relation = {!!}
 
   antirefl-Apartness-Relation : is-antireflexive rel-Apartness-Relation
   antirefl-Apartness-Relation = {!!}
 
   consistent-Apartness-Relation : is-consistent rel-Apartness-Relation
-  consistent-Apartness-Relation x .x refl = {!!}
+  consistent-Apartness-Relation = {!!}
 
   symmetric-Apartness-Relation : is-symmetric apart-Apartness-Relation
   symmetric-Apartness-Relation = {!!}
@@ -169,5 +169,5 @@ module _
     is-cotransitive-apart-function-into-Type-With-Apartness = {!!}
 
   exp-Type-With-Apartness : Type-With-Apartness (l1 ⊔ l2) (l1 ⊔ l3)
-  pr1 exp-Type-With-Apartness = {!!}
+  exp-Type-With-Apartness = {!!}
 ```

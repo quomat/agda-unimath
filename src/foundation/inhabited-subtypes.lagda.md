@@ -55,7 +55,7 @@ module _
   type-inhabited-subtype = {!!}
 
   inhabited-type-inhabited-subtype : Inhabited-Type (l1 ⊔ l2)
-  pr1 inhabited-type-inhabited-subtype = {!!}
+  inhabited-type-inhabited-subtype = {!!}
 
   is-in-inhabited-subtype : A → UU l2
   is-in-inhabited-subtype = {!!}

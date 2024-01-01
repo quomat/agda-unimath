@@ -41,16 +41,16 @@ be inhabited.
 
 ```agda
 is-inhabited-Prop : {l : Level} → UU l → Prop l
-is-inhabited-Prop X = {!!}
+is-inhabited-Prop = {!!}
 
 is-inhabited : {l : Level} → UU l → UU l
-is-inhabited X = {!!}
+is-inhabited = {!!}
 
 is-property-is-inhabited : {l : Level} → (X : UU l) → is-prop (is-inhabited X)
-is-property-is-inhabited X = {!!}
+is-property-is-inhabited = {!!}
 
 Inhabited-Type : (l : Level) → UU (lsuc l)
-Inhabited-Type l = {!!}
+Inhabited-Type = {!!}
 
 module _
   {l : Level} (X : Inhabited-Type l)
@@ -75,7 +75,7 @@ module _
   where
 
   type-Fam-Inhabited-Types : X → UU l2
-  type-Fam-Inhabited-Types x = {!!}
+  type-Fam-Inhabited-Types = {!!}
 
   is-inhabited-type-Fam-Inhabited-Types :
     (x : X) → type-trunc-Prop (type-Fam-Inhabited-Types x)

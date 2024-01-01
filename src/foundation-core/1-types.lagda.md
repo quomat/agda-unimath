@@ -30,7 +30,7 @@ is-1-type : {l : Level} → UU l → UU l
 is-1-type = {!!}
 
 1-Type : (l : Level) → UU (lsuc l)
-1-Type l = {!!}
+1-Type = {!!}
 
 type-1-Type : {l : Level} → 1-Type l → UU l
 type-1-Type = {!!}
@@ -47,7 +47,7 @@ abstract
 
 ```agda
 Id-Set : {l : Level} (X : 1-Type l) (x y : type-1-Type X) → Set l
-pr1 (Id-Set X x y) = {!!}
+Id-Set = {!!}
 pr2 (Id-Set X x y) = {!!}
 ```
 
@@ -74,7 +74,7 @@ abstract
 
 1-type-Prop :
   {l : Level} → Prop l → 1-Type l
-1-type-Prop P = {!!}
+1-type-Prop = {!!}
 ```
 
 ### Any contractible type is a 1-type

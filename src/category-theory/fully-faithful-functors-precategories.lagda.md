@@ -79,7 +79,7 @@ module _
       ( obj-functor-Precategory C D F x)
       ( obj-functor-Precategory C D F y) ≃
     hom-Precategory C x y
-  inv-equiv-hom-is-fully-faithful-functor-Precategory is-ff-F = {!!}
+  inv-equiv-hom-is-fully-faithful-functor-Precategory = {!!}
 
   map-inv-hom-is-fully-faithful-functor-Precategory :
     is-fully-faithful-functor-Precategory →
@@ -88,7 +88,7 @@ module _
       ( obj-functor-Precategory C D F x)
       ( obj-functor-Precategory C D F y) →
     hom-Precategory C x y
-  map-inv-hom-is-fully-faithful-functor-Precategory is-ff-F = {!!}
+  map-inv-hom-is-fully-faithful-functor-Precategory = {!!}
 ```
 
 ### The type of fully faithful functors between two precategories
@@ -133,7 +133,7 @@ module _
     hom-Precategory D
       ( obj-fully-faithful-functor-Precategory F x)
       ( obj-fully-faithful-functor-Precategory F y)
-  equiv-hom-fully-faithful-functor-Precategory F = {!!}
+  equiv-hom-fully-faithful-functor-Precategory = {!!}
 
   inv-equiv-hom-fully-faithful-functor-Precategory :
     (F : fully-faithful-functor-Precategory)
@@ -142,7 +142,7 @@ module _
       ( obj-fully-faithful-functor-Precategory F x)
       ( obj-fully-faithful-functor-Precategory F y) ≃
     hom-Precategory C x y
-  inv-equiv-hom-fully-faithful-functor-Precategory F = {!!}
+  inv-equiv-hom-fully-faithful-functor-Precategory = {!!}
 
   map-inv-hom-fully-faithful-functor-Precategory :
     (F : fully-faithful-functor-Precategory)
@@ -151,7 +151,7 @@ module _
       ( obj-fully-faithful-functor-Precategory F x)
       ( obj-fully-faithful-functor-Precategory F y) →
     hom-Precategory C x y
-  map-inv-hom-fully-faithful-functor-Precategory F = {!!}
+  map-inv-hom-fully-faithful-functor-Precategory = {!!}
 ```
 
 ## Properties
@@ -169,36 +169,33 @@ module _
   is-full-is-fully-faithful-functor-Precategory :
     is-fully-faithful-functor-Precategory C D F →
     is-full-functor-Precategory C D F
-  is-full-is-fully-faithful-functor-Precategory is-ff-F x y = {!!}
+  is-full-is-fully-faithful-functor-Precategory = {!!}
 
   full-functor-is-fully-faithful-functor-Precategory :
     is-fully-faithful-functor-Precategory C D F → full-functor-Precategory C D
-  pr1 (full-functor-is-fully-faithful-functor-Precategory is-ff-F) = {!!}
+  full-functor-is-fully-faithful-functor-Precategory = {!!}
 
   is-faithful-is-fully-faithful-functor-Precategory :
     is-fully-faithful-functor-Precategory C D F →
     is-faithful-functor-Precategory C D F
-  is-faithful-is-fully-faithful-functor-Precategory is-ff-F x y = {!!}
+  is-faithful-is-fully-faithful-functor-Precategory = {!!}
 
   faithful-functor-is-fully-faithful-functor-Precategory :
     is-fully-faithful-functor-Precategory C D F →
     faithful-functor-Precategory C D
-  pr1 (faithful-functor-is-fully-faithful-functor-Precategory is-ff-F) = {!!}
+  faithful-functor-is-fully-faithful-functor-Precategory = {!!}
 
   is-fully-faithful-is-full-is-faithful-functor-Precategory :
     is-full-functor-Precategory C D F →
     is-faithful-functor-Precategory C D F →
     is-fully-faithful-functor-Precategory C D F
-  is-fully-faithful-is-full-is-faithful-functor-Precategory
-    is-full-F is-faithful-F x y = {!!}
+  is-fully-faithful-is-full-is-faithful-functor-Precategory = {!!}
 
   fully-faithful-functor-is-full-is-faithful-functor-Precategory :
     is-full-functor-Precategory C D F →
     is-faithful-functor-Precategory C D F →
     fully-faithful-functor-Precategory C D
-  pr1
-    ( fully-faithful-functor-is-full-is-faithful-functor-Precategory
-      is-full-F is-faithful-F) = {!!}
+  fully-faithful-functor-is-full-is-faithful-functor-Precategory = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}
@@ -256,8 +253,7 @@ module _
   is-iso-iso-is-essentially-injective-is-fully-faithful-functor-Precategory :
     is-iso-Precategory C
       ( hom-iso-is-essentially-injective-is-fully-faithful-functor-Precategory)
-  pr1
-    is-iso-iso-is-essentially-injective-is-fully-faithful-functor-Precategory = {!!}
+  is-iso-iso-is-essentially-injective-is-fully-faithful-functor-Precategory = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}
@@ -269,7 +265,7 @@ module _
 
   is-essentially-injective-is-fully-faithful-functor-Precategory :
     is-essentially-injective-functor-Precategory C D F
-  pr1 (is-essentially-injective-is-fully-faithful-functor-Precategory x y e) = {!!}
+  is-essentially-injective-is-fully-faithful-functor-Precategory = {!!}
 ```
 
 ### Fully faithful functors are pseudomonic
@@ -286,11 +282,11 @@ module _
   is-full-on-isos-is-fully-faithful-functor-Precategory :
     (x y : obj-Precategory C) →
     is-surjective (preserves-iso-functor-Precategory C D F {x} {y})
-  is-full-on-isos-is-fully-faithful-functor-Precategory x y e = {!!}
+  is-full-on-isos-is-fully-faithful-functor-Precategory = {!!}
 
   is-pseudomonic-is-fully-faithful-functor-Precategory :
     is-pseudomonic-functor-Precategory C D F
-  pr1 is-pseudomonic-is-fully-faithful-functor-Precategory = {!!}
+  is-pseudomonic-is-fully-faithful-functor-Precategory = {!!}
 ```
 
 ### Fully faithful functors are conservative
@@ -306,7 +302,7 @@ module _
 
   is-conservative-is-fully-faithful-functor-Precategory :
     is-conservative-functor-Precategory C D F
-  is-conservative-is-fully-faithful-functor-Precategory {x} {y} = {!!}
+  is-conservative-is-fully-faithful-functor-Precategory = {!!}
 ```
 
 ## External links

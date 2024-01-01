@@ -63,7 +63,7 @@ module _
   where
 
   is-commutative : (A → A → B) → UU (l1 ⊔ l2)
-  is-commutative f = {!!}
+  is-commutative = {!!}
 
 is-commutative-Prop :
   {l1 l2 : Level} {A : UU l1} (B : Set l2) →
@@ -82,7 +82,7 @@ module _
   symmetric-operation = {!!}
 
   map-symmetric-operation : symmetric-operation → A → A → B
-  map-symmetric-operation f x y = {!!}
+  map-symmetric-operation = {!!}
 ```
 
 ## Properties

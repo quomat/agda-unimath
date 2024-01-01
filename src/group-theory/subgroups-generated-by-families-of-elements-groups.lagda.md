@@ -56,8 +56,7 @@ module _
   contains-element-is-subgroup-generated-by-family-of-elements-Group :
     is-subgroup-generated-by-family-of-elements-Group →
     (i : I) → is-in-Subgroup G H (x i)
-  contains-element-is-subgroup-generated-by-family-of-elements-Group
-    U = {!!}
+  contains-element-is-subgroup-generated-by-family-of-elements-Group = {!!}
 
   leq-subgroup-is-subgroup-generated-by-family-of-elements-Group :
     is-subgroup-generated-by-family-of-elements-Group →
@@ -113,8 +112,7 @@ module _
     is-subgroup-generated-by-family-of-elements-subgroup-family-of-elements-Group :
       is-subgroup-generated-by-family-of-elements-Group G x
         subgroup-family-of-elements-Group
-    is-subgroup-generated-by-family-of-elements-subgroup-family-of-elements-Group
-      H = {!!}
+    is-subgroup-generated-by-family-of-elements-subgroup-family-of-elements-Group = {!!}
 
   abstract
     contains-element-subgroup-family-of-elements-Group :

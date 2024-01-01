@@ -42,10 +42,10 @@ ex-falso : {l : Level} {A : UU l} → empty → A
 ex-falso = {!!}
 
 is-empty : {l : Level} → UU l → UU l
-is-empty A = {!!}
+is-empty = {!!}
 
 is-nonempty : {l : Level} → UU l → UU l
-is-nonempty A = {!!}
+is-nonempty = {!!}
 ```
 
 ## Properties
@@ -62,7 +62,7 @@ module _
     is-emb-ex-falso ()
 
   ex-falso-emb : empty ↪ A
-  pr1 ex-falso-emb = {!!}
+  ex-falso-emb = {!!}
 ```
 
 ### Any map into an empty type is an equivalence
@@ -92,11 +92,11 @@ abstract
   is-prop-empty ()
 
 empty-Prop : Prop lzero
-pr1 empty-Prop = {!!}
+empty-Prop = {!!}
 pr2 empty-Prop = {!!}
 
 is-prop-is-empty : {l : Level} {A : UU l} → is-empty A → is-prop A
-is-prop-is-empty is-empty-A = {!!}
+is-prop-is-empty = {!!}
 ```
 
 ### The empty type is a set
@@ -106,7 +106,7 @@ is-set-empty : is-set empty
 is-set-empty ()
 
 empty-Set : Set lzero
-pr1 empty-Set = {!!}
+empty-Set = {!!}
 pr2 empty-Set = {!!}
 ```
 
@@ -118,7 +118,7 @@ abstract
   is-trunc-empty k ()
 
 empty-Truncated-Type : (k : 𝕋) → Truncated-Type lzero (succ-𝕋 k)
-pr1 (empty-Truncated-Type k) = {!!}
+empty-Truncated-Type = {!!}
 pr2 (empty-Truncated-Type k) = {!!}
 
 abstract

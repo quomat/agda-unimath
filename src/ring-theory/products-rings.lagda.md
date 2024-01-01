@@ -44,13 +44,13 @@ module _
   is-set-type-prod-Ring = {!!}
 
   add-prod-Ring : type-prod-Ring → type-prod-Ring → type-prod-Ring
-  pr1 (add-prod-Ring (pair x1 y1) (pair x2 y2)) = {!!}
+  add-prod-Ring = {!!}
 
   zero-prod-Ring : type-prod-Ring
-  pr1 zero-prod-Ring = {!!}
+  zero-prod-Ring = {!!}
 
   neg-prod-Ring : type-prod-Ring → type-prod-Ring
-  pr1 (neg-prod-Ring (pair x y)) = {!!}
+  neg-prod-Ring = {!!}
 
   left-unit-law-add-prod-Ring :
     (x : type-prod-Ring) → Id (add-prod-Ring zero-prod-Ring x) x
@@ -80,10 +80,10 @@ module _
   commutative-add-prod-Ring = {!!}
 
   mul-prod-Ring : type-prod-Ring → type-prod-Ring → type-prod-Ring
-  pr1 (mul-prod-Ring (pair x1 y1) (pair x2 y2)) = {!!}
+  mul-prod-Ring = {!!}
 
   one-prod-Ring : type-prod-Ring
-  pr1 one-prod-Ring = {!!}
+  one-prod-Ring = {!!}
 
   associative-mul-prod-Ring :
     (x y z : type-prod-Ring) →
@@ -115,14 +115,14 @@ module _
   right-distributive-mul-add-prod-Ring = {!!}
 
   semigroup-prod-Ring : Semigroup (l1 ⊔ l2)
-  pr1 semigroup-prod-Ring = {!!}
+  semigroup-prod-Ring = {!!}
 
   group-prod-Ring : Group (l1 ⊔ l2)
-  pr1 group-prod-Ring = {!!}
+  group-prod-Ring = {!!}
 
   ab-prod-Ring : Ab (l1 ⊔ l2)
-  pr1 ab-prod-Ring = {!!}
+  ab-prod-Ring = {!!}
 
   prod-Ring : Ring (l1 ⊔ l2)
-  pr1 prod-Ring = {!!}
+  prod-Ring = {!!}
 ```

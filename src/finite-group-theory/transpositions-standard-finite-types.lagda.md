@@ -100,7 +100,7 @@ module _
   is-involution-map-swap-two-last-elements-transposition-Fin = {!!}
 
   swap-two-last-elements-transposition-Fin : Permutation (succ-ℕ (succ-ℕ n))
-  pr1 swap-two-last-elements-transposition-Fin = {!!}
+  swap-two-last-elements-transposition-Fin = {!!}
 ```
 
 We show that this definiton is an instance of the previous one.
@@ -236,13 +236,7 @@ cases-htpy-transposition-Fin-transposition-swap-Fin :
   (x ＝ j) + (x ≠ j) →
   map-transposition-Fin n i j neq x ＝
   map-transposition-Fin n j i (neq ∘ inv) x
-cases-htpy-transposition-Fin-transposition-swap-Fin
-  ( n)
-  ( i)
-  ( j)
-  ( neq)
-  ( .i)
-  ( inl refl) _ = {!!}
+cases-htpy-transposition-Fin-transposition-swap-Fin = {!!}
 cases-htpy-transposition-Fin-transposition-swap-Fin
   ( n)
   ( i)
@@ -391,11 +385,7 @@ htpy-permutation-list-adjacent-transpositions-transposition-Fin :
       ( n)
       ( list-adjacent-transpositions-transposition-Fin n i j))
     ( transposition-Fin (succ-ℕ n) i j neq)
-htpy-permutation-list-adjacent-transpositions-transposition-Fin
-  ( 0)
-  ( inr star)
-  ( inr star)
-  ( neq) = {!!}
+htpy-permutation-list-adjacent-transpositions-transposition-Fin = {!!}
 htpy-permutation-list-adjacent-transpositions-transposition-Fin
   ( succ-ℕ n)
   ( inl i)

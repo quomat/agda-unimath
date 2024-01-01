@@ -35,7 +35,7 @@ module _
   where
 
   eq-value : X → UU l2
-  eq-value x = {!!}
+  eq-value = {!!}
 
   {-# INLINE eq-value #-}
 
@@ -43,7 +43,7 @@ module _
     {x y : X} (p : x ＝ y) (q : eq-value x) (r : eq-value y) →
     coherence-square-identifications (ap (tr P p) q) (apd f p) (apd g p) r →
     dependent-identification eq-value p q r
-  map-compute-dependent-identification-eq-value refl q r = {!!}
+  map-compute-dependent-identification-eq-value = {!!}
 ```
 
 ### The type family of identifications between values of two ordinary functions
@@ -62,20 +62,20 @@ module _
     {x y : X} (p : x ＝ y) (q : eq-value f g x) (r : eq-value f g y) →
     coherence-square-identifications q (ap f p) (ap g p) r →
     dependent-identification eq-value-function p q r
-  map-compute-dependent-identification-eq-value-function refl q r = {!!}
+  map-compute-dependent-identification-eq-value-function = {!!}
 
 map-compute-dependent-identification-eq-value-id-id :
   {l1 : Level} {A : UU l1} {a b : A} (p : a ＝ b) (q : a ＝ a) (r : b ＝ b) →
   coherence-square-identifications q p p r →
   dependent-identification (eq-value id id) p q r
-map-compute-dependent-identification-eq-value-id-id refl q r s = {!!}
+map-compute-dependent-identification-eq-value-id-id = {!!}
 
 map-compute-dependent-identification-eq-value-comp-id :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (g : B → A) (f : A → B) {a b : A}
   (p : a ＝ b) (q : eq-value (g ∘ f) id a) (r : eq-value (g ∘ f) id b) →
   coherence-square-identifications q (ap g (ap f p)) p r →
   dependent-identification (eq-value (g ∘ f) id) p q r
-map-compute-dependent-identification-eq-value-comp-id g f refl q r s = {!!}
+map-compute-dependent-identification-eq-value-comp-id = {!!}
 ```
 
 ### Homotopies
@@ -100,17 +100,17 @@ module _
   where
 
   refl-htpy : {f : (x : A) → B x} → f ~ f
-  refl-htpy x = {!!}
+  refl-htpy = {!!}
 
   refl-htpy' : (f : (x : A) → B x) → f ~ f
-  refl-htpy' f = {!!}
+  refl-htpy' = {!!}
 ```
 
 ### Inverting homotopies
 
 ```agda
   inv-htpy : {f g : (x : A) → B x} → f ~ g → g ~ f
-  inv-htpy H x = {!!}
+  inv-htpy = {!!}
 ```
 
 ### Concatenating homotopies
@@ -127,12 +127,12 @@ module _
   concat-htpy :
     {f g : (x : A) → B x} →
     f ~ g → (h : (x : A) → B x) → g ~ h → f ~ h
-  concat-htpy H h K x = {!!}
+  concat-htpy = {!!}
 
   concat-htpy' :
     (f : (x : A) → B x) {g h : (x : A) → B x} →
     g ~ h → f ~ g → f ~ h
-  concat-htpy' f K H = {!!}
+  concat-htpy' = {!!}
 
   concat-inv-htpy :
     {f g : (x : A) → B x} →
@@ -142,7 +142,7 @@ module _
   concat-inv-htpy' :
     (f : (x : A) → B x) {g h : (x : A) → B x} →
     (g ~ h) → (f ~ h) → (f ~ g)
-  concat-inv-htpy' f K = {!!}
+  concat-inv-htpy' = {!!}
 ```
 
 ### Transposition of homotopies
@@ -154,13 +154,13 @@ module _
   where
 
   left-transpose-htpy-concat : K ~ ((inv-htpy H) ∙h L)
-  left-transpose-htpy-concat x = {!!}
+  left-transpose-htpy-concat = {!!}
 
   inv-htpy-left-transpose-htpy-concat : ((inv-htpy H) ∙h L) ~ K
   inv-htpy-left-transpose-htpy-concat = {!!}
 
   right-transpose-htpy-concat : H ~ (L ∙h (inv-htpy K))
-  right-transpose-htpy-concat x = {!!}
+  right-transpose-htpy-concat = {!!}
 
   inv-htpy-right-transpose-htpy-concat : (L ∙h (inv-htpy K)) ~ H
   inv-htpy-right-transpose-htpy-concat = {!!}
@@ -175,7 +175,7 @@ module _
   where
 
   assoc-htpy : ((H ∙h K) ∙h L) ~ (H ∙h (K ∙h L))
-  assoc-htpy x = {!!}
+  assoc-htpy = {!!}
 
   inv-htpy-assoc-htpy : (H ∙h (K ∙h L)) ~ ((H ∙h K) ∙h L)
   inv-htpy-assoc-htpy = {!!}
@@ -190,13 +190,13 @@ module _
   where
 
   left-unit-htpy : (refl-htpy ∙h H) ~ H
-  left-unit-htpy x = {!!}
+  left-unit-htpy = {!!}
 
   inv-htpy-left-unit-htpy : H ~ (refl-htpy ∙h H)
   inv-htpy-left-unit-htpy = {!!}
 
   right-unit-htpy : (H ∙h refl-htpy) ~ H
-  right-unit-htpy x = {!!}
+  right-unit-htpy = {!!}
 
   inv-htpy-right-unit-htpy : H ~ (H ∙h refl-htpy)
   inv-htpy-right-unit-htpy = {!!}
@@ -233,7 +233,7 @@ module _
 
   distributive-inv-concat-htpy :
     (inv-htpy (H ∙h K)) ~ ((inv-htpy K) ∙h (inv-htpy H))
-  distributive-inv-concat-htpy x = {!!}
+  distributive-inv-concat-htpy = {!!}
 
   inv-htpy-distributive-inv-concat-htpy :
     ((inv-htpy K) ∙h (inv-htpy H)) ~ (inv-htpy (H ∙h K))
@@ -247,23 +247,23 @@ nat-htpy :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} {f g : A → B} (H : f ~ g)
   {x y : A} (p : x ＝ y) →
   ((H x) ∙ (ap g p)) ＝ ((ap f p) ∙ (H y))
-nat-htpy H refl = {!!}
+nat-htpy = {!!}
 
 inv-nat-htpy :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} {f g : A → B} (H : f ~ g)
   {x y : A} (p : x ＝ y) →
   ((ap f p) ∙ (H y)) ＝ ((H x) ∙ (ap g p))
-inv-nat-htpy H p = {!!}
+inv-nat-htpy = {!!}
 
 nat-htpy-id :
   {l : Level} {A : UU l} {f : A → A} (H : f ~ id)
   {x y : A} (p : x ＝ y) → ((H x) ∙ p) ＝ ((ap f p) ∙ (H y))
-nat-htpy-id H refl = {!!}
+nat-htpy-id = {!!}
 
 inv-nat-htpy-id :
   {l : Level} {A : UU l} {f : A → A} (H : f ~ id)
   {x y : A} (p : x ＝ y) → ((ap f p) ∙ (H y)) ＝ ((H x) ∙ p)
-inv-nat-htpy-id H p = {!!}
+inv-nat-htpy-id = {!!}
 ```
 
 ### Homotopies preserve the laws of the action on identity types
@@ -275,11 +275,11 @@ module _
 
   ap-concat-htpy :
     (H : f ~ g) {K K' : g ~ h} → K ~ K' → (H ∙h K) ~ (H ∙h K')
-  ap-concat-htpy H L x = {!!}
+  ap-concat-htpy = {!!}
 
   ap-concat-htpy' :
     {H H' : f ~ g} (K : g ~ h) → H ~ H' → (H ∙h K) ~ (H' ∙h K)
-  ap-concat-htpy' K L x = {!!}
+  ap-concat-htpy' = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} {f g : (x : A) → B x}
@@ -288,7 +288,7 @@ module _
 
   ap-inv-htpy :
     H ~ H' → (inv-htpy H) ~ (inv-htpy H')
-  ap-inv-htpy K x = {!!}
+  ap-inv-htpy = {!!}
 ```
 
 ## Reasoning with homotopies
@@ -318,7 +318,7 @@ step-homotopy-reasoning :
   {l1 l2 : Level} {X : UU l1} {Y : X → UU l2}
   {f g : (x : X) → Y x} → (f ~ g) →
   (h : (x : X) → Y x) → (g ~ h) → (f ~ h)
-step-homotopy-reasoning p h q = {!!}
+step-homotopy-reasoning = {!!}
 
 syntax step-homotopy-reasoning p h q = {!!}
 ```

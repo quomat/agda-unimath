@@ -51,7 +51,7 @@ replacement we show that for any type `A : U`, there is no surjective map
 
 ```agda
 Russell : (l : Level) → 𝕍 (lsuc l)
-Russell l = {!!}
+Russell = {!!}
 ```
 
 ## Properties
@@ -82,7 +82,7 @@ equiv-Russell-in-Russell = {!!}
 
 ```agda
 paradox-Russell : {l : Level} → ¬ (is-small l (UU l))
-paradox-Russell {l} H = {!!}
+paradox-Russell = {!!}
 
   K : is-small-universe l l
   K = {!!}

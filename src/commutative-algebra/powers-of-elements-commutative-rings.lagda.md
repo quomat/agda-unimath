@@ -33,7 +33,7 @@ defined by iteratively multiplying `x` with itself `n` times.
 power-Commutative-Ring :
   {l : Level} (A : Commutative-Ring l) →
   ℕ → type-Commutative-Ring A → type-Commutative-Ring A
-power-Commutative-Ring A = {!!}
+power-Commutative-Ring = {!!}
 ```
 
 ## Properties
@@ -101,7 +101,7 @@ module _
     mul-Commutative-Ring A
       ( power-Commutative-Ring A n x)
       ( power-Commutative-Ring A n y)
-  distributive-power-mul-Commutative-Ring n x y = {!!}
+  distributive-power-mul-Commutative-Ring = {!!}
 ```
 
 ### `(-x)ⁿ = {!!}

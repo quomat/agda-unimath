@@ -66,6 +66,6 @@ pointed-adjoint-structure-map-suspension-Prespectrum :
 pointed-adjoint-structure-map-suspension-Prespectrum = {!!}
 
 suspension-Prespectrum : {l : Level} → Pointed-Type l → Prespectrum l
-pr1 (suspension-Prespectrum A) n = {!!}
+suspension-Prespectrum = {!!}
 pr2 (suspension-Prespectrum A) = {!!}
 ```

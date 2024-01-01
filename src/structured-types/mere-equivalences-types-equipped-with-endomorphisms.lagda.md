@@ -88,7 +88,7 @@ module _
   mere-equiv-Component-Type-With-Endomorphism = {!!}
 
   canonical-Component-Type-With-Endomorphism : Component-Type-With-Endomorphism
-  pr1 canonical-Component-Type-With-Endomorphism = {!!}
+  canonical-Component-Type-With-Endomorphism = {!!}
 ```
 
 ### Equivalences of types equipped with an endomorphism in a given component

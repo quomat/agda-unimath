@@ -37,7 +37,7 @@ is a map `f : X → Maybe Y`.
 
 ```agda
 Maybe : {l : Level} → UU l → UU l
-Maybe X = {!!}
+Maybe = {!!}
 
 data Maybe' {l} (X : UU l) : UU l where
   unit-Maybe' : X → Maybe' X
@@ -49,24 +49,24 @@ unit-Maybe : {l : Level} {X : UU l} → X → Maybe X
 unit-Maybe = {!!}
 
 exception-Maybe : {l : Level} {X : UU l} → Maybe X
-exception-Maybe {l} {X} = {!!}
+exception-Maybe = {!!}
 ```
 
 ### The predicate of being an exception
 
 ```agda
 is-exception-Maybe : {l : Level} {X : UU l} → Maybe X → UU l
-is-exception-Maybe {l} {X} x = {!!}
+is-exception-Maybe = {!!}
 
 is-not-exception-Maybe : {l : Level} {X : UU l} → Maybe X → UU l
-is-not-exception-Maybe x = {!!}
+is-not-exception-Maybe = {!!}
 ```
 
 ### The predicate of being a value
 
 ```agda
 is-value-Maybe : {l : Level} {X : UU l} → Maybe X → UU l
-is-value-Maybe {l} {X} x = {!!}
+is-value-Maybe = {!!}
 
 value-is-value-Maybe :
   {l : Level} {X : UU l} (x : Maybe X) → is-value-Maybe x → X
@@ -82,7 +82,7 @@ eq-is-value-Maybe = {!!}
 
 ```agda
 maybe-structure : {l1 : Level} (X : UU l1) → UU (lsuc l1)
-maybe-structure {l1} X = {!!}
+maybe-structure = {!!}
 ```
 
 ## Properties
@@ -92,10 +92,10 @@ maybe-structure {l1} X = {!!}
 ```agda
 abstract
   is-emb-unit-Maybe : {l : Level} {X : UU l} → is-emb (unit-Maybe {X = X})
-  is-emb-unit-Maybe {l} {X} = {!!}
+  is-emb-unit-Maybe = {!!}
 
 emb-unit-Maybe : {l : Level} (X : UU l) → X ↪ Maybe X
-pr1 (emb-unit-Maybe X) = {!!}
+emb-unit-Maybe = {!!}
 pr2 (emb-unit-Maybe X) = {!!}
 
 abstract

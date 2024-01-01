@@ -107,7 +107,7 @@ module _
     is-prop-cases-Eq-isolated-element = {!!}
 
   Eq-isolated-element : is-isolated a → A → UU lzero
-  Eq-isolated-element d x = {!!}
+  Eq-isolated-element = {!!}
 
   abstract
     is-prop-Eq-isolated-element :
@@ -115,7 +115,7 @@ module _
     is-prop-Eq-isolated-element = {!!}
 
   Eq-isolated-element-Prop : is-isolated a → A → Prop lzero
-  pr1 (Eq-isolated-element-Prop d x) = {!!}
+  Eq-isolated-element-Prop = {!!}
 
   decide-reflexivity :
     (d : is-decidable (a ＝ a)) → Σ (a ＝ a) (λ p → inl p ＝ d)
@@ -123,7 +123,7 @@ module _
 
   abstract
     refl-Eq-isolated-element : (d : is-isolated a) → Eq-isolated-element d a
-    refl-Eq-isolated-element d = {!!}
+    refl-Eq-isolated-element = {!!}
 
   abstract
     Eq-eq-isolated-element :
@@ -161,7 +161,7 @@ module _
 
   abstract
     is-prop-eq-isolated-element : (d : is-isolated a) (x : A) → is-prop (a ＝ x)
-    is-prop-eq-isolated-element d x = {!!}
+    is-prop-eq-isolated-element = {!!}
 
   is-contr-loop-space-isolated-element :
     (d : is-isolated a) → is-contr (a ＝ a)
@@ -169,7 +169,7 @@ module _
 
   abstract
     is-emb-point-is-isolated : is-isolated a → is-emb (point a)
-    is-emb-point-is-isolated d star = {!!}
+    is-emb-point-is-isolated = {!!}
 ```
 
 ### Being an isolated element is a property
@@ -210,7 +210,7 @@ module _
   is-emb-point-isolated-element = {!!}
 
   emb-point-isolated-element : unit ↪ A
-  pr1 emb-point-isolated-element = {!!}
+  emb-point-isolated-element = {!!}
 
   is-decidable-point-isolated-element :
     is-decidable-map point-isolated-element
@@ -221,7 +221,7 @@ module _
   is-decidable-emb-point-isolated-element = {!!}
 
   decidable-emb-point-isolated-element : unit ↪ᵈ A
-  pr1 decidable-emb-point-isolated-element = {!!}
+  decidable-emb-point-isolated-element = {!!}
 ```
 
 ### Types with isolated elements can be equipped with a Maybe-structure
@@ -260,8 +260,7 @@ is-retraction-map-inv-maybe-structure-isolated-element :
   {l1 : Level} (X : UU l1) (x : isolated-element X) →
   ( map-inv-maybe-structure-isolated-element X x ∘
     map-maybe-structure-isolated-element X x) ~ id
-is-retraction-map-inv-maybe-structure-isolated-element
-  X (x , dx) (inl (y , f)) = {!!}
+is-retraction-map-inv-maybe-structure-isolated-element = {!!}
 is-retraction-map-inv-maybe-structure-isolated-element X (x , dx) (inr star) = {!!}
 
 is-equiv-map-maybe-structure-isolated-element :

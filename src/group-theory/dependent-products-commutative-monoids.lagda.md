@@ -72,5 +72,5 @@ module _
   commutative-mul-Π-Commutative-Monoid = {!!}
 
   Π-Commutative-Monoid : Commutative-Monoid (l1 ⊔ l2)
-  pr1 Π-Commutative-Monoid = {!!}
+  Π-Commutative-Monoid = {!!}
 ```

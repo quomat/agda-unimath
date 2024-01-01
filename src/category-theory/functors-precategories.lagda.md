@@ -68,7 +68,7 @@ module _
   is-prop-preserves-id-hom-map-Precategory = {!!}
 
   preserves-id-hom-prop-map-Precategory : Prop (l1 ⊔ l4)
-  pr1 preserves-id-hom-prop-map-Precategory = {!!}
+  preserves-id-hom-prop-map-Precategory = {!!}
 
   is-functor-prop-map-Precategory : Prop (l1 ⊔ l2 ⊔ l4)
   is-functor-prop-map-Precategory = {!!}
@@ -115,7 +115,7 @@ module _
   hom-functor-Precategory = {!!}
 
   map-functor-Precategory : functor-Precategory → map-Precategory C D
-  pr1 (map-functor-Precategory F) = {!!}
+  map-functor-Precategory = {!!}
 
   is-functor-functor-Precategory :
     (F : functor-Precategory) →
@@ -173,7 +173,7 @@ module _
   hom-comp-functor-Precategory = {!!}
 
   map-comp-functor-Precategory : map-Precategory A C
-  pr1 map-comp-functor-Precategory = {!!}
+  map-comp-functor-Precategory = {!!}
 
   preserves-comp-comp-functor-Precategory :
     preserves-comp-hom-map-Precategory A C map-comp-functor-Precategory
@@ -184,7 +184,7 @@ module _
   preserves-id-comp-functor-Precategory = {!!}
 
   comp-functor-Precategory : functor-Precategory A C
-  pr1 comp-functor-Precategory = {!!}
+  comp-functor-Precategory = {!!}
 ```
 
 ## Properties

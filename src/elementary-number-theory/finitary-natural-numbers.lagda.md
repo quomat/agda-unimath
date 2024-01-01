@@ -42,13 +42,13 @@ data based-ℕ : ℕ → UU lzero where
 
 ```agda
 constant-ℕ : (k : ℕ) → Fin k → ℕ
-constant-ℕ k x = {!!}
+constant-ℕ = {!!}
 
 unary-op-ℕ : (k : ℕ) → Fin k → ℕ → ℕ
-unary-op-ℕ k x n = {!!}
+unary-op-ℕ = {!!}
 
 convert-based-ℕ : (k : ℕ) → based-ℕ k → ℕ
-convert-based-ℕ k (constant-based-ℕ .k x) = {!!}
+convert-based-ℕ = {!!}
 convert-based-ℕ k (unary-op-based-ℕ .k x n) = {!!}
 ```
 
@@ -78,10 +78,7 @@ le-constant-unary-op-ℕ = {!!}
 
 is-injective-convert-based-ℕ :
   (k : ℕ) → is-injective (convert-based-ℕ k)
-is-injective-convert-based-ℕ
-  ( succ-ℕ k)
-  { constant-based-ℕ .(succ-ℕ k) x}
-  { constant-based-ℕ .(succ-ℕ k) y} p = {!!}
+is-injective-convert-based-ℕ = {!!}
 is-injective-convert-based-ℕ
   ( succ-ℕ k)
   { constant-based-ℕ .(succ-ℕ k) x}
@@ -121,14 +118,14 @@ is-injective-convert-based-ℕ
 
 ```agda
 zero-based-ℕ : (k : ℕ) → based-ℕ (succ-ℕ k)
-zero-based-ℕ k = {!!}
+zero-based-ℕ = {!!}
 ```
 
 ### The successor function on the `k`-ary natural numbers
 
 ```agda
 succ-based-ℕ : (k : ℕ) → based-ℕ k → based-ℕ k
-succ-based-ℕ (succ-ℕ k) (constant-based-ℕ .(succ-ℕ k) (inl x)) = {!!}
+succ-based-ℕ = {!!}
 succ-based-ℕ (succ-ℕ k) (constant-based-ℕ .(succ-ℕ k) (inr _)) = {!!}
 succ-based-ℕ (succ-ℕ k) (unary-op-based-ℕ .(succ-ℕ k) (inl x) n) = {!!}
 succ-based-ℕ (succ-ℕ k) (unary-op-based-ℕ .(succ-ℕ k) (inr x) n) = {!!}
@@ -138,7 +135,7 @@ succ-based-ℕ (succ-ℕ k) (unary-op-based-ℕ .(succ-ℕ k) (inr x) n) = {!!}
 
 ```agda
 inv-convert-based-ℕ : (k : ℕ) → ℕ → based-ℕ (succ-ℕ k)
-inv-convert-based-ℕ k zero-ℕ = {!!}
+inv-convert-based-ℕ = {!!}
 inv-convert-based-ℕ k (succ-ℕ n) = {!!}
 
 convert-based-succ-based-ℕ :

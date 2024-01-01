@@ -88,8 +88,7 @@ module _
     leq-radical-ideal-Commutative-Ring A
       ( join-family-of-radical-ideals-Commutative-Ring)
       ( K)
-  forward-inclusion-is-join-join-family-of-radical-ideals-Commutative-Ring
-    K H = {!!}
+  forward-inclusion-is-join-join-family-of-radical-ideals-Commutative-Ring = {!!}
 
   backward-inclusion-is-join-join-family-of-radical-ideals-Commutative-Ring :
     {l4 : Level} (K : radical-ideal-Commutative-Ring l4 A) →
@@ -97,8 +96,7 @@ module _
       ( join-family-of-radical-ideals-Commutative-Ring)
       ( K) →
     (i : I) → leq-radical-ideal-Commutative-Ring A (J i) K
-  backward-inclusion-is-join-join-family-of-radical-ideals-Commutative-Ring
-    K H i x p = {!!}
+  backward-inclusion-is-join-join-family-of-radical-ideals-Commutative-Ring = {!!}
 
   is-join-join-family-of-radical-ideals-Commutative-Ring :
     is-join-family-of-radical-ideals-Commutative-Ring A J

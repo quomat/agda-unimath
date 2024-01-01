@@ -40,7 +40,7 @@ open import univalent-combinatorics.standard-finite-types
 
 ```agda
 UU-Fin-Group : (l : Level) (n : ℕ) → Concrete-Group (lsuc l)
-pr1 (pr1 (pr1 (UU-Fin-Group l n))) = {!!}
+UU-Fin-Group = {!!}
 pr2 (pr1 (pr1 (UU-Fin-Group l n))) = {!!}
 pr2 (pr1 (UU-Fin-Group l n)) = {!!}
 pr2 (UU-Fin-Group l n) = {!!}

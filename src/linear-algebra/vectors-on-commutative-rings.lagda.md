@@ -110,7 +110,7 @@ module _
 
   zero-functional-vec-Commutative-Ring :
     (n : ℕ) → functional-vec-Commutative-Ring R n
-  zero-functional-vec-Commutative-Ring n i = {!!}
+  zero-functional-vec-Commutative-Ring = {!!}
 ```
 
 ### Pointwise addition of vectors on a commutative ring

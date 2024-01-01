@@ -33,7 +33,7 @@ is-reflective-modality :
 is-reflective-modality = {!!}
 
 reflective-modality : (l : Level) → UU (lsuc l)
-reflective-modality l = {!!}
+reflective-modality = {!!}
 ```
 
 ## See also

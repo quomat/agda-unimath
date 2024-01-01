@@ -22,10 +22,10 @@ Functions are primitive in Agda. Here we construct some basic functions
 
 ```agda
 id : {l : Level} {A : UU l} → A → A
-id a = {!!}
+id = {!!}
 
 idω : {A : UUω} → A → A
-idω a = {!!}
+idω = {!!}
 ```
 
 ### Dependent composition of functions

@@ -44,7 +44,7 @@ module _
   where
 
   is-dependent-epimorphism : (A → B) → UUω
-  is-dependent-epimorphism f = {!!}
+  is-dependent-epimorphism = {!!}
 ```
 
 ## Properties

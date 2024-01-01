@@ -36,7 +36,7 @@ module _
   where
 
   neighbor-Undirected-Graph : vertex-Undirected-Graph G → UU (l1 ⊔ l2)
-  neighbor-Undirected-Graph x = {!!}
+  neighbor-Undirected-Graph = {!!}
 ```
 
 ## Properties

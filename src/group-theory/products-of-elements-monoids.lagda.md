@@ -32,7 +32,7 @@ module _
   where
 
   mul-list-Monoid : list (type-Monoid M) → type-Monoid M
-  mul-list-Monoid nil = {!!}
+  mul-list-Monoid = {!!}
 ```
 
 ## Properties

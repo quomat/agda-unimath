@@ -61,7 +61,7 @@ module _
 
 ```agda
 Category : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Category l1 l2 = {!!}
+Category = {!!}
 
 module _
   {l1 l2 : Level} (C : Category l1 l2)
@@ -157,7 +157,7 @@ module _
   is-preunivalent-category-Category = {!!}
 
   preunivalent-category-Category : Preunivalent-Category l1 l2
-  pr1 preunivalent-category-Category = {!!}
+  preunivalent-category-Category = {!!}
 ```
 
 ### The total hom-type of a category
@@ -265,14 +265,12 @@ module _
   is-category-is-surjective-iso-eq-Preunivalent-Category :
     is-surjective-iso-eq-Precategory (precategory-Preunivalent-Category C) →
     is-category-Precategory (precategory-Preunivalent-Category C)
-  is-category-is-surjective-iso-eq-Preunivalent-Category
-    is-surjective-iso-eq-C x y = {!!}
+  is-category-is-surjective-iso-eq-Preunivalent-Category = {!!}
 
   is-surjective-iso-eq-is-category-Preunivalent-Category :
     is-category-Precategory (precategory-Preunivalent-Category C) →
     is-surjective-iso-eq-Precategory (precategory-Preunivalent-Category C)
-  is-surjective-iso-eq-is-category-Preunivalent-Category
-    is-category-C x y = {!!}
+  is-surjective-iso-eq-is-category-Preunivalent-Category = {!!}
 
   is-equiv-is-category-is-surjective-iso-eq-Preunivalent-Category :
     is-equiv is-category-is-surjective-iso-eq-Preunivalent-Category

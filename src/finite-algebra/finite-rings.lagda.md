@@ -57,14 +57,14 @@ A **finite ring** is a ring where the underlying type is finite.
 
 ```agda
 has-mul-Ab-𝔽 : {l1 : Level} (A : Ab-𝔽 l1) → UU l1
-has-mul-Ab-𝔽 A = {!!}
+has-mul-Ab-𝔽 = {!!}
 
 Ring-𝔽 : (l1 : Level) → UU (lsuc l1)
-Ring-𝔽 l1 = {!!}
+Ring-𝔽 = {!!}
 
 compute-ring-𝔽 :
   {l : Level} → (R : Ring l) → is-finite (type-Ring R) → Ring-𝔽 l
-pr1 (compute-ring-𝔽 R f) = {!!}
+compute-ring-𝔽 = {!!}
 pr2 (compute-ring-𝔽 R f) = {!!}
 
 module _
@@ -78,7 +78,7 @@ module _
   ab-Ring-𝔽 = {!!}
 
   ring-Ring-𝔽 : Ring l
-  pr1 ring-Ring-𝔽 = {!!}
+  ring-Ring-𝔽 = {!!}
 
   finite-type-Ring-𝔽 : 𝔽 l
   finite-type-Ring-𝔽 = {!!}
@@ -489,7 +489,7 @@ module _
 
   compute-structure-ring-𝔽 :
     structure-ring-𝔽 → Ring-𝔽 l
-  pr1 (compute-structure-ring-𝔽 (m , c)) = {!!}
+  compute-structure-ring-𝔽 = {!!}
   pr2 (compute-structure-ring-𝔽 (m , c)) = {!!}
 
   is-finite-structure-ring-𝔽 :

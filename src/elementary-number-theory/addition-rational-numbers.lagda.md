@@ -31,10 +31,10 @@ Properties of addition with respect to inequality are derived in
 
 ```agda
 add-ℚ : ℚ → ℚ → ℚ
-add-ℚ (x , p) (y , q) = {!!}
+add-ℚ = {!!}
 
 add-ℚ' : ℚ → ℚ → ℚ
-add-ℚ' x y = {!!}
+add-ℚ' = {!!}
 
 infixl 35 _+ℚ_
 _+ℚ_ = {!!}
@@ -50,10 +50,10 @@ ap-add-ℚ = {!!}
 
 ```agda
 left-unit-law-add-ℚ : (x : ℚ) → zero-ℚ +ℚ x ＝ x
-left-unit-law-add-ℚ (x , p) = {!!}
+left-unit-law-add-ℚ = {!!}
 
 right-unit-law-add-ℚ : (x : ℚ) → x +ℚ zero-ℚ ＝ x
-right-unit-law-add-ℚ (x , p) = {!!}
+right-unit-law-add-ℚ = {!!}
 ```
 
 ### Addition is associative

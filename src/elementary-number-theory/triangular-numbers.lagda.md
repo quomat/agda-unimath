@@ -17,6 +17,6 @@ open import elementary-number-theory.natural-numbers
 
 ```agda
 triangular-number-ℕ : ℕ → ℕ
-triangular-number-ℕ 0 = {!!}
+triangular-number-ℕ = {!!}
 triangular-number-ℕ (succ-ℕ n) = {!!}
 ```

@@ -62,7 +62,7 @@ module _
 
 ```agda
 Total-Order : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Total-Order l1 l2 = {!!}
+Total-Order = {!!}
 
 module _
   {l1 l2 : Level} (X : Total-Order l1 l2)

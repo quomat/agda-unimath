@@ -35,7 +35,7 @@ Pairs of distinct elements in a type `A` consist of two elements `x` and `y` of
 
 ```agda
 pair-of-distinct-elements : {l : Level} → UU l → UU l
-pair-of-distinct-elements A = {!!}
+pair-of-distinct-elements = {!!}
 
 module _
   {l : Level} {A : UU l} (p : pair-of-distinct-elements A)

@@ -51,5 +51,5 @@ module _
   is-prop-has-top-element-Poset = {!!}
 
   has-top-element-Poset-Prop : Prop (l1 ⊔ l2)
-  pr1 has-top-element-Poset-Prop = {!!}
+  has-top-element-Poset-Prop = {!!}
 ```

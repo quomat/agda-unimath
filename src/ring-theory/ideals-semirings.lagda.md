@@ -71,7 +71,7 @@ module _
   subset-left-ideal-Semiring = {!!}
 
   is-in-left-ideal-Semiring : type-Semiring R → UU l2
-  is-in-left-ideal-Semiring x = {!!}
+  is-in-left-ideal-Semiring = {!!}
 
   type-left-ideal-Semiring : UU (l1 ⊔ l2)
   type-left-ideal-Semiring = {!!}
@@ -144,7 +144,7 @@ module _
   subset-right-ideal-Semiring = {!!}
 
   is-in-right-ideal-Semiring : type-Semiring R → UU l2
-  is-in-right-ideal-Semiring x = {!!}
+  is-in-right-ideal-Semiring = {!!}
 
   type-right-ideal-Semiring : UU (l1 ⊔ l2)
   type-right-ideal-Semiring = {!!}
@@ -271,5 +271,5 @@ module _
   is-closed-under-right-multiplication-ideal-Semiring = {!!}
 
   submonoid-ideal-Semiring : Submonoid l2 (additive-monoid-Semiring R)
-  pr1 submonoid-ideal-Semiring = {!!}
+  submonoid-ideal-Semiring = {!!}
 ```

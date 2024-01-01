@@ -49,7 +49,7 @@ sum-list-ℕ = {!!}
 
 ```agda
 sum-Fin-ℕ : (k : ℕ) → (Fin k → ℕ) → ℕ
-sum-Fin-ℕ zero-ℕ f = {!!}
+sum-Fin-ℕ = {!!}
 sum-Fin-ℕ (succ-ℕ k) f = {!!}
 ```
 
@@ -57,14 +57,14 @@ sum-Fin-ℕ (succ-ℕ k) f = {!!}
 
 ```agda
 sum-count-ℕ : {l : Level} {A : UU l} (e : count A) → (f : A → ℕ) → ℕ
-sum-count-ℕ (pair k e) f = {!!}
+sum-count-ℕ = {!!}
 ```
 
 ### Bounded sums of natural numbers
 
 ```agda
 bounded-sum-ℕ : (u : ℕ) → ((x : ℕ) → le-ℕ x u → ℕ) → ℕ
-bounded-sum-ℕ zero-ℕ f = {!!}
+bounded-sum-ℕ = {!!}
 bounded-sum-ℕ (succ-ℕ u) f = {!!}
 ```
 

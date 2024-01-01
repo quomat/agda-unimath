@@ -32,7 +32,7 @@ module _
   where
 
   trivial-Subgroup : Subgroup l1 G
-  pr1 trivial-Subgroup x = {!!}
+  trivial-Subgroup = {!!}
 ```
 
 ### The predicate of being a trivial subgroup

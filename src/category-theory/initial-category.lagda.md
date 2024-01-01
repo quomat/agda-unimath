@@ -102,7 +102,7 @@ is-gaunt-initial-Category : is-gaunt-Category initial-Category
 is-gaunt-initial-Category ()
 
 initial-Gaunt-Category : Gaunt-Category lzero lzero
-pr1 initial-Gaunt-Category = {!!}
+initial-Gaunt-Category = {!!}
 pr2 initial-Gaunt-Category = {!!}
 ```
 

@@ -32,7 +32,7 @@ rational numbers.
 
 ```agda
 mul-ℚ : ℚ → ℚ → ℚ
-mul-ℚ (x , p) (y , q) = {!!}
+mul-ℚ = {!!}
 
 infixl 40 _*ℚ_
 _*ℚ_ = {!!}
@@ -44,8 +44,8 @@ _*ℚ_ = {!!}
 
 ```agda
 left-unit-law-mul-ℚ : (x : ℚ) → one-ℚ *ℚ x ＝ x
-left-unit-law-mul-ℚ x = {!!}
+left-unit-law-mul-ℚ = {!!}
 
 right-unit-law-mul-ℚ : (x : ℚ) → x *ℚ one-ℚ ＝ x
-right-unit-law-mul-ℚ x = {!!}
+right-unit-law-mul-ℚ = {!!}
 ```

@@ -159,7 +159,7 @@ module _
     commutative-add-abelianization-Group = {!!}
 
   abelianization-Group : Ab l1
-  pr1 abelianization-Group = {!!}
+  abelianization-Group = {!!}
 ```
 
 ### The abelianization functor
@@ -168,13 +168,13 @@ module _
 abelianization-hom-Group :
   {l1 l2 : Level} (G : Group l1) (H : Group l2) (f : hom-Group G H) →
   hom-Ab (abelianization-Group G) (abelianization-Group H)
-abelianization-hom-Group G H f = {!!}
+abelianization-hom-Group = {!!}
 
 preserves-id-abelianization-functor-Group :
   {l1 : Level} (G : Group l1) →
   abelianization-hom-Group G G (id-hom-Group G) ＝
   id-hom-Ab (abelianization-Group G)
-preserves-id-abelianization-functor-Group G = {!!}
+preserves-id-abelianization-functor-Group = {!!}
 
 preserves-comp-abelianization-functor-Group :
   {l1 l2 l3 : Level} (G : Group l1) (H : Group l2) (K : Group l3)
@@ -186,12 +186,11 @@ preserves-comp-abelianization-functor-Group :
     ( abelianization-Group K)
     ( abelianization-hom-Group H K g)
     ( abelianization-hom-Group G H f)
-preserves-comp-abelianization-functor-Group G H K g f = {!!}
+preserves-comp-abelianization-functor-Group = {!!}
 
 abelianization-functor-Group :
   functor-Large-Category id Group-Large-Category Ab-Large-Category
-obj-functor-Large-Precategory
-  abelianization-functor-Group = {!!}
+abelianization-functor-Group = {!!}
 hom-functor-Large-Precategory
   abelianization-functor-Group {l1} {l2} {G} {H} = {!!}
 preserves-comp-functor-Large-Precategory
@@ -205,7 +204,7 @@ preserves-id-functor-Large-Precategory
 ```agda
 hom-unit-abelianization-Group :
   {l1 : Level} (G : Group l1) → hom-Group G (group-abelianization-Group G)
-hom-unit-abelianization-Group G = {!!}
+hom-unit-abelianization-Group = {!!}
 
 naturality-unit-abelianization-Group :
   {l1 l2 : Level} (G : Group l1) (H : Group l2) (f : hom-Group G H) →
@@ -216,7 +215,7 @@ naturality-unit-abelianization-Group :
     ( hom-unit-abelianization-Group G)
     ( hom-unit-abelianization-Group H)
     ( abelianization-hom-Group G H f)
-naturality-unit-abelianization-Group G H f = {!!}
+naturality-unit-abelianization-Group = {!!}
 
 naturality-unit-abelianization-Group' :
   naturality-family-of-morphisms-functor-Large-Category
@@ -230,7 +229,7 @@ naturality-unit-abelianization-Group' :
       ( forgetful-functor-Ab)
       ( abelianization-functor-Group))
     ( hom-unit-abelianization-Group)
-naturality-unit-abelianization-Group' {X = G} {H} f = {!!}
+naturality-unit-abelianization-Group' = {!!}
 
 unit-abelianization-Group :
   natural-transformation-Large-Category
@@ -285,7 +284,7 @@ module _
     is-abelianization-Group G
       ( abelianization-Group G)
       ( hom-unit-abelianization-Group G)
-  is-abelianization-abelianization-Group A = {!!}
+  is-abelianization-abelianization-Group = {!!}
 ```
 
 ### The abelianization adjunction
@@ -294,7 +293,7 @@ module _
 equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab :
   {l1 l2 : Level} (G : Group l1) (A : Ab l2) →
   hom-Ab (abelianization-Group G) A ≃ hom-Group G (group-Ab A)
-pr1 (equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab G A) h = {!!}
+equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab = {!!}
 pr2 (equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab G A) = {!!}
 
 naturality-equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab :
@@ -316,8 +315,7 @@ naturality-equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab :
         ( comp-hom-Group H (group-Ab A) (group-Ab B) g h)
         ( f))
     ( map-equiv (equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab G B))
-naturality-equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab
-  G H f A B g h = {!!}
+naturality-equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab = {!!}
 
 is-adjoint-pair-abelianization-forgetful-functor-Ab :
   is-adjoint-pair-Large-Category
@@ -325,8 +323,7 @@ is-adjoint-pair-abelianization-forgetful-functor-Ab :
     ( Ab-Large-Category)
     ( abelianization-functor-Group)
     ( forgetful-functor-Ab)
-equiv-is-adjoint-pair-Large-Precategory
-  is-adjoint-pair-abelianization-forgetful-functor-Ab G A = {!!}
+is-adjoint-pair-abelianization-forgetful-functor-Ab = {!!}
 naturality-equiv-is-adjoint-pair-Large-Precategory
   is-adjoint-pair-abelianization-forgetful-functor-Ab
   { X1 = G}
@@ -342,8 +339,7 @@ abelianization-adjunction-Group :
     ( λ l → l)
     ( Group-Large-Category)
     ( Ab-Large-Category)
-left-adjoint-Adjunction-Large-Precategory
-  abelianization-adjunction-Group = {!!}
+abelianization-adjunction-Group = {!!}
 right-adjoint-Adjunction-Large-Precategory
   abelianization-adjunction-Group = {!!}
 is-adjoint-pair-Adjunction-Large-Precategory

@@ -43,93 +43,93 @@ set truncation, is contractible.
 
 ```agda
 is-0-connected-Prop : {l : Level} → UU l → Prop l
-is-0-connected-Prop A = {!!}
+is-0-connected-Prop = {!!}
 
 is-0-connected : {l : Level} → UU l → UU l
-is-0-connected A = {!!}
+is-0-connected = {!!}
 
 is-prop-is-0-connected : {l : Level} (A : UU l) → is-prop (is-0-connected A)
-is-prop-is-0-connected A = {!!}
+is-prop-is-0-connected = {!!}
 
 abstract
   is-inhabited-is-0-connected :
     {l : Level} {A : UU l} → is-0-connected A → is-inhabited A
-  is-inhabited-is-0-connected {l} {A} C = {!!}
+  is-inhabited-is-0-connected = {!!}
 
 abstract
   mere-eq-is-0-connected :
     {l : Level} {A : UU l} → is-0-connected A → (x y : A) → mere-eq x y
-  mere-eq-is-0-connected {A = A} H x y = {!!}
+  mere-eq-is-0-connected = {!!}
 
 abstract
   is-0-connected-mere-eq :
     {l : Level} {A : UU l} (a : A) →
     ((x : A) → mere-eq a x) → is-0-connected A
-  is-0-connected-mere-eq {l} {A} a e = {!!}
+  is-0-connected-mere-eq = {!!}
 
 abstract
   is-0-connected-mere-eq-is-inhabited :
     {l : Level} {A : UU l} →
     is-inhabited A → ((x y : A) → mere-eq x y) → is-0-connected A
-  is-0-connected-mere-eq-is-inhabited H K = {!!}
+  is-0-connected-mere-eq-is-inhabited = {!!}
 
 is-0-connected-is-surjective-point :
   {l1 : Level} {A : UU l1} (a : A) →
   is-surjective (point a) → is-0-connected A
-is-0-connected-is-surjective-point a H = {!!}
+is-0-connected-is-surjective-point = {!!}
 
 abstract
   is-surjective-point-is-0-connected :
     {l1 : Level} {A : UU l1} (a : A) →
     is-0-connected A → is-surjective (point a)
-  is-surjective-point-is-0-connected a H x = {!!}
+  is-surjective-point-is-0-connected = {!!}
 
 is-trunc-map-ev-point-is-connected :
   {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : UU l2} (a : A) →
   is-0-connected A → is-trunc (succ-𝕋 k) B →
   is-trunc-map k (ev-point' a {B})
-is-trunc-map-ev-point-is-connected k {A} {B} a H K = {!!}
+is-trunc-map-ev-point-is-connected = {!!}
 
 equiv-dependent-universal-property-is-0-connected :
   {l1 : Level} {A : UU l1} (a : A) → is-0-connected A →
   ( {l : Level} (P : A → Prop l) →
     ((x : A) → type-Prop (P x)) ≃ type-Prop (P a))
-equiv-dependent-universal-property-is-0-connected a H P = {!!}
+equiv-dependent-universal-property-is-0-connected = {!!}
 
 apply-dependent-universal-property-is-0-connected :
   {l1 : Level} {A : UU l1} (a : A) → is-0-connected A →
   {l : Level} (P : A → Prop l) → type-Prop (P a) → (x : A) → type-Prop (P x)
-apply-dependent-universal-property-is-0-connected a H P = {!!}
+apply-dependent-universal-property-is-0-connected = {!!}
 
 abstract
   is-surjective-fiber-inclusion :
     {l1 l2 : Level} {A : UU l1} {B : A → UU l2} →
     is-0-connected A → (a : A) → is-surjective (fiber-inclusion B a)
-  is-surjective-fiber-inclusion {B = B} C a (x , b) = {!!}
+  is-surjective-fiber-inclusion = {!!}
 
 abstract
   mere-eq-is-surjective-fiber-inclusion :
     {l1 : Level} {A : UU l1} (a : A) →
     ({l : Level} (B : A → UU l) → is-surjective (fiber-inclusion B a)) →
     (x : A) → mere-eq a x
-  mere-eq-is-surjective-fiber-inclusion a H x = {!!}
+  mere-eq-is-surjective-fiber-inclusion = {!!}
 
 abstract
   is-0-connected-is-surjective-fiber-inclusion :
     {l1 : Level} {A : UU l1} (a : A) →
     ({l : Level} (B : A → UU l) → is-surjective (fiber-inclusion B a)) →
     is-0-connected A
-  is-0-connected-is-surjective-fiber-inclusion a H = {!!}
+  is-0-connected-is-surjective-fiber-inclusion = {!!}
 
 is-0-connected-equiv :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   (A ≃ B) → is-0-connected B → is-0-connected A
-is-0-connected-equiv e = {!!}
+is-0-connected-equiv = {!!}
 
 is-0-connected-equiv' :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   (A ≃ B) → is-0-connected A → is-0-connected B
-is-0-connected-equiv' e = {!!}
+is-0-connected-equiv' = {!!}
 ```
 
 ### `0-connected` types are closed under cartesian products
@@ -150,5 +150,5 @@ module _
 is-0-connected-is-contr :
   {l : Level} (X : UU l) →
   is-contr X → is-0-connected X
-is-0-connected-is-contr X p = {!!}
+is-0-connected-is-contr = {!!}
 ```

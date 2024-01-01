@@ -33,7 +33,7 @@ module _
   where
 
   is-emb-hom-Group : (hom-Group G H) → UU (l1 ⊔ l2)
-  is-emb-hom-Group h = {!!}
+  is-emb-hom-Group = {!!}
 
   emb-Group : UU (l1 ⊔ l2)
   emb-Group = {!!}
@@ -42,7 +42,7 @@ module _
   hom-emb-Group = {!!}
 
   map-emb-hom-Group : emb-Group → type-Group G → type-Group H
-  map-emb-hom-Group f = {!!}
+  map-emb-hom-Group = {!!}
 
   is-emb-map-emb-hom-Group : (f : emb-Group) → is-emb (map-emb-hom-Group f)
   is-emb-map-emb-hom-Group = {!!}

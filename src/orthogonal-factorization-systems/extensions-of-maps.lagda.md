@@ -70,22 +70,22 @@ module _
   is-extension :
     {P : B → UU l3} →
     ((x : A) → P (i x)) → ((y : B) → P y) → UU (l1 ⊔ l3)
-  is-extension f g = {!!}
+  is-extension = {!!}
 
   extension-dependent-type :
     (P : B → UU l3) →
     ((x : A) → P (i x)) → UU (l1 ⊔ l2 ⊔ l3)
-  extension-dependent-type P f = {!!}
+  extension-dependent-type = {!!}
 
   extension :
     {X : UU l3} → (A → X) → UU (l1 ⊔ l2 ⊔ l3)
-  extension {X} = {!!}
+  extension = {!!}
 
   total-extension-dependent-type : (P : B → UU l3) → UU (l1 ⊔ l2 ⊔ l3)
-  total-extension-dependent-type P = {!!}
+  total-extension-dependent-type = {!!}
 
   total-extension : (X : UU l3) → UU (l1 ⊔ l2 ⊔ l3)
-  total-extension X = {!!}
+  total-extension = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {i : A → B}
@@ -127,7 +127,7 @@ module _
 
   is-extension-comp-vertical :
     is-extension j g h → is-extension i f g → is-extension (j ∘ i) f h
-  is-extension-comp-vertical H G x = {!!}
+  is-extension-comp-vertical = {!!}
 ```
 
 ### Horizontal composition of extensions of maps
@@ -153,7 +153,7 @@ module _
   is-extension-dependent-type-comp-horizontal :
     (I : is-extension f g i) →
     is-extension g h j → is-extension f (λ x → tr P (I x) (h x)) (j ∘ i)
-  is-extension-dependent-type-comp-horizontal I J x = {!!}
+  is-extension-dependent-type-comp-horizontal = {!!}
 ```
 
 #### Horizontal composition of extensions of ordinary maps
@@ -167,7 +167,7 @@ module _
 
   is-extension-comp-horizontal :
     (I : is-extension f g i) → is-extension g h j → is-extension f h (j ∘ i)
-  is-extension-comp-horizontal I J x = {!!}
+  is-extension-comp-horizontal = {!!}
 ```
 
 ### Left whiskering of extensions of maps
@@ -190,7 +190,7 @@ module _
   is-extension-left-whisker :
     (h : (x : C) → P x) (F : is-extension i f g) →
     (is-extension i (λ x → tr P (F x) (h (f x))) (h ∘ g))
-  is-extension-left-whisker h F = {!!}
+  is-extension-left-whisker = {!!}
 ```
 
 ### Right whiskering of extensions of maps
@@ -212,7 +212,7 @@ module _
 
   is-extension-right-whisker :
     (F : is-extension i f g) (h : X → A) → is-extension (i ∘ h) (f ∘ h) g
-  is-extension-right-whisker F h = {!!}
+  is-extension-right-whisker = {!!}
 ```
 
 ### Postcomposition of extensions
@@ -225,7 +225,7 @@ module _
   postcomp-extension :
     (f : A → B) (i : A → X) (g : X → Y) →
     extension f i → extension f (g ∘ i)
-  postcomp-extension f i g = {!!}
+  postcomp-extension = {!!}
 ```
 
 ## Properties
@@ -242,36 +242,36 @@ module _
   coherence-htpy-extension :
     (e e' : extension-dependent-type i P f) →
     map-extension e ~ map-extension e' → UU (l1 ⊔ l3)
-  coherence-htpy-extension e e' K = {!!}
+  coherence-htpy-extension = {!!}
 
   htpy-extension : (e e' : extension-dependent-type i P f) → UU (l1 ⊔ l2 ⊔ l3)
-  htpy-extension e e' = {!!}
+  htpy-extension = {!!}
 
   refl-htpy-extension :
     (e : extension-dependent-type i P f) → htpy-extension e e
-  pr1 (refl-htpy-extension e) = {!!}
+  refl-htpy-extension = {!!}
 
   htpy-eq-extension :
     (e e' : extension-dependent-type i P f) → e ＝ e' → htpy-extension e e'
-  htpy-eq-extension e .e refl = {!!}
+  htpy-eq-extension = {!!}
 
   is-torsorial-htpy-extension :
     (e : extension-dependent-type i P f) → is-torsorial (htpy-extension e)
-  is-torsorial-htpy-extension e = {!!}
+  is-torsorial-htpy-extension = {!!}
 
   is-equiv-htpy-eq-extension :
     (e e' : extension-dependent-type i P f) → is-equiv (htpy-eq-extension e e')
-  is-equiv-htpy-eq-extension e = {!!}
+  is-equiv-htpy-eq-extension = {!!}
 
   extensionality-extension :
     (e e' : extension-dependent-type i P f) → (e ＝ e') ≃ (htpy-extension e e')
-  pr1 (extensionality-extension e e') = {!!}
+  extensionality-extension = {!!}
 
   eq-htpy-extension :
     (e e' : extension-dependent-type i P f)
     (H : map-extension e ~ map-extension e') →
     coherence-htpy-extension e e' H → e ＝ e'
-  eq-htpy-extension e e' H K = {!!}
+  eq-htpy-extension = {!!}
 ```
 
 ### The total type of extensions is equivalent to `(y : B) → P y`
@@ -309,18 +309,18 @@ module _
     {P : B → UU l3} (f : (x : A) → P (i x)) →
     ((x : A) → is-trunc (succ-𝕋 k) (P (i x))) →
     (g : (x : B) → P x) → is-trunc k (is-extension i f g)
-  is-trunc-is-extension-dependent-type f is-trunc-P g = {!!}
+  is-trunc-is-extension-dependent-type = {!!}
 
   is-trunc-extension-dependent-type :
     {P : B → UU l3} (f : (x : A) → P (i x)) →
     ((x : B) → is-trunc k (P x)) → is-trunc k (extension-dependent-type i P f)
-  is-trunc-extension-dependent-type f is-trunc-P = {!!}
+  is-trunc-extension-dependent-type = {!!}
 
   is-trunc-total-extension-dependent-type :
     {P : B → UU l3} →
     ((x : B) → is-trunc k (P x)) →
     is-trunc k (total-extension-dependent-type i P)
-  is-trunc-total-extension-dependent-type {P} is-trunc-P = {!!}
+  is-trunc-total-extension-dependent-type = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} (i : A → B)
@@ -330,13 +330,13 @@ module _
     {P : B → UU l3} (f : (x : A) → P (i x)) →
     ((x : A) → is-prop (P (i x))) →
     (g : (x : B) → P x) → is-contr (is-extension i f g)
-  is-contr-is-extension f is-prop-P g = {!!}
+  is-contr-is-extension = {!!}
 
   is-prop-is-extension :
     {P : B → UU l3} (f : (x : A) → P (i x)) →
     ((x : A) → is-set (P (i x))) →
     (g : (x : B) → P x) → is-prop (is-extension i f g)
-  is-prop-is-extension f is-set-P g = {!!}
+  is-prop-is-extension = {!!}
 ```
 
 ### Every map has a unique extension along `i` if and only if `P` is `i`-local
@@ -350,12 +350,12 @@ module _
   equiv-fiber'-precomp-extension-dependent-type :
     (f : (x : A) → P (i x)) →
     fiber' (precomp-Π i P) f ≃ extension-dependent-type i P f
-  equiv-fiber'-precomp-extension-dependent-type f = {!!}
+  equiv-fiber'-precomp-extension-dependent-type = {!!}
 
   equiv-fiber-precomp-extension-dependent-type :
     (f : (x : A) → P (i x)) →
     fiber (precomp-Π i P) f ≃ extension-dependent-type i P f
-  equiv-fiber-precomp-extension-dependent-type f = {!!}
+  equiv-fiber-precomp-extension-dependent-type = {!!}
 
   equiv-is-contr-extension-dependent-type-is-local-dependent-type :
     is-local-dependent-type i P ≃
@@ -381,7 +381,7 @@ module _
 is-extension-self :
   {l1 l2 : Level} {A : UU l1} {P : A → UU l2}
   (f : (x : A) → P x) → is-extension id f f
-is-extension-self _ = {!!}
+is-extension-self = {!!}
 ```
 
 ### The identity is an extension of every map along themselves
@@ -390,7 +390,7 @@ is-extension-self _ = {!!}
 is-extension-along-self :
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
   (f : A → B) → is-extension f f id
-is-extension-along-self _ = {!!}
+is-extension-along-self = {!!}
 ```
 
 ### Postcomposition of extensions by an embedding is an embedding
@@ -403,7 +403,7 @@ module _
   is-emb-postcomp-extension :
     (f : A → B) (i : A → X) (g : X → Y) → is-emb g →
     is-emb (postcomp-extension f i g)
-  is-emb-postcomp-extension f i g H = {!!}
+  is-emb-postcomp-extension = {!!}
 ```
 
 ## See also

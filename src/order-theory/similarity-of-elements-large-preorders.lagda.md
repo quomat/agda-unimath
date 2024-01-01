@@ -37,19 +37,19 @@ module _
     {l1 l2 : Level}
     (x : type-Large-Preorder P l1) (y : type-Large-Preorder P l2) →
     Prop (β l1 l2 ⊔ β l2 l1)
-  sim-prop-Large-Preorder x y = {!!}
+  sim-prop-Large-Preorder = {!!}
 
   sim-Large-Preorder :
     {l1 l2 : Level}
     (x : type-Large-Preorder P l1) (y : type-Large-Preorder P l2) →
     UU (β l1 l2 ⊔ β l2 l1)
-  sim-Large-Preorder x y = {!!}
+  sim-Large-Preorder = {!!}
 
   is-prop-sim-Large-Preorder :
     {l1 l2 : Level}
     (x : type-Large-Preorder P l1) (y : type-Large-Preorder P l2) →
     is-prop (sim-Large-Preorder x y)
-  is-prop-sim-Large-Preorder x y = {!!}
+  is-prop-sim-Large-Preorder = {!!}
 ```
 
 ## Properties
@@ -63,7 +63,7 @@ module _
 
   refl-sim-Large-Preorder :
     is-reflexive-Large-Relation (type-Large-Preorder P) (sim-Large-Preorder P)
-  pr1 (refl-sim-Large-Preorder x) = {!!}
+  refl-sim-Large-Preorder = {!!}
 ```
 
 ### The similarity relation is transitive
@@ -75,7 +75,7 @@ module _
 
   transitive-sim-Large-Preorder :
     is-transitive-Large-Relation (type-Large-Preorder P) (sim-Large-Preorder P)
-  pr1 (transitive-sim-Large-Preorder x y z H K) = {!!}
+  transitive-sim-Large-Preorder = {!!}
   pr2 (transitive-sim-Large-Preorder x y z H K) = {!!}
 ```
 
@@ -88,7 +88,7 @@ module _
 
   symmetric-sim-Large-Preorder :
     is-symmetric-Large-Relation (type-Large-Preorder P) (sim-Large-Preorder P)
-  pr1 (symmetric-sim-Large-Preorder _ _ H) = {!!}
+  symmetric-sim-Large-Preorder = {!!}
 ```
 
 ### Equal elements are similar
@@ -101,5 +101,5 @@ module _
   sim-eq-Large-Preorder :
     {l : Level} {x y : type-Large-Preorder P l} →
     x ＝ y → sim-Large-Preorder P x y
-  sim-eq-Large-Preorder refl = {!!}
+  sim-eq-Large-Preorder = {!!}
 ```

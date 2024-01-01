@@ -29,7 +29,7 @@ Two elements `x` and `y` are **not equal** whenever `¬ (x ＝ y)` is inhabited.
 
 ```agda
 nonequal : {l : Level} {A : UU l} → A → A → UU l
-nonequal x y = {!!}
+nonequal = {!!}
 
 infix 6 _≠_
 _≠_ = {!!}
@@ -48,7 +48,7 @@ module _
   is-prop-nonequal = {!!}
 
   nonequal-Prop : (x y : A) → Prop l
-  pr1 (nonequal-Prop x y) = {!!}
+  nonequal-Prop = {!!}
 ```
 
 ### Nonequality is antireflexive
@@ -59,10 +59,10 @@ module _
   where
 
   is-antireflexive-nonequal : (a : A) → ¬ (a ≠ a)
-  is-antireflexive-nonequal a d = {!!}
+  is-antireflexive-nonequal = {!!}
 
   is-consistent-nonequal : (a b : A) → (a ＝ b) → ¬ (a ≠ b)
-  is-consistent-nonequal a b p d = {!!}
+  is-consistent-nonequal = {!!}
 ```
 
 ### Nonequality is symmetric
@@ -73,7 +73,7 @@ module _
   where
 
   is-symmetric-nonequal : is-symmetric (nonequal {A = A})
-  is-symmetric-nonequal a b = {!!}
+  is-symmetric-nonequal = {!!}
 ```
 
 ### If two functions are nonequal at a point, they are nonequal as functions
@@ -84,7 +84,7 @@ module _
   where
 
   nonequal-Π : (f g : (x : A) → B x) (a : A) → f a ≠ g a → f ≠ g
-  nonequal-Π f g a = {!!}
+  nonequal-Π = {!!}
 ```
 
 ### If either component of two pairs are nonequal, the pairs are nonequal
@@ -95,14 +95,14 @@ module _
   where
 
   nonequal-pr1 : (u v : Σ A B) → pr1 u ≠ pr1 v → u ≠ v
-  nonequal-pr1 u v = {!!}
+  nonequal-pr1 = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
   where
 
   nonequal-prod-pr2 : (u v : A × B) → pr2 u ≠ pr2 v → u ≠ v
-  nonequal-prod-pr2 u v = {!!}
+  nonequal-prod-pr2 = {!!}
 ```
 
 ### If there is a reflexive relation that does not relate `a` and `b`, then they are nonequal
@@ -125,10 +125,10 @@ module _
   where
 
   nonequal-leibniz : (B : A → UU l2) → (a b : A) → B a → ¬ (B b) → a ≠ b
-  nonequal-leibniz B a .a a' b' refl = {!!}
+  nonequal-leibniz = {!!}
 
   nonequal-leibniz' : (B : A → UU l2) → (a b : A) → ¬ (B a) → B b → a ≠ b
-  nonequal-leibniz' B a .a a' b' refl = {!!}
+  nonequal-leibniz' = {!!}
 ```
 
 ## See also

@@ -33,13 +33,13 @@ module _
   where
 
   commute-prop-Semigroup : (x y : type-Semigroup G) → Prop l
-  commute-prop-Semigroup x y = {!!}
+  commute-prop-Semigroup = {!!}
 
   commute-Semigroup : (x y : type-Semigroup G) → UU l
-  commute-Semigroup x y = {!!}
+  commute-Semigroup = {!!}
 
   commute-Semigroup' : (x y : type-Semigroup G) → UU l
-  commute-Semigroup' x y = {!!}
+  commute-Semigroup' = {!!}
 
   is-prop-commute-Semigroup :
     (x y : type-Semigroup G) → is-prop (commute-Semigroup x y)
@@ -56,7 +56,7 @@ module _
   where
 
   refl-commute-Semigroup : (x : type-Semigroup G) → commute-Semigroup G x x
-  refl-commute-Semigroup x = {!!}
+  refl-commute-Semigroup = {!!}
 ```
 
 ### The relation `commute-Semigroup` is symmetric

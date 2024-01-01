@@ -52,23 +52,23 @@ module _
   where
 
   map-inv-raise : raise l A → A
-  map-inv-raise (map-raise x) = {!!}
+  map-inv-raise = {!!}
 
   is-section-map-inv-raise : (map-raise ∘ map-inv-raise) ~ id
-  is-section-map-inv-raise (map-raise x) = {!!}
+  is-section-map-inv-raise = {!!}
 
   is-retraction-map-inv-raise : (map-inv-raise ∘ map-raise) ~ id
-  is-retraction-map-inv-raise x = {!!}
+  is-retraction-map-inv-raise = {!!}
 
   is-equiv-map-raise : is-equiv (map-raise {l} {l1} {A})
   is-equiv-map-raise = {!!}
 
 compute-raise : (l : Level) {l1 : Level} (A : UU l1) → A ≃ raise l A
-pr1 (compute-raise l A) = {!!}
+compute-raise = {!!}
 pr2 (compute-raise l A) = {!!}
 
 Raise : (l : Level) {l1 : Level} (A : UU l1) → Σ (UU (l1 ⊔ l)) (λ X → A ≃ X)
-pr1 (Raise l A) = {!!}
+Raise = {!!}
 pr2 (Raise l A) = {!!}
 ```
 
@@ -76,7 +76,7 @@ pr2 (Raise l A) = {!!}
 
 ```agda
 raise-Prop : (l : Level) {l1 : Level} → Prop l1 → Prop (l ⊔ l1)
-pr1 (raise-Prop l P) = {!!}
+raise-Prop = {!!}
 pr2 (raise-Prop l P) = {!!}
 ```
 
@@ -84,7 +84,7 @@ pr2 (raise-Prop l P) = {!!}
 
 ```agda
 raise-Set : (l : Level) {l1 : Level} → Set l1 → Set (l ⊔ l1)
-pr1 (raise-Set l A) = {!!}
+raise-Set = {!!}
 pr2 (raise-Set l A) = {!!}
 ```
 
@@ -96,10 +96,10 @@ module _
   where
 
   map-equiv-raise : raise l3 A → raise l4 B
-  map-equiv-raise (map-raise x) = {!!}
+  map-equiv-raise = {!!}
 
   map-inv-equiv-raise : raise l4 B → raise l3 A
-  map-inv-equiv-raise (map-raise y) = {!!}
+  map-inv-equiv-raise = {!!}
 
   is-section-map-inv-equiv-raise :
     ( map-equiv-raise ∘ map-inv-equiv-raise) ~ id
@@ -113,7 +113,7 @@ module _
   is-equiv-map-equiv-raise = {!!}
 
   equiv-raise : raise l3 A ≃ raise l4 B
-  pr1 equiv-raise = {!!}
+  equiv-raise = {!!}
 ```
 
 ### Raising universe levels from `l1` to `l ⊔ l1` is an embedding from `UU l1` to `UU (l ⊔ l1)`
@@ -121,9 +121,9 @@ module _
 ```agda
 abstract
   is-emb-raise : (l : Level) {l1 : Level} → is-emb (raise l {l1})
-  is-emb-raise l {l1} = {!!}
+  is-emb-raise = {!!}
 
 emb-raise : (l : Level) {l1 : Level} → UU l1 ↪ UU (l1 ⊔ l)
-pr1 (emb-raise l) = {!!}
+emb-raise = {!!}
 pr2 (emb-raise l) = {!!}
 ```

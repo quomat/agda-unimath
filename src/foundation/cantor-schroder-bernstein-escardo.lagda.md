@@ -40,7 +40,7 @@ equivalent.
 
 ```agda
 type-Cantor-Schröder-Bernstein-Escardó : (l1 l2 : Level) → UU (lsuc (l1 ⊔ l2))
-type-Cantor-Schröder-Bernstein-Escardó l1 l2 = {!!}
+type-Cantor-Schröder-Bernstein-Escardó = {!!}
 ```
 
 ## Proof

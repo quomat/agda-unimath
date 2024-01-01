@@ -46,7 +46,7 @@ module _
 
   naturality-family-of-morphisms-functor-Large-Precategory :
     family-of-morphisms-functor-Large-Precategory → UUω
-  naturality-family-of-morphisms-functor-Large-Precategory τ = {!!}
+  naturality-family-of-morphisms-functor-Large-Precategory = {!!}
 
   record natural-transformation-Large-Precategory : UUω
     where
@@ -78,17 +78,16 @@ module _
 
   hom-id-natural-transformation-Large-Precategory :
     family-of-morphisms-functor-Large-Precategory C D F F
-  hom-id-natural-transformation-Large-Precategory X = {!!}
+  hom-id-natural-transformation-Large-Precategory = {!!}
 
   naturality-id-natural-transformation-Large-Precategory :
     naturality-family-of-morphisms-functor-Large-Precategory C D F F
       hom-id-natural-transformation-Large-Precategory
-  naturality-id-natural-transformation-Large-Precategory f = {!!}
+  naturality-id-natural-transformation-Large-Precategory = {!!}
 
   id-natural-transformation-Large-Precategory :
     natural-transformation-Large-Precategory C D F F
-  hom-natural-transformation-Large-Precategory
-    id-natural-transformation-Large-Precategory = {!!}
+  id-natural-transformation-Large-Precategory = {!!}
 ```
 
 ### Composition of natural transformations
@@ -108,17 +107,16 @@ module _
 
   hom-comp-natural-transformation-Large-Precategory :
     family-of-morphisms-functor-Large-Precategory C D F H
-  hom-comp-natural-transformation-Large-Precategory X = {!!}
+  hom-comp-natural-transformation-Large-Precategory = {!!}
 
   naturality-comp-natural-transformation-Large-Precategory :
     naturality-family-of-morphisms-functor-Large-Precategory C D F H
       hom-comp-natural-transformation-Large-Precategory
-  naturality-comp-natural-transformation-Large-Precategory {X = X} {Y} f = {!!}
+  naturality-comp-natural-transformation-Large-Precategory = {!!}
 
   comp-natural-transformation-Large-Precategory :
     natural-transformation-Large-Precategory C D F H
-  hom-natural-transformation-Large-Precategory
-    comp-natural-transformation-Large-Precategory = {!!}
+  comp-natural-transformation-Large-Precategory = {!!}
 ```
 
 ## See also

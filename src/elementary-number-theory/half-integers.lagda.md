@@ -47,7 +47,7 @@ zero-½ℤ = {!!}
 
 ```agda
 add-½ℤ : ½ℤ → ½ℤ → ½ℤ
-add-½ℤ (inl x) (inl y) = {!!}
+add-½ℤ = {!!}
 add-½ℤ (inl x) (inr y) = {!!}
 add-½ℤ (inr x) (inl y) = {!!}
 add-½ℤ (inr x) (inr y) = {!!}

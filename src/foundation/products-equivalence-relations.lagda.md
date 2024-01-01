@@ -56,5 +56,5 @@ module _
   transitive-prod-Relation-Prop = {!!}
 
   prod-equivalence-relation : equivalence-relation (l2 ⊔ l4) (A × B)
-  pr1 prod-equivalence-relation = {!!}
+  prod-equivalence-relation = {!!}
 ```

@@ -36,10 +36,10 @@ module _
   where
 
   essential-fiber-functor-Precategory : (y : obj-Precategory D) → UU (l1 ⊔ l4)
-  essential-fiber-functor-Precategory y = {!!}
+  essential-fiber-functor-Precategory = {!!}
 
   essential-fiber-functor-Precategory' : (y : obj-Precategory D) → UU (l1 ⊔ l4)
-  essential-fiber-functor-Precategory' y = {!!}
+  essential-fiber-functor-Precategory' = {!!}
 ```
 
 ## See also

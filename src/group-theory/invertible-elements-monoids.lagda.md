@@ -46,7 +46,7 @@ module _
   where
 
   is-right-inverse-element-Monoid : type-Monoid M → UU l
-  is-right-inverse-element-Monoid y = {!!}
+  is-right-inverse-element-Monoid = {!!}
 
   is-right-invertible-element-Monoid : UU l
   is-right-invertible-element-Monoid = {!!}
@@ -74,7 +74,7 @@ module _
   where
 
   is-left-inverse-element-Monoid : type-Monoid M → UU l
-  is-left-inverse-element-Monoid y = {!!}
+  is-left-inverse-element-Monoid = {!!}
 
   is-left-invertible-element-Monoid : UU l
   is-left-invertible-element-Monoid = {!!}
@@ -102,7 +102,7 @@ module _
   where
 
   is-inverse-element-Monoid : type-Monoid M → UU l
-  is-inverse-element-Monoid y = {!!}
+  is-inverse-element-Monoid = {!!}
 
   is-invertible-element-Monoid : UU l
   is-invertible-element-Monoid = {!!}
@@ -144,7 +144,7 @@ module _
   is-prop-is-invertible-element-Monoid = {!!}
 
   is-invertible-element-prop-Monoid : type-Monoid M → Prop l
-  pr1 (is-invertible-element-prop-Monoid x) = {!!}
+  is-invertible-element-prop-Monoid = {!!}
 ```
 
 ### Inverses are left/right inverses

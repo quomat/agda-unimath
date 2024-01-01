@@ -35,15 +35,15 @@ commutative, i.e., if `xy = {!!}
 
 ```agda
 is-commutative-Semiring : {l : Level} → Semiring l → UU l
-is-commutative-Semiring A = {!!}
+is-commutative-Semiring = {!!}
 
 is-prop-is-commutative-Semiring :
   { l : Level} (A : Semiring l) → is-prop (is-commutative-Semiring A)
-is-prop-is-commutative-Semiring A = {!!}
+is-prop-is-commutative-Semiring = {!!}
 
 Commutative-Semiring :
   ( l : Level) → UU (lsuc l)
-Commutative-Semiring l = {!!}
+Commutative-Semiring = {!!}
 ```
 
 ### Immediate infrastructure for commutative semirings
@@ -189,7 +189,7 @@ module _
 
   multiplicative-commutative-monoid-Commutative-Semiring :
     Commutative-Monoid l
-  pr1 multiplicative-commutative-monoid-Commutative-Semiring = {!!}
+  multiplicative-commutative-monoid-Commutative-Semiring = {!!}
 
   left-zero-law-mul-Commutative-Semiring :
     (x : type-Commutative-Semiring) →

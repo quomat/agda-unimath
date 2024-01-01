@@ -27,10 +27,10 @@ module _
   where
 
   implicit-explicit-Π : ((x : A) → B x) → {x : A} → B x
-  implicit-explicit-Π f {x} = {!!}
+  implicit-explicit-Π = {!!}
 
   explicit-implicit-Π : ({x : A} → B x) → (x : A) → B x
-  explicit-implicit-Π f x = {!!}
+  explicit-implicit-Π = {!!}
 
   is-equiv-implicit-explicit-Π : is-equiv implicit-explicit-Π
   pr1 (pr1 is-equiv-implicit-explicit-Π) = {!!}
@@ -39,10 +39,10 @@ module _
   pr1 (pr1 is-equiv-explicit-implicit-Π) = {!!}
 
   equiv-implicit-explicit-Π : ((x : A) → B x) ≃ ({x : A} → B x)
-  pr1 equiv-implicit-explicit-Π = {!!}
+  equiv-implicit-explicit-Π = {!!}
 
   equiv-explicit-implicit-Π : ({x : A} → B x) ≃ ((x : A) → B x)
-  pr1 equiv-explicit-implicit-Π = {!!}
+  equiv-explicit-implicit-Π = {!!}
 ```
 
 ### Equality of explicit functions is equality of implicit functions

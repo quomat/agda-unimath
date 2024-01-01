@@ -33,7 +33,7 @@ abstract
   is-trunc-is-prop = {!!}
 
 truncated-type-Prop : {l : Level} (k : 𝕋) → Prop l → Truncated-Type l (succ-𝕋 k)
-pr1 (truncated-type-Prop k P) = {!!}
+truncated-type-Prop = {!!}
 pr2 (truncated-type-Prop k P) = {!!}
 ```
 
@@ -68,5 +68,5 @@ abstract
 ```agda
 equiv-is-prop-equiv : {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   A ≃ B → is-prop A ≃ is-prop B
-equiv-is-prop-equiv {A = A} {B = B} e = {!!}
+equiv-is-prop-equiv = {!!}
 ```

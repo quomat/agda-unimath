@@ -81,7 +81,7 @@ module _
     {i : (x : A) → B x}
     (H : h ~ i) (T : coherence-triangle-homotopies left right top) →
     coherence-triangle-homotopies {h = i} (left ∙h H) (right ∙h H) top
-  left-whisk-htpy-coherence-triangle-homotopies H T = {!!}
+  left-whisk-htpy-coherence-triangle-homotopies = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
@@ -95,7 +95,7 @@ module _
     coherence-triangle-homotopies
       {f = i ∘ f} {i ∘ g} {i ∘ h}
       (i ·l left) (i ·l right) (i ·l top)
-  left-whisk-coherence-triangle-homotopies i = {!!}
+  left-whisk-coherence-triangle-homotopies = {!!}
 ```
 
 ### Right whiskering triangles of homotopies
@@ -111,7 +111,7 @@ module _
     {i : (x : A) → B x}
     (T : coherence-triangle-homotopies left right top) (H : i ~ f) →
     coherence-triangle-homotopies {f = i} (H ∙h left) right (H ∙h top)
-  right-whisk-htpy-coherence-triangle-homotopies T H = {!!}
+  right-whisk-htpy-coherence-triangle-homotopies = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
@@ -125,5 +125,5 @@ module _
     coherence-triangle-homotopies
       {f = f ∘ i} {g ∘ i} {h ∘ i}
       (left ·r i) (right ·r i) (top ·r i)
-  right-whisk-coherence-triangle-homotopies T i = {!!}
+  right-whisk-coherence-triangle-homotopies = {!!}
 ```

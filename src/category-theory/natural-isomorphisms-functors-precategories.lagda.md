@@ -286,7 +286,7 @@ module _
   is-set-natural-isomorphism-Precategory = {!!}
 
   natural-isomorphism-set-Precategory : Set (l1 ⊔ l2 ⊔ l4)
-  pr1 natural-isomorphism-set-Precategory = {!!}
+  natural-isomorphism-set-Precategory = {!!}
 ```
 
 ### Inverses of natural isomorphisms are natural isomorphisms
@@ -312,8 +312,7 @@ module _
       ( natural-transformation-inv-is-natural-isomorphism-Precategory
         ( is-iso-f)) ＝
     id-natural-transformation-Precategory C D G
-  is-section-natural-transformation-inv-is-natural-isomorphism-Precategory
-    is-iso-f = {!!}
+  is-section-natural-transformation-inv-is-natural-isomorphism-Precategory = {!!}
 
   is-retraction-natural-transformation-inv-is-natural-isomorphism-Precategory :
     (is-iso-f : is-natural-isomorphism-Precategory C D F G f) →
@@ -321,8 +320,7 @@ module _
       ( natural-transformation-inv-is-natural-isomorphism-Precategory is-iso-f)
       ( f) ＝
     id-natural-transformation-Precategory C D F
-  is-retraction-natural-transformation-inv-is-natural-isomorphism-Precategory
-    is-iso-f = {!!}
+  is-retraction-natural-transformation-inv-is-natural-isomorphism-Precategory = {!!}
 
   is-natural-isomorphism-inv-is-natural-isomorphism-Precategory :
     (is-iso-f : is-natural-isomorphism-Precategory C D F G f) →
@@ -387,8 +385,7 @@ module _
     is-natural-isomorphism-Precategory C D F G f →
     is-natural-isomorphism-Precategory C D F H
       ( comp-natural-transformation-Precategory C D F G H g f)
-  is-natural-isomorphism-comp-is-natural-isomorphism-Precategory
-    is-iso-g is-iso-f x = {!!}
+  is-natural-isomorphism-comp-is-natural-isomorphism-Precategory = {!!}
 ```
 
 ### The composition operation on natural isomorphisms
@@ -413,7 +410,7 @@ module _
   is-natural-isomorphism-comp-natural-isomorphism-Precategory = {!!}
 
   comp-natural-isomorphism-Precategory : natural-isomorphism-Precategory C D F H
-  pr1 comp-natural-isomorphism-Precategory = {!!}
+  comp-natural-isomorphism-Precategory = {!!}
 
   natural-transformation-inv-comp-natural-isomorphism-Precategory :
     natural-transformation-Precategory C D H F

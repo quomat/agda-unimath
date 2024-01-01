@@ -121,7 +121,7 @@ module _
       ( vertical-map-standard-pullback {f = f} {g = g})
       ( horizontal-map-standard-pullback {f = f} {g = g})
       ( X)
-  pr1 cocone-join-maps = {!!}
+  cocone-join-maps = {!!}
 
   abstract
     uniqueness-join-maps :

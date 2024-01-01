@@ -52,7 +52,7 @@ module _
   is-prop-is-fully-faithful-map-Precategory = {!!}
 
   is-fully-faithful-prop-map-Precategory : Prop (l1 ⊔ l2 ⊔ l4)
-  pr1 is-fully-faithful-prop-map-Precategory = {!!}
+  is-fully-faithful-prop-map-Precategory = {!!}
 
   equiv-hom-is-fully-faithful-map-Precategory :
     is-fully-faithful-map-Precategory → {x y : obj-Precategory C} →
@@ -169,16 +169,13 @@ module _
     is-full-map-Precategory C D F →
     is-faithful-map-Precategory C D F →
     is-fully-faithful-map-Precategory C D F
-  is-fully-faithful-is-full-is-faithful-map-Precategory
-    is-full-F is-faithful-F x y = {!!}
+  is-fully-faithful-is-full-is-faithful-map-Precategory = {!!}
 
   fully-faithful-map-is-full-is-faithful-map-Precategory :
     is-full-map-Precategory C D F →
     is-faithful-map-Precategory C D F →
     fully-faithful-map-Precategory C D
-  pr1
-    ( fully-faithful-map-is-full-is-faithful-map-Precategory
-      is-full-F is-faithful-F) = {!!}
+  fully-faithful-map-is-full-is-faithful-map-Precategory = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}

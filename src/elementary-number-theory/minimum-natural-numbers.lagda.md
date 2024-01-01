@@ -34,15 +34,15 @@ numbers.
 
 ```agda
 min-ℕ : ℕ → (ℕ → ℕ)
-min-ℕ 0 n = {!!}
+min-ℕ = {!!}
 min-ℕ (succ-ℕ m) 0 = {!!}
 min-ℕ (succ-ℕ m) (succ-ℕ n) = {!!}
 
 ap-min-ℕ : {x x' y y' : ℕ} → x ＝ x' → y ＝ y' → min-ℕ x y ＝ min-ℕ x' y'
-ap-min-ℕ p q = {!!}
+ap-min-ℕ = {!!}
 
 min-Fin-ℕ : (n : ℕ) → (Fin (succ-ℕ n) → ℕ) → ℕ
-min-Fin-ℕ zero-ℕ f = {!!}
+min-Fin-ℕ = {!!}
 min-Fin-ℕ (succ-ℕ n) f = {!!}
 ```
 
@@ -80,10 +80,10 @@ associative-min-ℕ = {!!}
 
 ```agda
 left-zero-law-min-ℕ : (x : ℕ) → min-ℕ 0 x ＝ 0
-left-zero-law-min-ℕ x = {!!}
+left-zero-law-min-ℕ = {!!}
 
 right-zero-law-min-ℕ : (x : ℕ) → min-ℕ x 0 ＝ 0
-right-zero-law-min-ℕ zero-ℕ = {!!}
+right-zero-law-min-ℕ = {!!}
 right-zero-law-min-ℕ (succ-ℕ x) = {!!}
 ```
 
@@ -91,7 +91,7 @@ right-zero-law-min-ℕ (succ-ℕ x) = {!!}
 
 ```agda
 commutative-min-ℕ : (x y : ℕ) → min-ℕ x y ＝ min-ℕ y x
-commutative-min-ℕ zero-ℕ zero-ℕ = {!!}
+commutative-min-ℕ = {!!}
 commutative-min-ℕ zero-ℕ (succ-ℕ y) = {!!}
 commutative-min-ℕ (succ-ℕ x) zero-ℕ = {!!}
 commutative-min-ℕ (succ-ℕ x) (succ-ℕ y) = {!!}
@@ -101,7 +101,7 @@ commutative-min-ℕ (succ-ℕ x) (succ-ℕ y) = {!!}
 
 ```agda
 idempotent-min-ℕ : (x : ℕ) → min-ℕ x x ＝ x
-idempotent-min-ℕ zero-ℕ = {!!}
+idempotent-min-ℕ = {!!}
 idempotent-min-ℕ (succ-ℕ x) = {!!}
 ```
 

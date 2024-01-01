@@ -35,10 +35,10 @@ A unit element in a standard finite type is a divisor of one
 
 ```agda
 is-unit-Fin : (k : ℕ) → Fin k → UU lzero
-is-unit-Fin (succ-ℕ k) x = {!!}
+is-unit-Fin = {!!}
 
 unit-Fin : ℕ → UU lzero
-unit-Fin k = {!!}
+unit-Fin = {!!}
 ```
 
 ## Properties
@@ -47,10 +47,10 @@ unit-Fin k = {!!}
 
 ```agda
 is-unit-one-Fin : {k : ℕ} → is-unit-Fin (succ-ℕ k) (one-Fin k)
-is-unit-one-Fin {k} = {!!}
+is-unit-one-Fin = {!!}
 
 one-unit-Fin : {k : ℕ} → unit-Fin (succ-ℕ k)
-pr1 (one-unit-Fin {k}) = {!!}
+one-unit-Fin = {!!}
 pr2 (one-unit-Fin {k}) = {!!}
 ```
 
@@ -58,12 +58,12 @@ pr2 (one-unit-Fin {k}) = {!!}
 
 ```agda
 is-unit-neg-one-Fin : {k : ℕ} → is-unit-Fin (succ-ℕ k) (neg-one-Fin k)
-is-unit-neg-one-Fin {zero-ℕ} = {!!}
+is-unit-neg-one-Fin = {!!}
 pr1 (is-unit-neg-one-Fin {succ-ℕ k}) = {!!}
 pr2 (is-unit-neg-one-Fin {succ-ℕ k}) = {!!}
 
 neg-one-unit-Fin : (k : ℕ) → unit-Fin (succ-ℕ k)
-pr1 (neg-one-unit-Fin k) = {!!}
+neg-one-unit-Fin = {!!}
 pr2 (neg-one-unit-Fin k) = {!!}
 ```
 
@@ -76,7 +76,7 @@ is-unit-mul-Fin :
 is-unit-mul-Fin = {!!}
 
 mul-unit-Fin : (k : ℕ) → unit-Fin k → unit-Fin k → unit-Fin k
-pr1 (mul-unit-Fin k u v) = {!!}
+mul-unit-Fin = {!!}
 pr2 (mul-unit-Fin k u v) = {!!}
 ```
 
@@ -84,7 +84,7 @@ pr2 (mul-unit-Fin k u v) = {!!}
 
 ```agda
 inv-unit-Fin : {k : ℕ} → unit-Fin k → unit-Fin k
-pr1 (inv-unit-Fin {succ-ℕ k} (pair u (pair v p))) = {!!}
+inv-unit-Fin = {!!}
 pr1 (pr2 (inv-unit-Fin {succ-ℕ k} (pair u (pair v p)))) = {!!}
 pr2 (pr2 (inv-unit-Fin {succ-ℕ k} (pair u (pair v p)))) = {!!}
 ```

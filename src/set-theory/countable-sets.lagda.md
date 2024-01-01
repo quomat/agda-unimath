@@ -64,7 +64,7 @@ module _
   enumeration = {!!}
 
   map-enumeration : enumeration → (ℕ → Maybe (type-Set X))
-  map-enumeration E = {!!}
+  map-enumeration = {!!}
 
   is-surjective-map-enumeration :
     (E : enumeration) → is-surjective (map-enumeration E)
@@ -107,10 +107,10 @@ surjective map `f : ℕ → X`. Let us call the latter as "directly countable".
 
 ```agda
 is-directly-countable-Prop : {l : Level} → Set l → Prop l
-is-directly-countable-Prop X = {!!}
+is-directly-countable-Prop = {!!}
 
 is-directly-countable : {l : Level} → Set l → UU l
-is-directly-countable X = {!!}
+is-directly-countable = {!!}
 
 is-prop-is-directly-countable :
   {l : Level} (X : Set l) → is-prop (is-directly-countable X)
@@ -125,7 +125,7 @@ module _
   is-directly-countable-is-countable = {!!}
 
     is-surjective-f : is-surjective f
-    is-surjective-f x = {!!}
+    is-surjective-f = {!!}
 
   abstract
     is-countable-is-directly-countable :
@@ -174,7 +174,7 @@ module _
   where
 
   shift-decidable-subtype-ℕ : decidable-subtype l ℕ
-  shift-decidable-subtype-ℕ zero-ℕ = {!!}
+  shift-decidable-subtype-ℕ = {!!}
   shift-decidable-subtype-ℕ (succ-ℕ n) = {!!}
 
   map-shift-decidable-subtype-ℕ :
@@ -182,7 +182,7 @@ module _
   map-shift-decidable-subtype-ℕ = {!!}
 
   map-enumeration-decidable-subprojection-ℕ : ℕ → Maybe (type-Set X)
-  map-enumeration-decidable-subprojection-ℕ n = {!!}
+  map-enumeration-decidable-subprojection-ℕ = {!!}
 
   abstract
     is-surjective-map-enumeration-decidable-subprojection-ℕ :
@@ -214,10 +214,10 @@ module _
   where
 
   map-maybe-coprod : (Maybe A + Maybe B) → Maybe (A + B)
-  map-maybe-coprod (inl (inl x)) = {!!}
+  map-maybe-coprod = {!!}
 
   is-surjective-map-maybe-coprod : is-surjective map-maybe-coprod
-  is-surjective-map-maybe-coprod (inl (inl x)) = {!!}
+  is-surjective-map-maybe-coprod = {!!}
   is-surjective-map-maybe-coprod (inl (inr x)) = {!!}
   is-surjective-map-maybe-coprod (inr star) = {!!}
 ```
@@ -230,10 +230,10 @@ module _
   where
 
   map-maybe-prod : (Maybe A × Maybe B) → Maybe (A × B)
-  map-maybe-prod (inl a , inl b) = {!!}
+  map-maybe-prod = {!!}
 
   is-surjective-map-maybe-prod : is-surjective map-maybe-prod
-  is-surjective-map-maybe-prod (inl (a , b)) = {!!}
+  is-surjective-map-maybe-prod = {!!}
   is-surjective-map-maybe-prod (inr star) = {!!}
 ```
 
@@ -303,6 +303,6 @@ All standart finite sets are countable.
 
 ```agda
 is-countable-Fin-Set : (n : ℕ) → is-countable (Fin-Set n)
-is-countable-Fin-Set zero-ℕ = {!!}
+is-countable-Fin-Set = {!!}
 is-countable-Fin-Set (succ-ℕ n) = {!!}
 ```

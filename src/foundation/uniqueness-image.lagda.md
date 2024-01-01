@@ -96,7 +96,7 @@ module _
     is-equiv-map-hom-equiv-slice-uniqueness-image = {!!}
 
   equiv-equiv-slice-uniqueness-image : B ≃ B'
-  pr1 equiv-equiv-slice-uniqueness-image = {!!}
+  equiv-equiv-slice-uniqueness-image = {!!}
 
   triangle-hom-equiv-slice-uniqueness-image :
     (map-emb i) ~ (map-emb i' ∘ map-hom-equiv-slice-uniqueness-image)
@@ -166,7 +166,7 @@ module _
     is-equiv-map-hom-equiv-slice-uniqueness-im = {!!}
 
   equiv-equiv-slice-uniqueness-im : im f ≃ B
-  pr1 equiv-equiv-slice-uniqueness-im = {!!}
+  equiv-equiv-slice-uniqueness-im = {!!}
 
   triangle-hom-equiv-slice-uniqueness-im :
     (inclusion-im f) ~ (map-emb i ∘ map-hom-equiv-slice-uniqueness-im)

@@ -34,10 +34,10 @@ module _
   where
 
   dependent-universal-property-empty : (l : Level) → UU (l1 ⊔ lsuc l)
-  dependent-universal-property-empty l = {!!}
+  dependent-universal-property-empty = {!!}
 
   universal-property-empty : (l : Level) → UU (l1 ⊔ lsuc l)
-  universal-property-empty l = {!!}
+  universal-property-empty = {!!}
 
   universal-property-dependent-universal-property-empty :
     ({l : Level} → dependent-universal-property-empty l) →
@@ -71,11 +71,11 @@ abstract
     {l : Level} (Y : UU l) →
     ({l' : Level} (X : UU l') → is-contr (Y → X)) →
     is-equiv (ind-empty {P = λ t → Y})
-  uniqueness-empty Y H = {!!}
+  uniqueness-empty = {!!}
 
 abstract
   universal-property-empty-is-equiv-ind-empty :
     {l : Level} (X : UU l) → is-equiv (ind-empty {P = λ t → X}) →
     ((l' : Level) (Y : UU l') → is-contr (X → Y))
-  universal-property-empty-is-equiv-ind-empty X is-equiv-ind-empty l' Y = {!!}
+  universal-property-empty-is-equiv-ind-empty = {!!}
 ```

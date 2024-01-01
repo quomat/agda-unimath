@@ -75,7 +75,7 @@ module _
     {X Y Z : UU l} (g : Y → Z) (f : X → Y) →
     ( ap-map-higher-modality m g ∘ ap-map-higher-modality m f) ~
     ( ap-map-higher-modality m (g ∘ f))
-  functoriality-higher-modality {X} {Y} {Z} g f = {!!}
+  functoriality-higher-modality = {!!}
 ```
 
 ### Naturality of the unit of a higher modality
@@ -123,7 +123,7 @@ module _
         ( ap-map-higher-modality m g)
         ( naturality-unit-higher-modality m f x)) ∙
       ( naturality-unit-higher-modality m g (f x)))
-  compute-naturality-unit-ind-modality g f x = {!!}
+  compute-naturality-unit-ind-modality = {!!}
 ```
 
 ### Action on homotopies
@@ -141,7 +141,7 @@ module _
   htpy-ap-higher-modality :
     {X Y : UU l} {f g : X → Y} →
     f ~ g → ap-map-higher-modality m f ~ ap-map-higher-modality m g
-  htpy-ap-higher-modality H x' = {!!}
+  htpy-ap-higher-modality = {!!}
 ```
 
 ## References

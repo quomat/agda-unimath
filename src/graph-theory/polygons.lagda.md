@@ -44,10 +44,10 @@ presentation of the [dihedral group](group-theory.dihedral-groups.md) `D_k`.
 
 ```agda
 vertex-standard-polygon-Undirected-Graph : ℕ → UU lzero
-vertex-standard-polygon-Undirected-Graph k = {!!}
+vertex-standard-polygon-Undirected-Graph = {!!}
 
 unordered-pair-vertices-standard-polygon-Undirected-Graph : ℕ → UU (lsuc lzero)
-unordered-pair-vertices-standard-polygon-Undirected-Graph k = {!!}
+unordered-pair-vertices-standard-polygon-Undirected-Graph = {!!}
 
 edge-standard-polygon-Undirected-Graph :
   (k : ℕ) →
@@ -55,7 +55,7 @@ edge-standard-polygon-Undirected-Graph :
 edge-standard-polygon-Undirected-Graph = {!!}
 
 standard-polygon-Undirected-Graph : ℕ → Undirected-Graph lzero lzero
-pr1 (standard-polygon-Undirected-Graph k) = {!!}
+standard-polygon-Undirected-Graph = {!!}
 pr2 (standard-polygon-Undirected-Graph k) = {!!}
 ```
 
@@ -63,7 +63,7 @@ pr2 (standard-polygon-Undirected-Graph k) = {!!}
 
 ```agda
 Polygon : ℕ → UU (lsuc lzero)
-Polygon k = {!!}
+Polygon = {!!}
 
 module _
   (k : ℕ) (X : Polygon k)
@@ -91,7 +91,7 @@ module _
   mere-equiv-vertex-Polygon = {!!}
 
   is-finite-vertex-Polygon : is-nonzero-ℕ k → is-finite vertex-Polygon
-  is-finite-vertex-Polygon H = {!!}
+  is-finite-vertex-Polygon = {!!}
 
   is-set-vertex-Polygon : is-set vertex-Polygon
   is-set-vertex-Polygon = {!!}

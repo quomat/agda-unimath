@@ -86,6 +86,5 @@ coherence-square-action-equiv-family-over-subuniverse :
     ( equiv-eq-subuniverse P X Y)
     ( equiv-eq)
     ( action-equiv-family-over-subuniverse P B X Y)
-coherence-square-action-equiv-family-over-subuniverse
-  P B X .X refl = {!!}
+coherence-square-action-equiv-family-over-subuniverse = {!!}
 ```

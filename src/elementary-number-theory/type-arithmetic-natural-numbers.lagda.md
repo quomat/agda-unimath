@@ -51,11 +51,11 @@ We prove arithmetical laws involving the natural numbers
 
 ```agda
 map-equiv-ℕ : ℕ → unit + ℕ
-map-equiv-ℕ zero-ℕ = {!!}
+map-equiv-ℕ = {!!}
 map-equiv-ℕ (succ-ℕ n) = {!!}
 
 map-inv-equiv-ℕ : unit + ℕ → ℕ
-map-inv-equiv-ℕ (inl x) = {!!}
+map-inv-equiv-ℕ = {!!}
 map-inv-equiv-ℕ (inr n) = {!!}
 
 is-retraction-map-inv-equiv-ℕ :
@@ -67,7 +67,7 @@ is-section-map-inv-equiv-ℕ :
 is-section-map-inv-equiv-ℕ = {!!}
 
 equiv-ℕ : ℕ ≃ (unit + ℕ)
-pr1 equiv-ℕ = {!!}
+equiv-ℕ = {!!}
 pr2 equiv-ℕ = {!!}
 ```
 
@@ -78,7 +78,7 @@ succ-ℕ+ℕ : ℕ + ℕ → ℕ + ℕ
 succ-ℕ+ℕ = {!!}
 
 map-ℕ+ℕ-to-ℕ : ℕ + ℕ → ℕ
-map-ℕ+ℕ-to-ℕ (inl x) = {!!}
+map-ℕ+ℕ-to-ℕ = {!!}
 map-ℕ+ℕ-to-ℕ (inr x) = {!!}
 
 action-map-ℕ+ℕ-to-ℕ-on-succ-ℕ+ℕ :
@@ -88,12 +88,12 @@ action-map-ℕ+ℕ-to-ℕ-on-succ-ℕ+ℕ :
 action-map-ℕ+ℕ-to-ℕ-on-succ-ℕ+ℕ = {!!}
 
 is-split-surjective-map-ℕ+ℕ-to-ℕ : is-split-surjective map-ℕ+ℕ-to-ℕ
-is-split-surjective-map-ℕ+ℕ-to-ℕ zero-ℕ = {!!}
+is-split-surjective-map-ℕ+ℕ-to-ℕ = {!!}
 is-split-surjective-map-ℕ+ℕ-to-ℕ (succ-ℕ zero-ℕ) = {!!}
 is-split-surjective-map-ℕ+ℕ-to-ℕ (succ-ℕ (succ-ℕ b)) = {!!}
 
 is-injective-map-ℕ+ℕ-to-ℕ : is-injective map-ℕ+ℕ-to-ℕ
-is-injective-map-ℕ+ℕ-to-ℕ {inl x} {inl y} p = {!!}
+is-injective-map-ℕ+ℕ-to-ℕ = {!!}
 is-injective-map-ℕ+ℕ-to-ℕ {inl x} {inr y} p = {!!}
 
   t : ¬ (div-ℕ 2 (succ-ℕ (2 *ℕ y)))
@@ -150,7 +150,7 @@ equiv-iterated-product-ℕ = {!!}
 
 ```agda
 equiv-coprod-Fin-ℕ : (n : ℕ) → ((Fin n) + ℕ) ≃ ℕ
-equiv-coprod-Fin-ℕ zero-ℕ = {!!}
+equiv-coprod-Fin-ℕ = {!!}
 equiv-coprod-Fin-ℕ (succ-ℕ n) = {!!}
 ```
 
@@ -158,7 +158,7 @@ equiv-coprod-Fin-ℕ (succ-ℕ n) = {!!}
 
 ```agda
 equiv-prod-Fin-ℕ : (n : ℕ) → ((Fin (succ-ℕ n)) × ℕ) ≃ ℕ
-equiv-prod-Fin-ℕ zero-ℕ = {!!}
+equiv-prod-Fin-ℕ = {!!}
 equiv-prod-Fin-ℕ (succ-ℕ n) = {!!}
 ```
 

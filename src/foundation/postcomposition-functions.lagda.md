@@ -45,7 +45,7 @@ module _
   where
 
   postcomp : (X → Y) → (A → X) → (A → Y)
-  postcomp f h = {!!}
+  postcomp = {!!}
 ```
 
 ## Properties
@@ -108,8 +108,7 @@ simplified to that universe.
 is-equiv-is-equiv-postcomp' :
   {l : Level} {X : UU l} {Y : UU l} (f : X → Y) →
   ((A : UU l) → is-equiv (postcomp A f)) → is-equiv f
-is-equiv-is-equiv-postcomp'
-  {l} {X} {Y} f is-equiv-postcomp-f = {!!}
+is-equiv-is-equiv-postcomp' = {!!}
 
 abstract
   is-equiv-postcomp-is-equiv :

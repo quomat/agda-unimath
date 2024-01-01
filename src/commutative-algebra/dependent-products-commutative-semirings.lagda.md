@@ -142,5 +142,5 @@ module _
   commutative-mul-Π-Commutative-Semiring = {!!}
 
   Π-Commutative-Semiring : Commutative-Semiring (l1 ⊔ l2)
-  pr1 Π-Commutative-Semiring = {!!}
+  Π-Commutative-Semiring = {!!}
 ```

@@ -43,7 +43,7 @@ module _
   square-fiber = {!!}
 
   cone-fiber : cone f (const unit B b) (fiber f b)
-  pr1 cone-fiber = {!!}
+  cone-fiber = {!!}
 
   abstract
     is-pullback-cone-fiber : is-pullback f (const unit B b) cone-fiber
@@ -64,11 +64,11 @@ module _
 
   equiv-fiber-terminal-map :
     (u : unit) → fiber (terminal-map {A = A}) u ≃ A
-  equiv-fiber-terminal-map u = {!!}
+  equiv-fiber-terminal-map = {!!}
 
   inv-equiv-fiber-terminal-map :
     (u : unit) → A ≃ fiber (terminal-map {A = A}) u
-  inv-equiv-fiber-terminal-map u = {!!}
+  inv-equiv-fiber-terminal-map = {!!}
 
   equiv-fiber-terminal-map-star :
     fiber (terminal-map {A = A}) star ≃ A

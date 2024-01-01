@@ -36,5 +36,5 @@ module _
   where
 
   precomp-family : (l : Level) → (B → UU l) → (A → UU l)
-  precomp-family l Q = {!!}
+  precomp-family = {!!}
 ```

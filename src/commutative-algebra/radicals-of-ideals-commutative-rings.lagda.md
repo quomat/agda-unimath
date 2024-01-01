@@ -76,7 +76,7 @@ module _
   where
 
   subset-radical-of-ideal-Commutative-Ring : type-Commutative-Ring A → Prop l2
-  subset-radical-of-ideal-Commutative-Ring f = {!!}
+  subset-radical-of-ideal-Commutative-Ring = {!!}
 
   is-in-radical-of-ideal-Commutative-Ring : type-Commutative-Ring A → UU l2
   is-in-radical-of-ideal-Commutative-Ring = {!!}

@@ -60,7 +60,7 @@ module _
   where
 
   ind-open-modality : ind-modality {l} (unit-open-modality Q)
-  ind-open-modality P f z q = {!!}
+  ind-open-modality = {!!}
 
   compute-ind-open-modality :
     compute-ind-modality {l} (unit-open-modality Q) (ind-open-modality)
@@ -94,7 +94,7 @@ module _
   is-higher-modality-open-modality = {!!}
 
   open-higher-modality : higher-modality (l ⊔ lQ) (l ⊔ lQ)
-  pr1 open-higher-modality = {!!}
+  open-higher-modality = {!!}
 ```
 
 ### The open modalities are uniquely eliminating modalities

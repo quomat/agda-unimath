@@ -39,14 +39,13 @@ module _
 
   is-large-suplattice-Π-Large-Suplattice :
     is-large-suplattice-Large-Poset γ large-poset-Π-Large-Suplattice
-  sup-has-least-upper-bound-family-of-elements-Large-Poset
-    ( is-large-suplattice-Π-Large-Suplattice {l2} {l3} {J} a) i = {!!}
+  is-large-suplattice-Π-Large-Suplattice = {!!}
   is-least-upper-bound-sup-has-least-upper-bound-family-of-elements-Large-Poset
     ( is-large-suplattice-Π-Large-Suplattice {l2} {l3} {J} a) = {!!}
 
   Π-Large-Suplattice :
     Large-Suplattice (λ l2 → α l2 ⊔ l1) (λ l2 l3 → β l2 l3 ⊔ l1) γ
-  large-poset-Large-Suplattice Π-Large-Suplattice = {!!}
+  Π-Large-Suplattice = {!!}
   is-large-suplattice-Large-Suplattice Π-Large-Suplattice = {!!}
 
   set-Π-Large-Suplattice : (l : Level) → Set (α l ⊔ l1)

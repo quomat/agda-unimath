@@ -69,7 +69,7 @@ module _
 
 ```agda
 Preunivalent-Category : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Preunivalent-Category l1 l2 = {!!}
+Preunivalent-Category = {!!}
 
 module _
   {l1 l2 : Level} (C : Preunivalent-Category l1 l2)
@@ -222,10 +222,10 @@ module _
   where
 
   is-1-type-obj-Preunivalent-Category : is-1-type (obj-Preunivalent-Category C)
-  is-1-type-obj-Preunivalent-Category x y = {!!}
+  is-1-type-obj-Preunivalent-Category = {!!}
 
   obj-1-type-Preunivalent-Category : 1-Type l1
-  pr1 obj-1-type-Preunivalent-Category = {!!}
+  obj-1-type-Preunivalent-Category = {!!}
 ```
 
 ### The total hom-type of a preunivalent category is a 1-type

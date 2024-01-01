@@ -57,7 +57,7 @@ is-finite-total-order-Poset-Prop :
 is-finite-total-order-Poset-Prop = {!!}
 
 Total-Order-𝔽 : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Total-Order-𝔽 l1 l2 = {!!}
+Total-Order-𝔽 = {!!}
 
 poset-𝔽-Total-Order-𝔽 : {l1 l2 : Level} → Total-Order-𝔽 l1 l2 → Poset-𝔽 l1 l2
 poset-𝔽-Total-Order-𝔽 = {!!}

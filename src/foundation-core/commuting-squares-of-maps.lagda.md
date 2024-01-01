@@ -67,7 +67,7 @@ module _
     coherence-square-maps top-right mid right bottom-right →
     coherence-square-maps
       (top-right ∘ top-left) left right (bottom-right ∘ bottom-left)
-  pasting-horizontal-coherence-square-maps sq-left sq-right = {!!}
+  pasting-horizontal-coherence-square-maps = {!!}
 
   pasting-horizontal-up-to-htpy-coherence-square-maps :
     {top : A → C} (H : coherence-triangle-maps top top-right top-left)
@@ -76,7 +76,7 @@ module _
     coherence-square-maps top-left left mid bottom-left →
     coherence-square-maps top-right mid right bottom-right →
     coherence-square-maps top left right bottom
-  pasting-horizontal-up-to-htpy-coherence-square-maps H K sq-left sq-right = {!!}
+  pasting-horizontal-up-to-htpy-coherence-square-maps = {!!}
 ```
 
 ### Pasting commuting squares vertically
@@ -97,7 +97,7 @@ module _
     coherence-square-maps mid left-bottom right-bottom bottom →
     coherence-square-maps
       top (left-bottom ∘ left-top) (right-bottom ∘ right-top) bottom
-  pasting-vertical-coherence-square-maps sq-top sq-bottom = {!!}
+  pasting-vertical-coherence-square-maps = {!!}
 
   pasting-vertical-up-to-htpy-coherence-square-maps :
     {left : A → C} (H : coherence-triangle-maps left left-bottom left-top)
@@ -105,7 +105,7 @@ module _
     coherence-square-maps top left-top right-top mid →
     coherence-square-maps mid left-bottom right-bottom bottom →
     coherence-square-maps top left right bottom
-  pasting-vertical-up-to-htpy-coherence-square-maps H K sq-top sq-bottom = {!!}
+  pasting-vertical-up-to-htpy-coherence-square-maps = {!!}
 ```
 
 ### Associativity of horizontal pasting
@@ -168,7 +168,7 @@ module _
       ( γ₁ ∘ β₁)
       ( α)
       ( pasting-horizontal-coherence-square-maps β₀ γ₀ g h i β₁ γ₁ β γ)
-  assoc-pasting-horizontal-coherence-square-maps a = {!!}
+  assoc-pasting-horizontal-coherence-square-maps = {!!}
 ```
 
 ### The unit laws for horizontal pasting of commuting squares of maps
@@ -198,7 +198,7 @@ module _
 
   right-unit-law-pasting-horizontal-coherence-square-maps :
     pasting-horizontal-coherence-square-maps i id f g g j id α refl-htpy ~ α
-  right-unit-law-pasting-horizontal-coherence-square-maps a = {!!}
+  right-unit-law-pasting-horizontal-coherence-square-maps = {!!}
 ```
 
 ## See also

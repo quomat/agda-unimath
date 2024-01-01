@@ -32,7 +32,7 @@ is a number `u` in `ℤ-Mod k` such that `mul-ℤ-Mod k u x = {!!}
 
 ```agda
 div-ℤ-Mod : (k : ℕ) → ℤ-Mod k → ℤ-Mod k → UU lzero
-div-ℤ-Mod k x y = {!!}
+div-ℤ-Mod = {!!}
 ```
 
 ## Properties
@@ -41,7 +41,7 @@ div-ℤ-Mod k x y = {!!}
 
 ```agda
 refl-div-ℤ-Mod : {k : ℕ} (x : ℤ-Mod k) → div-ℤ-Mod k x x
-refl-div-ℤ-Mod {ℕ.zero-ℕ} = {!!}
+refl-div-ℤ-Mod = {!!}
 refl-div-ℤ-Mod {ℕ.succ-ℕ k} = {!!}
 ```
 
@@ -49,7 +49,7 @@ refl-div-ℤ-Mod {ℕ.succ-ℕ k} = {!!}
 
 ```agda
 transitive-div-ℤ-Mod : {k : ℕ} → is-transitive (div-ℤ-Mod k)
-transitive-div-ℤ-Mod {zero-ℕ} = {!!}
+transitive-div-ℤ-Mod = {!!}
 transitive-div-ℤ-Mod {succ-ℕ k} = {!!}
 ```
 

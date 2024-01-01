@@ -44,7 +44,7 @@ A **concrete group** is a [pointed](structured-types.pointed-types.md)
 
 ```agda
 Concrete-Group : (l : Level) → UU (lsuc l)
-Concrete-Group l = {!!}
+Concrete-Group = {!!}
 
 module _
   {l : Level} (G : Concrete-Group l)
@@ -83,19 +83,19 @@ module _
   is-set-type-Concrete-Group = {!!}
 
   set-Concrete-Group : Set l
-  pr1 set-Concrete-Group = {!!}
+  set-Concrete-Group = {!!}
 
   abstract
     is-1-type-classifying-type-Concrete-Group :
       is-trunc one-𝕋 classifying-type-Concrete-Group
-    is-1-type-classifying-type-Concrete-Group X Y = {!!}
+    is-1-type-classifying-type-Concrete-Group = {!!}
 
   classifying-1-type-Concrete-Group : Truncated-Type l one-𝕋
-  pr1 classifying-1-type-Concrete-Group = {!!}
+  classifying-1-type-Concrete-Group = {!!}
 
   Id-BG-Set :
     (X Y : classifying-type-Concrete-Group) → Set l
-  Id-BG-Set X Y = {!!}
+  Id-BG-Set = {!!}
 ```
 
 ### The abstract group associated to a concrete group
@@ -112,7 +112,7 @@ module _
   mul-Concrete-Group = {!!}
 
   mul-Concrete-Group' : (x y : type-Concrete-Group G) → type-Concrete-Group G
-  mul-Concrete-Group' x y = {!!}
+  mul-Concrete-Group' = {!!}
 
   associative-mul-Concrete-Group :
     (x y z : type-Concrete-Group G) →
@@ -147,21 +147,21 @@ module _
   right-inverse-law-mul-Concrete-Group = {!!}
 
   semigroup-Concrete-Group : Semigroup l
-  pr1 semigroup-Concrete-Group = {!!}
+  semigroup-Concrete-Group = {!!}
 
   is-unital-semigroup-Concrete-Group :
     is-unital-Semigroup semigroup-Concrete-Group
-  pr1 is-unital-semigroup-Concrete-Group = {!!}
+  is-unital-semigroup-Concrete-Group = {!!}
 
   is-group-Concrete-Group' :
     is-group' semigroup-Concrete-Group is-unital-semigroup-Concrete-Group
-  pr1 is-group-Concrete-Group' = {!!}
+  is-group-Concrete-Group' = {!!}
 
   is-group-Concrete-Group : is-group semigroup-Concrete-Group
-  pr1 is-group-Concrete-Group = {!!}
+  is-group-Concrete-Group = {!!}
 
   group-Concrete-Group : Group l
-  pr1 group-Concrete-Group = {!!}
+  group-Concrete-Group = {!!}
 ```
 
 ### The opposite abstract group associated to a concrete group

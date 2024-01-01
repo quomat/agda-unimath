@@ -65,7 +65,7 @@ component-UU :
 component-UU = {!!}
 
 type-component-UU : {l1 : Level} {A : UU l1} (X : component-UU A) → UU l1
-type-component-UU X = {!!}
+type-component-UU = {!!}
 
 abstract
   mere-equiv-component-UU :
@@ -103,7 +103,7 @@ abstract
   is-equiv-equiv-eq-component-UU-Level :
     {l1 l2 : Level} {A : UU l2} (X Y : component-UU-Level l1 A) →
     is-equiv (equiv-eq-component-UU-Level {X = X} {Y})
-  is-equiv-equiv-eq-component-UU-Level X = {!!}
+  is-equiv-equiv-eq-component-UU-Level = {!!}
 
 eq-equiv-component-UU-Level :
   {l1 l2 : Level} {A : UU l2} (X Y : component-UU-Level l1 A) →
@@ -133,7 +133,7 @@ abstract
   is-equiv-equiv-eq-component-UU :
     {l1 : Level} {A : UU l1} (X Y : component-UU A) →
     is-equiv (equiv-eq-component-UU {X = X} {Y})
-  is-equiv-equiv-eq-component-UU X Y = {!!}
+  is-equiv-equiv-eq-component-UU = {!!}
 
 eq-equiv-component-UU :
   {l1 : Level} {A : UU l1} (X Y : component-UU A) →

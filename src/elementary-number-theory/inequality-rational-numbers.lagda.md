@@ -29,13 +29,13 @@ of `y`.
 
 ```agda
 leq-ℚ-Prop : ℚ → ℚ → Prop lzero
-leq-ℚ-Prop (x , px) (y , py) = {!!}
+leq-ℚ-Prop = {!!}
 
 leq-ℚ : ℚ → ℚ → UU lzero
-leq-ℚ x y = {!!}
+leq-ℚ = {!!}
 
 is-prop-leq-ℚ : (x y : ℚ) → is-prop (leq-ℚ x y)
-is-prop-leq-ℚ x y = {!!}
+is-prop-leq-ℚ = {!!}
 
 infix 30 _≤-ℚ_
 _≤-ℚ_ = {!!}
@@ -45,11 +45,11 @@ _≤-ℚ_ = {!!}
 
 ```agda
 le-ℚ-Prop : ℚ → ℚ → Prop lzero
-le-ℚ-Prop (x , px) (y , py) = {!!}
+le-ℚ-Prop = {!!}
 
 le-ℚ : ℚ → ℚ → UU lzero
-le-ℚ x y = {!!}
+le-ℚ = {!!}
 
 is-prop-le-ℚ : (x y : ℚ) → is-prop (le-ℚ x y)
-is-prop-le-ℚ x y = {!!}
+is-prop-le-ℚ = {!!}
 ```

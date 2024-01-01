@@ -27,6 +27,6 @@ Given a sequence `f : ℕ → A` and an element `a : A` we define
 
 ```agda
 shift-ℕ : {l : Level} {A : UU l} (a : A) (f : ℕ → A) → ℕ → A
-shift-ℕ a f zero-ℕ = {!!}
+shift-ℕ = {!!}
 shift-ℕ a f (succ-ℕ n) = {!!}
 ```

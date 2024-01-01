@@ -157,5 +157,5 @@ module _
   commutative-mul-prod-Commutative-Ring = {!!}
 
   prod-Commutative-Ring : Commutative-Ring (l1 ⊔ l2)
-  pr1 prod-Commutative-Ring = {!!}
+  prod-Commutative-Ring = {!!}
 ```

@@ -87,8 +87,8 @@ module _
 
   commutative-add-Π-Ab :
     (f g : type-Π-Ab) → add-Π-Ab f g ＝ add-Π-Ab g f
-  commutative-add-Π-Ab f g = {!!}
+  commutative-add-Π-Ab = {!!}
 
   Π-Ab : Ab (l1 ⊔ l2)
-  pr1 Π-Ab = {!!}
+  Π-Ab = {!!}
 ```

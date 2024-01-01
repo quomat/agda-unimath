@@ -53,7 +53,7 @@ module _
   is-finite-type-prod-Commutative-Ring-𝔽 = {!!}
 
   finite-type-prod-Commutative-Ring-𝔽 : 𝔽 (l1 ⊔ l2)
-  pr1 finite-type-prod-Commutative-Ring-𝔽 = {!!}
+  finite-type-prod-Commutative-Ring-𝔽 = {!!}
 
   add-prod-Commutative-Ring-𝔽 :
     type-prod-Commutative-Ring-𝔽 →
@@ -169,5 +169,5 @@ module _
   commutative-ring-prod-Commutative-Ring-𝔽 = {!!}
 
   prod-Commutative-Ring-𝔽 : Commutative-Ring-𝔽 (l1 ⊔ l2)
-  pr1 prod-Commutative-Ring-𝔽 = {!!}
+  prod-Commutative-Ring-𝔽 = {!!}
 ```

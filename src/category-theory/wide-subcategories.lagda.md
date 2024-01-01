@@ -170,7 +170,7 @@ module _
   where
 
   subtype-obj-Wide-Subcategory : subtype lzero (obj-Category C)
-  subtype-obj-Wide-Subcategory _ = {!!}
+  subtype-obj-Wide-Subcategory = {!!}
 
   obj-Wide-Subcategory : UU l1
   obj-Wide-Subcategory = {!!}
@@ -193,7 +193,7 @@ module _
   subtype-hom-Wide-Subcategory = {!!}
 
   hom-Wide-Subcategory : (x y : obj-Wide-Subcategory C P) → UU (l2 ⊔ l3)
-  hom-Wide-Subcategory x y = {!!}
+  hom-Wide-Subcategory = {!!}
 
   inclusion-hom-Wide-Subcategory :
     (x y : obj-Wide-Subcategory C P) →
@@ -350,7 +350,7 @@ module _
   where
 
   category-Wide-Subcategory : Category l1 (l2 ⊔ l3)
-  pr1 category-Wide-Subcategory = {!!}
+  category-Wide-Subcategory = {!!}
 ```
 
 ### The inclusion functor of a wide subcategory

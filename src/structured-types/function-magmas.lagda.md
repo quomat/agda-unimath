@@ -36,5 +36,5 @@ module _
   mul-function-Magma = {!!}
 
   function-Magma : Magma (l1 ⊔ l2)
-  pr1 function-Magma = {!!}
+  function-Magma = {!!}
 ```

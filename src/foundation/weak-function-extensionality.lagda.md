@@ -44,7 +44,7 @@ instance-weak-function-extensionality :
 instance-weak-function-extensionality = {!!}
 
 weak-function-extensionality-Level : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-weak-function-extensionality-Level l1 l2 = {!!}
+weak-function-extensionality-Level = {!!}
 
 weak-function-extensionality : UUω
 weak-function-extensionality = {!!}
@@ -58,7 +58,7 @@ instance-weaker-function-extensionality :
 instance-weaker-function-extensionality = {!!}
 
 weaker-function-extensionality-Level : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-weaker-function-extensionality-Level l1 l2 = {!!}
+weaker-function-extensionality-Level = {!!}
 
 weaker-function-extensionality : UUω
 weaker-function-extensionality = {!!}
@@ -112,7 +112,7 @@ module _
   eq-function-converse-weak-funext = {!!}
 
   converse-weak-funext : (i : I) → is-contr (A i)
-  pr1 (converse-weak-funext i) = {!!}
+  converse-weak-funext = {!!}
 ```
 
 ### Weaker function extensionality implies weak function extensionality

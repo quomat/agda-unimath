@@ -21,5 +21,5 @@ open import foundation.universe-levels
 
 ```agda
 Furstenberg-Group : (l : Level) → UU (lsuc l)
-Furstenberg-Group l = {!!}
+Furstenberg-Group = {!!}
 ```

@@ -55,11 +55,11 @@ module _
   where
 
   htpy-is-inverse : (s t : is-inverse f g) → UU (l1 ⊔ l2)
-  htpy-is-inverse s t = {!!}
+  htpy-is-inverse = {!!}
 
   extensionality-is-inverse :
     {s t : is-inverse f g} → (s ＝ t) ≃ htpy-is-inverse s t
-  extensionality-is-inverse {s} {t} = {!!}
+  extensionality-is-inverse = {!!}
 
   htpy-eq-is-inverse : {s t : is-inverse f g} → s ＝ t → htpy-is-inverse s t
   htpy-eq-is-inverse = {!!}
@@ -78,33 +78,33 @@ module _
   coherence-htpy-is-invertible :
     (s t : is-invertible f) →
     map-inv-is-invertible s ~ map-inv-is-invertible t → UU (l1 ⊔ l2)
-  coherence-htpy-is-invertible s t H = {!!}
+  coherence-htpy-is-invertible = {!!}
 
   htpy-is-invertible : (s t : is-invertible f) → UU (l1 ⊔ l2)
-  htpy-is-invertible s t = {!!}
+  htpy-is-invertible = {!!}
 
   refl-htpy-is-invertible : (s : is-invertible f) → htpy-is-invertible s s
-  pr1 (refl-htpy-is-invertible s) = {!!}
+  refl-htpy-is-invertible = {!!}
 
   htpy-eq-is-invertible :
     (s t : is-invertible f) → s ＝ t → htpy-is-invertible s t
-  htpy-eq-is-invertible s .s refl = {!!}
+  htpy-eq-is-invertible = {!!}
 
   is-torsorial-htpy-is-invertible :
     (s : is-invertible f) → is-torsorial (htpy-is-invertible s)
-  is-torsorial-htpy-is-invertible s = {!!}
+  is-torsorial-htpy-is-invertible = {!!}
 
   is-equiv-htpy-eq-is-invertible :
     (s t : is-invertible f) → is-equiv (htpy-eq-is-invertible s t)
-  is-equiv-htpy-eq-is-invertible s = {!!}
+  is-equiv-htpy-eq-is-invertible = {!!}
 
   extensionality-is-invertible :
     (s t : is-invertible f) → (s ＝ t) ≃ (htpy-is-invertible s t)
-  pr1 (extensionality-is-invertible s t) = {!!}
+  extensionality-is-invertible = {!!}
 
   eq-htpy-is-invertible :
     (s t : is-invertible f) → htpy-is-invertible s t → s ＝ t
-  eq-htpy-is-invertible s t = {!!}
+  eq-htpy-is-invertible = {!!}
 ```
 
 #### Characterizing equality of `invertible-map`
@@ -118,33 +118,33 @@ module _
     (s t : invertible-map A B) →
     map-invertible-map s ~ map-invertible-map t →
     map-inv-invertible-map s ~ map-inv-invertible-map t → UU (l1 ⊔ l2)
-  coherence-htpy-invertible-map s t H I = {!!}
+  coherence-htpy-invertible-map = {!!}
 
   htpy-invertible-map : (s t : invertible-map A B) → UU (l1 ⊔ l2)
-  htpy-invertible-map s t = {!!}
+  htpy-invertible-map = {!!}
 
   refl-htpy-invertible-map : (s : invertible-map A B) → htpy-invertible-map s s
-  pr1 (refl-htpy-invertible-map s) = {!!}
+  refl-htpy-invertible-map = {!!}
 
   htpy-eq-invertible-map :
     (s t : invertible-map A B) → s ＝ t → htpy-invertible-map s t
-  htpy-eq-invertible-map s .s refl = {!!}
+  htpy-eq-invertible-map = {!!}
 
   is-torsorial-htpy-invertible-map :
     (s : invertible-map A B) → is-torsorial (htpy-invertible-map s)
-  is-torsorial-htpy-invertible-map s = {!!}
+  is-torsorial-htpy-invertible-map = {!!}
 
   is-equiv-htpy-eq-invertible-map :
     (s t : invertible-map A B) → is-equiv (htpy-eq-invertible-map s t)
-  is-equiv-htpy-eq-invertible-map s = {!!}
+  is-equiv-htpy-eq-invertible-map = {!!}
 
   extensionality-invertible-map :
     (s t : invertible-map A B) → (s ＝ t) ≃ (htpy-invertible-map s t)
-  pr1 (extensionality-invertible-map s t) = {!!}
+  extensionality-invertible-map = {!!}
 
   eq-htpy-invertible-map :
     (s t : invertible-map A B) → htpy-invertible-map s t → s ＝ t
-  eq-htpy-invertible-map s t = {!!}
+  eq-htpy-invertible-map = {!!}
 ```
 
 ### If the domains are `k`-truncated, then the type of inverses is `k`-truncated
@@ -158,18 +158,18 @@ module _
     (f : A → B) (g : B → A) →
     is-trunc (succ-𝕋 k) A → is-trunc (succ-𝕋 k) B →
     is-trunc k (is-inverse f g)
-  is-trunc-is-inverse f g is-trunc-A is-trunc-B = {!!}
+  is-trunc-is-inverse = {!!}
 
   is-trunc-is-invertible :
     (f : A → B) →
     is-trunc k A → is-trunc (succ-𝕋 k) B →
     is-trunc k (is-invertible f)
-  is-trunc-is-invertible f is-trunc-A is-trunc-B = {!!}
+  is-trunc-is-invertible = {!!}
 
   is-trunc-invertible-map :
     is-trunc k A → is-trunc k B →
     is-trunc k (invertible-map A B)
-  is-trunc-invertible-map is-trunc-A is-trunc-B = {!!}
+  is-trunc-invertible-map = {!!}
 ```
 
 ### The type `is-invertible id` is equivalent to `id ~ id`
@@ -178,7 +178,7 @@ module _
 is-invertible-id-htpy-id-id :
   {l : Level} (A : UU l) →
   (id {A = A} ~ id {A = A}) → is-invertible (id {A = A})
-pr1 (is-invertible-id-htpy-id-id A H) = {!!}
+is-invertible-id-htpy-id-id = {!!}
 pr1 (pr2 (is-invertible-id-htpy-id-id A H)) = {!!}
 pr2 (pr2 (is-invertible-id-htpy-id-id A H)) = {!!}
 
@@ -193,12 +193,12 @@ triangle-is-invertible-id-htpy-id-id :
         { B = λ s → (pr1 s ∘ id) ~ id}
         ( is-contr-section-is-equiv (is-equiv-id {_} {A}))
         ( pair id refl-htpy)))
-triangle-is-invertible-id-htpy-id-id A H = {!!}
+triangle-is-invertible-id-htpy-id-id = {!!}
 
 abstract
   is-equiv-is-invertible-id-htpy-id-id :
     {l : Level} (A : UU l) → is-equiv (is-invertible-id-htpy-id-id A)
-  is-equiv-is-invertible-id-htpy-id-id A = {!!}
+  is-equiv-is-invertible-id-htpy-id-id = {!!}
 ```
 
 ### The type of invertible maps is equivalent to the type of free loops on equivalences
@@ -247,7 +247,7 @@ module _
   equiv-is-retraction-section-is-invertible :
     (f : A → B) →
     Σ (section f) (λ g → (map-section f g) ∘ f ~ id) ≃ is-invertible f
-  equiv-is-retraction-section-is-invertible f = {!!}
+  equiv-is-retraction-section-is-invertible = {!!}
 
   equiv-free-loop-equivalence-invertible-equivalence :
     free-loop (A ≃ B) ≃ Σ (A ≃ B) (is-invertible ∘ map-equiv)

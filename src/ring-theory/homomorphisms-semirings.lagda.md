@@ -136,7 +136,7 @@ module _
   preserves-unit-id-hom-Semiring = {!!}
 
   id-hom-Semiring : hom-Semiring R R
-  pr1 id-hom-Semiring = {!!}
+  id-hom-Semiring = {!!}
 ```
 
 ### Composition of homomorphisms of semirings
@@ -175,7 +175,7 @@ module _
   preserves-unit-comp-hom-Semiring = {!!}
 
   comp-hom-Semiring : hom-Semiring R T
-  pr1 comp-hom-Semiring = {!!}
+  comp-hom-Semiring = {!!}
 ```
 
 ### Homotopies of homomorphisms of semirings
@@ -186,10 +186,10 @@ module _
   where
 
   htpy-hom-Semiring : (f g : hom-Semiring R S) → UU (l1 ⊔ l2)
-  htpy-hom-Semiring f g = {!!}
+  htpy-hom-Semiring = {!!}
 
   refl-htpy-hom-Semiring : (f : hom-Semiring R S) → htpy-hom-Semiring f f
-  refl-htpy-hom-Semiring f = {!!}
+  refl-htpy-hom-Semiring = {!!}
 ```
 
 ## Properties

@@ -108,17 +108,17 @@ module _
   all-elements-equal-total-sim-Large-Poset :
     {l1 l2 : Level} (x : type-Large-Poset P l1) →
     all-elements-equal (Σ (type-Large-Poset P l2) (sim-Large-Poset P x))
-  all-elements-equal-total-sim-Large-Poset x (y , H) (z , K) = {!!}
+  all-elements-equal-total-sim-Large-Poset = {!!}
 
   is-prop-total-sim-Large-Poset :
     {l1 l2 : Level} (x : type-Large-Poset P l1) →
     is-prop (Σ (type-Large-Poset P l2) (sim-Large-Poset P x))
-  is-prop-total-sim-Large-Poset x = {!!}
+  is-prop-total-sim-Large-Poset = {!!}
 
   is-torsorial-sim-Large-Poset :
     {l1 : Level} (x : type-Large-Poset P l1) →
     is-torsorial (sim-Large-Poset P x)
-  is-torsorial-sim-Large-Poset x = {!!}
+  is-torsorial-sim-Large-Poset = {!!}
 ```
 
 ### Similarity characterizes the identity type of elements in a large poset of the same universe level
@@ -131,20 +131,20 @@ module _
   sim-eq-Large-Poset :
     {l1 : Level} {x y : type-Large-Poset P l1} →
     x ＝ y → sim-Large-Poset P x y
-  sim-eq-Large-Poset refl = {!!}
+  sim-eq-Large-Poset = {!!}
 
   is-equiv-sim-eq-Large-Poset :
     {l1 : Level} (x y : type-Large-Poset P l1) →
     is-equiv (sim-eq-Large-Poset {l1} {x} {y})
-  is-equiv-sim-eq-Large-Poset x = {!!}
+  is-equiv-sim-eq-Large-Poset = {!!}
 
   extensionality-Large-Poset :
     {l1 : Level} (x y : type-Large-Poset P l1) →
     (x ＝ y) ≃ sim-Large-Poset P x y
-  pr1 (extensionality-Large-Poset x y) = {!!}
+  extensionality-Large-Poset = {!!}
 
   eq-sim-Large-Poset :
     {l1 : Level} (x y : type-Large-Poset P l1) →
     sim-Large-Poset P x y → x ＝ y
-  eq-sim-Large-Poset x y = {!!}
+  eq-sim-Large-Poset = {!!}
 ```

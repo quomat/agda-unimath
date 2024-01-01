@@ -49,10 +49,10 @@ module _
   classifying-type-Automorphism-∞-Group = {!!}
 
   shape-Automorphism-∞-Group : classifying-type-Automorphism-∞-Group
-  pr1 shape-Automorphism-∞-Group = {!!}
+  shape-Automorphism-∞-Group = {!!}
 
   classifying-pointed-type-Automorphism-∞-Group : Pointed-Type l
-  pr1 classifying-pointed-type-Automorphism-∞-Group = {!!}
+  classifying-pointed-type-Automorphism-∞-Group = {!!}
   pr2 classifying-pointed-type-Automorphism-∞-Group = {!!}
 
   is-0-connected-classifying-type-Automorphism-∞-Group :
@@ -60,7 +60,7 @@ module _
   is-0-connected-classifying-type-Automorphism-∞-Group = {!!}
 
   Automorphism-∞-Group : ∞-Group l
-  pr1 Automorphism-∞-Group = {!!}
+  Automorphism-∞-Group = {!!}
 ```
 
 ### Automorphism groups of objects in a 1-type
@@ -77,7 +77,7 @@ module _
   shape-Automorphism-Group = {!!}
 
   Automorphism-Group : Concrete-Group l
-  pr1 Automorphism-Group = {!!}
+  Automorphism-Group = {!!}
 
   ∞-group-Automorphism-Group : ∞-Group l
   ∞-group-Automorphism-Group = {!!}
@@ -94,38 +94,38 @@ module _
 
   Eq-classifying-type-Automorphism-∞-Group :
     (X Y : classifying-type-Automorphism-∞-Group A a) → UU l
-  Eq-classifying-type-Automorphism-∞-Group X Y = {!!}
+  Eq-classifying-type-Automorphism-∞-Group = {!!}
 
   refl-Eq-classifying-type-Automorphism-∞-Group :
     (X : classifying-type-Automorphism-∞-Group A a) →
     Eq-classifying-type-Automorphism-∞-Group X X
-  refl-Eq-classifying-type-Automorphism-∞-Group X = {!!}
+  refl-Eq-classifying-type-Automorphism-∞-Group = {!!}
 
   is-torsorial-Eq-classifying-type-Automorphism-∞-Group :
     (X : classifying-type-Automorphism-∞-Group A a) →
     is-torsorial (Eq-classifying-type-Automorphism-∞-Group X)
-  is-torsorial-Eq-classifying-type-Automorphism-∞-Group X = {!!}
+  is-torsorial-Eq-classifying-type-Automorphism-∞-Group = {!!}
 
   Eq-eq-classifying-type-Automorphism-∞-Group :
     (X Y : classifying-type-Automorphism-∞-Group A a) →
     (X ＝ Y) → Eq-classifying-type-Automorphism-∞-Group X Y
-  Eq-eq-classifying-type-Automorphism-∞-Group X .X refl = {!!}
+  Eq-eq-classifying-type-Automorphism-∞-Group = {!!}
 
   is-equiv-Eq-eq-classifying-type-Automorphism-∞-Group :
     (X Y : classifying-type-Automorphism-∞-Group A a) →
     is-equiv (Eq-eq-classifying-type-Automorphism-∞-Group X Y)
-  is-equiv-Eq-eq-classifying-type-Automorphism-∞-Group X = {!!}
+  is-equiv-Eq-eq-classifying-type-Automorphism-∞-Group = {!!}
 
   extensionality-classifying-type-Automorphism-∞-Group :
     (X Y : classifying-type-Automorphism-∞-Group A a) →
     (X ＝ Y) ≃ Eq-classifying-type-Automorphism-∞-Group X Y
-  pr1 (extensionality-classifying-type-Automorphism-∞-Group X Y) = {!!}
+  extensionality-classifying-type-Automorphism-∞-Group = {!!}
   pr2 (extensionality-classifying-type-Automorphism-∞-Group X Y) = {!!}
 
   eq-Eq-classifying-type-Automorphism-∞-Group :
     (X Y : classifying-type-Automorphism-∞-Group A a) →
     Eq-classifying-type-Automorphism-∞-Group X Y → X ＝ Y
-  eq-Eq-classifying-type-Automorphism-∞-Group X Y = {!!}
+  eq-Eq-classifying-type-Automorphism-∞-Group = {!!}
 ```
 
 ### Characerizing the identity type of `Automorphism-Group`
@@ -152,23 +152,23 @@ module _
   Eq-eq-classifying-type-Automorphism-Group :
     (X Y : classifying-type-Automorphism-Group A a) →
     (X ＝ Y) → Eq-classifying-type-Automorphism-Group X Y
-  Eq-eq-classifying-type-Automorphism-Group X .X refl = {!!}
+  Eq-eq-classifying-type-Automorphism-Group = {!!}
 
   is-equiv-Eq-eq-classifying-type-Automorphism-Group :
     (X Y : classifying-type-Automorphism-Group A a) →
     is-equiv (Eq-eq-classifying-type-Automorphism-Group X Y)
-  is-equiv-Eq-eq-classifying-type-Automorphism-Group X = {!!}
+  is-equiv-Eq-eq-classifying-type-Automorphism-Group = {!!}
 
   extensionality-classifying-type-Automorphism-Group :
     (X Y : classifying-type-Automorphism-Group A a) →
     (X ＝ Y) ≃ Eq-classifying-type-Automorphism-Group X Y
-  pr1 (extensionality-classifying-type-Automorphism-Group X Y) = {!!}
+  extensionality-classifying-type-Automorphism-Group = {!!}
   pr2 (extensionality-classifying-type-Automorphism-Group X Y) = {!!}
 
   eq-Eq-classifying-type-Automorphism-Group :
     (X Y : classifying-type-Automorphism-Group A a) →
     Eq-classifying-type-Automorphism-Group X Y → X ＝ Y
-  eq-Eq-classifying-type-Automorphism-Group X Y = {!!}
+  eq-Eq-classifying-type-Automorphism-Group = {!!}
 ```
 
 ### Equal elements have equivalent automorphism ∞-groups
@@ -181,7 +181,7 @@ module _
   equiv-eq-Automorphism-∞-Group :
     {x y : A} (p : x ＝ y) →
     equiv-∞-Group (Automorphism-∞-Group A x) (Automorphism-∞-Group A y)
-  equiv-eq-Automorphism-∞-Group refl = {!!}
+  equiv-eq-Automorphism-∞-Group = {!!}
 ```
 
 ### Equal elements in a 1-type have isomorphic automorphism groups
@@ -194,5 +194,5 @@ module _
   equiv-eq-Automorphism-Group :
     {x y : type-1-Type A} (p : x ＝ y) →
     equiv-Concrete-Group (Automorphism-Group A x) (Automorphism-Group A y)
-  equiv-eq-Automorphism-Group refl = {!!}
+  equiv-eq-Automorphism-Group = {!!}
 ```

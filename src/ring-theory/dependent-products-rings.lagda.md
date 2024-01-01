@@ -128,5 +128,5 @@ module _
   right-distributive-mul-add-Π-Ring = {!!}
 
   Π-Ring : Ring (l1 ⊔ l2)
-  pr1 Π-Ring = {!!}
+  Π-Ring = {!!}
 ```

@@ -46,10 +46,10 @@ sequential diagram of maps that extend infinitely to the left:
 sequence-map-dependent-tower :
   {l1 l2 : Level} (A : tower l1) →
   ((n : ℕ) → type-tower A n → UU l2) → UU (l1 ⊔ l2)
-sequence-map-dependent-tower A B = {!!}
+sequence-map-dependent-tower = {!!}
 
 dependent-tower : {l1 : Level} (l2 : Level) (A : tower l1) → UU (l1 ⊔ lsuc l2)
-dependent-tower l2 A = {!!}
+dependent-tower = {!!}
 
 family-dependent-tower :
   {l1 l2 : Level} {A : tower l1} →
@@ -69,7 +69,7 @@ map-dependent-tower = {!!}
 ```agda
 const-dependent-tower :
     {l1 l2 : Level} (A : tower l1) → tower l2 → dependent-tower l2 A
-pr1 (const-dependent-tower A B) n _ = {!!}
+const-dependent-tower = {!!}
 pr2 (const-dependent-tower A B) n _ = {!!}
 ```
 
@@ -99,7 +99,7 @@ module _
   naturality-section-dependent-tower :
     (h : (n : ℕ) (x : type-tower A n) → family-dependent-tower B n x)
     (n : ℕ) → UU (l1 ⊔ l2)
-  naturality-section-dependent-tower h n = {!!}
+  naturality-section-dependent-tower = {!!}
 
   section-dependent-tower : UU (l1 ⊔ l2)
   section-dependent-tower = {!!}
@@ -125,7 +125,7 @@ We can **right shift** a dependent tower of types by forgetting the first terms.
 right-shift-dependent-tower :
   {l1 l2 : Level} {A : tower l1} →
   dependent-tower l2 A → dependent-tower l2 (right-shift-tower A)
-pr1 (right-shift-dependent-tower B) n = {!!}
+right-shift-dependent-tower = {!!}
 pr2 (right-shift-dependent-tower B) n = {!!}
 ```
 
@@ -138,7 +138,7 @@ We can **left shift** a dependent tower of types by padding it with the
 left-shift-dependent-tower :
     {l1 l2 : Level} {A : tower l1} →
   dependent-tower l2 A → dependent-tower l2 (left-shift-tower A)
-pr1 (left-shift-dependent-tower {l2 = l2} B) zero-ℕ x = {!!}
+left-shift-dependent-tower = {!!}
 pr1 (left-shift-dependent-tower B) (succ-ℕ n) = {!!}
 pr2 (left-shift-dependent-tower B) zero-ℕ _ = {!!}
 pr2 (left-shift-dependent-tower B) (succ-ℕ n) = {!!}

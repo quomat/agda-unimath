@@ -35,10 +35,10 @@ module _
   where
 
   map-left-unit-law-Σ : Σ unit A → A star
-  map-left-unit-law-Σ (pair star a) = {!!}
+  map-left-unit-law-Σ = {!!}
 
   map-inv-left-unit-law-Σ : A star → Σ unit A
-  pr1 (map-inv-left-unit-law-Σ a) = {!!}
+  map-inv-left-unit-law-Σ = {!!}
 
   is-section-map-inv-left-unit-law-Σ :
     ( map-left-unit-law-Σ ∘ map-inv-left-unit-law-Σ) ~ id
@@ -52,13 +52,13 @@ module _
   is-equiv-map-left-unit-law-Σ = {!!}
 
   left-unit-law-Σ : Σ unit A ≃ A star
-  pr1 left-unit-law-Σ = {!!}
+  left-unit-law-Σ = {!!}
 
   is-equiv-map-inv-left-unit-law-Σ : is-equiv map-inv-left-unit-law-Σ
   is-equiv-map-inv-left-unit-law-Σ = {!!}
 
   inv-left-unit-law-Σ : A star ≃ Σ unit A
-  pr1 inv-left-unit-law-Σ = {!!}
+  inv-left-unit-law-Σ = {!!}
 ```
 
 ### Left unit law for cartesian products
@@ -86,13 +86,13 @@ module _
   is-equiv-map-left-unit-law-prod = {!!}
 
   left-unit-law-prod : (unit × A) ≃ A
-  pr1 left-unit-law-prod = {!!}
+  left-unit-law-prod = {!!}
 
   is-equiv-map-inv-left-unit-law-prod : is-equiv map-inv-left-unit-law-prod
   is-equiv-map-inv-left-unit-law-prod = {!!}
 
   inv-left-unit-law-prod : A ≃ (unit × A)
-  pr1 inv-left-unit-law-prod = {!!}
+  inv-left-unit-law-prod = {!!}
 ```
 
 ### Right unit law for cartesian products
@@ -102,7 +102,7 @@ module _
   map-right-unit-law-prod = {!!}
 
   map-inv-right-unit-law-prod : A → A × unit
-  pr1 (map-inv-right-unit-law-prod a) = {!!}
+  map-inv-right-unit-law-prod = {!!}
 
   is-section-map-inv-right-unit-law-prod :
     (map-right-unit-law-prod ∘ map-inv-right-unit-law-prod) ~ id
@@ -116,7 +116,7 @@ module _
   is-equiv-map-right-unit-law-prod = {!!}
 
   right-unit-law-prod : (A × unit) ≃ A
-  pr1 right-unit-law-prod = {!!}
+  right-unit-law-prod = {!!}
 ```
 
 ### Left unit law for dependent function types
@@ -127,10 +127,10 @@ module _
   where
 
   map-left-unit-law-Π : ((t : unit) → A t) → A star
-  map-left-unit-law-Π f = {!!}
+  map-left-unit-law-Π = {!!}
 
   map-inv-left-unit-law-Π : A star → ((t : unit) → A t)
-  map-inv-left-unit-law-Π a star = {!!}
+  map-inv-left-unit-law-Π = {!!}
 
   is-section-map-inv-left-unit-law-Π :
     ( map-left-unit-law-Π ∘ map-inv-left-unit-law-Π) ~ id
@@ -144,13 +144,13 @@ module _
   is-equiv-map-left-unit-law-Π = {!!}
 
   left-unit-law-Π : ((t : unit) → A t) ≃ A star
-  pr1 left-unit-law-Π = {!!}
+  left-unit-law-Π = {!!}
 
   is-equiv-map-inv-left-unit-law-Π : is-equiv map-inv-left-unit-law-Π
   is-equiv-map-inv-left-unit-law-Π = {!!}
 
   inv-left-unit-law-Π : A star ≃ ((t : unit) → A t)
-  pr1 inv-left-unit-law-Π = {!!}
+  inv-left-unit-law-Π = {!!}
 ```
 
 ### Left unit law for non-dependent function types

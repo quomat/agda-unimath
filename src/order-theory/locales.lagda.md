@@ -33,7 +33,7 @@ A **locale** is an object in the opposite of the category of
 
 ```agda
 Locale : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Locale l1 l2 = {!!}
+Locale = {!!}
 
 module _
   {l1 l2 : Level} (L : Locale l1 l2)

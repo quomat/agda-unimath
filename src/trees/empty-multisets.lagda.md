@@ -34,7 +34,7 @@ module _
   where
 
   is-empty-𝕍 : 𝕍 l → UU l
-  is-empty-𝕍 (tree-𝕎 X Y) = {!!}
+  is-empty-𝕍 = {!!}
 ```
 
 ### The predicate of being a multiset with no elements
@@ -47,7 +47,7 @@ module _
   where
 
   has-no-elements-𝕍 : 𝕍 l → UU (lsuc l)
-  has-no-elements-𝕍 X = {!!}
+  has-no-elements-𝕍 = {!!}
 ```
 
 ## Properties
@@ -61,9 +61,9 @@ module _
 
   is-empty-has-no-elements-𝕍 :
     (X : 𝕍 l) → has-no-elements-𝕍 X → is-empty-𝕍 X
-  is-empty-has-no-elements-𝕍 (tree-𝕎 X Y) H x = {!!}
+  is-empty-has-no-elements-𝕍 = {!!}
 
   has-no-elements-is-empty-𝕍 :
     (X : 𝕍 l) → is-empty-𝕍 X → has-no-elements-𝕍 X
-  has-no-elements-is-empty-𝕍 (tree-𝕎 X Y) H ._ (x , refl) = {!!}
+  has-no-elements-is-empty-𝕍 = {!!}
 ```

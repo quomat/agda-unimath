@@ -60,7 +60,7 @@ module _
   hom-set-Set-Magmoid = {!!}
 
   hom-Set-Magmoid : (x y : obj-Set-Magmoid) → UU l2
-  hom-Set-Magmoid x y = {!!}
+  hom-Set-Magmoid = {!!}
 
   is-set-hom-Set-Magmoid :
     (x y : obj-Set-Magmoid) → is-set (hom-Set-Magmoid x y)
@@ -105,7 +105,7 @@ module _
   where
 
   precomp-hom-Set-Magmoid : hom-Set-Magmoid M y z → hom-Set-Magmoid M x z
-  precomp-hom-Set-Magmoid g = {!!}
+  precomp-hom-Set-Magmoid = {!!}
 
   postcomp-hom-Set-Magmoid : hom-Set-Magmoid M z x → hom-Set-Magmoid M z y
   postcomp-hom-Set-Magmoid = {!!}

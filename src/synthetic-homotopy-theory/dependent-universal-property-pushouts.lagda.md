@@ -88,8 +88,7 @@ dependent-universal-property-pushout-induction-principle-pushout :
   (f : S → A) (g : S → B) {X : UU l4} (c : cocone f g X) →
   ((l : Level) → induction-principle-pushout l f g c) →
   ((l : Level) → dependent-universal-property-pushout l f g c)
-dependent-universal-property-pushout-induction-principle-pushout
-  f g c ind-c l P = {!!}
+dependent-universal-property-pushout-induction-principle-pushout = {!!}
 ```
 
 #### The dependent universal property of pushouts implies the induction principle of pushouts
@@ -100,8 +99,7 @@ induction-principle-pushout-dependent-universal-property-pushout :
   (f : S → A) (g : S → B) {X : UU l4} (c : cocone f g X) →
   ((l : Level) → dependent-universal-property-pushout l f g c) →
   ((l : Level) → induction-principle-pushout l f g c)
-induction-principle-pushout-dependent-universal-property-pushout
-  f g c dup-c l P = {!!}
+induction-principle-pushout-dependent-universal-property-pushout = {!!}
 ```
 
 ### The dependent pullback property of pushouts is equivalent to the dependent universal property of pushouts
@@ -127,8 +125,7 @@ dependent-pullback-property-dependent-universal-property-pushout :
   (f : S → A) (g : S → B) {X : UU l4} (c : cocone f g X) →
   ((l : Level) → dependent-universal-property-pushout l f g c) →
   ((l : Level) → dependent-pullback-property-pushout l f g c)
-dependent-pullback-property-dependent-universal-property-pushout
-  f g (pair i (pair j H)) I l P = {!!}
+dependent-pullback-property-dependent-universal-property-pushout = {!!}
 ```
 
 #### The dependent pullback property of pushouts implies the dependent universal property of pushouts
@@ -139,6 +136,5 @@ dependent-universal-property-dependent-pullback-property-pushout :
   (f : S → A) (g : S → B) {X : UU l4} (c : cocone f g X) →
   ({l : Level} → dependent-pullback-property-pushout l f g c) →
   ({l : Level} → dependent-universal-property-pushout l f g c)
-dependent-universal-property-dependent-pullback-property-pushout
-  f g (pair i (pair j H)) dpullback-c P = {!!}
+dependent-universal-property-dependent-pullback-property-pushout = {!!}
 ```

@@ -99,14 +99,14 @@ module _
   is-closed-under-inverses-normal-core-Subgroup = {!!}
 
   subgroup-normal-core-Subgroup : Subgroup (l1 ⊔ l2) G
-  pr1 subgroup-normal-core-Subgroup = {!!}
+  subgroup-normal-core-Subgroup = {!!}
 
   is-normal-normal-core-Subgroup :
     is-normal-Subgroup G subgroup-normal-core-Subgroup
   is-normal-normal-core-Subgroup = {!!}
 
   normal-core-Subgroup : Normal-Subgroup (l1 ⊔ l2) G
-  pr1 normal-core-Subgroup = {!!}
+  normal-core-Subgroup = {!!}
 
   is-contained-in-subgroup-normal-core-Subgroup :
     leq-Subgroup G subgroup-normal-core-Subgroup H

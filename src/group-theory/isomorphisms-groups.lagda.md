@@ -194,7 +194,7 @@ module _
 
   abstract
     extensionality-Group' : (H : Group l) → Id G H ≃ iso-Group G H
-    extensionality-Group' H = {!!}
+    extensionality-Group' = {!!}
 
   abstract
     is-torsorial-iso-Group : is-torsorial (λ (H : Group l) → iso-Group G H)

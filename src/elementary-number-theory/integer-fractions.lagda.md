@@ -45,17 +45,17 @@ fraction-ℤ = {!!}
 
 ```agda
 numerator-fraction-ℤ : fraction-ℤ → ℤ
-numerator-fraction-ℤ x = {!!}
+numerator-fraction-ℤ = {!!}
 ```
 
 ### The denominator of a fraction
 
 ```agda
 positive-denominator-fraction-ℤ : fraction-ℤ → positive-ℤ
-positive-denominator-fraction-ℤ x = {!!}
+positive-denominator-fraction-ℤ = {!!}
 
 denominator-fraction-ℤ : fraction-ℤ → ℤ
-denominator-fraction-ℤ x = {!!}
+denominator-fraction-ℤ = {!!}
 
 is-positive-denominator-fraction-ℤ :
   (x : fraction-ℤ) → is-positive-ℤ (denominator-fraction-ℤ x)
@@ -66,7 +66,7 @@ is-positive-denominator-fraction-ℤ = {!!}
 
 ```agda
 in-fraction-ℤ-ℤ : ℤ → fraction-ℤ
-pr1 (in-fraction-ℤ-ℤ x) = {!!}
+in-fraction-ℤ-ℤ = {!!}
 pr2 (in-fraction-ℤ-ℤ x) = {!!}
 ```
 
@@ -77,22 +77,22 @@ neg-one-fraction-ℤ : fraction-ℤ
 neg-one-fraction-ℤ = {!!}
 
 is-neg-one-fraction-ℤ : fraction-ℤ → UU lzero
-is-neg-one-fraction-ℤ x = {!!}
+is-neg-one-fraction-ℤ = {!!}
 
 zero-fraction-ℤ : fraction-ℤ
 zero-fraction-ℤ = {!!}
 
 is-zero-fraction-ℤ : fraction-ℤ → UU lzero
-is-zero-fraction-ℤ x = {!!}
+is-zero-fraction-ℤ = {!!}
 
 is-nonzero-fraction-ℤ : fraction-ℤ → UU lzero
-is-nonzero-fraction-ℤ k = {!!}
+is-nonzero-fraction-ℤ = {!!}
 
 one-fraction-ℤ : fraction-ℤ
 one-fraction-ℤ = {!!}
 
 is-one-fraction-ℤ : fraction-ℤ → UU lzero
-is-one-fraction-ℤ x = {!!}
+is-one-fraction-ℤ = {!!}
 ```
 
 ## Properties
@@ -114,25 +114,25 @@ is-set-fraction-ℤ = {!!}
 
 ```agda
 sim-fraction-ℤ-Prop : fraction-ℤ → fraction-ℤ → Prop lzero
-sim-fraction-ℤ-Prop x y = {!!}
+sim-fraction-ℤ-Prop = {!!}
 
 sim-fraction-ℤ : fraction-ℤ → fraction-ℤ → UU lzero
-sim-fraction-ℤ x y = {!!}
+sim-fraction-ℤ = {!!}
 
 is-prop-sim-fraction-ℤ : (x y : fraction-ℤ) → is-prop (sim-fraction-ℤ x y)
-is-prop-sim-fraction-ℤ x y = {!!}
+is-prop-sim-fraction-ℤ = {!!}
 
 refl-sim-fraction-ℤ : is-reflexive sim-fraction-ℤ
-refl-sim-fraction-ℤ x = {!!}
+refl-sim-fraction-ℤ = {!!}
 
 symmetric-sim-fraction-ℤ : is-symmetric sim-fraction-ℤ
-symmetric-sim-fraction-ℤ x y r = {!!}
+symmetric-sim-fraction-ℤ = {!!}
 
 transitive-sim-fraction-ℤ : is-transitive sim-fraction-ℤ
-transitive-sim-fraction-ℤ x y z s r = {!!}
+transitive-sim-fraction-ℤ = {!!}
 
 equivalence-relation-sim-fraction-ℤ : equivalence-relation lzero fraction-ℤ
-pr1 equivalence-relation-sim-fraction-ℤ = {!!}
+equivalence-relation-sim-fraction-ℤ = {!!}
 pr1 (pr2 equivalence-relation-sim-fraction-ℤ) = {!!}
 pr1 (pr2 (pr2 equivalence-relation-sim-fraction-ℤ)) = {!!}
 pr2 (pr2 (pr2 equivalence-relation-sim-fraction-ℤ)) = {!!}

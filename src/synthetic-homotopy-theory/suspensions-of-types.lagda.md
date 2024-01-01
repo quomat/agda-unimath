@@ -81,7 +81,7 @@ south-suspension = {!!}
 meridian-suspension :
   {l : Level} {X : UU l} → X →
   north-suspension {X = X} ＝ south-suspension {X = X}
-meridian-suspension {X = X} = {!!}
+meridian-suspension = {!!}
 
 suspension-structure-suspension :
   {l : Level} (X : UU l) → suspension-structure X (suspension X)

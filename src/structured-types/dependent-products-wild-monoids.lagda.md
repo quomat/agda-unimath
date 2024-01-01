@@ -70,5 +70,5 @@ module _
   unital-associator-Π-Wild-Monoid = {!!}
 
   Π-Wild-Monoid : Wild-Monoid (l1 ⊔ l2)
-  pr1 Π-Wild-Monoid = {!!}
+  Π-Wild-Monoid = {!!}
 ```

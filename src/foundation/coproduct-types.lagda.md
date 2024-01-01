@@ -38,25 +38,25 @@ module _
   where
 
   is-left-Prop : X + Y → Prop lzero
-  is-left-Prop (inl x) = {!!}
+  is-left-Prop = {!!}
 
   is-left : X + Y → UU lzero
-  is-left x = {!!}
+  is-left = {!!}
 
   is-prop-is-left : (x : X + Y) → is-prop (is-left x)
-  is-prop-is-left x = {!!}
+  is-prop-is-left = {!!}
 
   is-right-Prop : X + Y → Prop lzero
-  is-right-Prop (inl x) = {!!}
+  is-right-Prop = {!!}
 
   is-right : X + Y → UU lzero
-  is-right x = {!!}
+  is-right = {!!}
 
   is-prop-is-right : (x : X + Y) → is-prop (is-right x)
-  is-prop-is-right x = {!!}
+  is-prop-is-right = {!!}
 
   is-left-or-is-right : (x : X + Y) → is-left x + is-right x
-  is-left-or-is-right (inl x) = {!!}
+  is-left-or-is-right = {!!}
 ```
 
 ### The predicate that a subuniverse is closed under coproducts
@@ -85,10 +85,10 @@ module _
   where
 
   is-injective-inl : is-injective {B = A + B} inl
-  is-injective-inl refl = {!!}
+  is-injective-inl = {!!}
 
   is-injective-inr : is-injective {B = A + B} inr
-  is-injective-inr refl = {!!}
+  is-injective-inr = {!!}
 
   neq-inl-inr : {x : A} {y : B} → inl x ≠ inr y
   neq-inl-inr ()
@@ -105,10 +105,10 @@ module _
   where
 
   map-equiv-left-summand : Σ (X + Y) is-left → X
-  map-equiv-left-summand (pair (inl x) star) = {!!}
+  map-equiv-left-summand = {!!}
 
   map-inv-equiv-left-summand : X → Σ (X + Y) is-left
-  map-inv-equiv-left-summand x = {!!}
+  map-inv-equiv-left-summand = {!!}
 
   is-section-map-inv-equiv-left-summand :
     (map-equiv-left-summand ∘ map-inv-equiv-left-summand) ~ id
@@ -119,7 +119,7 @@ module _
   is-retraction-map-inv-equiv-left-summand = {!!}
 
   equiv-left-summand : (Σ (X + Y) is-left) ≃ X
-  pr1 equiv-left-summand = {!!}
+  equiv-left-summand = {!!}
 ```
 
 ### The type of right elements is equivalent to the right summand
@@ -134,7 +134,7 @@ module _
   map-equiv-right-summand (pair (inr x) star) = {!!}
 
   map-inv-equiv-right-summand : Y → Σ (X + Y) is-right
-  map-inv-equiv-right-summand y = {!!}
+  map-inv-equiv-right-summand = {!!}
 
   is-section-map-inv-equiv-right-summand :
     (map-equiv-right-summand ∘ map-inv-equiv-right-summand) ~ id
@@ -145,7 +145,7 @@ module _
   is-retraction-map-inv-equiv-right-summand = {!!}
 
   equiv-right-summand : (Σ (X + Y) is-right) ≃ Y
-  pr1 equiv-right-summand = {!!}
+  equiv-right-summand = {!!}
 ```
 
 ### Coproducts of contractible types are not contractible
@@ -176,7 +176,7 @@ module _
 
   abstract
     is-prop-coprod : (P → ¬ Q) → is-prop P → is-prop Q → is-prop (P + Q)
-    is-prop-coprod f is-prop-P is-prop-Q = {!!}
+    is-prop-coprod = {!!}
 
 coprod-Prop :
   {l1 l2 : Level} (P : Prop l1) (Q : Prop l2) →

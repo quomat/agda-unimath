@@ -89,7 +89,7 @@ module _
 
 ```agda
 Strict-Category : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Strict-Category l1 l2 = {!!}
+Strict-Category = {!!}
 
 module _
   {l1 l2 : Level} (C : Strict-Category l1 l2)
@@ -180,7 +180,7 @@ module _
     is-preunivalent-Strict-Category = {!!}
 
   preunivalent-category-Strict-Category : Preunivalent-Category l1 l2
-  pr1 preunivalent-category-Strict-Category = {!!}
+  preunivalent-category-Strict-Category = {!!}
 ```
 
 ### The total hom-set of a strict category

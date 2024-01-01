@@ -112,7 +112,7 @@ module _
   where
 
   Eq-unordered-tuple : unordered-tuple n A → unordered-tuple n A → UU l
-  Eq-unordered-tuple x y = {!!}
+  Eq-unordered-tuple = {!!}
 
   refl-Eq-unordered-tuple :
     (x : unordered-tuple n A) → Eq-unordered-tuple x x
@@ -162,7 +162,7 @@ preserves-comp-map-unordered-tuple = {!!}
 preserves-id-map-unordered-tuple :
   {l1 : Level} (n : ℕ) {A : UU l1} →
   map-unordered-tuple n (id {A = A}) ~ id
-preserves-id-map-unordered-tuple n = {!!}
+preserves-id-map-unordered-tuple = {!!}
 
 htpy-unordered-tuple :
   {l1 l2 : Level} (n : ℕ) {A : UU l1} {B : UU l2} {f g : A → B} →
@@ -172,7 +172,7 @@ htpy-unordered-tuple = {!!}
 preserves-refl-htpy-unordered-tuple :
   {l1 l2 : Level} (n : ℕ) {A : UU l1} {B : UU l2} (f : A → B) →
   htpy-unordered-tuple n (refl-htpy {f = f}) ~ refl-htpy
-preserves-refl-htpy-unordered-tuple n f p = {!!}
+preserves-refl-htpy-unordered-tuple = {!!}
 
 equiv-unordered-tuple :
   {l1 l2 : Level} (n : ℕ) {A : UU l1} {B : UU l2} →

@@ -84,7 +84,7 @@ module _
   map-transposition' = {!!}
 
   map-transposition : X → X
-  map-transposition x = {!!}
+  map-transposition = {!!}
 
   preserves-subtype-map-transposition :
     (x : X) → is-in-2-Element-Decidable-Subtype P x →
@@ -99,23 +99,23 @@ module _
   is-involution-map-transposition' = {!!}
 
   is-involution-map-transposition : is-involution map-transposition
-  is-involution-map-transposition x = {!!}
+  is-involution-map-transposition = {!!}
 
   is-equiv-map-transposition : is-equiv map-transposition
   is-equiv-map-transposition = {!!}
 
   transposition : X ≃ X
-  pr1 transposition = {!!}
+  transposition = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1}
   where
 
   is-transposition-permutation-Prop : X ≃ X → Prop (l1 ⊔ lsuc l2)
-  is-transposition-permutation-Prop f = {!!}
+  is-transposition-permutation-Prop = {!!}
 
   is-transposition-permutation : X ≃ X → UU (l1 ⊔ lsuc l2)
-  is-transposition-permutation f = {!!}
+  is-transposition-permutation = {!!}
 
   is-prop-is-transposition-permutation :
     (f : X ≃ X) → is-prop (is-transposition-permutation f)
@@ -189,7 +189,7 @@ module _
 
   abstract
     is-not-identity-map-transposition : Id (map-transposition P) id → empty
-    is-not-identity-map-transposition f = {!!}
+    is-not-identity-map-transposition = {!!}
 ```
 
 ### Any transposition on a type equipped with a counting is a standard transposition
@@ -403,8 +403,7 @@ eq-transposition-precomp-standard-2-Element-Decidable-Subtype :
       ( standard-transposition H np)
       ( standard-2-Element-Decidable-Subtype H np))
     ( standard-2-Element-Decidable-Subtype H np)
-eq-transposition-precomp-standard-2-Element-Decidable-Subtype
-  {l} {X} H {x} {y} np = {!!}
+eq-transposition-precomp-standard-2-Element-Decidable-Subtype = {!!}
 
 eq-transposition-precomp-ineq-standard-2-Element-Decidable-Subtype :
   {l : Level} {X : UU l} (H : has-decidable-equality X) →
@@ -415,8 +414,7 @@ eq-transposition-precomp-ineq-standard-2-Element-Decidable-Subtype :
       ( standard-transposition H np)
       ( standard-2-Element-Decidable-Subtype H np'))
     ( standard-2-Element-Decidable-Subtype H np')
-eq-transposition-precomp-ineq-standard-2-Element-Decidable-Subtype
-  {l} {X} H {x} {y} {z} {w} np np' nq1 nq2 nq3 nq4 = {!!}
+eq-transposition-precomp-ineq-standard-2-Element-Decidable-Subtype = {!!}
 ```
 
 ```agda

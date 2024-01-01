@@ -193,8 +193,7 @@ abstract
     { l1 l2 : Level} {A : UU l1} (P : Prop l2) (f : A → type-Prop P) →
     is-propositional-truncation P f →
     dependent-universal-property-propositional-truncation P f
-  dependent-universal-property-is-propositional-truncation
-    {l1} {l2} {A} P f is-ptr-f Q = {!!}
+  dependent-universal-property-is-propositional-truncation = {!!}
 
 abstract
   is-propositional-truncation-dependent-universal-property :
@@ -221,7 +220,7 @@ abstract
   is-propositional-truncation-terminal-map :
     { l1 : Level} (A : UU l1) (a : A) →
     is-propositional-truncation unit-Prop (terminal-map {A = A})
-  is-propositional-truncation-terminal-map A a = {!!}
+  is-propositional-truncation-terminal-map = {!!}
 ```
 
 ### Any map between propositions is a propositional truncation if and only if it is an equivalence

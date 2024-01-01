@@ -45,7 +45,7 @@ module _
   is-prop-is-simple-Undirected-Graph = {!!}
 
 Simple-Undirected-Graph : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Simple-Undirected-Graph l1 l2 = {!!}
+Simple-Undirected-Graph = {!!}
 ```
 
 ## External links

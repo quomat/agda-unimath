@@ -29,7 +29,7 @@ module _
   where
 
   preserves-mul-Magma : (type-Magma M → type-Magma N) → UU (l1 ⊔ l2)
-  preserves-mul-Magma f = {!!}
+  preserves-mul-Magma = {!!}
 
   hom-Magma : UU (l1 ⊔ l2)
   hom-Magma = {!!}

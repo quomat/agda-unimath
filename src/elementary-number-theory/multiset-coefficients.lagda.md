@@ -27,7 +27,7 @@ of the type
 
 ```agda
 multiset-coefficient : ℕ → ℕ → ℕ
-multiset-coefficient zero-ℕ zero-ℕ = {!!}
+multiset-coefficient = {!!}
 multiset-coefficient zero-ℕ (succ-ℕ k) = {!!}
 multiset-coefficient (succ-ℕ n) zero-ℕ = {!!}
 multiset-coefficient (succ-ℕ n) (succ-ℕ k) = {!!}

@@ -146,7 +146,7 @@ module _
   group-of-units-Commutative-Ring = {!!}
 
   abelian-group-of-units-Commutative-Ring : Ab l
-  pr1 abelian-group-of-units-Commutative-Ring = {!!}
+  abelian-group-of-units-Commutative-Ring = {!!}
 
   inclusion-group-of-units-Commutative-Ring :
     type-group-of-units-Commutative-Ring → type-Commutative-Ring A

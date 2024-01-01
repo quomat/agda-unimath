@@ -35,17 +35,17 @@ is-decidable-Relation-Prop :
 is-decidable-Relation-Prop = {!!}
 
 Decidable-Relation : {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-Decidable-Relation l2 X = {!!}
+Decidable-Relation = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} (R : Decidable-Relation l2 X)
   where
 
   relation-Decidable-Relation : X → X → Prop l2
-  relation-Decidable-Relation x y = {!!}
+  relation-Decidable-Relation = {!!}
 
   rel-Decidable-Relation : X → X → UU l2
-  rel-Decidable-Relation x y = {!!}
+  rel-Decidable-Relation = {!!}
 
   is-prop-rel-Decidable-Relation :
     (x y : X) → is-prop (rel-Decidable-Relation x y)

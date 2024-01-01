@@ -46,7 +46,7 @@ eq-iso-Semigroup :
 eq-iso-Semigroup = {!!}
 
 Semigroup-Large-Category : Large-Category lsuc (_⊔_)
-large-precategory-Large-Category Semigroup-Large-Category = {!!}
+Semigroup-Large-Category = {!!}
 is-large-category-Large-Category Semigroup-Large-Category = {!!}
 ```
 

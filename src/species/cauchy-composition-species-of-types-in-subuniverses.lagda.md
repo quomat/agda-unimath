@@ -158,8 +158,7 @@ module _
   is-retraction-map-inv-equiv-Σ-extension-cauchy-composition-unit-subuniverse :
     ( map-inv-equiv-Σ-extension-cauchy-composition-unit-subuniverse ∘
       map-equiv-Σ-extension-cauchy-composition-unit-subuniverse) ~ id
-  is-retraction-map-inv-equiv-Σ-extension-cauchy-composition-unit-subuniverse
-    x = {!!}
+  is-retraction-map-inv-equiv-Σ-extension-cauchy-composition-unit-subuniverse = {!!}
 
   is-equiv-map-equiv-Σ-extension-cauchy-composition-unit-subuniverse :
     is-equiv map-equiv-Σ-extension-cauchy-composition-unit-subuniverse

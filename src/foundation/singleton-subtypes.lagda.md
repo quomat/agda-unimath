@@ -96,7 +96,7 @@ module _
   where
 
   subtype-standard-singleton-subtype : subtype l (type-Set X)
-  subtype-standard-singleton-subtype y = {!!}
+  subtype-standard-singleton-subtype = {!!}
 
   type-standard-singleton-subtype : UU l
   type-standard-singleton-subtype = {!!}
@@ -106,7 +106,7 @@ module _
   inclusion-standard-singleton-subtype = {!!}
 
   standard-singleton-subtype : singleton-subtype l (type-Set X)
-  pr1 standard-singleton-subtype = {!!}
+  standard-singleton-subtype = {!!}
 
   inhabited-subtype-standard-singleton-subtype :
     inhabited-subtype l (type-Set X)

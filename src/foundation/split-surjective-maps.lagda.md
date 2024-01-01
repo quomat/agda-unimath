@@ -44,7 +44,7 @@ module _
   where
 
   is-split-surjective : (A → B) → UU (l1 ⊔ l2)
-  is-split-surjective f = {!!}
+  is-split-surjective = {!!}
 
   split-surjection : UU (l1 ⊔ l2)
   split-surjection = {!!}
@@ -67,10 +67,10 @@ module _
   where
 
   section-is-split-surjective : is-split-surjective f → section f
-  pr1 (section-is-split-surjective s) = {!!}
+  section-is-split-surjective = {!!}
 
   is-split-surjective-section : section f → is-split-surjective f
-  pr1 (is-split-surjective-section s b) = {!!}
+  is-split-surjective-section = {!!}
 
   equiv-section-is-split-surjective : is-split-surjective f ≃ section f
   equiv-section-is-split-surjective = {!!}

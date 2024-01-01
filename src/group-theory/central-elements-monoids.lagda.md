@@ -50,7 +50,7 @@ module _
   where
 
   is-central-element-unit-Monoid : is-central-element-Monoid M (unit-Monoid M)
-  is-central-element-unit-Monoid y = {!!}
+  is-central-element-unit-Monoid = {!!}
 ```
 
 ### The product of two central elements is central

@@ -69,7 +69,7 @@ module _
   where
 
   is-lifting-square : (j : X → B) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-lifting-square j = {!!}
+  is-lifting-square = {!!}
 
   lifting-square : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
   lifting-square = {!!}
@@ -94,7 +94,7 @@ module _
   is-extension-lifting-square = {!!}
 
   extension-lifting-square : lifting-square h f g i H → extension f h
-  pr1 (extension-lifting-square L) = {!!}
+  extension-lifting-square = {!!}
 
   is-lift-is-lifting-square :
     {j : X → B} → is-lifting-square h f g i H j → is-lift g i j
@@ -106,7 +106,7 @@ module _
   is-lift-lifting-square = {!!}
 
   lift-lifting-square : lifting-square h f g i H → lift g i
-  pr1 (lift-lifting-square L) = {!!}
+  lift-lifting-square = {!!}
 
   coherence-is-lifting-square :
     {j : X → B} → (l : is-lifting-square h f g i H j) →

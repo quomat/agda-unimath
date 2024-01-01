@@ -71,7 +71,7 @@ module _
   is-prop-iff-Prop = {!!}
 
   iff-Prop : Prop (l1 ⊔ l2)
-  pr1 iff-Prop = {!!}
+  iff-Prop = {!!}
 
   infix 6 _⇔_
 
@@ -109,19 +109,19 @@ module _
   where
 
   htpy-iff : (f g : A ↔ B) → UU (l1 ⊔ l2)
-  htpy-iff f g = {!!}
+  htpy-iff = {!!}
 
   ext-iff : (f g : A ↔ B) → (f ＝ g) ≃ htpy-iff f g
-  ext-iff f g = {!!}
+  ext-iff = {!!}
 
   refl-htpy-iff : (f : A ↔ B) → htpy-iff f f
-  pr1 (refl-htpy-iff f) = {!!}
+  refl-htpy-iff = {!!}
 
   htpy-eq-iff : {f g : A ↔ B} → f ＝ g → htpy-iff f g
-  htpy-eq-iff {f} {g} = {!!}
+  htpy-eq-iff = {!!}
 
   eq-htpy-iff : (f g : A ↔ B) → htpy-iff f g → (f ＝ g)
-  eq-htpy-iff f g = {!!}
+  eq-htpy-iff = {!!}
 ```
 
 ### Logical equivalences between propositions induce equivalences
@@ -132,7 +132,7 @@ module _
   where
 
   equiv-iff' : (P ⇔ Q) → (type-Prop P ≃ type-Prop Q)
-  pr1 (equiv-iff' t) = {!!}
+  equiv-iff' = {!!}
 
   equiv-iff :
     (type-Prop P → type-Prop Q) → (type-Prop Q → type-Prop P) →
@@ -144,12 +144,12 @@ module _
 
 ```agda
 iff-equiv : {l1 l2 : Level} {A : UU l1} {B : UU l2} → (A ≃ B) → (A ↔ B)
-pr1 (iff-equiv e) = {!!}
+iff-equiv = {!!}
 pr2 (iff-equiv e) = {!!}
 
 is-injective-iff-equiv :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → is-injective (iff-equiv {A = A} {B})
-is-injective-iff-equiv p = {!!}
+is-injective-iff-equiv = {!!}
 
 compute-fiber-iff-equiv :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} ((f , g) : A ↔ B) →
@@ -188,7 +188,7 @@ module _
   where
 
   iff-Π-iff-family : ((i : I) → A i ↔ B i) → ((i : I) → A i) ↔ ((i : I) → B i)
-  pr1 (iff-Π-iff-family e) a i = {!!}
+  iff-Π-iff-family = {!!}
 ```
 
 ## Reasoning with logical equivalences

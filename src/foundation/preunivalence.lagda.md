@@ -32,13 +32,13 @@ a common generalization of the [univalence axiom](foundation.univalence.md) and
 
 ```agda
 instance-preunivalence : {l : Level} (X Y : UU l) → UU (lsuc l)
-instance-preunivalence X Y = {!!}
+instance-preunivalence = {!!}
 
 based-preunivalence-axiom : {l : Level} (X : UU l) → UU (lsuc l)
-based-preunivalence-axiom {l} X = {!!}
+based-preunivalence-axiom = {!!}
 
 preunivalence-axiom-Level : (l : Level) → UU (lsuc l)
-preunivalence-axiom-Level l = {!!}
+preunivalence-axiom-Level = {!!}
 
 preunivalence-axiom : UUω
 preunivalence-axiom = {!!}
@@ -70,7 +70,7 @@ module _
   instance-preunivalence-instance-axiom-K = {!!}
 
 preunivalence-axiom-axiom-K : axiom-K → preunivalence-axiom
-preunivalence-axiom-axiom-K K {l} X Y = {!!}
+preunivalence-axiom-axiom-K = {!!}
 ```
 
 ### Preunivalence generalizes univalence
@@ -85,7 +85,7 @@ module _
   instance-preunivalence-instance-univalence = {!!}
 
 preunivalence-axiom-univalence-axiom : univalence-axiom → preunivalence-axiom
-preunivalence-axiom-univalence-axiom UA X Y = {!!}
+preunivalence-axiom-univalence-axiom = {!!}
 ```
 
 ### Preunivalence holds in univalent foundations

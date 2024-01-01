@@ -129,10 +129,10 @@ module _
   where
 
   htpy-hom-Monoid : (f g : hom-Monoid M N) → UU (l1 ⊔ l2)
-  htpy-hom-Monoid f g = {!!}
+  htpy-hom-Monoid = {!!}
 
   refl-htpy-hom-Monoid : (f : hom-Monoid M N) → htpy-hom-Monoid f f
-  refl-htpy-hom-Monoid f = {!!}
+  refl-htpy-hom-Monoid = {!!}
 ```
 
 ## Properties

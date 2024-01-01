@@ -72,7 +72,7 @@ module _
   where
 
   generating-subset-normal-closure-Subgroup : subset-Group (l1 ⊔ l2) G
-  generating-subset-normal-closure-Subgroup x = {!!}
+  generating-subset-normal-closure-Subgroup = {!!}
 
   contains-subgroup-generating-subset-normal-closure-Subgroup :
     subset-Subgroup G H ⊆ generating-subset-normal-closure-Subgroup
@@ -82,8 +82,7 @@ module _
     is-closed-under-conjugation-generating-subset-normal-closure-Subgroup :
       is-closed-under-conjugation-subset-Group G
         generating-subset-normal-closure-Subgroup
-    is-closed-under-conjugation-generating-subset-normal-closure-Subgroup
-      x y s = {!!}
+    is-closed-under-conjugation-generating-subset-normal-closure-Subgroup = {!!}
 
   subgroup-normal-closure-Subgroup : Subgroup (l1 ⊔ l2) G
   subgroup-normal-closure-Subgroup = {!!}
@@ -131,7 +130,7 @@ module _
   is-normal-subgroup-normal-closure-Subgroup = {!!}
 
   normal-closure-Subgroup : Normal-Subgroup (l1 ⊔ l2) G
-  pr1 normal-closure-Subgroup = {!!}
+  normal-closure-Subgroup = {!!}
 
   contains-subgroup-normal-closure-Subgroup :
     leq-Subgroup G H subgroup-normal-closure-Subgroup

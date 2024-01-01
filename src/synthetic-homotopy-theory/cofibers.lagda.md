@@ -38,23 +38,23 @@ module _
   where
 
   cofiber : (A → B) → UU (l1 ⊔ l2)
-  cofiber f = {!!}
+  cofiber = {!!}
 
   cocone-cofiber :
     (f : A → B) → cocone f (const A unit star) (cofiber f)
   cocone-cofiber = {!!}
 
   inl-cofiber : (f : A → B) → B → cofiber f
-  inl-cofiber f = {!!}
+  inl-cofiber = {!!}
 
   inr-cofiber : (f : A → B) → unit → cofiber f
-  inr-cofiber f = {!!}
+  inr-cofiber = {!!}
 
   point-cofiber : (f : A → B) → cofiber f
-  point-cofiber f = {!!}
+  point-cofiber = {!!}
 
   cofiber-Pointed-Type : (f : A → B) → Pointed-Type (l1 ⊔ l2)
-  pr1 (cofiber-Pointed-Type f) = {!!}
+  cofiber-Pointed-Type = {!!}
 
   universal-property-cofiber :
     (f : A → B) {l : Level} →

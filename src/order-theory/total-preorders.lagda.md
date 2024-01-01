@@ -35,10 +35,10 @@ module _
   where
 
   incident-Preorder-Prop : (x y : type-Preorder X) → Prop l2
-  incident-Preorder-Prop x y = {!!}
+  incident-Preorder-Prop = {!!}
 
   incident-Preorder : (x y : type-Preorder X) → UU l2
-  incident-Preorder x y = {!!}
+  incident-Preorder = {!!}
 
   is-prop-incident-Preorder :
     (x y : type-Preorder X) → is-prop (incident-Preorder x y)
@@ -58,7 +58,7 @@ module _
 
 ```agda
 Total-Preorder : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Total-Preorder l1 l2 = {!!}
+Total-Preorder = {!!}
 
 module _
   {l1 l2 : Level} (X : Total-Preorder l1 l2)

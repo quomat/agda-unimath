@@ -49,25 +49,25 @@ module _
   is-equiv-pr1-prod-empty = {!!}
 
   left-zero-law-prod : (empty × X) ≃ empty
-  pr1 left-zero-law-prod = {!!}
+  left-zero-law-prod = {!!}
 
 module _
   {l1 l2 : Level} (A : UU l1) (B : UU l2) (is-empty-A : is-empty A)
   where
   inv-pr1-prod-is-empty : A → A × B
-  inv-pr1-prod-is-empty a = {!!}
+  inv-pr1-prod-is-empty = {!!}
 
   is-section-inv-pr1-prod-is-empty : (pr1 ∘ inv-pr1-prod-is-empty) ~ id
-  is-section-inv-pr1-prod-is-empty a = {!!}
+  is-section-inv-pr1-prod-is-empty = {!!}
 
   is-retraction-inv-pr1-prod-is-empty : (inv-pr1-prod-is-empty ∘ pr1) ~ id
-  is-retraction-inv-pr1-prod-is-empty (pair a b) = {!!}
+  is-retraction-inv-pr1-prod-is-empty = {!!}
 
   is-equiv-pr1-prod-is-empty : is-equiv (pr1 {A = A} {B = λ a → B})
   is-equiv-pr1-prod-is-empty = {!!}
 
   left-zero-law-prod-is-empty : (A × B) ≃ A
-  pr1 left-zero-law-prod-is-empty = {!!}
+  left-zero-law-prod-is-empty = {!!}
 ```
 
 ### Right zero law for cartesian products
@@ -90,25 +90,25 @@ module _
   is-equiv-pr2-prod-empty = {!!}
 
   right-zero-law-prod : (X × empty) ≃ empty
-  pr1 right-zero-law-prod = {!!}
+  right-zero-law-prod = {!!}
 
 module _
   {l1 l2 : Level} (A : UU l1) (B : UU l2) (is-empty-B : is-empty B)
   where
   inv-pr2-prod-is-empty : B → A × B
-  inv-pr2-prod-is-empty b = {!!}
+  inv-pr2-prod-is-empty = {!!}
 
   is-section-inv-pr2-prod-is-empty : (pr2 ∘ inv-pr2-prod-is-empty) ~ id
-  is-section-inv-pr2-prod-is-empty b = {!!}
+  is-section-inv-pr2-prod-is-empty = {!!}
 
   is-retraction-inv-pr2-prod-is-empty : (inv-pr2-prod-is-empty ∘ pr2) ~ id
-  is-retraction-inv-pr2-prod-is-empty (pair a b) = {!!}
+  is-retraction-inv-pr2-prod-is-empty = {!!}
 
   is-equiv-pr2-prod-is-empty : is-equiv (pr2 {A = A} {B = λ a → B})
   is-equiv-pr2-prod-is-empty = {!!}
 
   right-zero-law-prod-is-empty : (A × B) ≃ B
-  pr1 right-zero-law-prod-is-empty = {!!}
+  right-zero-law-prod-is-empty = {!!}
 ```
 
 ### Right absorption law for dependent pair types and for cartesian products
@@ -142,7 +142,7 @@ module _
   is-equiv-map-left-absorption-Σ = {!!}
 
   left-absorption-Σ : Σ empty A ≃ empty
-  pr1 left-absorption-Σ = {!!}
+  left-absorption-Σ = {!!}
 ```
 
 ### Right absorption law for cartesian product types
@@ -195,7 +195,7 @@ module _
   where
 
   map-left-unit-law-coprod-is-empty : A + B → B
-  map-left-unit-law-coprod-is-empty (inl a) = {!!}
+  map-left-unit-law-coprod-is-empty = {!!}
 
   map-inv-left-unit-law-coprod-is-empty : B → A + B
   map-inv-left-unit-law-coprod-is-empty = {!!}
@@ -215,14 +215,14 @@ module _
   is-equiv-map-left-unit-law-coprod-is-empty = {!!}
 
   left-unit-law-coprod-is-empty : (A + B) ≃ B
-  pr1 left-unit-law-coprod-is-empty = {!!}
+  left-unit-law-coprod-is-empty = {!!}
 
   is-equiv-inr-is-empty :
     is-equiv inr
   is-equiv-inr-is-empty = {!!}
 
   inv-left-unit-law-coprod-is-empty : B ≃ (A + B)
-  pr1 inv-left-unit-law-coprod-is-empty = {!!}
+  inv-left-unit-law-coprod-is-empty = {!!}
 
   is-contr-map-left-unit-law-coprod-is-empty :
     is-contr-map map-left-unit-law-coprod-is-empty
@@ -232,14 +232,14 @@ module _
   is-contr-map-inr-is-empty = {!!}
 
   is-right-coprod-is-empty : (x : A + B) → Σ B (λ b → inr b ＝ x)
-  is-right-coprod-is-empty x = {!!}
+  is-right-coprod-is-empty = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
   where
 
   is-empty-left-summand-is-equiv : is-equiv (inr {A = A} {B = B}) → is-empty A
-  is-empty-left-summand-is-equiv H a = {!!}
+  is-empty-left-summand-is-equiv = {!!}
 
 module _
   {l : Level} (B : UU l)
@@ -277,7 +277,7 @@ module _
   where
 
   map-right-unit-law-coprod-is-empty : A + B → A
-  map-right-unit-law-coprod-is-empty (inl a) = {!!}
+  map-right-unit-law-coprod-is-empty = {!!}
 
   map-inv-right-unit-law-coprod-is-empty : A → A + B
   map-inv-right-unit-law-coprod-is-empty = {!!}
@@ -300,10 +300,10 @@ module _
   is-equiv-inl-is-empty = {!!}
 
   right-unit-law-coprod-is-empty : (A + B) ≃ A
-  pr1 right-unit-law-coprod-is-empty = {!!}
+  right-unit-law-coprod-is-empty = {!!}
 
   inv-right-unit-law-coprod-is-empty : A ≃ (A + B)
-  pr1 inv-right-unit-law-coprod-is-empty = {!!}
+  inv-right-unit-law-coprod-is-empty = {!!}
 
   is-contr-map-right-unit-law-coprod-is-empty :
     is-contr-map map-right-unit-law-coprod-is-empty
@@ -321,7 +321,7 @@ module _
   where
 
   is-empty-right-summand-is-equiv : is-equiv (inl {A = A} {B = B}) → is-empty B
-  is-empty-right-summand-is-equiv H b = {!!}
+  is-empty-right-summand-is-equiv = {!!}
 
 module _
   {l : Level} (A : UU l)

@@ -24,7 +24,7 @@ An `n`-tuple of types is a type family `Fin n → UU`.
 
 ```agda
 tuple-types : (l : Level) (n : ℕ) → UU (lsuc l)
-tuple-types l n = {!!}
+tuple-types = {!!}
 ```
 
 ## Properties

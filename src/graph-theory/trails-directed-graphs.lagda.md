@@ -33,7 +33,7 @@ module _
   is-trail-walk-Directed-Graph = {!!}
 
   trail-Directed-Graph : (x y : vertex-Directed-Graph G) → UU (l1 ⊔ l2)
-  trail-Directed-Graph x y = {!!}
+  trail-Directed-Graph = {!!}
 
   walk-trail-Directed-Graph :
     {x y : vertex-Directed-Graph G} →

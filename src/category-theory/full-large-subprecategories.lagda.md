@@ -69,7 +69,7 @@ module _
   is-prop-is-in-obj-Full-Large-Subprecategory = {!!}
 
   obj-Full-Large-Subprecategory : (l : Level) → UU (α l ⊔ γ l)
-  obj-Full-Large-Subprecategory l = {!!}
+  obj-Full-Large-Subprecategory = {!!}
 
   hom-set-Full-Large-Subprecategory :
     {l1 l2 : Level}
@@ -204,6 +204,5 @@ module _
     is-large-category-Large-Precategory C →
     is-large-category-Large-Precategory
       ( large-precategory-Full-Large-Subprecategory C P)
-  is-large-category-large-precategory-is-large-category-Full-Large-Subprecategory
-    is-large-category-C X = {!!}
+  is-large-category-large-precategory-is-large-category-Full-Large-Subprecategory = {!!}
 ```

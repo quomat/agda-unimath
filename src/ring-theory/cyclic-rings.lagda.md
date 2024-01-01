@@ -113,7 +113,7 @@ module _
 
 ```agda
 Cyclic-Ring : (l : Level) → UU (lsuc l)
-Cyclic-Ring l = {!!}
+Cyclic-Ring = {!!}
 
 module _
   {l : Level} (R : Cyclic-Ring l)
@@ -132,7 +132,7 @@ module _
   is-cyclic-Cyclic-Ring = {!!}
 
   cyclic-group-Cyclic-Ring : Cyclic-Group l
-  pr1 cyclic-group-Cyclic-Ring = {!!}
+  cyclic-group-Cyclic-Ring = {!!}
 
   type-Cyclic-Ring : UU l
   type-Cyclic-Ring = {!!}
@@ -349,7 +349,7 @@ module _
     commutative-mul-Cyclic-Ring = {!!}
 
   commutative-ring-Cyclic-Ring : Commutative-Ring l
-  pr1 commutative-ring-Cyclic-Ring = {!!}
+  commutative-ring-Cyclic-Ring = {!!}
 ```
 
 ## See also

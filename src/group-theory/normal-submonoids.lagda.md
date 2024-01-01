@@ -68,7 +68,7 @@ module _
 
 Normal-Submonoid :
   {l1 : Level} (l2 : Level) → Monoid l1 → UU (l1 ⊔ lsuc l2)
-Normal-Submonoid l2 M = {!!}
+Normal-Submonoid = {!!}
 
 module _
   {l1 l2 : Level} (M : Monoid l1) (N : Normal-Submonoid l2 M)
@@ -175,7 +175,7 @@ module _
 
   has-same-elements-Normal-Submonoid :
     {l3 : Level} → Normal-Submonoid l3 M → UU (l1 ⊔ l2 ⊔ l3)
-  has-same-elements-Normal-Submonoid K = {!!}
+  has-same-elements-Normal-Submonoid = {!!}
 
   extensionality-Normal-Submonoid :
     (K : Normal-Submonoid l2 M) →
@@ -185,7 +185,7 @@ module _
   eq-has-same-elements-Normal-Submonoid :
     (K : Normal-Submonoid l2 M) →
     has-same-elements-Normal-Submonoid K → N ＝ K
-  eq-has-same-elements-Normal-Submonoid K = {!!}
+  eq-has-same-elements-Normal-Submonoid = {!!}
 ```
 
 ### The congruence relation of a normal submonoid
@@ -196,37 +196,37 @@ module _
   where
 
   rel-congruence-Normal-Submonoid : Relation-Prop (l1 ⊔ l2) (type-Monoid M)
-  rel-congruence-Normal-Submonoid x y = {!!}
+  rel-congruence-Normal-Submonoid = {!!}
 
   sim-congruence-Normal-Submonoid : (x y : type-Monoid M) → UU (l1 ⊔ l2)
-  sim-congruence-Normal-Submonoid x y = {!!}
+  sim-congruence-Normal-Submonoid = {!!}
 
   refl-congruence-Normal-Submonoid :
     is-reflexive sim-congruence-Normal-Submonoid
-  pr1 (refl-congruence-Normal-Submonoid _ u v) = {!!}
+  refl-congruence-Normal-Submonoid = {!!}
 
   symmetric-congruence-Normal-Submonoid :
     is-symmetric sim-congruence-Normal-Submonoid
-  pr1 (symmetric-congruence-Normal-Submonoid _ _ H u v) = {!!}
+  symmetric-congruence-Normal-Submonoid = {!!}
 
   transitive-congruence-Normal-Submonoid :
     is-transitive sim-congruence-Normal-Submonoid
-  transitive-congruence-Normal-Submonoid _ _ _ H K u v = {!!}
+  transitive-congruence-Normal-Submonoid = {!!}
 
   equivalence-relation-congruence-Normal-Submonoid :
     equivalence-relation (l1 ⊔ l2) (type-Monoid M)
-  pr1 equivalence-relation-congruence-Normal-Submonoid = {!!}
+  equivalence-relation-congruence-Normal-Submonoid = {!!}
   pr1 (pr2 equivalence-relation-congruence-Normal-Submonoid) = {!!}
   pr1 (pr2 (pr2 equivalence-relation-congruence-Normal-Submonoid)) = {!!}
   pr2 (pr2 (pr2 equivalence-relation-congruence-Normal-Submonoid)) = {!!}
 
   is-congruence-congruence-Normal-Submonoid :
     is-congruence-Monoid M equivalence-relation-congruence-Normal-Submonoid
-  pr1 (is-congruence-congruence-Normal-Submonoid {x} {x'} {y} {y'} H K u v) L = {!!}
+  is-congruence-congruence-Normal-Submonoid = {!!}
   pr2 (is-congruence-congruence-Normal-Submonoid {x} {x'} {y} {y'} H K u v) L = {!!}
 
   congruence-Normal-Submonoid : congruence-Monoid (l1 ⊔ l2) M
-  pr1 congruence-Normal-Submonoid = {!!}
+  congruence-Normal-Submonoid = {!!}
   pr2 congruence-Normal-Submonoid = {!!}
 ```
 
@@ -239,7 +239,7 @@ module _
 
   subset-normal-submonoid-congruence-Monoid :
     subtype l2 (type-Monoid M)
-  subset-normal-submonoid-congruence-Monoid x = {!!}
+  subset-normal-submonoid-congruence-Monoid = {!!}
 
   is-in-normal-submonoid-congruence-Monoid : type-Monoid M → UU l2
   is-in-normal-submonoid-congruence-Monoid = {!!}
@@ -251,18 +251,18 @@ module _
   is-closed-under-multiplication-normal-submonoid-congruence-Monoid :
     is-closed-under-multiplication-subset-Monoid M
       subset-normal-submonoid-congruence-Monoid
-  is-closed-under-multiplication-normal-submonoid-congruence-Monoid x y H K = {!!}
+  is-closed-under-multiplication-normal-submonoid-congruence-Monoid = {!!}
 
   submonoid-congruence-Monoid : Submonoid l2 M
-  pr1 submonoid-congruence-Monoid = {!!}
+  submonoid-congruence-Monoid = {!!}
 
   is-normal-submonoid-congruence-Monoid :
     is-normal-Submonoid M submonoid-congruence-Monoid
-  pr1 (is-normal-submonoid-congruence-Monoid x y u H) K = {!!}
+  is-normal-submonoid-congruence-Monoid = {!!}
   pr2 (is-normal-submonoid-congruence-Monoid x y u H) K = {!!}
 
   normal-submonoid-congruence-Monoid : Normal-Submonoid l2 M
-  pr1 normal-submonoid-congruence-Monoid = {!!}
+  normal-submonoid-congruence-Monoid = {!!}
 ```
 
 ### The normal submonoid obtained from the congruence relation of a normal submonoid has the same elements as the original normal submonoid
@@ -277,7 +277,7 @@ module _
       ( normal-submonoid-congruence-Monoid M
         ( congruence-Normal-Submonoid M N))
       ( N)
-  pr1 (has-same-elements-normal-submonoid-congruence-Normal-Submonoid x) H = {!!}
+  has-same-elements-normal-submonoid-congruence-Normal-Submonoid = {!!}
   pr1
     ( pr2
       ( has-same-elements-normal-submonoid-congruence-Normal-Submonoid x)
@@ -303,11 +303,11 @@ module _
 
   is-saturated-congruence-Normal-Submonoid :
     is-saturated-congruence-Monoid M (congruence-Normal-Submonoid M N)
-  is-saturated-congruence-Normal-Submonoid x y H u v = {!!}
+  is-saturated-congruence-Normal-Submonoid = {!!}
 
   saturated-congruence-Normal-Submonoid :
     saturated-congruence-Monoid (l1 ⊔ l2) M
-  pr1 saturated-congruence-Normal-Submonoid = {!!}
+  saturated-congruence-Normal-Submonoid = {!!}
 ```
 
 ### The congruence relation of the normal submonoid associated to a congruence relation relates the same elements as the original congruence relation
@@ -326,10 +326,7 @@ module _
       ( saturated-congruence-Normal-Submonoid M
         ( normal-submonoid-saturated-congruence-Monoid))
       ( R)
-  pr1
-    ( relate-same-elements-congruence-normal-submonoid-saturated-congruence-Monoid
-      x y)
-    H = {!!}
+  relate-same-elements-congruence-normal-submonoid-saturated-congruence-Monoid = {!!}
   pr1
     ( pr2
       ( relate-same-elements-congruence-normal-submonoid-saturated-congruence-Monoid
@@ -349,12 +346,12 @@ is-section-congruence-Normal-Submonoid :
   {l1 : Level} (l2 : Level) (M : Monoid l1) (N : Normal-Submonoid (l1 ⊔ l2) M) →
   ( normal-submonoid-congruence-Monoid M (congruence-Normal-Submonoid M N)) ＝
   ( N)
-is-section-congruence-Normal-Submonoid l2 M N = {!!}
+is-section-congruence-Normal-Submonoid = {!!}
 
 normal-submonoid-retract-of-congruence-Monoid :
   {l1 : Level} (l2 : Level) (M : Monoid l1) →
   (Normal-Submonoid (l1 ⊔ l2) M) retract-of (congruence-Monoid (l1 ⊔ l2) M)
-pr1 (normal-submonoid-retract-of-congruence-Monoid l2 M) = {!!}
+normal-submonoid-retract-of-congruence-Monoid = {!!}
 pr1 (pr2 (normal-submonoid-retract-of-congruence-Monoid l2 M)) = {!!}
 pr2 (pr2 (normal-submonoid-retract-of-congruence-Monoid l2 M)) = {!!}
 ```
@@ -367,7 +364,7 @@ is-section-saturated-congruence-Normal-Submonoid :
   ( normal-submonoid-saturated-congruence-Monoid M
     ( saturated-congruence-Normal-Submonoid M N)) ＝
   ( N)
-is-section-saturated-congruence-Normal-Submonoid l2 M N = {!!}
+is-section-saturated-congruence-Normal-Submonoid = {!!}
 
 is-retraction-saturated-congruence-Normal-Submonoid :
   {l1 : Level} (l2 : Level) (M : Monoid l1)
@@ -375,17 +372,17 @@ is-retraction-saturated-congruence-Normal-Submonoid :
   ( saturated-congruence-Normal-Submonoid M
     ( normal-submonoid-saturated-congruence-Monoid M R)) ＝
   ( R)
-is-retraction-saturated-congruence-Normal-Submonoid l2 M R = {!!}
+is-retraction-saturated-congruence-Normal-Submonoid = {!!}
 
 is-equiv-normal-submonoid-saturated-congruence-Monoid :
   {l1 : Level} (l2 : Level) (M : Monoid l1) →
   is-equiv (normal-submonoid-saturated-congruence-Monoid {l2 = l1 ⊔ l2} M)
-is-equiv-normal-submonoid-saturated-congruence-Monoid l2 M = {!!}
+is-equiv-normal-submonoid-saturated-congruence-Monoid = {!!}
 
 equiv-normal-submonoid-saturated-congruence-Monoid :
   {l1 : Level} (l2 : Level) (M : Monoid l1) →
   saturated-congruence-Monoid (l1 ⊔ l2) M ≃ Normal-Submonoid (l1 ⊔ l2) M
-pr1 (equiv-normal-submonoid-saturated-congruence-Monoid l2 M) = {!!}
+equiv-normal-submonoid-saturated-congruence-Monoid = {!!}
 pr2 (equiv-normal-submonoid-saturated-congruence-Monoid l2 M) = {!!}
 ```
 

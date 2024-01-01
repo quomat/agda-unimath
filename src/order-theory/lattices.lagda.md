@@ -38,14 +38,14 @@ is-lattice-Poset-Prop :
 is-lattice-Poset-Prop = {!!}
 
 is-lattice-Poset : {l1 l2 : Level} → Poset l1 l2 → UU (l1 ⊔ l2)
-is-lattice-Poset P = {!!}
+is-lattice-Poset = {!!}
 
 is-prop-is-lattice-Poset :
   {l1 l2 : Level} (P : Poset l1 l2) → is-prop (is-lattice-Poset P)
 is-prop-is-lattice-Poset = {!!}
 
 Lattice : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Lattice l1 l2 = {!!}
+Lattice = {!!}
 
 module _
   {l1 l2 : Level} (A : Lattice l1 l2)
@@ -91,7 +91,7 @@ module _
   meet-semilattice-Lattice = {!!}
 
   meet-Lattice : (x y : type-Lattice) → type-Lattice
-  meet-Lattice x y = {!!}
+  meet-Lattice = {!!}
 
   is-join-semilattice-Lattice : is-join-semilattice-Poset poset-Lattice
   is-join-semilattice-Lattice = {!!}
@@ -100,5 +100,5 @@ module _
   join-semilattice-Lattice = {!!}
 
   join-Lattice : (x y : type-Lattice) → type-Lattice
-  join-Lattice x y = {!!}
+  join-Lattice = {!!}
 ```

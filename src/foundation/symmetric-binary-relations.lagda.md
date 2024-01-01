@@ -122,7 +122,7 @@ module _
   where
 
   relation-Symmetric-Relation : Relation l2 A
-  relation-Symmetric-Relation x y = {!!}
+  relation-Symmetric-Relation = {!!}
 
   equiv-symmetric-relation-Symmetric-Relation :
     {x y : A} →
@@ -145,7 +145,7 @@ module _
   where
 
   symmetric-relation-Relation : Symmetric-Relation l2 A
-  symmetric-relation-Relation p = {!!}
+  symmetric-relation-Relation = {!!}
 
   unit-symmetric-relation-Relation :
     (x y : A) → R x y →

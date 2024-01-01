@@ -64,15 +64,15 @@ module _
 
   edge-finite-type-complete-bipartite-Undirected-Graph-𝔽 :
     unordered-pair-vertices-complete-bipartite-Undirected-Graph-𝔽 → 𝔽 (l1 ⊔ l2)
-  edge-finite-type-complete-bipartite-Undirected-Graph-𝔽 p = {!!}
+  edge-finite-type-complete-bipartite-Undirected-Graph-𝔽 = {!!}
 
   edge-complete-bipartite-Undirected-Graph :
     unordered-pair-vertices-complete-bipartite-Undirected-Graph-𝔽 → UU (l1 ⊔ l2)
-  edge-complete-bipartite-Undirected-Graph p = {!!}
+  edge-complete-bipartite-Undirected-Graph = {!!}
 
   complete-bipartite-Undirected-Graph-𝔽 :
     Undirected-Graph-𝔽 (l1 ⊔ l2) (l1 ⊔ l2)
-  pr1 complete-bipartite-Undirected-Graph-𝔽 = {!!}
+  complete-bipartite-Undirected-Graph-𝔽 = {!!}
 ```
 
 ## External links

@@ -47,7 +47,7 @@ module _
   where
 
   is-dependent-epimorphism-Truncated-Type : (A → B) → UUω
-  is-dependent-epimorphism-Truncated-Type f = {!!}
+  is-dependent-epimorphism-Truncated-Type = {!!}
 ```
 
 ## Properties

@@ -52,7 +52,7 @@ module _
   mul-dihedral-group-Ab = {!!}
 
   inv-dihedral-group-Ab : type-dihedral-group-Ab → type-dihedral-group-Ab
-  inv-dihedral-group-Ab (inl x) = {!!}
+  inv-dihedral-group-Ab = {!!}
 
   associative-mul-dihedral-group-Ab :
     (x y z : type-dihedral-group-Ab) →
@@ -83,11 +83,11 @@ module _
   right-inverse-law-mul-dihedral-group-Ab = {!!}
 
   semigroup-dihedral-group-Ab : Semigroup l
-  pr1 semigroup-dihedral-group-Ab = {!!}
+  semigroup-dihedral-group-Ab = {!!}
 
   monoid-dihedral-group-Ab : Monoid l
-  pr1 monoid-dihedral-group-Ab = {!!}
+  monoid-dihedral-group-Ab = {!!}
 
   dihedral-group-Ab : Group l
-  pr1 dihedral-group-Ab = {!!}
+  dihedral-group-Ab = {!!}
 ```

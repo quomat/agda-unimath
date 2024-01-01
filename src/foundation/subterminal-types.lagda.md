@@ -61,7 +61,7 @@ module _
 
   abstract
     is-prop-is-subterminal : is-subterminal A → is-prop A
-    is-prop-is-subterminal H x y = {!!}
+    is-prop-is-subterminal = {!!}
 
   abstract
     eq-is-subterminal : is-subterminal A → all-elements-equal A

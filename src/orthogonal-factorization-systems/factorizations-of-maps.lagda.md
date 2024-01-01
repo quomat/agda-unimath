@@ -69,7 +69,7 @@ module _
   where
 
   factorization-through : (f : A → B) (X : UU l3) → UU (l1 ⊔ l2 ⊔ l3)
-  factorization-through f X = {!!}
+  factorization-through = {!!}
 
   right-map-factorization-through :
     {f : A → B} {X : UU l3} → factorization-through f X → X → B
@@ -96,7 +96,7 @@ module _
   where
 
   factorization : (l3 : Level) (f : A → B) → UU (l1 ⊔ l2 ⊔ lsuc l3)
-  factorization l3 f = {!!}
+  factorization = {!!}
 
   image-factorization : {l3 : Level} {f : A → B} → factorization l3 f → UU l3
   image-factorization = {!!}

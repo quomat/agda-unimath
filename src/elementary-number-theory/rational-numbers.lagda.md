@@ -40,17 +40,17 @@ equivalence relation given by `(n/m) ~ (n'/m') := {!!}
 ℚ = {!!}
 
 fraction-ℚ : ℚ → fraction-ℤ
-fraction-ℚ x = {!!}
+fraction-ℚ = {!!}
 
 is-reduced-fraction-ℚ : (x : ℚ) → is-reduced-fraction-ℤ (fraction-ℚ x)
-is-reduced-fraction-ℚ x = {!!}
+is-reduced-fraction-ℚ = {!!}
 ```
 
 ### Inclusion of fractions
 
 ```agda
 in-fraction-ℤ : fraction-ℤ → ℚ
-pr1 (in-fraction-ℤ x) = {!!}
+in-fraction-ℤ = {!!}
 pr2 (in-fraction-ℤ x) = {!!}
 ```
 
@@ -58,7 +58,7 @@ pr2 (in-fraction-ℤ x) = {!!}
 
 ```agda
 in-int : ℤ → ℚ
-in-int x = {!!}
+in-int = {!!}
 ```
 
 ### Negative one, zero and one
@@ -68,22 +68,22 @@ neg-one-ℚ : ℚ
 neg-one-ℚ = {!!}
 
 is-neg-one-ℚ : ℚ → UU lzero
-is-neg-one-ℚ x = {!!}
+is-neg-one-ℚ = {!!}
 
 zero-ℚ : ℚ
 zero-ℚ = {!!}
 
 is-zero-ℚ : ℚ → UU lzero
-is-zero-ℚ x = {!!}
+is-zero-ℚ = {!!}
 
 is-nonzero-ℚ : ℚ → UU lzero
-is-nonzero-ℚ k = {!!}
+is-nonzero-ℚ = {!!}
 
 one-ℚ : ℚ
 one-ℚ = {!!}
 
 is-one-ℚ : ℚ → UU lzero
-is-one-ℚ x = {!!}
+is-one-ℚ = {!!}
 ```
 
 ## Properties
@@ -104,11 +104,11 @@ is-set-ℚ : is-set ℚ
 is-set-ℚ = {!!}
 
 ℚ-Set : Set lzero
-pr1 ℚ-Set = {!!}
+ℚ-Set = {!!}
 pr2 ℚ-Set = {!!}
 
 in-fraction-fraction-ℚ : (x : ℚ) → in-fraction-ℤ (fraction-ℚ x) ＝ x
-in-fraction-fraction-ℚ (pair (pair m (pair n n-pos)) p) = {!!}
+in-fraction-fraction-ℚ = {!!}
 ```
 
 ### The reflecting map from ℤ to ℚ

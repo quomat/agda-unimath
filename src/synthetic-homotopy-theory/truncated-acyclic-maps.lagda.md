@@ -71,10 +71,10 @@ module _
   where
 
   is-truncated-acyclic-map-Prop : (A → B) → Prop (l1 ⊔ l2)
-  is-truncated-acyclic-map-Prop f = {!!}
+  is-truncated-acyclic-map-Prop = {!!}
 
   is-truncated-acyclic-map : (A → B) → UU (l1 ⊔ l2)
-  is-truncated-acyclic-map f = {!!}
+  is-truncated-acyclic-map = {!!}
 
   is-prop-is-truncated-acyclic-map :
     (f : A → B) → is-prop (is-truncated-acyclic-map f)
@@ -109,12 +109,12 @@ module _
   is-truncated-acyclic-map-terminal-map-is-truncated-acyclic :
     is-truncated-acyclic k A →
     is-truncated-acyclic-map k (terminal-map {A = A})
-  is-truncated-acyclic-map-terminal-map-is-truncated-acyclic ac u = {!!}
+  is-truncated-acyclic-map-terminal-map-is-truncated-acyclic = {!!}
 
   is-truncated-acyclic-is-truncated-acyclic-map-terminal-map :
     is-truncated-acyclic-map k (terminal-map {A = A}) →
     is-truncated-acyclic k A
-  is-truncated-acyclic-is-truncated-acyclic-map-terminal-map ac = {!!}
+  is-truncated-acyclic-is-truncated-acyclic-map-terminal-map = {!!}
 ```
 
 ### A type is `k`-acyclic if and only if the constant map from any `k`-type is an embedding
@@ -249,7 +249,7 @@ In particular, the unit of the `k`-truncation is `(k+1)`-acyclic
 is-truncated-acyclic-map-succ-unit-trunc :
   {l : Level} {k : 𝕋} (A : UU l) →
   is-truncated-acyclic-map (succ-𝕋 k) (unit-trunc {A = A})
-is-truncated-acyclic-map-succ-unit-trunc {k = k} A = {!!}
+is-truncated-acyclic-map-succ-unit-trunc = {!!}
 ```
 
 ### A type is `(k+1)`-acyclic if and only if its `k`-truncation is

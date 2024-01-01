@@ -35,18 +35,18 @@ Furthermore, the identity relation is a nonsaturated congruence relation on
 
 ```agda
 semigroup-ℕ-Max : Semigroup lzero
-pr1 semigroup-ℕ-Max = {!!}
+semigroup-ℕ-Max = {!!}
 pr1 (pr2 semigroup-ℕ-Max) = {!!}
 pr2 (pr2 semigroup-ℕ-Max) = {!!}
 
 monoid-ℕ-Max : Monoid lzero
-pr1 monoid-ℕ-Max = {!!}
+monoid-ℕ-Max = {!!}
 pr1 (pr2 monoid-ℕ-Max) = {!!}
 pr1 (pr2 (pr2 monoid-ℕ-Max)) = {!!}
 pr2 (pr2 (pr2 monoid-ℕ-Max)) = {!!}
 
 ℕ-Max : Commutative-Monoid lzero
-pr1 ℕ-Max = {!!}
+ℕ-Max = {!!}
 pr2 ℕ-Max = {!!}
 ```
 
@@ -62,10 +62,10 @@ module _
   is-initial-segment-Normal-Commutative-Submonoid-ℕ-Max :
     is-initial-segment-subset-ℕ
       ( subset-Normal-Commutative-Submonoid ℕ-Max N)
-  is-initial-segment-Normal-Commutative-Submonoid-ℕ-Max x H = {!!}
+  is-initial-segment-Normal-Commutative-Submonoid-ℕ-Max = {!!}
 
   initial-segment-Normal-Submonoid-ℕ-Max : initial-segment-ℕ l
-  pr1 initial-segment-Normal-Submonoid-ℕ-Max = {!!}
+  initial-segment-Normal-Submonoid-ℕ-Max = {!!}
 ```
 
 ### Initial segments of the natural numbers are normal submonoids of `ℕ-Max`
@@ -74,7 +74,7 @@ module _
 submonoid-initial-segment-ℕ-Max :
   {l : Level} (I : initial-segment-ℕ l) (i0 : is-in-initial-segment-ℕ I 0) →
   Commutative-Submonoid l ℕ-Max
-pr1 (submonoid-initial-segment-ℕ-Max I i0) = {!!}
+submonoid-initial-segment-ℕ-Max = {!!}
 pr1 (pr2 (submonoid-initial-segment-ℕ-Max I i0)) = {!!}
 pr2 (pr2 (submonoid-initial-segment-ℕ-Max I i0)) = {!!}
 
@@ -83,7 +83,7 @@ is-normal-submonoid-initial-segment-ℕ-Max :
   is-normal-Commutative-Submonoid
     ℕ-Max
     (submonoid-initial-segment-ℕ-Max I i0)
-is-normal-submonoid-initial-segment-ℕ-Max I i0 u zero-ℕ H K = {!!}
+is-normal-submonoid-initial-segment-ℕ-Max = {!!}
 is-normal-submonoid-initial-segment-ℕ-Max I i0 zero-ℕ (succ-ℕ x) H K = {!!}
 is-normal-submonoid-initial-segment-ℕ-Max I i0 (succ-ℕ u) (succ-ℕ x) H K = {!!}
 ```

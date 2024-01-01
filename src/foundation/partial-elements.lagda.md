@@ -51,7 +51,7 @@ the type of partial elements of `X`.
 
 ```agda
 partial-element : {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-partial-element l2 X = {!!}
+partial-element = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} (x : partial-element l2 X)

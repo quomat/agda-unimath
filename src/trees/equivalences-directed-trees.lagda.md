@@ -48,7 +48,7 @@ directed graphs.
 is-equiv-hom-Directed-Tree :
   {l1 l2 l3 l4 : Level} (S : Directed-Tree l1 l2) (T : Directed-Tree l3 l4) →
   hom-Directed-Tree S T → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-is-equiv-hom-Directed-Tree S T = {!!}
+is-equiv-hom-Directed-Tree = {!!}
 ```
 
 ### Equivalences of directed trees
@@ -57,19 +57,19 @@ is-equiv-hom-Directed-Tree S T = {!!}
 equiv-Directed-Tree :
   {l1 l2 l3 l4 : Level} (S : Directed-Tree l1 l2) (T : Directed-Tree l3 l4) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-equiv-Directed-Tree S T = {!!}
+equiv-Directed-Tree = {!!}
 
 equiv-is-equiv-hom-Directed-Tree :
   {l1 l2 l3 l4 : Level} (S : Directed-Tree l1 l2) (T : Directed-Tree l3 l4) →
   (f : hom-Directed-Tree S T) → is-equiv-hom-Directed-Tree S T f →
   equiv-Directed-Tree S T
-equiv-is-equiv-hom-Directed-Tree S T = {!!}
+equiv-is-equiv-hom-Directed-Tree = {!!}
 
 compute-equiv-Directed-Tree :
   {l1 l2 l3 l4 : Level} (S : Directed-Tree l1 l2) (T : Directed-Tree l3 l4) →
   equiv-Directed-Tree S T ≃
   Σ (hom-Directed-Tree S T) (is-equiv-hom-Directed-Tree S T)
-compute-equiv-Directed-Tree S T = {!!}
+compute-equiv-Directed-Tree = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} (S : Directed-Tree l1 l2) (T : Directed-Tree l3 l4)
@@ -131,14 +131,14 @@ module _
     ( Σ (node-Directed-Tree S) (λ y → edge-Directed-Tree S y x)) ≃
     ( Σ ( node-Directed-Tree T)
         ( λ y → edge-Directed-Tree T y (node-equiv-Directed-Tree x)))
-  equiv-direct-predecessor-equiv-Directed-Tree x = {!!}
+  equiv-direct-predecessor-equiv-Directed-Tree = {!!}
 
   direct-predecessor-equiv-Directed-Tree :
     (x : node-Directed-Tree S) →
     Σ (node-Directed-Tree S) (λ y → edge-Directed-Tree S y x) →
     Σ ( node-Directed-Tree T)
       ( λ y → edge-Directed-Tree T y (node-equiv-Directed-Tree x))
-  direct-predecessor-equiv-Directed-Tree x = {!!}
+  direct-predecessor-equiv-Directed-Tree = {!!}
 
   equiv-walk-equiv-Directed-Tree :
     {x y : node-Directed-Tree S} →
@@ -162,7 +162,7 @@ module _
 ```agda
 id-equiv-Directed-Tree :
   {l1 l2 : Level} (T : Directed-Tree l1 l2) → equiv-Directed-Tree T T
-id-equiv-Directed-Tree T = {!!}
+id-equiv-Directed-Tree = {!!}
 ```
 
 ### Composition of equivalences of directed trees
@@ -236,7 +236,7 @@ module _
 refl-htpy-equiv-Directed-Tree :
   {l1 l2 l3 l4 : Level} (S : Directed-Tree l1 l2) (T : Directed-Tree l3 l4)
   (f : equiv-Directed-Tree S T) → htpy-equiv-Directed-Tree S T f f
-refl-htpy-equiv-Directed-Tree S T f = {!!}
+refl-htpy-equiv-Directed-Tree = {!!}
 ```
 
 ## Properties
@@ -281,7 +281,7 @@ module _
   preserves-root-is-equiv-node-hom-Directed-Tree :
     is-equiv (node-hom-Directed-Tree S T f) →
     preserves-root-hom-Directed-Tree S T f
-  preserves-root-is-equiv-node-hom-Directed-Tree H = {!!}
+  preserves-root-is-equiv-node-hom-Directed-Tree = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} (S : Directed-Tree l1 l2) (T : Directed-Tree l3 l4)
@@ -294,7 +294,7 @@ module _
 
   rooted-hom-equiv-Directed-Tree :
     rooted-hom-Directed-Tree S T
-  pr1 rooted-hom-equiv-Directed-Tree = {!!}
+  rooted-hom-equiv-Directed-Tree = {!!}
 ```
 
 ### Equivalences characterize identifications of trees
@@ -310,11 +310,11 @@ module _
 
   equiv-eq-Directed-Tree :
     (S : Directed-Tree l1 l2) → (T ＝ S) → equiv-Directed-Tree T S
-  equiv-eq-Directed-Tree S = {!!}
+  equiv-eq-Directed-Tree = {!!}
 
   eq-equiv-Directed-Tree :
     (S : Directed-Tree l1 l2) → equiv-Directed-Tree T S → (T ＝ S)
-  eq-equiv-Directed-Tree S = {!!}
+  eq-equiv-Directed-Tree = {!!}
 
   is-torsorial-equiv-Directed-Tree :
     is-torsorial (equiv-Directed-Tree T)
@@ -344,7 +344,7 @@ module _
   is-equiv-is-equiv-node-hom-Directed-Tree :
     is-equiv (node-hom-Directed-Tree S T f) →
     is-equiv-hom-Directed-Tree S T f
-  pr1 (is-equiv-is-equiv-node-hom-Directed-Tree H) = {!!}
+  is-equiv-is-equiv-node-hom-Directed-Tree = {!!}
 ```
 
 ### The inverse of an equivalence of directed trees

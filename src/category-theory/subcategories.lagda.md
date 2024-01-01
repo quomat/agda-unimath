@@ -186,7 +186,7 @@ module _
   subtype-hom-obj-subcategory-Subcategory = {!!}
 
   hom-Subcategory : (x y : obj-Subcategory C P) → UU (l2 ⊔ l4)
-  hom-Subcategory x y = {!!}
+  hom-Subcategory = {!!}
 
   inclusion-hom-Subcategory :
     (x y : obj-Subcategory C P) →
@@ -419,7 +419,7 @@ module _
   is-category-Subcategory = {!!}
 
   category-Subcategory : Category (l1 ⊔ l3) (l2 ⊔ l4)
-  pr1 category-Subcategory = {!!}
+  category-Subcategory = {!!}
 ```
 
 ### The inclusion functor is an embedding on objects and hom-sets

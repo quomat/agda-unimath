@@ -220,15 +220,13 @@ module _
     {y : vertex-Undirected-Graph G} (w : walk-Undirected-Graph G x y)
     (v : vertex-on-walk-Undirected-Graph G w) →
     walk-Undirected-Graph G x (vertex-vertex-on-walk-Undirected-Graph G w v)
-  first-segment-walk-Undirected-Graph
-    refl-walk-Undirected-Graph (v , refl) = {!!}
+  first-segment-walk-Undirected-Graph = {!!}
 
   second-segment-walk-Undirected-Graph :
     {y : vertex-Undirected-Graph G} (w : walk-Undirected-Graph G x y)
     (v : vertex-on-walk-Undirected-Graph G w) →
     walk-Undirected-Graph G (vertex-vertex-on-walk-Undirected-Graph G w v) y
-  second-segment-walk-Undirected-Graph
-    refl-walk-Undirected-Graph (v , refl) = {!!}
+  second-segment-walk-Undirected-Graph = {!!}
 
   eq-decompose-walk-Undirected-Graph :
     {y : vertex-Undirected-Graph G} (w : walk-Undirected-Graph G x y)
@@ -280,8 +278,7 @@ module _
       ( vertex-vertex-on-walk-Undirected-Graph G w v)) +
     ( is-vertex-on-second-segment-walk-Undirected-Graph w u
       ( vertex-vertex-on-walk-Undirected-Graph G w v))
-  is-vertex-on-first-or-second-segment-walk-Undirected-Graph
-    refl-walk-Undirected-Graph (u , refl) (.u , refl) = {!!}
+  is-vertex-on-first-or-second-segment-walk-Undirected-Graph = {!!}
 ```
 
 ### For any decomposition of a walk `w` into `w1` followed by `w2`, any vertex on `w1` is a vertex on `w`
@@ -305,8 +302,7 @@ is-vertex-on-walk-is-vertex-on-second-segment-walk-Undirected-Graph :
   (u : vertex-Undirected-Graph G) →
   is-vertex-on-second-segment-walk-Undirected-Graph G w v u →
   is-vertex-on-walk-Undirected-Graph G w u
-is-vertex-on-walk-is-vertex-on-second-segment-walk-Undirected-Graph
-  G refl-walk-Undirected-Graph (v , refl) .v refl = {!!}
+is-vertex-on-walk-is-vertex-on-second-segment-walk-Undirected-Graph = {!!}
 is-vertex-on-walk-is-vertex-on-second-segment-walk-Undirected-Graph
   G (cons-walk-Undirected-Graph p e w) (v , inl K) u (inl H) = {!!}
 is-vertex-on-walk-is-vertex-on-second-segment-walk-Undirected-Graph G

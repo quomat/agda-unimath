@@ -86,7 +86,7 @@ module _
 
   ideal-Commutative-Ring-Large-Preorder :
     Large-Preorder (λ l1 → l ⊔ lsuc l1) (λ l1 l2 → l ⊔ l1 ⊔ l2)
-  type-Large-Preorder ideal-Commutative-Ring-Large-Preorder l1 = {!!}
+  ideal-Commutative-Ring-Large-Preorder = {!!}
 ```
 
 ### The large poset of ideals in a commutative ring
@@ -98,7 +98,7 @@ module _
 
   ideal-Commutative-Ring-Large-Poset :
     Large-Poset (λ l1 → l ⊔ lsuc l1) (λ l1 l2 → l ⊔ l1 ⊔ l2)
-  large-preorder-Large-Poset ideal-Commutative-Ring-Large-Poset = {!!}
+  ideal-Commutative-Ring-Large-Poset = {!!}
 ```
 
 ### The similarity relation on ideals in a commutative ring

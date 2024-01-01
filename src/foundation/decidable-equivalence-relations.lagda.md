@@ -62,11 +62,11 @@ A decidable equivalence relation on a type `X` is an equivalence relation `R` on
 ```agda
 is-decidable-equivalence-relation :
   {l1 l2 : Level} → {A : UU l1} → equivalence-relation l2 A → UU (l1 ⊔ l2)
-is-decidable-equivalence-relation {A = A} R = {!!}
+is-decidable-equivalence-relation = {!!}
 
 Decidable-equivalence-relation :
   {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-Decidable-equivalence-relation l2 X = {!!}
+Decidable-equivalence-relation = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} (R : Decidable-equivalence-relation l2 X)
@@ -96,7 +96,7 @@ module _
 
   equivalence-relation-Decidable-equivalence-relation :
     equivalence-relation l2 X
-  pr1 equivalence-relation-Decidable-equivalence-relation = {!!}
+  equivalence-relation-Decidable-equivalence-relation = {!!}
 
   refl-Decidable-equivalence-relation :
     is-reflexive sim-Decidable-equivalence-relation
@@ -110,7 +110,7 @@ module _
     {x y : X} →
     sim-Decidable-equivalence-relation x y ≃
     sim-Decidable-equivalence-relation y x
-  equiv-symmetric-Decidable-equivalence-relation {x} {y} = {!!}
+  equiv-symmetric-Decidable-equivalence-relation = {!!}
 
   transitive-Decidable-equivalence-relation :
     is-transitive sim-Decidable-equivalence-relation
@@ -121,7 +121,7 @@ equiv-equivalence-relation-is-decidable-Dec-equivalence-relation :
   Decidable-equivalence-relation l2 X ≃
   Σ ( equivalence-relation l2 X)
     ( λ R → is-decidable-equivalence-relation R)
-pr1 equiv-equivalence-relation-is-decidable-Dec-equivalence-relation R = {!!}
+equiv-equivalence-relation-is-decidable-Dec-equivalence-relation = {!!}
 pr2 equiv-equivalence-relation-is-decidable-Dec-equivalence-relation = {!!}
 ```
 
@@ -134,14 +134,14 @@ module _
 
   is-equivalence-class-Decidable-equivalence-relation :
     decidable-subtype l2 X → UU (l1 ⊔ lsuc l2)
-  is-equivalence-class-Decidable-equivalence-relation P = {!!}
+  is-equivalence-class-Decidable-equivalence-relation = {!!}
 
   equivalence-class-Decidable-equivalence-relation : UU (l1 ⊔ lsuc l2)
   equivalence-class-Decidable-equivalence-relation = {!!}
 
   class-Decidable-equivalence-relation :
     X → equivalence-class-Decidable-equivalence-relation
-  pr1 (class-Decidable-equivalence-relation x) = {!!}
+  class-Decidable-equivalence-relation = {!!}
 
   emb-equivalence-class-Decidable-equivalence-relation :
     equivalence-class-Decidable-equivalence-relation ↪ decidable-subtype l2 X
@@ -162,14 +162,14 @@ module _
   is-prop-is-in-subtype-equivalence-class-Decidable-equivalence-relation :
     (P : equivalence-class-Decidable-equivalence-relation) (x : X) →
     is-prop (is-in-subtype-equivalence-class-Decidable-equivalence-relation P x)
-  is-prop-is-in-subtype-equivalence-class-Decidable-equivalence-relation P = {!!}
+  is-prop-is-in-subtype-equivalence-class-Decidable-equivalence-relation = {!!}
 
   is-set-equivalence-class-Decidable-equivalence-relation :
     is-set equivalence-class-Decidable-equivalence-relation
   is-set-equivalence-class-Decidable-equivalence-relation = {!!}
 
   equivalence-class-Decidable-equivalence-relation-Set : Set (l1 ⊔ lsuc l2)
-  pr1 equivalence-class-Decidable-equivalence-relation-Set = {!!}
+  equivalence-class-Decidable-equivalence-relation-Set = {!!}
 
   unit-im-equivalence-class-Decidable-equivalence-relation :
     hom-slice
@@ -203,7 +203,7 @@ module _
       Σ ( equivalence-class-Decidable-equivalence-relation R)
         ( λ P →
           is-in-subtype-equivalence-class-Decidable-equivalence-relation R P a)
-    pr1 center-total-subtype-equivalence-class-Decidable-equivalence-relation = {!!}
+    center-total-subtype-equivalence-class-Decidable-equivalence-relation = {!!}
 
     contraction-total-subtype-equivalence-class-Decidable-equivalence-relation :
       ( t :
@@ -212,22 +212,19 @@ module _
             is-in-subtype-equivalence-class-Decidable-equivalence-relation
               R P a)) →
       center-total-subtype-equivalence-class-Decidable-equivalence-relation ＝ t
-    contraction-total-subtype-equivalence-class-Decidable-equivalence-relation
-      ( pair (pair P p) H) = {!!}
+    contraction-total-subtype-equivalence-class-Decidable-equivalence-relation = {!!}
 
     is-torsorial-subtype-equivalence-class-Decidable-equivalence-relation :
       is-torsorial
         ( λ P →
           is-in-subtype-equivalence-class-Decidable-equivalence-relation R P a)
-    pr1
-      is-torsorial-subtype-equivalence-class-Decidable-equivalence-relation = {!!}
+    is-torsorial-subtype-equivalence-class-Decidable-equivalence-relation = {!!}
 
   related-eq-quotient-Decidable-equivalence-relation :
     (q : equivalence-class-Decidable-equivalence-relation R) →
       class-Decidable-equivalence-relation R a ＝ q →
     is-in-subtype-equivalence-class-Decidable-equivalence-relation R q a
-  related-eq-quotient-Decidable-equivalence-relation
-    .(class-Decidable-equivalence-relation R a) refl = {!!}
+  related-eq-quotient-Decidable-equivalence-relation = {!!}
 
   abstract
     is-equiv-related-eq-quotient-Decidable-equivalence-relation :
@@ -240,14 +237,14 @@ module _
       (q : equivalence-class-Decidable-equivalence-relation R) →
       ( class-Decidable-equivalence-relation R a ＝ q) ≃
       ( is-in-subtype-equivalence-class-Decidable-equivalence-relation R q a)
-    pr1 (effective-quotient-Decidable-equivalence-relation' q) = {!!}
+    effective-quotient-Decidable-equivalence-relation' = {!!}
 
   abstract
     eq-effective-quotient-Decidable-equivalence-relation' :
       (q : equivalence-class-Decidable-equivalence-relation R) →
       is-in-subtype-equivalence-class-Decidable-equivalence-relation R q a →
       class-Decidable-equivalence-relation R a ＝ q
-    eq-effective-quotient-Decidable-equivalence-relation' q = {!!}
+    eq-effective-quotient-Decidable-equivalence-relation' = {!!}
 ```
 
 ### The quotient map into the large set quotient is effective
@@ -262,7 +259,7 @@ module _
       is-effective
         ( equivalence-relation-Decidable-equivalence-relation R)
         ( class-Decidable-equivalence-relation R)
-    is-effective-class-Decidable-equivalence-relation x y = {!!}
+    is-effective-class-Decidable-equivalence-relation = {!!}
 
   abstract
     apply-effectiveness-class-Decidable-equivalence-relation :
@@ -270,14 +267,14 @@ module _
       ( class-Decidable-equivalence-relation R x ＝
         class-Decidable-equivalence-relation R y) →
       sim-Decidable-equivalence-relation R x y
-    apply-effectiveness-class-Decidable-equivalence-relation {x} {y} = {!!}
+    apply-effectiveness-class-Decidable-equivalence-relation = {!!}
 
   abstract
     apply-effectiveness-class-Decidable-equivalence-relation' :
       {x y : A} → sim-Decidable-equivalence-relation R x y →
       class-Decidable-equivalence-relation R x ＝
       class-Decidable-equivalence-relation R y
-    apply-effectiveness-class-Decidable-equivalence-relation' {x} {y} = {!!}
+    apply-effectiveness-class-Decidable-equivalence-relation' = {!!}
 ```
 
 ### The quotient map into the large set quotient is surjective and effective
@@ -291,7 +288,7 @@ module _
     is-surjective-and-effective
       ( equivalence-relation-Decidable-equivalence-relation R)
       ( class-Decidable-equivalence-relation R)
-  pr1 is-surjective-and-effective-class-Decidable-equivalence-relation = {!!}
+  is-surjective-and-effective-class-Decidable-equivalence-relation = {!!}
 ```
 
 ### The quotient map into the large set quotient is a reflecting map
@@ -305,7 +302,7 @@ module _
     reflecting-map-equivalence-relation
       ( equivalence-relation-Decidable-equivalence-relation R)
       ( equivalence-class-Decidable-equivalence-relation R)
-  pr1 quotient-reflecting-map-equivalence-class-Decidable-equivalence-relation = {!!}
+  quotient-reflecting-map-equivalence-class-Decidable-equivalence-relation = {!!}
 ```
 
 ```agda
@@ -318,8 +315,7 @@ module _
     is-in-subtype-equivalence-class-Decidable-equivalence-relation R P a →
     sim-Decidable-equivalence-relation R a b →
     is-in-subtype-equivalence-class-Decidable-equivalence-relation R P b
-  transitive-is-in-subtype-equivalence-class-Decidable-equivalence-relation
-    P a b p q = {!!}
+  transitive-is-in-subtype-equivalence-class-Decidable-equivalence-relation = {!!}
 ```
 
 ```agda
@@ -332,7 +328,7 @@ module _
     (T : equivalence-class R) →
     (a : A) →
     is-decidable (is-in-equivalence-class R T a)
-  is-decidable-is-in-equivalence-class-is-decidable F T a = {!!}
+  is-decidable-is-in-equivalence-class-is-decidable = {!!}
 ```
 
 #### The type of decidable equivalence relations on `A` is equivalent to the type of surjections from `A` into a type with decidable equality
@@ -343,18 +339,18 @@ has-decidable-equality-type-Surjection-Into-Set :
   ( is-decidable-equivalence-relation
     ( equivalence-relation-Surjection-Into-Set surj)) →
   has-decidable-equality (type-Surjection-Into-Set surj)
-has-decidable-equality-type-Surjection-Into-Set surj is-dec-rel x y = {!!}
+has-decidable-equality-type-Surjection-Into-Set = {!!}
 
 is-decidable-equivalence-relation-Surjection-Into-Set :
   {l1 : Level} {A : UU l1} (surj : Surjection-Into-Set l1 A) →
   has-decidable-equality (type-Surjection-Into-Set surj) →
   is-decidable-equivalence-relation
     ( equivalence-relation-Surjection-Into-Set surj)
-is-decidable-equivalence-relation-Surjection-Into-Set surj dec-eq x y = {!!}
+is-decidable-equivalence-relation-Surjection-Into-Set = {!!}
 
 equiv-Surjection-Into-Set-Decidable-equivalence-relation :
   {l1 : Level} (A : UU l1) →
   Decidable-equivalence-relation l1 A ≃
   Σ (UU l1) (λ X → (A ↠ X) × has-decidable-equality X)
-equiv-Surjection-Into-Set-Decidable-equivalence-relation {l1} A = {!!}
+equiv-Surjection-Into-Set-Decidable-equivalence-relation = {!!}
 ```

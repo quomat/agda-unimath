@@ -52,7 +52,7 @@ module _
   where
 
   is-perfect-image : (a : A) → UU (l1 ⊔ l2)
-  is-perfect-image a = {!!}
+  is-perfect-image = {!!}
 ```
 
 ## Properties
@@ -69,14 +69,14 @@ module _
 
   is-prop-is-perfect-image-is-emb :
     (a : A) → is-prop (is-perfect-image f g a)
-  is-prop-is-perfect-image-is-emb a = {!!}
+  is-prop-is-perfect-image-is-emb = {!!}
 
   is-perfect-image-Prop : A → Prop (l1 ⊔ l2)
-  pr1 (is-perfect-image-Prop a) = {!!}
+  is-perfect-image-Prop = {!!}
 
   is-decidable-is-perfect-image-is-emb :
     LEM (l1 ⊔ l2) → (a : A) → is-decidable (is-perfect-image f g a)
-  is-decidable-is-perfect-image-is-emb lem a = {!!}
+  is-decidable-is-perfect-image-is-emb = {!!}
 ```
 
 If `a` is a perfect image for `g`, then `a` has a preimage under `g`. Just take
@@ -90,7 +90,7 @@ module _
   is-perfect-image-is-fiber :
     {f : A → B} {g : B → A} → (a : A) →
     is-perfect-image f g a → fiber g a
-  is-perfect-image-is-fiber a ρ = {!!}
+  is-perfect-image-is-fiber = {!!}
 ```
 
 One can define a map from `A` to `B` restricting the domain to the perfect
@@ -104,12 +104,12 @@ module _
 
   inverse-of-perfect-image :
     (a : A) → (is-perfect-image f g a) → B
-  inverse-of-perfect-image a ρ = {!!}
+  inverse-of-perfect-image = {!!}
 
   is-section-inverse-of-perfect-image :
     (a : A) (ρ : is-perfect-image f g a) →
     g (inverse-of-perfect-image a ρ) ＝ a
-  is-section-inverse-of-perfect-image a ρ = {!!}
+  is-section-inverse-of-perfect-image = {!!}
 ```
 
 ```agda
@@ -121,7 +121,7 @@ module _
   is-retraction-inverse-of-perfect-image :
     (b : B) (ρ : is-perfect-image f g (g b)) →
     inverse-of-perfect-image (g b) ρ ＝ b
-  is-retraction-inverse-of-perfect-image b ρ = {!!}
+  is-retraction-inverse-of-perfect-image = {!!}
 ```
 
 If `g (f (a))` is a perfect image for `g`, so is `a`.
@@ -135,7 +135,7 @@ module _
     (a : A) →
     is-perfect-image f g (g (f (a))) →
     is-perfect-image f g a
-  previous-perfect-image a γ a₀ n p = {!!}
+  previous-perfect-image = {!!}
 ```
 
 Perfect images goes to a disjoint place under `inverse-of-perfect-image` than
@@ -149,7 +149,7 @@ module _
   perfect-image-has-distinct-image :
     (a a₀ : A) → ¬ (is-perfect-image f g a) → (ρ : is-perfect-image f g a₀) →
     f a ≠ inverse-of-perfect-image a₀ ρ
-  perfect-image-has-distinct-image a a₀ nρ ρ p = {!!}
+  perfect-image-has-distinct-image = {!!}
 
     s : ¬ (is-perfect-image f g (g (f a)))
     s = {!!}
@@ -167,7 +167,7 @@ module _
   where
 
   is-not-perfect-image : (a : A) → UU (l1 ⊔ l2)
-  is-not-perfect-image a = {!!}
+  is-not-perfect-image = {!!}
 ```
 
 If we assume law of excluded middle and `g` is embedding, we can prove that if
@@ -184,7 +184,7 @@ module _
     (a : A) →
     ¬ (is-not-perfect-image a) →
     (is-perfect-image f g a)
-  not-not-perfect-is-perfect a nρ a₀ n p = {!!}
+  not-not-perfect-is-perfect = {!!}
 ```
 
 The following property states that if `g (b)` is not a perfect image, then `b`
@@ -203,12 +203,12 @@ module _
       (b : B) →
       ¬ (is-perfect-image f g (g b)) →
       Σ (fiber f b) (λ s → ¬ (is-perfect-image f g (pr1 s)))
-  not-perfect-image-has-not-perfect-fiber b nρ = {!!}
+  not-perfect-image-has-not-perfect-fiber = {!!}
 
       ii :
         is-not-perfect-image (g b) →
         Σ (fiber f b) (λ s → ¬ (is-perfect-image f g (pr1 s)))
-      ii (pair x₀ (pair zero-ℕ u)) = {!!}
+      ii = {!!}
 
         a : fiber f b
         a = {!!}

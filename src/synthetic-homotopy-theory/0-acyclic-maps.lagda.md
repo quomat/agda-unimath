@@ -41,7 +41,7 @@ module _
   is-0-acyclic-map-Prop = {!!}
 
   is-0-acyclic-map : (A → B) → UU (l1 ⊔ l2)
-  is-0-acyclic-map f = {!!}
+  is-0-acyclic-map = {!!}
 
   is-prop-is-0-acyclic-map :
     (f : A → B) → is-prop (is-0-acyclic-map f)

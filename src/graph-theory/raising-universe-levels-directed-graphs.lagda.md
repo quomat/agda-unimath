@@ -65,7 +65,7 @@ module _
   edge-compute-raise-Directed-Graph = {!!}
 
   raise-Directed-Graph : Directed-Graph (l1 ⊔ l3) (l2 ⊔ l4)
-  pr1 raise-Directed-Graph = {!!}
+  raise-Directed-Graph = {!!}
 
   compute-raise-Directed-Graph :
     equiv-Directed-Graph G raise-Directed-Graph

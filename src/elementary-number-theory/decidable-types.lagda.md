@@ -37,7 +37,7 @@ decidable.
 is-decidable-Σ-ℕ :
   {l : Level} (m : ℕ) (P : ℕ → UU l) (d : is-decidable-fam P) →
   is-decidable (Σ ℕ (λ x → (leq-ℕ m x) × (P x))) → is-decidable (Σ ℕ P)
-is-decidable-Σ-ℕ m P d (inl (pair x (pair l p))) = {!!}
+is-decidable-Σ-ℕ = {!!}
 is-decidable-Σ-ℕ zero-ℕ P d (inr f) = {!!}
 is-decidable-Σ-ℕ (succ-ℕ m) P d (inr f) with d zero-ℕ
 ... | inl p = {!!}
@@ -57,12 +57,12 @@ is-decidable-bounded-Σ-ℕ :
   {l1 l2 : Level} (m : ℕ) (P : ℕ → UU l1) (Q : ℕ → UU l2)
   (dP : is-decidable-fam P) (dQ : is-decidable-fam Q)
   (H : is-upper-bound-ℕ P m) → is-decidable (Σ ℕ (λ x → (P x) × (Q x)))
-is-decidable-bounded-Σ-ℕ m P Q dP dQ H = {!!}
+is-decidable-bounded-Σ-ℕ = {!!}
 
 is-decidable-bounded-Σ-ℕ' :
   {l : Level} (m : ℕ) (P : ℕ → UU l) (d : is-decidable-fam P) →
   is-decidable (Σ ℕ (λ x → (leq-ℕ x m) × (P x)))
-is-decidable-bounded-Σ-ℕ' m P d = {!!}
+is-decidable-bounded-Σ-ℕ' = {!!}
 ```
 
 ### Strictly bounded sums of decidable families over ℕ are decidable
@@ -73,12 +73,12 @@ is-decidable-strictly-bounded-Σ-ℕ :
   (dP : is-decidable-fam P) (dQ : is-decidable-fam Q)
   (H : is-strict-upper-bound-ℕ P m) →
   is-decidable (Σ ℕ (λ x → (P x) × (Q x)))
-is-decidable-strictly-bounded-Σ-ℕ m P Q dP dQ H = {!!}
+is-decidable-strictly-bounded-Σ-ℕ = {!!}
 
 is-decidable-strictly-bounded-Σ-ℕ' :
   {l : Level} (m : ℕ) (P : ℕ → UU l) (d : is-decidable-fam P) →
   is-decidable (Σ ℕ (λ x → (le-ℕ x m) × (P x)))
-is-decidable-strictly-bounded-Σ-ℕ' m P d = {!!}
+is-decidable-strictly-bounded-Σ-ℕ' = {!!}
 ```
 
 ### Given a family `P `of decidable types over ℕ and a number `m` such that `Π (m ≤ x), P x`, the type `Π ℕ P` is decidable
@@ -87,7 +87,7 @@ is-decidable-strictly-bounded-Σ-ℕ' m P d = {!!}
 is-decidable-Π-ℕ :
   {l : Level} (P : ℕ → UU l) (d : is-decidable-fam P) (m : ℕ) →
   is-decidable ((x : ℕ) → (leq-ℕ m x) → P x) → is-decidable ((x : ℕ) → P x)
-is-decidable-Π-ℕ P d zero-ℕ (inr nH) = {!!}
+is-decidable-Π-ℕ = {!!}
 is-decidable-Π-ℕ P d zero-ℕ (inl H) = {!!}
 is-decidable-Π-ℕ P d (succ-ℕ m) (inr nH) = {!!}
 is-decidable-Π-ℕ P d (succ-ℕ m) (inl H) with d zero-ℕ
@@ -109,12 +109,12 @@ is-decidable-bounded-Π-ℕ :
   {l1 l2 : Level} (P : ℕ → UU l1) (Q : ℕ → UU l2) (dP : is-decidable-fam P) →
   (dQ : is-decidable-fam Q) (m : ℕ) (H : is-upper-bound-ℕ P m) →
   is-decidable ((x : ℕ) → P x → Q x)
-is-decidable-bounded-Π-ℕ P Q dP dQ m H = {!!}
+is-decidable-bounded-Π-ℕ = {!!}
 
 is-decidable-bounded-Π-ℕ' :
   {l : Level} (P : ℕ → UU l) (d : is-decidable-fam P) (m : ℕ) →
   is-decidable ((x : ℕ) → (leq-ℕ x m) → P x)
-is-decidable-bounded-Π-ℕ' P d m = {!!}
+is-decidable-bounded-Π-ℕ' = {!!}
 ```
 
 ### Strictly bounded dependent products of decidable types are decidable
@@ -124,10 +124,10 @@ is-decidable-strictly-bounded-Π-ℕ :
   {l1 l2 : Level} (P : ℕ → UU l1) (Q : ℕ → UU l2) (dP : is-decidable-fam P) →
   (dQ : is-decidable-fam Q) (m : ℕ) (H : is-strict-upper-bound-ℕ P m) →
   is-decidable ((x : ℕ) → P x → Q x)
-is-decidable-strictly-bounded-Π-ℕ P Q dP dQ m H = {!!}
+is-decidable-strictly-bounded-Π-ℕ = {!!}
 
 is-decidable-strictly-bounded-Π-ℕ' :
   {l : Level} (P : ℕ → UU l) (d : is-decidable-fam P) (m : ℕ) →
   is-decidable ((x : ℕ) → le-ℕ x m → P x)
-is-decidable-strictly-bounded-Π-ℕ' P d m = {!!}
+is-decidable-strictly-bounded-Π-ℕ' = {!!}
 ```

@@ -41,10 +41,10 @@ module _
   where
 
   is-faithful : (A → B) → UU (l1 ⊔ l2)
-  is-faithful f = {!!}
+  is-faithful = {!!}
 
 faithful-map : {l1 l2 : Level} → UU l1 → UU l2 → UU (l1 ⊔ l2)
-faithful-map A B = {!!}
+faithful-map = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
@@ -63,19 +63,19 @@ module _
   emb-ap-faithful-map = {!!}
 
   is-faithful-is-emb : {f : A → B} → is-emb f → is-faithful f
-  is-faithful-is-emb {f} H x y = {!!}
+  is-faithful-is-emb = {!!}
 
   faithful-map-emb : (A ↪ B) → faithful-map A B
-  pr1 (faithful-map-emb f) = {!!}
+  faithful-map-emb = {!!}
 
   is-faithful-is-equiv : {f : A → B} → is-equiv f → is-faithful f
-  is-faithful-is-equiv H = {!!}
+  is-faithful-is-equiv = {!!}
 
   faithful-map-equiv : (A ≃ B) → faithful-map A B
-  pr1 (faithful-map-equiv e) = {!!}
+  faithful-map-equiv = {!!}
 
   emb-ap : (f : A ↪ B) (x y : A) → (x ＝ y) ↪ (map-emb f x ＝ map-emb f y)
-  pr1 (emb-ap f x y) = {!!}
+  emb-ap = {!!}
 ```
 
 ## Examples
@@ -102,10 +102,10 @@ module _
   where
 
   is-0-map-is-faithful : is-faithful f → is-0-map f
-  is-0-map-is-faithful H = {!!}
+  is-0-map-is-faithful = {!!}
 
   is-faithful-is-0-map : is-0-map f → is-faithful f
-  is-faithful-is-0-map H x y = {!!}
+  is-faithful-is-0-map = {!!}
 ```
 
 ## Properties
@@ -120,7 +120,7 @@ module _
   abstract
     is-faithful-pr1 :
       {B : A → UU l2} → ((x : A) → is-set (B x)) → is-faithful (pr1 {B = B})
-    is-faithful-pr1 H = {!!}
+    is-faithful-pr1 = {!!}
 
   pr1-faithful-map :
     (B : A → Set l2) → faithful-map (Σ A (λ x → type-Set (B x))) A
@@ -136,7 +136,7 @@ module _
 
   abstract
     is-faithful-htpy : is-faithful g → is-faithful f
-    is-faithful-htpy K = {!!}
+    is-faithful-htpy = {!!}
 ```
 
 ### Faithful maps are closed under composition
@@ -186,7 +186,7 @@ module _
   where
 
   is-faithful-tot : ((x : A) → is-faithful (f x)) → is-faithful (tot f)
-  is-faithful-tot H = {!!}
+  is-faithful-tot = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} {C : A → UU l3}

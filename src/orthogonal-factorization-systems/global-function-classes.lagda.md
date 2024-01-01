@@ -191,14 +191,12 @@ module _
   has-equivalences-has-identity-maps-global-function-class :
     has-identity-maps-global-function-class P →
     has-equivalences-global-function-class P
-  has-equivalences-has-identity-maps-global-function-class
-    has-id-P {B = B} f f' = {!!}
+  has-equivalences-has-identity-maps-global-function-class = {!!}
 
   has-equivalences-has-identity-maps-global-function-class' :
     has-identity-maps-global-function-class P →
     has-equivalences-global-function-class P
-  has-equivalences-has-identity-maps-global-function-class'
-    has-id-P {B = B} f f' = {!!}
+  has-equivalences-has-identity-maps-global-function-class' = {!!}
 
   has-identity-maps-has-equivalences-global-function-class :
     has-equivalences-global-function-class P →

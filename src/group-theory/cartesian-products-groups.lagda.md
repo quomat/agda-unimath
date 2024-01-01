@@ -71,7 +71,7 @@ module _
   right-unit-law-mul-prod-Group = {!!}
 
   inv-prod-Group : type-prod-Group → type-prod-Group
-  pr1 (inv-prod-Group (pair x y)) = {!!}
+  inv-prod-Group = {!!}
 
   left-inverse-law-prod-Group :
     (x : type-prod-Group) →
@@ -84,5 +84,5 @@ module _
   right-inverse-law-prod-Group = {!!}
 
   prod-Group : Group (l1 ⊔ l2)
-  pr1 prod-Group = {!!}
+  prod-Group = {!!}
 ```

@@ -69,5 +69,5 @@ module _
   is-closed-under-right-multiplication-kernel-hom-Ring = {!!}
 
   kernel-hom-Ring : ideal-Ring l2 R
-  pr1 kernel-hom-Ring = {!!}
+  kernel-hom-Ring = {!!}
 ```

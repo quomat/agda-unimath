@@ -66,7 +66,7 @@ module _
   where
 
   equiv-postcomp-is-mono : (g ＝ h) ≃ ((f ∘ g) ＝ (f ∘ h))
-  pr1 equiv-postcomp-is-mono = {!!}
+  equiv-postcomp-is-mono = {!!}
 
   is-injective-postcomp-is-mono : (f ∘ g) ＝ (f ∘ h) → g ＝ h
   is-injective-postcomp-is-mono = {!!}
@@ -80,10 +80,10 @@ module _
   where
 
   is-mono-is-emb : is-emb f → {l3 : Level} → is-mono l3 f
-  is-mono-is-emb is-emb-f X = {!!}
+  is-mono-is-emb = {!!}
 
   is-emb-is-mono : ({l3 : Level} → is-mono l3 f) → is-emb f
-  is-emb-is-mono is-mono-f = {!!}
+  is-emb-is-mono = {!!}
 ```
 
 We construct an explicit equivalence for postcomposition for homotopies between

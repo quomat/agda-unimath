@@ -105,11 +105,11 @@ module _
       ( powerset-Large-Poset B)
       ( powerset-Large-Poset A)
       ( pullback-subtype f)
-  preserves-order-pullback-subtype S T H x = {!!}
+  preserves-order-pullback-subtype = {!!}
 
   pullback-subtype-hom-Large-Poset :
     hom-Large-Poset (λ l → l) (powerset-Large-Poset B) (powerset-Large-Poset A)
-  map-hom-Large-Preorder pullback-subtype-hom-Large-Poset = {!!}
+  pullback-subtype-hom-Large-Poset = {!!}
 ```
 
 ## See also

@@ -187,7 +187,7 @@ module _
     {y y' : type-Large-Meet-Semilattice l2} →
     (x ＝ x') → (y ＝ y') →
     meet-Large-Meet-Semilattice x y ＝ meet-Large-Meet-Semilattice x' y'
-  ap-meet-Large-Meet-Semilattice p q = {!!}
+  ap-meet-Large-Meet-Semilattice = {!!}
 
   has-top-element-Large-Meet-Semilattice :
     has-top-element-Large-Poset (large-poset-Large-Meet-Semilattice L)
@@ -216,15 +216,15 @@ module _
 
   is-meet-semilattice-poset-Large-Meet-Semilattice :
     {l : Level} → is-meet-semilattice-Poset (poset-Large-Meet-Semilattice l)
-  pr1 (is-meet-semilattice-poset-Large-Meet-Semilattice x y) = {!!}
+  is-meet-semilattice-poset-Large-Meet-Semilattice = {!!}
   pr2 (is-meet-semilattice-poset-Large-Meet-Semilattice x y) = {!!}
 
   order-theoretic-meet-semilattice-Large-Meet-Semilattice :
     (l : Level) → Order-Theoretic-Meet-Semilattice (α l) (β l l)
-  pr1 (order-theoretic-meet-semilattice-Large-Meet-Semilattice l) = {!!}
+  order-theoretic-meet-semilattice-Large-Meet-Semilattice = {!!}
   pr2 (order-theoretic-meet-semilattice-Large-Meet-Semilattice l) = {!!}
 
   meet-semilattice-Large-Meet-Semilattice :
     (l : Level) → Meet-Semilattice (α l)
-  meet-semilattice-Large-Meet-Semilattice l = {!!}
+  meet-semilattice-Large-Meet-Semilattice = {!!}
 ```

@@ -245,10 +245,7 @@ module _
   is-congruence-congruence-Normal-Commutative-Submonoid :
     is-congruence-Commutative-Monoid M
       equivalence-relation-congruence-Normal-Commutative-Submonoid
-  pr1
-    ( is-congruence-congruence-Normal-Commutative-Submonoid
-      {x} {x'} {y} {y'} H K u)
-    ( L) = {!!}
+  is-congruence-congruence-Normal-Commutative-Submonoid = {!!}
 
   congruence-Normal-Commutative-Submonoid :
     congruence-Commutative-Monoid (l1 ⊔ l2) M
@@ -279,11 +276,10 @@ module _
   is-closed-under-multiplication-normal-submonoid-congruence-Commutative-Monoid :
     is-closed-under-multiplication-subset-Commutative-Monoid M
       subset-normal-submonoid-congruence-Commutative-Monoid
-  is-closed-under-multiplication-normal-submonoid-congruence-Commutative-Monoid
-    x y H K = {!!}
+  is-closed-under-multiplication-normal-submonoid-congruence-Commutative-Monoid = {!!}
 
   submonoid-congruence-Commutative-Monoid : Commutative-Submonoid l2 M
-  pr1 submonoid-congruence-Commutative-Monoid = {!!}
+  submonoid-congruence-Commutative-Monoid = {!!}
 
   is-normal-submonoid-congruence-Commutative-Monoid :
     is-normal-Commutative-Submonoid M submonoid-congruence-Commutative-Monoid
@@ -307,10 +303,7 @@ module _
       ( normal-submonoid-congruence-Commutative-Monoid M
         ( congruence-Normal-Commutative-Submonoid M N))
       ( N)
-  pr1
-    ( has-same-elements-normal-submonoid-congruence-Normal-Commutative-Submonoid
-      x)
-    ( H) = {!!}
+  has-same-elements-normal-submonoid-congruence-Normal-Commutative-Submonoid = {!!}
 ```
 
 ### The congruence relation of a normal submonoid is saturated
@@ -348,11 +341,7 @@ module _
       ( saturated-congruence-Normal-Commutative-Submonoid M
         ( normal-submonoid-saturated-congruence-Commutative-Monoid))
       ( R)
-  pr1
-    ( relate-same-elements-congruence-normal-submonoid-saturated-congruence-Commutative-Monoid
-      ( x)
-      ( y))
-    ( H) = {!!}
+  relate-same-elements-congruence-normal-submonoid-saturated-congruence-Commutative-Monoid = {!!}
 ```
 
 ### The type of normal submonoids of `M` is a retract of the type of congruence relations of `M`
@@ -396,7 +385,7 @@ is-equiv-normal-submonoid-saturated-congruence-Commutative-Monoid :
   {l1 : Level} (l2 : Level) (M : Commutative-Monoid l1) →
   is-equiv
     ( normal-submonoid-saturated-congruence-Commutative-Monoid {l2 = l1 ⊔ l2} M)
-is-equiv-normal-submonoid-saturated-congruence-Commutative-Monoid l2 M = {!!}
+is-equiv-normal-submonoid-saturated-congruence-Commutative-Monoid = {!!}
 
 equiv-normal-submonoid-saturated-congruence-Commutative-Monoid :
   {l1 : Level} (l2 : Level) (M : Commutative-Monoid l1) →

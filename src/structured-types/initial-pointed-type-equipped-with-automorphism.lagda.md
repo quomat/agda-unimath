@@ -49,25 +49,25 @@ pr2 ℤ-Pointed-Type-With-Aut = {!!}
 map-ℤ-Pointed-Type-With-Aut :
   {l : Level} (X : Pointed-Type-With-Aut l) →
   ℤ → type-Pointed-Type-With-Aut X
-map-ℤ-Pointed-Type-With-Aut X k = {!!}
+map-ℤ-Pointed-Type-With-Aut = {!!}
 
 preserves-point-map-ℤ-Pointed-Type-With-Aut :
   {l : Level} (X : Pointed-Type-With-Aut l) →
   ( map-ℤ-Pointed-Type-With-Aut X zero-ℤ) ＝
   ( point-Pointed-Type-With-Aut X)
-preserves-point-map-ℤ-Pointed-Type-With-Aut X = {!!}
+preserves-point-map-ℤ-Pointed-Type-With-Aut = {!!}
 
 preserves-aut-map-ℤ-Pointed-Type-With-Aut :
   {l : Level} (X : Pointed-Type-With-Aut l) (k : ℤ) →
   ( map-ℤ-Pointed-Type-With-Aut X (succ-ℤ k)) ＝
   ( map-aut-Pointed-Type-With-Aut X
     ( map-ℤ-Pointed-Type-With-Aut X k))
-preserves-aut-map-ℤ-Pointed-Type-With-Aut X k = {!!}
+preserves-aut-map-ℤ-Pointed-Type-With-Aut = {!!}
 
 hom-ℤ-Pointed-Type-With-Aut :
   {l : Level} (X : Pointed-Type-With-Aut l) →
   hom-Pointed-Type-With-Aut ℤ-Pointed-Type-With-Aut X
-hom-ℤ-Pointed-Type-With-Aut X = {!!}
+hom-ℤ-Pointed-Type-With-Aut = {!!}
 ```
 
 #### The map previously constructed is unique
@@ -78,7 +78,7 @@ htpy-map-ℤ-Pointed-Type-With-Aut :
   (h : hom-Pointed-Type-With-Aut ℤ-Pointed-Type-With-Aut X) →
   map-ℤ-Pointed-Type-With-Aut X ~
   map-hom-Pointed-Type-With-Aut ℤ-Pointed-Type-With-Aut X h
-htpy-map-ℤ-Pointed-Type-With-Aut X h (inl zero-ℕ) = {!!}
+htpy-map-ℤ-Pointed-Type-With-Aut = {!!}
 htpy-map-ℤ-Pointed-Type-With-Aut X h (inl (succ-ℕ k)) = {!!}
 htpy-map-ℤ-Pointed-Type-With-Aut X h (inr (inl star)) = {!!}
 htpy-map-ℤ-Pointed-Type-With-Aut X h (inr (inr zero-ℕ)) = {!!}
@@ -91,7 +91,7 @@ coh-point-htpy-map-ℤ-Pointed-Type-With-Aut :
   ( ( htpy-map-ℤ-Pointed-Type-With-Aut X h zero-ℤ) ∙
     ( preserves-point-map-hom-Pointed-Type-With-Aut
       ℤ-Pointed-Type-With-Aut X h))
-coh-point-htpy-map-ℤ-Pointed-Type-With-Aut X h = {!!}
+coh-point-htpy-map-ℤ-Pointed-Type-With-Aut = {!!}
 
 coh-aut-htpy-map-ℤ-Pointed-Type-With-Aut :
   {l : Level} (X : Pointed-Type-With-Aut l)
@@ -104,7 +104,7 @@ coh-aut-htpy-map-ℤ-Pointed-Type-With-Aut :
   ( ( htpy-map-ℤ-Pointed-Type-With-Aut X h (succ-ℤ k)) ∙
     ( preserves-aut-map-hom-Pointed-Type-With-Aut
       ℤ-Pointed-Type-With-Aut X h k))
-coh-aut-htpy-map-ℤ-Pointed-Type-With-Aut X h (inl zero-ℕ) = {!!}
+coh-aut-htpy-map-ℤ-Pointed-Type-With-Aut = {!!}
 coh-aut-htpy-map-ℤ-Pointed-Type-With-Aut X h (inl (succ-ℕ k)) = {!!}
 coh-aut-htpy-map-ℤ-Pointed-Type-With-Aut X h (inr (inl star)) = {!!}
 coh-aut-htpy-map-ℤ-Pointed-Type-With-Aut X h (inr (inr zero-ℕ)) = {!!}
@@ -115,10 +115,10 @@ htpy-hom-ℤ-Pointed-Type-With-Aut :
   (h : hom-Pointed-Type-With-Aut ℤ-Pointed-Type-With-Aut X) →
   htpy-hom-Pointed-Type-With-Aut ℤ-Pointed-Type-With-Aut X
     (hom-ℤ-Pointed-Type-With-Aut X) h
-htpy-hom-ℤ-Pointed-Type-With-Aut X h = {!!}
+htpy-hom-ℤ-Pointed-Type-With-Aut = {!!}
 
 is-initial-ℤ-Pointed-Type-With-Aut :
   {l : Level} (X : Pointed-Type-With-Aut l) →
   is-contr (hom-Pointed-Type-With-Aut ℤ-Pointed-Type-With-Aut X)
-is-initial-ℤ-Pointed-Type-With-Aut X = {!!}
+is-initial-ℤ-Pointed-Type-With-Aut = {!!}
 ```

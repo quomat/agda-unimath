@@ -31,7 +31,7 @@ iteratively multiplying `x` with itself `n` times.
 ```agda
 power-Semiring :
   {l : Level} (R : Semiring l) → ℕ → type-Semiring R → type-Semiring R
-power-Semiring R n x = {!!}
+power-Semiring = {!!}
 ```
 
 ## Properties

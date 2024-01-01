@@ -44,8 +44,7 @@ rings is constructed in the file
 
 ```agda
 Cyclic-Ring-Large-Precategory : Large-Precategory lsuc _⊔_
-obj-Large-Precategory
-  Cyclic-Ring-Large-Precategory = {!!}
+Cyclic-Ring-Large-Precategory = {!!}
 hom-set-Large-Precategory
   Cyclic-Ring-Large-Precategory = {!!}
 comp-hom-Large-Precategory
@@ -71,8 +70,7 @@ abstract
   is-large-category-Cyclic-Ring-Large-Category = {!!}
 
 Cyclic-Ring-Large-Category : Large-Category lsuc _⊔_
-large-precategory-Large-Category
-  Cyclic-Ring-Large-Category = {!!}
+Cyclic-Ring-Large-Category = {!!}
 is-large-category-Large-Category
   Cyclic-Ring-Large-Category = {!!}
 ```

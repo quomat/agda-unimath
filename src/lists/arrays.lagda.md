@@ -39,7 +39,7 @@ We show that arrays and lists are equivalent.
 
 ```agda
 array : {l : Level} → UU l → UU l
-array A = {!!}
+array = {!!}
 
 module _
   {l : Level} {A : UU l}
@@ -55,28 +55,28 @@ module _
   pr1 (empty-array) = {!!}
 
   is-empty-array-Prop : array A → Prop lzero
-  is-empty-array-Prop (zero-ℕ , t) = {!!}
+  is-empty-array-Prop = {!!}
 
   is-empty-array : array A → UU lzero
   is-empty-array = {!!}
 
   is-nonempty-array-Prop : array A → Prop lzero
-  is-nonempty-array-Prop (zero-ℕ , t) = {!!}
+  is-nonempty-array-Prop = {!!}
 
   is-nonempty-array : array A → UU lzero
   is-nonempty-array = {!!}
 
   head-array : (t : array A) → is-nonempty-array t → A
-  head-array (succ-ℕ n , f) _ = {!!}
+  head-array = {!!}
 
   tail-array : (t : array A) → is-nonempty-array t → array A
-  tail-array (succ-ℕ n , f) _ = {!!}
+  tail-array = {!!}
 
   cons-array : A → array A → array A
-  cons-array a t = {!!}
+  cons-array = {!!}
 
   revert-array : array A → array A
-  revert-array (n , t) = {!!}
+  revert-array = {!!}
 ```
 
 ### The definition of `fold-vec`
@@ -98,13 +98,13 @@ module _
   where
 
   list-vec : (n : ℕ) → (vec A n) → list A
-  list-vec zero-ℕ _ = {!!}
+  list-vec = {!!}
 
   vec-list : (l : list A) → vec A (length-list l)
-  vec-list nil = {!!}
+  vec-list = {!!}
 
   is-section-vec-list : (λ l → list-vec (length-list l) (vec-list l)) ~ id
-  is-section-vec-list nil = {!!}
+  is-section-vec-list = {!!}
 
   is-retraction-vec-list :
     ( λ (x : Σ ℕ (λ n → vec A n)) →
@@ -114,22 +114,22 @@ module _
   is-retraction-vec-list = {!!}
 
   list-array : array A → list A
-  list-array (n , t) = {!!}
+  list-array = {!!}
 
   array-list : list A → array A
-  array-list l = {!!}
+  array-list = {!!}
 
   is-section-array-list : (list-array ∘ array-list) ~ id
-  is-section-array-list nil = {!!}
+  is-section-array-list = {!!}
 
   is-retraction-array-list : (array-list ∘ list-array) ~ id
-  is-retraction-array-list (n , t) = {!!}
+  is-retraction-array-list = {!!}
 
   equiv-list-array : array A ≃ list A
-  pr1 equiv-list-array = {!!}
+  equiv-list-array = {!!}
 
   equiv-array-list : list A ≃ array A
-  pr1 equiv-array-list = {!!}
+  equiv-array-list = {!!}
 ```
 
 ### Computational rules of the equivalence between arrays and lists

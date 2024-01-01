@@ -157,7 +157,7 @@ module _
 
   extensionality-obj-Large-Category :
     (X ＝ Y) ≃ iso-Large-Category C X Y
-  pr1 extensionality-obj-Large-Category = {!!}
+  extensionality-obj-Large-Category = {!!}
 
 module _
   {α : Level → Level} {β : Level → Level → Level}
@@ -198,7 +198,7 @@ module _
   is-prop-is-iso-Large-Category :
     (f : hom-Large-Category C X Y) →
     is-prop (is-iso-Large-Category C f)
-  is-prop-is-iso-Large-Category f = {!!}
+  is-prop-is-iso-Large-Category = {!!}
 
   is-iso-prop-Large-Category :
     (f : hom-Large-Category C X Y) → Prop (β l1 l1 ⊔ β l2 l1 ⊔ β l2 l2)
@@ -339,7 +339,7 @@ module _
   is-iso-inv-is-iso-Large-Category :
     (p : is-iso-Large-Category C f) →
     is-iso-Large-Category C (hom-inv-iso-Large-Category C (f , p))
-  pr1 (is-iso-inv-is-iso-Large-Category p) = {!!}
+  is-iso-inv-is-iso-Large-Category = {!!}
 ```
 
 ### Inverses of isomorphisms
@@ -354,7 +354,7 @@ module _
   inv-iso-Large-Category :
     iso-Large-Category C X Y →
     iso-Large-Category C Y X
-  pr1 (inv-iso-Large-Category f) = {!!}
+  inv-iso-Large-Category = {!!}
 ```
 
 ### Composition of isomorphisms satisfies the unit laws

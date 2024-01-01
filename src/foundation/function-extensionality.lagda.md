@@ -42,7 +42,7 @@ module _
   where
 
   htpy-eq : {f g : (x : A) → B x} → f ＝ g → f ~ g
-  htpy-eq refl = {!!}
+  htpy-eq = {!!}
 ```
 
 ### An instance of function extensionality
@@ -61,7 +61,7 @@ module _
   where
 
   instance-function-extensionality : (f g : (x : A) → B x) → UU (l1 ⊔ l2)
-  instance-function-extensionality f g = {!!}
+  instance-function-extensionality = {!!}
 ```
 
 ### Based function extensionality
@@ -80,14 +80,14 @@ module _
   where
 
   based-function-extensionality : (f : (x : A) → B x) → UU (l1 ⊔ l2)
-  based-function-extensionality f = {!!}
+  based-function-extensionality = {!!}
 ```
 
 ### The function extensionality principle with respect to a universe level
 
 ```agda
 function-extensionality-Level : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-function-extensionality-Level l1 l2 = {!!}
+function-extensionality-Level = {!!}
 ```
 
 ### The function extensionality axiom
@@ -107,27 +107,27 @@ module _
   pr1 (equiv-funext) = {!!}
 
   eq-htpy : {f g : (x : A) → B x} → (f ~ g) → f ＝ g
-  eq-htpy {f} {g} = {!!}
+  eq-htpy = {!!}
 
   abstract
     is-section-eq-htpy :
       {f g : (x : A) → B x} → (htpy-eq ∘ eq-htpy {f} {g}) ~ id
-    is-section-eq-htpy {f} {g} = {!!}
+    is-section-eq-htpy = {!!}
 
     is-retraction-eq-htpy :
       {f g : (x : A) → B x} → (eq-htpy ∘ htpy-eq {f = f} {g = g}) ~ id
-    is-retraction-eq-htpy {f} {g} = {!!}
+    is-retraction-eq-htpy = {!!}
 
     is-equiv-eq-htpy :
       (f g : (x : A) → B x) → is-equiv (eq-htpy {f} {g})
-    is-equiv-eq-htpy f g = {!!}
+    is-equiv-eq-htpy = {!!}
 
     eq-htpy-refl-htpy :
       (f : (x : A) → B x) → eq-htpy (refl-htpy {f = f}) ＝ refl
-    eq-htpy-refl-htpy f = {!!}
+    eq-htpy-refl-htpy = {!!}
 
     equiv-eq-htpy : {f g : (x : A) → B x} → (f ~ g) ≃ (f ＝ g)
-    pr1 (equiv-eq-htpy {f} {g}) = {!!}
+    equiv-eq-htpy = {!!}
 ```
 
 ### Function extensionality for implicit functions
@@ -178,7 +178,7 @@ coherence-square-ap-precomp-Π :
     ( htpy-eq)
     ( htpy-eq)
     ( precomp-Π f (eq-value g h))
-coherence-square-ap-precomp-Π f g .g refl = {!!}
+coherence-square-ap-precomp-Π = {!!}
 ```
 
 ### Naturality of `htpy-eq` for ordinary functions
@@ -206,7 +206,7 @@ square-htpy-eq :
     ( htpy-eq)
     ( htpy-eq)
     ( precomp-Π f (eq-value g h))
-square-htpy-eq f g .g refl = {!!}
+square-htpy-eq = {!!}
 ```
 
 ### Computing the action on paths of an evaluation map
@@ -215,7 +215,7 @@ square-htpy-eq f g .g refl = {!!}
 ap-ev :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (a : A) → {f g : A → B} →
   (p : f ＝ g) → (ap (λ h → h a) p) ＝ htpy-eq p a
-ap-ev a refl = {!!}
+ap-ev = {!!}
 ```
 
 ### `htpy-eq` preserves concatenation of identifications
@@ -227,7 +227,7 @@ module _
 
   htpy-eq-concat :
     (p : f ＝ g) (q : g ＝ h) → htpy-eq (p ∙ q) ＝ (htpy-eq p ∙h htpy-eq q)
-  htpy-eq-concat refl refl = {!!}
+  htpy-eq-concat = {!!}
 ```
 
 ### `eq-htpy` preserves concatenation of homotopies
@@ -239,7 +239,7 @@ module _
 
   eq-htpy-concat-htpy :
     (H : f ~ g) (K : g ~ h) → eq-htpy (H ∙h K) ＝ ((eq-htpy H) ∙ (eq-htpy K))
-  eq-htpy-concat-htpy H K = {!!}
+  eq-htpy-concat-htpy = {!!}
 ```
 
 ## See also

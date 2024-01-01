@@ -49,7 +49,7 @@ postulate
     {l : Level} {k : 𝕋} {A : UU l} → is-trunc k (type-trunc k A)
 
 trunc : {l : Level} (k : 𝕋) → UU l → Truncated-Type l k
-pr1 (trunc k A) = {!!}
+trunc = {!!}
 pr2 (trunc k A) = {!!}
 
 postulate
@@ -63,7 +63,7 @@ postulate
 equiv-universal-property-trunc :
   {l1 l2 : Level} {k : 𝕋} (A : UU l1) (B : Truncated-Type l2 k) →
   (type-trunc k A → type-Truncated-Type B) ≃ (A → type-Truncated-Type B)
-pr1 (equiv-universal-property-trunc A B) = {!!}
+equiv-universal-property-trunc = {!!}
 pr2 (equiv-universal-property-trunc A B) = {!!}
 ```
 
@@ -75,7 +75,7 @@ pr2 (equiv-universal-property-trunc A B) = {!!}
 universal-property-trunc :
   {l1 : Level} (k : 𝕋) (A : UU l1) →
   universal-property-truncation (trunc k A) unit-trunc
-universal-property-trunc k A = {!!}
+universal-property-trunc = {!!}
 
 module _
   {l1 l2 : Level} {k : 𝕋} {A : UU l1}
@@ -85,17 +85,17 @@ module _
     (B : Truncated-Type l2 k) (f : A → type-Truncated-Type B) →
     Σ ( type-trunc k A → type-Truncated-Type B)
       ( λ h → h ∘ unit-trunc ~ f)
-  apply-universal-property-trunc B f = {!!}
+  apply-universal-property-trunc = {!!}
 
   map-universal-property-trunc :
     (B : Truncated-Type l2 k) → (A → type-Truncated-Type B) →
     type-trunc k A → type-Truncated-Type B
-  map-universal-property-trunc B f = {!!}
+  map-universal-property-trunc = {!!}
 
   triangle-universal-property-trunc :
     (B : Truncated-Type l2 k) (f : A → type-Truncated-Type B) →
     map-universal-property-trunc B f ∘ unit-trunc ~ f
-  triangle-universal-property-trunc B f = {!!}
+  triangle-universal-property-trunc = {!!}
 ```
 
 ### The `n`-truncations satisfy the dependent universal property of `n`-truncations
@@ -113,7 +113,7 @@ module _
     {l2 : Level} (B : type-trunc k A → Truncated-Type l2 k) →
     ((x : type-trunc k A) → type-Truncated-Type (B x)) ≃
     ((a : A) → type-Truncated-Type (B (unit-trunc a)))
-  pr1 (equiv-dependent-universal-property-trunc B) = {!!}
+  equiv-dependent-universal-property-trunc = {!!}
 
   unique-dependent-function-trunc :
     {l2 : Level} (B : type-trunc k A → Truncated-Type l2 k)
@@ -121,26 +121,26 @@ module _
     is-contr
       ( Σ ( (x : type-trunc k A) → type-Truncated-Type (B x))
           ( λ h → (h ∘ unit-trunc) ~ f))
-  unique-dependent-function-trunc B f = {!!}
+  unique-dependent-function-trunc = {!!}
 
   apply-dependent-universal-property-trunc :
     {l2 : Level} (B : type-trunc k A → Truncated-Type l2 k) →
     (f : (x : A) → type-Truncated-Type (B (unit-trunc x))) →
     Σ ( (x : type-trunc k A) → type-Truncated-Type (B x))
       ( λ h → (h ∘ unit-trunc) ~ f)
-  apply-dependent-universal-property-trunc B f = {!!}
+  apply-dependent-universal-property-trunc = {!!}
 
   function-dependent-universal-property-trunc :
     {l2 : Level} (B : type-trunc k A → Truncated-Type l2 k) →
     (f : (x : A) → type-Truncated-Type (B (unit-trunc x))) →
     (x : type-trunc k A) → type-Truncated-Type (B x)
-  function-dependent-universal-property-trunc B f = {!!}
+  function-dependent-universal-property-trunc = {!!}
 
   htpy-dependent-universal-property-trunc :
     {l2 : Level} (B : type-trunc k A → Truncated-Type l2 k) →
     (f : (x : A) → type-Truncated-Type (B (unit-trunc x))) →
     ( function-dependent-universal-property-trunc B f ∘ unit-trunc) ~ f
-  htpy-dependent-universal-property-trunc B f = {!!}
+  htpy-dependent-universal-property-trunc = {!!}
 ```
 
 ### Families of `k`-truncated-types over `k+1`-truncations of types
@@ -152,7 +152,7 @@ unique-truncated-fam-trunc :
   is-contr
     ( Σ ( type-trunc (succ-𝕋 k) A → Truncated-Type l2 k)
         ( λ C → (x : A) → type-equiv-Truncated-Type (B x) (C (unit-trunc x))))
-unique-truncated-fam-trunc {l1} {l2} {k} {A} B = {!!}
+unique-truncated-fam-trunc = {!!}
 
 module _
   {l1 l2 : Level} {k : 𝕋} {A : UU l1} (B : A → Truncated-Type l2 k)
@@ -171,7 +171,7 @@ module _
 
   map-compute-truncated-fam-trunc :
     (x : A) → type-Truncated-Type (B x) → (fam-trunc (unit-trunc x))
-  map-compute-truncated-fam-trunc x = {!!}
+  map-compute-truncated-fam-trunc = {!!}
 
   total-truncated-fam-trunc : UU (l1 ⊔ l2)
   total-truncated-fam-trunc = {!!}
@@ -233,7 +233,7 @@ module _
 
   equiv-unit-trunc :
     type-Truncated-Type A ≃ type-trunc k (type-Truncated-Type A)
-  pr1 equiv-unit-trunc = {!!}
+  equiv-unit-trunc = {!!}
 ```
 
 ### A contractible type is equivalent to its `k`-truncation
@@ -244,7 +244,7 @@ module _
   where
 
   is-equiv-unit-trunc-is-contr : is-contr A → is-equiv unit-trunc
-  is-equiv-unit-trunc-is-contr c = {!!}
+  is-equiv-unit-trunc-is-contr = {!!}
 ```
 
 ### Truncation is idempotent
@@ -269,14 +269,14 @@ module _
   Eq-trunc-Truncated-Type = {!!}
 
   Eq-trunc : type-trunc (succ-𝕋 k) A → UU l
-  Eq-trunc x = {!!}
+  Eq-trunc = {!!}
 
   compute-Eq-trunc : (x : A) → type-trunc k (a ＝ x) ≃ Eq-trunc (unit-trunc x)
   compute-Eq-trunc = {!!}
 
   map-compute-Eq-trunc :
     (x : A) → type-trunc k (a ＝ x) → Eq-trunc (unit-trunc x)
-  map-compute-Eq-trunc x = {!!}
+  map-compute-Eq-trunc = {!!}
 
   refl-Eq-trunc : Eq-trunc (unit-trunc a)
   refl-Eq-trunc = {!!}
@@ -289,7 +289,7 @@ module _
   pr1 (pr1 is-torsorial-Eq-trunc) = {!!}
 
   Eq-eq-trunc : (x : type-trunc (succ-𝕋 k) A) → (unit-trunc a ＝ x) → Eq-trunc x
-  Eq-eq-trunc .(unit-trunc a) refl = {!!}
+  Eq-eq-trunc = {!!}
 
   is-equiv-Eq-eq-trunc :
     (x : type-trunc (succ-𝕋 k) A) → is-equiv (Eq-eq-trunc x)
@@ -297,17 +297,17 @@ module _
 
   extensionality-trunc :
     (x : type-trunc (succ-𝕋 k) A) → (unit-trunc a ＝ x) ≃ Eq-trunc x
-  pr1 (extensionality-trunc x) = {!!}
+  extensionality-trunc = {!!}
 
   effectiveness-trunc :
     (x : A) →
     type-trunc k (a ＝ x) ≃ (unit-trunc {k = succ-𝕋 k} a ＝ unit-trunc x)
-  effectiveness-trunc x = {!!}
+  effectiveness-trunc = {!!}
 
   map-effectiveness-trunc :
     (x : A) →
     type-trunc k (a ＝ x) → (unit-trunc {k = succ-𝕋 k} a ＝ unit-trunc x)
-  map-effectiveness-trunc x = {!!}
+  map-effectiveness-trunc = {!!}
 
   refl-effectiveness-trunc :
     map-effectiveness-trunc a (unit-trunc refl) ＝ refl
@@ -339,9 +339,9 @@ module _
 
   equiv-trunc-Σ :
       type-trunc k (Σ A B) ≃ type-trunc k (Σ A (λ x → type-trunc k (B x)))
-  pr1 equiv-trunc-Σ = {!!}
+  equiv-trunc-Σ = {!!}
 
   inv-equiv-trunc-Σ :
     type-trunc k (Σ A (λ x → type-trunc k (B x))) ≃ type-trunc k (Σ A B)
-  pr1 inv-equiv-trunc-Σ = {!!}
+  inv-equiv-trunc-Σ = {!!}
 ```

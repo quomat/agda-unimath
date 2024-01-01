@@ -52,14 +52,14 @@ module _
   where
 
   is-epimorphism-Level : (l : Level) → (A → B) → UU (l1 ⊔ l2 ⊔ lsuc l)
-  is-epimorphism-Level l f = {!!}
+  is-epimorphism-Level = {!!}
 ```
 
 ### Epimorphisms
 
 ```agda
   is-epimorphism : (A → B) → UUω
-  is-epimorphism f = {!!}
+  is-epimorphism = {!!}
 ```
 
 ## Properties

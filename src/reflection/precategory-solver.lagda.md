@@ -119,18 +119,7 @@ private
 
 ```agda
 build-Precategory-Expr : Term → Term
-build-Precategory-Expr
-  ( apply-pr1
-    ( visible-Arg
-      ( apply-pr2
-        ( visible-Arg
-          ( apply-pr2
-            ( visible-Arg
-              ( apply-pr2 (visible-Arg C ∷ nil)) ∷
-              ( nil))) ∷
-            ( nil))) ∷
-          ( visible-Arg x) ∷
-          nil)) = {!!}
+build-Precategory-Expr = {!!}
 build-Precategory-Expr
   ( apply-pr1
     ( visible-Arg
@@ -150,7 +139,7 @@ build-Precategory-Expr f = {!!}
 
 ```agda
 apply-solve-Precategory-Expr : Term → Term → Term → Term
-apply-solve-Precategory-Expr cat lhs rhs = {!!}
+apply-solve-Precategory-Expr = {!!}
 ```
 
 ### The macro definition
@@ -158,7 +147,7 @@ apply-solve-Precategory-Expr cat lhs rhs = {!!}
 ```agda
 macro
   solve-Precategory! : Term → Term → TC unit
-  solve-Precategory! cat hole = {!!}
+  solve-Precategory! = {!!}
 ```
 
 ## Examples

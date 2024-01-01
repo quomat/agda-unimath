@@ -133,7 +133,7 @@ module _
     (n : ℕ) {x y : type-Ab A} →
     multiple-Ab A n (add-Ab A x y) ＝
     add-Ab A (multiple-Ab A n x) (multiple-Ab A n y)
-  left-distributive-multiple-add-Ab n = {!!}
+  left-distributive-multiple-add-Ab = {!!}
 ```
 
 ### Multiples by products of natural numbers are iterated multiples

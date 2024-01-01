@@ -99,7 +99,7 @@ module _
     is-closed-under-multiplication-image-hom-Semigroup = {!!}
 
   image-hom-Semigroup : Subsemigroup (l1 ⊔ l2) H
-  pr1 image-hom-Semigroup = {!!}
+  image-hom-Semigroup = {!!}
 
   is-image-image-hom-Semigroup :
     is-image-hom-Semigroup G H f image-hom-Semigroup
@@ -136,7 +136,7 @@ module _
     is-closed-under-multiplication-im-hom-Subsemigroup = {!!}
 
   im-hom-Subsemigroup : Subsemigroup (l1 ⊔ l2 ⊔ l3) H
-  pr1 im-hom-Subsemigroup = {!!}
+  im-hom-Subsemigroup = {!!}
   pr2 im-hom-Subsemigroup = {!!}
 
   forward-implication-is-image-subsemigroup-im-hom-Subsemigroup :

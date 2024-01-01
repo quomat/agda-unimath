@@ -33,10 +33,10 @@ analogue of [monoids](group-theory.monoids.md). We define it as a
 
 ```agda
 is-concrete-monoid-Category : {l1 l2 : Level} → Category l1 l2 → UU l1
-is-concrete-monoid-Category C = {!!}
+is-concrete-monoid-Category = {!!}
 
 Concrete-Monoid : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Concrete-Monoid l1 l2 = {!!}
+Concrete-Monoid = {!!}
 
 module _
   {l1 l2 : Level} (M : Concrete-Monoid l1 l2)

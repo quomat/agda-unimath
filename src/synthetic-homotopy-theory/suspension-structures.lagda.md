@@ -92,10 +92,10 @@ module _
   where
 
   north-suspension-structure : suspension-structure X Y → Y
-  north-suspension-structure c = {!!}
+  north-suspension-structure = {!!}
 
   south-suspension-structure : suspension-structure X Y → Y
-  south-suspension-structure c = {!!}
+  south-suspension-structure = {!!}
 
   meridian-suspension-structure :
     (c : suspension-structure X Y) →
@@ -191,7 +191,7 @@ module _
   where
 
   refl-htpy-suspension-structure : htpy-suspension-structure c c
-  pr1 refl-htpy-suspension-structure = {!!}
+  refl-htpy-suspension-structure = {!!}
 
   is-refl-refl-htpy-suspension-structure :
     refl-htpy-suspension-structure ＝ htpy-eq-suspension-structure refl

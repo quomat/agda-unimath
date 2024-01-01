@@ -30,7 +30,7 @@ module _
   where
 
   is-in-interval-Poset : (z : type-Poset X) → Prop l2
-  is-in-interval-Poset z = {!!}
+  is-in-interval-Poset = {!!}
 
   poset-interval-Subposet : Poset (l1 ⊔ l2) l2
   poset-interval-Subposet = {!!}

@@ -115,7 +115,7 @@ module _
   where
 
   retract-map : (g : X → Y) (f : A → B) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  retract-map g f = {!!}
+  retract-map = {!!}
 ```
 
 ### The higher coherence in the definition of retracts of maps
@@ -211,7 +211,7 @@ module _
   is-retraction-map-codomain-hom-retraction-retract-map = {!!}
 
   retract-codomain-retract-map : B retract-of Y
-  pr1 retract-codomain-retract-map = {!!}
+  retract-codomain-retract-map = {!!}
 
   coh-retract-map :
     coherence-retract-map f g
@@ -342,7 +342,7 @@ module _
   where
 
   is-equiv-retract-map-is-equiv' : is-equiv f
-  pr1 is-equiv-retract-map-is-equiv' = {!!}
+  is-equiv-retract-map-is-equiv' = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} {Y : UU l4}
@@ -356,7 +356,7 @@ module _
   retraction-retract-map-is-equiv = {!!}
 
   is-equiv-retract-map-is-equiv : is-equiv f
-  pr1 is-equiv-retract-map-is-equiv = {!!}
+  is-equiv-retract-map-is-equiv = {!!}
 ```
 
 ### If `f` is a retract of `g`, then the fiber inclusions of `f` are retracts of the fiber inclusions of `g`

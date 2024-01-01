@@ -53,19 +53,19 @@ module _
   associative-mul-Π-Monoid = {!!}
 
   unit-Π-Monoid : type-Π-Monoid
-  unit-Π-Monoid i = {!!}
+  unit-Π-Monoid = {!!}
 
   left-unit-law-mul-Π-Monoid :
     (f : type-Π-Monoid) → mul-Π-Monoid unit-Π-Monoid f ＝ f
-  left-unit-law-mul-Π-Monoid f = {!!}
+  left-unit-law-mul-Π-Monoid = {!!}
 
   right-unit-law-mul-Π-Monoid :
     (f : type-Π-Monoid) → mul-Π-Monoid f unit-Π-Monoid ＝ f
-  right-unit-law-mul-Π-Monoid f = {!!}
+  right-unit-law-mul-Π-Monoid = {!!}
 
   is-unital-Π-Monoid : is-unital-Semigroup semigroup-Π-Monoid
-  pr1 is-unital-Π-Monoid = {!!}
+  is-unital-Π-Monoid = {!!}
 
   Π-Monoid : Monoid (l1 ⊔ l2)
-  pr1 Π-Monoid = {!!}
+  Π-Monoid = {!!}
 ```

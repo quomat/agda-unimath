@@ -87,5 +87,5 @@ module _
   commutative-add-prod-Ab = {!!}
 
   prod-Ab : Ab (l1 ⊔ l2)
-  pr1 prod-Ab = {!!}
+  prod-Ab = {!!}
 ```

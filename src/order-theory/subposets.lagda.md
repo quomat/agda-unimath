@@ -58,13 +58,13 @@ module _
   transitive-leq-Subposet = {!!}
 
   antisymmetric-leq-Subposet : is-antisymmetric leq-Subposet
-  antisymmetric-leq-Subposet x y H K = {!!}
+  antisymmetric-leq-Subposet = {!!}
 
   preorder-Subposet : Preorder (l1 ⊔ l3) l2
-  pr1 preorder-Subposet = {!!}
+  preorder-Subposet = {!!}
 
   poset-Subposet : Poset (l1 ⊔ l3) l2
-  pr1 poset-Subposet = {!!}
+  poset-Subposet = {!!}
 ```
 
 ### Inclusion of sub-posets
@@ -103,5 +103,5 @@ module _
   transitive-inclusion-Subposet = {!!}
 
   sub-poset-Preorder : (l : Level) → Preorder (l1 ⊔ lsuc l) (l1 ⊔ l)
-  pr1 (sub-poset-Preorder l) = {!!}
+  sub-poset-Preorder = {!!}
 ```

@@ -37,7 +37,7 @@ module _
   where
 
   precomp-Π : ((b : B) → C b) → ((a : A) → C (f a))
-  precomp-Π h a = {!!}
+  precomp-Π = {!!}
 ```
 
 ## Properties

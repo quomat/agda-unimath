@@ -59,7 +59,7 @@ module _
   where
 
   ind-bool : P true → P false → (b : bool) → P b
-  ind-bool pt pf true = {!!}
+  ind-bool = {!!}
 ```
 
 ### The `if_then_else` function
@@ -77,23 +77,23 @@ module _
 
 ```agda
 raise-bool : (l : Level) → UU l
-raise-bool l = {!!}
+raise-bool = {!!}
 
 raise-true : (l : Level) → raise-bool l
-raise-true l = {!!}
+raise-true = {!!}
 
 raise-false : (l : Level) → raise-bool l
-raise-false l = {!!}
+raise-false = {!!}
 
 compute-raise-bool : (l : Level) → bool ≃ raise-bool l
-compute-raise-bool l = {!!}
+compute-raise-bool = {!!}
 ```
 
 ### The standard propositions associated to the constructors of bool
 
 ```agda
 prop-bool : bool → Prop lzero
-prop-bool true = {!!}
+prop-bool = {!!}
 prop-bool false = {!!}
 
 type-prop-bool : bool → UU lzero
@@ -104,13 +104,13 @@ type-prop-bool = {!!}
 
 ```agda
 Eq-bool : bool → bool → UU lzero
-Eq-bool true true = {!!}
+Eq-bool = {!!}
 Eq-bool true false = {!!}
 Eq-bool false true = {!!}
 Eq-bool false false = {!!}
 
 refl-Eq-bool : (x : bool) → Eq-bool x x
-refl-Eq-bool true = {!!}
+refl-Eq-bool = {!!}
 refl-Eq-bool false = {!!}
 
 Eq-eq-bool :
@@ -127,19 +127,19 @@ neq-false-true-bool = {!!}
 neg-bool false = {!!}
 
 conjunction-bool : bool → bool → bool
-conjunction-bool true true = {!!}
+conjunction-bool = {!!}
 conjunction-bool true false = {!!}
 conjunction-bool false true = {!!}
 conjunction-bool false false = {!!}
 
 disjunction-bool : bool → bool → bool
-disjunction-bool true true = {!!}
+disjunction-bool = {!!}
 disjunction-bool true false = {!!}
 disjunction-bool false true = {!!}
 disjunction-bool false false = {!!}
 
 implication-bool : bool → bool → bool
-implication-bool true true = {!!}
+implication-bool = {!!}
 implication-bool true false = {!!}
 implication-bool false true = {!!}
 implication-bool false false = {!!}
@@ -152,14 +152,14 @@ implication-bool false false = {!!}
 ```agda
 abstract
   is-prop-Eq-bool : (x y : bool) → is-prop (Eq-bool x y)
-  is-prop-Eq-bool true true = {!!}
+  is-prop-Eq-bool = {!!}
 
 abstract
   is-set-bool : is-set bool
   is-set-bool = {!!}
 
 bool-Set : Set lzero
-pr1 bool-Set = {!!}
+bool-Set = {!!}
 pr2 bool-Set = {!!}
 ```
 
@@ -167,23 +167,23 @@ pr2 bool-Set = {!!}
 
 ```agda
 bool-Fin-two-ℕ : Fin 2 → bool
-bool-Fin-two-ℕ (inl (inr star)) = {!!}
+bool-Fin-two-ℕ = {!!}
 bool-Fin-two-ℕ (inr star) = {!!}
 
 Fin-two-ℕ-bool : bool → Fin 2
-Fin-two-ℕ-bool true = {!!}
+Fin-two-ℕ-bool = {!!}
 Fin-two-ℕ-bool false = {!!}
 
 abstract
   is-retraction-Fin-two-ℕ-bool : (Fin-two-ℕ-bool ∘ bool-Fin-two-ℕ) ~ id
-  is-retraction-Fin-two-ℕ-bool (inl (inr star)) = {!!}
+  is-retraction-Fin-two-ℕ-bool = {!!}
 
 abstract
   is-section-Fin-two-ℕ-bool : (bool-Fin-two-ℕ ∘ Fin-two-ℕ-bool) ~ id
-  is-section-Fin-two-ℕ-bool true = {!!}
+  is-section-Fin-two-ℕ-bool = {!!}
 
 equiv-bool-Fin-two-ℕ : Fin 2 ≃ bool
-pr1 equiv-bool-Fin-two-ℕ = {!!}
+equiv-bool-Fin-two-ℕ = {!!}
 pr2 equiv-bool-Fin-two-ℕ = {!!}
 ```
 
@@ -194,7 +194,7 @@ is-finite-bool : is-finite bool
 is-finite-bool = {!!}
 
 bool-𝔽 : 𝔽 lzero
-pr1 bool-𝔽 = {!!}
+bool-𝔽 = {!!}
 pr2 bool-𝔽 = {!!}
 ```
 
@@ -210,7 +210,7 @@ neq-neg-bool false ()
 
 ```agda
 neg-neg-bool : (neg-bool ∘ neg-bool) ~ id
-neg-neg-bool true = {!!}
+neg-neg-bool = {!!}
 neg-neg-bool false = {!!}
 ```
 
@@ -222,7 +222,7 @@ abstract
   pr1 (pr1 is-equiv-neg-bool) = {!!}
 
 equiv-neg-bool : bool ≃ bool
-pr1 equiv-neg-bool = {!!}
+equiv-neg-bool = {!!}
 pr2 equiv-neg-bool = {!!}
 ```
 
@@ -240,9 +240,9 @@ abstract
 ```agda
 abstract
   is-injective-const-true : is-injective (const unit bool true)
-  is-injective-const-true {star} {star} p = {!!}
+  is-injective-const-true = {!!}
 
 abstract
   is-injective-const-false : is-injective (const unit bool false)
-  is-injective-const-false {star} {star} p = {!!}
+  is-injective-const-false = {!!}
 ```

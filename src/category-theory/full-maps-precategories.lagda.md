@@ -46,7 +46,7 @@ module _
   is-prop-is-full-map-Precategory = {!!}
 
   is-full-prop-map-Precategory : Prop (l1 ⊔ l2 ⊔ l4)
-  pr1 is-full-prop-map-Precategory = {!!}
+  is-full-prop-map-Precategory = {!!}
 ```
 
 ### The type of full maps between two precategories

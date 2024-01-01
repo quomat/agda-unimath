@@ -82,7 +82,7 @@ module _
   is-equiv-id-Set-Magmoid = {!!}
 
   id-structure-equiv-Set-Magmoid : structure-equiv-Set-Magmoid A A
-  pr1 id-structure-equiv-Set-Magmoid = {!!}
+  id-structure-equiv-Set-Magmoid = {!!}
 ```
 
 ## Properties

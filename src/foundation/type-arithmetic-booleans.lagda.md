@@ -34,10 +34,10 @@ module _
   where
 
   map-Σ-bool-coprod : Σ bool A → A true + A false
-  map-Σ-bool-coprod (pair true a) = {!!}
+  map-Σ-bool-coprod = {!!}
 
   map-inv-Σ-bool-coprod : A true + A false → Σ bool A
-  map-inv-Σ-bool-coprod (inl a) = {!!}
+  map-inv-Σ-bool-coprod = {!!}
 
   is-section-map-inv-Σ-bool-coprod :
     ( map-Σ-bool-coprod ∘ map-inv-Σ-bool-coprod) ~ id
@@ -51,11 +51,11 @@ module _
   is-equiv-map-Σ-bool-coprod = {!!}
 
   equiv-Σ-bool-coprod : Σ bool A ≃ (A true + A false)
-  pr1 equiv-Σ-bool-coprod = {!!}
+  equiv-Σ-bool-coprod = {!!}
 
   is-equiv-map-inv-Σ-bool-coprod : is-equiv map-inv-Σ-bool-coprod
   is-equiv-map-inv-Σ-bool-coprod = {!!}
 
   inv-equiv-Σ-bool-coprod : (A true + A false) ≃ Σ bool A
-  pr1 inv-equiv-Σ-bool-coprod = {!!}
+  inv-equiv-Σ-bool-coprod = {!!}
 ```

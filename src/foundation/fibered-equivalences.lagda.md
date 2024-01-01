@@ -53,16 +53,16 @@ module _
   where
 
   equiv-over : (X → Y) → UU (l1 ⊔ l2 ⊔ l4)
-  equiv-over i = {!!}
+  equiv-over = {!!}
 
   fibered-equiv : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
   fibered-equiv = {!!}
 
   fiberwise-equiv-over : (X → Y) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  fiberwise-equiv-over i = {!!}
+  fiberwise-equiv-over = {!!}
 
   fam-equiv-over : (X → Y) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  fam-equiv-over i = {!!}
+  fam-equiv-over = {!!}
 ```
 
 ## Properties
@@ -131,17 +131,15 @@ module _
   where
 
   is-fibered-equiv-fibered-map : fibered-map f g → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-fibered-equiv-fibered-map (i , h , H) = {!!}
+  is-fibered-equiv-fibered-map = {!!}
 
   map-Σ-is-fibered-equiv-fibered-map-fibered-equiv :
     (fibered-equiv f g) → Σ (fibered-map f g) (is-fibered-equiv-fibered-map)
-  pr1 (pr1 (map-Σ-is-fibered-equiv-fibered-map-fibered-equiv
-    ((i , is-equiv-i) , (h , is-equiv-h) , H))) = {!!}
+  map-Σ-is-fibered-equiv-fibered-map-fibered-equiv = {!!}
 
   map-fibered-equiv-Σ-is-fibered-equiv-fibered-map :
     (Σ (fibered-map f g) (is-fibered-equiv-fibered-map)) → (fibered-equiv f g)
-  pr1 (pr1 (map-fibered-equiv-Σ-is-fibered-equiv-fibered-map
-    ((i , h , H) , is-equiv-i , is-equiv-h))) = {!!}
+  map-fibered-equiv-Σ-is-fibered-equiv-fibered-map = {!!}
 
   is-equiv-map-Σ-is-fibered-equiv-fibered-map-fibered-equiv :
     is-equiv (map-Σ-is-fibered-equiv-fibered-map-fibered-equiv)
@@ -299,11 +297,11 @@ module _
   where
 
   self-fibered-equiv : A ≃ B → fibered-equiv id id
-  pr1 (self-fibered-equiv e) = {!!}
+  self-fibered-equiv = {!!}
 
   id-fibered-equiv : (f : A → B) → fibered-equiv f f
-  pr1 (id-fibered-equiv f) = {!!}
+  id-fibered-equiv = {!!}
 
   id-fibered-equiv-htpy : (f g : A → B) → f ~ g → fibered-equiv f g
-  pr1 (id-fibered-equiv-htpy f g H) = {!!}
+  id-fibered-equiv-htpy = {!!}
 ```

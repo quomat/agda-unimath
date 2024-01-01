@@ -23,7 +23,7 @@ A **pointed type** is a type `A` equipped with an element `a : A`.
 
 ```agda
 Pointed-Type : (l : Level) → UU (lsuc l)
-Pointed-Type l = {!!}
+Pointed-Type = {!!}
 
 module _
   {l : Level} (A : Pointed-Type l)

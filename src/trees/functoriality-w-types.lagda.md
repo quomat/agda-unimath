@@ -44,13 +44,13 @@ map-𝕎' :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : A → UU l2} {C : UU l3} (D : C → UU l4)
   (f : A → C) (g : (x : A) → D (f x) → B x) →
   𝕎 A B → 𝕎 C D
-map-𝕎' D f g (tree-𝕎 a α) = {!!}
+map-𝕎' = {!!}
 
 map-𝕎 :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : A → UU l2} {C : UU l3} (D : C → UU l4)
   (f : A → C) (e : (x : A) → B x ≃ D (f x)) →
   𝕎 A B → 𝕎 C D
-map-𝕎 D f e = {!!}
+map-𝕎 = {!!}
 ```
 
 ## Properties
@@ -62,14 +62,14 @@ fiber-map-𝕎 :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : A → UU l2} {C : UU l3} (D : C → UU l4)
   (f : A → C) (e : (x : A) → B x ≃ D (f x)) →
   𝕎 C D → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-fiber-map-𝕎 D f e (tree-𝕎 c γ) = {!!}
+fiber-map-𝕎 = {!!}
 
 abstract
   equiv-fiber-map-𝕎 :
     {l1 l2 l3 l4 : Level} {A : UU l1} {B : A → UU l2} {C : UU l3}
     (D : C → UU l4) (f : A → C) (e : (x : A) → B x ≃ D (f x)) →
     (y : 𝕎 C D) → fiber (map-𝕎 D f e) y ≃ fiber-map-𝕎 D f e y
-  equiv-fiber-map-𝕎 {A = A} {B} {C} D f e (tree-𝕎 c γ) = {!!}
+  equiv-fiber-map-𝕎 = {!!}
 ```
 
 ### For any family of equivalences `e` over `f`, if `f` is truncated then `map-𝕎 f e` is truncated
@@ -80,7 +80,7 @@ is-trunc-map-map-𝕎 :
   {A : UU l1} {B : A → UU l2} {C : UU l3} (D : C → UU l4)
   (f : A → C) (e : (x : A) → B x ≃ D (f x)) →
   is-trunc-map k f → is-trunc-map k (map-𝕎 D f e)
-is-trunc-map-map-𝕎 k D f e H (tree-𝕎 c γ) = {!!}
+is-trunc-map-map-𝕎 = {!!}
 ```
 
 ### For any family of equivalences `e` over `f`, if `f` is an equivalence then `map-𝕎 f e` is an equivalence
@@ -90,13 +90,13 @@ is-equiv-map-𝕎 :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : A → UU l2} {C : UU l3} (D : C → UU l4)
   (f : A → C) (e : (x : A) → B x ≃ D (f x)) →
   is-equiv f → is-equiv (map-𝕎 D f e)
-is-equiv-map-𝕎 D f e H = {!!}
+is-equiv-map-𝕎 = {!!}
 
 equiv-𝕎 :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : A → UU l2} {C : UU l3} (D : C → UU l4)
   (f : A ≃ C) (e : (x : A) → B x ≃ D (map-equiv f x)) →
   𝕎 A B ≃ 𝕎 C D
-equiv-𝕎 D f e = {!!}
+equiv-𝕎 = {!!}
 ```
 
 ### For any family of equivalences `e` over `f`, if `f` is an embedding, then `map-𝕎 f e` is an embedding
@@ -106,10 +106,10 @@ is-emb-map-𝕎 :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : A → UU l2} {C : UU l3} (D : C → UU l4)
   (f : A → C) (e : (x : A) → B x ≃ D (f x)) →
   is-emb f → is-emb (map-𝕎 D f e)
-is-emb-map-𝕎 D f e H = {!!}
+is-emb-map-𝕎 = {!!}
 
 emb-𝕎 :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : A → UU l2} {C : UU l3} (D : C → UU l4)
   (f : A ↪ C) (e : (x : A) → B x ≃ D (map-emb f x)) → 𝕎 A B ↪ 𝕎 C D
-emb-𝕎 D f e = {!!}
+emb-𝕎 = {!!}
 ```

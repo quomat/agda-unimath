@@ -42,10 +42,10 @@ module _
   where
 
   descent-data-circle-dependent-pair-type : descent-data-circle (l2 ⊔ l3)
-  pr1 descent-data-circle-dependent-pair-type = {!!}
+  descent-data-circle-dependent-pair-type = {!!}
 
   family-descent-data-circle-dependent-pair-type : S → UU (l2 ⊔ l3)
-  family-descent-data-circle-dependent-pair-type x = {!!}
+  family-descent-data-circle-dependent-pair-type = {!!}
 ```
 
 ## Properties

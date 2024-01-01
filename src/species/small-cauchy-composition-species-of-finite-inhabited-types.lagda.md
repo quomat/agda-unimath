@@ -92,13 +92,13 @@ module _
     C2 = {!!}
 
     C3 : is-closed-under-Σ-subuniverse (is-finite-and-inhabited-Prop {l1})
-    C3 X Y = {!!}
+    C3 = {!!}
 
     C4 : is-finite-and-inhabited (raise-unit l1)
     C4 = {!!}
 
     C5 : (X : UU l1) → is-small (l1 ⊔ l2) (is-contr X)
-    C5 X = {!!}
+    C5 = {!!}
 
     C6 :
       ( X : type-subuniverse {l1} is-finite-and-inhabited-Prop) →

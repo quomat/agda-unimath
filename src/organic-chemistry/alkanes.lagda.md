@@ -24,5 +24,5 @@ not have any double or triple carbon-carbon bonds.
 
 ```agda
 is-alkane-hydrocarbon : {l1 l2 : Level} → hydrocarbon l1 l2 → UU (l1 ⊔ l2)
-is-alkane-hydrocarbon H = {!!}
+is-alkane-hydrocarbon = {!!}
 ```

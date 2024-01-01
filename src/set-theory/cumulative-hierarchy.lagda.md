@@ -50,13 +50,13 @@ has-smaller-image :
   { l1 l2 l3 : Level} →
   {A : UU l1} {B : UU l2} {C : UU l3} →
   (A → C) → (B → C) → UU (l1 ⊔ l2 ⊔ l3)
-has-smaller-image {l1} {l2} {l3} {A} {B} {C} f g = {!!}
+has-smaller-image = {!!}
 
 has-same-image :
   { l1 l2 l3 : Level} →
   {A : UU l1} {B : UU l2} {C : UU l3} →
   (A → C) → (B → C) → UU (l1 ⊔ l2 ⊔ l3)
-has-same-image {l1} {l2} {l3} {A} {B} {C} f g = {!!}
+has-same-image = {!!}
 ```
 
 ### Pseudo cumulative hierarchy
@@ -67,10 +67,10 @@ hierarchy, but not necessarily its induction principle.
 ```agda
 has-cumulative-hierarchy-structure :
   {l : Level} → (V : UU (lsuc l)) → UU (lsuc l)
-has-cumulative-hierarchy-structure {l} V = {!!}
+has-cumulative-hierarchy-structure = {!!}
 
 pseudo-cumulative-hierarchy : (l : Level) → UU (lsuc (lsuc l))
-pseudo-cumulative-hierarchy (l) = {!!}
+pseudo-cumulative-hierarchy = {!!}
 
 module _
   {l : Level} (V : pseudo-cumulative-hierarchy l)
@@ -108,7 +108,7 @@ module _
 
   compute-induction-principle-cumulative-hierarchy :
     induction-principle-cumulative-hierarchy → UU (lsuc (l1 ⊔ l2))
-  compute-induction-principle-cumulative-hierarchy IP = {!!}
+  compute-induction-principle-cumulative-hierarchy = {!!}
 ```
 
 ## Examples
@@ -163,7 +163,7 @@ module _
       ( (a : A) → P (f a)) →
       ( P (set-pseudo-cumulative-hierarchy V f))) →
     ( x : type-pseudo-cumulative-hierarchy V) → P x
-  prop-ind-principle-cumulative-hierarchy {l2} P σ ρ = {!!}
+  prop-ind-principle-cumulative-hierarchy = {!!}
 
   compute-prop-ind-principle-cumulative-hierarchy :
     { l2 : Level}
@@ -177,7 +177,7 @@ module _
     ( IH : (a : A) → P (f a)) →
     prop-ind-principle-cumulative-hierarchy
       P σ ρ (set-pseudo-cumulative-hierarchy V f) ＝ ρ f IH
-  compute-prop-ind-principle-cumulative-hierarchy {l2} P σ ρ = {!!}
+  compute-prop-ind-principle-cumulative-hierarchy = {!!}
 ```
 
 ### The recursion principle and its computation rule for the cumulative hierarchy
@@ -197,7 +197,7 @@ module _
       ( (b : B) → ∃ A (λ a → (g b ＝ f a) × (IH₂ b ＝ IH₁ a))) →
       ρ f IH₁ ＝ ρ g IH₂) →
     type-pseudo-cumulative-hierarchy V → X
-  recursion-principle-cumulative-hierarchy {l2} X σ ρ τ = {!!}
+  recursion-principle-cumulative-hierarchy = {!!}
 
   compute-recursion-principle-cumulative-hierarchy :
     { l2 : Level} ( X : UU l2) (σ : is-set X)
@@ -214,7 +214,7 @@ module _
     {A : UU l1} → (f : A → type-pseudo-cumulative-hierarchy V) → (IH : A → X) →
     recursion-principle-cumulative-hierarchy X σ ρ τ
       ( set-pseudo-cumulative-hierarchy V f) ＝ ρ f IH
-  compute-recursion-principle-cumulative-hierarchy {l2} X σ ρ τ = {!!}
+  compute-recursion-principle-cumulative-hierarchy = {!!}
 ```
 
 A simplification of the recursion principle, when the codomain is `Prop l2`.
@@ -233,7 +233,7 @@ A simplification of the recursion principle, when the codomain is `Prop l2`.
       ( (a : A) → ∃ B (λ b → (f a ＝ g b) × (IH₁ a ＝ IH₂ b))) →
       type-Prop (ρ f IH₁) → type-Prop (ρ g IH₂)) →
     type-pseudo-cumulative-hierarchy V → Prop l2
-  prop-recursion-principle-cumulative-hierarchy {l2} ρ τ = {!!}
+  prop-recursion-principle-cumulative-hierarchy = {!!}
 
   compute-prop-recursion-principle-cumulative-hierarchy :
     {l2 : Level}
@@ -252,7 +252,7 @@ A simplification of the recursion principle, when the codomain is `Prop l2`.
     ( IH : A → Prop l2) →
     prop-recursion-principle-cumulative-hierarchy ρ τ
       ( set-pseudo-cumulative-hierarchy V f) ＝ ρ f IH
-  compute-prop-recursion-principle-cumulative-hierarchy {l2} ρ τ = {!!}
+  compute-prop-recursion-principle-cumulative-hierarchy = {!!}
 ```
 
 Another simplification of the recursion principle, when recursive calls are not
@@ -268,7 +268,7 @@ needed.
       ( e : has-smaller-image f g) →
       type-Prop (ρ f) → type-Prop (ρ g)) →
     type-pseudo-cumulative-hierarchy V → Prop l2
-  simple-prop-recursion-principle-cumulative-hierarchy {l2} ρ τ = {!!}
+  simple-prop-recursion-principle-cumulative-hierarchy = {!!}
 
   compute-simple-prop-recursion-principle-cumulative-hierarchy :
     {l2 : Level}
@@ -281,7 +281,7 @@ needed.
     {A : UU l1} → (f : A → type-pseudo-cumulative-hierarchy V) →
     simple-prop-recursion-principle-cumulative-hierarchy ρ τ
       ( set-pseudo-cumulative-hierarchy V f) ＝ ρ f
-  compute-simple-prop-recursion-principle-cumulative-hierarchy {l2} ρ τ f = {!!}
+  compute-simple-prop-recursion-principle-cumulative-hierarchy = {!!}
 ```
 
 ### The membership relationship for the cumulative hierarchy
@@ -291,20 +291,20 @@ needed.
     ( type-pseudo-cumulative-hierarchy V) →
     ( type-pseudo-cumulative-hierarchy V) →
     Prop (lsuc l1)
-  ∈-cumulative-hierarchy-Prop x = {!!}
+  ∈-cumulative-hierarchy-Prop = {!!}
 
   ∈-cumulative-hierarchy :
     ( type-pseudo-cumulative-hierarchy V) →
     ( type-pseudo-cumulative-hierarchy V) →
     UU (lsuc l1)
-  ∈-cumulative-hierarchy x y = {!!}
+  ∈-cumulative-hierarchy = {!!}
 
   id-∈-cumulative-hierarchy :
     ( x : type-pseudo-cumulative-hierarchy V) {A : UU l1}
     ( f : A → type-pseudo-cumulative-hierarchy V) →
     ( ∈-cumulative-hierarchy x (set-pseudo-cumulative-hierarchy V f)) ＝
       ∃ A (λ a → f a ＝ x)
-  id-∈-cumulative-hierarchy x f = {!!}
+  id-∈-cumulative-hierarchy = {!!}
 
   ∈-cumulative-hierarchy-mere-preimage :
     { x : type-pseudo-cumulative-hierarchy V} →
@@ -312,7 +312,7 @@ needed.
     { f : A → type-pseudo-cumulative-hierarchy V} →
     ( ∈-cumulative-hierarchy x (set-pseudo-cumulative-hierarchy V f)) →
     ∃ A (λ a → f a ＝ x)
-  ∈-cumulative-hierarchy-mere-preimage {x} {A} {f} = {!!}
+  ∈-cumulative-hierarchy-mere-preimage = {!!}
 
   mere-preimage-∈-cumulative-hierarchy :
     { x : type-pseudo-cumulative-hierarchy V} →
@@ -320,13 +320,13 @@ needed.
     { f : A → type-pseudo-cumulative-hierarchy V} →
     ∃ A (λ a → f a ＝ x) →
     ( ∈-cumulative-hierarchy x (set-pseudo-cumulative-hierarchy V f))
-  mere-preimage-∈-cumulative-hierarchy {x} {A} {f} = {!!}
+  mere-preimage-∈-cumulative-hierarchy = {!!}
 
   is-prop-∈-cumulative-hierarchy :
     ( x : type-pseudo-cumulative-hierarchy V) →
     ( y : type-pseudo-cumulative-hierarchy V) →
     is-prop (∈-cumulative-hierarchy x y)
-  is-prop-∈-cumulative-hierarchy x y = {!!}
+  is-prop-∈-cumulative-hierarchy = {!!}
 ```
 
 ### The subset relationship for the cumulative hierarchy
@@ -336,13 +336,13 @@ needed.
     ( type-pseudo-cumulative-hierarchy V) →
     ( type-pseudo-cumulative-hierarchy V) →
     UU (lsuc l1)
-  ⊆-cumulative-hierarchy x y = {!!}
+  ⊆-cumulative-hierarchy = {!!}
 
   is-prop-⊆-cumulative-hierarchy :
     ( x : type-pseudo-cumulative-hierarchy V) →
     ( y : type-pseudo-cumulative-hierarchy V) →
     is-prop (⊆-cumulative-hierarchy x y)
-  is-prop-⊆-cumulative-hierarchy x y = {!!}
+  is-prop-⊆-cumulative-hierarchy = {!!}
 
   ⊆-cumulative-hierarchy-has-smaller-image :
     { A B : UU l1}
@@ -352,7 +352,7 @@ needed.
       ( set-pseudo-cumulative-hierarchy V f)
       ( set-pseudo-cumulative-hierarchy V g) →
     has-smaller-image f g
-  ⊆-cumulative-hierarchy-has-smaller-image f g s a = {!!}
+  ⊆-cumulative-hierarchy-has-smaller-image = {!!}
 
   has-smaller-image-⊆-cumulative-hierarchy :
     { A B : UU l1}
@@ -362,7 +362,7 @@ needed.
     ⊆-cumulative-hierarchy
       ( set-pseudo-cumulative-hierarchy V f)
       ( set-pseudo-cumulative-hierarchy V g)
-  has-smaller-image-⊆-cumulative-hierarchy {A} {B} f g s x m = {!!}
+  has-smaller-image-⊆-cumulative-hierarchy = {!!}
 ```
 
 ### Extensionality of the membership relation
@@ -375,14 +375,14 @@ needed.
     ( ⊆-cumulative-hierarchy x (set-pseudo-cumulative-hierarchy V f)) →
     ( ⊆-cumulative-hierarchy (set-pseudo-cumulative-hierarchy V f) x) →
     x ＝ (set-pseudo-cumulative-hierarchy V f)
-  pre-extensionality-∈-cumulative-hierarchy f = {!!}
+  pre-extensionality-∈-cumulative-hierarchy = {!!}
 
   extensionality-∈-cumulative-hierarchy :
     ( x y : type-pseudo-cumulative-hierarchy V) →
     ( ⊆-cumulative-hierarchy x y) →
     ( ⊆-cumulative-hierarchy y x) →
     x ＝ y
-  extensionality-∈-cumulative-hierarchy x = {!!}
+  extensionality-∈-cumulative-hierarchy = {!!}
 ```
 
 ### Cumulative hierarchies satisfy the empty set axiom
@@ -391,7 +391,7 @@ needed.
   empty-set-axiom-cumulative-hierarchy :
     ( x : type-pseudo-cumulative-hierarchy V) →
     ¬ (∈-cumulative-hierarchy x empty-set-cumulative-hierarchy)
-  empty-set-axiom-cumulative-hierarchy x H = {!!}
+  empty-set-axiom-cumulative-hierarchy = {!!}
 ```
 
 ### Cumulative hierarchies satisfy the pair axiom
@@ -400,14 +400,14 @@ needed.
   pair-cumulative-hierarchy :
     ( x y : type-pseudo-cumulative-hierarchy V) →
     type-pseudo-cumulative-hierarchy V
-  pair-cumulative-hierarchy x y = {!!}
+  pair-cumulative-hierarchy = {!!}
 
   abstract
     pair-axiom-cumulative-hierarchy :
       ( x y v : type-pseudo-cumulative-hierarchy V) →
       ( ∈-cumulative-hierarchy v (pair-cumulative-hierarchy x y) ↔
         type-trunc-Prop ( (v ＝ x) + (v ＝ y)))
-    pr1 (pair-axiom-cumulative-hierarchy x y v) H = {!!}
+    pair-axiom-cumulative-hierarchy = {!!}
     pr2 (pair-axiom-cumulative-hierarchy x y v) H = {!!}
 ```
 
@@ -417,7 +417,7 @@ needed.
   singleton-cumulative-hierarchy :
     type-pseudo-cumulative-hierarchy V →
     type-pseudo-cumulative-hierarchy V
-  singleton-cumulative-hierarchy x = {!!}
+  singleton-cumulative-hierarchy = {!!}
 ```
 
 ### Cumulative hierarchies satisfy the infinity axiom
@@ -437,7 +437,7 @@ needed.
           ( pair-cumulative-hierarchy x
             ( singleton-cumulative-hierarchy x))
           ( infinity-cumulative-hierarchy))
-    pr1 infinity-axiom-cumulative-hierarchy = {!!}
+    infinity-axiom-cumulative-hierarchy = {!!}
     pr2 infinity-axiom-cumulative-hierarchy x H = {!!}
 ```
 
@@ -453,7 +453,7 @@ needed.
         ∈-cumulative-hierarchy y x → P y) →
       P x) →
     ( x : type-pseudo-cumulative-hierarchy V) → P x
-  ∈-induction-cumulative-hierarchy P P-prop h = {!!}
+  ∈-induction-cumulative-hierarchy = {!!}
 ```
 
 ### Cumulative hierarchies satisfy the replacement axiom
@@ -470,7 +470,7 @@ needed.
           ∈-cumulative-hierarchy y v ↔
           ∃ ( type-pseudo-cumulative-hierarchy V)
             ( λ z → (∈-cumulative-hierarchy z x) × (y ＝ r z)))
-    replacement-cumulative-hierarchy x r = {!!}
+    replacement-cumulative-hierarchy = {!!}
 ```
 
 ## References

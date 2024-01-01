@@ -67,7 +67,7 @@ module _
 is-path-refl-walk-Undirected-Graph :
   {l1 l2 : Level} (G : Undirected-Graph l1 l2) (x : vertex-Undirected-Graph G) →
   is-path-walk-Undirected-Graph G (refl-walk-Undirected-Graph {x = x})
-is-path-refl-walk-Undirected-Graph G x = {!!}
+is-path-refl-walk-Undirected-Graph = {!!}
 ```
 
 ## External links

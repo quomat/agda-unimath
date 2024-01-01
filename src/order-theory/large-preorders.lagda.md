@@ -106,7 +106,7 @@ module _
   where
 
   preorder-Large-Preorder : (l : Level) → Preorder (α l) (β l l)
-  pr1 (preorder-Large-Preorder l) = {!!}
+  preorder-Large-Preorder = {!!}
 ```
 
 ### Large preorders are large precategories
@@ -117,5 +117,5 @@ module _
   where
 
   large-precategory-Large-Preorder : Large-Precategory α β
-  obj-Large-Precategory large-precategory-Large-Preorder = {!!}
+  large-precategory-Large-Preorder = {!!}
 ```

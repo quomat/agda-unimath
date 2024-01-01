@@ -34,12 +34,12 @@ _proof-relevant_ relation.
 Large-Relation :
   (α : Level → Level) (β : Level → Level → Level)
   (A : (l : Level) → UU (α l)) → UUω
-Large-Relation α β A = {!!}
+Large-Relation = {!!}
 
 total-space-Large-Relation :
   {α : Level → Level} {β : Level → Level → Level}
   (A : (l : Level) → UU (α l)) → Large-Relation α β A → UUω
-total-space-Large-Relation A R = {!!}
+total-space-Large-Relation = {!!}
 ```
 
 ### Large relations valued in propositions
@@ -48,33 +48,33 @@ total-space-Large-Relation A R = {!!}
 is-prop-Large-Relation :
   {α : Level → Level} {β : Level → Level → Level}
   (A : (l : Level) → UU (α l)) → Large-Relation α β A → UUω
-is-prop-Large-Relation A R = {!!}
+is-prop-Large-Relation = {!!}
 
 Large-Relation-Prop :
   (α : Level → Level) (β : Level → Level → Level)
   (A : (l : Level) → UU (α l)) →
   UUω
-Large-Relation-Prop α β A = {!!}
+Large-Relation-Prop = {!!}
 
 type-Large-Relation-Prop :
   {α : Level → Level} {β : Level → Level → Level}
   (A : (l : Level) → UU (α l)) →
   Large-Relation-Prop α β A → Large-Relation α β A
-type-Large-Relation-Prop A R x y = {!!}
+type-Large-Relation-Prop = {!!}
 
 is-prop-type-Large-Relation-Prop :
   {α : Level → Level} {β : Level → Level → Level}
   (A : (l : Level) → UU (α l))
   (R : Large-Relation-Prop α β A) →
   is-prop-Large-Relation A (type-Large-Relation-Prop A R)
-is-prop-type-Large-Relation-Prop A R x y = {!!}
+is-prop-type-Large-Relation-Prop = {!!}
 
 total-space-Large-Relation-Prop :
   {α : Level → Level} {β : Level → Level → Level}
   (A : (l : Level) → UU (α l))
   (R : Large-Relation-Prop α β A) →
   UUω
-total-space-Large-Relation-Prop A R = {!!}
+total-space-Large-Relation-Prop = {!!}
 ```
 
 ## Small relations from large relations
@@ -84,19 +84,19 @@ relation-Large-Relation :
   {α : Level → Level} {β : Level → Level → Level}
   (A : (l : Level) → UU (α l)) (R : Large-Relation α β A)
   (l : Level) → Relation (β l l) (A l)
-relation-Large-Relation A R l x y = {!!}
+relation-Large-Relation = {!!}
 
 relation-prop-Large-Relation-Prop :
   {α : Level → Level} {β : Level → Level → Level}
   (A : (l : Level) → UU (α l)) (R : Large-Relation-Prop α β A)
   (l : Level) → Relation-Prop (β l l) (A l)
-relation-prop-Large-Relation-Prop A R l x y = {!!}
+relation-prop-Large-Relation-Prop = {!!}
 
 relation-Large-Relation-Prop :
   {α : Level → Level} {β : Level → Level → Level}
   (A : (l : Level) → UU (α l)) (R : Large-Relation-Prop α β A)
   (l : Level) → Relation (β l l) (A l)
-relation-Large-Relation-Prop A R = {!!}
+relation-Large-Relation-Prop = {!!}
 ```
 
 ## Specifications of properties of binary relations

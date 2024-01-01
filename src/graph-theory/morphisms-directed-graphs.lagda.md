@@ -110,7 +110,7 @@ module _
   where
 
   id-hom-Directed-Graph : hom-Directed-Graph G G
-  pr1 id-hom-Directed-Graph = {!!}
+  id-hom-Directed-Graph = {!!}
 ```
 
 ## Properties

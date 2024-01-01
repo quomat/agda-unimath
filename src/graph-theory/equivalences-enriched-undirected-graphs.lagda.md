@@ -118,7 +118,7 @@ module _
 
   id-equiv-Enriched-Undirected-Graph :
     equiv-Enriched-Undirected-Graph A B G G
-  pr1 id-equiv-Enriched-Undirected-Graph = {!!}
+  id-equiv-Enriched-Undirected-Graph = {!!}
   pr1 (pr2 id-equiv-Enriched-Undirected-Graph) = {!!}
 ```
 
@@ -139,7 +139,7 @@ module _
   equiv-eq-Enriched-Undirected-Graph :
     (H : Enriched-Undirected-Graph l3 l4 A B) →
     (G ＝ H) → equiv-Enriched-Undirected-Graph A B G H
-  equiv-eq-Enriched-Undirected-Graph H refl = {!!}
+  equiv-eq-Enriched-Undirected-Graph = {!!}
 
   is-equiv-equiv-eq-Enriched-Undirected-Graph :
     (H : Enriched-Undirected-Graph l3 l4 A B) →
@@ -149,13 +149,13 @@ module _
   extensionality-Enriched-Undirected-Graph :
     (H : Enriched-Undirected-Graph l3 l4 A B) →
     (G ＝ H) ≃ equiv-Enriched-Undirected-Graph A B G H
-  pr1 (extensionality-Enriched-Undirected-Graph H) = {!!}
+  extensionality-Enriched-Undirected-Graph = {!!}
   pr2 (extensionality-Enriched-Undirected-Graph H) = {!!}
 
   eq-equiv-Enriched-Undirected-Graph :
     (H : Enriched-Undirected-Graph l3 l4 A B) →
     equiv-Enriched-Undirected-Graph A B G H → (G ＝ H)
-  eq-equiv-Enriched-Undirected-Graph H = {!!}
+  eq-equiv-Enriched-Undirected-Graph = {!!}
 ```
 
 ## External links

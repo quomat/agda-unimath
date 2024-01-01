@@ -45,7 +45,7 @@ module _
   subtype-core-Monoid = {!!}
 
   submonoid-core-Monoid : Submonoid l M
-  pr1 submonoid-core-Monoid = {!!}
+  submonoid-core-Monoid = {!!}
 
   monoid-core-Monoid : Monoid l
   monoid-core-Monoid = {!!}
@@ -66,7 +66,7 @@ module _
   associative-mul-core-Monoid = {!!}
 
   unit-core-Monoid : type-core-Monoid
-  pr1 unit-core-Monoid = {!!}
+  unit-core-Monoid = {!!}
 
   left-unit-law-mul-core-Monoid :
     (x : type-core-Monoid) →
@@ -79,10 +79,10 @@ module _
   right-unit-law-mul-core-Monoid = {!!}
 
   is-unital-core-Monoid : is-unital-Semigroup semigroup-core-Monoid
-  pr1 is-unital-core-Monoid = {!!}
+  is-unital-core-Monoid = {!!}
 
   inv-core-Monoid : type-core-Monoid → type-core-Monoid
-  pr1 (inv-core-Monoid x) = {!!}
+  inv-core-Monoid = {!!}
 
   left-inverse-law-mul-core-Monoid :
     (x : type-core-Monoid) →
@@ -95,13 +95,13 @@ module _
   right-inverse-law-mul-core-Monoid = {!!}
 
   is-group-core-Monoid' : is-group' semigroup-core-Monoid is-unital-core-Monoid
-  pr1 is-group-core-Monoid' = {!!}
+  is-group-core-Monoid' = {!!}
 
   is-group-core-Monoid : is-group semigroup-core-Monoid
-  pr1 is-group-core-Monoid = {!!}
+  is-group-core-Monoid = {!!}
 
   core-Monoid : Group l
-  pr1 core-Monoid = {!!}
+  core-Monoid = {!!}
 
   inclusion-core-Monoid :
     type-core-Monoid → type-Monoid M
@@ -132,7 +132,7 @@ module _
   where
 
   map-core-hom-Monoid : type-core-Monoid M → type-core-Monoid N
-  pr1 (map-core-hom-Monoid x) = {!!}
+  map-core-hom-Monoid = {!!}
 
   preserves-mul-hom-core-hom-Monoid :
     {x y : type-core-Monoid M} →
@@ -141,7 +141,7 @@ module _
   preserves-mul-hom-core-hom-Monoid = {!!}
 
   hom-core-hom-Monoid : hom-Group (core-Monoid M) (core-Monoid N)
-  pr1 hom-core-hom-Monoid = {!!}
+  hom-core-hom-Monoid = {!!}
 
   preserves-unit-hom-core-hom-Monoid :
     map-core-hom-Monoid (unit-core-Monoid M) ＝ unit-core-Monoid N

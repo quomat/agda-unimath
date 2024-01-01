@@ -113,7 +113,7 @@ pr1 (pr2 is-unital-composition-operation-terminal-Category) = {!!}
 pr2 (pr2 is-unital-composition-operation-terminal-Category) = {!!}
 
 terminal-Precategory : Precategory lzero lzero
-pr1 terminal-Precategory = {!!}
+terminal-Precategory = {!!}
 pr1 (pr2 terminal-Precategory) = {!!}
 pr1 (pr2 (pr2 terminal-Precategory)) = {!!}
 pr2 (pr2 (pr2 terminal-Precategory)) = {!!}
@@ -127,7 +127,7 @@ is-category-terminal-Category :
 is-category-terminal-Category = {!!}
 
 terminal-Category : Category lzero lzero
-pr1 terminal-Category = {!!}
+terminal-Category = {!!}
 pr2 terminal-Category = {!!}
 ```
 
@@ -150,7 +150,7 @@ is-strict-category-terminal-Category :
 is-strict-category-terminal-Category = {!!}
 
 terminal-Strict-Category : Strict-Category lzero lzero
-pr1 terminal-Strict-Category = {!!}
+terminal-Strict-Category = {!!}
 pr2 terminal-Strict-Category = {!!}
 ```
 
@@ -158,10 +158,10 @@ pr2 terminal-Strict-Category = {!!}
 
 ```agda
 is-gaunt-terminal-Category : is-gaunt-Category terminal-Category
-is-gaunt-terminal-Category _ _ = {!!}
+is-gaunt-terminal-Category = {!!}
 
 terminal-Gaunt-Category : Gaunt-Category lzero lzero
-pr1 terminal-Gaunt-Category = {!!}
+terminal-Gaunt-Category = {!!}
 pr2 terminal-Gaunt-Category = {!!}
 ```
 

@@ -22,5 +22,5 @@ open import group-theory.homomorphisms-groups
 ```agda
 instance
   Group-Large-Precategory : Large-Precategory lsuc (_⊔_)
-  obj-Large-Precategory Group-Large-Precategory = {!!}
+  Group-Large-Precategory = {!!}
 ```

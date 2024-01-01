@@ -62,10 +62,10 @@ module _
   where
 
   is-inhabited-is-0-acyclic : is-0-acyclic A → is-inhabited A
-  is-inhabited-is-0-acyclic ac = {!!}
+  is-inhabited-is-0-acyclic = {!!}
 
   is-0-acyclic-is-inhabited : is-inhabited A → is-0-acyclic A
-  is-0-acyclic-is-inhabited h = {!!}
+  is-0-acyclic-is-inhabited = {!!}
 ```
 
 ## See also

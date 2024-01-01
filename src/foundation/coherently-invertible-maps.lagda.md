@@ -45,7 +45,7 @@ abstract
   is-equiv-is-coherently-invertible-is-equiv :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
     is-equiv (is-coherently-invertible-is-equiv {f = f})
-  is-equiv-is-coherently-invertible-is-equiv f = {!!}
+  is-equiv-is-coherently-invertible-is-equiv = {!!}
 ```
 
 ## See also

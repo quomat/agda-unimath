@@ -42,7 +42,7 @@ module _
   where
 
   is-section : (B → A) → UU l2
-  is-section g = {!!}
+  is-section = {!!}
 ```
 
 ### The type of sections of a map
@@ -79,7 +79,7 @@ module _
   is-section-map-section-left-factor = {!!}
 
   section-left-factor : section g
-  pr1 section-left-factor = {!!}
+  section-left-factor = {!!}
 ```
 
 ### Composites of sections are sections of composites
@@ -98,7 +98,7 @@ module _
   is-section-map-section-comp = {!!}
 
   section-comp : section (g ∘ h)
-  pr1 section-comp = {!!}
+  section-comp = {!!}
 ```
 
 ### In a commuting triangle `g ∘ h ~ f`, any section of `f` induces a section of `g`
@@ -142,7 +142,7 @@ module _
   is-section-map-section-right-map-triangle' = {!!}
 
   section-right-map-triangle' : section g
-  pr1 section-right-map-triangle' = {!!}
+  section-right-map-triangle' = {!!}
 ```
 
 #### Second version, with the commutativity of the triangle accoring to our convention
@@ -192,12 +192,12 @@ module _
   where
 
   map-section-left-map-triangle : section g → X → A
-  map-section-left-map-triangle s = {!!}
+  map-section-left-map-triangle = {!!}
 
   is-section-map-section-left-map-triangle :
     (s : section g) → is-section f (map-section-left-map-triangle s)
   is-section-map-section-left-map-triangle = {!!}
 
   section-left-map-triangle : section g → section f
-  pr1 (section-left-map-triangle s) = {!!}
+  section-left-map-triangle = {!!}
 ```

@@ -127,5 +127,5 @@ module _
   right-zero-law-mul-function-Semiring = {!!}
 
   function-Semiring : Semiring (l1 ⊔ l2)
-  pr1 function-Semiring = {!!}
+  function-Semiring = {!!}
 ```

@@ -137,8 +137,7 @@ module _
       ( x)
       ( y)
       ( meet-Large-Subframe x y)
-  is-greatest-binary-lower-bound-meet-Large-Subframe
-    (x , p) (y , q) (z , r) = {!!}
+  is-greatest-binary-lower-bound-meet-Large-Subframe = {!!}
 
   has-meets-Large-Subframe :
     has-meets-Large-Poset

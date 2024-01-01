@@ -54,7 +54,7 @@ module _
 
   abstract
     is-set-is-emb-diagonal : is-emb (diagonal A) → is-set A
-    is-set-is-emb-diagonal H = {!!}
+    is-set-is-emb-diagonal = {!!}
 
   abstract
     is-1-type-is-0-map-diagonal : is-0-map (diagonal A) → is-1-type A
@@ -62,7 +62,7 @@ module _
 
   abstract
     is-1-type-is-faithful-diagonal : is-faithful (diagonal A) → is-1-type A
-    is-1-type-is-faithful-diagonal H = {!!}
+    is-1-type-is-faithful-diagonal = {!!}
 
   abstract
     is-trunc-map-diagonal-is-trunc :
@@ -79,7 +79,7 @@ module _
 
   abstract
     is-emb-diagonal-is-set : is-set A → is-emb (diagonal A)
-    is-emb-diagonal-is-set H = {!!}
+    is-emb-diagonal-is-set = {!!}
 
   abstract
     is-0-map-diagonal-is-1-type : is-1-type A → is-0-map (diagonal A)
@@ -87,7 +87,7 @@ module _
 
   abstract
     is-faithful-diagonal-is-1-type : is-1-type A → is-faithful (diagonal A)
-    is-faithful-diagonal-is-1-type H = {!!}
+    is-faithful-diagonal-is-1-type = {!!}
 
 diagonal-emb :
   {l : Level} (A : Set l) → (type-Set A) ↪ ((type-Set A) × (type-Set A))

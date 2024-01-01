@@ -67,10 +67,10 @@ for the inverse of `x`.
 
 ```agda
 is-abelian-prop-Group : {l : Level} → Group l → Prop l
-is-abelian-prop-Group G = {!!}
+is-abelian-prop-Group = {!!}
 
 is-abelian-Group : {l : Level} → Group l → UU l
-is-abelian-Group G = {!!}
+is-abelian-Group = {!!}
 
 is-prop-is-abelian-Group :
   {l : Level} (G : Group l) → is-prop (is-abelian-Group G)
@@ -81,7 +81,7 @@ is-prop-is-abelian-Group = {!!}
 
 ```agda
 Ab : (l : Level) → UU (lsuc l)
-Ab l = {!!}
+Ab = {!!}
 
 module _
   {l : Level} (A : Ab l)
@@ -204,10 +204,10 @@ module _
   where
 
   monoid-Ab : Monoid l
-  pr1 monoid-Ab = {!!}
+  monoid-Ab = {!!}
 
   commutative-monoid-Ab : Commutative-Monoid l
-  pr1 commutative-monoid-Ab = {!!}
+  commutative-monoid-Ab = {!!}
 ```
 
 ### The structure of an abelian group
@@ -250,7 +250,7 @@ module _
   where
 
   commutator-Ab : type-Ab A → type-Ab A → type-Ab A
-  commutator-Ab x y = {!!}
+  commutator-Ab = {!!}
 ```
 
 ### The commutator subgroup of an abelian group

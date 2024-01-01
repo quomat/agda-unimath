@@ -29,8 +29,7 @@ and [ring homomorphisms](ring-theory.homomorphisms-rings.md).
 
 ```agda
 Ring-Large-Precategory : Large-Precategory lsuc _⊔_
-obj-Large-Precategory
-  Ring-Large-Precategory = {!!}
+Ring-Large-Precategory = {!!}
 hom-set-Large-Precategory
   Ring-Large-Precategory = {!!}
 comp-hom-Large-Precategory

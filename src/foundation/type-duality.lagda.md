@@ -67,24 +67,24 @@ is an [equivalence](foundation-core.equivalences.md) if and only if `A` is
 ```agda
 type-polynomial-endofunctor-UU :
   (l : Level) {l1 : Level} (A : UU l1) → UU (lsuc l ⊔ l1)
-type-polynomial-endofunctor-UU l = {!!}
+type-polynomial-endofunctor-UU = {!!}
 
 map-polynomial-endofunctor-UU :
   (l : Level) {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
   type-polynomial-endofunctor-UU l A → type-polynomial-endofunctor-UU l B
-map-polynomial-endofunctor-UU l = {!!}
+map-polynomial-endofunctor-UU = {!!}
 ```
 
 ### Type families
 
 ```agda
 type-exp-UU : (l : Level) {l1 : Level} → UU l1 → UU (lsuc l ⊔ l1)
-type-exp-UU l A = {!!}
+type-exp-UU = {!!}
 
 map-exp-UU :
   (l : Level) {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
   type-exp-UU l B → type-exp-UU l A
-map-exp-UU l f P = {!!}
+map-exp-UU = {!!}
 ```
 
 ## Properties
@@ -95,17 +95,17 @@ map-exp-UU l f P = {!!}
 map-type-duality :
   {l l1 : Level} {A : UU l1} → is-locally-small l A →
   type-polynomial-endofunctor-UU l A → type-exp-UU l A
-map-type-duality H (X , f) a = {!!}
+map-type-duality = {!!}
 
 is-emb-map-type-duality :
   {l l1 : Level} {A : UU l1} (H : is-locally-small l A) →
   is-emb (map-type-duality H)
-is-emb-map-type-duality {l} {l1} {A} H (X , f) = {!!}
+is-emb-map-type-duality = {!!}
 
 emb-type-duality :
   {l l1 : Level} {A : UU l1} → is-locally-small l A →
   type-polynomial-endofunctor-UU l A ↪ type-exp-UU l A
-pr1 (emb-type-duality H) = {!!}
+emb-type-duality = {!!}
 pr2 (emb-type-duality H) = {!!}
 ```
 
@@ -120,22 +120,22 @@ module _
 
   map-inv-type-duality :
     type-exp-UU l A → type-polynomial-endofunctor-UU l A
-  pr1 (map-inv-type-duality B) = {!!}
+  map-inv-type-duality = {!!}
 
   is-section-map-inv-type-duality :
     map-type-duality (is-locally-small-is-small H) ∘ map-inv-type-duality ~ id
-  is-section-map-inv-type-duality B = {!!}
+  is-section-map-inv-type-duality = {!!}
 
   is-retraction-map-inv-type-duality :
     map-inv-type-duality ∘ map-type-duality (is-locally-small-is-small H) ~ id
-  is-retraction-map-inv-type-duality X = {!!}
+  is-retraction-map-inv-type-duality = {!!}
 
   is-equiv-map-type-duality :
     is-equiv (map-type-duality (is-locally-small-is-small H))
   is-equiv-map-type-duality = {!!}
 
   type-duality : type-polynomial-endofunctor-UU l A ≃ type-exp-UU l A
-  pr1 type-duality = {!!}
+  type-duality = {!!}
 ```
 
 #### The converse direction
@@ -147,43 +147,43 @@ module _
 
   is-small-is-equiv-map-type-duality :
     is-equiv (map-type-duality H) → is-small l A
-  pr1 (is-small-is-equiv-map-type-duality E) = {!!}
+  is-small-is-equiv-map-type-duality = {!!}
 ```
 
 ### Type duality formulated using `l1 ⊔ l2`
 
 ```agda
 Fiber : {l l1 : Level} (A : UU l1) → Slice l A → A → UU (l1 ⊔ l)
-Fiber A f = {!!}
+Fiber = {!!}
 
 Pr1 : {l l1 : Level} (A : UU l1) → (A → UU l) → Slice (l1 ⊔ l) A
-pr1 (Pr1 A B) = {!!}
+Pr1 = {!!}
 pr2 (Pr1 A B) = {!!}
 
 is-section-Pr1 :
   {l1 l2 : Level} {A : UU l1} → (Fiber {l1 ⊔ l2} A ∘ Pr1 {l1 ⊔ l2} A) ~ id
-is-section-Pr1 B = {!!}
+is-section-Pr1 = {!!}
 
 is-retraction-Pr1 :
   {l1 l2 : Level} {A : UU l1} → (Pr1 {l1 ⊔ l2} A ∘ Fiber {l1 ⊔ l2} A) ~ id
-is-retraction-Pr1 {A = A} (X , f) = {!!}
+is-retraction-Pr1 = {!!}
 
 is-equiv-Fiber :
   {l1 : Level} (l2 : Level) (A : UU l1) → is-equiv (Fiber {l1 ⊔ l2} A)
-is-equiv-Fiber l2 A = {!!}
+is-equiv-Fiber = {!!}
 
 equiv-Fiber :
   {l1 : Level} (l2 : Level) (A : UU l1) → Slice (l1 ⊔ l2) A ≃ (A → UU (l1 ⊔ l2))
-pr1 (equiv-Fiber l2 A) = {!!}
+equiv-Fiber = {!!}
 pr2 (equiv-Fiber l2 A) = {!!}
 
 is-equiv-Pr1 :
   {l1 : Level} (l2 : Level) (A : UU l1) → is-equiv (Pr1 {l1 ⊔ l2} A)
-is-equiv-Pr1 {l1} l2 A = {!!}
+is-equiv-Pr1 = {!!}
 
 equiv-Pr1 :
   {l1 : Level} (l2 : Level) (A : UU l1) → (A → UU (l1 ⊔ l2)) ≃ Slice (l1 ⊔ l2) A
-pr1 (equiv-Pr1 l2 A) = {!!}
+equiv-Pr1 = {!!}
 pr2 (equiv-Pr1 l2 A) = {!!}
 ```
 
@@ -194,5 +194,5 @@ The type of all function from `A → B` is equivalent to the type of function
 fiber-Σ :
   {l1 l2 : Level} (X : UU l1) (A : UU l2) →
   (X → A) ≃ Σ (A → UU (l2 ⊔ l1)) (λ Y → X ≃ Σ A Y)
-fiber-Σ {l1} {l2} X A = {!!}
+fiber-Σ = {!!}
 ```

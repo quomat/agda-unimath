@@ -73,7 +73,7 @@ module _
   is-unital-function-Group = {!!}
 
   monoid-function-Group : Monoid (l1 ⊔ l2)
-  pr1 monoid-function-Group = {!!}
+  monoid-function-Group = {!!}
 
   inv-function-Group : type-function-Group → type-function-Group
   inv-function-Group = {!!}

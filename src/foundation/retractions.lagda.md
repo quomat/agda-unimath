@@ -64,13 +64,13 @@ is-retraction-retraction-left-map-triangle :
   (H : f ~ (g ∘ h)) (rg : retraction g) →
   ( ( retraction-top-map-triangle f g h H) ∘
     ( retraction-left-map-triangle f g h H rg)) ~ id
-is-retraction-retraction-left-map-triangle f g h H (l , L) (k , K) = {!!}
+is-retraction-retraction-left-map-triangle = {!!}
 
 retraction-right-factor-retract-of-retraction-left-factor :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {X : UU l3}
   (f : A → X) (g : B → X) (h : A → B) (H : f ~ g ∘ h) →
   retraction g → (retraction h) retract-of (retraction f)
-pr1 (retraction-right-factor-retract-of-retraction-left-factor f g h H rg) = {!!}
+retraction-right-factor-retract-of-retraction-left-factor = {!!}
 pr1
   ( pr2
     ( retraction-right-factor-retract-of-retraction-left-factor f g h H rg)) = {!!}
@@ -86,7 +86,7 @@ abstract
   is-injective-retraction :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) → retraction f →
     is-injective f
-  is-injective-retraction f (h , H) {x} {y} p = {!!}
+  is-injective-retraction = {!!}
 ```
 
 ### Transposing identifications along retractions
@@ -99,10 +99,10 @@ module _
   transpose-eq-retraction :
     (g : B → A) (H : (g ∘ f) ~ id) {x : B} {y : A} →
     x ＝ f y → g x ＝ y
-  transpose-eq-retraction g H refl = {!!}
+  transpose-eq-retraction = {!!}
 
   transpose-eq-retraction' :
     (g : B → A) (H : (g ∘ f) ~ id) {x : A} {y : B} →
     f x ＝ y → x ＝ g y
-  transpose-eq-retraction' g H refl = {!!}
+  transpose-eq-retraction' = {!!}
 ```

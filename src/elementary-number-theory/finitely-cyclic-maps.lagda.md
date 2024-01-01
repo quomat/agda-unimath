@@ -32,7 +32,7 @@ module _
   where
 
   is-finitely-cyclic-map : (f : X → X) → UU l
-  is-finitely-cyclic-map f = {!!}
+  is-finitely-cyclic-map = {!!}
 
   length-path-is-finitely-cyclic-map :
     {f : X → X} → is-finitely-cyclic-map f → X → X → ℕ
@@ -77,7 +77,7 @@ compute-iterate-succ-Fin :
 compute-iterate-succ-Fin = {!!}
 
 is-finitely-cyclic-succ-Fin : {k : ℕ} → is-finitely-cyclic-map (succ-Fin k)
-pr1 (is-finitely-cyclic-succ-Fin {succ-ℕ k} x y) = {!!}
+is-finitely-cyclic-succ-Fin = {!!}
 pr2 (is-finitely-cyclic-succ-Fin {succ-ℕ k} x y) = {!!}
 ```
 

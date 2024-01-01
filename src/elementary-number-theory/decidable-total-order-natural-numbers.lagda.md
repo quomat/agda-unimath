@@ -30,14 +30,14 @@ forms a [decidable total order](order-theory.decidable-total-orders.md).
 
 ```agda
 is-total-leq-ℕ : is-total-Poset ℕ-Poset
-is-total-leq-ℕ n m = {!!}
+is-total-leq-ℕ = {!!}
 
 ℕ-Total-Order : Total-Order lzero lzero
-pr1 ℕ-Total-Order = {!!}
+ℕ-Total-Order = {!!}
 pr2 ℕ-Total-Order = {!!}
 
 ℕ-Decidable-Total-Order : Decidable-Total-Order lzero lzero
-pr1 ℕ-Decidable-Total-Order = {!!}
+ℕ-Decidable-Total-Order = {!!}
 pr1 (pr2 ℕ-Decidable-Total-Order) = {!!}
 pr2 (pr2 ℕ-Decidable-Total-Order) = {!!}
 ```

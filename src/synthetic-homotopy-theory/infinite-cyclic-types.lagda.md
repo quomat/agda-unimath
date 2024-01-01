@@ -47,7 +47,7 @@ open import univalent-combinatorics.cyclic-finite-types
 
 ```agda
 Infinite-Cyclic-Type : (l : Level) → UU (lsuc l)
-Infinite-Cyclic-Type l = {!!}
+Infinite-Cyclic-Type = {!!}
 
 ℤ-Infinite-Cyclic-Type : Infinite-Cyclic-Type lzero
 ℤ-Infinite-Cyclic-Type = {!!}
@@ -83,7 +83,7 @@ module _
   pr1 (pr1 point-Infinite-Cyclic-Type) = {!!}
 
   Infinite-Cyclic-Type-Pointed-Type-Level : Pointed-Type (lsuc l)
-  pr1 Infinite-Cyclic-Type-Pointed-Type-Level = {!!}
+  Infinite-Cyclic-Type-Pointed-Type-Level = {!!}
 
 module _
   {l1 : Level} (X : Infinite-Cyclic-Type l1)
@@ -117,7 +117,7 @@ module _
 
   map-left-factor-compute-Ω-Infinite-Cyclic-Type :
     equiv-Infinite-Cyclic-Type ℤ-Infinite-Cyclic-Type ℤ-Infinite-Cyclic-Type → ℤ
-  map-left-factor-compute-Ω-Infinite-Cyclic-Type e = {!!}
+  map-left-factor-compute-Ω-Infinite-Cyclic-Type = {!!}
 
   abstract
     is-equiv-map-left-factor-compute-Ω-Infinite-Cyclic-Type :
@@ -128,7 +128,7 @@ module _
     equiv-Infinite-Cyclic-Type
       ℤ-Infinite-Cyclic-Type
       ℤ-Infinite-Cyclic-Type ≃ ℤ
-  pr1 equiv-left-factor-compute-Ω-Infinite-Cyclic-Type = {!!}
+  equiv-left-factor-compute-Ω-Infinite-Cyclic-Type = {!!}
 
   compute-Ω-Infinite-Cyclic-Type :
     type-Ω (Infinite-Cyclic-Type-Pointed-Type) ≃ ℤ

@@ -174,7 +174,7 @@ module _
       ( right-unit {p = p})
       ( concat-dependent-identification B p refl q refl)
       ( q)
-  right-unit-dependent-identification refl refl = {!!}
+  right-unit-dependent-identification = {!!}
 
   left-unit-dependent-identification :
     {x y : A} (p : x ＝ y) {x' : B x} {y' : B y}
@@ -186,7 +186,7 @@ module _
         ( refl-dependent-identification B)
         ( q))
       ( q)
-  left-unit-dependent-identification p q = {!!}
+  left-unit-dependent-identification = {!!}
 ```
 
 ### Inverse laws for dependent identifications

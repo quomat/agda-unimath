@@ -56,7 +56,7 @@ module _
   is-prop-is-in-Large-Subpreorder = {!!}
 
   type-Large-Subpreorder : (l1 : Level) → UU (α l1 ⊔ γ l1)
-  type-Large-Subpreorder l1 = {!!}
+  type-Large-Subpreorder = {!!}
 
   leq-prop-Large-Subpreorder :
     Large-Relation-Prop (λ l → α l ⊔ γ l) β type-Large-Subpreorder

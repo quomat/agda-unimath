@@ -51,7 +51,7 @@ is-connected-prop-set-bundle-𝕊¹ :
 is-connected-prop-set-bundle-𝕊¹ = {!!}
 
 is-connected-set-bundle-𝕊¹ : {l : Level} (X : 𝕊¹ → Set l) → UU l
-is-connected-set-bundle-𝕊¹ X = {!!}
+is-connected-set-bundle-𝕊¹ = {!!}
 
 is-prop-is-connected-set-bundle-𝕊¹ :
   {l : Level} (X : 𝕊¹ → Set l) → is-prop (is-connected-set-bundle-𝕊¹ X)
@@ -62,7 +62,7 @@ is-prop-is-connected-set-bundle-𝕊¹ = {!!}
 
 ```agda
 connected-set-bundle-𝕊¹ : (l : Level) → UU (lsuc l)
-connected-set-bundle-𝕊¹ l = {!!}
+connected-set-bundle-𝕊¹ = {!!}
 
 module _
   {l : Level} (X : connected-set-bundle-𝕊¹ l)
@@ -123,7 +123,7 @@ module _
   map-aut-connected-set-bundle-𝕊¹ = {!!}
 
   set-with-automorphism-connected-set-bundle-𝕊¹ : Set-With-Automorphism l
-  pr1 set-with-automorphism-connected-set-bundle-𝕊¹ = {!!}
+  set-with-automorphism-connected-set-bundle-𝕊¹ = {!!}
   pr2 set-with-automorphism-connected-set-bundle-𝕊¹ = {!!}
 ```
 

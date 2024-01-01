@@ -37,7 +37,7 @@ The fact that the standard cyclic groups are
 
 ```agda
 ℤ-Mod-Semigroup : (k : ℕ) → Semigroup lzero
-pr1 (ℤ-Mod-Semigroup k) = {!!}
+ℤ-Mod-Semigroup = {!!}
 pr1 (pr2 (ℤ-Mod-Semigroup k)) = {!!}
 pr2 (pr2 (ℤ-Mod-Semigroup k)) = {!!}
 ```
@@ -46,7 +46,7 @@ pr2 (pr2 (ℤ-Mod-Semigroup k)) = {!!}
 
 ```agda
 ℤ-Mod-Group : (k : ℕ) → Group lzero
-pr1 (ℤ-Mod-Group k) = {!!}
+ℤ-Mod-Group = {!!}
 pr1 (pr1 (pr2 (ℤ-Mod-Group k))) = {!!}
 pr1 (pr2 (pr1 (pr2 (ℤ-Mod-Group k)))) = {!!}
 pr2 (pr2 (pr1 (pr2 (ℤ-Mod-Group k)))) = {!!}
@@ -59,7 +59,7 @@ pr2 (pr2 (pr2 (pr2 (ℤ-Mod-Group k)))) = {!!}
 
 ```agda
 ℤ-Mod-Ab : (k : ℕ) → Ab lzero
-pr1 (ℤ-Mod-Ab k) = {!!}
+ℤ-Mod-Ab = {!!}
 pr2 (ℤ-Mod-Ab k) = {!!}
 ```
 

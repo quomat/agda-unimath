@@ -30,7 +30,7 @@ The natural numbers equipped with `0` and addition is a commutative monoid.
 
 ```agda
 ℕ-Semigroup : Semigroup lzero
-pr1 ℕ-Semigroup = {!!}
+ℕ-Semigroup = {!!}
 pr1 (pr2 ℕ-Semigroup) = {!!}
 pr2 (pr2 ℕ-Semigroup) = {!!}
 ```
@@ -39,7 +39,7 @@ pr2 (pr2 ℕ-Semigroup) = {!!}
 
 ```agda
 ℕ-Monoid : Monoid lzero
-pr1 ℕ-Monoid = {!!}
+ℕ-Monoid = {!!}
 pr1 (pr2 ℕ-Monoid) = {!!}
 pr1 (pr2 (pr2 ℕ-Monoid)) = {!!}
 pr2 (pr2 (pr2 ℕ-Monoid)) = {!!}
@@ -49,6 +49,6 @@ pr2 (pr2 (pr2 ℕ-Monoid)) = {!!}
 
 ```agda
 ℕ-Commutative-Monoid : Commutative-Monoid lzero
-pr1 ℕ-Commutative-Monoid = {!!}
+ℕ-Commutative-Monoid = {!!}
 pr2 ℕ-Commutative-Monoid = {!!}
 ```

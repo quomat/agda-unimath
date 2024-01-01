@@ -151,7 +151,7 @@ module _
   distributive-meet-sup-Π-Large-Frame = {!!}
 
   Π-Large-Frame : Large-Frame (λ l2 → α l2 ⊔ l1) (λ l2 l3 → β l2 l3 ⊔ l1) γ
-  large-poset-Large-Frame Π-Large-Frame = {!!}
+  Π-Large-Frame = {!!}
   is-large-meet-semilattice-Large-Frame Π-Large-Frame = {!!}
   is-large-suplattice-Large-Frame Π-Large-Frame = {!!}
   distributive-meet-sup-Large-Frame Π-Large-Frame = {!!}

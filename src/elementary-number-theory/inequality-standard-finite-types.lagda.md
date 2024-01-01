@@ -35,7 +35,7 @@ open import univalent-combinatorics.standard-finite-types
 
 ```agda
 leq-Fin : (k : ℕ) → Fin k → Fin k → UU lzero
-leq-Fin (succ-ℕ k) x (inr y) = {!!}
+leq-Fin = {!!}
 leq-Fin (succ-ℕ k) (inl x) (inl y) = {!!}
 leq-Fin (succ-ℕ k) (inr x) (inl y) = {!!}
 
@@ -45,7 +45,7 @@ abstract
   is-prop-leq-Fin = {!!}
 
 leq-Fin-Prop : (k : ℕ) → Fin k → Fin k → Prop lzero
-pr1 (leq-Fin-Prop k x y) = {!!}
+leq-Fin-Prop = {!!}
 pr2 (leq-Fin-Prop k x y) = {!!}
 
 leq-neg-one-Fin :
@@ -53,7 +53,7 @@ leq-neg-one-Fin :
 leq-neg-one-Fin = {!!}
 
 refl-leq-Fin : (k : ℕ) → is-reflexive (leq-Fin k)
-refl-leq-Fin (succ-ℕ k) (inl x) = {!!}
+refl-leq-Fin = {!!}
 refl-leq-Fin (succ-ℕ k) (inr star) = {!!}
 
 antisymmetric-leq-Fin :
@@ -87,13 +87,13 @@ reflects-leq-nat-Fin = {!!}
 
 ```agda
 Fin-Preorder : ℕ → Preorder lzero lzero
-pr1 (Fin-Preorder k) = {!!}
+Fin-Preorder = {!!}
 pr1 (pr2 (Fin-Preorder k)) = {!!}
 pr1 (pr2 (pr2 (Fin-Preorder k))) = {!!}
 pr2 (pr2 (pr2 (Fin-Preorder k))) = {!!}
 
 Fin-Poset : ℕ → Poset lzero lzero
-pr1 (Fin-Poset k) = {!!}
+Fin-Poset = {!!}
 pr2 (Fin-Poset k) = {!!}
 ```
 
@@ -103,13 +103,13 @@ pr2 (Fin-Poset k) = {!!}
 
 ```agda
 is-decidable-leq-Fin : (k : ℕ) (x y : Fin k) → is-decidable (leq-Fin k x y)
-is-decidable-leq-Fin (succ-ℕ k) (inl x) (inl y) = {!!}
+is-decidable-leq-Fin = {!!}
 is-decidable-leq-Fin (succ-ℕ k) (inl x) (inr y) = {!!}
 is-decidable-leq-Fin (succ-ℕ k) (inr x) (inl y) = {!!}
 is-decidable-leq-Fin (succ-ℕ k) (inr x) (inr y) = {!!}
 
 leq-Fin-Decidable-Prop : (k : ℕ) → Fin k → Fin k → Decidable-Prop lzero
-pr1 (leq-Fin-Decidable-Prop k x y) = {!!}
+leq-Fin-Decidable-Prop = {!!}
 pr1 (pr2 (leq-Fin-Decidable-Prop k x y)) = {!!}
 pr2 (pr2 (leq-Fin-Decidable-Prop k x y)) = {!!}
 ```
@@ -118,7 +118,7 @@ pr2 (pr2 (leq-Fin-Decidable-Prop k x y)) = {!!}
 
 ```agda
 linear-leq-Fin : (k : ℕ) (x y : Fin k) → leq-Fin k x y + leq-Fin k y x
-linear-leq-Fin (succ-ℕ k) (inl x) (inl y) = {!!}
+linear-leq-Fin = {!!}
 linear-leq-Fin (succ-ℕ k) (inl x) (inr y) = {!!}
 linear-leq-Fin (succ-ℕ k) (inr x) y = {!!}
 ```

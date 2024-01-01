@@ -55,7 +55,7 @@ coherent-unital-mul-Pointed-Type = {!!}
 
 ```agda
 H-Space : (l : Level) → UU (lsuc l)
-H-Space l = {!!}
+H-Space = {!!}
 
 module _
   {l : Level} (M : H-Space l)
@@ -88,7 +88,7 @@ module _
   ap-mul-H-Space = {!!}
 
   magma-H-Space : Magma l
-  pr1 magma-H-Space = {!!}
+  magma-H-Space = {!!}
 
   coherent-unit-laws-mul-H-Space :
     coherent-unit-laws mul-H-Space unit-H-Space
@@ -115,7 +115,7 @@ module _
   unit-laws-mul-H-Space = {!!}
 
   is-unital-mul-H-Space : is-unital mul-H-Space
-  pr1 is-unital-mul-H-Space = {!!}
+  is-unital-mul-H-Space = {!!}
 
   is-coherently-unital-mul-H-Space :
     is-coherently-unital mul-H-Space

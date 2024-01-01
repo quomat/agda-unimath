@@ -100,7 +100,7 @@ module _
   ap-mul-Group = {!!}
 
   mul-Group' : type-Group → type-Group → type-Group
-  mul-Group' x y = {!!}
+  mul-Group' = {!!}
 
   associative-mul-Group :
     (x y z : type-Group) →
@@ -114,28 +114,28 @@ module _
   is-unital-Group = {!!}
 
   monoid-Group : Monoid l
-  pr1 monoid-Group = {!!}
+  monoid-Group = {!!}
 
   unit-Group : type-Group
   unit-Group = {!!}
 
   is-unit-Group : type-Group → UU l
-  is-unit-Group x = {!!}
+  is-unit-Group = {!!}
 
   is-unit-Group' : type-Group → UU l
-  is-unit-Group' x = {!!}
+  is-unit-Group' = {!!}
 
   is-prop-is-unit-Group : (x : type-Group) → is-prop (is-unit-Group x)
-  is-prop-is-unit-Group x = {!!}
+  is-prop-is-unit-Group = {!!}
 
   is-prop-is-unit-Group' : (x : type-Group) → is-prop (is-unit-Group' x)
-  is-prop-is-unit-Group' x = {!!}
+  is-prop-is-unit-Group' = {!!}
 
   is-unit-prop-Group : type-Group → Prop l
-  pr1 (is-unit-prop-Group x) = {!!}
+  is-unit-prop-Group = {!!}
 
   is-unit-prop-Group' : type-Group → Prop l
-  pr1 (is-unit-prop-Group' x) = {!!}
+  is-unit-prop-Group' = {!!}
 
   left-unit-law-mul-Group :
     (x : type-Group) → Id (mul-Group unit-Group x) x
@@ -146,7 +146,7 @@ module _
   right-unit-law-mul-Group = {!!}
 
   pointed-type-Group : Pointed-Type l
-  pr1 pointed-type-Group = {!!}
+  pointed-type-Group = {!!}
 
   has-inverses-Group : is-group' semigroup-Group is-unital-Group
   has-inverses-Group = {!!}
@@ -211,7 +211,7 @@ module _
   where
 
   left-div-Group : type-Group G → type-Group G → type-Group G
-  left-div-Group x = {!!}
+  left-div-Group = {!!}
 
   ap-left-div-Group :
     {x x' y y' : type-Group G} → x ＝ x' → y ＝ y' →
@@ -227,23 +227,23 @@ module _
   is-retraction-left-div-Group = {!!}
 
   is-equiv-mul-Group : (x : type-Group G) → is-equiv (mul-Group G x)
-  is-equiv-mul-Group x = {!!}
+  is-equiv-mul-Group = {!!}
 
   equiv-mul-Group : (x : type-Group G) → type-Group G ≃ type-Group G
-  pr1 (equiv-mul-Group x) = {!!}
+  equiv-mul-Group = {!!}
 
   is-equiv-left-div-Group : (x : type-Group G) → is-equiv (left-div-Group x)
-  is-equiv-left-div-Group x = {!!}
+  is-equiv-left-div-Group = {!!}
 
   equiv-left-div-Group : (x : type-Group G) → type-Group G ≃ type-Group G
-  pr1 (equiv-left-div-Group x) = {!!}
+  equiv-left-div-Group = {!!}
 ```
 
 ### Multiplication by `x` from the right is an equivalence
 
 ```agda
   right-div-Group : type-Group G → type-Group G → type-Group G
-  right-div-Group x y = {!!}
+  right-div-Group = {!!}
 
   ap-right-div-Group :
     {x x' y y' : type-Group G} → x ＝ x' → y ＝ y' →
@@ -259,10 +259,10 @@ module _
   is-retraction-right-div-Group = {!!}
 
   is-equiv-mul-Group' : (x : type-Group G) → is-equiv (mul-Group' G x)
-  is-equiv-mul-Group' x = {!!}
+  is-equiv-mul-Group' = {!!}
 
   equiv-mul-Group' : (x : type-Group G) → type-Group G ≃ type-Group G
-  pr1 (equiv-mul-Group' x) = {!!}
+  equiv-mul-Group' = {!!}
 
   is-equiv-right-div-Group :
     (x : type-Group G) → is-equiv (λ y → right-div-Group y x)
@@ -277,22 +277,22 @@ module _
 
 ```agda
   is-binary-equiv-mul-Group : is-binary-equiv (mul-Group G)
-  pr1 is-binary-equiv-mul-Group = {!!}
+  is-binary-equiv-mul-Group = {!!}
 
   is-binary-emb-mul-Group : is-binary-emb (mul-Group G)
   is-binary-emb-mul-Group = {!!}
 
   is-emb-mul-Group : (x : type-Group G) → is-emb (mul-Group G x)
-  is-emb-mul-Group x = {!!}
+  is-emb-mul-Group = {!!}
 
   is-emb-mul-Group' : (x : type-Group G) → is-emb (mul-Group' G x)
-  is-emb-mul-Group' x = {!!}
+  is-emb-mul-Group' = {!!}
 
   is-injective-mul-Group : (x : type-Group G) → is-injective (mul-Group G x)
-  is-injective-mul-Group x = {!!}
+  is-injective-mul-Group = {!!}
 
   is-injective-mul-Group' : (x : type-Group G) → is-injective (mul-Group' G x)
-  is-injective-mul-Group' x = {!!}
+  is-injective-mul-Group' = {!!}
 ```
 
 ### Transposition laws for equalities in groups
@@ -367,7 +367,7 @@ module _
   is-equiv-inv-Group = {!!}
 
   equiv-equiv-inv-Group : type-Group G ≃ type-Group G
-  pr1 equiv-equiv-inv-Group = {!!}
+  equiv-equiv-inv-Group = {!!}
 ```
 
 ### Two elements `x` and `y` are equal iff `x⁻¹y= {!!}
@@ -438,11 +438,7 @@ abstract
   all-elements-equal-is-group :
     {l : Level} (G : Semigroup l) (e : is-unital-Semigroup G) →
     all-elements-equal (is-group' G e)
-  all-elements-equal-is-group
-    ( pair G (pair μ associative-G))
-    ( pair e (pair left-unit-G right-unit-G))
-    ( pair i (pair left-inv-i right-inv-i))
-    ( pair i' (pair left-inv-i' right-inv-i')) = {!!}
+  all-elements-equal-is-group = {!!}
 
 abstract
   is-prop-is-group :
@@ -450,7 +446,7 @@ abstract
   is-prop-is-group = {!!}
 
 is-group-prop-Semigroup : {l : Level} (G : Semigroup l) → Prop l
-pr1 (is-group-prop-Semigroup G) = {!!}
+is-group-prop-Semigroup = {!!}
 pr2 (is-group-prop-Semigroup G) = {!!}
 ```
 
@@ -462,7 +458,7 @@ module _
   where
 
   is-idempotent-Group : type-Group G → UU l
-  is-idempotent-Group x = {!!}
+  is-idempotent-Group = {!!}
 
   is-unit-is-idempotent-Group :
     {x : type-Group G} → is-idempotent-Group x → is-unit-Group G x
@@ -495,5 +491,5 @@ module _
   where
 
   pointed-type-with-aut-Group : Pointed-Type-With-Aut l
-  pr1 pointed-type-with-aut-Group = {!!}
+  pointed-type-with-aut-Group = {!!}
 ```

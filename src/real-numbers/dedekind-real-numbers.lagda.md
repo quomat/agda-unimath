@@ -72,7 +72,7 @@ module _
 
 ```agda
 ℝ : (l : Level) → UU (lsuc l)
-ℝ l = {!!}
+ℝ = {!!}
 ```
 
 ## Properties
@@ -82,10 +82,10 @@ module _
 ```agda
 abstract
   is-set-ℝ : (l : Level) → is-set (ℝ l)
-  is-set-ℝ l = {!!}
+  is-set-ℝ = {!!}
 
 ℝ-Set : (l : Level) → Set (lsuc l)
-pr1 (ℝ-Set l) = {!!}
+ℝ-Set = {!!}
 pr2 (ℝ-Set l) = {!!}
 ```
 

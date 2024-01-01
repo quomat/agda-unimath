@@ -25,7 +25,7 @@ A **sequence** of elements in a type `A` is a map `ℕ → A`.
 
 ```agda
 sequence : {l : Level} → UU l → UU l
-sequence A = {!!}
+sequence = {!!}
 ```
 
 ### Functorial action on maps of sequences

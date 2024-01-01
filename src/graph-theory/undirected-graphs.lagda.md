@@ -28,7 +28,7 @@ types over the [unordered pairs](foundation.unordered-pairs.md) of `V`.
 
 ```agda
 Undirected-Graph : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Undirected-Graph l1 l2 = {!!}
+Undirected-Graph = {!!}
 
 module _
   {l1 l2 : Level} (G : Undirected-Graph l1 l2)
@@ -64,17 +64,17 @@ module _
   where
 
   undirected-graph-Graph : Undirected-Graph l1 l2
-  pr1 undirected-graph-Graph = {!!}
+  undirected-graph-Graph = {!!}
 
 module _
   {l1 l2 : Level} (G : Undirected-Graph l1 l2)
   where
 
   graph-Undirected-Graph : Directed-Graph l1 (lsuc lzero ⊔ l1 ⊔ l2)
-  pr1 graph-Undirected-Graph = {!!}
+  graph-Undirected-Graph = {!!}
 
   graph-Undirected-Graph' : Directed-Graph l1 l2
-  pr1 graph-Undirected-Graph' = {!!}
+  graph-Undirected-Graph' = {!!}
 ```
 
 ### Transporting edges along equalities of unordered pairs of vertices

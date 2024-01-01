@@ -41,10 +41,10 @@ module _
   obj-Π-Precategory = {!!}
 
   hom-set-Π-Precategory : obj-Π-Precategory → obj-Π-Precategory → Set (l1 ⊔ l3)
-  hom-set-Π-Precategory x y = {!!}
+  hom-set-Π-Precategory = {!!}
 
   hom-Π-Precategory : obj-Π-Precategory → obj-Π-Precategory → UU (l1 ⊔ l3)
-  hom-Π-Precategory x y = {!!}
+  hom-Π-Precategory = {!!}
 
   comp-hom-Π-Precategory :
     {x y z : obj-Π-Precategory} →
@@ -76,7 +76,7 @@ module _
   associative-composition-operation-Π-Precategory = {!!}
 
   id-hom-Π-Precategory : {x : obj-Π-Precategory} → hom-Π-Precategory x x
-  id-hom-Π-Precategory i = {!!}
+  id-hom-Π-Precategory = {!!}
 
   left-unit-law-comp-hom-Π-Precategory :
     {x y : obj-Π-Precategory}
@@ -96,7 +96,7 @@ module _
   is-unital-Π-Precategory = {!!}
 
   Π-Precategory : Precategory (l1 ⊔ l2) (l1 ⊔ l3)
-  pr1 Π-Precategory = {!!}
+  Π-Precategory = {!!}
 ```
 
 ## Properties

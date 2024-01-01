@@ -29,18 +29,18 @@ open import foundation.negated-equality
 
 ```agda
 add-ℕ : ℕ → ℕ → ℕ
-add-ℕ x 0 = {!!}
+add-ℕ = {!!}
 add-ℕ x (succ-ℕ y) = {!!}
 
 infixl 35 _+ℕ_
 _+ℕ_ = {!!}
 
 add-ℕ' : ℕ → ℕ → ℕ
-add-ℕ' m n = {!!}
+add-ℕ' = {!!}
 
 ap-add-ℕ :
   {m n m' n' : ℕ} → m ＝ m' → n ＝ n' → m +ℕ n ＝ m' +ℕ n'
-ap-add-ℕ p q = {!!}
+ap-add-ℕ = {!!}
 ```
 
 ## Properties
@@ -50,11 +50,11 @@ ap-add-ℕ p q = {!!}
 ```agda
 right-unit-law-add-ℕ :
   (x : ℕ) → x +ℕ zero-ℕ ＝ x
-right-unit-law-add-ℕ x = {!!}
+right-unit-law-add-ℕ = {!!}
 
 left-unit-law-add-ℕ :
   (x : ℕ) → zero-ℕ +ℕ x ＝ x
-left-unit-law-add-ℕ zero-ℕ = {!!}
+left-unit-law-add-ℕ = {!!}
 left-unit-law-add-ℕ (succ-ℕ x) = {!!}
 ```
 
@@ -63,12 +63,12 @@ left-unit-law-add-ℕ (succ-ℕ x) = {!!}
 ```agda
 left-successor-law-add-ℕ :
   (x y : ℕ) → (succ-ℕ x) +ℕ y ＝ succ-ℕ (x +ℕ y)
-left-successor-law-add-ℕ x zero-ℕ = {!!}
+left-successor-law-add-ℕ = {!!}
 left-successor-law-add-ℕ x (succ-ℕ y) = {!!}
 
 right-successor-law-add-ℕ :
   (x y : ℕ) → x +ℕ (succ-ℕ y) ＝ succ-ℕ (x +ℕ y)
-right-successor-law-add-ℕ x y = {!!}
+right-successor-law-add-ℕ = {!!}
 ```
 
 ### Addition is associative
@@ -76,7 +76,7 @@ right-successor-law-add-ℕ x y = {!!}
 ```agda
 associative-add-ℕ :
   (x y z : ℕ) → (x +ℕ y) +ℕ z ＝ x +ℕ (y +ℕ z)
-associative-add-ℕ x y zero-ℕ = {!!}
+associative-add-ℕ = {!!}
 associative-add-ℕ x y (succ-ℕ z) = {!!}
 ```
 
@@ -84,7 +84,7 @@ associative-add-ℕ x y (succ-ℕ z) = {!!}
 
 ```agda
 commutative-add-ℕ : (x y : ℕ) → x +ℕ y ＝ y +ℕ x
-commutative-add-ℕ zero-ℕ y = {!!}
+commutative-add-ℕ = {!!}
 commutative-add-ℕ (succ-ℕ x) y = {!!}
 ```
 
@@ -93,11 +93,11 @@ commutative-add-ℕ (succ-ℕ x) y = {!!}
 ```agda
 left-one-law-add-ℕ :
   (x : ℕ) → 1 +ℕ x ＝ succ-ℕ x
-left-one-law-add-ℕ x = {!!}
+left-one-law-add-ℕ = {!!}
 
 right-one-law-add-ℕ :
   (x : ℕ) → x +ℕ 1 ＝ succ-ℕ x
-right-one-law-add-ℕ x = {!!}
+right-one-law-add-ℕ = {!!}
 ```
 
 ### Addition by `1` on the left or on the right is the double successor
@@ -105,11 +105,11 @@ right-one-law-add-ℕ x = {!!}
 ```agda
 left-two-law-add-ℕ :
   (x : ℕ) → 2 +ℕ x ＝ succ-ℕ (succ-ℕ x)
-left-two-law-add-ℕ x = {!!}
+left-two-law-add-ℕ = {!!}
 
 right-two-law-add-ℕ :
   (x : ℕ) → x +ℕ 2 ＝ succ-ℕ (succ-ℕ x)
-right-two-law-add-ℕ x = {!!}
+right-two-law-add-ℕ = {!!}
 ```
 
 ### Interchange law of addition
@@ -123,21 +123,21 @@ interchange-law-add-add-ℕ = {!!}
 
 ```agda
 is-injective-right-add-ℕ : (k : ℕ) → is-injective (_+ℕ k)
-is-injective-right-add-ℕ zero-ℕ = {!!}
+is-injective-right-add-ℕ = {!!}
 is-injective-right-add-ℕ (succ-ℕ k) p = {!!}
 
 is-injective-left-add-ℕ : (k : ℕ) → is-injective (k +ℕ_)
-is-injective-left-add-ℕ k {x} {y} p = {!!}
+is-injective-left-add-ℕ = {!!}
 ```
 
 ### Addition by a fixed element on either side is an embedding
 
 ```agda
 is-emb-left-add-ℕ : (x : ℕ) → is-emb (x +ℕ_)
-is-emb-left-add-ℕ x = {!!}
+is-emb-left-add-ℕ = {!!}
 
 is-emb-right-add-ℕ : (x : ℕ) → is-emb (_+ℕ x)
-is-emb-right-add-ℕ x = {!!}
+is-emb-right-add-ℕ = {!!}
 ```
 
 ### `x + y ＝ 0` if and only if both `x` and `y` are `0`
@@ -145,20 +145,20 @@ is-emb-right-add-ℕ x = {!!}
 ```agda
 is-zero-right-is-zero-add-ℕ :
   (x y : ℕ) → is-zero-ℕ (x +ℕ y) → is-zero-ℕ y
-is-zero-right-is-zero-add-ℕ x zero-ℕ p = {!!}
+is-zero-right-is-zero-add-ℕ = {!!}
 is-zero-right-is-zero-add-ℕ x (succ-ℕ y) p = {!!}
 
 is-zero-left-is-zero-add-ℕ :
   (x y : ℕ) → is-zero-ℕ (x +ℕ y) → is-zero-ℕ x
-is-zero-left-is-zero-add-ℕ x y p = {!!}
+is-zero-left-is-zero-add-ℕ = {!!}
 
 is-zero-summand-is-zero-sum-ℕ :
   (x y : ℕ) → is-zero-ℕ (x +ℕ y) → (is-zero-ℕ x) × (is-zero-ℕ y)
-is-zero-summand-is-zero-sum-ℕ x y p = {!!}
+is-zero-summand-is-zero-sum-ℕ = {!!}
 
 is-zero-sum-is-zero-summand-ℕ :
   (x y : ℕ) → (is-zero-ℕ x) × (is-zero-ℕ y) → is-zero-ℕ (x +ℕ y)
-is-zero-sum-is-zero-summand-ℕ .zero-ℕ .zero-ℕ (pair refl refl) = {!!}
+is-zero-sum-is-zero-summand-ℕ = {!!}
 ```
 
 ### `m ≠ m + n + 1`
@@ -166,7 +166,7 @@ is-zero-sum-is-zero-summand-ℕ .zero-ℕ .zero-ℕ (pair refl refl) = {!!}
 ```agda
 neq-add-ℕ :
   (m n : ℕ) → m ≠ m +ℕ (succ-ℕ n)
-neq-add-ℕ (succ-ℕ m) n p = {!!}
+neq-add-ℕ = {!!}
 ```
 
 ## See also

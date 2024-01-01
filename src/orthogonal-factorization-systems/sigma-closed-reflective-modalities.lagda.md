@@ -34,7 +34,7 @@ is-closed-under-Σ-reflective-modality :
 is-closed-under-Σ-reflective-modality = {!!}
 
 closed-under-Σ-reflective-modality : (l : Level) → UU (lsuc l)
-closed-under-Σ-reflective-modality l = {!!}
+closed-under-Σ-reflective-modality = {!!}
 ```
 
 ## See also

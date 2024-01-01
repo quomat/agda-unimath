@@ -52,7 +52,7 @@ module _
 
 ```agda
 Meet-Suplattice : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Meet-Suplattice l1 l2 = {!!}
+Meet-Suplattice = {!!}
 
 module _
   {l1 l2 : Level} (A : Meet-Suplattice l1 l2)

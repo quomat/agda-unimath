@@ -248,10 +248,10 @@ module _
     right-inverse-law-mul-quotient-Group = {!!}
 
   semigroup-quotient-Group : Semigroup (l1 ⊔ l2)
-  pr1 semigroup-quotient-Group = {!!}
+  semigroup-quotient-Group = {!!}
 
   quotient-Group : Group (l1 ⊔ l2)
-  pr1 quotient-Group = {!!}
+  quotient-Group = {!!}
 ```
 
 #### The quotient homomorphism into the quotient group
@@ -284,7 +284,7 @@ module _
     preserves-inv-quotient-hom-Group = {!!}
 
   quotient-hom-Group : hom-Group G (quotient-Group G N)
-  pr1 quotient-hom-Group = {!!}
+  quotient-hom-Group = {!!}
 
   nullifies-normal-subgroup-quotient-hom-Group :
     nullifies-normal-subgroup-hom-Group G
@@ -294,7 +294,7 @@ module _
   nullifies-normal-subgroup-quotient-hom-Group = {!!}
 
   nullifying-quotient-hom-Group : nullifying-hom-Group G (quotient-Group G N) N
-  pr1 nullifying-quotient-hom-Group = {!!}
+  nullifying-quotient-hom-Group = {!!}
 ```
 
 #### Induction on quotient groups

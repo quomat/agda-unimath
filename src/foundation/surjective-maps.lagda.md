@@ -69,16 +69,16 @@ A map `f : A → B` is **surjective** if all of its
 ```agda
 is-surjective-Prop :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → (A → B) → Prop (l1 ⊔ l2)
-is-surjective-Prop {B = B} f = {!!}
+is-surjective-Prop = {!!}
 
 is-surjective :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → (A → B) → UU (l1 ⊔ l2)
-is-surjective f = {!!}
+is-surjective = {!!}
 
 is-prop-is-surjective :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
   is-prop (is-surjective f)
-is-prop-is-surjective f = {!!}
+is-prop-is-surjective = {!!}
 
 infix 5 _↠_
 _↠_ : {l1 l2 : Level} → UU l1 → UU l2 → UU (l1 ⊔ l2)
@@ -99,7 +99,7 @@ module _
 
 ```agda
 Surjection : {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-Surjection l2 A = {!!}
+Surjection = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (f : Surjection l2 A)
@@ -123,17 +123,17 @@ module _
 ```agda
 Surjection-Into-Truncated-Type :
   {l1 : Level} (l2 : Level) (k : 𝕋) → UU l1 → UU (l1 ⊔ lsuc l2)
-Surjection-Into-Truncated-Type l2 k A = {!!}
+Surjection-Into-Truncated-Type = {!!}
 
 emb-inclusion-Surjection-Into-Truncated-Type :
   {l1 : Level} (l2 : Level) (k : 𝕋) (A : UU l1) →
   Surjection-Into-Truncated-Type l2 k A ↪ Surjection l2 A
-emb-inclusion-Surjection-Into-Truncated-Type l2 k A = {!!}
+emb-inclusion-Surjection-Into-Truncated-Type = {!!}
 
 inclusion-Surjection-Into-Truncated-Type :
   {l1 l2 : Level} {k : 𝕋} {A : UU l1} →
   Surjection-Into-Truncated-Type l2 k A → Surjection l2 A
-inclusion-Surjection-Into-Truncated-Type {l1} {l2} {k} {A} = {!!}
+inclusion-Surjection-Into-Truncated-Type = {!!}
 
 module _
   {l1 l2 : Level} {k : 𝕋} {A : UU l1}
@@ -168,17 +168,17 @@ module _
 ```agda
 Surjection-Into-Set :
   {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-Surjection-Into-Set l2 A = {!!}
+Surjection-Into-Set = {!!}
 
 emb-inclusion-Surjection-Into-Set :
   {l1 : Level} (l2 : Level) (A : UU l1) →
   Surjection-Into-Set l2 A ↪ Surjection l2 A
-emb-inclusion-Surjection-Into-Set l2 A = {!!}
+emb-inclusion-Surjection-Into-Set = {!!}
 
 inclusion-Surjection-Into-Set :
   {l1 l2 : Level} {A : UU l1} →
   Surjection-Into-Set l2 A → Surjection l2 A
-inclusion-Surjection-Into-Set {l1} {l2} {A} = {!!}
+inclusion-Surjection-Into-Set = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (f : Surjection-Into-Set l2 A)
@@ -212,7 +212,7 @@ abstract
   is-surjective-has-section :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} →
     section f → is-surjective f
-  is-surjective-has-section (g , G) b = {!!}
+  is-surjective-has-section = {!!}
 ```
 
 ### Any split surjective map is surjective
@@ -222,7 +222,7 @@ abstract
   is-surjective-is-split-surjective :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} →
     is-split-surjective f → is-surjective f
-  is-surjective-is-split-surjective H x = {!!}
+  is-surjective-is-split-surjective = {!!}
 ```
 
 ### Any equivalence is surjective
@@ -231,12 +231,12 @@ abstract
 is-surjective-is-equiv :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} →
   is-equiv f → is-surjective f
-is-surjective-is-equiv H = {!!}
+is-surjective-is-equiv = {!!}
 
 is-surjective-map-equiv :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (e : A ≃ B) →
   is-surjective (map-equiv e)
-is-surjective-map-equiv e = {!!}
+is-surjective-map-equiv = {!!}
 ```
 
 ### The identity function is surjective
@@ -247,7 +247,7 @@ module _
   where
 
   is-surjective-id : is-surjective (id {A = A})
-  is-surjective-id a = {!!}
+  is-surjective-id = {!!}
 ```
 
 ### Maps which are homotopic to surjective maps are surjective
@@ -260,12 +260,12 @@ module _
   abstract
     is-surjective-htpy :
       {f g : A → B} → f ~ g → is-surjective g → is-surjective f
-    is-surjective-htpy {f} {g} H K b = {!!}
+    is-surjective-htpy = {!!}
 
   abstract
     is-surjective-htpy' :
       {f g : A → B} → f ~ g → is-surjective f → is-surjective g
-    is-surjective-htpy' H = {!!}
+    is-surjective-htpy' = {!!}
 ```
 
 ### The dependent universal property of surjective maps
@@ -281,7 +281,7 @@ module _
   abstract
     is-surjective-dependent-universal-property-surj :
       dependent-universal-property-surj → is-surjective f
-    is-surjective-dependent-universal-property-surj dup-surj-f = {!!}
+    is-surjective-dependent-universal-property-surj = {!!}
 
   abstract
     square-dependent-universal-property-surj :
@@ -290,42 +290,42 @@ module _
       ( ( λ h x → h (f x) (x , refl)) ∘
         ( λ h y → (h y) ∘ unit-trunc-Prop) ∘
         ( λ h y → const (type-trunc-Prop (fiber f y)) (type-Prop (P y)) (h y)))
-    square-dependent-universal-property-surj P = {!!}
+    square-dependent-universal-property-surj = {!!}
 
   abstract
     dependent-universal-property-surj-is-surjective :
       is-surjective f → dependent-universal-property-surj
-    dependent-universal-property-surj-is-surjective is-surj-f P = {!!}
+    dependent-universal-property-surj-is-surjective = {!!}
 
   equiv-dependent-universal-property-surj-is-surjective :
     is-surjective f →
     {l : Level} (C : B → Prop l) →
     ((b : B) → type-Prop (C b)) ≃ ((a : A) → type-Prop (C (f a)))
-  pr1 (equiv-dependent-universal-property-surj-is-surjective H C) h x = {!!}
+  equiv-dependent-universal-property-surj-is-surjective = {!!}
 
   apply-dependent-universal-property-surj-is-surjective :
     is-surjective f →
     {l : Level} (C : B → Prop l) →
     ((a : A) → type-Prop (C (f a))) → ((y : B) → type-Prop (C y))
-  apply-dependent-universal-property-surj-is-surjective H C = {!!}
+  apply-dependent-universal-property-surj-is-surjective = {!!}
 
   apply-twice-dependent-universal-property-surj-is-surjective :
     is-surjective f →
     {l : Level} (C : B → B → Prop l) →
     ((x y : A) → type-Prop (C (f x) (f y))) → ((s t : B) → type-Prop (C s t))
-  apply-twice-dependent-universal-property-surj-is-surjective H C G s = {!!}
+  apply-twice-dependent-universal-property-surj-is-surjective = {!!}
 
 equiv-dependent-universal-property-surjection :
   {l l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A ↠ B) →
   (C : B → Prop l) →
   ((b : B) → type-Prop (C b)) ≃ ((a : A) → type-Prop (C (map-surjection f a)))
-equiv-dependent-universal-property-surjection f = {!!}
+equiv-dependent-universal-property-surjection = {!!}
 
 apply-dependent-universal-property-surjection :
   {l l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A ↠ B) →
   (C : B → Prop l) →
   ((a : A) → type-Prop (C (map-surjection f a))) → ((y : B) → type-Prop (C y))
-apply-dependent-universal-property-surjection f = {!!}
+apply-dependent-universal-property-surjection = {!!}
 ```
 
 ### A map into a proposition is a propositional truncation if and only if it is surjective
@@ -336,14 +336,14 @@ abstract
     {l1 l2 : Level} {A : UU l1} {P : Prop l2} (f : A → type-Prop P) →
     dependent-universal-property-propositional-truncation P f →
     is-surjective f
-  is-surjective-is-propositional-truncation f duppt-f = {!!}
+  is-surjective-is-propositional-truncation = {!!}
 
 abstract
   is-propsitional-truncation-is-surjective :
     {l1 l2 : Level} {A : UU l1} {P : Prop l2} (f : A → type-Prop P) →
     is-surjective f →
     dependent-universal-property-propositional-truncation P f
-  is-propsitional-truncation-is-surjective f is-surj-f = {!!}
+  is-propsitional-truncation-is-surjective = {!!}
 ```
 
 ### A map that is both surjective and an embedding is an equivalence
@@ -353,7 +353,7 @@ abstract
   is-equiv-is-emb-is-surjective :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} →
     is-surjective f → is-emb f → is-equiv f
-  is-equiv-is-emb-is-surjective {f = f} H K = {!!}
+  is-equiv-is-emb-is-surjective = {!!}
 ```
 
 ### The composite of surjective maps is surjective
@@ -367,12 +367,12 @@ module _
     is-surjective-left-map-triangle :
       (f : A → X) (g : B → X) (h : A → B) (H : f ~ (g ∘ h)) →
       is-surjective g → is-surjective h → is-surjective f
-    is-surjective-left-map-triangle f g h H is-surj-g is-surj-h x = {!!}
+    is-surjective-left-map-triangle = {!!}
 
   is-surjective-comp :
     {g : B → X} {h : A → B} →
     is-surjective g → is-surjective h → is-surjective (g ∘ h)
-  is-surjective-comp {g} {h} = {!!}
+  is-surjective-comp = {!!}
 ```
 
 ### Functoriality of products preserves being surjective
@@ -385,11 +385,11 @@ module _
   is-surjective-map-prod :
     {f : A → C} {g : B → D} →
     is-surjective f → is-surjective g → is-surjective (map-prod f g)
-  is-surjective-map-prod {f} {g} s s' (c , d) = {!!}
+  is-surjective-map-prod = {!!}
 
   surjection-prod :
     (A ↠ C) → (B ↠ D) → ((A × B) ↠ (C × D))
-  pr1 (surjection-prod f g) = {!!}
+  surjection-prod = {!!}
 ```
 
 ### The composite of a surjective map with an equivalence is surjective
@@ -398,7 +398,7 @@ module _
 is-surjective-comp-equiv :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : UU l3}
   (e : B ≃ C) → {f : A → B} → is-surjective f → is-surjective (map-equiv e ∘ f)
-is-surjective-comp-equiv e = {!!}
+is-surjective-comp-equiv = {!!}
 ```
 
 ### The precomposite of a surjective map with an equivalence is surjective
@@ -407,7 +407,7 @@ is-surjective-comp-equiv e = {!!}
 is-surjective-precomp-equiv :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : UU l3} {f : B → C} →
   is-surjective f → (e : A ≃ B) → is-surjective (f ∘ map-equiv e)
-is-surjective-precomp-equiv H e = {!!}
+is-surjective-precomp-equiv = {!!}
 ```
 
 ### If a composite is surjective, then so is its left factor
@@ -421,11 +421,11 @@ module _
     is-surjective-right-map-triangle :
       (f : A → X) (g : B → X) (h : A → B) (H : f ~ (g ∘ h)) →
       is-surjective f → is-surjective g
-    is-surjective-right-map-triangle f g h H is-surj-f x = {!!}
+    is-surjective-right-map-triangle = {!!}
 
   is-surjective-left-factor :
     {g : B → X} (h : A → B) → is-surjective (g ∘ h) → is-surjective g
-  is-surjective-left-factor {g} h = {!!}
+  is-surjective-left-factor = {!!}
 ```
 
 ### Surjective maps are `-1`-connected
@@ -434,12 +434,12 @@ module _
 is-neg-one-connected-map-is-surjective :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} →
   is-surjective f → is-connected-map neg-one-𝕋 f
-is-neg-one-connected-map-is-surjective H b = {!!}
+is-neg-one-connected-map-is-surjective = {!!}
 
 is-surjective-is-neg-one-connected-map :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} →
   is-connected-map neg-one-𝕋 f → is-surjective f
-is-surjective-is-neg-one-connected-map H b = {!!}
+is-surjective-is-neg-one-connected-map = {!!}
 ```
 
 ### A (k+1)-connected map is surjective
@@ -449,7 +449,7 @@ is-surjective-is-connected-map :
   {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : UU l2}
   {f : A → B} → is-connected-map (succ-𝕋 k) f →
   is-surjective f
-is-surjective-is-connected-map neg-two-𝕋 H = {!!}
+is-surjective-is-connected-map = {!!}
 is-surjective-is-connected-map (succ-𝕋 k) H = {!!}
 ```
 
@@ -461,7 +461,7 @@ is-trunc-map-precomp-Π-is-surjective :
   {A : UU l1} {B : UU l2} {f : A → B} → is-surjective f →
   (P : B → Truncated-Type l3 (succ-𝕋 k)) →
   is-trunc-map k (precomp-Π f (λ b → type-Truncated-Type (P b)))
-is-trunc-map-precomp-Π-is-surjective k H = {!!}
+is-trunc-map-precomp-Π-is-surjective = {!!}
 ```
 
 ### Characterization of the identity type of `A ↠ B`
@@ -472,7 +472,7 @@ module _
   where
 
   htpy-surjection : (A ↠ B) → UU (l1 ⊔ l2)
-  htpy-surjection g = {!!}
+  htpy-surjection = {!!}
 
   refl-htpy-surjection : htpy-surjection f
   refl-htpy-surjection = {!!}
@@ -482,7 +482,7 @@ module _
 
   htpy-eq-surjection :
     (g : A ↠ B) → (f ＝ g) → htpy-surjection g
-  htpy-eq-surjection .f refl = {!!}
+  htpy-eq-surjection = {!!}
 
   is-equiv-htpy-eq-surjection :
     (g : A ↠ B) → is-equiv (htpy-eq-surjection g)
@@ -490,10 +490,10 @@ module _
 
   extensionality-surjection :
     (g : A ↠ B) → (f ＝ g) ≃ htpy-surjection g
-  pr1 (extensionality-surjection g) = {!!}
+  extensionality-surjection = {!!}
 
   eq-htpy-surjection : (g : A ↠ B) → htpy-surjection g → f ＝ g
-  eq-htpy-surjection g = {!!}
+  eq-htpy-surjection = {!!}
 ```
 
 ### Characterization of the identity type of `Surjection l2 A`
@@ -502,14 +502,14 @@ module _
 equiv-Surjection :
   {l1 l2 l3 : Level} {A : UU l1} →
   Surjection l2 A → Surjection l3 A → UU (l1 ⊔ l2 ⊔ l3)
-equiv-Surjection f g = {!!}
+equiv-Surjection = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (f : Surjection l2 A)
   where
 
   id-equiv-Surjection : equiv-Surjection f f
-  pr1 id-equiv-Surjection = {!!}
+  id-equiv-Surjection = {!!}
 
   is-torsorial-equiv-Surjection :
     is-torsorial (equiv-Surjection f)
@@ -517,7 +517,7 @@ module _
 
   equiv-eq-Surjection :
     (g : Surjection l2 A) → (f ＝ g) → equiv-Surjection f g
-  equiv-eq-Surjection .f refl = {!!}
+  equiv-eq-Surjection = {!!}
 
   is-equiv-equiv-eq-Surjection :
     (g : Surjection l2 A) → is-equiv (equiv-eq-Surjection g)
@@ -525,11 +525,11 @@ module _
 
   extensionality-Surjection :
     (g : Surjection l2 A) → (f ＝ g) ≃ equiv-Surjection f g
-  pr1 (extensionality-Surjection g) = {!!}
+  extensionality-Surjection = {!!}
 
   eq-equiv-Surjection :
     (g : Surjection l2 A) → equiv-Surjection f g → f ＝ g
-  eq-equiv-Surjection g = {!!}
+  eq-equiv-Surjection = {!!}
 ```
 
 ### Characterization of the identity type of `Surjection-Into-Truncated-Type l2 k A`
@@ -539,7 +539,7 @@ equiv-Surjection-Into-Truncated-Type :
   {l1 l2 l3 : Level} {k : 𝕋} {A : UU l1} →
   Surjection-Into-Truncated-Type l2 k A →
   Surjection-Into-Truncated-Type l3 k A → UU (l1 ⊔ l2 ⊔ l3)
-equiv-Surjection-Into-Truncated-Type f g = {!!}
+equiv-Surjection-Into-Truncated-Type = {!!}
 
 module _
   {l1 l2 : Level} {k : 𝕋} {A : UU l1}
@@ -553,12 +553,12 @@ module _
   extensionality-Surjection-Into-Truncated-Type :
     (g : Surjection-Into-Truncated-Type l2 k A) →
     (f ＝ g) ≃ equiv-Surjection-Into-Truncated-Type f g
-  extensionality-Surjection-Into-Truncated-Type g = {!!}
+  extensionality-Surjection-Into-Truncated-Type = {!!}
 
   equiv-eq-Surjection-Into-Truncated-Type :
     (g : Surjection-Into-Truncated-Type l2 k A) →
     (f ＝ g) → equiv-Surjection-Into-Truncated-Type f g
-  equiv-eq-Surjection-Into-Truncated-Type g = {!!}
+  equiv-eq-Surjection-Into-Truncated-Type = {!!}
 
   refl-equiv-eq-Surjection-Into-Truncated-Type :
     equiv-eq-Surjection-Into-Truncated-Type f refl ＝
@@ -568,7 +568,7 @@ module _
   eq-equiv-Surjection-Into-Truncated-Type :
     (g : Surjection-Into-Truncated-Type l2 k A) →
     equiv-Surjection-Into-Truncated-Type f g → f ＝ g
-  eq-equiv-Surjection-Into-Truncated-Type g = {!!}
+  eq-equiv-Surjection-Into-Truncated-Type = {!!}
 ```
 
 ### The type `Surjection-Into-Truncated-Type l2 (succ-𝕋 k) A` is `k`-truncated
@@ -622,31 +622,31 @@ module _
     (f : A → B) (i : A → X) (g : X → Y) →
     is-surjective f → is-emb g →
     is-surjective (postcomp-extension f i g)
-  is-surjective-postcomp-extension-surjective-map f i g H K (h , L) = {!!}
+  is-surjective-postcomp-extension-surjective-map = {!!}
 
     J : (b : B) → fiber g (h b)
     J = {!!}
 
     j : B → X
-    j b = {!!}
+    j = {!!}
 
     M : (g ∘ j) ~ h
-    M b = {!!}
+    M = {!!}
 
     N : i ~ (j ∘ f)
-    N a = {!!}
+    N = {!!}
 
   is-equiv-postcomp-extension-is-surjective :
     (f : A → B) (i : A → X) (g : X → Y) →
     is-surjective f → is-emb g →
     is-equiv (postcomp-extension f i g)
-  is-equiv-postcomp-extension-is-surjective f i g H K = {!!}
+  is-equiv-postcomp-extension-is-surjective = {!!}
 
   equiv-postcomp-extension-surjection :
     (f : A ↠ B) (i : A → X) (g : X ↪ Y) →
     extension (map-surjection f) i ≃
     extension (map-surjection f) (map-emb g ∘ i)
-  pr1 (equiv-postcomp-extension-surjection f i g) = {!!}
+  equiv-postcomp-extension-surjection = {!!}
 ```
 
 ### The type of surjections `A ↠ B` is equivalent to the type of families `P` of inhabited types over `B` equipped with an equivalence `A ≃ Σ B P`

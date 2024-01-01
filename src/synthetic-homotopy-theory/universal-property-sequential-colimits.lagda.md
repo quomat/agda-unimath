@@ -135,9 +135,7 @@ module _
         ( top-map-cofork-cocone-sequential-diagram A)
         ( cofork-cocone-sequential-diagram A c)) →
     universal-property-sequential-colimit A c
-  universal-property-sequential-colimit-universal-property-coequalizer
-    ( up-cofork)
-    ( Y) = {!!}
+  universal-property-sequential-colimit-universal-property-coequalizer = {!!}
 
   universal-property-coequalizer-universal-property-sequential-colimit :
     universal-property-sequential-colimit A c →
@@ -146,9 +144,7 @@ module _
         ( bottom-map-cofork-cocone-sequential-diagram A)
         ( top-map-cofork-cocone-sequential-diagram A)
         ( cofork-cocone-sequential-diagram A c))
-  universal-property-coequalizer-universal-property-sequential-colimit
-    ( up-sequential-colimit)
-    ( Y) = {!!}
+  universal-property-coequalizer-universal-property-sequential-colimit = {!!}
 ```
 
 ### The 3-for-2 property of the universal property of sequential colimits
@@ -189,27 +185,19 @@ module _
       universal-property-sequential-colimit A c →
       universal-property-sequential-colimit A c' →
       is-equiv h
-    is-equiv-universal-property-sequential-colimit-universal-property-sequential-colimit
-      ( up-sequential-colimit)
-      ( up-sequential-colimit') = {!!}
+    is-equiv-universal-property-sequential-colimit-universal-property-sequential-colimit = {!!}
 
     universal-property-sequential-colimit-is-equiv-universal-property-sequential-colimit :
       universal-property-sequential-colimit A c →
       is-equiv h →
       universal-property-sequential-colimit A c'
-    universal-property-sequential-colimit-is-equiv-universal-property-sequential-colimit
-      ( up-sequential-colimit)
-      ( is-equiv-h)
-      ( Z) = {!!}
+    universal-property-sequential-colimit-is-equiv-universal-property-sequential-colimit = {!!}
 
     universal-property-sequential-colimit-universal-property-sequential-colimit-is-equiv :
       is-equiv h →
       universal-property-sequential-colimit A c' →
       universal-property-sequential-colimit A c
-    universal-property-sequential-colimit-universal-property-sequential-colimit-is-equiv
-      ( is-equiv-h)
-      ( up-sequential-colimit)
-      ( Z) = {!!}
+    universal-property-sequential-colimit-universal-property-sequential-colimit-is-equiv = {!!}
 ```
 
 ### Unique uniqueness of of sequential colimits

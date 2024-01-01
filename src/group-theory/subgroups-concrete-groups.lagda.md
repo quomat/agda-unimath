@@ -90,10 +90,10 @@ module _
   unit-coset-subgroup-Concrete-Group = {!!}
 
   shape-subgroup-Concrete-Group : classifying-type-subgroup-Concrete-Group
-  pr1 shape-subgroup-Concrete-Group = {!!}
+  shape-subgroup-Concrete-Group = {!!}
 
   classifying-pointed-type-subgroup-Concrete-Group : Pointed-Type (l1 ⊔ l2)
-  pr1 classifying-pointed-type-subgroup-Concrete-Group = {!!}
+  classifying-pointed-type-subgroup-Concrete-Group = {!!}
 
   is-connected-classifying-type-subgroup-Concrete-Group :
     is-0-connected classifying-type-subgroup-Concrete-Group

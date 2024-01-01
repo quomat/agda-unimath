@@ -66,7 +66,7 @@ module _
   where
 
   subset-normalizer-Subgroup : subset-Group (l1 ⊔ l2) G
-  subset-normalizer-Subgroup x = {!!}
+  subset-normalizer-Subgroup = {!!}
 
   is-in-normalizer-Subgroup : type-Group G → UU (l1 ⊔ l2)
   is-in-normalizer-Subgroup = {!!}
@@ -94,7 +94,7 @@ module _
   is-closed-under-inverses-normalizer-Subgroup = {!!}
 
   normalizer-Subgroup : Subgroup (l1 ⊔ l2) G
-  pr1 normalizer-Subgroup = {!!}
+  normalizer-Subgroup = {!!}
 
   forward-implication-is-normalizer-normalizer-Subgroup :
     {l : Level} (K : Subgroup l G) →

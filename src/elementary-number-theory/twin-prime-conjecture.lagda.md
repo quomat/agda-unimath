@@ -26,7 +26,7 @@ there is a twin prime that is larger than n.
 
 ```agda
 is-twin-prime-ℕ : ℕ → UU lzero
-is-twin-prime-ℕ n = {!!}
+is-twin-prime-ℕ = {!!}
 
 twin-prime-conjecture : UU lzero
 twin-prime-conjecture = {!!}

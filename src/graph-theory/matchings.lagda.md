@@ -43,10 +43,10 @@ module _
   selected-edges-vertex-Undirected-Graph = {!!}
 
   matching : Undirected-Graph l1 l2 → UU (lsuc lzero ⊔ l1 ⊔ l2)
-  matching G = {!!}
+  matching = {!!}
 
   perfect-matching : Undirected-Graph l1 l2 → UU (lsuc lzero ⊔ l1 ⊔ l2)
-  perfect-matching G = {!!}
+  perfect-matching = {!!}
 ```
 
 ## External links

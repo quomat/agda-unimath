@@ -25,5 +25,5 @@ types to a universe.
 
 ```agda
 species-inhabited-types : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-species-inhabited-types l1 l2 = {!!}
+species-inhabited-types = {!!}
 ```

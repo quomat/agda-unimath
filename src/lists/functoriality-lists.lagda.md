@@ -141,7 +141,7 @@ in handy when we try to define and prove more advanced things.
 identity-law-map-list :
   {l1 : Level} {A : UU l1} →
   map-list (id {A = A}) ~ id
-identity-law-map-list nil = {!!}
+identity-law-map-list = {!!}
 identity-law-map-list (cons a x) = {!!}
 
 composition-law-map-list :

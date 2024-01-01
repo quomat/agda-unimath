@@ -31,10 +31,10 @@ module _
   where
 
   is-central-element-prop-Semigroup : type-Semigroup G → Prop l
-  is-central-element-prop-Semigroup x = {!!}
+  is-central-element-prop-Semigroup = {!!}
 
   is-central-element-Semigroup : type-Semigroup G → UU l
-  is-central-element-Semigroup x = {!!}
+  is-central-element-Semigroup = {!!}
 
   is-prop-is-central-element-Semigroup :
     (x : type-Semigroup G) → is-prop (is-central-element-Semigroup x)

@@ -36,13 +36,13 @@ module _
   where
 
   mere-eq-Prop : A → A → Prop l
-  mere-eq-Prop x y = {!!}
+  mere-eq-Prop = {!!}
 
   mere-eq : A → A → UU l
-  mere-eq x y = {!!}
+  mere-eq = {!!}
 
   is-prop-mere-eq : (x y : A) → is-prop (mere-eq x y)
-  is-prop-mere-eq x y = {!!}
+  is-prop-mere-eq = {!!}
 ```
 
 ## Properties

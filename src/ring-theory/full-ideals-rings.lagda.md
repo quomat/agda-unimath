@@ -92,23 +92,23 @@ module _
   is-left-ideal-full-ideal-Ring = {!!}
 
   full-left-ideal-Ring : left-ideal-Ring lzero R
-  pr1 full-left-ideal-Ring = {!!}
+  full-left-ideal-Ring = {!!}
 
   is-right-ideal-full-ideal-Ring :
     is-right-ideal-subset-Ring R subset-full-ideal-Ring
   is-right-ideal-full-ideal-Ring = {!!}
 
   full-right-ideal-Ring : right-ideal-Ring lzero R
-  pr1 full-right-ideal-Ring = {!!}
+  full-right-ideal-Ring = {!!}
 
   is-ideal-full-ideal-Ring : is-ideal-subset-Ring R subset-full-ideal-Ring
-  pr1 is-ideal-full-ideal-Ring = {!!}
+  is-ideal-full-ideal-Ring = {!!}
 
   full-ideal-Ring : ideal-Ring lzero R
-  pr1 full-ideal-Ring = {!!}
+  full-ideal-Ring = {!!}
 
   is-full-full-ideal-Ring : is-full-ideal-Ring R full-ideal-Ring
-  is-full-full-ideal-Ring x = {!!}
+  is-full-full-ideal-Ring = {!!}
 ```
 
 ## Properties

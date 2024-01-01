@@ -35,7 +35,7 @@ module _
   where
 
   Eq-Σ : (s t : Σ A B) → UU (l1 ⊔ l2)
-  Eq-Σ s t = {!!}
+  Eq-Σ = {!!}
 ```
 
 ## Properties
@@ -44,10 +44,10 @@ module _
 
 ```agda
   refl-Eq-Σ : (s : Σ A B) → Eq-Σ s s
-  pr1 (refl-Eq-Σ (pair a b)) = {!!}
+  refl-Eq-Σ = {!!}
 
   pair-eq-Σ : {s t : Σ A B} → s ＝ t → Eq-Σ s t
-  pair-eq-Σ {s} refl = {!!}
+  pair-eq-Σ = {!!}
 
   eq-pair-Σ :
     {s t : Σ A B}
@@ -56,7 +56,7 @@ module _
   eq-pair-Σ = {!!}
 
   eq-pair-Σ' : {s t : Σ A B} → Eq-Σ s t → s ＝ t
-  eq-pair-Σ' p = {!!}
+  eq-pair-Σ' = {!!}
 
   eq-pair-eq-pr1 :
     {x y : A} {s : B x} (p : x ＝ y) → (x , s) ＝ (y , tr B p s)
@@ -76,7 +76,7 @@ module _
 
   is-retraction-pair-eq-Σ :
     (s t : Σ A B) → pair-eq-Σ {s} {t} ∘ eq-pair-Σ' {s} {t} ~ id {A = Eq-Σ s t}
-  is-retraction-pair-eq-Σ (pair x y) (pair .x .y) (pair refl refl) = {!!}
+  is-retraction-pair-eq-Σ = {!!}
 
   is-section-pair-eq-Σ :
     (s t : Σ A B) → ((eq-pair-Σ' {s} {t}) ∘ (pair-eq-Σ {s} {t})) ~ id
@@ -84,23 +84,23 @@ module _
 
   abstract
     is-equiv-eq-pair-Σ : (s t : Σ A B) → is-equiv (eq-pair-Σ' {s} {t})
-    is-equiv-eq-pair-Σ s t = {!!}
+    is-equiv-eq-pair-Σ = {!!}
 
   equiv-eq-pair-Σ : (s t : Σ A B) → Eq-Σ s t ≃ (s ＝ t)
-  pr1 (equiv-eq-pair-Σ s t) = {!!}
+  equiv-eq-pair-Σ = {!!}
 
   abstract
     is-equiv-pair-eq-Σ : (s t : Σ A B) → is-equiv (pair-eq-Σ {s} {t})
-    is-equiv-pair-eq-Σ s t = {!!}
+    is-equiv-pair-eq-Σ = {!!}
 
   equiv-pair-eq-Σ : (s t : Σ A B) → (s ＝ t) ≃ Eq-Σ s t
-  pr1 (equiv-pair-eq-Σ s t) = {!!}
+  equiv-pair-eq-Σ = {!!}
 
   η-pair : (t : Σ A B) → (pair (pr1 t) (pr2 t)) ＝ t
-  η-pair t = {!!}
+  η-pair = {!!}
 
   eq-base-eq-pair-Σ : {s t : Σ A B} → (s ＝ t) → (pr1 s ＝ pr1 t)
-  eq-base-eq-pair-Σ p = {!!}
+  eq-base-eq-pair-Σ = {!!}
 
   dependent-eq-family-eq-pair-Σ :
     {s t : Σ A B} → (p : s ＝ t) →

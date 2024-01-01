@@ -65,7 +65,7 @@ module _
 
 ```agda
 trivial-∞-Group : {l : Level} → ∞-Group l
-pr1 (pr1 (trivial-∞-Group {l})) = {!!}
+trivial-∞-Group = {!!}
 pr2 (pr1 trivial-∞-Group) = {!!}
 pr2 (trivial-∞-Group {l}) = {!!}
 

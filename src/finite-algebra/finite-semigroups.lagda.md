@@ -30,7 +30,7 @@ Finite semigroups are finite sets equipped with an associative binary operation.
 
 ```agda
 has-associative-mul-𝔽 : {l : Level} (X : 𝔽 l) → UU l
-has-associative-mul-𝔽 X = {!!}
+has-associative-mul-𝔽 = {!!}
 
 Semigroup-𝔽 :
   (l : Level) → UU (lsuc l)
@@ -57,7 +57,7 @@ module _
   has-associative-mul-Semigroup-𝔽 = {!!}
 
   semigroup-Semigroup-𝔽 : Semigroup l
-  pr1 semigroup-Semigroup-𝔽 = {!!}
+  semigroup-Semigroup-𝔽 = {!!}
 
   set-Semigroup-𝔽 : Set l
   set-Semigroup-𝔽 = {!!}

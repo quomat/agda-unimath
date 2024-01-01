@@ -42,7 +42,7 @@ is-iso-Category :
   {x y : obj-Category C}
   (f : hom-Category C x y) →
   UU l2
-is-iso-Category C = {!!}
+is-iso-Category = {!!}
 
 module _
   {l1 l2 : Level}
@@ -216,7 +216,7 @@ module _
   is-set-iso-Category = {!!}
 
   iso-set-Category : Set l2
-  pr1 iso-set-Category = {!!}
+  iso-set-Category = {!!}
 ```
 
 ### Isomorphisms are closed under composition
@@ -657,21 +657,21 @@ module _
 
   extensionality-obj-Category :
     (x y : obj-Category C) → (x ＝ y) ≃ iso-Category C x y
-  pr1 (extensionality-obj-Category x y) = {!!}
+  extensionality-obj-Category = {!!}
 
   eq-iso-Category :
     {x y : obj-Category C} → iso-Category C x y → x ＝ y
-  eq-iso-Category {x} {y} = {!!}
+  eq-iso-Category = {!!}
 
   is-section-eq-iso-Category :
     {x y : obj-Category C} (f : iso-Category C x y) →
     iso-eq-Category C x y (eq-iso-Category f) ＝ f
-  is-section-eq-iso-Category {x} {y} = {!!}
+  is-section-eq-iso-Category = {!!}
 
   is-retraction-eq-iso-Category :
     {x y : obj-Category C} (p : x ＝ y) →
     eq-iso-Category (iso-eq-Category C x y p) ＝ p
-  is-retraction-eq-iso-Category {x} {y} = {!!}
+  is-retraction-eq-iso-Category = {!!}
 
 module _
   {l1 l2 : Level}
@@ -701,5 +701,5 @@ module _
     ( f : iso-Category C x y) →
     ( eq-iso-Category C (comp-iso-Category C g f)) ＝
     ( eq-iso-Category C f ∙ eq-iso-Category C g)
-  preserves-comp-eq-iso-Category g f = {!!}
+  preserves-comp-eq-iso-Category = {!!}
 ```

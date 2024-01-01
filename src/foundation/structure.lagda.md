@@ -28,7 +28,7 @@ type `A` equipped with an element of type `P A`.
 
 ```agda
 structure : {l1 l2 : Level} (P : UU l1 → UU l2) → UU (lsuc l1 ⊔ l2)
-structure {l1} P = {!!}
+structure = {!!}
 
 fam-structure :
   {l1 l2 l3 : Level} (P : UU l1 → UU l2) (A : UU l3) → UU (lsuc l1 ⊔ l2 ⊔ l3)

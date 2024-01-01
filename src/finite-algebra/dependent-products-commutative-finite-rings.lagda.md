@@ -162,5 +162,5 @@ module _
   commutative-ring-Π-Commutative-Ring-𝔽 = {!!}
 
   Π-Commutative-Ring-𝔽 : Commutative-Ring-𝔽 (l1 ⊔ l2)
-  pr1 Π-Commutative-Ring-𝔽 = {!!}
+  Π-Commutative-Ring-𝔽 = {!!}
 ```

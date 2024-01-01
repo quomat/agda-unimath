@@ -77,8 +77,7 @@ abstract
     {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (f : (x : A) → B x) →
     based-function-extensionality f →
     induction-principle-homotopies f
-  induction-principle-homotopies-based-function-extensionality
-    {A = A} {B} f funext-f = {!!}
+  induction-principle-homotopies-based-function-extensionality = {!!}
 
 abstract
   based-function-extensionality-induction-principle-homotopies :

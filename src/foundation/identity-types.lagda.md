@@ -55,7 +55,7 @@ mac-lane-pentagon :
       α₅ = (assoc p q (r ∙ s))
   in
     coherence-pentagon-identifications α₁ α₄ α₂ α₅ α₃
-mac-lane-pentagon = {!!}!}
+mac-lane-pentagon = {!!}}
 ```
 
 ### The groupoidal operations on identity types are equivalences
@@ -67,13 +67,13 @@ module _
 
   abstract
     is-equiv-inv : (x y : A) → is-equiv (λ (p : x ＝ y) → inv p)
-    is-equiv-inv x y = {!!}
+    is-equiv-inv = {!!}
 
   equiv-inv : (x y : A) → (x ＝ y) ≃ (y ＝ x)
-  pr1 (equiv-inv x y) = {!!}
+  equiv-inv = {!!}
 
   inv-concat : {x y : A} (p : x ＝ y) (z : A) → x ＝ z → y ＝ z
-  inv-concat p = {!!}
+  inv-concat = {!!}
 
   is-retraction-inv-concat :
     {x y : A} (p : x ＝ y) (z : A) → (inv-concat p z ∘ concat p z) ~ id
@@ -115,7 +115,7 @@ module _
   equiv-concat-equiv = {!!}
 
   inv-concat' : (x : A) {y z : A} → y ＝ z → x ＝ z → x ＝ y
-  inv-concat' x q = {!!}
+  inv-concat' = {!!}
 
   is-retraction-inv-concat' :
     (x : A) {y z : A} (q : y ＝ z) → (inv-concat' x q ∘ concat' x q) ~ id

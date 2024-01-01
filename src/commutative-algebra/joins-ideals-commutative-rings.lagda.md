@@ -145,8 +145,7 @@ module _
       ( join-family-of-ideals-Commutative-Ring A
         ( λ α →
           product-ideal-Commutative-Ring A I (J α)))
-  forward-inclusion-distributive-product-join-family-of-ideals-Commutative-Ring
-    x p = {!!}
+  forward-inclusion-distributive-product-join-family-of-ideals-Commutative-Ring = {!!}
 
   backward-inclusion-distributive-product-join-family-of-ideals-Commutative-Ring :
     leq-ideal-Commutative-Ring A
@@ -156,8 +155,7 @@ module _
       ( product-ideal-Commutative-Ring A
         ( I)
         ( join-family-of-ideals-Commutative-Ring A J))
-  backward-inclusion-distributive-product-join-family-of-ideals-Commutative-Ring
-    = {!!}
+  backward-inclusion-distributive-product-join-family-of-ideals-Commutative-Ring = {!!}
 
   sim-distributive-product-join-family-of-ideals-Commutative-Ring :
     sim-ideal-Commutative-Ring A
@@ -165,7 +163,7 @@ module _
         ( join-family-of-ideals-Commutative-Ring A J))
       ( join-family-of-ideals-Commutative-Ring A
         ( λ α → product-ideal-Commutative-Ring A I (J α)))
-  pr1 sim-distributive-product-join-family-of-ideals-Commutative-Ring = {!!}
+  sim-distributive-product-join-family-of-ideals-Commutative-Ring = {!!}
 
   distributive-product-join-family-of-ideals-Commutative-Ring :
     product-ideal-Commutative-Ring A I

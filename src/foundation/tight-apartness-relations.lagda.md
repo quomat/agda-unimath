@@ -65,7 +65,7 @@ module _
 
 ```agda
 Type-With-Tight-Apartness : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Type-With-Tight-Apartness l1 l2 = {!!}
+Type-With-Tight-Apartness = {!!}
 
 module _
   {l1 l2 : Level} (X : Type-With-Tight-Apartness l1 l2)

@@ -53,7 +53,7 @@ module _
 
   abstract
     is-path-split-is-equiv : is-equiv f → is-path-split f
-    pr1 (is-path-split-is-equiv is-equiv-f) = {!!}
+    is-path-split-is-equiv = {!!}
 
   abstract
     is-coherently-invertible-is-path-split :

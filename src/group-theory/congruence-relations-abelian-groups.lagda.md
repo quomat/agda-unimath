@@ -36,7 +36,7 @@ is-congruence-Ab :
 is-congruence-Ab = {!!}
 
 congruence-Ab : {l : Level} (l2 : Level) (A : Ab l) → UU (l ⊔ lsuc l2)
-congruence-Ab l2 A = {!!}
+congruence-Ab = {!!}
 
 module _
   {l1 l2 : Level} (A : Ab l1) (R : congruence-Ab l2 A)

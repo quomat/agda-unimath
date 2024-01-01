@@ -48,7 +48,7 @@ is-groupoid-Category :
 is-groupoid-Category = {!!}
 
 Groupoid : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Groupoid l1 l2 = {!!}
+Groupoid = {!!}
 
 module _
   {l1 l2 : Level} (G : Groupoid l1 l2)
@@ -124,7 +124,7 @@ module _
   obj-groupoid-1-Type = {!!}
 
   precategory-Groupoid-1-Type : Precategory l l
-  pr1 precategory-Groupoid-1-Type = {!!}
+  precategory-Groupoid-1-Type = {!!}
 
   is-category-groupoid-1-Type :
     is-category-Precategory precategory-Groupoid-1-Type

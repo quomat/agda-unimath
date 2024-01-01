@@ -44,7 +44,7 @@ module _
   where
 
   map-suspension-structure : suspension-structure A (suspension B)
-  pr1 map-suspension-structure = {!!}
+  map-suspension-structure = {!!}
 
   map-suspension : suspension A → suspension B
   map-suspension = {!!}
@@ -158,5 +158,5 @@ module _
   is-equiv-map-suspension-is-equiv = {!!}
 
   equiv-suspension : A ≃ B → suspension A ≃ suspension B
-  pr1 (equiv-suspension e) = {!!}
+  equiv-suspension = {!!}
 ```

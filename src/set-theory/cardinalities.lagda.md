@@ -44,13 +44,13 @@ element in the set truncation of the universe of all sets.
 
 ```agda
 cardinal-Set : (l : Level) → Set (lsuc l)
-cardinal-Set l = {!!}
+cardinal-Set = {!!}
 
 cardinal : (l : Level) → UU (lsuc l)
-cardinal l = {!!}
+cardinal = {!!}
 
 cardinality : {l : Level} → Set l → cardinal l
-cardinality A = {!!}
+cardinality = {!!}
 ```
 
 ### Inequality of cardinalities
@@ -58,47 +58,47 @@ cardinality A = {!!}
 ```agda
 leq-cardinality-Prop' :
   {l1 l2 : Level} → Set l1 → cardinal l2 → Prop (l1 ⊔ l2)
-leq-cardinality-Prop' {l1} {l2} X = {!!}
+leq-cardinality-Prop' = {!!}
 
 compute-leq-cardinality-Prop' :
   {l1 l2 : Level} (X : Set l1) (Y : Set l2) →
   ( leq-cardinality-Prop' X (cardinality Y)) ＝
   ( mere-emb-Prop (type-Set X) (type-Set Y))
-compute-leq-cardinality-Prop' {l1} {l2} X = {!!}
+compute-leq-cardinality-Prop' = {!!}
 
 leq-cardinality-Prop :
   {l1 l2 : Level} → cardinal l1 → cardinal l2 → Prop (l1 ⊔ l2)
-leq-cardinality-Prop {l1} {l2} = {!!}
+leq-cardinality-Prop = {!!}
 
 leq-cardinality :
   {l1 l2 : Level} → cardinal l1 → cardinal l2 → UU (l1 ⊔ l2)
-leq-cardinality X Y = {!!}
+leq-cardinality = {!!}
 
 is-prop-leq-cardinality :
   {l1 l2 : Level} {X : cardinal l1} {Y : cardinal l2} →
   is-prop (leq-cardinality X Y)
-is-prop-leq-cardinality {X = X} {Y = Y} = {!!}
+is-prop-leq-cardinality = {!!}
 
 compute-leq-cardinality :
   {l1 l2 : Level} (X : Set l1) (Y : Set l2) →
   ( leq-cardinality (cardinality X) (cardinality Y)) ≃
   ( mere-emb (type-Set X) (type-Set Y))
-compute-leq-cardinality {l1} {l2} X Y = {!!}
+compute-leq-cardinality = {!!}
 
 unit-leq-cardinality :
   {l1 l2 : Level} (X : Set l1) (Y : Set l2) →
   mere-emb (type-Set X) (type-Set Y) →
   leq-cardinality (cardinality X) (cardinality Y)
-unit-leq-cardinality X Y = {!!}
+unit-leq-cardinality = {!!}
 
 inv-unit-leq-cardinality :
   {l1 l2 : Level} (X : Set l1) (Y : Set l2) →
   leq-cardinality (cardinality X) (cardinality Y) →
   mere-emb (type-Set X) (type-Set Y)
-inv-unit-leq-cardinality X Y = {!!}
+inv-unit-leq-cardinality = {!!}
 
 refl-leq-cardinality : is-reflexive-Large-Relation cardinal leq-cardinality
-refl-leq-cardinality {l} = {!!}
+refl-leq-cardinality = {!!}
 
 transitive-leq-cardinality :
   {l1 l2 l3 : Level}
@@ -108,7 +108,7 @@ transitive-leq-cardinality :
   leq-cardinality X Y →
   leq-cardinality Y Z →
   leq-cardinality X Z
-transitive-leq-cardinality X Y Z = {!!}
+transitive-leq-cardinality = {!!}
 ```
 
 ## Properties
@@ -119,7 +119,7 @@ transitive-leq-cardinality X Y Z = {!!}
 is-effective-cardinality :
   {l : Level} (X Y : Set l) →
   (cardinality X ＝ cardinality Y) ≃ mere-equiv (type-Set X) (type-Set Y)
-is-effective-cardinality X Y = {!!}
+is-effective-cardinality = {!!}
 ```
 
 ### Assuming excluded middle we can show that `leq-cardinality` is a partial order
@@ -131,5 +131,5 @@ Using the previous result and assuming excluded middle, we can conclude
 antisymmetric-leq-cardinality :
   {l1 : Level} (X Y : cardinal l1) → (LEM l1) →
   leq-cardinality X Y → leq-cardinality Y X → X ＝ Y
-antisymmetric-leq-cardinality {l1} X Y lem = {!!}
+antisymmetric-leq-cardinality = {!!}
 ```

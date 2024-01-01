@@ -40,14 +40,14 @@ preserves-left-unit-law-mul :
   (μ : A → A → A) {eA : A} → ((x : A) → Id (μ eA x) x) →
   (ν : B → B → B) {eB : B} → ((y : B) → Id (ν eB y) y) →
   (f : A → B) → Id (f eA) eB → preserves-mul μ ν f → UU (l1 ⊔ l2)
-preserves-left-unit-law-mul {A = A} {B} μ {eA} lA ν {eB} lB f p μf = {!!}
+preserves-left-unit-law-mul = {!!}
 
 preserves-right-unit-law-mul :
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
   (μ : A → A → A) {eA : A} → ((x : A) → Id (μ x eA) x) →
   (ν : B → B → B) {eB : B} → ((y : B) → Id (ν y eB) y) →
   (f : A → B) → Id (f eA) eB → preserves-mul μ ν f → UU (l1 ⊔ l2)
-preserves-right-unit-law-mul {A = A} {B} μ {eA} rA ν {eB} rB f p μf = {!!}
+preserves-right-unit-law-mul = {!!}
 
 preserves-coh-unit-laws-mul :
   {l1 l2 : Level} (M : H-Space l1) (N : H-Space l2) →
@@ -71,9 +71,7 @@ preserves-coh-unit-laws-mul :
     ( pr2 f)
     ( μf) →
   UU l2
-preserves-coh-unit-laws-mul M
-  (pair (pair N ._) μ)
-  (pair f refl) μf lf rf = {!!}
+preserves-coh-unit-laws-mul = {!!}
 ```
 
 ### Second description of preservation of the coherent unit laws
@@ -101,18 +99,18 @@ preserves-coh-unit-laws-mul' :
     ( pr2 f)
     ( μf) →
   UU l2
-preserves-coh-unit-laws-mul' M N f μf lf rf = {!!}
+preserves-coh-unit-laws-mul' = {!!}
 
 preserves-unital-mul :
   {l1 l2 : Level} (M : H-Space l1) (N : H-Space l2) →
   (f : pointed-type-H-Space M →∗ pointed-type-H-Space N) →
   UU (l1 ⊔ l2)
-preserves-unital-mul M N f = {!!}
+preserves-unital-mul = {!!}
 
 hom-H-Space :
   {l1 l2 : Level} (M : H-Space l1) (N : H-Space l2) →
   UU (l1 ⊔ l2)
-hom-H-Space M N = {!!}
+hom-H-Space = {!!}
 ```
 
 ### Homotopies of morphisms of H-spaces
@@ -122,5 +120,5 @@ preserves-mul-htpy :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (μA : A → A → A) (μB : B → B → B) →
   {f g : A → B} (μf : preserves-mul μA μB f) (μg : preserves-mul μA μB g) →
   (f ~ g) → UU (l1 ⊔ l2)
-preserves-mul-htpy {A = A} μA μB μf μg H = {!!}
+preserves-mul-htpy = {!!}
 ```

@@ -52,10 +52,10 @@ module _
   is-closed-under-multiplication-pullback-Subsemigroup :
     is-closed-under-multiplication-subset-Semigroup G
       subset-pullback-Subsemigroup
-  is-closed-under-multiplication-pullback-Subsemigroup p q = {!!}
+  is-closed-under-multiplication-pullback-Subsemigroup = {!!}
 
   pullback-Subsemigroup : Subsemigroup l3 G
-  pr1 pullback-Subsemigroup = {!!}
+  pullback-Subsemigroup = {!!}
   pr2 pullback-Subsemigroup = {!!}
 
   is-in-pullback-Subsemigroup : type-Semigroup G → UU l3
@@ -85,14 +85,14 @@ module _
     leq-Subsemigroup G
       ( pullback-Subsemigroup G H f S)
       ( pullback-Subsemigroup G H f T)
-  preserves-order-pullback-Subsemigroup S T = {!!}
+  preserves-order-pullback-Subsemigroup = {!!}
 
   pullback-hom-large-poset-Subsemigroup :
     hom-Large-Poset
       ( λ l → l)
       ( Subsemigroup-Large-Poset H)
       ( Subsemigroup-Large-Poset G)
-  map-hom-Large-Preorder pullback-hom-large-poset-Subsemigroup = {!!}
+  pullback-hom-large-poset-Subsemigroup = {!!}
   preserves-order-hom-Large-Preorder pullback-hom-large-poset-Subsemigroup = {!!}
 ```
 

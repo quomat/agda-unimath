@@ -157,8 +157,7 @@ module _
               inclusion-subuniverse P X ≃
               ( inclusion-subuniverse P (pr1 A) ×
                 inclusion-subuniverse P (pr1 x))))
-    map-reassociate-left-iterated-product-Decomposition-Subuniverse
-      ( (A , B , e) , C , D , f) = {!!}
+    map-reassociate-left-iterated-product-Decomposition-Subuniverse = {!!}
 
     map-inv-reassociate-left-iterated-product-Decomposition-Subuniverse :
       Σ ( type-subuniverse P × (type-subuniverse P × type-subuniverse P))
@@ -173,8 +172,7 @@ module _
               ( inclusion-subuniverse P (pr1 A) ×
                 inclusion-subuniverse P (pr1 x)))) →
       left-iterated-binary-product-Decomposition-Subuniverse P X
-    map-inv-reassociate-left-iterated-product-Decomposition-Subuniverse
-      ( (B , C , D) , (A , f) , e) = {!!}
+    map-inv-reassociate-left-iterated-product-Decomposition-Subuniverse = {!!}
 
     equiv-reassociate-left-iterated-product-Decomposition-Subuniverse :
       left-iterated-binary-product-Decomposition-Subuniverse P X ≃
@@ -210,8 +208,7 @@ module _
               inclusion-subuniverse P X ≃
               ( inclusion-subuniverse P (pr1 x) ×
                 inclusion-subuniverse P (pr1 B))))
-    map-reassociate-right-iterated-product-Decomposition-Subuniverse
-      ( (A , B , e) , C , D , f) = {!!}
+    map-reassociate-right-iterated-product-Decomposition-Subuniverse = {!!}
 
     map-inv-reassociate-right-iterated-product-Decomposition-Subuniverse :
       Σ ( type-subuniverse P × (type-subuniverse P × type-subuniverse P))
@@ -226,8 +223,7 @@ module _
               ( inclusion-subuniverse P (pr1 x) ×
                 inclusion-subuniverse P (pr1 B)))) →
       right-iterated-binary-product-Decomposition-Subuniverse P X
-    map-inv-reassociate-right-iterated-product-Decomposition-Subuniverse
-      ( (A , C , D) , (B , f) , e) = {!!}
+    map-inv-reassociate-right-iterated-product-Decomposition-Subuniverse = {!!}
 
     equiv-reassociate-right-iterated-product-Decomposition-Subuniverse :
       right-iterated-binary-product-Decomposition-Subuniverse P X ≃

@@ -57,17 +57,17 @@ is-full-decidable-subtype = {!!}
 
 ```agda
 full-subtype : {l1 : Level} (l2 : Level) (A : UU l1) → subtype l2 A
-full-subtype l2 A x = {!!}
+full-subtype = {!!}
 
 type-full-subtype : {l1 : Level} (l2 : Level) (A : UU l1) → UU (l1 ⊔ l2)
-type-full-subtype l2 A = {!!}
+type-full-subtype = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1}
   where
 
   is-in-full-subtype : (x : A) → is-in-subtype (full-subtype l2 A) x
-  is-in-full-subtype x = {!!}
+  is-in-full-subtype = {!!}
 
   inclusion-full-subtype : type-full-subtype l2 A → A
   inclusion-full-subtype = {!!}

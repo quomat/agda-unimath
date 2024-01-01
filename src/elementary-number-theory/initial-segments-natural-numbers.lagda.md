@@ -37,13 +37,13 @@ holds for every `n : ℕ`.
 
 ```agda
 is-initial-segment-subset-ℕ-Prop : {l : Level} (P : subtype l ℕ) → Prop l
-is-initial-segment-subset-ℕ-Prop P = {!!}
+is-initial-segment-subset-ℕ-Prop = {!!}
 
 is-initial-segment-subset-ℕ : {l : Level} (P : subtype l ℕ) → UU l
-is-initial-segment-subset-ℕ P = {!!}
+is-initial-segment-subset-ℕ = {!!}
 
 initial-segment-ℕ : (l : Level) → UU (lsuc l)
-initial-segment-ℕ l = {!!}
+initial-segment-ℕ = {!!}
 
 module _
   {l : Level} (I : initial-segment-ℕ l)

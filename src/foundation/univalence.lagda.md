@@ -56,7 +56,7 @@ module _
   equiv-univalence = {!!}
 
   eq-equiv : (A B : UU l) → A ≃ B → A ＝ B
-  eq-equiv A B = {!!}
+  eq-equiv = {!!}
 
   abstract
     is-section-eq-equiv :

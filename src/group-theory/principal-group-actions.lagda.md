@@ -30,5 +30,5 @@ module _
   where
 
   principal-action-Group : action-Group G l1
-  pr1 principal-action-Group = {!!}
+  principal-action-Group = {!!}
 ```

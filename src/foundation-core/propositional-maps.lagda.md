@@ -47,7 +47,7 @@ module _
   where
 
   is-prop-map : (A → B) → UU (l1 ⊔ l2)
-  is-prop-map f = {!!}
+  is-prop-map = {!!}
 ```
 
 ### The type of propositional maps
@@ -58,7 +58,7 @@ module _
   where
 
   prop-map : (A : UU l1) (B : UU l2) → UU (l1 ⊔ l2)
-  prop-map A B = {!!}
+  prop-map = {!!}
 
   module _
     {A : UU l1} {B : UU l2} (f : prop-map A B)
@@ -82,31 +82,31 @@ module _
 
   abstract
     is-emb-is-prop-map : is-prop-map f → is-emb f
-    is-emb-is-prop-map is-prop-map-f x = {!!}
+    is-emb-is-prop-map = {!!}
 
   abstract
     is-prop-map-is-emb : is-emb f → is-prop-map f
-    is-prop-map-is-emb is-emb-f y = {!!}
+    is-prop-map-is-emb = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
   where
 
   emb-prop-map : prop-map A B → A ↪ B
-  pr1 (emb-prop-map (f , p)) = {!!}
+  emb-prop-map = {!!}
 
   prop-map-emb : A ↪ B → prop-map A B
-  pr1 (prop-map-emb (f , p)) = {!!}
+  prop-map-emb = {!!}
 
   is-prop-map-emb : (f : A ↪ B) → is-prop-map (map-emb f)
-  is-prop-map-emb f = {!!}
+  is-prop-map-emb = {!!}
 
   is-prop-map-emb' : (f : A ↪ B) → (b : B) → is-prop (fiber' (map-emb f) b)
-  is-prop-map-emb' f y = {!!}
+  is-prop-map-emb' = {!!}
 
   fiber-emb-Prop : A ↪ B → B → Prop (l1 ⊔ l2)
-  pr1 (fiber-emb-Prop f y) = {!!}
+  fiber-emb-Prop = {!!}
 
   fiber-emb-Prop' : A ↪ B → B → Prop (l1 ⊔ l2)
-  pr1 (fiber-emb-Prop' f y) = {!!}
+  fiber-emb-Prop' = {!!}
 ```

@@ -68,7 +68,7 @@ module _
     coherence-triangle-maps' diagonal-left bottom left →
     coherence-triangle-maps diagonal-right right top →
     coherence-square-maps top left right bottom
-  coherence-square-htpy-coherence-triangles-maps L H K = {!!}
+  coherence-square-htpy-coherence-triangles-maps = {!!}
 
   coherence-square-htpy-coherence-triangles-maps' :
     { diagonal-left diagonal-right : A → Y} →
@@ -76,14 +76,14 @@ module _
     coherence-triangle-maps' diagonal-left bottom left →
     coherence-triangle-maps diagonal-right right top →
     coherence-square-maps top left right bottom
-  coherence-square-htpy-coherence-triangles-maps' L H K = {!!}
+  coherence-square-htpy-coherence-triangles-maps' = {!!}
 
   coherence-square-coherence-triangles-maps :
     ( diagonal : A → Y) →
     coherence-triangle-maps' diagonal bottom left →
     coherence-triangle-maps diagonal right top →
     coherence-square-maps top left right bottom
-  coherence-square-coherence-triangles-maps diagonal H K = {!!}
+  coherence-square-coherence-triangles-maps = {!!}
 
   compute-coherence-square-refl-htpy-coherence-triangles-maps :
     ( diagonal : A → Y) →
@@ -91,7 +91,7 @@ module _
     ( K : coherence-triangle-maps diagonal right top) →
     ( coherence-square-htpy-coherence-triangles-maps refl-htpy H K) ~
     ( coherence-square-coherence-triangles-maps diagonal H K)
-  compute-coherence-square-refl-htpy-coherence-triangles-maps diagonal H K x = {!!}
+  compute-coherence-square-refl-htpy-coherence-triangles-maps = {!!}
 ```
 
 ### Inverting squares horizontally and vertically
@@ -106,14 +106,14 @@ coherence-square-inv-horizontal :
   (top : A ≃ B) (left : A → X) (right : B → Y) (bottom : X ≃ Y) →
   coherence-square-maps (map-equiv top) left right (map-equiv bottom) →
   coherence-square-maps (map-inv-equiv top) right left (map-inv-equiv bottom)
-coherence-square-inv-horizontal top left right bottom H b = {!!}
+coherence-square-inv-horizontal = {!!}
 
 coherence-square-inv-vertical :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} {Y : UU l4}
   (top : A → B) (left : A ≃ X) (right : B ≃ Y) (bottom : X → Y) →
   coherence-square-maps top (map-equiv left) (map-equiv right) bottom →
   coherence-square-maps bottom (map-inv-equiv left) (map-inv-equiv right) top
-coherence-square-inv-vertical top left right bottom H x = {!!}
+coherence-square-inv-vertical = {!!}
 
 coherence-square-inv-all :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} {Y : UU l4}
@@ -128,7 +128,7 @@ coherence-square-inv-all :
     ( map-inv-equiv right)
     ( map-inv-equiv left)
     ( map-inv-equiv top)
-coherence-square-inv-all top left right bottom H = {!!}
+coherence-square-inv-all = {!!}
 ```
 
 ### Any commuting square of maps induces a commuting square of function spaces
@@ -144,7 +144,7 @@ precomp-coherence-square-maps :
     ( precomp bottom X)
     ( precomp top X)
     ( precomp left X)
-precomp-coherence-square-maps top left right bottom H X = {!!}
+precomp-coherence-square-maps = {!!}
 ```
 
 ## Properties
@@ -180,7 +180,7 @@ module _
       ( coherence-square-inv-vertical top left right bottom H)
       ( refl-htpy)
       ( is-retraction-map-inv-equiv right)
-  left-inverse-law-pasting-vertical-coherence-square-maps H a = {!!}
+  left-inverse-law-pasting-vertical-coherence-square-maps = {!!}
 
   right-inverse-law-pasting-vertical-coherence-square-maps :
     ( H : coherence-square-maps top (map-equiv left) (map-equiv right) bottom) →
@@ -199,7 +199,7 @@ module _
       ( H)
       ( refl-htpy)
       ( is-section-map-inv-equiv right)
-  right-inverse-law-pasting-vertical-coherence-square-maps H a = {!!}
+  right-inverse-law-pasting-vertical-coherence-square-maps = {!!}
 ```
 
 ### Associativity of vertical pasting
@@ -288,7 +288,7 @@ module _
       ( H x)
       ( H y)
       ( ap right (ap top p))
-  nat-coherence-square-maps refl = {!!}
+  nat-coherence-square-maps = {!!}
 ```
 
 As a corollary, whenever we have two coherence squares touching at a vertex:
@@ -325,7 +325,7 @@ module _
       ( K ·r mid-left ·r left)
       ( K ·r mid-top ·r top)
       ( right ·l mid-right ·l H)
-  swap-nat-coherence-square-maps x = {!!}
+  swap-nat-coherence-square-maps = {!!}
 ```
 
 ### Commutativity of horizontal and vertical pasting
@@ -523,17 +523,7 @@ module _
         ( bottom-left)
         ( H)
         ( W))
-  distributive-precomp-pasting-horizontal-coherence-square-maps
-    ( top-left)
-    ( top-right)
-    ( left)
-    ( middle)
-    ( right)
-    ( bottom-left)
-    ( bottom-right)
-    ( H)
-    ( K)
-    ( h) = {!!}
+  distributive-precomp-pasting-horizontal-coherence-square-maps = {!!}
 
   distributive-precomp-pasting-vertical-coherence-square-maps :
     ( top : A → X) (left-top : A → B) (right-top : X → Y) (middle : B → Y) →
@@ -578,17 +568,7 @@ module _
         ( middle)
         ( H)
         ( W))
-  distributive-precomp-pasting-vertical-coherence-square-maps
-    ( top)
-    ( left-top)
-    ( right-top)
-    ( middle)
-    ( left-bottom)
-    ( right-bottom)
-    ( bottom)
-    ( H)
-    ( K)
-    ( h) = {!!}
+  distributive-precomp-pasting-vertical-coherence-square-maps = {!!}
 ```
 
 ### Transposing by precomposition of whiskered squares
@@ -637,7 +617,7 @@ module _
       ( W) ~
     ( ( precomp f W) ·l
       ( precomp-coherence-square-maps top left right bottom H W))
-  distributive-precomp-right-whisk-coherence-square-maps f g = {!!}
+  distributive-precomp-right-whisk-coherence-square-maps = {!!}
 ```
 
 Similarly, we can calculate transpositions of left-whiskered squares with the
@@ -655,7 +635,7 @@ formula `W^(f ·l H) = {!!}
       ( W) ~
     ( ( precomp-coherence-square-maps top left right bottom H W) ·r
       ( precomp f W))
-  distributive-precomp-left-whisk-coherence-square-maps f g = {!!}
+  distributive-precomp-left-whisk-coherence-square-maps = {!!}
 ```
 
 ### The square of function spaces induced by a composition of triangles is homotopic to the composition of induced triangles of function spaces
@@ -694,12 +674,7 @@ module _
       ( htpy-precomp L W)
       ( precomp-coherence-triangle-maps' diagonal-left bottom left H W)
       ( precomp-coherence-triangle-maps diagonal-right right top K W))
-  distributive-precomp-coherence-square-left-map-triangle-coherence-triangle-maps
-    { diagonal-right = diagonal-right}
-    ( L)
-    ( H)
-    ( K)
-    ( h) = {!!}
+  distributive-precomp-coherence-square-left-map-triangle-coherence-triangle-maps = {!!}
 
   distributive-precomp-coherence-square-left-map-triangle-coherence-triangle-maps' :
     { diagonal-left diagonal-right : A → Y} →
@@ -728,12 +703,7 @@ module _
       ( htpy-precomp L W)
       ( precomp-coherence-triangle-maps' diagonal-left bottom left H W)
       ( precomp-coherence-triangle-maps diagonal-right right top K W))
-  distributive-precomp-coherence-square-left-map-triangle-coherence-triangle-maps'
-    { diagonal-left = diagonal-left}
-    ( L)
-    ( H)
-    ( K)
-    ( h) = {!!}
+  distributive-precomp-coherence-square-left-map-triangle-coherence-triangle-maps' = {!!}
 
   distributive-precomp-coherence-square-comp-coherence-triangles-maps :
     ( diagonal : A → Y) →
@@ -761,9 +731,5 @@ module _
       ( precomp diagonal W)
       ( precomp-coherence-triangle-maps' diagonal bottom left H W)
       ( precomp-coherence-triangle-maps diagonal right top K W))
-  distributive-precomp-coherence-square-comp-coherence-triangles-maps
-    ( diagonal)
-    ( H)
-    ( K)
-    ( h) = {!!}
+  distributive-precomp-coherence-square-comp-coherence-triangles-maps = {!!}
 ```

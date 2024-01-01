@@ -56,7 +56,7 @@ module _
   where
 
   reflects-normal-subgroup-hom-Group : hom-Group G H → UU (l1 ⊔ l3 ⊔ l4)
-  reflects-normal-subgroup-hom-Group f = {!!}
+  reflects-normal-subgroup-hom-Group = {!!}
 
   reflecting-hom-Group : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
   reflecting-hom-Group = {!!}
@@ -107,7 +107,7 @@ module _
   id-reflecting-hom-Group' :
     (p : reflects-normal-subgroup-hom-Group G G N N (id-hom-Group G)) →
     reflecting-hom-Group G G N N
-  pr1 (id-reflecting-hom-Group' p) = {!!}
+  id-reflecting-hom-Group' = {!!}
 
   id-reflecting-hom-Group : reflecting-hom-Group G G N N
   id-reflecting-hom-Group = {!!}
@@ -127,20 +127,20 @@ module _
     reflecting-hom-Group H K M N →
     reflecting-hom-Group G H L M →
     hom-Group G K
-  hom-comp-reflecting-hom-Group g f = {!!}
+  hom-comp-reflecting-hom-Group = {!!}
 
   map-comp-reflecting-hom-Group :
     reflecting-hom-Group H K M N →
     reflecting-hom-Group G H L M →
     type-Group G → type-Group K
-  map-comp-reflecting-hom-Group g f = {!!}
+  map-comp-reflecting-hom-Group = {!!}
 
   reflects-normal-subgroup-comp-reflecting-hom-Group :
     (g : reflecting-hom-Group H K M N) →
     (f : reflecting-hom-Group G H L M) →
     reflects-normal-subgroup-hom-Group G K L N
       ( hom-comp-reflecting-hom-Group g f)
-  reflects-normal-subgroup-comp-reflecting-hom-Group g f = {!!}
+  reflects-normal-subgroup-comp-reflecting-hom-Group = {!!}
 
   comp-reflecting-hom-Group' :
     (g : reflecting-hom-Group H K M N) (f : reflecting-hom-Group G H L M) →
@@ -148,13 +148,13 @@ module _
       reflects-normal-subgroup-hom-Group G K L N
         ( hom-comp-reflecting-hom-Group g f)) →
     reflecting-hom-Group G K L N
-  pr1 (comp-reflecting-hom-Group' g f p) = {!!}
+  comp-reflecting-hom-Group' = {!!}
 
   comp-reflecting-hom-Group :
     reflecting-hom-Group H K M N →
     reflecting-hom-Group G H L M →
     reflecting-hom-Group G K L N
-  comp-reflecting-hom-Group g f = {!!}
+  comp-reflecting-hom-Group = {!!}
 ```
 
 ### Homotopies of reflecting homomorphisms
@@ -168,11 +168,11 @@ module _
 
   htpy-reflecting-hom-Group :
     reflecting-hom-Group G H N M → reflecting-hom-Group G H N M → UU (l1 ⊔ l2)
-  htpy-reflecting-hom-Group f g = {!!}
+  htpy-reflecting-hom-Group = {!!}
 
   refl-htpy-reflecting-hom-Group :
     (f : reflecting-hom-Group G H N M) → htpy-reflecting-hom-Group f f
-  refl-htpy-reflecting-hom-Group f = {!!}
+  refl-htpy-reflecting-hom-Group = {!!}
 ```
 
 ## Properties
@@ -190,5 +190,5 @@ module _
   htpy-eq-reflecting-hom-Group :
     (g : reflecting-hom-Group G H N M) →
     f ＝ g → htpy-reflecting-hom-Group G H N M f g
-  htpy-eq-reflecting-hom-Group g refl = {!!}
+  htpy-eq-reflecting-hom-Group = {!!}
 ```

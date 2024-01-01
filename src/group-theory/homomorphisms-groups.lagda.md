@@ -38,10 +38,10 @@ module _
   where
 
   preserves-mul-Group : (type-Group G → type-Group H) → UU (l1 ⊔ l2)
-  preserves-mul-Group f = {!!}
+  preserves-mul-Group = {!!}
 
   preserves-mul-Group' : (type-Group G → type-Group H) → UU (l1 ⊔ l2)
-  preserves-mul-Group' f = {!!}
+  preserves-mul-Group' = {!!}
 
   is-prop-preserves-mul-Group :
     (f : type-Group G → type-Group H) → is-prop (preserves-mul-Group f)
@@ -69,7 +69,7 @@ module _
 
 ```agda
 id-hom-Group : {l : Level} (G : Group l) → hom-Group G G
-id-hom-Group G = {!!}
+id-hom-Group = {!!}
 ```
 
 ### Composition of group homomorphisms
@@ -130,7 +130,7 @@ module _
   is-set-hom-Group = {!!}
 
   hom-set-Group : Set (l1 ⊔ l2)
-  pr1 hom-set-Group = {!!}
+  hom-set-Group = {!!}
 ```
 
 ### Associativity of composition of group homomorphisms
@@ -176,7 +176,7 @@ module _
   where
 
   preserves-unit-Group : (type-Group G → type-Group H) → UU l2
-  preserves-unit-Group f = {!!}
+  preserves-unit-Group = {!!}
 
   abstract
     preserves-unit-hom-Group :
@@ -224,7 +224,7 @@ module _
   where
 
   hom-monoid-hom-Group : hom-Monoid (monoid-Group G) (monoid-Group H)
-  pr1 hom-monoid-hom-Group = {!!}
+  hom-monoid-hom-Group = {!!}
 ```
 
 ### Group homomorphisms preserve left and right division

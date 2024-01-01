@@ -25,6 +25,6 @@ all coefficients are equal.
 
 ```agda
 constant-vec : {l : Level} {A : UU l} {n : ℕ} → A → vec A n
-constant-vec {n = zero-ℕ} _ = {!!}
+constant-vec = {!!}
 constant-vec {n = succ-ℕ n} x = {!!}
 ```

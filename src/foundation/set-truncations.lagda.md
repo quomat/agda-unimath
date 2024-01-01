@@ -180,13 +180,13 @@ module _
   abstract
     is-surjective-unit-trunc-Set :
       (A : UU l) → is-surjective (unit-trunc-Set {A = A})
-    is-surjective-unit-trunc-Set A = {!!}
+    is-surjective-unit-trunc-Set = {!!}
 
   abstract
     is-effective-unit-trunc-Set :
       (A : UU l) →
       is-effective (mere-eq-equivalence-relation A) (unit-trunc-Set {A = A})
-    is-effective-unit-trunc-Set A = {!!}
+    is-effective-unit-trunc-Set = {!!}
 
   abstract
     apply-effectiveness-unit-trunc-Set :
@@ -199,11 +199,11 @@ module _
     apply-effectiveness-unit-trunc-Set' = {!!}
 
   emb-trunc-Set : (A : UU l) → type-trunc-Set A ↪ (A → Prop l)
-  emb-trunc-Set A = {!!}
+  emb-trunc-Set = {!!}
 
   hom-slice-trunc-Set :
     (A : UU l) → hom-slice (mere-eq-Prop {A = A}) (map-emb (emb-trunc-Set A))
-  pr1 (hom-slice-trunc-Set A) = {!!}
+  hom-slice-trunc-Set = {!!}
 
   abstract
     is-image-trunc-Set :
@@ -212,7 +212,7 @@ module _
         ( mere-eq-Prop {A = A})
         ( emb-trunc-Set A)
         ( hom-slice-trunc-Set A)
-    is-image-trunc-Set A = {!!}
+    is-image-trunc-Set = {!!}
 ```
 
 ### Uniqueness of `trunc-Set`
@@ -225,7 +225,7 @@ module _
 
   abstract
     is-equiv-is-set-truncation' : is-set-truncation B f → is-equiv h
-    is-equiv-is-set-truncation' Sf = {!!}
+    is-equiv-is-set-truncation' = {!!}
 
   abstract
     is-set-truncation-is-equiv' :
@@ -239,7 +239,7 @@ module _
 
   abstract
     is-equiv-is-set-truncation : is-set-truncation B f → is-equiv h
-    is-equiv-is-set-truncation Sf = {!!}
+    is-equiv-is-set-truncation = {!!}
 
   abstract
     is-set-truncation-is-equiv :

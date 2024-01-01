@@ -45,12 +45,12 @@ bezouts-lemma-eqn-to-int :
       ( int-ℕ (minimal-positive-distance-x-coeff (abs-ℤ x) (abs-ℤ y) H) *ℤ x))
     ( abs-ℤ
       ( int-ℕ (minimal-positive-distance-y-coeff (abs-ℤ x) (abs-ℤ y) H) *ℤ y))
-bezouts-lemma-eqn-to-int x y H = {!!}
+bezouts-lemma-eqn-to-int = {!!}
 
 refactor-pos-cond :
   (x y : ℤ) → (H : is-positive-ℤ x) → (K : is-positive-ℤ y) →
   is-nonzero-ℕ ((abs-ℤ x) +ℕ (abs-ℤ y))
-refactor-pos-cond x y H _ = {!!}
+refactor-pos-cond = {!!}
 
 bezouts-lemma-refactor-hypotheses :
   (x y : ℤ) (H : is-positive-ℤ x) (K : is-positive-ℤ y) →
@@ -71,24 +71,24 @@ bezouts-lemma-refactor-hypotheses :
             ( abs-ℤ y)
             ( refactor-pos-cond x y H K)))
         ( y)))
-bezouts-lemma-refactor-hypotheses x y H K = {!!}
+bezouts-lemma-refactor-hypotheses = {!!}
 
 bezouts-lemma-pos-ints :
   (x y : ℤ) (H : is-positive-ℤ x) (K : is-positive-ℤ y) →
   Σ ℤ (λ s → Σ ℤ (λ t → (s *ℤ x) +ℤ (t *ℤ y) ＝ gcd-ℤ x y))
-bezouts-lemma-pos-ints x y H K = {!!}
+bezouts-lemma-pos-ints = {!!}
 
   sx-ty-nonneg-case-split :
     ( is-nonnegative-ℤ ((s *ℤ x) -ℤ (t *ℤ y)) +
       is-nonnegative-ℤ (neg-ℤ ((s *ℤ x) -ℤ (t *ℤ y)))) →
     Σ ℤ (λ s → Σ ℤ (λ t → (s *ℤ x) +ℤ (t *ℤ y) ＝ gcd-ℤ x y))
-  pr1 (sx-ty-nonneg-case-split (inl pos)) = {!!}
+  sx-ty-nonneg-case-split = {!!}
 
   pr1 (sx-ty-nonneg-case-split (inr neg)) = {!!}
 
 bezouts-lemma-ℤ :
   (x y : ℤ) → Σ ℤ (λ s → Σ ℤ (λ t → (s *ℤ x) +ℤ (t *ℤ y) ＝ gcd-ℤ x y))
-bezouts-lemma-ℤ (inl x) (inl y) = {!!}
+bezouts-lemma-ℤ = {!!}
 bezouts-lemma-ℤ (inl x) (inr (inl star)) = {!!}
 bezouts-lemma-ℤ (inl x) (inr (inr y)) = {!!}
 bezouts-lemma-ℤ (inr (inl star)) (inl y) = {!!}
@@ -107,9 +107,9 @@ Bezout.
 ```agda
 div-right-factor-coprime-ℤ :
   (x y z : ℤ) → (div-ℤ x (y *ℤ z)) → (gcd-ℤ x y ＝ one-ℤ) → div-ℤ x z
-div-right-factor-coprime-ℤ x y z H K = {!!}
+div-right-factor-coprime-ℤ = {!!}
 
 div-right-factor-coprime-ℕ :
   (x y z : ℕ) → (div-ℕ x (y *ℕ z)) → (gcd-ℕ x y ＝ 1) → div-ℕ x z
-div-right-factor-coprime-ℕ x y z H K = {!!}
+div-right-factor-coprime-ℕ = {!!}
 ```

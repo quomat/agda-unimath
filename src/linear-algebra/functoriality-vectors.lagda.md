@@ -37,11 +37,11 @@ module _
   where
 
   map-vec : {n : ℕ} → (A → B) → vec A n → vec B n
-  map-vec _ empty-vec = {!!}
+  map-vec = {!!}
 
   htpy-vec :
     {n : ℕ} {f g : A → B} → (f ~ g) → map-vec {n = n} f ~ map-vec {n = n} g
-  htpy-vec H empty-vec = {!!}
+  htpy-vec = {!!}
 ```
 
 ### Binary functoriality of the type of listed vectors

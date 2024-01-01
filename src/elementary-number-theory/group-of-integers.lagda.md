@@ -29,12 +29,12 @@ forms a group.
 
 ```agda
 ℤ-Semigroup : Semigroup lzero
-pr1 ℤ-Semigroup = {!!}
+ℤ-Semigroup = {!!}
 pr1 (pr2 ℤ-Semigroup) = {!!}
 pr2 (pr2 ℤ-Semigroup) = {!!}
 
 ℤ-Group : Group lzero
-pr1 ℤ-Group = {!!}
+ℤ-Group = {!!}
 pr1 (pr1 (pr2 ℤ-Group)) = {!!}
 pr1 (pr2 (pr1 (pr2 ℤ-Group))) = {!!}
 pr2 (pr2 (pr1 (pr2 ℤ-Group))) = {!!}
@@ -43,6 +43,6 @@ pr1 (pr2 (pr2 (pr2 ℤ-Group))) = {!!}
 pr2 (pr2 (pr2 (pr2 ℤ-Group))) = {!!}
 
 ℤ-Ab : Ab lzero
-pr1 ℤ-Ab = {!!}
+ℤ-Ab = {!!}
 pr2 ℤ-Ab = {!!}
 ```

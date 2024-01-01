@@ -47,7 +47,7 @@ is-decidable-subtype-Prop :
 is-decidable-subtype-Prop = {!!}
 
 is-decidable-subtype : {l1 l2 : Level} {A : UU l1} → subtype l2 A → UU (l1 ⊔ l2)
-is-decidable-subtype P = {!!}
+is-decidable-subtype = {!!}
 
 is-prop-is-decidable-subtype :
   {l1 l2 : Level} {A : UU l1} (P : subtype l2 A) →
@@ -55,7 +55,7 @@ is-prop-is-decidable-subtype :
 is-prop-is-decidable-subtype = {!!}
 
 decidable-subtype : {l1 : Level} (l : Level) (X : UU l1) → UU (l1 ⊔ lsuc l)
-decidable-subtype l X = {!!}
+decidable-subtype = {!!}
 ```
 
 ### The underlying subtype of a decidable subtype
@@ -66,7 +66,7 @@ module _
   where
 
   subtype-decidable-subtype : subtype l2 A
-  subtype-decidable-subtype a = {!!}
+  subtype-decidable-subtype = {!!}
 
   is-decidable-decidable-subtype :
     is-decidable-subtype subtype-decidable-subtype
@@ -114,16 +114,16 @@ module _
   where
 
   is-decidable-is-left : (x : A + B) → is-decidable (is-left x)
-  is-decidable-is-left (inl x) = {!!}
+  is-decidable-is-left = {!!}
 
   is-left-Decidable-Prop : A + B → Decidable-Prop lzero
-  pr1 (is-left-Decidable-Prop x) = {!!}
+  is-left-Decidable-Prop = {!!}
 
   is-decidable-is-right : (x : A + B) → is-decidable (is-right x)
-  is-decidable-is-right (inl x) = {!!}
+  is-decidable-is-right = {!!}
 
   is-right-Decidable-Prop : A + B → Decidable-Prop lzero
-  pr1 (is-right-Decidable-Prop x) = {!!}
+  is-right-Decidable-Prop = {!!}
 ```
 
 ## Properties

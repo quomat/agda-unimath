@@ -38,10 +38,10 @@ module _
   where
 
   map-commutative-prod : A × B → B × A
-  pr1 (map-commutative-prod (pair a b)) = {!!}
+  map-commutative-prod = {!!}
 
   map-inv-commutative-prod : B × A → A × B
-  pr1 (map-inv-commutative-prod (pair b a)) = {!!}
+  map-inv-commutative-prod = {!!}
 
   is-section-map-inv-commutative-prod :
     (map-commutative-prod ∘ map-inv-commutative-prod) ~ id
@@ -55,7 +55,7 @@ module _
   is-equiv-map-commutative-prod = {!!}
 
   commutative-prod : (A × B) ≃ (B × A)
-  pr1 commutative-prod = {!!}
+  commutative-prod = {!!}
 ```
 
 ### Associativity of cartesian products
@@ -113,7 +113,7 @@ module _
   is-equiv-pr2-prod-is-contr = {!!}
 
   equiv-pr2-prod-is-contr : (A × B) ≃ B
-  pr1 equiv-pr2-prod-is-contr = {!!}
+  equiv-pr2-prod-is-contr = {!!}
 ```
 
 ### Adding redundant property

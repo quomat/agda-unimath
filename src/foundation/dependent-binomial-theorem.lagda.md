@@ -43,23 +43,23 @@ module _
 
   fam-coprod :
     Fin 2 → UU (l1 ⊔ l2)
-  fam-coprod (inl (inr _)) = {!!}
+  fam-coprod = {!!}
 
   map-compute-total-fam-coprod :
     Σ (Fin 2) fam-coprod → A + B
-  map-compute-total-fam-coprod (pair (inl (inr _)) y) = {!!}
+  map-compute-total-fam-coprod = {!!}
 
   map-inv-compute-total-fam-coprod :
     A + B → Σ (Fin 2) fam-coprod
-  pr1 (map-inv-compute-total-fam-coprod (inl x)) = {!!}
+  map-inv-compute-total-fam-coprod = {!!}
 
   is-section-map-inv-compute-total-fam-coprod :
     (map-compute-total-fam-coprod ∘ map-inv-compute-total-fam-coprod) ~ id
-  is-section-map-inv-compute-total-fam-coprod (inl x) = {!!}
+  is-section-map-inv-compute-total-fam-coprod = {!!}
 
   is-retraction-map-inv-compute-total-fam-coprod :
     (map-inv-compute-total-fam-coprod ∘ map-compute-total-fam-coprod) ~ id
-  is-retraction-map-inv-compute-total-fam-coprod (pair (inl (inr _)) y) = {!!}
+  is-retraction-map-inv-compute-total-fam-coprod = {!!}
 
   is-equiv-map-compute-total-fam-coprod :
     is-equiv map-compute-total-fam-coprod
@@ -67,7 +67,7 @@ module _
 
   compute-total-fam-coprod :
     (Σ (Fin 2) fam-coprod) ≃ (A + B)
-  pr1 compute-total-fam-coprod = {!!}
+  compute-total-fam-coprod = {!!}
 
   inv-compute-total-fam-coprod :
     (A + B) ≃ Σ (Fin 2) fam-coprod

@@ -29,10 +29,10 @@ module _
   where
 
   is-separated-family : (X → UU l3) → UU (l1 ⊔ l2 ⊔ l3)
-  is-separated-family A = {!!}
+  is-separated-family = {!!}
 
   is-separated : UU l3 → UU (l1 ⊔ l2 ⊔ l3)
-  is-separated A = {!!}
+  is-separated = {!!}
 ```
 
 ## References

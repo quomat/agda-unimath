@@ -29,7 +29,7 @@ The binomial coefficient `(n choose k)` measures how many decidable subsets of
 
 ```agda
 binomial-coefficient-ℕ : ℕ → ℕ → ℕ
-binomial-coefficient-ℕ zero-ℕ zero-ℕ = {!!}
+binomial-coefficient-ℕ = {!!}
 binomial-coefficient-ℕ zero-ℕ (succ-ℕ k) = {!!}
 binomial-coefficient-ℕ (succ-ℕ n) zero-ℕ = {!!}
 binomial-coefficient-ℕ (succ-ℕ n) (succ-ℕ k) = {!!}
@@ -39,7 +39,7 @@ binomial-coefficient-ℕ (succ-ℕ n) (succ-ℕ k) = {!!}
 
 ```agda
 binomial-coefficient-Fin : (n : ℕ) → Fin (succ-ℕ n) → ℕ
-binomial-coefficient-Fin n x = {!!}
+binomial-coefficient-Fin = {!!}
 ```
 
 ## Properties

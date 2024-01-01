@@ -85,8 +85,7 @@ pullback-property-dependent-pullback-property-pushout :
   (f : S → A) (g : S → B) {X : UU l4} (c : cocone f g X) →
   dependent-pullback-property-pushout l f g c →
   pullback-property-pushout l f g c
-pullback-property-dependent-pullback-property-pushout
-  l f g (pair i (pair j H)) dpb Y = {!!}
+pullback-property-dependent-pullback-property-pushout = {!!}
 ```
 
 ### Proof of Theorem 18.1.4, (2) implies (3)
@@ -97,37 +96,37 @@ We first define the family of lifts, which is indexed by maps $Y → X$.
 fam-lifts :
   {l1 l2 l3 : Level} (Y : UU l1) {X : UU l2} (P : X → UU l3) →
   (Y → X) → UU (l1 ⊔ l3)
-fam-lifts Y P h = {!!}
+fam-lifts = {!!}
 
 tr-fam-lifts' :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} (P : X → UU l4) →
   (h : B → X) {f g : A → B} (H : f ~ g) →
   fam-lifts A P (h ∘ f) → fam-lifts A P (h ∘ g)
-tr-fam-lifts' P h {f} {g} H k s = {!!}
+tr-fam-lifts' = {!!}
 
 TR-EQ-HTPY-FAM-LIFTS :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} (P : X → UU l4) →
   (h : B → X) {f g : A → B} (H : f ~ g) → UU (l1 ⊔ l4)
-TR-EQ-HTPY-FAM-LIFTS {A = A} P h H = {!!}
+TR-EQ-HTPY-FAM-LIFTS = {!!}
 
 tr-eq-htpy-fam-lifts-refl-htpy :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} (P : X → UU l4) →
   (h : B → X) (f : A → B) → TR-EQ-HTPY-FAM-LIFTS P h (refl-htpy' f)
-tr-eq-htpy-fam-lifts-refl-htpy P h f k = {!!}
+tr-eq-htpy-fam-lifts-refl-htpy = {!!}
 
 abstract
   tr-eq-htpy-fam-lifts :
     {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} (P : X → UU l4) →
     (h : B → X) {f g : A → B} (H : f ~ g) →
     TR-EQ-HTPY-FAM-LIFTS P h H
-  tr-eq-htpy-fam-lifts P h {f} = {!!}
+  tr-eq-htpy-fam-lifts = {!!}
 
   compute-tr-eq-htpy-fam-lifts :
     {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} (P : X → UU l4) →
     (h : B → X) (f : A → B) →
     Id ( tr-eq-htpy-fam-lifts P h (refl-htpy' f))
         ( tr-eq-htpy-fam-lifts-refl-htpy P h f)
-  compute-tr-eq-htpy-fam-lifts P h f = {!!}
+  compute-tr-eq-htpy-fam-lifts = {!!}
 ```
 
 One of the basic operations on lifts is precomposition by an ordinary function.
@@ -137,7 +136,7 @@ precompose-lifts :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3}
   (P : X → UU l4) → (f : A → B) → (h : B → X) →
   (fam-lifts B P h) → (fam-lifts A P (h ∘ f))
-precompose-lifts P f h h' a = {!!}
+precompose-lifts = {!!}
 ```
 
 Given two homotopic maps, their precomposition functions have different
@@ -148,18 +147,18 @@ homotopy induction.
 TRIANGLE-PRECOMPOSE-LIFTS :
   { l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3}
   ( P : X → UU l4) {f g : A → B} (H : f ~ g) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-TRIANGLE-PRECOMPOSE-LIFTS {A = A} {B} {X} P {f} {g} H = {!!}
+TRIANGLE-PRECOMPOSE-LIFTS = {!!}
 
 triangle-precompose-lifts-refl-htpy :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3}
   (P : X → UU l4) (f : A → B) → TRIANGLE-PRECOMPOSE-LIFTS P (refl-htpy' f)
-triangle-precompose-lifts-refl-htpy {A = A} P f h h' = {!!}
+triangle-precompose-lifts-refl-htpy = {!!}
 
 triangle-precompose-lifts :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3}
   (P : X → UU l4) {f g : A → B} (H : f ~ g) →
   TRIANGLE-PRECOMPOSE-LIFTS P H
-triangle-precompose-lifts {A = A} P {f} = {!!}
+triangle-precompose-lifts = {!!}
 
 compute-triangle-precompose-lifts :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3}
@@ -167,7 +166,7 @@ compute-triangle-precompose-lifts :
   Id
     ( triangle-precompose-lifts P (refl-htpy' f))
     ( triangle-precompose-lifts-refl-htpy P f)
-compute-triangle-precompose-lifts P f = {!!}
+compute-triangle-precompose-lifts = {!!}
 ```
 
 There is a similar commuting triangle with the computed transport function. This
@@ -180,14 +179,14 @@ triangle-precompose-lifts' :
   (P : X → UU l4) {f g : A → B} (H : f ~ g) → (h : B → X) →
   ( (tr-fam-lifts' P h H) ∘ (precompose-lifts P f h)) ~
   ( precompose-lifts P g h)
-triangle-precompose-lifts' P H h k = {!!}
+triangle-precompose-lifts' = {!!}
 
 compute-triangle-precompose-lifts' :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3}
   (P : X → UU l4) (f : A → B) → (h : B → X) →
   ( triangle-precompose-lifts' P (refl-htpy' f) h) ~
   ( refl-htpy' ( precompose-lifts P f h))
-compute-triangle-precompose-lifts' P f h k = {!!}
+compute-triangle-precompose-lifts' = {!!}
 ```
 
 There is a coherence between the two commuting triangles. This coherence is
@@ -197,36 +196,36 @@ again constructed by homotopy induction.
 COHERENCE-TRIANGLE-PRECOMPOSE-LIFTS :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} (P : X → UU l4)
   {f g : A → B} (H : f ~ g) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-COHERENCE-TRIANGLE-PRECOMPOSE-LIFTS {A = A} {B} {X} P {f} {g} H = {!!}
+COHERENCE-TRIANGLE-PRECOMPOSE-LIFTS = {!!}
 
 coherence-triangle-precompose-lifts-refl-htpy :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} (P : X → UU l4)
   (f : A → B) → COHERENCE-TRIANGLE-PRECOMPOSE-LIFTS P (refl-htpy' f)
-coherence-triangle-precompose-lifts-refl-htpy P f h = {!!}
+coherence-triangle-precompose-lifts-refl-htpy = {!!}
 
 abstract
   coherence-triangle-precompose-lifts :
     {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} (P : X → UU l4)
     {f g : A → B} (H : f ~ g) → COHERENCE-TRIANGLE-PRECOMPOSE-LIFTS P H
-  coherence-triangle-precompose-lifts P {f} = {!!}
+  coherence-triangle-precompose-lifts = {!!}
 
   compute-coherence-triangle-precompose-lifts :
     {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} (P : X → UU l4)
     (f : A → B) →
       Id ( coherence-triangle-precompose-lifts P (refl-htpy' f))
           ( coherence-triangle-precompose-lifts-refl-htpy P f)
-  compute-coherence-triangle-precompose-lifts P f = {!!}
+  compute-coherence-triangle-precompose-lifts = {!!}
 
 total-lifts :
   {l1 l2 l3 : Level} (A : UU l1) {X : UU l2} (P : X → UU l3) →
   UU (l1 ⊔ l2 ⊔ l3)
-total-lifts A {X} P = {!!}
+total-lifts = {!!}
 
 precompose-total-lifts :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3}
   (P : X → UU l4) → (A → B) →
   total-lifts B P → total-lifts A P
-precompose-total-lifts {A = A} P f = {!!}
+precompose-total-lifts = {!!}
 
 coherence-square-map-inv-distributive-Π-Σ :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3}
@@ -236,7 +235,7 @@ coherence-square-map-inv-distributive-Π-Σ :
     ( map-inv-distributive-Π-Σ {A = B} {B = λ x → X} {C = λ x y → P y})
     ( map-inv-distributive-Π-Σ)
     ( λ h → h ∘ f)
-coherence-square-map-inv-distributive-Π-Σ P f = {!!}
+coherence-square-map-inv-distributive-Π-Σ = {!!}
 ```
 
 Our goal is now to produce a homotopy between `precompose-total-lifts P f` and
@@ -248,12 +247,12 @@ HTPY-PRECOMPOSE-TOTAL-LIFTS :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3}
   (P : X → UU l4) {f g : A → B} (H : f ~ g) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-HTPY-PRECOMPOSE-TOTAL-LIFTS P {f} {g} H = {!!}
+HTPY-PRECOMPOSE-TOTAL-LIFTS = {!!}
 
 htpy-precompose-total-lifts :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} (P : X → UU l4)
   {f g : A → B} (H : f ~ g) → HTPY-PRECOMPOSE-TOTAL-LIFTS P H
-htpy-precompose-total-lifts {A = A} {B} P {f} {g} H = {!!}
+htpy-precompose-total-lifts = {!!}
 ```
 
 We show that when `htpy-precompose-total-lifts` is applied to `refl-htpy`, it
@@ -264,30 +263,30 @@ tr-id-left-subst :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} {x y : A}
   (p : Id x y) (b : B) → (q : Id (f x) b) →
   Id (tr (λ (a : A) → Id (f a) b) p q) ((inv (ap f p)) ∙ q)
-tr-id-left-subst refl b q = {!!}
+tr-id-left-subst = {!!}
 
 compute-htpy-precompose-total-lifts :
   { l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} (P : X → UU l4)
   ( f : A → B) →
   ( htpy-precompose-total-lifts P (refl-htpy {f = f})) ~
   ( refl-htpy' (map-Σ (fam-lifts A P) (λ h → h ∘ f) (precompose-lifts P f)))
-compute-htpy-precompose-total-lifts {A = A} P f (pair h h') = {!!}
+compute-htpy-precompose-total-lifts = {!!}
 
 COHERENCE-INV-HTPY-DISTRIBUTIVE-Π-Σ :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} (P : X → UU l4)
   {f g : A → B} (H : f ~ g) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-COHERENCE-INV-HTPY-DISTRIBUTIVE-Π-Σ P {f} {g} H = {!!}
+COHERENCE-INV-HTPY-DISTRIBUTIVE-Π-Σ = {!!}
 
 coherence-inv-htpy-distributive-Π-Σ-refl-htpy :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} (P : X → UU l4)
   (f : A → B) → COHERENCE-INV-HTPY-DISTRIBUTIVE-Π-Σ P (refl-htpy' f)
-coherence-inv-htpy-distributive-Π-Σ-refl-htpy {X = X} P f = {!!}
+coherence-inv-htpy-distributive-Π-Σ-refl-htpy = {!!}
 
 abstract
   coherence-inv-htpy-distributive-Π-Σ :
     {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} (P : X → UU l4)
     {f g : A → B} (H : f ~ g) → COHERENCE-INV-HTPY-DISTRIBUTIVE-Π-Σ P H
-  coherence-inv-htpy-distributive-Π-Σ P {f} = {!!}
+  coherence-inv-htpy-distributive-Π-Σ = {!!}
 
 cone-family-dependent-pullback-property :
   {l1 l2 l3 l4 l : Level} {S : UU l1} {A : UU l2} {B : UU l3} {X : UU l4}
@@ -298,7 +297,7 @@ cone-family-dependent-pullback-property :
     ( precompose-lifts P g)
     ( cone-pullback-property-pushout f g c X)
     ( fam-lifts X P)
-cone-family-dependent-pullback-property f g c P γ = {!!}
+cone-family-dependent-pullback-property = {!!}
 
 is-pullback-cone-family-dependent-pullback-property :
   {l1 l2 l3 l4 : Level} {S : UU l1} {A : UU l2} {B : UU l3} {X : UU l4}
@@ -310,17 +309,14 @@ is-pullback-cone-family-dependent-pullback-property :
       ( precompose-lifts P f (γ ∘ (pr1 c))))
     ( precompose-lifts P g (γ ∘ (pr1 (pr2 c))))
     ( cone-family-dependent-pullback-property f g c P γ)
-is-pullback-cone-family-dependent-pullback-property {S = S} {A} {B} {X}
-  f g (pair i (pair j H)) pb-c P = {!!}
+is-pullback-cone-family-dependent-pullback-property = {!!}
 
 dependent-pullback-property-pullback-property-pushout :
   {l1 l2 l3 l4 : Level} {S : UU l1} {A : UU l2} {B : UU l3} {X : UU l4}
   (f : S → A) (g : S → B) (c : cocone f g X) →
   ({l : Level} → pullback-property-pushout l f g c) →
   ({l : Level} → dependent-pullback-property-pushout l f g c)
-dependent-pullback-property-pullback-property-pushout
-  {S = S} {A} {B} {X}
-  f g (pair i (pair j H)) pullback-c P = {!!}
+dependent-pullback-property-pullback-property-pushout = {!!}
 ```
 
 This concludes the proof of Theorem 18.1.4.
@@ -333,7 +329,7 @@ dependent-universal-property-universal-property-pushout :
   ( f : S → A) (g : S → B) (c : cocone f g X) →
   ( {l : Level} → universal-property-pushout l f g c) →
   ( {l : Level} → dependent-universal-property-pushout l f g c)
-dependent-universal-property-universal-property-pushout f g c up-X = {!!}
+dependent-universal-property-universal-property-pushout = {!!}
 ```
 
 ## Section 16.2 Families over pushouts
@@ -344,7 +340,7 @@ dependent-universal-property-universal-property-pushout f g c up-X = {!!}
 Fam-pushout :
   {l1 l2 l3 : Level} (l : Level) {S : UU l1} {A : UU l2} {B : UU l3}
   (f : S → A) (g : S → B) → UU (l1 ⊔ l2 ⊔ l3 ⊔ lsuc l)
-Fam-pushout l {S} {A} {B} f g = {!!}
+Fam-pushout = {!!}
 ```
 
 ### Characterizing the identity type of `Fam-pushout`
@@ -357,63 +353,63 @@ coherence-equiv-Fam-pushout :
   ( eA : (a : A) → (pr1 P a) ≃ (pr1 Q a))
   ( eB : (b : B) → (pr1 (pr2 P) b) ≃ (pr1 (pr2 Q) b)) →
   UU (l1 ⊔ l ⊔ l')
-coherence-equiv-Fam-pushout {S = S} {f = f} {g} P Q eA eB = {!!}
+coherence-equiv-Fam-pushout = {!!}
 
 equiv-Fam-pushout :
   {l1 l2 l3 l l' : Level} {S : UU l1} {A : UU l2} {B : UU l3}
   {f : S → A} {g : S → B} →
   Fam-pushout l f g → Fam-pushout l' f g → UU (l1 ⊔ l2 ⊔ l3 ⊔ l ⊔ l')
-equiv-Fam-pushout {S = S} {A} {B} {f} {g} P Q = {!!}
+equiv-Fam-pushout = {!!}
 
 reflexive-equiv-Fam-pushout :
   {l1 l2 l3 l : Level} {S : UU l1} {A : UU l2} {B : UU l3}
   {f : S → A} {g : S → B} (P : Fam-pushout l f g) →
   equiv-Fam-pushout P P
-reflexive-equiv-Fam-pushout (pair PA (pair PB PS)) = {!!}
+reflexive-equiv-Fam-pushout = {!!}
 
 equiv-Fam-pushout-eq :
   {l1 l2 l3 l : Level} {S : UU l1} {A : UU l2} {B : UU l3}
   {f : S → A} {g : S → B} {P Q : Fam-pushout l f g} →
   Id P Q → equiv-Fam-pushout P Q
-equiv-Fam-pushout-eq {P = P} {.P} refl = {!!}
+equiv-Fam-pushout-eq = {!!}
 
 is-torsorial-equiv-Fam-pushout :
   {l1 l2 l3 l : Level} {S : UU l1} {A : UU l2} {B : UU l3}
   {f : S → A} {g : S → B} (P : Fam-pushout l f g) →
   is-torsorial (equiv-Fam-pushout P)
-is-torsorial-equiv-Fam-pushout {S = S} {A} {B} {f} {g} P = {!!}
+is-torsorial-equiv-Fam-pushout = {!!}
 
 is-equiv-equiv-Fam-pushout-eq :
   {l1 l2 l3 l : Level} {S : UU l1} {A : UU l2} {B : UU l3}
   {f : S → A} {g : S → B} (P Q : Fam-pushout l f g) →
   is-equiv (equiv-Fam-pushout-eq {P = P} {Q})
-is-equiv-equiv-Fam-pushout-eq P = {!!}
+is-equiv-equiv-Fam-pushout-eq = {!!}
 
 equiv-equiv-Fam-pushout :
   {l1 l2 l3 l : Level} {S : UU l1} {A : UU l2} {B : UU l3}
   {f : S → A} {g : S → B} (P Q : Fam-pushout l f g) →
   Id P Q ≃ equiv-Fam-pushout P Q
-equiv-equiv-Fam-pushout P Q = {!!}
+equiv-equiv-Fam-pushout = {!!}
 
 eq-equiv-Fam-pushout :
   {l1 l2 l3 l : Level} {S : UU l1} {A : UU l2} {B : UU l3}
   {f : S → A} {g : S → B} {P Q : Fam-pushout l f g} →
   (equiv-Fam-pushout P Q) → Id P Q
-eq-equiv-Fam-pushout {P = P} {Q} = {!!}
+eq-equiv-Fam-pushout = {!!}
 
 is-section-eq-equiv-Fam-pushout :
   { l1 l2 l3 l : Level} {S : UU l1} {A : UU l2} {B : UU l3}
   { f : S → A} {g : S → B} {P Q : Fam-pushout l f g} →
   ( ( equiv-Fam-pushout-eq {P = P} {Q}) ∘
     ( eq-equiv-Fam-pushout {P = P} {Q})) ~ id
-is-section-eq-equiv-Fam-pushout {P = P} {Q} = {!!}
+is-section-eq-equiv-Fam-pushout = {!!}
 
 is-retraction-eq-equiv-Fam-pushout :
   {l1 l2 l3 l : Level} {S : UU l1} {A : UU l2} {B : UU l3}
   {f : S → A} {g : S → B} {P Q : Fam-pushout l f g} →
   ( ( eq-equiv-Fam-pushout {P = P} {Q}) ∘
     ( equiv-Fam-pushout-eq {P = P} {Q})) ~ id
-is-retraction-eq-equiv-Fam-pushout {P = P} {Q} = {!!}
+is-retraction-eq-equiv-Fam-pushout = {!!}
 ```
 
 This concludes the characterization of the identity type of `Fam-pushout`.
@@ -425,7 +421,7 @@ desc-fam :
   {l1 l2 l3 l4 l : Level} {S : UU l1} {A : UU l2} {B : UU l3} {X : UU l4}
   {f : S → A} {g : S → B} (c : cocone f g X) →
   (P : X → UU l) → Fam-pushout l f g
-desc-fam c P = {!!}
+desc-fam = {!!}
 ```
 
 ### Theorem 18.2.3
@@ -434,39 +430,39 @@ desc-fam c P = {!!}
 Fam-pushout-cocone-UU :
   {l1 l2 l3 : Level} (l : Level) {S : UU l1} {A : UU l2} {B : UU l3}
   {f : S → A} {g : S → B} → cocone f g (UU l) → Fam-pushout l f g
-Fam-pushout-cocone-UU l = {!!}
+Fam-pushout-cocone-UU = {!!}
 
 is-equiv-Fam-pushout-cocone-UU :
   {l1 l2 l3 : Level} (l : Level) {S : UU l1} {A : UU l2} {B : UU l3}
   {f : S → A} {g : S → B} →
   is-equiv (Fam-pushout-cocone-UU l {f = f} {g})
-is-equiv-Fam-pushout-cocone-UU l {f = f} {g} = {!!}
+is-equiv-Fam-pushout-cocone-UU = {!!}
 
 htpy-equiv-eq-ap-fam :
   {l1 l2 : Level} {A : UU l1} (B : A → UU l2) {x y : A} (p : Id x y) →
   htpy-equiv (equiv-tr B p) (equiv-eq (ap B p))
-htpy-equiv-eq-ap-fam B {x} {.x} refl = {!!}
+htpy-equiv-eq-ap-fam = {!!}
 
 triangle-desc-fam :
   {l1 l2 l3 l4 l : Level} {S : UU l1} {A : UU l2} {B : UU l3} {X : UU l4}
   {f : S → A} {g : S → B} (c : cocone f g X) →
   ( desc-fam {l = l} c) ~
   ( ( Fam-pushout-cocone-UU l {f = f} {g}) ∘ ( cocone-map f g {Y = UU l} c))
-triangle-desc-fam {l = l} {S} {A} {B} {X} (pair i (pair j H)) P = {!!}
+triangle-desc-fam = {!!}
 
 is-equiv-desc-fam :
   {l1 l2 l3 l4 l : Level} {S : UU l1} {A : UU l2} {B : UU l3} {X : UU l4}
   {f : S → A} {g : S → B} (c : cocone f g X) →
   ({l' : Level} → universal-property-pushout l' f g c) →
   is-equiv (desc-fam {l = l} {f = f} {g} c)
-is-equiv-desc-fam {l = l} {f = f} {g} c up-c = {!!}
+is-equiv-desc-fam = {!!}
 
 equiv-desc-fam :
   {l1 l2 l3 l4 l : Level} {S : UU l1} {A : UU l2} {B : UU l3} {X : UU l4}
   {f : S → A} {g : S → B} (c : cocone f g X) →
   ({l' : Level} → universal-property-pushout l' f g c) →
   (X → UU l) ≃ Fam-pushout l f g
-equiv-desc-fam c up-c = {!!}
+equiv-desc-fam = {!!}
 ```
 
 ### Corollary 18.2.4
@@ -480,21 +476,21 @@ uniqueness-Fam-pushout :
   is-contr
     ( Σ (X → UU l) (λ Q →
       equiv-Fam-pushout P (desc-fam c Q)))
-uniqueness-Fam-pushout {l = l} f g c up-c P = {!!}
+uniqueness-Fam-pushout = {!!}
 
 fam-Fam-pushout :
   {l1 l2 l3 l4 l : Level} {S : UU l1} {A : UU l2} {B : UU l3} {X : UU l4}
   {f : S → A} {g : S → B} (c : cocone f g X) →
   (up-X : {l' : Level} → universal-property-pushout l' f g c) →
   Fam-pushout l f g → (X → UU l)
-fam-Fam-pushout {f = f} {g} c up-X P = {!!}
+fam-Fam-pushout = {!!}
 
 is-section-fam-Fam-pushout :
   {l1 l2 l3 l4 l : Level} {S : UU l1} {A : UU l2} {B : UU l3} {X : UU l4}
   {f : S → A} {g : S → B} (c : cocone f g X) →
   (up-X : {l' : Level} → universal-property-pushout l' f g c) →
   ((desc-fam {l = l} c) ∘ (fam-Fam-pushout c up-X)) ~ id
-is-section-fam-Fam-pushout {f = f} {g} c up-X P = {!!}
+is-section-fam-Fam-pushout = {!!}
 
 compute-left-fam-Fam-pushout :
   { l1 l2 l3 l4 l : Level} {S : UU l1} {A : UU l2} {B : UU l3} {X : UU l4}
@@ -502,7 +498,7 @@ compute-left-fam-Fam-pushout :
   ( up-X : {l' : Level} → universal-property-pushout l' f g c) →
   ( P : Fam-pushout l f g) →
   ( a : A) → (pr1 P a) ≃ (fam-Fam-pushout c up-X P (pr1 c a))
-compute-left-fam-Fam-pushout {f = f} {g} c up-X P = {!!}
+compute-left-fam-Fam-pushout = {!!}
 
 compute-right-fam-Fam-pushout :
   { l1 l2 l3 l4 l : Level} {S : UU l1} {A : UU l2} {B : UU l3} {X : UU l4}
@@ -510,7 +506,7 @@ compute-right-fam-Fam-pushout :
   ( up-X : {l' : Level} → universal-property-pushout l' f g c) →
   ( P : Fam-pushout l f g) →
   ( b : B) → (pr1 (pr2 P) b) ≃ (fam-Fam-pushout c up-X P (pr1 (pr2 c) b))
-compute-right-fam-Fam-pushout {f = f} {g} c up-X P = {!!}
+compute-right-fam-Fam-pushout = {!!}
 
 compute-path-fam-Fam-pushout :
   { l1 l2 l3 l4 l : Level} {S : UU l1} {A : UU l2} {B : UU l3} {X : UU l4}
@@ -522,7 +518,7 @@ compute-path-fam-Fam-pushout :
       ( map-equiv (pr2 (pr2 P) s))) ~
     ( ( tr (fam-Fam-pushout c up-X P) (pr2 (pr2 c) s)) ∘
       ( map-equiv (compute-left-fam-Fam-pushout c up-X P (f s))))
-compute-path-fam-Fam-pushout {f = f} {g} c up-X P = {!!}
+compute-path-fam-Fam-pushout = {!!}
 ```
 
 ## Section 18.3 The Flattening lemma for pushouts
@@ -542,7 +538,7 @@ cocone-flattening-pushout :
     ( map-Σ (pr1 P) f (λ s → id))
     ( map-Σ (pr1 (pr2 P)) g (λ s → map-equiv (pr2 (pr2 P) s)))
     ( Σ X Q)
-cocone-flattening-pushout f g c P Q e = {!!}
+cocone-flattening-pushout = {!!}
 -}
 ```
 
@@ -554,7 +550,7 @@ coherence-bottom-flattening-lemma' :
   {l1 l2 l3 : Level} {B : UU l1} {Q : B → UU l2} {T : UU l3}
   {b b' : B} (α : Id b b') {y : Q b} {y' : Q b'} (β : Id (tr Q α y) y')
   (h : (b : B) → Q b → T) → Id (h b y) (h b' y')
-coherence-bottom-flattening-lemma' refl refl h = {!!}
+coherence-bottom-flattening-lemma' = {!!}
 
 coherence-bottom-flattening-lemma :
   {l1 l2 l3 l4 l5 : Level}
@@ -565,7 +561,7 @@ coherence-bottom-flattening-lemma :
   (K : (a : A) → ((tr Q (H a)) ∘ (g a)) ~ (g' a))
   (h : (b : B) → Q b → T) → (a : A) (p : P a) →
   Id (h (f a) (g a p)) (h (f' a) (g' a p))
-coherence-bottom-flattening-lemma H K h a p = {!!}
+coherence-bottom-flattening-lemma = {!!}
 coherence-cube-flattening-lemma :
   {l1 l2 l3 l4 l5 : Level}
   {A : UU l1} {B : UU l2} {P : A → UU l3} {Q : B → UU l4} {T : UU l5}
@@ -579,8 +575,7 @@ coherence-cube-flattening-lemma :
          ( coherence-bottom-flattening-lemma H K (ev-pair h) a)))
      ( ap ev-pair
        ( htpy-precomp (htpy-map-Σ Q H g K) T h))
-coherence-cube-flattening-lemma
-  {A = A} {B} {P} {Q} {T} {f = f} {f'} H {g} {g'} K = {!!}
+coherence-cube-flattening-lemma = {!!}
 
 flattening-pushout' :
   {l1 l2 l3 l4 l5 : Level} {S : UU l1} {A : UU l2} {B : UU l3} {X : UU l4}
@@ -593,7 +588,7 @@ flattening-pushout' :
     ( map-Σ (pr1 P) f (λ s → id))
     ( map-Σ (pr1 (pr2 P)) g (λ s → map-equiv (pr2 (pr2 P) s)))
     ( cocone-flattening-pushout f g c P Q e)
-flattening-pushout' f g c P Q e l T = {!!}
+flattening-pushout' = {!!}
 
 flattening-pushout :
   {l1 l2 l3 l4 l5 : Level} {S : UU l1} {A : UU l2} {B : UU l3} {X : UU l4}
@@ -606,6 +601,6 @@ flattening-pushout :
     ( map-Σ (pr1 P) f (λ s → id))
     ( map-Σ (pr1 (pr2 P)) g (λ s → map-equiv (pr2 (pr2 P) s)))
     ( cocone-flattening-pushout f g c P Q e)
-flattening-pushout f g c P Q e l = {!!}
+flattening-pushout = {!!}
 -}
 ```

@@ -35,10 +35,10 @@ module _
   where
 
   Ω³ : Pointed-Type l → Pointed-Type l
-  Ω³ A = {!!}
+  Ω³ = {!!}
 
   type-Ω³ : {A : UU l} (a : A) → UU l
-  type-Ω³ a = {!!}
+  type-Ω³ = {!!}
 
   refl-Ω³ : {A : UU l} {a : A} → type-Ω³ a
   refl-Ω³ = {!!}
@@ -62,17 +62,17 @@ z-concat-Ω³ = {!!}
 ap-x-concat-Ω³ :
   {l : Level} {A : UU l} {a : A} {α α' β β' : type-Ω³ a}
   (s : Id α α') (t : Id β β') → Id (x-concat-Ω³ α β) (x-concat-Ω³ α' β')
-ap-x-concat-Ω³ s t = {!!}
+ap-x-concat-Ω³ = {!!}
 
 ap-y-concat-Ω³ :
   {l : Level} {A : UU l} {a : A} {α α' β β' : type-Ω³ a}
   (s : Id α α') (t : Id β β') → Id (y-concat-Ω³ α β) (y-concat-Ω³ α' β')
-ap-y-concat-Ω³ s t = {!!}
+ap-y-concat-Ω³ = {!!}
 
 ap-z-concat-Ω³ :
   {l : Level} {A : UU l} {a : A} {α α' β β' : type-Ω³ a}
   (s : Id α α') (t : Id β β') → Id (z-concat-Ω³ α β) (z-concat-Ω³ α' β')
-ap-z-concat-Ω³ s t = {!!}
+ap-z-concat-Ω³ = {!!}
 ```
 
 ## Properties
@@ -83,41 +83,41 @@ ap-z-concat-Ω³ s t = {!!}
 left-unit-law-x-concat-Ω³ :
   {l : Level} {A : UU l} {a : A} (α : type-Ω³ a) →
   Id (x-concat-Ω³ refl-Ω³ α) α
-left-unit-law-x-concat-Ω³ α = {!!}
+left-unit-law-x-concat-Ω³ = {!!}
 
 right-unit-law-x-concat-Ω³ :
   {l : Level} {A : UU l} {a : A} (α : type-Ω³ a) →
   Id (x-concat-Ω³ α refl-Ω³) α
-right-unit-law-x-concat-Ω³ α = {!!}
+right-unit-law-x-concat-Ω³ = {!!}
 
 left-unit-law-y-concat-Ω³ :
   {l : Level} {A : UU l} {a : A} (α : type-Ω³ a) →
   Id (y-concat-Ω³ refl-Ω³ α) α
-left-unit-law-y-concat-Ω³ α = {!!}
+left-unit-law-y-concat-Ω³ = {!!}
 
 right-unit-law-y-concat-Ω³ :
   {l : Level} {A : UU l} {a : A} (α : type-Ω³ a) →
   Id (y-concat-Ω³ α refl-Ω³) α
-right-unit-law-y-concat-Ω³ α = {!!}
+right-unit-law-y-concat-Ω³ = {!!}
 
 left-unit-law-z-concat-Ω³ :
   {l : Level} {A : UU l} {a : A} (α : type-Ω³ a) →
   Id (z-concat-Ω³ refl-Ω³ α) α
-left-unit-law-z-concat-Ω³ α = {!!}
+left-unit-law-z-concat-Ω³ = {!!}
 
 {-
 super-naturality-right-unit :
   {l : Level} {A : UU l} {x y z : A} {p q : Id x y} {α β : Id p q} (γ : Id α β)
   (u : Id y z) →
   Id (ap (λ ω → horizontal-concat-Id² ω (refl {x = u})) γ) {!!}
-super-naturality-right-unit α = {!!}
+super-naturality-right-unit = {!!}
 -}
 
 {-
 right-unit-law-z-concat-Ω³ :
   {l : Level} {A : UU l} {a : A} (α : type-Ω³ a) →
   Id (z-concat-Ω³ α refl-Ω³) α
-right-unit-law-z-concat-Ω³ α = {!!}
+right-unit-law-z-concat-Ω³ = {!!}
 -}
 {-
   ( ( inv right-unit) ∙
@@ -154,7 +154,7 @@ interchange-y-z-concat-Ω³ :
   Id
     ( z-concat-Ω³ (y-concat-Ω³ α β) (y-concat-Ω³ γ δ))
     ( y-concat-Ω³ (z-concat-Ω³ α γ) (z-concat-Ω³ β δ))
-interchange-y-z-concat-Ω³ α β γ δ = {!!}
+interchange-y-z-concat-Ω³ = {!!}
 ```
 
 ### The Eckmann-Hilton connections in Ω³
@@ -163,38 +163,38 @@ interchange-y-z-concat-Ω³ α β γ δ = {!!}
 outer-eckmann-hilton-connection-x-y-concat-Ω³ :
   {l : Level} {A : UU l} {a : A} (α δ : type-Ω³ a) →
   Id (y-concat-Ω³ α δ) (x-concat-Ω³ α δ)
-outer-eckmann-hilton-connection-x-y-concat-Ω³ α δ = {!!}
+outer-eckmann-hilton-connection-x-y-concat-Ω³ = {!!}
 
 inner-eckmann-hilton-connection-x-y-concat-Ω³ :
   {l : Level} {A : UU l} {a : A} (β γ : type-Ω³ a) →
   Id (y-concat-Ω³ β γ) (x-concat-Ω³ γ β)
-inner-eckmann-hilton-connection-x-y-concat-Ω³ β γ = {!!}
+inner-eckmann-hilton-connection-x-y-concat-Ω³ = {!!}
 
 {-
 outer-eckmann-hilton-connection-x-z-concat-Ω³ :
   {l : Level} {A : UU l} {a : A} (α δ : type-Ω³ a) →
   Id (z-concat-Ω³ α δ) (x-concat-Ω³ α δ)
-outer-eckmann-hilton-connection-x-z-concat-Ω³ α δ = {!!}
+outer-eckmann-hilton-connection-x-z-concat-Ω³ = {!!}
 -}
 
 {-
 inner-eckmann-hilton-connection-x-z-concat-Ω³ :
   {l : Level} {A : UU l} {a : A} (β γ : type-Ω³ a) →
   Id (z-concat-Ω³ β γ) (x-concat-Ω³ γ β)
-inner-eckmann-hilton-connection-x-z-concat-Ω³ β γ = {!!}
+inner-eckmann-hilton-connection-x-z-concat-Ω³ = {!!}
 -}
 
 {-
 outer-eckmann-hilton-connection-y-z-concat-Ω³ :
   {l : Level} {A : UU l} {a : A} (α δ : type-Ω³ a) →
   Id (z-concat-Ω³ α δ) (y-concat-Ω³ α δ)
-outer-eckmann-hilton-connection-y-z-concat-Ω³ α δ = {!!}
+outer-eckmann-hilton-connection-y-z-concat-Ω³ = {!!}
 -}
 
 {-
 inner-eckmann-hilton-connection-y-z-concat-Ω³ :
   {l : Level} {A : UU l} {a : A} (β γ : type-Ω³ a) →
   Id (z-concat-Ω³ β γ) (y-concat-Ω³ γ β)
-inner-eckmann-hilton-connection-y-z-concat-Ω³ β γ = {!!}
+inner-eckmann-hilton-connection-y-z-concat-Ω³ = {!!}
 -}
 ```
