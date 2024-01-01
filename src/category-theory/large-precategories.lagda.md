@@ -111,15 +111,14 @@ module _
     (X : obj-Large-Precategory C l1)
     (Y : obj-Large-Precategory C l2) →
     UU (β l1 l2)
-  hom-Large-Precategory X Y = type-Set (hom-set-Large-Precategory C X Y)
+  hom-Large-Precategory X Y = {!!}
 
   is-set-hom-Large-Precategory :
     {l1 l2 : Level}
     (X : obj-Large-Precategory C l1)
     (Y : obj-Large-Precategory C l2) →
     is-set (hom-Large-Precategory X Y)
-  is-set-hom-Large-Precategory X Y =
-    is-set-type-Set (hom-set-Large-Precategory C X Y)
+  is-set-hom-Large-Precategory X Y = {!!}
 
   ap-comp-hom-Large-Precategory :
     {l1 l2 l3 : Level}
@@ -130,7 +129,7 @@ module _
     {f f' : hom-Large-Precategory X Y} (q : f ＝ f') →
     comp-hom-Large-Precategory C g f ＝
     comp-hom-Large-Precategory C g' f'
-  ap-comp-hom-Large-Precategory = ap-binary (comp-hom-Large-Precategory C)
+  ap-comp-hom-Large-Precategory = {!!}
 
   comp-hom-Large-Precategory' :
     {l1 l2 l3 : Level}
@@ -140,7 +139,7 @@ module _
     hom-Large-Precategory X Y →
     hom-Large-Precategory Y Z →
     hom-Large-Precategory X Z
-  comp-hom-Large-Precategory' f g = comp-hom-Large-Precategory C g f
+  comp-hom-Large-Precategory' f g = {!!}
 ```
 
 ### Precategories obtained from large precategories
@@ -153,22 +152,7 @@ module _
 
   precategory-Large-Precategory :
     (l : Level) → Precategory (α l) (β l l)
-  pr1 (precategory-Large-Precategory l) =
-    obj-Large-Precategory C l
-  pr1 (pr2 (precategory-Large-Precategory l)) =
-    hom-set-Large-Precategory C
-  pr1 (pr1 (pr2 (pr2 (precategory-Large-Precategory l)))) =
-    comp-hom-Large-Precategory C
-  pr1 (pr2 (pr1 (pr2 (pr2 (precategory-Large-Precategory l)))) h g f) =
-    associative-comp-hom-Large-Precategory C h g f
-  pr2 (pr2 (pr1 (pr2 (pr2 (precategory-Large-Precategory l)))) h g f) =
-    inv-associative-comp-hom-Large-Precategory C h g f
-  pr1 (pr2 (pr2 (pr2 (precategory-Large-Precategory l)))) x =
-    id-hom-Large-Precategory C
-  pr1 (pr2 (pr2 (pr2 (pr2 (precategory-Large-Precategory l))))) =
-    left-unit-law-comp-hom-Large-Precategory C
-  pr2 (pr2 (pr2 (pr2 (pr2 (precategory-Large-Precategory l))))) =
-    right-unit-law-comp-hom-Large-Precategory C
+  pr1 (precategory-Large-Precategory l) = {!!}
 ```
 
 ### Equalities induce morphisms
@@ -182,17 +166,17 @@ module _
 
   hom-eq-Large-Precategory :
     (X Y : obj-Large-Precategory C l1) → X ＝ Y → hom-Large-Precategory C X Y
-  hom-eq-Large-Precategory X .X refl = id-hom-Large-Precategory C
+  hom-eq-Large-Precategory X .X refl = {!!}
 
   hom-inv-eq-Large-Precategory :
     (X Y : obj-Large-Precategory C l1) → X ＝ Y → hom-Large-Precategory C Y X
-  hom-inv-eq-Large-Precategory X Y = hom-eq-Large-Precategory Y X ∘ inv
+  hom-inv-eq-Large-Precategory X Y = {!!}
 
   compute-hom-eq-Large-Precategory :
     (X Y : obj-Large-Precategory C l1) →
     hom-eq-Precategory (precategory-Large-Precategory C l1) X Y ~
     hom-eq-Large-Precategory X Y
-  compute-hom-eq-Large-Precategory X .X refl = refl
+  compute-hom-eq-Large-Precategory X .X refl = {!!}
 ```
 
 ### Pre- and postcomposition by a morphism
@@ -210,8 +194,7 @@ module _
     (f : hom-Large-Precategory C X Y) →
     (Z : obj-Large-Precategory C l3) →
     hom-Large-Precategory C Y Z → hom-Large-Precategory C X Z
-  precomp-hom-Large-Precategory f Z g =
-    comp-hom-Large-Precategory C g f
+  precomp-hom-Large-Precategory f Z g = {!!}
 
   postcomp-hom-Large-Precategory :
     {l1 l2 l3 : Level}
@@ -220,6 +203,5 @@ module _
     {Z : obj-Large-Precategory C l3}
     (f : hom-Large-Precategory C Y Z) →
     hom-Large-Precategory C X Y → hom-Large-Precategory C X Z
-  postcomp-hom-Large-Precategory X f g =
-    comp-hom-Large-Precategory C f g
+  postcomp-hom-Large-Precategory X f g = {!!}
 ```

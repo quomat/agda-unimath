@@ -40,11 +40,10 @@ open import univalent-combinatorics.standard-finite-types
 
 ```agda
 UU-Fin-Group : (l : Level) (n : ℕ) → Concrete-Group (lsuc l)
-pr1 (pr1 (pr1 (UU-Fin-Group l n))) = UU-Fin l n
-pr2 (pr1 (pr1 (UU-Fin-Group l n))) = Fin-UU-Fin l n
-pr2 (pr1 (UU-Fin-Group l n)) = is-0-connected-UU-Fin n
-pr2 (UU-Fin-Group l n) =
-  is-1-type-UU-Fin n (Fin-UU-Fin l n) (Fin-UU-Fin l n)
+pr1 (pr1 (pr1 (UU-Fin-Group l n))) = {!!}
+pr2 (pr1 (pr1 (UU-Fin-Group l n))) = {!!}
+pr2 (pr1 (UU-Fin-Group l n)) = {!!}
+pr2 (UU-Fin-Group l n) = {!!}
 ```
 
 ### Properties
@@ -58,25 +57,13 @@ module _
     hom-Group
       ( group-Concrete-Group (UU-Fin-Group l n))
       ( loop-group-Set (raise-Set l (Fin-Set n)))
-  pr1 hom-loop-group-fin-UU-Fin-Group p = pr1 (pair-eq-Σ p)
-  pr2 hom-loop-group-fin-UU-Fin-Group {p} {q} =
-    pr1-interchange-concat-pair-eq-Σ p q
+  pr1 hom-loop-group-fin-UU-Fin-Group p = {!!}
 
   hom-inv-loop-group-fin-UU-Fin-Group :
     hom-Group
       ( loop-group-Set (raise-Set l (Fin-Set n)))
       ( group-Concrete-Group (UU-Fin-Group l n))
-  pr1 hom-inv-loop-group-fin-UU-Fin-Group p =
-    eq-pair-Σ p (eq-is-prop is-prop-type-trunc-Prop)
-  pr2 hom-inv-loop-group-fin-UU-Fin-Group {p} {q} =
-    ( ap
-      ( λ r → eq-pair-Σ (p ∙ q) r)
-      ( eq-is-prop (is-trunc-Id (is-prop-type-trunc-Prop _ _)))) ∙
-      ( interchange-concat-eq-pair-Σ
-        ( p)
-        ( q)
-        ( eq-is-prop is-prop-type-trunc-Prop)
-        ( eq-is-prop is-prop-type-trunc-Prop))
+  pr1 hom-inv-loop-group-fin-UU-Fin-Group p = {!!}
 
   is-section-hom-inv-loop-group-fin-UU-Fin-Group :
     Id
@@ -87,20 +74,7 @@ module _
         ( hom-loop-group-fin-UU-Fin-Group)
         ( hom-inv-loop-group-fin-UU-Fin-Group))
       ( id-hom-Group (loop-group-Set (raise-Set l (Fin-Set n))))
-  is-section-hom-inv-loop-group-fin-UU-Fin-Group =
-    eq-pair-Σ
-      ( eq-htpy
-        ( λ p →
-          ap pr1
-            ( is-retraction-pair-eq-Σ
-              ( Fin-UU-Fin l n)
-              ( Fin-UU-Fin l n)
-              ( pair p (eq-is-prop is-prop-type-trunc-Prop)))))
-      ( eq-is-prop
-        ( is-prop-preserves-mul-Semigroup
-          ( semigroup-Group (loop-group-Set (raise-Set l (Fin-Set n))))
-          ( semigroup-Group (loop-group-Set (raise-Set l (Fin-Set n))))
-          ( id)))
+  is-section-hom-inv-loop-group-fin-UU-Fin-Group = {!!}
 
   is-retraction-hom-inv-loop-group-fin-UU-Fin-Group :
     Id
@@ -111,30 +85,11 @@ module _
         ( hom-inv-loop-group-fin-UU-Fin-Group)
         ( hom-loop-group-fin-UU-Fin-Group))
       ( id-hom-Group (group-Concrete-Group (UU-Fin-Group l n)))
-  is-retraction-hom-inv-loop-group-fin-UU-Fin-Group =
-    eq-pair-Σ
-      ( eq-htpy
-        ( λ p →
-          ( ap
-            ( λ r → eq-pair-Σ (pr1 (pair-eq-Σ p)) r)
-            ( eq-is-prop (is-trunc-Id (is-prop-type-trunc-Prop _ _)))) ∙
-            ( is-section-pair-eq-Σ (Fin-UU-Fin l n) (Fin-UU-Fin l n) p)))
-      ( eq-is-prop
-        ( is-prop-preserves-mul-Semigroup
-          ( semigroup-Group (group-Concrete-Group (UU-Fin-Group l n)))
-          ( semigroup-Group (group-Concrete-Group (UU-Fin-Group l n)))
-          ( id)))
+  is-retraction-hom-inv-loop-group-fin-UU-Fin-Group = {!!}
 
   iso-loop-group-fin-UU-Fin-Group :
     iso-Group
       ( group-Concrete-Group (UU-Fin-Group l n))
       ( loop-group-Set (raise-Set l (Fin-Set n)))
-  pr1 iso-loop-group-fin-UU-Fin-Group =
-    hom-loop-group-fin-UU-Fin-Group
-  pr1 (pr2 iso-loop-group-fin-UU-Fin-Group) =
-    hom-inv-loop-group-fin-UU-Fin-Group
-  pr1 (pr2 (pr2 iso-loop-group-fin-UU-Fin-Group)) =
-    is-section-hom-inv-loop-group-fin-UU-Fin-Group
-  pr2 (pr2 (pr2 iso-loop-group-fin-UU-Fin-Group)) =
-    is-retraction-hom-inv-loop-group-fin-UU-Fin-Group
+  pr1 iso-loop-group-fin-UU-Fin-Group = {!!}
 ```

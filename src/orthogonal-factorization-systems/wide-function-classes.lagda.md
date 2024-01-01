@@ -36,58 +36,46 @@ module _
   where
 
   is-wide-function-class : UU (lsuc l1 ⊔ l2)
-  is-wide-function-class =
-    ( has-equivalences-function-class P) ×
-    ( is-closed-under-composition-function-class P)
+  is-wide-function-class = {!!}
 
   is-wide-function-class-Prop : Prop (lsuc l1 ⊔ l2)
-  is-wide-function-class-Prop =
-    prod-Prop
-      ( has-equivalences-function-class-Prop P)
-      ( is-closed-under-composition-function-class-Prop P)
+  is-wide-function-class-Prop = {!!}
 
   is-prop-is-wide-function-class : is-prop is-wide-function-class
-  is-prop-is-wide-function-class = is-prop-type-Prop is-wide-function-class-Prop
+  is-prop-is-wide-function-class = {!!}
 
   has-equivalences-is-wide-function-class :
     is-wide-function-class → has-equivalences-function-class P
-  has-equivalences-is-wide-function-class = pr1
+  has-equivalences-is-wide-function-class = {!!}
 
   is-closed-under-composition-is-wide-function-class :
     is-wide-function-class → is-closed-under-composition-function-class P
-  is-closed-under-composition-is-wide-function-class = pr2
+  is-closed-under-composition-is-wide-function-class = {!!}
 ```
 
 ### The type of small wide function classes
 
 ```agda
 wide-function-class : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-wide-function-class l1 l2 =
-  Σ (function-class l1 l1 l2) (is-wide-function-class)
+wide-function-class l1 l2 = {!!}
 
 module _
   {l1 l2 : Level} (P : wide-function-class l1 l2)
   where
 
   function-class-wide-function-class : function-class l1 l1 l2
-  function-class-wide-function-class = pr1 P
+  function-class-wide-function-class = {!!}
 
   is-wide-wide-function-class :
     is-wide-function-class function-class-wide-function-class
-  is-wide-wide-function-class = pr2 P
+  is-wide-wide-function-class = {!!}
 
   has-equivalences-wide-function-class :
     has-equivalences-function-class function-class-wide-function-class
-  has-equivalences-wide-function-class =
-    has-equivalences-is-wide-function-class
-      ( function-class-wide-function-class)
-      ( is-wide-wide-function-class)
+  has-equivalences-wide-function-class = {!!}
 
   is-closed-under-composition-wide-function-class :
     is-closed-under-composition-function-class
       ( function-class-wide-function-class)
-  is-closed-under-composition-wide-function-class =
-    is-closed-under-composition-is-wide-function-class
-      ( function-class-wide-function-class)
-      ( is-wide-wide-function-class)
+  is-closed-under-composition-wide-function-class = {!!}
 ```

@@ -41,5 +41,5 @@ module _
   where
 
   is-initial-Ring : UUω
-  is-initial-Ring = is-initial-obj-Large-Category Ring-Large-Category R
+  is-initial-Ring = {!!}
 ```

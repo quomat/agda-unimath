@@ -42,9 +42,7 @@ consists of a dependent type `Y` over `X` and for each `x : X` an
 Dependent-Type-With-Automorphism :
   {l1 : Level} (l2 : Level) →
   Type-With-Automorphism l1 → UU (l1 ⊔ lsuc l2)
-Dependent-Type-With-Automorphism l2 P =
-  Σ ( type-Type-With-Automorphism P → UU l2)
-    ( λ R → equiv-fam R (R ∘ (map-Type-With-Automorphism P)))
+Dependent-Type-With-Automorphism l2 P = {!!}
 
 module _
   { l1 l2 : Level} (P : Type-With-Automorphism l1)
@@ -53,21 +51,19 @@ module _
 
   family-Dependent-Type-With-Automorphism :
     type-Type-With-Automorphism P → UU l2
-  family-Dependent-Type-With-Automorphism =
-    pr1 Q
+  family-Dependent-Type-With-Automorphism = {!!}
 
   dependent-automorphism-Dependent-Type-With-Automorphism :
     equiv-fam
       ( family-Dependent-Type-With-Automorphism)
       ( family-Dependent-Type-With-Automorphism ∘ map-Type-With-Automorphism P)
-  dependent-automorphism-Dependent-Type-With-Automorphism = pr2 Q
+  dependent-automorphism-Dependent-Type-With-Automorphism = {!!}
 
   map-Dependent-Type-With-Automorphism :
     { x : type-Type-With-Automorphism P} →
     ( family-Dependent-Type-With-Automorphism x) →
     ( family-Dependent-Type-With-Automorphism (map-Type-With-Automorphism P x))
-  map-Dependent-Type-With-Automorphism {x} =
-    map-equiv (dependent-automorphism-Dependent-Type-With-Automorphism x)
+  map-Dependent-Type-With-Automorphism {x} = {!!}
 ```
 
 ### Equivalences of dependent types equipped with automorphisms
@@ -81,17 +77,7 @@ module _
     Dependent-Type-With-Automorphism l2 P →
     Dependent-Type-With-Automorphism l3 P →
     UU (l1 ⊔ l2 ⊔ l3)
-  equiv-Dependent-Type-With-Automorphism Q T =
-    Σ ( equiv-fam
-        ( family-Dependent-Type-With-Automorphism P Q)
-        ( family-Dependent-Type-With-Automorphism P T))
-      ( λ H →
-        ( x : type-Type-With-Automorphism P) →
-        coherence-square-maps
-          ( map-equiv (H x))
-          ( map-Dependent-Type-With-Automorphism P Q)
-          ( map-Dependent-Type-With-Automorphism P T)
-          ( map-equiv (H (map-Type-With-Automorphism P x))))
+  equiv-Dependent-Type-With-Automorphism Q T = {!!}
 
 module _
   { l1 l2 l3 : Level} (P : Type-With-Automorphism l1)
@@ -104,14 +90,13 @@ module _
     equiv-fam
       ( family-Dependent-Type-With-Automorphism P Q)
       ( family-Dependent-Type-With-Automorphism P T)
-  equiv-equiv-Dependent-Type-With-Automorphism = pr1 α
+  equiv-equiv-Dependent-Type-With-Automorphism = {!!}
 
   map-equiv-Dependent-Type-With-Automorphism :
     { x : type-Type-With-Automorphism P} →
     ( family-Dependent-Type-With-Automorphism P Q x) →
     ( family-Dependent-Type-With-Automorphism P T x)
-  map-equiv-Dependent-Type-With-Automorphism {x} =
-    map-equiv (equiv-equiv-Dependent-Type-With-Automorphism x)
+  map-equiv-Dependent-Type-With-Automorphism {x} = {!!}
 
   coherence-square-equiv-Dependent-Type-With-Automorphism :
     ( x : type-Type-With-Automorphism P) →
@@ -120,7 +105,7 @@ module _
       ( map-Dependent-Type-With-Automorphism P Q)
       ( map-Dependent-Type-With-Automorphism P T)
       ( map-equiv-Dependent-Type-With-Automorphism)
-  coherence-square-equiv-Dependent-Type-With-Automorphism = pr2 α
+  coherence-square-equiv-Dependent-Type-With-Automorphism = {!!}
 ```
 
 ## Properties
@@ -135,58 +120,30 @@ module _
   id-equiv-Dependent-Type-With-Automorphism :
     ( Q : Dependent-Type-With-Automorphism l2 P) →
     equiv-Dependent-Type-With-Automorphism P Q Q
-  pr1 (id-equiv-Dependent-Type-With-Automorphism Q) =
-    id-equiv-fam (family-Dependent-Type-With-Automorphism P Q)
-  pr2 (id-equiv-Dependent-Type-With-Automorphism Q) x = refl-htpy
+  pr1 (id-equiv-Dependent-Type-With-Automorphism Q) = {!!}
 
   equiv-eq-Dependent-Type-With-Automorphism :
     ( Q T : Dependent-Type-With-Automorphism l2 P) →
     Q ＝ T → equiv-Dependent-Type-With-Automorphism P Q T
-  equiv-eq-Dependent-Type-With-Automorphism Q .Q refl =
-    id-equiv-Dependent-Type-With-Automorphism Q
+  equiv-eq-Dependent-Type-With-Automorphism Q .Q refl = {!!}
 
   is-torsorial-equiv-Dependent-Type-With-Automorphism :
     ( Q : Dependent-Type-With-Automorphism l2 P) →
     is-torsorial (equiv-Dependent-Type-With-Automorphism P Q)
-  is-torsorial-equiv-Dependent-Type-With-Automorphism Q =
-    is-torsorial-Eq-structure
-      ( λ R K H →
-        ( x : type-Type-With-Automorphism P) →
-        coherence-square-maps
-          ( map-equiv (H x))
-          ( map-Dependent-Type-With-Automorphism P Q)
-          ( map-equiv (K x))
-          ( map-equiv (H (map-Type-With-Automorphism P x))))
-      ( is-torsorial-equiv-fam (family-Dependent-Type-With-Automorphism P Q))
-      ( family-Dependent-Type-With-Automorphism P Q ,
-        id-equiv-fam (family-Dependent-Type-With-Automorphism P Q))
-      ( is-torsorial-Eq-Π
-        ( λ x K →
-          ( map-Dependent-Type-With-Automorphism P Q) ~
-          ( map-equiv K))
-        ( λ x →
-          is-torsorial-htpy-equiv
-            ( dependent-automorphism-Dependent-Type-With-Automorphism P Q x)))
+  is-torsorial-equiv-Dependent-Type-With-Automorphism Q = {!!}
 
   is-equiv-equiv-eq-Dependent-Type-With-Automorphism :
     ( Q T : Dependent-Type-With-Automorphism l2 P) →
     is-equiv (equiv-eq-Dependent-Type-With-Automorphism Q T)
-  is-equiv-equiv-eq-Dependent-Type-With-Automorphism Q =
-    fundamental-theorem-id
-      ( is-torsorial-equiv-Dependent-Type-With-Automorphism Q)
-      ( equiv-eq-Dependent-Type-With-Automorphism Q)
+  is-equiv-equiv-eq-Dependent-Type-With-Automorphism Q = {!!}
 
   extensionality-Dependent-Type-With-Automorphism :
     (Q T : Dependent-Type-With-Automorphism l2 P) →
     (Q ＝ T) ≃ equiv-Dependent-Type-With-Automorphism P Q T
-  pr1 (extensionality-Dependent-Type-With-Automorphism Q T) =
-    equiv-eq-Dependent-Type-With-Automorphism Q T
-  pr2 (extensionality-Dependent-Type-With-Automorphism Q T) =
-    is-equiv-equiv-eq-Dependent-Type-With-Automorphism Q T
+  pr1 (extensionality-Dependent-Type-With-Automorphism Q T) = {!!}
 
   eq-equiv-Dependent-Type-With-Automorphism :
     ( Q T : Dependent-Type-With-Automorphism l2 P) →
     equiv-Dependent-Type-With-Automorphism P Q T → Q ＝ T
-  eq-equiv-Dependent-Type-With-Automorphism Q T =
-    map-inv-is-equiv (is-equiv-equiv-eq-Dependent-Type-With-Automorphism Q T)
+  eq-equiv-Dependent-Type-With-Automorphism Q T = {!!}
 ```

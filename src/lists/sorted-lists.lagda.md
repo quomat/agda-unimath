@@ -40,19 +40,14 @@ module _
   where
 
   is-sorted-list-Prop : list (type-Decidable-Total-Order X) → Prop l2
-  is-sorted-list-Prop nil = raise-unit-Prop l2
-  is-sorted-list-Prop (cons x nil) = raise-unit-Prop l2
-  is-sorted-list-Prop (cons x (cons y l)) =
-    prod-Prop
-      ( leq-Decidable-Total-Order-Prop X x y)
-      ( is-sorted-list-Prop (cons y l))
+  is-sorted-list-Prop nil = {!!}
 
   is-sorted-list : list (type-Decidable-Total-Order X) → UU l2
-  is-sorted-list l = type-Prop (is-sorted-list-Prop l)
+  is-sorted-list l = {!!}
 
   is-prop-is-sorted-list :
     (l : list (type-Decidable-Total-Order X)) → is-prop (is-sorted-list l)
-  is-prop-is-sorted-list l = is-prop-type-Prop (is-sorted-list-Prop l)
+  is-prop-is-sorted-list l = {!!}
 ```
 
 ### The proposition that an element is less or equal than every element in a list
@@ -61,16 +56,12 @@ module _
   is-least-element-list-Prop :
     type-Decidable-Total-Order X →
     list (type-Decidable-Total-Order X) → Prop l2
-  is-least-element-list-Prop x nil = raise-unit-Prop l2
-  is-least-element-list-Prop x (cons y l) =
-    prod-Prop
-      ( leq-Decidable-Total-Order-Prop X x y)
-      ( is-least-element-list-Prop x l)
+  is-least-element-list-Prop x nil = {!!}
 
   is-least-element-list :
     type-Decidable-Total-Order X →
     list (type-Decidable-Total-Order X) → UU l2
-  is-least-element-list x l = type-Prop (is-least-element-list-Prop x l)
+  is-least-element-list x l = {!!}
 ```
 
 ## Properties
@@ -81,9 +72,7 @@ module _
   is-sorted-tail-is-sorted-list :
     (l : list (type-Decidable-Total-Order X)) →
     is-sorted-list l → is-sorted-list (tail-list l)
-  is-sorted-tail-is-sorted-list nil _ = raise-star
-  is-sorted-tail-is-sorted-list (cons x nil) s = raise-star
-  is-sorted-tail-is-sorted-list (cons x (cons y l)) s = pr2 s
+  is-sorted-tail-is-sorted-list nil _ = {!!}
 ```
 
 ### If a list is sorted then its head is less or equal than every element in the list
@@ -96,24 +85,7 @@ module _
     z ∈-list (cons y l) →
     leq-Decidable-Total-Order X x y →
     leq-Decidable-Total-Order X x z
-  leq-element-in-list-leq-head-is-sorted-list x .z z l s (is-head .z l) q =
-    q
-  leq-element-in-list-leq-head-is-sorted-list
-    ( x)
-    ( y)
-    ( z)
-    ( cons w l)
-    ( s)
-    ( is-in-tail .z .y .(cons w l) i)
-    ( q) =
-    leq-element-in-list-leq-head-is-sorted-list
-      ( x)
-      ( w)
-      ( z)
-      ( l)
-      ( pr2 s)
-      ( i)
-      ( transitive-leq-Decidable-Total-Order X x y w (pr1 s) q)
+  leq-element-in-list-leq-head-is-sorted-list x .z z l s (is-head .z l) q = {!!}
 ```
 
 ### An equivalent definition of being sorted
@@ -121,29 +93,16 @@ module _
 ```agda
   is-sorted-least-element-list-Prop :
     list (type-Decidable-Total-Order X) → Prop l2
-  is-sorted-least-element-list-Prop nil = raise-unit-Prop l2
-  is-sorted-least-element-list-Prop (cons x l) =
-    prod-Prop
-      ( is-least-element-list-Prop x l)
-      ( is-sorted-least-element-list-Prop l)
+  is-sorted-least-element-list-Prop nil = {!!}
 
   is-sorted-least-element-list :
     list (type-Decidable-Total-Order X) → UU l2
-  is-sorted-least-element-list l =
-    type-Prop (is-sorted-least-element-list-Prop l)
+  is-sorted-least-element-list l = {!!}
 
   is-sorted-list-is-sorted-least-element-list :
     (l : list (type-Decidable-Total-Order X)) →
     is-sorted-least-element-list l → is-sorted-list l
-  is-sorted-list-is-sorted-least-element-list nil _ =
-    raise-star
-  is-sorted-list-is-sorted-least-element-list (cons x nil) _ =
-    raise-star
-  is-sorted-list-is-sorted-least-element-list
-    (cons x (cons y l))
-    (p , q) =
-    ( pr1 p ,
-      is-sorted-list-is-sorted-least-element-list (cons y l) q)
+  is-sorted-list-is-sorted-least-element-list nil _ = {!!}
 ```
 
 ### If a vector `v` of length `n` is sorted, then the list `list-vec n v` is also sorted
@@ -153,8 +112,5 @@ module _
     (n : ℕ) (v : vec (type-Decidable-Total-Order X) n) →
     is-sorted-vec X v →
     is-sorted-list (list-vec n v)
-  is-sorted-list-is-sorted-vec 0 v S = raise-star
-  is-sorted-list-is-sorted-vec 1 (x ∷ v) S = raise-star
-  is-sorted-list-is-sorted-vec (succ-ℕ (succ-ℕ n)) (x ∷ y ∷ v) S =
-    pr1 S , is-sorted-list-is-sorted-vec (succ-ℕ n) (y ∷ v) (pr2 S)
+  is-sorted-list-is-sorted-vec 0 v S = {!!}
 ```

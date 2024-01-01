@@ -55,87 +55,58 @@ module _
 
   presheaf-large-precategory-Precategory :
     Large-Precategory (λ l → l1 ⊔ l2 ⊔ lsuc l) (λ l l' → l1 ⊔ l2 ⊔ l ⊔ l')
-  presheaf-large-precategory-Precategory =
-    copresheaf-large-precategory-Precategory (opposite-Precategory C)
+  presheaf-large-precategory-Precategory = {!!}
 
   is-large-category-presheaf-large-category-Precategory :
     is-large-category-Large-Precategory presheaf-large-precategory-Precategory
-  is-large-category-presheaf-large-category-Precategory =
-    is-large-category-copresheaf-large-category-Precategory
-      ( opposite-Precategory C)
+  is-large-category-presheaf-large-category-Precategory = {!!}
 
   presheaf-large-category-Precategory :
     Large-Category (λ l → l1 ⊔ l2 ⊔ lsuc l) (λ l l' → l1 ⊔ l2 ⊔ l ⊔ l')
-  presheaf-large-category-Precategory =
-    copresheaf-large-category-Precategory (opposite-Precategory C)
+  presheaf-large-category-Precategory = {!!}
 
   presheaf-Precategory : (l : Level) → UU (l1 ⊔ l2 ⊔ lsuc l)
-  presheaf-Precategory =
-    obj-Large-Category presheaf-large-category-Precategory
+  presheaf-Precategory = {!!}
 
   module _
     {l3 : Level} (P : presheaf-Precategory l3)
     where
 
     element-set-presheaf-Precategory : obj-Precategory C → Set l3
-    element-set-presheaf-Precategory =
-      obj-functor-Small-Large-Precategory
-        ( opposite-Precategory C)
-        ( Set-Large-Precategory)
-        ( P)
+    element-set-presheaf-Precategory = {!!}
 
     element-presheaf-Precategory : obj-Precategory C → UU l3
-    element-presheaf-Precategory X =
-      type-Set (element-set-presheaf-Precategory X)
+    element-presheaf-Precategory X = {!!}
 
     action-presheaf-Precategory :
       {X Y : obj-Precategory C} →
       hom-Precategory C X Y →
       element-presheaf-Precategory Y → element-presheaf-Precategory X
-    action-presheaf-Precategory =
-      hom-functor-Small-Large-Precategory
-        ( opposite-Precategory C)
-        ( Set-Large-Precategory)
-        ( P)
+    action-presheaf-Precategory = {!!}
 
     preserves-id-action-presheaf-Precategory :
       {X : obj-Precategory C} →
       action-presheaf-Precategory {X} {X} (id-hom-Precategory C) ~ id
-    preserves-id-action-presheaf-Precategory =
-      htpy-eq
-        ( preserves-id-functor-Small-Large-Precategory
-          ( opposite-Precategory C)
-          ( Set-Large-Precategory)
-          ( P)
-          ( _))
+    preserves-id-action-presheaf-Precategory = {!!}
 
     preserves-comp-action-presheaf-Precategory :
       {X Y Z : obj-Precategory C}
       (g : hom-Precategory C Y Z) (f : hom-Precategory C X Y) →
       action-presheaf-Precategory (comp-hom-Precategory C g f) ~
       action-presheaf-Precategory f ∘ action-presheaf-Precategory g
-    preserves-comp-action-presheaf-Precategory g f =
-      htpy-eq
-        ( preserves-comp-functor-Small-Large-Precategory
-          ( opposite-Precategory C)
-          ( Set-Large-Precategory)
-          ( P)
-          ( f)
-          ( g))
+    preserves-comp-action-presheaf-Precategory g f = {!!}
 
   hom-set-presheaf-Precategory :
     {l3 l4 : Level}
     (X : presheaf-Precategory l3)
     (Y : presheaf-Precategory l4) → Set (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  hom-set-presheaf-Precategory =
-    hom-set-Large-Category presheaf-large-category-Precategory
+  hom-set-presheaf-Precategory = {!!}
 
   hom-presheaf-Precategory :
     {l3 l4 : Level}
     (X : presheaf-Precategory l3)
     (Y : presheaf-Precategory l4) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  hom-presheaf-Precategory =
-    hom-Large-Category presheaf-large-category-Precategory
+  hom-presheaf-Precategory = {!!}
 
   module _
     {l3 l4 : Level}
@@ -146,13 +117,7 @@ module _
     map-hom-presheaf-Precategory :
       (X : obj-Precategory C) →
       element-presheaf-Precategory P X → element-presheaf-Precategory Q X
-    map-hom-presheaf-Precategory =
-      hom-natural-transformation-Small-Large-Precategory
-        ( opposite-Precategory C)
-        ( Set-Large-Precategory)
-        ( P)
-        ( Q)
-        ( h)
+    map-hom-presheaf-Precategory = {!!}
 
     naturality-hom-presheaf-Precategory :
       {X Y : obj-Precategory C} (f : hom-Precategory C X Y) →
@@ -161,15 +126,7 @@ module _
         ( map-hom-presheaf-Precategory Y)
         ( map-hom-presheaf-Precategory X)
         ( action-presheaf-Precategory Q f)
-    naturality-hom-presheaf-Precategory f =
-      htpy-eq
-        ( naturality-natural-transformation-Small-Large-Precategory
-          ( opposite-Precategory C)
-          ( Set-Large-Precategory)
-          ( P)
-          ( Q)
-          ( h)
-          ( f))
+    naturality-hom-presheaf-Precategory f = {!!}
 
   comp-hom-presheaf-Precategory :
     {l3 l4 l5 : Level}
@@ -178,14 +135,12 @@ module _
     (Z : presheaf-Precategory l5) →
     hom-presheaf-Precategory Y Z → hom-presheaf-Precategory X Y →
     hom-presheaf-Precategory X Z
-  comp-hom-presheaf-Precategory X Y Z =
-    comp-hom-Large-Category presheaf-large-category-Precategory {X = X} {Y} {Z}
+  comp-hom-presheaf-Precategory X Y Z = {!!}
 
   id-hom-presheaf-Precategory :
     {l3 : Level} (X : presheaf-Precategory l3) →
     hom-presheaf-Precategory X X
-  id-hom-presheaf-Precategory {l3} X =
-    id-hom-Large-Category presheaf-large-category-Precategory {l3} {X}
+  id-hom-presheaf-Precategory {l3} X = {!!}
 
   associative-comp-hom-presheaf-Precategory :
     {l3 l4 l5 l6 : Level}
@@ -201,13 +156,7 @@ module _
       ( f) ＝
     comp-hom-presheaf-Precategory X Z W h
       ( comp-hom-presheaf-Precategory X Y Z g f)
-  associative-comp-hom-presheaf-Precategory X Y Z W =
-    associative-comp-hom-Large-Category
-      ( presheaf-large-category-Precategory)
-      { X = X}
-      { Y}
-      { Z}
-      { W}
+  associative-comp-hom-presheaf-Precategory X Y Z W = {!!}
 
   inv-associative-comp-hom-presheaf-Precategory :
     {l3 l4 l5 l6 : Level}
@@ -224,10 +173,7 @@ module _
     comp-hom-presheaf-Precategory X Y W
       ( comp-hom-presheaf-Precategory Y Z W h g)
       ( f)
-  inv-associative-comp-hom-presheaf-Precategory X Y Z W =
-    inv-associative-comp-hom-Large-Precategory
-      ( presheaf-large-precategory-Precategory)
-      { X = X} {Y} {Z} {W}
+  inv-associative-comp-hom-presheaf-Precategory X Y Z W = {!!}
 
   left-unit-law-comp-hom-presheaf-Precategory :
     {l3 l4 : Level}
@@ -238,11 +184,7 @@ module _
       ( id-hom-presheaf-Precategory Y)
       ( f) ＝
     f
-  left-unit-law-comp-hom-presheaf-Precategory X Y =
-    left-unit-law-comp-hom-Large-Category
-      ( presheaf-large-category-Precategory)
-      { X = X}
-      { Y}
+  left-unit-law-comp-hom-presheaf-Precategory X Y = {!!}
 
   right-unit-law-comp-hom-presheaf-Precategory :
     {l3 l4 : Level}
@@ -252,11 +194,7 @@ module _
     comp-hom-presheaf-Precategory X X Y f
       ( id-hom-presheaf-Precategory X) ＝
     f
-  right-unit-law-comp-hom-presheaf-Precategory X Y =
-    right-unit-law-comp-hom-Large-Category
-      ( presheaf-large-category-Precategory)
-      { X = X}
-      { Y}
+  right-unit-law-comp-hom-presheaf-Precategory X Y = {!!}
 ```
 
 ### The category of small presheaves on a precategory
@@ -268,12 +206,10 @@ module _
 
   presheaf-precategory-Precategory :
     Precategory (l1 ⊔ l2 ⊔ lsuc l) (l1 ⊔ l2 ⊔ l)
-  presheaf-precategory-Precategory =
-    precategory-Large-Category (presheaf-large-category-Precategory C) l
+  presheaf-precategory-Precategory = {!!}
 
   presheaf-category-Precategory : Category (l1 ⊔ l2 ⊔ lsuc l) (l1 ⊔ l2 ⊔ l)
-  presheaf-category-Precategory =
-    category-Large-Category (presheaf-large-category-Precategory C) l
+  presheaf-category-Precategory = {!!}
 ```
 
 ## See also

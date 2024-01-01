@@ -33,10 +33,10 @@ There is an element **zero** of the natural numbers.
 
 ```agda
 peano-axiom-1 : {l : Level} → UU l → UU l
-peano-axiom-1 N = N
+peano-axiom-1 N = {!!}
 
 peano-1-ℕ : peano-axiom-1 ℕ
-peano-1-ℕ = zero-ℕ
+peano-1-ℕ = {!!}
 ```
 
 ## Peano's 2nd axiom
@@ -46,10 +46,10 @@ natural number `x`, it is true that `x ＝ x`.
 
 ```agda
 peano-axiom-2 : {l : Level} → UU l → UU l
-peano-axiom-2 N = (x : N) → x ＝ x
+peano-axiom-2 N = {!!}
 
 peano-2-ℕ : peano-axiom-2 ℕ
-peano-2-ℕ x = refl
+peano-2-ℕ x = {!!}
 ```
 
 ### Peano's 3rd axiom
@@ -59,10 +59,10 @@ then `y ＝ x`.
 
 ```agda
 peano-axiom-3 : {l : Level} → UU l → UU l
-peano-axiom-3 N = (x y : N) → x ＝ y → y ＝ x
+peano-axiom-3 N = {!!}
 
 peano-3-ℕ : peano-axiom-3 ℕ
-peano-3-ℕ x y = inv
+peano-3-ℕ x y = {!!}
 ```
 
 ### Peano's 4th axiom
@@ -72,10 +72,10 @@ The identity relation on the natural numbers is transitive. I.e. if `y ＝ z` an
 
 ```agda
 peano-axiom-4 : {l : Level} → UU l → UU l
-peano-axiom-4 N = (x y z : N) → y ＝ z → x ＝ y → x ＝ z
+peano-axiom-4 N = {!!}
 
 peano-4-ℕ : peano-axiom-4 ℕ
-peano-4-ℕ x y z = concat' x
+peano-4-ℕ x y z = {!!}
 ```
 
 ### Peano's 5th axiom
@@ -92,10 +92,10 @@ For every natural number, there is a **successor** natural number.
 
 ```agda
 peano-axiom-6 : {l : Level} → UU l → UU l
-peano-axiom-6 N = N → N
+peano-axiom-6 N = {!!}
 
 peano-6-ℕ : peano-axiom-6 ℕ
-peano-6-ℕ = succ-ℕ
+peano-6-ℕ = {!!}
 ```
 
 ### Peano's 7th axiom
@@ -105,11 +105,11 @@ the successor of `y`, then `x` is identified with `y`.
 
 ```agda
 peano-axiom-7 : {l : Level} (N : UU l) → peano-axiom-6 N → UU l
-peano-axiom-7 N succ = (x y : N) → (x ＝ y) ↔ (succ x ＝ succ y)
+peano-axiom-7 N succ = {!!}
 
 peano-7-ℕ : peano-axiom-7 ℕ peano-6-ℕ
-pr1 (peano-7-ℕ x y) refl = refl
-pr2 (peano-7-ℕ x y) = is-injective-succ-ℕ
+pr1 (peano-7-ℕ x y) refl = {!!}
+pr2 (peano-7-ℕ x y) = {!!}
 ```
 
 ### Peano's 8th axiom
@@ -119,10 +119,10 @@ The zero natural number may not be identified with any successor natural number.
 ```agda
 peano-axiom-8 :
   {l : Level} (N : UU l) → peano-axiom-1 N → peano-axiom-6 N → UU l
-peano-axiom-8 N zero succ = (x : N) → succ x ≠ zero
+peano-axiom-8 N zero succ = {!!}
 
 peano-8-ℕ : peano-axiom-8 ℕ peano-1-ℕ peano-6-ℕ
-peano-8-ℕ = is-nonzero-succ-ℕ
+peano-8-ℕ = {!!}
 ```
 
 ### Peano's 9th axiom
@@ -143,14 +143,10 @@ then `P x` holds for all natural numbers `x`.
 ```agda
 peano-axiom-9 :
   {l : Level} (N : UU l) → peano-axiom-1 N → peano-axiom-6 N → UUω
-peano-axiom-9 N zero succ =
-  {l' : Level} (P : N → Prop l') →
-  type-Prop (P zero) →
-  ((x : N) → type-Prop (P x) → type-Prop (P (succ x))) →
-  ((x : N) → type-Prop (P x))
+peano-axiom-9 N zero succ = {!!}
 
 peano-9-ℕ : peano-axiom-9 ℕ peano-1-ℕ peano-6-ℕ
-peano-9-ℕ P = ind-ℕ {P = type-Prop ∘ P}
+peano-9-ℕ P = {!!}
 ```
 
 ## External links

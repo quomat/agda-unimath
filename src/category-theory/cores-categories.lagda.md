@@ -39,8 +39,7 @@ module _
   where
 
   core-wide-subcategory-Category : Wide-Subcategory l2 C
-  core-wide-subcategory-Category =
-    core-wide-subprecategory-Precategory (precategory-Category C)
+  core-wide-subcategory-Category = {!!}
 ```
 
 ### The core subcategory
@@ -51,11 +50,10 @@ module _
   where
 
   core-subcategory-Category : Subcategory lzero l2 C
-  core-subcategory-Category =
-    core-subprecategory-Precategory (precategory-Category C)
+  core-subcategory-Category = {!!}
 
   is-wide-core-Category : is-wide-Subcategory C core-subcategory-Category
-  is-wide-core-Category = is-wide-core-Precategory (precategory-Category C)
+  is-wide-core-Category = {!!}
 ```
 
 ### The core precategory
@@ -63,8 +61,7 @@ module _
 ```agda
 core-precategory-Category :
   {l1 l2 : Level} (C : Category l1 l2) → Precategory l1 l2
-core-precategory-Category C =
-  core-precategory-Precategory (precategory-Category C)
+core-precategory-Category C = {!!}
 ```
 
 ### The core category
@@ -72,11 +69,8 @@ core-precategory-Category C =
 ```agda
 core-category-Category :
   {l1 l2 : Level} (C : Category l1 l2) → Category l1 l2
-pr1 (core-category-Category C) = core-precategory-Category C
-pr2 (core-category-Category C) =
-  is-category-core-is-category-Precategory
-    ( precategory-Category C)
-    ( is-category-Category C)
+pr1 (core-category-Category C) = {!!}
+pr2 (core-category-Category C) = {!!}
 ```
 
 ### The core pregroupoid
@@ -88,12 +82,10 @@ module _
 
   is-pregroupoid-core-Category :
     is-pregroupoid-Precategory (core-precategory-Category C)
-  is-pregroupoid-core-Category =
-    is-pregroupoid-core-Precategory (precategory-Category C)
+  is-pregroupoid-core-Category = {!!}
 
   core-pregroupoid-Category : Pregroupoid l1 l2
-  core-pregroupoid-Category =
-    core-pregroupoid-Precategory (precategory-Category C)
+  core-pregroupoid-Category = {!!}
 ```
 
 ### The core groupoid
@@ -104,11 +96,10 @@ module _
   where
 
   is-groupoid-core-Category : is-groupoid-Category (core-category-Category C)
-  is-groupoid-core-Category = is-pregroupoid-core-Category C
+  is-groupoid-core-Category = {!!}
 
   core-groupoid-Category : Groupoid l1 l2
-  pr1 core-groupoid-Category = core-category-Category C
-  pr2 core-groupoid-Category = is-groupoid-core-Category
+  pr1 core-groupoid-Category = {!!}
 ```
 
 ## Properties
@@ -122,13 +113,11 @@ module _
 
   compute-iso-core-Category :
     iso-Category C x y ≃ iso-Category (core-category-Category C) x y
-  compute-iso-core-Category =
-    compute-iso-core-Precategory (precategory-Category C)
+  compute-iso-core-Category = {!!}
 
   inv-compute-iso-core-Category :
     iso-Category (core-category-Category C) x y ≃ iso-Category C x y
-  inv-compute-iso-core-Category =
-    inv-compute-iso-core-Precategory (precategory-Category C)
+  inv-compute-iso-core-Category = {!!}
 ```
 
 ## See also

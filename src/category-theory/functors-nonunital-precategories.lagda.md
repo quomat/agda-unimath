@@ -29,7 +29,7 @@ precategory `D` consists of:
 - a map `F₀ : C → D` on objects,
 - a map `F₁ : hom x y → hom (F₀ x) (F₀ y)` on morphisms, such that the following
   identity holds:
-- `F₁ (g ∘ f) = F₁ g ∘ F₁ f`.
+- `F₁ (g ∘ f) = {!!}
 
 ## Definition
 
@@ -43,16 +43,13 @@ module _
   where
 
   functor-Nonunital-Precategory : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  functor-Nonunital-Precategory =
-    functor-Set-Magmoid
-      ( set-magmoid-Nonunital-Precategory C)
-      ( set-magmoid-Nonunital-Precategory D)
+  functor-Nonunital-Precategory = {!!}
 
   obj-functor-Nonunital-Precategory :
     functor-Nonunital-Precategory →
     obj-Nonunital-Precategory C →
     obj-Nonunital-Precategory D
-  obj-functor-Nonunital-Precategory = pr1
+  obj-functor-Nonunital-Precategory = {!!}
 
   hom-functor-Nonunital-Precategory :
     (F : functor-Nonunital-Precategory) →
@@ -61,17 +58,14 @@ module _
     hom-Nonunital-Precategory D
       ( obj-functor-Nonunital-Precategory F x)
       ( obj-functor-Nonunital-Precategory F y)
-  hom-functor-Nonunital-Precategory F = pr1 (pr2 F)
+  hom-functor-Nonunital-Precategory F = {!!}
 
   map-functor-Nonunital-Precategory :
     functor-Nonunital-Precategory →
     map-Set-Magmoid
       ( set-magmoid-Nonunital-Precategory C)
       ( set-magmoid-Nonunital-Precategory D)
-  pr1 (map-functor-Nonunital-Precategory F) =
-    obj-functor-Nonunital-Precategory F
-  pr2 (map-functor-Nonunital-Precategory F) =
-    hom-functor-Nonunital-Precategory F
+  pr1 (map-functor-Nonunital-Precategory F) = {!!}
 
   preserves-comp-functor-Nonunital-Precategory :
     (F : functor-Nonunital-Precategory)
@@ -83,7 +77,7 @@ module _
     ( comp-hom-Nonunital-Precategory D
       ( hom-functor-Nonunital-Precategory F g)
       ( hom-functor-Nonunital-Precategory F f))
-  preserves-comp-functor-Nonunital-Precategory = pr2 ∘ pr2
+  preserves-comp-functor-Nonunital-Precategory = {!!}
 ```
 
 ## Examples
@@ -96,8 +90,7 @@ There is an identity functor on any nonunital precategory.
 id-functor-Nonunital-Precategory :
   {l1 l2 : Level} (C : Nonunital-Precategory l1 l2) →
   functor-Nonunital-Precategory C C
-id-functor-Nonunital-Precategory C =
-  id-functor-Set-Magmoid (set-magmoid-Nonunital-Precategory C)
+id-functor-Nonunital-Precategory C = {!!}
 ```
 
 ### Composition of nonunital functors
@@ -117,9 +110,7 @@ module _
 
   obj-comp-functor-Nonunital-Precategory :
     obj-Nonunital-Precategory A → obj-Nonunital-Precategory C
-  obj-comp-functor-Nonunital-Precategory =
-    obj-functor-Nonunital-Precategory B C G ∘
-    obj-functor-Nonunital-Precategory A B F
+  obj-comp-functor-Nonunital-Precategory = {!!}
 
   hom-comp-functor-Nonunital-Precategory :
     {x y : obj-Nonunital-Precategory A} →
@@ -127,33 +118,18 @@ module _
     hom-Nonunital-Precategory C
       ( obj-comp-functor-Nonunital-Precategory x)
       ( obj-comp-functor-Nonunital-Precategory y)
-  hom-comp-functor-Nonunital-Precategory =
-    hom-functor-Nonunital-Precategory B C G ∘
-    hom-functor-Nonunital-Precategory A B F
+  hom-comp-functor-Nonunital-Precategory = {!!}
 
   map-comp-functor-Nonunital-Precategory :
     map-Set-Magmoid
       ( set-magmoid-Nonunital-Precategory A)
       ( set-magmoid-Nonunital-Precategory C)
-  pr1 map-comp-functor-Nonunital-Precategory =
-    obj-comp-functor-Nonunital-Precategory
-  pr2 map-comp-functor-Nonunital-Precategory =
-    hom-comp-functor-Nonunital-Precategory
+  pr1 map-comp-functor-Nonunital-Precategory = {!!}
 
-  preserves-comp-comp-functor-Nonunital-Precategory =
-    preserves-comp-comp-functor-Set-Magmoid
-      ( set-magmoid-Nonunital-Precategory A)
-      ( set-magmoid-Nonunital-Precategory B)
-      ( set-magmoid-Nonunital-Precategory C)
-      ( G) (F)
+  preserves-comp-comp-functor-Nonunital-Precategory = {!!}
 
   comp-functor-Nonunital-Precategory : functor-Nonunital-Precategory A C
-  comp-functor-Nonunital-Precategory =
-    comp-functor-Set-Magmoid
-      ( set-magmoid-Nonunital-Precategory A)
-      ( set-magmoid-Nonunital-Precategory B)
-      ( set-magmoid-Nonunital-Precategory C)
-      ( G) (F)
+  comp-functor-Nonunital-Precategory = {!!}
 ```
 
 ## Properties
@@ -174,39 +150,31 @@ module _
     ( F ＝ G) ≃
     ( map-functor-Nonunital-Precategory C D F ＝
       map-functor-Nonunital-Precategory C D G)
-  equiv-eq-map-eq-functor-Nonunital-Precategory =
-    equiv-eq-map-eq-functor-Set-Magmoid
-      ( set-magmoid-Nonunital-Precategory C)
-      ( set-magmoid-Nonunital-Precategory D)
-      ( F) (G)
+  equiv-eq-map-eq-functor-Nonunital-Precategory = {!!}
 
   eq-map-eq-functor-Nonunital-Precategory :
     ( F ＝ G) →
     ( map-functor-Nonunital-Precategory C D F ＝
       map-functor-Nonunital-Precategory C D G)
-  eq-map-eq-functor-Nonunital-Precategory =
-    map-equiv equiv-eq-map-eq-functor-Nonunital-Precategory
+  eq-map-eq-functor-Nonunital-Precategory = {!!}
 
   eq-eq-map-functor-Nonunital-Precategory :
     ( map-functor-Nonunital-Precategory C D F ＝
       map-functor-Nonunital-Precategory C D G) →
     ( F ＝ G)
-  eq-eq-map-functor-Nonunital-Precategory =
-    map-inv-equiv equiv-eq-map-eq-functor-Nonunital-Precategory
+  eq-eq-map-functor-Nonunital-Precategory = {!!}
 
   is-section-eq-eq-map-functor-Nonunital-Precategory :
     eq-map-eq-functor-Nonunital-Precategory ∘
     eq-eq-map-functor-Nonunital-Precategory ~
     id
-  is-section-eq-eq-map-functor-Nonunital-Precategory =
-    is-section-map-inv-equiv equiv-eq-map-eq-functor-Nonunital-Precategory
+  is-section-eq-eq-map-functor-Nonunital-Precategory = {!!}
 
   is-retraction-eq-eq-map-functor-Nonunital-Precategory :
     eq-eq-map-functor-Nonunital-Precategory ∘
     eq-map-eq-functor-Nonunital-Precategory ~
     id
-  is-retraction-eq-eq-map-functor-Nonunital-Precategory =
-    is-retraction-map-inv-equiv equiv-eq-map-eq-functor-Nonunital-Precategory
+  is-retraction-eq-eq-map-functor-Nonunital-Precategory = {!!}
 ```
 
 ### Categorical laws for nonunital functor composition
@@ -224,14 +192,13 @@ module _
     comp-functor-Nonunital-Precategory C D D
       ( id-functor-Nonunital-Precategory D) (F) ＝
     F
-  left-unit-law-comp-functor-Nonunital-Precategory =
-    eq-eq-map-functor-Nonunital-Precategory C D _ _ refl
+  left-unit-law-comp-functor-Nonunital-Precategory = {!!}
 
   right-unit-law-comp-functor-Nonunital-Precategory :
     comp-functor-Nonunital-Precategory C C D
       ( F) (id-functor-Nonunital-Precategory C) ＝
     F
-  right-unit-law-comp-functor-Nonunital-Precategory = refl
+  right-unit-law-comp-functor-Nonunital-Precategory = {!!}
 ```
 
 #### Associativity of functor composition
@@ -253,8 +220,7 @@ module _
       ( comp-functor-Nonunital-Precategory B C D H G) (F) ＝
     comp-functor-Nonunital-Precategory A C D
       ( H) (comp-functor-Nonunital-Precategory A B C G F)
-  associative-comp-functor-Nonunital-Precategory =
-    eq-eq-map-functor-Nonunital-Precategory A D _ _ refl
+  associative-comp-functor-Nonunital-Precategory = {!!}
 ```
 
 #### Mac Lane pentagon for nonunital functor composition
@@ -287,42 +253,7 @@ module _
 
   mac-lane-pentagon-comp-functor-Nonunital-Precategory :
     coherence-pentagon-identifications
-      { x =
-        comp-functor-Nonunital-Precategory A B E
-        ( comp-functor-Nonunital-Precategory B D E I
-          ( comp-functor-Nonunital-Precategory B C D H G))
-        ( F)}
-      { comp-functor-Nonunital-Precategory A D E I
-        ( comp-functor-Nonunital-Precategory A B D
-          ( comp-functor-Nonunital-Precategory B C D H G)
-          ( F))}
-      { comp-functor-Nonunital-Precategory A B E
-        ( comp-functor-Nonunital-Precategory B C E
-          ( comp-functor-Nonunital-Precategory C D E I H)
-          ( G))
-        ( F)}
-      { comp-functor-Nonunital-Precategory A D E
-        ( I)
-        ( comp-functor-Nonunital-Precategory A C D
-          ( H)
-          ( comp-functor-Nonunital-Precategory A B C G F))}
-      { comp-functor-Nonunital-Precategory A C E
-        ( comp-functor-Nonunital-Precategory C D E I H)
-        ( comp-functor-Nonunital-Precategory A B C G F)}
-      ( associative-comp-functor-Nonunital-Precategory A B D E
-        ( F) (comp-functor-Nonunital-Precategory B C D H G) (I))
-      ( ap
-        ( λ p → comp-functor-Nonunital-Precategory A B E p F)
-        ( inv (associative-comp-functor-Nonunital-Precategory B C D E G H I)))
-      ( ap
-        ( λ p → comp-functor-Nonunital-Precategory A D E I p)
-        ( associative-comp-functor-Nonunital-Precategory A B C D F G H))
-      ( associative-comp-functor-Nonunital-Precategory A B C E
-        ( F) (G) (comp-functor-Nonunital-Precategory C D E I H))
-      ( inv
-        ( associative-comp-functor-Nonunital-Precategory A C D E
-          (comp-functor-Nonunital-Precategory A B C G F) H I))
-  mac-lane-pentagon-comp-functor-Nonunital-Precategory = {!!}
+      { x = {!!}
 ```
 
 ## External links

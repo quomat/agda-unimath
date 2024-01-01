@@ -52,31 +52,25 @@ module _
 
   subtype-group-of-units-Commutative-Ring :
     type-Commutative-Ring A → Prop l
-  subtype-group-of-units-Commutative-Ring =
-    subtype-group-of-units-Ring (ring-Commutative-Ring A)
+  subtype-group-of-units-Commutative-Ring = {!!}
 
   submonoid-group-of-units-Commutative-Ring :
     Submonoid l (multiplicative-monoid-Commutative-Ring A)
-  submonoid-group-of-units-Commutative-Ring =
-    submonoid-group-of-units-Ring (ring-Commutative-Ring A)
+  submonoid-group-of-units-Commutative-Ring = {!!}
 
   monoid-group-of-units-Commutative-Ring : Monoid l
-  monoid-group-of-units-Commutative-Ring =
-    monoid-group-of-units-Ring (ring-Commutative-Ring A)
+  monoid-group-of-units-Commutative-Ring = {!!}
 
   semigroup-group-of-units-Commutative-Ring : Semigroup l
-  semigroup-group-of-units-Commutative-Ring =
-    semigroup-group-of-units-Ring (ring-Commutative-Ring A)
+  semigroup-group-of-units-Commutative-Ring = {!!}
 
   type-group-of-units-Commutative-Ring : UU l
-  type-group-of-units-Commutative-Ring =
-    type-group-of-units-Ring (ring-Commutative-Ring A)
+  type-group-of-units-Commutative-Ring = {!!}
 
   mul-group-of-units-Commutative-Ring :
     (x y : type-group-of-units-Commutative-Ring) →
     type-group-of-units-Commutative-Ring
-  mul-group-of-units-Commutative-Ring =
-    mul-group-of-units-Ring (ring-Commutative-Ring A)
+  mul-group-of-units-Commutative-Ring = {!!}
 
   associative-mul-group-of-units-Commutative-Ring :
     (x y z : type-group-of-units-Commutative-Ring) →
@@ -85,13 +79,11 @@ module _
       ( z) ＝
     mul-group-of-units-Commutative-Ring x
       ( mul-group-of-units-Commutative-Ring y z)
-  associative-mul-group-of-units-Commutative-Ring =
-    associative-mul-group-of-units-Ring (ring-Commutative-Ring A)
+  associative-mul-group-of-units-Commutative-Ring = {!!}
 
   unit-group-of-units-Commutative-Ring :
     type-group-of-units-Commutative-Ring
-  unit-group-of-units-Commutative-Ring =
-    unit-group-of-units-Ring (ring-Commutative-Ring A)
+  unit-group-of-units-Commutative-Ring = {!!}
 
   left-unit-law-mul-group-of-units-Commutative-Ring :
     (x : type-group-of-units-Commutative-Ring) →
@@ -99,8 +91,7 @@ module _
       ( unit-group-of-units-Commutative-Ring)
       ( x) ＝
     x
-  left-unit-law-mul-group-of-units-Commutative-Ring =
-    left-unit-law-mul-group-of-units-Ring (ring-Commutative-Ring A)
+  left-unit-law-mul-group-of-units-Commutative-Ring = {!!}
 
   right-unit-law-mul-group-of-units-Commutative-Ring :
     (x : type-group-of-units-Commutative-Ring) →
@@ -108,19 +99,16 @@ module _
       ( x)
       ( unit-group-of-units-Commutative-Ring) ＝
     x
-  right-unit-law-mul-group-of-units-Commutative-Ring =
-    right-unit-law-mul-group-of-units-Ring (ring-Commutative-Ring A)
+  right-unit-law-mul-group-of-units-Commutative-Ring = {!!}
 
   is-unital-group-of-units-Commutative-Ring :
     is-unital-Semigroup semigroup-group-of-units-Commutative-Ring
-  is-unital-group-of-units-Commutative-Ring =
-    is-unital-group-of-units-Ring (ring-Commutative-Ring A)
+  is-unital-group-of-units-Commutative-Ring = {!!}
 
   inv-group-of-units-Commutative-Ring :
     type-group-of-units-Commutative-Ring →
     type-group-of-units-Commutative-Ring
-  inv-group-of-units-Commutative-Ring =
-    inv-group-of-units-Ring (ring-Commutative-Ring A)
+  inv-group-of-units-Commutative-Ring = {!!}
 
   left-inverse-law-mul-group-of-units-Commutative-Ring :
     (x : type-group-of-units-Commutative-Ring) →
@@ -128,8 +116,7 @@ module _
       ( inv-group-of-units-Commutative-Ring x)
       ( x) ＝
     unit-group-of-units-Commutative-Ring
-  left-inverse-law-mul-group-of-units-Commutative-Ring =
-    left-inverse-law-mul-group-of-units-Ring (ring-Commutative-Ring A)
+  left-inverse-law-mul-group-of-units-Commutative-Ring = {!!}
 
   right-inverse-law-mul-group-of-units-Commutative-Ring :
     (x : type-group-of-units-Commutative-Ring) →
@@ -137,45 +124,33 @@ module _
       ( x)
       ( inv-group-of-units-Commutative-Ring x) ＝
     unit-group-of-units-Commutative-Ring
-  right-inverse-law-mul-group-of-units-Commutative-Ring =
-    right-inverse-law-mul-group-of-units-Ring
-      ( ring-Commutative-Ring A)
+  right-inverse-law-mul-group-of-units-Commutative-Ring = {!!}
 
   commutative-mul-group-of-units-Commutative-Ring :
     (x y : type-group-of-units-Commutative-Ring) →
     mul-group-of-units-Commutative-Ring x y ＝
     mul-group-of-units-Commutative-Ring y x
-  commutative-mul-group-of-units-Commutative-Ring x y =
-    eq-type-subtype
-      ( subtype-group-of-units-Commutative-Ring)
-      ( commutative-mul-Commutative-Ring A (pr1 x) (pr1 y))
+  commutative-mul-group-of-units-Commutative-Ring x y = {!!}
 
   is-group-group-of-units-Commutative-Ring' :
     is-group'
       ( semigroup-group-of-units-Commutative-Ring)
       ( is-unital-group-of-units-Commutative-Ring)
-  is-group-group-of-units-Commutative-Ring' =
-    is-group-group-of-units-Ring' (ring-Commutative-Ring A)
+  is-group-group-of-units-Commutative-Ring' = {!!}
 
   is-group-group-of-units-Commutative-Ring :
     is-group semigroup-group-of-units-Commutative-Ring
-  is-group-group-of-units-Commutative-Ring =
-    is-group-group-of-units-Ring (ring-Commutative-Ring A)
+  is-group-group-of-units-Commutative-Ring = {!!}
 
   group-of-units-Commutative-Ring : Group l
-  group-of-units-Commutative-Ring =
-    group-of-units-Ring (ring-Commutative-Ring A)
+  group-of-units-Commutative-Ring = {!!}
 
   abelian-group-of-units-Commutative-Ring : Ab l
-  pr1 abelian-group-of-units-Commutative-Ring =
-    group-of-units-Commutative-Ring
-  pr2 abelian-group-of-units-Commutative-Ring =
-    commutative-mul-group-of-units-Commutative-Ring
+  pr1 abelian-group-of-units-Commutative-Ring = {!!}
 
   inclusion-group-of-units-Commutative-Ring :
     type-group-of-units-Commutative-Ring → type-Commutative-Ring A
-  inclusion-group-of-units-Commutative-Ring =
-    inclusion-group-of-units-Ring (ring-Commutative-Ring A)
+  inclusion-group-of-units-Commutative-Ring = {!!}
 
   preserves-mul-inclusion-group-of-units-Commutative-Ring :
     {x y : type-group-of-units-Commutative-Ring} →
@@ -184,17 +159,12 @@ module _
     mul-Commutative-Ring A
       ( inclusion-group-of-units-Commutative-Ring x)
       ( inclusion-group-of-units-Commutative-Ring y)
-  preserves-mul-inclusion-group-of-units-Commutative-Ring {x} {y} =
-    preserves-mul-inclusion-group-of-units-Ring
-      ( ring-Commutative-Ring A)
-      { x}
-      { y}
+  preserves-mul-inclusion-group-of-units-Commutative-Ring {x} {y} = {!!}
 
   hom-inclusion-group-of-units-Commutative-Ring :
     hom-Monoid monoid-group-of-units-Commutative-Ring
       ( multiplicative-monoid-Commutative-Ring A)
-  hom-inclusion-group-of-units-Commutative-Ring =
-    hom-inclusion-group-of-units-Ring (ring-Commutative-Ring A)
+  hom-inclusion-group-of-units-Commutative-Ring = {!!}
 ```
 
 ## Properties
@@ -212,11 +182,7 @@ module _
   map-group-of-units-hom-Commutative-Ring :
     type-group-of-units-Commutative-Ring A →
     type-group-of-units-Commutative-Ring B
-  map-group-of-units-hom-Commutative-Ring =
-    map-group-of-units-hom-Ring
-      ( ring-Commutative-Ring A)
-      ( ring-Commutative-Ring B)
-      ( f)
+  map-group-of-units-hom-Commutative-Ring = {!!}
 
   preserves-mul-hom-group-of-units-hom-Commutative-Ring :
     {x y : type-group-of-units-Commutative-Ring A} →
@@ -225,31 +191,19 @@ module _
     mul-group-of-units-Commutative-Ring B
       ( map-group-of-units-hom-Commutative-Ring x)
       ( map-group-of-units-hom-Commutative-Ring y)
-  preserves-mul-hom-group-of-units-hom-Commutative-Ring =
-    preserves-mul-hom-group-of-units-hom-Ring
-      ( ring-Commutative-Ring A)
-      ( ring-Commutative-Ring B)
-      ( f)
+  preserves-mul-hom-group-of-units-hom-Commutative-Ring = {!!}
 
   hom-group-of-units-hom-Commutative-Ring :
     hom-Group
       ( group-of-units-Commutative-Ring A)
       ( group-of-units-Commutative-Ring B)
-  hom-group-of-units-hom-Commutative-Ring =
-    hom-group-of-units-hom-Ring
-      ( ring-Commutative-Ring A)
-      ( ring-Commutative-Ring B)
-      ( f)
+  hom-group-of-units-hom-Commutative-Ring = {!!}
 
   preserves-unit-hom-group-of-units-hom-Commutative-Ring :
     map-group-of-units-hom-Commutative-Ring
       ( unit-group-of-units-Commutative-Ring A) ＝
     unit-group-of-units-Commutative-Ring B
-  preserves-unit-hom-group-of-units-hom-Commutative-Ring =
-    preserves-unit-hom-group-of-units-hom-Ring
-      ( ring-Commutative-Ring A)
-      ( ring-Commutative-Ring B)
-      ( f)
+  preserves-unit-hom-group-of-units-hom-Commutative-Ring = {!!}
 
   preserves-inv-hom-group-of-units-hom-Commutative-Ring :
     {x : type-group-of-units-Commutative-Ring A} →
@@ -257,11 +211,7 @@ module _
       ( inv-group-of-units-Commutative-Ring A x) ＝
     inv-group-of-units-Commutative-Ring B
       ( map-group-of-units-hom-Commutative-Ring x)
-  preserves-inv-hom-group-of-units-hom-Commutative-Ring =
-    preserves-inv-hom-group-of-units-hom-Ring
-      ( ring-Commutative-Ring A)
-      ( ring-Commutative-Ring B)
-      ( f)
+  preserves-inv-hom-group-of-units-hom-Commutative-Ring = {!!}
 ```
 
 #### The functorial laws of `group-of-units-Commutative-Ring`
@@ -274,8 +224,7 @@ module _
   preserves-id-hom-group-of-units-hom-Commutative-Ring :
     hom-group-of-units-hom-Commutative-Ring A A (id-hom-Commutative-Ring A) ＝
     id-hom-Group (group-of-units-Commutative-Ring A)
-  preserves-id-hom-group-of-units-hom-Commutative-Ring =
-    preserves-id-hom-group-of-units-hom-Ring (ring-Commutative-Ring A)
+  preserves-id-hom-group-of-units-hom-Commutative-Ring = {!!}
 
 module _
   {l1 l2 l3 : Level}
@@ -292,13 +241,7 @@ module _
       ( group-of-units-Commutative-Ring C)
       ( hom-group-of-units-hom-Commutative-Ring B C g)
       ( hom-group-of-units-hom-Commutative-Ring A B f)
-  preserves-comp-hom-group-of-units-hom-Commutative-Ring g f =
-    preserves-comp-hom-group-of-units-hom-Ring
-      ( ring-Commutative-Ring A)
-      ( ring-Commutative-Ring B)
-      ( ring-Commutative-Ring C)
-      ( g)
-      ( f)
+  preserves-comp-hom-group-of-units-hom-Commutative-Ring g f = {!!}
 ```
 
 #### The functor `group-of-units-Commutative-Ring`
@@ -309,18 +252,14 @@ group-of-units-commutative-ring-functor-Large-Precategory :
     ( Commutative-Ring-Large-Precategory)
     ( Ab-Large-Precategory)
 obj-functor-Large-Precategory
-  group-of-units-commutative-ring-functor-Large-Precategory =
-  abelian-group-of-units-Commutative-Ring
+  group-of-units-commutative-ring-functor-Large-Precategory = {!!}
 hom-functor-Large-Precategory
-  group-of-units-commutative-ring-functor-Large-Precategory {X = A} {Y = B} =
-  hom-group-of-units-hom-Commutative-Ring A B
+  group-of-units-commutative-ring-functor-Large-Precategory {X = A} {Y = B} = {!!}
 preserves-comp-functor-Large-Precategory
   group-of-units-commutative-ring-functor-Large-Precategory
   {X = A}
   {Y = B}
-  {Z = C} =
-  preserves-comp-hom-group-of-units-hom-Commutative-Ring A B C
+  {Z = C} = {!!}
 preserves-id-functor-Large-Precategory
-  group-of-units-commutative-ring-functor-Large-Precategory {X = A} =
-  preserves-id-hom-group-of-units-hom-Commutative-Ring A
+  group-of-units-commutative-ring-functor-Large-Precategory {X = A} = {!!}
 ```

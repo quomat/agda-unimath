@@ -51,14 +51,11 @@ module _
 
   orbit-Group-Full-Large-Subcategory :
     Full-Large-Subcategory (l1 ⊔_) (action-Group-Large-Category G)
-  orbit-Group-Full-Large-Subcategory = is-transitive-prop-action-Group G
+  orbit-Group-Full-Large-Subcategory = {!!}
 
   orbit-Group-Large-Category :
     Large-Category (λ l → l1 ⊔ lsuc l) (λ l2 l3 → l1 ⊔ l2 ⊔ l3)
-  orbit-Group-Large-Category =
-    large-category-Full-Large-Subcategory
-      ( action-Group-Large-Category G)
-      ( orbit-Group-Full-Large-Subcategory)
+  orbit-Group-Large-Category = {!!}
 ```
 
 ### The large orbit precategory of a group
@@ -70,8 +67,7 @@ module _
 
   orbit-Group-Large-Precategory :
     Large-Precategory (λ l → l1 ⊔ lsuc l) (λ l2 l3 → l1 ⊔ l2 ⊔ l3)
-  orbit-Group-Large-Precategory =
-    large-precategory-Large-Category (orbit-Group-Large-Category G)
+  orbit-Group-Large-Precategory = {!!}
 ```
 
 ### The small orbit category of a group
@@ -82,7 +78,7 @@ module _
   where
 
   orbit-Group-Category : (l2 : Level) → Category (l1 ⊔ lsuc l2) (l1 ⊔ l2)
-  orbit-Group-Category = category-Large-Category (orbit-Group-Large-Category G)
+  orbit-Group-Category = {!!}
 ```
 
 ### The small orbit precategory of a group
@@ -93,8 +89,7 @@ module _
   where
 
   orbit-Group-Precategory : (l2 : Level) → Precategory (l1 ⊔ lsuc l2) (l1 ⊔ l2)
-  orbit-Group-Precategory =
-    precategory-Large-Category (orbit-Group-Large-Category G)
+  orbit-Group-Precategory = {!!}
 ```
 
 ## External links

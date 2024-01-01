@@ -33,16 +33,14 @@ module _
   where
 
   classifying-type-ℤ-∞-Group : UU lzero
-  classifying-type-ℤ-∞-Group = 𝕊¹
+  classifying-type-ℤ-∞-Group = {!!}
 
   shape-ℤ-∞-Group : 𝕊¹
-  shape-ℤ-∞-Group = base-𝕊¹
+  shape-ℤ-∞-Group = {!!}
 
   classifying-pointed-type-ℤ-∞-Group : Pointed-Type lzero
-  pr1 classifying-pointed-type-ℤ-∞-Group = classifying-type-ℤ-∞-Group
-  pr2 classifying-pointed-type-ℤ-∞-Group = shape-ℤ-∞-Group
+  pr1 classifying-pointed-type-ℤ-∞-Group = {!!}
 
   ℤ-∞-Group : ∞-Group lzero
-  pr1 ℤ-∞-Group = classifying-pointed-type-ℤ-∞-Group
-  pr2 ℤ-∞-Group = is-0-connected-𝕊¹
+  pr1 ℤ-∞-Group = {!!}
 ```

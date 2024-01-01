@@ -31,5 +31,5 @@ to be
 ```agda
 symmetric-element-Involutive-Type :
   {l : Level} (A : Involutive-Type l) → UU (lsuc lzero ⊔ l)
-symmetric-element-Involutive-Type A = (X : 2-Element-Type lzero) → A X
+symmetric-element-Involutive-Type A = {!!}
 ```

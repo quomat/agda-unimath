@@ -51,11 +51,7 @@ module _
   where
 
   sim-hom-Large-Preorder : UUω
-  sim-hom-Large-Preorder =
-    {l : Level} (x : type-Large-Preorder P l) →
-    sim-Large-Preorder Q
-      ( map-hom-Large-Preorder f x)
-      ( map-hom-Large-Preorder g x)
+  sim-hom-Large-Preorder = {!!}
 ```
 
 ### The reflexive similarity of order preserving maps between large preorders
@@ -69,8 +65,7 @@ module _
   where
 
   refl-sim-hom-Large-Preorder : sim-hom-Large-Preorder P Q f f
-  refl-sim-hom-Large-Preorder x =
-    refl-sim-Large-Preorder Q (map-hom-Large-Preorder f x)
+  refl-sim-hom-Large-Preorder x = {!!}
 ```
 
 ## Properties
@@ -88,5 +83,5 @@ module _
 
   sim-htpy-hom-Large-Preorder :
     htpy-hom-Large-Preorder P Q f g → sim-hom-Large-Preorder P Q f g
-  sim-htpy-hom-Large-Preorder H x = sim-eq-Large-Preorder Q (H x)
+  sim-htpy-hom-Large-Preorder H x = {!!}
 ```

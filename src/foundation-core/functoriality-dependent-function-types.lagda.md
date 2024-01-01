@@ -38,13 +38,13 @@ htpy-map-Π :
   {l1 l2 l3 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3}
   {f f' : (i : I) → A i → B i} (H : (i : I) → (f i) ~ (f' i)) →
   map-Π f ~ map-Π f'
-htpy-map-Π H h = eq-htpy (λ i → H i (h i))
+htpy-map-Π H h = {!!}
 
 htpy-map-Π' :
   {l1 l2 l3 l4 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3}
   {J : UU l4} (α : J → I) {f f' : (i : I) → A i → B i} →
   ((i : I) → (f i) ~ (f' i)) → map-Π' α f ~ map-Π' α f'
-htpy-map-Π' α H = htpy-map-Π (H ∘ α)
+htpy-map-Π' α H = {!!}
 ```
 
 ### The fibers of `map-Π`
@@ -54,15 +54,14 @@ compute-fiber-map-Π :
   {l1 l2 l3 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3}
   (f : (i : I) → A i → B i) (h : (i : I) → B i) →
   ((i : I) → fiber (f i) (h i)) ≃ fiber (map-Π f) h
-compute-fiber-map-Π f h =
-  equiv-tot (λ _ → equiv-eq-htpy) ∘e distributive-Π-Σ
+compute-fiber-map-Π f h = {!!}
 
 compute-fiber-map-Π' :
   {l1 l2 l3 l4 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3}
   {J : UU l4} (α : J → I) (f : (i : I) → A i → B i)
   (h : (j : J) → B (α j)) →
   ((j : J) → fiber (f (α j)) (h j)) ≃ fiber (map-Π' α f) h
-compute-fiber-map-Π' α f = compute-fiber-map-Π (f ∘ α)
+compute-fiber-map-Π' α f = {!!}
 ```
 
 ### Families of equivalences induce equivalences of dependent function types
@@ -73,20 +72,13 @@ abstract
     {l1 l2 l3 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3}
     {f : (i : I) → A i → B i} (is-equiv-f : is-fiberwise-equiv f) →
     is-equiv (map-Π f)
-  is-equiv-map-Π-is-fiberwise-equiv is-equiv-f =
-    is-equiv-is-contr-map
-      ( λ g →
-        is-contr-equiv' _
-          ( compute-fiber-map-Π _ g)
-          ( is-contr-Π (λ i → is-contr-map-is-equiv (is-equiv-f i) (g i))))
+  is-equiv-map-Π-is-fiberwise-equiv is-equiv-f = {!!}
 
 equiv-Π-equiv-family :
   {l1 l2 l3 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3}
   (e : (i : I) → (A i) ≃ (B i)) → ((i : I) → A i) ≃ ((i : I) → B i)
-pr1 (equiv-Π-equiv-family e) = map-Π (λ i → map-equiv (e i))
-pr2 (equiv-Π-equiv-family e) =
-  is-equiv-map-Π-is-fiberwise-equiv
-    ( λ i → is-equiv-map-equiv (e i))
+pr1 (equiv-Π-equiv-family e) = {!!}
+pr2 (equiv-Π-equiv-family e) = {!!}
 ```
 
 ### Families of equivalences induce equivalences of implicit dependent function types
@@ -95,10 +87,7 @@ pr2 (equiv-Π-equiv-family e) =
 equiv-implicit-Π-equiv-family :
   {l1 l2 l3 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3}
   (e : (i : I) → (A i) ≃ (B i)) → ({i : I} → A i) ≃ ({i : I} → B i)
-equiv-implicit-Π-equiv-family e =
-  ( equiv-implicit-explicit-Π) ∘e
-  ( equiv-Π-equiv-family e) ∘e
-  ( equiv-explicit-implicit-Π)
+equiv-implicit-Π-equiv-family e = {!!}
 ```
 
 ##### Computing the inverse of `equiv-Π-equiv-family`
@@ -112,11 +101,7 @@ module _
     (e : (x : A) → B x ≃ C x) →
     ( map-inv-equiv (equiv-Π-equiv-family e)) ~
     ( map-equiv (equiv-Π-equiv-family λ x → (inv-equiv (e x))))
-  compute-inv-equiv-Π-equiv-family e f =
-    is-injective-map-equiv
-      ( equiv-Π-equiv-family e)
-      ( ( is-section-map-inv-equiv (equiv-Π-equiv-family e) f) ∙
-        ( eq-htpy (λ x → inv (is-section-map-inv-equiv (e x) (f x)))))
+  compute-inv-equiv-Π-equiv-family e f = {!!}
 ```
 
 ## See also

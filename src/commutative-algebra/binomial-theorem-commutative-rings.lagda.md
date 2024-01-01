@@ -36,7 +36,7 @@ The **binomial theorem** in commutative rings asserts that for any two elements
 `x` and `y` of a commutative ring `A` and any natural number `n`, we have
 
 ```text
-  (x + y)ⁿ = ∑_{0 ≤ i < n+1} (n choose i) xⁱ yⁿ⁻ⁱ.
+  (x + y)ⁿ = {!!}
 ```
 
 ## Definitions
@@ -48,7 +48,7 @@ binomial-sum-Commutative-Ring :
   {l : Level} (A : Commutative-Ring l)
   (n : ℕ) (f : functional-vec-Commutative-Ring A (succ-ℕ n)) →
   type-Commutative-Ring A
-binomial-sum-Commutative-Ring A = binomial-sum-Ring (ring-Commutative-Ring A)
+binomial-sum-Commutative-Ring A = {!!}
 ```
 
 ## Properties
@@ -64,15 +64,13 @@ module _
     (f : functional-vec-Commutative-Ring A 1) →
     binomial-sum-Commutative-Ring A 0 f ＝
     head-functional-vec-Commutative-Ring A 0 f
-  binomial-sum-one-element-Commutative-Ring =
-    binomial-sum-one-element-Ring (ring-Commutative-Ring A)
+  binomial-sum-one-element-Commutative-Ring = {!!}
 
   binomial-sum-two-elements-Commutative-Ring :
     (f : functional-vec-Commutative-Ring A 2) →
     binomial-sum-Commutative-Ring A 1 f ＝
     add-Commutative-Ring A (f (zero-Fin 1)) (f (one-Fin 1))
-  binomial-sum-two-elements-Commutative-Ring =
-    binomial-sum-two-elements-Ring (ring-Commutative-Ring A)
+  binomial-sum-two-elements-Commutative-Ring = {!!}
 ```
 
 ### Binomial sums are homotopy invariant
@@ -86,8 +84,7 @@ module _
     (n : ℕ) {f g : functional-vec-Commutative-Ring A (succ-ℕ n)} →
     (f ~ g) →
     binomial-sum-Commutative-Ring A n f ＝ binomial-sum-Commutative-Ring A n g
-  htpy-binomial-sum-Commutative-Ring =
-    htpy-binomial-sum-Ring (ring-Commutative-Ring A)
+  htpy-binomial-sum-Commutative-Ring = {!!}
 ```
 
 ### Multiplication distributes over sums
@@ -102,16 +99,14 @@ module _
     (f : functional-vec-Commutative-Ring A (succ-ℕ n)) →
     mul-Commutative-Ring A x (binomial-sum-Commutative-Ring A n f) ＝
     binomial-sum-Commutative-Ring A n (λ i → mul-Commutative-Ring A x (f i))
-  left-distributive-mul-binomial-sum-Commutative-Ring =
-    left-distributive-mul-binomial-sum-Ring (ring-Commutative-Ring A)
+  left-distributive-mul-binomial-sum-Commutative-Ring = {!!}
 
   right-distributive-mul-binomial-sum-Commutative-Ring :
     (n : ℕ) (f : functional-vec-Commutative-Ring A (succ-ℕ n)) →
     (x : type-Commutative-Ring A) →
     mul-Commutative-Ring A (binomial-sum-Commutative-Ring A n f) x ＝
     binomial-sum-Commutative-Ring A n (λ i → mul-Commutative-Ring A (f i) x)
-  right-distributive-mul-binomial-sum-Commutative-Ring =
-    right-distributive-mul-binomial-sum-Ring (ring-Commutative-Ring A)
+  right-distributive-mul-binomial-sum-Commutative-Ring = {!!}
 ```
 
 ## Theorem
@@ -128,13 +123,7 @@ binomial-theorem-Commutative-Ring :
       mul-Commutative-Ring A
       ( power-Commutative-Ring A (nat-Fin (succ-ℕ n) i) x)
       ( power-Commutative-Ring A (dist-ℕ (nat-Fin (succ-ℕ n) i) n) y))
-binomial-theorem-Commutative-Ring A n x y =
-  binomial-theorem-Ring
-    ( ring-Commutative-Ring A)
-    ( n)
-    ( x)
-    ( y)
-    ( commutative-mul-Commutative-Ring A x y)
+binomial-theorem-Commutative-Ring A n x y = {!!}
 ```
 
 ## Corollaries
@@ -170,7 +159,5 @@ is-linear-combination-power-add-Commutative-Ring :
               ( power-Commutative-Ring A
                 ( dist-ℕ (nat-Fin (succ-ℕ m) i) m)
                 ( y))))))
-is-linear-combination-power-add-Commutative-Ring A =
-  is-linear-combination-power-add-Commutative-Semiring
-    ( commutative-semiring-Commutative-Ring A)
+is-linear-combination-power-add-Commutative-Ring A = {!!}
 ```

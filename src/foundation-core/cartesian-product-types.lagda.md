@@ -20,13 +20,13 @@ constant type family.
 
 ```agda
 prod : {l1 l2 : Level} (A : UU l1) (B : UU l2) → UU (l1 ⊔ l2)
-prod A B = Σ A (λ a → B)
+prod A B = {!!}
 
 pair' :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → A → B → prod A B
-pair' = pair
+pair' = {!!}
 
 infixr 15 _×_
 _×_ : {l1 l2 : Level} (A : UU l1) (B : UU l2) → UU (l1 ⊔ l2)
-A × B = prod A B
+A × B = {!!}
 ```

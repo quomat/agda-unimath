@@ -23,32 +23,30 @@ open import ring-theory.rings
 
 ## Idea
 
-Trivial rings are rings in which `0 = 1`.
+Trivial rings are rings in which `0 = {!!}
 
 ## Definition
 
 ```agda
 is-trivial-ring-Prop : {l : Level} → Ring l → Prop l
-is-trivial-ring-Prop R =
-  Id-Prop (set-Ring R) (zero-Ring R) (one-Ring R)
+is-trivial-ring-Prop R = {!!}
 
 is-trivial-Ring : {l : Level} → Ring l → UU l
-is-trivial-Ring R = type-Prop (is-trivial-ring-Prop R)
+is-trivial-Ring R = {!!}
 
 is-prop-is-trivial-Ring :
   {l : Level} (R : Ring l) → is-prop (is-trivial-Ring R)
-is-prop-is-trivial-Ring R = is-prop-type-Prop (is-trivial-ring-Prop R)
+is-prop-is-trivial-Ring R = {!!}
 
 is-nontrivial-ring-Prop : {l : Level} → Ring l → Prop l
-is-nontrivial-ring-Prop R =
-  neg-Prop (is-trivial-ring-Prop R)
+is-nontrivial-ring-Prop R = {!!}
 
 is-nontrivial-Ring : {l : Level} → Ring l → UU l
-is-nontrivial-Ring R = type-Prop (is-nontrivial-ring-Prop R)
+is-nontrivial-Ring R = {!!}
 
 is-prop-is-nontrivial-Ring :
   {l : Level} (R : Ring l) → is-prop (is-nontrivial-Ring R)
-is-prop-is-nontrivial-Ring R = is-prop-type-Prop (is-nontrivial-ring-Prop R)
+is-prop-is-nontrivial-Ring R = {!!}
 ```
 
 ## Properties
@@ -60,14 +58,6 @@ is-contr-is-trivial-Ring :
   {l : Level} (R : Ring l) →
   is-trivial-Ring R →
   is-contr (type-Ring R)
-pr1 (is-contr-is-trivial-Ring R p) = zero-Ring R
-pr2 (is-contr-is-trivial-Ring R p) x =
-  equational-reasoning
-    zero-Ring R
-      ＝ mul-Ring R (zero-Ring R) x
-        by inv (left-zero-law-mul-Ring R x)
-      ＝ mul-Ring R (one-Ring R) x
-        by ap-binary (mul-Ring R) p refl
-      ＝ x
-        by left-unit-law-mul-Ring R x
+pr1 (is-contr-is-trivial-Ring R p) = {!!}
+pr2 (is-contr-is-trivial-Ring R p) x = {!!}
 ```

@@ -54,13 +54,7 @@ module fibered where
     {B : fibered-system l3 l4 A} {C : fibered-system l5 l6 A}
     (D : bifibered-system l7 l8 B C) →
     fibered-system (l5 ⊔ l7) (l6 ⊔ l8) (total-system A B)
-  fibered-system.type (total-fibered-system {C = C} D) X =
-    Σ (fibered-system.type C (pr1 X)) (bifibered-system.type D (pr2 X))
-  fibered-system.element (total-fibered-system {C = C} D)
-    {pair X Y} (pair Z W) (pair x y) =
-    Σ (fibered-system.element C Z x) (bifibered-system.element D W y)
-  fibered-system.slice (total-fibered-system D) {pair X Y} (pair Z W) =
-    total-fibered-system (bifibered-system.slice D W)
+  fibered-system.type (total-fibered-system {C = C} D) X = {!!}
 
   record section-fibered-system
     {l1 l2 l3 l4 l5 l6 l7 l8 : Level} {A : system l1 l2}
@@ -92,13 +86,7 @@ module fibered where
     {D : bifibered-system l7 l8 B C} {f : section-system C}
     (g : section-fibered-system f D) →
     section-system (total-fibered-system D)
-  section-system.type (total-section-system {f = f} g) (pair X Y) =
-    pair (section-system.type f X) (section-fibered-system.type g Y)
-  section-system.element (total-section-system {f = f} g)
-    {pair X Y} (pair x y) =
-    pair (section-system.element f x) (section-fibered-system.element g y)
-  section-system.slice (total-section-system g) (pair X Y) =
-    total-section-system (section-fibered-system.slice g Y)
+  section-system.type (total-section-system {f = f} g) (pair X Y) = {!!}
 ```
 
 ### Homotopies of sections of fibered systems
@@ -109,7 +97,7 @@ module fibered where
     (D : (x : A) → B x → C x → UU l4) {x y : A} (p : Id x y)
     {u : B x} {u' : B y} (q : Id (tr B p u) u') {v : C x} {v' : C y}
     (r : Id (tr C p v) v') → D x u v → D y u' v'
-  double-tr D refl refl refl d = d
+  double-tr D refl refl refl d = {!!}
 
   tr-bifibered-system-slice :
     {l1 l2 l3 l4 l5 l6 l7 l8 : Level} {A : system l1 l2}
@@ -124,7 +112,7 @@ module fibered where
         ( ap (fibered-system.slice C) p)
         ( bifibered-system.slice D d))
       ( bifibered-system.slice D (tr (bifibered-system.type D Y) p d))
-  tr-bifibered-system-slice D Y refl refl = refl
+  tr-bifibered-system-slice D Y refl refl = {!!}
 
   Eq-bifibered-system' :
     {l1 l2 l3 l4 l5 l6 l7 l8 : Level} {A : system l1 l2}
@@ -135,32 +123,7 @@ module fibered where
     (g : section-fibered-system f D) (g' : section-fibered-system f' D') →
     bifibered-system l7 l8 B (Eq-fibered-system' α f f')
   bifibered-system.type
-    ( Eq-bifibered-system' D .D refl refl f f' g g') {X} Y p =
-    Id
-      ( tr (bifibered-system.type D Y) p (section-fibered-system.type g Y))
-      ( section-fibered-system.type g' Y)
-  bifibered-system.element
-    ( Eq-bifibered-system' {A = A} {C = C} D .D refl refl f f' g g')
-    {X} {Y} {p} {x} α y q =
-      Id
-        ( double-tr
-          ( λ Z u → bifibered-system.element D {Z = Z} u y)
-          ( p)
-          ( α)
-          ( q)
-          ( section-fibered-system.element g y))
-        ( section-fibered-system.element g' y)
-  bifibered-system.slice
-    ( Eq-bifibered-system' {C = C} D .D refl refl f f' g g') {X} {Y} {α} β =
-    Eq-bifibered-system'
-      ( bifibered-system.slice D (section-fibered-system.type g Y))
-      ( bifibered-system.slice D (section-fibered-system.type g' Y))
-      ( ap (fibered-system.slice C) α)
-      ( tr-bifibered-system-slice D Y α β ∙ ap (bifibered-system.slice D) β)
-      ( section-system.slice f X)
-      ( section-system.slice f' X)
-      ( section-fibered-system.slice g Y)
-      ( section-fibered-system.slice g' Y)
+    ( Eq-bifibered-system' D .D refl refl f f' g g') {X} Y p = {!!}
 
   htpy-section-fibered-system' :
     {l1 l2 l3 l4 l5 l6 l7 l8 : Level} {A : system l1 l2}
@@ -171,8 +134,7 @@ module fibered where
     (H : htpy-section-system' α f f')
     (g : section-fibered-system f D) (h : section-fibered-system f' D') →
     UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l7 ⊔ l8)
-  htpy-section-fibered-system' {D = D} {D'} {f} {f'} {α} β H g h =
-    section-fibered-system H (Eq-bifibered-system' D D' α β f f' g h)
+  htpy-section-fibered-system' {D = D} {D'} {f} {f'} {α} β H g h = {!!}
 
   htpy-section-fibered-system :
     {l1 l2 l3 l4 l5 l6 l7 l8 : Level} {A : system l1 l2}
@@ -181,8 +143,7 @@ module fibered where
     (H : htpy-section-system f f')
     (g : section-fibered-system f D) (h : section-fibered-system f' D) →
     UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l7 ⊔ l8)
-  htpy-section-fibered-system H g h =
-    htpy-section-fibered-system' {α = refl} refl H g h
+  htpy-section-fibered-system H g h = {!!}
 ```
 
 ### Morphisms of fibered systems
@@ -193,31 +154,20 @@ module fibered where
     (B : fibered-system l3 l4 A) {C : system l5 l6}
     (D : fibered-system l7 l8 C) →
     bifibered-system l7 l8 B (constant-fibered-system A C)
-  bifibered-system.type (constant-bifibered-system B D) Y Z =
-    fibered-system.type D Z
-  bifibered-system.element (constant-bifibered-system B D) {Z = Z} W y z =
-    fibered-system.element D W z
-  bifibered-system.slice (constant-bifibered-system B D) {X = X} {Y} {Z} W =
-    constant-bifibered-system
-      ( fibered-system.slice B Y)
-      ( fibered-system.slice D W)
+  bifibered-system.type (constant-bifibered-system B D) Y Z = {!!}
 
   hom-fibered-system :
     {l1 l2 l3 l4 l5 l6 l7 l8 : Level}
     {A : system l1 l2} {A' : system l3 l4}
     (f : hom-system A A') (B : fibered-system l5 l6 A)
     (B' : fibered-system l7 l8 A') → UU (l1 ⊔ l2 ⊔ l5 ⊔ l6 ⊔ l7 ⊔ l8)
-  hom-fibered-system f B B' =
-    section-fibered-system f (constant-bifibered-system B B')
+  hom-fibered-system f B B' = {!!}
 
   id-hom-fibered-system :
     {l1 l2 l3 l4 : Level}
     {A : system l1 l2} (B : fibered-system l3 l4 A) →
     hom-fibered-system (id-hom-system A) B B
-  section-fibered-system.type (id-hom-fibered-system B) = id
-  section-fibered-system.element (id-hom-fibered-system B) = id
-  section-fibered-system.slice (id-hom-fibered-system B) Y =
-    id-hom-fibered-system (fibered-system.slice B Y)
+  section-fibered-system.type (id-hom-fibered-system B) = {!!}
 
   comp-hom-fibered-system :
     {l1 l2 l3 l4 l5 l6 l7 l8 l9 l10 l11 l12 : Level}
@@ -227,16 +177,7 @@ module fibered where
     {F : fibered-system l11 l12 C}
     (k : hom-fibered-system g E F) (h : hom-fibered-system f D E) →
     hom-fibered-system (comp-hom-system g f) D F
-  section-fibered-system.type (comp-hom-fibered-system k h) Y =
-    section-fibered-system.type k
-      ( section-fibered-system.type h Y)
-  section-fibered-system.element (comp-hom-fibered-system k h) y =
-    section-fibered-system.element k
-      ( section-fibered-system.element h y)
-  section-fibered-system.slice (comp-hom-fibered-system k h) Y =
-    comp-hom-fibered-system
-      ( section-fibered-system.slice k (section-fibered-system.type h Y))
-      ( section-fibered-system.slice h Y)
+  section-fibered-system.type (comp-hom-fibered-system k h) Y = {!!}
 
   htpy-hom-fibered-system :
     {l1 l2 l3 l4 l5 l6 l7 l8 : Level} {A : system l1 l2}
@@ -244,7 +185,7 @@ module fibered where
     {f f' : hom-system A C} (H : htpy-hom-system f f')
     (g : hom-fibered-system f B D) (g' : hom-fibered-system f' B D) →
     UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l7 ⊔ l8)
-  htpy-hom-fibered-system H g g' = htpy-section-fibered-system H g g'
+  htpy-hom-fibered-system H g g' = {!!}
 ```
 
 ### Weakening structure on fibered systems
@@ -704,20 +645,7 @@ generic elements to be equipped with generic elements.
   total-type-theory :
     {l1 l2 l3 l4 : Level} {A : type-theory l1 l2}
     (B : fibered-type-theory l3 l4 A) → type-theory (l1 ⊔ l3) (l2 ⊔ l4)
-  type-theory.sys (total-type-theory {A = A} B) =
-    total-system (type-theory.sys A) (fibered-type-theory.sys B)
-  type-theory.W (total-type-theory {A = A} B) = {!!}
-  type-theory.S (total-type-theory {A = A} B) = {!!}
-  type-theory.δ (total-type-theory {A = A} B) = {!!}
-  type-theory.WW (total-type-theory {A = A} B) = {!!}
-  type-theory.SS (total-type-theory {A = A} B) = {!!}
-  type-theory.WS (total-type-theory {A = A} B) = {!!}
-  type-theory.SW (total-type-theory {A = A} B) = {!!}
-  type-theory.Wδ (total-type-theory {A = A} B) = {!!}
-  type-theory.Sδ (total-type-theory {A = A} B) = {!!}
-  type-theory.S!W (total-type-theory {A = A} B) = {!!}
-  type-theory.δid (total-type-theory {A = A} B) = {!!}
-  type-theory.Sδ! (total-type-theory {A = A} B) = {!!}
+  type-theory.sys (total-type-theory {A = A} B) = {!!}
 -}
 
 {-

@@ -94,12 +94,7 @@ module _
   where
 
   horizontal-coherence-prism-maps : UU (l1 ⊔ l3')
-  horizontal-coherence-prism-maps =
-    ( ( hC ·l left) ∙h sq-front) ~
-    ( ( pasting-vertical-coherence-square-maps hA h h' hB g g' hC
-        ( sq-top)
-        ( sq-bottom)) ∙h
-      ( right ·r hA))
+  horizontal-coherence-prism-maps = {!!}
 ```
 
 ### Vertical commuting prisms of maps
@@ -128,12 +123,7 @@ module _
     where
 
     vertical-coherence-prism-maps : UU (l1 ⊔ l3')
-    vertical-coherence-prism-maps =
-      ( ( bottom ·r hA) ∙h
-        ( pasting-horizontal-coherence-square-maps h g hA hB hC h' g'
-          ( left)
-          ( right))) ~
-      ( front ∙h (hC ·l top))
+    vertical-coherence-prism-maps = {!!}
 
   module _
     ( top : coherence-triangle-maps f g h)
@@ -144,7 +134,5 @@ module _
     where
 
     vertical-coherence-prism-maps' : UU (l1 ⊔ l3')
-    vertical-coherence-prism-maps' =
-      ( inv-front ∙h ((bottom ·r hA) ∙h (g' ·l left))) ~
-      ( (hC ·l top) ∙h (inv-right ·r h))
+    vertical-coherence-prism-maps' = {!!}
 ```

@@ -45,12 +45,7 @@ module _
 
   obj-subst-action-Group :
     {l3 : Level} → action-Group H l3 → action-Group G l3
-  pr1 (obj-subst-action-Group X) = set-action-Group H X
-  pr2 (obj-subst-action-Group X) =
-    comp-hom-Group G H
-      ( symmetric-Group (set-action-Group H X))
-      ( pr2 X)
-      ( f)
+  pr1 (obj-subst-action-Group X) = {!!}
 
   hom-subst-action-Group :
     {l3 l4 : Level}
@@ -59,15 +54,14 @@ module _
     hom-action-Group G
       ( obj-subst-action-Group X)
       ( obj-subst-action-Group Y)
-  pr1 (hom-subst-action-Group X Y h) = pr1 h
-  pr2 (hom-subst-action-Group X Y h) x = pr2 h (map-hom-Group G H f x)
+  pr1 (hom-subst-action-Group X Y h) = {!!}
 
   preserves-id-subst-action-Group :
     {l3 : Level} (X : action-Group H l3) →
     Id
       ( hom-subst-action-Group X X (id-hom-action-Group H X))
       ( id-hom-action-Group G (obj-subst-action-Group X))
-  preserves-id-subst-action-Group X = refl
+  preserves-id-subst-action-Group X = {!!}
 
   preserves-comp-subst-action-Group :
     {l3 l4 l5 : Level} (X : action-Group H l3)
@@ -83,22 +77,13 @@ module _
         ( obj-subst-action-Group Z)
         ( hom-subst-action-Group Y Z g)
         ( hom-subst-action-Group X Y f))
-  preserves-comp-subst-action-Group X Y Z g f = refl
+  preserves-comp-subst-action-Group X Y Z g f = {!!}
 
   subst-action-Group :
     functor-Large-Precategory (λ l → l)
       ( action-Group-Large-Precategory H)
       ( action-Group-Large-Precategory G)
-  obj-functor-Large-Precategory subst-action-Group =
-    obj-subst-action-Group
-  hom-functor-Large-Precategory subst-action-Group {X = X} {Y} =
-    hom-subst-action-Group X Y
-  preserves-comp-functor-Large-Precategory subst-action-Group
-    {l1} {l2} {l3} {X} {Y} {Z} =
-    preserves-comp-subst-action-Group X Y Z
-  preserves-id-functor-Large-Precategory
-    subst-action-Group {l1} {X} =
-    preserves-id-subst-action-Group X
+  obj-functor-Large-Precategory subst-action-Group = {!!}
 ```
 
 ## Properties
@@ -112,19 +97,16 @@ module _
 
   preset-obj-left-adjoint-subst-action-Group :
     {l3 : Level} → action-Group G l3 → Set (l2 ⊔ l3)
-  preset-obj-left-adjoint-subst-action-Group X =
-    prod-Set (set-Group H) (set-action-Group G X)
+  preset-obj-left-adjoint-subst-action-Group X = {!!}
 
   pretype-obj-left-adjoint-subst-action-Group :
     {l3 : Level} → action-Group G l3 → UU (l2 ⊔ l3)
-  pretype-obj-left-adjoint-subst-action-Group X =
-    type-Set (preset-obj-left-adjoint-subst-action-Group X)
+  pretype-obj-left-adjoint-subst-action-Group X = {!!}
 
   is-set-pretype-obj-left-adjoint-subst-action-Group :
     {l3 : Level} (X : action-Group G l3) →
     is-set (pretype-obj-left-adjoint-subst-action-Group X)
-  is-set-pretype-obj-left-adjoint-subst-action-Group X =
-    is-set-type-Set (preset-obj-left-adjoint-subst-action-Group X)
+  is-set-pretype-obj-left-adjoint-subst-action-Group X = {!!}
 
   equivalence-relation-obj-left-adjoint-subst-action-Group :
     {l3 : Level} (X : action-Group G l3) →
@@ -134,82 +116,10 @@ module _
   pr1
     ( equivalence-relation-obj-left-adjoint-subst-action-Group X)
     ( h , x)
-    ( h' , x') =
-    ∃-Prop
-      ( type-Group G)
-      ( λ g →
-        ( Id (mul-Group H (map-hom-Group G H f g) h) h') ×
-        ( Id (mul-action-Group G X g x) x'))
-  pr1
-    ( pr2 (equivalence-relation-obj-left-adjoint-subst-action-Group X))
-    ( h , x) =
-    intro-∃
-      ( unit-Group G)
-      ( pair
-        ( ( ap (mul-Group' H h) (preserves-unit-hom-Group G H f)) ∙
-          ( left-unit-law-mul-Group H h))
-        ( preserves-unit-mul-action-Group G X x))
-  pr1
-    ( pr2
-      ( pr2
-        ( equivalence-relation-obj-left-adjoint-subst-action-Group X)))
-    ( h , x)
-    ( h' , x')
-    ( e) =
-    apply-universal-property-trunc-Prop e
-      ( pr1
-        ( equivalence-relation-obj-left-adjoint-subst-action-Group X)
-        ( h' , x')
-        ( h , x))
-      ( λ (g , p , q) →
-        intro-∃
-          ( inv-Group G g)
-          ( ( ( ap
-                ( mul-Group' H h')
-                ( preserves-inv-hom-Group G H f)) ∙
-              ( inv (transpose-eq-mul-Group' H p))) ,
-            ( inv (transpose-eq-mul-action-Group G X g x x' q))))
-  pr2
-    ( pr2
-      ( pr2
-        ( equivalence-relation-obj-left-adjoint-subst-action-Group X)))
-    ( h , x)
-    ( h' , x')
-    ( h'' , x'')
-    ( d)
-    ( e) =
-    apply-universal-property-trunc-Prop e
-      ( pr1
-        ( equivalence-relation-obj-left-adjoint-subst-action-Group X)
-        ( h , x)
-        ( h'' , x''))
-      ( λ (g , p , q) →
-        apply-universal-property-trunc-Prop d
-          ( pr1
-            ( equivalence-relation-obj-left-adjoint-subst-action-Group
-              ( X))
-            ( h , x)
-            ( h'' , x''))
-          ( λ (g' , p' , q') →
-            intro-∃
-              ( mul-Group G g' g)
-              ( ( ( ap
-                    ( mul-Group' H h)
-                    ( preserves-mul-hom-Group G H f)) ∙
-                  ( associative-mul-Group H
-                    ( map-hom-Group G H f g')
-                    ( map-hom-Group G H f g)
-                    ( h)) ∙
-                  ( ap (mul-Group H (map-hom-Group G H f g')) p) ∙
-                  ( p')) ,
-                ( ( preserves-mul-action-Group G X g' g x) ∙
-                  ( ap (mul-action-Group G X g') q) ∙
-                  ( q')))))
+    ( h' , x') = {!!}
 
   set-left-adjoint-subst-action-Group :
     {l3 : Level} → action-Group G l3 →
     Set (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  set-left-adjoint-subst-action-Group X =
-    equivalence-class-Set
-      ( equivalence-relation-obj-left-adjoint-subst-action-Group X)
+  set-left-adjoint-subst-action-Group X = {!!}
 ```

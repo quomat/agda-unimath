@@ -44,9 +44,7 @@ module _
   dependent-binary-homotopy :
     ((x : A) (y : B x) → D x y (f x y)) →
     ((x : A) (y : B x) → D x y (g x y)) → UU (l1 ⊔ l2 ⊔ l4)
-  dependent-binary-homotopy f' g' =
-    (x : A) (y : B x) →
-    dependent-identification (D x y) (H x y) (f' x y) (g' x y)
+  dependent-binary-homotopy f' g' = {!!}
 ```
 
 ### The reflexive dependent binary homotopy
@@ -61,5 +59,5 @@ module _
   refl-dependent-binary-homotopy :
     {f' : (x : A) (y : B x) → D x y (f x y)} →
     dependent-binary-homotopy D (refl-binary-htpy f) f' f'
-  refl-dependent-binary-homotopy {f'} = refl-binary-htpy f'
+  refl-dependent-binary-homotopy {f'} = {!!}
 ```

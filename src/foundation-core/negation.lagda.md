@@ -24,10 +24,10 @@ type `A` is the type `A → empty`.
 
 ```agda
 ¬ : {l : Level} → UU l → UU l
-¬ A = A → empty
+¬ A = {!!}
 
 map-neg :
   {l1 l2 : Level} {P : UU l1} {Q : UU l2} →
   (P → Q) → (¬ Q → ¬ P)
-map-neg f nq p = nq (f p)
+map-neg f nq p = {!!}
 ```

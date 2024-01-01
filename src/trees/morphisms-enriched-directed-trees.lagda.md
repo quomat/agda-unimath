@@ -38,34 +38,7 @@ hom-Enriched-Directed-Tree :
   {l1 l2 l3 l4 l5 l6 : Level} (A : UU l1) (B : A → UU l2) →
   Enriched-Directed-Tree l3 l4 A B → Enriched-Directed-Tree l5 l6 A B →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6)
-hom-Enriched-Directed-Tree A B S T =
-  Σ ( hom-Directed-Tree
-      ( directed-tree-Enriched-Directed-Tree A B S)
-      ( directed-tree-Enriched-Directed-Tree A B T))
-    ( λ f →
-      Σ ( coherence-triangle-maps
-          ( shape-Enriched-Directed-Tree A B S)
-          ( shape-Enriched-Directed-Tree A B T)
-          ( node-hom-Directed-Tree
-            ( directed-tree-Enriched-Directed-Tree A B S)
-            ( directed-tree-Enriched-Directed-Tree A B T)
-            ( f)))
-        ( λ H →
-          ( x : node-Enriched-Directed-Tree A B S) →
-          coherence-square-maps
-            ( tr B (H x))
-            ( map-enrichment-Enriched-Directed-Tree A B S x)
-            ( map-enrichment-Enriched-Directed-Tree A B T
-              ( node-hom-Directed-Tree
-                ( directed-tree-Enriched-Directed-Tree A B S)
-                ( directed-tree-Enriched-Directed-Tree A B T)
-                ( f)
-                ( x)))
-            ( direct-predecessor-hom-Directed-Tree
-              ( directed-tree-Enriched-Directed-Tree A B S)
-              ( directed-tree-Enriched-Directed-Tree A B T)
-              ( f)
-              ( x))))
+hom-Enriched-Directed-Tree A B S T = {!!}
 
 module _
   {l1 l2 l3 l4 l5 l6 : Level} (A : UU l1) (B : A → UU l2)
@@ -77,15 +50,11 @@ module _
     hom-Directed-Tree
       ( directed-tree-Enriched-Directed-Tree A B S)
       ( directed-tree-Enriched-Directed-Tree A B T)
-  directed-tree-hom-Enriched-Directed-Tree = pr1 f
+  directed-tree-hom-Enriched-Directed-Tree = {!!}
 
   node-hom-Enriched-Directed-Tree :
     node-Enriched-Directed-Tree A B S → node-Enriched-Directed-Tree A B T
-  node-hom-Enriched-Directed-Tree =
-    node-hom-Directed-Tree
-      ( directed-tree-Enriched-Directed-Tree A B S)
-      ( directed-tree-Enriched-Directed-Tree A B T)
-      ( directed-tree-hom-Enriched-Directed-Tree)
+  node-hom-Enriched-Directed-Tree = {!!}
 
   edge-hom-Enriched-Directed-Tree :
     {x y : node-Enriched-Directed-Tree A B S} →
@@ -93,11 +62,7 @@ module _
     edge-Enriched-Directed-Tree A B T
       ( node-hom-Enriched-Directed-Tree x)
       ( node-hom-Enriched-Directed-Tree y)
-  edge-hom-Enriched-Directed-Tree =
-    edge-hom-Directed-Tree
-      ( directed-tree-Enriched-Directed-Tree A B S)
-      ( directed-tree-Enriched-Directed-Tree A B T)
-      ( directed-tree-hom-Enriched-Directed-Tree)
+  edge-hom-Enriched-Directed-Tree = {!!}
 
   direct-predecessor-hom-Enriched-Directed-Tree :
     (x : node-Enriched-Directed-Tree A B S) →
@@ -107,18 +72,14 @@ module _
       ( λ y →
         edge-Enriched-Directed-Tree A B T y
           ( node-hom-Enriched-Directed-Tree x))
-  direct-predecessor-hom-Enriched-Directed-Tree =
-    direct-predecessor-hom-Directed-Tree
-      ( directed-tree-Enriched-Directed-Tree A B S)
-      ( directed-tree-Enriched-Directed-Tree A B T)
-      ( directed-tree-hom-Enriched-Directed-Tree)
+  direct-predecessor-hom-Enriched-Directed-Tree = {!!}
 
   shape-hom-Enriched-Directed-Tree :
     coherence-triangle-maps
       ( shape-Enriched-Directed-Tree A B S)
       ( shape-Enriched-Directed-Tree A B T)
       ( node-hom-Enriched-Directed-Tree)
-  shape-hom-Enriched-Directed-Tree = pr1 (pr2 f)
+  shape-hom-Enriched-Directed-Tree = {!!}
 
   enrichment-hom-Enriched-Directed-Tree :
     ( x : node-Enriched-Directed-Tree A B S) →
@@ -132,7 +93,7 @@ module _
           ( directed-tree-hom-Enriched-Directed-Tree)
           ( x)))
       ( direct-predecessor-hom-Enriched-Directed-Tree x)
-  enrichment-hom-Enriched-Directed-Tree = pr2 (pr2 f)
+  enrichment-hom-Enriched-Directed-Tree = {!!}
 ```
 
 ### Homotopies of morphisms of enriched directed trees
@@ -145,60 +106,7 @@ module _
   where
 
   htpy-hom-Enriched-Directed-Tree : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6)
-  htpy-hom-Enriched-Directed-Tree =
-    Σ ( htpy-hom-Directed-Tree
-        ( directed-tree-Enriched-Directed-Tree A B S)
-        ( directed-tree-Enriched-Directed-Tree A B T)
-        ( directed-tree-hom-Enriched-Directed-Tree A B S T f)
-        ( directed-tree-hom-Enriched-Directed-Tree A B S T g))
-      ( λ H →
-        Σ ( ( ( shape-hom-Enriched-Directed-Tree A B S T f) ∙h
-              ( ( shape-Enriched-Directed-Tree A B T) ·l
-                ( node-htpy-hom-Directed-Tree
-                  ( directed-tree-Enriched-Directed-Tree A B S)
-                  ( directed-tree-Enriched-Directed-Tree A B T)
-                  ( directed-tree-hom-Enriched-Directed-Tree A B S T f)
-                  ( directed-tree-hom-Enriched-Directed-Tree A B S T g)
-                  ( H)))) ~
-            ( shape-hom-Enriched-Directed-Tree A B S T g))
-          ( λ K →
-            ( x : node-Enriched-Directed-Tree A B S) →
-            ( ( ( tot
-                  ( λ y →
-                    tr
-                      ( edge-Enriched-Directed-Tree A B T y)
-                      ( node-htpy-hom-Directed-Tree
-                        ( directed-tree-Enriched-Directed-Tree A B S)
-                        ( directed-tree-Enriched-Directed-Tree A B T)
-                        ( directed-tree-hom-Enriched-Directed-Tree A B S T f)
-                        ( directed-tree-hom-Enriched-Directed-Tree A B S T g)
-                        ( H)
-                        ( x)))) ·l
-                ( enrichment-hom-Enriched-Directed-Tree A B S T f x)) ∙h
-              ( ( ( coherence-square-map-enrichment-Enriched-Directed-Tree
-                    A B T (pr1 H x)) ·r
-                  ( tr B (shape-hom-Enriched-Directed-Tree A B S T f x))) ∙h
-                ( λ b →
-                  ap
-                    ( map-enrichment-Enriched-Directed-Tree A B T
-                      ( node-hom-Enriched-Directed-Tree A B S T g x))
-                    ( ( inv
-                        ( tr-concat
-                          ( shape-hom-Enriched-Directed-Tree A B S T f x)
-                          ( ap
-                            ( shape-Enriched-Directed-Tree A B T)
-                            ( pr1 H x))
-                          ( b))) ∙
-                      ( ap (λ q → tr B q b) (K x)))))) ~
-            ( ( ( direct-predecessor-htpy-hom-Directed-Tree
-                  ( directed-tree-Enriched-Directed-Tree A B S)
-                  ( directed-tree-Enriched-Directed-Tree A B T)
-                  ( directed-tree-hom-Enriched-Directed-Tree A B S T f)
-                  ( directed-tree-hom-Enriched-Directed-Tree A B S T g)
-                  ( H)
-                  ( x)) ·r
-                ( map-enrichment-Enriched-Directed-Tree A B S x)) ∙h
-              ( enrichment-hom-Enriched-Directed-Tree A B S T g x))))
+  htpy-hom-Enriched-Directed-Tree = {!!}
 ```
 
 ### Identity morphisms of enriched directed trees
@@ -211,8 +119,5 @@ module _
 
   id-hom-Enriched-Directed-Tree :
     hom-Enriched-Directed-Tree A B T T
-  pr1 id-hom-Enriched-Directed-Tree =
-    id-hom-Directed-Tree (directed-tree-Enriched-Directed-Tree A B T)
-  pr1 (pr2 id-hom-Enriched-Directed-Tree) = refl-htpy
-  pr2 (pr2 id-hom-Enriched-Directed-Tree) x = refl-htpy
+  pr1 id-hom-Enriched-Directed-Tree = {!!}
 ```

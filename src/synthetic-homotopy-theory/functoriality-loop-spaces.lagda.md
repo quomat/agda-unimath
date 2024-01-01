@@ -40,38 +40,21 @@ module _
   where
 
   map-Ω : type-Ω A → type-Ω B
-  map-Ω p =
-    tr-type-Ω
-      ( preserves-point-pointed-map f)
-      ( ap (map-pointed-map f) p)
+  map-Ω p = {!!}
 
   preserves-refl-map-Ω : map-Ω refl ＝ refl
-  preserves-refl-map-Ω = preserves-refl-tr-Ω (pr2 f)
+  preserves-refl-map-Ω = {!!}
 
   pointed-map-Ω : Ω A →∗ Ω B
-  pr1 pointed-map-Ω = map-Ω
-  pr2 pointed-map-Ω = preserves-refl-map-Ω
+  pr1 pointed-map-Ω = {!!}
 
   preserves-mul-map-Ω :
     {x y : type-Ω A} → map-Ω (mul-Ω A x y) ＝ mul-Ω B (map-Ω x) (map-Ω y)
-  preserves-mul-map-Ω {x} {y} =
-    ( ap
-      ( tr-type-Ω (preserves-point-pointed-map f))
-      ( ap-concat (map-pointed-map f) x y)) ∙
-    ( preserves-mul-tr-Ω
-      ( preserves-point-pointed-map f)
-      ( ap (map-pointed-map f) x)
-      ( ap (map-pointed-map f) y))
+  preserves-mul-map-Ω {x} {y} = {!!}
 
   preserves-inv-map-Ω :
     (x : type-Ω A) → map-Ω (inv-Ω A x) ＝ inv-Ω B (map-Ω x)
-  preserves-inv-map-Ω x =
-    ( ap
-      ( tr-type-Ω (preserves-point-pointed-map f))
-      ( ap-inv (map-pointed-map f) x)) ∙
-    ( preserves-inv-tr-Ω
-      ( preserves-point-pointed-map f)
-      ( ap (map-pointed-map f) x))
+  preserves-inv-map-Ω x = {!!}
 ```
 
 ### Faithful pointed maps induce embeddings on loop spaces
@@ -83,20 +66,11 @@ module _
 
   is-emb-map-Ω :
     (f : A →∗ B) → is-faithful (map-pointed-map f) → is-emb (map-Ω f)
-  is-emb-map-Ω f H =
-    is-emb-comp
-      ( tr-type-Ω (preserves-point-pointed-map f))
-      ( ap (map-pointed-map f))
-      ( is-emb-is-equiv (is-equiv-tr-type-Ω (preserves-point-pointed-map f)))
-      ( H (point-Pointed-Type A) (point-Pointed-Type A))
+  is-emb-map-Ω f H = {!!}
 
   emb-Ω :
     faithful-pointed-map A B → type-Ω A ↪ type-Ω B
-  pr1 (emb-Ω f) = map-Ω (pointed-map-faithful-pointed-map f)
-  pr2 (emb-Ω f) =
-    is-emb-map-Ω
-      ( pointed-map-faithful-pointed-map f)
-      ( is-faithful-faithful-pointed-map f)
+  pr1 (emb-Ω f) = {!!}
 ```
 
 ### Pointed embeddings induce pointed equivalences on loop spaces
@@ -108,20 +82,13 @@ module _
   where
 
   is-equiv-map-Ω-is-emb : is-equiv (map-Ω f)
-  is-equiv-map-Ω-is-emb =
-    is-equiv-comp
-      ( tr-type-Ω (preserves-point-pointed-map f))
-      ( ap (map-pointed-map f))
-      ( is-emb-f (point-Pointed-Type A) (point-Pointed-Type A))
-      ( is-equiv-tr-type-Ω (preserves-point-pointed-map f))
+  is-equiv-map-Ω-is-emb = {!!}
 
   equiv-map-Ω-is-emb : type-Ω A ≃ type-Ω B
-  pr1 equiv-map-Ω-is-emb = map-Ω f
-  pr2 equiv-map-Ω-is-emb = is-equiv-map-Ω-is-emb
+  pr1 equiv-map-Ω-is-emb = {!!}
 
   pointed-equiv-pointed-map-Ω-is-emb : Ω A ≃∗ Ω B
-  pr1 pointed-equiv-pointed-map-Ω-is-emb = equiv-map-Ω-is-emb
-  pr2 pointed-equiv-pointed-map-Ω-is-emb = preserves-refl-map-Ω f
+  pr1 pointed-equiv-pointed-map-Ω-is-emb = {!!}
 ```
 
 ### The operator `pointed-map-Ω` preserves equivalences
@@ -134,10 +101,7 @@ module _
 
   equiv-map-Ω-pointed-equiv :
     type-Ω A ≃ type-Ω B
-  equiv-map-Ω-pointed-equiv =
-    equiv-map-Ω-is-emb
-      ( pointed-map-pointed-equiv e)
-      ( is-emb-is-equiv (is-equiv-map-equiv-pointed-equiv e))
+  equiv-map-Ω-pointed-equiv = {!!}
 ```
 
 ### `pointed-map-Ω` preserves pointed equivalences
@@ -150,7 +114,5 @@ module _
 
   pointed-equiv-Ω-pointed-equiv :
     Ω A ≃∗ Ω B
-  pr1 pointed-equiv-Ω-pointed-equiv = equiv-map-Ω-pointed-equiv e
-  pr2 pointed-equiv-Ω-pointed-equiv =
-    preserves-refl-map-Ω (pointed-map-pointed-equiv e)
+  pr1 pointed-equiv-Ω-pointed-equiv = {!!}
 ```

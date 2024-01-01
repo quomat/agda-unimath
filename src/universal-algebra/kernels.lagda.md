@@ -48,44 +48,13 @@ module _
 
   rel-prop-kernel-hom-Algebra :
     Relation-Prop l4 (type-Algebra Sg Th Alg1)
-  pr1 (rel-prop-kernel-hom-Algebra x y) =
-    map-hom-Algebra Sg Th Alg1 Alg2 F x ＝
-      map-hom-Algebra Sg Th Alg1 Alg2 F y
-  pr2 (rel-prop-kernel-hom-Algebra x y) =
-    is-set-Algebra Sg Th Alg2 _ _
+  pr1 (rel-prop-kernel-hom-Algebra x y) = {!!}
 
   equivalence-relation-kernel-hom-Algebra :
     equivalence-relation l4 (type-Algebra Sg Th Alg1)
-  pr1 equivalence-relation-kernel-hom-Algebra =
-    rel-prop-kernel-hom-Algebra
-  pr1 (pr2 equivalence-relation-kernel-hom-Algebra) _ = refl
-  pr1 (pr2 (pr2 equivalence-relation-kernel-hom-Algebra)) _ _ = inv
-  pr2 (pr2 (pr2 equivalence-relation-kernel-hom-Algebra)) _ _ _ f g = g ∙ f
+  pr1 equivalence-relation-kernel-hom-Algebra = {!!}
 
   kernel-hom-Algebra :
     congruence-Algebra Sg Th Alg1 l4
-  pr1 kernel-hom-Algebra = equivalence-relation-kernel-hom-Algebra
-  pr2 kernel-hom-Algebra op v v' p =
-    equational-reasoning
-      f (is-model-set-Algebra Sg Th Alg1 op v)
-      ＝ is-model-set-Algebra Sg Th Alg2 op (map-vec f v)
-        by preserves-operations-hom-Algebra Sg Th Alg1 Alg2 F op v
-      ＝ is-model-set-Algebra Sg Th Alg2 op (map-vec f v')
-        by
-          ap
-            ( is-model-set-Algebra Sg Th Alg2 op)
-            ( map-hom-Algebra-lemma (pr2 Sg op) v v' p)
-      ＝ f (is-model-set-Algebra Sg Th Alg1 op v')
-        by inv (preserves-operations-hom-Algebra Sg Th Alg1 Alg2 F op v')
-    where
-    f = map-hom-Algebra Sg Th Alg1 Alg2 F
-    map-hom-Algebra-lemma :
-      ( n : ℕ) →
-      ( v v' : vec (type-Algebra Sg Th Alg1) n) →
-      ( relation-holds-all-vec Sg Th Alg1
-        equivalence-relation-kernel-hom-Algebra v v') →
-      (map-vec f v) ＝ (map-vec f v')
-    map-hom-Algebra-lemma zero-ℕ empty-vec empty-vec p = refl
-    map-hom-Algebra-lemma (succ-ℕ n) (x ∷ v) (x' ∷ v') (p , p') =
-      ap-binary (_∷_) p (map-hom-Algebra-lemma n v v' p')
+  pr1 kernel-hom-Algebra = {!!}
 ```

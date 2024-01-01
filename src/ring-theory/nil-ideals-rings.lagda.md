@@ -33,18 +33,13 @@ module _
   where
 
   is-nil-left-ideal-ring-Prop : Prop (l1 ⊔ l2)
-  is-nil-left-ideal-ring-Prop =
-    Π-Prop
-      ( type-left-ideal-Ring R I)
-      ( λ x →
-        is-nilpotent-element-ring-Prop R (inclusion-left-ideal-Ring R I x))
+  is-nil-left-ideal-ring-Prop = {!!}
 
   is-nil-left-ideal-Ring : UU (l1 ⊔ l2)
-  is-nil-left-ideal-Ring = type-Prop is-nil-left-ideal-ring-Prop
+  is-nil-left-ideal-Ring = {!!}
 
   is-prop-is-nil-left-ideal-Ring : is-prop is-nil-left-ideal-Ring
-  is-prop-is-nil-left-ideal-Ring =
-    is-prop-type-Prop is-nil-left-ideal-ring-Prop
+  is-prop-is-nil-left-ideal-Ring = {!!}
 ```
 
 ### Nil right ideals
@@ -55,18 +50,13 @@ module _
   where
 
   is-nil-right-ideal-ring-Prop : Prop (l1 ⊔ l2)
-  is-nil-right-ideal-ring-Prop =
-    Π-Prop
-      ( type-right-ideal-Ring R I)
-      ( λ x →
-        is-nilpotent-element-ring-Prop R (inclusion-right-ideal-Ring R I x))
+  is-nil-right-ideal-ring-Prop = {!!}
 
   is-nil-right-ideal-Ring : UU (l1 ⊔ l2)
-  is-nil-right-ideal-Ring = type-Prop is-nil-right-ideal-ring-Prop
+  is-nil-right-ideal-Ring = {!!}
 
   is-prop-is-nil-right-ideal-Ring : is-prop is-nil-right-ideal-Ring
-  is-prop-is-nil-right-ideal-Ring =
-    is-prop-type-Prop is-nil-right-ideal-ring-Prop
+  is-prop-is-nil-right-ideal-Ring = {!!}
 ```
 
 ### Nil ideals
@@ -77,16 +67,11 @@ module _
   where
 
   is-nil-ideal-ring-Prop : Prop (l1 ⊔ l2)
-  is-nil-ideal-ring-Prop =
-    Π-Prop
-      ( type-ideal-Ring R I)
-      ( λ x →
-        is-nilpotent-element-ring-Prop R (inclusion-ideal-Ring R I x))
+  is-nil-ideal-ring-Prop = {!!}
 
   is-nil-ideal-Ring : UU (l1 ⊔ l2)
-  is-nil-ideal-Ring = type-Prop is-nil-ideal-ring-Prop
+  is-nil-ideal-Ring = {!!}
 
   is-prop-is-nil-ideal-Ring : is-prop is-nil-ideal-Ring
-  is-prop-is-nil-ideal-Ring =
-    is-prop-type-Prop is-nil-ideal-ring-Prop
+  is-prop-is-nil-ideal-Ring = {!!}
 ```

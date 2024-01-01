@@ -43,15 +43,7 @@ module _
   zariski-frame-Commutative-Ring :
     Large-Frame (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3) l1
   large-poset-Large-Frame
-    zariski-frame-Commutative-Ring =
-    radical-ideal-Commutative-Ring-Large-Poset A
-  is-large-meet-semilattice-Large-Frame
-    zariski-frame-Commutative-Ring =
-    is-large-meet-semilattice-radical-ideal-Commutative-Ring A
-  is-large-suplattice-Large-Frame zariski-frame-Commutative-Ring =
-    is-large-suplattice-radical-ideal-Commutative-Ring A
-  distributive-meet-sup-Large-Frame zariski-frame-Commutative-Ring =
-    distributive-intersection-join-family-of-radical-ideals-Commutative-Ring A
+    zariski-frame-Commutative-Ring = {!!}
 ```
 
 ### The Zariski locale
@@ -63,5 +55,5 @@ module _
 
   zariski-locale-Commutative-Ring :
     Large-Locale (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3) l1
-  zariski-locale-Commutative-Ring = zariski-frame-Commutative-Ring A
+  zariski-locale-Commutative-Ring = {!!}
 ```

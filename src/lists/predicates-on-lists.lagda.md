@@ -27,14 +27,13 @@ module _
 
   for-all-list-Prop :
     (l : list X) → Prop l2
-  for-all-list-Prop nil = raise-unit-Prop l2
-  for-all-list-Prop (cons x l) = prod-Prop (P x) (for-all-list-Prop l)
+  for-all-list-Prop nil = {!!}
 
   for-all-list :
     (l : list X) → UU l2
-  for-all-list l = type-Prop (for-all-list-Prop l)
+  for-all-list l = {!!}
 
   is-prop-for-all-list :
     (l : list X) → is-prop (for-all-list l)
-  is-prop-for-all-list l = is-prop-type-Prop (for-all-list-Prop l)
+  is-prop-for-all-list l = {!!}
 ```

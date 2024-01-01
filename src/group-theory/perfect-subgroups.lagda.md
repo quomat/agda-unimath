@@ -33,13 +33,13 @@ module _
   where
 
   is-perfect-prop-Subgroup : Prop (l1 ⊔ l2)
-  is-perfect-prop-Subgroup = is-perfect-prop-Group (group-Subgroup G H)
+  is-perfect-prop-Subgroup = {!!}
 
   is-perfect-Subgroup : UU (l1 ⊔ l2)
-  is-perfect-Subgroup = type-Prop is-perfect-prop-Subgroup
+  is-perfect-Subgroup = {!!}
 
   is-prop-is-perfect-Subgroup : is-prop is-perfect-Subgroup
-  is-prop-is-perfect-Subgroup = is-prop-type-Prop is-perfect-prop-Subgroup
+  is-prop-is-perfect-Subgroup = {!!}
 ```
 
 ## External links

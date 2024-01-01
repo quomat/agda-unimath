@@ -40,17 +40,7 @@ module _
 
   stereoisomerism-Enriched-Undirected-Graph :
     UU (lsuc lzero ⊔ l1 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6)
-  stereoisomerism-Enriched-Undirected-Graph =
-    Σ ( equiv-Undirected-Graph
-        ( undirected-graph-Enriched-Undirected-Graph A B G)
-        ( undirected-graph-Enriched-Undirected-Graph A B H))
-      ( λ e →
-        ( shape-vertex-Enriched-Undirected-Graph A B G) ~
-        ( ( shape-vertex-Enriched-Undirected-Graph A B H) ∘
-          ( vertex-equiv-Undirected-Graph
-            ( undirected-graph-Enriched-Undirected-Graph A B G)
-            ( undirected-graph-Enriched-Undirected-Graph A B H)
-            ( e))))
+  stereoisomerism-Enriched-Undirected-Graph = {!!}
 ```
 
 ## External links

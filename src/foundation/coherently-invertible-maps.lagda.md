@@ -39,59 +39,13 @@ abstract
   is-prop-is-coherently-invertible :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
     is-prop (is-coherently-invertible f)
-  is-prop-is-coherently-invertible {A = A} {B} f =
-    is-prop-is-proof-irrelevant
-      ( λ H →
-        is-contr-equiv'
-          ( Σ ( section f)
-              ( λ s →
-                Σ ( ( map-section f s ∘ f) ~ id)
-                  ( λ H →
-                    ( htpy-right-whisk (is-section-map-section f s) f) ~
-                    ( htpy-left-whisk f H))))
-          ( associative-Σ
-            ( B → A)
-            ( λ g → (f ∘ g) ~ id)
-            ( λ s →
-              Σ ( ( map-section f s ∘ f) ~ id)
-                ( λ H →
-                  ( htpy-right-whisk (is-section-map-section f s) f) ~
-                  ( htpy-left-whisk f H))))
-          ( is-contr-Σ
-            ( is-contr-section-is-equiv (is-equiv-is-coherently-invertible H))
-            ( section-is-coherently-invertible H)
-            ( is-contr-equiv'
-              ( (x : A) →
-                Σ ( map-inv-is-coherently-invertible H (f x) ＝ x)
-                  ( λ p →
-                    is-retraction-is-coherently-invertible H (f x) ＝ ap f p))
-              ( distributive-Π-Σ)
-              ( is-contr-Π
-                ( λ x →
-                  is-contr-equiv'
-                    ( fiber
-                      ( ap f)
-                      ( is-retraction-is-coherently-invertible H (f x)))
-                    ( equiv-tot
-                      ( λ p →
-                        equiv-inv
-                          ( ap f p)
-                          ( is-retraction-is-coherently-invertible H (f x))))
-                    ( is-contr-map-is-equiv
-                      ( is-emb-is-equiv
-                        ( is-equiv-is-coherently-invertible H)
-                        ( map-inv-is-coherently-invertible H (f x)) x)
-                      ( is-retraction-is-coherently-invertible H (f x))))))))
+  is-prop-is-coherently-invertible {A = A} {B} f = {!!}
 
 abstract
   is-equiv-is-coherently-invertible-is-equiv :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
     is-equiv (is-coherently-invertible-is-equiv {f = f})
-  is-equiv-is-coherently-invertible-is-equiv f =
-    is-equiv-is-prop
-      ( is-property-is-equiv f)
-      ( is-prop-is-coherently-invertible f)
-      ( is-equiv-is-coherently-invertible)
+  is-equiv-is-coherently-invertible-is-equiv f = {!!}
 ```
 
 ## See also

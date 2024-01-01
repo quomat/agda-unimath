@@ -45,17 +45,13 @@ module _
   where
 
   is-faithful-map-Precategory : UU (l1 ⊔ l2 ⊔ l4)
-  is-faithful-map-Precategory =
-    (x y : obj-Precategory C) → is-emb (hom-map-Precategory C D F {x} {y})
+  is-faithful-map-Precategory = {!!}
 
   is-prop-is-faithful-map-Precategory : is-prop is-faithful-map-Precategory
-  is-prop-is-faithful-map-Precategory =
-    is-prop-iterated-Π 2
-      ( λ x y → is-property-is-emb (hom-map-Precategory C D F {x} {y}))
+  is-prop-is-faithful-map-Precategory = {!!}
 
   is-faithful-prop-map-Precategory : Prop (l1 ⊔ l2 ⊔ l4)
-  pr1 is-faithful-prop-map-Precategory = is-faithful-map-Precategory
-  pr2 is-faithful-prop-map-Precategory = is-prop-is-faithful-map-Precategory
+  pr1 is-faithful-prop-map-Precategory = {!!}
 ```
 
 ### The type of faithful maps between two precategories
@@ -68,22 +64,20 @@ module _
   where
 
   faithful-map-Precategory : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  faithful-map-Precategory =
-    Σ (map-Precategory C D) (is-faithful-map-Precategory C D)
+  faithful-map-Precategory = {!!}
 
   map-faithful-map-Precategory :
     faithful-map-Precategory → map-Precategory C D
-  map-faithful-map-Precategory = pr1
+  map-faithful-map-Precategory = {!!}
 
   is-faithful-faithful-map-Precategory :
     (F : faithful-map-Precategory) →
     is-faithful-map-Precategory C D (map-faithful-map-Precategory F)
-  is-faithful-faithful-map-Precategory = pr2
+  is-faithful-faithful-map-Precategory = {!!}
 
   obj-faithful-map-Precategory :
     faithful-map-Precategory → obj-Precategory C → obj-Precategory D
-  obj-faithful-map-Precategory =
-    obj-map-Precategory C D ∘ map-faithful-map-Precategory
+  obj-faithful-map-Precategory = {!!}
 
   hom-faithful-map-Precategory :
     (F : faithful-map-Precategory) {x y : obj-Precategory C} →
@@ -91,8 +85,7 @@ module _
     hom-Precategory D
       ( obj-faithful-map-Precategory F x)
       ( obj-faithful-map-Precategory F y)
-  hom-faithful-map-Precategory =
-    hom-map-Precategory C D ∘ map-faithful-map-Precategory
+  hom-faithful-map-Precategory = {!!}
 ```
 
 ### The predicate of being injective on hom-sets on maps between precategories
@@ -106,23 +99,14 @@ module _
   where
 
   is-injective-hom-map-Precategory : UU (l1 ⊔ l2 ⊔ l4)
-  is-injective-hom-map-Precategory =
-    (x y : obj-Precategory C) → is-injective (hom-map-Precategory C D F {x} {y})
+  is-injective-hom-map-Precategory = {!!}
 
   is-prop-is-injective-hom-map-Precategory :
     is-prop is-injective-hom-map-Precategory
-  is-prop-is-injective-hom-map-Precategory =
-    is-prop-iterated-Π 2
-      ( λ x y →
-        is-prop-is-injective
-          ( is-set-hom-Precategory C x y)
-          ( hom-map-Precategory C D F {x} {y}))
+  is-prop-is-injective-hom-map-Precategory = {!!}
 
   is-injective-hom-prop-map-Precategory : Prop (l1 ⊔ l2 ⊔ l4)
-  pr1 is-injective-hom-prop-map-Precategory =
-    is-injective-hom-map-Precategory
-  pr2 is-injective-hom-prop-map-Precategory =
-    is-prop-is-injective-hom-map-Precategory
+  pr1 is-injective-hom-prop-map-Precategory = {!!}
 ```
 
 ## Properties
@@ -140,50 +124,30 @@ module _
   is-injective-hom-is-faithful-map-Precategory :
     is-faithful-map-Precategory C D F →
     is-injective-hom-map-Precategory C D F
-  is-injective-hom-is-faithful-map-Precategory is-faithful-F x y =
-    is-injective-is-emb (is-faithful-F x y)
+  is-injective-hom-is-faithful-map-Precategory is-faithful-F x y = {!!}
 
   is-faithful-is-injective-hom-map-Precategory :
     is-injective-hom-map-Precategory C D F →
     is-faithful-map-Precategory C D F
-  is-faithful-is-injective-hom-map-Precategory is-injective-hom-F x y =
-    is-emb-is-injective
-      ( is-set-hom-Precategory D
-        ( obj-map-Precategory C D F x)
-        ( obj-map-Precategory C D F y))
-      ( is-injective-hom-F x y)
+  is-faithful-is-injective-hom-map-Precategory is-injective-hom-F x y = {!!}
 
   is-equiv-is-injective-hom-is-faithful-map-Precategory :
     is-equiv is-injective-hom-is-faithful-map-Precategory
-  is-equiv-is-injective-hom-is-faithful-map-Precategory =
-    is-equiv-is-prop
-      ( is-prop-is-faithful-map-Precategory C D F)
-      ( is-prop-is-injective-hom-map-Precategory C D F)
-      ( is-faithful-is-injective-hom-map-Precategory)
+  is-equiv-is-injective-hom-is-faithful-map-Precategory = {!!}
 
   is-equiv-is-faithful-is-injective-hom-map-Precategory :
     is-equiv is-faithful-is-injective-hom-map-Precategory
-  is-equiv-is-faithful-is-injective-hom-map-Precategory =
-    is-equiv-is-prop
-      ( is-prop-is-injective-hom-map-Precategory C D F)
-      ( is-prop-is-faithful-map-Precategory C D F)
-      ( is-injective-hom-is-faithful-map-Precategory)
+  is-equiv-is-faithful-is-injective-hom-map-Precategory = {!!}
 
   equiv-is-injective-hom-is-faithful-map-Precategory :
     is-faithful-map-Precategory C D F ≃
     is-injective-hom-map-Precategory C D F
-  pr1 equiv-is-injective-hom-is-faithful-map-Precategory =
-    is-injective-hom-is-faithful-map-Precategory
-  pr2 equiv-is-injective-hom-is-faithful-map-Precategory =
-    is-equiv-is-injective-hom-is-faithful-map-Precategory
+  pr1 equiv-is-injective-hom-is-faithful-map-Precategory = {!!}
 
   equiv-is-faithful-is-injective-hom-map-Precategory :
     is-injective-hom-map-Precategory C D F ≃
     is-faithful-map-Precategory C D F
-  pr1 equiv-is-faithful-is-injective-hom-map-Precategory =
-    is-faithful-is-injective-hom-map-Precategory
-  pr2 equiv-is-faithful-is-injective-hom-map-Precategory =
-    is-equiv-is-faithful-is-injective-hom-map-Precategory
+  pr1 equiv-is-faithful-is-injective-hom-map-Precategory = {!!}
 ```
 
 ## See also

@@ -35,8 +35,7 @@ module _
   where
 
   Full-Large-Subcategory : UUω
-  Full-Large-Subcategory =
-    Full-Large-Subprecategory γ (large-precategory-Large-Category C)
+  Full-Large-Subcategory = {!!}
 
 module _
   {α : Level → Level} {β : Level → Level → Level} {γ : Level → Level}
@@ -46,49 +45,33 @@ module _
 
   large-precategory-Full-Large-Subcategory :
     Large-Precategory (λ l → α l ⊔ γ l) β
-  large-precategory-Full-Large-Subcategory =
-    large-precategory-Full-Large-Subprecategory
-      ( large-precategory-Large-Category C)
-      ( P)
+  large-precategory-Full-Large-Subcategory = {!!}
 
   is-in-obj-Full-Large-Subcategory :
     {l : Level} (X : obj-Large-Category C l) → UU (γ l)
-  is-in-obj-Full-Large-Subcategory =
-    is-in-obj-Full-Large-Subprecategory (large-precategory-Large-Category C) P
+  is-in-obj-Full-Large-Subcategory = {!!}
 
   is-prop-is-in-obj-Full-Large-Subcategory :
     {l : Level} (X : obj-Large-Category C l) →
     is-prop (is-in-obj-Full-Large-Subcategory X)
-  is-prop-is-in-obj-Full-Large-Subcategory =
-    is-prop-is-in-obj-Full-Large-Subprecategory
-      ( large-precategory-Large-Category C)
-      ( P)
+  is-prop-is-in-obj-Full-Large-Subcategory = {!!}
 
   obj-Full-Large-Subcategory : (l : Level) → UU (α l ⊔ γ l)
-  obj-Full-Large-Subcategory =
-    obj-Full-Large-Subprecategory
-      ( large-precategory-Large-Category C)
-      ( P)
+  obj-Full-Large-Subcategory = {!!}
 
   hom-set-Full-Large-Subcategory :
     {l1 l2 : Level}
     (X : obj-Full-Large-Subcategory l1)
     (Y : obj-Full-Large-Subcategory l2) →
     Set (β l1 l2)
-  hom-set-Full-Large-Subcategory =
-    hom-set-Full-Large-Subprecategory
-      ( large-precategory-Large-Category C)
-      ( P)
+  hom-set-Full-Large-Subcategory = {!!}
 
   hom-Full-Large-Subcategory :
     {l1 l2 : Level}
     (X : obj-Full-Large-Subcategory l1)
     (Y : obj-Full-Large-Subcategory l2) →
     UU (β l1 l2)
-  hom-Full-Large-Subcategory =
-    hom-Full-Large-Subprecategory
-      ( large-precategory-Large-Category C)
-      ( P)
+  hom-Full-Large-Subcategory = {!!}
 
   comp-hom-Full-Large-Subcategory :
     {l1 l2 l3 : Level}
@@ -97,18 +80,12 @@ module _
     (Z : obj-Full-Large-Subcategory l3) →
     hom-Full-Large-Subcategory Y Z → hom-Full-Large-Subcategory X Y →
     hom-Full-Large-Subcategory X Z
-  comp-hom-Full-Large-Subcategory =
-    comp-hom-Full-Large-Subprecategory
-      ( large-precategory-Large-Category C)
-      ( P)
+  comp-hom-Full-Large-Subcategory = {!!}
 
   id-hom-Full-Large-Subcategory :
     {l1 : Level} (X : obj-Full-Large-Subcategory l1) →
     hom-Full-Large-Subcategory X X
-  id-hom-Full-Large-Subcategory =
-    id-hom-Full-Large-Subprecategory
-      ( large-precategory-Large-Category C)
-      ( P)
+  id-hom-Full-Large-Subcategory = {!!}
 
   associative-comp-hom-Full-Large-Subcategory :
     {l1 l2 l3 l4 : Level}
@@ -125,10 +102,7 @@ module _
     comp-hom-Full-Large-Subcategory X Z W
       ( h)
       ( comp-hom-Full-Large-Subcategory X Y Z g f)
-  associative-comp-hom-Full-Large-Subcategory =
-    associative-comp-hom-Full-Large-Subprecategory
-      ( large-precategory-Large-Category C)
-      ( P)
+  associative-comp-hom-Full-Large-Subcategory = {!!}
 
   inv-associative-comp-hom-Full-Large-Subcategory :
     {l1 l2 l3 l4 : Level}
@@ -145,10 +119,7 @@ module _
     comp-hom-Full-Large-Subcategory X Y W
       ( comp-hom-Full-Large-Subcategory Y Z W h g)
       ( f)
-  inv-associative-comp-hom-Full-Large-Subcategory =
-    inv-associative-comp-hom-Full-Large-Subprecategory
-      ( large-precategory-Large-Category C)
-      ( P)
+  inv-associative-comp-hom-Full-Large-Subcategory = {!!}
 
   left-unit-law-comp-hom-Full-Large-Subcategory :
     {l1 l2 : Level}
@@ -159,10 +130,7 @@ module _
       ( id-hom-Full-Large-Subcategory Y)
       ( f) ＝
     f
-  left-unit-law-comp-hom-Full-Large-Subcategory =
-    left-unit-law-comp-hom-Full-Large-Subprecategory
-      ( large-precategory-Large-Category C)
-      ( P)
+  left-unit-law-comp-hom-Full-Large-Subcategory = {!!}
 
   right-unit-law-comp-hom-Full-Large-Subcategory :
     {l1 l2 : Level}
@@ -173,28 +141,19 @@ module _
       ( f)
       ( id-hom-Full-Large-Subcategory X) ＝
     f
-  right-unit-law-comp-hom-Full-Large-Subcategory =
-    right-unit-law-comp-hom-Full-Large-Subprecategory
-      ( large-precategory-Large-Category C)
-      ( P)
+  right-unit-law-comp-hom-Full-Large-Subcategory = {!!}
 
   iso-Full-Large-Subcategory :
     {l1 l2 : Level}
     (X : obj-Full-Large-Subcategory l1)
     (Y : obj-Full-Large-Subcategory l2) →
     UU (β l1 l1 ⊔ β l1 l2 ⊔ β l2 l1 ⊔ β l2 l2)
-  iso-Full-Large-Subcategory =
-    iso-Full-Large-Subprecategory
-      ( large-precategory-Large-Category C)
-      ( P)
+  iso-Full-Large-Subcategory = {!!}
 
   iso-eq-Full-Large-Subcategory :
     {l1 : Level} (X Y : obj-Full-Large-Subcategory l1) →
     (X ＝ Y) → iso-Full-Large-Subcategory X Y
-  iso-eq-Full-Large-Subcategory =
-    iso-eq-Full-Large-Subprecategory
-      ( large-precategory-Large-Category C)
-      ( P)
+  iso-eq-Full-Large-Subcategory = {!!}
 ```
 
 ### The underlying large category of a full large subcategory
@@ -209,20 +168,12 @@ module _
   is-large-category-Full-Large-Subcategory :
     is-large-category-Large-Precategory
       ( large-precategory-Full-Large-Subcategory C P)
-  is-large-category-Full-Large-Subcategory =
-    is-large-category-large-precategory-is-large-category-Full-Large-Subprecategory
-      ( large-precategory-Large-Category C)
-      ( P)
-      ( is-large-category-Large-Category C)
+  is-large-category-Full-Large-Subcategory = {!!}
 
   large-category-Full-Large-Subcategory :
     Large-Category (λ l → α l ⊔ γ l) β
   large-precategory-Large-Category
-    large-category-Full-Large-Subcategory =
-    large-precategory-Full-Large-Subcategory C P
-  is-large-category-Large-Category
-    large-category-Full-Large-Subcategory =
-    is-large-category-Full-Large-Subcategory
+    large-category-Full-Large-Subcategory = {!!}
 ```
 
 ### The forgetful functor from a full large subcategory to the ambient large category
@@ -239,8 +190,5 @@ module _
       ( λ l → l)
       ( large-category-Full-Large-Subcategory C P)
       ( C)
-  forgetful-functor-Full-Large-Subcategory =
-    forgetful-functor-Full-Large-Subprecategory
-      ( large-precategory-Large-Category C)
-      ( P)
+  forgetful-functor-Full-Large-Subcategory = {!!}
 ```

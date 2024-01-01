@@ -22,10 +22,10 @@ Functions are primitive in Agda. Here we construct some basic functions
 
 ```agda
 id : {l : Level} {A : UU l} → A → A
-id a = a
+id a = {!!}
 
 idω : {A : UUω} → A → A
-idω a = a
+idω a = {!!}
 ```
 
 ### Dependent composition of functions
@@ -36,7 +36,7 @@ infixr 15 _∘_
 _∘_ :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} {C : (a : A) → B a → UU l3} →
   ({a : A} → (b : B a) → C a b) → (f : (a : A) → B a) → (a : A) → C a (f a)
-(g ∘ f) a = g (f a)
+(g ∘ f) a = {!!}
 ```
 
 ### Evaluation at a point
@@ -44,11 +44,11 @@ _∘_ :
 ```agda
 ev-point :
   {l1 l2 : Level} {A : UU l1} (a : A) {P : A → UU l2} → ((x : A) → P x) → P a
-ev-point a f = f a
+ev-point a f = {!!}
 
 ev-point' :
   {l1 l2 : Level} {A : UU l1} (a : A) {X : UU l2} → (A → X) → X
-ev-point' a f = f a
+ev-point' a f = {!!}
 ```
 
 ### Postcomposition functions
@@ -60,7 +60,7 @@ map-Π :
   (f : (i : I) → A i → B i) →
   ((i : I) → A i) →
   ((i : I) → B i)
-map-Π f h i = f i (h i)
+map-Π f h i = {!!}
 
 map-Π' :
   {l1 l2 l3 l4 : Level}
@@ -69,7 +69,7 @@ map-Π' :
   ((i : I) → A i → B i) →
   ((j : J) → A (α j)) →
   ((j : J) → B (α j))
-map-Π' α f = map-Π (f ∘ α)
+map-Π' α f = {!!}
 ```
 
 ## See also

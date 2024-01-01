@@ -68,8 +68,7 @@ module _
 
   map-cocone-hom-sequential-diagram :
     cocone-sequential-diagram B X → cocone-sequential-diagram A X
-  map-cocone-hom-sequential-diagram c =
-    comp-hom-sequential-diagram A B (constant-sequential-diagram X) c f
+  map-cocone-hom-sequential-diagram c = {!!}
 ```
 
 ### A morphism of sequential diagrams induces a map of standard sequential colimits
@@ -122,10 +121,7 @@ module _
 
   map-hom-standard-sequential-colimit :
     standard-sequential-colimit A → standard-sequential-colimit B
-  map-hom-standard-sequential-colimit =
-    cogap-standard-sequential-colimit
-      ( map-cocone-hom-sequential-diagram f
-        ( cocone-standard-sequential-colimit B))
+  map-hom-standard-sequential-colimit = {!!}
 
   htpy-cocone-map-hom-standard-sequential-colimit :
     htpy-cocone-sequential-diagram A
@@ -134,12 +130,7 @@ module _
         ( map-hom-standard-sequential-colimit))
       ( map-cocone-hom-sequential-diagram f
         ( cocone-standard-sequential-colimit B))
-  htpy-cocone-map-hom-standard-sequential-colimit =
-    htpy-cocone-universal-property-sequential-colimit A
-      ( cocone-standard-sequential-colimit A)
-      ( up-standard-sequential-colimit)
-      ( map-cocone-hom-sequential-diagram f
-        ( cocone-standard-sequential-colimit B))
+  htpy-cocone-map-hom-standard-sequential-colimit = {!!}
 
   htpy-htpy-cocone-map-hom-standard-sequential-colimit :
     ( n : ℕ) →
@@ -148,9 +139,7 @@ module _
       ( map-cocone-standard-sequential-colimit n)
       ( map-cocone-standard-sequential-colimit n)
       ( map-hom-standard-sequential-colimit)
-  htpy-htpy-cocone-map-hom-standard-sequential-colimit =
-    htpy-htpy-cocone-sequential-diagram A
-      ( htpy-cocone-map-hom-standard-sequential-colimit)
+  htpy-htpy-cocone-map-hom-standard-sequential-colimit = {!!}
 
   coherence-htpy-cocone-map-hom-standard-sequential-colimit :
     ( n : ℕ) →
@@ -164,9 +153,7 @@ module _
           ( n))
       ( ( htpy-htpy-cocone-map-hom-standard-sequential-colimit (succ-ℕ n)) ·r
         ( map-sequential-diagram A n))
-  coherence-htpy-cocone-map-hom-standard-sequential-colimit =
-    coherence-htpy-htpy-cocone-sequential-diagram A
-      ( htpy-cocone-map-hom-standard-sequential-colimit)
+  coherence-htpy-cocone-map-hom-standard-sequential-colimit = {!!}
 
   prism-htpy-cocone-map-hom-standard-sequential-colimit :
     ( n : ℕ) →
@@ -186,23 +173,7 @@ module _
         ( htpy-htpy-cocone-map-hom-standard-sequential-colimit (succ-ℕ n)))
       ( naturality-map-hom-sequential-diagram B f n)
       ( coherence-triangle-cocone-standard-sequential-colimit n)
-  prism-htpy-cocone-map-hom-standard-sequential-colimit n =
-    rotate-vertical-coherence-prism-maps
-      ( map-cocone-standard-sequential-colimit n)
-      ( map-cocone-standard-sequential-colimit (succ-ℕ n))
-      ( map-sequential-diagram A n)
-      ( map-cocone-standard-sequential-colimit n)
-      ( map-cocone-standard-sequential-colimit (succ-ℕ n))
-      ( map-sequential-diagram B n)
-      ( map-hom-sequential-diagram B f n)
-      ( map-hom-sequential-diagram B f (succ-ℕ n))
-      ( map-hom-standard-sequential-colimit)
-      ( coherence-triangle-cocone-standard-sequential-colimit n)
-      ( htpy-htpy-cocone-map-hom-standard-sequential-colimit n)
-      ( htpy-htpy-cocone-map-hom-standard-sequential-colimit (succ-ℕ n))
-      ( naturality-map-hom-sequential-diagram B f n)
-      ( coherence-triangle-cocone-standard-sequential-colimit n)
-      ( inv-htpy (coherence-htpy-cocone-map-hom-standard-sequential-colimit n))
+  prism-htpy-cocone-map-hom-standard-sequential-colimit n = {!!}
 ```
 
 ### Homotopies between morphisms of sequential diagrams induce homotopies of maps of standard sequential colimits
@@ -216,11 +187,7 @@ module _
   htpy-map-hom-standard-sequential-colimit-htpy-hom-sequential-diagram :
     map-hom-standard-sequential-colimit B f ~
     map-hom-standard-sequential-colimit B g
-  htpy-map-hom-standard-sequential-colimit-htpy-hom-sequential-diagram =
-    htpy-eq
-      ( ap
-        ( map-hom-standard-sequential-colimit B)
-        ( eq-htpy-sequential-diagram A B f g H))
+  htpy-map-hom-standard-sequential-colimit-htpy-hom-sequential-diagram = {!!}
 ```
 
 ### The identity morphism induces the identity map
@@ -237,25 +204,13 @@ module _
       ( map-hom-standard-sequential-colimit A
         ( id-hom-sequential-diagram A))
       ( id)
-  pr1 htpy-preserves-id-map-hom-standard-sequential-colimit =
-    htpy-htpy-cocone-map-hom-standard-sequential-colimit A
-      ( id-hom-sequential-diagram A)
-  pr2 htpy-preserves-id-map-hom-standard-sequential-colimit n =
-    ( coherence-htpy-cocone-map-hom-standard-sequential-colimit A
-      ( id-hom-sequential-diagram A) n) ∙h
-    ( ap-concat-htpy _
-      ( ( right-unit-htpy) ∙h
-        ( inv-htpy
-          ( left-unit-law-left-whisk-htpy
-            ( coherence-triangle-cocone-standard-sequential-colimit n)))))
+  pr1 htpy-preserves-id-map-hom-standard-sequential-colimit = {!!}
 
   preserves-id-map-hom-standard-sequential-colimit :
     map-hom-standard-sequential-colimit A
       ( id-hom-sequential-diagram A) ~
     id
-  preserves-id-map-hom-standard-sequential-colimit =
-    htpy-htpy-out-of-standard-sequential-colimit A
-      ( htpy-preserves-id-map-hom-standard-sequential-colimit)
+  preserves-id-map-hom-standard-sequential-colimit = {!!}
 ```
 
 ### Forming standard sequential colimits preserves composition of morphisms of sequential diagrams
@@ -275,113 +230,21 @@ module _
         ( comp-hom-sequential-diagram A B C g f))
       ( ( map-hom-standard-sequential-colimit C g) ∘
         ( map-hom-standard-sequential-colimit B f))
-  pr1 htpy-preserves-comp-map-hom-standard-sequential-colimit n =
-    ( htpy-htpy-cocone-map-hom-standard-sequential-colimit C
-      ( comp-hom-sequential-diagram A B C g f) n) ∙h
-    ( pasting-vertical-coherence-square-maps
-      ( map-cocone-standard-sequential-colimit n)
-      ( map-hom-sequential-diagram B f n)
-      ( map-hom-standard-sequential-colimit B f)
-      ( map-cocone-standard-sequential-colimit n)
-      ( map-hom-sequential-diagram C g n)
-      ( map-hom-standard-sequential-colimit C g)
-      ( map-cocone-standard-sequential-colimit n)
-      ( inv-htpy
-        ( htpy-htpy-cocone-map-hom-standard-sequential-colimit B f n))
-      ( inv-htpy
-        ( htpy-htpy-cocone-map-hom-standard-sequential-colimit C g n)))
-  pr2 htpy-preserves-comp-map-hom-standard-sequential-colimit n =
-    ( inv-htpy-assoc-htpy
-      ( ( map-hom-standard-sequential-colimit C
-          ( comp-hom-sequential-diagram A B C g f)) ·l
-        ( coherence-triangle-cocone-standard-sequential-colimit n))
-      ( ( htpy-htpy-cocone-map-hom-standard-sequential-colimit C
-          ( comp-hom-sequential-diagram A B C g f)
-          ( succ-ℕ n)) ·r
-        ( map-sequential-diagram A n))
-      ( _)) ∙h
-    ( ap-concat-htpy' _
-      ( coherence-htpy-cocone-map-hom-standard-sequential-colimit C
-        ( comp-hom-sequential-diagram A B C g f)
-        ( n)) ∙h
-    ( assoc-htpy
-      ( htpy-htpy-cocone-map-hom-standard-sequential-colimit C
-        ( comp-hom-sequential-diagram A B C g f)
-        ( n))
-      ( coherence-triangle-cocone-sequential-diagram A
-        ( map-cocone-hom-sequential-diagram
-          ( comp-hom-sequential-diagram A B C g f)
-          ( cocone-standard-sequential-colimit C))
-        ( n))
-      ( _)) ∙h
-    ( ap-concat-htpy
-      ( htpy-htpy-cocone-map-hom-standard-sequential-colimit C
-        ( comp-hom-sequential-diagram A B C g f)
-        ( n))
-      ( ( assoc-htpy
-          ( ( coherence-triangle-cocone-standard-sequential-colimit n) ·r
-            ( ( map-hom-sequential-diagram C g n) ∘
-              ( map-hom-sequential-diagram B f n)))
-          ( map-cocone-standard-sequential-colimit (succ-ℕ n) ·l _)
-          ( _)) ∙h
-        ( pasting-vertical-coherence-prism-maps
-          ( map-cocone-standard-sequential-colimit n)
-          ( map-cocone-standard-sequential-colimit (succ-ℕ n))
-          ( map-sequential-diagram A n)
-          ( map-cocone-standard-sequential-colimit n)
-          ( map-cocone-standard-sequential-colimit (succ-ℕ n))
-          ( map-sequential-diagram B n)
-          ( map-hom-sequential-diagram B f n)
-          ( map-hom-sequential-diagram B f (succ-ℕ n))
-          ( map-hom-standard-sequential-colimit B f)
-          ( map-cocone-standard-sequential-colimit n)
-          ( map-cocone-standard-sequential-colimit (succ-ℕ n))
-          ( map-sequential-diagram C n)
-          ( map-hom-sequential-diagram C g n)
-          ( map-hom-sequential-diagram C g (succ-ℕ n))
-          ( map-hom-standard-sequential-colimit C g)
-          ( coherence-triangle-cocone-standard-sequential-colimit n)
-          ( inv-htpy
-            ( htpy-htpy-cocone-map-hom-standard-sequential-colimit B f n))
-          ( inv-htpy
-            ( htpy-htpy-cocone-map-hom-standard-sequential-colimit B f
-              ( succ-ℕ n)))
-          ( naturality-map-hom-sequential-diagram B f n)
-          ( coherence-triangle-cocone-standard-sequential-colimit n)
-          ( inv-htpy
-            ( htpy-htpy-cocone-map-hom-standard-sequential-colimit C g n))
-          ( inv-htpy
-            ( htpy-htpy-cocone-map-hom-standard-sequential-colimit C g
-              ( succ-ℕ n)))
-          ( naturality-map-hom-sequential-diagram C g n)
-          ( coherence-triangle-cocone-standard-sequential-colimit n)
-          ( prism-htpy-cocone-map-hom-standard-sequential-colimit B f n)
-          ( prism-htpy-cocone-map-hom-standard-sequential-colimit C g
-            ( n))))) ∙h
-    ( inv-htpy-assoc-htpy
-      ( htpy-htpy-cocone-map-hom-standard-sequential-colimit C
-        ( comp-hom-sequential-diagram A B C g f)
-        ( n))
-      ( _)
-      ( ( ( map-hom-standard-sequential-colimit C g) ∘
-          ( map-hom-standard-sequential-colimit B f)) ·l
-        ( coherence-triangle-cocone-standard-sequential-colimit n))))
+  pr1 htpy-preserves-comp-map-hom-standard-sequential-colimit n = {!!}
 
   preserves-comp-map-hom-standard-sequential-colimit :
     ( map-hom-standard-sequential-colimit C
       ( comp-hom-sequential-diagram A B C g f)) ~
     ( ( map-hom-standard-sequential-colimit C g) ∘
       ( map-hom-standard-sequential-colimit B f))
-  preserves-comp-map-hom-standard-sequential-colimit =
-    htpy-htpy-out-of-standard-sequential-colimit A
-      htpy-preserves-comp-map-hom-standard-sequential-colimit
+  preserves-comp-map-hom-standard-sequential-colimit = {!!}
 ```
 
 ### An equivalence of sequential diagrams induces an equivalence of standard sequential colimits
 
 Additionally, the underlying map of the inverse equivalence is definitionally
 equal to the map induced by the inverse of the equivalence of sequential
-diagrams, i.e. `(e∞)⁻¹ = (e⁻¹)∞`.
+diagrams, i.e. `(e∞)⁻¹ = {!!}
 
 ```agda
 module _
@@ -391,57 +254,32 @@ module _
 
   map-equiv-standard-sequential-colimit :
     standard-sequential-colimit A → standard-sequential-colimit B
-  map-equiv-standard-sequential-colimit =
-    map-hom-standard-sequential-colimit B
-      ( hom-equiv-sequential-diagram B e)
+  map-equiv-standard-sequential-colimit = {!!}
 
   inv-map-equiv-standard-sequential-colimit :
     standard-sequential-colimit B → standard-sequential-colimit A
-  inv-map-equiv-standard-sequential-colimit =
-    map-hom-standard-sequential-colimit A
-      ( hom-inv-equiv-sequential-diagram B e)
+  inv-map-equiv-standard-sequential-colimit = {!!}
 
   abstract
     is-section-inv-map-equiv-standard-sequential-colimit :
       ( ( map-equiv-standard-sequential-colimit) ∘
         ( inv-map-equiv-standard-sequential-colimit)) ~
       ( id)
-    is-section-inv-map-equiv-standard-sequential-colimit =
-      ( inv-htpy
-        ( preserves-comp-map-hom-standard-sequential-colimit
-          ( hom-equiv-sequential-diagram B e)
-          ( hom-inv-equiv-sequential-diagram B e))) ∙h
-      ( htpy-map-hom-standard-sequential-colimit-htpy-hom-sequential-diagram
-        ( is-section-inv-equiv-sequential-diagram B e)) ∙h
-      ( preserves-id-map-hom-standard-sequential-colimit)
+    is-section-inv-map-equiv-standard-sequential-colimit = {!!}
 
     is-retraction-inv-map-equiv-standard-sequential-colimit :
       ( ( inv-map-equiv-standard-sequential-colimit) ∘
         ( map-equiv-standard-sequential-colimit)) ~
       ( id)
-    is-retraction-inv-map-equiv-standard-sequential-colimit =
-      ( inv-htpy
-        ( preserves-comp-map-hom-standard-sequential-colimit
-          ( hom-inv-equiv-sequential-diagram B e)
-          ( hom-equiv-sequential-diagram B e))) ∙h
-      ( htpy-map-hom-standard-sequential-colimit-htpy-hom-sequential-diagram
-        ( is-retraction-inv-equiv-sequential-diagram B e)) ∙h
-      ( preserves-id-map-hom-standard-sequential-colimit)
+    is-retraction-inv-map-equiv-standard-sequential-colimit = {!!}
 
   is-equiv-map-hom-standard-sequential-colimit :
     is-equiv map-equiv-standard-sequential-colimit
-  is-equiv-map-hom-standard-sequential-colimit =
-    is-equiv-is-invertible
-      ( inv-map-equiv-standard-sequential-colimit)
-      ( is-section-inv-map-equiv-standard-sequential-colimit)
-      ( is-retraction-inv-map-equiv-standard-sequential-colimit)
+  is-equiv-map-hom-standard-sequential-colimit = {!!}
 
   equiv-equiv-standard-sequential-colimit :
     standard-sequential-colimit A ≃ standard-sequential-colimit B
-  pr1 equiv-equiv-standard-sequential-colimit =
-    map-hom-standard-sequential-colimit B (hom-equiv-sequential-diagram B e)
-  pr2 equiv-equiv-standard-sequential-colimit =
-    is-equiv-map-hom-standard-sequential-colimit
+  pr1 equiv-equiv-standard-sequential-colimit = {!!}
 ```
 
 ### A retract of sequential diagrams induces a retract of standard sequential colimits
@@ -457,46 +295,28 @@ module _
 
   map-inclusion-retract-standard-sequential-colimit :
     standard-sequential-colimit A → standard-sequential-colimit B
-  map-inclusion-retract-standard-sequential-colimit =
-    map-hom-standard-sequential-colimit B
-      ( inclusion-retract-sequential-diagram A B R)
+  map-inclusion-retract-standard-sequential-colimit = {!!}
 
   map-hom-retraction-retract-standard-sequential-colimit :
     standard-sequential-colimit B → standard-sequential-colimit A
-  map-hom-retraction-retract-standard-sequential-colimit =
-    map-hom-standard-sequential-colimit A
-      ( hom-retraction-retract-sequential-diagram A B R)
+  map-hom-retraction-retract-standard-sequential-colimit = {!!}
 
   abstract
     is-retraction-map-hom-retraction-retract-standard-sequential-colimit :
       is-retraction
         ( map-inclusion-retract-standard-sequential-colimit)
         ( map-hom-retraction-retract-standard-sequential-colimit)
-    is-retraction-map-hom-retraction-retract-standard-sequential-colimit =
-      ( inv-htpy
-        ( preserves-comp-map-hom-standard-sequential-colimit
-          ( hom-retraction-retract-sequential-diagram A B R)
-          ( inclusion-retract-sequential-diagram A B R))) ∙h
-      ( htpy-map-hom-standard-sequential-colimit-htpy-hom-sequential-diagram
-        ( is-retraction-hom-retraction-retract-sequential-diagram A B R)) ∙h
-      ( preserves-id-map-hom-standard-sequential-colimit)
+    is-retraction-map-hom-retraction-retract-standard-sequential-colimit = {!!}
 
   retraction-retract-standard-sequential-colimit :
     retraction
       ( map-hom-standard-sequential-colimit B
         ( inclusion-retract-sequential-diagram A B R))
-  pr1 retraction-retract-standard-sequential-colimit =
-    map-hom-retraction-retract-standard-sequential-colimit
-  pr2 retraction-retract-standard-sequential-colimit =
-    is-retraction-map-hom-retraction-retract-standard-sequential-colimit
+  pr1 retraction-retract-standard-sequential-colimit = {!!}
 
   retract-retract-standard-sequential-colimit :
     (standard-sequential-colimit A) retract-of (standard-sequential-colimit B)
-  pr1 retract-retract-standard-sequential-colimit =
-    map-hom-standard-sequential-colimit B
-      ( inclusion-retract-sequential-diagram A B R)
-  pr2 retract-retract-standard-sequential-colimit =
-    retraction-retract-standard-sequential-colimit
+  pr1 retract-retract-standard-sequential-colimit = {!!}
 ```
 
 ## References

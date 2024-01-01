@@ -36,15 +36,13 @@ module _
   where
 
   equiv-∞-Group : UU (l1 ⊔ l2)
-  equiv-∞-Group =
-    classifying-pointed-type-∞-Group G ≃∗ classifying-pointed-type-∞-Group H
+  equiv-∞-Group = {!!}
 
   hom-equiv-∞-Group : equiv-∞-Group → hom-∞-Group G H
-  hom-equiv-∞-Group =
-    pointed-map-pointed-equiv
+  hom-equiv-∞-Group = {!!}
 
   map-equiv-∞-Group : equiv-∞-Group → type-∞-Group G → type-∞-Group H
-  map-equiv-∞-Group = map-hom-∞-Group G H ∘ hom-equiv-∞-Group
+  map-equiv-∞-Group = {!!}
 ```
 
 ### The identity equivalence of higher groups
@@ -52,7 +50,7 @@ module _
 ```agda
 id-equiv-∞-Group :
   {l1 : Level} (G : ∞-Group l1) → equiv-∞-Group G G
-id-equiv-∞-Group G = id-pointed-equiv
+id-equiv-∞-Group G = {!!}
 ```
 
 ### Isomorphisms of ∞-groups
@@ -63,7 +61,7 @@ module _
   where
 
   is-iso-∞-Group : hom-∞-Group G H → UU (l1 ⊔ l2)
-  is-iso-∞-Group = is-iso-pointed-map
+  is-iso-∞-Group = {!!}
 ```
 
 ## Properties
@@ -74,31 +72,22 @@ module _
 is-torsorial-equiv-∞-Group :
   {l1 : Level} (G : ∞-Group l1) →
   is-torsorial (λ (H : ∞-Group l1) → equiv-∞-Group G H)
-is-torsorial-equiv-∞-Group G =
-  is-torsorial-Eq-subtype
-    ( is-torsorial-equiv-Pointed-Type (classifying-pointed-type-∞-Group G))
-    ( λ X → is-prop-is-0-connected (type-Pointed-Type X))
-    ( classifying-pointed-type-∞-Group G)
-    ( id-pointed-equiv)
-    ( is-0-connected-classifying-type-∞-Group G)
+is-torsorial-equiv-∞-Group G = {!!}
 
 equiv-eq-∞-Group :
   {l1 : Level} (G H : ∞-Group l1) → (G ＝ H) → equiv-∞-Group G H
-equiv-eq-∞-Group G .G refl = id-equiv-∞-Group G
+equiv-eq-∞-Group G .G refl = {!!}
 
 is-equiv-equiv-eq-∞-Group :
   {l1 : Level} (G H : ∞-Group l1) → is-equiv (equiv-eq-∞-Group G H)
-is-equiv-equiv-eq-∞-Group G =
-  fundamental-theorem-id
-    ( is-torsorial-equiv-∞-Group G)
-    ( equiv-eq-∞-Group G)
+is-equiv-equiv-eq-∞-Group G = {!!}
 
 extensionality-∞-Group :
   {l1 : Level} (G H : ∞-Group l1) → (G ＝ H) ≃ equiv-∞-Group G H
-pr1 (extensionality-∞-Group G H) = equiv-eq-∞-Group G H
-pr2 (extensionality-∞-Group G H) = is-equiv-equiv-eq-∞-Group G H
+pr1 (extensionality-∞-Group G H) = {!!}
+pr2 (extensionality-∞-Group G H) = {!!}
 
 eq-equiv-∞-Group :
   {l1 : Level} (G H : ∞-Group l1) → equiv-∞-Group G H → G ＝ H
-eq-equiv-∞-Group G H = map-inv-equiv (extensionality-∞-Group G H)
+eq-equiv-∞-Group G H = {!!}
 ```

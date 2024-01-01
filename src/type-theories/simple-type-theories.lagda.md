@@ -71,26 +71,14 @@ homotopies of sections of fibered systems.
     {B B' : fibered-system l4 S A} (α : Id B B') {f f' : (X : T) → S X}
     (g : section-system B f) (g' : section-system B' f') →
     fibered-system l4 (λ t → Id (f t) (f' t)) A
-  fibered-system.element (Eq-fibered-system' {B = B} refl {f} g g') {X} p x =
-    Id
-      ( tr
-        ( λ u → fibered-system.element B u x)
-        ( p)
-        ( section-system.element g x))
-      ( section-system.element g' x)
-  fibered-system.slice (Eq-fibered-system' {B = B} refl g g') {X} p =
-    Eq-fibered-system'
-      ( ap (fibered-system.slice B) p)
-      ( section-system.slice g X)
-      ( section-system.slice g' X)
+  fibered-system.element (Eq-fibered-system' {B = B} refl {f} g g') {X} p x = {!!}
 
   htpy-section-system' :
     {l1 l2 l3 l4 : Level} {T : UU l1} {A : system l2 T} {S : T → UU l3}
     {B B' : fibered-system l4 S A} (α : Id B B') {f f' : (X : T) → S X}
     (H : f ~ f') (g : section-system B f) (g' : section-system B' f') →
     UU (l1 ⊔ l2 ⊔ l4)
-  htpy-section-system' α H g g' =
-    section-system (Eq-fibered-system' α g g') H
+  htpy-section-system' α H g g' = {!!}
 
   concat-htpy-section-system' :
     {l1 l2 l3 l4 : Level}
@@ -104,26 +92,7 @@ homotopies of sections of fibered systems.
     htpy-section-system' γ (H ∙h H') g g''
   section-system.element
     ( concat-htpy-section-system'
-      {B = B} {α = refl} {refl} .refl refl {H = H} {H'} {g} K K') {X} x =
-    ( tr-concat
-      { B = λ t → fibered-system.element B t x}
-      ( H X)
-      ( H' X)
-      ( section-system.element g x)) ∙
-    ( ( ap
-        ( tr
-          ( λ t → fibered-system.element B t x)
-          ( H' X))
-        ( section-system.element K x)) ∙
-      ( section-system.element K' x))
-  section-system.slice
-    ( concat-htpy-section-system'
-      {B = B} {α = refl} {refl} .refl refl {H = H} {H'} K K') X =
-    concat-htpy-section-system'
-      ( ap (fibered-system.slice B) (H X ∙ H' X))
-      ( inv (ap-concat (fibered-system.slice B) (H X) (H' X)))
-      ( section-system.slice K X)
-      ( section-system.slice K' X)
+      {B = B} {α = refl} {refl} .refl refl {H = H} {H'} {g} K K') {X} x = {!!}
 
   inv-htpy-section-system' :
     {l1 l2 l3 l4 : Level}
@@ -134,16 +103,7 @@ homotopies of sections of fibered systems.
     {g' : section-system B' f'} {H : f ~ f'} →
     htpy-section-system' α H g g' → htpy-section-system' β (inv-htpy H) g' g
   section-system.element
-    ( inv-htpy-section-system' {α = refl} .refl refl {H = H} K) {X} x =
-    eq-transpose-tr
-      ( H X)
-      ( inv (section-system.element K x))
-  section-system.slice
-    ( inv-htpy-section-system' {B = B} {α = refl} .refl refl {H = H} K) X =
-    inv-htpy-section-system'
-      ( ap (fibered-system.slice B) (inv (H X)))
-      ( inv (ap-inv (fibered-system.slice B) (H X)))
-      ( section-system.slice K X)
+    ( inv-htpy-section-system' {α = refl} .refl refl {H = H} K) {X} x = {!!}
 ```
 
 ### Nonhomogenous homotopies
@@ -156,16 +116,14 @@ We specialize the above definitions to nonhomogenous homotopies.
     {T : UU l1} {A : system l2 T} {S : T → UU l3}
     {B : fibered-system l4 S A} {f f' : (X : T) → S X} →
     (f ~ f') → section-system B f → section-system B f' → UU (l1 ⊔ l2 ⊔ l4)
-  htpy-section-system H g g' = htpy-section-system' refl H g g'
+  htpy-section-system H g g' = {!!}
 
   refl-htpy-section-system :
     {l1 l2 l3 l4 : Level}
     {T : UU l1} {A : system l2 T} {S : T → UU l3}
     {B : fibered-system l4 S A} {f : (X : T) → S X}
     (g : section-system B f) → htpy-section-system refl-htpy g g
-  section-system.element (refl-htpy-section-system g) = refl-htpy
-  section-system.slice (refl-htpy-section-system g) X =
-    refl-htpy-section-system (section-system.slice g X)
+  section-system.element (refl-htpy-section-system g) = {!!}
 
   concat-htpy-section-system :
     {l1 l2 l3 l4 : Level}
@@ -175,8 +133,7 @@ We specialize the above definitions to nonhomogenous homotopies.
     {g'' : section-system B f''} {H : f ~ f'} {H' : f' ~ f''} →
     htpy-section-system H g g' → htpy-section-system H' g' g'' →
     htpy-section-system (H ∙h H') g g''
-  concat-htpy-section-system K K' =
-    concat-htpy-section-system' refl refl K K'
+  concat-htpy-section-system K K' = {!!}
 
   inv-htpy-section-system :
     {l1 l2 l3 l4 : Level}
@@ -184,8 +141,7 @@ We specialize the above definitions to nonhomogenous homotopies.
     {B : fibered-system l4 S A} {f f' : (X : T) → S X}
     {g : section-system B f} {g' : section-system B f'} {H : f ~ f'} →
     htpy-section-system H g g' → htpy-section-system (inv-htpy H) g' g
-  inv-htpy-section-system K =
-    inv-htpy-section-system' refl refl K
+  inv-htpy-section-system K = {!!}
 ```
 
 ---
@@ -194,36 +150,28 @@ We specialize the above definitions to nonhomogenous homotopies.
   constant-fibered-system :
     {l1 l2 l3 l4 : Level} {T : UU l1} (A : system l2 T) {S : UU l3}
     (B : system l4 S) → fibered-system l4 (λ X → S) A
-  fibered-system.element (constant-fibered-system A B) Y x = system.element B Y
-  fibered-system.slice (constant-fibered-system A B) {X} Y =
-    constant-fibered-system
-      ( system.slice A X)
-      ( system.slice B Y)
+  fibered-system.element (constant-fibered-system A B) Y x = {!!}
 
   hom-system :
     {l1 l2 l3 l4 : Level} {T : UU l1} {S : UU l2} (f : T → S)
     (A : system l3 T) (B : system l4 S) → UU (l1 ⊔ l3 ⊔ l4)
-  hom-system f A B = section-system (constant-fibered-system A B) f
+  hom-system f A B = {!!}
 
   htpy-hom-system :
     {l1 l2 l3 l4 : Level} {T : UU l1} {S : UU l2} {f : T → S}
     {A : system l3 T} {B : system l4 S} (g h : hom-system f A B) →
     UU (l1 ⊔ l3 ⊔ l4)
-  htpy-hom-system g h = htpy-section-system {!!} {!!} {!!}
+  htpy-hom-system g h = {!!}
 
   id-hom-system :
     {l1 l2 : Level} {T : UU l1} (A : system l2 T) → hom-system id A A
-  section-system.element (id-hom-system A) {X} = id
-  section-system.slice (id-hom-system A) X = id-hom-system (system.slice A X)
+  section-system.element (id-hom-system A) {X} = {!!}
 
   comp-hom-system :
     {l1 l2 l3 l4 l5 l6 : Level} {T : UU l1} {S : UU l2} {R : UU l3} {g : S → R}
     {f : T → S} {A : system l4 T} {B : system l5 S} {C : system l6 R}
     (β : hom-system g B C) (α : hom-system f A B) → hom-system (g ∘ f) A C
-  section-system.element (comp-hom-system {f = f} β α) {X} =
-    section-system.element β {f X} ∘ section-system.element α {X}
-  section-system.slice (comp-hom-system {f = f} β α) X =
-    comp-hom-system (section-system.slice β (f X)) (section-system.slice α X)
+  section-system.element (comp-hom-system {f = f} β α) {X} = {!!}
 
   record weakening
     {l1 l2 : Level} {T : UU l1} (A : system l2 T) : UU (l1 ⊔ l2)
@@ -507,34 +455,7 @@ We specialize the above definitions to nonhomogenous homotopies.
     {l1 l2 : Level} (T : type-theory l1 l2)
     (X : type-theory.typ T) →
     type-theory l1 l2
-  type-theory.typ (slice-type-theory T X) =
-    type-theory.typ T
-  type-theory.sys (slice-type-theory T X) =
-    system.slice (type-theory.sys T) X
-  type-theory.W (slice-type-theory T X) =
-    weakening.slice (type-theory.W T) X
-  type-theory.S (slice-type-theory T X) =
-    substitution.slice (type-theory.S T) X
-  type-theory.δ (slice-type-theory T X) =
-    generic-element.slice (type-theory.δ T) X
-  type-theory.WW (slice-type-theory T X) =
-    weakening-preserves-weakening.slice (type-theory.WW T) X
-  type-theory.SS (slice-type-theory T X) =
-    substitution-preserves-substitution.slice (type-theory.SS T) X
-  type-theory.WS (slice-type-theory T X) =
-    weakening-preserves-substitution.slice (type-theory.WS T) X
-  type-theory.SW (slice-type-theory T X) =
-    substitution-preserves-weakening.slice (type-theory.SW T) X
-  type-theory.Wδ (slice-type-theory T X) =
-    weakening-preserves-generic-element.slice (type-theory.Wδ T) X
-  type-theory.Sδ (slice-type-theory T X) =
-    substitution-preserves-generic-element.slice (type-theory.Sδ T) X
-  type-theory.S!W (slice-type-theory T X) =
-    substitution-cancels-weakening.slice (type-theory.S!W T) X
-  type-theory.δid (slice-type-theory T X) =
-    generic-element-is-identity.slice (type-theory.δid T) X
-  type-theory.Sδ! (slice-type-theory T X) =
-    substitution-by-generic-element.slice (type-theory.Sδ! T) X
+  type-theory.typ (slice-type-theory T X) = {!!}
 
 module dependent-simple
   where
@@ -544,33 +465,21 @@ module dependent-simple
 
   system :
     {l1 l2 : Level} {T : UU l1} → simple.system l2 T → dependent.system l1 l2
-  dependent.system.type (system {T = T} A) = T
-  dependent.system.element (system A) X =
-    simple.system.element A X
-  dependent.system.slice (system A) X =
-    system (simple.system.slice A X)
+  dependent.system.type (system {T = T} A) = {!!}
 
   fibered-system :
     {l1 l2 l3 l4 : Level}
     {T : UU l1} {A : simple.system l2 T} {S : T → UU l3} →
     simple.fibered-system l4 S A →
     dependent.fibered-system l3 l4 (system A)
-  dependent.fibered-system.type (fibered-system {S = S} B) = S
-  dependent.fibered-system.element (fibered-system B) Y =
-    simple.fibered-system.element B Y
-  dependent.fibered-system.slice (fibered-system B) Y =
-    fibered-system (simple.fibered-system.slice B Y)
+  dependent.fibered-system.type (fibered-system {S = S} B) = {!!}
 
   section-system :
     {l1 l2 l3 l4 : Level}
     {T : UU l1} {A : simple.system l2 T} {S : T → UU l3}
     {B : simple.fibered-system l4 S A} {f : (X : T) → S X} →
     simple.section-system B f → dependent.section-system (fibered-system B)
-  dependent.section-system.type (section-system {B = B} {f} g) X = f X
-  dependent.section-system.element (section-system {B = B} {f} g) x =
-    simple.section-system.element g x
-  dependent.section-system.slice (section-system {B = B} {f} g) X =
-    section-system (simple.section-system.slice g X)
+  dependent.section-system.type (section-system {B = B} {f} g) X = {!!}
 
   Eq-fibered-system' :
     {l1 l2 l3 l4 : Level}
@@ -585,10 +494,7 @@ module dependent-simple
         ( ap fibered-system α)
         ( section-system g)
         ( section-system g'))
-  fibered.section-fibered-system.type (Eq-fibered-system' refl f g) Y = Y
-  fibered.section-fibered-system.element (Eq-fibered-system' refl f g) y = y
-  fibered.section-fibered-system.slice (Eq-fibered-system' refl f g) Y =
-    {!Eq-fibered-system' ? ? ? !}
+  fibered.section-fibered-system.type (Eq-fibered-system' refl f g) Y = {!!}
 
   htpy-section-system' :
     {l1 l2 l3 l4 : Level}
@@ -600,11 +506,7 @@ module dependent-simple
       ( ap fibered-system α)
       ( section-system g)
       ( section-system g')
-  dependent.section-system.type (htpy-section-system' refl {H = H} K) = H
-  dependent.section-system.element (htpy-section-system' refl {H = H} K) =
-    simple.section-system.element K
-  dependent.section-system.slice (htpy-section-system' refl {H = H} K) X =
-    {!htpy-section-system' ? ? !}
+  dependent.section-system.type (htpy-section-system' refl {H = H} K) = {!!}
 
   htpy-section-system :
     {l1 l2 l3 l4 : Level}
@@ -613,22 +515,14 @@ module dependent-simple
     {g : simple.section-system B f} {g' : simple.section-system B f'} →
     simple.htpy-section-system H g g' →
     dependent.htpy-section-system (section-system g) (section-system g')
-  dependent.section-system.type (htpy-section-system {H = H} K) = H
-  dependent.section-system.element (htpy-section-system {H = H} K) =
-    simple.section-system.element K
-  dependent.section-system.slice (htpy-section-system {H = H} K) X =
-    {!htpy-section-system ? !}
+  dependent.section-system.type (htpy-section-system {H = H} K) = {!!}
 
   hom-system :
     {l1 l2 l3 l4 : Level} {T : UU l1} {S : UU l3} {f : T → S}
     {A : simple.system l2 T} {B : simple.system l4 S} →
     simple.hom-system f A B →
     dependent.hom-system (system A) (system B)
-  dependent.section-system.type (hom-system {f = f} h) = f
-  dependent.section-system.element (hom-system h) =
-    simple.section-system.element h
-  dependent.section-system.slice (hom-system h) X =
-    hom-system (simple.section-system.slice h X)
+  dependent.section-system.type (hom-system {f = f} h) = {!!}
 
   comp-hom-system :
     {l1 l2 l3 l4 l5 l6 : Level}
@@ -642,12 +536,7 @@ module dependent-simple
       ( dependent.comp-hom-system
         ( hom-system k)
         ( hom-system h))
-  dependent.section-system.type (comp-hom-system k h) X = refl
-  dependent.section-system.element (comp-hom-system k h) x = refl
-  dependent.section-system.slice (comp-hom-system {f = f} k h) X =
-    comp-hom-system
-      ( simple.section-system.slice k (f X))
-      ( simple.section-system.slice h X)
+  dependent.section-system.type (comp-hom-system k h) X = {!!}
 
   htpy-hom-system :
     {l1 l2 l3 l4 : Level}
@@ -656,20 +545,12 @@ module dependent-simple
     {g h : simple.hom-system f A B} →
     simple.htpy-hom-system g h →
     dependent.htpy-hom-system (hom-system g) (hom-system h)
-  dependent.section-system.type (htpy-hom-system H) = refl-htpy
-  dependent.section-system.element (htpy-hom-system {f = f} H) {X} x =
-    simple.section-system.element {f = {!!}} H x
-    --simple.section-system.element H {X} x
-  dependent.section-system.slice (htpy-hom-system H) X =
-    {!!} --htpy-hom-system (simple.section-system.slice H X)
+  dependent.section-system.type (htpy-hom-system H) = {!!}
 
   weakening :
     {l1 l2 : Level} {T : UU l1} {A : simple.system l2 T} →
     simple.weakening A → dependent.weakening (system A)
-  dependent.weakening.type (weakening W) X =
-    hom-system (simple.weakening.element W X)
-  dependent.weakening.slice (weakening W) X =
-    weakening (simple.weakening.slice W X)
+  dependent.weakening.type (weakening W) X = {!!}
 
   preserves-weakening :
     {l1 l2 l3 l4 : Level}
@@ -683,43 +564,21 @@ module dependent-simple
       ( weakening WB)
       ( hom-system g)
   dependent.preserves-weakening.type
-    ( preserves-weakening {f = f} {WA = WA} {WB} {g = g} Wg) X =
-    dependent.concat-htpy-hom-system
-      ( dependent.inv-htpy-hom-system
-        ( comp-hom-system
-          ( simple.section-system.slice g X)
-          ( simple.weakening.element WA X)))
-      ( dependent.concat-htpy-hom-system
-        ( htpy-hom-system (simple.preserves-weakening.element Wg X))
-        ( comp-hom-system
-          ( simple.weakening.element WB (f X))
-          ( g)))
-  dependent.preserves-weakening.slice (preserves-weakening Wg) X =
-    preserves-weakening (simple.preserves-weakening.slice Wg X)
+    ( preserves-weakening {f = f} {WA = WA} {WB} {g = g} Wg) X = {!!}
 
   substitution :
     {l1 l2 : Level} {T : UU l1} {A : simple.system l2 T} →
     simple.substitution A →
     dependent.substitution (system A)
   dependent.substitution.type
-    ( substitution S) x =
-    hom-system (simple.substitution.element S x)
-  dependent.substitution.slice
-    ( substitution S) X =
-    substitution (simple.substitution.slice S X)
+    ( substitution S) x = {!!}
 
   generic-element :
     {l1 l2 : Level} {T : UU l1} {A : simple.system l2 T} →
     (W : simple.weakening A) → simple.generic-element A →
     dependent.generic-element (weakening W)
   dependent.generic-element.type
-    ( generic-element W δ) X =
-    simple.generic-element.element δ X
-  dependent.generic-element.slice
-    ( generic-element W δ) X =
-    generic-element
-      ( simple.weakening.slice W X)
-      ( simple.generic-element.slice δ X)
+    ( generic-element W δ) X = {!!}
 
   weakening-preserves-weakening :
     {l1 l2 : Level} {T : UU l1} {A : simple.system l2 T}
@@ -727,10 +586,5 @@ module dependent-simple
     simple.weakening-preserves-weakening W →
     dependent.weakening-preserves-weakening (weakening W)
   dependent.weakening-preserves-weakening.type
-    ( weakening-preserves-weakening WW) X =
-    preserves-weakening (simple.weakening-preserves-weakening.element WW X)
-  dependent.weakening-preserves-weakening.slice
-    ( weakening-preserves-weakening WW) X =
-    weakening-preserves-weakening
-      ( simple.weakening-preserves-weakening.slice WW X)
+    ( weakening-preserves-weakening WW) X = {!!}
 ```

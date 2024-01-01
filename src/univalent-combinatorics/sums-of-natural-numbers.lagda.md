@@ -38,21 +38,5 @@ abstract
     Id
       ( sum-count-ℕ count-A (λ x → sum-count-ℕ (count-B x) (f x)))
       ( sum-count-ℕ (count-Σ count-A count-B) (ind-Σ f))
-  associative-sum-count-ℕ {l1} {l2} {A} {B} count-A count-B f =
-    ( ( htpy-sum-count-ℕ count-A
-        ( λ x →
-          inv
-          ( number-of-elements-count-Σ
-            ( count-B x)
-            ( λ y → count-Fin (f x y))))) ∙
-      ( inv
-        ( number-of-elements-count-Σ count-A
-          ( λ x → count-Σ (count-B x) (λ y → count-Fin (f x y)))))) ∙
-    ( ( double-counting-equiv
-        ( count-Σ count-A (λ x → count-Σ (count-B x) (λ y → count-Fin (f x y))))
-        ( count-Σ (count-Σ count-A count-B) (λ x → count-Fin (ind-Σ f x)))
-        ( inv-associative-Σ A B (λ x → Fin (ind-Σ f x)))) ∙
-      ( number-of-elements-count-Σ
-        ( count-Σ count-A count-B)
-        ( λ x → (count-Fin (ind-Σ f x)))))
+  associative-sum-count-ℕ {l1} {l2} {A} {B} count-A count-B f = {!!}
 ```

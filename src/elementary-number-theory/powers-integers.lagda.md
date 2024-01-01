@@ -28,14 +28,14 @@ iteratively multiplying `x` with itself `n` times.
 
 ```agda
 power-ℤ : ℕ → ℤ → ℤ
-power-ℤ = power-Commutative-Ring ℤ-Commutative-Ring
+power-ℤ = {!!}
 ```
 
 ## Properties
 
-### `xⁿ⁺¹ = xⁿx`
+### `xⁿ⁺¹ = {!!}
 
 ```agda
 power-succ-ℤ : (n : ℕ) (x : ℤ) → power-ℤ (succ-ℕ n) x ＝ (power-ℤ n x) *ℤ x
-power-succ-ℤ = power-succ-Commutative-Ring ℤ-Commutative-Ring
+power-succ-ℤ = {!!}
 ```

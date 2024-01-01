@@ -33,11 +33,11 @@ module _
   where
 
   Abstract-Equation : UU l1
-  Abstract-Equation = Term Sg × Term Sg
+  Abstract-Equation = {!!}
 
   lhs-Abstract-Equation : Abstract-Equation → Term Sg
-  lhs-Abstract-Equation = pr1
+  lhs-Abstract-Equation = {!!}
 
   rhs-Abstract-Equation : Abstract-Equation → Term Sg
-  rhs-Abstract-Equation = pr2
+  rhs-Abstract-Equation = {!!}
 ```

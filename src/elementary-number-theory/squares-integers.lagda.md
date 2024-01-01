@@ -32,16 +32,16 @@ open import foundation-core.transport-along-identifications
 
 ```agda
 square-ℤ : ℤ → ℤ
-square-ℤ a = mul-ℤ a a
+square-ℤ a = {!!}
 
 cube-ℤ : ℤ → ℤ
-cube-ℤ a = mul-ℤ (square-ℤ a) a
+cube-ℤ a = {!!}
 
 is-square-ℤ : ℤ → UU lzero
-is-square-ℤ a = Σ ℤ (λ x → a ＝ square-ℤ x)
+is-square-ℤ a = {!!}
 
 square-root-ℤ : (a : ℤ) → is-square-ℤ a → ℤ
-square-root-ℤ _ (root , _) = root
+square-root-ℤ _ (root , _) = {!!}
 ```
 
 ## Properties
@@ -53,61 +53,39 @@ is-decidable-is-nonnegative-square-ℤ :
   (a : ℤ) →
   (is-nonnegative-ℤ a) + (is-nonnegative-ℤ (neg-ℤ a)) →
   is-nonnegative-ℤ (square-ℤ a)
-is-decidable-is-nonnegative-square-ℤ _ (inl x) = is-nonnegative-mul-ℤ x x
-is-decidable-is-nonnegative-square-ℤ a (inr x) =
-  tr
-    ( is-nonnegative-ℤ)
-    ( double-negative-law-mul-ℤ a a)
-    ( is-nonnegative-mul-ℤ x x)
+is-decidable-is-nonnegative-square-ℤ _ (inl x) = {!!}
+is-decidable-is-nonnegative-square-ℤ a (inr x) = {!!}
 
 is-nonnegative-square-ℤ : (a : ℤ) → is-nonnegative-ℤ (square-ℤ a)
-is-nonnegative-square-ℤ a =
-  is-decidable-is-nonnegative-square-ℤ a decide-is-nonnegative-ℤ
+is-nonnegative-square-ℤ a = {!!}
 ```
 
 ### The squares in ℤ are exactly the squares in ℕ
 
 ```agda
 is-square-int-is-square-nat : {n : ℕ} → is-square-ℕ n → is-square-ℤ (int-ℕ n)
-is-square-int-is-square-nat (root , pf-square) =
-  ( ( int-ℕ root) ,
-    ( ( ap int-ℕ pf-square) ∙
-      ( inv (mul-int-ℕ root root))))
+is-square-int-is-square-nat (root , pf-square) = {!!}
 
 is-square-nat-is-square-int : {a : ℤ} → is-square-ℤ a → is-square-ℕ (abs-ℤ a)
-is-square-nat-is-square-int (root , pf-square) =
-  ( ( abs-ℤ root) ,
-    ( ( ap abs-ℤ pf-square) ∙
-      ( multiplicative-abs-ℤ root root)))
+is-square-nat-is-square-int (root , pf-square) = {!!}
 
 iff-is-square-int-is-square-nat :
   (n : ℕ) → is-square-ℕ n ↔ is-square-ℤ (int-ℕ n)
-pr1 (iff-is-square-int-is-square-nat n) = is-square-int-is-square-nat
-pr2 (iff-is-square-int-is-square-nat n) H =
-  tr is-square-ℕ (abs-int-ℕ n) (is-square-nat-is-square-int H)
+pr1 (iff-is-square-int-is-square-nat n) = {!!}
+pr2 (iff-is-square-int-is-square-nat n) H = {!!}
 
 iff-is-nonneg-square-nat-is-square-int :
   (a : ℤ) → is-square-ℤ a ↔ is-nonnegative-ℤ a × is-square-ℕ (abs-ℤ a)
-pr1 (iff-is-nonneg-square-nat-is-square-int a) (root , pf-square) =
-  ( ( tr is-nonnegative-ℤ (inv pf-square) (is-nonnegative-square-ℤ root)) ,
-    ( is-square-nat-is-square-int (root , pf-square)))
+pr1 (iff-is-nonneg-square-nat-is-square-int a) (root , pf-square) = {!!}
 pr2
-  ( iff-is-nonneg-square-nat-is-square-int a) (pf-nonneg , (root , pf-square)) =
-  ( ( int-ℕ root) ,
-    ( ( inv (int-abs-is-nonnegative-ℤ a pf-nonneg)) ∙
-      ( pr2 (is-square-int-is-square-nat (root , pf-square)))))
+  ( iff-is-nonneg-square-nat-is-square-int a) (pf-nonneg , (root , pf-square)) = {!!}
 ```
 
 ### Squareness in ℤ is decidable
 
 ```agda
 is-decidable-is-square-ℤ : (a : ℤ) → is-decidable (is-square-ℤ a)
-is-decidable-is-square-ℤ (inl n) =
-  inr (map-neg (pr1 (iff-is-nonneg-square-nat-is-square-int (inl n))) pr1)
-is-decidable-is-square-ℤ (inr (inl n)) = inl (zero-ℤ , refl)
-is-decidable-is-square-ℤ (inr (inr n)) =
-  is-decidable-iff
-    ( is-square-int-is-square-nat)
-    ( is-square-nat-is-square-int)
-    ( is-decidable-is-square-ℕ (succ-ℕ n))
+is-decidable-is-square-ℤ (inl n) = {!!}
+is-decidable-is-square-ℤ (inr (inl n)) = {!!}
+is-decidable-is-square-ℤ (inr (inr n)) = {!!}
 ```

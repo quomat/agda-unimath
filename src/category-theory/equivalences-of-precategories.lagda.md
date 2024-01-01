@@ -42,22 +42,12 @@ module _
 
   is-equiv-functor-Precategory :
     functor-Precategory C D → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-equiv-functor-Precategory F =
-    Σ ( functor-Precategory D C)
-      ( λ G →
-        ( natural-isomorphism-Precategory C C
-          ( comp-functor-Precategory C D C G F)
-          ( id-functor-Precategory C))) ×
-    Σ ( functor-Precategory D C)
-      ( λ H →
-        ( natural-isomorphism-Precategory D D
-          ( comp-functor-Precategory D C D F H)
-          ( id-functor-Precategory D)))
+  is-equiv-functor-Precategory F = {!!}
 ```
 
 ### The type of equivalences of precategories
 
 ```agda
   equiv-Precategory : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  equiv-Precategory = Σ (functor-Precategory C D) (is-equiv-functor-Precategory)
+  equiv-Precategory = {!!}
 ```

@@ -23,11 +23,11 @@ open import synthetic-homotopy-theory.circle
 
 ```agda
 ℂP∞ : UU (lsuc lzero)
-ℂP∞ = Σ (UU lzero) (λ X → type-trunc-Set (𝕊¹ ≃ X))
+ℂP∞ = {!!}
 
 point-ℂP∞ : ℂP∞
-pr1 point-ℂP∞ = 𝕊¹
-pr2 point-ℂP∞ = unit-trunc-Set id-equiv
+pr1 point-ℂP∞ = {!!}
+pr2 point-ℂP∞ = {!!}
 ```
 
 ### `ℂP∞` as the `2`-truncation of the `2`-sphere

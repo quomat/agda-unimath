@@ -37,21 +37,20 @@ A **cospan** is a pair of functions with a common codomain.
 cospan :
   {l1 l2 : Level} (l : Level) (A : UU l1) (B : UU l2) →
   UU (l1 ⊔ l2 ⊔ lsuc l)
-cospan l A B =
-  Σ (UU l) (λ X → (A → X) × (B → X))
+cospan l A B = {!!}
 
 module _
   {l1 l2 : Level} {l : Level} {A : UU l1} {B : UU l2} (c : cospan l A B)
   where
 
   codomain-cospan : UU l
-  codomain-cospan = pr1 c
+  codomain-cospan = {!!}
 
   left-map-cospan : A → codomain-cospan
-  left-map-cospan = pr1 (pr2 c)
+  left-map-cospan = {!!}
 
   right-map-cospan : B → codomain-cospan
-  right-map-cospan = pr2 (pr2 c)
+  right-map-cospan = {!!}
 ```
 
 ### Homomorphisms between cospans with fixed domains
@@ -60,13 +59,7 @@ One notion of homomorphism of cospans `c` and `d` with common domains is a map
 between their codomains so that the triangles on either side commute:
 
 ```text
-  A ===== A
-  |       |
-  v       v
-  C ----> D
-  ^       ^
-  |       |
-  B ===== B
+  A = {!!}
 ```
 
 ```agda
@@ -77,14 +70,10 @@ module _
   coherence-hom-codomain-cospan :
     (c d : cospan l A B) →
     (codomain-cospan c → codomain-cospan d) → UU (l1 ⊔ l2 ⊔ l)
-  coherence-hom-codomain-cospan c d h =
-    ( coherence-triangle-maps (left-map-cospan d) h (left-map-cospan c)) ×
-    ( coherence-triangle-maps (right-map-cospan d) h (right-map-cospan c))
+  coherence-hom-codomain-cospan c d h = {!!}
 
   hom-codomain-cospan : (c d : cospan l A B) → UU (l1 ⊔ l2 ⊔ l)
-  hom-codomain-cospan c d =
-    Σ ( codomain-cospan c → codomain-cospan d)
-      ( coherence-hom-codomain-cospan c d)
+  hom-codomain-cospan c d = {!!}
 ```
 
 ## Properties
@@ -97,43 +86,28 @@ module _
   where
 
   htpy-cospan : (c d : cospan l A B) → UU (l1 ⊔ l2 ⊔ l)
-  htpy-cospan c d =
-    Σ ( codomain-cospan c ≃ codomain-cospan d)
-      ( λ e → coherence-hom-codomain-cospan c d (map-equiv e))
+  htpy-cospan c d = {!!}
 
   refl-htpy-cospan : (c : cospan l A B) → htpy-cospan c c
-  pr1 (refl-htpy-cospan c) = id-equiv
-  pr1 (pr2 (refl-htpy-cospan c)) = refl-htpy
-  pr2 (pr2 (refl-htpy-cospan c)) = refl-htpy
+  pr1 (refl-htpy-cospan c) = {!!}
 
   htpy-eq-cospan : (c d : cospan l A B) → c ＝ d → htpy-cospan c d
-  htpy-eq-cospan c .c refl = refl-htpy-cospan c
+  htpy-eq-cospan c .c refl = {!!}
 
   is-torsorial-htpy-cospan :
     (c : cospan l A B) → is-torsorial (htpy-cospan c)
-  is-torsorial-htpy-cospan c =
-    is-torsorial-Eq-structure
-      ( λ X d e → coherence-hom-codomain-cospan c (X , d) (map-equiv e))
-      ( is-torsorial-equiv (pr1 c))
-      ( codomain-cospan c , id-equiv)
-      ( is-torsorial-Eq-structure
-        ( λ x f a → coherence-triangle-maps f id (right-map-cospan c))
-        ( is-torsorial-htpy' (left-map-cospan c))
-        ( left-map-cospan c , refl-htpy)
-        (is-torsorial-htpy' (right-map-cospan c)))
+  is-torsorial-htpy-cospan c = {!!}
 
   is-equiv-htpy-eq-cospan :
     (c d : cospan l A B) → is-equiv (htpy-eq-cospan c d)
-  is-equiv-htpy-eq-cospan c =
-    fundamental-theorem-id (is-torsorial-htpy-cospan c) (htpy-eq-cospan c)
+  is-equiv-htpy-eq-cospan c = {!!}
 
   extensionality-cospan :
     (c d : cospan l A B) → (c ＝ d) ≃ (htpy-cospan c d)
-  pr1 (extensionality-cospan c d) = htpy-eq-cospan c d
-  pr2 (extensionality-cospan c d) = is-equiv-htpy-eq-cospan c d
+  pr1 (extensionality-cospan c d) = {!!}
 
   eq-htpy-cospan : (c d : cospan l A B) → htpy-cospan c d → c ＝ d
-  eq-htpy-cospan c d = map-inv-equiv (extensionality-cospan c d)
+  eq-htpy-cospan c d = {!!}
 ```
 
 ## See also

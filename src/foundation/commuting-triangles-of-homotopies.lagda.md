@@ -43,11 +43,11 @@ module _
 
   coherence-triangle-homotopies :
     (left : f ~ h) (right : g ~ h) (top : f ~ g) → UU (l1 ⊔ l2)
-  coherence-triangle-homotopies left right top = left ~ (top ∙h right)
+  coherence-triangle-homotopies left right top = {!!}
 
   coherence-triangle-homotopies' :
     (left : f ~ h) (right : g ~ h) (top : f ~ g) → UU (l1 ⊔ l2)
-  coherence-triangle-homotopies' left right top = (top ∙h right) ~ left
+  coherence-triangle-homotopies' left right top = {!!}
 ```
 
 ## Properties
@@ -65,8 +65,7 @@ module _
   distributivity-left-whisk :
     coherence-triangle-homotopies left right top →
     (i ·l left) ~ ((i ·l top) ∙h (i ·l right))
-  distributivity-left-whisk T x =
-    ap-concat-eq i (top x) (right x) (left x) (T x)
+  distributivity-left-whisk T x = {!!}
 ```
 
 ### Left whiskering triangles of homotopies
@@ -82,8 +81,7 @@ module _
     {i : (x : A) → B x}
     (H : h ~ i) (T : coherence-triangle-homotopies left right top) →
     coherence-triangle-homotopies {h = i} (left ∙h H) (right ∙h H) top
-  left-whisk-htpy-coherence-triangle-homotopies H T =
-    (λ x → ap (_∙ H x) (T x)) ∙h assoc-htpy top right H
+  left-whisk-htpy-coherence-triangle-homotopies H T = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
@@ -97,8 +95,7 @@ module _
     coherence-triangle-homotopies
       {f = i ∘ f} {i ∘ g} {i ∘ h}
       (i ·l left) (i ·l right) (i ·l top)
-  left-whisk-coherence-triangle-homotopies i =
-    distributivity-left-whisk i left right top
+  left-whisk-coherence-triangle-homotopies i = {!!}
 ```
 
 ### Right whiskering triangles of homotopies
@@ -114,8 +111,7 @@ module _
     {i : (x : A) → B x}
     (T : coherence-triangle-homotopies left right top) (H : i ~ f) →
     coherence-triangle-homotopies {f = i} (H ∙h left) right (H ∙h top)
-  right-whisk-htpy-coherence-triangle-homotopies T H =
-    (λ x → ap (H x ∙_) (T x)) ∙h (inv-htpy-assoc-htpy H top right)
+  right-whisk-htpy-coherence-triangle-homotopies T H = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
@@ -129,5 +125,5 @@ module _
     coherence-triangle-homotopies
       {f = f ∘ i} {g ∘ i} {h ∘ i}
       (left ·r i) (right ·r i) (top ·r i)
-  right-whisk-coherence-triangle-homotopies T i = T ∘ i
+  right-whisk-coherence-triangle-homotopies T i = {!!}
 ```

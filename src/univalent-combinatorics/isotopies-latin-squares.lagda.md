@@ -31,17 +31,5 @@ module _
   where
 
   isotopy-Latin-Square : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6)
-  isotopy-Latin-Square =
-    Σ ( row-Latin-Square L ≃ row-Latin-Square K)
-      ( λ e-row →
-        Σ ( column-Latin-Square L ≃ column-Latin-Square K)
-          ( λ e-column →
-            Σ ( symbol-Latin-Square L ≃ symbol-Latin-Square K)
-              ( λ e-symbol →
-                ( x : row-Latin-Square L) (y : column-Latin-Square L) →
-                Id
-                  ( map-equiv e-symbol (mul-Latin-Square L x y))
-                  ( mul-Latin-Square K
-                    ( map-equiv e-row x)
-                    ( map-equiv e-column y)))))
+  isotopy-Latin-Square = {!!}
 ```

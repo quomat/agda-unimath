@@ -32,42 +32,37 @@ ordering on `P`, the subpreorder inherits the structure of a preorder.
 ```agda
 Subpreorder :
   {l1 l2 : Level} (l3 : Level) → Preorder l1 l2 → UU (l1 ⊔ lsuc l3)
-Subpreorder l3 P = subtype l3 (type-Preorder P)
+Subpreorder l3 P = {!!}
 
 module _
   {l1 l2 l3 : Level} (P : Preorder l1 l2) (S : Subpreorder l3 P)
   where
 
   type-Subpreorder : UU (l1 ⊔ l3)
-  type-Subpreorder = type-subtype S
+  type-Subpreorder = {!!}
 
   eq-type-Subpreorder :
     (x y : type-Subpreorder) → Id (pr1 x) (pr1 y) → Id x y
-  eq-type-Subpreorder x y = eq-type-subtype S
+  eq-type-Subpreorder x y = {!!}
 
   leq-Subpreorder-Prop : (x y : type-Subpreorder) → Prop l2
-  leq-Subpreorder-Prop x y = leq-Preorder-Prop P (pr1 x) (pr1 y)
+  leq-Subpreorder-Prop x y = {!!}
 
   leq-Subpreorder : (x y : type-Subpreorder) → UU l2
-  leq-Subpreorder x y = type-Prop (leq-Subpreorder-Prop x y)
+  leq-Subpreorder x y = {!!}
 
   is-prop-leq-Subpreorder :
     (x y : type-Subpreorder) → is-prop (leq-Subpreorder x y)
-  is-prop-leq-Subpreorder x y =
-    is-prop-type-Prop (leq-Subpreorder-Prop x y)
+  is-prop-leq-Subpreorder x y = {!!}
 
   refl-leq-Subpreorder : is-reflexive leq-Subpreorder
-  refl-leq-Subpreorder x = refl-leq-Preorder P (pr1 x)
+  refl-leq-Subpreorder x = {!!}
 
   transitive-leq-Subpreorder : is-transitive leq-Subpreorder
-  transitive-leq-Subpreorder x y z =
-    transitive-leq-Preorder P (pr1 x) (pr1 y) (pr1 z)
+  transitive-leq-Subpreorder x y z = {!!}
 
   preorder-Subpreorder : Preorder (l1 ⊔ l3) l2
-  pr1 preorder-Subpreorder = type-Subpreorder
-  pr1 (pr2 preorder-Subpreorder) = leq-Subpreorder-Prop
-  pr1 (pr2 (pr2 preorder-Subpreorder)) = refl-leq-Subpreorder
-  pr2 (pr2 (pr2 preorder-Subpreorder)) = transitive-leq-Subpreorder
+  pr1 preorder-Subpreorder = {!!}
 ```
 
 ### Inclusions of subpreorders
@@ -83,19 +78,17 @@ module _
     where
 
     inclusion-Subpreorder-Prop : Prop (l1 ⊔ l3 ⊔ l4)
-    inclusion-Subpreorder-Prop =
-      Π-Prop (type-Preorder P) (λ x → hom-Prop (S x) (T x))
+    inclusion-Subpreorder-Prop = {!!}
 
     inclusion-Subpreorder : UU (l1 ⊔ l3 ⊔ l4)
-    inclusion-Subpreorder = type-Prop inclusion-Subpreorder-Prop
+    inclusion-Subpreorder = {!!}
 
     is-prop-inclusion-Subpreorder : is-prop inclusion-Subpreorder
-    is-prop-inclusion-Subpreorder =
-      is-prop-type-Prop inclusion-Subpreorder-Prop
+    is-prop-inclusion-Subpreorder = {!!}
 
   refl-inclusion-Subpreorder :
     {l3 : Level} → is-reflexive (inclusion-Subpreorder {l3})
-  refl-inclusion-Subpreorder S x = id
+  refl-inclusion-Subpreorder S x = {!!}
 
   transitive-inclusion-Subpreorder :
     {l3 l4 l5 : Level} (S : type-Preorder P → Prop l3)
@@ -104,11 +97,8 @@ module _
     inclusion-Subpreorder T U →
     inclusion-Subpreorder S T →
     inclusion-Subpreorder S U
-  transitive-inclusion-Subpreorder S T U g f x = (g x) ∘ (f x)
+  transitive-inclusion-Subpreorder S T U g f x = {!!}
 
   Sub-Preorder : (l : Level) → Preorder (l1 ⊔ lsuc l) (l1 ⊔ l)
-  pr1 (Sub-Preorder l) = type-Preorder P → Prop l
-  pr1 (pr2 (Sub-Preorder l)) = inclusion-Subpreorder-Prop
-  pr1 (pr2 (pr2 (Sub-Preorder l))) = refl-inclusion-Subpreorder
-  pr2 (pr2 (pr2 (Sub-Preorder l))) = transitive-inclusion-Subpreorder
+  pr1 (Sub-Preorder l) = {!!}
 ```

@@ -38,24 +38,21 @@ module _
   where
 
   hom-Wild-Monoid : UU (l1 ⊔ l2)
-  hom-Wild-Monoid =
-    hom-H-Space
-      ( h-space-Wild-Monoid M)
-      ( h-space-Wild-Monoid N)
+  hom-Wild-Monoid = {!!}
 
   pointed-map-hom-Wild-Monoid :
     hom-Wild-Monoid →
     pointed-type-Wild-Monoid M →∗ pointed-type-Wild-Monoid N
-  pointed-map-hom-Wild-Monoid f = pr1 f
+  pointed-map-hom-Wild-Monoid f = {!!}
 
   map-hom-Wild-Monoid :
     hom-Wild-Monoid → type-Wild-Monoid M → type-Wild-Monoid N
-  map-hom-Wild-Monoid f = pr1 (pr1 f)
+  map-hom-Wild-Monoid f = {!!}
 
   preserves-unit-map-hom-Wild-Monoid :
     (f : hom-Wild-Monoid) →
     (map-hom-Wild-Monoid f (unit-Wild-Monoid M)) ＝ (unit-Wild-Monoid N)
-  preserves-unit-map-hom-Wild-Monoid f = pr2 (pr1 f)
+  preserves-unit-map-hom-Wild-Monoid f = {!!}
 
   preserves-unital-mul-map-hom-Wild-Monoid :
     (f : hom-Wild-Monoid) →
@@ -63,7 +60,7 @@ module _
       ( h-space-Wild-Monoid M)
       ( h-space-Wild-Monoid N)
       ( pointed-map-hom-Wild-Monoid f)
-  preserves-unital-mul-map-hom-Wild-Monoid f = pr2 f
+  preserves-unital-mul-map-hom-Wild-Monoid f = {!!}
 
   preserves-mul-map-hom-Wild-Monoid :
     (f : hom-Wild-Monoid) →
@@ -71,7 +68,7 @@ module _
       ( mul-Wild-Monoid M)
       ( mul-Wild-Monoid N)
       ( map-hom-Wild-Monoid f)
-  preserves-mul-map-hom-Wild-Monoid f = pr1 (pr2 f)
+  preserves-mul-map-hom-Wild-Monoid f = {!!}
 
   preserves-left-unit-law-mul-map-hom-Wild-Monoid :
     ( f : hom-Wild-Monoid) →
@@ -83,8 +80,7 @@ module _
       ( map-hom-Wild-Monoid f)
       ( preserves-unit-map-hom-Wild-Monoid f)
       ( preserves-mul-map-hom-Wild-Monoid f)
-  preserves-left-unit-law-mul-map-hom-Wild-Monoid f =
-    pr1 (pr2 (pr2 f))
+  preserves-left-unit-law-mul-map-hom-Wild-Monoid f = {!!}
 
   preserves-right-unit-law-mul-map-hom-Wild-Monoid :
     (f : hom-Wild-Monoid) →
@@ -96,8 +92,7 @@ module _
       ( map-hom-Wild-Monoid f)
       ( preserves-unit-map-hom-Wild-Monoid f)
       ( preserves-mul-map-hom-Wild-Monoid f)
-  preserves-right-unit-law-mul-map-hom-Wild-Monoid f =
-    pr1 (pr2 (pr2 (pr2 f)))
+  preserves-right-unit-law-mul-map-hom-Wild-Monoid f = {!!}
 
   preserves-coh-unit-laws-map-hom-Wild-Monoid :
     (f : hom-Wild-Monoid) →
@@ -108,6 +103,5 @@ module _
       ( preserves-mul-map-hom-Wild-Monoid f)
       ( preserves-left-unit-law-mul-map-hom-Wild-Monoid f)
       ( preserves-right-unit-law-mul-map-hom-Wild-Monoid f)
-  preserves-coh-unit-laws-map-hom-Wild-Monoid f =
-    pr2 (pr2 (pr2 (pr2 f)))
+  preserves-coh-unit-laws-map-hom-Wild-Monoid f = {!!}
 ```

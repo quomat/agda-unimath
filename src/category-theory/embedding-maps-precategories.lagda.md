@@ -47,19 +47,14 @@ module _
   where
 
   is-embedding-map-prop-map-Precategory : Prop (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-embedding-map-prop-map-Precategory =
-    prod-Prop
-      ( is-emb-Prop (obj-map-Precategory C D F))
-      ( is-fully-faithful-prop-map-Precategory C D F)
+  is-embedding-map-prop-map-Precategory = {!!}
 
   is-embedding-map-map-Precategory : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-embedding-map-map-Precategory =
-    type-Prop is-embedding-map-prop-map-Precategory
+  is-embedding-map-map-Precategory = {!!}
 
   is-prop-is-embedding-map-map-Precategory :
     is-prop is-embedding-map-map-Precategory
-  is-prop-is-embedding-map-map-Precategory =
-    is-prop-type-Prop is-embedding-map-prop-map-Precategory
+  is-prop-is-embedding-map-map-Precategory = {!!}
 ```
 
 ### The type of embedding maps between precategories
@@ -72,15 +67,14 @@ module _
   where
 
   embedding-map-Precategory : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  embedding-map-Precategory =
-    Σ (map-Precategory C D) (is-embedding-map-map-Precategory C D)
+  embedding-map-Precategory = {!!}
 
   map-embedding-map-Precategory :
     embedding-map-Precategory → map-Precategory C D
-  map-embedding-map-Precategory = pr1
+  map-embedding-map-Precategory = {!!}
 
   is-embedding-map-embedding-map-Precategory :
     (e : embedding-map-Precategory) →
     is-embedding-map-map-Precategory C D (map-embedding-map-Precategory e)
-  is-embedding-map-embedding-map-Precategory = pr2
+  is-embedding-map-embedding-map-Precategory = {!!}
 ```

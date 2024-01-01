@@ -47,8 +47,8 @@ primitive
 
 ```agda
 _ : primQNameLess (quote bool) (quote unit) ＝ true
-_ = refl
+_ = {!!}
 
 _ : primShowQName (quote bool) ＝ "foundation.booleans.bool"
-_ = refl
+_ = {!!}
 ```

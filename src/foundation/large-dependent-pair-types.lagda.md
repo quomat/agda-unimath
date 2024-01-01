@@ -31,7 +31,7 @@ record Σω (A : UUω) (B : A → UUω) : UUω where
 open Σω public
 
 infixr 3 _,ω_
-pattern _,ω_ a b = pairω a b
+pattern _,ω_ a b = {!!}
 ```
 
 ### Families on dependent pair types
@@ -42,5 +42,5 @@ module _
   where
 
   fam-Σω : ((x : A) → B x → UU l) → Σω A B → UU l
-  fam-Σω C (pairω x y) = C x y
+  fam-Σω C (pairω x y) = {!!}
 ```

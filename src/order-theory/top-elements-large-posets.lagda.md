@@ -32,8 +32,7 @@ module _
 
   is-top-element-Large-Poset :
     {l1 : Level} → type-Large-Poset P l1 → UUω
-  is-top-element-Large-Poset x =
-    {l : Level} (y : type-Large-Poset P l) → leq-Large-Poset P y x
+  is-top-element-Large-Poset x = {!!}
 ```
 
 ### The predicate on posets of having a top element
@@ -70,9 +69,5 @@ module _
     ((i : I) → has-top-element-Large-Poset (P i)) →
     has-top-element-Large-Poset (Π-Large-Poset P)
   top-has-top-element-Large-Poset
-    ( has-top-element-Π-Large-Poset H) i =
-    top-has-top-element-Large-Poset (H i)
-  is-top-element-top-has-top-element-Large-Poset
-    ( has-top-element-Π-Large-Poset H) x i =
-    is-top-element-top-has-top-element-Large-Poset (H i) (x i)
+    ( has-top-element-Π-Large-Poset H) i = {!!}
 ```

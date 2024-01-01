@@ -26,7 +26,7 @@ open import ring-theory.subsets-rings
 ## Idea
 
 A nilpotent element in a ring is an element `x` for which there is a natural
-number `n` such that `x^n = 0`.
+number `n` such that `x^n = {!!}
 
 ## Definition
 
@@ -36,16 +36,14 @@ module _
   where
 
   is-nilpotent-element-ring-Prop : type-Ring R → Prop l
-  is-nilpotent-element-ring-Prop =
-    is-nilpotent-element-semiring-Prop (semiring-Ring R)
+  is-nilpotent-element-ring-Prop = {!!}
 
   is-nilpotent-element-Ring : type-Ring R → UU l
-  is-nilpotent-element-Ring = is-nilpotent-element-Semiring (semiring-Ring R)
+  is-nilpotent-element-Ring = {!!}
 
   is-prop-is-nilpotent-element-Ring :
     (x : type-Ring R) → is-prop (is-nilpotent-element-Ring x)
-  is-prop-is-nilpotent-element-Ring =
-    is-prop-is-nilpotent-element-Semiring (semiring-Ring R)
+  is-prop-is-nilpotent-element-Ring = {!!}
 ```
 
 ## Properties
@@ -55,7 +53,7 @@ module _
 ```agda
 is-nilpotent-zero-Ring :
   {l : Level} (R : Ring l) → is-nilpotent-element-Ring R (zero-Ring R)
-is-nilpotent-zero-Ring R = is-nilpotent-zero-Semiring (semiring-Ring R)
+is-nilpotent-zero-Ring R = {!!}
 ```
 
 ### If `x` and `y` commute and are both nilpotent, then `x + y` is nilpotent
@@ -66,7 +64,7 @@ is-nilpotent-add-Ring :
   (x y : type-Ring R) → (mul-Ring R x y ＝ mul-Ring R y x) →
   is-nilpotent-element-Ring R x → is-nilpotent-element-Ring R y →
   is-nilpotent-element-Ring R (add-Ring R x y)
-is-nilpotent-add-Ring R = is-nilpotent-add-Semiring (semiring-Ring R)
+is-nilpotent-add-Ring R = {!!}
 ```
 
 ### If `x` is nilpotent, then so is `-x`
@@ -75,14 +73,7 @@ is-nilpotent-add-Ring R = is-nilpotent-add-Semiring (semiring-Ring R)
 is-nilpotent-element-neg-Ring :
   {l : Level} (R : Ring l) →
   is-closed-under-negatives-subset-Ring R (is-nilpotent-element-ring-Prop R)
-is-nilpotent-element-neg-Ring R {x} H =
-  apply-universal-property-trunc-Prop H
-    ( is-nilpotent-element-ring-Prop R (neg-Ring R x))
-    ( λ (n , p) →
-      intro-∃ n
-        ( ( power-neg-Ring R n x) ∙
-          ( ( ap (mul-Ring R (power-Ring R n (neg-one-Ring R))) p) ∙
-            ( right-zero-law-mul-Ring R (power-Ring R n (neg-one-Ring R))))))
+is-nilpotent-element-neg-Ring R {x} H = {!!}
 ```
 
 ### If `x` is nilpotent and `y` commutes with `x`, then `xy` is also nilpotent
@@ -97,14 +88,12 @@ module _
     mul-Ring R x y ＝ mul-Ring R y x →
     is-nilpotent-element-Ring R x →
     is-nilpotent-element-Ring R (mul-Ring R x y)
-  is-nilpotent-element-mul-Ring =
-    is-nilpotent-element-mul-Semiring (semiring-Ring R)
+  is-nilpotent-element-mul-Ring = {!!}
 
   is-nilpotent-element-mul-Ring' :
     (x y : type-Ring R) →
     mul-Ring R x y ＝ mul-Ring R y x →
     is-nilpotent-element-Ring R x →
     is-nilpotent-element-Ring R (mul-Ring R y x)
-  is-nilpotent-element-mul-Ring' =
-    is-nilpotent-element-mul-Semiring' (semiring-Ring R)
+  is-nilpotent-element-mul-Ring' = {!!}
 ```

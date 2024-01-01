@@ -35,12 +35,10 @@ module _
 
   is-totally-faithful-hom-Undirected-Graph :
     hom-Undirected-Graph G H → UU (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l4)
-  is-totally-faithful-hom-Undirected-Graph f =
-    is-emb (tot (edge-hom-Undirected-Graph G H f))
+  is-totally-faithful-hom-Undirected-Graph f = {!!}
 
   totally-faithful-hom-Undirected-Graph : UU (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  totally-faithful-hom-Undirected-Graph =
-    Σ (hom-Undirected-Graph G H) is-totally-faithful-hom-Undirected-Graph
+  totally-faithful-hom-Undirected-Graph = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}
@@ -49,32 +47,28 @@ module _
   where
 
   hom-totally-faithful-hom-Undirected-Graph : hom-Undirected-Graph G H
-  hom-totally-faithful-hom-Undirected-Graph = pr1 f
+  hom-totally-faithful-hom-Undirected-Graph = {!!}
 
   vertex-totally-faithful-hom-Undirected-Graph :
     vertex-Undirected-Graph G → vertex-Undirected-Graph H
-  vertex-totally-faithful-hom-Undirected-Graph =
-    vertex-hom-Undirected-Graph G H hom-totally-faithful-hom-Undirected-Graph
+  vertex-totally-faithful-hom-Undirected-Graph = {!!}
 
   unordered-pair-vertices-totally-faithful-hom-Undirected-Graph :
     unordered-pair-vertices-Undirected-Graph G →
     unordered-pair-vertices-Undirected-Graph H
-  unordered-pair-vertices-totally-faithful-hom-Undirected-Graph =
-    unordered-pair-vertices-hom-Undirected-Graph G H
-      hom-totally-faithful-hom-Undirected-Graph
+  unordered-pair-vertices-totally-faithful-hom-Undirected-Graph = {!!}
 
   edge-totally-faithful-hom-Undirected-Graph :
     (p : unordered-pair-vertices-Undirected-Graph G) →
     edge-Undirected-Graph G p →
     edge-Undirected-Graph H
       ( unordered-pair-vertices-totally-faithful-hom-Undirected-Graph p)
-  edge-totally-faithful-hom-Undirected-Graph =
-    edge-hom-Undirected-Graph G H hom-totally-faithful-hom-Undirected-Graph
+  edge-totally-faithful-hom-Undirected-Graph = {!!}
 
   is-totally-faithful-totally-faithful-hom-Undirected-Graph :
     is-totally-faithful-hom-Undirected-Graph G H
       hom-totally-faithful-hom-Undirected-Graph
-  is-totally-faithful-totally-faithful-hom-Undirected-Graph = pr2 f
+  is-totally-faithful-totally-faithful-hom-Undirected-Graph = {!!}
 ```
 
 ## See also

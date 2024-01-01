@@ -35,5 +35,5 @@ module _
   where
 
   characteristic-Ring : ideal-Ring l ℤ-Ring
-  characteristic-Ring = kernel-hom-Ring ℤ-Ring R (initial-hom-Ring R)
+  characteristic-Ring = {!!}
 ```

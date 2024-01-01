@@ -42,26 +42,26 @@ pattern _,_ a b = pair a b
 ind-Σ :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} {C : Σ A B → UU l3} →
   ((x : A) (y : B x) → C (pair x y)) → ((t : Σ A B) → C t)
-ind-Σ f (x , y) = f x y
+ind-Σ f (x , y) = {!!}
 
 ev-pair :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} {C : Σ A B → UU l3} →
   ((t : Σ A B) → C t) → (x : A) (y : B x) → C (pair x y)
-ev-pair f x y = f (x , y)
+ev-pair f x y = {!!}
 
 triple :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} {C : (x : A) → B x → UU l3} →
   (a : A) (b : B a) → C a b → Σ A (λ x → Σ (B x) (C x))
-pr1 (triple a b c) = a
-pr1 (pr2 (triple a b c)) = b
-pr2 (pr2 (triple a b c)) = c
+pr1 (triple a b c) = {!!}
+pr1 (pr2 (triple a b c)) = {!!}
+pr2 (pr2 (triple a b c)) = {!!}
 
 triple' :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} {C : Σ A B → UU l3} →
   (a : A) (b : B a) → C (pair a b) → Σ (Σ A B) C
-pr1 (pr1 (triple' a b c)) = a
-pr2 (pr1 (triple' a b c)) = b
-pr2 (triple' a b c) = c
+pr1 (pr1 (triple' a b c)) = {!!}
+pr2 (pr1 (triple' a b c)) = {!!}
+pr2 (triple' a b c) = {!!}
 ```
 
 ### Families on dependent pair types
@@ -72,5 +72,5 @@ module _
   where
 
   fam-Σ : ((x : A) → B x → UU l3) → Σ A B → UU l3
-  fam-Σ C (x , y) = C x y
+  fam-Σ C (x , y) = {!!}
 ```

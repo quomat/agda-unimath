@@ -31,22 +31,20 @@ module _
   where
 
   set-op-Semigroup : Set l
-  set-op-Semigroup = set-Semigroup G
+  set-op-Semigroup = {!!}
 
   type-op-Semigroup : UU l
-  type-op-Semigroup = type-Set set-op-Semigroup
+  type-op-Semigroup = {!!}
 
   mul-op-Semigroup : type-op-Semigroup → type-op-Semigroup → type-op-Semigroup
-  mul-op-Semigroup x y = mul-Semigroup G y x
+  mul-op-Semigroup x y = {!!}
 
   associative-mul-op-Semigroup :
     (x y z : type-op-Semigroup) →
     mul-Semigroup G z (mul-Semigroup G y x) ＝
     mul-Semigroup G (mul-Semigroup G z y) x
-  associative-mul-op-Semigroup x y z = inv (associative-mul-Semigroup G z y x)
+  associative-mul-op-Semigroup x y z = {!!}
 
   op-Semigroup : Semigroup l
-  pr1 op-Semigroup = set-op-Semigroup
-  pr1 (pr2 op-Semigroup) = mul-op-Semigroup
-  pr2 (pr2 op-Semigroup) = associative-mul-op-Semigroup
+  pr1 op-Semigroup = {!!}
 ```

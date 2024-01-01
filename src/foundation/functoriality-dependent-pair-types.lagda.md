@@ -47,20 +47,12 @@ module _
 
   abstract
     is-trunc-map-tot : ((x : A) → is-trunc-map k (f x)) → is-trunc-map k (tot f)
-    is-trunc-map-tot H y =
-      is-trunc-equiv k
-        ( fiber (f (pr1 y)) (pr2 y))
-        ( compute-fiber-tot f y)
-        ( H (pr1 y) (pr2 y))
+    is-trunc-map-tot H y = {!!}
 
   abstract
     is-trunc-map-is-trunc-map-tot :
       is-trunc-map k (tot f) → ((x : A) → is-trunc-map k (f x))
-    is-trunc-map-is-trunc-map-tot is-trunc-tot-f x z =
-      is-trunc-equiv k
-        ( fiber (tot f) (pair x z))
-        ( inv-compute-fiber-tot f (pair x z))
-        ( is-trunc-tot-f (pair x z))
+    is-trunc-map-is-trunc-map-tot is-trunc-tot-f x z = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} {C : A → UU l3}
@@ -70,12 +62,11 @@ module _
   abstract
     is-contr-map-tot :
       ((x : A) → is-contr-map (f x)) → is-contr-map (tot f)
-    is-contr-map-tot =
-      is-trunc-map-tot neg-two-𝕋
+    is-contr-map-tot = {!!}
 
   abstract
     is-prop-map-tot : ((x : A) → is-prop-map (f x)) → is-prop-map (tot f)
-    is-prop-map-tot = is-trunc-map-tot neg-one-𝕋
+    is-prop-map-tot = {!!}
 ```
 
 ### The functoriality of dependent pair types preserves truncatedness
@@ -89,17 +80,13 @@ module _
     is-trunc-map-map-Σ-map-base :
       (k : 𝕋) {f : A → B} (C : B → UU l3) →
       is-trunc-map k f → is-trunc-map k (map-Σ-map-base f C)
-    is-trunc-map-map-Σ-map-base k {f} C H y =
-      is-trunc-equiv' k
-        ( fiber f (pr1 y))
-        ( equiv-fiber-map-Σ-map-base-fiber f C y)
-        ( H (pr1 y))
+    is-trunc-map-map-Σ-map-base k {f} C H y = {!!}
 
   abstract
     is-prop-map-map-Σ-map-base :
       {f : A → B} (C : B → UU l3) →
       is-prop-map f → is-prop-map (map-Σ-map-base f C)
-    is-prop-map-map-Σ-map-base C = is-trunc-map-map-Σ-map-base neg-one-𝕋 C
+    is-prop-map-map-Σ-map-base C = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {C : A → UU l3}
@@ -110,14 +97,7 @@ module _
       (k : 𝕋) (D : B → UU l4) {f : A → B} {g : (x : A) → C x → D (f x)} →
       is-trunc-map k f → ((x : A) → is-trunc-map k (g x)) →
       is-trunc-map k (map-Σ D f g)
-    is-trunc-map-map-Σ k D {f} {g} H K =
-      is-trunc-map-left-map-triangle k
-        ( map-Σ D f g)
-        ( map-Σ-map-base f D)
-        ( tot g)
-        ( triangle-map-Σ D f g)
-        ( is-trunc-map-map-Σ-map-base k D H)
-        ( is-trunc-map-tot k K)
+    is-trunc-map-map-Σ k D {f} {g} H K = {!!}
 
   module _
     (D : B → UU l4) {f : A → B} {g : (x : A) → C x → D (f x)}
@@ -127,13 +107,13 @@ module _
       is-contr-map-map-Σ :
         is-contr-map f → ((x : A) → is-contr-map (g x)) →
         is-contr-map (map-Σ D f g)
-      is-contr-map-map-Σ = is-trunc-map-map-Σ neg-two-𝕋 D
+      is-contr-map-map-Σ = {!!}
 
     abstract
       is-prop-map-map-Σ :
         is-prop-map f → ((x : A) → is-prop-map (g x)) →
         is-prop-map (map-Σ D f g)
-      is-prop-map-map-Σ = is-trunc-map-map-Σ neg-one-𝕋 D
+      is-prop-map-map-Σ = {!!}
 ```
 
 ### A family of squares over a pullback squares is a family of pullback squares if and only if the induced square of total spaces is a pullback square
@@ -150,26 +130,7 @@ module _
 
   tot-cone-cone-family :
     cone (map-Σ PX f f') (map-Σ PX g g') (Σ C PC)
-  pr1 tot-cone-cone-family =
-    map-Σ _ (vertical-map-cone f g c) (λ x → pr1 (c' x))
-  pr1 (pr2 tot-cone-cone-family) =
-    map-Σ _ (horizontal-map-cone f g c) (λ x → (pr1 (pr2 (c' x))))
-  pr2 (pr2 tot-cone-cone-family) =
-    htpy-map-Σ PX
-      ( coherence-square-cone f g c)
-      ( λ z →
-        ( f' (vertical-map-cone f g c z)) ∘
-        ( vertical-map-cone
-          ( ( tr PX (coherence-square-cone f g c z)) ∘
-            ( f' (vertical-map-cone f g c z)))
-          ( g' (horizontal-map-cone f g c z))
-          ( c' z)))
-      ( λ z →
-        coherence-square-cone
-          ( ( tr PX (coherence-square-cone f g c z)) ∘
-            ( f' (vertical-map-cone f g c z)))
-          ( g' (horizontal-map-cone f g c z))
-          ( c' z))
+  pr1 tot-cone-cone-family = {!!}
 
   map-standard-pullback-tot-cone-cone-fam-right-factor :
     Σ ( standard-pullback f g)
@@ -184,10 +145,7 @@ module _
           ( λ b' → Id
             ( tr PX (pr2 bα) (f' (pr1 aa') (pr2 aa')))
             ( g' (pr1 bα) b'))))
-  map-standard-pullback-tot-cone-cone-fam-right-factor =
-    map-interchange-Σ-Σ
-      ( λ a bα a' → Σ (PB (pr1 bα))
-        ( λ b' → Id (tr PX (pr2 bα) (f' a a')) (g' (pr1 bα) b')))
+  map-standard-pullback-tot-cone-cone-fam-right-factor = {!!}
 
   map-standard-pullback-tot-cone-cone-fam-left-factor :
     (aa' : Σ A PA) →
@@ -199,9 +157,7 @@ module _
     Σ ( Σ B PB)
       ( λ bb' → Σ (Id (f (pr1 aa')) (g (pr1 bb')))
         ( λ α → Id (tr PX α (f' (pr1 aa') (pr2 aa'))) (g' (pr1 bb') (pr2 bb'))))
-  map-standard-pullback-tot-cone-cone-fam-left-factor aa' =
-    ( map-interchange-Σ-Σ
-      ( λ b α b' → Id (tr PX α (f' (pr1 aa') (pr2 aa'))) (g' b b')))
+  map-standard-pullback-tot-cone-cone-fam-left-factor aa' = {!!}
 
   map-standard-pullback-tot-cone-cone-family :
     Σ ( standard-pullback f g)
@@ -211,31 +167,11 @@ module _
             f' (vertical-map-standard-pullback t))
           ( g' (horizontal-map-standard-pullback t))) →
     standard-pullback (map-Σ PX f f') (map-Σ PX g g')
-  map-standard-pullback-tot-cone-cone-family =
-    ( tot
-      (λ aa' →
-        ( tot (λ bb' → eq-pair-Σ')) ∘
-        ( map-standard-pullback-tot-cone-cone-fam-left-factor aa'))) ∘
-    ( map-standard-pullback-tot-cone-cone-fam-right-factor)
+  map-standard-pullback-tot-cone-cone-family = {!!}
 
   is-equiv-map-standard-pullback-tot-cone-cone-family :
     is-equiv map-standard-pullback-tot-cone-cone-family
-  is-equiv-map-standard-pullback-tot-cone-cone-family =
-    is-equiv-comp
-      ( tot (λ aa' →
-        ( tot (λ bb' → eq-pair-Σ')) ∘
-        ( map-standard-pullback-tot-cone-cone-fam-left-factor aa')))
-      ( map-standard-pullback-tot-cone-cone-fam-right-factor)
-      ( is-equiv-map-interchange-Σ-Σ
-        ( λ a bα a' → Σ (PB (pr1 bα))
-          ( λ b' → Id (tr PX (pr2 bα) (f' a a')) (g' (pr1 bα) b'))))
-      ( is-equiv-tot-is-fiberwise-equiv (λ aa' → is-equiv-comp
-        ( tot (λ bb' → eq-pair-Σ'))
-        ( map-standard-pullback-tot-cone-cone-fam-left-factor aa')
-        ( is-equiv-map-interchange-Σ-Σ _)
-        ( is-equiv-tot-is-fiberwise-equiv (λ bb' → is-equiv-eq-pair-Σ
-          ( pair (f (pr1 aa')) (f' (pr1 aa') (pr2 aa')))
-          ( pair (g (pr1 bb')) (g' (pr1 bb') (pr2 bb')))))))
+  is-equiv-map-standard-pullback-tot-cone-cone-family = {!!}
 
   triangle-standard-pullback-tot-cone-cone-family :
     ( gap (map-Σ PX f f') (map-Σ PX g g') tot-cone-cone-family) ~
@@ -246,8 +182,7 @@ module _
           ( (tr PX (pr2 (pr2 c) x)) ∘ (f' (pr1 c x)))
           ( g' (pr1 (pr2 c) x))
           ( c' x))))
-  triangle-standard-pullback-tot-cone-cone-family x =
-    refl
+  triangle-standard-pullback-tot-cone-cone-family x = {!!}
 
   is-pullback-family-is-pullback-tot :
     is-pullback f g c →
@@ -258,26 +193,7 @@ module _
       ( (tr PX (pr2 (pr2 c) x)) ∘ (f' (pr1 c x)))
       ( g' (pr1 (pr2 c) x))
       ( c' x)
-  is-pullback-family-is-pullback-tot is-pb-c is-pb-tot =
-    is-fiberwise-equiv-is-equiv-map-Σ _
-      ( gap f g c)
-      ( λ x → gap
-        ( (tr PX (pr2 (pr2 c) x)) ∘ (f' (pr1 c x)))
-        ( g' (pr1 (pr2 c) x))
-        ( c' x))
-      ( is-pb-c)
-      ( is-equiv-top-map-triangle
-        ( gap (map-Σ PX f f') (map-Σ PX g g') tot-cone-cone-family)
-        ( map-standard-pullback-tot-cone-cone-family)
-        ( map-Σ _
-          ( gap f g c)
-          ( λ x → gap
-            ( (tr PX (pr2 (pr2 c) x)) ∘ (f' (pr1 c x)))
-            ( g' (pr1 (pr2 c) x))
-            ( c' x)))
-        ( triangle-standard-pullback-tot-cone-cone-family)
-        ( is-equiv-map-standard-pullback-tot-cone-cone-family)
-        ( is-pb-tot))
+  is-pullback-family-is-pullback-tot is-pb-c is-pb-tot = {!!}
 
   is-pullback-tot-is-pullback-family :
     is-pullback f g c →
@@ -288,21 +204,7 @@ module _
         ( c' x)) →
     is-pullback
       (map-Σ PX f f') (map-Σ PX g g') tot-cone-cone-family
-  is-pullback-tot-is-pullback-family is-pb-c is-pb-c' =
-    is-equiv-left-map-triangle
-      ( gap (map-Σ PX f f') (map-Σ PX g g') tot-cone-cone-family)
-      ( map-standard-pullback-tot-cone-cone-family)
-      ( map-Σ _
-        ( gap f g c)
-        ( λ x → gap
-          ( (tr PX (pr2 (pr2 c) x)) ∘ (f' (pr1 c x)))
-          ( g' (pr1 (pr2 c) x))
-          ( c' x)))
-      ( triangle-standard-pullback-tot-cone-cone-family)
-      ( is-equiv-map-Σ _
-        ( is-pb-c)
-        ( is-pb-c'))
-      ( is-equiv-map-standard-pullback-tot-cone-cone-family)
+  is-pullback-tot-is-pullback-family is-pb-c is-pb-c' = {!!}
 ```
 
 ### Commuting squares of maps on total spaces
@@ -335,7 +237,7 @@ module _
       ( map-Σ Q left' left)
       ( map-Σ S right' right)
       ( map-Σ S bottom' bottom)
-  coherence-square-maps-Σ {H'} H (a , p) = eq-pair-Σ (H' a) (H a p)
+  coherence-square-maps-Σ {H'} H (a , p) = {!!}
 ```
 
 #### Commuting squares of induced maps on total spaces
@@ -353,7 +255,7 @@ module _
   coherence-square-maps-tot :
     ((a : A) → coherence-square-maps (top a) (left a) (right a) (bottom a)) →
     coherence-square-maps (tot top) (tot left) (tot right) (tot bottom)
-  coherence-square-maps-tot H (a , p) = eq-pair-Σ refl (H a p)
+  coherence-square-maps-tot H (a , p) = {!!}
 ```
 
 #### `map-Σ-map-base` preserves commuting squares of maps
@@ -372,7 +274,7 @@ module _
       ( map-Σ-map-base left (S ∘ bottom))
       ( map-Σ-map-base right S)
       ( map-Σ-map-base bottom S)
-  coherence-square-maps-map-Σ-map-base H (a , p) = eq-pair-Σ (H a) refl
+  coherence-square-maps-map-Σ-map-base H (a , p) = {!!}
 ```
 
 ### The action of `map-Σ-map-base` on identifications of the form `eq-pair-Σ` is given by the action on the base
@@ -387,7 +289,7 @@ module _
     ( q : tr (C ∘ f) p t ＝ t') →
     ap (map-Σ-map-base f C) (eq-pair-Σ p q) ＝
     eq-pair-Σ (ap f p) (substitution-law-tr C f p ∙ q)
-  compute-ap-map-Σ-map-base-eq-pair-Σ refl refl = refl
+  compute-ap-map-Σ-map-base-eq-pair-Σ refl refl = {!!}
 ```
 
 #### Computing the inverse of `equiv-tot`
@@ -401,11 +303,7 @@ module _
     (e : (x : A) → B x ≃ C x) →
     ( map-inv-equiv (equiv-tot e)) ~
     ( map-equiv (equiv-tot (λ x → inv-equiv (e x))))
-  compute-inv-equiv-tot e (a , c) =
-    is-injective-map-equiv
-      ( equiv-tot e)
-      ( ( is-section-map-inv-equiv (equiv-tot e) (a , c)) ∙
-        ( eq-pair-Σ refl (inv (is-section-map-inv-equiv (e a) c))))
+  compute-inv-equiv-tot e (a , c) = {!!}
 ```
 
 ## See also

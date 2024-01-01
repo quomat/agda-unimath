@@ -43,7 +43,7 @@ module _
 
   preserves-mul-equiv :
     (μA : A → A → A) (μB : B → B → B) → (A ≃ B) → UU (l1 ⊔ l2)
-  preserves-mul-equiv μA μB e = preserves-mul μA μB (map-equiv e)
+  preserves-mul-equiv μA μB e = {!!}
 ```
 
 ### Equivalences of semigroups
@@ -55,15 +55,13 @@ module _
 
   preserves-mul-equiv-Semigroup :
     (type-Semigroup G ≃ type-Semigroup H) → UU (l1 ⊔ l2)
-  preserves-mul-equiv-Semigroup e =
-    preserves-mul-equiv (mul-Semigroup G) (mul-Semigroup H) e
+  preserves-mul-equiv-Semigroup e = {!!}
 
   equiv-Semigroup : UU (l1 ⊔ l2)
-  equiv-Semigroup =
-    Σ (type-Semigroup G ≃ type-Semigroup H) preserves-mul-equiv-Semigroup
+  equiv-Semigroup = {!!}
 
   is-equiv-hom-Semigroup : hom-Semigroup G H → UU (l1 ⊔ l2)
-  is-equiv-hom-Semigroup f = is-equiv (map-hom-Semigroup G H f)
+  is-equiv-hom-Semigroup f = {!!}
 ```
 
 ## Properties
@@ -78,10 +76,7 @@ module _
   center-total-preserves-mul-id-Semigroup :
     Σ ( has-associative-mul (type-Semigroup G))
       ( λ μ → preserves-mul-Semigroup G (pair (set-Semigroup G) μ) id)
-  pr1 (pr1 (center-total-preserves-mul-id-Semigroup)) = mul-Semigroup G
-  pr2 (pr1 (center-total-preserves-mul-id-Semigroup)) =
-    associative-mul-Semigroup G
-  pr2 (center-total-preserves-mul-id-Semigroup) = refl
+  pr1 (pr1 (center-total-preserves-mul-id-Semigroup)) = {!!}
 
   contraction-total-preserves-mul-id-Semigroup :
     ( t : Σ ( has-associative-mul (type-Semigroup G))
@@ -89,46 +84,15 @@ module _
               preserves-mul-Semigroup G (pair (set-Semigroup G) μ) id)) →
     Id center-total-preserves-mul-id-Semigroup t
   contraction-total-preserves-mul-id-Semigroup
-    ( (μ-G' , associative-G') , μ-id) =
-    eq-type-subtype
-      ( λ μ →
-        preserves-mul-prop-Semigroup G (pair (set-Semigroup G) μ) id)
-      ( eq-type-subtype
-        ( λ μ →
-          Π-Prop
-            ( type-Semigroup G)
-            ( λ x →
-              Π-Prop
-                ( type-Semigroup G)
-                ( λ y →
-                  Π-Prop
-                    ( type-Semigroup G)
-                    ( λ z →
-                      Id-Prop
-                        ( set-Semigroup G)
-                        ( μ (μ x y) z) (μ x (μ y z))))))
-        ( eq-htpy (λ x → eq-htpy (λ y → μ-id))))
+    ( (μ-G' , associative-G') , μ-id) = {!!}
 
   is-torsorial-preserves-mul-id-Semigroup :
     is-torsorial
       ( λ (μ : has-associative-mul (type-Semigroup G)) →
         preserves-mul (mul-Semigroup G) (pr1 μ) id)
-  pr1 is-torsorial-preserves-mul-id-Semigroup =
-    center-total-preserves-mul-id-Semigroup
-  pr2 is-torsorial-preserves-mul-id-Semigroup =
-    contraction-total-preserves-mul-id-Semigroup
+  pr1 is-torsorial-preserves-mul-id-Semigroup = {!!}
 
   is-torsorial-equiv-Semigroup :
     is-torsorial (equiv-Semigroup G)
-  is-torsorial-equiv-Semigroup =
-    is-torsorial-Eq-structure
-      ( λ H μH → preserves-mul-equiv-Semigroup G (pair H μH))
-      ( is-torsorial-Eq-subtype
-        ( is-torsorial-equiv (type-Semigroup G))
-        ( is-prop-is-set)
-        ( type-Semigroup G)
-        ( id-equiv)
-        ( is-set-type-Semigroup G))
-      ( pair (set-Semigroup G) id-equiv)
-      ( is-torsorial-preserves-mul-id-Semigroup)
+  is-torsorial-equiv-Semigroup = {!!}
 ```

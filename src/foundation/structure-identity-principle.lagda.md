@@ -41,11 +41,7 @@ module _
       (is-contr-AC : is-torsorial C) (t : Σ A C) →
       is-torsorial (λ y → D (pr1 t) y (pr2 t)) →
       is-torsorial (λ t → Σ (C (pr1 t)) (D (pr1 t) (pr2 t)))
-    is-torsorial-Eq-structure is-contr-AC t is-contr-BD =
-      is-contr-equiv
-        ( Σ (Σ A C) (λ t → Σ (B (pr1 t)) (λ y → D (pr1 t) y (pr2 t))))
-        ( interchange-Σ-Σ D)
-        ( is-contr-Σ is-contr-AC t is-contr-BD)
+    is-torsorial-Eq-structure is-contr-AC t is-contr-BD = {!!}
 ```
 
 ## Theorem
@@ -66,31 +62,17 @@ module _
       (h : (z : Σ A B) → (pair a b) ＝ z → Σ (Eq-A (pr1 z)) (Eq-B (pr2 z))) →
       ((x : A) → is-equiv (f x)) → ((y : B a) → is-equiv (g y)) →
       (z : Σ A B) → is-equiv (h z)
-    structure-identity-principle {f} {g} h H K =
-      fundamental-theorem-id
-        ( is-torsorial-Eq-structure
-          ( λ x → Eq-B)
-          ( fundamental-theorem-id' f H)
-          ( pair a refl-A)
-          ( fundamental-theorem-id' g K))
-        ( h)
+    structure-identity-principle {f} {g} h H K = {!!}
 
   map-extensionality-Σ :
     (f : (x : A) → (a ＝ x) ≃ Eq-A x)
     (g : (y : B a) → (b ＝ y) ≃ Eq-B y refl-A) →
     (z : Σ A B) → pair a b ＝ z → Σ (Eq-A (pr1 z)) (Eq-B (pr2 z))
-  pr1 (map-extensionality-Σ f g .(pair a b) refl) = refl-A
-  pr2 (map-extensionality-Σ f g .(pair a b) refl) = refl-B
+  pr1 (map-extensionality-Σ f g .(pair a b) refl) = {!!}
 
   extensionality-Σ :
     (f : (x : A) → (a ＝ x) ≃ Eq-A x)
     (g : (y : B a) → (b ＝ y) ≃ Eq-B y refl-A) →
     (z : Σ A B) → (pair a b ＝ z) ≃ Σ (Eq-A (pr1 z)) (Eq-B (pr2 z))
-  pr1 (extensionality-Σ f g z) = map-extensionality-Σ f g z
-  pr2 (extensionality-Σ f g z) =
-    structure-identity-principle
-      ( map-extensionality-Σ f g)
-      ( λ x → is-equiv-map-equiv (f x))
-      ( λ y → is-equiv-map-equiv (g y))
-      ( z)
+  pr1 (extensionality-Σ f g z) = {!!}
 ```

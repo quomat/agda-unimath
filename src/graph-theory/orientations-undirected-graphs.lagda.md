@@ -30,16 +30,13 @@ module _
   where
 
   orientation-Undirected-Graph : UU (lsuc lzero ⊔ l1 ⊔ l2)
-  orientation-Undirected-Graph =
-    ( p : unordered-pair-vertices-Undirected-Graph G) →
-    edge-Undirected-Graph G p → type-UU-Fin 2 (pr1 p)
+  orientation-Undirected-Graph = {!!}
 
   source-edge-orientation-Undirected-Graph :
     orientation-Undirected-Graph →
     (p : unordered-pair-vertices-Undirected-Graph G) →
     edge-Undirected-Graph G p → vertex-Undirected-Graph G
-  source-edge-orientation-Undirected-Graph d (pair X p) e =
-    p (d (pair X p) e)
+  source-edge-orientation-Undirected-Graph d (pair X p) e = {!!}
 ```
 
 ## External links

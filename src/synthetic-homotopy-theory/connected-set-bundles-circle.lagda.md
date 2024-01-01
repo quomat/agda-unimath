@@ -48,108 +48,83 @@ be thought of as the categorification of the [poset](order-theory.posets.md) of
 ```agda
 is-connected-prop-set-bundle-𝕊¹ :
   {l : Level} → (𝕊¹ → Set l) → Prop l
-is-connected-prop-set-bundle-𝕊¹ X =
-  is-0-connected-Prop (Σ 𝕊¹ (type-Set ∘ X))
+is-connected-prop-set-bundle-𝕊¹ X = {!!}
 
 is-connected-set-bundle-𝕊¹ : {l : Level} (X : 𝕊¹ → Set l) → UU l
-is-connected-set-bundle-𝕊¹ X =
-  type-Prop (is-connected-prop-set-bundle-𝕊¹ X)
+is-connected-set-bundle-𝕊¹ X = {!!}
 
 is-prop-is-connected-set-bundle-𝕊¹ :
   {l : Level} (X : 𝕊¹ → Set l) → is-prop (is-connected-set-bundle-𝕊¹ X)
-is-prop-is-connected-set-bundle-𝕊¹ X =
-  is-prop-type-Prop (is-connected-prop-set-bundle-𝕊¹ X)
+is-prop-is-connected-set-bundle-𝕊¹ X = {!!}
 ```
 
 ### Connected set bundles over the circle
 
 ```agda
 connected-set-bundle-𝕊¹ : (l : Level) → UU (lsuc l)
-connected-set-bundle-𝕊¹ l = type-subtype is-connected-prop-set-bundle-𝕊¹
+connected-set-bundle-𝕊¹ l = {!!}
 
 module _
   {l : Level} (X : connected-set-bundle-𝕊¹ l)
   where
 
   set-bundle-connected-set-bundle-𝕊¹ : 𝕊¹ → Set l
-  set-bundle-connected-set-bundle-𝕊¹ = pr1 X
+  set-bundle-connected-set-bundle-𝕊¹ = {!!}
 
   bundle-connected-set-bundle-𝕊¹ : 𝕊¹ → UU l
-  bundle-connected-set-bundle-𝕊¹ =
-    type-Set ∘ set-bundle-connected-set-bundle-𝕊¹
+  bundle-connected-set-bundle-𝕊¹ = {!!}
 
   set-connected-set-bundle-𝕊¹ : Set l
-  set-connected-set-bundle-𝕊¹ =
-    set-bundle-connected-set-bundle-𝕊¹ base-𝕊¹
+  set-connected-set-bundle-𝕊¹ = {!!}
 
   type-connected-set-bundle-𝕊¹ : UU l
-  type-connected-set-bundle-𝕊¹ = type-Set set-connected-set-bundle-𝕊¹
+  type-connected-set-bundle-𝕊¹ = {!!}
 
   total-space-connected-set-bundle-𝕊¹ : UU l
-  total-space-connected-set-bundle-𝕊¹ = Σ 𝕊¹ bundle-connected-set-bundle-𝕊¹
+  total-space-connected-set-bundle-𝕊¹ = {!!}
 
   is-connected-connected-set-bundle-𝕊¹ :
     is-connected-set-bundle-𝕊¹ set-bundle-connected-set-bundle-𝕊¹
-  is-connected-connected-set-bundle-𝕊¹ = pr2 X
+  is-connected-connected-set-bundle-𝕊¹ = {!!}
 
   mere-eq-total-space-connected-set-bundle-𝕊¹ :
     (x y : total-space-connected-set-bundle-𝕊¹) →
     mere-eq x y
-  mere-eq-total-space-connected-set-bundle-𝕊¹ =
-    mere-eq-is-0-connected is-connected-connected-set-bundle-𝕊¹
+  mere-eq-total-space-connected-set-bundle-𝕊¹ = {!!}
 
   transitive-action-connected-set-bundle-𝕊¹ :
     transitive-action-∞-Group l 𝕊¹-∞-Group
-  pr1 transitive-action-connected-set-bundle-𝕊¹ =
-    bundle-connected-set-bundle-𝕊¹
-  pr2 transitive-action-connected-set-bundle-𝕊¹ =
-    is-connected-connected-set-bundle-𝕊¹
+  pr1 transitive-action-connected-set-bundle-𝕊¹ = {!!}
+  pr2 transitive-action-connected-set-bundle-𝕊¹ = {!!}
 
   is-abstractly-transitive-action-connected-set-bundle-𝕊¹ :
     is-abstractly-transitive-action-∞-Group
       ( 𝕊¹-∞-Group)
       ( bundle-connected-set-bundle-𝕊¹)
-  is-abstractly-transitive-action-connected-set-bundle-𝕊¹ =
-    is-abstractly-transitive-transitive-action-∞-Group
-      ( 𝕊¹-∞-Group)
-      ( transitive-action-connected-set-bundle-𝕊¹)
+  is-abstractly-transitive-action-connected-set-bundle-𝕊¹ = {!!}
 
   is-inhabited-connected-set-bundle-𝕊¹ :
     is-inhabited type-connected-set-bundle-𝕊¹
-  is-inhabited-connected-set-bundle-𝕊¹ =
-    is-inhabited-transitive-action-∞-Group
-      ( 𝕊¹-∞-Group)
-      ( transitive-action-connected-set-bundle-𝕊¹)
+  is-inhabited-connected-set-bundle-𝕊¹ = {!!}
 
   is-surjective-tr-connected-set-bundle-𝕊¹ :
     (t : 𝕊¹) (x : type-connected-set-bundle-𝕊¹) →
     is-surjective (λ (p : base-𝕊¹ ＝ t) → tr bundle-connected-set-bundle-𝕊¹ p x)
-  is-surjective-tr-connected-set-bundle-𝕊¹ =
-    is-surjective-tr-is-abstractly-transitive-action-∞-Group
-      ( 𝕊¹-∞-Group)
-      ( bundle-connected-set-bundle-𝕊¹)
-      ( is-abstractly-transitive-action-connected-set-bundle-𝕊¹)
+  is-surjective-tr-connected-set-bundle-𝕊¹ = {!!}
 
   inhabited-type-connected-set-bundle-𝕊¹ : Inhabited-Type l
-  inhabited-type-connected-set-bundle-𝕊¹ =
-    inhabited-type-transitive-action-∞-Group
-      ( 𝕊¹-∞-Group)
-      ( transitive-action-connected-set-bundle-𝕊¹)
+  inhabited-type-connected-set-bundle-𝕊¹ = {!!}
 
   aut-connected-set-bundle-𝕊¹ : Aut type-connected-set-bundle-𝕊¹
-  aut-connected-set-bundle-𝕊¹ =
-    equiv-tr bundle-connected-set-bundle-𝕊¹ loop-𝕊¹
+  aut-connected-set-bundle-𝕊¹ = {!!}
 
   map-aut-connected-set-bundle-𝕊¹ :
     type-connected-set-bundle-𝕊¹ → type-connected-set-bundle-𝕊¹
-  map-aut-connected-set-bundle-𝕊¹ =
-    map-equiv aut-connected-set-bundle-𝕊¹
+  map-aut-connected-set-bundle-𝕊¹ = {!!}
 
   set-with-automorphism-connected-set-bundle-𝕊¹ : Set-With-Automorphism l
-  pr1 set-with-automorphism-connected-set-bundle-𝕊¹ =
-    set-connected-set-bundle-𝕊¹
-  pr2 set-with-automorphism-connected-set-bundle-𝕊¹ =
-    aut-connected-set-bundle-𝕊¹
+  pr1 set-with-automorphism-connected-set-bundle-𝕊¹ = {!!}
+  pr2 set-with-automorphism-connected-set-bundle-𝕊¹ = {!!}
 ```
 
 ## Properties

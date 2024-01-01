@@ -38,92 +38,43 @@ module _
   where
 
   structure-preserving-map-ℕ : UU l
-  structure-preserving-map-ℕ =
-    Σ (ℕ → X) (λ h → (h zero-ℕ ＝ x) × ((h ∘ succ-ℕ) ~ (f ∘ h)))
+  structure-preserving-map-ℕ = {!!}
 
   htpy-structure-preserving-map-ℕ :
     (h k : structure-preserving-map-ℕ) → UU l
-  htpy-structure-preserving-map-ℕ h k =
-    Σ ( pr1 h ~ pr1 k)
-      ( λ H →
-        ( pr1 (pr2 h) ＝ (H zero-ℕ ∙ pr1 (pr2 k))) ×
-        ( (n : ℕ) →
-          (pr2 (pr2 h) n ∙ ap f (H n)) ＝ (H (succ-ℕ n) ∙ pr2 (pr2 k) n)))
+  htpy-structure-preserving-map-ℕ h k = {!!}
 
   refl-htpy-structure-preserving-map-ℕ :
     (h : structure-preserving-map-ℕ) → htpy-structure-preserving-map-ℕ h h
-  refl-htpy-structure-preserving-map-ℕ h =
-    triple refl-htpy refl (λ n → right-unit)
+  refl-htpy-structure-preserving-map-ℕ h = {!!}
 
   htpy-eq-structure-preserving-map-ℕ :
     {h k : structure-preserving-map-ℕ} → h ＝ k →
     htpy-structure-preserving-map-ℕ h k
-  htpy-eq-structure-preserving-map-ℕ {h} refl =
-    refl-htpy-structure-preserving-map-ℕ h
+  htpy-eq-structure-preserving-map-ℕ {h} refl = {!!}
 
   is-torsorial-htpy-structure-preserving-map-ℕ :
     (h : structure-preserving-map-ℕ) →
     is-torsorial (htpy-structure-preserving-map-ℕ h)
-  is-torsorial-htpy-structure-preserving-map-ℕ h =
-    is-torsorial-Eq-structure
-      ( λ g p (H : pr1 h ~ g) →
-        ( pr1 (pr2 h) ＝ (H zero-ℕ ∙ pr1 p)) ×
-        ( (n : ℕ) →
-          (pr2 (pr2 h) n ∙ ap f (H n)) ＝ (H (succ-ℕ n) ∙ pr2 p n)))
-      ( is-torsorial-htpy (pr1 h))
-      ( pair (pr1 h) refl-htpy)
-      ( is-torsorial-Eq-structure
-        ( λ p0 pS q →
-          (n : ℕ) → (pr2 (pr2 h) n ∙ refl) ＝ pS n)
-        ( is-torsorial-path (pr1 (pr2 h)))
-        ( pair (pr1 (pr2 h)) refl)
-        ( is-torsorial-htpy (λ n → (pr2 (pr2 h) n ∙ refl))))
+  is-torsorial-htpy-structure-preserving-map-ℕ h = {!!}
 
   is-equiv-htpy-eq-structure-preserving-map-ℕ :
     (h k : structure-preserving-map-ℕ) →
     is-equiv (htpy-eq-structure-preserving-map-ℕ {h} {k})
-  is-equiv-htpy-eq-structure-preserving-map-ℕ h =
-    fundamental-theorem-id
-      ( is-torsorial-htpy-structure-preserving-map-ℕ h)
-      ( λ k → htpy-eq-structure-preserving-map-ℕ {h} {k})
+  is-equiv-htpy-eq-structure-preserving-map-ℕ h = {!!}
 
   eq-htpy-structure-preserving-map-ℕ :
     {h k : structure-preserving-map-ℕ} →
     htpy-structure-preserving-map-ℕ h k → h ＝ k
-  eq-htpy-structure-preserving-map-ℕ {h} {k} =
-    map-inv-is-equiv (is-equiv-htpy-eq-structure-preserving-map-ℕ h k)
+  eq-htpy-structure-preserving-map-ℕ {h} {k} = {!!}
 
   center-structure-preserving-map-ℕ : structure-preserving-map-ℕ
-  pr1 center-structure-preserving-map-ℕ =
-    h
-    where
-    h : ℕ → X
-    h zero-ℕ = x
-    h (succ-ℕ n) = f (h n)
-  pr1 (pr2 center-structure-preserving-map-ℕ) = refl
-  pr2 (pr2 center-structure-preserving-map-ℕ) = refl-htpy
+  pr1 center-structure-preserving-map-ℕ = {!!}
 
   contraction-structure-preserving-map-ℕ :
     (h : structure-preserving-map-ℕ) → center-structure-preserving-map-ℕ ＝ h
-  contraction-structure-preserving-map-ℕ h =
-    eq-htpy-structure-preserving-map-ℕ (triple α β γ)
-    where
-    α : pr1 center-structure-preserving-map-ℕ ~ pr1 h
-    α zero-ℕ = inv (pr1 (pr2 h))
-    α (succ-ℕ n) = ap f (α n) ∙ inv (pr2 (pr2 h) n)
-    β : pr1 (pr2 center-structure-preserving-map-ℕ) ＝ (α zero-ℕ ∙ pr1 (pr2 h))
-    β = inv (left-inv (pr1 (pr2 h)))
-    γ :
-      (n : ℕ) →
-      ( pr2 (pr2 center-structure-preserving-map-ℕ) n ∙ ap f (α n)) ＝
-      ( α (succ-ℕ n) ∙ pr2 (pr2 h) n)
-    γ n = ( ( inv right-unit) ∙
-            ( ap (λ q → (ap f (α n) ∙ q)) (inv (left-inv (pr2 (pr2 h) n))))) ∙
-          ( inv
-            ( assoc (ap f (α n)) (inv (pr2 (pr2 h) n)) (pr2 (pr2 h) n)))
+  contraction-structure-preserving-map-ℕ h = {!!}
 
   is-contr-structure-preserving-map-ℕ : is-contr structure-preserving-map-ℕ
-  pr1 is-contr-structure-preserving-map-ℕ = center-structure-preserving-map-ℕ
-  pr2 is-contr-structure-preserving-map-ℕ =
-    contraction-structure-preserving-map-ℕ
+  pr1 is-contr-structure-preserving-map-ℕ = {!!}
 ```

@@ -74,6 +74,5 @@ module _
   where
 
   dirichlet-series-species-subuniverse : UU (lsuc l1 ⊔ l2 ⊔ l3 ⊔ l5 ⊔ l6)
-  dirichlet-series-species-subuniverse =
-    Σ (type-subuniverse P) (λ X → inclusion-subuniverse Q (T X) × (S → H (X)))
+  dirichlet-series-species-subuniverse = {!!}
 ```

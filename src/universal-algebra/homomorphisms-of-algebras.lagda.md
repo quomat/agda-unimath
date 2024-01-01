@@ -40,26 +40,19 @@ module _
   preserves-operations-Algebra :
     (type-Algebra Sg Th Alg1 → type-Algebra Sg Th Alg2) →
     UU (l1 ⊔ l3 ⊔ l4)
-  preserves-operations-Algebra f =
-    ( op : operation-signature Sg) →
-    ( v : vec (type-Algebra Sg Th Alg1)
-      ( arity-operation-signature Sg op)) →
-        ( f (is-model-set-Algebra Sg Th Alg1 op v) ＝
-          ( is-model-set-Algebra Sg Th Alg2 op (map-vec f v)))
+  preserves-operations-Algebra f = {!!}
 
   hom-Algebra : UU (l1 ⊔ l3 ⊔ l4)
-  hom-Algebra =
-    Σ ( type-Algebra Sg Th Alg1 → type-Algebra Sg Th Alg2)
-      ( preserves-operations-Algebra)
+  hom-Algebra = {!!}
 
   map-hom-Algebra :
     hom-Algebra →
     type-Algebra Sg Th Alg1 →
     type-Algebra Sg Th Alg2
-  map-hom-Algebra = pr1
+  map-hom-Algebra = {!!}
 
   preserves-operations-hom-Algebra :
     ( f : hom-Algebra) →
     preserves-operations-Algebra (map-hom-Algebra f)
-  preserves-operations-hom-Algebra = pr2
+  preserves-operations-hom-Algebra = {!!}
 ```

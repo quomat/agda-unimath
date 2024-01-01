@@ -33,13 +33,7 @@ module _
 
   is-closed-under-sup-Large-Subposet :
     Large-Subposet γ (large-poset-Large-Suplattice L) → UUω
-  is-closed-under-sup-Large-Subposet S =
-    {l1 l2 : Level} {I : UU l1} (x : I → type-Large-Suplattice L l2) →
-    ((i : I) → is-in-Large-Subposet (large-poset-Large-Suplattice L) S (x i)) →
-    is-in-Large-Subposet
-      ( large-poset-Large-Suplattice L)
-      ( S)
-      ( sup-Large-Suplattice L x)
+  is-closed-under-sup-Large-Subposet S = {!!}
 
 record
   Large-Subsuplattice
@@ -63,71 +57,44 @@ module _
 
   large-poset-Large-Subsuplattice :
     Large-Poset (λ l → α l ⊔ γ l) (λ l1 l2 → β l1 l2)
-  large-poset-Large-Subsuplattice =
-    large-poset-Large-Subposet
-      ( large-poset-Large-Suplattice P)
-      ( large-subposet-Large-Subsuplattice S)
+  large-poset-Large-Subsuplattice = {!!}
 
   is-in-Large-Subsuplattice :
     {l1 : Level} → type-Large-Suplattice P l1 → UU (γ l1)
-  is-in-Large-Subsuplattice =
-    is-in-Large-Subposet
-      ( large-poset-Large-Suplattice P)
-      ( large-subposet-Large-Subsuplattice S)
+  is-in-Large-Subsuplattice = {!!}
 
   type-Large-Subsuplattice : (l1 : Level) → UU (α l1 ⊔ γ l1)
-  type-Large-Subsuplattice =
-    type-Large-Subposet
-      ( large-poset-Large-Suplattice P)
-      ( large-subposet-Large-Subsuplattice S)
+  type-Large-Subsuplattice = {!!}
 
   leq-prop-Large-Subsuplattice :
     Large-Relation-Prop (λ l → α l ⊔ γ l) β type-Large-Subsuplattice
-  leq-prop-Large-Subsuplattice =
-    leq-prop-Large-Subposet
-      ( large-poset-Large-Suplattice P)
-      ( large-subposet-Large-Subsuplattice S)
+  leq-prop-Large-Subsuplattice = {!!}
 
   leq-Large-Subsuplattice :
     Large-Relation (λ l → α l ⊔ γ l) β type-Large-Subsuplattice
-  leq-Large-Subsuplattice =
-    leq-Large-Subposet
-      ( large-poset-Large-Suplattice P)
-      ( large-subposet-Large-Subsuplattice S)
+  leq-Large-Subsuplattice = {!!}
 
   is-prop-leq-Large-Subsuplattice :
     is-prop-Large-Relation type-Large-Subsuplattice leq-Large-Subsuplattice
-  is-prop-leq-Large-Subsuplattice =
-    is-prop-leq-Large-Subposet
-      ( large-poset-Large-Suplattice P)
-      ( large-subposet-Large-Subsuplattice S)
+  is-prop-leq-Large-Subsuplattice = {!!}
 
   refl-leq-Large-Subsuplattice :
     is-reflexive-Large-Relation
       ( type-Large-Subsuplattice)
       ( leq-Large-Subsuplattice)
-  refl-leq-Large-Subsuplattice =
-    refl-leq-Large-Subposet
-      ( large-poset-Large-Suplattice P)
-      ( large-subposet-Large-Subsuplattice S)
+  refl-leq-Large-Subsuplattice = {!!}
 
   transitive-leq-Large-Subsuplattice :
     is-transitive-Large-Relation
       ( type-Large-Subsuplattice)
       ( leq-Large-Subsuplattice)
-  transitive-leq-Large-Subsuplattice =
-    transitive-leq-Large-Subposet
-      ( large-poset-Large-Suplattice P)
-      ( large-subposet-Large-Subsuplattice S)
+  transitive-leq-Large-Subsuplattice = {!!}
 
   antisymmetric-leq-Large-Subsuplattice :
     is-antisymmetric-Large-Relation
       ( type-Large-Subsuplattice)
       ( leq-Large-Subsuplattice)
-  antisymmetric-leq-Large-Subsuplattice =
-    antisymmetric-leq-Large-Subposet
-      ( large-poset-Large-Suplattice P)
-      ( large-subposet-Large-Subsuplattice S)
+  antisymmetric-leq-Large-Subsuplattice = {!!}
 
   is-closed-under-sim-Large-Subsuplattice :
     {l1 l2 : Level}
@@ -136,7 +103,5 @@ module _
     leq-Large-Suplattice P x y →
     leq-Large-Suplattice P y x →
     is-in-Large-Subsuplattice x → is-in-Large-Subsuplattice y
-  is-closed-under-sim-Large-Subsuplattice =
-    is-closed-under-sim-Large-Subposet
-      ( large-subposet-Large-Subsuplattice S)
+  is-closed-under-sim-Large-Subsuplattice = {!!}
 ```

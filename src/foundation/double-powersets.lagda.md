@@ -36,15 +36,14 @@ module _
     Large-Poset
       ( λ l3 → l1 ⊔ lsuc l2 ⊔ lsuc l3)
       ( λ l3 l4 → l1 ⊔ lsuc l2 ⊔ l3 ⊔ l4)
-  double-powerset-Large-Poset A = powerset-Large-Poset (powerset l2 A)
+  double-powerset-Large-Poset A = {!!}
 
   double-powerset-Poset :
     (l : Level) → UU l1 → Poset (l1 ⊔ lsuc l2 ⊔ lsuc l) (l1 ⊔ lsuc l2 ⊔ l)
-  double-powerset-Poset l A =
-    poset-Large-Poset (double-powerset-Large-Poset A) l
+  double-powerset-Poset l A = {!!}
 
   double-powerset : (l3 : Level) → UU l1 → UU (l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  double-powerset l3 A = type-Poset (double-powerset-Poset l3 A)
+  double-powerset l3 A = {!!}
 ```
 
 ## Operations on the double powerset
@@ -55,8 +54,7 @@ module _
 intersection-double-powerset :
   {l1 l2 l3 : Level} {A : UU l1} →
   double-powerset l2 l3 A → powerset (l1 ⊔ lsuc l2 ⊔ l3) A
-intersection-double-powerset F a =
-  Π-Prop (type-subtype F) (λ X → inclusion-subtype F X a)
+intersection-double-powerset F a = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} (F : double-powerset l2 l3 A)
@@ -65,13 +63,13 @@ module _
   inclusion-intersection-double-powerset :
     (X : type-subtype F) →
     intersection-double-powerset F ⊆ inclusion-subtype F X
-  inclusion-intersection-double-powerset X a f = f X
+  inclusion-intersection-double-powerset X a f = {!!}
 
   universal-property-intersection-double-powerset :
     {l : Level} (P : powerset l A)
     (H : (X : type-subtype F) → P ⊆ inclusion-subtype F X) →
     P ⊆ intersection-double-powerset F
-  universal-property-intersection-double-powerset P H a p X = H X a p
+  universal-property-intersection-double-powerset P H a p X = {!!}
 ```
 
 ### Unions of subtypes of powersets
@@ -80,26 +78,22 @@ module _
 union-double-powerset :
   {l1 l2 l3 : Level} {A : UU l1} →
   double-powerset l2 l3 A → powerset (l1 ⊔ lsuc l2 ⊔ l3) A
-union-double-powerset F a =
-  ∃-Prop (type-subtype F) (λ X → is-in-subtype (inclusion-subtype F X) a)
+union-double-powerset F a = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} (F : double-powerset l2 l3 A)
   where
 
   type-union-double-powerset : UU (l1 ⊔ lsuc l2 ⊔ l3)
-  type-union-double-powerset = type-subtype (union-double-powerset F)
+  type-union-double-powerset = {!!}
 
   inclusion-union-double-powerset :
     (X : type-subtype F) → inclusion-subtype F X ⊆ union-double-powerset F
-  inclusion-union-double-powerset X a = intro-∃ X
+  inclusion-union-double-powerset X a = {!!}
 
   universal-property-union-double-powerset :
     {l : Level} (P : powerset l A)
     (H : (X : type-subtype F) → inclusion-subtype F X ⊆ P) →
     union-double-powerset F ⊆ P
-  universal-property-union-double-powerset P H a =
-    map-universal-property-trunc-Prop
-      ( P a)
-      ( λ X → H (pr1 X) a (pr2 X))
+  universal-property-union-double-powerset P H a = {!!}
 ```

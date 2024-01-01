@@ -39,10 +39,10 @@ data ♭ {@♭ l : Level} (@♭ A : UU l) : UU l where
 
 ```agda
 counit-crisp : {@♭ l : Level} {@♭ A : UU l} → @♭ A → A
-counit-crisp x = x
+counit-crisp x = {!!}
 
 counit-flat : {@♭ l : Level} {@♭ A : UU l} → ♭ A → A
-counit-flat (cons-flat x) = counit-crisp x
+counit-flat (cons-flat x) = {!!}
 ```
 
 ### Flat dependent elimination
@@ -52,12 +52,12 @@ ind-flat :
   {@♭ l1 : Level} {@♭ A : UU l1} {l2 : Level} (C : ♭ A → UU l2) →
   ((@♭ u : A) → C (cons-flat u)) →
   (x : ♭ A) → C x
-ind-flat C f (cons-flat x) = f x
+ind-flat C f (cons-flat x) = {!!}
 
 crisp-ind-flat :
   {@♭ l1 : Level} {l2 : Level} {@♭ A : UU l1} (C : @♭ ♭ A → UU l2) →
   ((@♭ u : A) → C (cons-flat u)) → (@♭ x : ♭ A) → C x
-crisp-ind-flat C f (cons-flat x) = f x
+crisp-ind-flat C f (cons-flat x) = {!!}
 ```
 
 ### Flat elimination
@@ -66,12 +66,12 @@ crisp-ind-flat C f (cons-flat x) = f x
 rec-flat :
   {@♭ l1 : Level} {@♭ A : UU l1} {l2 : Level} (C : UU l2) →
   ((@♭ u : A) → C) → (x : ♭ A) → C
-rec-flat C = ind-flat (λ _ → C)
+rec-flat C = {!!}
 
 crisp-rec-flat :
   {@♭ l1 : Level} {l2 : Level} {@♭ A : UU l1} (C : UU l2) →
   ((@♭ u : A) → C) → (@♭ x : ♭ A) → C
-crisp-rec-flat C = crisp-ind-flat (λ _ → C)
+crisp-rec-flat C = {!!}
 ```
 
 ### Flat action on maps
@@ -82,17 +82,17 @@ module _
   where
 
   ap-flat : @♭ (A → B) → (♭ A → ♭ B)
-  ap-flat f (cons-flat x) = cons-flat (f x)
+  ap-flat f (cons-flat x) = {!!}
 
   ap-crisp-flat : @♭ (@♭ A → B) → (♭ A → ♭ B)
-  ap-crisp-flat f (cons-flat x) = cons-flat (f x)
+  ap-crisp-flat f (cons-flat x) = {!!}
 
   coap-flat : (♭ A → ♭ B) → (@♭ A → B)
-  coap-flat f x = counit-flat (f (cons-flat x))
+  coap-flat f x = {!!}
 
   is-crisp-retraction-coap-flat :
     (@♭ f : @♭ A → B) → coap-flat (ap-crisp-flat f) ＝ f
-  is-crisp-retraction-coap-flat _ = refl
+  is-crisp-retraction-coap-flat _ = {!!}
 ```
 
 ## Properties
@@ -103,7 +103,7 @@ module _
 crispen :
   {@♭ l1 l2 : Level} {@♭ A : UU l1} {P : A → UU l2} →
   ((x : A) → P x) → ((@♭ x : A) → P x)
-crispen f x = f x
+crispen f x = {!!}
 ```
 
 ### The flat modality is idempotent
@@ -114,10 +114,10 @@ module _
   where
 
   is-crisp-section-cons-flat : (@♭ x : A) → counit-flat (cons-flat x) ＝ x
-  is-crisp-section-cons-flat _ = refl
+  is-crisp-section-cons-flat _ = {!!}
 
   is-crisp-retraction-cons-flat : (@♭ x : ♭ A) → cons-flat (counit-flat x) ＝ x
-  is-crisp-retraction-cons-flat (cons-flat _) = refl
+  is-crisp-retraction-cons-flat (cons-flat _) = {!!}
 ```
 
 ```agda
@@ -126,37 +126,33 @@ module _
   where
 
   map-flat-counit-flat : ♭ (♭ A) → ♭ A
-  map-flat-counit-flat (cons-flat x) = x
+  map-flat-counit-flat (cons-flat x) = {!!}
 
   diagonal-flat : ♭ A → ♭ (♭ A)
-  diagonal-flat (cons-flat x) = cons-flat (cons-flat x)
+  diagonal-flat (cons-flat x) = {!!}
 
   is-section-flat-counit-flat :
     diagonal-flat ∘ map-flat-counit-flat ~ id
-  is-section-flat-counit-flat (cons-flat (cons-flat _)) = refl
+  is-section-flat-counit-flat (cons-flat (cons-flat _)) = {!!}
 
   is-retraction-flat-counit-flat :
     map-flat-counit-flat ∘ diagonal-flat ~ id
-  is-retraction-flat-counit-flat (cons-flat _) = refl
+  is-retraction-flat-counit-flat (cons-flat _) = {!!}
 
   section-flat-counit-flat : section map-flat-counit-flat
-  pr1 section-flat-counit-flat = diagonal-flat
-  pr2 section-flat-counit-flat = is-retraction-flat-counit-flat
+  pr1 section-flat-counit-flat = {!!}
 
   retraction-flat-counit-flat : retraction map-flat-counit-flat
-  pr1 retraction-flat-counit-flat = diagonal-flat
-  pr2 retraction-flat-counit-flat = is-section-flat-counit-flat
+  pr1 retraction-flat-counit-flat = {!!}
 
   is-equiv-flat-counit-flat : is-equiv map-flat-counit-flat
-  pr1 is-equiv-flat-counit-flat = section-flat-counit-flat
-  pr2 is-equiv-flat-counit-flat = retraction-flat-counit-flat
+  pr1 is-equiv-flat-counit-flat = {!!}
 
   equiv-flat-counit-flat : ♭ (♭ A) ≃ ♭ A
-  pr1 equiv-flat-counit-flat = map-flat-counit-flat
-  pr2 equiv-flat-counit-flat = is-equiv-flat-counit-flat
+  pr1 equiv-flat-counit-flat = {!!}
 
   inv-equiv-flat-counit-flat : ♭ A ≃ ♭ (♭ A)
-  inv-equiv-flat-counit-flat = inv-equiv equiv-flat-counit-flat
+  inv-equiv-flat-counit-flat = {!!}
 ```
 
 ## See also

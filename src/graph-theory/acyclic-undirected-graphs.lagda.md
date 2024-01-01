@@ -50,9 +50,7 @@ simply say that the geometric realization of `G` is contractible.
 is-acyclic-Undirected-Graph :
   {l1 l2 : Level} (l : Level) (G : Undirected-Graph l1 l2) →
   UU (l1 ⊔ l2 ⊔ lsuc l)
-is-acyclic-Undirected-Graph l G =
-  is-geometric-realization-reflecting-map-Undirected-Graph l G
-    ( terminal-reflecting-map-Undirected-Graph G)
+is-acyclic-Undirected-Graph l G = {!!}
 ```
 
 ## See also

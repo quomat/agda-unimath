@@ -51,107 +51,73 @@ We prove arithmetical laws involving the natural numbers
 
 ```agda
 map-equiv-ℕ : ℕ → unit + ℕ
-map-equiv-ℕ zero-ℕ = inl star
-map-equiv-ℕ (succ-ℕ n) = inr n
+map-equiv-ℕ zero-ℕ = {!!}
+map-equiv-ℕ (succ-ℕ n) = {!!}
 
 map-inv-equiv-ℕ : unit + ℕ → ℕ
-map-inv-equiv-ℕ (inl x) = zero-ℕ
-map-inv-equiv-ℕ (inr n) = succ-ℕ n
+map-inv-equiv-ℕ (inl x) = {!!}
+map-inv-equiv-ℕ (inr n) = {!!}
 
 is-retraction-map-inv-equiv-ℕ :
   ( map-inv-equiv-ℕ ∘ map-equiv-ℕ) ~ id
-is-retraction-map-inv-equiv-ℕ zero-ℕ = refl
-is-retraction-map-inv-equiv-ℕ (succ-ℕ n) = refl
+is-retraction-map-inv-equiv-ℕ zero-ℕ = {!!}
+is-retraction-map-inv-equiv-ℕ (succ-ℕ n) = {!!}
 
 is-section-map-inv-equiv-ℕ :
   ( map-equiv-ℕ ∘ map-inv-equiv-ℕ) ~ id
-is-section-map-inv-equiv-ℕ (inl star) = refl
-is-section-map-inv-equiv-ℕ (inr n) = refl
+is-section-map-inv-equiv-ℕ (inl star) = {!!}
+is-section-map-inv-equiv-ℕ (inr n) = {!!}
 
 equiv-ℕ : ℕ ≃ (unit + ℕ)
-pr1 equiv-ℕ = map-equiv-ℕ
-pr2 equiv-ℕ =
-  is-equiv-is-invertible
-    map-inv-equiv-ℕ
-    is-section-map-inv-equiv-ℕ
-    is-retraction-map-inv-equiv-ℕ
+pr1 equiv-ℕ = {!!}
+pr2 equiv-ℕ = {!!}
 ```
 
 ### The coproduct `ℕ + ℕ` is equivalent to `ℕ`
 
 ```agda
 succ-ℕ+ℕ : ℕ + ℕ → ℕ + ℕ
-succ-ℕ+ℕ = map-coprod succ-ℕ succ-ℕ
+succ-ℕ+ℕ = {!!}
 
 map-ℕ+ℕ-to-ℕ : ℕ + ℕ → ℕ
-map-ℕ+ℕ-to-ℕ (inl x) = 2 *ℕ x
-map-ℕ+ℕ-to-ℕ (inr x) = succ-ℕ (2 *ℕ x)
+map-ℕ+ℕ-to-ℕ (inl x) = {!!}
+map-ℕ+ℕ-to-ℕ (inr x) = {!!}
 
 action-map-ℕ+ℕ-to-ℕ-on-succ-ℕ+ℕ :
   (x : ℕ + ℕ) →
     (map-ℕ+ℕ-to-ℕ (succ-ℕ+ℕ x)) ＝
       (succ-ℕ (succ-ℕ (map-ℕ+ℕ-to-ℕ x)))
-action-map-ℕ+ℕ-to-ℕ-on-succ-ℕ+ℕ (inl x) =
-  ap succ-ℕ (left-successor-law-add-ℕ _ _)
-action-map-ℕ+ℕ-to-ℕ-on-succ-ℕ+ℕ (inr x) =
-  ap (succ-ℕ ∘ succ-ℕ) (left-successor-law-add-ℕ _ _)
+action-map-ℕ+ℕ-to-ℕ-on-succ-ℕ+ℕ (inl x) = {!!}
+action-map-ℕ+ℕ-to-ℕ-on-succ-ℕ+ℕ (inr x) = {!!}
 
 is-split-surjective-map-ℕ+ℕ-to-ℕ : is-split-surjective map-ℕ+ℕ-to-ℕ
-is-split-surjective-map-ℕ+ℕ-to-ℕ zero-ℕ =
-  ( pair (inl 0) refl)
-is-split-surjective-map-ℕ+ℕ-to-ℕ (succ-ℕ zero-ℕ) =
-  ( pair (inr 0) refl)
-is-split-surjective-map-ℕ+ℕ-to-ℕ (succ-ℕ (succ-ℕ b)) =
-  ( pair
-    ( succ-ℕ+ℕ (pr1 (is-split-surjective-map-ℕ+ℕ-to-ℕ b)))
-    ( ( action-map-ℕ+ℕ-to-ℕ-on-succ-ℕ+ℕ
-        ( pr1 (is-split-surjective-map-ℕ+ℕ-to-ℕ b))) ∙
-      ( ap (succ-ℕ ∘ succ-ℕ)
-        ( pr2 (is-split-surjective-map-ℕ+ℕ-to-ℕ b)))))
+is-split-surjective-map-ℕ+ℕ-to-ℕ zero-ℕ = {!!}
+is-split-surjective-map-ℕ+ℕ-to-ℕ (succ-ℕ zero-ℕ) = {!!}
+is-split-surjective-map-ℕ+ℕ-to-ℕ (succ-ℕ (succ-ℕ b)) = {!!}
 
 is-injective-map-ℕ+ℕ-to-ℕ : is-injective map-ℕ+ℕ-to-ℕ
-is-injective-map-ℕ+ℕ-to-ℕ {inl x} {inl y} p =
-  ( ap inl (is-injective-left-mul-succ-ℕ 1 p))
-is-injective-map-ℕ+ℕ-to-ℕ {inl x} {inr y} p =
-  ex-falso (t s)
-  where
-  s : (div-ℕ 2 (succ-ℕ (2 *ℕ y)))
-  s = concatenate-div-eq-ℕ (x , commutative-mul-ℕ x 2) p
+is-injective-map-ℕ+ℕ-to-ℕ {inl x} {inl y} p = {!!}
+is-injective-map-ℕ+ℕ-to-ℕ {inl x} {inr y} p = {!!}
 
   t : ¬ (div-ℕ 2 (succ-ℕ (2 *ℕ y)))
-  t =
-    ( is-odd-succ-is-even-ℕ
-      ( 2 *ℕ y)
-      ( y , commutative-mul-ℕ y 2))
-is-injective-map-ℕ+ℕ-to-ℕ {inr x} {inl y} p =
-  ex-falso (t s)
-  where
-  s : (div-ℕ 2 (succ-ℕ (2 *ℕ x)))
-  s = concatenate-div-eq-ℕ (y , commutative-mul-ℕ y 2) (inv p)
+  t = {!!}
+is-injective-map-ℕ+ℕ-to-ℕ {inr x} {inl y} p = {!!}
 
   t : ¬ (div-ℕ 2 (succ-ℕ (2 *ℕ x)))
-  t =
-    ( is-odd-succ-is-even-ℕ
-      ( 2 *ℕ x)
-      ( x , commutative-mul-ℕ x 2))
-is-injective-map-ℕ+ℕ-to-ℕ {inr x} {inr y} p =
-  ( ap inr (is-injective-left-mul-succ-ℕ 1 (is-injective-succ-ℕ p)))
+  t = {!!}
+is-injective-map-ℕ+ℕ-to-ℕ {inr x} {inr y} p = {!!}
 
 is-equiv-map-ℕ+ℕ-to-ℕ : is-equiv map-ℕ+ℕ-to-ℕ
-is-equiv-map-ℕ+ℕ-to-ℕ =
-  is-equiv-is-split-surjective-is-injective
-    ( map-ℕ+ℕ-to-ℕ)
-    ( is-injective-map-ℕ+ℕ-to-ℕ)
-    ( is-split-surjective-map-ℕ+ℕ-to-ℕ)
+is-equiv-map-ℕ+ℕ-to-ℕ = {!!}
 
 ℕ+ℕ≃ℕ : (ℕ + ℕ) ≃ ℕ
-ℕ+ℕ≃ℕ = pair map-ℕ+ℕ-to-ℕ is-equiv-map-ℕ+ℕ-to-ℕ
+ℕ+ℕ≃ℕ = {!!}
 
 map-ℕ-to-ℕ+ℕ : ℕ → ℕ + ℕ
-map-ℕ-to-ℕ+ℕ = map-inv-is-equiv (pr2 ℕ+ℕ≃ℕ)
+map-ℕ-to-ℕ+ℕ = {!!}
 
 is-equiv-map-ℕ-to-ℕ+ℕ : is-equiv map-ℕ-to-ℕ+ℕ
-is-equiv-map-ℕ-to-ℕ+ℕ = is-equiv-map-inv-is-equiv (pr2 ℕ+ℕ≃ℕ)
+is-equiv-map-ℕ-to-ℕ+ℕ = {!!}
 ```
 
 ### The iterated coproduct `ℕ + ℕ + ... + ℕ` is equivalent to `ℕ` for any n
@@ -159,23 +125,21 @@ is-equiv-map-ℕ-to-ℕ+ℕ = is-equiv-map-inv-is-equiv (pr2 ℕ+ℕ≃ℕ)
 ```agda
 equiv-iterated-coproduct-ℕ :
   (n : ℕ) → (iterate n (_+_ ℕ) ℕ) ≃ ℕ
-equiv-iterated-coproduct-ℕ zero-ℕ = id-equiv
-equiv-iterated-coproduct-ℕ (succ-ℕ n) =
-  ( ℕ+ℕ≃ℕ) ∘e
-    ( equiv-coprod id-equiv (equiv-iterated-coproduct-ℕ n))
+equiv-iterated-coproduct-ℕ zero-ℕ = {!!}
+equiv-iterated-coproduct-ℕ (succ-ℕ n) = {!!}
 ```
 
 ### The product `ℕ × ℕ` is equivalent to `ℕ`
 
 ```agda
 ℕ×ℕ≃ℕ : (ℕ × ℕ) ≃ ℕ
-ℕ×ℕ≃ℕ = pair pairing-map is-equiv-pairing-map
+ℕ×ℕ≃ℕ = {!!}
 
 map-ℕ-to-ℕ×ℕ : ℕ → ℕ × ℕ
-map-ℕ-to-ℕ×ℕ = map-inv-is-equiv (pr2 ℕ×ℕ≃ℕ)
+map-ℕ-to-ℕ×ℕ = {!!}
 
 is-equiv-map-ℕ-to-ℕ×ℕ : is-equiv map-ℕ-to-ℕ×ℕ
-is-equiv-map-ℕ-to-ℕ×ℕ = is-equiv-map-inv-is-equiv (pr2 ℕ×ℕ≃ℕ)
+is-equiv-map-ℕ-to-ℕ×ℕ = {!!}
 ```
 
 ### The iterated coproduct `ℕ × ℕ × ... × ℕ` is equivalent to `ℕ` for any n
@@ -183,46 +147,35 @@ is-equiv-map-ℕ-to-ℕ×ℕ = is-equiv-map-inv-is-equiv (pr2 ℕ×ℕ≃ℕ)
 ```agda
 equiv-iterated-product-ℕ :
   (n : ℕ) → (iterate n (_×_ ℕ) ℕ) ≃ ℕ
-equiv-iterated-product-ℕ zero-ℕ = id-equiv
-equiv-iterated-product-ℕ (succ-ℕ n) =
-  ( ℕ×ℕ≃ℕ) ∘e
-    ( equiv-prod id-equiv (equiv-iterated-product-ℕ n))
+equiv-iterated-product-ℕ zero-ℕ = {!!}
+equiv-iterated-product-ℕ (succ-ℕ n) = {!!}
 ```
 
 ### The coproduct `(Fin n) + ℕ` is equivalent to `N` for any standard finite `Fin n`
 
 ```agda
 equiv-coprod-Fin-ℕ : (n : ℕ) → ((Fin n) + ℕ) ≃ ℕ
-equiv-coprod-Fin-ℕ zero-ℕ = left-unit-law-coprod ℕ
-equiv-coprod-Fin-ℕ (succ-ℕ n) =
-  ( equiv-coprod-Fin-ℕ n) ∘e
-    ( equiv-coprod id-equiv (inv-equiv equiv-ℕ) ∘e
-      ( associative-coprod))
+equiv-coprod-Fin-ℕ zero-ℕ = {!!}
+equiv-coprod-Fin-ℕ (succ-ℕ n) = {!!}
 ```
 
 ### The product `(Fin n) × ℕ` is equivalent to `N` for any standard finite `Fin n` where n is nonzero
 
 ```agda
 equiv-prod-Fin-ℕ : (n : ℕ) → ((Fin (succ-ℕ n)) × ℕ) ≃ ℕ
-equiv-prod-Fin-ℕ zero-ℕ =
-  ( left-unit-law-coprod ℕ) ∘e
-    ( ( equiv-coprod (left-absorption-prod ℕ) left-unit-law-prod) ∘e
-      ( right-distributive-prod-coprod empty unit ℕ))
-equiv-prod-Fin-ℕ (succ-ℕ n) =
-  ( ℕ+ℕ≃ℕ) ∘e
-    ( ( equiv-coprod (equiv-prod-Fin-ℕ n) left-unit-law-prod) ∘e
-      ( right-distributive-prod-coprod (Fin (succ-ℕ n)) unit ℕ))
+equiv-prod-Fin-ℕ zero-ℕ = {!!}
+equiv-prod-Fin-ℕ (succ-ℕ n) = {!!}
 ```
 
 ### The integers `ℤ` is equivalent to `ℕ`
 
 ```agda
 ℤ≃ℕ : ℤ ≃ ℕ
-ℤ≃ℕ = (ℕ+ℕ≃ℕ) ∘e (equiv-coprod id-equiv (inv-equiv equiv-ℕ))
+ℤ≃ℕ = {!!}
 
 map-ℕ-to-ℤ : ℕ → ℤ
-map-ℕ-to-ℤ = map-inv-is-equiv (pr2 ℤ≃ℕ)
+map-ℕ-to-ℤ = {!!}
 
 is-equiv-map-ℕ-to-ℤ : is-equiv map-ℕ-to-ℤ
-is-equiv-map-ℕ-to-ℤ = is-equiv-map-inv-is-equiv (pr2 ℤ≃ℕ)
+is-equiv-map-ℕ-to-ℤ = {!!}
 ```

@@ -28,24 +28,5 @@ Semigroups and semigroup homomorphisms form a precategory.
 ```agda
 instance
   Semigroup-Large-Precategory : Large-Precategory lsuc (_⊔_)
-  obj-Large-Precategory Semigroup-Large-Precategory = Semigroup
-  hom-set-Large-Precategory Semigroup-Large-Precategory = hom-set-Semigroup
-  comp-hom-Large-Precategory Semigroup-Large-Precategory
-    {X = G} {H} {K} =
-    comp-hom-Semigroup G H K
-  id-hom-Large-Precategory Semigroup-Large-Precategory
-    {X = G} =
-    id-hom-Semigroup G
-  associative-comp-hom-Large-Precategory Semigroup-Large-Precategory
-    {X = G} {H} {K} {L} =
-    associative-comp-hom-Semigroup G H K L
-  inv-associative-comp-hom-Large-Precategory Semigroup-Large-Precategory
-    {X = G} {H} {K} {L} =
-    inv-associative-comp-hom-Semigroup G H K L
-  left-unit-law-comp-hom-Large-Precategory Semigroup-Large-Precategory
-    {X = G} {H} =
-    left-unit-law-comp-hom-Semigroup G H
-  right-unit-law-comp-hom-Large-Precategory Semigroup-Large-Precategory
-    {X = G} {H} =
-    right-unit-law-comp-hom-Semigroup G H
+  obj-Large-Precategory Semigroup-Large-Precategory = {!!}
 ```

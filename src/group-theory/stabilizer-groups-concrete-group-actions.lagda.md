@@ -33,7 +33,7 @@ The **stabilizer** of an element `x : X point` of a
 `(point , x)` in the type of
 [orbits](group-theory.orbits-concrete-group-actions.md) of `X`. This type is a
 indeed [concrete group](group-theory.concrete-groups.md) of which the underlying
-type is the type of elements `g : G` such that `g x = x`.
+type is the type of elements `g : G` such that `g x = {!!}
 
 ## Definition
 
@@ -44,45 +44,17 @@ module _
 
   action-stabilizer-action-Concrete-Group :
     type-action-Concrete-Group G X → action-Concrete-Group (l1 ⊔ l2) G
-  action-stabilizer-action-Concrete-Group x u =
-    set-subset
-      ( X u)
-      ( λ y → mere-eq-Prop (shape-Concrete-Group G , x) (u , y))
+  action-stabilizer-action-Concrete-Group x u = {!!}
 
   is-transitive-action-stabilizer-action-Concrete-Group :
     (x : type-action-Concrete-Group G X) →
     is-transitive-action-Concrete-Group G
       ( action-stabilizer-action-Concrete-Group x)
-  is-transitive-action-stabilizer-action-Concrete-Group x =
-    is-0-connected-equiv'
-      ( associative-Σ
-        ( classifying-type-Concrete-Group G)
-        ( type-Set ∘ X)
-        ( mere-eq (shape-Concrete-Group G , x)))
-      ( is-0-connected-mere-eq
-        ( ( shape-Concrete-Group G , x) ,
-          ( refl-mere-eq (shape-Concrete-Group G , x)))
-        ( λ (uy , p) →
-          apply-universal-property-trunc-Prop p
-            ( mere-eq-Prop
-              ( ( shape-Concrete-Group G , x) ,
-                ( refl-mere-eq (shape-Concrete-Group G , x)))
-              ( uy , p))
-            ( λ q →
-              unit-trunc-Prop
-                ( eq-type-subtype
-                  ( mere-eq-Prop (shape-Concrete-Group G , x))
-                  ( q)))))
+  is-transitive-action-stabilizer-action-Concrete-Group x = {!!}
 
   subgroup-stabilizer-action-Concrete-Group :
     (x : type-action-Concrete-Group G X) → subgroup-Concrete-Group (l1 ⊔ l2) G
-  pr1 (pr1 (subgroup-stabilizer-action-Concrete-Group x)) =
-    action-stabilizer-action-Concrete-Group x
-  pr2 (pr1 (subgroup-stabilizer-action-Concrete-Group x)) =
-    is-transitive-action-stabilizer-action-Concrete-Group x
-  pr1 (pr2 (subgroup-stabilizer-action-Concrete-Group x)) = x
-  pr2 (pr2 (subgroup-stabilizer-action-Concrete-Group x)) =
-    refl-mere-eq (shape-Concrete-Group G , x)
+  pr1 (pr1 (subgroup-stabilizer-action-Concrete-Group x)) = {!!}
 ```
 
 ## External links

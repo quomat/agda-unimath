@@ -50,64 +50,55 @@ module _
   where
 
   is-cyclic-prop-Group : Prop l1
-  is-cyclic-prop-Group =
-    ∃-Prop
-      ( type-Group G)
-      ( is-generating-element-Group G)
+  is-cyclic-prop-Group = {!!}
 
   is-cyclic-Group : UU l1
-  is-cyclic-Group = type-Prop is-cyclic-prop-Group
+  is-cyclic-Group = {!!}
 
   is-prop-is-cyclic-Group : is-prop is-cyclic-Group
-  is-prop-is-cyclic-Group = is-prop-type-Prop is-cyclic-prop-Group
+  is-prop-is-cyclic-Group = {!!}
 
 Cyclic-Group : (l : Level) → UU (lsuc l)
-Cyclic-Group l = type-subtype (is-cyclic-prop-Group {l})
+Cyclic-Group l = {!!}
 
 module _
   {l : Level} (C : Cyclic-Group l)
   where
 
   group-Cyclic-Group : Group l
-  group-Cyclic-Group = pr1 C
+  group-Cyclic-Group = {!!}
 
   is-cyclic-Cyclic-Group : is-cyclic-Group group-Cyclic-Group
-  is-cyclic-Cyclic-Group = pr2 C
+  is-cyclic-Cyclic-Group = {!!}
 
   set-Cyclic-Group : Set l
-  set-Cyclic-Group = set-Group group-Cyclic-Group
+  set-Cyclic-Group = {!!}
 
   type-Cyclic-Group : UU l
-  type-Cyclic-Group = type-Group group-Cyclic-Group
+  type-Cyclic-Group = {!!}
 
   zero-Cyclic-Group : type-Cyclic-Group
-  zero-Cyclic-Group = unit-Group group-Cyclic-Group
+  zero-Cyclic-Group = {!!}
 
   add-Cyclic-Group : (x y : type-Cyclic-Group) → type-Cyclic-Group
-  add-Cyclic-Group = mul-Group group-Cyclic-Group
+  add-Cyclic-Group = {!!}
 
   neg-Cyclic-Group : type-Cyclic-Group → type-Cyclic-Group
-  neg-Cyclic-Group = inv-Group group-Cyclic-Group
+  neg-Cyclic-Group = {!!}
 
   associative-add-Cyclic-Group :
     (x y z : type-Cyclic-Group) →
     add-Cyclic-Group (add-Cyclic-Group x y) z ＝
     add-Cyclic-Group x (add-Cyclic-Group y z)
-  associative-add-Cyclic-Group = associative-mul-Group group-Cyclic-Group
+  associative-add-Cyclic-Group = {!!}
 
   commutative-add-Cyclic-Group :
     (x y : type-Cyclic-Group) →
     add-Cyclic-Group x y ＝ add-Cyclic-Group y x
-  commutative-add-Cyclic-Group x y =
-    apply-universal-property-trunc-Prop
-      ( is-cyclic-Cyclic-Group)
-      ( Id-Prop set-Cyclic-Group (add-Cyclic-Group x y) (add-Cyclic-Group y x))
-      ( λ (g , u) →
-        commutative-mul-is-generating-element-Group group-Cyclic-Group g u x y)
+  commutative-add-Cyclic-Group x y = {!!}
 
   ab-Cyclic-Group : Ab l
-  pr1 ab-Cyclic-Group = group-Cyclic-Group
-  pr2 ab-Cyclic-Group = commutative-add-Cyclic-Group
+  pr1 ab-Cyclic-Group = {!!}
 ```
 
 #### The definition where `G` has a generating element
@@ -118,11 +109,10 @@ module _
   where
 
   has-generating-element-prop-Group : Prop l1
-  has-generating-element-prop-Group =
-    is-inhabited-subtype-Prop (generating-element-Group G)
+  has-generating-element-prop-Group = {!!}
 
   has-generating-element-Group : UU l1
-  has-generating-element-Group = type-Prop has-generating-element-prop-Group
+  has-generating-element-Group = {!!}
 ```
 
 ## Properties
@@ -137,12 +127,7 @@ module _
   is-cyclic-has-generating-element-Group :
     is-cyclic-Group G →
     {l : Level} → ∃ (type-Group G) (λ g → is-emb-ev-element-hom-Group' G g l)
-  is-cyclic-has-generating-element-Group H =
-    apply-universal-property-trunc-Prop H
-      ( ∃-Prop (type-Group G) (λ g → is-emb-ev-element-hom-Group' G g _))
-      ( λ (g , u) →
-        intro-∃ g
-          ( is-emb-ev-element-is-generating-element-Group G g u))
+  is-cyclic-has-generating-element-Group H = {!!}
 ```
 
 ## See also

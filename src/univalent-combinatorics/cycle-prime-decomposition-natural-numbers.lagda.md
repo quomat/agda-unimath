@@ -51,24 +51,11 @@ decomposition of `n`.
 ```agda
 concrete-group-cycle-prime-decomposition-ℕ :
   (n : ℕ) → leq-ℕ 1 n → Concrete-Group (lsuc lzero)
-concrete-group-cycle-prime-decomposition-ℕ n H =
-  iterated-product-Concrete-Group
-    ( length-array
-      ( array-list
-        ( map-list
-          ( concrete-group-Cyclic-Type)
-          ( list-fundamental-theorem-arithmetic-ℕ n H))))
-    ( functional-vec-array
-      ( array-list
-        ( map-list
-          ( concrete-group-Cyclic-Type)
-          ( list-fundamental-theorem-arithmetic-ℕ n H))))
+concrete-group-cycle-prime-decomposition-ℕ n H = {!!}
 
 cycle-prime-decomposition-ℕ :
   (n : ℕ) → leq-ℕ 1 n → UU (lsuc lzero)
-cycle-prime-decomposition-ℕ n H =
-  iterated-product-lists
-    ( map-list (Cyclic-Type lzero) (list-fundamental-theorem-arithmetic-ℕ n H))
+cycle-prime-decomposition-ℕ n H = {!!}
 ```
 
 ## Properties
@@ -83,84 +70,5 @@ equiv-product-cycle-prime-decomposition-ℕ :
   (n m : ℕ) → (H : leq-ℕ 1 n) → (I : leq-ℕ 1 m) →
   ( cycle-prime-decomposition-ℕ n H × cycle-prime-decomposition-ℕ m I) ≃
   cycle-prime-decomposition-ℕ (n *ℕ m) (preserves-leq-mul-ℕ 1 n 1 m H I)
-equiv-product-cycle-prime-decomposition-ℕ n m H I =
-  ( ( equiv-eq
-      ( ap
-        ( λ p → iterated-product-lists (map-list (Cyclic-Type lzero) p))
-        ( ( inv
-            ( eq-permute-list-permutation-insertion-sort-list
-              ( ℕ-Decidable-Total-Order)
-              ( concat-list
-                ( list-fundamental-theorem-arithmetic-ℕ n H)
-                ( list-fundamental-theorem-arithmetic-ℕ m I)))) ∙
-          ( ap
-            ( pr1)
-            ( eq-is-contr'
-              ( fundamental-theorem-arithmetic-list-ℕ
-                ( n *ℕ m)
-                ( preserves-leq-mul-ℕ 1 n 1 m H I))
-              ( prime-decomposition-list-sort-concatenation-ℕ
-                ( n)
-                ( m)
-                ( H)
-                ( I)
-                ( list-fundamental-theorem-arithmetic-ℕ n H)
-                ( list-fundamental-theorem-arithmetic-ℕ m I)
-                ( is-prime-decomposition-list-fundamental-theorem-arithmetic-ℕ
-                  n
-                  H)
-                ( is-prime-decomposition-list-fundamental-theorem-arithmetic-ℕ
-                  m
-                  I))
-              ( prime-decomposition-fundamental-theorem-arithmetic-list-ℕ
-                (n *ℕ m)
-                ( preserves-leq-mul-ℕ 1 n 1 m H I))))))) ∘e
-    ( equiv-eq
-      ( ap
-        ( iterated-product-lists)
-        ( eq-map-list-permute-list
-          ( Cyclic-Type lzero)
-          ( concat-list
-            ( list-fundamental-theorem-arithmetic-ℕ n H)
-            ( list-fundamental-theorem-arithmetic-ℕ m I))
-          ( permutation-insertion-sort-list
-            ( ℕ-Decidable-Total-Order)
-            ( concat-list
-              ( list-fundamental-theorem-arithmetic-ℕ n H)
-              ( list-fundamental-theorem-arithmetic-ℕ m I))))) ∘e
-      ( ( inv-equiv
-          ( equiv-permutation-iterated-product-lists
-            ( map-list
-              ( Cyclic-Type lzero)
-              ( concat-list
-                ( list-fundamental-theorem-arithmetic-ℕ n H)
-                ( list-fundamental-theorem-arithmetic-ℕ m I)))
-            ( tr
-              ( Permutation)
-              ( inv
-                ( length-map-list
-                  ( Cyclic-Type lzero)
-                  ( concat-list
-                    ( list-fundamental-theorem-arithmetic-ℕ n H)
-                    ( list-fundamental-theorem-arithmetic-ℕ m I))))
-              ( permutation-insertion-sort-list
-                ( ℕ-Decidable-Total-Order)
-                ( concat-list
-                  ( list-fundamental-theorem-arithmetic-ℕ n H)
-                  ( list-fundamental-theorem-arithmetic-ℕ m I)))))) ∘e
-        ( ( equiv-eq
-            ( ap
-              ( iterated-product-lists)
-              ( inv
-                ( preserves-concat-map-list
-                  ( Cyclic-Type lzero)
-                  ( list-fundamental-theorem-arithmetic-ℕ n H)
-                  ( list-fundamental-theorem-arithmetic-ℕ m I))))) ∘e
-          ( equiv-product-iterated-product-lists
-            ( map-list
-              ( Cyclic-Type lzero)
-              ( list-fundamental-theorem-arithmetic-ℕ n H))
-            ( map-list
-              ( Cyclic-Type lzero)
-              ( list-fundamental-theorem-arithmetic-ℕ m I)))))))
+equiv-product-cycle-prime-decomposition-ℕ n m H I = {!!}
 ```

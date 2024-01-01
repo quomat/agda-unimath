@@ -53,17 +53,13 @@ module _
   where
 
   is-torsion-element-prop-Group : Prop l1
-  is-torsion-element-prop-Group =
-    ∃-Prop
-      ( nonzero-ℤ)
-      ( λ k → integer-power-Group G (int-nonzero-ℤ k) x ＝ unit-Group G)
+  is-torsion-element-prop-Group = {!!}
 
   is-torsion-element-Group : UU l1
-  is-torsion-element-Group = type-Prop is-torsion-element-prop-Group
+  is-torsion-element-Group = {!!}
 
   is-prop-is-torsion-element-Group : is-prop is-torsion-element-Group
-  is-prop-is-torsion-element-Group =
-    is-prop-type-Prop is-torsion-element-prop-Group
+  is-prop-is-torsion-element-Group = {!!}
 ```
 
 ### The type of torsion elements of a group
@@ -74,7 +70,7 @@ module _
   where
 
   torsion-element-Group : UU l1
-  torsion-element-Group = type-subtype (is-torsion-element-prop-Group G)
+  torsion-element-Group = {!!}
 ```
 
 ## Properties
@@ -87,14 +83,10 @@ module _
   where
 
   is-torsion-element-unit-Group : is-torsion-element-Group G (unit-Group G)
-  is-torsion-element-unit-Group =
-    intro-∃
-      ( one-nonzero-ℤ)
-      ( integer-power-unit-Group G one-ℤ)
+  is-torsion-element-unit-Group = {!!}
 
   unit-torsion-element-Group : torsion-element-Group G
-  pr1 unit-torsion-element-Group = unit-Group G
-  pr2 unit-torsion-element-Group = is-torsion-element-unit-Group
+  pr1 unit-torsion-element-Group = {!!}
 ```
 
 ## See also

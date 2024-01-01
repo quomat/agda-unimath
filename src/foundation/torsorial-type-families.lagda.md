@@ -40,11 +40,11 @@ it follows that a type family `E` is torsorial if and only if it is in the
 ```agda
 is-torsorial-Prop :
   {l1 l2 : Level} {B : UU l1} → (B → UU l2) → Prop (l1 ⊔ l2)
-is-torsorial-Prop E = is-contr-Prop (Σ _ E)
+is-torsorial-Prop E = {!!}
 
 is-prop-is-torsorial :
   {l1 l2 : Level} {B : UU l1} (E : B → UU l2) → is-prop (is-torsorial E)
-is-prop-is-torsorial E = is-prop-type-Prop (is-torsorial-Prop E)
+is-prop-is-torsorial E = {!!}
 ```
 
 ### The type of torsorial type families over `B`
@@ -52,18 +52,18 @@ is-prop-is-torsorial E = is-prop-type-Prop (is-torsorial-Prop E)
 ```agda
 torsorial-family-of-types :
   {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-torsorial-family-of-types l2 B = Σ (B → UU l2) is-torsorial
+torsorial-family-of-types l2 B = {!!}
 
 module _
   {l1 l2 : Level} {B : UU l1} (T : torsorial-family-of-types l2 B)
   where
 
   type-torsorial-family-of-types : B → UU l2
-  type-torsorial-family-of-types = pr1 T
+  type-torsorial-family-of-types = {!!}
 
   is-torsorial-torsorial-family-of-types :
     is-torsorial type-torsorial-family-of-types
-  is-torsorial-torsorial-family-of-types = pr2 T
+  is-torsorial-torsorial-family-of-types = {!!}
 ```
 
 ## Properties
@@ -86,27 +86,13 @@ module _
 
   is-torsorial-fiber-Id :
     {a : A} → ((x : A) → (a ＝ x) ≃ B x) → is-torsorial B
-  is-torsorial-fiber-Id H =
-    fundamental-theorem-id'
-      ( λ x → map-equiv (H x))
-      ( λ x → is-equiv-map-equiv (H x))
+  is-torsorial-fiber-Id H = {!!}
 
   fiber-Id-is-torsorial :
     is-torsorial B → Σ A (λ a → (x : A) → (a ＝ x) ≃ B x)
-  pr1 (fiber-Id-is-torsorial ((a , b) , H)) = a
-  pr2 (fiber-Id-is-torsorial ((a , b) , H)) =
-    map-inv-distributive-Π-Σ (f , fundamental-theorem-id ((a , b) , H) f)
-    where
-    f : (x : A) → (a ＝ x) → B x
-    f x refl = b
+  pr1 (fiber-Id-is-torsorial ((a , b) , H)) = {!!}
 
   compute-fiber-Id :
     (Σ A (λ a → (x : A) → (a ＝ x) ≃ B x)) ≃ is-torsorial B
-  compute-fiber-Id =
-    equiv-iff
-      ( Σ A (λ a → (x : A) → (a ＝ x) ≃ B x) ,
-        is-prop-total-family-of-equivalences-Id)
-      ( is-contr-Prop (Σ A B))
-      ( λ u → is-torsorial-fiber-Id (pr2 u))
-      ( fiber-Id-is-torsorial)
+  compute-fiber-Id = {!!}
 ```

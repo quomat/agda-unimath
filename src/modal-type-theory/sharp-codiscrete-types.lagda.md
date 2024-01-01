@@ -47,14 +47,14 @@ be subject to change in the future.
 
 ```agda
 is-sharp-codiscrete : {l : Level} (A : UU l) → UU l
-is-sharp-codiscrete {l} A = is-equiv (unit-sharp {l} {A})
+is-sharp-codiscrete {l} A = {!!}
 
 is-sharp-codiscrete-family :
   {l1 l2 : Level} {A : UU l1} (B : A → UU l2) → UU (l1 ⊔ l2)
-is-sharp-codiscrete-family {A = A} B = (x : A) → is-sharp-codiscrete (B x)
+is-sharp-codiscrete-family {A = A} B = {!!}
 
 Sharp-Codiscrete : (l : Level) → UU (lsuc l)
-Sharp-Codiscrete l = Σ (UU l) (is-sharp-codiscrete)
+Sharp-Codiscrete l = {!!}
 ```
 
 ## Postulates
@@ -69,11 +69,7 @@ postulate
 is-sharp-codiscrete-Id :
   {l1 : Level} {A : UU l1} (x y : A) →
   is-sharp-codiscrete A → is-sharp-codiscrete (x ＝ y)
-is-sharp-codiscrete-Id x y is-sharp-codiscrete-A =
-  map-tr-equiv
-    ( is-sharp-codiscrete)
-    ( inv-equiv-ap-is-emb (is-emb-is-equiv is-sharp-codiscrete-A))
-    ( is-sharp-codiscrete-Id-sharp (unit-sharp x) (unit-sharp y))
+is-sharp-codiscrete-Id x y is-sharp-codiscrete-A = {!!}
 ```
 
 ### A `Π`-type is codiscrete if its codomain is
@@ -104,22 +100,21 @@ module _
   where
 
   is-sharp-codiscrete-Prop : Prop l
-  is-sharp-codiscrete-Prop = is-equiv-Prop (unit-sharp {l} {A})
+  is-sharp-codiscrete-Prop = {!!}
 
   is-property-is-sharp-codiscrete : is-prop (is-sharp-codiscrete A)
-  is-property-is-sharp-codiscrete = is-prop-type-Prop is-sharp-codiscrete-Prop
+  is-property-is-sharp-codiscrete = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (B : A → UU l2)
   where
 
   is-sharp-codiscrete-family-Prop : Prop (l1 ⊔ l2)
-  is-sharp-codiscrete-family-Prop = Π-Prop A (is-sharp-codiscrete-Prop ∘ B)
+  is-sharp-codiscrete-family-Prop = {!!}
 
   is-property-is-sharp-codiscrete-family :
     is-prop (is-sharp-codiscrete-family B)
-  is-property-is-sharp-codiscrete-family =
-    is-prop-type-Prop is-sharp-codiscrete-family-Prop
+  is-property-is-sharp-codiscrete-family = {!!}
 ```
 
 ### Codiscreteness is a higher modality
@@ -131,21 +126,17 @@ module _
 
   is-higher-modality-sharp :
     is-higher-modality (sharp-locally-small-operator-modality l) (unit-sharp)
-  pr1 is-higher-modality-sharp = induction-principle-sharp
-  pr2 is-higher-modality-sharp X = is-sharp-codiscrete-Id-sharp
+  pr1 is-higher-modality-sharp = {!!}
 
   sharp-higher-modality : higher-modality l l
-  pr1 sharp-higher-modality = sharp-locally-small-operator-modality l
-  pr1 (pr2 sharp-higher-modality) = unit-sharp
-  pr2 (pr2 sharp-higher-modality) = is-higher-modality-sharp
+  pr1 sharp-higher-modality = {!!}
 ```
 
 ### Types in the image of `♯` are codiscrete
 
 ```agda
 is-sharp-codiscrete-sharp : {l : Level} (X : UU l) → is-sharp-codiscrete (♯ X)
-is-sharp-codiscrete-sharp {l} =
-  is-modal-operator-type-higher-modality (sharp-higher-modality l)
+is-sharp-codiscrete-sharp {l} = {!!}
 ```
 
 ## See also

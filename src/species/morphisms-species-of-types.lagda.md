@@ -35,11 +35,11 @@ values.
 hom-species-types :
   {l1 l2 l3 : Level} →
   species-types l1 l2 → species-types l1 l3 → UU (lsuc l1 ⊔ l2 ⊔ l3)
-hom-species-types {l1} F G = (X : UU l1) → F X → G X
+hom-species-types {l1} F G = {!!}
 
 id-hom-species-types :
   {l1 l2 : Level} → (F : species-types l1 l2) → hom-species-types F F
-id-hom-species-types F = λ X x → x
+id-hom-species-types F = {!!}
 
 comp-hom-species-types :
   {l1 l2 l3 l4 : Level}
@@ -47,7 +47,7 @@ comp-hom-species-types :
   {G : species-types l1 l3}
   {H : species-types l1 l4} →
   hom-species-types G H → hom-species-types F G → hom-species-types F H
-comp-hom-species-types f g X = (f X) ∘ (g X)
+comp-hom-species-types f g X = {!!}
 ```
 
 ### Homotopies between morphisms of species
@@ -56,12 +56,12 @@ comp-hom-species-types f g X = (f X) ∘ (g X)
 htpy-hom-species-types :
   {l1 l2 l3 : Level} {F : species-types l1 l2} {G : species-types l1 l3} →
   hom-species-types F G → hom-species-types F G → UU (lsuc l1 ⊔ l2 ⊔ l3)
-htpy-hom-species-types {l1} f g = (X : UU l1) → (f X) ~ (g X)
+htpy-hom-species-types {l1} f g = {!!}
 
 refl-htpy-hom-species-types :
   {l1 l2 l3 : Level} {F : species-types l1 l2} {G : species-types l1 l3}
   (f : hom-species-types F G) → htpy-hom-species-types f f
-refl-htpy-hom-species-types f X = refl-htpy
+refl-htpy-hom-species-types f X = {!!}
 ```
 
 ## Properties
@@ -73,29 +73,24 @@ htpy-eq-hom-species-types :
   {l1 l2 l3 : Level} {F : species-types l1 l2} {G : species-types l1 l3}
   {f g : hom-species-types F G} →
   Id f g → htpy-hom-species-types f g
-htpy-eq-hom-species-types refl X y = refl
+htpy-eq-hom-species-types refl X y = {!!}
 
 is-torsorial-htpy-hom-species-types :
   {l1 l2 l3 : Level} {F : species-types l1 l2} {G : species-types l1 l3}
   (f : hom-species-types F G) →
   is-torsorial (htpy-hom-species-types f)
-is-torsorial-htpy-hom-species-types f =
-  is-torsorial-Eq-Π (λ X h → f X ~ h) (λ X → is-torsorial-htpy (f X))
+is-torsorial-htpy-hom-species-types f = {!!}
 
 is-equiv-htpy-eq-hom-species-types :
   {l1 l2 l3 : Level} {F : species-types l1 l2} {G : species-types l1 l3}
   (f g : hom-species-types F G) →
   is-equiv (htpy-eq-hom-species-types {f = f} {g = g})
-is-equiv-htpy-eq-hom-species-types f =
-  fundamental-theorem-id
-    ( is-torsorial-htpy-hom-species-types f)
-    ( λ g → htpy-eq-hom-species-types {f = f} {g = g})
+is-equiv-htpy-eq-hom-species-types f = {!!}
 
 eq-htpy-hom-species-types :
   {l1 l2 l3 : Level} {F : species-types l1 l2} {G : species-types l1 l3}
   {f g : hom-species-types F G} → htpy-hom-species-types f g → Id f g
-eq-htpy-hom-species-types {f = f} {g = g} =
-  map-inv-is-equiv (is-equiv-htpy-eq-hom-species-types f g)
+eq-htpy-hom-species-types {f = f} {g = g} = {!!}
 ```
 
 ### Associativity of composition
@@ -113,12 +108,12 @@ module _
   associative-comp-hom-species-types :
     comp-hom-species-types (comp-hom-species-types h g) f ＝
     comp-hom-species-types h (comp-hom-species-types g f)
-  associative-comp-hom-species-types = refl
+  associative-comp-hom-species-types = {!!}
 
   inv-associative-comp-hom-species-types :
     comp-hom-species-types h (comp-hom-species-types g f) ＝
     comp-hom-species-types (comp-hom-species-types h g) f
-  inv-associative-comp-hom-species-types = refl
+  inv-associative-comp-hom-species-types = {!!}
 ```
 
 ### Unit laws of composition
@@ -128,11 +123,11 @@ left-unit-law-comp-hom-species-types :
   {l1 l2 l3 : Level} {F : species-types l1 l2} {G : species-types l1 l3}
   (f : hom-species-types F G) →
   Id (comp-hom-species-types (id-hom-species-types G) f) f
-left-unit-law-comp-hom-species-types f = refl
+left-unit-law-comp-hom-species-types f = {!!}
 
 right-unit-law-comp-hom-species-types :
   {l1 l2 l3 : Level} {F : species-types l1 l2} {G : species-types l1 l3}
   (f : hom-species-types F G) →
   Id (comp-hom-species-types f (id-hom-species-types F)) f
-right-unit-law-comp-hom-species-types f = refl
+right-unit-law-comp-hom-species-types f = {!!}
 ```

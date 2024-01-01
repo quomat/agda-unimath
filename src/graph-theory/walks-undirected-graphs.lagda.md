@@ -74,20 +74,16 @@ module _
   is-vertex-on-walk-Undirected-Graph :
     {y : vertex-Undirected-Graph G} (w : walk-Undirected-Graph G x y) →
     vertex-Undirected-Graph G → UU l1
-  is-vertex-on-walk-Undirected-Graph refl-walk-Undirected-Graph v = x ＝ v
-  is-vertex-on-walk-Undirected-Graph (cons-walk-Undirected-Graph p e {y} w) v =
-    ( is-vertex-on-walk-Undirected-Graph w v) +
-    ( other-element-unordered-pair p y ＝ v)
+  is-vertex-on-walk-Undirected-Graph refl-walk-Undirected-Graph v = {!!}
 
   vertex-on-walk-Undirected-Graph :
     {y : vertex-Undirected-Graph G} (w : walk-Undirected-Graph G x y) → UU l1
-  vertex-on-walk-Undirected-Graph w =
-    Σ (vertex-Undirected-Graph G) (is-vertex-on-walk-Undirected-Graph w)
+  vertex-on-walk-Undirected-Graph w = {!!}
 
   vertex-vertex-on-walk-Undirected-Graph :
     {y : vertex-Undirected-Graph G} (w : walk-Undirected-Graph G x y) →
     vertex-on-walk-Undirected-Graph w → vertex-Undirected-Graph G
-  vertex-vertex-on-walk-Undirected-Graph w = pr1
+  vertex-vertex-on-walk-Undirected-Graph w = {!!}
 ```
 
 ### Edges on a walk
@@ -100,30 +96,23 @@ module _
   is-edge-on-walk-Undirected-Graph' :
     {y : vertex-Undirected-Graph G} (w : walk-Undirected-Graph G x y) →
     total-edge-Undirected-Graph G → UU (lsuc lzero ⊔ l1 ⊔ l2)
-  is-edge-on-walk-Undirected-Graph' refl-walk-Undirected-Graph e =
-    raise-empty (lsuc lzero ⊔ l1 ⊔ l2)
-  is-edge-on-walk-Undirected-Graph' (cons-walk-Undirected-Graph q f w) e =
-    ( is-edge-on-walk-Undirected-Graph' w e) +
-    ( pair q f ＝ e)
+  is-edge-on-walk-Undirected-Graph' refl-walk-Undirected-Graph e = {!!}
 
   is-edge-on-walk-Undirected-Graph :
     {y : vertex-Undirected-Graph G} (w : walk-Undirected-Graph G x y) →
     (p : unordered-pair-vertices-Undirected-Graph G) →
     edge-Undirected-Graph G p → UU (lsuc lzero ⊔ l1 ⊔ l2)
-  is-edge-on-walk-Undirected-Graph w p e =
-    is-edge-on-walk-Undirected-Graph' w (pair p e)
+  is-edge-on-walk-Undirected-Graph w p e = {!!}
 
   edge-on-walk-Undirected-Graph :
     {y : vertex-Undirected-Graph G} (w : walk-Undirected-Graph G x y) →
     UU (lsuc lzero ⊔ l1 ⊔ l2)
-  edge-on-walk-Undirected-Graph w =
-    Σ ( total-edge-Undirected-Graph G)
-      ( λ e → is-edge-on-walk-Undirected-Graph' w e)
+  edge-on-walk-Undirected-Graph w = {!!}
 
   edge-edge-on-walk-Undirected-Graph :
     {y : vertex-Undirected-Graph G} (w : walk-Undirected-Graph G x y) →
     edge-on-walk-Undirected-Graph w → total-edge-Undirected-Graph G
-  edge-edge-on-walk-Undirected-Graph w = pr1
+  edge-edge-on-walk-Undirected-Graph w = {!!}
 ```
 
 ### Concatenating walks
@@ -137,9 +126,7 @@ module _
     {y z : vertex-Undirected-Graph G} →
     walk-Undirected-Graph G x y → walk-Undirected-Graph G y z →
     walk-Undirected-Graph G x z
-  concat-walk-Undirected-Graph w refl-walk-Undirected-Graph = w
-  concat-walk-Undirected-Graph w (cons-walk-Undirected-Graph p e v) =
-    cons-walk-Undirected-Graph p e (concat-walk-Undirected-Graph w v)
+  concat-walk-Undirected-Graph w refl-walk-Undirected-Graph = {!!}
 ```
 
 ### The length of a walk
@@ -151,9 +138,7 @@ module _
 
   length-walk-Undirected-Graph :
     {y : vertex-Undirected-Graph G} → walk-Undirected-Graph G x y → ℕ
-  length-walk-Undirected-Graph refl-walk-Undirected-Graph = 0
-  length-walk-Undirected-Graph (cons-walk-Undirected-Graph p e w) =
-    succ-ℕ (length-walk-Undirected-Graph w)
+  length-walk-Undirected-Graph refl-walk-Undirected-Graph = {!!}
 ```
 
 ## Properties
@@ -168,8 +153,7 @@ module _
   is-contr-vertex-on-walk-refl-walk-Undirected-Graph :
     is-contr
       ( vertex-on-walk-Undirected-Graph G (refl-walk-Undirected-Graph {x = x}))
-  is-contr-vertex-on-walk-refl-walk-Undirected-Graph =
-    is-torsorial-path x
+  is-contr-vertex-on-walk-refl-walk-Undirected-Graph = {!!}
 ```
 
 ### The type of vertices on a walk is equivalent to `Fin (n + 1)` where `n` is the length of the walk
@@ -183,21 +167,7 @@ module _
     {y : vertex-Undirected-Graph G} (w : walk-Undirected-Graph G x y) →
     vertex-on-walk-Undirected-Graph G w ≃
     Fin (succ-ℕ (length-walk-Undirected-Graph G w))
-  compute-vertex-on-walk-Undirected-Graph refl-walk-Undirected-Graph =
-    equiv-is-contr
-      ( is-contr-vertex-on-walk-refl-walk-Undirected-Graph G x)
-      ( is-contr-Fin-one-ℕ)
-  compute-vertex-on-walk-Undirected-Graph
-    ( cons-walk-Undirected-Graph p e {y} w) =
-    ( equiv-coprod
-      ( compute-vertex-on-walk-Undirected-Graph w)
-      ( equiv-is-contr
-        ( is-torsorial-path (other-element-unordered-pair p y))
-        ( is-contr-unit))) ∘e
-    ( left-distributive-Σ-coprod
-      ( vertex-Undirected-Graph G)
-      ( is-vertex-on-walk-Undirected-Graph G w)
-      ( λ z → other-element-unordered-pair p y ＝ z))
+  compute-vertex-on-walk-Undirected-Graph refl-walk-Undirected-Graph = {!!}
 ```
 
 ### The type of edges on a constant walk is empty
@@ -210,7 +180,7 @@ module _
   is-empty-edge-on-walk-refl-walk-Undirected-Graph :
     is-empty
       ( edge-on-walk-Undirected-Graph G (refl-walk-Undirected-Graph {x = x}))
-  is-empty-edge-on-walk-refl-walk-Undirected-Graph = is-empty-raise-empty ∘ pr2
+  is-empty-edge-on-walk-refl-walk-Undirected-Graph = {!!}
 ```
 
 ### The type of edges on a walk is equivalent to `Fin n` where `n` is the length of the walk
@@ -223,20 +193,7 @@ module _
   compute-edge-on-walk-Undirected-Graph :
     {y : vertex-Undirected-Graph G} (w : walk-Undirected-Graph G x y) →
     edge-on-walk-Undirected-Graph G w ≃ Fin (length-walk-Undirected-Graph G w)
-  compute-edge-on-walk-Undirected-Graph refl-walk-Undirected-Graph =
-    equiv-is-empty
-      ( is-empty-edge-on-walk-refl-walk-Undirected-Graph G x)
-      ( id)
-  compute-edge-on-walk-Undirected-Graph (cons-walk-Undirected-Graph p e w) =
-    ( equiv-coprod
-      ( compute-edge-on-walk-Undirected-Graph w)
-      ( equiv-is-contr
-        ( is-torsorial-path (pair p e))
-        ( is-contr-unit))) ∘e
-    ( left-distributive-Σ-coprod
-      ( total-edge-Undirected-Graph G)
-      ( is-edge-on-walk-Undirected-Graph' G w)
-      ( λ z → pair p e ＝ z))
+  compute-edge-on-walk-Undirected-Graph refl-walk-Undirected-Graph = {!!}
 ```
 
 ### Right unit law for concatenation of walks
@@ -249,12 +206,7 @@ module _
   right-unit-law-concat-walk-Undirected-Graph :
     {y : vertex-Undirected-Graph G} (w : walk-Undirected-Graph G x y) →
     (concat-walk-Undirected-Graph G w refl-walk-Undirected-Graph) ＝ w
-  right-unit-law-concat-walk-Undirected-Graph refl-walk-Undirected-Graph = refl
-  right-unit-law-concat-walk-Undirected-Graph
-    ( cons-walk-Undirected-Graph p e w) =
-    ap
-      ( cons-walk-Undirected-Graph p e)
-      ( right-unit-law-concat-walk-Undirected-Graph w)
+  right-unit-law-concat-walk-Undirected-Graph refl-walk-Undirected-Graph = {!!}
 ```
 
 ### For any walk `w` from `x` to `y` and any vertex `v` on `w`, we can decompose `w` into a walk `w1` from `x` to `v` and a walk `w2` from `v` to `y`
@@ -269,29 +221,14 @@ module _
     (v : vertex-on-walk-Undirected-Graph G w) →
     walk-Undirected-Graph G x (vertex-vertex-on-walk-Undirected-Graph G w v)
   first-segment-walk-Undirected-Graph
-    refl-walk-Undirected-Graph (v , refl) = refl-walk-Undirected-Graph
-  first-segment-walk-Undirected-Graph
-    (cons-walk-Undirected-Graph p e w) (v , inl x) =
-    first-segment-walk-Undirected-Graph w (pair v x)
-  first-segment-walk-Undirected-Graph
-    ( cons-walk-Undirected-Graph p e w)
-    ( .(other-element-unordered-pair p _) , inr refl) =
-    cons-walk-Undirected-Graph p e w
+    refl-walk-Undirected-Graph (v , refl) = {!!}
 
   second-segment-walk-Undirected-Graph :
     {y : vertex-Undirected-Graph G} (w : walk-Undirected-Graph G x y)
     (v : vertex-on-walk-Undirected-Graph G w) →
     walk-Undirected-Graph G (vertex-vertex-on-walk-Undirected-Graph G w v) y
   second-segment-walk-Undirected-Graph
-    refl-walk-Undirected-Graph (v , refl) = refl-walk-Undirected-Graph
-  second-segment-walk-Undirected-Graph
-    (cons-walk-Undirected-Graph p e w) (v , inl H) =
-    cons-walk-Undirected-Graph p e
-      ( second-segment-walk-Undirected-Graph w (pair v H))
-  second-segment-walk-Undirected-Graph
-    ( cons-walk-Undirected-Graph p e w)
-    ( .(other-element-unordered-pair p _) , inr refl) =
-    refl-walk-Undirected-Graph
+    refl-walk-Undirected-Graph (v , refl) = {!!}
 
   eq-decompose-walk-Undirected-Graph :
     {y : vertex-Undirected-Graph G} (w : walk-Undirected-Graph G x y)
@@ -299,18 +236,7 @@ module _
     ( concat-walk-Undirected-Graph G
       ( first-segment-walk-Undirected-Graph w v)
       ( second-segment-walk-Undirected-Graph w v)) ＝ w
-  eq-decompose-walk-Undirected-Graph refl-walk-Undirected-Graph (v , refl) =
-    refl
-  eq-decompose-walk-Undirected-Graph
-    ( cons-walk-Undirected-Graph p e w) (v , inl H) =
-    ap
-      ( cons-walk-Undirected-Graph p e)
-      ( eq-decompose-walk-Undirected-Graph w (pair v H))
-  eq-decompose-walk-Undirected-Graph
-    ( cons-walk-Undirected-Graph p e w)
-    ( .(other-element-unordered-pair p _) , inr refl) =
-    right-unit-law-concat-walk-Undirected-Graph G
-      ( cons-walk-Undirected-Graph p e w)
+  eq-decompose-walk-Undirected-Graph refl-walk-Undirected-Graph (v , refl) = {!!}
 ```
 
 ### For any edge `e` on `p`, if `v` is a vertex on `w` then it is a vertex on `cons p e w`
@@ -325,7 +251,7 @@ is-vertex-on-walk-cons-walk-Undirected-Graph :
   {v : vertex-Undirected-Graph G} →
   is-vertex-on-walk-Undirected-Graph G w v →
   is-vertex-on-walk-Undirected-Graph G (cons-walk-Undirected-Graph p e w) v
-is-vertex-on-walk-cons-walk-Undirected-Graph G p e w = inl
+is-vertex-on-walk-cons-walk-Undirected-Graph G p e w = {!!}
 ```
 
 ### For any decomposition of a walk `w` into `w1` followed by `w2`, any vertex on `w` is a vertex on `w1` or on `w2`
@@ -339,17 +265,13 @@ module _
     {y : vertex-Undirected-Graph G} (w : walk-Undirected-Graph G x y) →
     (v : vertex-on-walk-Undirected-Graph G w) →
     vertex-Undirected-Graph G → UU l1
-  is-vertex-on-first-segment-walk-Undirected-Graph w v =
-    is-vertex-on-walk-Undirected-Graph G
-      ( first-segment-walk-Undirected-Graph G w v)
+  is-vertex-on-first-segment-walk-Undirected-Graph w v = {!!}
 
   is-vertex-on-second-segment-walk-Undirected-Graph :
     {y : vertex-Undirected-Graph G} (w : walk-Undirected-Graph G x y) →
     (v : vertex-on-walk-Undirected-Graph G w) →
     vertex-Undirected-Graph G → UU l1
-  is-vertex-on-second-segment-walk-Undirected-Graph w v =
-    is-vertex-on-walk-Undirected-Graph G
-      ( second-segment-walk-Undirected-Graph G w v)
+  is-vertex-on-second-segment-walk-Undirected-Graph w v = {!!}
 
   is-vertex-on-first-or-second-segment-walk-Undirected-Graph :
     {y : vertex-Undirected-Graph G} (w : walk-Undirected-Graph G x y) →
@@ -359,31 +281,7 @@ module _
     ( is-vertex-on-second-segment-walk-Undirected-Graph w u
       ( vertex-vertex-on-walk-Undirected-Graph G w v))
   is-vertex-on-first-or-second-segment-walk-Undirected-Graph
-    refl-walk-Undirected-Graph (u , refl) (.u , refl) =
-    inl refl
-  is-vertex-on-first-or-second-segment-walk-Undirected-Graph
-    ( cons-walk-Undirected-Graph p e w) (u , inl H) (v , inl K) =
-    map-coprod id
-      ( is-vertex-on-walk-cons-walk-Undirected-Graph G p e
-        ( second-segment-walk-Undirected-Graph G w (u , H)))
-      ( is-vertex-on-first-or-second-segment-walk-Undirected-Graph w
-        ( pair u H)
-        ( pair v K))
-  is-vertex-on-first-or-second-segment-walk-Undirected-Graph
-    ( cons-walk-Undirected-Graph p e w)
-    ( u , inl H)
-    ( .(other-element-unordered-pair p _) , inr refl) =
-    inr (inr refl)
-  is-vertex-on-first-or-second-segment-walk-Undirected-Graph
-    ( cons-walk-Undirected-Graph p e w)
-    ( .(other-element-unordered-pair p _) , inr refl)
-    ( v , inl x) =
-    inl (is-vertex-on-walk-cons-walk-Undirected-Graph G p e w x)
-  is-vertex-on-first-or-second-segment-walk-Undirected-Graph
-    ( cons-walk-Undirected-Graph p e w)
-    ( .(other-element-unordered-pair p _) , inr refl)
-    ( .(other-element-unordered-pair p _) , inr refl) =
-    inl (inr refl)
+    refl-walk-Undirected-Graph (u , refl) (.u , refl) = {!!}
 ```
 
 ### For any decomposition of a walk `w` into `w1` followed by `w2`, any vertex on `w1` is a vertex on `w`
@@ -400,17 +298,12 @@ is-vertex-on-walk-is-vertex-on-first-segment-walk-Undirected-Graph G
   (v , refl)
   .(vertex-vertex-on-walk-Undirected-Graph G refl-walk-Undirected-Graph
     (v , refl))
-  refl =
-  refl
+  refl = {!!}
 is-vertex-on-walk-is-vertex-on-first-segment-walk-Undirected-Graph G
-  ( cons-walk-Undirected-Graph p e w) (v , inl K) u H =
-  inl
-    ( is-vertex-on-walk-is-vertex-on-first-segment-walk-Undirected-Graph
-      G w (pair v K) u H)
+  ( cons-walk-Undirected-Graph p e w) (v , inl K) u H = {!!}
 is-vertex-on-walk-is-vertex-on-first-segment-walk-Undirected-Graph G
   ( cons-walk-Undirected-Graph p e w)
-  (.(other-element-unordered-pair p _) , inr refl) u H =
-  H
+  (.(other-element-unordered-pair p _) , inr refl) u H = {!!}
 ```
 
 ### For any decomposition of a walk `w` into `w1` followed by `w2`, any vertex on `w2` is a vertex on `w`
@@ -423,24 +316,19 @@ is-vertex-on-walk-is-vertex-on-second-segment-walk-Undirected-Graph :
   is-vertex-on-second-segment-walk-Undirected-Graph G w v u →
   is-vertex-on-walk-Undirected-Graph G w u
 is-vertex-on-walk-is-vertex-on-second-segment-walk-Undirected-Graph
-  G refl-walk-Undirected-Graph (v , refl) .v refl = refl
+  G refl-walk-Undirected-Graph (v , refl) .v refl = {!!}
 is-vertex-on-walk-is-vertex-on-second-segment-walk-Undirected-Graph
-  G (cons-walk-Undirected-Graph p e w) (v , inl K) u (inl H) =
-  is-vertex-on-walk-cons-walk-Undirected-Graph G p e w
-    ( is-vertex-on-walk-is-vertex-on-second-segment-walk-Undirected-Graph
-      G w (pair v K) u H)
+  G (cons-walk-Undirected-Graph p e w) (v , inl K) u (inl H) = {!!}
 is-vertex-on-walk-is-vertex-on-second-segment-walk-Undirected-Graph G
   ( cons-walk-Undirected-Graph p e w)
   ( v , inl K)
   .(other-element-unordered-pair p _)
-  ( inr refl) =
-  inr refl
+  ( inr refl) = {!!}
 is-vertex-on-walk-is-vertex-on-second-segment-walk-Undirected-Graph G
   ( cons-walk-Undirected-Graph p e w)
   ( .(other-element-unordered-pair p _) , inr refl)
   .(other-element-unordered-pair p _)
-  ( refl) =
-  inr refl
+  ( refl) = {!!}
 ```
 
 ### Constant walks are identifications
@@ -453,66 +341,46 @@ module _
   is-constant-walk-Undirected-Graph-Prop :
     {y : vertex-Undirected-Graph G} →
     walk-Undirected-Graph G x y → Prop lzero
-  is-constant-walk-Undirected-Graph-Prop w =
-    is-zero-ℕ-Prop (length-walk-Undirected-Graph G w)
+  is-constant-walk-Undirected-Graph-Prop w = {!!}
 
   is-constant-walk-Undirected-Graph :
     {y : vertex-Undirected-Graph G} → walk-Undirected-Graph G x y → UU lzero
-  is-constant-walk-Undirected-Graph w =
-    type-Prop (is-constant-walk-Undirected-Graph-Prop w)
+  is-constant-walk-Undirected-Graph w = {!!}
 
   constant-walk-Undirected-Graph :
     (y : vertex-Undirected-Graph G) → UU (lsuc lzero ⊔ l1 ⊔ l2)
-  constant-walk-Undirected-Graph y =
-    Σ (walk-Undirected-Graph G x y) is-constant-walk-Undirected-Graph
+  constant-walk-Undirected-Graph y = {!!}
 
   is-decidable-is-constant-walk-Undirected-Graph :
     {y : vertex-Undirected-Graph G} (w : walk-Undirected-Graph G x y) →
     is-decidable (is-constant-walk-Undirected-Graph w)
-  is-decidable-is-constant-walk-Undirected-Graph w =
-    is-decidable-is-zero-ℕ (length-walk-Undirected-Graph G w)
+  is-decidable-is-constant-walk-Undirected-Graph w = {!!}
 
   refl-constant-walk-Undirected-Graph :
     constant-walk-Undirected-Graph x
-  pr1 refl-constant-walk-Undirected-Graph = refl-walk-Undirected-Graph
-  pr2 refl-constant-walk-Undirected-Graph = refl
+  pr1 refl-constant-walk-Undirected-Graph = {!!}
 
   is-torsorial-constant-walk-Undirected-Graph :
     is-torsorial constant-walk-Undirected-Graph
-  pr1 (pr1 is-torsorial-constant-walk-Undirected-Graph) = x
-  pr2 (pr1 is-torsorial-constant-walk-Undirected-Graph) =
-    refl-constant-walk-Undirected-Graph
-  pr2 is-torsorial-constant-walk-Undirected-Graph
-    (v , refl-walk-Undirected-Graph , refl) =
-    refl
-  pr2 is-torsorial-constant-walk-Undirected-Graph
-    (.(other-element-unordered-pair p _) ,
-      cons-walk-Undirected-Graph p e w , ())
+  pr1 (pr1 is-torsorial-constant-walk-Undirected-Graph) = {!!}
 
   constant-walk-eq-Undirected-Graph :
     (y : vertex-Undirected-Graph G) → x ＝ y → constant-walk-Undirected-Graph y
-  constant-walk-eq-Undirected-Graph y refl = refl-constant-walk-Undirected-Graph
+  constant-walk-eq-Undirected-Graph y refl = {!!}
 
   is-equiv-constant-walk-eq-Undirected-Graph :
     (y : vertex-Undirected-Graph G) →
     is-equiv (constant-walk-eq-Undirected-Graph y)
-  is-equiv-constant-walk-eq-Undirected-Graph =
-    fundamental-theorem-id
-      ( is-torsorial-constant-walk-Undirected-Graph)
-      ( constant-walk-eq-Undirected-Graph)
+  is-equiv-constant-walk-eq-Undirected-Graph = {!!}
 
   equiv-constant-walk-eq-Undirected-Graph :
     (y : vertex-Undirected-Graph G) →
     (x ＝ y) ≃ constant-walk-Undirected-Graph y
-  pr1 (equiv-constant-walk-eq-Undirected-Graph y) =
-    constant-walk-eq-Undirected-Graph y
-  pr2 (equiv-constant-walk-eq-Undirected-Graph y) =
-    is-equiv-constant-walk-eq-Undirected-Graph y
+  pr1 (equiv-constant-walk-eq-Undirected-Graph y) = {!!}
 
   eq-constant-walk-Undirected-Graph :
     {y : vertex-Undirected-Graph G} → constant-walk-Undirected-Graph y → x ＝ y
-  eq-constant-walk-Undirected-Graph {y} =
-    map-inv-is-equiv (is-equiv-constant-walk-eq-Undirected-Graph y)
+  eq-constant-walk-Undirected-Graph {y} = {!!}
 ```
 
 ## External links

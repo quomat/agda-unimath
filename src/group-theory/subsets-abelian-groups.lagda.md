@@ -39,7 +39,7 @@ module _
 
   powerset-large-locale-Ab :
     Large-Locale (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3) lzero
-  powerset-large-locale-Ab = powerset-Large-Locale (type-Ab G)
+  powerset-large-locale-Ab = {!!}
 ```
 
 ### The large poset of subsets of an abelian group
@@ -51,8 +51,7 @@ module _
 
   powerset-large-poset-Ab :
     Large-Poset (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3)
-  powerset-large-poset-Ab =
-    large-poset-Large-Locale (powerset-large-locale-Ab G)
+  powerset-large-poset-Ab = {!!}
 ```
 
 ### Subsets of abelian groups
@@ -60,9 +59,9 @@ module _
 ```agda
 subset-Ab :
   (l : Level) {l1 : Level} (A : Ab l1) → UU ((lsuc l) ⊔ l1)
-subset-Ab l A = subset-Group l (group-Ab A)
+subset-Ab l A = {!!}
 
 is-set-subset-Ab :
   (l : Level) {l1 : Level} (A : Ab l1) → is-set (subset-Ab l A)
-is-set-subset-Ab l A = is-set-subset-Group (group-Ab A)
+is-set-subset-Ab l A = {!!}
 ```

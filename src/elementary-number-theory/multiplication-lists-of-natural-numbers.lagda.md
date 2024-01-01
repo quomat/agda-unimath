@@ -33,7 +33,7 @@ list.
 ```agda
 mul-list-ℕ :
   list ℕ → ℕ
-mul-list-ℕ = fold-list 1 mul-ℕ
+mul-list-ℕ = {!!}
 ```
 
 ## Properties
@@ -44,14 +44,7 @@ mul-list-ℕ = fold-list 1 mul-ℕ
 invariant-permutation-mul-list-ℕ :
   (l : list ℕ) (t : Permutation (length-list l)) →
   mul-list-ℕ l ＝ mul-list-ℕ (permute-list l t)
-invariant-permutation-mul-list-ℕ =
-  invariant-permutation-fold-list
-    ( 1)
-    ( mul-ℕ)
-    ( λ a1 a2 b →
-      ( inv (associative-mul-ℕ a1 a2 b) ∙
-        ( ap (λ n → n *ℕ b) (commutative-mul-ℕ a1 a2) ∙
-          ( associative-mul-ℕ a2 a1 b))))
+invariant-permutation-mul-list-ℕ = {!!}
 ```
 
 ### `mul-list-ℕ` of a concatenation of lists
@@ -60,8 +53,6 @@ invariant-permutation-mul-list-ℕ =
 eq-mul-list-concat-list-ℕ :
   (p q : list ℕ) →
   (mul-list-ℕ (concat-list p q)) ＝ (mul-list-ℕ p) *ℕ (mul-list-ℕ q)
-eq-mul-list-concat-list-ℕ nil q = inv (left-unit-law-add-ℕ (mul-list-ℕ q))
-eq-mul-list-concat-list-ℕ (cons x p) q =
-  ap (mul-ℕ x) (eq-mul-list-concat-list-ℕ p q) ∙
-  inv (associative-mul-ℕ x (mul-list-ℕ p) (mul-list-ℕ q))
+eq-mul-list-concat-list-ℕ nil q = {!!}
+eq-mul-list-concat-list-ℕ (cons x p) q = {!!}
 ```

@@ -38,17 +38,13 @@ module _
   where
 
   is-pregroupoid-Precategory : UU (l1 ⊔ l2)
-  is-pregroupoid-Precategory =
-    (x y : obj-Precategory C) (f : hom-Precategory C x y) →
-    is-iso-Precategory C f
+  is-pregroupoid-Precategory = {!!}
 
   is-prop-is-pregroupoid-Precategory : is-prop is-pregroupoid-Precategory
-  is-prop-is-pregroupoid-Precategory =
-    is-prop-iterated-Π 3 (λ x y → is-prop-is-iso-Precategory C)
+  is-prop-is-pregroupoid-Precategory = {!!}
 
   is-pregroupoid-prop-Precategory : Prop (l1 ⊔ l2)
-  pr1 is-pregroupoid-prop-Precategory = is-pregroupoid-Precategory
-  pr2 is-pregroupoid-prop-Precategory = is-prop-is-pregroupoid-Precategory
+  pr1 is-pregroupoid-prop-Precategory = {!!}
 ```
 
 ### The type of pregroupoids
@@ -56,67 +52,63 @@ module _
 ```agda
 Pregroupoid :
   (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Pregroupoid l1 l2 = Σ (Precategory l1 l2) (is-pregroupoid-Precategory)
+Pregroupoid l1 l2 = {!!}
 
 module _
   {l1 l2 : Level} (G : Pregroupoid l1 l2)
   where
 
   precategory-Pregroupoid : Precategory l1 l2
-  precategory-Pregroupoid = pr1 G
+  precategory-Pregroupoid = {!!}
 
   is-pregroupoid-Pregroupoid :
     is-pregroupoid-Precategory precategory-Pregroupoid
-  is-pregroupoid-Pregroupoid = pr2 G
+  is-pregroupoid-Pregroupoid = {!!}
 
   obj-Pregroupoid : UU l1
-  obj-Pregroupoid = obj-Precategory precategory-Pregroupoid
+  obj-Pregroupoid = {!!}
 
   hom-set-Pregroupoid : obj-Pregroupoid → obj-Pregroupoid → Set l2
-  hom-set-Pregroupoid = hom-set-Precategory precategory-Pregroupoid
+  hom-set-Pregroupoid = {!!}
 
   hom-Pregroupoid : obj-Pregroupoid → obj-Pregroupoid → UU l2
-  hom-Pregroupoid = hom-Precategory precategory-Pregroupoid
+  hom-Pregroupoid = {!!}
 
   id-hom-Pregroupoid :
     {x : obj-Pregroupoid} → hom-Pregroupoid x x
-  id-hom-Pregroupoid = id-hom-Precategory precategory-Pregroupoid
+  id-hom-Pregroupoid = {!!}
 
   comp-hom-Pregroupoid :
     {x y z : obj-Pregroupoid} → hom-Pregroupoid y z →
     hom-Pregroupoid x y → hom-Pregroupoid x z
-  comp-hom-Pregroupoid = comp-hom-Precategory precategory-Pregroupoid
+  comp-hom-Pregroupoid = {!!}
 
   associative-comp-hom-Pregroupoid :
     {x y z w : obj-Pregroupoid} (h : hom-Pregroupoid z w)
     (g : hom-Pregroupoid y z) (f : hom-Pregroupoid x y) →
     comp-hom-Pregroupoid (comp-hom-Pregroupoid h g) f ＝
     comp-hom-Pregroupoid h (comp-hom-Pregroupoid g f)
-  associative-comp-hom-Pregroupoid =
-    associative-comp-hom-Precategory precategory-Pregroupoid
+  associative-comp-hom-Pregroupoid = {!!}
 
   inv-associative-comp-hom-Pregroupoid :
     {x y z w : obj-Pregroupoid} (h : hom-Pregroupoid z w)
     (g : hom-Pregroupoid y z) (f : hom-Pregroupoid x y) →
     comp-hom-Pregroupoid h (comp-hom-Pregroupoid g f) ＝
     comp-hom-Pregroupoid (comp-hom-Pregroupoid h g) f
-  inv-associative-comp-hom-Pregroupoid =
-    inv-associative-comp-hom-Precategory precategory-Pregroupoid
+  inv-associative-comp-hom-Pregroupoid = {!!}
 
   left-unit-law-comp-hom-Pregroupoid :
     {x y : obj-Pregroupoid} (f : hom-Pregroupoid x y) →
     ( comp-hom-Pregroupoid id-hom-Pregroupoid f) ＝ f
-  left-unit-law-comp-hom-Pregroupoid =
-    left-unit-law-comp-hom-Precategory precategory-Pregroupoid
+  left-unit-law-comp-hom-Pregroupoid = {!!}
 
   right-unit-law-comp-hom-Pregroupoid :
     {x y : obj-Pregroupoid} (f : hom-Pregroupoid x y) →
     ( comp-hom-Pregroupoid f id-hom-Pregroupoid) ＝ f
-  right-unit-law-comp-hom-Pregroupoid =
-    right-unit-law-comp-hom-Precategory precategory-Pregroupoid
+  right-unit-law-comp-hom-Pregroupoid = {!!}
 
   iso-Pregroupoid : (x y : obj-Pregroupoid) → UU l2
-  iso-Pregroupoid = iso-Precategory precategory-Pregroupoid
+  iso-Pregroupoid = {!!}
 ```
 
 ## Properties
@@ -130,16 +122,11 @@ module _
 
   inv-compute-iso-Pregroupoid :
     {x y : obj-Pregroupoid G} → iso-Pregroupoid G x y ≃ hom-Pregroupoid G x y
-  inv-compute-iso-Pregroupoid {x} {y} =
-    right-unit-law-Σ-is-contr
-      ( λ f →
-        is-proof-irrelevant-is-prop
-          ( is-prop-is-iso-Precategory (precategory-Pregroupoid G) f)
-          ( is-pregroupoid-Pregroupoid G x y f))
+  inv-compute-iso-Pregroupoid {x} {y} = {!!}
 
   compute-iso-Pregroupoid :
     {x y : obj-Pregroupoid G} → hom-Pregroupoid G x y ≃ iso-Pregroupoid G x y
-  compute-iso-Pregroupoid = inv-equiv inv-compute-iso-Pregroupoid
+  compute-iso-Pregroupoid = {!!}
 ```
 
 ## See also

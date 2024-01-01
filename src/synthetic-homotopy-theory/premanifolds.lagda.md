@@ -36,43 +36,37 @@ comes equipped with a
 
 ```agda
 Premanifold : (l : Level) (n : ℕ) → UU (lsuc l)
-Premanifold l n = Σ (UU l) (λ M → (x : M) → has-tangent-sphere n x)
+Premanifold l n = {!!}
 
 module _
   {l : Level} (n : ℕ) (M : Premanifold l n)
   where
 
   type-Premanifold : UU l
-  type-Premanifold = pr1 M
+  type-Premanifold = {!!}
 
   tangent-sphere-Premanifold : (x : type-Premanifold) → mere-sphere lzero n
-  tangent-sphere-Premanifold x =
-    tangent-sphere-has-tangent-sphere n (pr2 M x)
+  tangent-sphere-Premanifold x = {!!}
 
   type-tangent-sphere-Premanifold : (x : type-Premanifold) → UU lzero
-  type-tangent-sphere-Premanifold x =
-    type-tangent-sphere-has-tangent-sphere n (pr2 M x)
+  type-tangent-sphere-Premanifold x = {!!}
 
   mere-equiv-tangent-sphere-Premanifold :
     (x : type-Premanifold) →
     mere-equiv (sphere n) (type-tangent-sphere-Premanifold x)
-  mere-equiv-tangent-sphere-Premanifold x =
-    mere-equiv-tangent-sphere-has-tangent-sphere n (pr2 M x)
+  mere-equiv-tangent-sphere-Premanifold x = {!!}
 
   complement-Premanifold : (x : type-Premanifold) → UU l
-  complement-Premanifold x =
-    complement-has-tangent-sphere n (pr2 M x)
+  complement-Premanifold x = {!!}
 
   inclusion-tangent-sphere-Premanifold :
     (x : type-Premanifold) →
     type-tangent-sphere-Premanifold x → complement-Premanifold x
-  inclusion-tangent-sphere-Premanifold x =
-    inclusion-tangent-sphere-has-tangent-sphere n (pr2 M x)
+  inclusion-tangent-sphere-Premanifold x = {!!}
 
   inclusion-complement-Premanifold :
     (x : type-Premanifold) → complement-Premanifold x → type-Premanifold
-  inclusion-complement-Premanifold x =
-    inclusion-complement-has-tangent-sphere n (pr2 M x)
+  inclusion-complement-Premanifold x = {!!}
 
   coherence-square-Premanifold :
     (x : type-Premanifold) →
@@ -81,8 +75,7 @@ module _
       ( terminal-map)
       ( inclusion-complement-Premanifold x)
       ( point x)
-  coherence-square-Premanifold x =
-    coherence-square-has-tangent-sphere n (pr2 M x)
+  coherence-square-Premanifold x = {!!}
 
   cocone-Premanifold :
     (x : type-Premanifold) →
@@ -90,8 +83,7 @@ module _
       ( terminal-map)
       ( inclusion-tangent-sphere-Premanifold x)
       ( type-Premanifold)
-  cocone-Premanifold x =
-    cocone-has-tangent-sphere n (pr2 M x)
+  cocone-Premanifold x = {!!}
 
   is-pushout-Premanifold :
     (x : type-Premanifold) →
@@ -99,6 +91,5 @@ module _
       ( terminal-map)
       ( inclusion-tangent-sphere-Premanifold x)
       ( cocone-Premanifold x)
-  is-pushout-Premanifold x =
-    is-pushout-has-tangent-sphere n (pr2 M x)
+  is-pushout-Premanifold x = {!!}
 ```

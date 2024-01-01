@@ -42,8 +42,7 @@ module _
 
   powerset-large-locale-Semigroup :
     Large-Locale (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3) lzero
-  powerset-large-locale-Semigroup =
-    powerset-Large-Locale (type-Semigroup G)
+  powerset-large-locale-Semigroup = {!!}
 ```
 
 ### The large poset of subsets of a semigroup
@@ -55,7 +54,7 @@ module _
 
   powerset-large-poset-Semigroup :
     Large-Poset (λ l → l1 ⊔ lsuc l) (λ l2 l3 → l1 ⊔ l2 ⊔ l3)
-  powerset-large-poset-Semigroup = powerset-Large-Poset (type-Semigroup G)
+  powerset-large-poset-Semigroup = {!!}
 ```
 
 ### Subsets of semigroups
@@ -63,52 +62,48 @@ module _
 ```agda
 subset-Semigroup :
   {l1 : Level} (l2 : Level) (G : Semigroup l1) → UU (l1 ⊔ lsuc l2)
-subset-Semigroup l2 G = subtype l2 (type-Semigroup G)
+subset-Semigroup l2 G = {!!}
 
 module _
   {l1 l2 : Level} (G : Semigroup l1) (P : subset-Semigroup l2 G)
   where
 
   is-in-subset-Semigroup : type-Semigroup G → UU l2
-  is-in-subset-Semigroup = is-in-subtype P
+  is-in-subset-Semigroup = {!!}
 
   is-closed-under-eq-subset-Semigroup :
     {x y : type-Semigroup G} →
     is-in-subset-Semigroup x → (x ＝ y) → is-in-subset-Semigroup y
-  is-closed-under-eq-subset-Semigroup =
-    is-closed-under-eq-subtype P
+  is-closed-under-eq-subset-Semigroup = {!!}
 
   is-closed-under-eq-subset-Semigroup' :
     {x y : type-Semigroup G} →
     is-in-subset-Semigroup y → (x ＝ y) → is-in-subset-Semigroup x
-  is-closed-under-eq-subset-Semigroup' =
-    is-closed-under-eq-subtype' P
+  is-closed-under-eq-subset-Semigroup' = {!!}
 
   is-prop-is-in-subset-Semigroup :
     (x : type-Semigroup G) → is-prop (is-in-subset-Semigroup x)
-  is-prop-is-in-subset-Semigroup = is-prop-is-in-subtype P
+  is-prop-is-in-subset-Semigroup = {!!}
 
   type-subset-Semigroup : UU (l1 ⊔ l2)
-  type-subset-Semigroup = type-subtype P
+  type-subset-Semigroup = {!!}
 
   is-set-type-subset-Semigroup : is-set type-subset-Semigroup
-  is-set-type-subset-Semigroup =
-    is-set-type-subtype P (is-set-type-Semigroup G)
+  is-set-type-subset-Semigroup = {!!}
 
   set-subset-Semigroup : Set (l1 ⊔ l2)
-  set-subset-Semigroup = set-subset (set-Semigroup G) P
+  set-subset-Semigroup = {!!}
 
   inclusion-subset-Semigroup : type-subset-Semigroup → type-Semigroup G
-  inclusion-subset-Semigroup = inclusion-subtype P
+  inclusion-subset-Semigroup = {!!}
 
   ap-inclusion-subset-Semigroup :
     (x y : type-subset-Semigroup) →
     x ＝ y → (inclusion-subset-Semigroup x ＝ inclusion-subset-Semigroup y)
-  ap-inclusion-subset-Semigroup = ap-inclusion-subtype P
+  ap-inclusion-subset-Semigroup = {!!}
 
   is-in-subset-inclusion-subset-Semigroup :
     (x : type-subset-Semigroup) →
     is-in-subset-Semigroup (inclusion-subset-Semigroup x)
-  is-in-subset-inclusion-subset-Semigroup =
-    is-in-subtype-inclusion-subtype P
+  is-in-subset-inclusion-subset-Semigroup = {!!}
 ```

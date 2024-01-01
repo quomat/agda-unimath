@@ -38,35 +38,17 @@ module _
     { l3 : Level}
     ( S : (X Y : obj-Category C) →
     subtype l3 (hom-Category C X Y)) → Prop (l1 ⊔ l2 ⊔ l3)
-  is-sieve-prop-Category S =
-    Π-Prop
-      ( obj-Category C)
-      ( λ X →
-        Π-Prop
-          ( obj-Category C)
-          ( λ Y →
-            Π-Prop
-              ( obj-Category C)
-              ( λ Z →
-                Π-Prop
-                  ( type-subtype (S Y X))
-                  ( λ f →
-                    Π-Prop
-                      ( hom-Category C Z Y)
-                      ( λ g →
-                        S Z X
-                          ( comp-hom-Category
-                              C (inclusion-subtype (S Y X) f) g))))))
+  is-sieve-prop-Category S = {!!}
 
   is-sieve-Category :
     { l3 : Level}
     ( S : (X Y : obj-Category C) →
     subtype l3 (hom-Category C X Y)) → UU (l1 ⊔ l2 ⊔ l3)
-  is-sieve-Category S = type-Prop (is-sieve-prop-Category S)
+  is-sieve-Category S = {!!}
 
   is-prop-is-sieve-Category :
     { l3 : Level}
     ( S : (X Y : obj-Category C) → subtype l3 (hom-Category C X Y)) →
     is-prop (is-sieve-Category S)
-  is-prop-is-sieve-Category S = is-prop-type-Prop (is-sieve-prop-Category S)
+  is-prop-is-sieve-Category S = {!!}
 ```

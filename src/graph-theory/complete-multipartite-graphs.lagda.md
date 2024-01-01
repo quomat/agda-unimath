@@ -50,42 +50,26 @@ module _
   where
 
   vertex-finite-type-complete-multipartite-Undirected-Graph-𝔽 : 𝔽 (l1 ⊔ l2)
-  vertex-finite-type-complete-multipartite-Undirected-Graph-𝔽 =
-    Σ-𝔽 X Y
+  vertex-finite-type-complete-multipartite-Undirected-Graph-𝔽 = {!!}
 
   vertex-complete-multipartite-Undirected-Graph-𝔽 : UU (l1 ⊔ l2)
-  vertex-complete-multipartite-Undirected-Graph-𝔽 =
-    type-𝔽 vertex-finite-type-complete-multipartite-Undirected-Graph-𝔽
+  vertex-complete-multipartite-Undirected-Graph-𝔽 = {!!}
 
   unordered-pair-vertices-complete-multipartite-Undirected-Graph-𝔽 :
     UU (lsuc lzero ⊔ l1 ⊔ l2)
-  unordered-pair-vertices-complete-multipartite-Undirected-Graph-𝔽 =
-    unordered-pair vertex-complete-multipartite-Undirected-Graph-𝔽
+  unordered-pair-vertices-complete-multipartite-Undirected-Graph-𝔽 = {!!}
 
   edge-finite-type-complete-multipartite-Undirected-Graph-𝔽 :
     unordered-pair-vertices-complete-multipartite-Undirected-Graph-𝔽 → 𝔽 l1
-  edge-finite-type-complete-multipartite-Undirected-Graph-𝔽 p =
-    ( Π-𝔽
-      ( finite-type-2-Element-Type (pr1 p))
-      ( λ x →
-        Π-𝔽
-          ( finite-type-2-Element-Type (pr1 p))
-          ( λ y →
-            Id-𝔽 X
-              ( pr1 (element-unordered-pair p x))
-              ( pr1 (element-unordered-pair p y))))) →-𝔽
-    ( empty-𝔽)
+  edge-finite-type-complete-multipartite-Undirected-Graph-𝔽 p = {!!}
 
   edge-complete-multipartite-Undirected-Graph-𝔽 :
     unordered-pair-vertices-complete-multipartite-Undirected-Graph-𝔽 → UU l1
-  edge-complete-multipartite-Undirected-Graph-𝔽 p =
-    type-𝔽 (edge-finite-type-complete-multipartite-Undirected-Graph-𝔽 p)
+  edge-complete-multipartite-Undirected-Graph-𝔽 p = {!!}
 
   complete-multipartite-Undirected-Graph-𝔽 : Undirected-Graph-𝔽 (l1 ⊔ l2) l1
-  pr1 complete-multipartite-Undirected-Graph-𝔽 =
-    vertex-finite-type-complete-multipartite-Undirected-Graph-𝔽
-  pr2 complete-multipartite-Undirected-Graph-𝔽 =
-    edge-finite-type-complete-multipartite-Undirected-Graph-𝔽
+  pr1 complete-multipartite-Undirected-Graph-𝔽 = {!!}
+  pr2 complete-multipartite-Undirected-Graph-𝔽 = {!!}
 ```
 
 ## External links

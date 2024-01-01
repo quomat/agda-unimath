@@ -64,12 +64,7 @@ module _
               ( λ B →
                 Σ ( Σ ( UU l) λ U → ( U ≃ (A + B)))
                   ( λ U → Σ (pr1 U → UU l) (λ Y → X ≃ Σ (pr1 U) Y))))
-    pr1 reassociate ((U , V , f) , A , B , e) = (A , B , (U , e) , V , f)
-    pr2 reassociate =
-      is-equiv-is-invertible
-        ( λ (A , B , (U , e) , V , f) → ((U , V , f) , A , B , e))
-        ( refl-htpy)
-        ( refl-htpy)
+    pr1 reassociate ((U , V , f) , A , B , e) = {!!}
 
     reassociate' :
       Σ ( UU l)
@@ -88,14 +83,7 @@ module _
           ( left-summand-binary-coproduct-Decomposition d) ×
         Relaxed-Σ-Decomposition l l
           ( right-summand-binary-coproduct-Decomposition d))
-    pr1 reassociate' (A , B , (YA , YB) , (A' , eA) , (B' , eB) , e) =
-      (A' , B' , e) , ((A , YA , eA) , B , YB , eB)
-    pr2 reassociate' =
-      is-equiv-is-invertible
-        ( λ ((A' , B' , e) , ((A , YA , eA) , B , YB , eB)) →
-          (A , B , (YA , YB) , (A' , eA) , (B' , eB) , e))
-        ( refl-htpy)
-        ( refl-htpy)
+    pr1 reassociate' (A , B , (YA , YB) , (A' , eA) , (B' , eB) , e) = {!!}
 
   equiv-binary-coproduct-Decomposition-Σ-Decomposition :
     Σ ( Relaxed-Σ-Decomposition l l X)
@@ -109,41 +97,7 @@ module _
         Relaxed-Σ-Decomposition l l
           ( right-summand-binary-coproduct-Decomposition d))
 
-  equiv-binary-coproduct-Decomposition-Σ-Decomposition =
-    ( ( reassociate') ∘e
-      ( ( equiv-tot
-            ( λ A →
-              equiv-tot
-                ( λ B →
-                  ( ( equiv-tot
-                        ( λ ( YA , YB) →
-                          ( ( equiv-tot
-                              ( λ A' →
-                                equiv-tot
-                                  ( λ B' →
-                                    equiv-postcomp-equiv
-                                      ( equiv-coprod
-                                        ( inv-equiv (pr2 A'))
-                                        ( inv-equiv (pr2 B')))
-                                      ( X))) ∘e
-                            ( ( inv-left-unit-law-Σ-is-contr
-                                  ( is-torsorial-equiv' (Σ A YA))
-                                  ( Σ A YA , id-equiv)) ∘e
-                              ( inv-left-unit-law-Σ-is-contr
-                                  ( is-torsorial-equiv' (Σ B YB))
-                                  ( Σ B YB , id-equiv)))))) ∘e
-                    ( ( equiv-Σ-equiv-base
-                          ( λ (YA , YB) → X ≃ (Σ A YA + Σ B YB))
-                          ( equiv-universal-property-coprod (UU l))) ∘e
-                      ( ( equiv-tot
-                            ( λ Y →
-                              equiv-postcomp-equiv
-                                ( right-distributive-Σ-coprod A B Y)
-                                ( X))) ∘e
-                          ( left-unit-law-Σ-is-contr
-                              ( is-torsorial-equiv' (A + B))
-                              ((A + B) , id-equiv))))))))) ∘e
-      ( reassociate)))
+  equiv-binary-coproduct-Decomposition-Σ-Decomposition = {!!}
 
   module _
     ( D : Σ ( Relaxed-Σ-Decomposition l l X)
@@ -172,7 +126,7 @@ module _
             ( f))
           ( x) ＝
         pr1 f (map-inv-equiv e x)
-      tr-total-equiv e refl x = refl
+      tr-total-equiv e refl x = {!!}
 
     compute-left-equiv-binary-coproduct-Decomposition-Σ-Decomposition :
       ( a : left-summand-binary-coproduct-Decomposition (pr2 D)) →
@@ -187,17 +141,7 @@ module _
         ( map-inv-equiv
           ( matching-correspondence-binary-coproduct-Decomposition (pr2 D))
           ( inl a))
-    compute-left-equiv-binary-coproduct-Decomposition-Σ-Decomposition a =
-      tr-total-equiv
-        ( matching-correspondence-binary-coproduct-Decomposition (pr2 D))
-        ( inv
-            ( contraction
-                ( is-torsorial-equiv' (pr1 (pr2 D) + pr1 (pr2 (pr2 D))))
-                ( (pr1 (pr2 D) + pr1 (pr2 (pr2 D))) , id-equiv)) ∙
-          contraction
-            ( is-torsorial-equiv' (pr1 (pr2 D) + pr1 (pr2 (pr2 D))))
-                ( pr1 (pr1 D) , pr2 (pr2 (pr2 D))))
-        ( inl a)
+    compute-left-equiv-binary-coproduct-Decomposition-Σ-Decomposition a = {!!}
 
     compute-right-equiv-binary-coproduct-Decomposition-Σ-Decomposition :
       ( b : right-summand-binary-coproduct-Decomposition (pr2 D)) →
@@ -211,15 +155,5 @@ module _
         ( map-inv-equiv
           ( matching-correspondence-binary-coproduct-Decomposition (pr2 D))
           ( inr b))
-    compute-right-equiv-binary-coproduct-Decomposition-Σ-Decomposition b =
-      tr-total-equiv
-          ( matching-correspondence-binary-coproduct-Decomposition (pr2 D))
-          ( inv
-              ( contraction
-                  ( is-torsorial-equiv' (pr1 (pr2 D) + pr1 (pr2 (pr2 D))))
-                  ( (pr1 (pr2 D) + pr1 (pr2 (pr2 D))) , id-equiv)) ∙
-            contraction
-              ( is-torsorial-equiv' (pr1 (pr2 D) + pr1 (pr2 (pr2 D))))
-                  ( pr1 (pr1 D) , pr2 (pr2 (pr2 D))))
-          ( inr b)
+    compute-right-equiv-binary-coproduct-Decomposition-Σ-Decomposition b = {!!}
 ```

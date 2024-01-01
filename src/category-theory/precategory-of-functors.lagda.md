@@ -49,8 +49,7 @@ module _
     natural-transformation-Precategory C D G H →
     natural-transformation-Precategory C D F G →
     natural-transformation-Precategory C D F H
-  comp-hom-functor-precategory-Precategory {F} {G} {H} =
-    comp-natural-transformation-Precategory C D F G H
+  comp-hom-functor-precategory-Precategory {F} {G} {H} = {!!}
 
   associative-comp-hom-functor-precategory-Precategory :
     {F G H I : functor-Precategory C D}
@@ -63,9 +62,7 @@ module _
     comp-natural-transformation-Precategory C D F H I
       ( h)
       ( comp-natural-transformation-Precategory C D F G H g f)
-  associative-comp-hom-functor-precategory-Precategory {F} {G} {H} {I} h g f =
-    associative-comp-natural-transformation-Precategory
-      C D F G H I f g h
+  associative-comp-hom-functor-precategory-Precategory {F} {G} {H} {I} h g f = {!!}
 
   inv-associative-comp-hom-functor-precategory-Precategory :
     {F G H I : functor-Precategory C D}
@@ -79,32 +76,17 @@ module _
       ( comp-natural-transformation-Precategory C D G H I h g)
       ( f)
   inv-associative-comp-hom-functor-precategory-Precategory
-    { F} {G} {H} {I} h g f =
-    inv-associative-comp-natural-transformation-Precategory
-      C D F G H I f g h
+    { F} {G} {H} {I} h g f = {!!}
 
   associative-composition-operation-functor-precategory-Precategory :
     associative-composition-operation-binary-family-Set
       ( natural-transformation-set-Precategory C D)
   pr1 associative-composition-operation-functor-precategory-Precategory
-    {F} {G} {H} =
-    comp-hom-functor-precategory-Precategory {F} {G} {H}
-  pr1
-    ( pr2
-        associative-composition-operation-functor-precategory-Precategory
-          { F} {G} {H} {I} h g f) =
-    associative-comp-hom-functor-precategory-Precategory {F} {G} {H} {I} h g f
-  pr2
-    ( pr2
-        associative-composition-operation-functor-precategory-Precategory
-          { F} {G} {H} {I} h g f) =
-    inv-associative-comp-hom-functor-precategory-Precategory
-      { F} {G} {H} {I} h g f
+    {F} {G} {H} = {!!}
 
   id-hom-functor-precategory-Precategory :
     (F : functor-Precategory C D) → natural-transformation-Precategory C D F F
-  id-hom-functor-precategory-Precategory =
-    id-natural-transformation-Precategory C D
+  id-hom-functor-precategory-Precategory = {!!}
 
   left-unit-law-comp-hom-functor-precategory-Precategory :
     {F G : functor-Precategory C D}
@@ -112,8 +94,7 @@ module _
     comp-natural-transformation-Precategory C D F G G
       ( id-natural-transformation-Precategory C D G) α ＝
     α
-  left-unit-law-comp-hom-functor-precategory-Precategory {F} {G} =
-    left-unit-law-comp-natural-transformation-Precategory C D F G
+  left-unit-law-comp-hom-functor-precategory-Precategory {F} {G} = {!!}
 
   right-unit-law-comp-hom-functor-precategory-Precategory :
     {F G : functor-Precategory C D}
@@ -121,33 +102,17 @@ module _
     comp-natural-transformation-Precategory C D F F G
         α (id-natural-transformation-Precategory C D F) ＝
     α
-  right-unit-law-comp-hom-functor-precategory-Precategory {F} {G} =
-    right-unit-law-comp-natural-transformation-Precategory C D F G
+  right-unit-law-comp-hom-functor-precategory-Precategory {F} {G} = {!!}
 
   is-unital-composition-operation-functor-precategory-Precategory :
     is-unital-composition-operation-binary-family-Set
       ( natural-transformation-set-Precategory C D)
       ( λ {F} {G} {H} → comp-hom-functor-precategory-Precategory {F} {G} {H})
-  pr1 is-unital-composition-operation-functor-precategory-Precategory =
-    id-hom-functor-precategory-Precategory
-  pr1
-    ( pr2 is-unital-composition-operation-functor-precategory-Precategory)
-    { F} {G} =
-    left-unit-law-comp-hom-functor-precategory-Precategory {F} {G}
-  pr2
-    ( pr2 is-unital-composition-operation-functor-precategory-Precategory)
-    { F} {G} =
-    right-unit-law-comp-hom-functor-precategory-Precategory {F} {G}
+  pr1 is-unital-composition-operation-functor-precategory-Precategory = {!!}
 
   functor-precategory-Precategory :
     Precategory (l1 ⊔ l2 ⊔ l3 ⊔ l4) (l1 ⊔ l2 ⊔ l4)
-  pr1 functor-precategory-Precategory = functor-Precategory C D
-  pr1 (pr2 functor-precategory-Precategory) =
-    natural-transformation-set-Precategory C D
-  pr1 (pr2 (pr2 functor-precategory-Precategory)) =
-    associative-composition-operation-functor-precategory-Precategory
-  pr2 (pr2 (pr2 functor-precategory-Precategory)) =
-    is-unital-composition-operation-functor-precategory-Precategory
+  pr1 functor-precategory-Precategory = {!!}
 ```
 
 ## Properties
@@ -166,113 +131,63 @@ module _
     (f : natural-transformation-Precategory C D F G) →
     is-natural-isomorphism-Precategory C D F G f →
     is-iso-Precategory (functor-precategory-Precategory C D) {F} {G} f
-  pr1 (is-iso-functor-is-natural-isomorphism-Precategory f is-iso-f) =
-    natural-transformation-inv-is-natural-isomorphism-Precategory
-      C D F G f is-iso-f
-  pr1 (pr2 (is-iso-functor-is-natural-isomorphism-Precategory f is-iso-f)) =
-    is-section-natural-transformation-inv-is-natural-isomorphism-Precategory
-      C D F G f is-iso-f
-  pr2 (pr2 (is-iso-functor-is-natural-isomorphism-Precategory f is-iso-f)) =
-    is-retraction-natural-transformation-inv-is-natural-isomorphism-Precategory
-      C D F G f is-iso-f
+  pr1 (is-iso-functor-is-natural-isomorphism-Precategory f is-iso-f) = {!!}
 
   is-natural-isomorphism-is-iso-functor-Precategory :
     (f : natural-transformation-Precategory C D F G) →
     is-iso-Precategory (functor-precategory-Precategory C D) {F} {G} f →
     is-natural-isomorphism-Precategory C D F G f
-  pr1 (is-natural-isomorphism-is-iso-functor-Precategory f is-iso-f x) =
-    hom-family-natural-transformation-Precategory C D G F
-      ( hom-inv-is-iso-Precategory
-        ( functor-precategory-Precategory C D) {F} {G} is-iso-f)
-      ( x)
-  pr1 (pr2 (is-natural-isomorphism-is-iso-functor-Precategory f is-iso-f x)) =
-    htpy-eq
-      ( ap
-        ( hom-family-natural-transformation-Precategory C D G G)
-        ( is-section-hom-inv-is-iso-Precategory
-          ( functor-precategory-Precategory C D) {F} {G} is-iso-f))
-      ( x)
-  pr2 (pr2 (is-natural-isomorphism-is-iso-functor-Precategory f is-iso-f x)) =
-    htpy-eq
-      ( ap
-        ( hom-family-natural-transformation-Precategory C D F F)
-        ( is-retraction-hom-inv-is-iso-Precategory
-          ( functor-precategory-Precategory C D) {F} {G} is-iso-f))
-      ( x)
+  pr1 (is-natural-isomorphism-is-iso-functor-Precategory f is-iso-f x) = {!!}
 
   is-equiv-is-iso-functor-is-natural-isomorphism-Precategory :
     (f : natural-transformation-Precategory C D F G) →
     is-equiv (is-iso-functor-is-natural-isomorphism-Precategory f)
-  is-equiv-is-iso-functor-is-natural-isomorphism-Precategory f =
-    is-equiv-is-prop
-      ( is-prop-is-natural-isomorphism-Precategory C D F G f)
-      ( is-prop-is-iso-Precategory
-        ( functor-precategory-Precategory C D) {F} {G} f)
-      ( is-natural-isomorphism-is-iso-functor-Precategory f)
+  is-equiv-is-iso-functor-is-natural-isomorphism-Precategory f = {!!}
 
   is-equiv-is-natural-isomorphism-is-iso-functor-Precategory :
     (f : natural-transformation-Precategory C D F G) →
     is-equiv (is-natural-isomorphism-is-iso-functor-Precategory f)
-  is-equiv-is-natural-isomorphism-is-iso-functor-Precategory f =
-    is-equiv-is-prop
-      ( is-prop-is-iso-Precategory
-        ( functor-precategory-Precategory C D) {F} {G} f)
-      ( is-prop-is-natural-isomorphism-Precategory C D F G f)
-      ( is-iso-functor-is-natural-isomorphism-Precategory f)
+  is-equiv-is-natural-isomorphism-is-iso-functor-Precategory f = {!!}
 
   equiv-is-iso-functor-is-natural-isomorphism-Precategory :
     (f : natural-transformation-Precategory C D F G) →
     is-natural-isomorphism-Precategory C D F G f ≃
     is-iso-Precategory (functor-precategory-Precategory C D) {F} {G} f
-  pr1 (equiv-is-iso-functor-is-natural-isomorphism-Precategory f) =
-    is-iso-functor-is-natural-isomorphism-Precategory f
-  pr2 (equiv-is-iso-functor-is-natural-isomorphism-Precategory f) =
-    is-equiv-is-iso-functor-is-natural-isomorphism-Precategory f
+  pr1 (equiv-is-iso-functor-is-natural-isomorphism-Precategory f) = {!!}
 
   equiv-is-natural-isomorphism-is-iso-functor-Precategory :
     (f : natural-transformation-Precategory C D F G) →
     is-iso-Precategory (functor-precategory-Precategory C D) {F} {G} f ≃
     is-natural-isomorphism-Precategory C D F G f
-  pr1 (equiv-is-natural-isomorphism-is-iso-functor-Precategory f) =
-    is-natural-isomorphism-is-iso-functor-Precategory f
-  pr2 (equiv-is-natural-isomorphism-is-iso-functor-Precategory f) =
-    is-equiv-is-natural-isomorphism-is-iso-functor-Precategory f
+  pr1 (equiv-is-natural-isomorphism-is-iso-functor-Precategory f) = {!!}
 
   iso-functor-natural-isomorphism-Precategory :
     natural-isomorphism-Precategory C D F G →
     iso-Precategory (functor-precategory-Precategory C D) F G
-  iso-functor-natural-isomorphism-Precategory =
-    tot is-iso-functor-is-natural-isomorphism-Precategory
+  iso-functor-natural-isomorphism-Precategory = {!!}
 
   natural-isomorphism-iso-functor-Precategory :
     iso-Precategory (functor-precategory-Precategory C D) F G →
     natural-isomorphism-Precategory C D F G
-  natural-isomorphism-iso-functor-Precategory =
-    tot is-natural-isomorphism-is-iso-functor-Precategory
+  natural-isomorphism-iso-functor-Precategory = {!!}
 
   is-equiv-iso-functor-natural-isomorphism-Precategory :
     is-equiv iso-functor-natural-isomorphism-Precategory
-  is-equiv-iso-functor-natural-isomorphism-Precategory =
-    is-equiv-tot-is-fiberwise-equiv
-      is-equiv-is-iso-functor-is-natural-isomorphism-Precategory
+  is-equiv-iso-functor-natural-isomorphism-Precategory = {!!}
 
   is-equiv-natural-isomorphism-iso-functor-Precategory :
     is-equiv natural-isomorphism-iso-functor-Precategory
-  is-equiv-natural-isomorphism-iso-functor-Precategory =
-    is-equiv-tot-is-fiberwise-equiv
-      is-equiv-is-natural-isomorphism-is-iso-functor-Precategory
+  is-equiv-natural-isomorphism-iso-functor-Precategory = {!!}
 
   equiv-iso-functor-natural-isomorphism-Precategory :
     natural-isomorphism-Precategory C D F G ≃
     iso-Precategory (functor-precategory-Precategory C D) F G
-  equiv-iso-functor-natural-isomorphism-Precategory =
-    equiv-tot equiv-is-iso-functor-is-natural-isomorphism-Precategory
+  equiv-iso-functor-natural-isomorphism-Precategory = {!!}
 
   equiv-natural-isomorphism-iso-functor-Precategory :
     iso-Precategory (functor-precategory-Precategory C D) F G ≃
     natural-isomorphism-Precategory C D F G
-  equiv-natural-isomorphism-iso-functor-Precategory =
-    equiv-tot equiv-is-natural-isomorphism-is-iso-functor-Precategory
+  equiv-natural-isomorphism-iso-functor-Precategory = {!!}
 ```
 
 #### Computing with the equivalence that isomorphisms are natural isomorphisms
@@ -290,8 +205,5 @@ module _
     iso-eq-Precategory (functor-precategory-Precategory C D) F G p ＝
     iso-functor-natural-isomorphism-Precategory C D F G
       ( natural-isomorphism-eq-Precategory C D F G p)
-  compute-iso-functor-natural-isomorphism-eq-Precategory refl =
-    eq-iso-eq-hom-Precategory
-      ( functor-precategory-Precategory C D)
-      { F} {G} _ _ refl
+  compute-iso-functor-natural-isomorphism-eq-Precategory refl = {!!}
 ```

@@ -76,10 +76,7 @@ module _
     {x y : obj-Precategory C} →
     Precategory-Expr x y →
     hom-Precategory C x y
-  in-Precategory-Expr id-hom-Precategory-Expr = id-hom-Precategory C
-  in-Precategory-Expr (hom-Precategory-Expr f) = f
-  in-Precategory-Expr (comp-hom-Precategory-Expr f g) =
-    comp-hom-Precategory C (in-Precategory-Expr f) (in-Precategory-Expr g)
+  in-Precategory-Expr id-hom-Precategory-Expr = {!!}
 ```
 
 ### The normalization of the syntactic representation of a morphism
@@ -90,11 +87,7 @@ module _
     Precategory-Expr y z →
     hom-Precategory C x y →
     hom-Precategory C x z
-  eval-Precategory-Expr id-hom-Precategory-Expr f = f
-  eval-Precategory-Expr (hom-Precategory-Expr f) g =
-    comp-hom-Precategory C f g
-  eval-Precategory-Expr (comp-hom-Precategory-Expr f g) h =
-    eval-Precategory-Expr f (eval-Precategory-Expr g h)
+  eval-Precategory-Expr id-hom-Precategory-Expr f = {!!}
 
   is-sound-eval-Precategory-Expr :
     {x y z : obj-Precategory C}
@@ -102,48 +95,20 @@ module _
     (f : hom-Precategory C x y) →
     ( eval-Precategory-Expr e f) ＝
     ( comp-hom-Precategory C (in-Precategory-Expr e) f)
-  is-sound-eval-Precategory-Expr id-hom-Precategory-Expr f =
-    inv (left-unit-law-comp-hom-Precategory C f)
-  is-sound-eval-Precategory-Expr (hom-Precategory-Expr f) g = refl
-  is-sound-eval-Precategory-Expr (comp-hom-Precategory-Expr f g) h =
-    equational-reasoning
-    eval-Precategory-Expr f (eval-Precategory-Expr g h)
-      ＝ comp-hom-Precategory C
-          ( in-Precategory-Expr f)
-          ( eval-Precategory-Expr g h)
-        by is-sound-eval-Precategory-Expr f (eval-Precategory-Expr g h)
-      ＝ comp-hom-Precategory C
-          ( in-Precategory-Expr f)
-          ( comp-hom-Precategory C (in-Precategory-Expr g) h)
-        by ap
-          ( comp-hom-Precategory C (in-Precategory-Expr f))
-          ( is-sound-eval-Precategory-Expr g h)
-      ＝ comp-hom-Precategory C
-          ( comp-hom-Precategory C
-            ( in-Precategory-Expr f)
-            ( in-Precategory-Expr g))
-          h
-        by
-          inv
-            ( associative-comp-hom-Precategory
-              C (in-Precategory-Expr f) (in-Precategory-Expr g) h)
+  is-sound-eval-Precategory-Expr id-hom-Precategory-Expr f = {!!}
+  is-sound-eval-Precategory-Expr (hom-Precategory-Expr f) g = {!!}
 
   normalize-Precategory-Expr :
     {x y : obj-Precategory C} →
     Precategory-Expr x y →
     hom-Precategory C x y
-  normalize-Precategory-Expr e = eval-Precategory-Expr e (id-hom-Precategory C)
+  normalize-Precategory-Expr e = {!!}
 
   is-sound-normalize-Precategory-Expr :
     {x y : obj-Precategory C} →
     (e : Precategory-Expr x y) →
     normalize-Precategory-Expr e ＝ in-Precategory-Expr e
-  is-sound-normalize-Precategory-Expr e = equational-reasoning
-    eval-Precategory-Expr e (id-hom-Precategory C)
-      ＝ comp-hom-Precategory C (in-Precategory-Expr e) (id-hom-Precategory C)
-        by is-sound-eval-Precategory-Expr e (id-hom-Precategory C)
-      ＝ in-Precategory-Expr e
-        by right-unit-law-comp-hom-Precategory C (in-Precategory-Expr e)
+  is-sound-normalize-Precategory-Expr e = {!!}
 
   abstract
     solve-Precategory-Expr :
@@ -151,14 +116,7 @@ module _
       (f g : Precategory-Expr x y) →
       normalize-Precategory-Expr f ＝ normalize-Precategory-Expr g →
       in-Precategory-Expr f ＝ in-Precategory-Expr g
-    solve-Precategory-Expr f g p = equational-reasoning
-      in-Precategory-Expr f
-      ＝ normalize-Precategory-Expr f
-        by inv (is-sound-normalize-Precategory-Expr f)
-      ＝ normalize-Precategory-Expr g
-        by p
-      ＝ in-Precategory-Expr g
-        by is-sound-normalize-Precategory-Expr g
+    solve-Precategory-Expr f g p = {!!}
 ```
 
 ## The macro definition
@@ -168,26 +126,11 @@ module _
 ```agda
 private
   infixr 11 _∷_
-  pattern _∷_ x xs = cons x xs
-  _++_ : {l : Level} {A : UU l} → list A → list A → list A
-  _++_ = concat-list
-  infixr 10 _++_
+  pattern _∷_ x xs = {!!}
 
-  pattern apply-pr1 xs =
-    def (quote pr1)
-      ( hidden-Arg unknown ∷
-        hidden-Arg unknown ∷
-        hidden-Arg unknown ∷
-        hidden-Arg unknown ∷
-        xs)
+  pattern apply-pr1 xs = {!!}
 
-  pattern apply-pr2 xs =
-    def (quote pr2)
-      ( hidden-Arg unknown ∷
-        hidden-Arg unknown ∷
-        hidden-Arg unknown ∷
-        hidden-Arg unknown ∷
-        xs)
+  pattern apply-pr2 xs = {!!}
 ```
 
 ### Building a term of `Precategory-Expr C x y` from a term of type `hom-Precategory C x y`
@@ -205,8 +148,7 @@ build-Precategory-Expr
               ( nil))) ∷
             ( nil))) ∷
           ( visible-Arg x) ∷
-          nil)) =
-  con (quote id-hom-Precategory-Expr) nil
+          nil)) = {!!}
 build-Precategory-Expr
   ( apply-pr1
     ( visible-Arg
@@ -218,30 +160,15 @@ build-Precategory-Expr
                 (visible-Arg C ∷ nil)) ∷ nil))
             ∷ nil)) ∷
       hidden-Arg x ∷ hidden-Arg y ∷ hidden-Arg z ∷
-      visible-Arg g ∷ visible-Arg f ∷ nil)) =
-  con
-    ( quote comp-hom-Precategory-Expr)
-    ( visible-Arg (build-Precategory-Expr g) ∷
-      visible-Arg (build-Precategory-Expr f) ∷
-      nil)
-build-Precategory-Expr f =
-  con (quote hom-Precategory-Expr) (visible-Arg f ∷ nil)
+      visible-Arg g ∷ visible-Arg f ∷ nil)) = {!!}
+build-Precategory-Expr f = {!!}
 ```
 
 ### The application of the `solve-Precategory-Expr` lemma
 
 ```agda
 apply-solve-Precategory-Expr : Term → Term → Term → Term
-apply-solve-Precategory-Expr cat lhs rhs =
-  def
-    ( quote solve-Precategory-Expr)
-    ( replicate-hidden-Arg 2 ++
-      visible-Arg cat ∷
-      replicate-hidden-Arg 2 ++
-      visible-Arg lhs ∷
-      visible-Arg rhs ∷
-      visible-Arg (con (quote refl) nil) ∷
-      nil)
+apply-solve-Precategory-Expr cat lhs rhs = {!!}
 ```
 
 ### The macro definition
@@ -249,12 +176,7 @@ apply-solve-Precategory-Expr cat lhs rhs =
 ```agda
 macro
   solve-Precategory! : Term → Term → TC unit
-  solve-Precategory! cat hole = do
-    goal ← inferType hole >>= reduce
-    (lhs , rhs) ← boundary-TCM goal
-    built-lhs ← normalise lhs >>= (returnTC ∘ build-Precategory-Expr)
-    built-rhs ← normalise rhs >>= (returnTC ∘ build-Precategory-Expr)
-    unify hole (apply-solve-Precategory-Expr cat built-lhs built-rhs)
+  solve-Precategory! cat hole = {!!}
 ```
 
 ## Examples
@@ -270,12 +192,12 @@ module _
       {x y : obj-Precategory C}
       {f : hom-Precategory C x y} →
       f ＝ f
-    _ = solve-Precategory! C
+    _ = {!!}
 
     _ :
       {x : obj-Precategory C} →
       id-hom-Precategory C {x} ＝ id-hom-Precategory C {x}
-    _ = solve-Precategory! C
+    _ = {!!}
 
     _ :
       {a b c : obj-Precategory C}
@@ -283,7 +205,7 @@ module _
       {g : hom-Precategory C b c} →
       (comp-hom-Precategory C g f) ＝
       comp-hom-Precategory C g f
-    _ = solve-Precategory! C
+    _ = {!!}
 
     _ :
       {a b c d : obj-Precategory C}
@@ -292,7 +214,7 @@ module _
       {h : hom-Precategory C c d} →
       comp-hom-Precategory C h (comp-hom-Precategory C g f) ＝
       comp-hom-Precategory C (comp-hom-Precategory C h g) f
-    _ = solve-Precategory! C
+    _ = {!!}
 
     _ :
       {a b c d : obj-Precategory C}
@@ -305,5 +227,5 @@ module _
       comp-hom-Precategory C
         ( comp-hom-Precategory C h g)
         ( comp-hom-Precategory C (id-hom-Precategory C) f)
-    _ = solve-Precategory! C
+    _ = {!!}
 ```

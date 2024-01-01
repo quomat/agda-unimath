@@ -37,42 +37,36 @@ no objects.
 
 ```agda
 obj-initial-Category : UU lzero
-obj-initial-Category = empty
+obj-initial-Category = {!!}
 
 hom-set-initial-Category :
   obj-initial-Category → obj-initial-Category → Set lzero
-hom-set-initial-Category _ _ = unit-Set
+hom-set-initial-Category _ _ = {!!}
 
 hom-initial-Category :
   obj-initial-Category → obj-initial-Category → UU lzero
-hom-initial-Category x y = type-Set (hom-set-initial-Category x y)
+hom-initial-Category x y = {!!}
 ```
 
 ### The underlying precategory of the initial category
 
 ```agda
-comp-hom-initial-Category =
-  comp-hom-indiscrete-Precategory empty
+comp-hom-initial-Category = {!!}
 
-associative-comp-hom-initial-Category =
-  associative-comp-hom-indiscrete-Precategory empty
+associative-comp-hom-initial-Category = {!!}
 
-associative-composition-operation-initial-Category =
-  associative-composition-operation-indiscrete-Precategory empty
+associative-composition-operation-initial-Category = {!!}
 
-id-hom-initial-Category = id-hom-indiscrete-Precategory empty
+id-hom-initial-Category = {!!}
 
-left-unit-law-comp-hom-initial-Category =
-  left-unit-law-comp-hom-indiscrete-Precategory empty
+left-unit-law-comp-hom-initial-Category = {!!}
 
-right-unit-law-comp-hom-initial-Category =
-  right-unit-law-comp-hom-indiscrete-Precategory empty
+right-unit-law-comp-hom-initial-Category = {!!}
 
-is-unital-composition-operation-initial-Category =
-  is-unital-composition-operation-indiscrete-Precategory empty
+is-unital-composition-operation-initial-Category = {!!}
 
 initial-Precategory : Precategory lzero lzero
-initial-Precategory = indiscrete-Precategory empty
+initial-Precategory = {!!}
 ```
 
 ### The initial category
@@ -83,8 +77,8 @@ is-category-initial-Category :
 is-category-initial-Category ()
 
 initial-Category : Category lzero lzero
-pr1 initial-Category = initial-Precategory
-pr2 initial-Category = is-category-initial-Category
+pr1 initial-Category = {!!}
+pr2 initial-Category = {!!}
 ```
 
 ### The initial preunivalent category
@@ -95,8 +89,7 @@ is-preunivalent-initial-Category :
 is-preunivalent-initial-Category ()
 
 initial-Preunivalent-Category : Preunivalent-Category lzero lzero
-initial-Preunivalent-Category =
-  preunivalent-category-Category initial-Category
+initial-Preunivalent-Category = {!!}
 ```
 
 ### The initial strict category
@@ -107,8 +100,8 @@ is-strict-category-initial-Category :
 is-strict-category-initial-Category ()
 
 initial-Strict-Category : Strict-Category lzero lzero
-pr1 initial-Strict-Category = initial-Precategory
-pr2 initial-Strict-Category = is-strict-category-initial-Category
+pr1 initial-Strict-Category = {!!}
+pr2 initial-Strict-Category = {!!}
 ```
 
 ### The initial gaunt category
@@ -118,8 +111,8 @@ is-gaunt-initial-Category : is-gaunt-Category initial-Category
 is-gaunt-initial-Category ()
 
 initial-Gaunt-Category : Gaunt-Category lzero lzero
-pr1 initial-Gaunt-Category = initial-Category
-pr2 initial-Gaunt-Category = is-gaunt-initial-Category
+pr1 initial-Gaunt-Category = {!!}
+pr2 initial-Gaunt-Category = {!!}
 ```
 
 ## Properties
@@ -141,21 +134,12 @@ module _
     uniqueness-initial-functor-Precategory :
       (F : functor-Precategory initial-Precategory C) →
       initial-functor-Precategory ＝ F
-    uniqueness-initial-functor-Precategory F =
-      eq-htpy-functor-Precategory
-        ( initial-Precategory)
-        ( C)
-        ( initial-functor-Precategory)
-        ( F)
-        ( (λ where ()) , (λ where {()}))
+    uniqueness-initial-functor-Precategory F = {!!}
 
   abstract
     is-contr-functor-initial-Precategory :
       is-contr (functor-Precategory initial-Precategory C)
-    pr1 is-contr-functor-initial-Precategory =
-      initial-functor-Precategory
-    pr2 is-contr-functor-initial-Precategory =
-      uniqueness-initial-functor-Precategory
+    pr1 is-contr-functor-initial-Precategory = {!!}
 ```
 
 ## See also

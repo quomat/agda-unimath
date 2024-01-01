@@ -48,17 +48,14 @@ module _
   where
 
   is-nontrivial-prop-Group : Prop l1
-  is-nontrivial-prop-Group =
-    ∃-Prop (type-Group G) (λ g → unit-Group G ≠ g)
+  is-nontrivial-prop-Group = {!!}
 
   is-nontrivial-Group : UU l1
-  is-nontrivial-Group =
-    type-Prop is-nontrivial-prop-Group
+  is-nontrivial-Group = {!!}
 
   is-prop-is-nontrivial-Group :
     is-prop is-nontrivial-Group
-  is-prop-is-nontrivial-Group =
-    is-prop-type-Prop is-nontrivial-prop-Group
+  is-prop-is-nontrivial-Group = {!!}
 ```
 
 ### The predicate of not being the trivial group
@@ -69,17 +66,14 @@ module _
   where
 
   is-not-trivial-prop-Group : Prop l1
-  is-not-trivial-prop-Group =
-    neg-Prop' ((x : type-Group G) → unit-Group G ＝ x)
+  is-not-trivial-prop-Group = {!!}
 
   is-not-trivial-Group : UU l1
-  is-not-trivial-Group =
-    type-Prop is-not-trivial-prop-Group
+  is-not-trivial-Group = {!!}
 
   is-prop-is-not-trivial-Group :
     is-prop is-not-trivial-Group
-  is-prop-is-not-trivial-Group =
-    is-prop-type-Prop is-not-trivial-prop-Group
+  is-prop-is-not-trivial-Group = {!!}
 ```
 
 ## Properties
@@ -96,11 +90,11 @@ module _
 
   neg-is-trivial-is-not-trivial-Group :
     is-not-trivial-Group G → ¬ (is-trivial-Group G)
-  neg-is-trivial-is-not-trivial-Group H p = H (λ x → eq-is-contr p)
+  neg-is-trivial-is-not-trivial-Group H p = {!!}
 
   is-not-trivial-neg-is-trivial-Group :
     ¬ (is-trivial-Group G) → is-not-trivial-Group G
-  is-not-trivial-neg-is-trivial-Group H p = H (unit-Group G , p)
+  is-not-trivial-neg-is-trivial-Group H p = {!!}
 ```
 
 ### The map `subgroup-Prop G : Prop → Subgroup G` is an embedding for any nontrivial group
@@ -123,36 +117,7 @@ module _
   abstract
     is-emb-subgroup-prop-is-nontrivial-Group :
       is-nontrivial-Group G → is-emb (subgroup-Prop {l2 = l2} G)
-    is-emb-subgroup-prop-is-nontrivial-Group H =
-      apply-universal-property-trunc-Prop H
-        ( is-emb-Prop _)
-        ( λ (x , f) →
-          is-emb-is-injective
-            ( is-set-Subgroup G)
-            ( λ {P} {Q} α →
-              eq-iff
-                ( λ p →
-                  map-left-unit-law-disjunction-is-empty-Prop
-                    ( Id-Prop (set-Group G) _ _)
-                    ( Q)
-                    ( f)
-                    ( forward-implication
-                      ( iff-eq (ap (λ T → subset-Subgroup G T x) α))
-                      ( inr-disjunction-Prop
-                        ( Id-Prop (set-Group G) _ _)
-                        ( P)
-                        ( p))))
-                ( λ q →
-                  map-left-unit-law-disjunction-is-empty-Prop
-                    ( Id-Prop (set-Group G) _ _)
-                    ( P)
-                    ( f)
-                    ( backward-implication
-                      ( iff-eq (ap (λ T → subset-Subgroup G T x) α))
-                      ( inr-disjunction-Prop
-                        ( Id-Prop (set-Group G) _ _)
-                        ( Q)
-                        ( q))))))
+    is-emb-subgroup-prop-is-nontrivial-Group H = {!!}
 ```
 
 ### If the map `subgroup-Prop G : Prop lzero → Subgroup l1 G` is an embedding, then `G` is not a trivial group
@@ -173,12 +138,5 @@ module _
 
   is-not-trivial-is-emb-subgroup-Prop :
     is-emb (subgroup-Prop {l2 = lzero} G) → is-not-trivial-Group G
-  is-not-trivial-is-emb-subgroup-Prop H K =
-    backward-implication
-      ( iff-eq
-        ( is-injective-is-emb H
-          { x = empty-Prop}
-          { y = unit-Prop}
-          ( eq-is-contr (is-contr-subgroup-is-trivial-Group G (_ , K)))))
-      ( star)
+  is-not-trivial-is-emb-subgroup-Prop H K = {!!}
 ```

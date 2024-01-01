@@ -36,11 +36,10 @@ module _
   where
 
   descent-data-circle-constant-type : descent-data-circle l2
-  pr1 descent-data-circle-constant-type = X
-  pr2 descent-data-circle-constant-type = id-equiv
+  pr1 descent-data-circle-constant-type = {!!}
 
   family-descent-data-circle-constant-type : S → UU l2
-  family-descent-data-circle-constant-type x = X
+  family-descent-data-circle-constant-type x = {!!}
 ```
 
 ## Properties
@@ -58,16 +57,9 @@ module _
       ( descent-data-circle-constant-type l X)
       ( descent-data-family-circle l
         ( family-descent-data-circle-constant-type l X))
-  pr1 eq-descent-data-circle-constant-type = id-equiv
-  pr2 eq-descent-data-circle-constant-type x =
-    inv (tr-constant-type-family (loop-free-loop l) x)
+  pr1 eq-descent-data-circle-constant-type = {!!}
 
   family-with-descent-data-constant-type :
     family-with-descent-data-circle l l2
-  pr1 family-with-descent-data-constant-type =
-    family-descent-data-circle-constant-type l X
-  pr1 (pr2 family-with-descent-data-constant-type) =
-    descent-data-circle-constant-type l X
-  pr2 (pr2 family-with-descent-data-constant-type) =
-    eq-descent-data-circle-constant-type
+  pr1 family-with-descent-data-constant-type = {!!}
 ```

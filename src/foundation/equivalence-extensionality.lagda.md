@@ -39,57 +39,30 @@ module _
   where
 
   htpy-equiv : A ≃ B → A ≃ B → UU (l1 ⊔ l2)
-  htpy-equiv e e' = (map-equiv e) ~ (map-equiv e')
+  htpy-equiv e e' = {!!}
 
-  _~e_ = htpy-equiv
+  _~e_ = {!!}
 
   extensionality-equiv : (f g : A ≃ B) → (f ＝ g) ≃ htpy-equiv f g
-  extensionality-equiv f =
-    extensionality-type-subtype
-      ( is-equiv-Prop)
-      ( pr2 f)
-      ( refl-htpy' (pr1 f))
-      ( λ g → equiv-funext)
-    where
-    is-equiv-Prop : (f : A → B) → Prop (l1 ⊔ l2)
-    pr1 (is-equiv-Prop f) = is-equiv f
-    pr2 (is-equiv-Prop f) H =
-      is-prop-is-contr
-        ( is-contr-prod
-          ( is-contr-equiv'
-            ( (b : B) → fiber f b)
-            ( distributive-Π-Σ)
-            ( is-contr-Π (is-contr-map-is-equiv H)))
-          ( is-contr-is-equiv'
-            ( Σ (B → A) (λ h → (h ∘ f) ＝ id))
-            ( tot (λ h → htpy-eq))
-            ( is-equiv-tot-is-fiberwise-equiv
-              ( λ h → funext (h ∘ f) id))
-            ( is-contr-map-is-equiv
-              ( is-equiv-precomp-Π-is-equiv H (λ y → A))
-              ( id))))
-        ( H)
+  extensionality-equiv f = {!!}
 
   abstract
     is-torsorial-htpy-equiv :
       (e : A ≃ B) → is-torsorial (htpy-equiv e)
-    is-torsorial-htpy-equiv e =
-      fundamental-theorem-id'
-        ( map-equiv ∘ extensionality-equiv e)
-        ( is-equiv-map-equiv ∘ extensionality-equiv e)
+    is-torsorial-htpy-equiv e = {!!}
 
   refl-htpy-equiv : (e : A ≃ B) → htpy-equiv e e
-  refl-htpy-equiv e = refl-htpy
+  refl-htpy-equiv e = {!!}
 
   eq-htpy-equiv : {e e' : A ≃ B} → htpy-equiv e e' → e ＝ e'
-  eq-htpy-equiv {e} {e'} = map-inv-equiv (extensionality-equiv e e')
+  eq-htpy-equiv {e} {e'} = {!!}
 
   htpy-eq-equiv : {e e' : A ≃ B} → e ＝ e' → htpy-equiv e e'
-  htpy-eq-equiv {e} {e'} = map-equiv (extensionality-equiv e e')
+  htpy-eq-equiv {e} {e'} = {!!}
 
   htpy-eq-map-equiv :
     {e e' : A ≃ B} → (map-equiv e) ＝ (map-equiv e') → htpy-equiv e e'
-  htpy-eq-map-equiv = htpy-eq
+  htpy-eq-map-equiv = {!!}
 ```
 
 ### Homotopy induction for homotopies between equivalences
@@ -106,19 +79,16 @@ module _
       section
         ( λ (h : (e' : A ≃ B) (H : htpy-equiv e e') → P e' H) →
           h e (refl-htpy-equiv e))
-    induction-principle-htpy-equiv e =
-      is-identity-system-is-torsorial e
-        ( refl-htpy-equiv e)
-        ( is-torsorial-htpy-equiv e)
+    induction-principle-htpy-equiv e = {!!}
 
   ind-htpy-equiv :
     {l3 : Level} (e : A ≃ B) (P : (e' : A ≃ B) (H : htpy-equiv e e') → UU l3) →
     P e (refl-htpy-equiv e) → (e' : A ≃ B) (H : htpy-equiv e e') → P e' H
-  ind-htpy-equiv e P = pr1 (induction-principle-htpy-equiv e P)
+  ind-htpy-equiv e P = {!!}
 
   compute-ind-htpy-equiv :
     {l3 : Level} (e : A ≃ B) (P : (e' : A ≃ B) (H : htpy-equiv e e') → UU l3)
     (p : P e (refl-htpy-equiv e)) →
     ind-htpy-equiv e P p e (refl-htpy-equiv e) ＝ p
-  compute-ind-htpy-equiv e P = pr2 (induction-principle-htpy-equiv e P)
+  compute-ind-htpy-equiv e P = {!!}
 ```

@@ -57,7 +57,5 @@ module _
   where
 
   is-cellular-map : UUω
-  is-cellular-map =
-    {l3 l4 : Level} {X : UU l3} {Y : UU l4} (g : X → Y) →
-    is-connected-map k g → mere-diagonal-lift f g
+  is-cellular-map = {!!}
 ```

@@ -36,14 +36,14 @@ module _
 
   coherence-htpy-retraction :
     (g h : retraction f) → map-retraction f g ~ map-retraction f h → UU l1
-  coherence-htpy-retraction = coherence-htpy-hom-coslice
+  coherence-htpy-retraction = {!!}
 
   htpy-retraction : retraction f → retraction f → UU (l1 ⊔ l2)
-  htpy-retraction = htpy-hom-coslice
+  htpy-retraction = {!!}
 
   extensionality-retraction :
     (g h : retraction f) → (g ＝ h) ≃ htpy-retraction g h
-  extensionality-retraction = extensionality-hom-coslice
+  extensionality-retraction = {!!}
 
   eq-htpy-retraction :
     ( g h : retraction f)
@@ -52,7 +52,7 @@ module _
       ( is-retraction-map-retraction f g) ~
       ( (H ·r f) ∙h is-retraction-map-retraction f h)) →
     g ＝ h
-  eq-htpy-retraction = eq-htpy-hom-coslice
+  eq-htpy-retraction = {!!}
 ```
 
 ### If the left factor of a composite has a retraction, then the type of retractions of the right factor is a retract of the type of retractions of the composite
@@ -64,32 +64,19 @@ is-retraction-retraction-left-map-triangle :
   (H : f ~ (g ∘ h)) (rg : retraction g) →
   ( ( retraction-top-map-triangle f g h H) ∘
     ( retraction-left-map-triangle f g h H rg)) ~ id
-is-retraction-retraction-left-map-triangle f g h H (l , L) (k , K) =
-  eq-htpy-retraction
-    ( ( retraction-top-map-triangle f g h H
-        ( retraction-left-map-triangle f g h H (l , L) (k , K))))
-    ( k , K)
-    ( k ·l L)
-    ( ( inv-htpy-assoc-htpy
-        ( inv-htpy ((k ∘ l) ·l H))
-        ( (k ∘ l) ·l H)
-        ( (k ·l (L ·r h)) ∙h K)) ∙h
-      ( ap-concat-htpy' ((k ·l (L ·r h)) ∙h K) (left-inv-htpy ((k ∘ l) ·l H))))
+is-retraction-retraction-left-map-triangle f g h H (l , L) (k , K) = {!!}
 
 retraction-right-factor-retract-of-retraction-left-factor :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {X : UU l3}
   (f : A → X) (g : B → X) (h : A → B) (H : f ~ g ∘ h) →
   retraction g → (retraction h) retract-of (retraction f)
-pr1 (retraction-right-factor-retract-of-retraction-left-factor f g h H rg) =
-  retraction-left-map-triangle f g h H rg
+pr1 (retraction-right-factor-retract-of-retraction-left-factor f g h H rg) = {!!}
 pr1
   ( pr2
-    ( retraction-right-factor-retract-of-retraction-left-factor f g h H rg)) =
-  retraction-top-map-triangle f g h H
+    ( retraction-right-factor-retract-of-retraction-left-factor f g h H rg)) = {!!}
 pr2
   ( pr2
-    ( retraction-right-factor-retract-of-retraction-left-factor f g h H rg)) =
-  is-retraction-retraction-left-map-triangle f g h H rg
+    ( retraction-right-factor-retract-of-retraction-left-factor f g h H rg)) = {!!}
 ```
 
 ### If `f` has a retraction, then `f` is injective
@@ -99,7 +86,7 @@ abstract
   is-injective-retraction :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) → retraction f →
     is-injective f
-  is-injective-retraction f (h , H) {x} {y} p = (inv (H x)) ∙ (ap h p ∙ H y)
+  is-injective-retraction f (h , H) {x} {y} p = {!!}
 ```
 
 ### Transposing identifications along retractions
@@ -112,10 +99,10 @@ module _
   transpose-eq-retraction :
     (g : B → A) (H : (g ∘ f) ~ id) {x : B} {y : A} →
     x ＝ f y → g x ＝ y
-  transpose-eq-retraction g H refl = H _
+  transpose-eq-retraction g H refl = {!!}
 
   transpose-eq-retraction' :
     (g : B → A) (H : (g ∘ f) ~ id) {x : A} {y : B} →
     f x ＝ y → x ＝ g y
-  transpose-eq-retraction' g H refl = inv (H _)
+  transpose-eq-retraction' g H refl = {!!}
 ```

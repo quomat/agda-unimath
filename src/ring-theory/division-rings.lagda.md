@@ -28,7 +28,5 @@ invertible.
 ```agda
 is-division-Ring :
   { l : Level} → Ring l → UU l
-is-division-Ring R =
-  (is-nontrivial-Ring R) ×
-  ((x : type-Ring R) → zero-Ring R ≠ x → is-invertible-element-Ring R x)
+is-division-Ring R = {!!}
 ```

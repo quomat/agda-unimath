@@ -39,13 +39,13 @@ module _
   where
 
   is-full-prop-Subgroup : Prop (l1 ⊔ l2)
-  is-full-prop-Subgroup = is-full-subtype-Prop (subset-Subgroup G H)
+  is-full-prop-Subgroup = {!!}
 
   is-full-Subgroup : UU (l1 ⊔ l2)
-  is-full-Subgroup = type-Prop is-full-prop-Subgroup
+  is-full-Subgroup = {!!}
 
   is-prop-is-full-Subgroup : is-prop is-full-Subgroup
-  is-prop-is-full-Subgroup = is-prop-type-Prop is-full-prop-Subgroup
+  is-prop-is-full-Subgroup = {!!}
 ```
 
 ### The full subgroup at each universe level
@@ -53,79 +53,65 @@ module _
 ```agda
 subset-full-Subgroup :
   {l1 : Level} (l2 : Level) (G : Group l1) → subset-Group l2 G
-subset-full-Subgroup l2 G = full-subtype l2 (type-Group G)
+subset-full-Subgroup l2 G = {!!}
 
 type-full-Subgroup :
   {l1 : Level} (l2 : Level) (G : Group l1) → UU (l1 ⊔ l2)
-type-full-Subgroup l2 G = type-full-subtype l2 (type-Group G)
+type-full-Subgroup l2 G = {!!}
 
 contains-unit-full-Subgroup :
   {l1 l2 : Level} (G : Group l1) →
   contains-unit-subset-Group G (subset-full-Subgroup l2 G)
-contains-unit-full-Subgroup G = is-in-full-subtype (unit-Group G)
+contains-unit-full-Subgroup G = {!!}
 
 is-closed-under-multiplication-full-Subgroup :
   {l1 l2 : Level} (G : Group l1) →
   is-closed-under-multiplication-subset-Group G (subset-full-Subgroup l2 G)
-is-closed-under-multiplication-full-Subgroup G {x} {y} _ _ =
-  is-in-full-subtype (mul-Group G x y)
+is-closed-under-multiplication-full-Subgroup G {x} {y} _ _ = {!!}
 
 is-closed-under-inverses-full-Subgroup :
   {l1 l2 : Level} (G : Group l1) →
   is-closed-under-inverses-subset-Group G (subset-full-Subgroup l2 G)
-is-closed-under-inverses-full-Subgroup G {x} _ =
-  is-in-full-subtype (inv-Group G x)
+is-closed-under-inverses-full-Subgroup G {x} _ = {!!}
 
 full-Subgroup : {l1 : Level} (l2 : Level) (G : Group l1) → Subgroup l2 G
-pr1 (full-Subgroup l2 G) =
-  subset-full-Subgroup l2 G
-pr1 (pr2 (full-Subgroup l2 G)) =
-  contains-unit-full-Subgroup G
-pr1 (pr2 (pr2 (full-Subgroup l2 G))) {x} {y} =
-  is-closed-under-multiplication-full-Subgroup G {x} {y}
-pr2 (pr2 (pr2 (full-Subgroup l2 G))) {x} =
-  is-closed-under-inverses-full-Subgroup G {x}
+pr1 (full-Subgroup l2 G) = {!!}
+pr1 (pr2 (full-Subgroup l2 G)) = {!!}
+pr1 (pr2 (pr2 (full-Subgroup l2 G))) {x} {y} = {!!}
+pr2 (pr2 (pr2 (full-Subgroup l2 G))) {x} = {!!}
 
 module _
   {l1 l2 : Level} (G : Group l1)
   where
 
   inclusion-full-Subgroup : type-full-Subgroup l2 G → type-Group G
-  inclusion-full-Subgroup = inclusion-Subgroup G (full-Subgroup l2 G)
+  inclusion-full-Subgroup = {!!}
 
   is-equiv-inclusion-full-Subgroup : is-equiv inclusion-full-Subgroup
-  is-equiv-inclusion-full-Subgroup = is-equiv-inclusion-full-subtype
+  is-equiv-inclusion-full-Subgroup = {!!}
 
   equiv-inclusion-full-Subgroup : type-full-Subgroup l2 G ≃ type-Group G
-  pr1 equiv-inclusion-full-Subgroup = inclusion-full-Subgroup
-  pr2 equiv-inclusion-full-Subgroup = is-equiv-inclusion-full-Subgroup
+  pr1 equiv-inclusion-full-Subgroup = {!!}
 
   group-full-Subgroup : Group (l1 ⊔ l2)
-  group-full-Subgroup = group-Subgroup G (full-Subgroup l2 G)
+  group-full-Subgroup = {!!}
 
   hom-inclusion-full-Subgroup : hom-Group group-full-Subgroup G
-  hom-inclusion-full-Subgroup =
-    hom-inclusion-Subgroup G (full-Subgroup l2 G)
+  hom-inclusion-full-Subgroup = {!!}
 
   preserves-mul-inclusion-full-Subgroup :
     preserves-mul-Group group-full-Subgroup G inclusion-full-Subgroup
-  preserves-mul-inclusion-full-Subgroup {x} {y} =
-    preserves-mul-inclusion-Subgroup G (full-Subgroup l2 G) {x} {y}
+  preserves-mul-inclusion-full-Subgroup {x} {y} = {!!}
 
   equiv-group-inclusion-full-Subgroup : equiv-Group group-full-Subgroup G
-  pr1 equiv-group-inclusion-full-Subgroup =
-    equiv-inclusion-full-Subgroup
-  pr2 equiv-group-inclusion-full-Subgroup {x} {y} =
-    preserves-mul-inclusion-full-Subgroup {x} {y}
+  pr1 equiv-group-inclusion-full-Subgroup = {!!}
 
   iso-full-Subgroup : iso-Group group-full-Subgroup G
-  iso-full-Subgroup =
-    iso-equiv-Group group-full-Subgroup G equiv-group-inclusion-full-Subgroup
+  iso-full-Subgroup = {!!}
 
   inv-iso-full-Subgroup :
     iso-Group G group-full-Subgroup
-  inv-iso-full-Subgroup =
-    inv-iso-Group group-full-Subgroup G iso-full-Subgroup
+  inv-iso-full-Subgroup = {!!}
 ```
 
 ## Properties
@@ -140,27 +126,14 @@ module _
   is-iso-inclusion-is-full-Subgroup :
     is-full-Subgroup G H →
     is-iso-Group (group-Subgroup G H) G (hom-inclusion-Subgroup G H)
-  is-iso-inclusion-is-full-Subgroup K =
-    is-iso-is-equiv-hom-Group
-      ( group-Subgroup G H)
-      ( G)
-      ( hom-inclusion-Subgroup G H)
-      ( is-equiv-inclusion-is-full-subtype (subset-Subgroup G H) K)
+  is-iso-inclusion-is-full-Subgroup K = {!!}
 
   iso-inclusion-is-full-Subgroup :
     is-full-Subgroup G H → iso-Group (group-Subgroup G H) G
-  pr1 (iso-inclusion-is-full-Subgroup K) = hom-inclusion-Subgroup G H
-  pr2 (iso-inclusion-is-full-Subgroup K) = is-iso-inclusion-is-full-Subgroup K
+  pr1 (iso-inclusion-is-full-Subgroup K) = {!!}
 
   is-full-is-iso-inclusion-Subgroup :
     is-iso-Group (group-Subgroup G H) G (hom-inclusion-Subgroup G H) →
     is-full-Subgroup G H
-  is-full-is-iso-inclusion-Subgroup K =
-    is-full-is-equiv-inclusion-subtype
-      ( subset-Subgroup G H)
-      ( is-equiv-is-iso-Group
-        ( group-Subgroup G H)
-        ( G)
-        ( hom-inclusion-Subgroup G H)
-        ( K))
+  is-full-is-iso-inclusion-Subgroup K = {!!}
 ```

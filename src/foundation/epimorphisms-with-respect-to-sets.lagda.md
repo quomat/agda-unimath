@@ -45,8 +45,7 @@ every set `C` the precomposition function `(B → C) → (A → C)` is an embedd
 is-epimorphism-Set :
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
   (f : A → B) → UUω
-is-epimorphism-Set f =
-  {l : Level} (C : Set l) → is-emb (precomp f (type-Set C))
+is-epimorphism-Set f = {!!}
 ```
 
 ## Properties
@@ -58,19 +57,7 @@ abstract
   is-epimorphism-is-surjective-Set :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} →
     is-surjective f → is-epimorphism-Set f
-  is-epimorphism-is-surjective-Set H C =
-    is-emb-is-injective
-      ( is-set-function-type (is-set-type-Set C))
-      ( λ {g} {h} p →
-        eq-htpy
-          ( λ b →
-            apply-universal-property-trunc-Prop
-              ( H b)
-              ( Id-Prop C (g b) (h b))
-              ( λ u →
-                ( inv (ap g (pr2 u))) ∙
-                ( htpy-eq p (pr1 u)) ∙
-                ( ap h (pr2 u)))))
+  is-epimorphism-is-surjective-Set H C = {!!}
 ```
 
 ### Maps that are epimorphisms with respect to maps into sets are surjective
@@ -80,28 +67,7 @@ abstract
   is-surjective-is-epimorphism-Set :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} →
     is-epimorphism-Set f → is-surjective f
-  is-surjective-is-epimorphism-Set {l1} {l2} {A} {B} {f} H b =
-    map-equiv
-      ( equiv-eq
-        ( ap
-          ( pr1)
-          ( htpy-eq
-            ( is-injective-is-emb
-              ( H (Prop-Set (l1 ⊔ l2)))
-              { g}
-              { h}
-              ( eq-htpy
-                ( λ a →
-                  eq-iff
-                    ( λ _ → unit-trunc-Prop (pair a refl))
-                    ( λ _ → raise-star))))
-            ( b))))
-      ( raise-star)
-    where
-    g : B → Prop (l1 ⊔ l2)
-    g y = raise-unit-Prop (l1 ⊔ l2)
-    h : B → Prop (l1 ⊔ l2)
-    h y = ∃-Prop A (λ x → f x ＝ y)
+  is-surjective-is-epimorphism-Set {l1} {l2} {A} {B} {f} H b = {!!}
 ```
 
 ### There is at most one extension of a map into a set along a surjection
@@ -128,20 +94,12 @@ module _
   where
 
   extension-along-surjection-Set : UU (l1 ⊔ l2 ⊔ l3)
-  extension-along-surjection-Set =
-    Σ (B → type-Set C) (λ h → g ~ h ∘ map-surjection f)
+  extension-along-surjection-Set = {!!}
 
   abstract
     is-prop-extension-along-surjection-Set :
       is-prop extension-along-surjection-Set
-    is-prop-extension-along-surjection-Set =
-      is-prop-equiv'
-        ( equiv-tot (λ h → equiv-funext ∘e equiv-inv _ g))
-        ( is-prop-map-is-emb
-          ( is-epimorphism-is-surjective-Set
-            ( is-surjective-map-surjection f)
-            ( C))
-          ( g))
+    is-prop-extension-along-surjection-Set = {!!}
 ```
 
 ## See also

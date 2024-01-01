@@ -30,5 +30,5 @@ module _
   where
 
   type-arithmetic-functions-Ring : UU l
-  type-arithmetic-functions-Ring = nonzero-ℕ → type-Ring R
+  type-arithmetic-functions-Ring = {!!}
 ```

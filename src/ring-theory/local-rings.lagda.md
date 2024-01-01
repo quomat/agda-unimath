@@ -30,41 +30,30 @@ ring of which the non-invertible elements form an ideal is a local ring.
 
 ```agda
 is-local-prop-Ring : {l : Level} (R : Ring l) → Prop l
-is-local-prop-Ring R =
-  Π-Prop
-    ( type-Ring R)
-    ( λ a →
-      Π-Prop
-        ( type-Ring R)
-        ( λ b →
-          function-Prop
-            ( is-invertible-element-Ring R (add-Ring R a b))
-            ( disjunction-Prop
-              ( is-invertible-element-prop-Ring R a)
-              ( is-invertible-element-prop-Ring R b))))
+is-local-prop-Ring R = {!!}
 
 is-local-Ring : {l : Level} → Ring l → UU l
-is-local-Ring R = type-Prop (is-local-prop-Ring R)
+is-local-Ring R = {!!}
 
 is-prop-is-local-Ring : {l : Level} (R : Ring l) → is-prop (is-local-Ring R)
-is-prop-is-local-Ring R = is-prop-type-Prop (is-local-prop-Ring R)
+is-prop-is-local-Ring R = {!!}
 
 Local-Ring : (l : Level) → UU (lsuc l)
-Local-Ring l = Σ (Ring l) is-local-Ring
+Local-Ring l = {!!}
 
 module _
   {l : Level} (R : Local-Ring l)
   where
 
   ring-Local-Ring : Ring l
-  ring-Local-Ring = pr1 R
+  ring-Local-Ring = {!!}
 
   set-Local-Ring : Set l
-  set-Local-Ring = set-Ring ring-Local-Ring
+  set-Local-Ring = {!!}
 
   type-Local-Ring : UU l
-  type-Local-Ring = type-Ring ring-Local-Ring
+  type-Local-Ring = {!!}
 
   is-local-ring-Local-Ring : is-local-Ring ring-Local-Ring
-  is-local-ring-Local-Ring = pr2 R
+  is-local-ring-Local-Ring = {!!}
 ```

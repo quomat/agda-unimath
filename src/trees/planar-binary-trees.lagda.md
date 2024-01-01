@@ -41,21 +41,13 @@ data Planar-Bin-Tree : UU lzero where
 
 ```agda
 PBT-𝕎 : UU lzero
-PBT-𝕎 = 𝕎 bool P
-  where
-  P : bool → UU lzero
-  P true = bool
-  P false = empty
+PBT-𝕎 = {!!}
 
 root-PBT-𝕎 : PBT-𝕎
-root-PBT-𝕎 = constant-𝕎 false id
+root-PBT-𝕎 = {!!}
 
 join-PBT-𝕎 : (x y : PBT-𝕎) → PBT-𝕎
-join-PBT-𝕎 x y = tree-𝕎 true α
-  where
-  α : bool → PBT-𝕎
-  α true = x
-  α false = y
+join-PBT-𝕎 x y = {!!}
 ```
 
 ## Properties
@@ -65,10 +57,7 @@ join-PBT-𝕎 x y = tree-𝕎 true α
 ```agda
 {-
 Planar-Bin-Tree-PBT-𝕎 : PBT-𝕎 → Planar-Bin-Tree
-Planar-Bin-Tree-PBT-𝕎 (tree-𝕎 true α) =
-  join-PBT
-    ( Planar-Bin-Tree-PBT-𝕎 (α true))
-    ( Planar-Bin-Tree-PBT-𝕎 (α false))
+Planar-Bin-Tree-PBT-𝕎 (tree-𝕎 true α) = {!!}
 Planar-Bin-Tree-PBT-𝕎 (tree-𝕎 false α) = {!!}
 -}
 ```

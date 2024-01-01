@@ -27,19 +27,19 @@ for every `z ∈-𝕍 x` we have `z ∈-𝕍 x ↪ z ∈-𝕍 y`.
 
 ```agda
 is-submultiset-𝕍 : {l : Level} → 𝕍 l → 𝕍 l → UU (lsuc l)
-is-submultiset-𝕍 {l} y x = (z : 𝕍 l) → z ∈-𝕍 x → (z ∈-𝕍 x) ↪ (z ∈-𝕍 y)
+is-submultiset-𝕍 {l} y x = {!!}
 
 infix 6 _⊆-𝕍_
 _⊆-𝕍_ : {l : Level} → 𝕍 l → 𝕍 l → UU (lsuc l)
-x ⊆-𝕍 y = is-submultiset-𝕍 y x
+x ⊆-𝕍 y = {!!}
 ```
 
 ### Full submultisets
 
 ```agda
 is-full-submultiset-𝕍 : {l : Level} → 𝕍 l → 𝕍 l → UU (lsuc l)
-is-full-submultiset-𝕍 {l} y x = (z : 𝕍 l) → z ∈-𝕍 x → (z ∈-𝕍 x) ≃ (z ∈-𝕍 y)
+is-full-submultiset-𝕍 {l} y x = {!!}
 
 _⊑-𝕍_ : {l : Level} → 𝕍 l → 𝕍 l → UU (lsuc l)
-x ⊑-𝕍 y = is-full-submultiset-𝕍 y x
+x ⊑-𝕍 y = {!!}
 ```

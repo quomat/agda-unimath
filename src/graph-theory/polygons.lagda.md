@@ -44,80 +44,60 @@ presentation of the [dihedral group](group-theory.dihedral-groups.md) `D_k`.
 
 ```agda
 vertex-standard-polygon-Undirected-Graph : ℕ → UU lzero
-vertex-standard-polygon-Undirected-Graph k = ℤ-Mod k
+vertex-standard-polygon-Undirected-Graph k = {!!}
 
 unordered-pair-vertices-standard-polygon-Undirected-Graph : ℕ → UU (lsuc lzero)
-unordered-pair-vertices-standard-polygon-Undirected-Graph k =
-  unordered-pair (vertex-standard-polygon-Undirected-Graph k)
+unordered-pair-vertices-standard-polygon-Undirected-Graph k = {!!}
 
 edge-standard-polygon-Undirected-Graph :
   (k : ℕ) →
   unordered-pair-vertices-standard-polygon-Undirected-Graph k → UU lzero
-edge-standard-polygon-Undirected-Graph k p =
-  Σ ( type-unordered-pair p)
-    ( λ x →
-      fiber
-        ( element-unordered-pair p)
-        ( succ-ℤ-Mod k (element-unordered-pair p x)))
+edge-standard-polygon-Undirected-Graph k p = {!!}
 
 standard-polygon-Undirected-Graph : ℕ → Undirected-Graph lzero lzero
-pr1 (standard-polygon-Undirected-Graph k) =
-  vertex-standard-polygon-Undirected-Graph k
-pr2 (standard-polygon-Undirected-Graph k) =
-  edge-standard-polygon-Undirected-Graph k
+pr1 (standard-polygon-Undirected-Graph k) = {!!}
+pr2 (standard-polygon-Undirected-Graph k) = {!!}
 ```
 
 ### The type of all polygons with `k` vertices
 
 ```agda
 Polygon : ℕ → UU (lsuc lzero)
-Polygon k =
-  Σ ( Undirected-Graph lzero lzero)
-    ( mere-equiv-Undirected-Graph (standard-polygon-Undirected-Graph k))
+Polygon k = {!!}
 
 module _
   (k : ℕ) (X : Polygon k)
   where
 
   undirected-graph-Polygon : Undirected-Graph lzero lzero
-  undirected-graph-Polygon = pr1 X
+  undirected-graph-Polygon = {!!}
 
   mere-equiv-Polygon :
     mere-equiv-Undirected-Graph
       ( standard-polygon-Undirected-Graph k)
       ( undirected-graph-Polygon)
-  mere-equiv-Polygon = pr2 X
+  mere-equiv-Polygon = {!!}
 
   vertex-Polygon : UU lzero
-  vertex-Polygon = vertex-Undirected-Graph undirected-graph-Polygon
+  vertex-Polygon = {!!}
 
   unordered-pair-vertices-Polygon : UU (lsuc lzero)
-  unordered-pair-vertices-Polygon = unordered-pair vertex-Polygon
+  unordered-pair-vertices-Polygon = {!!}
 
   edge-Polygon : unordered-pair-vertices-Polygon → UU lzero
-  edge-Polygon = edge-Undirected-Graph undirected-graph-Polygon
+  edge-Polygon = {!!}
 
   mere-equiv-vertex-Polygon : mere-equiv (ℤ-Mod k) vertex-Polygon
-  mere-equiv-vertex-Polygon =
-    map-trunc-Prop
-      ( equiv-vertex-equiv-Undirected-Graph
-        ( standard-polygon-Undirected-Graph k)
-        ( undirected-graph-Polygon))
-      ( mere-equiv-Polygon)
+  mere-equiv-vertex-Polygon = {!!}
 
   is-finite-vertex-Polygon : is-nonzero-ℕ k → is-finite vertex-Polygon
-  is-finite-vertex-Polygon H =
-    is-finite-mere-equiv mere-equiv-vertex-Polygon (is-finite-ℤ-Mod H)
+  is-finite-vertex-Polygon H = {!!}
 
   is-set-vertex-Polygon : is-set vertex-Polygon
-  is-set-vertex-Polygon =
-    is-set-mere-equiv' mere-equiv-vertex-Polygon (is-set-ℤ-Mod k)
+  is-set-vertex-Polygon = {!!}
 
   has-decidable-equality-vertex-Polygon : has-decidable-equality vertex-Polygon
-  has-decidable-equality-vertex-Polygon =
-    has-decidable-equality-mere-equiv'
-      ( mere-equiv-vertex-Polygon)
-      ( has-decidable-equality-ℤ-Mod k)
+  has-decidable-equality-vertex-Polygon = {!!}
 ```
 
 ## Properties
@@ -127,7 +107,7 @@ module _
 ```agda
 is-set-vertex-standard-polygon-Undirected-Graph :
   (k : ℕ) → is-set (vertex-standard-polygon-Undirected-Graph k)
-is-set-vertex-standard-polygon-Undirected-Graph k = is-set-ℤ-Mod k
+is-set-vertex-standard-polygon-Undirected-Graph k = {!!}
 ```
 
 ### Every edge is between distinct points

@@ -28,35 +28,32 @@ an [automorphism](foundation.automorphisms.md) on `e : A ≃ A`.
 
 ```agda
 Type-With-Automorphism : (l : Level) → UU (lsuc l)
-Type-With-Automorphism l = Σ (UU l) (Aut)
+Type-With-Automorphism l = {!!}
 
 module _
   {l : Level} (A : Type-With-Automorphism l)
   where
 
   type-Type-With-Automorphism : UU l
-  type-Type-With-Automorphism = pr1 A
+  type-Type-With-Automorphism = {!!}
 
   automorphism-Type-With-Automorphism : Aut type-Type-With-Automorphism
-  automorphism-Type-With-Automorphism = pr2 A
+  automorphism-Type-With-Automorphism = {!!}
 
   map-Type-With-Automorphism :
     type-Type-With-Automorphism → type-Type-With-Automorphism
-  map-Type-With-Automorphism = map-equiv automorphism-Type-With-Automorphism
+  map-Type-With-Automorphism = {!!}
 
   type-with-endomorphism-Type-With-Automorphism : Type-With-Endomorphism l
-  pr1 type-with-endomorphism-Type-With-Automorphism =
-    type-Type-With-Automorphism
-  pr2 type-with-endomorphism-Type-With-Automorphism =
-    map-Type-With-Automorphism
+  pr1 type-with-endomorphism-Type-With-Automorphism = {!!}
 ```
 
 ### Types equipped with the identity automorphism
 
 ```agda
 trivial-Type-With-Automorphism : {l : Level} → UU l → Type-With-Automorphism l
-pr1 (trivial-Type-With-Automorphism X) = X
-pr2 (trivial-Type-With-Automorphism X) = id-equiv
+pr1 (trivial-Type-With-Automorphism X) = {!!}
+pr2 (trivial-Type-With-Automorphism X) = {!!}
 ```
 
 ## See also

@@ -47,7 +47,7 @@ module _
   where
 
   dependent-lift-family-of-elements : UU (l1 ⊔ l3)
-  dependent-lift-family-of-elements = (i : I) → B i (a i)
+  dependent-lift-family-of-elements = {!!}
 ```
 
 ### Lifts of families of elements
@@ -58,7 +58,7 @@ module _
   where
 
   lift-family-of-elements : UU (l1 ⊔ l3)
-  lift-family-of-elements = dependent-lift-family-of-elements a (λ _ → B)
+  lift-family-of-elements = {!!}
 ```
 
 ### Dependent lifts of binary families of elements
@@ -70,8 +70,7 @@ module _
   where
 
   dependent-lift-binary-family-of-elements : UU (l1 ⊔ l3 ⊔ l4)
-  dependent-lift-binary-family-of-elements =
-    dependent-lift-family-of-elements a (λ i x → (y : B i x) → C i x y)
+  dependent-lift-binary-family-of-elements = {!!}
 ```
 
 ### Lifts of binary families of elements
@@ -83,8 +82,7 @@ module _
   where
 
   lift-binary-family-of-elements : UU (l1 ⊔ l3 ⊔ l4)
-  lift-binary-family-of-elements =
-    dependent-lift-binary-family-of-elements a (λ _ → C)
+  lift-binary-family-of-elements = {!!}
 ```
 
 ## See also

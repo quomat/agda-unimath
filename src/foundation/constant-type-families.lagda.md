@@ -37,30 +37,30 @@ module _
   where
 
   is-constant-type-family : UU (l1 ⊔ lsuc l2)
-  is-constant-type-family = Σ (UU l2) (λ X → (a : A) → X ≃ B a)
+  is-constant-type-family = {!!}
 
   module _
     (H : is-constant-type-family)
     where
 
     type-is-constant-type-family : UU l2
-    type-is-constant-type-family = pr1 H
+    type-is-constant-type-family = {!!}
 
     equiv-is-constant-type-family : (a : A) → type-is-constant-type-family ≃ B a
-    equiv-is-constant-type-family = pr2 H
+    equiv-is-constant-type-family = {!!}
 ```
 
 ### The (standard) constant type family
 
 ```agda
 constant-type-family : {l1 l2 : Level} (A : UU l1) (B : UU l2) → A → UU l2
-constant-type-family A B a = B
+constant-type-family A B a = {!!}
 
 is-constant-type-family-constant-type-family :
   {l1 l2 : Level} (A : UU l1) (B : UU l2) →
   is-constant-type-family (constant-type-family A B)
-pr1 (is-constant-type-family-constant-type-family A B) = B
-pr2 (is-constant-type-family-constant-type-family A B) a = id-equiv
+pr1 (is-constant-type-family-constant-type-family A B) = {!!}
+pr2 (is-constant-type-family-constant-type-family A B) a = {!!}
 ```
 
 ## Properties
@@ -71,7 +71,7 @@ pr2 (is-constant-type-family-constant-type-family A B) a = id-equiv
 tr-constant-type-family :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} {x y : A} (p : x ＝ y) (b : B) →
   dependent-identification (constant-type-family A B) p b b
-tr-constant-type-family refl b = refl
+tr-constant-type-family refl b = {!!}
 ```
 
 ### Dependent action on paths of sections of standard constant type families
@@ -80,5 +80,5 @@ tr-constant-type-family refl b = refl
 apd-constant-type-family :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) {x y : A} (p : x ＝ y) →
   apd f p ＝ (tr-constant-type-family p (f x) ∙ ap f p)
-apd-constant-type-family f refl = refl
+apd-constant-type-family f refl = {!!}
 ```

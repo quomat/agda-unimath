@@ -28,14 +28,10 @@ Every finite type is small.
 ```agda
 is-small-Fin :
   (l : Level) → (k : ℕ) → is-small l (Fin k)
-pr1 (is-small-Fin l k) = raise-Fin l k
-pr2 (is-small-Fin l k) = compute-raise-Fin l k
+pr1 (is-small-Fin l k) = {!!}
+pr2 (is-small-Fin l k) = {!!}
 
 is-small-is-finite :
   {l1 : Level} (l2 : Level) → (A : 𝔽 l1) → is-small l2 (type-𝔽 A)
-is-small-is-finite l2 A =
-  apply-universal-property-trunc-Prop
-    ( is-finite-type-𝔽 A)
-    ( is-small l2 (type-𝔽 A) , is-prop-is-small l2 (type-𝔽 A))
-    ( λ p → is-small-equiv' (Fin (pr1 p)) (pr2 p) (is-small-Fin l2 (pr1 p)))
+is-small-is-finite l2 A = {!!}
 ```

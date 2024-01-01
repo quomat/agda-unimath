@@ -25,7 +25,7 @@ Given [large categories](category-theory.large-categories.md) `C` and `D`, a
 
 - a family of morphisms `γ : (x : C) → hom (F x) (G x)` such that the following
   **naturality condition** holds:
-- `(G f) ∘ (γ x) = (γ y) ∘ (F f)`, for all `f : hom x y`.
+- `(G f) ∘ (γ x) = {!!}
 
 ## Definition
 
@@ -40,42 +40,25 @@ module _
   where
 
   family-of-morphisms-functor-Large-Category : UUω
-  family-of-morphisms-functor-Large-Category =
-    family-of-morphisms-functor-Large-Precategory
-      ( large-precategory-Large-Category C)
-      ( large-precategory-Large-Category D)
-      ( F)
-      ( G)
+  family-of-morphisms-functor-Large-Category = {!!}
 
   naturality-family-of-morphisms-functor-Large-Category :
     family-of-morphisms-functor-Large-Category → UUω
-  naturality-family-of-morphisms-functor-Large-Category =
-    naturality-family-of-morphisms-functor-Large-Precategory
-      ( large-precategory-Large-Category C)
-      ( large-precategory-Large-Category D)
-      ( F)
-      ( G)
+  naturality-family-of-morphisms-functor-Large-Category = {!!}
 
   natural-transformation-Large-Category : UUω
-  natural-transformation-Large-Category =
-    natural-transformation-Large-Precategory
-      ( large-precategory-Large-Category C)
-      ( large-precategory-Large-Category D)
-      ( F)
-      ( G)
+  natural-transformation-Large-Category = {!!}
 
   hom-natural-transformation-Large-Category :
     natural-transformation-Large-Category →
     family-of-morphisms-functor-Large-Category
-  hom-natural-transformation-Large-Category =
-    hom-natural-transformation-Large-Precategory
+  hom-natural-transformation-Large-Category = {!!}
 
   naturality-natural-transformation-Large-Category :
     (τ : natural-transformation-Large-Category) →
     naturality-family-of-morphisms-functor-Large-Category
       (hom-natural-transformation-Large-Category τ)
-  naturality-natural-transformation-Large-Category =
-    naturality-natural-transformation-Large-Precategory
+  naturality-natural-transformation-Large-Category = {!!}
 ```
 
 ## Properties
@@ -95,28 +78,16 @@ module _
 
   hom-id-natural-transformation-Large-Category :
     family-of-morphisms-functor-Large-Category C D F F
-  hom-id-natural-transformation-Large-Category =
-    hom-id-natural-transformation-Large-Precategory
-      ( large-precategory-Large-Category C)
-      ( large-precategory-Large-Category D)
-      ( F)
+  hom-id-natural-transformation-Large-Category = {!!}
 
   naturality-id-natural-transformation-Large-Category :
     naturality-family-of-morphisms-functor-Large-Category C D F F
       hom-id-natural-transformation-Large-Category
-  naturality-id-natural-transformation-Large-Category =
-    naturality-id-natural-transformation-Large-Precategory
-      ( large-precategory-Large-Category C)
-      ( large-precategory-Large-Category D)
-      ( F)
+  naturality-id-natural-transformation-Large-Category = {!!}
 
   id-natural-transformation-Large-Category :
     natural-transformation-Large-Category C D F F
-  id-natural-transformation-Large-Category =
-    id-natural-transformation-Large-Precategory
-      ( large-precategory-Large-Category C)
-      ( large-precategory-Large-Category D)
-      ( F)
+  id-natural-transformation-Large-Category = {!!}
 ```
 
 ### Composition of natural transformations
@@ -136,38 +107,14 @@ module _
 
   hom-comp-natural-transformation-Large-Category :
     family-of-morphisms-functor-Large-Category C D F H
-  hom-comp-natural-transformation-Large-Category =
-    hom-comp-natural-transformation-Large-Precategory
-      ( large-precategory-Large-Category C)
-      ( large-precategory-Large-Category D)
-      ( F)
-      ( G)
-      ( H)
-      ( τ)
-      ( σ)
+  hom-comp-natural-transformation-Large-Category = {!!}
 
   naturality-comp-natural-transformation-Large-Category :
     naturality-family-of-morphisms-functor-Large-Category C D F H
       hom-comp-natural-transformation-Large-Category
-  naturality-comp-natural-transformation-Large-Category =
-    naturality-comp-natural-transformation-Large-Precategory
-      ( large-precategory-Large-Category C)
-      ( large-precategory-Large-Category D)
-      ( F)
-      ( G)
-      ( H)
-      ( τ)
-      ( σ)
+  naturality-comp-natural-transformation-Large-Category = {!!}
 
   comp-natural-transformation-Large-Category :
     natural-transformation-Large-Category C D F H
-  comp-natural-transformation-Large-Category =
-    comp-natural-transformation-Large-Precategory
-      ( large-precategory-Large-Category C)
-      ( large-precategory-Large-Category D)
-      ( F)
-      ( G)
-      ( H)
-      ( τ)
-      ( σ)
+  comp-natural-transformation-Large-Category = {!!}
 ```

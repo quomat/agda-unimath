@@ -68,7 +68,7 @@ module _
     coherence-triangle-maps' diagonal-left bottom left →
     coherence-triangle-maps diagonal-right right top →
     coherence-square-maps top left right bottom
-  coherence-square-htpy-coherence-triangles-maps L H K = (H ∙h L) ∙h K
+  coherence-square-htpy-coherence-triangles-maps L H K = {!!}
 
   coherence-square-htpy-coherence-triangles-maps' :
     { diagonal-left diagonal-right : A → Y} →
@@ -76,14 +76,14 @@ module _
     coherence-triangle-maps' diagonal-left bottom left →
     coherence-triangle-maps diagonal-right right top →
     coherence-square-maps top left right bottom
-  coherence-square-htpy-coherence-triangles-maps' L H K = H ∙h (L ∙h K)
+  coherence-square-htpy-coherence-triangles-maps' L H K = {!!}
 
   coherence-square-coherence-triangles-maps :
     ( diagonal : A → Y) →
     coherence-triangle-maps' diagonal bottom left →
     coherence-triangle-maps diagonal right top →
     coherence-square-maps top left right bottom
-  coherence-square-coherence-triangles-maps diagonal H K = H ∙h K
+  coherence-square-coherence-triangles-maps diagonal H K = {!!}
 
   compute-coherence-square-refl-htpy-coherence-triangles-maps :
     ( diagonal : A → Y) →
@@ -91,8 +91,7 @@ module _
     ( K : coherence-triangle-maps diagonal right top) →
     ( coherence-square-htpy-coherence-triangles-maps refl-htpy H K) ~
     ( coherence-square-coherence-triangles-maps diagonal H K)
-  compute-coherence-square-refl-htpy-coherence-triangles-maps diagonal H K x =
-    ap (_∙ K x) right-unit
+  compute-coherence-square-refl-htpy-coherence-triangles-maps diagonal H K x = {!!}
 ```
 
 ### Inverting squares horizontally and vertically
@@ -107,22 +106,14 @@ coherence-square-inv-horizontal :
   (top : A ≃ B) (left : A → X) (right : B → Y) (bottom : X ≃ Y) →
   coherence-square-maps (map-equiv top) left right (map-equiv bottom) →
   coherence-square-maps (map-inv-equiv top) right left (map-inv-equiv bottom)
-coherence-square-inv-horizontal top left right bottom H b =
-  map-eq-transpose-equiv-inv
-    ( bottom)
-    ( ( ap right (inv (is-section-map-inv-equiv top b))) ∙
-      ( inv (H (map-inv-equiv top b))))
+coherence-square-inv-horizontal top left right bottom H b = {!!}
 
 coherence-square-inv-vertical :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} {Y : UU l4}
   (top : A → B) (left : A ≃ X) (right : B ≃ Y) (bottom : X → Y) →
   coherence-square-maps top (map-equiv left) (map-equiv right) bottom →
   coherence-square-maps bottom (map-inv-equiv left) (map-inv-equiv right) top
-coherence-square-inv-vertical top left right bottom H x =
-  map-eq-transpose-equiv
-    ( right)
-    ( ( inv (H (map-inv-equiv left x))) ∙
-      ( ap bottom (is-section-map-inv-equiv left x)))
+coherence-square-inv-vertical top left right bottom H x = {!!}
 
 coherence-square-inv-all :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} {Y : UU l4}
@@ -137,18 +128,7 @@ coherence-square-inv-all :
     ( map-inv-equiv right)
     ( map-inv-equiv left)
     ( map-inv-equiv top)
-coherence-square-inv-all top left right bottom H =
-  coherence-square-inv-vertical
-    ( map-inv-equiv top)
-    ( right)
-    ( left)
-    ( map-inv-equiv bottom)
-    ( coherence-square-inv-horizontal
-      ( top)
-      ( map-equiv left)
-      ( map-equiv right)
-      ( bottom)
-      ( H))
+coherence-square-inv-all top left right bottom H = {!!}
 ```
 
 ### Any commuting square of maps induces a commuting square of function spaces
@@ -164,8 +144,7 @@ precomp-coherence-square-maps :
     ( precomp bottom X)
     ( precomp top X)
     ( precomp left X)
-precomp-coherence-square-maps top left right bottom H X =
-  htpy-precomp H X
+precomp-coherence-square-maps top left right bottom H X = {!!}
 ```
 
 ## Properties
@@ -201,86 +180,7 @@ module _
       ( coherence-square-inv-vertical top left right bottom H)
       ( refl-htpy)
       ( is-retraction-map-inv-equiv right)
-  left-inverse-law-pasting-vertical-coherence-square-maps H a =
-    ( right-unit) ∙
-    ( inv
-      ( ( ap
-          ( λ q →
-            ( q ∙ ap (map-inv-equiv right) (H a)) ∙
-            ( is-retraction-map-inv-equiv right (top a)))
-          ( triangle-eq-transpose-equiv-concat
-            ( right)
-            ( inv (H (map-inv-equiv left (map-equiv left a))))
-            ( ap bottom (is-section-map-inv-equiv left (map-equiv left a))))) ∙
-        ( assoc
-          ( ( map-eq-transpose-equiv
-              ( right)
-              ( inv (H (map-inv-equiv left (map-equiv left a))))) ∙
-            ( ap
-              ( map-inv-equiv right)
-              ( ap bottom (is-section-map-inv-equiv left (map-equiv left a)))))
-          ( ap (map-inv-equiv right) (H a))
-          ( is-retraction-map-inv-equiv right (top a))) ∙
-        ( left-whisk-square-identification
-          ( map-eq-transpose-equiv
-            ( right)
-            ( inv (H (map-inv-equiv left (map-equiv left a)))))
-          ( inv
-            ( coherence-square-identifications-comp-vertical
-              { p-left =
-                  ap
-                    ( map-inv-equiv right)
-                    ( H (map-inv-equiv left (map-equiv left a)))}
-              { p-top =
-                  ap
-                    ( map-inv-equiv right)
-                    ( ap
-                      ( bottom)
-                      ( is-section-map-inv-equiv left (map-equiv left a)))}
-              { q-bottom = ap top (is-retraction-map-inv-equiv left a)}
-              ( coherence-square-identifications-top-paste
-                ( ap
-                  ( map-inv-equiv right)
-                  ( H (map-inv-equiv left (map-equiv left a))))
-                ( _)
-                ( _)
-                ( _)
-                ( inv
-                  ( ap
-                    ( ap (map-inv-equiv right))
-                    ( ( ap (ap bottom) (coherence-map-inv-equiv left a)) ∙
-                      ( inv
-                        ( ap-comp
-                          ( bottom)
-                          ( map-equiv left)
-                          ( is-retraction-map-inv-equiv left a))))))
-                ( coherence-square-identifications-ap
-                  ( map-inv-equiv right)
-                  ( ap
-                    ( bottom ∘ map-equiv left)
-                    ( is-retraction-map-inv-equiv left a))
-                  ( H (map-inv-equiv left (map-equiv left a)))
-                  ( H a)
-                  ( ap
-                    ( map-equiv right ∘ top)
-                    ( is-retraction-map-inv-equiv left a))
-                  ( nat-htpy H (is-retraction-map-inv-equiv left a))))
-              ( coherence-square-identifications-top-paste _
-                ( ap top (is-retraction-map-inv-equiv left a))
-                ( _)
-                ( _)
-                ( ap-comp
-                  ( map-inv-equiv right)
-                  ( map-equiv right ∘ top)
-                  ( is-retraction-map-inv-equiv left a))
-                ( nat-htpy
-                  ( is-retraction-map-inv-equiv right ·r top)
-                  ( is-retraction-map-inv-equiv left a)))))) ∙
-        ( ap
-          ( _∙ ap top (is-retraction-map-inv-equiv left a))
-          ( right-inverse-eq-transpose-equiv
-            ( right)
-            ( H (map-inv-equiv left (map-equiv left a)))))))
+  left-inverse-law-pasting-vertical-coherence-square-maps H a = {!!}
 
   right-inverse-law-pasting-vertical-coherence-square-maps :
     ( H : coherence-square-maps top (map-equiv left) (map-equiv right) bottom) →
@@ -299,24 +199,7 @@ module _
       ( H)
       ( refl-htpy)
       ( is-section-map-inv-equiv right)
-  right-inverse-law-pasting-vertical-coherence-square-maps H a =
-    ( right-unit) ∙
-    ( inv
-      ( ( assoc
-          ( H (map-inv-equiv left a))
-          ( ap
-            ( map-equiv right)
-            ( coherence-square-inv-vertical top left right bottom H a))
-          ( is-section-map-inv-equiv right (bottom a))) ∙
-        ( ap
-          ( H (map-inv-equiv left a) ∙_)
-          ( triangle-eq-transpose-equiv
-            ( right)
-            ( ( inv (H (map-inv-equiv left a))) ∙
-              ( ap bottom (is-section-map-inv-equiv left a))))) ∙
-        ( is-retraction-left-concat-inv
-          ( H (map-inv-equiv left a))
-          ( ap bottom (is-section-map-inv-equiv left a)))))
+  right-inverse-law-pasting-vertical-coherence-square-maps H a = {!!}
 ```
 
 ### Associativity of vertical pasting
@@ -377,20 +260,7 @@ module _
         ( bottom)
         ( sq-mid)
         ( sq-bottom))
-  assoc-pasting-vertical-coherence-square-maps =
-    ( ap-concat-htpy
-      ( sq-bottom ·r mid-left ·r top-left)
-      ( ( distributive-left-whisk-concat-htpy
-          ( bottom-right)
-          ( sq-mid ·r top-left)
-          ( mid-right ·l sq-top)) ∙h
-        ( ap-concat-htpy
-          ( bottom-right ·l (sq-mid ·r top-left))
-          ( associative-left-whisk-comp bottom-right mid-right sq-top)))) ∙h
-    ( inv-htpy-assoc-htpy
-      ( sq-bottom ·r mid-left ·r top-left)
-      ( bottom-right ·l (sq-mid ·r top-left))
-      ( ( bottom-right ∘ mid-right) ·l sq-top))
+  assoc-pasting-vertical-coherence-square-maps = {!!}
 ```
 
 ### Naturality of commuting squares of maps with respect to identifications
@@ -401,12 +271,7 @@ square of coherence squares of maps and identifications:
 
 ```text
            ap f (ap g p)
-  f (g x) =============== f (g y)
-     ‖                       ‖
- H x ‖                       ‖ H y
-     ‖                       ‖
-  h (k x) =============== h (k y)
-           ap h (ap k p)           .
+  f (g x) = {!!}
 ```
 
 ```agda
@@ -423,7 +288,7 @@ module _
       ( H x)
       ( H y)
       ( ap right (ap top p))
-  nat-coherence-square-maps refl = right-unit
+  nat-coherence-square-maps refl = {!!}
 ```
 
 As a corollary, whenever we have two coherence squares touching at a vertex:
@@ -460,8 +325,7 @@ module _
       ( K ·r mid-left ·r left)
       ( K ·r mid-top ·r top)
       ( right ·l mid-right ·l H)
-  swap-nat-coherence-square-maps x =
-    nat-coherence-square-maps mid-right mid-bottom right bottom K (H x)
+  swap-nat-coherence-square-maps x = {!!}
 ```
 
 ### Commutativity of horizontal and vertical pasting
@@ -569,33 +433,7 @@ module _
         ( bottom-right)
         ( sq-left-bottom)
         ( sq-right-bottom)))
-  commutative-pasting-vertical-pasting-horizontal-coherence-square-maps =
-    ( ap-concat-htpy' _
-      ( distributive-left-whisk-concat-htpy
-        ( bottom-right)
-        ( sq-left-bottom ·r left-top)
-        ( mid-bottom ·l sq-left-top)) ∙h
-      ( both-whisk-square-htpy
-        ( bottom-right ·l (sq-left-bottom ·r left-top))
-        ( right-bottom ·l (sq-right-top ·r top-left))
-        ( inv-htpy
-          ( swap-nat-coherence-square-maps
-            ( top-left)
-            ( left-top)
-            ( mid-top)
-            ( mid-left)
-            ( mid-right)
-            ( mid-bottom)
-            ( right-bottom)
-            ( bottom-right)
-            ( sq-left-top)
-            ( sq-right-bottom))))) ∙h
-      ( ap-concat-htpy _
-        ( inv-htpy
-          ( distributive-left-whisk-concat-htpy
-            ( right-bottom)
-            ( mid-right ·l sq-left-top)
-            ( sq-right-top ·r top-left))))
+  commutative-pasting-vertical-pasting-horizontal-coherence-square-maps = {!!}
 ```
 
 ### Distributivity of pasting squares and transposing by precomposition
@@ -695,40 +533,7 @@ module _
     ( bottom-right)
     ( H)
     ( K)
-    ( h) =
-    equational-reasoning
-      eq-htpy
-        ( h ·l ((bottom-right ·l H) ∙h (K ·r top-left)))
-      ＝ eq-htpy
-          ( (h ·l (bottom-right ·l H)) ∙h ((h ·l K) ·r top-left))
-        by
-        ap
-          ( eq-htpy)
-          ( eq-htpy
-            ( distributive-left-whisk-concat-htpy
-              ( h)
-              ( bottom-right ·l H)
-              ( K ·r top-left)))
-      ＝ eq-htpy
-          ( h ·l (bottom-right ·l H)) ∙
-        eq-htpy
-          ( (h ·l K) ·r top-left)
-        by
-        eq-htpy-concat-htpy
-          ( h ·l (bottom-right ·l H))
-          ( (h ·l K) ·r top-left)
-      ＝ eq-htpy
-          ( (h ∘ bottom-right) ·l H) ∙
-          ap
-            ( precomp top-left W)
-            ( eq-htpy (h ·l K))
-        by
-        ap-binary
-          ( λ L q → eq-htpy L ∙ q)
-          ( eq-htpy (associative-left-whisk-comp h bottom-right H))
-          ( compute-eq-htpy-right-whisk
-            ( top-left)
-            ( h ·l K))
+    ( h) = {!!}
 
   distributive-precomp-pasting-vertical-coherence-square-maps :
     ( top : A → X) (left-top : A → B) (right-top : X → Y) (middle : B → Y) →
@@ -783,38 +588,7 @@ module _
     ( bottom)
     ( H)
     ( K)
-    ( h) =
-    equational-reasoning
-      eq-htpy
-        (h ·l ((K ·r left-top) ∙h (right-bottom ·l H)))
-      ＝ eq-htpy
-          ( ((h ·l K) ·r left-top) ∙h (h ·l (right-bottom ·l H)))
-        by
-        ap
-          ( eq-htpy)
-          ( eq-htpy
-            ( distributive-left-whisk-concat-htpy
-            ( h)
-            ( K ·r left-top)
-            ( right-bottom ·l H)))
-      ＝ eq-htpy
-          ( (h ·l K) ·r left-top) ∙
-        eq-htpy
-          ( h ·l (right-bottom ·l H))
-        by
-        eq-htpy-concat-htpy
-          ( (h ·l K) ·r left-top)
-          ( h ·l (right-bottom ·l H))
-      ＝ ap
-          ( precomp left-top W)
-          ( eq-htpy (h ·l K)) ∙
-        eq-htpy
-          ( (h ∘ right-bottom) ·l H)
-        by
-        ap-binary
-          ( λ p L → p ∙ eq-htpy L)
-          ( compute-eq-htpy-right-whisk left-top (h ·l K))
-          ( eq-htpy (associative-left-whisk-comp h right-bottom H))
+    ( h) = {!!}
 ```
 
 ### Transposing by precomposition of whiskered squares
@@ -842,7 +616,7 @@ and transposing it by precomposition results in the square
 ```
 
 This fact can be written as distribution of right whiskering over transposition:
-`W^(H ·r f) = W^f ·l W^H`.
+`W^(H ·r f) = {!!}
 
 ```agda
 module _
@@ -863,12 +637,11 @@ module _
       ( W) ~
     ( ( precomp f W) ·l
       ( precomp-coherence-square-maps top left right bottom H W))
-  distributive-precomp-right-whisk-coherence-square-maps f g =
-    compute-eq-htpy-right-whisk f (g ·l H)
+  distributive-precomp-right-whisk-coherence-square-maps f g = {!!}
 ```
 
 Similarly, we can calculate transpositions of left-whiskered squares with the
-formula `W^(f ·l H) = W^H ·r W^f`.
+formula `W^(f ·l H) = {!!}
 
 ```agda
   distributive-precomp-left-whisk-coherence-square-maps :
@@ -882,8 +655,7 @@ formula `W^(f ·l H) = W^H ·r W^f`.
       ( W) ~
     ( ( precomp-coherence-square-maps top left right bottom H W) ·r
       ( precomp f W))
-  distributive-precomp-left-whisk-coherence-square-maps f g =
-    ap eq-htpy (eq-htpy (λ a → inv (ap-comp g f (H a))))
+  distributive-precomp-left-whisk-coherence-square-maps f g = {!!}
 ```
 
 ### The square of function spaces induced by a composition of triangles is homotopic to the composition of induced triangles of function spaces
@@ -927,11 +699,7 @@ module _
     ( L)
     ( H)
     ( K)
-    ( h) =
-    ( compute-concat-htpy-precomp (H ∙h L) K W h) ∙
-    ( ap
-      ( _∙ precomp-coherence-triangle-maps diagonal-right right top K W h)
-      ( compute-concat-htpy-precomp H L W h))
+    ( h) = {!!}
 
   distributive-precomp-coherence-square-left-map-triangle-coherence-triangle-maps' :
     { diagonal-left diagonal-right : A → Y} →
@@ -965,11 +733,7 @@ module _
     ( L)
     ( H)
     ( K)
-    ( h) =
-    ( compute-concat-htpy-precomp H (L ∙h K) W h) ∙
-    ( ap
-      ( precomp-coherence-triangle-maps' diagonal-left bottom left H W h ∙_)
-      ( compute-concat-htpy-precomp L K W h))
+    ( h) = {!!}
 
   distributive-precomp-coherence-square-comp-coherence-triangles-maps :
     ( diagonal : A → Y) →
@@ -1001,6 +765,5 @@ module _
     ( diagonal)
     ( H)
     ( K)
-    ( h) =
-    compute-concat-htpy-precomp H K W h
+    ( h) = {!!}
 ```

@@ -48,7 +48,5 @@ coherence-square-hom-Large-Precategory :
   (right : hom-Large-Precategory C y w)
   (bottom : hom-Large-Precategory C z w) →
   UU (β l1 l4)
-coherence-square-hom-Large-Precategory C top left right bottom =
-  ( comp-hom-Large-Precategory C bottom left) ＝
-  ( comp-hom-Large-Precategory C right top)
+coherence-square-hom-Large-Precategory C top left right bottom = {!!}
 ```

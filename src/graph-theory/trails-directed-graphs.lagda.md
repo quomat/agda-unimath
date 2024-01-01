@@ -30,22 +30,20 @@ module _
 
   is-trail-walk-Directed-Graph :
     {x y : vertex-Directed-Graph G} → walk-Directed-Graph G x y → UU (l1 ⊔ l2)
-  is-trail-walk-Directed-Graph w =
-    is-injective (total-edge-edge-on-walk-Directed-Graph G w)
+  is-trail-walk-Directed-Graph w = {!!}
 
   trail-Directed-Graph : (x y : vertex-Directed-Graph G) → UU (l1 ⊔ l2)
-  trail-Directed-Graph x y =
-    Σ (walk-Directed-Graph G x y) (is-trail-walk-Directed-Graph)
+  trail-Directed-Graph x y = {!!}
 
   walk-trail-Directed-Graph :
     {x y : vertex-Directed-Graph G} →
     trail-Directed-Graph x y → walk-Directed-Graph G x y
-  walk-trail-Directed-Graph = pr1
+  walk-trail-Directed-Graph = {!!}
 
   is-trail-trail-Directed-Graph :
     {x y : vertex-Directed-Graph G} (t : trail-Directed-Graph x y) →
     is-trail-walk-Directed-Graph (walk-trail-Directed-Graph t)
-  is-trail-trail-Directed-Graph = pr2
+  is-trail-trail-Directed-Graph = {!!}
 ```
 
 ## External links

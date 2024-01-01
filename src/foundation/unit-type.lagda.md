@@ -42,7 +42,7 @@ record unit : UU lzero where
 
 ```agda
 ind-unit : {l : Level} {P : unit → UU l} → P star → (x : unit) → P x
-ind-unit p star = p
+ind-unit p star = {!!}
 ```
 
 ### The terminal map out of a type
@@ -53,7 +53,7 @@ module _
   where
 
   terminal-map : A → unit
-  terminal-map = const A unit star
+  terminal-map = {!!}
 ```
 
 ### Points as maps out of the unit type
@@ -64,23 +64,23 @@ module _
   where
 
   point : A → (unit → A)
-  point = const unit A
+  point = {!!}
 ```
 
 ### Raising the universe level of the unit type
 
 ```agda
 raise-unit : (l : Level) → UU l
-raise-unit l = raise l unit
+raise-unit l = {!!}
 
 raise-star : {l : Level} → raise l unit
-raise-star = map-raise star
+raise-star = {!!}
 
 raise-terminal-map : {l1 l2 : Level} {A : UU l1} → A → raise-unit l2
-raise-terminal-map {l2 = l2} = const _ (raise-unit l2) raise-star
+raise-terminal-map {l2 = l2} = {!!}
 
 compute-raise-unit : (l : Level) → unit ≃ raise-unit l
-compute-raise-unit l = compute-raise l unit
+compute-raise-unit l = {!!}
 ```
 
 ## Properties
@@ -90,8 +90,7 @@ compute-raise-unit l = compute-raise l unit
 ```agda
 abstract
   is-contr-unit : is-contr unit
-  pr1 is-contr-unit = star
-  pr2 is-contr-unit star = refl
+  pr1 is-contr-unit = {!!}
 ```
 
 ### Any contractible type is equivalent to the unit type
@@ -104,19 +103,14 @@ module _
   abstract
     is-equiv-terminal-map-is-contr :
       is-contr A → is-equiv (terminal-map {A = A})
-    pr1 (pr1 (is-equiv-terminal-map-is-contr H)) = ind-unit (center H)
-    pr2 (pr1 (is-equiv-terminal-map-is-contr H)) = ind-unit refl
-    pr1 (pr2 (is-equiv-terminal-map-is-contr H)) x = center H
-    pr2 (pr2 (is-equiv-terminal-map-is-contr H)) = contraction H
+    pr1 (pr1 (is-equiv-terminal-map-is-contr H)) = {!!}
 
   equiv-unit-is-contr : is-contr A → A ≃ unit
-  pr1 (equiv-unit-is-contr H) = terminal-map
-  pr2 (equiv-unit-is-contr H) = is-equiv-terminal-map-is-contr H
+  pr1 (equiv-unit-is-contr H) = {!!}
 
   abstract
     is-contr-is-equiv-const : is-equiv (terminal-map {A = A}) → is-contr A
-    pr1 (is-contr-is-equiv-const ((g , G) , (h , H))) = h star
-    pr2 (is-contr-is-equiv-const ((g , G) , (h , H))) = H
+    pr1 (is-contr-is-equiv-const ((g , G) , (h , H))) = {!!}
 ```
 
 ### The unit type is a proposition
@@ -124,11 +118,11 @@ module _
 ```agda
 abstract
   is-prop-unit : is-prop unit
-  is-prop-unit = is-prop-is-contr is-contr-unit
+  is-prop-unit = {!!}
 
 unit-Prop : Prop lzero
-pr1 unit-Prop = unit
-pr2 unit-Prop = is-prop-unit
+pr1 unit-Prop = {!!}
+pr2 unit-Prop = {!!}
 ```
 
 ### The unit type is a set
@@ -136,37 +130,35 @@ pr2 unit-Prop = is-prop-unit
 ```agda
 abstract
   is-set-unit : is-set unit
-  is-set-unit = is-trunc-succ-is-trunc neg-one-𝕋 is-prop-unit
+  is-set-unit = {!!}
 
 unit-Set : Set lzero
-pr1 unit-Set = unit
-pr2 unit-Set = is-set-unit
+pr1 unit-Set = {!!}
+pr2 unit-Set = {!!}
 ```
 
 ```agda
 abstract
   is-contr-raise-unit :
     {l1 : Level} → is-contr (raise-unit l1)
-  is-contr-raise-unit {l1} =
-    is-contr-equiv' unit (compute-raise l1 unit) is-contr-unit
+  is-contr-raise-unit {l1} = {!!}
 
 abstract
   is-prop-raise-unit :
     {l1 : Level} → is-prop (raise-unit l1)
-  is-prop-raise-unit {l1} =
-    is-prop-equiv' (compute-raise l1 unit) is-prop-unit
+  is-prop-raise-unit {l1} = {!!}
 
 raise-unit-Prop :
   (l1 : Level) → Prop l1
-pr1 (raise-unit-Prop l1) = raise-unit l1
-pr2 (raise-unit-Prop l1) = is-prop-raise-unit
+pr1 (raise-unit-Prop l1) = {!!}
+pr2 (raise-unit-Prop l1) = {!!}
 
 abstract
   is-set-raise-unit :
     {l1 : Level} → is-set (raise-unit l1)
-  is-set-raise-unit = is-trunc-succ-is-trunc neg-one-𝕋 is-prop-raise-unit
+  is-set-raise-unit = {!!}
 
 raise-unit-Set : Set lzero
-pr1 raise-unit-Set = unit
-pr2 raise-unit-Set = is-set-unit
+pr1 raise-unit-Set = {!!}
+pr2 raise-unit-Set = {!!}
 ```

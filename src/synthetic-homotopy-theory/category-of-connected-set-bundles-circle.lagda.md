@@ -33,8 +33,5 @@ category is the categorification of the [poset](order-theory.posets.md) of the
 
 ```agda
 connected-set-bundle-𝕊¹-Large-Category : Large-Category (lsuc) (_⊔_)
-connected-set-bundle-𝕊¹-Large-Category =
-  large-category-Full-Large-Subcategory
-    ( Family-Of-Sets-Large-Category 𝕊¹)
-    ( is-connected-prop-set-bundle-𝕊¹)
+connected-set-bundle-𝕊¹-Large-Category = {!!}
 ```

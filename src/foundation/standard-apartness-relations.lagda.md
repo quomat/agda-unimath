@@ -36,8 +36,7 @@ is [equivalent](foundation.logical-equivalences.md) to
 is-standard-Apartness-Relation :
   {l1 l2 : Level} (l3 : Level) {A : UU l1} (R : Apartness-Relation l2 A) →
   UU (l1 ⊔ l2 ⊔ lsuc l3)
-is-standard-Apartness-Relation {l1} {l2} l3 {A} R =
-  LEM l3 → (x y : A) → (x ≠ y) ↔ apart-Apartness-Relation R x y
+is-standard-Apartness-Relation {l1} {l2} l3 {A} R = {!!}
 ```
 
 ## Properties
@@ -48,10 +47,6 @@ is-standard-Apartness-Relation {l1} {l2} l3 {A} R =
 is-standard-is-tight-Apartness-Relation :
   {l1 l2 : Level} {A : UU l1} (R : Apartness-Relation l2 A) →
   is-tight-Apartness-Relation R → is-standard-Apartness-Relation l2 R
-pr1 (is-standard-is-tight-Apartness-Relation R H lem x y) np =
-  double-negation-elim-is-decidable
-    ( lem (rel-Apartness-Relation R x y))
-    ( map-neg (H x y) np)
-pr2 (is-standard-is-tight-Apartness-Relation R H lem x .x) r refl =
-  antirefl-Apartness-Relation R x r
+pr1 (is-standard-is-tight-Apartness-Relation R H lem x y) np = {!!}
+pr2 (is-standard-is-tight-Apartness-Relation R H lem x .x) r refl = {!!}
 ```

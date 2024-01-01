@@ -34,58 +34,36 @@ module _
   where
 
   is-iso-Set : (f : hom-Set A B) → UU (l1 ⊔ l2)
-  is-iso-Set f = Σ (hom-Set B A) (λ g → ((f ∘ g) ＝ id) × ((g ∘ f) ＝ id))
+  is-iso-Set f = {!!}
 
   iso-Set : UU (l1 ⊔ l2)
-  iso-Set = Σ (hom-Set A B) is-iso-Set
+  iso-Set = {!!}
 
   map-iso-Set : iso-Set → type-Set A → type-Set B
-  map-iso-Set = pr1
+  map-iso-Set = {!!}
 
   is-iso-map-iso-Set : (f : iso-Set) → is-iso-Set (map-iso-Set f)
-  is-iso-map-iso-Set = pr2
+  is-iso-map-iso-Set = {!!}
 
   is-proof-irrelevant-is-iso-Set :
     (f : hom-Set A B) → is-proof-irrelevant (is-iso-Set f)
-  pr1 (is-proof-irrelevant-is-iso-Set f H) = H
-  pr2 (is-proof-irrelevant-is-iso-Set f (g , p , q)) (g' , p' , q') =
-    eq-type-subtype
-      ( λ h →
-        prod-Prop
-          ( Id-Prop (hom-set-Set B B) (f ∘ h) id)
-          ( Id-Prop (hom-set-Set A A) (h ∘ f) id))
-      ( ( ap (λ h → g ∘ h) (inv p')) ∙
-        ( ap (λ h → h ∘ g') q))
+  pr1 (is-proof-irrelevant-is-iso-Set f H) = {!!}
 
   is-prop-is-iso-Set : (f : hom-Set A B) → is-prop (is-iso-Set f)
-  is-prop-is-iso-Set f =
-    is-prop-is-proof-irrelevant (is-proof-irrelevant-is-iso-Set f)
+  is-prop-is-iso-Set f = {!!}
 
   is-iso-is-equiv-Set : {f : hom-Set A B} → is-equiv f → is-iso-Set f
-  pr1 (is-iso-is-equiv-Set H) = map-inv-is-equiv H
-  pr1 (pr2 (is-iso-is-equiv-Set H)) = eq-htpy (is-section-map-inv-is-equiv H)
-  pr2 (pr2 (is-iso-is-equiv-Set H)) = eq-htpy (is-retraction-map-inv-is-equiv H)
+  pr1 (is-iso-is-equiv-Set H) = {!!}
 
   is-equiv-is-iso-Set : {f : hom-Set A B} → is-iso-Set f → is-equiv f
-  is-equiv-is-iso-Set H =
-    is-equiv-is-invertible
-      ( pr1 H)
-      ( htpy-eq (pr1 (pr2 H)))
-      ( htpy-eq (pr2 (pr2 H)))
+  is-equiv-is-iso-Set H = {!!}
 
   iso-equiv-Set : type-equiv-Set A B → iso-Set
-  pr1 (iso-equiv-Set e) = map-equiv e
-  pr2 (iso-equiv-Set e) = is-iso-is-equiv-Set (is-equiv-map-equiv e)
+  pr1 (iso-equiv-Set e) = {!!}
 
   equiv-iso-Set : iso-Set → type-equiv-Set A B
-  pr1 (equiv-iso-Set f) = map-iso-Set f
-  pr2 (equiv-iso-Set f) = is-equiv-is-iso-Set (is-iso-map-iso-Set f)
+  pr1 (equiv-iso-Set f) = {!!}
 
   equiv-iso-equiv-Set : type-equiv-Set A B ≃ iso-Set
-  equiv-iso-equiv-Set =
-    equiv-type-subtype
-      ( is-property-is-equiv)
-      ( is-prop-is-iso-Set)
-      ( λ f → is-iso-is-equiv-Set)
-      ( λ f → is-equiv-is-iso-Set)
+  equiv-iso-equiv-Set = {!!}
 ```

@@ -40,14 +40,14 @@ universe level, and there is a
 
 ```agda
 Set-Large-Precategory : Large-Precategory lsuc (_⊔_)
-obj-Large-Precategory Set-Large-Precategory = Set
-hom-set-Large-Precategory Set-Large-Precategory = hom-set-Set
-comp-hom-Large-Precategory Set-Large-Precategory g f = g ∘ f
-id-hom-Large-Precategory Set-Large-Precategory = id
-associative-comp-hom-Large-Precategory Set-Large-Precategory h g f = refl
-inv-associative-comp-hom-Large-Precategory Set-Large-Precategory h g f = refl
-left-unit-law-comp-hom-Large-Precategory Set-Large-Precategory f = refl
-right-unit-law-comp-hom-Large-Precategory Set-Large-Precategory f = refl
+obj-Large-Precategory Set-Large-Precategory = {!!}
+hom-set-Large-Precategory Set-Large-Precategory = {!!}
+comp-hom-Large-Precategory Set-Large-Precategory g f = {!!}
+id-hom-Large-Precategory Set-Large-Precategory = {!!}
+associative-comp-hom-Large-Precategory Set-Large-Precategory h g f = {!!}
+inv-associative-comp-hom-Large-Precategory Set-Large-Precategory h g f = {!!}
+left-unit-law-comp-hom-Large-Precategory Set-Large-Precategory f = {!!}
+right-unit-law-comp-hom-Large-Precategory Set-Large-Precategory f = {!!}
 ```
 
 ### The large category of sets
@@ -56,34 +56,27 @@ right-unit-law-comp-hom-Large-Precategory Set-Large-Precategory f = refl
 id-iso-Set :
   {l : Level} {X : obj-Large-Precategory Set-Large-Precategory l} →
   iso-Large-Precategory Set-Large-Precategory X X
-id-iso-Set {l} {X} = id-iso-Large-Precategory (Set-Large-Precategory) {l} {X}
+id-iso-Set {l} {X} = {!!}
 
 iso-eq-Set :
   {l : Level} (X Y : obj-Large-Precategory Set-Large-Precategory l) →
   X ＝ Y → iso-Large-Precategory Set-Large-Precategory X Y
-iso-eq-Set = iso-eq-Large-Precategory Set-Large-Precategory
+iso-eq-Set = {!!}
 
 is-large-category-Set-Large-Precategory :
   is-large-category-Large-Precategory Set-Large-Precategory
-is-large-category-Set-Large-Precategory {l} X =
-  fundamental-theorem-id
-    ( is-contr-equiv'
-      ( Σ (Set l) (type-equiv-Set X))
-      ( equiv-tot (equiv-iso-equiv-Set X))
-      ( is-torsorial-equiv-Set X))
-    ( iso-eq-Set X)
+is-large-category-Set-Large-Precategory {l} X = {!!}
 
 Set-Large-Category : Large-Category lsuc (_⊔_)
-large-precategory-Large-Category Set-Large-Category = Set-Large-Precategory
-is-large-category-Large-Category Set-Large-Category =
-  is-large-category-Set-Large-Precategory
+large-precategory-Large-Category Set-Large-Category = {!!}
+is-large-category-Large-Category Set-Large-Category = {!!}
 ```
 
 ### The precategory of small sets
 
 ```agda
 Set-Precategory : (l : Level) → Precategory (lsuc l) l
-Set-Precategory = precategory-Large-Precategory Set-Large-Precategory
+Set-Precategory = {!!}
 ```
 
 ### The category of small sets
@@ -92,12 +85,11 @@ The precategory of sets and functions in a given universe is a category.
 
 ```agda
 Set-Category : (l : Level) → Category (lsuc l) l
-Set-Category = category-Large-Category Set-Large-Category
+Set-Category = {!!}
 
 is-category-Set-Precategory :
   (l : Level) → is-category-Precategory (Set-Precategory l)
-is-category-Set-Precategory l =
-  is-category-Category (Set-Category l)
+is-category-Set-Precategory l = {!!}
 ```
 
 ## Comments

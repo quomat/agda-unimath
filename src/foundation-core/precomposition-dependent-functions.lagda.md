@@ -37,7 +37,7 @@ module _
   where
 
   precomp-Π : ((b : B) → C b) → ((a : A) → C (f a))
-  precomp-Π h a = h (f a)
+  precomp-Π h a = {!!}
 ```
 
 ## Properties
@@ -52,5 +52,5 @@ module _
 
   htpy-precomp-Π :
     dependent-homotopy (λ _ → C) H (precomp-Π f C h) (precomp-Π g C h)
-  htpy-precomp-Π x = apd h (H x)
+  htpy-precomp-Π x = {!!}
 ```

@@ -38,8 +38,7 @@ follow from the [univalence axiom](foundation.univalence.md) that the
 ```agda
 unlabeled-structure-species-types :
   {l1 l2 : Level} (F : species-types l1 l2) → ℕ → UU (lsuc l1 ⊔ l2)
-unlabeled-structure-species-types {l1} {l2} F n =
-  Σ (UU-Fin l1 n) (λ X → F (type-UU-Fin n X))
+unlabeled-structure-species-types {l1} {l2} F n = {!!}
 
 module _
   {l1 l2 : Level} (F : species-types l1 l2) {k : ℕ}
@@ -47,26 +46,21 @@ module _
   where
 
   type-of-cardinality-unlabeled-structure-species-types : UU-Fin l1 k
-  type-of-cardinality-unlabeled-structure-species-types = pr1 X
+  type-of-cardinality-unlabeled-structure-species-types = {!!}
 
   type-unlabeled-structure-species-types : UU l1
-  type-unlabeled-structure-species-types =
-    type-UU-Fin k type-of-cardinality-unlabeled-structure-species-types
+  type-unlabeled-structure-species-types = {!!}
 
   has-cardinality-type-unlabeled-structure-species-types :
     has-cardinality k type-unlabeled-structure-species-types
-  has-cardinality-type-unlabeled-structure-species-types =
-    has-cardinality-type-UU-Fin
-      k
-      type-of-cardinality-unlabeled-structure-species-types
+  has-cardinality-type-unlabeled-structure-species-types = {!!}
 
   finite-type-unlabeled-structure-species-types : 𝔽 l1
-  finite-type-unlabeled-structure-species-types =
-    finite-type-UU-Fin k type-of-cardinality-unlabeled-structure-species-types
+  finite-type-unlabeled-structure-species-types = {!!}
 
   structure-unlabeled-structure-species-types :
     F type-unlabeled-structure-species-types
-  structure-unlabeled-structure-species-types = pr2 X
+  structure-unlabeled-structure-species-types = {!!}
 ```
 
 ### Equivalences of unlabeled structures of a species

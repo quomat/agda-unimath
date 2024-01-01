@@ -48,10 +48,7 @@ module _
             ( ind-coprod _ HA HB))
           ( inl x)) ∘
       ( fiber-map-coprod-inl-fiber f g x))
-  triangle-descent-square-fiber-map-coprod-inl-fiber x (pair a' p) =
-    eq-pair-Σ refl
-      ( ap (concat (inv (HA a')) (αA x))
-        ( ap-comp (ind-coprod _ αA αB) inl p))
+  triangle-descent-square-fiber-map-coprod-inl-fiber x (pair a' p) = {!!}
 
   triangle-descent-square-fiber-map-coprod-inr-fiber :
     (y : B) →
@@ -63,10 +60,7 @@ module _
             ( ind-coprod _ HA HB))
           ( inr y)) ∘
       ( fiber-map-coprod-inr-fiber f g y))
-  triangle-descent-square-fiber-map-coprod-inr-fiber y ( pair b' p) =
-    eq-pair-Σ refl
-      ( ap (concat (inv (HB b')) (αB y))
-        ( ap-comp (ind-coprod _ αA αB) inr p))
+  triangle-descent-square-fiber-map-coprod-inr-fiber y ( pair b' p) = {!!}
 
 module _
   {l1 l2 l3 l1' l2' l3' : Level}
@@ -77,20 +71,7 @@ module _
   cone-descent-coprod :
     (cone-A' : cone f i A') (cone-B' : cone g i B') →
     cone (ind-coprod _ f g) i (A' + B')
-  pr1 (cone-descent-coprod (pair h (pair f' H)) (pair k (pair g' K))) =
-    map-coprod h k
-  pr1
-    ( pr2 (cone-descent-coprod (pair h (pair f' H)) (pair k (pair g' K))))
-    ( inl a') = f' a'
-  pr1
-    ( pr2 (cone-descent-coprod (pair h (pair f' H)) (pair k (pair g' K))))
-    ( inr b') = g' b'
-  pr2
-    ( pr2 (cone-descent-coprod (pair h (pair f' H)) (pair k (pair g' K))))
-    ( inl a') = H a'
-  pr2
-    ( pr2 (cone-descent-coprod (pair h (pair f' H)) (pair k (pair g' K))))
-    ( inr b') = K b'
+  pr1 (cone-descent-coprod (pair h (pair f' H)) (pair k (pair g' K))) = {!!}
 
   abstract
     descent-coprod :
@@ -99,86 +80,19 @@ module _
       is-pullback g i cone-B' →
       is-pullback (ind-coprod _ f g) i (cone-descent-coprod cone-A' cone-B')
     descent-coprod (pair h (pair f' H)) (pair k (pair g' K))
-      is-pb-cone-A' is-pb-cone-B' =
-      is-pullback-is-fiberwise-equiv-map-fiber-cone
-        ( ind-coprod _ f g)
-        ( i)
-        ( cone-descent-coprod (triple h f' H) (triple k g' K))
-        ( α)
-      where
-      α :
-        is-fiberwise-equiv
-          ( map-fiber-cone
-            ( ind-coprod (λ _ → X) f g)
-            ( i)
-            ( cone-descent-coprod (triple h f' H) (triple k g' K)))
-      α (inl x) =
-        is-equiv-right-map-triangle
-          ( map-fiber-cone f i (triple h f' H) x)
-          ( map-fiber-cone (ind-coprod _ f g) i
-            ( cone-descent-coprod (triple h f' H) (triple k g' K))
-            ( inl x))
-          ( fiber-map-coprod-inl-fiber h k x)
-          ( triangle-descent-square-fiber-map-coprod-inl-fiber
-            h k i f g f' g' H K x)
-          ( is-fiberwise-equiv-map-fiber-cone-is-pullback f i
-            ( triple h f' H) is-pb-cone-A' x)
-          ( is-equiv-fiber-map-coprod-inl-fiber h k x)
-      α (inr y) =
-        is-equiv-right-map-triangle
-          ( map-fiber-cone g i (triple k g' K) y)
-          ( map-fiber-cone
-            ( ind-coprod _ f g) i
-            ( cone-descent-coprod (triple h f' H) (triple k g' K))
-            ( inr y))
-          ( fiber-map-coprod-inr-fiber h k y)
-          ( triangle-descent-square-fiber-map-coprod-inr-fiber
-            h k i f g f' g' H K y)
-          ( is-fiberwise-equiv-map-fiber-cone-is-pullback g i
-            ( triple k g' K) is-pb-cone-B' y)
-          ( is-equiv-fiber-map-coprod-inr-fiber h k y)
+      is-pb-cone-A' is-pb-cone-B' = {!!}
 
   abstract
     descent-coprod-inl :
       (cone-A' : cone f i A') (cone-B' : cone g i B') →
       is-pullback (ind-coprod _ f g) i (cone-descent-coprod cone-A' cone-B') →
       is-pullback f i cone-A'
-    descent-coprod-inl (pair h (pair f' H)) (pair k (pair g' K)) is-pb-dsq =
-        is-pullback-is-fiberwise-equiv-map-fiber-cone f i (triple h f' H)
-          ( λ a →
-            is-equiv-left-map-triangle
-            ( map-fiber-cone f i (triple h f' H) a)
-            ( map-fiber-cone (ind-coprod _ f g) i
-              ( cone-descent-coprod (triple h f' H) (triple k g' K))
-              ( inl a))
-            ( fiber-map-coprod-inl-fiber h k a)
-            ( triangle-descent-square-fiber-map-coprod-inl-fiber
-              h k i f g f' g' H K a)
-            ( is-equiv-fiber-map-coprod-inl-fiber h k a)
-            ( is-fiberwise-equiv-map-fiber-cone-is-pullback (ind-coprod _ f g) i
-              ( cone-descent-coprod ( triple h f' H) (triple k g' K))
-              ( is-pb-dsq)
-              ( inl a)))
+    descent-coprod-inl (pair h (pair f' H)) (pair k (pair g' K)) is-pb-dsq = {!!}
 
   abstract
     descent-coprod-inr :
       (cone-A' : cone f i A') (cone-B' : cone g i B') →
       is-pullback (ind-coprod _ f g) i (cone-descent-coprod cone-A' cone-B') →
       is-pullback g i cone-B'
-    descent-coprod-inr (pair h (pair f' H)) (pair k (pair g' K)) is-pb-dsq =
-        is-pullback-is-fiberwise-equiv-map-fiber-cone g i (triple k g' K)
-          ( λ b →
-            is-equiv-left-map-triangle
-            ( map-fiber-cone g i (triple k g' K) b)
-            ( map-fiber-cone (ind-coprod _ f g) i
-              ( cone-descent-coprod (triple h f' H) (triple k g' K))
-              ( inr b))
-            ( fiber-map-coprod-inr-fiber h k b)
-            ( triangle-descent-square-fiber-map-coprod-inr-fiber
-              h k i f g f' g' H K b)
-            ( is-equiv-fiber-map-coprod-inr-fiber h k b)
-            ( is-fiberwise-equiv-map-fiber-cone-is-pullback (ind-coprod _ f g) i
-              ( cone-descent-coprod (triple h f' H) (triple k g' K))
-              ( is-pb-dsq)
-              ( inr b)))
+    descent-coprod-inr (pair h (pair f' H)) (pair k (pair g' K)) is-pb-dsq = {!!}
 ```

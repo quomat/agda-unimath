@@ -37,10 +37,7 @@ module _
   where
 
   circuit-Undirected-Graph : UU (lsuc lzero ⊔ l1 ⊔ l2)
-  circuit-Undirected-Graph =
-    Σ ( Polygon k)
-      ( λ H →
-        totally-faithful-hom-Undirected-Graph (undirected-graph-Polygon k H) G)
+  circuit-Undirected-Graph = {!!}
 ```
 
 ## External links

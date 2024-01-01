@@ -25,5 +25,5 @@ consisting of elements `a` such that `f a ∈ S`.
 preimage-subtype :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
   subtype l3 B → subtype l3 A
-preimage-subtype f S a = S (f a)
+preimage-subtype f S a = {!!}
 ```

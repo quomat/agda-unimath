@@ -45,36 +45,25 @@ module _
     {l2 l3 : Level} →
     radical-ideal-Commutative-Ring l2 A →
     radical-ideal-Commutative-Ring l3 A → Prop (l1 ⊔ l2 ⊔ l3)
-  leq-prop-radical-ideal-Commutative-Ring I J =
-    leq-prop-ideal-Commutative-Ring A
-      ( ideal-radical-ideal-Commutative-Ring A I)
-      ( ideal-radical-ideal-Commutative-Ring A J)
+  leq-prop-radical-ideal-Commutative-Ring I J = {!!}
 
   leq-radical-ideal-Commutative-Ring :
     {l2 l3 : Level} →
     radical-ideal-Commutative-Ring l2 A →
     radical-ideal-Commutative-Ring l3 A → UU (l1 ⊔ l2 ⊔ l3)
-  leq-radical-ideal-Commutative-Ring I J =
-    leq-ideal-Commutative-Ring A
-      ( ideal-radical-ideal-Commutative-Ring A I)
-      ( ideal-radical-ideal-Commutative-Ring A J)
+  leq-radical-ideal-Commutative-Ring I J = {!!}
 
   is-prop-leq-radical-ideal-Commutative-Ring :
     {l2 l3 : Level}
     (I : radical-ideal-Commutative-Ring l2 A)
     (J : radical-ideal-Commutative-Ring l3 A) →
     is-prop (leq-radical-ideal-Commutative-Ring I J)
-  is-prop-leq-radical-ideal-Commutative-Ring I J =
-    is-prop-leq-ideal-Commutative-Ring A
-      ( ideal-radical-ideal-Commutative-Ring A I)
-      ( ideal-radical-ideal-Commutative-Ring A J)
+  is-prop-leq-radical-ideal-Commutative-Ring I J = {!!}
 
   refl-leq-radical-ideal-Commutative-Ring :
     {l2 : Level} (I : radical-ideal-Commutative-Ring l2 A) →
     leq-radical-ideal-Commutative-Ring I I
-  refl-leq-radical-ideal-Commutative-Ring I =
-    refl-leq-ideal-Commutative-Ring A
-      ( ideal-radical-ideal-Commutative-Ring A I)
+  refl-leq-radical-ideal-Commutative-Ring I = {!!}
 
   transitive-leq-radical-ideal-Commutative-Ring :
     {l2 l3 l4 : Level}
@@ -84,24 +73,13 @@ module _
     leq-radical-ideal-Commutative-Ring J K →
     leq-radical-ideal-Commutative-Ring I J →
     leq-radical-ideal-Commutative-Ring I K
-  transitive-leq-radical-ideal-Commutative-Ring I J K =
-    transitive-leq-ideal-Commutative-Ring A
-      ( ideal-radical-ideal-Commutative-Ring A I)
-      ( ideal-radical-ideal-Commutative-Ring A J)
-      ( ideal-radical-ideal-Commutative-Ring A K)
+  transitive-leq-radical-ideal-Commutative-Ring I J K = {!!}
 
   antisymmetric-leq-radical-ideal-Commutative-Ring :
     {l2 : Level} (I J : radical-ideal-Commutative-Ring l2 A) →
     leq-radical-ideal-Commutative-Ring I J →
     leq-radical-ideal-Commutative-Ring J I → I ＝ J
-  antisymmetric-leq-radical-ideal-Commutative-Ring I J H K =
-    eq-type-subtype
-      ( is-radical-ideal-prop-Commutative-Ring A)
-      ( antisymmetric-leq-ideal-Commutative-Ring A
-        ( ideal-radical-ideal-Commutative-Ring A I)
-        ( ideal-radical-ideal-Commutative-Ring A J)
-        ( H)
-        ( K))
+  antisymmetric-leq-radical-ideal-Commutative-Ring I J H K = {!!}
 ```
 
 ### The large preorder of radical ideals in a commutative ring
@@ -113,14 +91,7 @@ module _
 
   radical-ideal-Commutative-Ring-Large-Preorder :
     Large-Preorder (λ l1 → l ⊔ lsuc l1) (λ l1 l2 → l ⊔ l1 ⊔ l2)
-  type-Large-Preorder radical-ideal-Commutative-Ring-Large-Preorder l1 =
-    radical-ideal-Commutative-Ring l1 A
-  leq-prop-Large-Preorder radical-ideal-Commutative-Ring-Large-Preorder =
-    leq-prop-radical-ideal-Commutative-Ring A
-  refl-leq-Large-Preorder radical-ideal-Commutative-Ring-Large-Preorder =
-    refl-leq-radical-ideal-Commutative-Ring A
-  transitive-leq-Large-Preorder radical-ideal-Commutative-Ring-Large-Preorder =
-    transitive-leq-radical-ideal-Commutative-Ring A
+  type-Large-Preorder radical-ideal-Commutative-Ring-Large-Preorder l1 = {!!}
 ```
 
 ### The large poset of radical ideals in a commutative ring
@@ -132,10 +103,7 @@ module _
 
   radical-ideal-Commutative-Ring-Large-Poset :
     Large-Poset (λ l1 → l ⊔ lsuc l1) (λ l1 l2 → l ⊔ l1 ⊔ l2)
-  large-preorder-Large-Poset radical-ideal-Commutative-Ring-Large-Poset =
-    radical-ideal-Commutative-Ring-Large-Preorder A
-  antisymmetric-leq-Large-Poset radical-ideal-Commutative-Ring-Large-Poset =
-    antisymmetric-leq-radical-ideal-Commutative-Ring A
+  large-preorder-Large-Poset radical-ideal-Commutative-Ring-Large-Poset = {!!}
 ```
 
 ### Similarity of radical ideals in a commutative ring
@@ -148,17 +116,14 @@ module _
   where
 
   sim-prop-radical-ideal-Commutative-Ring : Prop (l1 ⊔ l2 ⊔ l3)
-  sim-prop-radical-ideal-Commutative-Ring =
-    sim-prop-Large-Poset (radical-ideal-Commutative-Ring-Large-Poset A) I J
+  sim-prop-radical-ideal-Commutative-Ring = {!!}
 
   sim-radical-ideal-Commutative-Ring : UU (l1 ⊔ l2 ⊔ l3)
-  sim-radical-ideal-Commutative-Ring =
-    sim-Large-Poset (radical-ideal-Commutative-Ring-Large-Poset A) I J
+  sim-radical-ideal-Commutative-Ring = {!!}
 
   is-prop-sim-radical-ideal-Commutative-Ring :
     is-prop sim-radical-ideal-Commutative-Ring
-  is-prop-sim-radical-ideal-Commutative-Ring =
-    is-prop-sim-Large-Poset (radical-ideal-Commutative-Ring-Large-Poset A) I J
+  is-prop-sim-radical-ideal-Commutative-Ring = {!!}
 ```
 
 ### The inclusion of radical ideals into ideals of a commutative ring
@@ -176,7 +141,7 @@ module _
     leq-ideal-Commutative-Ring A
       ( ideal-radical-ideal-Commutative-Ring A I)
       ( ideal-radical-ideal-Commutative-Ring A J)
-  preserves-order-ideal-radical-ideal-Commutative-Ring I J H = H
+  preserves-order-ideal-radical-ideal-Commutative-Ring I J H = {!!}
 
   ideal-radical-ideal-hom-large-poset-Commutative-Ring :
     hom-Large-Poset
@@ -184,9 +149,5 @@ module _
       ( radical-ideal-Commutative-Ring-Large-Poset A)
       ( ideal-Commutative-Ring-Large-Poset A)
   map-hom-Large-Preorder
-    ideal-radical-ideal-hom-large-poset-Commutative-Ring =
-    ideal-radical-ideal-Commutative-Ring A
-  preserves-order-hom-Large-Preorder
-    ideal-radical-ideal-hom-large-poset-Commutative-Ring =
-    preserves-order-ideal-radical-ideal-Commutative-Ring
+    ideal-radical-ideal-hom-large-poset-Commutative-Ring = {!!}
 ```

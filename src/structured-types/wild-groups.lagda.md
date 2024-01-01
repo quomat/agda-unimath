@@ -19,8 +19,8 @@ open import structured-types.wild-monoids
 ```agda
 is-wild-group-Wild-Monoid :
   {l : Level} (M : Wild-Monoid l) → UU l
-is-wild-group-Wild-Monoid M = is-binary-equiv (mul-Wild-Monoid M)
+is-wild-group-Wild-Monoid M = {!!}
 
 Wild-Group : (l : Level) → UU (lsuc l)
-Wild-Group l = Σ (Wild-Monoid l) is-wild-group-Wild-Monoid
+Wild-Group l = {!!}
 ```

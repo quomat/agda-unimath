@@ -51,45 +51,11 @@ module _
     is-contr
       ( Σ ( type-Truncated-Type C)
           ( λ z → (t : fiber f y) → g (pr1 t) ＝ z))
-  unique-extension-fiber-is-truncation-is-truncation-ap C g =
-    apply-dependent-universal-property-surj-is-surjective f H
-      ( λ y → is-contr-Prop _)
-      ( λ x →
-        is-contr-equiv
-          ( Σ (type-Truncated-Type C) (λ z → g x ＝ z))
-          ( equiv-tot
-            ( λ z →
-              ( ( equiv-ev-refl' x) ∘e
-                ( equiv-Π-equiv-family
-                  ( λ x' →
-                    equiv-is-truncation
-                      ( Id-Truncated-Type B (f x') (f x))
-                      ( ap f)
-                      ( K x' x)
-                      ( Id-Truncated-Type C (g x') z)))) ∘e
-              ( equiv-ev-pair)))
-          ( is-torsorial-path (g x)))
+  unique-extension-fiber-is-truncation-is-truncation-ap C g = {!!}
 
   is-truncation-is-truncation-ap :
     is-truncation B f
-  is-truncation-is-truncation-ap C =
-    is-equiv-is-contr-map
-      ( λ g →
-        is-contr-equiv'
-          ( (y : type-Truncated-Type B) →
-            Σ ( type-Truncated-Type C)
-              ( λ z → (t : fiber f y) → (g (pr1 t) ＝ z)))
-          ( ( equiv-tot
-              ( λ h →
-                ( ( ( inv-equiv (equiv-funext)) ∘e
-                    ( equiv-Π-equiv-family
-                      ( λ x →
-                        equiv-inv (g x) (h (f x)) ∘e equiv-ev-refl (f x)))) ∘e
-                  ( equiv-swap-Π)) ∘e
-                ( equiv-Π-equiv-family (λ x → equiv-ev-pair)))) ∘e
-            ( distributive-Π-Σ))
-          ( is-contr-Π
-            ( unique-extension-fiber-is-truncation-is-truncation-ap C g)))
+  is-truncation-is-truncation-ap C = {!!}
 
 module _
   {l1 l2 : Level} {k : 𝕋} {A : UU l1} (B : Truncated-Type l2 (succ-𝕋 k))
@@ -98,9 +64,5 @@ module _
 
   is-surjective-is-truncation :
     is-truncation B f → is-surjective f
-  is-surjective-is-truncation H =
-    map-inv-is-equiv
-      ( dependent-universal-property-truncation-is-truncation B f H
-        ( λ y → truncated-type-trunc-Prop k (fiber f y)))
-      ( λ x → unit-trunc-Prop (pair x refl))
+  is-surjective-is-truncation H = {!!}
 ```

@@ -40,10 +40,10 @@ maps between general types it is recommended to use the notion of
 
 ```agda
 is-injective : {l1 l2 : Level} {A : UU l1} {B : UU l2} → (A → B) → UU (l1 ⊔ l2)
-is-injective {l1} {l2} {A} {B} f = {x y : A} → f x ＝ f y → x ＝ y
+is-injective {l1} {l2} {A} {B} f = {!!}
 
 injection : {l1 l2 : Level} (A : UU l1) (B : UU l2) → UU (l1 ⊔ l2)
-injection A B = Σ (A → B) is-injective
+injection A B = {!!}
 ```
 
 ## Examples
@@ -52,11 +52,11 @@ injection A B = Σ (A → B) is-injective
 
 ```agda
 is-injective-id : {l1 : Level} {A : UU l1} → is-injective (id {A = A})
-is-injective-id p = p
+is-injective-id p = {!!}
 
 id-injection : {l1 : Level} {A : UU l1} → injection A A
-pr1 id-injection = id
-pr2 id-injection = is-injective-id
+pr1 id-injection = {!!}
+pr2 id-injection = {!!}
 ```
 
 ## Properties
@@ -71,13 +71,12 @@ module _
   is-injective-right-factor :
     (g : B → C) (h : A → B) →
     is-injective (g ∘ h) → is-injective h
-  is-injective-right-factor g h is-inj-gh p = is-inj-gh (ap g p)
+  is-injective-right-factor g h is-inj-gh p = {!!}
 
   is-injective-top-map-triangle :
     (f : A → C) (g : B → C) (h : A → B) (H : f ~ (g ∘ h)) →
     is-injective f → is-injective h
-  is-injective-top-map-triangle f g h H is-inj-f {x} {x'} p =
-    is-inj-f {x} {x'} ((H x) ∙ ((ap g p) ∙ (inv (H x'))))
+  is-injective-top-map-triangle f g h H is-inj-f {x} {x'} p = {!!}
 ```
 
 ### Injective maps are closed under composition
@@ -90,13 +89,12 @@ module _
   is-injective-comp :
     {g : B → C} {h : A → B} →
     is-injective h → is-injective g → is-injective (g ∘ h)
-  is-injective-comp is-inj-h is-inj-g = is-inj-h ∘ is-inj-g
+  is-injective-comp is-inj-h is-inj-g = {!!}
 
   is-injective-left-map-triangle :
     (f : A → C) (g : B → C) (h : A → B) → f ~ (g ∘ h) →
     is-injective h → is-injective g → is-injective f
-  is-injective-left-map-triangle f g h H is-inj-h is-inj-g {x} {x'} p =
-    is-inj-h (is-inj-g ((inv (H x)) ∙ (p ∙ (H x'))))
+  is-injective-left-map-triangle f g h H is-inj-h is-inj-g {x} {x'} p = {!!}
 ```
 
 ### Equivalences are injective
@@ -108,14 +106,11 @@ module _
 
   abstract
     is-injective-is-equiv : {f : A → B} → is-equiv f → is-injective f
-    is-injective-is-equiv H {x} {y} p =
-      ( inv (is-retraction-map-inv-is-equiv H x)) ∙
-      ( ( ap (map-inv-is-equiv H) p) ∙
-        ( is-retraction-map-inv-is-equiv H y))
+    is-injective-is-equiv H {x} {y} p = {!!}
 
   abstract
     is-injective-map-equiv : (e : A ≃ B) → is-injective (map-equiv e)
-    is-injective-map-equiv (pair f H) = is-injective-is-equiv H
+    is-injective-map-equiv (pair f H) = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
@@ -123,12 +118,10 @@ module _
 
   abstract
     is-injective-map-inv-equiv : (e : A ≃ B) → is-injective (map-inv-equiv e)
-    is-injective-map-inv-equiv e =
-      is-injective-is-equiv (is-equiv-map-inv-equiv e)
+    is-injective-map-inv-equiv e = {!!}
 
   is-equiv-is-injective : {f : A → B} → section f → is-injective f → is-equiv f
-  is-equiv-is-injective {f} (pair g G) H =
-    is-equiv-is-invertible g G (λ x → H (G (f x)))
+  is-equiv-is-injective {f} (pair g G) H = {!!}
 ```
 
 ### Any embedding is injective
@@ -139,10 +132,10 @@ module _
   where
 
   is-injective-is-emb : {f : A → B} → is-emb f → is-injective f
-  is-injective-is-emb is-emb-f {x} {y} = map-inv-is-equiv (is-emb-f x y)
+  is-injective-is-emb is-emb-f {x} {y} = {!!}
 
   is-injective-emb : (e : A ↪ B) → is-injective (map-emb e)
-  is-injective-emb e {x} {y} = map-inv-is-equiv (is-emb-map-emb e x y)
+  is-injective-emb e {x} {y} = {!!}
 ```
 
 ### Any injective map between sets is an embedding
@@ -153,33 +146,22 @@ abstract
     {l1 l2 : Level} {A : UU l1} (is-set-A : is-set A)
     {B : UU l2} (is-set-B : is-set B) (f : A → B) →
     is-injective f → is-emb f
-  is-emb-is-injective' is-set-A is-set-B f is-injective-f x y =
-    is-equiv-is-prop
-      ( is-set-A x y)
-      ( is-set-B (f x) (f y))
-      ( is-injective-f)
+  is-emb-is-injective' is-set-A is-set-B f is-injective-f x y = {!!}
 
   is-set-is-injective :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} →
     is-set B → is-injective f → is-set A
-  is-set-is-injective {f = f} H I =
-    is-set-prop-in-id
-      ( λ x y → f x ＝ f y)
-      ( λ x y → H (f x) (f y))
-      ( λ x → refl)
-      ( λ x y → I)
+  is-set-is-injective {f = f} H I = {!!}
 
   is-emb-is-injective :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} →
     is-set B → is-injective f → is-emb f
-  is-emb-is-injective {f = f} H I =
-    is-emb-is-injective' (is-set-is-injective H I) H f I
+  is-emb-is-injective {f = f} H I = {!!}
 
   is-prop-map-is-injective :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} →
     is-set B → is-injective f → is-prop-map f
-  is-prop-map-is-injective {f = f} H I =
-    is-prop-map-is-emb (is-emb-is-injective H I)
+  is-prop-map-is-injective {f = f} H I = {!!}
 ```
 
 ### For a map between sets, being injective is a property
@@ -191,15 +173,10 @@ module _
 
   is-prop-is-injective :
     is-set A → (f : A → B) → is-prop (is-injective f)
-  is-prop-is-injective H f =
-    is-prop-Π'
-      ( λ x →
-        is-prop-Π'
-          ( λ y → is-prop-function-type (H x y)))
+  is-prop-is-injective H f = {!!}
 
   is-injective-Prop : is-set A → (A → B) → Prop (l1 ⊔ l2)
-  pr1 (is-injective-Prop H f) = is-injective f
-  pr2 (is-injective-Prop H f) = is-prop-is-injective H f
+  pr1 (is-injective-Prop H f) = {!!}
 ```
 
 ### Any map out of a contractible type is injective
@@ -208,5 +185,5 @@ module _
 is-injective-is-contr :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
   is-contr A → is-injective f
-is-injective-is-contr f H p = eq-is-contr H
+is-injective-is-contr f H p = {!!}
 ```

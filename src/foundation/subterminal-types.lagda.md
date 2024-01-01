@@ -34,7 +34,7 @@ module _
   where
 
   is-subterminal : UU l
-  is-subterminal = is-emb (terminal-map {A = A})
+  is-subterminal = {!!}
 ```
 
 ## Properties
@@ -49,36 +49,26 @@ module _
   abstract
     is-subterminal-is-proof-irrelevant :
       is-proof-irrelevant A → is-subterminal A
-    is-subterminal-is-proof-irrelevant H =
-      is-emb-is-emb
-        ( λ x → is-emb-is-equiv (is-equiv-is-contr _ (H x) is-contr-unit))
+    is-subterminal-is-proof-irrelevant H = {!!}
 
   abstract
     is-subterminal-all-elements-equal : all-elements-equal A → is-subterminal A
-    is-subterminal-all-elements-equal =
-      is-subterminal-is-proof-irrelevant ∘
-      is-proof-irrelevant-all-elements-equal
+    is-subterminal-all-elements-equal = {!!}
 
   abstract
     is-subterminal-is-prop : is-prop A → is-subterminal A
-    is-subterminal-is-prop = is-subterminal-all-elements-equal ∘ eq-is-prop'
+    is-subterminal-is-prop = {!!}
 
   abstract
     is-prop-is-subterminal : is-subterminal A → is-prop A
-    is-prop-is-subterminal H x y =
-      is-contr-is-equiv
-        ( star ＝ star)
-        ( ap terminal-map)
-        ( H x y)
-        ( is-prop-is-contr is-contr-unit star star)
+    is-prop-is-subterminal H x y = {!!}
 
   abstract
     eq-is-subterminal : is-subterminal A → all-elements-equal A
-    eq-is-subterminal = eq-is-prop' ∘ is-prop-is-subterminal
+    eq-is-subterminal = {!!}
 
   abstract
     is-proof-irrelevant-is-subterminal :
       is-subterminal A → is-proof-irrelevant A
-    is-proof-irrelevant-is-subterminal H =
-      is-proof-irrelevant-all-elements-equal (eq-is-subterminal H)
+    is-proof-irrelevant-is-subterminal H = {!!}
 ```

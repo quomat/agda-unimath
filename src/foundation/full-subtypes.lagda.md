@@ -36,13 +36,13 @@ module _
   where
 
   is-full-subtype-Prop : Prop (l1 ⊔ l2)
-  is-full-subtype-Prop = Π-Prop A (λ x → P x)
+  is-full-subtype-Prop = {!!}
 
   is-full-subtype : UU (l1 ⊔ l2)
-  is-full-subtype = type-Prop is-full-subtype-Prop
+  is-full-subtype = {!!}
 
   is-prop-is-full-subtype : is-prop is-full-subtype
-  is-prop-is-full-subtype = is-prop-type-Prop is-full-subtype-Prop
+  is-prop-is-full-subtype = {!!}
 ```
 
 ### Full decidable subtypes
@@ -50,32 +50,30 @@ module _
 ```agda
 is-full-decidable-subtype :
   {l1 l2 : Level} {A : UU l1} → decidable-subtype l2 A → UU (l1 ⊔ l2)
-is-full-decidable-subtype P =
-  is-full-subtype (subtype-decidable-subtype P)
+is-full-decidable-subtype P = {!!}
 ```
 
 ### The full subtype at a universe level
 
 ```agda
 full-subtype : {l1 : Level} (l2 : Level) (A : UU l1) → subtype l2 A
-full-subtype l2 A x = raise-unit-Prop l2
+full-subtype l2 A x = {!!}
 
 type-full-subtype : {l1 : Level} (l2 : Level) (A : UU l1) → UU (l1 ⊔ l2)
-type-full-subtype l2 A = type-subtype (full-subtype l2 A)
+type-full-subtype l2 A = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1}
   where
 
   is-in-full-subtype : (x : A) → is-in-subtype (full-subtype l2 A) x
-  is-in-full-subtype x = raise-star
+  is-in-full-subtype x = {!!}
 
   inclusion-full-subtype : type-full-subtype l2 A → A
-  inclusion-full-subtype = inclusion-subtype (full-subtype l2 A)
+  inclusion-full-subtype = {!!}
 
   is-equiv-inclusion-full-subtype : is-equiv inclusion-full-subtype
-  is-equiv-inclusion-full-subtype =
-    is-equiv-pr1-is-contr (λ a → is-contr-raise-unit)
+  is-equiv-inclusion-full-subtype = {!!}
 ```
 
 ## Properties
@@ -89,20 +87,13 @@ module _
 
   is-equiv-inclusion-is-full-subtype :
     is-full-subtype P → is-equiv (inclusion-subtype P)
-  is-equiv-inclusion-is-full-subtype H =
-    is-equiv-pr1-is-contr
-      ( λ x → is-proof-irrelevant-is-prop (is-prop-is-in-subtype P x) (H x))
+  is-equiv-inclusion-is-full-subtype H = {!!}
 
   equiv-inclusion-is-full-subtype :
     is-full-subtype P → type-subtype P ≃ A
-  pr1 (equiv-inclusion-is-full-subtype H) = inclusion-subtype P
-  pr2 (equiv-inclusion-is-full-subtype H) = is-equiv-inclusion-is-full-subtype H
+  pr1 (equiv-inclusion-is-full-subtype H) = {!!}
 
   is-full-is-equiv-inclusion-subtype :
     is-equiv (inclusion-subtype P) → is-full-subtype P
-  is-full-is-equiv-inclusion-subtype H x =
-    tr
-      ( is-in-subtype P)
-      ( is-section-map-inv-is-equiv H x)
-      ( pr2 (map-inv-is-equiv H x))
+  is-full-is-equiv-inclusion-subtype H x = {!!}
 ```

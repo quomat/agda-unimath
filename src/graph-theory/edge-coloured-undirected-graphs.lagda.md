@@ -38,68 +38,50 @@ module _
     ( (p : unordered-pair-vertices-Undirected-Graph G) →
       edge-Undirected-Graph G p → C) →
     (x : vertex-Undirected-Graph G) → neighbor-Undirected-Graph G x → C
-  neighbor-edge-colouring-Undirected-Graph f x (pair y e) =
-    f (standard-unordered-pair x y) e
+  neighbor-edge-colouring-Undirected-Graph f x (pair y e) = {!!}
 
   edge-colouring-Undirected-Graph : UU (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l3)
-  edge-colouring-Undirected-Graph =
-    Σ ( (p : unordered-pair-vertices-Undirected-Graph G) →
-        edge-Undirected-Graph G p → C)
-      ( λ f →
-        (x : vertex-Undirected-Graph G) →
-        is-emb (neighbor-edge-colouring-Undirected-Graph f x))
+  edge-colouring-Undirected-Graph = {!!}
 
 Edge-Coloured-Undirected-Graph :
   {l : Level} (l1 l2 : Level) (C : UU l) → UU (l ⊔ lsuc l1 ⊔ lsuc l2)
-Edge-Coloured-Undirected-Graph l1 l2 C =
-  Σ ( Undirected-Graph l1 l2)
-    ( edge-colouring-Undirected-Graph C)
+Edge-Coloured-Undirected-Graph l1 l2 C = {!!}
 
 module _
   {l1 l2 l3 : Level} {C : UU l1} (G : Edge-Coloured-Undirected-Graph l2 l3 C)
   where
 
   undirected-graph-Edge-Coloured-Undirected-Graph : Undirected-Graph l2 l3
-  undirected-graph-Edge-Coloured-Undirected-Graph = pr1 G
+  undirected-graph-Edge-Coloured-Undirected-Graph = {!!}
 
   vertex-Edge-Coloured-Undirected-Graph : UU l2
-  vertex-Edge-Coloured-Undirected-Graph =
-    vertex-Undirected-Graph undirected-graph-Edge-Coloured-Undirected-Graph
+  vertex-Edge-Coloured-Undirected-Graph = {!!}
 
   unordered-pair-vertices-Edge-Coloured-Undirected-Graph : UU (lsuc lzero ⊔ l2)
-  unordered-pair-vertices-Edge-Coloured-Undirected-Graph =
-    unordered-pair-vertices-Undirected-Graph
-      undirected-graph-Edge-Coloured-Undirected-Graph
+  unordered-pair-vertices-Edge-Coloured-Undirected-Graph = {!!}
 
   edge-Edge-Coloured-Undirected-Graph :
     unordered-pair-vertices-Edge-Coloured-Undirected-Graph → UU l3
-  edge-Edge-Coloured-Undirected-Graph =
-    edge-Undirected-Graph undirected-graph-Edge-Coloured-Undirected-Graph
+  edge-Edge-Coloured-Undirected-Graph = {!!}
 
   neighbor-Edge-Coloured-Undirected-Graph :
     vertex-Edge-Coloured-Undirected-Graph → UU (l2 ⊔ l3)
-  neighbor-Edge-Coloured-Undirected-Graph =
-    neighbor-Undirected-Graph undirected-graph-Edge-Coloured-Undirected-Graph
+  neighbor-Edge-Coloured-Undirected-Graph = {!!}
 
   colouring-Edge-Coloured-Undirected-Graph :
     (p : unordered-pair-vertices-Edge-Coloured-Undirected-Graph) →
     edge-Edge-Coloured-Undirected-Graph p → C
-  colouring-Edge-Coloured-Undirected-Graph =
-    pr1 (pr2 G)
+  colouring-Edge-Coloured-Undirected-Graph = {!!}
 
   neighbor-colouring-Edge-Coloured-Undirected-Graph :
     (x : vertex-Edge-Coloured-Undirected-Graph) →
     neighbor-Edge-Coloured-Undirected-Graph x → C
-  neighbor-colouring-Edge-Coloured-Undirected-Graph =
-    neighbor-edge-colouring-Undirected-Graph C
-      undirected-graph-Edge-Coloured-Undirected-Graph
-      colouring-Edge-Coloured-Undirected-Graph
+  neighbor-colouring-Edge-Coloured-Undirected-Graph = {!!}
 
   is-emb-colouring-Edge-Coloured-Undirected-Graph :
     (x : vertex-Edge-Coloured-Undirected-Graph) →
     is-emb (neighbor-colouring-Edge-Coloured-Undirected-Graph x)
-  is-emb-colouring-Edge-Coloured-Undirected-Graph =
-    pr2 (pr2 G)
+  is-emb-colouring-Edge-Coloured-Undirected-Graph = {!!}
 ```
 
 ## External links

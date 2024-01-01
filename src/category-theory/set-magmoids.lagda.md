@@ -47,43 +47,38 @@ objects form a set.
 ```agda
 Set-Magmoid :
   (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Set-Magmoid l1 l2 =
-  Σ ( UU l1)
-    ( λ A →
-      Σ ( A → A → Set l2)
-        ( composition-operation-binary-family-Set))
+Set-Magmoid l1 l2 = {!!}
 
 module _
   {l1 l2 : Level} (M : Set-Magmoid l1 l2)
   where
 
   obj-Set-Magmoid : UU l1
-  obj-Set-Magmoid = pr1 M
+  obj-Set-Magmoid = {!!}
 
   hom-set-Set-Magmoid : (x y : obj-Set-Magmoid) → Set l2
-  hom-set-Set-Magmoid = pr1 (pr2 M)
+  hom-set-Set-Magmoid = {!!}
 
   hom-Set-Magmoid : (x y : obj-Set-Magmoid) → UU l2
-  hom-Set-Magmoid x y = type-Set (hom-set-Set-Magmoid x y)
+  hom-Set-Magmoid x y = {!!}
 
   is-set-hom-Set-Magmoid :
     (x y : obj-Set-Magmoid) → is-set (hom-Set-Magmoid x y)
-  is-set-hom-Set-Magmoid x y =
-    is-set-type-Set (hom-set-Set-Magmoid x y)
+  is-set-hom-Set-Magmoid x y = {!!}
 
   comp-hom-Set-Magmoid :
     {x y z : obj-Set-Magmoid} →
     hom-Set-Magmoid y z →
     hom-Set-Magmoid x y →
     hom-Set-Magmoid x z
-  comp-hom-Set-Magmoid = pr2 (pr2 M)
+  comp-hom-Set-Magmoid = {!!}
 
   comp-hom-Set-Magmoid' :
     {x y z : obj-Set-Magmoid} →
     hom-Set-Magmoid x y →
     hom-Set-Magmoid y z →
     hom-Set-Magmoid x z
-  comp-hom-Set-Magmoid' f g = comp-hom-Set-Magmoid g f
+  comp-hom-Set-Magmoid' f g = {!!}
 ```
 
 ### The total hom-type of a set-magmoid
@@ -91,15 +86,13 @@ module _
 ```agda
 total-hom-Set-Magmoid :
   {l1 l2 : Level} (M : Set-Magmoid l1 l2) → UU (l1 ⊔ l2)
-total-hom-Set-Magmoid M =
-  Σ ( obj-Set-Magmoid M)
-    ( λ x → Σ (obj-Set-Magmoid M) (hom-Set-Magmoid M x))
+total-hom-Set-Magmoid M = {!!}
 
 obj-total-hom-Set-Magmoid :
   {l1 l2 : Level} (M : Set-Magmoid l1 l2) →
   total-hom-Set-Magmoid M → obj-Set-Magmoid M × obj-Set-Magmoid M
-pr1 (obj-total-hom-Set-Magmoid M (x , y , f)) = x
-pr2 (obj-total-hom-Set-Magmoid M (x , y , f)) = y
+pr1 (obj-total-hom-Set-Magmoid M (x , y , f)) = {!!}
+pr2 (obj-total-hom-Set-Magmoid M (x , y , f)) = {!!}
 ```
 
 ### Pre- and postcomposition by a morphism
@@ -113,10 +106,10 @@ module _
   where
 
   precomp-hom-Set-Magmoid : hom-Set-Magmoid M y z → hom-Set-Magmoid M x z
-  precomp-hom-Set-Magmoid g = comp-hom-Set-Magmoid M g f
+  precomp-hom-Set-Magmoid g = {!!}
 
   postcomp-hom-Set-Magmoid : hom-Set-Magmoid M z x → hom-Set-Magmoid M z y
-  postcomp-hom-Set-Magmoid = comp-hom-Set-Magmoid M f
+  postcomp-hom-Set-Magmoid = {!!}
 ```
 
 ### The predicate on set-magmoids of being associative
@@ -127,26 +120,17 @@ module _
   where
 
   is-associative-Set-Magmoid : UU (l1 ⊔ l2)
-  is-associative-Set-Magmoid =
-    is-associative-composition-operation-binary-family-Set
-      ( hom-set-Set-Magmoid M)
-      ( comp-hom-Set-Magmoid M)
+  is-associative-Set-Magmoid = {!!}
 
   is-prop-is-associative-Set-Magmoid :
     is-prop
       ( is-associative-composition-operation-binary-family-Set
         ( hom-set-Set-Magmoid M)
         ( comp-hom-Set-Magmoid M))
-  is-prop-is-associative-Set-Magmoid =
-    is-prop-is-associative-composition-operation-binary-family-Set
-      ( hom-set-Set-Magmoid M)
-      ( comp-hom-Set-Magmoid M)
+  is-prop-is-associative-Set-Magmoid = {!!}
 
   is-associative-prop-Set-Magmoid : Prop (l1 ⊔ l2)
-  is-associative-prop-Set-Magmoid =
-    is-associative-prop-composition-operation-binary-family-Set
-      ( hom-set-Set-Magmoid M)
-      ( comp-hom-Set-Magmoid M)
+  is-associative-prop-Set-Magmoid = {!!}
 ```
 
 ### The predicate on set-magmoids of being unital
@@ -165,26 +149,17 @@ module _
   where
 
   is-unital-Set-Magmoid : UU (l1 ⊔ l2)
-  is-unital-Set-Magmoid =
-    is-unital-composition-operation-binary-family-Set
-      ( hom-set-Set-Magmoid M)
-      ( comp-hom-Set-Magmoid M)
+  is-unital-Set-Magmoid = {!!}
 
   is-prop-is-unital-Set-Magmoid :
     is-prop
       ( is-unital-composition-operation-binary-family-Set
         ( hom-set-Set-Magmoid M)
         ( comp-hom-Set-Magmoid M))
-  is-prop-is-unital-Set-Magmoid =
-    is-prop-is-unital-composition-operation-binary-family-Set
-      ( hom-set-Set-Magmoid M)
-      ( comp-hom-Set-Magmoid M)
+  is-prop-is-unital-Set-Magmoid = {!!}
 
   is-unital-prop-Set-Magmoid : Prop (l1 ⊔ l2)
-  is-unital-prop-Set-Magmoid =
-    is-unital-prop-composition-operation-binary-family-Set
-      ( hom-set-Set-Magmoid M)
-      ( comp-hom-Set-Magmoid M)
+  is-unital-prop-Set-Magmoid = {!!}
 ```
 
 ## Properties
@@ -199,21 +174,12 @@ module _
   is-trunc-total-hom-is-trunc-obj-Set-Magmoid :
     is-trunc (succ-𝕋 (succ-𝕋 k)) (obj-Set-Magmoid M) →
     is-trunc (succ-𝕋 (succ-𝕋 k)) (total-hom-Set-Magmoid M)
-  is-trunc-total-hom-is-trunc-obj-Set-Magmoid is-trunc-obj-M =
-    is-trunc-Σ
-      ( is-trunc-obj-M)
-      ( λ x →
-        is-trunc-Σ
-          ( is-trunc-obj-M)
-          ( λ y → is-trunc-is-set k (is-set-hom-Set-Magmoid M x y)))
+  is-trunc-total-hom-is-trunc-obj-Set-Magmoid is-trunc-obj-M = {!!}
 
   total-hom-truncated-type-is-trunc-obj-Set-Magmoid :
     is-trunc (succ-𝕋 (succ-𝕋 k)) (obj-Set-Magmoid M) →
     Truncated-Type (l1 ⊔ l2) (succ-𝕋 (succ-𝕋 k))
-  pr1 (total-hom-truncated-type-is-trunc-obj-Set-Magmoid is-trunc-obj-M) =
-    total-hom-Set-Magmoid M
-  pr2 (total-hom-truncated-type-is-trunc-obj-Set-Magmoid is-trunc-obj-M) =
-    is-trunc-total-hom-is-trunc-obj-Set-Magmoid is-trunc-obj-M
+  pr1 (total-hom-truncated-type-is-trunc-obj-Set-Magmoid is-trunc-obj-M) = {!!}
 ```
 
 ## See also

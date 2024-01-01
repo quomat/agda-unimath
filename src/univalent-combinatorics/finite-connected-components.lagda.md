@@ -27,16 +27,14 @@ is a finite type.
 
 ```agda
 has-finitely-many-components-Prop : {l : Level} → UU l → Prop l
-has-finitely-many-components-Prop A = is-finite-Prop (type-trunc-Set A)
+has-finitely-many-components-Prop A = {!!}
 
 has-finitely-many-components : {l : Level} → UU l → UU l
-has-finitely-many-components A = type-Prop (has-finitely-many-components-Prop A)
+has-finitely-many-components A = {!!}
 
 has-cardinality-components-Prop : {l : Level} (k : ℕ) → UU l → Prop l
-has-cardinality-components-Prop k A =
-  has-cardinality-Prop k (type-trunc-Set A)
+has-cardinality-components-Prop k A = {!!}
 
 has-cardinality-components : {l : Level} (k : ℕ) → UU l → UU l
-has-cardinality-components k A =
-  type-Prop (has-cardinality-components-Prop k A)
+has-cardinality-components k A = {!!}
 ```

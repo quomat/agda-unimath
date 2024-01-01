@@ -36,15 +36,13 @@ module _
   where
 
   is-trivial-prop-Concrete-Group : Prop l
-  is-trivial-prop-Concrete-Group =
-    is-trivial-prop-∞-Group (∞-group-Concrete-Group G)
+  is-trivial-prop-Concrete-Group = {!!}
 
   is-trivial-Concrete-Group : UU l
-  is-trivial-Concrete-Group = type-Prop is-trivial-prop-Concrete-Group
+  is-trivial-Concrete-Group = {!!}
 
   is-property-is-trivial-Concrete-Group : is-prop (is-trivial-Concrete-Group)
-  is-property-is-trivial-Concrete-Group =
-    is-prop-type-Prop is-trivial-prop-Concrete-Group
+  is-property-is-trivial-Concrete-Group = {!!}
 ```
 
 ### Higher groups with contractible classifying type
@@ -55,32 +53,27 @@ module _
   where
 
   has-contractible-classifying-type-prop-Concrete-Group : Prop l
-  has-contractible-classifying-type-prop-Concrete-Group =
-    has-contractible-classifying-type-prop-∞-Group (∞-group-Concrete-Group G)
+  has-contractible-classifying-type-prop-Concrete-Group = {!!}
 
   has-contractible-classifying-type-Concrete-Group : UU l
-  has-contractible-classifying-type-Concrete-Group =
-    type-Prop has-contractible-classifying-type-prop-Concrete-Group
+  has-contractible-classifying-type-Concrete-Group = {!!}
 
   is-property-has-contractible-classifying-type-Concrete-Group :
     is-prop (has-contractible-classifying-type-Concrete-Group)
-  is-property-has-contractible-classifying-type-Concrete-Group =
-    is-prop-type-Prop has-contractible-classifying-type-prop-Concrete-Group
+  is-property-has-contractible-classifying-type-Concrete-Group = {!!}
 ```
 
 ### The trivial concrete group
 
 ```agda
 trivial-Concrete-Group : {l : Level} → Concrete-Group l
-pr1 trivial-Concrete-Group = trivial-∞-Group
-pr2 trivial-Concrete-Group =
-  is-trunc-is-contr (one-𝕋) (is-contr-raise-unit) (raise-star) (raise-star)
+pr1 trivial-Concrete-Group = {!!}
+pr2 trivial-Concrete-Group = {!!}
 
 has-contractible-classifying-type-trivial-Concrete-Group :
   {l : Level} →
   has-contractible-classifying-type-Concrete-Group (trivial-Concrete-Group {l})
-has-contractible-classifying-type-trivial-Concrete-Group =
-  has-contractible-classifying-type-trivial-∞-Group
+has-contractible-classifying-type-trivial-Concrete-Group = {!!}
 ```
 
 ## Properties

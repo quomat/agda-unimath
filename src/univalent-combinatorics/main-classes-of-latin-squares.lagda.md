@@ -31,15 +31,14 @@ inhabited types equipped with a ternary 1-1 correspondence.
 
 ```agda
 Main-Class-Latin-Squares : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Main-Class-Latin-Squares l1 l2 = Main-Class-Latin-Hypercube l1 l2 2
+Main-Class-Latin-Squares l1 l2 = {!!}
 ```
 
 ### Main classes of latin squares of fixed finite order
 
 ```agda
 Main-Class-Latin-Square-of-Order : (m : ℕ) → UU (lsuc lzero)
-Main-Class-Latin-Square-of-Order m =
-  Main-Class-Latin-Hypercube-of-Order 2 m
+Main-Class-Latin-Square-of-Order m = {!!}
 ```
 
 ## Properties
@@ -49,8 +48,7 @@ Main-Class-Latin-Square-of-Order m =
 ```agda
 is-π-finite-Main-Class-Latin-Square-of-Order :
   (k m : ℕ) → is-π-finite k (Main-Class-Latin-Square-of-Order m)
-is-π-finite-Main-Class-Latin-Square-of-Order k m =
-  is-π-finite-Main-Class-Latin-Hypercube-of-Order k 2 m
+is-π-finite-Main-Class-Latin-Square-of-Order k m = {!!}
 ```
 
 ### The sequence of the number of main classes of latin squares of finite order
@@ -59,14 +57,12 @@ The following sequence defines [A003090](https://oeis.org/A003090) in the OEIS.
 
 ```agda
 number-of-main-classes-of-Latin-squares-of-order : ℕ → ℕ
-number-of-main-classes-of-Latin-squares-of-order =
-  number-of-main-classes-of-Latin-hypercubes-of-order 2
+number-of-main-classes-of-Latin-squares-of-order = {!!}
 
 mere-equiv-number-of-main-classes-of-Latin-squares-of-order :
   (m : ℕ) →
   mere-equiv
     ( Fin (number-of-main-classes-of-Latin-squares-of-order m))
     ( type-trunc-Set (Main-Class-Latin-Square-of-Order m))
-mere-equiv-number-of-main-classes-of-Latin-squares-of-order =
-  mere-equiv-number-of-main-classes-of-Latin-hypercubes-of-order 2
+mere-equiv-number-of-main-classes-of-Latin-squares-of-order = {!!}
 ```

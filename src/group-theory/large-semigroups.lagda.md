@@ -60,11 +60,11 @@ module _
   where
 
   type-Large-Semigroup : (l : Level) → UU (α l)
-  type-Large-Semigroup l = type-Set (set-Large-Semigroup G l)
+  type-Large-Semigroup l = {!!}
 
   is-set-type-Large-Semigroup :
     {l : Level} → is-set (type-Large-Semigroup l)
-  is-set-type-Large-Semigroup = is-set-type-Set (set-Large-Semigroup G _)
+  is-set-type-Large-Semigroup = {!!}
 ```
 
 ### Small semigroups from large semigroups
@@ -75,7 +75,5 @@ module _
   where
 
   semigroup-Large-Semigroup : (l : Level) → Semigroup (α l)
-  pr1 (semigroup-Large-Semigroup l) = set-Large-Semigroup G l
-  pr1 (pr2 (semigroup-Large-Semigroup l)) = mul-Large-Semigroup G
-  pr2 (pr2 (semigroup-Large-Semigroup l)) = associative-mul-Large-Semigroup G
+  pr1 (semigroup-Large-Semigroup l) = {!!}
 ```

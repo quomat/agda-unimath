@@ -86,7 +86,7 @@ experimental.
 copartial-dependent-function :
   {l1 l2 : Level} (l3 : Level) (A : UU l1) → (A → UU l2) →
   UU (l1 ⊔ l2 ⊔ lsuc l3)
-copartial-dependent-function l3 A B = (x : A) → copartial-element l3 (B x)
+copartial-dependent-function l3 A B = {!!}
 ```
 
 ### Copartial functions
@@ -94,7 +94,7 @@ copartial-dependent-function l3 A B = (x : A) → copartial-element l3 (B x)
 ```agda
 copartial-function :
   {l1 l2 : Level} (l3 : Level) → UU l1 → UU l2 → UU (l1 ⊔ l2 ⊔ lsuc l3)
-copartial-function l3 A B = copartial-dependent-function l3 A (λ _ → B)
+copartial-function l3 A B = {!!}
 ```
 
 ### Erased values of copartial dependent functions
@@ -106,11 +106,10 @@ module _
   where
 
   is-erased-prop-copartial-dependent-function : Prop l3
-  is-erased-prop-copartial-dependent-function =
-    is-erased-prop-copartial-element (f a)
+  is-erased-prop-copartial-dependent-function = {!!}
 
   is-erased-copartial-dependent-function : UU l3
-  is-erased-copartial-dependent-function = is-erased-copartial-element (f a)
+  is-erased-copartial-dependent-function = {!!}
 ```
 
 ### Erased values of copartial functions
@@ -122,12 +121,10 @@ module _
   where
 
   is-erased-prop-copartial-function : Prop l3
-  is-erased-prop-copartial-function =
-    is-erased-prop-copartial-dependent-function f a
+  is-erased-prop-copartial-function = {!!}
 
   is-erased-copartial-function : UU l3
-  is-erased-copartial-function =
-    is-erased-copartial-dependent-function f a
+  is-erased-copartial-function = {!!}
 ```
 
 ### Copartial dependent functions obtained from dependent functions
@@ -139,8 +136,7 @@ module _
 
   copartial-dependent-function-dependent-function :
     copartial-dependent-function lzero A B
-  copartial-dependent-function-dependent-function a =
-    unit-copartial-element (f a)
+  copartial-dependent-function-dependent-function a = {!!}
 ```
 
 ### Copartial functions obtained from functions
@@ -151,8 +147,7 @@ module _
   where
 
   copartial-function-function : copartial-function lzero A B
-  copartial-function-function =
-    copartial-dependent-function-dependent-function f
+  copartial-function-function = {!!}
 ```
 
 ## See also

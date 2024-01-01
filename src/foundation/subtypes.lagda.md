@@ -37,13 +37,7 @@ open import foundation-core.torsorial-type-families
 
 ```agda
 Subtype : {l1 : Level} (l2 l3 : Level) (A : UU l1) → UU (l1 ⊔ lsuc l2 ⊔ lsuc l3)
-Subtype l2 l3 A =
-  Σ ( A → Prop l2)
-    ( λ P →
-      Σ ( Σ (UU l3) (λ X → X ↪ A))
-        ( λ i →
-          Σ ( pr1 i ≃ Σ A (type-Prop ∘ P))
-            ( λ e → map-emb (pr2 i) ~ (pr1 ∘ map-equiv e))))
+Subtype l2 l3 A = {!!}
 ```
 
 ## Properties
@@ -56,8 +50,7 @@ module _
   where
 
   is-injective-inclusion-subtype : is-injective (inclusion-subtype B)
-  is-injective-inclusion-subtype =
-    is-injective-is-emb (is-emb-inclusion-subtype B)
+  is-injective-inclusion-subtype = {!!}
 ```
 
 ### Equality in the type of all subtypes
@@ -69,50 +62,38 @@ module _
 
   has-same-elements-subtype-Prop :
     {l3 : Level} → subtype l3 A → Prop (l1 ⊔ l2 ⊔ l3)
-  has-same-elements-subtype-Prop Q =
-    Π-Prop A (λ x → iff-Prop (P x) (Q x))
+  has-same-elements-subtype-Prop Q = {!!}
 
   has-same-elements-subtype : {l3 : Level} → subtype l3 A → UU (l1 ⊔ l2 ⊔ l3)
-  has-same-elements-subtype Q = type-Prop (has-same-elements-subtype-Prop Q)
+  has-same-elements-subtype Q = {!!}
 
   is-prop-has-same-elements-subtype :
     {l3 : Level} (Q : subtype l3 A) →
     is-prop (has-same-elements-subtype Q)
-  is-prop-has-same-elements-subtype Q =
-    is-prop-type-Prop (has-same-elements-subtype-Prop Q)
+  is-prop-has-same-elements-subtype Q = {!!}
 
   refl-has-same-elements-subtype : has-same-elements-subtype P
-  pr1 (refl-has-same-elements-subtype x) = id
-  pr2 (refl-has-same-elements-subtype x) = id
+  pr1 (refl-has-same-elements-subtype x) = {!!}
 
   is-torsorial-has-same-elements-subtype :
     is-torsorial has-same-elements-subtype
-  is-torsorial-has-same-elements-subtype =
-    is-torsorial-Eq-Π
-      ( λ x Q → P x ⇔ Q)
-      ( λ x → is-torsorial-iff (P x))
+  is-torsorial-has-same-elements-subtype = {!!}
 
   has-same-elements-eq-subtype :
     (Q : subtype l2 A) → (P ＝ Q) → has-same-elements-subtype Q
-  has-same-elements-eq-subtype .P refl =
-    refl-has-same-elements-subtype
+  has-same-elements-eq-subtype .P refl = {!!}
 
   is-equiv-has-same-elements-eq-subtype :
     (Q : subtype l2 A) → is-equiv (has-same-elements-eq-subtype Q)
-  is-equiv-has-same-elements-eq-subtype =
-    fundamental-theorem-id
-      is-torsorial-has-same-elements-subtype
-      has-same-elements-eq-subtype
+  is-equiv-has-same-elements-eq-subtype = {!!}
 
   extensionality-subtype :
     (Q : subtype l2 A) → (P ＝ Q) ≃ has-same-elements-subtype Q
-  pr1 (extensionality-subtype Q) = has-same-elements-eq-subtype Q
-  pr2 (extensionality-subtype Q) = is-equiv-has-same-elements-eq-subtype Q
+  pr1 (extensionality-subtype Q) = {!!}
 
   eq-has-same-elements-subtype :
     (Q : subtype l2 A) → has-same-elements-subtype Q → P ＝ Q
-  eq-has-same-elements-subtype Q =
-    map-inv-equiv (extensionality-subtype Q)
+  eq-has-same-elements-subtype Q = {!!}
 ```
 
 ### Similarity of subtypes
@@ -124,19 +105,17 @@ module _
 
   sim-subtype :
     {l2 l3 : Level} → subtype l2 A → subtype l3 A → UU (l1 ⊔ l2 ⊔ l3)
-  sim-subtype P Q = (P ⊆ Q) × (Q ⊆ P)
+  sim-subtype P Q = {!!}
 
   has-same-elements-sim-subtype :
     {l2 l3 : Level} (P : subtype l2 A) (Q : subtype l3 A) →
     sim-subtype P Q → has-same-elements-subtype P Q
-  pr1 (has-same-elements-sim-subtype P Q s x) = pr1 s x
-  pr2 (has-same-elements-sim-subtype P Q s x) = pr2 s x
+  pr1 (has-same-elements-sim-subtype P Q s x) = {!!}
 
   sim-has-same-elements-subtype :
     {l2 l3 : Level} (P : subtype l2 A) (Q : subtype l3 A) →
     has-same-elements-subtype P Q → sim-subtype P Q
-  pr1 (sim-has-same-elements-subtype P Q s) x = forward-implication (s x)
-  pr2 (sim-has-same-elements-subtype P Q s) x = backward-implication (s x)
+  pr1 (sim-has-same-elements-subtype P Q s) x = {!!}
 ```
 
 ### The containment relation is antisymmetric
@@ -149,17 +128,11 @@ module _
   equiv-antisymmetric-leq-subtype :
     {l2 l3 : Level} (P : subtype l2 A) (Q : subtype l3 A) → P ⊆ Q → Q ⊆ P →
     (x : A) → is-in-subtype P x ≃ is-in-subtype Q x
-  equiv-antisymmetric-leq-subtype P Q H K x =
-    equiv-prop
-      ( is-prop-is-in-subtype P x)
-      ( is-prop-is-in-subtype Q x)
-      ( H x)
-      ( K x)
+  equiv-antisymmetric-leq-subtype P Q H K x = {!!}
 
   antisymmetric-leq-subtype :
     {l2 : Level} (P Q : subtype l2 A) → P ⊆ Q → Q ⊆ P → P ＝ Q
-  antisymmetric-leq-subtype P Q H K =
-    eq-has-same-elements-subtype P Q (λ x → (H x , K x))
+  antisymmetric-leq-subtype P Q H K = {!!}
 ```
 
 ### The type of all subtypes of a type is a set
@@ -167,14 +140,11 @@ module _
 ```agda
 is-set-subtype :
   {l1 l2 : Level} {A : UU l1} → is-set (subtype l2 A)
-is-set-subtype P Q =
-  is-prop-equiv
-    ( extensionality-subtype P Q)
-    ( is-prop-has-same-elements-subtype P Q)
+is-set-subtype P Q = {!!}
 
 subtype-Set : {l1 : Level} (l2 : Level) → UU l1 → Set (l1 ⊔ lsuc l2)
-pr1 (subtype-Set l2 A) = subtype l2 A
-pr2 (subtype-Set l2 A) = is-set-subtype
+pr1 (subtype-Set l2 A) = {!!}
+pr2 (subtype-Set l2 A) = {!!}
 ```
 
 ### Characterisation of embeddings into subtypes
@@ -187,38 +157,20 @@ module _
   inv-emb-into-subtype :
     (g : X ↪ type-subtype B) →
     Σ (X ↪ A) (λ f → (x : X) → is-in-subtype B (map-emb f x))
-  pr1 (pr1 (inv-emb-into-subtype g)) =
-    inclusion-subtype B ∘ map-emb g
-  pr2 (pr1 (inv-emb-into-subtype g)) =
-    is-emb-comp _ _ (is-emb-inclusion-subtype B) (is-emb-map-emb g)
-  pr2 (inv-emb-into-subtype g) x =
-    pr2 (map-emb g x)
+  pr1 (pr1 (inv-emb-into-subtype g)) = {!!}
 
   issec-map-inv-emb-into-subtype :
     ( ind-Σ (emb-into-subtype B) ∘ inv-emb-into-subtype) ~ id
-  issec-map-inv-emb-into-subtype g =
-    eq-type-subtype
-      is-emb-Prop
-      refl
+  issec-map-inv-emb-into-subtype g = {!!}
 
   isretr-map-inv-emb-into-subtype :
     ( inv-emb-into-subtype ∘ ind-Σ (emb-into-subtype B)) ~ id
-  isretr-map-inv-emb-into-subtype (f , b) =
-    eq-type-subtype
-      (λ f → Π-Prop X (λ x → B (map-emb f x)))
-      (eq-type-subtype
-        is-emb-Prop
-        refl)
+  isretr-map-inv-emb-into-subtype (f , b) = {!!}
 
   equiv-emb-into-subtype :
     Σ (X ↪ A) (λ f →
       (x : X) → is-in-subtype B (map-emb f x)) ≃ (X ↪ type-subtype B)
-  pr1 equiv-emb-into-subtype = ind-Σ (emb-into-subtype B)
-  pr2 equiv-emb-into-subtype =
-    is-equiv-is-invertible
-      inv-emb-into-subtype
-      issec-map-inv-emb-into-subtype
-      isretr-map-inv-emb-into-subtype
+  pr1 equiv-emb-into-subtype = {!!}
 ```
 
 ## See also

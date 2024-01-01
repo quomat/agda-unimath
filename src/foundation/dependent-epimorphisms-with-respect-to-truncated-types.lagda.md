@@ -47,9 +47,7 @@ module _
   where
 
   is-dependent-epimorphism-Truncated-Type : (A → B) → UUω
-  is-dependent-epimorphism-Truncated-Type f =
-    {l : Level} (C : B → Truncated-Type l k) →
-    is-emb (precomp-Π f (λ b → type-Truncated-Type (C b)))
+  is-dependent-epimorphism-Truncated-Type f = {!!}
 ```
 
 ## Properties
@@ -64,7 +62,7 @@ module _
   is-epimorphism-is-dependent-epimorphism-Truncated-Type :
     is-dependent-epimorphism-Truncated-Type k f →
     is-epimorphism-Truncated-Type k f
-  is-epimorphism-is-dependent-epimorphism-Truncated-Type e X = e (λ _ → X)
+  is-epimorphism-is-dependent-epimorphism-Truncated-Type e X = {!!}
 ```
 
 The converse of the above, that every `k`-epimorphism is a dependent

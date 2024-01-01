@@ -35,23 +35,14 @@ module _
   preserves-sups :
     (type-Suplattice A → type-Suplattice B) →
     UU (l1 ⊔ lsuc l3 ⊔ l4 ⊔ l5)
-  preserves-sups f =
-    {I : UU l3} → (b : I → type-Suplattice A) →
-    is-least-upper-bound-family-of-elements-Poset
-      ( poset-Suplattice B)
-      ( f ∘ b)
-      ( f (sup-Suplattice A b))
+  preserves-sups f = {!!}
 
   hom-Suplattice : UU (l1 ⊔ l2 ⊔ lsuc l3 ⊔ l4 ⊔ l5)
-  hom-Suplattice =
-    Σ ( type-Suplattice A → type-Suplattice B)
-      ( λ f →
-        preserves-order-Poset (poset-Suplattice A) (poset-Suplattice B) f ×
-        preserves-sups f)
+  hom-Suplattice = {!!}
 
   map-hom-Suplattice :
     hom-Suplattice → type-Suplattice A → type-Suplattice B
-  map-hom-Suplattice = pr1
+  map-hom-Suplattice = {!!}
 
   preserves-order-hom-Suplattice :
     (H : hom-Suplattice) →
@@ -59,9 +50,9 @@ module _
       ( poset-Suplattice A)
       ( poset-Suplattice B)
       ( map-hom-Suplattice H)
-  preserves-order-hom-Suplattice = pr1 ∘ pr2
+  preserves-order-hom-Suplattice = {!!}
 
   preserves-sup-hom-Suplattice :
     (H : hom-Suplattice) → preserves-sups (map-hom-Suplattice H)
-  preserves-sup-hom-Suplattice = pr2 ∘ pr2
+  preserves-sup-hom-Suplattice = {!!}
 ```

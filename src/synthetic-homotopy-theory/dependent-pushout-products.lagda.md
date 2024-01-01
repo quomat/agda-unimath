@@ -61,19 +61,14 @@ module _
   where
 
   domain-dependent-pushout-product : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  domain-dependent-pushout-product =
-    pushout
-      ( map-Σ (Y ∘ f) id (g ∘ f))
-      ( map-Σ B f (λ a → id))
+  domain-dependent-pushout-product = {!!}
 
   cocone-dependent-pushout-product :
     cocone
       ( map-Σ (Y ∘ f) id (g ∘ f))
       ( map-Σ B f (λ a → id))
       ( Σ X Y)
-  pr1 cocone-dependent-pushout-product = map-Σ Y f (λ a → id)
-  pr1 (pr2 cocone-dependent-pushout-product) = map-Σ Y id g
-  pr2 (pr2 cocone-dependent-pushout-product) = refl-htpy
+  pr1 cocone-dependent-pushout-product = {!!}
 
   abstract
     uniqueness-dependent-pushout-product :
@@ -91,32 +86,23 @@ module _
                     ( map-Σ B f (λ a → id)))
                   ( h))
                 ( cocone-dependent-pushout-product)))
-    uniqueness-dependent-pushout-product =
-      uniqueness-map-universal-property-pushout
-        ( map-Σ (Y ∘ f) id (g ∘ f))
-        ( map-Σ B f (λ a → id))
-        ( cocone-pushout (map-Σ (Y ∘ f) id (g ∘ f)) (map-Σ B f (λ a → id)))
-        ( up-pushout (map-Σ (Y ∘ f) id (g ∘ f)) (map-Σ B f (λ a → id)))
-        ( cocone-dependent-pushout-product)
+    uniqueness-dependent-pushout-product = {!!}
 
   abstract
     dependent-pushout-product : domain-dependent-pushout-product → Σ X Y
-    dependent-pushout-product =
-      pr1 (center uniqueness-dependent-pushout-product)
+    dependent-pushout-product = {!!}
 
     compute-inl-dependent-pushout-product :
       ( dependent-pushout-product ∘
         inl-pushout (map-Σ (Y ∘ f) id (g ∘ f)) (map-Σ B f (λ a → id))) ~
       ( map-Σ Y f (λ a → id))
-    compute-inl-dependent-pushout-product =
-      pr1 (pr2 (center uniqueness-dependent-pushout-product))
+    compute-inl-dependent-pushout-product = {!!}
 
     compute-inr-dependent-pushout-product :
       ( dependent-pushout-product ∘
         inr-pushout (map-Σ (Y ∘ f) id (g ∘ f)) (map-Σ B f (λ a → id))) ~
       map-Σ Y id g
-    compute-inr-dependent-pushout-product =
-      pr1 (pr2 (pr2 (center uniqueness-dependent-pushout-product)))
+    compute-inr-dependent-pushout-product = {!!}
 
     compute-glue-dependent-pushout-product :
       statement-coherence-htpy-cocone
@@ -130,6 +116,5 @@ module _
         ( cocone-dependent-pushout-product)
         ( compute-inl-dependent-pushout-product)
         ( compute-inr-dependent-pushout-product)
-    compute-glue-dependent-pushout-product =
-      pr2 (pr2 (pr2 (center uniqueness-dependent-pushout-product)))
+    compute-glue-dependent-pushout-product = {!!}
 ```

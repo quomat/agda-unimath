@@ -39,22 +39,17 @@ module _
   where
 
   map-Set-Magmoid : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  map-Set-Magmoid =
-    Σ ( obj-Set-Magmoid C → obj-Set-Magmoid D)
-      ( λ F₀ →
-        {x y : obj-Set-Magmoid C} →
-        hom-Set-Magmoid C x y →
-        hom-Set-Magmoid D (F₀ x) (F₀ y))
+  map-Set-Magmoid = {!!}
 
   obj-map-Set-Magmoid :
     (F : map-Set-Magmoid) → obj-Set-Magmoid C → obj-Set-Magmoid D
-  obj-map-Set-Magmoid = pr1
+  obj-map-Set-Magmoid = {!!}
 
   hom-map-Set-Magmoid :
     (F : map-Set-Magmoid) {x y : obj-Set-Magmoid C} →
     hom-Set-Magmoid C x y →
     hom-Set-Magmoid D (obj-map-Set-Magmoid F x) (obj-map-Set-Magmoid F y)
-  hom-map-Set-Magmoid = pr2
+  hom-map-Set-Magmoid = {!!}
 ```
 
 ### The identity map on a set-magmoid
@@ -65,8 +60,7 @@ module _
   where
 
   id-map-Set-Magmoid : map-Set-Magmoid A A
-  pr1 id-map-Set-Magmoid = id
-  pr2 id-map-Set-Magmoid = id
+  pr1 id-map-Set-Magmoid = {!!}
 ```
 
 ### Composition of maps on set-magmoids
@@ -84,19 +78,16 @@ module _
   where
 
   obj-comp-map-Set-Magmoid : obj-Set-Magmoid A → obj-Set-Magmoid C
-  obj-comp-map-Set-Magmoid =
-    obj-map-Set-Magmoid B C G ∘ obj-map-Set-Magmoid A B F
+  obj-comp-map-Set-Magmoid = {!!}
 
   hom-comp-map-Set-Magmoid :
     {x y : obj-Set-Magmoid A} →
     hom-Set-Magmoid A x y →
     hom-Set-Magmoid C (obj-comp-map-Set-Magmoid x) (obj-comp-map-Set-Magmoid y)
-  hom-comp-map-Set-Magmoid =
-    hom-map-Set-Magmoid B C G ∘ hom-map-Set-Magmoid A B F
+  hom-comp-map-Set-Magmoid = {!!}
 
   comp-map-Set-Magmoid : map-Set-Magmoid A C
-  pr1 comp-map-Set-Magmoid = obj-comp-map-Set-Magmoid
-  pr2 comp-map-Set-Magmoid = hom-comp-map-Set-Magmoid
+  pr1 comp-map-Set-Magmoid = {!!}
 ```
 
 ## Properties
@@ -114,11 +105,11 @@ module _
 
   left-unit-law-comp-map-Set-Magmoid :
     comp-map-Set-Magmoid A B B (id-map-Set-Magmoid B) F ＝ F
-  left-unit-law-comp-map-Set-Magmoid = refl
+  left-unit-law-comp-map-Set-Magmoid = {!!}
 
   right-unit-law-comp-map-Set-Magmoid :
     comp-map-Set-Magmoid A A B F (id-map-Set-Magmoid A) ＝ F
-  right-unit-law-comp-map-Set-Magmoid = refl
+  right-unit-law-comp-map-Set-Magmoid = {!!}
 ```
 
 #### Associativity of map composition
@@ -138,7 +129,7 @@ module _
   associative-comp-map-Set-Magmoid :
     comp-map-Set-Magmoid A B D (comp-map-Set-Magmoid B C D H G) F ＝
     comp-map-Set-Magmoid A C D H (comp-map-Set-Magmoid A B C G F)
-  associative-comp-map-Set-Magmoid = refl
+  associative-comp-map-Set-Magmoid = {!!}
 ```
 
 #### Mac Lane pentagon for map composition
@@ -208,7 +199,7 @@ module _
       ( inv
         ( associative-comp-map-Set-Magmoid A C D E
           (comp-map-Set-Magmoid A B C G F) H I))
-  mac-lane-pentagon-comp-map-Set-Magmoid = refl
+  mac-lane-pentagon-comp-map-Set-Magmoid = {!!}
 ```
 
 ## See also

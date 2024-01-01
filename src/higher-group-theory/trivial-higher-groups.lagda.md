@@ -34,13 +34,13 @@ module _
   where
 
   is-trivial-prop-∞-Group : Prop l
-  is-trivial-prop-∞-Group = is-contr-Prop (type-∞-Group G)
+  is-trivial-prop-∞-Group = {!!}
 
   is-trivial-∞-Group : UU l
-  is-trivial-∞-Group = type-Prop is-trivial-prop-∞-Group
+  is-trivial-∞-Group = {!!}
 
   is-property-is-trivial-∞-Group : is-prop (is-trivial-∞-Group)
-  is-property-is-trivial-∞-Group = is-prop-type-Prop is-trivial-prop-∞-Group
+  is-property-is-trivial-∞-Group = {!!}
 ```
 
 ### Higher groups with contractible classifying type
@@ -51,31 +51,27 @@ module _
   where
 
   has-contractible-classifying-type-prop-∞-Group : Prop l
-  has-contractible-classifying-type-prop-∞-Group =
-    is-contr-Prop (classifying-type-∞-Group G)
+  has-contractible-classifying-type-prop-∞-Group = {!!}
 
   has-contractible-classifying-type-∞-Group : UU l
-  has-contractible-classifying-type-∞-Group =
-    type-Prop has-contractible-classifying-type-prop-∞-Group
+  has-contractible-classifying-type-∞-Group = {!!}
 
   is-property-has-contractible-classifying-type-∞-Group :
     is-prop (has-contractible-classifying-type-∞-Group)
-  is-property-has-contractible-classifying-type-∞-Group =
-    is-prop-type-Prop has-contractible-classifying-type-prop-∞-Group
+  is-property-has-contractible-classifying-type-∞-Group = {!!}
 ```
 
 ### The trivial higher group
 
 ```agda
 trivial-∞-Group : {l : Level} → ∞-Group l
-pr1 (pr1 (trivial-∞-Group {l})) = raise-unit l
-pr2 (pr1 trivial-∞-Group) = raise-star
-pr2 (trivial-∞-Group {l}) =
-  is-0-connected-is-contr (raise-unit l) is-contr-raise-unit
+pr1 (pr1 (trivial-∞-Group {l})) = {!!}
+pr2 (pr1 trivial-∞-Group) = {!!}
+pr2 (trivial-∞-Group {l}) = {!!}
 
 has-contractible-classifying-type-trivial-∞-Group :
   {l : Level} → has-contractible-classifying-type-∞-Group (trivial-∞-Group {l})
-has-contractible-classifying-type-trivial-∞-Group = is-contr-raise-unit
+has-contractible-classifying-type-trivial-∞-Group = {!!}
 ```
 
 ## Properties

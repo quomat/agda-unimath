@@ -42,11 +42,7 @@ module _
   node-fiber-hom-Directed-Tree :
     node-fiber-Directed-Tree S x →
     node-fiber-Directed-Tree T (node-hom-Directed-Tree S T f x)
-  node-fiber-hom-Directed-Tree =
-    map-Σ
-      ( λ y → walk-Directed-Tree T y (node-hom-Directed-Tree S T f x))
-      ( node-hom-Directed-Tree S T f)
-      ( λ y → walk-hom-Directed-Tree S T f {y} {x})
+  node-fiber-hom-Directed-Tree = {!!}
 
   edge-fiber-hom-Directed-Tree :
     (y z : node-fiber-Directed-Tree S x) →
@@ -55,20 +51,13 @@ module _
       ( node-hom-Directed-Tree S T f x)
       ( node-fiber-hom-Directed-Tree y)
       ( node-fiber-hom-Directed-Tree z)
-  edge-fiber-hom-Directed-Tree (y , v) (z , w) =
-    map-Σ
-      ( λ e →
-        walk-hom-Directed-Tree S T f v ＝
-        cons-walk-Directed-Graph e (walk-hom-Directed-Tree S T f w))
-      ( edge-hom-Directed-Tree S T f)
-      ( λ e → ap (walk-hom-Directed-Tree S T f))
+  edge-fiber-hom-Directed-Tree (y , v) (z , w) = {!!}
 
   fiber-hom-Directed-Tree :
     hom-Directed-Tree
       ( fiber-Directed-Tree S x)
       ( fiber-Directed-Tree T (node-hom-Directed-Tree S T f x))
-  pr1 fiber-hom-Directed-Tree = node-fiber-hom-Directed-Tree
-  pr2 fiber-hom-Directed-Tree = edge-fiber-hom-Directed-Tree
+  pr1 fiber-hom-Directed-Tree = {!!}
 ```
 
 ### The action on fibers of equivalences of directed trees
@@ -82,17 +71,12 @@ module _
   equiv-node-fiber-equiv-Directed-Tree :
     node-fiber-Directed-Tree S x ≃
     node-fiber-Directed-Tree T (node-equiv-Directed-Tree S T f x)
-  equiv-node-fiber-equiv-Directed-Tree =
-    equiv-Σ
-      ( λ y → walk-Directed-Tree T y (node-equiv-Directed-Tree S T f x))
-      ( equiv-node-equiv-Directed-Tree S T f)
-      ( λ y → equiv-walk-equiv-Directed-Tree S T f {y} {x})
+  equiv-node-fiber-equiv-Directed-Tree = {!!}
 
   node-fiber-equiv-Directed-Tree :
     node-fiber-Directed-Tree S x →
     node-fiber-Directed-Tree T (node-equiv-Directed-Tree S T f x)
-  node-fiber-equiv-Directed-Tree =
-    map-equiv equiv-node-fiber-equiv-Directed-Tree
+  node-fiber-equiv-Directed-Tree = {!!}
 
   equiv-edge-fiber-equiv-Directed-Tree :
     (y z : node-fiber-Directed-Tree S x) →
@@ -101,17 +85,7 @@ module _
       ( node-equiv-Directed-Tree S T f x)
       ( node-fiber-equiv-Directed-Tree y)
       ( node-fiber-equiv-Directed-Tree z)
-  equiv-edge-fiber-equiv-Directed-Tree (y , v) (z , w) =
-    equiv-Σ
-      ( λ e →
-        walk-equiv-Directed-Tree S T f v ＝
-        cons-walk-Directed-Graph e (walk-equiv-Directed-Tree S T f w))
-      ( equiv-edge-equiv-Directed-Tree S T f y z)
-      ( λ e →
-        equiv-ap
-          ( equiv-walk-equiv-Directed-Tree S T f)
-          ( v)
-          ( cons-walk-Directed-Graph e w))
+  equiv-edge-fiber-equiv-Directed-Tree (y , v) (z , w) = {!!}
 
   edge-fiber-equiv-Directed-Tree :
     (y z : node-fiber-Directed-Tree S x) →
@@ -120,15 +94,11 @@ module _
       ( node-equiv-Directed-Tree S T f x)
       ( node-fiber-equiv-Directed-Tree y)
       ( node-fiber-equiv-Directed-Tree z)
-  edge-fiber-equiv-Directed-Tree y z =
-    map-equiv (equiv-edge-fiber-equiv-Directed-Tree y z)
+  edge-fiber-equiv-Directed-Tree y z = {!!}
 
   fiber-equiv-Directed-Tree :
     equiv-Directed-Tree
       ( fiber-Directed-Tree S x)
       ( fiber-Directed-Tree T (node-equiv-Directed-Tree S T f x))
-  pr1 fiber-equiv-Directed-Tree =
-    equiv-node-fiber-equiv-Directed-Tree
-  pr2 fiber-equiv-Directed-Tree =
-    equiv-edge-fiber-equiv-Directed-Tree
+  pr1 fiber-equiv-Directed-Tree = {!!}
 ```

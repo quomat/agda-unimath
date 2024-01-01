@@ -41,10 +41,10 @@ module _
   where
 
   Π-total-fam : UU (l1 ⊔ l2 ⊔ l3)
-  Π-total-fam = (x : A) → Σ (B x) (C x)
+  Π-total-fam = {!!}
 
   universally-structured-Π : UU (l1 ⊔ l2 ⊔ l3)
-  universally-structured-Π = Σ ((x : A) → B x) (λ f → (x : A) → C x (f x))
+  universally-structured-Π = {!!}
 ```
 
 ### Implicit dependent products of dependent pair types
@@ -56,11 +56,10 @@ module _
   where
 
   implicit-Π-total-fam : UU (l1 ⊔ l2 ⊔ l3)
-  implicit-Π-total-fam = {x : A} → Σ (B x) (C x)
+  implicit-Π-total-fam = {!!}
 
   universally-structured-implicit-Π : UU (l1 ⊔ l2 ⊔ l3)
-  universally-structured-implicit-Π =
-    Σ ({x : A} → B x) (λ f → {x : A} → C x (f {x}))
+  universally-structured-implicit-Π = {!!}
 ```
 
 ## Theorem
@@ -73,44 +72,32 @@ module _
   where
 
   map-distributive-Π-Σ : Π-total-fam C → universally-structured-Π C
-  pr1 (map-distributive-Π-Σ φ) x = pr1 (φ x)
-  pr2 (map-distributive-Π-Σ φ) x = pr2 (φ x)
+  pr1 (map-distributive-Π-Σ φ) x = {!!}
 
   map-inv-distributive-Π-Σ : universally-structured-Π C → Π-total-fam C
-  pr1 (map-inv-distributive-Π-Σ ψ x) = (pr1 ψ) x
-  pr2 (map-inv-distributive-Π-Σ ψ x) = (pr2 ψ) x
+  pr1 (map-inv-distributive-Π-Σ ψ x) = {!!}
 
   is-section-map-inv-distributive-Π-Σ :
     map-distributive-Π-Σ ∘ map-inv-distributive-Π-Σ ~ id
-  is-section-map-inv-distributive-Π-Σ (ψ , ψ') = refl
+  is-section-map-inv-distributive-Π-Σ (ψ , ψ') = {!!}
 
   is-retraction-map-inv-distributive-Π-Σ :
     map-inv-distributive-Π-Σ ∘ map-distributive-Π-Σ ~ id
-  is-retraction-map-inv-distributive-Π-Σ φ = refl
+  is-retraction-map-inv-distributive-Π-Σ φ = {!!}
 
   abstract
     is-equiv-map-distributive-Π-Σ : is-equiv (map-distributive-Π-Σ)
-    is-equiv-map-distributive-Π-Σ =
-      is-equiv-is-invertible
-        ( map-inv-distributive-Π-Σ)
-        ( is-section-map-inv-distributive-Π-Σ)
-        ( is-retraction-map-inv-distributive-Π-Σ)
+    is-equiv-map-distributive-Π-Σ = {!!}
 
   distributive-Π-Σ : Π-total-fam C ≃ universally-structured-Π C
-  pr1 distributive-Π-Σ = map-distributive-Π-Σ
-  pr2 distributive-Π-Σ = is-equiv-map-distributive-Π-Σ
+  pr1 distributive-Π-Σ = {!!}
 
   abstract
     is-equiv-map-inv-distributive-Π-Σ : is-equiv (map-inv-distributive-Π-Σ)
-    is-equiv-map-inv-distributive-Π-Σ =
-      is-equiv-is-invertible
-        ( map-distributive-Π-Σ)
-        ( is-retraction-map-inv-distributive-Π-Σ)
-        ( is-section-map-inv-distributive-Π-Σ)
+    is-equiv-map-inv-distributive-Π-Σ = {!!}
 
   inv-distributive-Π-Σ : universally-structured-Π C ≃ Π-total-fam C
-  pr1 inv-distributive-Π-Σ = map-inv-distributive-Π-Σ
-  pr2 inv-distributive-Π-Σ = is-equiv-map-inv-distributive-Π-Σ
+  pr1 inv-distributive-Π-Σ = {!!}
 ```
 
 ### The distributivity of implicit Π over Σ
@@ -122,51 +109,39 @@ module _
 
   map-distributive-implicit-Π-Σ :
     implicit-Π-total-fam C → universally-structured-implicit-Π C
-  pr1 (map-distributive-implicit-Π-Σ φ) {x} = pr1 (φ {x})
-  pr2 (map-distributive-implicit-Π-Σ φ) {x} = pr2 (φ {x})
+  pr1 (map-distributive-implicit-Π-Σ φ) {x} = {!!}
 
   map-inv-distributive-implicit-Π-Σ :
     universally-structured-implicit-Π C → implicit-Π-total-fam C
-  pr1 (map-inv-distributive-implicit-Π-Σ ψ {x}) = pr1 ψ
-  pr2 (map-inv-distributive-implicit-Π-Σ ψ {x}) = pr2 ψ
+  pr1 (map-inv-distributive-implicit-Π-Σ ψ {x}) = {!!}
 
   is-section-map-inv-distributive-implicit-Π-Σ :
     ( ( map-distributive-implicit-Π-Σ) ∘
       ( map-inv-distributive-implicit-Π-Σ)) ~ id
-  is-section-map-inv-distributive-implicit-Π-Σ (ψ , ψ') = refl
+  is-section-map-inv-distributive-implicit-Π-Σ (ψ , ψ') = {!!}
 
   is-retraction-map-inv-distributive-implicit-Π-Σ :
     ( ( map-inv-distributive-implicit-Π-Σ) ∘
       ( map-distributive-implicit-Π-Σ)) ~ id
-  is-retraction-map-inv-distributive-implicit-Π-Σ φ = refl
+  is-retraction-map-inv-distributive-implicit-Π-Σ φ = {!!}
 
   abstract
     is-equiv-map-distributive-implicit-Π-Σ :
       is-equiv (map-distributive-implicit-Π-Σ)
-    is-equiv-map-distributive-implicit-Π-Σ =
-      is-equiv-is-invertible
-        ( map-inv-distributive-implicit-Π-Σ)
-        ( is-section-map-inv-distributive-implicit-Π-Σ)
-        ( is-retraction-map-inv-distributive-implicit-Π-Σ)
+    is-equiv-map-distributive-implicit-Π-Σ = {!!}
 
   distributive-implicit-Π-Σ :
     implicit-Π-total-fam C ≃ universally-structured-implicit-Π C
-  pr1 distributive-implicit-Π-Σ = map-distributive-implicit-Π-Σ
-  pr2 distributive-implicit-Π-Σ = is-equiv-map-distributive-implicit-Π-Σ
+  pr1 distributive-implicit-Π-Σ = {!!}
 
   abstract
     is-equiv-map-inv-distributive-implicit-Π-Σ :
       is-equiv (map-inv-distributive-implicit-Π-Σ)
-    is-equiv-map-inv-distributive-implicit-Π-Σ =
-      is-equiv-is-invertible
-        ( map-distributive-implicit-Π-Σ)
-        ( is-retraction-map-inv-distributive-implicit-Π-Σ)
-        ( is-section-map-inv-distributive-implicit-Π-Σ)
+    is-equiv-map-inv-distributive-implicit-Π-Σ = {!!}
 
   inv-distributive-implicit-Π-Σ :
     (universally-structured-implicit-Π C) ≃ (implicit-Π-total-fam C)
-  pr1 inv-distributive-implicit-Π-Σ = map-inv-distributive-implicit-Π-Σ
-  pr2 inv-distributive-implicit-Π-Σ = is-equiv-map-inv-distributive-implicit-Π-Σ
+  pr1 inv-distributive-implicit-Π-Σ = {!!}
 ```
 
 ### Ordinary functions into a Σ-type
@@ -177,14 +152,13 @@ module _
   where
 
   mapping-into-Σ : (A → Σ B C) → Σ (A → B) (λ f → (x : A) → C (f x))
-  mapping-into-Σ = map-distributive-Π-Σ {B = λ _ → B}
+  mapping-into-Σ = {!!}
 
   abstract
     is-equiv-mapping-into-Σ : is-equiv mapping-into-Σ
-    is-equiv-mapping-into-Σ = is-equiv-map-distributive-Π-Σ
+    is-equiv-mapping-into-Σ = {!!}
 
   equiv-mapping-into-Σ :
     (A → Σ B C) ≃ Σ (A → B) (λ f → (x : A) → C (f x))
-  pr1 equiv-mapping-into-Σ = mapping-into-Σ
-  pr2 equiv-mapping-into-Σ = is-equiv-mapping-into-Σ
+  pr1 equiv-mapping-into-Σ = {!!}
 ```

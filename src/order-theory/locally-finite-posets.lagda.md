@@ -31,19 +31,11 @@ module _
   where
 
   is-locally-finite-Poset-Prop : Prop (l1 ⊔ l2)
-  is-locally-finite-Poset-Prop =
-    Π-Prop
-      ( type-Poset X)
-      ( λ x →
-        Π-Prop
-          ( type-Poset X)
-          ( λ y →
-            is-finite-Poset-Prop (poset-interval-Subposet X x y)))
+  is-locally-finite-Poset-Prop = {!!}
 
   is-locally-finite-Poset : UU (l1 ⊔ l2)
-  is-locally-finite-Poset = type-Prop is-locally-finite-Poset-Prop
+  is-locally-finite-Poset = {!!}
 
   is-prop-is-locally-finite-Poset : is-prop is-locally-finite-Poset
-  is-prop-is-locally-finite-Poset =
-    is-prop-type-Prop is-locally-finite-Poset-Prop
+  is-prop-is-locally-finite-Poset = {!!}
 ```

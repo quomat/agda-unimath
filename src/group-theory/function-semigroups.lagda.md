@@ -31,27 +31,25 @@ module _
   where
 
   function-Semigroup : Semigroup (l1 ⊔ l2)
-  function-Semigroup = Π-Semigroup X (λ _ → G)
+  function-Semigroup = {!!}
 
   set-function-Semigroup : Set (l1 ⊔ l2)
-  set-function-Semigroup = set-Π-Semigroup X (λ _ → G)
+  set-function-Semigroup = {!!}
 
   type-function-Semigroup : UU (l1 ⊔ l2)
-  type-function-Semigroup = type-Π-Semigroup X (λ _ → G)
+  type-function-Semigroup = {!!}
 
   mul-function-Semigroup :
     (f g : type-function-Semigroup) → type-function-Semigroup
-  mul-function-Semigroup = mul-Π-Semigroup X (λ _ → G)
+  mul-function-Semigroup = {!!}
 
   associative-mul-function-Semigroup :
     (f g h : type-function-Semigroup) →
     mul-function-Semigroup (mul-function-Semigroup f g) h ＝
     mul-function-Semigroup f (mul-function-Semigroup g h)
-  associative-mul-function-Semigroup =
-    associative-mul-Π-Semigroup X (λ _ → G)
+  associative-mul-function-Semigroup = {!!}
 
   has-associative-mul-function-Semigroup :
     has-associative-mul-Set set-function-Semigroup
-  has-associative-mul-function-Semigroup =
-    has-associative-mul-Π-Semigroup X (λ _ → G)
+  has-associative-mul-function-Semigroup = {!!}
 ```

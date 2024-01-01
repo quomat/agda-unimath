@@ -62,61 +62,56 @@ record
     ctx-category : Precategory l1 l2
 
   Ctx : UU l1
-  Ctx = obj-Precategory ctx-category
+  Ctx = {!!}
 
   Sub : Ctx → Ctx → UU l2
-  Sub = hom-Precategory ctx-category
+  Sub = {!!}
 
   field
     ty-presheaf : presheaf-Precategory ctx-category l3
 
   Ty : Ctx → UU l3
-  Ty Γ = element-presheaf-Precategory ctx-category ty-presheaf Γ
+  Ty Γ = {!!}
 
   ∫Ty : Precategory (l1 ⊔ l3) (l2 ⊔ l3)
-  ∫Ty = precategory-of-elements-presheaf-Precategory ctx-category ty-presheaf
+  ∫Ty = {!!}
 
   obj-∫Ty : UU (l1 ⊔ l3)
-  obj-∫Ty = obj-Precategory ∫Ty
+  obj-∫Ty = {!!}
 
   hom-∫Ty : obj-∫Ty → obj-∫Ty → UU (l2 ⊔ l3)
-  hom-∫Ty = hom-Precategory ∫Ty
+  hom-∫Ty = {!!}
 
   proj-∫Ty : functor-Precategory ∫Ty ctx-category
-  proj-∫Ty =
-    proj-functor-precategory-of-elements-presheaf-Precategory
-      ( ctx-category)
-      ( ty-presheaf)
+  proj-∫Ty = {!!}
 
   _·_ : {Δ Γ : Ctx} (A : Ty Γ) (γ : Sub Δ Γ) → Ty Δ
-  A · γ = action-presheaf-Precategory ctx-category ty-presheaf γ A
+  A · γ = {!!}
 
   preserves-comp-Ty :
     {Δ Δ' Γ : Ctx} (A : Ty Γ) (γ : Sub Δ' Γ) (δ : Sub Δ Δ') →
     A · comp-hom-Precategory ctx-category γ δ ＝ (A · γ) · δ
-  preserves-comp-Ty A γ δ =
-    preserves-comp-action-presheaf-Precategory ctx-category ty-presheaf γ δ A
+  preserves-comp-Ty A γ δ = {!!}
 
   preserves-id-Ty :
     {Γ : Ctx} (A : Ty Γ) → A · id-hom-Precategory ctx-category ＝ A
-  preserves-id-Ty {Γ} =
-    preserves-id-action-presheaf-Precategory ctx-category ty-presheaf
+  preserves-id-Ty {Γ} = {!!}
 
   field
     ext-functor : functor-Precategory ∫Ty ctx-category
 
   ext : (Γ : Ctx) (A : Ty Γ) → Ctx
-  ext Γ A = obj-functor-Precategory ∫Ty ctx-category ext-functor (Γ , A)
+  ext Γ A = {!!}
 
   ⟨_,_⟩ : {Γ Δ : Ctx} (σ : Sub Γ Δ) (A : Ty Δ) → Sub (ext Γ (A · σ)) (ext Δ A)
-  ⟨ σ , A ⟩ = hom-functor-Precategory ∫Ty ctx-category ext-functor (σ , refl)
+  ⟨ σ , A ⟩ = {!!}
 
   field
     p-natural-transformation :
       natural-transformation-Precategory ∫Ty ctx-category ext-functor proj-∫Ty
 
   p : (Γ : Ctx) (A : Ty Γ) → Sub (ext Γ A) Γ
-  p Γ A = pr1 p-natural-transformation (Γ , A)
+  p Γ A = {!!}
 
   naturality-p :
     {x y : obj-∫Ty} (f : hom-∫Ty x y) →
@@ -126,17 +121,7 @@ record
       ( p (pr1 x) (pr2 x))
       ( p (pr1 y) (pr2 y))
       ( hom-functor-Precategory ∫Ty ctx-category proj-∫Ty f)
-  naturality-p =
-    naturality-natural-transformation-Precategory
-      ( precategory-of-elements-presheaf-Precategory
-        ( ctx-category)
-        ( ty-presheaf))
-      ( ctx-category)
-      ( ext-functor)
-      ( proj-functor-precategory-of-elements-presheaf-Precategory
-        ( ctx-category)
-          ( ty-presheaf))
-      ( p-natural-transformation)
+  naturality-p = {!!}
 
   field
     is-pullback-p :
@@ -152,51 +137,17 @@ The terms are defined as sections to `ext`.
     where
 
     Tm : UU l2
-    Tm =
-      Σ ( Sub Γ (ext Γ A))
-        ( λ t →
-          comp-hom-Precategory ctx-category (p Γ A) t ＝
-          id-hom-Precategory ctx-category)
+    Tm = {!!}
 
     is-set-Tm : is-set Tm
-    is-set-Tm =
-      is-set-type-subtype
-        ( λ t →
-          Id-Prop
-            ( hom-set-Precategory ctx-category Γ Γ)
-            ( comp-hom-Precategory ctx-category (p Γ A) t)
-            ( id-hom-Precategory ctx-category))
-        ( is-set-hom-Precategory ctx-category Γ (ext Γ A))
+    is-set-Tm = {!!}
 
     Tm-Set : Set l2
-    pr1 Tm-Set = Tm
-    pr2 Tm-Set = is-set-Tm
+    pr1 Tm-Set = {!!}
 
   _[_] :
     {Γ Δ : Ctx} {A : Ty Δ} (t : Tm Δ A) (σ : Sub Γ Δ) → Tm Γ (A · σ)
-  _[_] {Γ} {Δ} {A} (s , eq) σ =
-    ( pr1 gap-map , pr1 (pr2 gap-map))
-    where
-    sq :
-      comp-hom-Precategory ctx-category σ (id-hom-Precategory ctx-category) ＝
-      comp-hom-Precategory ctx-category
-        ( p Δ A)
-        ( comp-hom-Precategory ctx-category s σ)
-    sq =
-      equational-reasoning
-        comp-hom-Precategory ctx-category σ (id-hom-Precategory ctx-category)
-          ＝ σ by right-unit-law-comp-hom-Precategory ctx-category σ
-          ＝ comp-hom-Precategory
-              ctx-category
-              (id-hom-Precategory ctx-category)
-              σ by inv (left-unit-law-comp-hom-Precategory ctx-category σ)
-          ＝ comp-hom-Precategory ctx-category
-              (comp-hom-Precategory ctx-category (p Δ A) s)
-              σ by ap (λ k → comp-hom-Precategory ctx-category k σ) (inv eq)
-          ＝ comp-hom-Precategory ctx-category
-              (p Δ A)
-              (comp-hom-Precategory ctx-category s σ)
-              by associative-comp-hom-Precategory ctx-category _ _ _
+  _[_] {Γ} {Δ} {A} (s , eq) σ = {!!}
 
     gap-map :
       Σ ( Sub Γ (ext Γ (A · σ)))
@@ -207,14 +158,5 @@ The terms are defined as sections to `ext`.
               ( pr1 (pr2 ext-functor) (σ , refl))
               ( g)) ＝
             ( comp-hom-Precategory ctx-category s σ)))
-    gap-map =
-      pr1
-        ( is-pullback-p
-          ( Γ , (A · σ))
-          ( Δ , A)
-          ( σ , refl)
-          ( Γ)
-          ( id-hom-Precategory ctx-category)
-          ( comp-hom-Precategory ctx-category s σ)
-          ( sq))
+    gap-map = {!!}
 ```

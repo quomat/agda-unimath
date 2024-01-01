@@ -38,20 +38,16 @@ parametric-Total-Order-Full-Large-Subprecategory :
   Full-Large-Subprecategory
     ( λ l → α l ⊔ β l)
     ( parametric-Poset-Large-Precategory α β)
-parametric-Total-Order-Full-Large-Subprecategory α β = is-total-Poset-Prop
+parametric-Total-Order-Full-Large-Subprecategory α β = {!!}
 
 Total-Order-Large-Precategory :
   Large-Precategory lsuc (_⊔_)
-Total-Order-Large-Precategory =
-  large-precategory-Full-Large-Subprecategory
-    ( Poset-Large-Precategory)
-    ( parametric-Total-Order-Full-Large-Subprecategory (λ l → l) (λ l → l))
+Total-Order-Large-Precategory = {!!}
 ```
 
 ### The precategory or total orders of universe level `l`
 
 ```agda
 Total-Order-Precategory : (l : Level) → Precategory (lsuc l) l
-Total-Order-Precategory =
-  precategory-Large-Precategory Total-Order-Large-Precategory
+Total-Order-Precategory = {!!}
 ```

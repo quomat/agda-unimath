@@ -40,24 +40,20 @@ module _
   where
 
   vec-Commutative-Semiring : ℕ → UU l
-  vec-Commutative-Semiring =
-    vec-Semiring (semiring-Commutative-Semiring R)
+  vec-Commutative-Semiring = {!!}
 
   head-vec-Commutative-Semiring :
     {n : ℕ} → vec-Commutative-Semiring (succ-ℕ n) → type-Commutative-Semiring R
-  head-vec-Commutative-Semiring =
-    head-vec-Semiring (semiring-Commutative-Semiring R)
+  head-vec-Commutative-Semiring = {!!}
 
   tail-vec-Commutative-Semiring :
     {n : ℕ} → vec-Commutative-Semiring (succ-ℕ n) → vec-Commutative-Semiring n
-  tail-vec-Commutative-Semiring =
-    tail-vec-Semiring (semiring-Commutative-Semiring R)
+  tail-vec-Commutative-Semiring = {!!}
 
   snoc-vec-Commutative-Semiring :
     {n : ℕ} → vec-Commutative-Semiring n → type-Commutative-Semiring R →
     vec-Commutative-Semiring (succ-ℕ n)
-  snoc-vec-Commutative-Semiring =
-    snoc-vec-Semiring (semiring-Commutative-Semiring R)
+  snoc-vec-Commutative-Semiring = {!!}
 ```
 
 ### Functional vectors on commutative semirings
@@ -68,33 +64,28 @@ module _
   where
 
   functional-vec-Commutative-Semiring : ℕ → UU l
-  functional-vec-Commutative-Semiring =
-    functional-vec-Semiring (semiring-Commutative-Semiring R)
+  functional-vec-Commutative-Semiring = {!!}
 
   head-functional-vec-Commutative-Semiring :
     (n : ℕ) → functional-vec-Commutative-Semiring (succ-ℕ n) →
     type-Commutative-Semiring R
-  head-functional-vec-Commutative-Semiring =
-    head-functional-vec-Semiring (semiring-Commutative-Semiring R)
+  head-functional-vec-Commutative-Semiring = {!!}
 
   tail-functional-vec-Commutative-Semiring :
     (n : ℕ) → functional-vec-Commutative-Semiring (succ-ℕ n) →
     functional-vec-Commutative-Semiring n
-  tail-functional-vec-Commutative-Semiring =
-    tail-functional-vec-Semiring (semiring-Commutative-Semiring R)
+  tail-functional-vec-Commutative-Semiring = {!!}
 
   cons-functional-vec-Commutative-Semiring :
     (n : ℕ) → type-Commutative-Semiring R →
     functional-vec-Commutative-Semiring n →
     functional-vec-Commutative-Semiring (succ-ℕ n)
-  cons-functional-vec-Commutative-Semiring =
-    cons-functional-vec-Semiring (semiring-Commutative-Semiring R)
+  cons-functional-vec-Commutative-Semiring = {!!}
 
   snoc-functional-vec-Commutative-Semiring :
     (n : ℕ) → functional-vec-Commutative-Semiring n →
     type-Commutative-Semiring R → functional-vec-Commutative-Semiring (succ-ℕ n)
-  snoc-functional-vec-Commutative-Semiring =
-    snoc-functional-vec-Semiring (semiring-Commutative-Semiring R)
+  snoc-functional-vec-Commutative-Semiring = {!!}
 ```
 
 ### Zero vector on a commutative semiring
@@ -107,7 +98,7 @@ module _
   where
 
   zero-vec-Commutative-Semiring : {n : ℕ} → vec-Commutative-Semiring R n
-  zero-vec-Commutative-Semiring = constant-vec (zero-Commutative-Semiring R)
+  zero-vec-Commutative-Semiring = {!!}
 ```
 
 #### The zero functional vector
@@ -119,7 +110,7 @@ module _
 
   zero-functional-vec-Commutative-Semiring :
     (n : ℕ) → functional-vec-Commutative-Semiring R n
-  zero-functional-vec-Commutative-Semiring n i = zero-Commutative-Semiring R
+  zero-functional-vec-Commutative-Semiring n i = {!!}
 ```
 
 ### Pointwise addition of vectors on a commutative semiring
@@ -134,45 +125,37 @@ module _
   add-vec-Commutative-Semiring :
     {n : ℕ} → vec-Commutative-Semiring R n → vec-Commutative-Semiring R n →
     vec-Commutative-Semiring R n
-  add-vec-Commutative-Semiring =
-    add-vec-Semiring (semiring-Commutative-Semiring R)
+  add-vec-Commutative-Semiring = {!!}
 
   associative-add-vec-Commutative-Semiring :
     {n : ℕ} (v1 v2 v3 : vec-Commutative-Semiring R n) →
     add-vec-Commutative-Semiring (add-vec-Commutative-Semiring v1 v2) v3 ＝
     add-vec-Commutative-Semiring v1 (add-vec-Commutative-Semiring v2 v3)
-  associative-add-vec-Commutative-Semiring =
-    associative-add-vec-Semiring (semiring-Commutative-Semiring R)
+  associative-add-vec-Commutative-Semiring = {!!}
 
   vec-Commutative-Semiring-Semigroup : ℕ → Semigroup l
-  vec-Commutative-Semiring-Semigroup =
-    vec-Semiring-Semigroup (semiring-Commutative-Semiring R)
+  vec-Commutative-Semiring-Semigroup = {!!}
 
   left-unit-law-add-vec-Commutative-Semiring :
     {n : ℕ} (v : vec-Commutative-Semiring R n) →
     add-vec-Commutative-Semiring (zero-vec-Commutative-Semiring R) v ＝ v
-  left-unit-law-add-vec-Commutative-Semiring =
-    left-unit-law-add-vec-Semiring (semiring-Commutative-Semiring R)
+  left-unit-law-add-vec-Commutative-Semiring = {!!}
 
   right-unit-law-add-vec-Commutative-Semiring :
     {n : ℕ} (v : vec-Commutative-Semiring R n) →
     add-vec-Commutative-Semiring v (zero-vec-Commutative-Semiring R) ＝ v
-  right-unit-law-add-vec-Commutative-Semiring =
-    right-unit-law-add-vec-Semiring (semiring-Commutative-Semiring R)
+  right-unit-law-add-vec-Commutative-Semiring = {!!}
 
   vec-Commutative-Semiring-Monoid : ℕ → Monoid l
-  vec-Commutative-Semiring-Monoid =
-    vec-Semiring-Monoid (semiring-Commutative-Semiring R)
+  vec-Commutative-Semiring-Monoid = {!!}
 
   commutative-add-vec-Commutative-Semiring :
     {n : ℕ} (v w : vec-Commutative-Semiring R n) →
     add-vec-Commutative-Semiring v w ＝ add-vec-Commutative-Semiring w v
-  commutative-add-vec-Commutative-Semiring =
-    commutative-add-vec-Semiring (semiring-Commutative-Semiring R)
+  commutative-add-vec-Commutative-Semiring = {!!}
 
   vec-Commutative-Semiring-Commutative-Monoid : ℕ → Commutative-Monoid l
-  vec-Commutative-Semiring-Commutative-Monoid =
-    vec-Semiring-Commutative-Monoid (semiring-Commutative-Semiring R)
+  vec-Commutative-Semiring-Commutative-Monoid = {!!}
 ```
 
 #### Pointwise addition of functional vectors on a commutative semiring
@@ -185,8 +168,7 @@ module _
   add-functional-vec-Commutative-Semiring :
     (n : ℕ) (v w : functional-vec-Commutative-Semiring R n) →
     functional-vec-Commutative-Semiring R n
-  add-functional-vec-Commutative-Semiring =
-    add-functional-vec-Semiring (semiring-Commutative-Semiring R)
+  add-functional-vec-Commutative-Semiring = {!!}
 
   associative-add-functional-vec-Commutative-Semiring :
     (n : ℕ) (v1 v2 v3 : functional-vec-Commutative-Semiring R n) →
@@ -194,40 +176,33 @@ module _
       ( add-functional-vec-Commutative-Semiring n v1 v2) v3) ＝
     ( add-functional-vec-Commutative-Semiring n v1
       ( add-functional-vec-Commutative-Semiring n v2 v3))
-  associative-add-functional-vec-Commutative-Semiring =
-    associative-add-functional-vec-Semiring (semiring-Commutative-Semiring R)
+  associative-add-functional-vec-Commutative-Semiring = {!!}
 
   functional-vec-Commutative-Semiring-Semigroup : ℕ → Semigroup l
-  functional-vec-Commutative-Semiring-Semigroup =
-    functional-vec-Semiring-Semigroup (semiring-Commutative-Semiring R)
+  functional-vec-Commutative-Semiring-Semigroup = {!!}
 
   left-unit-law-add-functional-vec-Commutative-Semiring :
     (n : ℕ) (v : functional-vec-Commutative-Semiring R n) →
     add-functional-vec-Commutative-Semiring n
       ( zero-functional-vec-Commutative-Semiring R n) v ＝ v
-  left-unit-law-add-functional-vec-Commutative-Semiring =
-    left-unit-law-add-functional-vec-Semiring (semiring-Commutative-Semiring R)
+  left-unit-law-add-functional-vec-Commutative-Semiring = {!!}
 
   right-unit-law-add-functional-vec-Commutative-Semiring :
     (n : ℕ) (v : functional-vec-Commutative-Semiring R n) →
     add-functional-vec-Commutative-Semiring n v
       ( zero-functional-vec-Commutative-Semiring R n) ＝ v
-  right-unit-law-add-functional-vec-Commutative-Semiring =
-    right-unit-law-add-functional-vec-Semiring (semiring-Commutative-Semiring R)
+  right-unit-law-add-functional-vec-Commutative-Semiring = {!!}
 
   functional-vec-Commutative-Semiring-Monoid : ℕ → Monoid l
-  functional-vec-Commutative-Semiring-Monoid =
-    functional-vec-Semiring-Monoid (semiring-Commutative-Semiring R)
+  functional-vec-Commutative-Semiring-Monoid = {!!}
 
   commutative-add-functional-vec-Commutative-Semiring :
     (n : ℕ) (v w : functional-vec-Commutative-Semiring R n) →
     add-functional-vec-Commutative-Semiring n v w ＝
     add-functional-vec-Commutative-Semiring n w v
-  commutative-add-functional-vec-Commutative-Semiring =
-    commutative-add-functional-vec-Semiring (semiring-Commutative-Semiring R)
+  commutative-add-functional-vec-Commutative-Semiring = {!!}
 
   functional-vec-Commutative-Semiring-Commutative-Monoid :
     ℕ → Commutative-Monoid l
-  functional-vec-Commutative-Semiring-Commutative-Monoid =
-    functional-vec-Semiring-Commutative-Monoid (semiring-Commutative-Semiring R)
+  functional-vec-Commutative-Semiring-Commutative-Monoid = {!!}
 ```

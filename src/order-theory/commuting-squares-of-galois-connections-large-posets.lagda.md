@@ -64,16 +64,10 @@ module _
   where
 
   lower-coherence-square-galois-connection-Large-Poset : UUω
-  lower-coherence-square-galois-connection-Large-Poset =
-    lower-sim-galois-connection-Large-Poset P V
-      ( comp-galois-connection-Large-Poset P Q V J F)
-      ( comp-galois-connection-Large-Poset P U V G I)
+  lower-coherence-square-galois-connection-Large-Poset = {!!}
 
   upper-coherence-square-galois-connection-Large-Poset : UUω
-  upper-coherence-square-galois-connection-Large-Poset =
-    upper-sim-galois-connection-Large-Poset P V
-      ( comp-galois-connection-Large-Poset P U V G I)
-      ( comp-galois-connection-Large-Poset P Q V J F)
+  upper-coherence-square-galois-connection-Large-Poset = {!!}
 ```
 
 ## Properties
@@ -99,18 +93,12 @@ module _
       P Q U V I F G J →
     lower-coherence-square-galois-connection-Large-Poset
       P Q U V I F G J
-  lower-coherence-square-upper-coherence-square-galois-connection-Large-Poset =
-    lower-sim-upper-sim-galois-connection-Large-Poset P V
-      ( comp-galois-connection-Large-Poset P Q V J F)
-      ( comp-galois-connection-Large-Poset P U V G I)
+  lower-coherence-square-upper-coherence-square-galois-connection-Large-Poset = {!!}
 
   upper-coherence-square-lower-coherence-square-galois-connection-Large-Poset :
     lower-coherence-square-galois-connection-Large-Poset
       P Q U V I F G J →
     upper-coherence-square-galois-connection-Large-Poset
       P Q U V I F G J
-  upper-coherence-square-lower-coherence-square-galois-connection-Large-Poset =
-    upper-sim-lower-sim-galois-connection-Large-Poset P V
-      ( comp-galois-connection-Large-Poset P Q V J F)
-      ( comp-galois-connection-Large-Poset P U V G I)
+  upper-coherence-square-lower-coherence-square-galois-connection-Large-Poset = {!!}
 ```

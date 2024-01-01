@@ -40,48 +40,30 @@ module _
 
   binary-reflects-equivalence-relation :
     {X : UU l5} (f : A → B → X) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5)
-  binary-reflects-equivalence-relation f =
-    {x x' : A} {y y' : B} →
-    sim-equivalence-relation R x x' → sim-equivalence-relation S y y' →
-    f x y ＝ f x' y'
+  binary-reflects-equivalence-relation f = {!!}
 
   binary-reflecting-map-equivalence-relation :
     (X : UU l5) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5)
-  binary-reflecting-map-equivalence-relation X =
-    Σ (A → B → X) binary-reflects-equivalence-relation
+  binary-reflecting-map-equivalence-relation X = {!!}
 
   map-binary-reflecting-map-equivalence-relation :
     {X : UU l5} → binary-reflecting-map-equivalence-relation X → A → B → X
-  map-binary-reflecting-map-equivalence-relation = pr1
+  map-binary-reflecting-map-equivalence-relation = {!!}
 
   reflects-binary-reflecting-map-equivalence-relation :
     {X : UU l5} (f : binary-reflecting-map-equivalence-relation X) →
     binary-reflects-equivalence-relation
       ( map-binary-reflecting-map-equivalence-relation f)
-  reflects-binary-reflecting-map-equivalence-relation = pr2
+  reflects-binary-reflecting-map-equivalence-relation = {!!}
 
   is-prop-binary-reflects-equivalence-relation :
     (X : Set l5) (f : A → B → type-Set X) →
     is-prop (binary-reflects-equivalence-relation f)
-  is-prop-binary-reflects-equivalence-relation X f =
-    is-prop-Π'
-      ( λ x →
-        is-prop-Π'
-          ( λ x' →
-            is-prop-Π'
-              ( λ y →
-                is-prop-Π'
-                  ( λ y' →
-                    is-prop-function-type
-                      ( is-prop-function-type
-                        ( is-set-type-Set X (f x y) (f x' y')))))))
+  is-prop-binary-reflects-equivalence-relation X f = {!!}
 
   binary-reflects-prop-equivalence-relation :
     (X : Set l5) (f : A → B → type-Set X) → Prop (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5)
-  pr1 (binary-reflects-prop-equivalence-relation X f) =
-    binary-reflects-equivalence-relation f
-  pr2 (binary-reflects-prop-equivalence-relation X f) =
-    is-prop-binary-reflects-equivalence-relation X f
+  pr1 (binary-reflects-prop-equivalence-relation X f) = {!!}
 ```
 
 ### Characterizing the identity type of binary reflecting maps into sets
@@ -97,54 +79,33 @@ module _
   htpy-binary-reflecting-map-equivalence-relation :
     (g : binary-reflecting-map-equivalence-relation R S (type-Set C)) →
     UU (l1 ⊔ l3 ⊔ l5)
-  htpy-binary-reflecting-map-equivalence-relation g =
-    (x : A) (y : B) →
-    map-binary-reflecting-map-equivalence-relation R S f x y ＝
-    map-binary-reflecting-map-equivalence-relation R S g x y
+  htpy-binary-reflecting-map-equivalence-relation g = {!!}
 
   refl-htpy-binary-reflecting-map-equivalence-relation :
     htpy-binary-reflecting-map-equivalence-relation f
-  refl-htpy-binary-reflecting-map-equivalence-relation x y = refl
+  refl-htpy-binary-reflecting-map-equivalence-relation x y = {!!}
 
   htpy-eq-binary-reflecting-map-equivalence-relation :
     (g : binary-reflecting-map-equivalence-relation R S (type-Set C)) →
     (f ＝ g) → htpy-binary-reflecting-map-equivalence-relation g
-  htpy-eq-binary-reflecting-map-equivalence-relation .f refl =
-    refl-htpy-binary-reflecting-map-equivalence-relation
+  htpy-eq-binary-reflecting-map-equivalence-relation .f refl = {!!}
 
   is-torsorial-htpy-binary-reflecting-map-equivalence-relation :
     is-torsorial (htpy-binary-reflecting-map-equivalence-relation)
-  is-torsorial-htpy-binary-reflecting-map-equivalence-relation =
-    is-torsorial-Eq-subtype
-      ( is-torsorial-Eq-Π
-        ( λ x g → map-binary-reflecting-map-equivalence-relation R S f x ~ g)
-        ( λ x →
-          is-torsorial-htpy
-            ( map-binary-reflecting-map-equivalence-relation R S f x)))
-      ( is-prop-binary-reflects-equivalence-relation R S C)
-      ( map-binary-reflecting-map-equivalence-relation R S f)
-      ( λ x → refl-htpy)
-      ( reflects-binary-reflecting-map-equivalence-relation R S f)
+  is-torsorial-htpy-binary-reflecting-map-equivalence-relation = {!!}
 
   is-equiv-htpy-eq-binary-reflecting-map-equivalence-relation :
     (g : binary-reflecting-map-equivalence-relation R S (type-Set C)) →
     is-equiv (htpy-eq-binary-reflecting-map-equivalence-relation g)
-  is-equiv-htpy-eq-binary-reflecting-map-equivalence-relation =
-    fundamental-theorem-id
-      is-torsorial-htpy-binary-reflecting-map-equivalence-relation
-      htpy-eq-binary-reflecting-map-equivalence-relation
+  is-equiv-htpy-eq-binary-reflecting-map-equivalence-relation = {!!}
 
   extensionality-binary-reflecting-map-equivalence-relation :
     (g : binary-reflecting-map-equivalence-relation R S (type-Set C)) →
     (f ＝ g) ≃ htpy-binary-reflecting-map-equivalence-relation g
-  pr1 (extensionality-binary-reflecting-map-equivalence-relation g) =
-    htpy-eq-binary-reflecting-map-equivalence-relation g
-  pr2 (extensionality-binary-reflecting-map-equivalence-relation g) =
-    is-equiv-htpy-eq-binary-reflecting-map-equivalence-relation g
+  pr1 (extensionality-binary-reflecting-map-equivalence-relation g) = {!!}
 
   eq-htpy-binary-reflecting-map-equivalence-relation :
     (g : binary-reflecting-map-equivalence-relation R S (type-Set C)) →
     htpy-binary-reflecting-map-equivalence-relation g → (f ＝ g)
-  eq-htpy-binary-reflecting-map-equivalence-relation g =
-    map-inv-equiv (extensionality-binary-reflecting-map-equivalence-relation g)
+  eq-htpy-binary-reflecting-map-equivalence-relation g = {!!}
 ```

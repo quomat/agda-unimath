@@ -32,10 +32,7 @@ The large poset of cyclic rings is dual to the large poset of
 
 ```agda
 Cyclic-Ring-Large-Poset : Large-Poset lsuc _⊔_
-Cyclic-Ring-Large-Poset =
-  large-poset-Large-Category
-    ( Cyclic-Ring-Large-Category)
-    ( is-large-poset-Cyclic-Ring-Large-Category)
+Cyclic-Ring-Large-Poset = {!!}
 ```
 
 ## See also

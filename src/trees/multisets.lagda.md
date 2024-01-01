@@ -29,7 +29,7 @@ family over the universe `UU l`.
 
 ```agda
 𝕍 : (l : Level) → UU (lsuc l)
-𝕍 l = 𝕎 (UU l) (λ X → X)
+𝕍 l = {!!}
 ```
 
 ### The large type of all multisets
@@ -47,10 +47,10 @@ data
 infix 6 _∈-𝕍_ _∉-𝕍_
 
 _∈-𝕍_ : {l : Level} → 𝕍 l → 𝕍 l → UU (lsuc l)
-X ∈-𝕍 Y = X ∈-𝕎 Y
+X ∈-𝕍 Y = {!!}
 
 _∉-𝕍_ : {l : Level} → 𝕍 l → 𝕍 l → UU (lsuc l)
-X ∉-𝕍 Y = is-empty (X ∈-𝕍 Y)
+X ∉-𝕍 Y = {!!}
 ```
 
 ### Comprehension for multisets
@@ -58,6 +58,5 @@ X ∉-𝕍 Y = is-empty (X ∈-𝕍 Y)
 ```agda
 comprehension-𝕍 :
   {l : Level} (X : 𝕍 l) (P : shape-𝕎 X → UU l) → 𝕍 l
-comprehension-𝕍 X P =
-  tree-𝕎 (Σ (shape-𝕎 X) P) (component-𝕎 X ∘ pr1)
+comprehension-𝕍 X P = {!!}
 ```

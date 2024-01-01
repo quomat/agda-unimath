@@ -29,7 +29,7 @@ open import foundation.universe-levels
 ## Idea
 
 The type of rational numbers is the quotient of the type of fractions, by the
-equivalence relation given by `(n/m) ~ (n'/m') := Id (n *ℤ m') (n' *ℤ m)`.
+equivalence relation given by `(n/m) ~ (n'/m') := {!!}
 
 ## Definitions
 
@@ -37,53 +37,53 @@ equivalence relation given by `(n/m) ~ (n'/m') := Id (n *ℤ m') (n' *ℤ m)`.
 
 ```agda
 ℚ : UU lzero
-ℚ = Σ fraction-ℤ is-reduced-fraction-ℤ
+ℚ = {!!}
 
 fraction-ℚ : ℚ → fraction-ℤ
-fraction-ℚ x = pr1 x
+fraction-ℚ x = {!!}
 
 is-reduced-fraction-ℚ : (x : ℚ) → is-reduced-fraction-ℤ (fraction-ℚ x)
-is-reduced-fraction-ℚ x = pr2 x
+is-reduced-fraction-ℚ x = {!!}
 ```
 
 ### Inclusion of fractions
 
 ```agda
 in-fraction-ℤ : fraction-ℤ → ℚ
-pr1 (in-fraction-ℤ x) = reduce-fraction-ℤ x
-pr2 (in-fraction-ℤ x) = is-reduced-reduce-fraction-ℤ x
+pr1 (in-fraction-ℤ x) = {!!}
+pr2 (in-fraction-ℤ x) = {!!}
 ```
 
 ### Inclusion of the integers
 
 ```agda
 in-int : ℤ → ℚ
-in-int x = pair (pair x one-positive-ℤ) (is-one-gcd-one-ℤ' x)
+in-int x = {!!}
 ```
 
 ### Negative one, zero and one
 
 ```agda
 neg-one-ℚ : ℚ
-neg-one-ℚ = in-int neg-one-ℤ
+neg-one-ℚ = {!!}
 
 is-neg-one-ℚ : ℚ → UU lzero
-is-neg-one-ℚ x = (x ＝ neg-one-ℚ)
+is-neg-one-ℚ x = {!!}
 
 zero-ℚ : ℚ
-zero-ℚ = in-int zero-ℤ
+zero-ℚ = {!!}
 
 is-zero-ℚ : ℚ → UU lzero
-is-zero-ℚ x = (x ＝ zero-ℚ)
+is-zero-ℚ x = {!!}
 
 is-nonzero-ℚ : ℚ → UU lzero
-is-nonzero-ℚ k = ¬ (is-zero-ℚ k)
+is-nonzero-ℚ k = {!!}
 
 one-ℚ : ℚ
-one-ℚ = in-int one-ℤ
+one-ℚ = {!!}
 
 is-one-ℚ : ℚ → UU lzero
-is-one-ℚ x = (x ＝ one-ℚ)
+is-one-ℚ x = {!!}
 ```
 
 ## Properties
@@ -94,35 +94,21 @@ is-one-ℚ x = (x ＝ one-ℚ)
 eq-ℚ-sim-fractions-ℤ :
   (x y : fraction-ℤ) → (H : sim-fraction-ℤ x y) →
   in-fraction-ℤ x ＝ in-fraction-ℤ y
-eq-ℚ-sim-fractions-ℤ x y H =
-  eq-pair-Σ'
-    ( pair
-      ( unique-reduce-fraction-ℤ x y H)
-      ( eq-is-prop (is-prop-is-reduced-fraction-ℤ (reduce-fraction-ℤ y))))
+eq-ℚ-sim-fractions-ℤ x y H = {!!}
 ```
 
 ### The type of rationals is a set
 
 ```agda
 is-set-ℚ : is-set ℚ
-is-set-ℚ =
-  is-set-Σ
-    ( is-set-fraction-ℤ)
-    ( λ x → is-set-is-prop (is-prop-is-reduced-fraction-ℤ x))
+is-set-ℚ = {!!}
 
 ℚ-Set : Set lzero
-pr1 ℚ-Set = ℚ
-pr2 ℚ-Set = is-set-ℚ
+pr1 ℚ-Set = {!!}
+pr2 ℚ-Set = {!!}
 
 in-fraction-fraction-ℚ : (x : ℚ) → in-fraction-ℤ (fraction-ℚ x) ＝ x
-in-fraction-fraction-ℚ (pair (pair m (pair n n-pos)) p) =
-  eq-pair-Σ
-    ( eq-pair
-      ( eq-quotient-div-is-one-ℤ _ _ p (div-left-gcd-ℤ m n))
-      ( eq-pair-Σ
-        ( eq-quotient-div-is-one-ℤ _ _ p (div-right-gcd-ℤ m n))
-        ( eq-is-prop (is-prop-is-positive-ℤ n))))
-    ( eq-is-prop (is-prop-is-reduced-fraction-ℤ (m , n , n-pos)))
+in-fraction-fraction-ℚ (pair (pair m (pair n n-pos)) p) = {!!}
 ```
 
 ### The reflecting map from ℤ to ℚ
@@ -130,6 +116,6 @@ in-fraction-fraction-ℚ (pair (pair m (pair n n-pos)) p) =
 ```agda
 reflecting-map-sim-fraction :
   reflecting-map-equivalence-relation equivalence-relation-sim-fraction-ℤ ℚ
-pr1 reflecting-map-sim-fraction = in-fraction-ℤ
-pr2 reflecting-map-sim-fraction {x} {y} H = eq-ℚ-sim-fractions-ℤ x y H
+pr1 reflecting-map-sim-fraction = {!!}
+pr2 reflecting-map-sim-fraction {x} {y} H = {!!}
 ```

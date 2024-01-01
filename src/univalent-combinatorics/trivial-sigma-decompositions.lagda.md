@@ -32,11 +32,7 @@ module _
 
   trivial-inhabited-Σ-Decomposition-𝔽 :
     (p : is-inhabited (type-𝔽 A)) → Σ-Decomposition-𝔽 l2 l1 A
-  trivial-inhabited-Σ-Decomposition-𝔽 p =
-    map-Σ-Decomposition-𝔽-subtype-is-finite
-      ( A)
-      ( ( trivial-inhabited-Σ-Decomposition l2 (type-𝔽 A) p) ,
-        ( is-finite-raise-unit , λ x → is-finite-type-𝔽 A))
+  trivial-inhabited-Σ-Decomposition-𝔽 p = {!!}
 
 module _
   {l1 l2 l3 : Level} (A : 𝔽 l1)
@@ -45,26 +41,22 @@ module _
 
   is-trivial-Prop-Σ-Decomposition-𝔽 :
     Prop l2
-  is-trivial-Prop-Σ-Decomposition-𝔽 =
-    is-contr-Prop (indexing-type-Σ-Decomposition-𝔽 A D)
+  is-trivial-Prop-Σ-Decomposition-𝔽 = {!!}
 
   is-trivial-Σ-Decomposition-𝔽 :
     UU (l2)
-  is-trivial-Σ-Decomposition-𝔽 =
-    type-Prop (is-trivial-Prop-Σ-Decomposition-𝔽)
+  is-trivial-Σ-Decomposition-𝔽 = {!!}
 
 is-trivial-trivial-inhabited-Σ-Decomposition-𝔽 :
   {l1 l2 : Level} (A : 𝔽 l1) (p : is-inhabited (type-𝔽 A)) →
   is-trivial-Σ-Decomposition-𝔽
     ( A)
     ( trivial-inhabited-Σ-Decomposition-𝔽 l2 A p)
-is-trivial-trivial-inhabited-Σ-Decomposition-𝔽 A p =
-  is-trivial-trivial-inhabited-Σ-Decomposition p
+is-trivial-trivial-inhabited-Σ-Decomposition-𝔽 A p = {!!}
 
 type-trivial-Σ-Decomposition-𝔽 :
   {l1 l2 l3 : Level} (A : 𝔽 l1) → UU (l1 ⊔ lsuc l2 ⊔ lsuc l3)
-type-trivial-Σ-Decomposition-𝔽 {l1} {l2} {l3} A =
-  type-subtype (is-trivial-Prop-Σ-Decomposition-𝔽 {l1} {l2} {l3} A)
+type-trivial-Σ-Decomposition-𝔽 {l1} {l2} {l3} A = {!!}
 ```
 
 ## Propositions
@@ -86,24 +78,11 @@ module _
         ( is-inhabited-base-type-is-trivial-Σ-Decomposition {l1} {l2} {l3} {l4}
           ( Σ-Decomposition-Σ-Decomposition-𝔽 A D)
           ( is-trivial)))
-  equiv-trivial-is-trivial-Σ-Decomposition-𝔽 =
-    equiv-trivial-is-trivial-Σ-Decomposition
-      ( Σ-Decomposition-Σ-Decomposition-𝔽 A D)
-      ( is-trivial)
+  equiv-trivial-is-trivial-Σ-Decomposition-𝔽 = {!!}
 
 is-contr-type-trivial-Σ-Decomposition-𝔽 :
   {l1 l2 : Level} (A : 𝔽 l1) → (p : is-inhabited (type-𝔽 A)) →
   is-contr (type-trivial-Σ-Decomposition-𝔽 {l1} {l2} {l1} A)
-pr1 ( is-contr-type-trivial-Σ-Decomposition-𝔽 {l1} {l2} A p) =
-  ( trivial-inhabited-Σ-Decomposition-𝔽 l2 A p ,
-    is-trivial-trivial-inhabited-Σ-Decomposition-𝔽 A p)
-pr2 ( is-contr-type-trivial-Σ-Decomposition-𝔽 {l1} {l2} A p) x =
-  eq-type-subtype
-    ( is-trivial-Prop-Σ-Decomposition-𝔽 A)
-    ( inv
-      ( eq-equiv-Σ-Decomposition-𝔽
-        ( A)
-        ( pr1 x)
-        ( trivial-inhabited-Σ-Decomposition-𝔽 l2 A p)
-        ( equiv-trivial-is-trivial-Σ-Decomposition-𝔽 A (pr1 x) (pr2 x))))
+pr1 ( is-contr-type-trivial-Σ-Decomposition-𝔽 {l1} {l2} A p) = {!!}
+pr2 ( is-contr-type-trivial-Σ-Decomposition-𝔽 {l1} {l2} A p) x = {!!}
 ```

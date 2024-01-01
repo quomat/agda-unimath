@@ -27,7 +27,5 @@ product-dirichlet-series-species-Inhabited-𝔽 :
   {l1 l2 l3 l4 : Level} → species-Inhabited-𝔽 l1 l2 →
   species-Inhabited-𝔽 l1 l3 →
   UU l4 → UU (lsuc l1 ⊔ l2 ⊔ l3 ⊔ l4)
-product-dirichlet-series-species-Inhabited-𝔽 S T X =
-  dirichlet-series-species-Inhabited-𝔽 S X ×
-  dirichlet-series-species-Inhabited-𝔽 T X
+product-dirichlet-series-species-Inhabited-𝔽 S T X = {!!}
 ```

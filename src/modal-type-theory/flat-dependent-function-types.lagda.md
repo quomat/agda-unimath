@@ -39,18 +39,17 @@ module _
   where
 
   map-crisp-distributive-flat-Π : ♭ ((x : A) → B x) → ((@♭ x : A) → ♭ (B x))
-  map-crisp-distributive-flat-Π (cons-flat f) x = cons-flat (f x)
+  map-crisp-distributive-flat-Π (cons-flat f) x = {!!}
 
 module _
   {@♭ l1 l2 : Level} {@♭ A : UU l1} {@♭ B : UU l2}
   where
 
   map-crisp-distributive-flat-function-types : ♭ (A → B) → (@♭ A → ♭ B)
-  map-crisp-distributive-flat-function-types = map-crisp-distributive-flat-Π
+  map-crisp-distributive-flat-function-types = {!!}
 
   map-distributive-flat-function-types : ♭ (A → B) → (♭ A → ♭ B)
-  map-distributive-flat-function-types f (cons-flat x) =
-    map-crisp-distributive-flat-function-types f x
+  map-distributive-flat-function-types f (cons-flat x) = {!!}
 ```
 
 ## See also

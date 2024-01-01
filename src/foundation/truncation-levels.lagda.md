@@ -25,39 +25,38 @@ open import foundation-core.identity-types
 
 ```agda
 truncation-level-minus-two-ℕ : ℕ → 𝕋
-truncation-level-minus-two-ℕ zero-ℕ = neg-two-𝕋
-truncation-level-minus-two-ℕ (succ-ℕ n) =
-  succ-𝕋 (truncation-level-minus-two-ℕ n)
+truncation-level-minus-two-ℕ zero-ℕ = {!!}
+truncation-level-minus-two-ℕ (succ-ℕ n) = {!!}
 
 truncation-level-minus-one-ℕ : ℕ → 𝕋
-truncation-level-minus-one-ℕ = succ-𝕋 ∘ truncation-level-minus-two-ℕ
+truncation-level-minus-one-ℕ = {!!}
 
 truncation-level-ℕ : ℕ → 𝕋
-truncation-level-ℕ = succ-𝕋 ∘ truncation-level-minus-one-ℕ
+truncation-level-ℕ = {!!}
 ```
 
 ### Inclusion of the truncation levels into the natural numbers
 
 ```agda
 nat-succ-succ-𝕋 : 𝕋 → ℕ
-nat-succ-succ-𝕋 neg-two-𝕋 = zero-ℕ
-nat-succ-succ-𝕋 (succ-𝕋 k) = succ-ℕ (nat-succ-succ-𝕋 k)
+nat-succ-succ-𝕋 neg-two-𝕋 = {!!}
+nat-succ-succ-𝕋 (succ-𝕋 k) = {!!}
 ```
 
 ### Addition of truncation levels
 
 ```agda
 add-𝕋 : 𝕋 → 𝕋 → 𝕋
-add-𝕋 neg-two-𝕋 neg-two-𝕋 = neg-two-𝕋
-add-𝕋 neg-two-𝕋 (succ-𝕋 neg-two-𝕋) = neg-two-𝕋
-add-𝕋 neg-two-𝕋 (succ-𝕋 (succ-𝕋 l)) = l
-add-𝕋 (succ-𝕋 neg-two-𝕋) neg-two-𝕋 = neg-two-𝕋
-add-𝕋 (succ-𝕋 neg-two-𝕋) (succ-𝕋 l) = l
-add-𝕋 (succ-𝕋 (succ-𝕋 k)) neg-two-𝕋 = k
-add-𝕋 (succ-𝕋 (succ-𝕋 k)) (succ-𝕋 l) = succ-𝕋 (add-𝕋 (succ-𝕋 k) (succ-𝕋 l))
+add-𝕋 neg-two-𝕋 neg-two-𝕋 = {!!}
+add-𝕋 neg-two-𝕋 (succ-𝕋 neg-two-𝕋) = {!!}
+add-𝕋 neg-two-𝕋 (succ-𝕋 (succ-𝕋 l)) = {!!}
+add-𝕋 (succ-𝕋 neg-two-𝕋) neg-two-𝕋 = {!!}
+add-𝕋 (succ-𝕋 neg-two-𝕋) (succ-𝕋 l) = {!!}
+add-𝕋 (succ-𝕋 (succ-𝕋 k)) neg-two-𝕋 = {!!}
+add-𝕋 (succ-𝕋 (succ-𝕋 k)) (succ-𝕋 l) = {!!}
 
 infixl 35 _+𝕋_
-_+𝕋_ = add-𝕋
+_+𝕋_ = {!!}
 ```
 
 ### Iterated successor functions on truncation levels
@@ -68,11 +67,11 @@ successor:
 
 ```agda
 iterated-succ-𝕋 : ℕ → 𝕋 → 𝕋
-iterated-succ-𝕋 zero-ℕ x = x
-iterated-succ-𝕋 (succ-ℕ n) x = iterated-succ-𝕋 n (succ-𝕋 x)
+iterated-succ-𝕋 zero-ℕ x = {!!}
+iterated-succ-𝕋 (succ-ℕ n) x = {!!}
 
 iterated-succ-𝕋' : 𝕋 → ℕ → 𝕋
-iterated-succ-𝕋' x n = iterated-succ-𝕋 n x
+iterated-succ-𝕋' x n = {!!}
 ```
 
 ## Properties
@@ -81,16 +80,15 @@ iterated-succ-𝕋' x n = iterated-succ-𝕋 n x
 
 ```agda
 left-unit-law-add-𝕋 : (k : 𝕋) → zero-𝕋 +𝕋 k ＝ k
-left-unit-law-add-𝕋 neg-two-𝕋 = refl
-left-unit-law-add-𝕋 (succ-𝕋 neg-two-𝕋) = refl
-left-unit-law-add-𝕋 (succ-𝕋 (succ-𝕋 neg-two-𝕋)) = refl
-left-unit-law-add-𝕋 (succ-𝕋 (succ-𝕋 (succ-𝕋 k))) = refl
+left-unit-law-add-𝕋 neg-two-𝕋 = {!!}
+left-unit-law-add-𝕋 (succ-𝕋 neg-two-𝕋) = {!!}
+left-unit-law-add-𝕋 (succ-𝕋 (succ-𝕋 neg-two-𝕋)) = {!!}
+left-unit-law-add-𝕋 (succ-𝕋 (succ-𝕋 (succ-𝕋 k))) = {!!}
 
 right-unit-law-add-𝕋 : (k : 𝕋) → k +𝕋 zero-𝕋 ＝ k
-right-unit-law-add-𝕋 neg-two-𝕋 = refl
-right-unit-law-add-𝕋 (succ-𝕋 neg-two-𝕋) = refl
-right-unit-law-add-𝕋 (succ-𝕋 (succ-𝕋 k)) =
-  ap succ-𝕋 (right-unit-law-add-𝕋 (succ-𝕋 k))
+right-unit-law-add-𝕋 neg-two-𝕋 = {!!}
+right-unit-law-add-𝕋 (succ-𝕋 neg-two-𝕋) = {!!}
+right-unit-law-add-𝕋 (succ-𝕋 (succ-𝕋 k)) = {!!}
 ```
 
 ### Successor laws for addition of truncation levels
@@ -100,15 +98,14 @@ left-successor-law-add-𝕋 :
   (n k : 𝕋) →
   (succ-𝕋 (succ-𝕋 (succ-𝕋 n))) +𝕋 k ＝
   succ-𝕋 (add-𝕋 (succ-𝕋 (succ-𝕋 n)) k)
-left-successor-law-add-𝕋 n neg-two-𝕋 = refl
-left-successor-law-add-𝕋 n (succ-𝕋 k) = refl
+left-successor-law-add-𝕋 n neg-two-𝕋 = {!!}
+left-successor-law-add-𝕋 n (succ-𝕋 k) = {!!}
 
 right-successor-law-add-𝕋 :
   (k n : 𝕋) →
   k +𝕋 (succ-𝕋 (succ-𝕋 (succ-𝕋 n))) ＝
   succ-𝕋 (k +𝕋 (succ-𝕋 (succ-𝕋 n)))
-right-successor-law-add-𝕋 neg-two-𝕋 n = refl
-right-successor-law-add-𝕋 (succ-𝕋 neg-two-𝕋) n = refl
-right-successor-law-add-𝕋 (succ-𝕋 (succ-𝕋 k)) n =
-  ap succ-𝕋 (right-successor-law-add-𝕋 (succ-𝕋 k) n)
+right-successor-law-add-𝕋 neg-two-𝕋 n = {!!}
+right-successor-law-add-𝕋 (succ-𝕋 neg-two-𝕋) n = {!!}
+right-successor-law-add-𝕋 (succ-𝕋 (succ-𝕋 k)) n = {!!}
 ```

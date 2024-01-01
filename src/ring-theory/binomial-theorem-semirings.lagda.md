@@ -34,11 +34,11 @@ open import univalent-combinatorics.standard-finite-types
 ## Idea
 
 The binomial theorem in semirings asserts that for any two elements `x` and `y`
-of a commutative ring `R` and any natural number `n`, if `xy = yx` holds then we
+of a commutative ring `R` and any natural number `n`, if `xy = {!!}
 have
 
 ```text
-  (x + y)ⁿ = ∑_{0 ≤ i < n+1} (n choose i) xⁱ yⁿ⁻ⁱ.
+  (x + y)ⁿ = {!!}
 ```
 
 ## Definitions
@@ -50,12 +50,7 @@ binomial-sum-Semiring :
   {l : Level} (R : Semiring l)
   (n : ℕ) (f : functional-vec-Semiring R (succ-ℕ n)) →
   type-Semiring R
-binomial-sum-Semiring R n f =
-  sum-Semiring R (succ-ℕ n)
-    ( λ i →
-      mul-nat-scalar-Semiring R
-        ( binomial-coefficient-Fin n i)
-        ( f i))
+binomial-sum-Semiring R n f = {!!}
 ```
 
 ## Properties
@@ -71,26 +66,13 @@ module _
     (f : functional-vec-Semiring R 1) →
     binomial-sum-Semiring R 0 f ＝
     head-functional-vec-Semiring R 0 f
-  binomial-sum-one-element-Semiring f =
-    ( sum-one-element-Semiring R
-      ( λ i →
-        mul-nat-scalar-Semiring R
-          ( binomial-coefficient-Fin 0 i)
-          ( f i))) ∙
-    ( left-unit-law-mul-nat-scalar-Semiring R
-      ( head-functional-vec-Semiring R 0 f))
+  binomial-sum-one-element-Semiring f = {!!}
 
   binomial-sum-two-elements-Semiring :
     (f : functional-vec-Semiring R 2) →
     binomial-sum-Semiring R 1 f ＝
     add-Semiring R (f (zero-Fin 1)) (f (one-Fin 1))
-  binomial-sum-two-elements-Semiring f =
-    sum-two-elements-Semiring R
-      ( λ i → mul-nat-scalar-Semiring R (binomial-coefficient-Fin 1 i) (f i)) ∙
-      ( ap-binary
-        ( add-Semiring R)
-        ( left-unit-law-mul-nat-scalar-Semiring R (f (zero-Fin 1)))
-        ( left-unit-law-mul-nat-scalar-Semiring R (f (one-Fin 1))))
+  binomial-sum-two-elements-Semiring f = {!!}
 ```
 
 ### Binomial sums are homotopy invariant
@@ -104,13 +86,7 @@ module _
     (n : ℕ) {f g : functional-vec-Semiring R (succ-ℕ n)} →
     (f ~ g) →
     binomial-sum-Semiring R n f ＝ binomial-sum-Semiring R n g
-  htpy-binomial-sum-Semiring n H =
-    htpy-sum-Semiring R
-      ( succ-ℕ n)
-      ( λ i →
-        ap
-          ( mul-nat-scalar-Semiring R (binomial-coefficient-Fin n i))
-          ( H i))
+  htpy-binomial-sum-Semiring n H = {!!}
 ```
 
 ### Multiplication distributes over sums
@@ -125,38 +101,14 @@ module _
     (f : functional-vec-Semiring R (succ-ℕ n)) →
     mul-Semiring R x (binomial-sum-Semiring R n f) ＝
     binomial-sum-Semiring R n (λ i → mul-Semiring R x (f i))
-  left-distributive-mul-binomial-sum-Semiring n x f =
-    ( left-distributive-mul-sum-Semiring R
-      ( succ-ℕ n)
-      ( x)
-      ( λ i →
-        mul-nat-scalar-Semiring R (binomial-coefficient-Fin n i) (f i))) ∙
-    ( htpy-sum-Semiring R
-      ( succ-ℕ n)
-      ( λ i →
-        right-nat-scalar-law-mul-Semiring R
-          ( binomial-coefficient-Fin n i)
-          ( x)
-          ( f i)))
+  left-distributive-mul-binomial-sum-Semiring n x f = {!!}
 
   right-distributive-mul-binomial-sum-Semiring :
     (n : ℕ) (f : functional-vec-Semiring R (succ-ℕ n)) →
     (x : type-Semiring R) →
     mul-Semiring R (binomial-sum-Semiring R n f) x ＝
     binomial-sum-Semiring R n (λ i → mul-Semiring R (f i) x)
-  right-distributive-mul-binomial-sum-Semiring n f x =
-    ( right-distributive-mul-sum-Semiring R
-      ( succ-ℕ n)
-      ( λ i →
-        mul-nat-scalar-Semiring R (binomial-coefficient-Fin n i) (f i))
-      ( x)) ∙
-    ( htpy-sum-Semiring R
-      ( succ-ℕ n)
-      ( λ i →
-        left-nat-scalar-law-mul-Semiring R
-          ( binomial-coefficient-Fin n i)
-          ( f i)
-          ( x)))
+  right-distributive-mul-binomial-sum-Semiring n f x = {!!}
 ```
 
 ## Lemmas
@@ -194,79 +146,7 @@ module _
               ( power-Semiring R
                 ( dist-ℕ (nat-Fin (succ-ℕ n) i) (succ-ℕ n))
                 ( y))))))
-  left-summand-binomial-theorem-Semiring n x y H =
-    ( right-distributive-mul-binomial-sum-Semiring R
-      ( succ-ℕ n)
-      ( λ i →
-        mul-Semiring R
-          ( power-Semiring R
-            ( nat-Fin (succ-ℕ (succ-ℕ n)) i)
-            ( x))
-          ( power-Semiring R
-            ( dist-ℕ (nat-Fin (succ-ℕ (succ-ℕ n)) i) (succ-ℕ n))
-            ( y)))
-      ( x)) ∙
-    ( ( htpy-binomial-sum-Semiring R
-        ( succ-ℕ n)
-        ( λ i →
-          ( ( associative-mul-Semiring R
-              ( power-Semiring R (nat-Fin (succ-ℕ (succ-ℕ n)) i) x)
-              ( power-Semiring R
-                ( dist-ℕ (nat-Fin (succ-ℕ (succ-ℕ n)) i) (succ-ℕ n))
-                ( y))
-              ( x)) ∙
-            ( ( ap
-                ( mul-Semiring R
-                  ( power-Semiring R (nat-Fin (succ-ℕ (succ-ℕ n)) i) x))
-                ( commute-powers-Semiring' R
-                  ( dist-ℕ (nat-Fin (succ-ℕ (succ-ℕ n)) i) (succ-ℕ n))
-                  ( inv H))) ∙
-              ( inv
-                ( associative-mul-Semiring R
-                  ( power-Semiring R (nat-Fin (succ-ℕ (succ-ℕ n)) i) x)
-                  ( x)
-                  ( power-Semiring R
-                    ( dist-ℕ (nat-Fin (succ-ℕ (succ-ℕ n)) i) (succ-ℕ n))
-                    ( y)))))) ∙
-          ( ap
-            ( mul-Semiring' R
-              ( power-Semiring R
-                ( dist-ℕ (nat-Fin (succ-ℕ (succ-ℕ n)) i) (succ-ℕ n))
-                ( y)))
-            ( inv
-              ( power-succ-Semiring R
-                ( nat-Fin (succ-ℕ (succ-ℕ n)) i)
-                ( x)))))) ∙
-      ( ( ap
-          ( add-Semiring R _)
-          ( ( ap-mul-nat-scalar-Semiring R
-              ( is-one-on-diagonal-binomial-coefficient-ℕ (succ-ℕ n))
-              ( ap
-                ( λ t →
-                  mul-Semiring R
-                    ( power-Semiring R (succ-ℕ (succ-ℕ n)) x)
-                    ( power-Semiring R t y))
-                ( dist-eq-ℕ' (succ-ℕ n)))) ∙
-            ( ( left-unit-law-mul-nat-scalar-Semiring R
-                ( mul-Semiring R
-                  ( power-Semiring R (succ-ℕ (succ-ℕ n)) x)
-                  ( one-Semiring R))) ∙
-              ( right-unit-law-mul-Semiring R
-                ( power-Semiring R (succ-ℕ (succ-ℕ n)) x))))) ∙
-        ( commutative-add-Semiring R
-          ( sum-Semiring R
-            ( succ-ℕ n)
-            ( λ i →
-              mul-nat-scalar-Semiring R
-                ( binomial-coefficient-Fin (succ-ℕ n) (inl-Fin (succ-ℕ n) i))
-                ( mul-Semiring R
-                  ( power-Semiring R
-                    ( succ-ℕ (nat-Fin (succ-ℕ n) i))
-                    ( x))
-                  ( power-Semiring R
-                    ( dist-ℕ (nat-Fin (succ-ℕ n) i) (succ-ℕ n))
-                    ( y)))))
-          ( power-Semiring R (succ-ℕ (succ-ℕ n)) x))))
+  left-summand-binomial-theorem-Semiring n x y H = {!!}
 ```
 
 ### Computing a right summand that will appear in the proof of the binomial theorem
@@ -302,87 +182,7 @@ module _
               ( power-Semiring R
                 ( dist-ℕ (nat-Fin (succ-ℕ n) i) (succ-ℕ n))
                 ( y))))))
-  right-summand-binomial-theorem-Semiring n x y =
-    ( right-distributive-mul-binomial-sum-Semiring R
-      ( succ-ℕ n)
-      ( λ i →
-        mul-Semiring R
-          ( power-Semiring R
-            ( nat-Fin (succ-ℕ (succ-ℕ n)) i)
-            ( x))
-          ( power-Semiring R
-            ( dist-ℕ (nat-Fin (succ-ℕ (succ-ℕ n)) i) (succ-ℕ n))
-            ( y)))
-      ( y)) ∙
-    ( ( htpy-binomial-sum-Semiring R
-        ( succ-ℕ n)
-        ( λ i →
-          ( associative-mul-Semiring R
-            ( power-Semiring R
-              ( nat-Fin (succ-ℕ (succ-ℕ n)) i)
-              ( x))
-            ( power-Semiring R
-              ( dist-ℕ (nat-Fin (succ-ℕ (succ-ℕ n)) i) (succ-ℕ n))
-              ( y))
-            ( y)) ∙
-          ( ap
-            ( mul-Semiring R
-              ( power-Semiring R
-                ( nat-Fin (succ-ℕ (succ-ℕ n)) i)
-                ( x)))
-            ( inv
-              ( ap
-                ( λ m → power-Semiring R m y)
-                ( right-successor-law-dist-ℕ
-                  ( nat-Fin (succ-ℕ (succ-ℕ n)) i)
-                  ( succ-ℕ n)
-                  ( upper-bound-nat-Fin (succ-ℕ n) i)) ∙
-                ( power-succ-Semiring R
-                  ( dist-ℕ (nat-Fin (succ-ℕ (succ-ℕ n)) i) (succ-ℕ n))
-                  ( y))))))) ∙
-      ( ( snoc-sum-Semiring R
-          ( succ-ℕ n)
-          ( λ i →
-            mul-nat-scalar-Semiring R
-              ( binomial-coefficient-Fin (succ-ℕ n) i)
-              ( mul-Semiring R
-                ( power-Semiring R
-                  ( nat-Fin (succ-ℕ (succ-ℕ n)) i)
-                  ( x))
-                ( power-Semiring R
-                  ( dist-ℕ (nat-Fin (succ-ℕ (succ-ℕ n)) i) (succ-ℕ (succ-ℕ n)))
-                  ( y))))
-          ( ( ap
-              ( λ m →
-                mul-nat-scalar-Semiring R
-                  ( binomial-coefficient-ℕ (succ-ℕ n) m)
-                  ( mul-Semiring R
-                    ( power-Semiring R m x)
-                    ( power-Semiring R
-                      ( dist-ℕ m (succ-ℕ (succ-ℕ n)))
-                      ( y))))
-              ( is-zero-nat-zero-Fin {n})) ∙
-            ( ( left-unit-law-mul-nat-scalar-Semiring R
-                ( mul-Semiring R
-                  ( one-Semiring R)
-                  ( power-Semiring R (succ-ℕ (succ-ℕ n)) y))) ∙
-              ( left-unit-law-mul-Semiring R
-                ( power-Semiring R (succ-ℕ (succ-ℕ n)) y))))) ∙
-        ( ap-add-Semiring R
-          ( refl)
-          ( htpy-sum-Semiring R
-            ( succ-ℕ n)
-            ( λ i →
-              ( ap
-                ( λ m →
-                  mul-nat-scalar-Semiring R
-                    ( binomial-coefficient-ℕ (succ-ℕ n) m)
-                    ( mul-Semiring R
-                      ( power-Semiring R m x)
-                      ( power-Semiring R
-                        ( dist-ℕ m (succ-ℕ (succ-ℕ n)))
-                        ( y))))
-                ( nat-inr-Fin (succ-ℕ n) i)))))))
+  right-summand-binomial-theorem-Semiring n x y = {!!}
 ```
 
 ## Theorem
@@ -399,208 +199,9 @@ binomial-theorem-Semiring :
       mul-Semiring R
       ( power-Semiring R (nat-Fin (succ-ℕ n) i) x)
       ( power-Semiring R (dist-ℕ (nat-Fin (succ-ℕ n) i) n) y))
-binomial-theorem-Semiring R zero-ℕ x y H =
-  inv
-    ( ( sum-one-element-Semiring R
-        ( λ i →
-          mul-nat-scalar-Semiring R
-            ( binomial-coefficient-Fin 0 i)
-            ( mul-Semiring R
-              ( power-Semiring R (nat-Fin 1 i) x)
-              ( power-Semiring R (dist-ℕ (nat-Fin 1 i) 0) y)))) ∙
-      ( ( left-unit-law-mul-nat-scalar-Semiring R
-          ( mul-Semiring R
-            ( one-Semiring R)
-            ( one-Semiring R))) ∙
-        ( left-unit-law-mul-Semiring R (one-Semiring R))))
-binomial-theorem-Semiring R (succ-ℕ zero-ℕ) x y H =
-  ( commutative-add-Semiring R x y) ∙
-  ( ( ap-binary
-      ( add-Semiring R)
-      ( ( inv (left-unit-law-mul-Semiring R y)) ∙
-        ( inv
-          ( left-unit-law-mul-nat-scalar-Semiring R
-            ( mul-Semiring R (one-Semiring R) y))))
-      ( ( inv (right-unit-law-mul-Semiring R x)) ∙
-        ( inv
-          ( left-unit-law-mul-nat-scalar-Semiring R
-            ( mul-Semiring R x (one-Semiring R)))))) ∙
-    ( inv
-      ( sum-two-elements-Semiring R
-        ( λ i →
-          mul-nat-scalar-Semiring R
-          ( binomial-coefficient-Fin 1 i)
-          ( mul-Semiring R
-            ( power-Semiring R (nat-Fin 2 i) x)
-            ( power-Semiring R (dist-ℕ (nat-Fin 2 i) 1) y))))))
-binomial-theorem-Semiring R (succ-ℕ (succ-ℕ n)) x y H =
-  ( ap
-    ( λ r → mul-Semiring R r (add-Semiring R x y))
-    ( binomial-theorem-Semiring R (succ-ℕ n) x y H)) ∙
-  ( ( left-distributive-mul-add-Semiring R _ x y) ∙
-    ( ( ap-add-Semiring R
-        ( left-summand-binomial-theorem-Semiring R n x y H)
-        ( right-summand-binomial-theorem-Semiring R n x y)) ∙
-      ( ( interchange-add-add-Semiring R
-          ( power-Semiring R (succ-ℕ (succ-ℕ n)) x)
-          ( sum-Semiring R
-            ( succ-ℕ n)
-            ( λ i →
-              mul-nat-scalar-Semiring R
-              ( binomial-coefficient-Fin (succ-ℕ n) (inl-Fin (succ-ℕ n) i))
-              ( mul-Semiring R
-                ( power-Semiring R
-                  ( succ-ℕ (nat-Fin (succ-ℕ n) i))
-                  ( x))
-                ( power-Semiring R
-                  ( dist-ℕ (nat-Fin (succ-ℕ n) i) (succ-ℕ n))
-                  ( y)))))
-          ( power-Semiring R (succ-ℕ (succ-ℕ n)) y)
-          ( sum-Semiring R
-            ( succ-ℕ n)
-            ( λ i →
-              mul-nat-scalar-Semiring R
-              ( binomial-coefficient-ℕ
-                ( succ-ℕ n)
-                ( succ-ℕ (nat-Fin (succ-ℕ (succ-ℕ n)) (inl-Fin (succ-ℕ n) i))))
-              ( mul-Semiring R
-                ( power-Semiring R
-                  ( succ-ℕ (nat-Fin (succ-ℕ n) i))
-                  ( x))
-                ( power-Semiring R
-                  ( dist-ℕ (nat-Fin (succ-ℕ n) i) (succ-ℕ n))
-                  ( y)))))) ∙
-        ( ( ap-add-Semiring R
-            ( commutative-add-Semiring R
-              ( power-Semiring R (succ-ℕ (succ-ℕ n)) x)
-              ( power-Semiring R (succ-ℕ (succ-ℕ n)) y))
-            ( ( interchange-add-sum-Semiring R
-                ( succ-ℕ n)
-                ( λ i →
-                  mul-nat-scalar-Semiring R
-                  ( binomial-coefficient-Fin (succ-ℕ n) (inl-Fin (succ-ℕ n) i))
-                  ( mul-Semiring R
-                    ( power-Semiring R
-                      ( succ-ℕ (nat-Fin (succ-ℕ n) i))
-                      ( x))
-                    ( power-Semiring R
-                      ( dist-ℕ (nat-Fin (succ-ℕ n) i) (succ-ℕ n))
-                      ( y))))
-                ( λ i →
-                  mul-nat-scalar-Semiring R
-                  ( binomial-coefficient-ℕ
-                    ( succ-ℕ n)
-                    ( succ-ℕ
-                      ( nat-Fin (succ-ℕ (succ-ℕ n)) (inl-Fin (succ-ℕ n) i))))
-                    ( mul-Semiring R
-                      ( power-Semiring R
-                        ( succ-ℕ (nat-Fin (succ-ℕ n) i))
-                        ( x))
-                      ( power-Semiring R
-                        ( dist-ℕ (nat-Fin (succ-ℕ n) i) (succ-ℕ n))
-                        ( y))))) ∙
-              ( htpy-sum-Semiring R
-                ( succ-ℕ n)
-                ( λ i →
-                  ( inv
-                    ( right-distributive-mul-nat-scalar-add-Semiring R
-                      ( binomial-coefficient-ℕ
-                        ( succ-ℕ n)
-                        ( nat-Fin (succ-ℕ n) i))
-                      ( binomial-coefficient-ℕ
-                        ( succ-ℕ n)
-                        ( succ-ℕ (nat-Fin (succ-ℕ n) i)))
-                      ( mul-Semiring R
-                        ( power-Semiring R
-                          ( succ-ℕ (nat-Fin (succ-ℕ n) i))
-                          ( x))
-                        ( power-Semiring R
-                          ( dist-ℕ (nat-Fin (succ-ℕ n) i) (succ-ℕ n))
-                          ( y))))) ∙
-                  ( ap
-                    ( λ m →
-                      mul-nat-scalar-Semiring R
-                        ( binomial-coefficient-ℕ (succ-ℕ (succ-ℕ n)) m)
-                        ( mul-Semiring R
-                          ( power-Semiring R m x)
-                          ( power-Semiring R
-                            ( dist-ℕ m (succ-ℕ (succ-ℕ n)))
-                            ( y))))
-                    ( inv (nat-inr-Fin (succ-ℕ n) i))))))) ∙
-          ( ( right-swap-add-Semiring R
-              ( power-Semiring R (succ-ℕ (succ-ℕ n)) y)
-              ( power-Semiring R (succ-ℕ (succ-ℕ n)) x)
-              ( _)) ∙
-            ( ( ap
-                ( add-Semiring' R
-                  ( power-Semiring R (succ-ℕ (succ-ℕ n)) x))
-                ( inv
-                  ( snoc-sum-Semiring R
-                    ( succ-ℕ n)
-                    ( λ i →
-                      mul-nat-scalar-Semiring R
-                        ( binomial-coefficient-ℕ
-                          ( succ-ℕ (succ-ℕ n))
-                          ( nat-Fin (succ-ℕ (succ-ℕ n)) i))
-                        ( mul-Semiring R
-                          ( power-Semiring R
-                            ( nat-Fin (succ-ℕ (succ-ℕ n)) i)
-                            ( x))
-                          ( power-Semiring R
-                            ( dist-ℕ
-                              ( nat-Fin (succ-ℕ (succ-ℕ n)) i)
-                              ( succ-ℕ (succ-ℕ n)))
-                            ( y))))
-                    ( ( ap
-                        ( λ m →
-                          mul-nat-scalar-Semiring R
-                            ( binomial-coefficient-ℕ (succ-ℕ (succ-ℕ n)) m)
-                            ( mul-Semiring R
-                              ( power-Semiring R m x)
-                              ( power-Semiring R
-                                ( dist-ℕ m (succ-ℕ (succ-ℕ n)))
-                                ( y))))
-                        ( is-zero-nat-zero-Fin {n})) ∙
-                      ( ( left-unit-law-mul-nat-scalar-Semiring R
-                          ( mul-Semiring R
-                            ( one-Semiring R)
-                            ( power-Semiring R
-                              ( succ-ℕ (succ-ℕ n))
-                              ( y)))) ∙
-                        ( left-unit-law-mul-Semiring R
-                          ( power-Semiring R
-                            ( succ-ℕ (succ-ℕ n))
-                            ( y)))))))) ∙
-              ( inv
-                ( cons-sum-Semiring R
-                  ( succ-ℕ (succ-ℕ n))
-                  ( λ i →
-                    mul-nat-scalar-Semiring R
-                      ( binomial-coefficient-Fin (succ-ℕ (succ-ℕ n)) i)
-                      ( mul-Semiring R
-                        ( power-Semiring R
-                          ( nat-Fin (succ-ℕ (succ-ℕ (succ-ℕ n))) i)
-                          ( x))
-                        ( power-Semiring R
-                          ( dist-ℕ
-                            ( nat-Fin (succ-ℕ (succ-ℕ (succ-ℕ n))) i)
-                            ( succ-ℕ (succ-ℕ n)))
-                          ( y))))
-                  ( ( ap-mul-nat-scalar-Semiring R
-                      ( is-one-on-diagonal-binomial-coefficient-ℕ
-                        ( succ-ℕ (succ-ℕ n)))
-                      ( ( ap
-                          ( mul-Semiring R
-                            ( power-Semiring R (succ-ℕ (succ-ℕ n)) x))
-                          ( ap
-                            ( λ m → power-Semiring R m y)
-                            ( dist-eq-ℕ' (succ-ℕ (succ-ℕ n))))) ∙
-                        ( right-unit-law-mul-Semiring R
-                          ( power-Semiring R (succ-ℕ (succ-ℕ n)) x)))) ∙
-                    ( left-unit-law-mul-nat-scalar-Semiring R
-                      ( power-Semiring R
-                        ( succ-ℕ (succ-ℕ n))
-                        ( x))))))))))))
+binomial-theorem-Semiring R zero-ℕ x y H = {!!}
+binomial-theorem-Semiring R (succ-ℕ zero-ℕ) x y H = {!!}
+binomial-theorem-Semiring R (succ-ℕ (succ-ℕ n)) x y H = {!!}
 ```
 
 ## Corollaries
@@ -634,155 +235,5 @@ is-linear-combination-power-add-Semiring :
             ( mul-Semiring R
               ( power-Semiring R (nat-Fin (succ-ℕ m) i) x)
               ( power-Semiring R (dist-ℕ (nat-Fin (succ-ℕ m) i) m) y)))))
-is-linear-combination-power-add-Semiring R n m x y H =
-  ( binomial-theorem-Semiring R (n +ℕ m) x y H) ∙
-  ( ( split-sum-Semiring R n
-      ( succ-ℕ m)
-      ( λ i →
-        mul-nat-scalar-Semiring R
-          ( binomial-coefficient-ℕ
-            ( n +ℕ m)
-            ( nat-Fin (n +ℕ (succ-ℕ m)) i))
-          ( mul-Semiring R
-            ( power-Semiring R
-              ( nat-Fin (n +ℕ (succ-ℕ m)) i)
-              ( x))
-            ( power-Semiring R
-              ( dist-ℕ
-                ( nat-Fin (n +ℕ (succ-ℕ m)) i)
-                ( n +ℕ m))
-              ( y))))) ∙
-    ( ( ap-add-Semiring R
-        ( ( htpy-sum-Semiring R n
-            ( λ i →
-              ( ap
-                ( λ u →
-                  mul-nat-scalar-Semiring R
-                    ( binomial-coefficient-ℕ (n +ℕ m) u)
-                    ( mul-Semiring R
-                      ( power-Semiring R u x)
-                      ( power-Semiring R
-                        ( dist-ℕ u (n +ℕ m))
-                        ( y))))
-                ( nat-inl-coprod-Fin n m i)) ∙
-              ( ( ( ap
-                    ( mul-nat-scalar-Semiring R
-                      ( binomial-coefficient-ℕ
-                        ( n +ℕ m)
-                        ( nat-Fin n i)))
-                    ( ( ap
-                        ( mul-Semiring R
-                          ( power-Semiring R
-                            ( nat-Fin n i)
-                            ( x)))
-                        ( ( ap
-                            ( λ u → power-Semiring R u y)
-                            ( ( inv
-                                ( triangle-equality-dist-ℕ
-                                  ( nat-Fin n i)
-                                  ( n)
-                                  ( n +ℕ m)
-                                  ( upper-bound-nat-Fin' n i)
-                                  ( leq-add-ℕ n m)) ∙
-                                ( ap
-                                  ( (dist-ℕ (nat-Fin n i) n) +ℕ_)
-                                  ( dist-add-ℕ n m))) ∙
-                              ( commutative-add-ℕ
-                                ( dist-ℕ (nat-Fin n i) n)
-                                ( m)))) ∙
-                          ( ( distributive-power-add-Semiring R m
-                              ( dist-ℕ (nat-Fin n i) n))))) ∙
-                      ( ( inv
-                          ( associative-mul-Semiring R
-                            ( power-Semiring R (nat-Fin n i) x)
-                            ( power-Semiring R m y)
-                            ( power-Semiring R (dist-ℕ (nat-Fin n i) n) y))) ∙
-                        ( ( ap
-                            ( mul-Semiring' R
-                              ( power-Semiring R (dist-ℕ (nat-Fin n i) n) y))
-                            ( commute-powers-Semiring R (nat-Fin n i) m H)) ∙
-                          ( associative-mul-Semiring R
-                            ( power-Semiring R m y)
-                            ( power-Semiring R (nat-Fin n i) x)
-                            ( power-Semiring R
-                              ( dist-ℕ (nat-Fin n i) n)
-                              ( y))))))) ∙
-                  ( inv
-                    ( right-nat-scalar-law-mul-Semiring R
-                      ( binomial-coefficient-ℕ
-                        ( n +ℕ m)
-                        ( nat-Fin n i))
-                      ( power-Semiring R m y)
-                      ( mul-Semiring R
-                        ( power-Semiring R (nat-Fin n i) x)
-                        ( power-Semiring R
-                          ( dist-ℕ (nat-Fin n i) n)
-                          ( y))))))))) ∙
-          ( ( inv
-              ( left-distributive-mul-sum-Semiring R n
-                ( power-Semiring R m y)
-                ( λ i →
-                  mul-nat-scalar-Semiring R
-                    ( binomial-coefficient-ℕ (n +ℕ m) (nat-Fin n i))
-                    ( mul-Semiring R
-                      ( power-Semiring R (nat-Fin n i) x)
-                      ( power-Semiring R (dist-ℕ (nat-Fin n i) n) y)))))))
-        ( ( htpy-sum-Semiring R
-            ( succ-ℕ m)
-            ( λ i →
-              ( ap
-                ( λ u →
-                  mul-nat-scalar-Semiring R
-                    ( binomial-coefficient-ℕ (n +ℕ m) u)
-                    ( mul-Semiring R
-                      ( power-Semiring R u x)
-                      ( power-Semiring R
-                        ( dist-ℕ u (n +ℕ m))
-                        ( y))))
-                ( nat-inr-coprod-Fin n (succ-ℕ m) i)) ∙
-              ( ( ap
-                  ( mul-nat-scalar-Semiring R
-                    ( binomial-coefficient-ℕ
-                      ( n +ℕ m)
-                      ( n +ℕ (nat-Fin (succ-ℕ m) i))))
-                  ( ap-mul-Semiring R
-                    ( distributive-power-add-Semiring R n
-                      ( nat-Fin (succ-ℕ m) i))
-                    ( ap
-                      ( λ u → power-Semiring R u y)
-                      ( translation-invariant-dist-ℕ
-                        ( n)
-                        ( nat-Fin (succ-ℕ m) i)
-                        ( m))) ∙
-                    ( associative-mul-Semiring R
-                      ( power-Semiring R n x)
-                      ( power-Semiring R (nat-Fin (succ-ℕ m) i) x)
-                      ( power-Semiring R
-                        ( dist-ℕ (nat-Fin (succ-ℕ m) i) m)
-                        ( y))))) ∙
-                ( inv
-                  ( right-nat-scalar-law-mul-Semiring R
-                    ( binomial-coefficient-ℕ
-                      ( n +ℕ m)
-                      ( n +ℕ (nat-Fin (succ-ℕ m) i)))
-                    ( power-Semiring R n x)
-                    ( mul-Semiring R
-                      ( power-Semiring R (nat-Fin (succ-ℕ m) i) x)
-                      ( power-Semiring R
-                        ( dist-ℕ (nat-Fin (succ-ℕ m) i) m)
-                        ( y)))))))) ∙
-          ( inv
-            ( left-distributive-mul-sum-Semiring R
-              ( succ-ℕ m)
-              ( power-Semiring R n x)
-              ( λ i →
-                mul-nat-scalar-Semiring R
-                  ( binomial-coefficient-ℕ
-                    ( n +ℕ m)
-                    ( n +ℕ (nat-Fin (succ-ℕ m) i)))
-                  ( mul-Semiring R
-                    ( power-Semiring R (nat-Fin (succ-ℕ m) i) x)
-                    ( power-Semiring R
-                      ( dist-ℕ (nat-Fin (succ-ℕ m) i) m)
-                      ( y))))))))))
+is-linear-combination-power-add-Semiring R n m x y H = {!!}
 ```

@@ -68,13 +68,13 @@ module _
   where
 
   is-1-acyclic-Prop : Prop l
-  is-1-acyclic-Prop = is-truncated-acyclic-Prop (one-𝕋) A
+  is-1-acyclic-Prop = {!!}
 
   is-1-acyclic : UU l
-  is-1-acyclic = type-Prop is-1-acyclic-Prop
+  is-1-acyclic = {!!}
 
   is-prop-is-1-acyclic : is-prop is-1-acyclic
-  is-prop-is-1-acyclic = is-prop-type-Prop is-1-acyclic-Prop
+  is-prop-is-1-acyclic = {!!}
 ```
 
 ## Properties
@@ -87,7 +87,7 @@ module _
   where
 
   is-1-acyclic-is-0-connected : is-0-connected A → is-1-acyclic A
-  is-1-acyclic-is-0-connected = is-truncated-acyclic-succ-is-connected
+  is-1-acyclic-is-0-connected = {!!}
 ```
 
 ### Every `1`-acyclic type is `0`-connected
@@ -107,8 +107,7 @@ private
       is-injective-gen : is-injective gen
 
   concrete-group-assumption : UUω
-  concrete-group-assumption =
-    {l : Level} (A : UU l) → concrete-group-assumption' A
+  concrete-group-assumption = {!!}
 
 module _
   (cga : concrete-group-assumption)
@@ -117,38 +116,12 @@ module _
   is-contr-is-1-acyclic-is-set :
     {l : Level} (A : UU l) →
     is-set A → is-1-acyclic A → is-contr A
-  is-contr-is-1-acyclic-is-set A s ac =
-    let open concrete-group-assumption' (cga A) in
-    is-contr-is-inhabited-is-prop
-      ( is-prop-all-elements-equal
-        ( λ x y →
-          is-injective-gen
-            ( binary-tr
-              ( Id)
-              ( htpy-eq
-                ( is-section-map-inv-equiv
-                  ( const A (type-Ω (pair (type-Truncated-Type BG) pt)) ,
-                    is-equiv-const-Id-is-acyclic-Truncated-Type A ac BG pt pt)
-                  ( gen))
-                ( x))
-              ( htpy-eq
-                ( is-section-map-inv-equiv
-                  ( const A (type-Ω (pair (type-Truncated-Type BG) pt)) ,
-                    is-equiv-const-Id-is-acyclic-Truncated-Type A ac BG pt pt)
-                  ( gen))
-                ( y))
-              ( refl))))
-      ( is-inhabited-is-0-acyclic
-        ( is-truncated-acyclic-is-truncated-acyclic-succ ac))
+  is-contr-is-1-acyclic-is-set A s ac = {!!}
 
   is-0-connected-is-1-acyclic :
     {l : Level} (A : UU l) →
     is-1-acyclic A → is-0-connected A
-  is-0-connected-is-1-acyclic A ac =
-    is-contr-is-1-acyclic-is-set
-      ( type-trunc-Set A)
-      ( is-set-type-trunc-Set)
-      ( is-truncated-acyclic-succ-type-trunc-is-truncated-acyclic-succ A ac)
+  is-0-connected-is-1-acyclic A ac = {!!}
 ```
 
 ## References

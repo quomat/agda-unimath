@@ -46,25 +46,20 @@ module _
 
   is-join-family-of-right-ideals-Ring :
     {l4 : Level} → right-ideal-Ring l4 R → UUω
-  is-join-family-of-right-ideals-Ring =
-    is-least-upper-bound-family-of-elements-Large-Poset
-      ( right-ideal-Ring-Large-Poset R)
-      ( I)
+  is-join-family-of-right-ideals-Ring = {!!}
 
   inclusion-is-join-family-of-right-ideals-Ring :
     {l4 l5 : Level} (J : right-ideal-Ring l4 R) →
     is-join-family-of-right-ideals-Ring J →
     (K : right-ideal-Ring l5 R) → ((α : U) → leq-right-ideal-Ring R (I α) K) →
     leq-right-ideal-Ring R J K
-  inclusion-is-join-family-of-right-ideals-Ring J H K =
-    pr1 (H K)
+  inclusion-is-join-family-of-right-ideals-Ring J H K = {!!}
 
   contains-right-ideal-is-join-family-of-right-ideals-Ring :
     {l4 : Level} (J : right-ideal-Ring l4 R) →
     is-join-family-of-right-ideals-Ring J →
     {α : U} → leq-right-ideal-Ring R (I α) J
-  contains-right-ideal-is-join-family-of-right-ideals-Ring J H {α} =
-    pr2 (H J) (refl-leq-right-ideal-Ring R J) α
+  contains-right-ideal-is-join-family-of-right-ideals-Ring J H {α} = {!!}
 ```
 
 ### The join of a family of right ideals
@@ -76,58 +71,38 @@ module _
 
   generating-subset-join-family-of-right-ideals-Ring :
     subset-Ring (l2 ⊔ l3) R
-  generating-subset-join-family-of-right-ideals-Ring =
-    union-family-of-subtypes (λ α → subset-right-ideal-Ring R (I α))
+  generating-subset-join-family-of-right-ideals-Ring = {!!}
 
   join-family-of-right-ideals-Ring :
     right-ideal-Ring (l1 ⊔ l2 ⊔ l3) R
-  join-family-of-right-ideals-Ring =
-    right-ideal-family-of-subsets-Ring R (λ α → subset-right-ideal-Ring R (I α))
+  join-family-of-right-ideals-Ring = {!!}
 
   forward-inclusion-is-join-join-family-of-right-ideals-Ring :
     {l4 : Level} (K : right-ideal-Ring l4 R) →
     ((α : U) → leq-right-ideal-Ring R (I α) K) →
     leq-right-ideal-Ring R join-family-of-right-ideals-Ring K
-  forward-inclusion-is-join-join-family-of-right-ideals-Ring K H =
-    is-right-ideal-generated-by-family-of-subsets-right-ideal-family-of-subsets-Ring
-      ( R)
-      ( λ α → subset-right-ideal-Ring R (I α))
-      ( K)
-      ( λ α x → H α x)
+  forward-inclusion-is-join-join-family-of-right-ideals-Ring K H = {!!}
 
   backward-inclusion-is-join-join-family-of-right-ideals-Ring :
     {l4 : Level} (K : right-ideal-Ring l4 R) →
     leq-right-ideal-Ring R join-family-of-right-ideals-Ring K →
     (α : U) → leq-right-ideal-Ring R (I α) K
-  backward-inclusion-is-join-join-family-of-right-ideals-Ring K H _ x p =
-    H ( x)
-      ( contains-subset-right-ideal-family-of-subsets-Ring R
-        ( λ α → subset-right-ideal-Ring R (I α))
-        ( x)
-        ( p))
+  backward-inclusion-is-join-join-family-of-right-ideals-Ring K H _ x p = {!!}
 
   is-join-join-family-of-right-ideals-Ring :
     is-join-family-of-right-ideals-Ring R I join-family-of-right-ideals-Ring
-  pr1 (is-join-join-family-of-right-ideals-Ring K) =
-    forward-inclusion-is-join-join-family-of-right-ideals-Ring K
-  pr2 (is-join-join-family-of-right-ideals-Ring K) =
-    backward-inclusion-is-join-join-family-of-right-ideals-Ring K
+  pr1 (is-join-join-family-of-right-ideals-Ring K) = {!!}
+  pr2 (is-join-join-family-of-right-ideals-Ring K) = {!!}
 
   inclusion-join-family-of-right-ideals-Ring :
     {l4 : Level} (J : right-ideal-Ring l4 R) →
     ((α : U) → leq-right-ideal-Ring R (I α) J) →
     leq-right-ideal-Ring R join-family-of-right-ideals-Ring J
-  inclusion-join-family-of-right-ideals-Ring =
-    inclusion-is-join-family-of-right-ideals-Ring R I
-      ( join-family-of-right-ideals-Ring)
-      ( is-join-join-family-of-right-ideals-Ring)
+  inclusion-join-family-of-right-ideals-Ring = {!!}
 
   contains-right-ideal-join-family-of-right-ideals-Ring :
     {α : U} → leq-right-ideal-Ring R (I α) join-family-of-right-ideals-Ring
-  contains-right-ideal-join-family-of-right-ideals-Ring =
-    contains-right-ideal-is-join-family-of-right-ideals-Ring R I
-      ( join-family-of-right-ideals-Ring)
-      ( is-join-join-family-of-right-ideals-Ring)
+  contains-right-ideal-join-family-of-right-ideals-Ring = {!!}
 ```
 
 ### The large suplattice of right ideals in a ring
@@ -140,20 +115,16 @@ module _
   is-large-suplattice-right-ideal-Ring-Large-Poset :
     is-large-suplattice-Large-Poset l1 (right-ideal-Ring-Large-Poset R)
   sup-has-least-upper-bound-family-of-elements-Large-Poset
-    ( is-large-suplattice-right-ideal-Ring-Large-Poset I) =
-    join-family-of-right-ideals-Ring R I
+    ( is-large-suplattice-right-ideal-Ring-Large-Poset I) = {!!}
   is-least-upper-bound-sup-has-least-upper-bound-family-of-elements-Large-Poset
-    ( is-large-suplattice-right-ideal-Ring-Large-Poset I) =
-    is-join-join-family-of-right-ideals-Ring R I
+    ( is-large-suplattice-right-ideal-Ring-Large-Poset I) = {!!}
 
   right-ideal-Ring-Large-Suplattice :
     Large-Suplattice (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3) l1
   large-poset-Large-Suplattice
-    right-ideal-Ring-Large-Suplattice =
-    right-ideal-Ring-Large-Poset R
+    right-ideal-Ring-Large-Suplattice = {!!}
   is-large-suplattice-Large-Suplattice
-    right-ideal-Ring-Large-Suplattice =
-    is-large-suplattice-right-ideal-Ring-Large-Poset
+    right-ideal-Ring-Large-Suplattice = {!!}
 ```
 
 ## Properties
@@ -173,12 +144,7 @@ module _
     leq-right-ideal-Ring A
       ( join-family-of-right-ideals-Ring A I)
       ( join-family-of-right-ideals-Ring A J)
-  preserves-order-join-family-of-right-ideals-Ring =
-    preserves-order-sup-Large-Suplattice
-      ( right-ideal-Ring-Large-Suplattice A)
-      { x = I}
-      { y = J}
-      ( H)
+  preserves-order-join-family-of-right-ideals-Ring = {!!}
 ```
 
 ### The operation `S ↦ (S)` preserves joins
@@ -193,36 +159,17 @@ module _
       ( right-ideal-Ring-Large-Poset R)
       ( λ α → right-ideal-subset-Ring R (S α))
       ( right-ideal-subset-Ring R (union-family-of-subtypes S))
-  is-least-upper-bound-join-right-ideal-subset-Ring =
-    preserves-least-upper-bounds-right-ideal-subset-Ring R S
-      ( union-family-of-subtypes S)
-      ( is-least-upper-bound-union-family-of-subtypes S)
+  is-least-upper-bound-join-right-ideal-subset-Ring = {!!}
 
   sim-preserves-join-right-ideal-subset-Ring :
     sim-right-ideal-Ring R
       ( right-ideal-subset-Ring R (union-family-of-subtypes S))
       ( join-family-of-right-ideals-Ring R
         ( λ α → right-ideal-subset-Ring R (S α)))
-  sim-preserves-join-right-ideal-subset-Ring =
-    sim-is-least-upper-bound-family-of-elements-Large-Poset
-      ( right-ideal-Ring-Large-Poset R)
-      { x = λ α → right-ideal-subset-Ring R (S α)}
-      { y = right-ideal-subset-Ring R (union-family-of-subtypes S)}
-      { z =
-        join-family-of-right-ideals-Ring R
-          ( λ α → right-ideal-subset-Ring R (S α))}
-      ( is-least-upper-bound-join-right-ideal-subset-Ring)
-      ( is-join-join-family-of-right-ideals-Ring R
-        ( λ α → right-ideal-subset-Ring R (S α)))
+  sim-preserves-join-right-ideal-subset-Ring = {!!}
 
   preserves-join-right-ideal-subset-Ring :
     right-ideal-subset-Ring R (union-family-of-subtypes S) ＝
     join-family-of-right-ideals-Ring R (λ α → right-ideal-subset-Ring R (S α))
-  preserves-join-right-ideal-subset-Ring =
-    eq-sim-Large-Poset
-      ( right-ideal-Ring-Large-Poset R)
-      ( right-ideal-subset-Ring R (union-family-of-subtypes S))
-      ( join-family-of-right-ideals-Ring R
-        ( λ α → right-ideal-subset-Ring R (S α)))
-      ( sim-preserves-join-right-ideal-subset-Ring)
+  preserves-join-right-ideal-subset-Ring = {!!}
 ```

@@ -38,38 +38,31 @@ module _
 
   binary-htpy :
     (f g : (x : A) (y : B x) → C x y) → UU (l1 ⊔ l2 ⊔ l3)
-  binary-htpy f g = (x : A) → f x ~ g x
+  binary-htpy f g = {!!}
 
   refl-binary-htpy : (f : (x : A) (y : B x) → C x y) → binary-htpy f f
-  refl-binary-htpy f x = refl-htpy
+  refl-binary-htpy f x = {!!}
 
   binary-htpy-eq :
     (f g : (x : A) (y : B x) → C x y) → (f ＝ g) → binary-htpy f g
-  binary-htpy-eq f .f refl = refl-binary-htpy f
+  binary-htpy-eq f .f refl = {!!}
 
   is-torsorial-binary-htpy :
     (f : (x : A) (y : B x) → C x y) →
     is-torsorial (binary-htpy f)
-  is-torsorial-binary-htpy f =
-    is-torsorial-Eq-Π
-      ( λ x g → f x ~ g)
-      ( λ x → is-torsorial-htpy (f x))
+  is-torsorial-binary-htpy f = {!!}
 
   is-equiv-binary-htpy-eq :
     (f g : (x : A) (y : B x) → C x y) → is-equiv (binary-htpy-eq f g)
-  is-equiv-binary-htpy-eq f =
-    fundamental-theorem-id
-      ( is-torsorial-binary-htpy f)
-      ( binary-htpy-eq f)
+  is-equiv-binary-htpy-eq f = {!!}
 
   extensionality-binary-Π :
     (f g : (x : A) (y : B x) → C x y) → (f ＝ g) ≃ binary-htpy f g
-  pr1 (extensionality-binary-Π f g) = binary-htpy-eq f g
-  pr2 (extensionality-binary-Π f g) = is-equiv-binary-htpy-eq f g
+  pr1 (extensionality-binary-Π f g) = {!!}
 
   eq-binary-htpy :
     (f g : (x : A) (y : B x) → C x y) → binary-htpy f g → f ＝ g
-  eq-binary-htpy f g = map-inv-equiv (extensionality-binary-Π f g)
+  eq-binary-htpy f g = {!!}
 ```
 
 ## Properties
@@ -83,18 +76,17 @@ module _
 
   binary-htpy-htpy :
     (f g : (x : A) (y : B x) → C x y) → (f ~ g) → binary-htpy f g
-  binary-htpy-htpy f g =
-    ind-htpy f (λ g H → binary-htpy f g) (refl-binary-htpy f)
+  binary-htpy-htpy f g = {!!}
 
   equiv-binary-htpy-htpy :
     (f g : (x : A) (y : B x) → C x y) → (f ~ g) ≃ binary-htpy f g
-  equiv-binary-htpy-htpy f g = extensionality-binary-Π f g ∘e equiv-eq-htpy
+  equiv-binary-htpy-htpy f g = {!!}
 
   htpy-binary-htpy :
     (f g : (x : A) (y : B x) → C x y) → binary-htpy f g → f ~ g
-  htpy-binary-htpy f g = map-inv-equiv (equiv-binary-htpy-htpy f g)
+  htpy-binary-htpy f g = {!!}
 
   equiv-htpy-binary-htpy :
     (f g : (x : A) (y : B x) → C x y) → binary-htpy f g ≃ (f ~ g)
-  equiv-htpy-binary-htpy f g = inv-equiv (equiv-binary-htpy-htpy f g)
+  equiv-htpy-binary-htpy f g = {!!}
 ```

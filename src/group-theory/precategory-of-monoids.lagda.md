@@ -29,34 +29,26 @@ The **precategory of monoids** consists of monoids and homomorphisms of monoids.
 ```agda
 Monoid-Large-Precategory : Large-Precategory lsuc _⊔_
 obj-Large-Precategory
-  Monoid-Large-Precategory =
-  Monoid
+  Monoid-Large-Precategory = {!!}
 hom-set-Large-Precategory
-  Monoid-Large-Precategory =
-  hom-set-Monoid
+  Monoid-Large-Precategory = {!!}
 comp-hom-Large-Precategory
-  Monoid-Large-Precategory {X = K} {L} {M} =
-  comp-hom-Monoid K L M
+  Monoid-Large-Precategory {X = K} {L} {M} = {!!}
 id-hom-Large-Precategory
-  Monoid-Large-Precategory {X = M} =
-  id-hom-Monoid M
+  Monoid-Large-Precategory {X = M} = {!!}
 associative-comp-hom-Large-Precategory
-  Monoid-Large-Precategory {X = K} {L} {M} {N} =
-  associative-comp-hom-Monoid K L M N
+  Monoid-Large-Precategory {X = K} {L} {M} {N} = {!!}
 inv-associative-comp-hom-Large-Precategory
-  Monoid-Large-Precategory {X = K} {L} {M} {N} =
-  inv-associative-comp-hom-Monoid K L M N
+  Monoid-Large-Precategory {X = K} {L} {M} {N} = {!!}
 left-unit-law-comp-hom-Large-Precategory
-  Monoid-Large-Precategory {X = M} {N} =
-  left-unit-law-comp-hom-Monoid M N
+  Monoid-Large-Precategory {X = M} {N} = {!!}
 right-unit-law-comp-hom-Large-Precategory
-  Monoid-Large-Precategory {X = M} {N} =
-  right-unit-law-comp-hom-Monoid M N
+  Monoid-Large-Precategory {X = M} {N} = {!!}
 ```
 
 ### The precategory of small monoids
 
 ```agda
 Monoid-Precategory : (l : Level) → Precategory (lsuc l) l
-Monoid-Precategory = precategory-Large-Precategory Monoid-Large-Precategory
+Monoid-Precategory = {!!}
 ```

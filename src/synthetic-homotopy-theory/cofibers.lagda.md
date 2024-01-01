@@ -38,29 +38,28 @@ module _
   where
 
   cofiber : (A → B) → UU (l1 ⊔ l2)
-  cofiber f = pushout f (const A unit star)
+  cofiber f = {!!}
 
   cocone-cofiber :
     (f : A → B) → cocone f (const A unit star) (cofiber f)
-  cocone-cofiber f = cocone-pushout f (const A unit star)
+  cocone-cofiber f = {!!}
 
   inl-cofiber : (f : A → B) → B → cofiber f
-  inl-cofiber f = pr1 (cocone-cofiber f)
+  inl-cofiber f = {!!}
 
   inr-cofiber : (f : A → B) → unit → cofiber f
-  inr-cofiber f = pr1 (pr2 (cocone-cofiber f))
+  inr-cofiber f = {!!}
 
   point-cofiber : (f : A → B) → cofiber f
-  point-cofiber f = inr-cofiber f star
+  point-cofiber f = {!!}
 
   cofiber-Pointed-Type : (f : A → B) → Pointed-Type (l1 ⊔ l2)
-  pr1 (cofiber-Pointed-Type f) = cofiber f
-  pr2 (cofiber-Pointed-Type f) = point-cofiber f
+  pr1 (cofiber-Pointed-Type f) = {!!}
 
   universal-property-cofiber :
     (f : A → B) {l : Level} →
     universal-property-pushout l f (const A unit star) (cocone-cofiber f)
-  universal-property-cofiber f = up-pushout f (const A unit star)
+  universal-property-cofiber f = {!!}
 ```
 
 ## Properties
@@ -77,17 +76,7 @@ definition contractible. Examples of noncontractible acyclic types include
 is-contr-cofiber-is-equiv :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
   is-equiv f → is-contr (cofiber f)
-is-contr-cofiber-is-equiv {A = A} f is-equiv-f =
-  is-contr-is-equiv'
-    ( unit)
-    ( pr1 (pr2 (cocone-cofiber f)))
-    ( is-equiv-universal-property-pushout
-      ( f)
-      ( const A unit star)
-      ( cocone-cofiber f)
-      ( is-equiv-f)
-      ( universal-property-cofiber f))
-    ( is-contr-unit)
+is-contr-cofiber-is-equiv {A = A} f is-equiv-f = {!!}
 ```
 
 ### The cofiber of the point inclusion of `X` is equivalent to `X`
@@ -95,11 +84,5 @@ is-contr-cofiber-is-equiv {A = A} f is-equiv-f =
 ```agda
 is-equiv-inl-cofiber-point :
   {l : Level} {B : UU l} (b : B) → is-equiv (inl-cofiber (point b))
-is-equiv-inl-cofiber-point {B = B} b =
-  is-equiv-universal-property-pushout'
-    ( const unit B b)
-    ( const unit unit star)
-    ( cocone-pushout (const unit B b) (const unit unit star))
-    ( is-equiv-is-contr (const unit unit star) is-contr-unit is-contr-unit)
-    ( up-pushout (const unit B b) (const unit unit star))
+is-equiv-inl-cofiber-point {B = B} b = {!!}
 ```

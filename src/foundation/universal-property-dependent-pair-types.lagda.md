@@ -33,22 +33,17 @@ module _
 
   abstract
     is-equiv-ev-pair : is-equiv (ev-pair {C = C})
-    pr1 (pr1 is-equiv-ev-pair) = ind-Σ
-    pr2 (pr1 is-equiv-ev-pair) = refl-htpy
-    pr1 (pr2 is-equiv-ev-pair) = ind-Σ
-    pr2 (pr2 is-equiv-ev-pair) f = eq-htpy (ind-Σ (λ x y → refl))
+    pr1 (pr1 is-equiv-ev-pair) = {!!}
 
   abstract
     is-equiv-ind-Σ : is-equiv (ind-Σ {C = C})
-    is-equiv-ind-Σ = is-equiv-is-section is-equiv-ev-pair refl-htpy
+    is-equiv-ind-Σ = {!!}
 
   equiv-ev-pair : ((x : Σ A B) → C x) ≃ ((a : A) (b : B a) → C (pair a b))
-  pr1 equiv-ev-pair = ev-pair
-  pr2 equiv-ev-pair = is-equiv-ev-pair
+  pr1 equiv-ev-pair = {!!}
 
   equiv-ind-Σ : ((a : A) (b : B a) → C (a , b)) ≃ ((x : Σ A B) → C x)
-  pr1 equiv-ind-Σ = ind-Σ
-  pr2 equiv-ind-Σ = is-equiv-ind-Σ
+  pr1 equiv-ind-Σ = {!!}
 ```
 
 ## Properties
@@ -65,11 +60,7 @@ equiv-ev-pair² :
     ( λ k → ( xy : Σ X Y) → Z k xy) ≃
   Σ ( (a : A) → B a → C)
     ( λ k → (x : X) → (y : Y x) → Z (ind-Σ k) (x , y))
-equiv-ev-pair² {X = X} {Y = Y} {Z = Z} =
-  equiv-Σ
-    ( λ k → (x : X) (y : Y x) → Z (ind-Σ k) (x , y))
-    ( equiv-ev-pair)
-    ( λ k → equiv-ev-pair)
+equiv-ev-pair² {X = X} {Y = Y} {Z = Z} = {!!}
 
 equiv-ev-pair³ :
   { l1 l2 l3 l4 l5 l6 l7 l8 l9 : Level} →
@@ -85,11 +76,5 @@ equiv-ev-pair³ :
     ( λ k →
       Σ ( (x : X) → Y x → Z)
         ( λ l → (u : U) → (v : V u) → W (ind-Σ k) (ind-Σ l) (u , v)))
-equiv-ev-pair³ {X = X} {Y = Y} {Z = Z} {U = U} {V = V} {W = W} =
-  equiv-Σ
-    ( λ k →
-      Σ ( (x : X) → Y x → Z)
-        ( λ l → (u : U) → (v : V u) → W (ind-Σ k) (ind-Σ l) (u , v)))
-    ( equiv-ev-pair)
-    ( λ k → equiv-ev-pair²)
+equiv-ev-pair³ {X = X} {Y = Y} {Z = Z} {U = U} {V = V} {W = W} = {!!}
 ```

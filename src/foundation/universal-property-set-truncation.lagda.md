@@ -43,8 +43,7 @@ universal property of the set truncation of `A`** if any map `A → C` into a se
 ```agda
 is-set-truncation :
   {l1 l2 : Level} {A : UU l1} (B : Set l2) → (A → type-Set B) → UUω
-is-set-truncation B f =
-  {l : Level} (C : Set l) → is-equiv (precomp-Set f C)
+is-set-truncation B f = {!!}
 ```
 
 ### The universal property of set truncations
@@ -52,9 +51,7 @@ is-set-truncation B f =
 ```agda
 universal-property-set-truncation :
   {l1 l2 : Level} {A : UU l1} (B : Set l2) (f : A → type-Set B) → UUω
-universal-property-set-truncation {A = A} B f =
-  {l : Level} (C : Set l) (g : A → type-Set C) →
-  is-contr (Σ (hom-Set B C) (λ h → h ∘ f ~ g))
+universal-property-set-truncation {A = A} B f = {!!}
 ```
 
 ### The dependent universal property of set truncations
@@ -63,12 +60,11 @@ universal-property-set-truncation {A = A} B f =
 precomp-Π-Set :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} (f : A → B) (C : B → Set l3) →
   ((b : B) → type-Set (C b)) → ((a : A) → type-Set (C (f a)))
-precomp-Π-Set f C h a = h (f a)
+precomp-Π-Set f C h a = {!!}
 
 dependent-universal-property-set-truncation :
   {l1 l2 : Level} {A : UU l1} (B : Set l2) (f : A → type-Set B) → UUω
-dependent-universal-property-set-truncation B f =
-  {l : Level} (X : type-Set B → Set l) → is-equiv (precomp-Π-Set f X)
+dependent-universal-property-set-truncation B f = {!!}
 ```
 
 ## Properties
@@ -81,12 +77,7 @@ abstract
     {l1 l2 : Level} {A : UU l1} (B : Set l2) (f : A → type-Set B) →
     universal-property-set-truncation B f →
     is-set-truncation B f
-  is-set-truncation-universal-property B f up-f C =
-    is-equiv-is-contr-map
-      ( λ g → is-contr-equiv
-        ( Σ (hom-Set B C) (λ h → h ∘ f ~ g))
-        ( equiv-tot (λ h → equiv-funext))
-        ( up-f C g))
+  is-set-truncation-universal-property B f up-f C = {!!}
 ```
 
 ### A map into a set satisfies the universal property if it is a set truncation
@@ -96,25 +87,19 @@ abstract
   universal-property-is-set-truncation :
     {l1 l2 : Level} {A : UU l1} (B : Set l2) (f : A → type-Set B) →
     is-set-truncation B f → universal-property-set-truncation B f
-  universal-property-is-set-truncation B f is-settr-f C g =
-    is-contr-equiv'
-      ( Σ (hom-Set B C) (λ h → (h ∘ f) ＝ g))
-      ( equiv-tot (λ h → equiv-funext))
-      ( is-contr-map-is-equiv (is-settr-f C) g)
+  universal-property-is-set-truncation B f is-settr-f C g = {!!}
 
 map-is-set-truncation :
   {l1 l2 l3 : Level} {A : UU l1} (B : Set l2) (f : A → type-Set B) →
   is-set-truncation B f → (C : Set l3) (g : A → type-Set C) → hom-Set B C
-map-is-set-truncation B f is-settr-f C g =
-  pr1 (center (universal-property-is-set-truncation B f is-settr-f C g))
+map-is-set-truncation B f is-settr-f C g = {!!}
 
 triangle-is-set-truncation :
   {l1 l2 l3 : Level} {A : UU l1} (B : Set l2) (f : A → type-Set B) →
   (is-settr-f : is-set-truncation B f) →
   (C : Set l3) (g : A → type-Set C) →
   map-is-set-truncation B f is-settr-f C g ∘ f ~ g
-triangle-is-set-truncation B f is-settr-f C g =
-  pr2 (center (universal-property-is-set-truncation B f is-settr-f C g))
+triangle-is-set-truncation B f is-settr-f C g = {!!}
 ```
 
 ### The identity function on any set is a set truncation
@@ -123,8 +108,7 @@ triangle-is-set-truncation B f is-settr-f C g =
 abstract
   is-set-truncation-id :
     {l1 l2 : Level} {A : UU l1} (H : is-set A) → is-set-truncation (A , H) id
-  is-set-truncation-id H B =
-    is-equiv-precomp-is-equiv id is-equiv-id (type-Set B)
+  is-set-truncation-id H B = {!!}
 ```
 
 ### Any equivalence into a set is a set truncation
@@ -134,8 +118,7 @@ abstract
   is-set-truncation-equiv :
     {l1 l2 : Level} {A : UU l1} (B : Set l2) (e : A ≃ type-Set B) →
     is-set-truncation B (map-equiv e)
-  is-set-truncation-equiv B e C =
-    is-equiv-precomp-is-equiv (map-equiv e) (is-equiv-map-equiv e) (type-Set C)
+  is-set-truncation-equiv B e C = {!!}
 ```
 
 ### Any set truncation satisfies the dependent universal property of the set truncation
@@ -146,18 +129,7 @@ abstract
     {l1 l2 l3 : Level} {A : UU l1} (B : Set l2) (f : A → type-Set B) →
     is-set-truncation B f →
     dependent-universal-property-set-truncation B f
-  dependent-universal-property-is-set-truncation {A = A} B f H X =
-    is-fiberwise-equiv-is-equiv-map-Σ
-      ( λ (h : A → type-Set B) → (a : A) → type-Set (X (h a)))
-      ( λ (g : type-Set B → type-Set B) → g ∘ f)
-      ( λ g (s : (b : type-Set B) → type-Set (X (g b))) (a : A) → s (f a))
-      ( H B)
-      ( is-equiv-equiv
-        ( inv-distributive-Π-Σ)
-        ( inv-distributive-Π-Σ)
-        ( ind-Σ (λ g s → refl))
-        ( H (Σ-Set B X)))
-      ( id)
+  dependent-universal-property-is-set-truncation {A = A} B f H X = {!!}
 ```
 
 ### Any map satisfying the dependent universal property of set truncations is a set truncation
@@ -168,8 +140,7 @@ abstract
     {l1 l2 l3 : Level} {A : UU l1} (B : Set l2) (f : A → type-Set B) →
     dependent-universal-property-set-truncation B f →
     is-set-truncation B f
-  is-set-truncation-dependent-universal-property B f H X =
-    H (λ b → X)
+  is-set-truncation-dependent-universal-property B f H X = {!!}
 ```
 
 ### Any set quotient of the mere equality equivalence relation is a set truncation
@@ -183,21 +154,7 @@ abstract
       ( B)
       ( reflecting-map-mere-eq B f) →
     is-set-truncation B f
-  is-set-truncation-is-set-quotient {A = A} B f H X =
-    is-equiv-comp
-      ( pr1)
-      ( precomp-Set-Quotient
-        ( mere-eq-equivalence-relation A)
-        ( B)
-        ( reflecting-map-mere-eq B f)
-        ( X))
-      ( H X)
-      ( is-equiv-pr1-is-contr
-        ( λ h →
-          is-proof-irrelevant-is-prop
-            ( is-prop-reflects-equivalence-relation
-              ( mere-eq-equivalence-relation A) X h)
-            ( reflects-mere-eq X h)))
+  is-set-truncation-is-set-quotient {A = A} B f H X = {!!}
 ```
 
 ### Any set truncation is a quotient of the mere equality equivalence relation
@@ -211,19 +168,5 @@ abstract
       ( mere-eq-equivalence-relation A)
       ( B)
       ( reflecting-map-mere-eq B f)
-  is-set-quotient-is-set-truncation {A = A} B f H X =
-    is-equiv-right-factor
-      ( pr1)
-      ( precomp-Set-Quotient
-        ( mere-eq-equivalence-relation A)
-        ( B)
-        ( reflecting-map-mere-eq B f)
-        ( X))
-      ( is-equiv-pr1-is-contr
-        ( λ h →
-          is-proof-irrelevant-is-prop
-            ( is-prop-reflects-equivalence-relation
-              ( mere-eq-equivalence-relation A) X h)
-            ( reflects-mere-eq X h)))
-      ( H X)
+  is-set-quotient-is-set-truncation {A = A} B f H X = {!!}
 ```

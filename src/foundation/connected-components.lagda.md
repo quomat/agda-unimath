@@ -47,8 +47,7 @@ module _
   where
 
   is-least-subtype-containing-element : UUω
-  is-least-subtype-containing-element =
-    {l : Level} (Q : subtype l X) → (P ⊆ Q) ↔ is-in-subtype Q x
+  is-least-subtype-containing-element = {!!}
 ```
 
 ### Connected components of types
@@ -59,26 +58,23 @@ module _
   where
 
   connected-component : UU l
-  connected-component =
-    Σ A (λ x → type-trunc-Prop (x ＝ a))
+  connected-component = {!!}
 
   point-connected-component : connected-component
-  pr1 point-connected-component = a
-  pr2 point-connected-component = unit-trunc-Prop refl
+  pr1 point-connected-component = {!!}
 
   connected-component-Pointed-Type : Pointed-Type l
-  pr1 connected-component-Pointed-Type = connected-component
-  pr2 connected-component-Pointed-Type = point-connected-component
+  pr1 connected-component-Pointed-Type = {!!}
 
   value-connected-component :
     connected-component → A
-  value-connected-component X = pr1 X
+  value-connected-component X = {!!}
 
   abstract
     mere-equality-connected-component :
       (X : connected-component) →
       type-trunc-Prop (value-connected-component X ＝ a)
-    mere-equality-connected-component X = pr2 X
+    mere-equality-connected-component X = {!!}
 ```
 
 ## Properties
@@ -90,23 +86,12 @@ abstract
   is-0-connected-connected-component :
     {l : Level} (A : UU l) (a : A) →
     is-0-connected (connected-component A a)
-  is-0-connected-connected-component A a =
-    is-0-connected-mere-eq
-      ( a , unit-trunc-Prop refl)
-      ( λ (x , p) →
-        apply-universal-property-trunc-Prop
-          ( p)
-          ( trunc-Prop ((a , unit-trunc-Prop refl) ＝ (x , p)))
-          ( λ p' →
-            unit-trunc-Prop
-              ( eq-pair-Σ
-                ( inv p')
-                ( all-elements-equal-type-trunc-Prop _ p))))
+  is-0-connected-connected-component A a = {!!}
 
 connected-component-∞-Group :
   {l : Level} (A : UU l) (a : A) → ∞-Group l
-pr1 (connected-component-∞-Group A a) = connected-component-Pointed-Type A a
-pr2 (connected-component-∞-Group A a) = is-0-connected-connected-component A a
+pr1 (connected-component-∞-Group A a) = {!!}
+pr2 (connected-component-∞-Group A a) = {!!}
 ```
 
 ### If `A` is `k+1`-truncated, then the connected component of `a` in `A` is `k+1`-truncated
@@ -115,6 +100,5 @@ pr2 (connected-component-∞-Group A a) = is-0-connected-connected-component A a
 is-trunc-connected-component :
   {l : Level} {k : 𝕋} (A : UU l) (a : A) →
   is-trunc (succ-𝕋 k) A → is-trunc (succ-𝕋 k) (connected-component A a)
-is-trunc-connected-component {l} {k} A a H =
-  is-trunc-Σ H (λ x → is-trunc-is-prop k is-prop-type-trunc-Prop)
+is-trunc-connected-component {l} {k} A a H = {!!}
 ```

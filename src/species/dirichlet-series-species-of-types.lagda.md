@@ -70,5 +70,5 @@ module _
   where
 
   dirichlet-series-species-types : UU (lsuc l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  dirichlet-series-species-types = Σ (UU l1) (λ X → (T X) × (S → H (X)))
+  dirichlet-series-species-types = {!!}
 ```

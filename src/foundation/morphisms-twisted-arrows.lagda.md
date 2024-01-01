@@ -50,22 +50,21 @@ module _
   where
 
   hom-twisted-arrow : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  hom-twisted-arrow =
-    Σ (X → A) (λ i → Σ (B → Y) (λ j → j ∘ f ∘ i ~ g))
+  hom-twisted-arrow = {!!}
 
   module _
     (α : hom-twisted-arrow)
     where
 
     map-domain-hom-twisted-arrow : X → A
-    map-domain-hom-twisted-arrow = pr1 α
+    map-domain-hom-twisted-arrow = {!!}
 
     map-codomain-hom-twisted-arrow : B → Y
-    map-codomain-hom-twisted-arrow = pr1 (pr2 α)
+    map-codomain-hom-twisted-arrow = {!!}
 
     coh-hom-twisted-arrow :
       map-codomain-hom-twisted-arrow ∘ f ∘ map-domain-hom-twisted-arrow ~ g
-    coh-hom-twisted-arrow = pr2 (pr2 α)
+    coh-hom-twisted-arrow = {!!}
 ```
 
 ## See also

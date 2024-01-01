@@ -27,21 +27,21 @@ open import ring-theory.semirings
 ```agda
 has-mul-ℕ-Commutative-Monoid :
   has-mul-Commutative-Monoid ℕ-Commutative-Monoid
-pr1 (pr1 has-mul-ℕ-Commutative-Monoid) = mul-ℕ
-pr2 (pr1 has-mul-ℕ-Commutative-Monoid) = associative-mul-ℕ
-pr1 (pr1 (pr2 has-mul-ℕ-Commutative-Monoid)) = 1
-pr1 (pr2 (pr1 (pr2 has-mul-ℕ-Commutative-Monoid))) = left-unit-law-mul-ℕ
-pr2 (pr2 (pr1 (pr2 has-mul-ℕ-Commutative-Monoid))) = right-unit-law-mul-ℕ
-pr1 (pr2 (pr2 has-mul-ℕ-Commutative-Monoid)) = left-distributive-mul-add-ℕ
-pr2 (pr2 (pr2 has-mul-ℕ-Commutative-Monoid)) = right-distributive-mul-add-ℕ
+pr1 (pr1 has-mul-ℕ-Commutative-Monoid) = {!!}
+pr2 (pr1 has-mul-ℕ-Commutative-Monoid) = {!!}
+pr1 (pr1 (pr2 has-mul-ℕ-Commutative-Monoid)) = {!!}
+pr1 (pr2 (pr1 (pr2 has-mul-ℕ-Commutative-Monoid))) = {!!}
+pr2 (pr2 (pr1 (pr2 has-mul-ℕ-Commutative-Monoid))) = {!!}
+pr1 (pr2 (pr2 has-mul-ℕ-Commutative-Monoid)) = {!!}
+pr2 (pr2 (pr2 has-mul-ℕ-Commutative-Monoid)) = {!!}
 
 ℕ-Semiring : Semiring lzero
-pr1 ℕ-Semiring = ℕ-Commutative-Monoid
-pr1 (pr2 ℕ-Semiring) = has-mul-ℕ-Commutative-Monoid
-pr1 (pr2 (pr2 ℕ-Semiring)) = left-zero-law-mul-ℕ
-pr2 (pr2 (pr2 ℕ-Semiring)) = right-zero-law-mul-ℕ
+pr1 ℕ-Semiring = {!!}
+pr1 (pr2 ℕ-Semiring) = {!!}
+pr1 (pr2 (pr2 ℕ-Semiring)) = {!!}
+pr2 (pr2 (pr2 ℕ-Semiring)) = {!!}
 
 ℕ-Commutative-Semiring : Commutative-Semiring lzero
-pr1 ℕ-Commutative-Semiring = ℕ-Semiring
-pr2 ℕ-Commutative-Semiring = commutative-mul-ℕ
+pr1 ℕ-Commutative-Semiring = {!!}
+pr2 ℕ-Commutative-Semiring = {!!}
 ```

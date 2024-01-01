@@ -46,18 +46,18 @@ module _
   where
 
   base-Directed-Tree : UU (l1 ⊔ l2)
-  base-Directed-Tree = direct-predecessor-Directed-Tree T (root-Directed-Tree T)
+  base-Directed-Tree = {!!}
 
   module _
     (b : base-Directed-Tree)
     where
 
     node-base-Directed-Tree : node-Directed-Tree T
-    node-base-Directed-Tree = pr1 b
+    node-base-Directed-Tree = {!!}
 
     edge-base-Directed-Tree :
       edge-Directed-Tree T node-base-Directed-Tree (root-Directed-Tree T)
-    edge-base-Directed-Tree = pr2 b
+    edge-base-Directed-Tree = {!!}
 ```
 
 ## Properties
@@ -72,8 +72,7 @@ module _
   is-proper-node-base-Directed-Tree :
     (b : base-Directed-Tree T) →
     is-proper-node-Directed-Tree T (node-base-Directed-Tree T b)
-  is-proper-node-base-Directed-Tree (x , e) refl =
-    no-direct-successor-root-Directed-Tree T (x , e)
+  is-proper-node-base-Directed-Tree (x , e) refl = {!!}
 
   no-walk-to-base-root-Directed-Tree :
     (b : base-Directed-Tree T) →
@@ -82,10 +81,8 @@ module _
         ( node-base-Directed-Tree T b))
   no-walk-to-base-root-Directed-Tree
     ( pair .(root-Directed-Tree T) e)
-    refl-walk-Directed-Graph =
-    no-direct-successor-root-Directed-Tree T (root-Directed-Tree T , e)
-  no-walk-to-base-root-Directed-Tree b (cons-walk-Directed-Graph e w) =
-    no-direct-successor-root-Directed-Tree T (_ , e)
+    refl-walk-Directed-Graph = {!!}
+  no-walk-to-base-root-Directed-Tree b (cons-walk-Directed-Graph e w) = {!!}
 ```
 
 ### Any node which has a walk to a base element is a proper node
@@ -99,10 +96,8 @@ module _
     (x : node-Directed-Tree T) (b : base-Directed-Tree T) →
     walk-Directed-Tree T x (node-base-Directed-Tree T b) →
     is-proper-node-Directed-Tree T x
-  is-proper-node-walk-to-base-Directed-Tree ._ b refl-walk-Directed-Graph =
-    is-proper-node-base-Directed-Tree T b
-  is-proper-node-walk-to-base-Directed-Tree x b (cons-walk-Directed-Graph e w) =
-    is-proper-node-direct-successor-Directed-Tree T e
+  is-proper-node-walk-to-base-Directed-Tree ._ b refl-walk-Directed-Graph = {!!}
+  is-proper-node-walk-to-base-Directed-Tree x b (cons-walk-Directed-Graph e w) = {!!}
 ```
 
 ### There are no edges between base elements
@@ -117,17 +112,7 @@ module _
     ¬ ( edge-Directed-Tree T
         ( node-base-Directed-Tree T a)
         ( node-base-Directed-Tree T b))
-  no-edge-base-Directed-Tree a b e =
-    ex-falso
-      ( is-not-one-two-ℕ
-        ( ap
-          ( length-walk-Directed-Graph (graph-Directed-Tree T))
-          ( eq-is-contr'
-            ( unique-walk-to-root-Directed-Tree T
-              ( node-base-Directed-Tree T a))
-            ( cons-walk-Directed-Tree T e
-              ( unit-walk-Directed-Tree T (edge-base-Directed-Tree T b)))
-            ( unit-walk-Directed-Tree T (edge-base-Directed-Tree T a)))))
+  no-edge-base-Directed-Tree a b e = {!!}
 ```
 
 ### For any node `x`, the coproduct of `is-root x` and the type of base elements `b` equipped with a walk from `x` to `b` is contractible
@@ -141,29 +126,22 @@ module _
     {x y : node-Directed-Tree T} (e : edge-Directed-Tree T x y) →
     (w : walk-Directed-Tree T y (root-Directed-Tree T)) →
     Σ (base-Directed-Tree T) (walk-Directed-Tree T x ∘ pr1)
-  cons-cases-center-walk-to-base-Directed-Tree e refl-walk-Directed-Graph =
-    (_ , e) , refl-walk-Directed-Tree T
+  cons-cases-center-walk-to-base-Directed-Tree e refl-walk-Directed-Graph = {!!}
   cons-cases-center-walk-to-base-Directed-Tree e
-    ( cons-walk-Directed-Graph f w) =
-    tot
-      ( λ u → cons-walk-Directed-Tree T e)
-      ( cons-cases-center-walk-to-base-Directed-Tree f w)
+    ( cons-walk-Directed-Graph f w) = {!!}
 
   cases-center-walk-to-base-Directed-Tree :
     {x : node-Directed-Tree T}
     (w : walk-Directed-Tree T x (root-Directed-Tree T)) →
     is-root-Directed-Tree T x +
     Σ (base-Directed-Tree T) (walk-Directed-Tree T x ∘ pr1)
-  cases-center-walk-to-base-Directed-Tree refl-walk-Directed-Graph = inl refl
-  cases-center-walk-to-base-Directed-Tree (cons-walk-Directed-Graph e w) =
-    inr (cons-cases-center-walk-to-base-Directed-Tree e w)
+  cases-center-walk-to-base-Directed-Tree refl-walk-Directed-Graph = {!!}
 
   center-walk-to-base-Directed-Tree :
     (x : node-Directed-Tree T) →
     is-root-Directed-Tree T x +
     Σ (base-Directed-Tree T) (walk-Directed-Tree T x ∘ pr1)
-  center-walk-to-base-Directed-Tree x =
-    cases-center-walk-to-base-Directed-Tree (walk-to-root-Directed-Tree T x)
+  center-walk-to-base-Directed-Tree x = {!!}
 
   cons-cases-contraction-walk-to-base-Directed-Tree :
     {x y : node-Directed-Tree T} (e : edge-Directed-Tree T x y) →
@@ -172,49 +150,16 @@ module _
     cons-cases-center-walk-to-base-Directed-Tree e w ＝ u
   cons-cases-contraction-walk-to-base-Directed-Tree e
     ( refl-walk-Directed-Graph)
-    ( (z , f) , refl-walk-Directed-Graph) =
-    ap
-      ( λ i → ((z , i) , refl-walk-Directed-Graph))
-      ( eq-is-contr
-        ( is-proof-irrelevant-edge-to-root-Directed-Tree T z e))
+    ( (z , f) , refl-walk-Directed-Graph) = {!!}
   cons-cases-contraction-walk-to-base-Directed-Tree {x} e
     ( refl-walk-Directed-Graph)
-    ( (z , f) , cons-walk-Directed-Graph {_} {y} g v) =
-    ex-falso
-      ( no-walk-to-base-root-Directed-Tree T
-        ( z , f)
-        ( tr
-          ( λ u → walk-Directed-Tree T u z)
-          ( ap pr1
-            ( eq-direct-successor-Directed-Tree T
-              ( y , g)
-              ( root-Directed-Tree T , e)))
-          ( v)))
+    ( (z , f) , cons-walk-Directed-Graph {_} {y} g v) = {!!}
   cons-cases-contraction-walk-to-base-Directed-Tree e
     ( cons-walk-Directed-Graph {y} {z} g w)
-    ( (u , f) , refl-walk-Directed-Graph) =
-    ex-falso
-      ( no-direct-successor-root-Directed-Tree T
-        ( tr
-          ( λ i → Σ (node-Directed-Tree T) (edge-Directed-Tree T i))
-          ( ap pr1
-            ( eq-direct-successor-Directed-Tree T
-              ( y , e)
-              ( root-Directed-Tree T , f)))
-          ( z , g)))
+    ( (u , f) , refl-walk-Directed-Graph) = {!!}
   cons-cases-contraction-walk-to-base-Directed-Tree {x} {y} e
     ( cons-walk-Directed-Graph {y} {z} g w)
-    ( (u , f) , cons-walk-Directed-Graph {_} {y'} e' v) =
-    ( ap
-      ( tot (λ u → cons-walk-Directed-Tree T e))
-      ( cons-cases-contraction-walk-to-base-Directed-Tree g w
-        ( (u , f) ,
-          ( tr-walk-eq-direct-successor-Directed-Tree T
-            ( y' , e')
-            ( y , e) v)))) ∙
-    ( ap
-      ( pair (u , f))
-      ( eq-tr-walk-eq-direct-successor-Directed-Tree T (y' , e') (y , e) v))
+    ( (u , f) , cons-walk-Directed-Graph {_} {y'} e' v) = {!!}
 
   cases-contraction-walk-to-base-Directed-Tree :
     {x : node-Directed-Tree T}
@@ -225,18 +170,14 @@ module _
     cases-center-walk-to-base-Directed-Tree w ＝ u
   cases-contraction-walk-to-base-Directed-Tree
     ( refl-walk-Directed-Graph)
-    ( inl p) =
-    ap inl (eq-is-contr (is-contr-loop-space-root-Directed-Tree T))
+    ( inl p) = {!!}
   cases-contraction-walk-to-base-Directed-Tree refl-walk-Directed-Graph
-    ( inr (b , w)) =
-    ex-falso (no-walk-to-base-root-Directed-Tree T b w)
+    ( inr (b , w)) = {!!}
   cases-contraction-walk-to-base-Directed-Tree
     ( cons-walk-Directed-Graph e w)
-    ( inl refl) =
-    ex-falso (no-direct-successor-root-Directed-Tree T (_ , e))
+    ( inl refl) = {!!}
   cases-contraction-walk-to-base-Directed-Tree
-    ( cons-walk-Directed-Graph e w) (inr u) =
-    ap inr (cons-cases-contraction-walk-to-base-Directed-Tree e w u)
+    ( cons-walk-Directed-Graph e w) (inr u) = {!!}
 
   contraction-walk-to-base-Directed-Tree :
     (x : node-Directed-Tree T)
@@ -244,9 +185,7 @@ module _
       is-root-Directed-Tree T x +
       Σ (base-Directed-Tree T) (walk-Directed-Tree T x ∘ pr1)) →
     center-walk-to-base-Directed-Tree x ＝ w
-  contraction-walk-to-base-Directed-Tree x =
-    cases-contraction-walk-to-base-Directed-Tree
-      ( walk-to-root-Directed-Tree T x)
+  contraction-walk-to-base-Directed-Tree x = {!!}
 
   unique-walk-to-base-Directed-Tree :
     (x : node-Directed-Tree T) →
@@ -254,47 +193,32 @@ module _
       ( is-root-Directed-Tree T x +
         Σ ( base-Directed-Tree T)
           ( walk-Directed-Tree T x ∘ node-base-Directed-Tree T))
-  unique-walk-to-base-Directed-Tree x =
-    ( center-walk-to-base-Directed-Tree x ,
-      contraction-walk-to-base-Directed-Tree x)
+  unique-walk-to-base-Directed-Tree x = {!!}
 
   is-root-or-walk-to-base-Directed-Tree :
     (x : node-Directed-Tree T) →
     is-root-Directed-Tree T x +
     Σ ( base-Directed-Tree T)
       ( walk-Directed-Tree T x ∘ node-base-Directed-Tree T)
-  is-root-or-walk-to-base-Directed-Tree x =
-    center (unique-walk-to-base-Directed-Tree x)
+  is-root-or-walk-to-base-Directed-Tree x = {!!}
 
   is-root-is-root-or-walk-to-base-root-Directed-Tree :
     is-root-or-walk-to-base-Directed-Tree (root-Directed-Tree T) ＝
     inl refl
-  is-root-is-root-or-walk-to-base-root-Directed-Tree =
-    eq-is-contr (unique-walk-to-base-Directed-Tree (root-Directed-Tree T))
+  is-root-is-root-or-walk-to-base-root-Directed-Tree = {!!}
 
   unique-walk-to-base-is-proper-node-Directed-Tree :
     (x : node-Directed-Tree T) → is-proper-node-Directed-Tree T x →
     is-contr
       ( Σ ( base-Directed-Tree T)
           ( walk-Directed-Tree T x ∘ node-base-Directed-Tree T))
-  unique-walk-to-base-is-proper-node-Directed-Tree x f =
-    is-contr-equiv'
-      ( is-root-Directed-Tree T x +
-        Σ ( base-Directed-Tree T)
-          ( walk-Directed-Tree T x ∘ node-base-Directed-Tree T))
-      ( left-unit-law-coprod-is-empty
-        ( is-root-Directed-Tree T x)
-        ( Σ ( base-Directed-Tree T)
-          ( walk-Directed-Tree T x ∘ node-base-Directed-Tree T))
-        ( f))
-      ( unique-walk-to-base-Directed-Tree x)
+  unique-walk-to-base-is-proper-node-Directed-Tree x f = {!!}
 
   walk-to-base-is-proper-node-Directed-Tree :
     (x : node-Directed-Tree T) → is-proper-node-Directed-Tree T x →
     Σ ( base-Directed-Tree T)
       ( walk-Directed-Tree T x ∘ node-base-Directed-Tree T)
-  walk-to-base-is-proper-node-Directed-Tree x H =
-    center (unique-walk-to-base-is-proper-node-Directed-Tree x H)
+  walk-to-base-is-proper-node-Directed-Tree x H = {!!}
 
   unique-walk-to-base-direct-successor-Directed-Tree :
     (x : node-Directed-Tree T)
@@ -302,34 +226,25 @@ module _
     is-contr
       ( Σ ( base-Directed-Tree T)
           ( walk-Directed-Tree T x ∘ node-base-Directed-Tree T))
-  unique-walk-to-base-direct-successor-Directed-Tree x u =
-    unique-walk-to-base-is-proper-node-Directed-Tree x
-      ( is-proper-node-direct-successor-Directed-Tree T (pr2 u))
+  unique-walk-to-base-direct-successor-Directed-Tree x u = {!!}
 
   is-proof-irrelevant-walk-to-base-Directed-Tree :
     (x : node-Directed-Tree T) →
     is-proof-irrelevant
       ( Σ ( base-Directed-Tree T)
           ( λ b → walk-Directed-Tree T x (node-base-Directed-Tree T b)))
-  is-proof-irrelevant-walk-to-base-Directed-Tree x (b , w) =
-    unique-walk-to-base-is-proper-node-Directed-Tree x
-      ( is-proper-node-walk-to-base-Directed-Tree T x b w)
+  is-proof-irrelevant-walk-to-base-Directed-Tree x (b , w) = {!!}
 
   is-prop-walk-to-base-Directed-Tree :
     (x : node-Directed-Tree T) →
     is-prop
       ( Σ ( base-Directed-Tree T)
           ( λ b → walk-Directed-Tree T x (node-base-Directed-Tree T b)))
-  is-prop-walk-to-base-Directed-Tree x =
-    is-prop-is-proof-irrelevant
-      ( is-proof-irrelevant-walk-to-base-Directed-Tree x)
+  is-prop-walk-to-base-Directed-Tree x = {!!}
 
   walk-to-base-Directed-Tree-Prop : node-Directed-Tree T → Prop (l1 ⊔ l2)
-  pr1 (walk-to-base-Directed-Tree-Prop x) =
-    Σ ( base-Directed-Tree T)
-      ( λ b → walk-Directed-Tree T x (node-base-Directed-Tree T b))
-  pr2 (walk-to-base-Directed-Tree-Prop x) =
-    is-prop-walk-to-base-Directed-Tree x
+  pr1 (walk-to-base-Directed-Tree-Prop x) = {!!}
+  pr2 (walk-to-base-Directed-Tree-Prop x) = {!!}
 ```
 
 ### The type of proper nodes of a directed tree is equivalent to the type of nodes equipped with a base element `b` and a walk to `b`
@@ -345,15 +260,7 @@ module _
       ( λ b →
         Σ ( node-Directed-Tree T)
           ( λ x → walk-Directed-Tree T x (node-base-Directed-Tree T b)))
-  compute-proper-node-Directed-Tree =
-    ( equiv-left-swap-Σ) ∘e
-    ( equiv-tot
-      ( λ x →
-        equiv-iff
-          ( is-proper-node-Directed-Tree-Prop T x)
-          ( walk-to-base-Directed-Tree-Prop T x)
-          ( walk-to-base-is-proper-node-Directed-Tree T x)
-          ( λ (b , w) → is-proper-node-walk-to-base-Directed-Tree T x b w)))
+  compute-proper-node-Directed-Tree = {!!}
 
   map-compute-proper-node-Directed-Tree :
     proper-node-Directed-Tree T →
@@ -361,16 +268,12 @@ module _
       ( λ b →
         Σ ( node-Directed-Tree T)
           ( λ x → walk-Directed-Tree T x (node-base-Directed-Tree T b)))
-  map-compute-proper-node-Directed-Tree =
-    map-equiv compute-proper-node-Directed-Tree
+  map-compute-proper-node-Directed-Tree = {!!}
 
   eq-compute-proper-node-Directed-Tree :
     {x : node-Directed-Tree T} (H : is-proper-node-Directed-Tree T x)
     (b : base-Directed-Tree T)
     (w : walk-Directed-Tree T x (node-base-Directed-Tree T b)) →
     map-compute-proper-node-Directed-Tree (x , H) ＝ (b , x , w)
-  eq-compute-proper-node-Directed-Tree {x} H b w =
-    ap
-      ( map-equiv equiv-left-swap-Σ)
-      ( ap (pair x) (eq-is-prop (is-prop-walk-to-base-Directed-Tree T x)))
+  eq-compute-proper-node-Directed-Tree {x} H b w = {!!}
 ```

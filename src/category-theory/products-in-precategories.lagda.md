@@ -30,8 +30,8 @@ A product of two objects `x` and `x` in a category `C` consists of:
 - morphisms `l : hom p x` and `r : hom p y` such that for every object `z` and
   morphisms `f : hom z x` and `g : hom z y` there exists a unique morphism
   `h : hom z p` such that
-- `l ∘ h = f`
-- `r ∘ h = g`.
+- `l ∘ h = {!!}
+- `r ∘ h = {!!}
 
 We say that `C` has all binary products if there is a choice of a product for
 each pair of objects in `C`.
@@ -48,23 +48,13 @@ module _
     hom-Precategory C p x →
     hom-Precategory C p y →
     UU (l1 ⊔ l2)
-  is-product-Precategory x y p l r =
-    (z : obj-Precategory C)
-    (f : hom-Precategory C z x) →
-    (g : hom-Precategory C z y) →
-    (∃! (hom-Precategory C z p) λ h →
-        (comp-hom-Precategory C l h ＝ f) × (comp-hom-Precategory C r h ＝ g))
+  is-product-Precategory x y p l r = {!!}
 
   product-Precategory : obj-Precategory C → obj-Precategory C → UU (l1 ⊔ l2)
-  product-Precategory x y =
-    Σ (obj-Precategory C) λ p →
-    Σ (hom-Precategory C p x) λ l →
-    Σ (hom-Precategory C p y) λ r →
-      is-product-Precategory x y p l r
+  product-Precategory x y = {!!}
 
   has-all-binary-products-Precategory : UU (l1 ⊔ l2)
-  has-all-binary-products-Precategory =
-    (x y : obj-Precategory C) → product-Precategory x y
+  has-all-binary-products-Precategory = {!!}
 
 module _
   {l1 l2 : Level} (C : Precategory l1 l2)
@@ -73,17 +63,17 @@ module _
 
   object-product-Precategory :
     obj-Precategory C → obj-Precategory C → obj-Precategory C
-  object-product-Precategory x y = pr1 (t x y)
+  object-product-Precategory x y = {!!}
 
   pr1-product-Precategory :
     (x y : obj-Precategory C) →
     hom-Precategory C (object-product-Precategory x y) x
-  pr1-product-Precategory x y = pr1 (pr2 (t x y))
+  pr1-product-Precategory x y = {!!}
 
   pr2-product-Precategory :
     (x y : obj-Precategory C) →
     hom-Precategory C (object-product-Precategory x y) y
-  pr2-product-Precategory x y = pr1 (pr2 (pr2 (t x y)))
+  pr2-product-Precategory x y = {!!}
 
   module _
     (x y z : obj-Precategory C)
@@ -93,30 +83,26 @@ module _
 
     morphism-into-product-Precategory :
       hom-Precategory C z (object-product-Precategory x y)
-    morphism-into-product-Precategory =
-      pr1 (pr1 (pr2 (pr2 (pr2 (t x y))) z f g))
+    morphism-into-product-Precategory = {!!}
 
     morphism-into-product-Precategory-comm-pr1 :
       comp-hom-Precategory C
         ( pr1-product-Precategory x y)
         ( morphism-into-product-Precategory) ＝ f
-    morphism-into-product-Precategory-comm-pr1 =
-      pr1 (pr2 (pr1 (pr2 (pr2 (pr2 (t x y))) z f g)))
+    morphism-into-product-Precategory-comm-pr1 = {!!}
 
     morphism-into-product-Precategory-comm-pr2 :
       comp-hom-Precategory C
         ( pr2-product-Precategory x y)
         ( morphism-into-product-Precategory) ＝ g
-    morphism-into-product-Precategory-comm-pr2 =
-      pr2 (pr2 (pr1 (pr2 (pr2 (pr2 (t x y))) z f g)))
+    morphism-into-product-Precategory-comm-pr2 = {!!}
 
     is-unique-morphism-into-product-Precategory :
       (h : hom-Precategory C z (object-product-Precategory x y)) →
       comp-hom-Precategory C (pr1-product-Precategory x y) h ＝ f →
       comp-hom-Precategory C (pr2-product-Precategory x y) h ＝ g →
       morphism-into-product-Precategory ＝ h
-    is-unique-morphism-into-product-Precategory h comm1 comm2 =
-      ap pr1 ((pr2 (pr2 (pr2 (pr2 (t x y))) z f g)) (h , (comm1 , comm2)))
+    is-unique-morphism-into-product-Precategory h comm1 comm2 = {!!}
 
 module _
   {l1 l2 : Level} (C : Precategory l1 l2)
@@ -126,12 +112,10 @@ module _
   where
 
   is-prop-is-product-Precategory : is-prop (is-product-Precategory C x y p l r)
-  is-prop-is-product-Precategory =
-    is-prop-iterated-Π 3 (λ z f g → is-property-is-contr)
+  is-prop-is-product-Precategory = {!!}
 
   is-product-prop-Precategory : Prop (l1 ⊔ l2)
-  pr1 is-product-prop-Precategory = is-product-Precategory C x y p l r
-  pr2 is-product-prop-Precategory = is-prop-is-product-Precategory
+  pr1 is-product-prop-Precategory = {!!}
 ```
 
 ## Properties
@@ -155,8 +139,5 @@ module _
     hom-Precategory C
       (object-product-Precategory C t x₁ x₂)
       (object-product-Precategory C t y₁ y₂)
-  map-product-Precategory =
-    morphism-into-product-Precategory C t _ _ _
-      (comp-hom-Precategory C f (pr1-product-Precategory C t x₁ x₂))
-      (comp-hom-Precategory C g (pr2-product-Precategory C t x₁ x₂))
+  map-product-Precategory = {!!}
 ```

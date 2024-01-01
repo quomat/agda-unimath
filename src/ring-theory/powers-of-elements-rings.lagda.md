@@ -34,12 +34,12 @@ iteratively multiplying `x` with itself `n` times.
 
 ```agda
 power-Ring : {l : Level} (R : Ring l) → ℕ → type-Ring R → type-Ring R
-power-Ring R = power-Semiring (semiring-Ring R)
+power-Ring R = {!!}
 ```
 
 ## Properties
 
-### `xⁿ⁺¹ = xⁿx` and `xⁿ⁺¹ ＝ xxⁿ`
+### `xⁿ⁺¹ = {!!}
 
 ```agda
 module _
@@ -49,12 +49,12 @@ module _
   power-succ-Ring :
     (n : ℕ) (x : type-Ring R) →
     power-Ring R (succ-ℕ n) x ＝ mul-Ring R (power-Ring R n x) x
-  power-succ-Ring = power-succ-Semiring (semiring-Ring R)
+  power-succ-Ring = {!!}
 
   power-succ-Ring' :
     (n : ℕ) (x : type-Ring R) →
     power-Ring R (succ-ℕ n) x ＝ mul-Ring R x (power-Ring R n x)
-  power-succ-Ring' = power-succ-Semiring' (semiring-Ring R)
+  power-succ-Ring' = {!!}
 ```
 
 ### Powers by sums of natural numbers are products of powers
@@ -68,8 +68,7 @@ module _
     (m n : ℕ) {x : type-Ring R} →
     power-Ring R (m +ℕ n) x ＝
     mul-Ring R (power-Ring R m x) (power-Ring R n x)
-  distributive-power-add-Ring =
-    distributive-power-add-Semiring (semiring-Ring R)
+  distributive-power-add-Ring = {!!}
 ```
 
 ### Powers by products of natural numbers are iterated powers
@@ -82,7 +81,7 @@ module _
   power-mul-Ring :
     (m n : ℕ) {x : type-Ring R} →
     power-Ring R (m *ℕ n) x ＝ power-Ring R n (power-Ring R m x)
-  power-mul-Ring = power-mul-Semiring (semiring-Ring R)
+  power-mul-Ring = {!!}
 ```
 
 ### If `x` commutes with `y` then so do their powers
@@ -97,13 +96,13 @@ module _
     ( mul-Ring R x y ＝ mul-Ring R y x) →
     ( mul-Ring R (power-Ring R n x) y) ＝
     ( mul-Ring R y (power-Ring R n x))
-  commute-powers-Ring' = commute-powers-Semiring' (semiring-Ring R)
+  commute-powers-Ring' = {!!}
 
   commute-powers-Ring :
     (m n : ℕ) {x y : type-Ring R} → mul-Ring R x y ＝ mul-Ring R y x →
     ( mul-Ring R (power-Ring R m x) (power-Ring R n y)) ＝
     ( mul-Ring R (power-Ring R n y) (power-Ring R m x))
-  commute-powers-Ring = commute-powers-Semiring (semiring-Ring R)
+  commute-powers-Ring = {!!}
 ```
 
 ### If `x` commutes with `y`, then powers distribute over the product of `x` and `y`
@@ -117,11 +116,10 @@ module _
     (n : ℕ) {x y : type-Ring R} → mul-Ring R x y ＝ mul-Ring R y x →
     power-Ring R n (mul-Ring R x y) ＝
     mul-Ring R (power-Ring R n x) (power-Ring R n y)
-  distributive-power-mul-Ring =
-    distributive-power-mul-Semiring (semiring-Ring R)
+  distributive-power-mul-Ring = {!!}
 ```
 
-### `(-x)ⁿ = (-1)ⁿxⁿ`
+### `(-x)ⁿ = {!!}
 
 ```agda
 module _
@@ -132,59 +130,15 @@ module _
     (n : ℕ) (x : type-Ring R) →
     power-Ring R n (neg-Ring R x) ＝
     mul-Ring R (power-Ring R n (neg-one-Ring R)) (power-Ring R n x)
-  power-neg-Ring n x =
-    ( ap (power-Ring R n) (inv (mul-neg-one-Ring R x))) ∙
-    ( distributive-power-mul-Ring R n (is-central-element-neg-one-Ring R x))
+  power-neg-Ring n x = {!!}
 
   even-power-neg-Ring :
     (n : ℕ) (x : type-Ring R) →
     is-even-ℕ n → power-Ring R n (neg-Ring R x) ＝ power-Ring R n x
-  even-power-neg-Ring zero-ℕ x H = refl
-  even-power-neg-Ring (succ-ℕ zero-ℕ) x H = ex-falso (is-odd-one-ℕ H)
-  even-power-neg-Ring (succ-ℕ (succ-ℕ n)) x H =
-    ( right-negative-law-mul-Ring R
-      ( power-Ring R (succ-ℕ n) (neg-Ring R x))
-      ( x)) ∙
-    ( ( ap
-        ( neg-Ring R)
-        ( ( ap
-            ( mul-Ring' R x)
-            ( ( power-succ-Ring R n (neg-Ring R x)) ∙
-              ( ( right-negative-law-mul-Ring R
-                  ( power-Ring R n (neg-Ring R x))
-                  ( x)) ∙
-                ( ap
-                  ( neg-Ring R)
-                  ( ( ap
-                      ( mul-Ring' R x)
-                      ( even-power-neg-Ring n x
-                        ( is-even-is-even-succ-succ-ℕ n H))) ∙
-                    ( inv (power-succ-Ring R n x))))))) ∙
-          ( left-negative-law-mul-Ring R (power-Ring R (succ-ℕ n) x) x))) ∙
-      ( neg-neg-Ring R (power-Ring R (succ-ℕ (succ-ℕ n)) x)))
+  even-power-neg-Ring zero-ℕ x H = {!!}
 
   odd-power-neg-Ring :
     (n : ℕ) (x : type-Ring R) →
     is-odd-ℕ n → power-Ring R n (neg-Ring R x) ＝ neg-Ring R (power-Ring R n x)
-  odd-power-neg-Ring zero-ℕ x H = ex-falso (H is-even-zero-ℕ)
-  odd-power-neg-Ring (succ-ℕ zero-ℕ) x H = refl
-  odd-power-neg-Ring (succ-ℕ (succ-ℕ n)) x H =
-    ( right-negative-law-mul-Ring R
-      ( power-Ring R (succ-ℕ n) (neg-Ring R x))
-      ( x)) ∙
-    ( ap
-      ( neg-Ring R ∘ mul-Ring' R x)
-      ( ( power-succ-Ring R n (neg-Ring R x)) ∙
-        ( ( right-negative-law-mul-Ring R
-            ( power-Ring R n (neg-Ring R x))
-            ( x)) ∙
-          ( ( ap
-              ( neg-Ring R)
-              ( ( ap
-                  ( mul-Ring' R x)
-                  ( odd-power-neg-Ring n x
-                    ( is-odd-is-odd-succ-succ-ℕ n H))) ∙
-                ( ( left-negative-law-mul-Ring R (power-Ring R n x) x) ∙
-                  ( ap (neg-Ring R) (inv (power-succ-Ring R n x)))))) ∙
-            ( neg-neg-Ring R (power-Ring R (succ-ℕ n) x))))))
+  odd-power-neg-Ring zero-ℕ x H = {!!}
 ```

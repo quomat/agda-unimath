@@ -36,31 +36,30 @@ the set-quotient of a standard finite type.
 
 ```agda
 is-kuratowsky-finite-set-Prop : {l : Level} → Set l → Prop l
-is-kuratowsky-finite-set-Prop X =
-  ∃-Prop ℕ (λ n → Fin n ↠ type-Set X)
+is-kuratowsky-finite-set-Prop X = {!!}
 
 is-kuratowsky-finite-set : {l : Level} → Set l → UU l
-is-kuratowsky-finite-set X = type-Prop (is-kuratowsky-finite-set-Prop X)
+is-kuratowsky-finite-set X = {!!}
 
 𝔽-Kuratowsky : (l : Level) → UU (lsuc l)
-𝔽-Kuratowsky l = Σ (Set l) is-kuratowsky-finite-set
+𝔽-Kuratowsky l = {!!}
 
 module _
   {l : Level} (X : 𝔽-Kuratowsky l)
   where
 
   set-𝔽-Kuratowsky : Set l
-  set-𝔽-Kuratowsky = pr1 X
+  set-𝔽-Kuratowsky = {!!}
 
   type-𝔽-Kuratowsky : UU l
-  type-𝔽-Kuratowsky = type-Set set-𝔽-Kuratowsky
+  type-𝔽-Kuratowsky = {!!}
 
   is-set-type-𝔽-Kuratowsky : is-set type-𝔽-Kuratowsky
-  is-set-type-𝔽-Kuratowsky = is-set-type-Set set-𝔽-Kuratowsky
+  is-set-type-𝔽-Kuratowsky = {!!}
 
   is-kuratowsky-finite-set-𝔽-Kuratowsky :
     is-kuratowsky-finite-set set-𝔽-Kuratowsky
-  is-kuratowsky-finite-set-𝔽-Kuratowsky = pr2 X
+  is-kuratowsky-finite-set-𝔽-Kuratowsky = {!!}
 ```
 
 ## Properties
@@ -72,16 +71,11 @@ is-finite-has-decidable-equality-type-𝔽-Kuratowsky :
   {l : Level} (X : 𝔽-Kuratowsky l) →
   has-decidable-equality (type-𝔽-Kuratowsky X) →
   is-finite (type-𝔽-Kuratowsky X)
-is-finite-has-decidable-equality-type-𝔽-Kuratowsky X H =
-  apply-universal-property-trunc-Prop
-    ( is-kuratowsky-finite-set-𝔽-Kuratowsky X)
-    ( is-finite-Prop (type-𝔽-Kuratowsky X))
-    ( λ (n , f , s) → is-finite-codomain (is-finite-Fin n) s H)
+is-finite-has-decidable-equality-type-𝔽-Kuratowsky X H = {!!}
 
 has-decidable-equality-is-finite-type-𝔽-Kuratowsky :
   {l : Level} (X : 𝔽-Kuratowsky l) →
   is-finite (type-𝔽-Kuratowsky X) →
   has-decidable-equality (type-𝔽-Kuratowsky X)
-has-decidable-equality-is-finite-type-𝔽-Kuratowsky X H =
-  has-decidable-equality-is-finite H
+has-decidable-equality-is-finite-type-𝔽-Kuratowsky X H = {!!}
 ```

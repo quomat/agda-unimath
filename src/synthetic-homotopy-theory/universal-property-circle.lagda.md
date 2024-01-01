@@ -40,8 +40,7 @@ module _
   where
 
   ev-free-loop : (X → Y) → free-loop Y
-  pr1 (ev-free-loop f) = f (base-free-loop α)
-  pr2 (ev-free-loop f) = ap f (loop-free-loop α)
+  pr1 (ev-free-loop f) = {!!}
 ```
 
 ### The universal property of the circle
@@ -52,7 +51,7 @@ module _
   where
 
   universal-property-circle : UU (l1 ⊔ lsuc l2)
-  universal-property-circle = (Y : UU l2) → is-equiv (ev-free-loop α Y)
+  universal-property-circle = {!!}
 ```
 
 ### Evaluating a dependent function at a free loop
@@ -63,8 +62,7 @@ module _
   where
 
   ev-free-loop-Π : ((x : X) → P x) → free-dependent-loop α P
-  pr1 (ev-free-loop-Π f) = f (base-free-loop α)
-  pr2 (ev-free-loop-Π f) = apd f (loop-free-loop α)
+  pr1 (ev-free-loop-Π f) = {!!}
 ```
 
 ### The induction principle of the circle
@@ -75,7 +73,7 @@ module _
   where
 
   induction-principle-circle : UU ((lsuc l2) ⊔ l1)
-  induction-principle-circle = (P : X → UU l2) → section (ev-free-loop-Π α P)
+  induction-principle-circle = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} (α : free-loop X)
@@ -84,11 +82,11 @@ module _
   where
 
   function-induction-principle-circle : (x : X) → P x
-  function-induction-principle-circle = pr1 (H P) β
+  function-induction-principle-circle = {!!}
 
   compute-induction-principle-circle :
     (ev-free-loop-Π α P function-induction-principle-circle) ＝ β
-  compute-induction-principle-circle = pr2 (H P) β
+  compute-induction-principle-circle = {!!}
 ```
 
 ### The dependent universal property of the circle
@@ -99,8 +97,7 @@ module _
   where
 
   dependent-universal-property-circle : UU ((lsuc l2) ⊔ l1)
-  dependent-universal-property-circle =
-    (P : X → UU l2) → is-equiv (ev-free-loop-Π α P)
+  dependent-universal-property-circle = {!!}
 ```
 
 ## Properties
@@ -122,9 +119,7 @@ module _
       ( ev-free-loop-Π α P f)
       ( ev-free-loop-Π α P g)) →
     ( free-dependent-loop α (λ x → Id (f x) (g x)))
-  pr1 (free-dependent-loop-htpy {l2} {P} {f} {g} (p , q)) = p
-  pr2 (free-dependent-loop-htpy {l2} {P} {f} {g} (p , q)) =
-    map-compute-dependent-identification-eq-value f g (loop-free-loop α) p p q
+  pr1 (free-dependent-loop-htpy {l2} {P} {f} {g} (p , q)) = {!!}
 
   is-retraction-ind-circle :
     ( ind-circle : {l : Level} → induction-principle-circle l α)
@@ -132,27 +127,13 @@ module _
     ( ( function-induction-principle-circle α ind-circle P) ∘
       ( ev-free-loop-Π α P)) ~
     ( id)
-  is-retraction-ind-circle ind-circle P f =
-    eq-htpy
-      ( function-induction-principle-circle α ind-circle
-        ( eq-value
-          ( function-induction-principle-circle α ind-circle P
-            ( ev-free-loop-Π α P f))
-          ( f))
-        ( free-dependent-loop-htpy
-          ( Eq-free-dependent-loop-eq α P _ _
-            ( compute-induction-principle-circle α ind-circle P
-              ( ev-free-loop-Π α P f)))))
+  is-retraction-ind-circle ind-circle P f = {!!}
 
   abstract
     dependent-universal-property-induction-principle-circle :
       ({l : Level} → induction-principle-circle l α) →
       ({l : Level} → dependent-universal-property-circle l α)
-    dependent-universal-property-induction-principle-circle ind-circle P =
-      is-equiv-is-invertible
-        ( function-induction-principle-circle α ind-circle P)
-        ( compute-induction-principle-circle α ind-circle P)
-        ( is-retraction-ind-circle ind-circle P)
+    dependent-universal-property-induction-principle-circle ind-circle P = {!!}
 ```
 
 ### Uniqueness of the maps obtained from the universal property of the circle
@@ -167,13 +148,7 @@ module _
       ({l : Level} → universal-property-circle l α) →
       {l2 : Level} (Y : UU l2) (α' : free-loop Y) →
       is-contr (Σ (X → Y) (λ f → Eq-free-loop (ev-free-loop α Y f) α'))
-    uniqueness-universal-property-circle up-circle Y α' =
-      is-contr-is-equiv'
-        ( fiber (ev-free-loop α Y) α')
-        ( tot (λ f → Eq-eq-free-loop (ev-free-loop α Y f) α'))
-        ( is-equiv-tot-is-fiberwise-equiv
-          ( λ f → is-equiv-Eq-eq-free-loop (ev-free-loop α Y f) α'))
-        ( is-contr-map-is-equiv (up-circle Y) α')
+    uniqueness-universal-property-circle up-circle Y α' = {!!}
 ```
 
 ### Uniqueness of the dependent functions obtained from the dependent universal property of the circle
@@ -189,13 +164,7 @@ module _
     is-contr
       ( Σ ( (x : X) → P x)
           ( λ h → Eq-free-dependent-loop α P (ev-free-loop-Π α P h) k))
-  uniqueness-dependent-universal-property-circle dup-circle {l2} {P} k =
-    is-contr-is-equiv'
-      ( fiber (ev-free-loop-Π α P) k)
-      ( tot (λ h → Eq-free-dependent-loop-eq α P (ev-free-loop-Π α P h) k))
-      ( is-equiv-tot-is-fiberwise-equiv
-        (λ h → is-equiv-Eq-free-dependent-loop-eq α P (ev-free-loop-Π α P h) k))
-      ( is-contr-map-is-equiv (dup-circle P) k)
+  uniqueness-dependent-universal-property-circle dup-circle {l2} {P} k = {!!}
 ```
 
 ### The dependent universal property of the circle implies the universal property of the circle
@@ -208,14 +177,7 @@ module _
   triangle-comparison-free-loop :
     ( map-compute-free-dependent-loop-const α Y ∘ (ev-free-loop α Y)) ~
     ( ev-free-loop-Π α (λ x → Y))
-  triangle-comparison-free-loop f =
-    eq-Eq-free-dependent-loop α
-      ( λ x → Y)
-      ( map-compute-free-dependent-loop-const α Y
-        ( ev-free-loop α Y f))
-      ( ev-free-loop-Π α (λ x → Y) f)
-      ( refl ,
-        right-unit ∙ (inv (apd-constant-type-family f (loop-free-loop α))))
+  triangle-comparison-free-loop f = {!!}
 
 module _
   {l1 : Level} {X : UU l1} (α : free-loop X)
@@ -225,14 +187,7 @@ module _
     universal-property-dependent-universal-property-circle :
       ({l : Level} → dependent-universal-property-circle l α) →
       ({l : Level} → universal-property-circle l α)
-    universal-property-dependent-universal-property-circle dup-circle Y =
-      is-equiv-top-map-triangle
-        ( ev-free-loop-Π α (λ x → Y))
-        ( map-compute-free-dependent-loop-const α Y)
-        ( ev-free-loop α Y)
-        ( inv-htpy (triangle-comparison-free-loop α Y))
-        ( is-equiv-map-equiv (compute-free-dependent-loop-const α Y))
-        ( dup-circle (λ x → Y))
+    universal-property-dependent-universal-property-circle dup-circle Y = {!!}
 ```
 
 ### The induction principle of the circle implies the universal property of the circle
@@ -246,9 +201,7 @@ module _
     universal-property-induction-principle-circle :
       ({l : Level} → induction-principle-circle l α) →
       ({l : Level} → universal-property-circle l α)
-    universal-property-induction-principle-circle X =
-      universal-property-dependent-universal-property-circle α
-        ( dependent-universal-property-induction-principle-circle α X)
+    universal-property-induction-principle-circle X = {!!}
 ```
 
 ### The dependent universal property of the circle with respect to propositions
@@ -260,8 +213,5 @@ abstract
     ( dup-circle : dependent-universal-property-circle l2 l)
     ( P : X → UU l2) (is-prop-P : (x : X) → is-prop (P x)) →
     P (base-free-loop l) → (x : X) → P x
-  is-connected-circle' l dup-circle P is-prop-P p =
-    map-inv-is-equiv
-      ( dup-circle P)
-      ( pair p (center (is-prop-P _ (tr P (loop-free-loop l) p) p)))
+  is-connected-circle' l dup-circle P is-prop-P p = {!!}
 ```

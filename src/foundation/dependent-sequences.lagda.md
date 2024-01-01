@@ -27,7 +27,7 @@ dependent map `(n : ℕ) → A n`.
 
 ```agda
 dependent-sequence : {l : Level} → (ℕ → UU l) → UU l
-dependent-sequence B = (n : ℕ) → B n
+dependent-sequence B = {!!}
 ```
 
 ### Functorial action on maps of dependent sequences
@@ -36,5 +36,5 @@ dependent-sequence B = (n : ℕ) → B n
 map-dependent-sequence :
   {l1 l2 : Level} {A : ℕ → UU l1} {B : ℕ → UU l2} →
   ((n : ℕ) → A n → B n) → dependent-sequence A → dependent-sequence B
-map-dependent-sequence f a = map-Π f a
+map-dependent-sequence f a = {!!}
 ```

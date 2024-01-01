@@ -41,11 +41,11 @@ _proof-relevant_ relation.
 
 ```agda
 Relation : {l1 : Level} (l : Level) (A : UU l1) → UU (l1 ⊔ lsuc l)
-Relation l A = A → A → UU l
+Relation l A = {!!}
 
 total-space-Relation :
   {l1 l : Level} {A : UU l1} → Relation l A → UU (l1 ⊔ l)
-total-space-Relation {A = A} R = Σ (A × A) λ (a , a') → R a a'
+total-space-Relation {A = A} R = {!!}
 ```
 
 ### Relations valued in propositions
@@ -53,21 +53,20 @@ total-space-Relation {A = A} R = Σ (A × A) λ (a , a') → R a a'
 ```agda
 Relation-Prop :
   (l : Level) {l1 : Level} (A : UU l1) → UU ((lsuc l) ⊔ l1)
-Relation-Prop l A = A → A → Prop l
+Relation-Prop l A = {!!}
 
 type-Relation-Prop :
   {l1 l2 : Level} {A : UU l1} → Relation-Prop l2 A → Relation l2 A
-type-Relation-Prop R x y = pr1 (R x y)
+type-Relation-Prop R x y = {!!}
 
 is-prop-type-Relation-Prop :
   {l1 l2 : Level} {A : UU l1} (R : Relation-Prop l2 A) →
   (x y : A) → is-prop (type-Relation-Prop R x y)
-is-prop-type-Relation-Prop R x y = pr2 (R x y)
+is-prop-type-Relation-Prop R x y = {!!}
 
 total-space-Relation-Prop :
   {l : Level} {l1 : Level} {A : UU l1} → Relation-Prop l A → UU (l ⊔ l1)
-total-space-Relation-Prop {A = A} R =
-  Σ (A × A) λ (a , a') → type-Relation-Prop R a a'
+total-space-Relation-Prop {A = A} R = {!!}
 ```
 
 ### The predicate of being a reflexive relation
@@ -81,7 +80,7 @@ module _
   where
 
   is-reflexive : UU (l1 ⊔ l2)
-  is-reflexive = (x : A) → R x x
+  is-reflexive = {!!}
 ```
 
 ### The predicate of being a reflexive relation valued in propositions
@@ -95,11 +94,10 @@ module _
   where
 
   is-reflexive-Relation-Prop : UU (l1 ⊔ l2)
-  is-reflexive-Relation-Prop = is-reflexive (type-Relation-Prop R)
+  is-reflexive-Relation-Prop = {!!}
 
   is-prop-is-reflexive-Relation-Prop : is-prop is-reflexive-Relation-Prop
-  is-prop-is-reflexive-Relation-Prop =
-    is-prop-Π (λ x → is-prop-type-Relation-Prop R x x)
+  is-prop-is-reflexive-Relation-Prop = {!!}
 ```
 
 ### The predicate of being a symmetric relation
@@ -113,7 +111,7 @@ module _
   where
 
   is-symmetric : UU (l1 ⊔ l2)
-  is-symmetric = (x y : A) → R x y → R y x
+  is-symmetric = {!!}
 ```
 
 ### The predicate of being a symmetric relation valued in propositions
@@ -127,12 +125,10 @@ module _
   where
 
   is-symmetric-Relation-Prop : UU (l1 ⊔ l2)
-  is-symmetric-Relation-Prop = is-symmetric (type-Relation-Prop R)
+  is-symmetric-Relation-Prop = {!!}
 
   is-prop-is-symmetric-Relation-Prop : is-prop is-symmetric-Relation-Prop
-  is-prop-is-symmetric-Relation-Prop =
-    is-prop-iterated-Π 3
-      ( λ x y r → is-prop-type-Relation-Prop R y x)
+  is-prop-is-symmetric-Relation-Prop = {!!}
 ```
 
 ### The predicate of being a transitive relation
@@ -146,7 +142,7 @@ module _
   where
 
   is-transitive : UU (l1 ⊔ l2)
-  is-transitive = (x y z : A) → R y z → R x y → R x z
+  is-transitive = {!!}
 ```
 
 ### The predicate of being a transitive relation valued in propositions
@@ -160,14 +156,10 @@ module _
   where
 
   is-transitive-Relation-Prop : UU (l1 ⊔ l2)
-  is-transitive-Relation-Prop = is-transitive (type-Relation-Prop R)
+  is-transitive-Relation-Prop = {!!}
 
   is-prop-is-transitive-Relation-Prop : is-prop is-transitive-Relation-Prop
-  is-prop-is-transitive-Relation-Prop =
-    is-prop-iterated-Π 3
-      ( λ x y z →
-        is-prop-function-type
-          ( is-prop-function-type (is-prop-type-Relation-Prop R x z)))
+  is-prop-is-transitive-Relation-Prop = {!!}
 ```
 
 ### The predicate of being an irreflexive relation
@@ -181,7 +173,7 @@ module _
   where
 
   is-irreflexive : UU (l1 ⊔ l2)
-  is-irreflexive = (x : A) → ¬ (R x x)
+  is-irreflexive = {!!}
 ```
 
 ### The predicate of being an asymmetric relation
@@ -195,7 +187,7 @@ module _
   where
 
   is-asymmetric : UU (l1 ⊔ l2)
-  is-asymmetric = (x y : A) → R x y → ¬ (R y x)
+  is-asymmetric = {!!}
 ```
 
 ### The predicate of being an antisymmetric relation
@@ -209,7 +201,7 @@ module _
   where
 
   is-antisymmetric : UU (l1 ⊔ l2)
-  is-antisymmetric = (x y : A) → R x y → R y x → x ＝ y
+  is-antisymmetric = {!!}
 ```
 
 ### The predicate of being an antisymmetric relation valued in propositions
@@ -223,7 +215,7 @@ module _
   where
 
   is-antisymmetric-Relation-Prop : UU (l1 ⊔ l2)
-  is-antisymmetric-Relation-Prop = is-antisymmetric (type-Relation-Prop R)
+  is-antisymmetric-Relation-Prop = {!!}
 ```
 
 ## Properties
@@ -234,39 +226,31 @@ module _
 equiv-Relation :
   {l1 l2 l3 : Level} {A : UU l1} →
   Relation l2 A → Relation l3 A → UU (l1 ⊔ l2 ⊔ l3)
-equiv-Relation {A = A} R S = (x y : A) → R x y ≃ S x y
+equiv-Relation {A = A} R S = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (R : Relation l2 A)
   where
 
   id-equiv-Relation : equiv-Relation R R
-  id-equiv-Relation x y = id-equiv
+  id-equiv-Relation x y = {!!}
 
   is-torsorial-equiv-Relation :
     is-torsorial (equiv-Relation R)
-  is-torsorial-equiv-Relation =
-    is-torsorial-Eq-Π
-      ( λ x P → (y : A) → R x y ≃ P y)
-      ( λ x →
-        is-torsorial-Eq-Π
-          ( λ y P → R x y ≃ P)
-          ( λ y → is-torsorial-equiv (R x y)))
+  is-torsorial-equiv-Relation = {!!}
 
   equiv-eq-Relation : (S : Relation l2 A) → (R ＝ S) → equiv-Relation R S
-  equiv-eq-Relation .R refl = id-equiv-Relation
+  equiv-eq-Relation .R refl = {!!}
 
   is-equiv-equiv-eq-Relation :
     (S : Relation l2 A) → is-equiv (equiv-eq-Relation S)
-  is-equiv-equiv-eq-Relation =
-    fundamental-theorem-id is-torsorial-equiv-Relation equiv-eq-Relation
+  is-equiv-equiv-eq-Relation = {!!}
 
   extensionality-Relation : (S : Relation l2 A) → (R ＝ S) ≃ equiv-Relation R S
-  pr1 (extensionality-Relation S) = equiv-eq-Relation S
-  pr2 (extensionality-Relation S) = is-equiv-equiv-eq-Relation S
+  pr1 (extensionality-Relation S) = {!!}
 
   eq-equiv-Relation : (S : Relation l2 A) → equiv-Relation R S → (R ＝ S)
-  eq-equiv-Relation S = map-inv-equiv (extensionality-Relation S)
+  eq-equiv-Relation S = {!!}
 ```
 
 ### Characterization of equality of prop-valued binary relations
@@ -276,8 +260,7 @@ relates-same-elements-Relation-Prop :
   {l1 l2 l3 : Level} {A : UU l1}
   (R : Relation-Prop l2 A) (S : Relation-Prop l3 A) →
   UU (l1 ⊔ l2 ⊔ l3)
-relates-same-elements-Relation-Prop {A = A} R S =
-  (x : A) → has-same-elements-subtype (R x) (S x)
+relates-same-elements-Relation-Prop {A = A} R S = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (R : Relation-Prop l2 A)
@@ -285,43 +268,31 @@ module _
 
   refl-relates-same-elements-Relation-Prop :
     relates-same-elements-Relation-Prop R R
-  refl-relates-same-elements-Relation-Prop x =
-    refl-has-same-elements-subtype (R x)
+  refl-relates-same-elements-Relation-Prop x = {!!}
 
   is-torsorial-relates-same-elements-Relation-Prop :
     is-torsorial (relates-same-elements-Relation-Prop R)
-  is-torsorial-relates-same-elements-Relation-Prop =
-    is-torsorial-Eq-Π
-      ( λ x P → has-same-elements-subtype (R x) P)
-      ( λ x → is-torsorial-has-same-elements-subtype (R x))
+  is-torsorial-relates-same-elements-Relation-Prop = {!!}
 
   relates-same-elements-eq-Relation-Prop :
     (S : Relation-Prop l2 A) →
     (R ＝ S) → relates-same-elements-Relation-Prop R S
-  relates-same-elements-eq-Relation-Prop .R refl =
-    refl-relates-same-elements-Relation-Prop
+  relates-same-elements-eq-Relation-Prop .R refl = {!!}
 
   is-equiv-relates-same-elements-eq-Relation-Prop :
     (S : Relation-Prop l2 A) →
     is-equiv (relates-same-elements-eq-Relation-Prop S)
-  is-equiv-relates-same-elements-eq-Relation-Prop =
-    fundamental-theorem-id
-      is-torsorial-relates-same-elements-Relation-Prop
-      relates-same-elements-eq-Relation-Prop
+  is-equiv-relates-same-elements-eq-Relation-Prop = {!!}
 
   extensionality-Relation-Prop :
     (S : Relation-Prop l2 A) →
     (R ＝ S) ≃ relates-same-elements-Relation-Prop R S
-  pr1 (extensionality-Relation-Prop S) =
-    relates-same-elements-eq-Relation-Prop S
-  pr2 (extensionality-Relation-Prop S) =
-    is-equiv-relates-same-elements-eq-Relation-Prop S
+  pr1 (extensionality-Relation-Prop S) = {!!}
 
   eq-relates-same-elements-Relation-Prop :
     (S : Relation-Prop l2 A) →
     relates-same-elements-Relation-Prop R S → (R ＝ S)
-  eq-relates-same-elements-Relation-Prop S =
-    map-inv-equiv (extensionality-Relation-Prop S)
+  eq-relates-same-elements-Relation-Prop S = {!!}
 ```
 
 ### Asymmetric relations are irreflexive
@@ -332,7 +303,7 @@ module _
   where
 
   is-irreflexive-is-asymmetric : is-asymmetric R → is-irreflexive R
-  is-irreflexive-is-asymmetric H x r = H x x r r
+  is-irreflexive-is-asymmetric H x r = {!!}
 ```
 
 ### Asymmetric relations are antisymmetric
@@ -343,7 +314,7 @@ module _
   where
 
   is-antisymmetric-is-asymmetric : is-asymmetric R → is-antisymmetric R
-  is-antisymmetric-is-asymmetric H x y r s = ex-falso (H x y r s)
+  is-antisymmetric-is-asymmetric H x y r s = {!!}
 ```
 
 ## See also

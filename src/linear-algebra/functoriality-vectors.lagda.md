@@ -37,13 +37,11 @@ module _
   where
 
   map-vec : {n : ℕ} → (A → B) → vec A n → vec B n
-  map-vec _ empty-vec = empty-vec
-  map-vec f (x ∷ xs) = f x ∷ map-vec f xs
+  map-vec _ empty-vec = {!!}
 
   htpy-vec :
     {n : ℕ} {f g : A → B} → (f ~ g) → map-vec {n = n} f ~ map-vec {n = n} g
-  htpy-vec H empty-vec = refl
-  htpy-vec H (x ∷ v) = ap-binary _∷_ (H x) (htpy-vec H v)
+  htpy-vec H empty-vec = {!!}
 ```
 
 ### Binary functoriality of the type of listed vectors
@@ -55,8 +53,7 @@ module _
 
   binary-map-vec :
     {n : ℕ} → (A → B → C) → vec A n → vec B n → vec C n
-  binary-map-vec f empty-vec empty-vec = empty-vec
-  binary-map-vec f (x ∷ v) (y ∷ w) = f x y ∷ binary-map-vec f v w
+  binary-map-vec f empty-vec empty-vec = {!!}
 ```
 
 ### Functoriality of the type of functional vectors
@@ -68,12 +65,12 @@ module _
 
   map-functional-vec :
     (n : ℕ) → (A → B) → functional-vec A n → functional-vec B n
-  map-functional-vec n f v = f ∘ v
+  map-functional-vec n f v = {!!}
 
   htpy-functional-vec :
     (n : ℕ) {f g : A → B} → (f ~ g) →
     map-functional-vec n f ~ map-functional-vec n g
-  htpy-functional-vec n H v = eq-htpy (H ·r v)
+  htpy-functional-vec n H v = {!!}
 ```
 
 ### Binary functoriality of the type of functional vectors
@@ -86,7 +83,7 @@ module _
   binary-map-functional-vec :
     (n : ℕ) → (A → B → C) →
     functional-vec A n → functional-vec B n → functional-vec C n
-  binary-map-functional-vec n f v w i = f (v i) (w i)
+  binary-map-functional-vec n f v w i = {!!}
 ```
 
 ### Link between functoriality of the type of vectors and of the type of functional vectors
@@ -103,23 +100,5 @@ module _
       ( n)
       ( map-functional-vec n f (functional-vec-vec n v)) ＝
     map-vec f v
-  map-vec-map-functional-vec zero-ℕ empty-vec = refl
-  map-vec-map-functional-vec (succ-ℕ n) (x ∷ v) =
-    eq-Eq-vec
-      ( succ-ℕ n)
-      ( listed-vec-functional-vec
-        ( succ-ℕ n)
-        ( map-functional-vec
-          ( succ-ℕ n)
-          ( f)
-          ( functional-vec-vec (succ-ℕ n) (x ∷ v))))
-      ( map-vec f (x ∷ v))
-      ( refl ,
-        Eq-eq-vec
-          ( n)
-          ( listed-vec-functional-vec
-            ( n)
-            ( map-functional-vec n f (functional-vec-vec n v)))
-          ( map-vec f v)
-          ( map-vec-map-functional-vec n v))
+  map-vec-map-functional-vec zero-ℕ empty-vec = {!!}
 ```

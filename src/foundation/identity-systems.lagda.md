@@ -41,7 +41,7 @@ ev-refl-identity-system :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} {a : A} (b : B a)
   {P : (x : A) (y : B x) → UU l3} →
   ((x : A) (y : B x) → P x y) → P a b
-ev-refl-identity-system {a = a} b f = f a b
+ev-refl-identity-system {a = a} b f = {!!}
 ```
 
 ### The predicate of being an identity system with respect to a universe level
@@ -52,8 +52,7 @@ module _
   where
 
   is-identity-system-Level : UU (l1 ⊔ l2 ⊔ lsuc l)
-  is-identity-system-Level =
-    (P : (x : A) (y : B x) → UU l) → section (ev-refl-identity-system b {P})
+  is-identity-system-Level = {!!}
 ```
 
 ### The predicate of being an identity system
@@ -64,7 +63,7 @@ module _
     where
 
     is-identity-system : UUω
-    is-identity-system = {l : Level} → is-identity-system-Level l B a b
+    is-identity-system = {!!}
 ```
 
 ## Properties
@@ -82,33 +81,18 @@ module _
   abstract
     is-identity-system-is-torsorial :
       (H : is-torsorial B) → is-identity-system B a b
-    pr1 (is-identity-system-is-torsorial H P) p x y =
-      tr
-        ( fam-Σ P)
-        ( eq-is-contr H)
-        ( p)
-    pr2 (is-identity-system-is-torsorial H P) p =
-      ap
-        ( λ t → tr (fam-Σ P) t p)
-        ( eq-is-contr'
-          ( is-prop-is-contr H (a , b) (a , b))
-          ( eq-is-contr H)
-          ( refl))
+    pr1 (is-identity-system-is-torsorial H P) p x y = {!!}
 
   abstract
     is-torsorial-is-identity-system :
       is-identity-system B a b → is-torsorial B
-    pr1 (pr1 (is-torsorial-is-identity-system H)) = a
-    pr2 (pr1 (is-torsorial-is-identity-system H)) = b
-    pr2 (is-torsorial-is-identity-system H) (x , y) =
-      pr1 (H (λ x' y' → (a , b) ＝ (x' , y'))) refl x y
+    pr1 (pr1 (is-torsorial-is-identity-system H)) = {!!}
 
   abstract
     fundamental-theorem-id-is-identity-system :
       is-identity-system B a b →
       (f : (x : A) → a ＝ x → B x) → is-fiberwise-equiv f
-    fundamental-theorem-id-is-identity-system H =
-      fundamental-theorem-id (is-torsorial-is-identity-system H)
+    fundamental-theorem-id-is-identity-system H = {!!}
 ```
 
 ## External links

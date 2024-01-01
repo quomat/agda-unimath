@@ -53,47 +53,26 @@ module _
   where
 
   vertex-finite-type-complete-bipartite-Undirected-Graph-𝔽 : 𝔽 (l1 ⊔ l2)
-  vertex-finite-type-complete-bipartite-Undirected-Graph-𝔽 = coprod-𝔽 X Y
+  vertex-finite-type-complete-bipartite-Undirected-Graph-𝔽 = {!!}
 
   vertex-complete-bipartite-Undirected-Graph-𝔽 : UU (l1 ⊔ l2)
-  vertex-complete-bipartite-Undirected-Graph-𝔽 =
-    type-𝔽 vertex-finite-type-complete-bipartite-Undirected-Graph-𝔽
+  vertex-complete-bipartite-Undirected-Graph-𝔽 = {!!}
 
   unordered-pair-vertices-complete-bipartite-Undirected-Graph-𝔽 :
     UU (lsuc lzero ⊔ l1 ⊔ l2)
-  unordered-pair-vertices-complete-bipartite-Undirected-Graph-𝔽 =
-    unordered-pair vertex-complete-bipartite-Undirected-Graph-𝔽
+  unordered-pair-vertices-complete-bipartite-Undirected-Graph-𝔽 = {!!}
 
   edge-finite-type-complete-bipartite-Undirected-Graph-𝔽 :
     unordered-pair-vertices-complete-bipartite-Undirected-Graph-𝔽 → 𝔽 (l1 ⊔ l2)
-  edge-finite-type-complete-bipartite-Undirected-Graph-𝔽 p =
-    prod-𝔽
-      ( Σ-𝔽 X
-        ( λ x →
-          fiber-𝔽
-            ( finite-type-2-Element-Type (pr1 p))
-            ( coprod-𝔽 X Y)
-            ( element-unordered-pair p)
-            ( inl x)))
-      ( Σ-𝔽 Y
-        ( λ y →
-          fiber-𝔽
-            ( finite-type-2-Element-Type (pr1 p))
-            ( coprod-𝔽 X Y)
-            ( element-unordered-pair p)
-            ( inr y)))
+  edge-finite-type-complete-bipartite-Undirected-Graph-𝔽 p = {!!}
 
   edge-complete-bipartite-Undirected-Graph :
     unordered-pair-vertices-complete-bipartite-Undirected-Graph-𝔽 → UU (l1 ⊔ l2)
-  edge-complete-bipartite-Undirected-Graph p =
-    type-𝔽 (edge-finite-type-complete-bipartite-Undirected-Graph-𝔽 p)
+  edge-complete-bipartite-Undirected-Graph p = {!!}
 
   complete-bipartite-Undirected-Graph-𝔽 :
     Undirected-Graph-𝔽 (l1 ⊔ l2) (l1 ⊔ l2)
-  pr1 complete-bipartite-Undirected-Graph-𝔽 =
-    vertex-finite-type-complete-bipartite-Undirected-Graph-𝔽
-  pr2 complete-bipartite-Undirected-Graph-𝔽 =
-    edge-finite-type-complete-bipartite-Undirected-Graph-𝔽
+  pr1 complete-bipartite-Undirected-Graph-𝔽 = {!!}
 ```
 
 ## External links

@@ -55,13 +55,10 @@ where the map `A ∨∗ B → A ×∗ B` is the canonical inclusion
 smash-prod-Pointed-Type :
   {l1 l2 : Level} (A : Pointed-Type l1) (B : Pointed-Type l2) →
   Pointed-Type (l1 ⊔ l2)
-smash-prod-Pointed-Type A B =
-  pushout-Pointed-Type
-    ( pointed-map-prod-wedge-Pointed-Type A B)
-    ( terminal-pointed-map (A ∨∗ B))
+smash-prod-Pointed-Type A B = {!!}
 
 infixr 15 _∧∗_
-_∧∗_ = smash-prod-Pointed-Type
+_∧∗_ = {!!}
 ```
 
 **Note**: The symbols used for the smash product `_∧∗_` are the
@@ -77,10 +74,7 @@ cogap-smash-prod-Pointed-Type :
     ( pointed-map-prod-wedge-Pointed-Type A B)
     ( terminal-pointed-map (A ∨∗ B)) X →
   (A ∧∗ B) →∗ X
-cogap-smash-prod-Pointed-Type {A = A} {B} =
-  cogap-Pointed-Type
-    ( pointed-map-prod-wedge-Pointed-Type A B)
-    ( terminal-pointed-map (A ∨∗ B))
+cogap-smash-prod-Pointed-Type {A = A} {B} = {!!}
 
 map-cogap-smash-prod-Pointed-Type :
   {l1 l2 l3 : Level}
@@ -90,8 +84,7 @@ map-cogap-smash-prod-Pointed-Type :
     ( terminal-pointed-map (A ∨∗ B))
     ( X) →
   type-Pointed-Type (A ∧∗ B) → type-Pointed-Type X
-map-cogap-smash-prod-Pointed-Type c =
-  pr1 (cogap-smash-prod-Pointed-Type c)
+map-cogap-smash-prod-Pointed-Type c = {!!}
 ```
 
 ## Properties
@@ -104,15 +97,11 @@ module _
   where
 
   pointed-map-smash-prod-prod-Pointed-Type : (A ×∗ B) →∗ (A ∧∗ B)
-  pointed-map-smash-prod-prod-Pointed-Type =
-    inl-pushout-Pointed-Type
-      ( pointed-map-prod-wedge-Pointed-Type A B)
-      ( terminal-pointed-map (A ∨∗ B))
+  pointed-map-smash-prod-prod-Pointed-Type = {!!}
 
   map-smash-prod-prod-Pointed-Type :
     type-Pointed-Type (A ×∗ B) → type-Pointed-Type (A ∧∗ B)
-  map-smash-prod-prod-Pointed-Type =
-    map-pointed-map pointed-map-smash-prod-prod-Pointed-Type
+  map-smash-prod-prod-Pointed-Type = {!!}
 ```
 
 ### Pointed maps into pointed types `A` and `B` induce a pointed map into `A ∧∗ B`
@@ -125,14 +114,11 @@ module _
 
   gap-smash-prod-Pointed-Type :
     (f : S →∗ A) (g : S →∗ B) → S →∗ (A ∧∗ B)
-  gap-smash-prod-Pointed-Type f g =
-    pointed-map-smash-prod-prod-Pointed-Type A B ∘∗
-    gap-prod-Pointed-Type f g
+  gap-smash-prod-Pointed-Type f g = {!!}
 
   map-gap-smash-prod-Pointed-Type :
     (f : S →∗ A) (g : S →∗ B) → type-Pointed-Type S → type-Pointed-Type (A ∧∗ B)
-  map-gap-smash-prod-Pointed-Type f g =
-    pr1 (gap-smash-prod-Pointed-Type f g)
+  map-gap-smash-prod-Pointed-Type f g = {!!}
 ```
 
 ### The canonical map from the wedge sum to the smash product identifies all points
@@ -143,40 +129,17 @@ module _
   where
 
   pointed-map-smash-prod-wedge-Pointed-Type : (A ∨∗ B) →∗ (A ∧∗ B)
-  pointed-map-smash-prod-wedge-Pointed-Type =
-    pointed-map-smash-prod-prod-Pointed-Type A B ∘∗
-    pointed-map-prod-wedge-Pointed-Type A B
+  pointed-map-smash-prod-wedge-Pointed-Type = {!!}
 
   map-smash-prod-wedge-Pointed-Type :
     type-Pointed-Type (A ∨∗ B) → type-Pointed-Type (A ∧∗ B)
-  map-smash-prod-wedge-Pointed-Type =
-    map-pointed-map pointed-map-smash-prod-wedge-Pointed-Type
+  map-smash-prod-wedge-Pointed-Type = {!!}
 
   contraction-map-smash-prod-wedge-Pointed-Type :
     ( x : type-Pointed-Type (A ∨∗ B)) →
     map-smash-prod-wedge-Pointed-Type x ＝
     point-Pointed-Type (A ∧∗ B)
-  contraction-map-smash-prod-wedge-Pointed-Type x =
-    ( glue-pushout
-      ( map-prod-wedge-Pointed-Type A B)
-      ( map-pointed-map {A = A ∨∗ B} {B = unit-Pointed-Type}
-        ( terminal-pointed-map (A ∨∗ B)))
-      ( x)) ∙
-    ( htpy-right-whisk
-      ( htpy-pointed-htpy
-        ( inr-pushout-Pointed-Type
-          ( pointed-map-prod-wedge-Pointed-Type A B)
-          ( terminal-pointed-map (A ∨∗ B)))
-        ( inclusion-point-Pointed-Type (A ∧∗ B))
-        ( is-initial-unit-Pointed-Type
-          ( A ∧∗ B)
-          ( inr-pushout-Pointed-Type
-            ( pointed-map-prod-wedge-Pointed-Type A B)
-            ( terminal-pointed-map (A ∨∗ B)))))
-      ( map-terminal-pointed-map (A ∨∗ B))
-      ( x)) ∙
-    ( preserves-point-pointed-map
-      ( inclusion-point-Pointed-Type (A ∧∗ B)))
+  contraction-map-smash-prod-wedge-Pointed-Type x = {!!}
 
   coh-contraction-map-smash-prod-wedge-Pointed-Type :
     ( ap
@@ -186,26 +149,7 @@ module _
         ( map-inr-wedge-Pointed-Type A B (point-Pointed-Type B))) ＝
     ( contraction-map-smash-prod-wedge-Pointed-Type
       ( map-inl-wedge-Pointed-Type A B (point-Pointed-Type A)))
-  coh-contraction-map-smash-prod-wedge-Pointed-Type =
-    ( inv-map-compute-dependent-identification-eq-value-function
-      ( map-smash-prod-wedge-Pointed-Type)
-      ( map-pointed-map
-        ( constant-pointed-map (A ∨∗ B) (A ∧∗ B)))
-      ( glue-wedge-Pointed-Type A B)
-      ( contraction-map-smash-prod-wedge-Pointed-Type
-        ( map-inl-wedge-Pointed-Type A B (point-Pointed-Type A)))
-      ( contraction-map-smash-prod-wedge-Pointed-Type
-        ( map-inr-wedge-Pointed-Type A B (point-Pointed-Type B)))
-      ( apd
-        ( contraction-map-smash-prod-wedge-Pointed-Type)
-        ( glue-wedge-Pointed-Type A B))) ∙
-    ( identification-left-whisk
-      ( contraction-map-smash-prod-wedge-Pointed-Type
-        ( map-inl-wedge-Pointed-Type A B (point-Pointed-Type A)))
-      ( ap-const
-        ( point-Pointed-Type (A ∧∗ B))
-        ( glue-wedge-Pointed-Type A B))) ∙
-    ( right-unit)
+  coh-contraction-map-smash-prod-wedge-Pointed-Type = {!!}
 ```
 
 ### The map from the pointed product to the smash product identifies elements
@@ -225,12 +169,7 @@ module _
       ( x , point-Pointed-Type B) ＝
     map-smash-prod-prod-Pointed-Type A B
       ( point-Pointed-Type A , point-Pointed-Type B)
-  inl-glue-smash-prod-Pointed-Type x =
-    ( ap
-      ( map-smash-prod-prod-Pointed-Type A B)
-      ( inv (compute-inl-prod-wedge-Pointed-Type A B x))) ∙
-    ( contraction-map-smash-prod-wedge-Pointed-Type A B
-      ( map-inl-wedge-Pointed-Type A B x))
+  inl-glue-smash-prod-Pointed-Type x = {!!}
 
   inr-glue-smash-prod-Pointed-Type :
     ( y : type-Pointed-Type B) →
@@ -238,84 +177,12 @@ module _
       ( point-Pointed-Type A , y) ＝
     map-smash-prod-prod-Pointed-Type A B
       ( point-Pointed-Type A , point-Pointed-Type B)
-  inr-glue-smash-prod-Pointed-Type y =
-    ( ap
-      ( map-smash-prod-prod-Pointed-Type A B)
-      ( inv (compute-inr-prod-wedge-Pointed-Type A B y))) ∙
-    ( contraction-map-smash-prod-wedge-Pointed-Type A B
-      ( map-inr-wedge-Pointed-Type A B y))
+  inr-glue-smash-prod-Pointed-Type y = {!!}
 
   coh-glue-smash-prod-Pointed-Type :
     inl-glue-smash-prod-Pointed-Type (point-Pointed-Type A) ＝
     inr-glue-smash-prod-Pointed-Type (point-Pointed-Type B)
-  coh-glue-smash-prod-Pointed-Type =
-    ( identification-left-whisk
-      ( ap
-        ( map-smash-prod-prod-Pointed-Type A B)
-        ( inv (compute-inl-prod-wedge-Pointed-Type A B (point-Pointed-Type A))))
-      ( inv (coh-contraction-map-smash-prod-wedge-Pointed-Type A B))) ∙
-    ( inv
-      ( assoc
-        ( ap (map-smash-prod-prod-Pointed-Type A B)
-          ( inv
-            ( compute-inl-prod-wedge-Pointed-Type A B (point-Pointed-Type A))))
-        ( ap (map-smash-prod-wedge-Pointed-Type A B)
-          ( glue-wedge-Pointed-Type A B))
-        ( contraction-map-smash-prod-wedge-Pointed-Type A B
-          ( map-inr-wedge-Pointed-Type A B (point-Pointed-Type B))))) ∙
-    ( identification-right-whisk
-      ( ( identification-left-whisk
-          ( ap (map-smash-prod-prod-Pointed-Type A B)
-            ( inv
-              ( compute-inl-prod-wedge-Pointed-Type A B
-                ( point-Pointed-Type A))))
-          ( ap-comp
-            ( map-smash-prod-prod-Pointed-Type A B)
-            ( map-prod-wedge-Pointed-Type A B)
-            ( glue-wedge-Pointed-Type A B))) ∙
-        ( inv
-          ( ap-concat
-            ( map-smash-prod-prod-Pointed-Type A B)
-            ( inv
-              ( compute-inl-prod-wedge-Pointed-Type A B
-                ( point-Pointed-Type A)))
-            ( ap
-              ( map-prod-wedge-Pointed-Type A B)
-              ( glue-wedge-Pointed-Type A B)))) ∙
-        ( ap²
-          ( map-smash-prod-prod-Pointed-Type A B)
-          ( inv
-            ( left-transpose-eq-concat
-              ( compute-inl-prod-wedge-Pointed-Type A B
-                ( point-Pointed-Type A))
-              ( inv
-                ( compute-inr-prod-wedge-Pointed-Type A B
-                  ( point-Pointed-Type B)))
-              ( ap
-                ( map-prod-wedge-Pointed-Type A B)
-                ( glue-wedge-Pointed-Type A B))
-              ( inv
-                ( right-transpose-eq-concat
-                  ( ap
-                    ( map-prod-wedge-Pointed-Type A B)
-                    ( glue-wedge-Pointed-Type A B))
-                  ( compute-inr-prod-wedge-Pointed-Type A B
-                    ( point-Pointed-Type B))
-                  ( compute-inl-prod-wedge-Pointed-Type A B
-                    ( point-Pointed-Type A))
-                  ( ( compute-glue-cogap
-                      ( map-pointed-map
-                        ( inclusion-point-Pointed-Type A))
-                      ( map-pointed-map
-                        ( inclusion-point-Pointed-Type B))
-                      ( cocone-type-cocone-Pointed-Type
-                        ( inclusion-point-Pointed-Type A)
-                        ( inclusion-point-Pointed-Type B)
-                        ( cocone-prod-wedge-Pointed-Type A B))
-                      ( point-Pointed-Type unit-Pointed-Type)) ∙
-                    ( right-unit))))))))
-      ( contraction-map-smash-prod-wedge-Pointed-Type A B
-        ( map-inr-wedge-Pointed-Type A B (point-Pointed-Type B))))
+  coh-glue-smash-prod-Pointed-Type = {!!}
 ```
 
 ### The universal property of the smash product
@@ -337,37 +204,15 @@ map-universal-property-smash-prod-Pointed-Type :
   {l1 l2 l3 : Level}
   (A : Pointed-Type l1) (B : Pointed-Type l2) (C : Pointed-Type l3) →
   ((A ∧∗ B) →∗ C) → (type-Pointed-Type A) → (B →∗ C)
-pr1 (map-universal-property-smash-prod-Pointed-Type A B C f x) y =
-  map-pointed-map f (map-smash-prod-prod-Pointed-Type A B (x , y))
-pr2 (map-universal-property-smash-prod-Pointed-Type A B C f x) =
-  ( ap
-    ( map-pointed-map f)
-    ( inl-glue-smash-prod-Pointed-Type A B x)) ∙
-  ( preserves-point-pointed-map f)
+pr1 (map-universal-property-smash-prod-Pointed-Type A B C f x) y = {!!}
+pr2 (map-universal-property-smash-prod-Pointed-Type A B C f x) = {!!}
 
 universal-property-smash-prod-Pointed-Type :
   {l1 l2 l3 : Level}
   (A : Pointed-Type l1) (B : Pointed-Type l2) (C : Pointed-Type l3) →
   ((A ∧∗ B) →∗ C) → (A →∗ (pointed-map-Pointed-Type B C))
-pr1 (universal-property-smash-prod-Pointed-Type A B C f) =
-  map-universal-property-smash-prod-Pointed-Type A B C f
-pr2 (universal-property-smash-prod-Pointed-Type A B C f) =
-  eq-htpy-pointed-Π
-    ( map-universal-property-smash-prod-Pointed-Type A B C
-      ( f)
-      ( point-Pointed-Type A))
-    ( constant-pointed-map B C)
-    ( ( λ y →
-        ( ap
-          ( map-pointed-map f)
-          ( inr-glue-smash-prod-Pointed-Type A B y) ∙
-        ( preserves-point-pointed-map f))) ,
-      ( ( identification-right-whisk
-          ( ap²
-            ( map-pointed-map f)
-            ( inv (coh-glue-smash-prod-Pointed-Type A B)))
-          ( preserves-point-pointed-map f)) ∙
-        ( inv right-unit)))
+pr1 (universal-property-smash-prod-Pointed-Type A B C f) = {!!}
+pr2 (universal-property-smash-prod-Pointed-Type A B C f) = {!!}
 ```
 
 ## See also

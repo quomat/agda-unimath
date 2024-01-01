@@ -67,23 +67,14 @@ module _
   where
 
   is-transitive-prop-action-Concrete-Group : Prop (l1 ⊔ l2)
-  is-transitive-prop-action-Concrete-Group =
-    is-transitive-prop-action-∞-Group
-      ( ∞-group-Concrete-Group G)
-      ( type-Set ∘ X)
+  is-transitive-prop-action-Concrete-Group = {!!}
 
   is-transitive-action-Concrete-Group : UU (l1 ⊔ l2)
-  is-transitive-action-Concrete-Group =
-    is-transitive-action-∞-Group
-      ( ∞-group-Concrete-Group G)
-      ( type-Set ∘ X)
+  is-transitive-action-Concrete-Group = {!!}
 
   is-prop-is-transitive-action-Concrete-Group :
     is-prop is-transitive-action-Concrete-Group
-  is-prop-is-transitive-action-Concrete-Group =
-    is-prop-is-transitive-action-∞-Group
-      ( ∞-group-Concrete-Group G)
-      ( type-Set ∘ X)
+  is-prop-is-transitive-action-Concrete-Group = {!!}
 ```
 
 ### The predicate of being an abstractly transitive concrete group action
@@ -94,23 +85,14 @@ module _
   where
 
   is-abstractly-transitive-prop-action-Concrete-Group : Prop (l1 ⊔ l2)
-  is-abstractly-transitive-prop-action-Concrete-Group =
-    is-abstractly-transitive-prop-action-∞-Group
-      ( ∞-group-Concrete-Group G)
-      ( type-Set ∘ X)
+  is-abstractly-transitive-prop-action-Concrete-Group = {!!}
 
   is-abstractly-transitive-action-Concrete-Group : UU (l1 ⊔ l2)
-  is-abstractly-transitive-action-Concrete-Group =
-    is-abstractly-transitive-action-∞-Group
-      ( ∞-group-Concrete-Group G)
-      ( type-Set ∘ X)
+  is-abstractly-transitive-action-Concrete-Group = {!!}
 
   is-prop-is-abstractly-transitive-action-Concrete-Group :
     is-prop is-abstractly-transitive-action-Concrete-Group
-  is-prop-is-abstractly-transitive-action-Concrete-Group =
-    is-prop-is-abstractly-transitive-action-∞-Group
-      ( ∞-group-Concrete-Group G)
-      ( type-Set ∘ X)
+  is-prop-is-abstractly-transitive-action-Concrete-Group = {!!}
 ```
 
 ### Transitive concrete group actions
@@ -118,8 +100,7 @@ module _
 ```agda
 transitive-action-Concrete-Group :
   {l1 : Level} (l2 : Level) (G : Concrete-Group l1) → UU (l1 ⊔ lsuc l2)
-transitive-action-Concrete-Group l2 G =
-  type-subtype (is-transitive-prop-action-Concrete-Group {l2 = l2} G)
+transitive-action-Concrete-Group l2 G = {!!}
 
 module _
   {l1 l2 : Level} (G : Concrete-Group l1)
@@ -128,68 +109,49 @@ module _
 
   action-transitive-action-Concrete-Group :
     action-Concrete-Group l2 G
-  action-transitive-action-Concrete-Group = pr1 X
+  action-transitive-action-Concrete-Group = {!!}
 
   is-transitive-transitive-action-Concrete-Group :
     is-transitive-action-Concrete-Group G
       action-transitive-action-Concrete-Group
-  is-transitive-transitive-action-Concrete-Group = pr2 X
+  is-transitive-transitive-action-Concrete-Group = {!!}
 
   transitive-action-∞-group-transitive-action-Concrete-Group :
     transitive-action-∞-Group l2 (∞-group-Concrete-Group G)
-  pr1 transitive-action-∞-group-transitive-action-Concrete-Group =
-    type-Set ∘ action-transitive-action-Concrete-Group
-  pr2 transitive-action-∞-group-transitive-action-Concrete-Group =
-    is-transitive-transitive-action-Concrete-Group
+  pr1 transitive-action-∞-group-transitive-action-Concrete-Group = {!!}
 
   set-transitive-action-Concrete-Group : Set l2
-  set-transitive-action-Concrete-Group =
-    set-action-Concrete-Group G action-transitive-action-Concrete-Group
+  set-transitive-action-Concrete-Group = {!!}
 
   type-transitive-action-Concrete-Group : UU l2
-  type-transitive-action-Concrete-Group =
-    type-action-Concrete-Group G action-transitive-action-Concrete-Group
+  type-transitive-action-Concrete-Group = {!!}
 
   is-set-type-transitive-action-Concrete-Group :
     is-set type-transitive-action-Concrete-Group
-  is-set-type-transitive-action-Concrete-Group =
-    is-set-type-action-Concrete-Group G action-transitive-action-Concrete-Group
+  is-set-type-transitive-action-Concrete-Group = {!!}
 
   is-inhabited-type-transitive-action-Concrete-Group :
     is-inhabited type-transitive-action-Concrete-Group
-  is-inhabited-type-transitive-action-Concrete-Group =
-    is-inhabited-transitive-action-∞-Group
-      ( ∞-group-Concrete-Group G)
-      ( transitive-action-∞-group-transitive-action-Concrete-Group)
+  is-inhabited-type-transitive-action-Concrete-Group = {!!}
 
   inhabited-type-transitive-action-Concrete-Group :
     Inhabited-Type l2
-  inhabited-type-transitive-action-Concrete-Group =
-    inhabited-type-transitive-action-∞-Group
-      ( ∞-group-Concrete-Group G)
-      ( transitive-action-∞-group-transitive-action-Concrete-Group)
+  inhabited-type-transitive-action-Concrete-Group = {!!}
 
   mul-transitive-action-Concrete-Group :
     type-Concrete-Group G → type-transitive-action-Concrete-Group →
     type-transitive-action-Concrete-Group
-  mul-transitive-action-Concrete-Group =
-    mul-action-Concrete-Group G action-transitive-action-Concrete-Group
+  mul-transitive-action-Concrete-Group = {!!}
 
   is-abstractly-transitive-transitive-action-Concrete-Group :
     is-abstractly-transitive-action-Concrete-Group G
       ( action-transitive-action-Concrete-Group)
-  is-abstractly-transitive-transitive-action-Concrete-Group =
-    is-abstractly-transitive-transitive-action-∞-Group
-      ( ∞-group-Concrete-Group G)
-      ( transitive-action-∞-group-transitive-action-Concrete-Group)
+  is-abstractly-transitive-transitive-action-Concrete-Group = {!!}
 
   is-surjective-mul-right-transitive-action-Concrete-Group :
     (x : type-transitive-action-Concrete-Group) →
     is-surjective (λ g → mul-transitive-action-Concrete-Group g x)
-  is-surjective-mul-right-transitive-action-Concrete-Group =
-    is-surjective-mul-right-transitive-action-∞-Group
-      ( ∞-group-Concrete-Group G)
-      ( transitive-action-∞-group-transitive-action-Concrete-Group)
+  is-surjective-mul-right-transitive-action-Concrete-Group = {!!}
 ```
 
 ## Properties
@@ -204,20 +166,14 @@ module _
 
   equiv-transitive-action-Concrete-Group :
     {l3 : Level} (Y : transitive-action-Concrete-Group l3 G) → UU (l1 ⊔ l2 ⊔ l3)
-  equiv-transitive-action-Concrete-Group Y =
-    equiv-action-Concrete-Group G
-      ( action-transitive-action-Concrete-Group G X)
-      ( action-transitive-action-Concrete-Group G Y)
+  equiv-transitive-action-Concrete-Group Y = {!!}
 
   map-equiv-transitive-action-Concrete-Group :
     {l3 : Level} (Y : transitive-action-Concrete-Group l3 G) →
     equiv-transitive-action-Concrete-Group Y →
     type-transitive-action-Concrete-Group G X →
     type-transitive-action-Concrete-Group G Y
-  map-equiv-transitive-action-Concrete-Group Y =
-    map-equiv-action-Concrete-Group G
-      ( action-transitive-action-Concrete-Group G X)
-      ( action-transitive-action-Concrete-Group G Y)
+  map-equiv-transitive-action-Concrete-Group Y = {!!}
 
   preserves-mul-equiv-transitive-action-Concrete-Group :
     {l3 : Level} (Y : transitive-action-Concrete-Group l3 G) →
@@ -227,28 +183,16 @@ module _
       ( mul-transitive-action-Concrete-Group G X g x)) ＝
     ( mul-transitive-action-Concrete-Group G Y g
       ( map-equiv-transitive-action-Concrete-Group Y e x))
-  preserves-mul-equiv-transitive-action-Concrete-Group Y =
-    preserves-mul-equiv-action-Concrete-Group G
-      ( action-transitive-action-Concrete-Group G X)
-      ( action-transitive-action-Concrete-Group G Y)
+  preserves-mul-equiv-transitive-action-Concrete-Group Y = {!!}
 
   id-equiv-transitive-action-Concrete-Group :
     equiv-transitive-action-Concrete-Group X
-  id-equiv-transitive-action-Concrete-Group =
-    id-equiv-action-Concrete-Group G
-      ( action-transitive-action-Concrete-Group G X)
+  id-equiv-transitive-action-Concrete-Group = {!!}
 
   extensionality-transitive-action-Concrete-Group :
     (Y : transitive-action-Concrete-Group l2 G) →
     (X ＝ Y) ≃ equiv-transitive-action-Concrete-Group Y
-  extensionality-transitive-action-Concrete-Group Y =
-    ( extensionality-action-Concrete-Group G
-      ( action-transitive-action-Concrete-Group G X)
-      ( action-transitive-action-Concrete-Group G Y)) ∘e
-    ( extensionality-type-subtype'
-      ( is-transitive-prop-action-Concrete-Group G)
-      ( X)
-      ( Y))
+  extensionality-transitive-action-Concrete-Group Y = {!!}
 ```
 
 ### Two equivalences of transitive concrete group actions are homotopic if there exists a point on which they have the same value
@@ -262,20 +206,10 @@ module _
   where
 
   htpy-equiv-transitive-action-Concrete-Group : UU (l2 ⊔ l3)
-  htpy-equiv-transitive-action-Concrete-Group =
-    htpy-equiv-action-Concrete-Group G
-      ( action-transitive-action-Concrete-Group G X)
-      ( action-transitive-action-Concrete-Group G Y)
-      ( e)
-      ( f)
+  htpy-equiv-transitive-action-Concrete-Group = {!!}
 
   htpy-prop-equiv-transitive-action-Concrete-Group : Prop (l2 ⊔ l3)
-  htpy-prop-equiv-transitive-action-Concrete-Group =
-    htpy-prop-equiv-action-Concrete-Group G
-      ( action-transitive-action-Concrete-Group G X)
-      ( action-transitive-action-Concrete-Group G Y)
-      ( e)
-      ( f)
+  htpy-prop-equiv-transitive-action-Concrete-Group = {!!}
 
   htpy-exists-equiv-transitive-action-Concrete-Group :
     ∃ ( type-transitive-action-Concrete-Group G X)
@@ -283,30 +217,7 @@ module _
         map-equiv-transitive-action-Concrete-Group G X Y e x ＝
         map-equiv-transitive-action-Concrete-Group G X Y f x) →
     htpy-equiv-transitive-action-Concrete-Group
-  htpy-exists-equiv-transitive-action-Concrete-Group H =
-    apply-universal-property-trunc-Prop H
-      ( htpy-prop-equiv-transitive-action-Concrete-Group)
-      ( λ (x , p) y →
-        apply-universal-property-trunc-Prop
-          ( pr2
-            ( is-abstractly-transitive-transitive-action-Concrete-Group G X)
-            ( x)
-            ( y))
-          ( Id-Prop
-            ( set-transitive-action-Concrete-Group G Y)
-            ( map-equiv-transitive-action-Concrete-Group G X Y e y)
-            ( map-equiv-transitive-action-Concrete-Group G X Y f y))
-          ( λ (g , q) →
-            ( ap (map-equiv-transitive-action-Concrete-Group G X Y e) (inv q)) ∙
-            ( preserves-mul-equiv-transitive-action-Concrete-Group
-              G X Y e g x) ∙
-            ( ap
-              ( mul-transitive-action-Concrete-Group G Y g)
-              ( p)) ∙
-            ( inv
-              ( preserves-mul-equiv-transitive-action-Concrete-Group
-                G X Y f g x)) ∙
-            ( ap (map-equiv-transitive-action-Concrete-Group G X Y f) q)))
+  htpy-exists-equiv-transitive-action-Concrete-Group H = {!!}
 ```
 
 ### The type of transitive concrete group actions is a 1-type
@@ -318,14 +229,8 @@ module _
 
   is-1-type-transitive-action-Concrete-Group :
     is-1-type (transitive-action-Concrete-Group l2 G)
-  is-1-type-transitive-action-Concrete-Group =
-    is-1-type-type-subtype
-      ( is-transitive-prop-action-Concrete-Group G)
-      ( is-1-type-action-Concrete-Group G)
+  is-1-type-transitive-action-Concrete-Group = {!!}
 
   transitive-action-1-type-Concrete-Group : 1-Type (l1 ⊔ lsuc l2)
-  pr1 transitive-action-1-type-Concrete-Group =
-    transitive-action-Concrete-Group l2 G
-  pr2 transitive-action-1-type-Concrete-Group =
-    is-1-type-transitive-action-Concrete-Group
+  pr1 transitive-action-1-type-Concrete-Group = {!!}
 ```

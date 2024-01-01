@@ -35,7 +35,7 @@ An unordered tuple of types is an unordered tuple of elements in a universe
 
 ```agda
 unordered-tuple-types : (l : Level) → ℕ → UU (lsuc l)
-unordered-tuple-types l n = unordered-tuple n (UU l)
+unordered-tuple-types l n = {!!}
 ```
 
 ### Equivalences of unordered pairs of types
@@ -44,12 +44,7 @@ unordered-tuple-types l n = unordered-tuple n (UU l)
 equiv-unordered-tuple-types :
   {l1 l2 : Level} (n : ℕ) →
   unordered-tuple-types l1 n → unordered-tuple-types l2 n → UU (l1 ⊔ l2)
-equiv-unordered-tuple-types n A B =
-  Σ ( type-unordered-tuple n A ≃ type-unordered-tuple n B)
-    ( λ e →
-      (i : type-unordered-tuple n A) →
-      element-unordered-tuple n A i ≃
-      element-unordered-tuple n B (map-equiv e i))
+equiv-unordered-tuple-types n A B = {!!}
 
 module _
   {l1 l2 : Level} (n : ℕ)
@@ -59,19 +54,18 @@ module _
 
   equiv-type-equiv-unordered-tuple-types :
     type-unordered-tuple n A ≃ type-unordered-tuple n B
-  equiv-type-equiv-unordered-tuple-types = pr1 e
+  equiv-type-equiv-unordered-tuple-types = {!!}
 
   map-equiv-type-equiv-unordered-tuple-types :
     type-unordered-tuple n A → type-unordered-tuple n B
-  map-equiv-type-equiv-unordered-tuple-types =
-    map-equiv equiv-type-equiv-unordered-tuple-types
+  map-equiv-type-equiv-unordered-tuple-types = {!!}
 
   equiv-element-equiv-unordered-tuple-types :
     (i : type-unordered-tuple n A) →
     ( element-unordered-tuple n A i) ≃
     ( element-unordered-tuple n B
       ( map-equiv-type-equiv-unordered-tuple-types i))
-  equiv-element-equiv-unordered-tuple-types = pr2 e
+  equiv-element-equiv-unordered-tuple-types = {!!}
 ```
 
 ## Properties
@@ -84,37 +78,23 @@ module _
   where
 
   id-equiv-unordered-tuple-types : equiv-unordered-tuple-types n A A
-  pr1 id-equiv-unordered-tuple-types = id-equiv
-  pr2 id-equiv-unordered-tuple-types i = id-equiv
+  pr1 id-equiv-unordered-tuple-types = {!!}
 
   equiv-eq-unordered-tuple-types :
     (B : unordered-tuple-types l n) → A ＝ B → equiv-unordered-tuple-types n A B
-  equiv-eq-unordered-tuple-types .A refl = id-equiv-unordered-tuple-types
+  equiv-eq-unordered-tuple-types .A refl = {!!}
 
   is-torsorial-equiv-unordered-tuple-types :
     is-torsorial (equiv-unordered-tuple-types n A)
-  is-torsorial-equiv-unordered-tuple-types =
-    is-torsorial-Eq-structure
-      ( λ I B e →
-        (i : type-unordered-tuple n A) →
-        element-unordered-tuple n A i ≃ B (map-equiv e i))
-      ( is-torsorial-equiv-UU-Fin {k = n} (type-unordered-tuple-UU-Fin n A))
-      ( pair (type-unordered-tuple-UU-Fin n A) id-equiv)
-      ( is-torsorial-equiv-fam (element-unordered-tuple n A))
+  is-torsorial-equiv-unordered-tuple-types = {!!}
 
   is-equiv-equiv-eq-unordered-tuple-types :
     (B : unordered-tuple-types l n) →
     is-equiv (equiv-eq-unordered-tuple-types B)
-  is-equiv-equiv-eq-unordered-tuple-types =
-    fundamental-theorem-id
-      is-torsorial-equiv-unordered-tuple-types
-      equiv-eq-unordered-tuple-types
+  is-equiv-equiv-eq-unordered-tuple-types = {!!}
 
   extensionality-unordered-tuple-types :
     (B : unordered-tuple-types l n) →
     (A ＝ B) ≃ equiv-unordered-tuple-types n A B
-  pr1 (extensionality-unordered-tuple-types B) =
-    equiv-eq-unordered-tuple-types B
-  pr2 (extensionality-unordered-tuple-types B) =
-    is-equiv-equiv-eq-unordered-tuple-types B
+  pr1 (extensionality-unordered-tuple-types B) = {!!}
 ```

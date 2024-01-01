@@ -64,7 +64,7 @@ module _
   ev-id-equiv :
     {l : Level} (P : (B : UU l1) → (A ≃ B) → UU l) →
     ((B : UU l1) (e : A ≃ B) → P B e) → P A id-equiv
-  ev-id-equiv P f = f A id-equiv
+  ev-id-equiv P f = {!!}
 
   triangle-ev-id-equiv :
     {l : Level}
@@ -73,7 +73,7 @@ module _
       ( ev-point (A , id-equiv))
       ( ev-id-equiv (λ X e → P (X , e)))
       ( ev-pair)
-  triangle-ev-id-equiv P f = refl
+  triangle-ev-id-equiv P f = {!!}
 ```
 
 ### The equivalence induction principle
@@ -84,8 +84,7 @@ module _
   where
 
   induction-principle-equivalences : UUω
-  induction-principle-equivalences =
-    is-identity-system (λ (B : UU l1) → A ≃ B) A id-equiv
+  induction-principle-equivalences = {!!}
 ```
 
 ## Properties
@@ -101,8 +100,7 @@ module _
     is-identity-system-is-torsorial-equiv :
       is-torsorial (λ (B : UU l1) → A ≃ B) →
       is-identity-system (A ≃_) A id-equiv
-    is-identity-system-is-torsorial-equiv =
-      is-identity-system-is-torsorial A id-equiv
+    is-identity-system-is-torsorial-equiv = {!!}
 ```
 
 ### Equivalence induction implies contractibility of the total space of equivalences
@@ -116,15 +114,13 @@ module _
     is-torsorial-equiv-induction-principle-equivalences :
       induction-principle-equivalences A →
       is-torsorial (λ (B : UU l1) → A ≃ B)
-    is-torsorial-equiv-induction-principle-equivalences =
-      is-torsorial-is-identity-system A id-equiv
+    is-torsorial-equiv-induction-principle-equivalences = {!!}
 
   abstract
     is-torsorial-is-identity-system-equiv :
       is-identity-system (A ≃_) A id-equiv →
       is-torsorial (λ (B : UU l1) → A ≃ B)
-    is-torsorial-is-identity-system-equiv =
-      is-torsorial-is-identity-system A id-equiv
+    is-torsorial-is-identity-system-equiv = {!!}
 ```
 
 ### Equivalence induction in a universe
@@ -136,18 +132,17 @@ module _
 
   abstract
     is-identity-system-equiv : induction-principle-equivalences A
-    is-identity-system-equiv =
-      is-identity-system-is-torsorial-equiv (is-torsorial-equiv A)
+    is-identity-system-equiv = {!!}
 
   ind-equiv :
     {l2 : Level} (P : (B : UU l1) → A ≃ B → UU l2) →
     P A id-equiv → {B : UU l1} (e : A ≃ B) → P B e
-  ind-equiv P p {B} = pr1 (is-identity-system-equiv P) p B
+  ind-equiv P p {B} = {!!}
 
   compute-ind-equiv :
     {l2 : Level} (P : (B : UU l1) → A ≃ B → UU l2) →
     (u : P A id-equiv) → ind-equiv P u id-equiv ＝ u
-  compute-ind-equiv P = pr2 (is-identity-system-equiv P)
+  compute-ind-equiv P = {!!}
 ```
 
 ### Equivalence induction in a subuniverse
@@ -161,7 +156,7 @@ module _
     {F : (B : type-subuniverse P) → equiv-subuniverse P A B → UU l3} →
     ((B : type-subuniverse P) (e : equiv-subuniverse P A B) → F B e) →
     F A id-equiv
-  ev-id-equiv-subuniverse f = f A id-equiv
+  ev-id-equiv-subuniverse f = {!!}
 
   triangle-ev-id-equiv-subuniverse :
     (F : (B : type-subuniverse P) → equiv-subuniverse P A B → UU l3) →
@@ -169,29 +164,25 @@ module _
       ( ev-point (A , id-equiv))
       ( ev-id-equiv-subuniverse {F})
       ( ev-pair)
-  triangle-ev-id-equiv-subuniverse F E = refl
+  triangle-ev-id-equiv-subuniverse F E = {!!}
 
   abstract
     is-identity-system-equiv-subuniverse :
       (F : (B : type-subuniverse P) → equiv-subuniverse P A B → UU l3) →
       section (ev-id-equiv-subuniverse {F})
-    is-identity-system-equiv-subuniverse =
-      is-identity-system-is-torsorial A id-equiv
-        ( is-torsorial-equiv-subuniverse P A)
+    is-identity-system-equiv-subuniverse = {!!}
 
   ind-equiv-subuniverse :
     (F : (B : type-subuniverse P) → equiv-subuniverse P A B → UU l3) →
     F A id-equiv → (B : type-subuniverse P) (e : equiv-subuniverse P A B) →
     F B e
-  ind-equiv-subuniverse F =
-    pr1 (is-identity-system-equiv-subuniverse F)
+  ind-equiv-subuniverse F = {!!}
 
   compute-ind-equiv-subuniverse :
     (F : (B : type-subuniverse P) → equiv-subuniverse P A B → UU l3) →
     (u : F A id-equiv) →
     ind-equiv-subuniverse F u A id-equiv ＝ u
-  compute-ind-equiv-subuniverse F =
-    pr2 (is-identity-system-equiv-subuniverse F)
+  compute-ind-equiv-subuniverse F = {!!}
 ```
 
 ### The evaluation map `ev-id-equiv` is an equivalence
@@ -202,12 +193,10 @@ module _
   where
 
   is-equiv-ev-id-equiv : is-equiv (ev-id-equiv P)
-  is-equiv-ev-id-equiv =
-    dependent-universal-property-identity-system-is-torsorial
-      ( id-equiv) (is-torsorial-equiv A) P
+  is-equiv-ev-id-equiv = {!!}
 
   is-contr-map-ev-id-equiv : is-contr-map (ev-id-equiv P)
-  is-contr-map-ev-id-equiv = is-contr-map-is-equiv is-equiv-ev-id-equiv
+  is-contr-map-ev-id-equiv = {!!}
 ```
 
 ### The evaluation map `ev-id-equiv-subuniverse` is an equivalence
@@ -220,14 +209,11 @@ module _
 
   is-equiv-ev-id-equiv-subuniverse :
     is-equiv (ev-id-equiv-subuniverse P X {F})
-  is-equiv-ev-id-equiv-subuniverse =
-    dependent-universal-property-identity-system-is-torsorial
-    ( id-equiv) (is-torsorial-equiv-subuniverse P X) F
+  is-equiv-ev-id-equiv-subuniverse = {!!}
 
   is-contr-map-ev-id-equiv-subuniverse :
     is-contr-map (ev-id-equiv-subuniverse P X {F})
-  is-contr-map-ev-id-equiv-subuniverse =
-    is-contr-map-is-equiv is-equiv-ev-id-equiv-subuniverse
+  is-contr-map-ev-id-equiv-subuniverse = {!!}
 ```
 
 ### Equivalence induction implies that postcomposing by an equivalence is an equivalence
@@ -242,6 +228,5 @@ abstract
   is-equiv-postcomp-univalence :
     {l1 l2 : Level} {X Y : UU l1} (A : UU l2) (e : X ≃ Y) →
     is-equiv (postcomp A (map-equiv e))
-  is-equiv-postcomp-univalence A =
-    ind-equiv (λ Y e → is-equiv (postcomp A (map-equiv e))) is-equiv-id
+  is-equiv-postcomp-univalence A = {!!}
 ```

@@ -44,28 +44,28 @@ definitions.
 
 ```agda
 is-zero-ℕ : ℕ → UU lzero
-is-zero-ℕ n = (n ＝ zero-ℕ)
+is-zero-ℕ n = {!!}
 
 is-zero-ℕ' : ℕ → UU lzero
-is-zero-ℕ' n = (zero-ℕ ＝ n)
+is-zero-ℕ' n = {!!}
 
 is-successor-ℕ : ℕ → UU lzero
-is-successor-ℕ n = Σ ℕ (λ y → n ＝ succ-ℕ y)
+is-successor-ℕ n = {!!}
 
 is-nonzero-ℕ : ℕ → UU lzero
-is-nonzero-ℕ n = ¬ (is-zero-ℕ n)
+is-nonzero-ℕ n = {!!}
 
 is-one-ℕ : ℕ → UU lzero
-is-one-ℕ n = (n ＝ 1)
+is-one-ℕ n = {!!}
 
 is-one-ℕ' : ℕ → UU lzero
-is-one-ℕ' n = (1 ＝ n)
+is-one-ℕ' n = {!!}
 
 is-not-one-ℕ : ℕ → UU lzero
-is-not-one-ℕ n = ¬ (is-one-ℕ n)
+is-not-one-ℕ n = {!!}
 
 is-not-one-ℕ' : ℕ → UU lzero
-is-not-one-ℕ' n = ¬ (is-one-ℕ' n)
+is-not-one-ℕ' n = {!!}
 ```
 
 ## Properties
@@ -76,22 +76,22 @@ is-not-one-ℕ' n = ¬ (is-one-ℕ' n)
 ind-ℕ :
   {l : Level} {P : ℕ → UU l} →
   P 0 → ((n : ℕ) → P n → P (succ-ℕ n)) → ((n : ℕ) → P n)
-ind-ℕ p-zero p-succ 0 = p-zero
-ind-ℕ p-zero p-succ (succ-ℕ n) = p-succ n (ind-ℕ p-zero p-succ n)
+ind-ℕ p-zero p-succ 0 = {!!}
+ind-ℕ p-zero p-succ (succ-ℕ n) = {!!}
 ```
 
 ### The recursion principle of ℕ
 
 ```agda
 rec-ℕ : {l : Level} {A : UU l} → A → (ℕ → A → A) → (ℕ → A)
-rec-ℕ = ind-ℕ
+rec-ℕ = {!!}
 ```
 
 ### The successor function on ℕ is injective
 
 ```agda
 is-injective-succ-ℕ : is-injective succ-ℕ
-is-injective-succ-ℕ refl = refl
+is-injective-succ-ℕ refl = {!!}
 ```
 
 ### Successors are nonzero
@@ -104,9 +104,9 @@ is-nonzero-is-successor-ℕ : {x : ℕ} → is-successor-ℕ x → is-nonzero-�
 is-nonzero-is-successor-ℕ (x , refl) ()
 
 is-successor-is-nonzero-ℕ : {x : ℕ} → is-nonzero-ℕ x → is-successor-ℕ x
-is-successor-is-nonzero-ℕ {zero-ℕ} H = ex-falso (H refl)
-pr1 (is-successor-is-nonzero-ℕ {succ-ℕ x} H) = x
-pr2 (is-successor-is-nonzero-ℕ {succ-ℕ x} H) = refl
+is-successor-is-nonzero-ℕ {zero-ℕ} H = {!!}
+pr1 (is-successor-is-nonzero-ℕ {succ-ℕ x} H) = {!!}
+pr2 (is-successor-is-nonzero-ℕ {succ-ℕ x} H) = {!!}
 
 has-no-fixed-points-succ-ℕ : (x : ℕ) → ¬ (succ-ℕ x ＝ x)
 has-no-fixed-points-succ-ℕ x ()

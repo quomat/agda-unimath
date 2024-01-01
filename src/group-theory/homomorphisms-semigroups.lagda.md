@@ -39,10 +39,10 @@ module _
   where
 
   preserves-mul : (μA : A → A → A) (μB : B → B → B) → (A → B) → UU (l1 ⊔ l2)
-  preserves-mul μA μB f = {x y : A} → f (μA x y) ＝ μB (f x) (f y)
+  preserves-mul μA μB f = {!!}
 
   preserves-mul' : (μA : A → A → A) (μB : B → B → B) → (A → B) → UU (l1 ⊔ l2)
-  preserves-mul' μA μB f = (x y : A) → f (μA x y) ＝ μB (f x) (f y)
+  preserves-mul' μA μB f = {!!}
 
 module _
   {l1 l2 : Level} (G : Semigroup l1) (H : Semigroup l2)
@@ -50,122 +50,78 @@ module _
 
   preserves-mul-prop-Semigroup :
     (type-Semigroup G → type-Semigroup H) → Prop (l1 ⊔ l2)
-  preserves-mul-prop-Semigroup f =
-    Π-Prop'
-      ( type-Semigroup G)
-      ( λ x →
-        Π-Prop'
-          ( type-Semigroup G)
-          ( λ y →
-            Id-Prop
-              ( set-Semigroup H)
-              ( f (mul-Semigroup G x y))
-              ( mul-Semigroup H (f x) (f y))))
+  preserves-mul-prop-Semigroup f = {!!}
 
   preserves-mul-prop-Semigroup' :
     (type-Semigroup G → type-Semigroup H) → Prop (l1 ⊔ l2)
-  preserves-mul-prop-Semigroup' f =
-    Π-Prop'
-      ( type-Semigroup G)
-      ( λ x →
-        Π-Prop'
-          ( type-Semigroup G)
-          ( λ y →
-            Id-Prop
-              ( set-Semigroup H)
-              ( f (mul-Semigroup' G x y))
-              ( mul-Semigroup H (f x) (f y))))
+  preserves-mul-prop-Semigroup' f = {!!}
 
   preserves-mul-Semigroup :
     (type-Semigroup G → type-Semigroup H) → UU (l1 ⊔ l2)
-  preserves-mul-Semigroup f =
-    type-Prop (preserves-mul-prop-Semigroup f)
+  preserves-mul-Semigroup f = {!!}
 
   preserves-mul-Semigroup' :
     (type-Semigroup G → type-Semigroup H) → UU (l1 ⊔ l2)
-  preserves-mul-Semigroup' f =
-    type-Prop (preserves-mul-prop-Semigroup' f)
+  preserves-mul-Semigroup' f = {!!}
 
   is-prop-preserves-mul-Semigroup :
     (f : type-Semigroup G → type-Semigroup H) →
     is-prop (preserves-mul-Semigroup f)
-  is-prop-preserves-mul-Semigroup f =
-    is-prop-type-Prop (preserves-mul-prop-Semigroup f)
+  is-prop-preserves-mul-Semigroup f = {!!}
 
   is-prop-preserves-mul-Semigroup' :
     (f : type-Semigroup G → type-Semigroup H) →
     is-prop (preserves-mul-Semigroup' f)
-  is-prop-preserves-mul-Semigroup' f =
-    is-prop-type-Prop (preserves-mul-prop-Semigroup' f)
+  is-prop-preserves-mul-Semigroup' f = {!!}
 
   hom-Semigroup : UU (l1 ⊔ l2)
-  hom-Semigroup =
-    Σ ( type-Semigroup G → type-Semigroup H)
-      ( preserves-mul-Semigroup)
+  hom-Semigroup = {!!}
 
   map-hom-Semigroup :
     hom-Semigroup → type-Semigroup G → type-Semigroup H
-  map-hom-Semigroup f = pr1 f
+  map-hom-Semigroup f = {!!}
 
   preserves-mul-hom-Semigroup :
     (f : hom-Semigroup) → preserves-mul-Semigroup (map-hom-Semigroup f)
-  preserves-mul-hom-Semigroup f = pr2 f
+  preserves-mul-hom-Semigroup f = {!!}
 ```
 
 ### Characterizing the identity type of semigroup homomorphisms
 
 ```agda
   htpy-hom-Semigroup : (f g : hom-Semigroup) → UU (l1 ⊔ l2)
-  htpy-hom-Semigroup f g = map-hom-Semigroup f ~ map-hom-Semigroup g
+  htpy-hom-Semigroup f g = {!!}
 
   refl-htpy-hom-Semigroup : (f : hom-Semigroup) → htpy-hom-Semigroup f f
-  refl-htpy-hom-Semigroup f = refl-htpy
+  refl-htpy-hom-Semigroup f = {!!}
 
   htpy-eq-hom-Semigroup :
     (f g : hom-Semigroup) → Id f g → htpy-hom-Semigroup f g
-  htpy-eq-hom-Semigroup f .f refl = refl-htpy-hom-Semigroup f
+  htpy-eq-hom-Semigroup f .f refl = {!!}
 
   abstract
     is-torsorial-htpy-hom-Semigroup :
       (f : hom-Semigroup) → is-torsorial (htpy-hom-Semigroup f)
-    is-torsorial-htpy-hom-Semigroup f =
-      is-torsorial-Eq-subtype
-        ( is-torsorial-htpy (map-hom-Semigroup f))
-        ( is-prop-preserves-mul-Semigroup)
-        ( map-hom-Semigroup f)
-        ( refl-htpy)
-        ( preserves-mul-hom-Semigroup f)
+    is-torsorial-htpy-hom-Semigroup f = {!!}
 
   abstract
     is-equiv-htpy-eq-hom-Semigroup :
       (f g : hom-Semigroup) → is-equiv (htpy-eq-hom-Semigroup f g)
-    is-equiv-htpy-eq-hom-Semigroup f =
-      fundamental-theorem-id
-        ( is-torsorial-htpy-hom-Semigroup f)
-        ( htpy-eq-hom-Semigroup f)
+    is-equiv-htpy-eq-hom-Semigroup f = {!!}
 
   eq-htpy-hom-Semigroup :
     {f g : hom-Semigroup} → htpy-hom-Semigroup f g → Id f g
-  eq-htpy-hom-Semigroup {f} {g} =
-    map-inv-is-equiv (is-equiv-htpy-eq-hom-Semigroup f g)
+  eq-htpy-hom-Semigroup {f} {g} = {!!}
 
   is-set-hom-Semigroup : is-set hom-Semigroup
-  is-set-hom-Semigroup f g =
-    is-prop-is-equiv
-      ( is-equiv-htpy-eq-hom-Semigroup f g)
-      ( is-prop-Π
-        ( λ x →
-          is-set-type-Semigroup H
-            ( map-hom-Semigroup f x)
-            ( map-hom-Semigroup g x)))
+  is-set-hom-Semigroup f g = {!!}
 
   hom-set-Semigroup : Set (l1 ⊔ l2)
-  pr1 hom-set-Semigroup = hom-Semigroup
-  pr2 hom-set-Semigroup = is-set-hom-Semigroup
+  pr1 hom-set-Semigroup = {!!}
 
 preserves-mul-id-Semigroup :
   {l : Level} (G : Semigroup l) → preserves-mul-Semigroup G G id
-preserves-mul-id-Semigroup G = refl
+preserves-mul-id-Semigroup G = {!!}
 ```
 
 ### The identity homomorphism of semigroups
@@ -173,8 +129,8 @@ preserves-mul-id-Semigroup G = refl
 ```agda
 id-hom-Semigroup :
   {l : Level} (G : Semigroup l) → hom-Semigroup G G
-pr1 (id-hom-Semigroup G) = id
-pr2 (id-hom-Semigroup G) = preserves-mul-id-Semigroup G
+pr1 (id-hom-Semigroup G) = {!!}
+pr2 (id-hom-Semigroup G) = {!!}
 ```
 
 ### Composition of morphisms of semigroups
@@ -187,20 +143,14 @@ module _
   where
 
   map-comp-hom-Semigroup : type-Semigroup G → type-Semigroup K
-  map-comp-hom-Semigroup =
-    (map-hom-Semigroup H K g) ∘ (map-hom-Semigroup G H f)
+  map-comp-hom-Semigroup = {!!}
 
   preserves-mul-comp-hom-Semigroup :
     preserves-mul-Semigroup G K map-comp-hom-Semigroup
-  preserves-mul-comp-hom-Semigroup =
-    ( ap
-      ( map-hom-Semigroup H K g)
-      ( preserves-mul-hom-Semigroup G H f)) ∙
-    ( preserves-mul-hom-Semigroup H K g)
+  preserves-mul-comp-hom-Semigroup = {!!}
 
   comp-hom-Semigroup : hom-Semigroup G K
-  pr1 comp-hom-Semigroup = map-comp-hom-Semigroup
-  pr2 comp-hom-Semigroup = preserves-mul-comp-hom-Semigroup
+  pr1 comp-hom-Semigroup = {!!}
 ```
 
 ### Associativity of composition of homomorphisms of semigroups
@@ -215,12 +165,12 @@ module _
   associative-comp-hom-Semigroup :
     comp-hom-Semigroup G H L (comp-hom-Semigroup H K L h g) f ＝
     comp-hom-Semigroup G K L h (comp-hom-Semigroup G H K g f)
-  associative-comp-hom-Semigroup = eq-htpy-hom-Semigroup G L refl-htpy
+  associative-comp-hom-Semigroup = {!!}
 
   inv-associative-comp-hom-Semigroup :
     comp-hom-Semigroup G K L h (comp-hom-Semigroup G H K g f) ＝
     comp-hom-Semigroup G H L (comp-hom-Semigroup H K L h g) f
-  inv-associative-comp-hom-Semigroup = eq-htpy-hom-Semigroup G L refl-htpy
+  inv-associative-comp-hom-Semigroup = {!!}
 ```
 
 ### The left and right unit laws for composition of homomorphisms of semigroups
@@ -231,17 +181,12 @@ left-unit-law-comp-hom-Semigroup :
   ( f : hom-Semigroup G H) →
   Id ( comp-hom-Semigroup G H H (id-hom-Semigroup H) f) f
 left-unit-law-comp-hom-Semigroup G
-  (pair (pair H is-set-H) (pair μ-H associative-H)) (pair f μ-f) =
-  eq-htpy-hom-Semigroup G
-    ( pair (pair H is-set-H) (pair μ-H associative-H))
-    ( refl-htpy)
+  (pair (pair H is-set-H) (pair μ-H associative-H)) (pair f μ-f) = {!!}
 
 right-unit-law-comp-hom-Semigroup :
   { l1 l2 : Level} (G : Semigroup l1) (H : Semigroup l2)
   ( f : hom-Semigroup G H) →
   Id ( comp-hom-Semigroup G G H f (id-hom-Semigroup G)) f
 right-unit-law-comp-hom-Semigroup
-  (pair (pair G is-set-G) (pair μ-G associative-G)) H (pair f μ-f) =
-  eq-htpy-hom-Semigroup
-    ( pair (pair G is-set-G) (pair μ-G associative-G)) H refl-htpy
+  (pair (pair G is-set-G) (pair μ-G associative-G)) H (pair f μ-f) = {!!}
 ```

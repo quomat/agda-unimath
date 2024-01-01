@@ -32,7 +32,7 @@ open import order-theory.preorders
 
 The **poset of natural numbers ordered by divisibility** consists of the
 [natural numbers](elementary-number-theory.natural-numbers.md) and its ordering
-is defined by `m ≤ n := m | n`, i.e., by
+is defined by `m ≤ n := {!!}
 [divisibility](elementary-number-theory.divisibility-natural-numbers.md).
 
 The divisibility relation `m | n` on the natural numbers, however, is only
@@ -56,34 +56,28 @@ propositions by identifying all witnesses of divisibility.
 
 ```agda
 leq-prop-ℕ-Div : ℕ → ℕ → Prop lzero
-leq-prop-ℕ-Div m n = trunc-Prop (div-ℕ m n)
+leq-prop-ℕ-Div m n = {!!}
 
 leq-ℕ-Div : ℕ → ℕ → UU lzero
-leq-ℕ-Div m n = type-Prop (leq-prop-ℕ-Div m n)
+leq-ℕ-Div m n = {!!}
 
 refl-leq-ℕ-Div : (n : ℕ) → leq-ℕ-Div n n
-refl-leq-ℕ-Div n = unit-trunc-Prop (refl-div-ℕ n)
+refl-leq-ℕ-Div n = {!!}
 
 antisymmetric-leq-ℕ-Div : (m n : ℕ) → leq-ℕ-Div m n → leq-ℕ-Div n m → m ＝ n
-antisymmetric-leq-ℕ-Div m n H K =
-  apply-twice-universal-property-trunc-Prop H K
-    ( Id-Prop ℕ-Set _ _)
-    ( antisymmetric-div-ℕ m n)
+antisymmetric-leq-ℕ-Div m n H K = {!!}
 
 transitive-leq-ℕ-Div :
   (m n o : ℕ) → leq-ℕ-Div n o → leq-ℕ-Div m n → leq-ℕ-Div m o
-transitive-leq-ℕ-Div m n o H K =
-  apply-twice-universal-property-trunc-Prop H K
-    ( leq-prop-ℕ-Div m o)
-    ( λ H' K' → unit-trunc-Prop (transitive-div-ℕ m n o H' K'))
+transitive-leq-ℕ-Div m n o H K = {!!}
 
 ℕ-Div-Preorder : Preorder lzero lzero
-pr1 ℕ-Div-Preorder = ℕ
-pr1 (pr2 ℕ-Div-Preorder) = leq-prop-ℕ-Div
-pr1 (pr2 (pr2 ℕ-Div-Preorder)) = refl-leq-ℕ-Div
-pr2 (pr2 (pr2 ℕ-Div-Preorder)) = transitive-leq-ℕ-Div
+pr1 ℕ-Div-Preorder = {!!}
+pr1 (pr2 ℕ-Div-Preorder) = {!!}
+pr1 (pr2 (pr2 ℕ-Div-Preorder)) = {!!}
+pr2 (pr2 (pr2 ℕ-Div-Preorder)) = {!!}
 
 ℕ-Div-Poset : Poset lzero lzero
-pr1 ℕ-Div-Poset = ℕ-Div-Preorder
-pr2 ℕ-Div-Poset = antisymmetric-leq-ℕ-Div
+pr1 ℕ-Div-Poset = {!!}
+pr2 ℕ-Div-Poset = {!!}
 ```

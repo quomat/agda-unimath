@@ -27,7 +27,7 @@ An equivalence of species of types from `F` to `G` is a pointwise equivalence.
 equiv-species-types :
   {l1 l2 l3 : Level} → species-types l1 l2 → species-types l1 l3 →
   UU (lsuc l1 ⊔ l2 ⊔ l3)
-equiv-species-types {l1} F G = (X : UU l1) → F X ≃ G X
+equiv-species-types {l1} F G = {!!}
 ```
 
 ## Properties
@@ -38,5 +38,5 @@ equiv-species-types {l1} F G = (X : UU l1) → F X ≃ G X
 extensionality-species-types :
   {l1 l2 : Level} (F : species-types l1 l2) (G : species-types l1 l2) →
   (Id F G) ≃ (equiv-species-types F G)
-extensionality-species-types = extensionality-fam
+extensionality-species-types = {!!}
 ```

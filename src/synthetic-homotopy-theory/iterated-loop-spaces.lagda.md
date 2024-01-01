@@ -33,7 +33,7 @@ module _
   where
 
   iterated-loop-space : ℕ → Pointed-Type l → Pointed-Type l
-  iterated-loop-space n = iterate n Ω
+  iterated-loop-space n = {!!}
 ```
 
 ## See also

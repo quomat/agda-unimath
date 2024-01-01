@@ -31,8 +31,8 @@ A [group homomorphism](group-theory.homomorphisms-groups.md) `f : G → H` is an
 
 is an [embedding](foundation.embeddings.md) for any
 [group](group-theory.groups.md) `K`. In other words, `f` is an epimorphism if
-for any two group homomorphisms `g h : H → K` we have that `g ∘ f = h ∘ f`
-implies `g = h`.
+for any two group homomorphisms `g h : H → K` we have that `g ∘ f = {!!}
+implies `g = {!!}
 
 ## Definition
 
@@ -43,14 +43,13 @@ module _
   where
 
   is-epi-prop-hom-Group : Prop (l1 ⊔ l2 ⊔ lsuc l3)
-  is-epi-prop-hom-Group =
-    is-epi-prop-Large-Precategory Group-Large-Precategory l3 G H f
+  is-epi-prop-hom-Group = {!!}
 
   is-epi-hom-Group : UU (l1 ⊔ l2 ⊔ lsuc l3)
-  is-epi-hom-Group = type-Prop is-epi-prop-hom-Group
+  is-epi-hom-Group = {!!}
 
   is-prop-is-epi-hom-Group : is-prop is-epi-hom-Group
-  is-prop-is-epi-hom-Group = is-prop-type-Prop is-epi-prop-hom-Group
+  is-prop-is-epi-hom-Group = {!!}
 ```
 
 ## Properties
@@ -64,8 +63,7 @@ module _
   where
 
   is-epi-iso-Group : is-epi-hom-Group l3 G H (hom-iso-Group G H f)
-  is-epi-iso-Group =
-    is-epi-iso-Large-Precategory Group-Large-Precategory l3 G H f
+  is-epi-iso-Group = {!!}
 ```
 
 ### A group homomorphism is surjective if and only if it is an epimorphism
@@ -82,7 +80,7 @@ we may assume `x : G` equipped with an
 to show that `g (f x) ＝ h (f x)`, which was assumed.
 
 For the converse, suppose that `f : G → H` is an epimorphism and consider the
-[image subgroup](group-theory.images-of-group-homomorphisms.md) `I := im f` of
+[image subgroup](group-theory.images-of-group-homomorphisms.md) `I := {!!}
 `H`. We first show that `I` is [normal](group-theory.normal-subgroups.md), and
 then we show that `I ＝ H`.
 

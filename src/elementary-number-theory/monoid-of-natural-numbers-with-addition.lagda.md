@@ -30,25 +30,25 @@ The natural numbers equipped with `0` and addition is a commutative monoid.
 
 ```agda
 ℕ-Semigroup : Semigroup lzero
-pr1 ℕ-Semigroup = ℕ-Set
-pr1 (pr2 ℕ-Semigroup) = add-ℕ
-pr2 (pr2 ℕ-Semigroup) = associative-add-ℕ
+pr1 ℕ-Semigroup = {!!}
+pr1 (pr2 ℕ-Semigroup) = {!!}
+pr2 (pr2 ℕ-Semigroup) = {!!}
 ```
 
 ### The monoid of natural numbers
 
 ```agda
 ℕ-Monoid : Monoid lzero
-pr1 ℕ-Monoid = ℕ-Semigroup
-pr1 (pr2 ℕ-Monoid) = 0
-pr1 (pr2 (pr2 ℕ-Monoid)) = left-unit-law-add-ℕ
-pr2 (pr2 (pr2 ℕ-Monoid)) = right-unit-law-add-ℕ
+pr1 ℕ-Monoid = {!!}
+pr1 (pr2 ℕ-Monoid) = {!!}
+pr1 (pr2 (pr2 ℕ-Monoid)) = {!!}
+pr2 (pr2 (pr2 ℕ-Monoid)) = {!!}
 ```
 
 ### The commutative monoid of natural numbers
 
 ```agda
 ℕ-Commutative-Monoid : Commutative-Monoid lzero
-pr1 ℕ-Commutative-Monoid = ℕ-Monoid
-pr2 ℕ-Commutative-Monoid = commutative-add-ℕ
+pr1 ℕ-Commutative-Monoid = {!!}
+pr2 ℕ-Commutative-Monoid = {!!}
 ```

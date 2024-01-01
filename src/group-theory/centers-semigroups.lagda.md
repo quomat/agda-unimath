@@ -32,34 +32,30 @@ module _
   where
 
   subtype-center-Semigroup : type-Semigroup G → Prop l
-  subtype-center-Semigroup = is-central-element-prop-Semigroup G
+  subtype-center-Semigroup = {!!}
 
   center-Semigroup : Subsemigroup l G
-  pr1 center-Semigroup = subtype-center-Semigroup
-  pr2 center-Semigroup {x} {y} = is-central-element-mul-Semigroup G x y
+  pr1 center-Semigroup = {!!}
 
   semigroup-center-Semigroup : Semigroup l
-  semigroup-center-Semigroup = semigroup-Subsemigroup G center-Semigroup
+  semigroup-center-Semigroup = {!!}
 
   type-center-Semigroup : UU l
-  type-center-Semigroup =
-    type-Subsemigroup G center-Semigroup
+  type-center-Semigroup = {!!}
 
   mul-center-Semigroup :
     (x y : type-center-Semigroup) → type-center-Semigroup
-  mul-center-Semigroup = mul-Subsemigroup G center-Semigroup
+  mul-center-Semigroup = {!!}
 
   associative-mul-center-Semigroup :
     (x y z : type-center-Semigroup) →
     mul-center-Semigroup (mul-center-Semigroup x y) z ＝
     mul-center-Semigroup x (mul-center-Semigroup y z)
-  associative-mul-center-Semigroup =
-    associative-mul-Subsemigroup G center-Semigroup
+  associative-mul-center-Semigroup = {!!}
 
   inclusion-center-Semigroup :
     type-center-Semigroup → type-Semigroup G
-  inclusion-center-Semigroup =
-    inclusion-Subsemigroup G center-Semigroup
+  inclusion-center-Semigroup = {!!}
 
   preserves-mul-inclusion-center-Semigroup :
     {x y : type-center-Semigroup} →
@@ -67,11 +63,9 @@ module _
     mul-Semigroup G
       ( inclusion-center-Semigroup x)
       ( inclusion-center-Semigroup y)
-  preserves-mul-inclusion-center-Semigroup {x} {y} =
-    preserves-mul-inclusion-Subsemigroup G center-Semigroup {x} {y}
+  preserves-mul-inclusion-center-Semigroup {x} {y} = {!!}
 
   hom-inclusion-center-Semigroup :
     hom-Semigroup semigroup-center-Semigroup G
-  hom-inclusion-center-Semigroup =
-    hom-inclusion-Subsemigroup G center-Semigroup
+  hom-inclusion-center-Semigroup = {!!}
 ```

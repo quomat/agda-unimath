@@ -33,32 +33,23 @@ module _
 
   map-Cayleys-theorem :
     type-Group G → type-Group (symmetric-Group (set-Group G))
-  map-Cayleys-theorem = equiv-mul-Group G
+  map-Cayleys-theorem = {!!}
 
   preserves-mul-map-Cayleys-theorem :
     preserves-mul-Group G (symmetric-Group (set-Group G)) map-Cayleys-theorem
-  preserves-mul-map-Cayleys-theorem {x} {y} =
-    eq-htpy-equiv (associative-mul-Group G x y)
+  preserves-mul-map-Cayleys-theorem {x} {y} = {!!}
 
   hom-Cayleys-theorem : hom-Group G (symmetric-Group (set-Group G))
-  pr1 hom-Cayleys-theorem = map-Cayleys-theorem
-  pr2 hom-Cayleys-theorem = preserves-mul-map-Cayleys-theorem
+  pr1 hom-Cayleys-theorem = {!!}
 
   is-injective-map-Cayleys-theorem : is-injective map-Cayleys-theorem
-  is-injective-map-Cayleys-theorem {x} {y} p =
-    ( inv (right-unit-law-mul-Group G x)) ∙
-    ( htpy-eq-equiv p (unit-Group G)) ∙
-    ( right-unit-law-mul-Group G y)
+  is-injective-map-Cayleys-theorem {x} {y} p = {!!}
 
   is-emb-map-Cayleys-theorem : is-emb map-Cayleys-theorem
-  is-emb-map-Cayleys-theorem =
-    is-emb-is-injective
-      ( is-set-type-Group (symmetric-Group (set-Group G)))
-      ( is-injective-map-Cayleys-theorem)
+  is-emb-map-Cayleys-theorem = {!!}
 
   Cayleys-theorem : emb-Group G (symmetric-Group (set-Group G))
-  pr1 Cayleys-theorem = hom-Cayleys-theorem
-  pr2 Cayleys-theorem = is-emb-map-Cayleys-theorem
+  pr1 Cayleys-theorem = {!!}
 ```
 
 ### Cayley's theorem as a corollary of the Yoneda lemma

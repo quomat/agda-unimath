@@ -39,20 +39,7 @@ module _
       ( large-poset-Large-Suplattice K)
       ( large-poset-Large-Suplattice L) →
     UUω
-  preserves-sup-hom-Large-Poset f =
-    {l1 l2 : Level} {I : UU l1} (x : I → type-Large-Suplattice K l2) →
-    ( map-hom-Large-Poset
-      ( large-poset-Large-Suplattice K)
-      ( large-poset-Large-Suplattice L)
-      ( f)
-      ( sup-Large-Suplattice K x)) ＝
-    sup-Large-Suplattice L
-      ( λ i →
-        map-hom-Large-Poset
-          ( large-poset-Large-Suplattice K)
-          ( large-poset-Large-Suplattice L)
-          ( f)
-          ( x i))
+  preserves-sup-hom-Large-Poset f = {!!}
 
   record
     hom-Large-Suplattice : UUω
@@ -75,11 +62,7 @@ module _
     map-hom-Large-Suplattice :
       {l1 : Level} →
       type-Large-Suplattice K l1 → type-Large-Suplattice L l1
-    map-hom-Large-Suplattice =
-      map-hom-Large-Poset
-        ( large-poset-Large-Suplattice K)
-        ( large-poset-Large-Suplattice L)
-        ( hom-large-poset-hom-Large-Suplattice f)
+    map-hom-Large-Suplattice = {!!}
 
     preserves-order-map-hom-Large-Suplattice :
       {l1 l2 : Level}
@@ -88,9 +71,5 @@ module _
       leq-Large-Suplattice L
         ( map-hom-Large-Suplattice x)
         ( map-hom-Large-Suplattice y)
-    preserves-order-map-hom-Large-Suplattice =
-      preserves-order-hom-Large-Poset
-        ( large-poset-Large-Suplattice K)
-        ( large-poset-Large-Suplattice L)
-        ( hom-large-poset-hom-Large-Suplattice f)
+    preserves-order-map-hom-Large-Suplattice = {!!}
 ```

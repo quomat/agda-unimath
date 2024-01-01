@@ -31,17 +31,12 @@ module _
   where
 
   equivalence-class-Decidable-equivalence-relation-𝔽 : UU (l1 ⊔ lsuc l2)
-  equivalence-class-Decidable-equivalence-relation-𝔽 =
-    im (decidable-relation-Decidable-equivalence-relation-𝔽 X R)
+  equivalence-class-Decidable-equivalence-relation-𝔽 = {!!}
 
   is-finite-equivalence-class-Decidable-equivalence-relation-𝔽' :
     is-finite equivalence-class-Decidable-equivalence-relation-𝔽
-  is-finite-equivalence-class-Decidable-equivalence-relation-𝔽' =
-    is-finite-im
-      ( is-finite-type-𝔽 X)
-      ( has-decidable-equality-Subset-𝔽 X)
+  is-finite-equivalence-class-Decidable-equivalence-relation-𝔽' = {!!}
 
   quotient-𝔽 : 𝔽 (l1 ⊔ lsuc l2)
-  pr1 quotient-𝔽 = equivalence-class-Decidable-equivalence-relation-𝔽
-  pr2 quotient-𝔽 = is-finite-equivalence-class-Decidable-equivalence-relation-𝔽'
+  pr1 quotient-𝔽 = {!!}
 ```

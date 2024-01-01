@@ -36,13 +36,13 @@ module _
   where
 
   mere-eq-Prop : A → A → Prop l
-  mere-eq-Prop x y = trunc-Prop (x ＝ y)
+  mere-eq-Prop x y = {!!}
 
   mere-eq : A → A → UU l
-  mere-eq x y = type-Prop (mere-eq-Prop x y)
+  mere-eq x y = {!!}
 
   is-prop-mere-eq : (x y : A) → is-prop (mere-eq x y)
-  is-prop-mere-eq x y = is-prop-type-trunc-Prop
+  is-prop-mere-eq x y = {!!}
 ```
 
 ## Properties
@@ -53,7 +53,7 @@ module _
 abstract
   refl-mere-eq :
     {l : Level} {A : UU l} → is-reflexive (mere-eq {l} {A})
-  refl-mere-eq _ = unit-trunc-Prop refl
+  refl-mere-eq _ = {!!}
 ```
 
 ### Symmetry
@@ -62,7 +62,7 @@ abstract
 abstract
   symmetric-mere-eq :
     {l : Level} {A : UU l} → is-symmetric (mere-eq {l} {A})
-  symmetric-mere-eq _ _ = map-trunc-Prop inv
+  symmetric-mere-eq _ _ = {!!}
 ```
 
 ### Transitivity
@@ -71,10 +71,7 @@ abstract
 abstract
   transitive-mere-eq :
     {l : Level} {A : UU l} → is-transitive (mere-eq {l} {A})
-  transitive-mere-eq x y z p q =
-    apply-universal-property-trunc-Prop q
-      ( mere-eq-Prop x z)
-      ( λ p' → map-trunc-Prop (p' ∙_) p)
+  transitive-mere-eq x y z p q = {!!}
 ```
 
 ### Mere equality is an equivalence relation
@@ -82,10 +79,10 @@ abstract
 ```agda
 mere-eq-equivalence-relation :
   {l1 : Level} (A : UU l1) → equivalence-relation l1 A
-pr1 (mere-eq-equivalence-relation A) = mere-eq-Prop
-pr1 (pr2 (mere-eq-equivalence-relation A)) = refl-mere-eq
-pr1 (pr2 (pr2 (mere-eq-equivalence-relation A))) = symmetric-mere-eq
-pr2 (pr2 (pr2 (mere-eq-equivalence-relation A))) = transitive-mere-eq
+pr1 (mere-eq-equivalence-relation A) = {!!}
+pr1 (pr2 (mere-eq-equivalence-relation A)) = {!!}
+pr1 (pr2 (pr2 (mere-eq-equivalence-relation A))) = {!!}
+pr2 (pr2 (pr2 (mere-eq-equivalence-relation A))) = {!!}
 ```
 
 ### Any map into a set reflects mere equality
@@ -97,17 +94,13 @@ module _
 
   reflects-mere-eq :
     reflects-equivalence-relation (mere-eq-equivalence-relation A) f
-  reflects-mere-eq {x} {y} r =
-    apply-universal-property-trunc-Prop r
-      ( Id-Prop X (f x) (f y))
-      ( ap f)
+  reflects-mere-eq {x} {y} r = {!!}
 
   reflecting-map-mere-eq :
     reflecting-map-equivalence-relation
       ( mere-eq-equivalence-relation A)
       ( type-Set X)
-  pr1 reflecting-map-mere-eq = f
-  pr2 reflecting-map-mere-eq = reflects-mere-eq
+  pr1 reflecting-map-mere-eq = {!!}
 ```
 
 ### If mere equality maps into the identity type of `A`, then `A` is a set
@@ -115,9 +108,5 @@ module _
 ```agda
 is-set-mere-eq-in-id :
   {l : Level} {A : UU l} → ((x y : A) → mere-eq x y → x ＝ y) → is-set A
-is-set-mere-eq-in-id =
-  is-set-prop-in-id
-    ( mere-eq)
-    ( is-prop-mere-eq)
-    ( refl-mere-eq)
+is-set-mere-eq-in-id = {!!}
 ```

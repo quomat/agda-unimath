@@ -58,11 +58,7 @@ one for each `x : Aₙ`, or as a sequence fibered over `(A, a)`, visualised as
 dependent-sequential-diagram :
   { l1 : Level} → (A : sequential-diagram l1) →
   ( l2 : Level) → UU (l1 ⊔ lsuc l2)
-dependent-sequential-diagram A l2 =
-  Σ ( ( n : ℕ) → family-sequential-diagram A n → UU l2)
-    ( λ B →
-      ( n : ℕ) (x : family-sequential-diagram A n) →
-      B n x → B (succ-ℕ n) (map-sequential-diagram A n x))
+dependent-sequential-diagram A l2 = {!!}
 ```
 
 ### Components of a dependent sequential diagram
@@ -75,7 +71,7 @@ module _
 
   family-dependent-sequential-diagram :
     ( n : ℕ) → family-sequential-diagram A n → UU l2
-  family-dependent-sequential-diagram = pr1 B
+  family-dependent-sequential-diagram = {!!}
 
   map-dependent-sequential-diagram :
     ( n : ℕ) (x : family-sequential-diagram A n) →
@@ -83,7 +79,7 @@ module _
     family-dependent-sequential-diagram
       ( succ-ℕ n)
       ( map-sequential-diagram A n x)
-  map-dependent-sequential-diagram = pr2 B
+  map-dependent-sequential-diagram = {!!}
 ```
 
 ### Constant dependent sequential diagrams
@@ -97,8 +93,7 @@ module _
   where
 
   constant-dependent-sequential-diagram : dependent-sequential-diagram A l2
-  pr1 constant-dependent-sequential-diagram n _ = family-sequential-diagram B n
-  pr2 constant-dependent-sequential-diagram n _ = map-sequential-diagram B n
+  pr1 constant-dependent-sequential-diagram n _ = {!!}
 ```
 
 ### Sections of dependent sequential diagrams
@@ -131,16 +126,10 @@ module _
       ( n : ℕ) (x : family-sequential-diagram A n) →
       family-dependent-sequential-diagram A B n x) →
     UU (l1 ⊔ l2)
-  naturality-section-dependent-sequential-diagram s =
-    ( n : ℕ) →
-    ( map-dependent-sequential-diagram A B n _ ∘ s n) ~
-    ( s (succ-ℕ n) ∘ map-sequential-diagram A n)
+  naturality-section-dependent-sequential-diagram s = {!!}
 
   section-dependent-sequential-diagram : UU (l1 ⊔ l2)
-  section-dependent-sequential-diagram =
-    Σ ( ( n : ℕ) (x : family-sequential-diagram A n) →
-        family-dependent-sequential-diagram A B n x)
-      ( λ s → naturality-section-dependent-sequential-diagram s)
+  section-dependent-sequential-diagram = {!!}
 ```
 
 ### Components of sections of dependent sequential diagrams
@@ -155,12 +144,12 @@ module _
   map-section-dependent-sequential-diagram :
     ( n : ℕ) (x : family-sequential-diagram A n) →
     family-dependent-sequential-diagram A B n x
-  map-section-dependent-sequential-diagram = pr1 s
+  map-section-dependent-sequential-diagram = {!!}
 
   naturality-map-section-dependent-sequential-diagram :
     naturality-section-dependent-sequential-diagram A B
       map-section-dependent-sequential-diagram
-  naturality-map-section-dependent-sequential-diagram = pr2 s
+  naturality-map-section-dependent-sequential-diagram = {!!}
 ```
 
 ## References

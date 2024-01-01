@@ -50,22 +50,18 @@ module _
   where
 
   cocone-codiagonal-map : cocone f f B
-  pr1 cocone-codiagonal-map = id
-  pr1 (pr2 cocone-codiagonal-map) = id
-  pr2 (pr2 cocone-codiagonal-map) = refl-htpy
+  pr1 cocone-codiagonal-map = {!!}
 
   codiagonal-map : pushout f f → B
-  codiagonal-map = cogap f f cocone-codiagonal-map
+  codiagonal-map = {!!}
 
   compute-inl-codiagonal-map :
     codiagonal-map ∘ inl-pushout f f ~ id
-  compute-inl-codiagonal-map =
-    compute-inl-cogap f f cocone-codiagonal-map
+  compute-inl-codiagonal-map = {!!}
 
   compute-inr-codiagonal-map :
     codiagonal-map ∘ inr-pushout f f ~ id
-  compute-inr-codiagonal-map =
-    compute-inr-cogap f f cocone-codiagonal-map
+  compute-inr-codiagonal-map = {!!}
 
   compute-glue-codiagonal-map :
     statement-coherence-htpy-cocone f f
@@ -73,8 +69,7 @@ module _
       ( cocone-codiagonal-map)
       ( compute-inl-codiagonal-map)
       ( compute-inr-codiagonal-map)
-  compute-glue-codiagonal-map =
-    compute-glue-cogap f f cocone-codiagonal-map
+  compute-glue-codiagonal-map = {!!}
 ```
 
 ## Properties
@@ -90,29 +85,11 @@ module _
     {l : Level} →
     Σ ( cocone terminal-map terminal-map (fiber (codiagonal-map f) b))
       ( universal-property-pushout l terminal-map terminal-map)
-  universal-property-suspension-cocone-fiber =
-    universal-property-pushout-cogap-fiber-up-to-equiv f f
-      ( cocone-codiagonal-map f)
-      ( b)
-      ( fiber f b)
-      ( unit)
-      ( unit)
-      ( inv-equiv
-        ( terminal-map ,
-        ( is-equiv-terminal-map-is-contr (is-torsorial-path' b))))
-      ( inv-equiv
-        ( terminal-map ,
-          ( is-equiv-terminal-map-is-contr (is-torsorial-path' b))))
-      ( id-equiv)
-      ( terminal-map)
-      ( terminal-map)
-      ( λ _ → eq-is-contr (is-torsorial-path' b))
-      ( λ _ → eq-is-contr (is-torsorial-path' b))
+  universal-property-suspension-cocone-fiber = {!!}
 
   suspension-cocone-fiber :
     suspension-cocone (fiber f b) (fiber (codiagonal-map f) b)
-  suspension-cocone-fiber =
-    pr1 (universal-property-suspension-cocone-fiber {lzero})
+  suspension-cocone-fiber = {!!}
 
   universal-property-suspension-fiber :
     {l : Level} →
@@ -120,36 +97,17 @@ module _
       ( terminal-map)
       ( terminal-map)
       ( suspension-cocone-fiber)
-  universal-property-suspension-fiber =
-    pr2 universal-property-suspension-cocone-fiber
+  universal-property-suspension-fiber = {!!}
 
   fiber-codiagonal-map-suspension-fiber :
     suspension (fiber f b) → fiber (codiagonal-map f) b
-  fiber-codiagonal-map-suspension-fiber =
-    cogap terminal-map terminal-map suspension-cocone-fiber
+  fiber-codiagonal-map-suspension-fiber = {!!}
 
   is-equiv-fiber-codiagonal-map-suspension-fiber :
     is-equiv fiber-codiagonal-map-suspension-fiber
-  is-equiv-fiber-codiagonal-map-suspension-fiber =
-    is-equiv-up-pushout-up-pushout
-      ( terminal-map)
-      ( terminal-map)
-      ( cocone-pushout terminal-map terminal-map)
-      ( suspension-cocone-fiber)
-      ( cogap terminal-map terminal-map (suspension-cocone-fiber))
-      ( htpy-cocone-map-universal-property-pushout
-        ( terminal-map)
-        ( terminal-map)
-        ( cocone-pushout terminal-map terminal-map)
-        ( up-pushout terminal-map terminal-map)
-        ( suspension-cocone-fiber))
-      ( up-pushout terminal-map terminal-map)
-      ( universal-property-suspension-fiber)
+  is-equiv-fiber-codiagonal-map-suspension-fiber = {!!}
 
   equiv-fiber-codiagonal-map-suspension-fiber :
     suspension (fiber f b) ≃ fiber (codiagonal-map f) b
-  pr1 equiv-fiber-codiagonal-map-suspension-fiber =
-    fiber-codiagonal-map-suspension-fiber
-  pr2 equiv-fiber-codiagonal-map-suspension-fiber =
-    is-equiv-fiber-codiagonal-map-suspension-fiber
+  pr1 equiv-fiber-codiagonal-map-suspension-fiber = {!!}
 ```

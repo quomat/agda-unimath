@@ -23,5 +23,5 @@ A universe `UU l1` is said to be small with respect to `UU l2` if `UU l1` is a
 ```agda
 is-small-universe :
   (l l1 : Level) → UU (lsuc l1 ⊔ lsuc l)
-is-small-universe l l1 = is-small l (UU l1) × ((X : UU l1) → is-small l X)
+is-small-universe l l1 = {!!}
 ```

@@ -55,33 +55,21 @@ module _
 
     map-hom-Large-Frame :
       {l1 : Level} → type-Large-Frame K l1 → type-Large-Frame L l1
-    map-hom-Large-Frame =
-      map-hom-Large-Meet-Semilattice
-        ( large-meet-semilattice-Large-Frame K)
-        ( large-meet-semilattice-Large-Frame L)
-        ( hom-large-meet-semilattice-hom-Large-Frame f)
+    map-hom-Large-Frame = {!!}
 
     preserves-order-hom-Large-Frame :
       {l1 l2 : Level} (x : type-Large-Frame K l1) (y : type-Large-Frame K l2) →
       leq-Large-Frame K x y →
       leq-Large-Frame L (map-hom-Large-Frame x) (map-hom-Large-Frame y)
-    preserves-order-hom-Large-Frame =
-      preserves-order-hom-Large-Meet-Semilattice
-        ( large-meet-semilattice-Large-Frame K)
-        ( large-meet-semilattice-Large-Frame L)
-        ( hom-large-meet-semilattice-hom-Large-Frame f)
+    preserves-order-hom-Large-Frame = {!!}
 
     preserves-meets-hom-Large-Frame :
       {l1 l2 : Level} (x : type-Large-Frame K l1) (y : type-Large-Frame K l2) →
       map-hom-Large-Frame (meet-Large-Frame K x y) ＝
       meet-Large-Frame L (map-hom-Large-Frame x) (map-hom-Large-Frame y)
-    preserves-meets-hom-Large-Frame =
-      preserves-meets-hom-Large-Meet-Semilattice
-        ( hom-large-meet-semilattice-hom-Large-Frame f)
+    preserves-meets-hom-Large-Frame = {!!}
 
     preserves-top-hom-Large-Frame :
       map-hom-Large-Frame (top-Large-Frame K) ＝ top-Large-Frame L
-    preserves-top-hom-Large-Frame =
-      preserves-top-hom-Large-Meet-Semilattice
-        ( hom-large-meet-semilattice-hom-Large-Frame f)
+    preserves-top-hom-Large-Frame = {!!}
 ```

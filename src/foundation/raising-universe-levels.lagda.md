@@ -52,46 +52,40 @@ module _
   where
 
   map-inv-raise : raise l A → A
-  map-inv-raise (map-raise x) = x
+  map-inv-raise (map-raise x) = {!!}
 
   is-section-map-inv-raise : (map-raise ∘ map-inv-raise) ~ id
-  is-section-map-inv-raise (map-raise x) = refl
+  is-section-map-inv-raise (map-raise x) = {!!}
 
   is-retraction-map-inv-raise : (map-inv-raise ∘ map-raise) ~ id
-  is-retraction-map-inv-raise x = refl
+  is-retraction-map-inv-raise x = {!!}
 
   is-equiv-map-raise : is-equiv (map-raise {l} {l1} {A})
-  is-equiv-map-raise =
-    is-equiv-is-invertible
-      map-inv-raise
-      is-section-map-inv-raise
-      is-retraction-map-inv-raise
+  is-equiv-map-raise = {!!}
 
 compute-raise : (l : Level) {l1 : Level} (A : UU l1) → A ≃ raise l A
-pr1 (compute-raise l A) = map-raise
-pr2 (compute-raise l A) = is-equiv-map-raise
+pr1 (compute-raise l A) = {!!}
+pr2 (compute-raise l A) = {!!}
 
 Raise : (l : Level) {l1 : Level} (A : UU l1) → Σ (UU (l1 ⊔ l)) (λ X → A ≃ X)
-pr1 (Raise l A) = raise l A
-pr2 (Raise l A) = compute-raise l A
+pr1 (Raise l A) = {!!}
+pr2 (Raise l A) = {!!}
 ```
 
 ### Raising universe levels of propositions
 
 ```agda
 raise-Prop : (l : Level) {l1 : Level} → Prop l1 → Prop (l ⊔ l1)
-pr1 (raise-Prop l P) = raise l (type-Prop P)
-pr2 (raise-Prop l P) =
-  is-prop-equiv' (compute-raise l (type-Prop P)) (is-prop-type-Prop P)
+pr1 (raise-Prop l P) = {!!}
+pr2 (raise-Prop l P) = {!!}
 ```
 
 ### Raising universe levels of sets
 
 ```agda
 raise-Set : (l : Level) {l1 : Level} → Set l1 → Set (l ⊔ l1)
-pr1 (raise-Set l A) = raise l (type-Set A)
-pr2 (raise-Set l A) =
-  is-set-equiv' (type-Set A) (compute-raise l (type-Set A)) (is-set-type-Set A)
+pr1 (raise-Set l A) = {!!}
+pr2 (raise-Set l A) = {!!}
 ```
 
 ### Raising equivalent types
@@ -102,31 +96,24 @@ module _
   where
 
   map-equiv-raise : raise l3 A → raise l4 B
-  map-equiv-raise (map-raise x) = map-raise (map-equiv e x)
+  map-equiv-raise (map-raise x) = {!!}
 
   map-inv-equiv-raise : raise l4 B → raise l3 A
-  map-inv-equiv-raise (map-raise y) = map-raise (map-inv-equiv e y)
+  map-inv-equiv-raise (map-raise y) = {!!}
 
   is-section-map-inv-equiv-raise :
     ( map-equiv-raise ∘ map-inv-equiv-raise) ~ id
-  is-section-map-inv-equiv-raise (map-raise y) =
-    ap map-raise (is-section-map-inv-equiv e y)
+  is-section-map-inv-equiv-raise (map-raise y) = {!!}
 
   is-retraction-map-inv-equiv-raise :
     ( map-inv-equiv-raise ∘ map-equiv-raise) ~ id
-  is-retraction-map-inv-equiv-raise (map-raise x) =
-    ap map-raise (is-retraction-map-inv-equiv e x)
+  is-retraction-map-inv-equiv-raise (map-raise x) = {!!}
 
   is-equiv-map-equiv-raise : is-equiv map-equiv-raise
-  is-equiv-map-equiv-raise =
-    is-equiv-is-invertible
-      map-inv-equiv-raise
-      is-section-map-inv-equiv-raise
-      is-retraction-map-inv-equiv-raise
+  is-equiv-map-equiv-raise = {!!}
 
   equiv-raise : raise l3 A ≃ raise l4 B
-  pr1 equiv-raise = map-equiv-raise
-  pr2 equiv-raise = is-equiv-map-equiv-raise
+  pr1 equiv-raise = {!!}
 ```
 
 ### Raising universe levels from `l1` to `l ⊔ l1` is an embedding from `UU l1` to `UU (l ⊔ l1)`
@@ -134,22 +121,9 @@ module _
 ```agda
 abstract
   is-emb-raise : (l : Level) {l1 : Level} → is-emb (raise l {l1})
-  is-emb-raise l {l1} =
-    is-emb-is-prop-map
-      ( λ X →
-        is-prop-is-proof-irrelevant
-          ( λ (A , p) →
-            is-contr-equiv
-              ( Σ (UU l1) (λ A' → A' ≃ A))
-              ( equiv-tot
-                ( λ A' →
-                  ( equiv-postcomp-equiv (inv-equiv (compute-raise l A)) A') ∘e
-                  ( equiv-precomp-equiv (compute-raise l A') (raise l A)) ∘e
-                  ( equiv-univalence) ∘e
-                  ( equiv-concat' (raise l A') (inv p))))
-              ( is-torsorial-equiv' A)))
+  is-emb-raise l {l1} = {!!}
 
 emb-raise : (l : Level) {l1 : Level} → UU l1 ↪ UU (l1 ⊔ l)
-pr1 (emb-raise l) = raise l
-pr2 (emb-raise l) = is-emb-raise l
+pr1 (emb-raise l) = {!!}
+pr2 (emb-raise l) = {!!}
 ```

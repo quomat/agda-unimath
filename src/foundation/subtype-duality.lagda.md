@@ -28,21 +28,18 @@ open import foundation-core.propositions
 
 ```agda
 Slice-emb : (l : Level) {l1 : Level} (A : UU l1) → UU (lsuc l ⊔ l1)
-Slice-emb l A = Σ (UU l) (λ X → X ↪ A)
+Slice-emb l A = {!!}
 
 equiv-Fiber-Prop :
   (l : Level) {l1 : Level} (A : UU l1) →
   Slice-emb (l1 ⊔ l) A ≃ (A → Prop (l1 ⊔ l))
-equiv-Fiber-Prop l A =
-  ( equiv-Fiber-structure l is-prop A) ∘e
-  ( equiv-tot (λ X → equiv-tot equiv-is-prop-map-is-emb))
+equiv-Fiber-Prop l A = {!!}
 
 Slice-surjection : (l : Level) {l1 : Level} (A : UU l1) → UU (lsuc l ⊔ l1)
-Slice-surjection l A = Σ (UU l) (λ X → X ↠ A)
+Slice-surjection l A = {!!}
 
 equiv-Fiber-trunc-Prop :
   (l : Level) {l1 : Level} (A : UU l1) →
   Slice-surjection (l1 ⊔ l) A ≃ (A → Inhabited-Type (l1 ⊔ l))
-equiv-Fiber-trunc-Prop l A =
-  ( equiv-Fiber-structure l is-inhabited A)
+equiv-Fiber-trunc-Prop l A = {!!}
 ```

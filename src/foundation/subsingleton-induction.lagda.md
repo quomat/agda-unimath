@@ -39,18 +39,18 @@ construct a section of `B` it suffices to provide an element of `B a` for some
 ```agda
 is-subsingleton :
   (l1 : Level) {l2 : Level} (A : UU l2) → UU (lsuc l1 ⊔ l2)
-is-subsingleton l A = {B : A → UU l} (a : A) → section (ev-point a {B})
+is-subsingleton l A = {!!}
 
 ind-is-subsingleton :
   {l1 l2 : Level} {A : UU l1} →
   ({l : Level} → is-subsingleton l A) → {B : A → UU l2} (a : A) →
   B a → (x : A) → B x
-ind-is-subsingleton is-subsingleton-A a = pr1 (is-subsingleton-A a)
+ind-is-subsingleton is-subsingleton-A a = {!!}
 
 compute-ind-is-subsingleton :
   {l1 l2 : Level} {A : UU l1} (H : {l : Level} → is-subsingleton l A) →
   {B : A → UU l2} (a : A) → ev-point a {B} ∘ ind-is-subsingleton H {B} a ~ id
-compute-ind-is-subsingleton is-subsingleton-A a = pr2 (is-subsingleton-A a)
+compute-ind-is-subsingleton is-subsingleton-A a = {!!}
 ```
 
 ## Properties
@@ -62,16 +62,14 @@ abstract
   ind-subsingleton :
     {l1 l2 : Level} {A : UU l1} (is-prop-A : is-prop A)
     {B : A → UU l2} (a : A) → B a → (x : A) → B x
-  ind-subsingleton is-prop-A {B} a =
-    ind-singleton a (is-proof-irrelevant-is-prop is-prop-A a) B
+  ind-subsingleton is-prop-A {B} a = {!!}
 
 abstract
   compute-ind-subsingleton :
     {l1 l2 : Level} {A : UU l1}
     (is-prop-A : is-prop A) {B : A → UU l2} (a : A) →
     ev-point a {B} ∘ ind-subsingleton is-prop-A {B} a ~ id
-  compute-ind-subsingleton is-prop-A {B} a =
-    compute-ind-singleton a (is-proof-irrelevant-is-prop is-prop-A a) B
+  compute-ind-subsingleton is-prop-A {B} a = {!!}
 ```
 
 ### A type satisfies subsingleton induction if and only if it is a proposition
@@ -79,19 +77,16 @@ abstract
 ```agda
 is-subsingleton-is-prop :
   {l1 l2 : Level} {A : UU l1} → is-prop A → is-subsingleton l2 A
-is-subsingleton-is-prop is-prop-A {B} a =
-  is-singleton-is-contr a (is-proof-irrelevant-is-prop is-prop-A a) B
+is-subsingleton-is-prop is-prop-A {B} a = {!!}
 
 abstract
   is-prop-ind-subsingleton :
     {l1 : Level} (A : UU l1) →
     ({l2 : Level} {B : A → UU l2} (a : A) → B a → (x : A) → B x) → is-prop A
-  is-prop-ind-subsingleton A S =
-    is-prop-is-proof-irrelevant
-      ( λ a → is-contr-ind-singleton A a (λ B → S {B = B} a))
+  is-prop-ind-subsingleton A S = {!!}
 
 abstract
   is-prop-is-subsingleton :
     {l1 : Level} (A : UU l1) → ({l2 : Level} → is-subsingleton l2 A) → is-prop A
-  is-prop-is-subsingleton A S = is-prop-ind-subsingleton A (pr1 ∘ S)
+  is-prop-is-subsingleton A S = {!!}
 ```

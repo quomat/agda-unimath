@@ -33,7 +33,7 @@ vectors of length `n` of elements of `A`.
 
 ```agda
 matrix : {l : Level} (A : UU l) → ℕ → ℕ → UU l
-matrix A m n = vec (vec A n) m
+matrix A m n = {!!}
 ```
 
 ### The top row of a matrix
@@ -41,7 +41,7 @@ matrix A m n = vec (vec A n) m
 ```agda
 top-row-matrix :
   {l : Level} {m n : ℕ} {A : UU l} → matrix A (succ-ℕ m) n → vec A n
-top-row-matrix (v ∷ M) = v
+top-row-matrix (v ∷ M) = {!!}
 ```
 
 ### The left column of a matrix
@@ -49,7 +49,7 @@ top-row-matrix (v ∷ M) = v
 ```agda
 left-column-matrix :
   {l : Level} {m n : ℕ} {A : UU l} → matrix A m (succ-ℕ n) → vec A m
-left-column-matrix = map-vec head-vec
+left-column-matrix = {!!}
 ```
 
 ### The vertical tail of a matrix
@@ -57,7 +57,7 @@ left-column-matrix = map-vec head-vec
 ```agda
 vertical-tail-matrix :
   {l : Level} {m n : ℕ} {A : UU l} → matrix A (succ-ℕ m) n → matrix A m n
-vertical-tail-matrix M = tail-vec M
+vertical-tail-matrix M = {!!}
 ```
 
 ### The horizontal tail of a matrix
@@ -65,7 +65,7 @@ vertical-tail-matrix M = tail-vec M
 ```agda
 horizontal-tail-matrix :
   {l : Level} {m n : ℕ} {A : UU l} → matrix A m (succ-ℕ n) → matrix A m n
-horizontal-tail-matrix = map-vec tail-vec
+horizontal-tail-matrix = {!!}
 ```
 
 ### The vertically empty matrix
@@ -73,17 +73,17 @@ horizontal-tail-matrix = map-vec tail-vec
 ```agda
 vertically-empty-matrix :
   {l : Level} {n : ℕ} {A : UU l} → matrix A 0 n
-vertically-empty-matrix = empty-vec
+vertically-empty-matrix = {!!}
 
 eq-vertically-empty-matrix :
   {l : Level} {n : ℕ} {A : UU l}
   (x : matrix A 0 n) → Id vertically-empty-matrix x
-eq-vertically-empty-matrix empty-vec = refl
+eq-vertically-empty-matrix empty-vec = {!!}
 
 is-contr-matrix-zero-ℕ :
   {l : Level} {n : ℕ} {A : UU l} → is-contr (matrix A 0 n)
-pr1 is-contr-matrix-zero-ℕ = vertically-empty-matrix
-pr2 is-contr-matrix-zero-ℕ = eq-vertically-empty-matrix
+pr1 is-contr-matrix-zero-ℕ = {!!}
+pr2 is-contr-matrix-zero-ℕ = {!!}
 ```
 
 ### The horizontally empty matrix
@@ -91,18 +91,17 @@ pr2 is-contr-matrix-zero-ℕ = eq-vertically-empty-matrix
 ```agda
 horizontally-empty-matrix :
   {l : Level} {m : ℕ} {A : UU l} → matrix A m 0
-horizontally-empty-matrix {m = zero-ℕ} = empty-vec
-horizontally-empty-matrix {m = succ-ℕ m} = empty-vec ∷ horizontally-empty-matrix
+horizontally-empty-matrix {m = zero-ℕ} = {!!}
+horizontally-empty-matrix {m = succ-ℕ m} = {!!}
 
 eq-horizontally-empty-matrix :
   {l : Level} {m : ℕ} {A : UU l}
   (x : matrix A m 0) → Id horizontally-empty-matrix x
-eq-horizontally-empty-matrix {m = zero-ℕ} empty-vec = refl
-eq-horizontally-empty-matrix {m = succ-ℕ m} (empty-vec ∷ M) =
-  ap-binary _∷_ refl (eq-horizontally-empty-matrix M)
+eq-horizontally-empty-matrix {m = zero-ℕ} empty-vec = {!!}
+eq-horizontally-empty-matrix {m = succ-ℕ m} (empty-vec ∷ M) = {!!}
 
 is-contr-matrix-zero-ℕ' :
   {l : Level} {m : ℕ} {A : UU l} → is-contr (matrix A m 0)
-pr1 is-contr-matrix-zero-ℕ' = horizontally-empty-matrix
-pr2 is-contr-matrix-zero-ℕ' = eq-horizontally-empty-matrix
+pr1 is-contr-matrix-zero-ℕ' = {!!}
+pr2 is-contr-matrix-zero-ℕ' = {!!}
 ```

@@ -34,54 +34,50 @@ A **subset** of a commutative ring is a subtype of its underlying type.
 ```agda
 subset-Commutative-Ring :
   (l : Level) {l1 : Level} (A : Commutative-Ring l1) → UU ((lsuc l) ⊔ l1)
-subset-Commutative-Ring l A = subtype l (type-Commutative-Ring A)
+subset-Commutative-Ring l A = {!!}
 
 is-set-subset-Commutative-Ring :
   (l : Level) {l1 : Level} (A : Commutative-Ring l1) →
   is-set (subset-Commutative-Ring l A)
-is-set-subset-Commutative-Ring l A =
-  is-set-function-type is-set-type-Prop
+is-set-subset-Commutative-Ring l A = {!!}
 
 module _
   {l1 l2 : Level} (A : Commutative-Ring l1) (S : subset-Commutative-Ring l2 A)
   where
 
   is-in-subset-Commutative-Ring : type-Commutative-Ring A → UU l2
-  is-in-subset-Commutative-Ring = is-in-subtype S
+  is-in-subset-Commutative-Ring = {!!}
 
   is-prop-is-in-subset-Commutative-Ring :
     (x : type-Commutative-Ring A) → is-prop (is-in-subset-Commutative-Ring x)
-  is-prop-is-in-subset-Commutative-Ring = is-prop-is-in-subtype S
+  is-prop-is-in-subset-Commutative-Ring = {!!}
 
   type-subset-Commutative-Ring : UU (l1 ⊔ l2)
-  type-subset-Commutative-Ring = type-subtype S
+  type-subset-Commutative-Ring = {!!}
 
   inclusion-subset-Commutative-Ring :
     type-subset-Commutative-Ring → type-Commutative-Ring A
-  inclusion-subset-Commutative-Ring = inclusion-subtype S
+  inclusion-subset-Commutative-Ring = {!!}
 
   ap-inclusion-subset-Commutative-Ring :
     (x y : type-subset-Commutative-Ring) → x ＝ y →
     inclusion-subset-Commutative-Ring x ＝ inclusion-subset-Commutative-Ring y
-  ap-inclusion-subset-Commutative-Ring = ap-inclusion-subtype S
+  ap-inclusion-subset-Commutative-Ring = {!!}
 
   is-in-subset-inclusion-subset-Commutative-Ring :
     (x : type-subset-Commutative-Ring) →
     is-in-subset-Commutative-Ring (inclusion-subset-Commutative-Ring x)
-  is-in-subset-inclusion-subset-Commutative-Ring =
-    is-in-subtype-inclusion-subtype S
+  is-in-subset-inclusion-subset-Commutative-Ring = {!!}
 
   is-closed-under-eq-subset-Commutative-Ring :
     {x y : type-Commutative-Ring A} →
     is-in-subset-Commutative-Ring x → (x ＝ y) → is-in-subset-Commutative-Ring y
-  is-closed-under-eq-subset-Commutative-Ring =
-    is-closed-under-eq-subtype S
+  is-closed-under-eq-subset-Commutative-Ring = {!!}
 
   is-closed-under-eq-subset-Commutative-Ring' :
     {x y : type-Commutative-Ring A} →
     is-in-subset-Commutative-Ring y → (x ＝ y) → is-in-subset-Commutative-Ring x
-  is-closed-under-eq-subset-Commutative-Ring' =
-    is-closed-under-eq-subtype' S
+  is-closed-under-eq-subset-Commutative-Ring' = {!!}
 ```
 
 ### The condition that a subset contains zero
@@ -92,60 +88,49 @@ module _
   where
 
   contains-zero-subset-Commutative-Ring : UU l2
-  contains-zero-subset-Commutative-Ring =
-    is-in-subset-Commutative-Ring A S (zero-Commutative-Ring A)
+  contains-zero-subset-Commutative-Ring = {!!}
 ```
 
 ### The condition that a subset contains one
 
 ```agda
   contains-one-subset-Commutative-Ring : UU l2
-  contains-one-subset-Commutative-Ring =
-    is-in-subset-Commutative-Ring A S (one-Commutative-Ring A)
+  contains-one-subset-Commutative-Ring = {!!}
 ```
 
 ### The condition that a subset is closed under addition
 
 ```agda
   is-closed-under-addition-subset-Commutative-Ring : UU (l1 ⊔ l2)
-  is-closed-under-addition-subset-Commutative-Ring =
-    is-closed-under-addition-subset-Ring (ring-Commutative-Ring A) S
+  is-closed-under-addition-subset-Commutative-Ring = {!!}
 ```
 
 ### The condition that a subset is closed under negatives
 
 ```agda
   is-closed-under-negatives-subset-Commutative-Ring : UU (l1 ⊔ l2)
-  is-closed-under-negatives-subset-Commutative-Ring =
-    is-closed-under-negatives-subset-Ring (ring-Commutative-Ring A) S
+  is-closed-under-negatives-subset-Commutative-Ring = {!!}
 ```
 
 ### The condition that a subset is closed under multiplication
 
 ```agda
   is-closed-under-multiplication-subset-Commutative-Ring : UU (l1 ⊔ l2)
-  is-closed-under-multiplication-subset-Commutative-Ring =
-    is-closed-under-multiplication-subset-Ring (ring-Commutative-Ring A) S
+  is-closed-under-multiplication-subset-Commutative-Ring = {!!}
 ```
 
 ### The condition that a subset is closed under multiplication from the left by an arbitrary element
 
 ```agda
   is-closed-under-left-multiplication-subset-Commutative-Ring : UU (l1 ⊔ l2)
-  is-closed-under-left-multiplication-subset-Commutative-Ring =
-    is-closed-under-left-multiplication-subset-Ring
-      ( ring-Commutative-Ring A)
-      ( S)
+  is-closed-under-left-multiplication-subset-Commutative-Ring = {!!}
 ```
 
 ### The condition that a subset is closed under multiplication from the right by an arbitrary element
 
 ```agda
   is-closed-under-right-multiplication-subset-Commutative-Ring : UU (l1 ⊔ l2)
-  is-closed-under-right-multiplication-subset-Commutative-Ring =
-    is-closed-under-right-multiplication-subset-Ring
-      ( ring-Commutative-Ring A)
-      ( S)
+  is-closed-under-right-multiplication-subset-Commutative-Ring = {!!}
 ```
 
 ### The condition that a subset is an additive subgroup
@@ -157,6 +142,5 @@ module _
 
   is-additive-subgroup-subset-Commutative-Ring :
     {l2 : Level} → subset-Commutative-Ring l2 A → UU (l1 ⊔ l2)
-  is-additive-subgroup-subset-Commutative-Ring =
-    is-subgroup-Ab (ab-Commutative-Ring A)
+  is-additive-subgroup-subset-Commutative-Ring = {!!}
 ```

@@ -31,7 +31,7 @@ module _
   where
 
   hom-Large-Locale : UUω
-  hom-Large-Locale = hom-Large-Frame L K
+  hom-Large-Locale = {!!}
 
   module _
     (f : hom-Large-Locale)
@@ -39,29 +39,29 @@ module _
 
     map-hom-Large-Locale :
       {l1 : Level} → type-Large-Locale L l1 → type-Large-Locale K l1
-    map-hom-Large-Locale = map-hom-Large-Frame L K f
+    map-hom-Large-Locale = {!!}
 
     preserves-order-hom-Large-Locale :
       {l1 l2 : Level}
       (x : type-Large-Locale L l1) (y : type-Large-Locale L l2) →
       leq-Large-Locale L x y →
       leq-Large-Locale K (map-hom-Large-Locale x) (map-hom-Large-Locale y)
-    preserves-order-hom-Large-Locale = preserves-order-hom-Large-Frame L K f
+    preserves-order-hom-Large-Locale = {!!}
 
     preserves-meets-hom-Large-Locale :
       {l1 l2 : Level}
       (x : type-Large-Locale L l1) (y : type-Large-Locale L l2) →
       map-hom-Large-Locale (meet-Large-Locale L x y) ＝
       meet-Large-Locale K (map-hom-Large-Locale x) (map-hom-Large-Locale y)
-    preserves-meets-hom-Large-Locale = preserves-meets-hom-Large-Frame L K f
+    preserves-meets-hom-Large-Locale = {!!}
 
     preserves-top-hom-Large-Locale :
       map-hom-Large-Locale (top-Large-Locale L) ＝ top-Large-Locale K
-    preserves-top-hom-Large-Locale = preserves-top-hom-Large-Frame L K f
+    preserves-top-hom-Large-Locale = {!!}
 
     preserves-sup-hom-Large-Locale :
       {l1 l2 : Level} {I : UU l1} (x : I → type-Large-Locale L l2) →
       map-hom-Large-Locale (sup-Large-Locale L x) ＝
       sup-Large-Locale K (λ i → map-hom-Large-Locale (x i))
-    preserves-sup-hom-Large-Locale = preserves-sup-hom-Large-Frame f
+    preserves-sup-hom-Large-Locale = {!!}
 ```

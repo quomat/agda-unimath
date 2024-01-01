@@ -47,10 +47,7 @@ module _
   where
 
   is-of-natural-height-𝕍 : ℕ → 𝕍 l → UU l
-  is-of-natural-height-𝕍 zero-ℕ X =
-    is-empty-𝕍 X
-  is-of-natural-height-𝕍 (succ-ℕ n) (tree-𝕎 X Y) =
-    (x : X) → is-of-natural-height-𝕍 n (Y x)
+  is-of-natural-height-𝕍 zero-ℕ X = {!!}
 ```
 
 ### Explicitly bounded multisets
@@ -62,8 +59,7 @@ with a proof that `X` is of natural height `n` is far from a proposition.
 
 ```agda
 Explicitly-Bounded-𝕍 : (l : Level) → UU (lsuc l)
-Explicitly-Bounded-𝕍 l =
-  Σ (𝕍 l) (λ X → Σ ℕ (λ n → is-of-natural-height-𝕍 n X))
+Explicitly-Bounded-𝕍 l = {!!}
 ```
 
 ### Bounded multisets
@@ -80,7 +76,7 @@ data
     {n : ℕ} {X : UU l} (Y : X → Bounded-𝕍 l n) → Bounded-𝕍 l (succ-ℕ n)
 
 Bounded-𝕍' : (l : Level) → UU (lsuc l)
-Bounded-𝕍' l = Σ (𝕍 l) (λ X → ∃ ℕ (λ n → is-of-natural-height-𝕍 n X))
+Bounded-𝕍' l = {!!}
 ```
 
 ## Properties
@@ -94,8 +90,7 @@ module _
 
   is-of-natural-height-is-empty-𝕍 :
     (n : ℕ) (X : 𝕍 l) → is-empty-𝕍 X → is-of-natural-height-𝕍 n X
-  is-of-natural-height-is-empty-𝕍 zero-ℕ X H = H
-  is-of-natural-height-is-empty-𝕍 (succ-ℕ n) (tree-𝕎 X Y) H x = ex-falso (H x)
+  is-of-natural-height-is-empty-𝕍 zero-ℕ X H = {!!}
 ```
 
 ### A multiset of natural height `n` is a multiset of natural height `n + 1`
@@ -108,8 +103,5 @@ module _
   is-of-natural-height-succ-𝕍 :
     (n : ℕ) (X : 𝕍 l) →
     is-of-natural-height-𝕍 n X → is-of-natural-height-𝕍 (succ-ℕ n) X
-  is-of-natural-height-succ-𝕍 zero-ℕ X H =
-    is-of-natural-height-is-empty-𝕍 1 X H
-  is-of-natural-height-succ-𝕍 (succ-ℕ n) (tree-𝕎 X Y) H x =
-    is-of-natural-height-succ-𝕍 n (Y x) (H x)
+  is-of-natural-height-succ-𝕍 zero-ℕ X H = {!!}
 ```

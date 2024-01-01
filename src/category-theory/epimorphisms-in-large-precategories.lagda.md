@@ -21,7 +21,7 @@ open import foundation.universe-levels
 ## Idea
 
 A morphism `f : x → y` is a epimorphism if whenever we have two morphisms
-`g h : y → w` such that `g ∘ f = h ∘ f`, then in fact `g = h`. The way to state
+`g h : y → w` such that `g ∘ f = {!!}
 this in Homotopy Type Theory is to say that precomposition by `f` is an
 embedding.
 
@@ -36,17 +36,13 @@ module _
   where
 
   is-epi-prop-Large-Precategory : Prop (α l3 ⊔ β l1 l3 ⊔ β l2 l3)
-  is-epi-prop-Large-Precategory =
-    Π-Prop
-      ( obj-Large-Precategory C l3)
-      ( λ Z → is-emb-Prop (λ g → comp-hom-Large-Precategory C {Z = Z} g f))
+  is-epi-prop-Large-Precategory = {!!}
 
   is-epi-Large-Precategory : UU (α l3 ⊔ β l1 l3 ⊔ β l2 l3)
-  is-epi-Large-Precategory = type-Prop is-epi-prop-Large-Precategory
+  is-epi-Large-Precategory = {!!}
 
   is-prop-is-epi-Large-Precategory : is-prop is-epi-Large-Precategory
-  is-prop-is-epi-Large-Precategory =
-    is-prop-type-Prop is-epi-prop-Large-Precategory
+  is-prop-is-epi-Large-Precategory = {!!}
 ```
 
 ## Properties
@@ -63,6 +59,5 @@ module _
 
   is-epi-iso-Large-Precategory :
     is-epi-Large-Precategory C l3 X Y (hom-iso-Large-Precategory C f)
-  is-epi-iso-Large-Precategory Z =
-    is-emb-is-equiv (is-equiv-precomp-hom-iso-Large-Precategory C f Z)
+  is-epi-iso-Large-Precategory Z = {!!}
 ```

@@ -34,7 +34,7 @@ that type is an [equivalence](foundation-core.equivalences.md).
 
 ```agda
 is-flat-discrete : {@♭ l : Level} (@♭ A : UU l) → UU l
-is-flat-discrete {l} A = is-equiv (counit-flat {l} {A})
+is-flat-discrete {l} A = {!!}
 ```
 
 ## Properties
@@ -44,10 +44,10 @@ is-flat-discrete {l} A = is-equiv (counit-flat {l} {A})
 ```agda
 is-property-is-flat-discrete :
   {@♭ l : Level} (@♭ A : UU l) → is-prop (is-flat-discrete A)
-is-property-is-flat-discrete {l} A = is-property-is-equiv (counit-flat {l} {A})
+is-property-is-flat-discrete {l} A = {!!}
 
 is-flat-discrete-Prop : {@♭ l : Level} (@♭ A : UU l) → Prop l
-is-flat-discrete-Prop {l} A = is-equiv-Prop (counit-flat {l} {A})
+is-flat-discrete-Prop {l} A = {!!}
 ```
 
 ### The empty type is flat
@@ -65,33 +65,25 @@ is-retraction-map-is-flat-discrete-empty :
 is-retraction-map-is-flat-discrete-empty (cons-flat ())
 
 is-flat-discrete-empty : is-flat-discrete empty
-is-flat-discrete-empty =
-  is-equiv-is-invertible
-    ( map-is-flat-discrete-empty)
-    ( is-section-map-is-flat-discrete-empty)
-    ( is-retraction-map-is-flat-discrete-empty)
+is-flat-discrete-empty = {!!}
 ```
 
 ### The unit type is flat
 
 ```agda
 map-is-flat-discrete-unit : unit → ♭ unit
-map-is-flat-discrete-unit star = cons-flat star
+map-is-flat-discrete-unit star = {!!}
 
 is-section-map-is-flat-discrete-unit :
   counit-flat ∘ map-is-flat-discrete-unit ~ id
-is-section-map-is-flat-discrete-unit _ = refl
+is-section-map-is-flat-discrete-unit _ = {!!}
 
 is-retraction-map-is-flat-discrete-unit :
   map-is-flat-discrete-unit ∘ counit-flat ~ id
-is-retraction-map-is-flat-discrete-unit (cons-flat _) = refl
+is-retraction-map-is-flat-discrete-unit (cons-flat _) = {!!}
 
 is-flat-discrete-unit : is-flat-discrete unit
-is-flat-discrete-unit =
-  is-equiv-is-invertible
-    ( map-is-flat-discrete-unit)
-    ( is-section-map-is-flat-discrete-unit)
-    ( is-retraction-map-is-flat-discrete-unit)
+is-flat-discrete-unit = {!!}
 ```
 
 ## See also

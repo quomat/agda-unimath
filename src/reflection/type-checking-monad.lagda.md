@@ -179,23 +179,21 @@ postulate
 ```agda
 infixl 15 _<|>_
 _<|>_ : {l : Level} {A : UU l} → TC A → TC A → TC A
-_<|>_ = catchTC
+_<|>_ = {!!}
 
-infixl 10 _>>=_ _>>_ _<&>_
-_>>=_ :
-  {l1 l2 : Level} {A : UU l1} {B : UU l2} →
-  TC A → (A → TC B) → TC B
-_>>=_ = bindTC
+infixl 10 _>>= {!!}
+_>>= {!!}
+_>>= {!!}
 
 _>>_ :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   TC A → TC B → TC B
-xs >> ys = bindTC xs (λ _ → ys)
+xs >> ys = {!!}
 
 _<&>_ :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   TC A → (A → B) → TC B
-xs <&> f = bindTC xs (λ x → returnTC (f x))
+xs <&> f = {!!}
 ```
 
 ## Examples
@@ -211,10 +209,10 @@ adapted from alhassy's
 ```agda
 private
   numTCM : Term → TC unit
-  numTCM h = unify (quoteTerm 314) h
+  numTCM h = {!!}
 
   _ : unquote numTCM ＝ 314
-  _ = refl
+  _ = {!!}
 ```
 
 #### By use of a macro
@@ -222,10 +220,10 @@ private
 ```agda
   macro
     numTCM' : Term → TC unit
-    numTCM' h = unify (quoteTerm 1) h
+    numTCM' h = {!!}
 
   _ : numTCM' ＝ 1
-  _ = refl
+  _ = {!!}
 ```
 
 ### Modifying a term
@@ -233,16 +231,13 @@ private
 ```agda
   macro
     swap-add : Term → Term → TC unit
-    swap-add (def (quote add-ℕ) (cons a (cons b nil))) hole =
-      unify hole (def (quote add-ℕ) (cons b (cons a nil)))
-    {-# CATCHALL #-}
-    swap-add v hole = unify hole v
+    swap-add (def (quote add-ℕ) (cons a (cons b nil))) hole = {!!}
 
   ex1 : (a b : ℕ) → swap-add (add-ℕ a b) ＝ (add-ℕ b a)
-  ex1 a b = refl
+  ex1 a b = {!!}
 
   ex2 : (a b : ℕ) → swap-add a ＝ a
-  ex2 a b = refl
+  ex2 a b = {!!}
 ```
 
 ### Trying a path
@@ -253,31 +248,22 @@ example was addapted from
 ```agda
   private
     infixr 10 _∷_
-    pattern _∷_ x xs = cons x xs
+    pattern _∷_ x xs = {!!}
 
   ＝-type-info : Term → TC (Arg Term × (Arg Term × (Term × Term)))
   ＝-type-info
-    ( def (quote _＝_) (𝓁 ∷ 𝒯 ∷ (arg _ l) ∷ (arg _ r) ∷ nil)) =
-    returnTC (𝓁 , 𝒯 , l , r)
-  ＝-type-info _ = typeError (unit-list (strErr "Term is not a ＝-type."))
+    ( def (quote _＝_) (𝓁 ∷ 𝒯 ∷ (arg _ l) ∷ (arg _ r) ∷ nil)) = {!!}
 
   macro
     try-path! : Term → Term → TC unit
-    try-path! p goal =
-      ( unify goal p) <|>
-      ( do
-        p-type ← inferType p
-        𝓁 , 𝒯 , l , r ← ＝-type-info p-type
-        unify goal
-          ( def (quote inv)
-            ( 𝓁 ∷ 𝒯 ∷ hidden-Arg l ∷ hidden-Arg r ∷ visible-Arg p ∷ nil)))
+    try-path! p goal = {!!}
 
   module _ (a b : ℕ) (p : a ＝ b) where
     ex3 : Id a b
-    ex3 = try-path! p
+    ex3 = {!!}
 
     ex4 : Id b a
-    ex4 = try-path! p
+    ex4 = {!!}
 ```
 
 ### Getting the lhs and rhs of a goal
@@ -287,12 +273,6 @@ boundary-TCM : Term → TC (Term × Term)
 boundary-TCM
   ( def
     ( quote Id)
-    ( 𝓁 ∷ 𝒯 ∷ arg _ l ∷ arg _ r ∷ nil)) =
-  returnTC (l , r)
-boundary-TCM t =
-  typeError
-    ( strErr "The term\n " ∷
-      termErr t ∷
-      strErr "\nis not a ＝-type." ∷
-      nil)
+    ( 𝓁 ∷ 𝒯 ∷ arg _ l ∷ arg _ r ∷ nil)) = {!!}
+boundary-TCM t = {!!}
 ```

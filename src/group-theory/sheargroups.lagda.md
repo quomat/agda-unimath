@@ -20,15 +20,5 @@ open import foundation.universe-levels
 
 ```agda
 Sheargroup : (l : Level) → UU (lsuc l)
-Sheargroup l =
-  Σ ( Set l)
-    ( λ X →
-      Σ ( type-Set X)
-        ( λ e →
-          Σ (type-Set X → type-Set X → type-Set X)
-            ( λ m →
-              ( (x : type-Set X) → Id (m e x) x) ×
-              ( ( (x : type-Set X) → Id (m x x) e) ×
-                ( (x y z : type-Set X) →
-                  Id (m x (m y z)) (m (m (m x (m y e)) e) z))))))
+Sheargroup l = {!!}
 ```

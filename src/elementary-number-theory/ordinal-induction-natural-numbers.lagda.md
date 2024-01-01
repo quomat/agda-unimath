@@ -28,36 +28,32 @@ The computation rule should still be proven.
 ```agda
 □-<-ℕ :
   {l : Level} → (ℕ → UU l) → ℕ → UU l
-□-<-ℕ P n = (m : ℕ) → (le-ℕ m n) → P m
+□-<-ℕ P n = {!!}
 
 reflect-□-<-ℕ :
   {l : Level} (P : ℕ → UU l) →
   (( n : ℕ) → □-<-ℕ P n) → (n : ℕ) → P n
-reflect-□-<-ℕ P f n = f (succ-ℕ n) n (succ-le-ℕ n)
+reflect-□-<-ℕ P f n = {!!}
 
 zero-ordinal-ind-ℕ :
   { l : Level} (P : ℕ → UU l) → □-<-ℕ P zero-ℕ
-zero-ordinal-ind-ℕ P m t = ex-falso (contradiction-le-zero-ℕ m t)
+zero-ordinal-ind-ℕ P m t = {!!}
 
 succ-ordinal-ind-ℕ :
   {l : Level} (P : ℕ → UU l) → ((n : ℕ) → (□-<-ℕ P n) → P n) →
   (k : ℕ) → □-<-ℕ P k → □-<-ℕ P (succ-ℕ k)
-succ-ordinal-ind-ℕ P f k g m t =
-  f m (λ m' t' → g m' (transitive-le-ℕ' m' m k t' t))
+succ-ordinal-ind-ℕ P f k g m t = {!!}
 
 induction-ordinal-ind-ℕ :
   { l : Level} (P : ℕ → UU l) →
   ( qS : (k : ℕ) → □-<-ℕ P k → □-<-ℕ P (succ-ℕ k))
   ( n : ℕ) → □-<-ℕ P n
-induction-ordinal-ind-ℕ P qS zero-ℕ = zero-ordinal-ind-ℕ P
-induction-ordinal-ind-ℕ P qS (succ-ℕ n) =
-  qS n (induction-ordinal-ind-ℕ P qS n)
+induction-ordinal-ind-ℕ P qS zero-ℕ = {!!}
+induction-ordinal-ind-ℕ P qS (succ-ℕ n) = {!!}
 
 ordinal-ind-ℕ :
   { l : Level} (P : ℕ → UU l) →
   ( (n : ℕ) → (□-<-ℕ P n) → P n) →
   ( n : ℕ) → P n
-ordinal-ind-ℕ P f =
-  reflect-□-<-ℕ P
-    ( induction-ordinal-ind-ℕ P (succ-ordinal-ind-ℕ P f))
+ordinal-ind-ℕ P f = {!!}
 ```

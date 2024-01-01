@@ -43,43 +43,7 @@ b
 repetition-of-values-is-not-injective-Fin :
   (k l : ℕ) (f : Fin k → Fin l) →
   is-not-injective f → repetition-of-values f
-repetition-of-values-is-not-injective-Fin k l f N =
-  pair (pair x (pair y (pr2 w))) (pr1 w)
-  where
-  u : Σ (Fin k) (λ x → ¬ ((y : Fin k) → f x ＝ f y → x ＝ y))
-  u =
-    exists-not-not-forall-Fin k
-      ( λ x →
-        is-decidable-Π-Fin k
-          ( λ y →
-            is-decidable-function-type
-              ( has-decidable-equality-Fin l (f x) (f y))
-              ( has-decidable-equality-Fin k x y)))
-      ( λ f → N (λ {x} {y} → f x y))
-  x : Fin k
-  x = pr1 u
-  H : ¬ ((y : Fin k) → f x ＝ f y → x ＝ y)
-  H = pr2 u
-  v : Σ (Fin k) (λ y → ¬ (f x ＝ f y → x ＝ y))
-  v = exists-not-not-forall-Fin k
-      ( λ y →
-        is-decidable-function-type
-          ( has-decidable-equality-Fin l (f x) (f y))
-          ( has-decidable-equality-Fin k x y))
-      ( H)
-  y : Fin k
-  y = pr1 v
-  K : ¬ (f x ＝ f y → x ＝ y)
-  K = pr2 v
-  w : (f x ＝ f y) × (x ≠ y)
-  w = exists-not-not-forall-count
-      ( λ _ → Id x y)
-      ( λ _ →
-        has-decidable-equality-Fin k x y)
-      ( count-is-decidable-is-prop
-        ( is-set-Fin l (f x) (f y))
-        ( has-decidable-equality-Fin l (f x) (f y)))
-      ( K)
+repetition-of-values-is-not-injective-Fin k l f N = {!!}
 ```
 
 ### On the standard finite sets, `is-repetition-of-values f x` is decidable
@@ -88,7 +52,7 @@ repetition-of-values-is-not-injective-Fin k l f N =
 -- is-decidable-is-repetition-of-values-Fin :
 --   {k l : ℕ} (f : Fin k → Fin l) (x : Fin k) →
 --   is-decidable (is-repetition-of-values f x)
--- is-decidable-is-repetition-of-values-Fin f x =
+-- is-decidable-is-repetition-of-values-Fin f x = {!!}
 --   is-decidable-Σ-Fin
 --     ( λ y →
 --       is-decidable-prod
@@ -102,7 +66,7 @@ repetition-of-values-is-not-injective-Fin k l f N =
 -- is-decidable-is-repeated-value-Fin :
 --   (k l : ℕ) (f : Fin k → Fin l) (x : Fin k) →
 --   is-decidable (is-repeated-value f x)
--- is-decidable-is-repeated-value-Fin k l f x =
+-- is-decidable-is-repeated-value-Fin k l f x = {!!}
 --   is-decidable-Σ-Fin k
 --     ( λ y →
 --       is-decidable-prod
@@ -120,7 +84,7 @@ This remains to be defined.
 ```agda
 -- is-decidable-has-repetition-of-values-Fin :
 --   (k l : ℕ) (f : Fin k → Fin l) → is-decidable (has-repetition-of-values f)
--- is-decidable-has-repetition-of-values-Fin k l f =
+-- is-decidable-has-repetition-of-values-Fin k l f = {!!}
 --   is-decidable-Σ-Fin k (is-decidable-is-repetition-of-values-Fin k l f)
 ```
 
@@ -132,30 +96,30 @@ is-injective-map-Fin-zero-Fin :
 is-injective-map-Fin-zero-Fin f {()} {y}
 
 -- is-injective-map-Fin-one-Fin : {k : ℕ} (f : Fin 1 → Fin k) → is-injective f
--- is-injective-map-Fin-one-Fin f {inr star} {inr star} p = refl
+-- is-injective-map-Fin-one-Fin f {inr star} {inr star} p = {!!}
 
 -- has-repetition-of-values-is-not-injective-Fin :
 --   (k l : ℕ) (f : Fin l → Fin k) →
 --   is-not-injective f → has-repetition-of-values f
--- has-repetition-of-values-is-not-injective-Fin k zero-ℕ f H =
+-- has-repetition-of-values-is-not-injective-Fin k zero-ℕ f H = {!!}
 --   ex-falso (H (is-injective-map-Fin-zero-Fin {k} f))
 -- has-repetition-of-values-is-not-injective-Fin k (succ-ℕ l) f H with
 --   is-decidable-is-repetition-of-values-Fin (succ-ℕ l) k f (inr star)
--- ... | inl r = pair (inr star) r
--- ... | inr g =
+-- ... | inl r = {!!}
+-- ... | inr g = {!!}
 --   α (has-repetition-of-values-is-not-injective-Fin k l (f ∘ inl) K)
 --   where
 --   K : is-not-injective (f ∘ inl)
---   K I = H (λ {x} {y} → J x y)
+--   K I = {!!}
 --     where
 --     J : (x y : Fin (succ-ℕ l)) → Id (f x) (f y) → Id x y
---     J (inl x) (inl y) p = ap inl (I p)
---     J (inl x) (inr star) p =
+--     J (inl x) (inl y) p = {!!}
+--     J (inl x) (inr star) p = {!!}
 --       ex-falso (g (triple (inl x) (Eq-Fin-eq (succ-ℕ l)) (inv p)))
---     J (inr star) (inl y) p =
+--     J (inr star) (inl y) p = {!!}
 --       ex-falso (g (triple (inl y) (Eq-Fin-eq (succ-ℕ l)) p))
---     J (inr star) (inr star) p = refl
+--     J (inr star) (inr star) p = {!!}
 --     α : has-repetition-of-values (f ∘ inl) → has-repetition-of-values f
---     α (pair x (pair y (pair h q))) =
+--     α (pair x (pair y (pair h q))) = {!!}
 --       pair (inl x) (pair (inl y) (pair (λ r → h (is-injective-inl r)) q))
 ```

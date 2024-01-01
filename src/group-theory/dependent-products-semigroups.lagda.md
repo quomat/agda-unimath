@@ -33,30 +33,25 @@ module _
   where
 
   set-Π-Semigroup : Set (l1 ⊔ l2)
-  set-Π-Semigroup = Π-Set' I (λ i → set-Semigroup (G i))
+  set-Π-Semigroup = {!!}
 
   type-Π-Semigroup : UU (l1 ⊔ l2)
-  type-Π-Semigroup = type-Set set-Π-Semigroup
+  type-Π-Semigroup = {!!}
 
   mul-Π-Semigroup :
     (f g : type-Π-Semigroup) → type-Π-Semigroup
-  mul-Π-Semigroup f g i = mul-Semigroup (G i) (f i) (g i)
+  mul-Π-Semigroup f g i = {!!}
 
   associative-mul-Π-Semigroup :
     (f g h : type-Π-Semigroup) →
     mul-Π-Semigroup (mul-Π-Semigroup f g) h ＝
     mul-Π-Semigroup f (mul-Π-Semigroup g h)
-  associative-mul-Π-Semigroup f g h =
-    eq-htpy (λ i → associative-mul-Semigroup (G i) (f i) (g i) (h i))
+  associative-mul-Π-Semigroup f g h = {!!}
 
   has-associative-mul-Π-Semigroup :
     has-associative-mul-Set set-Π-Semigroup
-  pr1 has-associative-mul-Π-Semigroup =
-    mul-Π-Semigroup
-  pr2 has-associative-mul-Π-Semigroup =
-    associative-mul-Π-Semigroup
+  pr1 has-associative-mul-Π-Semigroup = {!!}
 
   Π-Semigroup : Semigroup (l1 ⊔ l2)
-  pr1 Π-Semigroup = set-Π-Semigroup
-  pr2 Π-Semigroup = has-associative-mul-Π-Semigroup
+  pr1 Π-Semigroup = {!!}
 ```

@@ -30,16 +30,14 @@ types.
 
 ```agda
 max-Fin : (k : ℕ) → Fin k → Fin k → Fin k
-max-Fin (succ-ℕ k) (inl x) (inl y) = inl (max-Fin k x y)
-max-Fin (succ-ℕ k) (inl x) (inr _) = inr star
-max-Fin (succ-ℕ k) (inr _) (inl x) = inr star
-max-Fin (succ-ℕ k) (inr _) (inr _) = inr star
+max-Fin (succ-ℕ k) (inl x) (inl y) = {!!}
+max-Fin (succ-ℕ k) (inl x) (inr _) = {!!}
+max-Fin (succ-ℕ k) (inr _) (inl x) = {!!}
+max-Fin (succ-ℕ k) (inr _) (inr _) = {!!}
 
 max-Fin-Fin : (n k : ℕ) → (Fin (succ-ℕ n) → Fin k) → Fin k
-max-Fin-Fin zero-ℕ k f =
-  f (inr star)
-max-Fin-Fin (succ-ℕ n) k f =
-  max-Fin k (f (inr star)) (max-Fin-Fin n k (λ k → f (inl k)))
+max-Fin-Fin zero-ℕ k f = {!!}
+max-Fin-Fin (succ-ℕ n) k f = {!!}
 ```
 
 ## Properties
@@ -50,47 +48,32 @@ max-Fin-Fin (succ-ℕ n) k f =
 leq-max-Fin :
   (k : ℕ) (l m n : Fin k) →
   leq-Fin k m l → leq-Fin k n l → leq-Fin k (max-Fin k m n) l
-leq-max-Fin (succ-ℕ k) (inl x) (inl y) (inl z) p q = leq-max-Fin k x y z p q
-leq-max-Fin (succ-ℕ k) (inr x) (inl y) (inl z) p q = star
-leq-max-Fin (succ-ℕ k) (inr x) (inl y) (inr z) p q = star
-leq-max-Fin (succ-ℕ k) (inr x) (inr y) (inl z) p q = star
-leq-max-Fin (succ-ℕ k) (inr x) (inr y) (inr z) p q = star
+leq-max-Fin (succ-ℕ k) (inl x) (inl y) (inl z) p q = {!!}
+leq-max-Fin (succ-ℕ k) (inr x) (inl y) (inl z) p q = {!!}
+leq-max-Fin (succ-ℕ k) (inr x) (inl y) (inr z) p q = {!!}
+leq-max-Fin (succ-ℕ k) (inr x) (inr y) (inl z) p q = {!!}
+leq-max-Fin (succ-ℕ k) (inr x) (inr y) (inr z) p q = {!!}
 
 leq-left-leq-max-Fin :
   (k : ℕ) (l m n : Fin k) → leq-Fin k (max-Fin k m n) l → leq-Fin k m l
-leq-left-leq-max-Fin (succ-ℕ k) (inl x) (inl y) (inl z) p =
-  leq-left-leq-max-Fin k x y z p
-leq-left-leq-max-Fin (succ-ℕ k) (inr x) (inl y) (inl z) p = star
-leq-left-leq-max-Fin (succ-ℕ k) (inr x) (inl y) (inr z) p = star
-leq-left-leq-max-Fin (succ-ℕ k) (inr x) (inr y) (inl z) p = star
-leq-left-leq-max-Fin (succ-ℕ k) (inr x) (inr y) (inr z) p = star
-leq-left-leq-max-Fin (succ-ℕ k) (inl x) (inr y) (inr z) p = p
+leq-left-leq-max-Fin (succ-ℕ k) (inl x) (inl y) (inl z) p = {!!}
+leq-left-leq-max-Fin (succ-ℕ k) (inr x) (inl y) (inl z) p = {!!}
+leq-left-leq-max-Fin (succ-ℕ k) (inr x) (inl y) (inr z) p = {!!}
+leq-left-leq-max-Fin (succ-ℕ k) (inr x) (inr y) (inl z) p = {!!}
+leq-left-leq-max-Fin (succ-ℕ k) (inr x) (inr y) (inr z) p = {!!}
+leq-left-leq-max-Fin (succ-ℕ k) (inl x) (inr y) (inr z) p = {!!}
 
 leq-right-leq-max-Fin :
   (k : ℕ) (l m n : Fin k) → leq-Fin k (max-Fin k m n) l → leq-Fin k n l
-leq-right-leq-max-Fin (succ-ℕ k) (inl x) (inl y) (inl z) p =
-  leq-right-leq-max-Fin k x y z p
-leq-right-leq-max-Fin (succ-ℕ k) (inr x) (inl y) (inl z) p = star
-leq-right-leq-max-Fin (succ-ℕ k) (inr x) (inl y) (inr z) p = star
-leq-right-leq-max-Fin (succ-ℕ k) (inr x) (inr y) (inl z) p = star
-leq-right-leq-max-Fin (succ-ℕ k) (inr x) (inr y) (inr z) p = star
-leq-right-leq-max-Fin (succ-ℕ k) (inl x) (inl y) (inr z) p = p
+leq-right-leq-max-Fin (succ-ℕ k) (inl x) (inl y) (inl z) p = {!!}
+leq-right-leq-max-Fin (succ-ℕ k) (inr x) (inl y) (inl z) p = {!!}
+leq-right-leq-max-Fin (succ-ℕ k) (inr x) (inl y) (inr z) p = {!!}
+leq-right-leq-max-Fin (succ-ℕ k) (inr x) (inr y) (inl z) p = {!!}
+leq-right-leq-max-Fin (succ-ℕ k) (inr x) (inr y) (inr z) p = {!!}
+leq-right-leq-max-Fin (succ-ℕ k) (inl x) (inl y) (inr z) p = {!!}
 
 is-least-upper-bound-max-Fin :
   (k : ℕ) (m n : Fin k) →
   is-least-binary-upper-bound-Poset (Fin-Poset k) m n (max-Fin k m n)
-is-least-upper-bound-max-Fin k m n =
-  prove-is-least-binary-upper-bound-Poset
-    ( Fin-Poset k)
-    ( ( leq-left-leq-max-Fin k
-        ( max-Fin k m n)
-        ( m)
-        ( n)
-        ( refl-leq-Fin k (max-Fin k m n))) ,
-      ( leq-right-leq-max-Fin k
-        ( max-Fin k m n)
-        ( m)
-        ( n)
-        ( refl-leq-Fin k (max-Fin k m n))))
-    ( λ x (H , K) → leq-max-Fin k x m n H K)
+is-least-upper-bound-max-Fin k m n = {!!}
 ```

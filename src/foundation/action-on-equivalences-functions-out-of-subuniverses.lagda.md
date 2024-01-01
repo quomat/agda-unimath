@@ -38,12 +38,7 @@ which is uniquely determined by the
 
 ```text
                      ap f
-       (X = Y) ---------------> (f X = f Y)
-          |                          |
- equiv-eq |                          | id
-          V                          V
-       (X ≃ Y) ---------------> (f X = f Y)
-                action-equiv f
+       (X = {!!}
 ```
 
 ## Definitions
@@ -60,19 +55,14 @@ module _
       is-contr
         ( Σ ( (Y : type-subuniverse P) → equiv-subuniverse P X Y → f X ＝ f Y)
             ( λ h → h X id-equiv ＝ refl))
-    unique-action-equiv-function-subuniverse X =
-      is-contr-map-ev-id-equiv-subuniverse P X
-        ( λ Y e → f X ＝ f Y)
-        ( refl)
+    unique-action-equiv-function-subuniverse X = {!!}
 
   action-equiv-function-subuniverse :
     (X Y : type-subuniverse P) → equiv-subuniverse P X Y → f X ＝ f Y
-  action-equiv-function-subuniverse X Y =
-    ap f ∘ eq-equiv-subuniverse P
+  action-equiv-function-subuniverse X Y = {!!}
 
   compute-action-equiv-function-subuniverse-id-equiv :
     (X : type-subuniverse P) →
     action-equiv-function-subuniverse X X id-equiv ＝ refl
-  compute-action-equiv-function-subuniverse-id-equiv X =
-    ap (ap f) (compute-eq-equiv-id-equiv-subuniverse P)
+  compute-action-equiv-function-subuniverse-id-equiv X = {!!}
 ```

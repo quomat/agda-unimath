@@ -33,17 +33,17 @@ of the natural numbers as its multiplicative structure.
 
 ```agda
 ℕ*-Semigroup : Semigroup lzero
-pr1 ℕ*-Semigroup = ℕ-Set
-pr1 (pr2 ℕ*-Semigroup) = mul-ℕ
-pr2 (pr2 ℕ*-Semigroup) = associative-mul-ℕ
+pr1 ℕ*-Semigroup = {!!}
+pr1 (pr2 ℕ*-Semigroup) = {!!}
+pr2 (pr2 ℕ*-Semigroup) = {!!}
 ```
 
 ### The multiplicative monoid of natural numbers
 
 ```agda
 ℕ*-Monoid : Monoid lzero
-pr1 ℕ*-Monoid = ℕ*-Semigroup
-pr1 (pr2 ℕ*-Monoid) = 1
-pr1 (pr2 (pr2 ℕ*-Monoid)) = left-unit-law-mul-ℕ
-pr2 (pr2 (pr2 ℕ*-Monoid)) = right-unit-law-mul-ℕ
+pr1 ℕ*-Monoid = {!!}
+pr1 (pr2 ℕ*-Monoid) = {!!}
+pr1 (pr2 (pr2 ℕ*-Monoid)) = {!!}
+pr2 (pr2 (pr2 ℕ*-Monoid)) = {!!}
 ```

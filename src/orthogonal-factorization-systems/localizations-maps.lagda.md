@@ -35,9 +35,7 @@ is-localization :
   {A : UU l1} {B : UU l2} (f : A → B)
   (X : UU l3) (Y : UU l4) (η : X → Y) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ lsuc l5)
-is-localization l5 f X Y η =
-  ( is-local f Y) ×
-  ( (Z : UU l5) → is-local f Z → is-local η Z)
+is-localization l5 f X Y η = {!!}
 ```
 
 ```agda
@@ -49,7 +47,7 @@ module _
   where
 
   is-local-is-localization : is-local f Y
-  is-local-is-localization = pr1 is-localization-Y
+  is-local-is-localization = {!!}
 ```
 
 ### The type of localizations of a type with respect to a map
@@ -59,8 +57,7 @@ localization :
   {l1 l2 l3 : Level} (l4 l5 : Level)
   {A : UU l1} {B : UU l2} (f : A → B)
   (X : UU l3) → UU (l1 ⊔ l2 ⊔ l3 ⊔ lsuc l4 ⊔ lsuc l5)
-localization l4 l5 f X =
-  Σ (UU l4) (λ Y → Σ (X → Y) (is-localization l5 f X Y))
+localization l4 l5 f X = {!!}
 ```
 
 ## Properties
@@ -77,12 +74,7 @@ module _
   is-subuniverse-localization-is-localization :
     is-localization l4 f X Y η →
     is-subuniverse-localization (is-local-Prop f) X Y
-  pr1 (is-subuniverse-localization-is-localization is-localization-Y) =
-    pr1 is-localization-Y
-  pr1 (pr2 (is-subuniverse-localization-is-localization is-localization-Y)) = η
-  pr2 (pr2 (is-subuniverse-localization-is-localization is-localization-Y))
-    Z is-local-Z =
-      pr2 is-localization-Y Z is-local-Z
+  pr1 (is-subuniverse-localization-is-localization is-localization-Y) = {!!}
 ```
 
 It remains to construct a converse.
@@ -93,5 +85,4 @@ It remains to construct a converse.
    theory_, Logical Methods in Computer Science, Volume 16, Issue 1, 2020
    ([arXiv:1706.07526](https://arxiv.org/abs/1706.07526),
    [DOI:10.23638/LMCS-16(1:2)2020](https://doi.org/10.23638/LMCS-16%281%3A2%292020))
-2. <a name="classifying-types"></a>Egbert Rijke, _Classifying Types_
-   ([arXiv:1906.09435](https://arxiv.org/abs/1906.09435))
+2. <a name= {!!}

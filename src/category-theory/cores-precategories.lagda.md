@@ -45,10 +45,7 @@ module _
   where
 
   core-wide-subprecategory-Precategory : Wide-Subprecategory l2 C
-  pr1 core-wide-subprecategory-Precategory x y = is-iso-prop-Precategory C
-  pr1 (pr2 core-wide-subprecategory-Precategory) x = is-iso-id-hom-Precategory C
-  pr2 (pr2 core-wide-subprecategory-Precategory) x y z g f =
-    is-iso-comp-is-iso-Precategory C
+  pr1 core-wide-subprecategory-Precategory x y = {!!}
 ```
 
 ### The core subprecategory
@@ -59,14 +56,11 @@ module _
   where
 
   core-subprecategory-Precategory : Subprecategory lzero l2 C
-  core-subprecategory-Precategory =
-    subprecategory-Wide-Subprecategory C
-      ( core-wide-subprecategory-Precategory C)
+  core-subprecategory-Precategory = {!!}
 
   is-wide-core-Precategory :
     is-wide-Subprecategory C core-subprecategory-Precategory
-  is-wide-core-Precategory =
-    is-wide-Wide-Subprecategory C (core-wide-subprecategory-Precategory C)
+  is-wide-core-Precategory = {!!}
 ```
 
 ### The core precategory
@@ -74,8 +68,7 @@ module _
 ```agda
 core-precategory-Precategory :
   {l1 l2 : Level} (C : Precategory l1 l2) → Precategory l1 l2
-core-precategory-Precategory C =
-  precategory-Wide-Subprecategory C (core-wide-subprecategory-Precategory C)
+core-precategory-Precategory C = {!!}
 ```
 
 ### The core pregroupoid
@@ -87,20 +80,10 @@ module _
 
   is-pregroupoid-core-Precategory :
     is-pregroupoid-Precategory (core-precategory-Precategory C)
-  pr1 (pr1 (is-pregroupoid-core-Precategory x y (f , f' , l , r))) = f'
-  pr1 (pr2 (pr1 (is-pregroupoid-core-Precategory x y (f , f' , l , r)))) = f
-  pr1 (pr2 (pr2 (pr1 (is-pregroupoid-core-Precategory x y (f , f' , l , r))))) =
-    r
-  pr2 (pr2 (pr2 (pr1 (is-pregroupoid-core-Precategory x y (f , f' , l , r))))) =
-    l
-  pr1 (pr2 (is-pregroupoid-core-Precategory x y (f , f' , l , r))) =
-    eq-type-subtype (is-iso-prop-Precategory C) l
-  pr2 (pr2 (is-pregroupoid-core-Precategory x y (f , f' , l , r))) =
-    eq-type-subtype (is-iso-prop-Precategory C) r
+  pr1 (pr1 (is-pregroupoid-core-Precategory x y (f , f' , l , r))) = {!!}
 
   core-pregroupoid-Precategory : Pregroupoid l1 l2
-  pr1 core-pregroupoid-Precategory = core-precategory-Precategory C
-  pr2 core-pregroupoid-Precategory = is-pregroupoid-core-Precategory
+  pr1 core-pregroupoid-Precategory = {!!}
 ```
 
 ## Properties
@@ -114,13 +97,11 @@ module _
 
   compute-iso-core-Precategory :
     iso-Precategory C x y ≃ iso-Precategory (core-precategory-Precategory C) x y
-  compute-iso-core-Precategory =
-    compute-iso-Pregroupoid (core-pregroupoid-Precategory C)
+  compute-iso-core-Precategory = {!!}
 
   inv-compute-iso-core-Precategory :
     iso-Precategory (core-precategory-Precategory C) x y ≃ iso-Precategory C x y
-  inv-compute-iso-core-Precategory =
-    inv-compute-iso-Pregroupoid (core-pregroupoid-Precategory C)
+  inv-compute-iso-core-Precategory = {!!}
 ```
 
 ### The core is replete
@@ -132,11 +113,7 @@ module _
 
   is-replete-core-Precategory :
     is-replete-Subprecategory C (core-subprecategory-Precategory C)
-  pr1 (is-replete-core-Precategory x y (f , is-iso-f)) = star
-  pr1 (pr2 (is-replete-core-Precategory x y (f , is-iso-f))) = is-iso-f
-  pr1 (pr2 (pr2 (is-replete-core-Precategory x y (f , is-iso-f)))) = f
-  pr1 (pr2 (pr2 (pr2 (is-replete-core-Precategory x y (f , f' , l , r))))) = r
-  pr2 (pr2 (pr2 (pr2 (is-replete-core-Precategory x y (f , f' , l , r))))) = l
+  pr1 (is-replete-core-Precategory x y (f , is-iso-f)) = {!!}
 ```
 
 ### The base precategory is a category if and only if the core is
@@ -150,40 +127,23 @@ module _
     is-category-Precategory C →
     (x : obj-Precategory C) →
     is-torsorial (iso-Precategory (core-precategory-Precategory C) x)
-  is-torsorial-iso-core-is-category-Precategory is-category-C x =
-    is-contr-equiv
-      ( Σ (obj-Category (C , is-category-C)) (iso-Precategory C x))
-      ( equiv-tot (λ y → inv-compute-iso-core-Precategory C))
-      ( is-torsorial-iso-Category (C , is-category-C) x)
+  is-torsorial-iso-core-is-category-Precategory is-category-C x = {!!}
 
   is-category-core-is-category-Precategory :
     is-category-Precategory C →
     is-category-Precategory (core-precategory-Precategory C)
-  is-category-core-is-category-Precategory is-category-C x =
-    fundamental-theorem-id
-      ( is-torsorial-iso-core-is-category-Precategory is-category-C x)
-      ( iso-eq-Precategory (core-precategory-Precategory C) x)
+  is-category-core-is-category-Precategory is-category-C x = {!!}
 
   is-torsorial-iso-is-category-core-Precategory :
     is-category-Precategory (core-precategory-Precategory C) →
     (x : obj-Precategory C) →
     is-torsorial (iso-Precategory C x)
-  is-torsorial-iso-is-category-core-Precategory is-category-core-C x =
-    is-contr-equiv
-      ( Σ ( obj-Category (core-precategory-Precategory C , is-category-core-C))
-          ( iso-Precategory (core-precategory-Precategory C) x))
-      ( equiv-tot (λ y → compute-iso-core-Precategory C))
-      ( is-torsorial-iso-Category
-        ( core-precategory-Precategory C , is-category-core-C)
-        ( x))
+  is-torsorial-iso-is-category-core-Precategory is-category-core-C x = {!!}
 
   is-category-is-category-core-Precategory :
     is-category-Precategory (core-precategory-Precategory C) →
     is-category-Precategory C
-  is-category-is-category-core-Precategory is-category-core-C x =
-    fundamental-theorem-id
-      ( is-torsorial-iso-is-category-core-Precategory is-category-core-C x)
-      ( iso-eq-Precategory C x)
+  is-category-is-category-core-Precategory is-category-core-C x = {!!}
 ```
 
 ### The construction of the core is idempotent
@@ -196,7 +156,7 @@ module _
   is-idempotent-core-Precategory :
     ( core-precategory-Precategory (core-precategory-Precategory C)) ＝
     ( core-precategory-Precategory C)
-  is-idempotent-core-Precategory = {!   !}
+  is-idempotent-core-Precategory = {!!}
 ```
 
 ## See also

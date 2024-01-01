@@ -48,48 +48,35 @@ and is thus canonically pointed at the identified image of `a` and `b`.
 wedge-Pointed-Type :
   {l1 l2 : Level} (A : Pointed-Type l1) (B : Pointed-Type l2) →
   Pointed-Type (l1 ⊔ l2)
-wedge-Pointed-Type A B =
-  pushout-Pointed-Type
-    ( inclusion-point-Pointed-Type A)
-    ( inclusion-point-Pointed-Type B)
+wedge-Pointed-Type A B = {!!}
 
 infixr 10 _∨∗_
-_∨∗_ = wedge-Pointed-Type
+_∨∗_ = {!!}
 
 module _
   {l1 l2 : Level} (A : Pointed-Type l1) (B : Pointed-Type l2)
   where
 
   inl-wedge-Pointed-Type : A →∗ (A ∨∗ B)
-  inl-wedge-Pointed-Type =
-    inl-pushout-Pointed-Type
-      ( inclusion-point-Pointed-Type A)
-      ( inclusion-point-Pointed-Type B)
+  inl-wedge-Pointed-Type = {!!}
 
   map-inl-wedge-Pointed-Type :
     type-Pointed-Type A → type-Pointed-Type (A ∨∗ B)
-  map-inl-wedge-Pointed-Type =
-    map-pointed-map inl-wedge-Pointed-Type
+  map-inl-wedge-Pointed-Type = {!!}
 
   inr-wedge-Pointed-Type : B →∗ A ∨∗ B
-  inr-wedge-Pointed-Type =
-    inr-pushout-Pointed-Type
-      ( inclusion-point-Pointed-Type A)
-      ( inclusion-point-Pointed-Type B)
+  inr-wedge-Pointed-Type = {!!}
 
   map-inr-wedge-Pointed-Type :
     type-Pointed-Type B → type-Pointed-Type (A ∨∗ B)
-  map-inr-wedge-Pointed-Type =
-    map-pointed-map inr-wedge-Pointed-Type
+  map-inr-wedge-Pointed-Type = {!!}
 
 indexed-wedge-Pointed-Type :
   {l1 l2 : Level} (I : UU l1) (A : I → Pointed-Type l2) → Pointed-Type (l1 ⊔ l2)
-pr1 (indexed-wedge-Pointed-Type I A) =
-  cofiber (λ i → (i , point-Pointed-Type (A i)))
-pr2 (indexed-wedge-Pointed-Type I A) =
-  point-cofiber (λ i → (i , point-Pointed-Type (A i)))
+pr1 (indexed-wedge-Pointed-Type I A) = {!!}
+pr2 (indexed-wedge-Pointed-Type I A) = {!!}
 
-⋁∗ = indexed-wedge-Pointed-Type
+⋁∗ = {!!}
 ```
 
 **Note**: the symbols used for the wedge sum `_∨∗_` are the
@@ -109,11 +96,7 @@ glue-wedge-Pointed-Type :
   {l1 l2 : Level} (A : Pointed-Type l1) (B : Pointed-Type l2) →
   map-inl-wedge-Pointed-Type A B (point-Pointed-Type A) ＝
   map-inr-wedge-Pointed-Type A B (point-Pointed-Type B)
-glue-wedge-Pointed-Type A B =
-  glue-pushout
-    ( map-pointed-map (inclusion-point-Pointed-Type A))
-    ( map-pointed-map (inclusion-point-Pointed-Type B))
-    ( point-Pointed-Type unit-Pointed-Type)
+glue-wedge-Pointed-Type A B = {!!}
 ```
 
 ### The inclusion of the wedge sum `A ∨∗ B` into the pointed product `A ×∗ B`
@@ -134,42 +117,27 @@ module _
       ( inclusion-point-Pointed-Type A)
       ( inclusion-point-Pointed-Type B)
       ( A ×∗ B)
-  pr1 cocone-prod-wedge-Pointed-Type = inl-prod-Pointed-Type A B
-  pr1 (pr2 cocone-prod-wedge-Pointed-Type) = inr-prod-Pointed-Type A B
-  pr1 (pr2 (pr2 cocone-prod-wedge-Pointed-Type)) = refl-htpy
-  pr2 (pr2 (pr2 cocone-prod-wedge-Pointed-Type)) = refl
+  pr1 cocone-prod-wedge-Pointed-Type = {!!}
 
   pointed-map-prod-wedge-Pointed-Type :
     (A ∨∗ B) →∗ (A ×∗ B)
-  pointed-map-prod-wedge-Pointed-Type =
-    cogap-Pointed-Type
-      ( inclusion-point-Pointed-Type A)
-      ( inclusion-point-Pointed-Type B)
-      ( cocone-prod-wedge-Pointed-Type)
+  pointed-map-prod-wedge-Pointed-Type = {!!}
 
   map-prod-wedge-Pointed-Type :
     type-Pointed-Type (A ∨∗ B) → type-Pointed-Type (A ×∗ B)
-  map-prod-wedge-Pointed-Type = pr1 pointed-map-prod-wedge-Pointed-Type
+  map-prod-wedge-Pointed-Type = {!!}
 
   compute-inl-prod-wedge-Pointed-Type :
     ( x : type-Pointed-Type A) →
     ( map-prod-wedge-Pointed-Type (map-inl-wedge-Pointed-Type A B x)) ＝
     ( x , point-Pointed-Type B)
-  compute-inl-prod-wedge-Pointed-Type =
-    compute-inl-cogap-Pointed-Type
-      ( inclusion-point-Pointed-Type A)
-      ( inclusion-point-Pointed-Type B)
-      ( cocone-prod-wedge-Pointed-Type)
+  compute-inl-prod-wedge-Pointed-Type = {!!}
 
   compute-inr-prod-wedge-Pointed-Type :
     ( y : type-Pointed-Type B) →
     ( map-prod-wedge-Pointed-Type (map-inr-wedge-Pointed-Type A B y)) ＝
     ( point-Pointed-Type A , y)
-  compute-inr-prod-wedge-Pointed-Type =
-    compute-inr-cogap-Pointed-Type
-      ( inclusion-point-Pointed-Type A)
-      ( inclusion-point-Pointed-Type B)
-      ( cocone-prod-wedge-Pointed-Type)
+  compute-inr-prod-wedge-Pointed-Type = {!!}
 ```
 
 ## See also

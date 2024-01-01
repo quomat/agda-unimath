@@ -39,49 +39,44 @@ We show that arrays and lists are equivalent.
 
 ```agda
 array : {l : Level} → UU l → UU l
-array A = Σ ℕ (λ n → functional-vec A n)
+array A = {!!}
 
 module _
   {l : Level} {A : UU l}
   where
 
   length-array : array A → ℕ
-  length-array = pr1
+  length-array = {!!}
 
   functional-vec-array : (t : array A) → Fin (length-array t) → A
-  functional-vec-array = pr2
+  functional-vec-array = {!!}
 
   empty-array : array A
-  pr1 (empty-array) = zero-ℕ
-  pr2 (empty-array) ()
+  pr1 (empty-array) = {!!}
 
   is-empty-array-Prop : array A → Prop lzero
-  is-empty-array-Prop (zero-ℕ , t) = unit-Prop
-  is-empty-array-Prop (succ-ℕ n , t) = empty-Prop
+  is-empty-array-Prop (zero-ℕ , t) = {!!}
 
   is-empty-array : array A → UU lzero
-  is-empty-array = type-Prop ∘ is-empty-array-Prop
+  is-empty-array = {!!}
 
   is-nonempty-array-Prop : array A → Prop lzero
-  is-nonempty-array-Prop (zero-ℕ , t) = empty-Prop
-  is-nonempty-array-Prop (succ-ℕ n , t) = unit-Prop
+  is-nonempty-array-Prop (zero-ℕ , t) = {!!}
 
   is-nonempty-array : array A → UU lzero
-  is-nonempty-array = type-Prop ∘ is-nonempty-array-Prop
+  is-nonempty-array = {!!}
 
   head-array : (t : array A) → is-nonempty-array t → A
-  head-array (succ-ℕ n , f) _ = f (inr star)
+  head-array (succ-ℕ n , f) _ = {!!}
 
   tail-array : (t : array A) → is-nonempty-array t → array A
-  tail-array (succ-ℕ n , f) _ = n , f ∘ inl
+  tail-array (succ-ℕ n , f) _ = {!!}
 
   cons-array : A → array A → array A
-  cons-array a t =
-    ( succ-ℕ (length-array t) ,
-      ind-coprod (λ _ → A) (functional-vec-array t) λ _ → a)
+  cons-array a t = {!!}
 
   revert-array : array A → array A
-  revert-array (n , t) = (n , λ k → t (opposite-Fin n k))
+  revert-array (n , t) = {!!}
 ```
 
 ### The definition of `fold-vec`
@@ -90,8 +85,8 @@ module _
 fold-vec :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (b : B) (μ : A → (B → B)) →
   {n : ℕ} → vec A n → B
-fold-vec b μ {0} _ = b
-fold-vec b μ (a ∷ l) = μ a (fold-vec b μ l)
+fold-vec b μ {0} _ = {!!}
+fold-vec b μ (a ∷ l) = {!!}
 ```
 
 ## Properties
@@ -104,61 +99,38 @@ module _
   where
 
   list-vec : (n : ℕ) → (vec A n) → list A
-  list-vec zero-ℕ _ = nil
-  list-vec (succ-ℕ n) (x ∷ l) = cons x (list-vec n l)
+  list-vec zero-ℕ _ = {!!}
 
   vec-list : (l : list A) → vec A (length-list l)
-  vec-list nil = empty-vec
-  vec-list (cons x l) = x ∷ vec-list l
+  vec-list nil = {!!}
 
   is-section-vec-list : (λ l → list-vec (length-list l) (vec-list l)) ~ id
-  is-section-vec-list nil = refl
-  is-section-vec-list (cons x l) = ap (cons x) (is-section-vec-list l)
+  is-section-vec-list nil = {!!}
 
   is-retraction-vec-list :
     ( λ (x : Σ ℕ (λ n → vec A n)) →
       ( length-list (list-vec (pr1 x) (pr2 x)) ,
         vec-list (list-vec (pr1 x) (pr2 x)))) ~
     id
-  is-retraction-vec-list (zero-ℕ , empty-vec) = refl
-  is-retraction-vec-list (succ-ℕ n , (x ∷ v)) =
-    ap
-      ( λ v → succ-ℕ (pr1 v) , (x ∷ (pr2 v)))
-      ( is-retraction-vec-list (n , v))
+  is-retraction-vec-list (zero-ℕ , empty-vec) = {!!}
 
   list-array : array A → list A
-  list-array (n , t) = list-vec n (listed-vec-functional-vec n t)
+  list-array (n , t) = {!!}
 
   array-list : list A → array A
-  array-list l =
-    ( length-list l , functional-vec-vec (length-list l) (vec-list l))
+  array-list l = {!!}
 
   is-section-array-list : (list-array ∘ array-list) ~ id
-  is-section-array-list nil = refl
-  is-section-array-list (cons x l) = ap (cons x) (is-section-array-list l)
+  is-section-array-list nil = {!!}
 
   is-retraction-array-list : (array-list ∘ list-array) ~ id
-  is-retraction-array-list (n , t) =
-    ap
-      ( λ (n , v) → (n , functional-vec-vec n v))
-      ( is-retraction-vec-list (n , listed-vec-functional-vec n t)) ∙
-    eq-pair-Σ refl (is-retraction-functional-vec-vec n t)
+  is-retraction-array-list (n , t) = {!!}
 
   equiv-list-array : array A ≃ list A
-  pr1 equiv-list-array = list-array
-  pr2 equiv-list-array =
-    is-equiv-is-invertible
-      array-list
-      is-section-array-list
-      is-retraction-array-list
+  pr1 equiv-list-array = {!!}
 
   equiv-array-list : list A ≃ array A
-  pr1 equiv-array-list = array-list
-  pr2 equiv-array-list =
-    is-equiv-is-invertible
-      list-array
-      is-retraction-array-list
-      is-section-array-list
+  pr1 equiv-array-list = {!!}
 ```
 
 ### Computational rules of the equivalence between arrays and lists
@@ -167,16 +139,11 @@ module _
   compute-length-list-list-vec :
     (n : ℕ) (v : vec A n) →
     length-list (list-vec n v) ＝ n
-  compute-length-list-list-vec zero-ℕ v = refl
-  compute-length-list-list-vec (succ-ℕ n) (x ∷ v) =
-    ap succ-ℕ (compute-length-list-list-vec n v)
+  compute-length-list-list-vec zero-ℕ v = {!!}
 
   compute-length-list-list-array :
     (t : array A) → length-list (list-array t) ＝ length-array t
-  compute-length-list-list-array t =
-    compute-length-list-list-vec
-      ( length-array t)
-      ( listed-vec-functional-vec (length-array t) (functional-vec-array t))
+  compute-length-list-list-array t = {!!}
 ```
 
 ### An element `x` is in a vector `v` iff it is in `list-vec n v`
@@ -185,18 +152,12 @@ module _
   is-in-list-is-in-vec-list :
     (l : list A) (x : A) →
     x ∈-vec (vec-list l) → x ∈-list l
-  is-in-list-is-in-vec-list (cons y l) .y (is-head .y .(vec-list l)) =
-    is-head y l
-  is-in-list-is-in-vec-list (cons y l) x (is-in-tail .x .y .(vec-list l) I) =
-    is-in-tail x y l (is-in-list-is-in-vec-list l x I)
+  is-in-list-is-in-vec-list (cons y l) .y (is-head .y .(vec-list l)) = {!!}
 
   is-in-vec-list-is-in-list :
     (l : list A) (x : A) →
     x ∈-list l → x ∈-vec (vec-list l)
-  is-in-vec-list-is-in-list (cons x l) x (is-head .x l) =
-    is-head x (vec-list l)
-  is-in-vec-list-is-in-list (cons y l) x (is-in-tail .x .y l I) =
-    is-in-tail x y (vec-list l) (is-in-vec-list-is-in-list l x I)
+  is-in-vec-list-is-in-list (cons x l) x (is-head .x l) = {!!}
 ```
 
 ### Link between `fold-list` and `fold-vec`
@@ -210,7 +171,5 @@ module _
   htpy-fold-list-fold-vec :
     (l : list A) →
     fold-vec b μ (vec-list l) ＝ fold-list b μ l
-  htpy-fold-list-fold-vec nil = refl
-  htpy-fold-list-fold-vec (cons x l) =
-    ap (μ x) (htpy-fold-list-fold-vec l)
+  htpy-fold-list-fold-vec nil = {!!}
 ```

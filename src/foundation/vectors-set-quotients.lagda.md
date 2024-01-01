@@ -62,13 +62,8 @@ all-sim-equivalence-relation :
   ( A : functional-vec (UU l1) n)
   ( R : (i : Fin n) → equivalence-relation l2 (A i)) →
   ( equivalence-relation l2 (multivariable-input n A))
-all-sim-equivalence-relation {l1} {l2} zero-ℕ A R =
-  raise-indiscrete-equivalence-relation l2 (raise-unit l1)
-all-sim-equivalence-relation (succ-ℕ n) A R =
-  prod-equivalence-relation (R (inr star))
-    ( all-sim-equivalence-relation n
-      ( tail-functional-vec n A)
-      ( λ x → R (inl x)))
+all-sim-equivalence-relation {l1} {l2} zero-ℕ A R = {!!}
+all-sim-equivalence-relation (succ-ℕ n) A R = {!!}
 ```
 
 ### The set quotient of a vector of types
@@ -80,8 +75,7 @@ set-quotient-vector :
   ( A : functional-vec (UU l1) n)
   ( R : (i : Fin n) → equivalence-relation l2 (A i)) →
   UU (l1 ⊔ l2)
-set-quotient-vector n A R =
-  multivariable-input n (λ i → ( set-quotient (R i)))
+set-quotient-vector n A R = {!!}
 
 is-set-set-quotient-vector :
   { l1 l2 : Level}
@@ -89,13 +83,8 @@ is-set-set-quotient-vector :
   ( A : functional-vec (UU l1) n)
   ( R : (i : Fin n) → equivalence-relation l2 (A i)) →
   is-set (set-quotient-vector n A R)
-is-set-set-quotient-vector zero-ℕ A R = is-set-raise-unit
-is-set-set-quotient-vector (succ-ℕ n) A R =
-  is-set-prod
-  ( is-set-set-quotient (R (inr star)))
-  ( is-set-set-quotient-vector n
-    ( tail-functional-vec n A)
-    ( λ x → R (inl x)))
+is-set-set-quotient-vector zero-ℕ A R = {!!}
+is-set-set-quotient-vector (succ-ℕ n) A R = {!!}
 
 set-quotient-vector-Set :
   { l1 l2 : Level}
@@ -103,10 +92,8 @@ set-quotient-vector-Set :
   ( A : functional-vec (UU l1) n)
   ( R : (i : Fin n) → equivalence-relation l2 (A i)) →
   Set (l1 ⊔ l2)
-pr1 (set-quotient-vector-Set n A R) =
-  set-quotient-vector n A R
-pr2 (set-quotient-vector-Set n A R) =
-  is-set-set-quotient-vector n A R
+pr1 (set-quotient-vector-Set n A R) = {!!}
+pr2 (set-quotient-vector-Set n A R) = {!!}
 
 quotient-vector-map :
   { l1 l2 : Level}
@@ -115,14 +102,9 @@ quotient-vector-map :
   ( R : (i : Fin n) → equivalence-relation l2 (A i)) →
   multivariable-input n A →
   set-quotient-vector n A R
-quotient-vector-map zero-ℕ A R a = raise-star
-pr1 (quotient-vector-map (succ-ℕ n) A R (a0 , a)) =
-  quotient-map (R (inr star)) (a0)
-pr2 (quotient-vector-map (succ-ℕ n) A R a) =
-  quotient-vector-map n
-    ( tail-functional-vec n A)
-    ( λ x → R (inl x))
-    ( tail-multivariable-input n A a)
+quotient-vector-map zero-ℕ A R a = {!!}
+pr1 (quotient-vector-map (succ-ℕ n) A R (a0 , a)) = {!!}
+pr2 (quotient-vector-map (succ-ℕ n) A R a) = {!!}
 
 reflects-quotient-vector-map :
   { l1 l2 : Level}
@@ -132,13 +114,8 @@ reflects-quotient-vector-map :
   reflects-equivalence-relation
     ( all-sim-equivalence-relation n A R)
     ( quotient-vector-map n A R)
-reflects-quotient-vector-map zero-ℕ A R p = refl
-reflects-quotient-vector-map (succ-ℕ n) A R (p , p') =
-  eq-pair
-    ( apply-effectiveness-quotient-map' (R (inr star)) p)
-    ( reflects-quotient-vector-map n
-      ( tail-functional-vec n A)
-      ( λ x → R (inl x)) p')
+reflects-quotient-vector-map zero-ℕ A R p = {!!}
+reflects-quotient-vector-map (succ-ℕ n) A R (p , p') = {!!}
 
 reflecting-map-quotient-vector-map :
   { l1 l2 : Level}
@@ -148,10 +125,8 @@ reflecting-map-quotient-vector-map :
   reflecting-map-equivalence-relation
     ( all-sim-equivalence-relation n A R)
     ( set-quotient-vector n A R)
-pr1 (reflecting-map-quotient-vector-map n A R) =
-  quotient-vector-map n A R
-pr2 (reflecting-map-quotient-vector-map n A R) =
-  reflects-quotient-vector-map n A R
+pr1 (reflecting-map-quotient-vector-map n A R) = {!!}
+pr2 (reflecting-map-quotient-vector-map n A R) = {!!}
 
 equiv-set-quotient-vector :
   { l1 l2 : Level}
@@ -159,54 +134,12 @@ equiv-set-quotient-vector :
   ( A : functional-vec (UU l1) n)
   ( R : (i : Fin n) → equivalence-relation l2 (A i)) →
   set-quotient-vector n A R ≃ set-quotient (all-sim-equivalence-relation n A R)
-pr1 (equiv-set-quotient-vector zero-ℕ A R) _ = quotient-map _ raise-star
-pr1 (pr1 (pr2 (equiv-set-quotient-vector zero-ℕ A R))) _ = raise-star
-pr2 (pr1 (pr2 (equiv-set-quotient-vector {l1} {l2} zero-ℕ A R))) =
-  induction-set-quotient
-    ( raise-indiscrete-equivalence-relation l2 (raise-unit l1))
-    ( λ x → pair _ (is-set-set-quotient _ _ x))
-    ( λ x → apply-effectiveness-quotient-map' _ raise-star)
-pr1 (pr2 (pr2 (equiv-set-quotient-vector zero-ℕ A R))) _ = raise-star
-pr2 (pr2 (pr2 (equiv-set-quotient-vector zero-ℕ A R))) (map-raise star) = refl
-equiv-set-quotient-vector (succ-ℕ n) A R =
-  equivalence-reasoning
-    set-quotient (R (inr star)) ×
-        ( set-quotient-vector n
-          ( tail-functional-vec n A)
-          ( λ x → R (inl x)))
-    ≃ set-quotient (R (inr star)) ×
-        ( set-quotient
-          (all-sim-equivalence-relation n
-          ( tail-functional-vec n A)
-          ( λ x → R (inl x))))
-      by lemma
-    ≃ set-quotient (all-sim-equivalence-relation (succ-ℕ n) A R)
-      by (equiv-quotient-prod-prod-set-quotient _ _)
-  where
-  lemma :
-    ( set-quotient (R (inr star)) ×
-      ( set-quotient-vector n
-        ( tail-functional-vec n A)
-        (λ x → R (inl x)))) ≃
-      ( set-quotient (R (inr star)) ×
-        ( set-quotient
-          ( all-sim-equivalence-relation n
-            ( tail-functional-vec n A)
-            ( λ x → R (inl x)))))
-  pr1 (pr1 lemma (qa0 , qa)) = qa0
-  pr2 (pr1 lemma (qa0 , qa)) = map-equiv (equiv-set-quotient-vector n _ _) qa
-  pr1 (pr1 (pr1 (pr2 lemma)) (qa0 , qa)) = qa0
-  pr2 (pr1 (pr1 (pr2 lemma)) (qa0 , qa)) =
-    map-inv-equiv (equiv-set-quotient-vector n _ _) qa
-  pr2 (pr1 (pr2 lemma)) (qa0 , qa) =
-    eq-pair refl (is-section-map-inv-equiv (equiv-set-quotient-vector n _ _) qa)
-  pr1 (pr1 (pr2 (pr2 lemma)) (qa0 , qa)) = qa0
-  pr2 (pr1 (pr2 (pr2 lemma)) (qa0 , qa)) =
-    map-inv-equiv (equiv-set-quotient-vector n _ _) qa
-  pr2 (pr2 (pr2 lemma)) (qa0 , qa) =
-    eq-pair
-      ( refl)
-      ( is-retraction-map-inv-equiv (equiv-set-quotient-vector n _ _) qa)
+pr1 (equiv-set-quotient-vector zero-ℕ A R) _ = {!!}
+pr1 (pr1 (pr2 (equiv-set-quotient-vector zero-ℕ A R))) _ = {!!}
+pr2 (pr1 (pr2 (equiv-set-quotient-vector {l1} {l2} zero-ℕ A R))) = {!!}
+pr1 (pr2 (pr2 (equiv-set-quotient-vector zero-ℕ A R))) _ = {!!}
+pr2 (pr2 (pr2 (equiv-set-quotient-vector zero-ℕ A R))) (map-raise star) = {!!}
+equiv-set-quotient-vector (succ-ℕ n) A R = {!!}
 
 map-equiv-equiv-set-quotient-vector-quotient-map :
   { l1 l2 : Level}
@@ -216,22 +149,8 @@ map-equiv-equiv-set-quotient-vector-quotient-map :
   ( map-equiv (equiv-set-quotient-vector n A R) ∘
     ( quotient-vector-map n A R)) ~
   ( quotient-map (all-sim-equivalence-relation n A R))
-map-equiv-equiv-set-quotient-vector-quotient-map zero-ℕ A R (map-raise star) =
-  refl
-map-equiv-equiv-set-quotient-vector-quotient-map (succ-ℕ n) A R (a0 , a) =
-  ap
-    ( λ qa →
-      map-equiv
-        ( equiv-quotient-prod-prod-set-quotient _ _)
-        ( quotient-map (R (inr star)) a0 , qa))
-    ( map-equiv-equiv-set-quotient-vector-quotient-map n
-        ( tail-functional-vec n A)
-        ( λ x → R (inl x)) a) ∙
-  ( triangle-uniqueness-prod-set-quotient
-    ( R (inr star))
-    ( all-sim-equivalence-relation n (λ z → tail-functional-vec n A z)
-    ( λ i → R (inl i)))
-    ( a0 , a))
+map-equiv-equiv-set-quotient-vector-quotient-map zero-ℕ A R (map-raise star) = {!!}
+map-equiv-equiv-set-quotient-vector-quotient-map (succ-ℕ n) A R (a0 , a) = {!!}
 
 inv-precomp-vector-set-quotient :
   { l l1 l2 : Level}
@@ -243,17 +162,8 @@ inv-precomp-vector-set-quotient :
     ( all-sim-equivalence-relation n A R)
     ( type-Set X) →
   ((set-quotient-vector n A R) → type-Set X)
-inv-precomp-vector-set-quotient zero-ℕ A R X f (map-raise star) =
-  pr1 f raise-star
-inv-precomp-vector-set-quotient (succ-ℕ n) A R X f (qa0 , qa) =
-  inv-precomp-set-quotient-prod-set-quotient
-    ( R (inr star))
-    ( all-sim-equivalence-relation n
-      ( tail-functional-vec n A)
-      ( λ x → R (inl x)))
-    ( X)
-    ( f)
-    ( qa0 , map-equiv (equiv-set-quotient-vector n _ _) qa)
+inv-precomp-vector-set-quotient zero-ℕ A R X f (map-raise star) = {!!}
+inv-precomp-vector-set-quotient (succ-ℕ n) A R X f (qa0 , qa) = {!!}
 
 abstract
   is-section-inv-precomp-vector-set-quotient :
@@ -269,40 +179,7 @@ abstract
       ( X)) ∘
     ( inv-precomp-vector-set-quotient n A R X) ~
     ( id)
-  is-section-inv-precomp-vector-set-quotient {l} {l1} {l2} 0 A R X f =
-    eq-pair-Σ
-      ( eq-htpy (λ where (map-raise star) → refl))
-      ( eq-is-prop
-        ( is-prop-reflects-equivalence-relation
-          ( raise-indiscrete-equivalence-relation l2 (raise-unit l1))
-          ( X)
-          ( map-reflecting-map-equivalence-relation _ f)))
-  is-section-inv-precomp-vector-set-quotient (succ-ℕ n) A R X f =
-    eq-pair-Σ
-      ( eq-htpy
-        ( λ (a0 , a) →
-          ( ap
-            ( inv-precomp-set-quotient-prod-set-quotient
-              ( R (inr star))
-              ( all-sim-equivalence-relation n
-                ( tail-functional-vec n A)
-                ( λ x → R (inl x))) X f)
-            ( eq-pair-Σ refl
-              ( map-equiv-equiv-set-quotient-vector-quotient-map n _ _ a)) ∙
-          ( htpy-eq
-            ( ap
-              ( map-reflecting-map-equivalence-relation _)
-              ( is-section-inv-precomp-set-quotient-prod-set-quotient
-                ( R (inr star))
-                ( all-sim-equivalence-relation n
-                  ( tail-functional-vec n A)
-                  ( λ x → R (inl x))) X f))
-            ( a0 , a)))))
-      ( eq-is-prop
-        ( is-prop-reflects-equivalence-relation
-          ( all-sim-equivalence-relation (succ-ℕ n) A R)
-          ( X)
-          ( map-reflecting-map-equivalence-relation _ f)))
+  is-section-inv-precomp-vector-set-quotient {l} {l1} {l2} 0 A R X f = {!!}
 
 section-precomp-vector-set-quotient :
   { l l1 l2 : Level}
@@ -316,10 +193,8 @@ section-precomp-vector-set-quotient :
       ( set-quotient-vector-Set n A R)
       ( reflecting-map-quotient-vector-map n A R)
       ( X)))
-pr1 (section-precomp-vector-set-quotient n A R X) =
-  inv-precomp-vector-set-quotient n A R X
-pr2 (section-precomp-vector-set-quotient n A R X) =
-  is-section-inv-precomp-vector-set-quotient n A R X
+pr1 (section-precomp-vector-set-quotient n A R X) = {!!}
+pr2 (section-precomp-vector-set-quotient n A R X) = {!!}
 
 abstract
   is-retraction-inv-precomp-vector-set-quotient :
@@ -334,29 +209,7 @@ abstract
         ( set-quotient-vector-Set n A R)
         ( reflecting-map-quotient-vector-map n A R)
         ( X)))
-  pr1 (is-retraction-inv-precomp-vector-set-quotient n A R X) =
-    inv-precomp-vector-set-quotient n A R X
-  pr2 (is-retraction-inv-precomp-vector-set-quotient zero-ℕ A R X) f =
-    eq-htpy (λ where (map-raise star) → refl)
-  pr2 (is-retraction-inv-precomp-vector-set-quotient (succ-ℕ n) A R X) f =
-    ap (_∘ set-quotient-vector-prod-set-quotient)
-      is-inv-map-inv-equiv-f ∙ lemma-f
-    where
-    precomp-f :
-      reflecting-map-equivalence-relation
-        ( prod-equivalence-relation (R (inr star))
-        ( all-sim-equivalence-relation n
-          ( tail-functional-vec n A)
-          ( λ x → R (inl x))))
-        ( type-Set X)
-    precomp-f =
-      precomp-Set-Quotient
-        ( prod-equivalence-relation (R (inr star))
-        ( all-sim-equivalence-relation n
-          ( tail-functional-vec n A)
-          ( λ x → R (inl x))))
-        ( set-quotient-vector-Set (succ-ℕ n) A R)
-        ( reflecting-map-quotient-vector-map (succ-ℕ n) A R) X f
+  pr1 (is-retraction-inv-precomp-vector-set-quotient n A R X) = {!!}
 
     set-quotient-vector-prod-set-quotient :
       ( set-quotient-vector (succ-ℕ n) A R) →
@@ -365,8 +218,7 @@ abstract
         ( all-sim-equivalence-relation n
           ( tail-functional-vec n A)
           ( λ x → R (inl x))))
-    set-quotient-vector-prod-set-quotient (qa0' , qa') =
-      (qa0' , map-equiv (equiv-set-quotient-vector n _ _) qa')
+    set-quotient-vector-prod-set-quotient (qa0' , qa') = {!!}
 
     map-inv-equiv-f :
       ( prod-set-quotient
@@ -375,19 +227,10 @@ abstract
           ( tail-functional-vec n A)
           ( λ x → R (inl x)))) →
       ( type-Set X)
-    map-inv-equiv-f (qa0 , qa) =
-      f (qa0 , map-inv-equiv (equiv-set-quotient-vector n _ _) qa)
+    map-inv-equiv-f (qa0 , qa) = {!!}
 
     lemma-f : (map-inv-equiv-f ∘ set-quotient-vector-prod-set-quotient) ＝ f
-    lemma-f =
-      eq-htpy
-        ( λ (qa0 , qa) →
-          ( ap f
-            ( eq-pair-Σ
-              ( refl)
-              ( is-retraction-map-inv-equiv
-                ( equiv-set-quotient-vector n _ _)
-                ( qa)))))
+    lemma-f = {!!}
 
     is-retraction-inv-precomp-f :
       ( inv-precomp-set-quotient-prod-set-quotient
@@ -413,14 +256,7 @@ abstract
             ( X)
             ( map-inv-equiv-f))) ＝
       map-inv-equiv-f
-    is-retraction-inv-precomp-f =
-      is-retraction-inv-precomp-set-quotient-prod-set-quotient
-        ( R (inr star))
-        ( all-sim-equivalence-relation n
-          ( tail-functional-vec n A)
-          ( λ x → R (inl x)))
-        ( X)
-        ( map-inv-equiv-f)
+    is-retraction-inv-precomp-f = {!!}
 
     is-inv-map-inv-equiv-f :
       ( inv-precomp-set-quotient-prod-set-quotient
@@ -431,30 +267,7 @@ abstract
         ( X)
         ( precomp-f)) ＝
         map-inv-equiv-f
-    is-inv-map-inv-equiv-f =
-      ap
-        ( inv-precomp-set-quotient-prod-set-quotient
-          ( R (inr star))
-          ( all-sim-equivalence-relation n (tail-functional-vec n A)
-          ( λ x → R (inl x)))
-          ( X))
-        ( eq-pair-Σ
-          ( ap ( _∘ quotient-vector-map _ A R) (inv lemma-f) ∙
-            ( ap
-              ( map-inv-equiv-f ∘_)
-              ( eq-htpy
-                ( λ (a0 , a) →
-                  ( eq-pair-Σ
-                    ( refl)
-                    ( map-equiv-equiv-set-quotient-vector-quotient-map
-                      _ _ _ a))))))
-          ( eq-is-prop
-            ( is-prop-reflects-equivalence-relation
-              ( prod-equivalence-relation
-                ( R (inr star))
-                ( all-sim-equivalence-relation n _ _))
-              ( X) _))) ∙
-        is-retraction-inv-precomp-f
+    is-inv-map-inv-equiv-f = {!!}
 
 is-set-quotient-vector-set-quotient :
   { l1 l2 : Level}
@@ -465,8 +278,6 @@ is-set-quotient-vector-set-quotient :
     ( all-sim-equivalence-relation n A R)
     ( set-quotient-vector-Set n A R)
     ( reflecting-map-quotient-vector-map n A R)
-pr1 (is-set-quotient-vector-set-quotient n A R X) =
-  section-precomp-vector-set-quotient n A R X
-pr2 (is-set-quotient-vector-set-quotient n A R X) =
-  is-retraction-inv-precomp-vector-set-quotient n A R X
+pr1 (is-set-quotient-vector-set-quotient n A R X) = {!!}
+pr2 (is-set-quotient-vector-set-quotient n A R X) = {!!}
 ```

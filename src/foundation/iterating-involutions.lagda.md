@@ -34,13 +34,5 @@ module _
 
   iterate-involution :
     (n : ℕ) (x : X) → iterate n f x ＝ iterate (nat-Fin 2 (mod-two-ℕ n)) f x
-  iterate-involution zero-ℕ x = refl
-  iterate-involution (succ-ℕ n) x =
-    ap f (iterate-involution n x) ∙ (cases-iterate-involution (mod-two-ℕ n))
-    where
-    cases-iterate-involution :
-      (k : Fin 2) →
-      f (iterate (nat-Fin 2 k) f x) ＝ iterate (nat-Fin 2 (succ-Fin 2 k)) f x
-    cases-iterate-involution (inl (inr _)) = refl
-    cases-iterate-involution (inr _) = P x
+  iterate-involution zero-ℕ x = {!!}
 ```

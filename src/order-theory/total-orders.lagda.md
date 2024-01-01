@@ -39,79 +39,79 @@ module _
   where
 
   incident-Poset-Prop : (x y : type-Poset X) → Prop l2
-  incident-Poset-Prop = incident-Preorder-Prop (preorder-Poset X)
+  incident-Poset-Prop = {!!}
 
   incident-Poset : (x y : type-Poset X) → UU l2
-  incident-Poset = incident-Preorder (preorder-Poset X)
+  incident-Poset = {!!}
 
   is-prop-incident-Poset :
     (x y : type-Poset X) → is-prop (incident-Poset x y)
-  is-prop-incident-Poset = is-prop-incident-Preorder (preorder-Poset X)
+  is-prop-incident-Poset = {!!}
 
   is-total-Poset-Prop : Prop (l1 ⊔ l2)
-  is-total-Poset-Prop = is-total-Preorder-Prop (preorder-Poset X)
+  is-total-Poset-Prop = {!!}
 
   is-total-Poset : UU (l1 ⊔ l2)
-  is-total-Poset = is-total-Preorder (preorder-Poset X)
+  is-total-Poset = {!!}
 
   is-prop-is-total-Poset : is-prop is-total-Poset
-  is-prop-is-total-Poset = is-prop-is-total-Preorder (preorder-Poset X)
+  is-prop-is-total-Poset = {!!}
 ```
 
 ### The type of total orders
 
 ```agda
 Total-Order : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Total-Order l1 l2 = Σ (Poset l1 l2) is-total-Poset
+Total-Order l1 l2 = {!!}
 
 module _
   {l1 l2 : Level} (X : Total-Order l1 l2)
   where
 
   poset-Total-Order : Poset l1 l2
-  poset-Total-Order = pr1 X
+  poset-Total-Order = {!!}
 
   preorder-Total-Order : Preorder l1 l2
-  preorder-Total-Order = preorder-Poset poset-Total-Order
+  preorder-Total-Order = {!!}
 
   is-total-Total-Order : is-total-Poset (poset-Total-Order)
-  is-total-Total-Order = pr2 X
+  is-total-Total-Order = {!!}
 
   type-Total-Order : UU l1
-  type-Total-Order = type-Poset poset-Total-Order
+  type-Total-Order = {!!}
 
   leq-Total-Order-Prop : (x y : type-Total-Order) → Prop l2
-  leq-Total-Order-Prop = leq-Poset-Prop poset-Total-Order
+  leq-Total-Order-Prop = {!!}
 
   leq-Total-Order : (x y : type-Total-Order) → UU l2
-  leq-Total-Order = leq-Poset poset-Total-Order
+  leq-Total-Order = {!!}
 
   is-prop-leq-Total-Order :
     (x y : type-Total-Order) → is-prop (leq-Total-Order x y)
-  is-prop-leq-Total-Order = is-prop-leq-Poset poset-Total-Order
+  is-prop-leq-Total-Order = {!!}
 
   concatenate-eq-leq-Total-Order :
     {x y z : type-Total-Order} → x ＝ y →
     leq-Total-Order y z → leq-Total-Order x z
-  concatenate-eq-leq-Total-Order = concatenate-eq-leq-Poset poset-Total-Order
+  concatenate-eq-leq-Total-Order = {!!}
 
   concatenate-leq-eq-Total-Order :
     {x y z : type-Total-Order} →
     leq-Total-Order x y → y ＝ z → leq-Total-Order x z
-  concatenate-leq-eq-Total-Order = concatenate-leq-eq-Poset poset-Total-Order
+  concatenate-leq-eq-Total-Order = {!!}
 
   refl-leq-Total-Order : is-reflexive leq-Total-Order
-  refl-leq-Total-Order = refl-leq-Poset poset-Total-Order
+  refl-leq-Total-Order = {!!}
 
   transitive-leq-Total-Order : is-transitive leq-Total-Order
-  transitive-leq-Total-Order = transitive-leq-Poset poset-Total-Order
+  transitive-leq-Total-Order = {!!}
 
   antisymmetric-leq-Total-Order : is-antisymmetric leq-Total-Order
-  antisymmetric-leq-Total-Order = antisymmetric-leq-Poset poset-Total-Order
+  antisymmetric-leq-Total-Order = {!!}
 
   is-set-type-Total-Order : is-set type-Total-Order
-  is-set-type-Total-Order = is-set-type-Poset poset-Total-Order
+  is-set-type-Total-Order = {!!}
 
   set-Total-Order : Set l1
-  set-Total-Order = set-Poset poset-Total-Order
+  set-Total-Order = {!!}
 ```

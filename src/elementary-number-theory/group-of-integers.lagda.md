@@ -29,20 +29,20 @@ forms a group.
 
 ```agda
 ℤ-Semigroup : Semigroup lzero
-pr1 ℤ-Semigroup = ℤ-Set
-pr1 (pr2 ℤ-Semigroup) = add-ℤ
-pr2 (pr2 ℤ-Semigroup) = associative-add-ℤ
+pr1 ℤ-Semigroup = {!!}
+pr1 (pr2 ℤ-Semigroup) = {!!}
+pr2 (pr2 ℤ-Semigroup) = {!!}
 
 ℤ-Group : Group lzero
-pr1 ℤ-Group = ℤ-Semigroup
-pr1 (pr1 (pr2 ℤ-Group)) = zero-ℤ
-pr1 (pr2 (pr1 (pr2 ℤ-Group))) = left-unit-law-add-ℤ
-pr2 (pr2 (pr1 (pr2 ℤ-Group))) = right-unit-law-add-ℤ
-pr1 (pr2 (pr2 ℤ-Group)) = neg-ℤ
-pr1 (pr2 (pr2 (pr2 ℤ-Group))) = left-inverse-law-add-ℤ
-pr2 (pr2 (pr2 (pr2 ℤ-Group))) = right-inverse-law-add-ℤ
+pr1 ℤ-Group = {!!}
+pr1 (pr1 (pr2 ℤ-Group)) = {!!}
+pr1 (pr2 (pr1 (pr2 ℤ-Group))) = {!!}
+pr2 (pr2 (pr1 (pr2 ℤ-Group))) = {!!}
+pr1 (pr2 (pr2 ℤ-Group)) = {!!}
+pr1 (pr2 (pr2 (pr2 ℤ-Group))) = {!!}
+pr2 (pr2 (pr2 (pr2 ℤ-Group))) = {!!}
 
 ℤ-Ab : Ab lzero
-pr1 ℤ-Ab = ℤ-Group
-pr2 ℤ-Ab = commutative-add-ℤ
+pr1 ℤ-Ab = {!!}
+pr2 ℤ-Ab = {!!}
 ```

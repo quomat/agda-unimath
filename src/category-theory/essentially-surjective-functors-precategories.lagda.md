@@ -39,24 +39,14 @@ module _
   where
 
   is-essentially-surjective-prop-functor-Precategory : Prop (l1 ⊔ l3 ⊔ l4)
-  is-essentially-surjective-prop-functor-Precategory =
-    Π-Prop
-      ( obj-Precategory D)
-      ( λ y →
-        ∃-Prop
-          ( obj-Precategory C)
-          ( λ x → iso-Precategory D (obj-functor-Precategory C D F x) y))
+  is-essentially-surjective-prop-functor-Precategory = {!!}
 
   is-essentially-surjective-functor-Precategory : UU (l1 ⊔ l3 ⊔ l4)
-  is-essentially-surjective-functor-Precategory =
-    ( y : obj-Precategory D) →
-    ∃ ( obj-Precategory C)
-      ( λ x → iso-Precategory D (obj-functor-Precategory C D F x) y)
+  is-essentially-surjective-functor-Precategory = {!!}
 
   is-prop-is-essentially-surjective-functor-Precategory :
     is-prop is-essentially-surjective-functor-Precategory
-  is-prop-is-essentially-surjective-functor-Precategory =
-    is-prop-type-Prop is-essentially-surjective-prop-functor-Precategory
+  is-prop-is-essentially-surjective-functor-Precategory = {!!}
 ```
 
 ### The type of essentially surjective functors
@@ -65,9 +55,7 @@ module _
 essentially-surjective-functor-Precategory :
   {l1 l2 l3 l4 : Level} (C : Precategory l1 l2) (D : Precategory l3 l4) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-essentially-surjective-functor-Precategory C D =
-  Σ ( functor-Precategory C D)
-    ( is-essentially-surjective-functor-Precategory C D)
+essentially-surjective-functor-Precategory C D = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}
@@ -77,18 +65,16 @@ module _
 
   functor-essentially-surjective-functor-Precategory :
     functor-Precategory C D
-  functor-essentially-surjective-functor-Precategory = pr1 F
+  functor-essentially-surjective-functor-Precategory = {!!}
 
   is-essentially-surjective-essentially-surjective-functor-Precategory :
     is-essentially-surjective-functor-Precategory C D
       ( functor-essentially-surjective-functor-Precategory)
-  is-essentially-surjective-essentially-surjective-functor-Precategory = pr2 F
+  is-essentially-surjective-essentially-surjective-functor-Precategory = {!!}
 
   obj-essentially-surjective-functor-Precategory :
     obj-Precategory C → obj-Precategory D
-  obj-essentially-surjective-functor-Precategory =
-    obj-functor-Precategory C D
-      ( functor-essentially-surjective-functor-Precategory)
+  obj-essentially-surjective-functor-Precategory = {!!}
 
   hom-essentially-surjective-functor-Precategory :
     {x y : obj-Precategory C} →
@@ -96,9 +82,7 @@ module _
     hom-Precategory D
       ( obj-essentially-surjective-functor-Precategory x)
       ( obj-essentially-surjective-functor-Precategory y)
-  hom-essentially-surjective-functor-Precategory =
-    hom-functor-Precategory C D
-      ( functor-essentially-surjective-functor-Precategory)
+  hom-essentially-surjective-functor-Precategory = {!!}
 ```
 
 ## Properties

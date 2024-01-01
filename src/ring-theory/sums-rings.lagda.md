@@ -37,7 +37,7 @@ family of elements of `R` indexed by a standard finite type.
 ```agda
 sum-Ring :
   {l : Level} (R : Ring l) (n : ℕ) → functional-vec-Ring R n → type-Ring R
-sum-Ring R = sum-Semiring (semiring-Ring R)
+sum-Ring R = {!!}
 ```
 
 ## Properties
@@ -51,12 +51,12 @@ module _
 
   sum-one-element-Ring :
     (f : functional-vec-Ring R 1) → sum-Ring R 1 f ＝ head-functional-vec 0 f
-  sum-one-element-Ring = sum-one-element-Semiring (semiring-Ring R)
+  sum-one-element-Ring = {!!}
 
   sum-two-elements-Ring :
     (f : functional-vec-Ring R 2) →
     sum-Ring R 2 f ＝ add-Ring R (f (zero-Fin 1)) (f (one-Fin 1))
-  sum-two-elements-Ring = sum-two-elements-Semiring (semiring-Ring R)
+  sum-two-elements-Ring = {!!}
 ```
 
 ### Sums are homotopy invariant
@@ -69,7 +69,7 @@ module _
   htpy-sum-Ring :
     (n : ℕ) {f g : functional-vec-Ring R n} →
     (f ~ g) → sum-Ring R n f ＝ sum-Ring R n g
-  htpy-sum-Ring = htpy-sum-Semiring (semiring-Ring R)
+  htpy-sum-Ring = {!!}
 ```
 
 ### Sums are equal to the zero-th term plus the rest
@@ -84,7 +84,7 @@ module _
     {x : type-Ring R} → head-functional-vec n f ＝ x →
     sum-Ring R (succ-ℕ n) f ＝
     add-Ring R (sum-Ring R n (tail-functional-vec n f)) x
-  cons-sum-Ring = cons-sum-Semiring (semiring-Ring R)
+  cons-sum-Ring = {!!}
 
   snoc-sum-Ring :
     (n : ℕ) (f : functional-vec-Ring R (succ-ℕ n)) →
@@ -93,7 +93,7 @@ module _
     add-Ring R
       ( x)
       ( sum-Ring R n (f ∘ inr-Fin n))
-  snoc-sum-Ring = snoc-sum-Semiring (semiring-Ring R)
+  snoc-sum-Ring = {!!}
 ```
 
 ### Multiplication distributes over sums
@@ -108,16 +108,14 @@ module _
     (f : functional-vec-Ring R n) →
     mul-Ring R x (sum-Ring R n f) ＝
     sum-Ring R n (λ i → mul-Ring R x (f i))
-  left-distributive-mul-sum-Ring =
-    left-distributive-mul-sum-Semiring (semiring-Ring R)
+  left-distributive-mul-sum-Ring = {!!}
 
   right-distributive-mul-sum-Ring :
     (n : ℕ) (f : functional-vec-Ring R n)
     (x : type-Ring R) →
     mul-Ring R (sum-Ring R n f) x ＝
     sum-Ring R n (λ i → mul-Ring R (f i) x)
-  right-distributive-mul-sum-Ring =
-    right-distributive-mul-sum-Semiring (semiring-Ring R)
+  right-distributive-mul-sum-Ring = {!!}
 ```
 
 ### Interchange law of sums and addition in a semiring
@@ -134,7 +132,7 @@ module _
       ( sum-Ring R n g) ＝
     sum-Ring R n
       ( add-functional-vec-Ring R n f g)
-  interchange-add-sum-Ring = interchange-add-sum-Semiring (semiring-Ring R)
+  interchange-add-sum-Ring = {!!}
 ```
 
 ### Extending a sum of elements in a semiring
@@ -150,7 +148,7 @@ module _
       ( succ-ℕ n)
       ( cons-functional-vec-Ring R n (zero-Ring R) f) ＝
     sum-Ring R n f
-  extend-sum-Ring = extend-sum-Semiring (semiring-Ring R)
+  extend-sum-Ring = {!!}
 ```
 
 ### Shifting a sum of elements in a semiring
@@ -167,7 +165,7 @@ module _
       ( snoc-functional-vec-Ring R n f
         ( zero-Ring R)) ＝
     sum-Ring R n f
-  shift-sum-Ring = shift-sum-Semiring (semiring-Ring R)
+  shift-sum-Ring = {!!}
 ```
 
 ### A sum of zeroes is zero
@@ -179,7 +177,7 @@ module _
 
   sum-zero-Ring :
     (n : ℕ) → sum-Ring R n (zero-functional-vec-Ring R n) ＝ zero-Ring R
-  sum-zero-Ring = sum-zero-Semiring (semiring-Ring R)
+  sum-zero-Ring = {!!}
 ```
 
 ### Splitting sums
@@ -192,5 +190,5 @@ split-sum-Ring :
   add-Ring R
     ( sum-Ring R n (f ∘ inl-coprod-Fin n m))
     ( sum-Ring R m (f ∘ inr-coprod-Fin n m))
-split-sum-Ring R = split-sum-Semiring (semiring-Ring R)
+split-sum-Ring R = {!!}
 ```

@@ -34,9 +34,5 @@ module _
   left-adjoint-subst-action-Concrete-Group :
     {l : Level} → (action-Concrete-Group l G) →
     (action-Concrete-Group (l1 ⊔ l2 ⊔ l) H)
-  left-adjoint-subst-action-Concrete-Group X y =
-    trunc-Set
-      ( Σ ( classifying-type-Concrete-Group G)
-          ( λ x →
-            type-Set (X x) × Id (classifying-map-hom-Concrete-Group G H f x) y))
+  left-adjoint-subst-action-Concrete-Group X y = {!!}
 ```

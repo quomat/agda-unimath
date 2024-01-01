@@ -54,18 +54,18 @@ are decidable types.
 ```agda
 is-decidable-emb :
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} → (X → Y) → UU (l1 ⊔ l2)
-is-decidable-emb {Y = Y} f = is-emb f × is-decidable-map f
+is-decidable-emb {Y = Y} f = {!!}
 
 abstract
   is-emb-is-decidable-emb :
     {l1 l2 : Level} {X : UU l1} {Y : UU l2} {f : X → Y} →
     is-decidable-emb f → is-emb f
-  is-emb-is-decidable-emb H = pr1 H
+  is-emb-is-decidable-emb H = {!!}
 
 is-decidable-map-is-decidable-emb :
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} {f : X → Y} →
   is-decidable-emb f → is-decidable-map f
-is-decidable-map-is-decidable-emb H = pr2 H
+is-decidable-map-is-decidable-emb H = {!!}
 ```
 
 ### Decidably propositional maps
@@ -73,18 +73,18 @@ is-decidable-map-is-decidable-emb H = pr2 H
 ```agda
 is-decidable-prop-map :
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} → (X → Y) → UU (l1 ⊔ l2)
-is-decidable-prop-map {Y = Y} f = (y : Y) → is-decidable-prop (fiber f y)
+is-decidable-prop-map {Y = Y} f = {!!}
 
 abstract
   is-prop-map-is-decidable-prop-map :
     {l1 l2 : Level} {X : UU l1} {Y : UU l2} {f : X → Y} →
     is-decidable-prop-map f → is-prop-map f
-  is-prop-map-is-decidable-prop-map H y = pr1 (H y)
+  is-prop-map-is-decidable-prop-map H y = {!!}
 
 is-decidable-map-is-decidable-prop-map :
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} {f : X → Y} →
   is-decidable-prop-map f → is-decidable-map f
-is-decidable-map-is-decidable-prop-map H y = pr2 (H y)
+is-decidable-map-is-decidable-prop-map H y = {!!}
 ```
 
 ### The type of decidable embeddings
@@ -93,36 +93,34 @@ is-decidable-map-is-decidable-prop-map H y = pr2 (H y)
 infix 5 _↪ᵈ_
 _↪ᵈ_ :
   {l1 l2 : Level} (X : UU l1) (Y : UU l2) → UU (l1 ⊔ l2)
-X ↪ᵈ Y = Σ (X → Y) is-decidable-emb
+X ↪ᵈ Y = {!!}
 
 map-decidable-emb :
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} → X ↪ᵈ Y → X → Y
-map-decidable-emb e = pr1 e
+map-decidable-emb e = {!!}
 
 abstract
   is-decidable-emb-map-decidable-emb :
     {l1 l2 : Level} {X : UU l1} {Y : UU l2} (e : X ↪ᵈ Y) →
     is-decidable-emb (map-decidable-emb e)
-  is-decidable-emb-map-decidable-emb e = pr2 e
+  is-decidable-emb-map-decidable-emb e = {!!}
 
 abstract
   is-emb-map-decidable-emb :
     {l1 l2 : Level} {X : UU l1} {Y : UU l2} (e : X ↪ᵈ Y) →
     is-emb (map-decidable-emb e)
-  is-emb-map-decidable-emb e =
-    is-emb-is-decidable-emb (is-decidable-emb-map-decidable-emb e)
+  is-emb-map-decidable-emb e = {!!}
 
 abstract
   is-decidable-map-map-decidable-emb :
     {l1 l2 : Level} {X : UU l1} {Y : UU l2} (e : X ↪ᵈ Y) →
     is-decidable-map (map-decidable-emb e)
-  is-decidable-map-map-decidable-emb e =
-    is-decidable-map-is-decidable-emb (is-decidable-emb-map-decidable-emb e)
+  is-decidable-map-map-decidable-emb e = {!!}
 
 emb-decidable-emb :
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} → X ↪ᵈ Y → X ↪ Y
-pr1 (emb-decidable-emb e) = map-decidable-emb e
-pr2 (emb-decidable-emb e) = is-emb-map-decidable-emb e
+pr1 (emb-decidable-emb e) = {!!}
+pr2 (emb-decidable-emb e) = {!!}
 ```
 
 ## Properties
@@ -134,8 +132,7 @@ abstract
   is-prop-is-decidable-prop-map :
     {l1 l2 : Level} {X : UU l1} {Y : UU l2} (f : X → Y) →
     is-prop (is-decidable-prop-map f)
-  is-prop-is-decidable-prop-map f =
-    is-prop-Π (λ y → is-prop-is-decidable-prop (fiber f y))
+  is-prop-is-decidable-prop-map f = {!!}
 ```
 
 ### Any map of which the fibers are decidable propositions is a decidable embedding
@@ -148,29 +145,22 @@ module _
   abstract
     is-decidable-emb-is-decidable-prop-map :
       is-decidable-prop-map f → is-decidable-emb f
-    pr1 (is-decidable-emb-is-decidable-prop-map H) =
-      is-emb-is-prop-map (is-prop-map-is-decidable-prop-map H)
-    pr2 (is-decidable-emb-is-decidable-prop-map H) =
-      is-decidable-map-is-decidable-prop-map H
+    pr1 (is-decidable-emb-is-decidable-prop-map H) = {!!}
 
   abstract
     is-prop-map-is-decidable-emb : is-decidable-emb f → is-prop-map f
-    is-prop-map-is-decidable-emb H =
-      is-prop-map-is-emb (is-emb-is-decidable-emb H)
+    is-prop-map-is-decidable-emb H = {!!}
 
   abstract
     is-decidable-prop-map-is-decidable-emb :
       is-decidable-emb f → is-decidable-prop-map f
-    pr1 (is-decidable-prop-map-is-decidable-emb H y) =
-      is-prop-map-is-decidable-emb H y
-    pr2 (is-decidable-prop-map-is-decidable-emb H y) = pr2 H y
+    pr1 (is-decidable-prop-map-is-decidable-emb H y) = {!!}
 
 decidable-subtype-decidable-emb :
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} →
   (X ↪ᵈ Y) → (decidable-subtype (l1 ⊔ l2) Y)
-pr1 (decidable-subtype-decidable-emb f y) = fiber (map-decidable-emb f) y
-pr2 (decidable-subtype-decidable-emb f y) =
-  is-decidable-prop-map-is-decidable-emb (pr2 f) y
+pr1 (decidable-subtype-decidable-emb f y) = {!!}
+pr2 (decidable-subtype-decidable-emb f y) = {!!}
 ```
 
 ### The type of all decidable embeddings into a type `A` is equivalent to the type of decidable subtypes of `A`
@@ -179,14 +169,7 @@ pr2 (decidable-subtype-decidable-emb f y) =
 equiv-Fiber-Decidable-Prop :
   (l : Level) {l1 : Level} (A : UU l1) →
   Σ (UU (l1 ⊔ l)) (λ X → X ↪ᵈ A) ≃ (decidable-subtype (l1 ⊔ l) A)
-equiv-Fiber-Decidable-Prop l A =
-  ( equiv-Fiber-structure l is-decidable-prop A) ∘e
-  ( equiv-tot
-    ( λ X →
-      equiv-tot
-        ( λ f →
-          ( inv-distributive-Π-Σ) ∘e
-          ( equiv-prod (equiv-is-prop-map-is-emb f) id-equiv))))
+equiv-Fiber-Decidable-Prop l A = {!!}
 ```
 
 ### Any equivalence is a decidable embedding
@@ -196,19 +179,17 @@ abstract
   is-decidable-emb-is-equiv :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} →
     is-equiv f → is-decidable-emb f
-  pr1 (is-decidable-emb-is-equiv H) = is-emb-is-equiv H
-  pr2 (is-decidable-emb-is-equiv H) x = inl (center (is-contr-map-is-equiv H x))
+  pr1 (is-decidable-emb-is-equiv H) = {!!}
 
 abstract
   is-decidable-emb-id :
     {l1 : Level} {A : UU l1} → is-decidable-emb (id {A = A})
-  pr1 (is-decidable-emb-id {l1} {A}) = is-emb-id
-  pr2 (is-decidable-emb-id {l1} {A}) x = inl (pair x refl)
+  pr1 (is-decidable-emb-id {l1} {A}) = {!!}
 
 decidable-emb-id :
   {l1 : Level} {A : UU l1} → A ↪ᵈ A
-pr1 (decidable-emb-id {l1} {A}) = id
-pr2 (decidable-emb-id {l1} {A}) = is-decidable-emb-id
+pr1 (decidable-emb-id {l1} {A}) = {!!}
+pr2 (decidable-emb-id {l1} {A}) = {!!}
 ```
 
 ### Being a decidable embedding is a property
@@ -218,13 +199,7 @@ abstract
   is-prop-is-decidable-emb :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
     is-prop (is-decidable-emb f)
-  is-prop-is-decidable-emb f =
-    is-prop-is-inhabited
-      ( λ H →
-        is-prop-prod
-          ( is-property-is-emb f)
-          ( is-prop-Π
-            ( λ y → is-prop-is-decidable (is-prop-map-is-emb (pr1 H) y))))
+  is-prop-is-decidable-emb f = {!!}
 ```
 
 ### Decidable embeddings are closed under composition
@@ -235,22 +210,7 @@ abstract
     {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : UU l3}
     {g : B → C} {f : A → B} →
     is-decidable-emb f → is-decidable-emb g → is-decidable-emb (g ∘ f)
-  pr1 (is-decidable-emb-comp {g = g} {f} H K) =
-    is-emb-comp _ _ (pr1 K) (pr1 H)
-  pr2 (is-decidable-emb-comp {g = g} {f} H K) x =
-    ind-coprod
-      ( λ t → is-decidable (fiber (g ∘ f) x))
-      ( λ u →
-        is-decidable-equiv
-          ( compute-fiber-comp g f x)
-          ( is-decidable-equiv
-            ( left-unit-law-Σ-is-contr
-              ( is-proof-irrelevant-is-prop
-                ( is-prop-map-is-emb (is-emb-is-decidable-emb K) x) ( u))
-              ( u))
-            ( is-decidable-map-is-decidable-emb H (pr1 u))))
-      ( λ α → inr (λ t → α (pair (f (pr1 t)) (pr2 t))))
-      ( pr2 K x)
+  pr1 (is-decidable-emb-comp {g = g} {f} H K) = {!!}
 ```
 
 ### Decidable embeddings are closed under homotopies
@@ -260,12 +220,7 @@ abstract
   is-decidable-emb-htpy :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f g : A → B} →
     f ~ g → is-decidable-emb g → is-decidable-emb f
-  pr1 (is-decidable-emb-htpy {f = f} {g} H K) =
-    is-emb-htpy H (is-emb-is-decidable-emb K)
-  pr2 (is-decidable-emb-htpy {f = f} {g} H K) b =
-    is-decidable-equiv
-      ( equiv-tot (λ a → equiv-concat (inv (H a)) b))
-      ( is-decidable-map-is-decidable-emb K b)
+  pr1 (is-decidable-emb-htpy {f = f} {g} H K) = {!!}
 ```
 
 ### Characterizing equality in the type of decidable embeddings
@@ -273,43 +228,33 @@ abstract
 ```agda
 htpy-decidable-emb :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f g : A ↪ᵈ B) → UU (l1 ⊔ l2)
-htpy-decidable-emb f g = map-decidable-emb f ~ map-decidable-emb g
+htpy-decidable-emb f g = {!!}
 
 refl-htpy-decidable-emb :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A ↪ᵈ B) → htpy-decidable-emb f f
-refl-htpy-decidable-emb f = refl-htpy
+refl-htpy-decidable-emb f = {!!}
 
 htpy-eq-decidable-emb :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f g : A ↪ᵈ B) →
   f ＝ g → htpy-decidable-emb f g
-htpy-eq-decidable-emb f .f refl = refl-htpy-decidable-emb f
+htpy-eq-decidable-emb f .f refl = {!!}
 
 abstract
   is-torsorial-htpy-decidable-emb :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A ↪ᵈ B) →
     is-torsorial (htpy-decidable-emb f)
-  is-torsorial-htpy-decidable-emb f =
-    is-torsorial-Eq-subtype
-      ( is-torsorial-htpy (map-decidable-emb f))
-      ( is-prop-is-decidable-emb)
-      ( map-decidable-emb f)
-      ( refl-htpy)
-      ( is-decidable-emb-map-decidable-emb f)
+  is-torsorial-htpy-decidable-emb f = {!!}
 
 abstract
   is-equiv-htpy-eq-decidable-emb :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f g : A ↪ᵈ B) →
     is-equiv (htpy-eq-decidable-emb f g)
-  is-equiv-htpy-eq-decidable-emb f =
-    fundamental-theorem-id
-      ( is-torsorial-htpy-decidable-emb f)
-      ( htpy-eq-decidable-emb f)
+  is-equiv-htpy-eq-decidable-emb f = {!!}
 
 eq-htpy-decidable-emb :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} {f g : A ↪ᵈ B} →
   htpy-decidable-emb f g → f ＝ g
-eq-htpy-decidable-emb {f = f} {g} =
-  map-inv-is-equiv (is-equiv-htpy-eq-decidable-emb f g)
+eq-htpy-decidable-emb {f = f} {g} = {!!}
 ```
 
 ### Precomposing decidable embeddings with equivalences
@@ -318,21 +263,7 @@ eq-htpy-decidable-emb {f = f} {g} =
 equiv-precomp-decidable-emb-equiv :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} (e : A ≃ B) →
   (C : UU l3) → (B ↪ᵈ C) ≃ (A ↪ᵈ C)
-equiv-precomp-decidable-emb-equiv e C =
-  equiv-Σ
-    ( is-decidable-emb)
-    ( equiv-precomp e C)
-    ( λ g →
-      equiv-prop
-        ( is-prop-is-decidable-emb g)
-        ( is-prop-is-decidable-emb (g ∘ map-equiv e))
-        ( is-decidable-emb-comp (is-decidable-emb-is-equiv (pr2 e)))
-        ( λ d →
-          is-decidable-emb-htpy
-            ( λ b → ap g (inv (is-section-map-inv-equiv e b)))
-            ( is-decidable-emb-comp
-              ( is-decidable-emb-is-equiv (is-equiv-map-inv-equiv e))
-              ( d))))
+equiv-precomp-decidable-emb-equiv e C = {!!}
 ```
 
 ### Any map out of the empty type is a decidable embedding
@@ -341,20 +272,16 @@ equiv-precomp-decidable-emb-equiv e C =
 abstract
   is-decidable-emb-ex-falso :
     {l : Level} {X : UU l} → is-decidable-emb (ex-falso {l} {X})
-  pr1 (is-decidable-emb-ex-falso {l} {X}) = is-emb-ex-falso
-  pr2 (is-decidable-emb-ex-falso {l} {X}) x = inr pr1
+  pr1 (is-decidable-emb-ex-falso {l} {X}) = {!!}
 
 decidable-emb-ex-falso :
   {l : Level} {X : UU l} → empty ↪ᵈ X
-pr1 decidable-emb-ex-falso = ex-falso
-pr2 decidable-emb-ex-falso = is-decidable-emb-ex-falso
+pr1 decidable-emb-ex-falso = {!!}
+pr2 decidable-emb-ex-falso = {!!}
 
 decidable-emb-is-empty :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → is-empty A → A ↪ᵈ B
-decidable-emb-is-empty {A = A} f =
-  map-equiv
-    ( equiv-precomp-decidable-emb-equiv (equiv-is-empty f id) _)
-    ( decidable-emb-ex-falso)
+decidable-emb-is-empty {A = A} f = {!!}
 ```
 
 ### The map on total spaces induced by a family of decidable embeddings is a decidable embeddings
@@ -367,12 +294,8 @@ module _
   is-decidable-emb-tot :
     {f : (x : A) → B x → C x} →
     ((x : A) → is-decidable-emb (f x)) → is-decidable-emb (tot f)
-  is-decidable-emb-tot H =
-    ( is-emb-tot (λ x → is-emb-is-decidable-emb (H x)) ,
-      is-decidable-map-tot λ x → is-decidable-map-is-decidable-emb (H x))
+  is-decidable-emb-tot H = {!!}
 
   decidable-emb-tot : ((x : A) → B x ↪ᵈ C x) → Σ A B ↪ᵈ Σ A C
-  pr1 (decidable-emb-tot f) = tot (λ x → map-decidable-emb (f x))
-  pr2 (decidable-emb-tot f) =
-    is-decidable-emb-tot (λ x → is-decidable-emb-map-decidable-emb (f x))
+  pr1 (decidable-emb-tot f) = {!!}
 ```

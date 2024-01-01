@@ -47,11 +47,11 @@ record
       {Γ : Ctx} (A : Ty Γ) (B : Ty (ext Γ A)) → Tm Γ (Π A B) ≃ Tm (ext Γ A) B
 
   app : {Γ : Ctx} (A : Ty Γ) (B : Ty (ext Γ A)) → Tm Γ (Π A B) → Tm (ext Γ A) B
-  app A B = map-equiv (iso-Π A B)
+  app A B = {!!}
 
   lam :
     {Γ : Ctx} (A : Ty Γ) (B : Ty (ext Γ A)) → Tm (ext Γ A) B → Tm Γ (Π A B)
-  lam A B = map-inv-equiv (iso-Π A B)
+  lam A B = {!!}
 
   field
     substitution-law-Π :

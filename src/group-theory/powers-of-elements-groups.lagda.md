@@ -40,7 +40,7 @@ module _
   where
 
   power-Group : ℕ → type-Group G → type-Group G
-  power-Group = power-Monoid (monoid-Group G)
+  power-Group = {!!}
 ```
 
 ### The predicate of being a power of an element in a group
@@ -56,19 +56,16 @@ module _
 
   is-power-of-element-prop-Group :
     (x y : type-Group G) → Prop l
-  is-power-of-element-prop-Group =
-    is-power-of-element-prop-Monoid (monoid-Group G)
+  is-power-of-element-prop-Group = {!!}
 
   is-power-of-element-Group :
     (x y : type-Group G) → UU l
-  is-power-of-element-Group =
-    is-power-of-element-Monoid (monoid-Group G)
+  is-power-of-element-Group = {!!}
 
   is-prop-is-power-of-element-Group :
     (x y : type-Group G) →
     is-prop (is-power-of-element-Group x y)
-  is-prop-is-power-of-element-Group =
-    is-prop-is-power-of-element-Monoid (monoid-Group G)
+  is-prop-is-power-of-element-Group = {!!}
 ```
 
 ## Properties
@@ -82,10 +79,10 @@ module _
 
   power-unit-Group :
     (n : ℕ) → power-Group G n (unit-Group G) ＝ unit-Group G
-  power-unit-Group = power-unit-Monoid (monoid-Group G)
+  power-unit-Group = {!!}
 ```
 
-### `xⁿ⁺¹ = xⁿx`
+### `xⁿ⁺¹ = {!!}
 
 ```agda
 module _
@@ -95,7 +92,7 @@ module _
   power-succ-Group :
     (n : ℕ) (x : type-Group G) →
     power-Group G (succ-ℕ n) x ＝ mul-Group G (power-Group G n x) x
-  power-succ-Group = power-succ-Monoid (monoid-Group G)
+  power-succ-Group = {!!}
 ```
 
 ### `xⁿ⁺¹ ＝ xxⁿ`
@@ -108,7 +105,7 @@ module _
   power-succ-Group' :
     (n : ℕ) (x : type-Group G) →
     power-Group G (succ-ℕ n) x ＝ mul-Group G x (power-Group G n x)
-  power-succ-Group' = power-succ-Monoid' (monoid-Group G)
+  power-succ-Group' = {!!}
 ```
 
 ### Powers by sums of natural numbers are products of powers
@@ -122,7 +119,7 @@ module _
     (m n : ℕ) {x : type-Group G} →
     power-Group G (m +ℕ n) x ＝
     mul-Group G (power-Group G m x) (power-Group G n x)
-  distributive-power-add-Group = distributive-power-add-Monoid (monoid-Group G)
+  distributive-power-add-Group = {!!}
 ```
 
 ### If `x` commutes with `y` then so do their powers
@@ -135,13 +132,13 @@ module _
   commute-powers-Group' :
     (n : ℕ) {x y : type-Group G} →
     commute-Group G x y → commute-Group G (power-Group G n x) y
-  commute-powers-Group' = commute-powers-Monoid' (monoid-Group G)
+  commute-powers-Group' = {!!}
 
   commute-powers-Group :
     (m n : ℕ) {x y : type-Group G} →
     commute-Group G x y →
     commute-Group G (power-Group G m x) (power-Group G n y)
-  commute-powers-Group = commute-powers-Monoid (monoid-Group G)
+  commute-powers-Group = {!!}
 ```
 
 ### If `x` commutes with `y`, then powers distribute over the product of `x` and `y`
@@ -156,8 +153,7 @@ module _
     (H : mul-Group G x y ＝ mul-Group G y x) →
     power-Group G n (mul-Group G x y) ＝
     mul-Group G (power-Group G n x) (power-Group G n y)
-  distributive-power-mul-Group =
-    distributive-power-mul-Monoid (monoid-Group G)
+  distributive-power-mul-Group = {!!}
 ```
 
 ### Powers by products of natural numbers are iterated powers
@@ -170,7 +166,7 @@ module _
   power-mul-Group :
     (m n : ℕ) {x : type-Group G} →
     power-Group G (m *ℕ n) x ＝ power-Group G n (power-Group G m x)
-  power-mul-Group = power-mul-Monoid (monoid-Group G)
+  power-mul-Group = {!!}
 ```
 
 ### Group homomorphisms preserve powers
@@ -184,9 +180,5 @@ module _
     (n : ℕ) (x : type-Group G) →
     map-hom-Group G H f (power-Group G n x) ＝
     power-Group H n (map-hom-Group G H f x)
-  preserves-powers-hom-Group =
-    preserves-powers-hom-Monoid
-      ( monoid-Group G)
-      ( monoid-Group H)
-      ( hom-monoid-hom-Group G H f)
+  preserves-powers-hom-Group = {!!}
 ```

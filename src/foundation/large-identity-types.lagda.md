@@ -23,5 +23,5 @@ module _
     reflω : Idω x x
 
   _＝ω_ : A → A → UUω
-  (a ＝ω b) = Idω a b
+  (a ＝ω b) = {!!}
 ```

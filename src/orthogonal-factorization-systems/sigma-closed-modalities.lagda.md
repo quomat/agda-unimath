@@ -29,13 +29,10 @@ modal whenever `B` is a family of modal types over modal base `A`.
 ```agda
 is-closed-under-Σ-modality :
   {l : Level} {○ : operator-modality l l} → unit-modality ○ → UU (lsuc l)
-is-closed-under-Σ-modality =
-  is-closed-under-Σ-subuniverse ∘ modal-type-subuniverse
+is-closed-under-Σ-modality = {!!}
 
 closed-under-Σ-modality : (l : Level) → UU (lsuc l)
-closed-under-Σ-modality l =
-  Σ ( operator-modality l l)
-    ( λ ○ → Σ (unit-modality ○) (is-closed-under-Σ-modality))
+closed-under-Σ-modality l = {!!}
 ```
 
 ## See also

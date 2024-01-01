@@ -37,7 +37,7 @@ module _
   where
 
   union-subtype : subtype l1 X → subtype l2 X → subtype (l1 ⊔ l2) X
-  union-subtype P Q x = disjunction-Prop (P x) (Q x)
+  union-subtype P Q x = {!!}
 ```
 
 ### Unions of decidable subtypes
@@ -46,7 +46,7 @@ module _
   union-decidable-subtype :
     decidable-subtype l1 X → decidable-subtype l2 X →
     decidable-subtype (l1 ⊔ l2) X
-  union-decidable-subtype P Q x = disjunction-Decidable-Prop (P x) (Q x)
+  union-decidable-subtype P Q x = {!!}
 ```
 
 ### Unions of families of subtypes
@@ -58,7 +58,7 @@ module _
 
   union-family-of-subtypes :
     {I : UU l2} (A : I → subtype l3 X) → subtype (l2 ⊔ l3) X
-  union-family-of-subtypes = sup-powerset-Large-Locale
+  union-family-of-subtypes = {!!}
 
   is-least-upper-bound-union-family-of-subtypes :
     {I : UU l2} (A : I → subtype l3 X) →
@@ -66,8 +66,7 @@ module _
       ( powerset-Large-Poset X)
       ( A)
       ( union-family-of-subtypes A)
-  is-least-upper-bound-union-family-of-subtypes =
-    is-least-upper-bound-sup-powerset-Large-Locale
+  is-least-upper-bound-union-family-of-subtypes = {!!}
 ```
 
 ## Properties
@@ -83,8 +82,5 @@ module _
   preserves-order-union-family-of-subtypes :
     ((i : I) → A i ⊆ B i) →
     union-family-of-subtypes A ⊆ union-family-of-subtypes B
-  preserves-order-union-family-of-subtypes H x p =
-    apply-universal-property-trunc-Prop p
-      ( union-family-of-subtypes B x)
-      ( λ (i , q) → unit-trunc-Prop (i , H i x q))
+  preserves-order-union-family-of-subtypes H x p = {!!}
 ```

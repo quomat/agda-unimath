@@ -32,7 +32,7 @@ A type `X` is non-contractible if it comes equipped with an element of type
 
 ```agda
 is-not-contractible : {l : Level} → UU l → UU l
-is-not-contractible X = ¬ (is-contr X)
+is-not-contractible X = {!!}
 ```
 
 ### A positive formulation of being noncontractible
@@ -43,12 +43,11 @@ apart from the unit type.
 
 ```agda
 is-noncontractible' : {l : Level} (A : UU l) → ℕ → UU l
-is-noncontractible' A zero-ℕ = is-empty A
-is-noncontractible' A (succ-ℕ k) =
-  Σ A (λ x → Σ A (λ y → is-noncontractible' (x ＝ y) k))
+is-noncontractible' A zero-ℕ = {!!}
+is-noncontractible' A (succ-ℕ k) = {!!}
 
 is-noncontractible : {l : Level} (A : UU l) → UU l
-is-noncontractible A = Σ ℕ (is-noncontractible' A)
+is-noncontractible A = {!!}
 ```
 
 ## Properties
@@ -58,10 +57,10 @@ is-noncontractible A = Σ ℕ (is-noncontractible' A)
 ```agda
 is-not-contractible-is-empty :
   {l : Level} {X : UU l} → is-empty X → is-not-contractible X
-is-not-contractible-is-empty H C = H (center C)
+is-not-contractible-is-empty H C = {!!}
 
 is-not-contractible-empty : is-not-contractible empty
-is-not-contractible-empty = is-not-contractible-is-empty id
+is-not-contractible-empty = {!!}
 ```
 
 ### Noncontractible types are not contractible
@@ -70,7 +69,6 @@ is-not-contractible-empty = is-not-contractible-is-empty id
 is-not-contractible-is-noncontractible :
   {l : Level} {X : UU l} → is-noncontractible X → is-not-contractible X
 is-not-contractible-is-noncontractible
-  ( pair zero-ℕ H) = is-not-contractible-is-empty H
-is-not-contractible-is-noncontractible (pair (succ-ℕ n) (pair x (pair y H))) C =
-  is-not-contractible-is-noncontractible (pair n H) (is-prop-is-contr C x y)
+  ( pair zero-ℕ H) = {!!}
+is-not-contractible-is-noncontractible (pair (succ-ℕ n) (pair x (pair y H))) C = {!!}
 ```

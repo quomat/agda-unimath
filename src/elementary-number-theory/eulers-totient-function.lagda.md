@@ -48,10 +48,7 @@ extend naturally to the first definition.
 
 ```agda
 eulers-totient-function-relatively-prime : ℕ → ℕ
-eulers-totient-function-relatively-prime n =
-  number-of-elements-subset-𝔽
-    ( Fin-𝔽 n)
-    ( λ x → is-relatively-prime-ℕ-Decidable-Prop (nat-Fin n x) n)
+eulers-totient-function-relatively-prime n = {!!}
 ```
 
 ## See also

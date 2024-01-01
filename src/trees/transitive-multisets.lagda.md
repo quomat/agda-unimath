@@ -31,12 +31,12 @@ have `z ∈-𝕍 y ↪ z ∈-𝕍 x`.
 
 ```agda
 is-transitive-𝕍 : {l : Level} → 𝕍 l → UU (lsuc l)
-is-transitive-𝕍 {l} x = (y : 𝕍 l) → y ∈-𝕍 x → y ⊑-𝕍 x
+is-transitive-𝕍 {l} x = {!!}
 ```
 
 ### Wealky transitive multisets
 
 ```agda
 is-weakly-transitive-𝕍 : {l : Level} → 𝕍 l → UU (lsuc l)
-is-weakly-transitive-𝕍 {l} x = (y : 𝕍 l) → y ∈-𝕍 x → y ⊆-𝕍 x
+is-weakly-transitive-𝕍 {l} x = {!!}
 ```

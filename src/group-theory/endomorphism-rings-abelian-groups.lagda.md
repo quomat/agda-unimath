@@ -35,19 +35,8 @@ module _
   where
 
   ab-endomorphism-ring-Ab : Ab l
-  ab-endomorphism-ring-Ab = ab-hom-Ab A A
+  ab-endomorphism-ring-Ab = {!!}
 
   endomorphism-ring-Ab : Ring l
-  pr1 endomorphism-ring-Ab = ab-endomorphism-ring-Ab
-  pr1 (pr1 (pr2 endomorphism-ring-Ab)) = comp-hom-Ab A A A
-  pr2 (pr1 (pr2 endomorphism-ring-Ab)) = associative-comp-hom-Ab A A A A
-  pr1 (pr1 (pr2 (pr2 endomorphism-ring-Ab))) = id-hom-Ab A
-  pr1 (pr2 (pr1 (pr2 (pr2 endomorphism-ring-Ab)))) =
-    left-unit-law-comp-hom-Ab A A
-  pr2 (pr2 (pr1 (pr2 (pr2 endomorphism-ring-Ab)))) =
-    right-unit-law-comp-hom-Ab A A
-  pr1 (pr2 (pr2 (pr2 endomorphism-ring-Ab))) =
-    left-distributive-comp-add-hom-Ab A A A
-  pr2 (pr2 (pr2 (pr2 endomorphism-ring-Ab))) =
-    right-distributive-comp-add-hom-Ab A A A
+  pr1 endomorphism-ring-Ab = {!!}
 ```

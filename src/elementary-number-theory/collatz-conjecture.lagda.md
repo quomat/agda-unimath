@@ -23,14 +23,13 @@ open import foundation.universe-levels
 ```agda
 collatz : ℕ → ℕ
 collatz n with is-decidable-div-ℕ 2 n
-... | inl (pair y p) = y
-... | inr f = succ-ℕ (3 *ℕ n)
+... | inl (pair y p) = {!!}
+... | inr f = {!!}
 
 iterate-collatz : ℕ → ℕ → ℕ
-iterate-collatz zero-ℕ n = n
-iterate-collatz (succ-ℕ k) n = collatz (iterate-collatz k n)
+iterate-collatz zero-ℕ n = {!!}
+iterate-collatz (succ-ℕ k) n = {!!}
 
 Collatz-conjecture : UU lzero
-Collatz-conjecture =
-  (n : ℕ) → is-nonzero-ℕ n → Σ ℕ (λ k → is-one-ℕ (iterate-collatz k n))
+Collatz-conjecture = {!!}
 ```

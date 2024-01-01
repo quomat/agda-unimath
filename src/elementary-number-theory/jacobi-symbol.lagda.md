@@ -33,19 +33,13 @@ for [prime](elementary-number-theory.prime-numbers.md) `p`. Specifically,
 product of the [legendre symbols](elementary-number-theory.legendre-symbol.md)
 `legendre-symbol(p₁,a),legendre-symbol(p₂,a),...,legendre-symbol(pₖ,a)`, where
 `p₁,...,pₖ` are the prime factors of `n`, not necessarily distinct (i.e. it is
-possible that `pᵢ = pⱼ`).
+possible that `pᵢ = {!!}
 
 ## Definition
 
 ```agda
 jacobi-symbol : ℤ → ℕ → ℤ
-jacobi-symbol a 0 = zero-ℤ
-jacobi-symbol a 1 = one-ℤ
-jacobi-symbol a (succ-ℕ (succ-ℕ n)) =
-  fold-list
-    ( one-ℤ)
-    ( mul-ℤ)
-    ( map-list
-      ( swap-Π legendre-symbol a)
-      ( list-primes-fundamental-theorem-arithmetic-ℕ (succ-ℕ (succ-ℕ n)) star))
+jacobi-symbol a 0 = {!!}
+jacobi-symbol a 1 = {!!}
+jacobi-symbol a (succ-ℕ (succ-ℕ n)) = {!!}
 ```

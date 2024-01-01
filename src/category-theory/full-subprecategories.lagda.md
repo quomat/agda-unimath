@@ -50,7 +50,7 @@ to `Y` in the subprecategory is [full](foundation.full-subtypes.md).
 ```agda
 Full-Subprecategory :
   {l1 l2 : Level} (l3 : Level) (C : Precategory l1 l2) → UU (l1 ⊔ lsuc l3)
-Full-Subprecategory l3 C = subtype l3 (obj-Precategory C)
+Full-Subprecategory l3 C = {!!}
 
 module _
   {l1 l2 l3 : Level}
@@ -59,29 +59,26 @@ module _
   where
 
   subtype-obj-Full-Subprecategory : subtype l3 (obj-Precategory C)
-  subtype-obj-Full-Subprecategory = P
+  subtype-obj-Full-Subprecategory = {!!}
 
   obj-Full-Subprecategory : UU (l1 ⊔ l3)
-  obj-Full-Subprecategory = type-subtype subtype-obj-Full-Subprecategory
+  obj-Full-Subprecategory = {!!}
 
   inclusion-obj-Full-Subprecategory :
     obj-Full-Subprecategory → obj-Precategory C
-  inclusion-obj-Full-Subprecategory =
-    inclusion-subtype subtype-obj-Full-Subprecategory
+  inclusion-obj-Full-Subprecategory = {!!}
 
   is-in-obj-Full-Subprecategory : (x : obj-Precategory C) → UU l3
-  is-in-obj-Full-Subprecategory = is-in-subtype subtype-obj-Full-Subprecategory
+  is-in-obj-Full-Subprecategory = {!!}
 
   is-prop-is-in-obj-Full-Subprecategory :
     (x : obj-Precategory C) → is-prop (is-in-obj-Full-Subprecategory x)
-  is-prop-is-in-obj-Full-Subprecategory =
-    is-prop-is-in-subtype subtype-obj-Full-Subprecategory
+  is-prop-is-in-obj-Full-Subprecategory = {!!}
 
   is-in-obj-inclusion-obj-Full-Subprecategory :
     (x : obj-Full-Subprecategory) →
     is-in-obj-Full-Subprecategory (inclusion-obj-Full-Subprecategory x)
-  is-in-obj-inclusion-obj-Full-Subprecategory =
-    is-in-subtype-inclusion-subtype subtype-obj-Full-Subprecategory
+  is-in-obj-inclusion-obj-Full-Subprecategory = {!!}
 ```
 
 ### The underlying precategory of a full subprecategory
@@ -94,29 +91,25 @@ module _
   where
 
   hom-set-Full-Subprecategory : (x y : obj-Full-Subprecategory C P) → Set l2
-  hom-set-Full-Subprecategory x y =
-    hom-set-Precategory C
-      ( inclusion-obj-Full-Subprecategory C P x)
-      ( inclusion-obj-Full-Subprecategory C P y)
+  hom-set-Full-Subprecategory x y = {!!}
 
   hom-Full-Subprecategory : (x y : obj-Full-Subprecategory C P) → UU l2
-  hom-Full-Subprecategory x y = type-Set (hom-set-Full-Subprecategory x y)
+  hom-Full-Subprecategory x y = {!!}
 
   is-set-hom-Full-Subprecategory :
     (x y : obj-Full-Subprecategory C P) → is-set (hom-Full-Subprecategory x y)
-  is-set-hom-Full-Subprecategory x y =
-    is-set-type-Set (hom-set-Full-Subprecategory x y)
+  is-set-hom-Full-Subprecategory x y = {!!}
 
   id-hom-Full-Subprecategory :
     {x : obj-Full-Subprecategory C P} → hom-Full-Subprecategory x x
-  id-hom-Full-Subprecategory = id-hom-Precategory C
+  id-hom-Full-Subprecategory = {!!}
 
   comp-hom-Full-Subprecategory :
     {x y z : obj-Full-Subprecategory C P} →
     hom-Full-Subprecategory y z →
     hom-Full-Subprecategory x y →
     hom-Full-Subprecategory x z
-  comp-hom-Full-Subprecategory = comp-hom-Precategory C
+  comp-hom-Full-Subprecategory = {!!}
 
   associative-comp-hom-Full-Subprecategory :
     {x y z w : obj-Full-Subprecategory C P}
@@ -129,8 +122,7 @@ module _
     comp-hom-Full-Subprecategory {x} {z} {w}
       ( h)
       ( comp-hom-Full-Subprecategory {x} {y} {z} g f)
-  associative-comp-hom-Full-Subprecategory =
-    associative-comp-hom-Precategory C
+  associative-comp-hom-Full-Subprecategory = {!!}
 
   inv-associative-comp-hom-Full-Subprecategory :
     {x y z w : obj-Full-Subprecategory C P}
@@ -143,8 +135,7 @@ module _
     comp-hom-Full-Subprecategory {x} {y} {w}
       ( comp-hom-Full-Subprecategory {y} {z} {w} h g)
       ( f)
-  inv-associative-comp-hom-Full-Subprecategory =
-    inv-associative-comp-hom-Precategory C
+  inv-associative-comp-hom-Full-Subprecategory = {!!}
 
   left-unit-law-comp-hom-Full-Subprecategory :
     {x y : obj-Full-Subprecategory C P}
@@ -153,8 +144,7 @@ module _
       ( id-hom-Full-Subprecategory {y})
       ( f) ＝
     f
-  left-unit-law-comp-hom-Full-Subprecategory =
-    left-unit-law-comp-hom-Precategory C
+  left-unit-law-comp-hom-Full-Subprecategory = {!!}
 
   right-unit-law-comp-hom-Full-Subprecategory :
     {x y : obj-Full-Subprecategory C P}
@@ -163,43 +153,21 @@ module _
       ( f)
       ( id-hom-Full-Subprecategory {x}) ＝
     f
-  right-unit-law-comp-hom-Full-Subprecategory =
-    right-unit-law-comp-hom-Precategory C
+  right-unit-law-comp-hom-Full-Subprecategory = {!!}
 
   associative-composition-operation-Full-Subprecategory :
     associative-composition-operation-binary-family-Set
       hom-set-Full-Subprecategory
-  pr1 associative-composition-operation-Full-Subprecategory {x} {y} {z} =
-    comp-hom-Full-Subprecategory {x} {y} {z}
-  pr1
-    ( pr2
-        associative-composition-operation-Full-Subprecategory
-          { x} {y} {z} {w} h g f) =
-    associative-comp-hom-Full-Subprecategory {x} {y} {z} {w} h g f
-  pr2
-    ( pr2
-        associative-composition-operation-Full-Subprecategory
-          { x} {y} {z} {w} h g f) =
-    inv-associative-comp-hom-Full-Subprecategory {x} {y} {z} {w} h g f
+  pr1 associative-composition-operation-Full-Subprecategory {x} {y} {z} = {!!}
 
   is-unital-composition-operation-Full-Subprecategory :
     is-unital-composition-operation-binary-family-Set
       ( hom-set-Full-Subprecategory)
       ( λ {x} {y} {z} → comp-hom-Full-Subprecategory {x} {y} {z})
-  pr1 is-unital-composition-operation-Full-Subprecategory x =
-    id-hom-Full-Subprecategory {x}
-  pr1 (pr2 is-unital-composition-operation-Full-Subprecategory) {x} {y} =
-    left-unit-law-comp-hom-Full-Subprecategory {x} {y}
-  pr2 (pr2 is-unital-composition-operation-Full-Subprecategory) {x} {y} =
-    right-unit-law-comp-hom-Full-Subprecategory {x} {y}
+  pr1 is-unital-composition-operation-Full-Subprecategory x = {!!}
 
   precategory-Full-Subprecategory : Precategory (l1 ⊔ l3) l2
-  pr1 precategory-Full-Subprecategory = obj-Full-Subprecategory C P
-  pr1 (pr2 precategory-Full-Subprecategory) = hom-set-Full-Subprecategory
-  pr1 (pr2 (pr2 precategory-Full-Subprecategory)) =
-    associative-composition-operation-Full-Subprecategory
-  pr2 (pr2 (pr2 precategory-Full-Subprecategory)) =
-    is-unital-composition-operation-Full-Subprecategory
+  pr1 precategory-Full-Subprecategory = {!!}
 ```
 
 ### Isomorphisms in full subprecategories
@@ -213,13 +181,11 @@ module _
 
   iso-Full-Subprecategory :
     (X Y : obj-Full-Subprecategory C P) → UU l2
-  iso-Full-Subprecategory X Y =
-    iso-Precategory C (inclusion-subtype P X) (inclusion-subtype P Y)
+  iso-Full-Subprecategory X Y = {!!}
 
   iso-eq-Full-Subprecategory :
     (X Y : obj-Full-Subprecategory C P) → X ＝ Y → iso-Full-Subprecategory X Y
-  iso-eq-Full-Subprecategory =
-    iso-eq-Precategory (precategory-Full-Subprecategory C P)
+  iso-eq-Full-Subprecategory = {!!}
 ```
 
 ### The inclusion functor of a full subprecategory
@@ -233,24 +199,18 @@ module _
 
   inclusion-map-Full-Subprecategory :
     map-Precategory (precategory-Full-Subprecategory C P) C
-  pr1 inclusion-map-Full-Subprecategory = inclusion-obj-Full-Subprecategory C P
-  pr2 inclusion-map-Full-Subprecategory = id
+  pr1 inclusion-map-Full-Subprecategory = {!!}
 
   is-functor-inclusion-Full-Subprecategory :
     is-functor-map-Precategory
       ( precategory-Full-Subprecategory C P)
       ( C)
       ( inclusion-map-Full-Subprecategory)
-  pr1 is-functor-inclusion-Full-Subprecategory g f = refl
-  pr2 is-functor-inclusion-Full-Subprecategory x = refl
+  pr1 is-functor-inclusion-Full-Subprecategory g f = {!!}
 
   inclusion-Full-Subprecategory :
     functor-Precategory (precategory-Full-Subprecategory C P) C
-  pr1 inclusion-Full-Subprecategory =
-    inclusion-obj-Full-Subprecategory C P
-  pr1 (pr2 inclusion-Full-Subprecategory) = id
-  pr2 (pr2 inclusion-Full-Subprecategory) =
-    is-functor-inclusion-Full-Subprecategory
+  pr1 inclusion-Full-Subprecategory = {!!}
 ```
 
 ## Properties
@@ -267,15 +227,7 @@ module _
   is-category-precategory-is-category-Full-Subprecategory :
     is-category-Precategory C →
     is-category-Precategory (precategory-Full-Subprecategory C P)
-  is-category-precategory-is-category-Full-Subprecategory is-category-C X =
-    fundamental-theorem-id
-      ( is-torsorial-Eq-subtype
-        ( is-torsorial-iso-Category (C , is-category-C) (inclusion-subtype P X))
-        ( is-prop-is-in-subtype P)
-        ( inclusion-subtype P X)
-        ( id-iso-Precategory C)
-        ( is-in-subtype-inclusion-subtype P X))
-      ( iso-eq-Full-Subprecategory C P X)
+  is-category-precategory-is-category-Full-Subprecategory is-category-C X = {!!}
 ```
 
 ### The inclusion functor is an embedding
@@ -292,7 +244,7 @@ module _
       ( precategory-Full-Subprecategory C P)
       ( C)
       ( inclusion-Full-Subprecategory C P)
-  is-fully-faithful-inclusion-Full-Subprecategory x y = is-equiv-id
+  is-fully-faithful-inclusion-Full-Subprecategory x y = {!!}
 
   is-emb-obj-inclusion-Full-Subprecategory :
     is-emb
@@ -300,25 +252,20 @@ module _
         ( precategory-Full-Subprecategory C P)
         ( C)
         ( inclusion-Full-Subprecategory C P))
-  is-emb-obj-inclusion-Full-Subprecategory =
-    is-emb-inclusion-subtype (subtype-obj-Full-Subprecategory C P)
+  is-emb-obj-inclusion-Full-Subprecategory = {!!}
 
   is-embedding-inclusion-Full-Subprecategory :
     is-embedding-functor-Precategory
       ( precategory-Full-Subprecategory C P)
       ( C)
       ( inclusion-Full-Subprecategory C P)
-  pr1 is-embedding-inclusion-Full-Subprecategory =
-    is-emb-obj-inclusion-Full-Subprecategory
-  pr2 is-embedding-inclusion-Full-Subprecategory =
-    is-fully-faithful-inclusion-Full-Subprecategory
+  pr1 is-embedding-inclusion-Full-Subprecategory = {!!}
 
   embedding-Full-Subprecategory :
     embedding-Precategory
       ( precategory-Full-Subprecategory C P)
       ( C)
-  pr1 embedding-Full-Subprecategory = inclusion-Full-Subprecategory C P
-  pr2 embedding-Full-Subprecategory = is-embedding-inclusion-Full-Subprecategory
+  pr1 embedding-Full-Subprecategory = {!!}
 ```
 
 ## See also

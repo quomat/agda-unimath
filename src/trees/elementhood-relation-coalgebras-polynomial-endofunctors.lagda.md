@@ -39,11 +39,10 @@ is-element-of-coalgebra-polynomial-endofunctor :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2}
   (X : coalgebra-polynomial-endofunctor l3 A B)
   (x y : type-coalgebra-polynomial-endofunctor X) → UU (l2 ⊔ l3)
-is-element-of-coalgebra-polynomial-endofunctor X x y =
-  fiber (component-coalgebra-polynomial-endofunctor X y) x
+is-element-of-coalgebra-polynomial-endofunctor X x y = {!!}
 
 syntax
-  is-element-of-coalgebra-polynomial-endofunctor X x y = x ∈ y in-coalgebra X
+  is-element-of-coalgebra-polynomial-endofunctor X x y = {!!}
 ```
 
 ### The graph of a coalgebra for a polynomial endofunctor
@@ -56,21 +55,16 @@ module _
 
   graph-coalgebra-polynomial-endofunctor :
     Directed-Graph l3 (l2 ⊔ l3)
-  pr1 graph-coalgebra-polynomial-endofunctor =
-    type-coalgebra-polynomial-endofunctor X
-  pr2 graph-coalgebra-polynomial-endofunctor x y =
-    x ∈ y in-coalgebra X
+  pr1 graph-coalgebra-polynomial-endofunctor = {!!}
 
   walk-coalgebra-polynomial-endofunctor :
     (x y : type-coalgebra-polynomial-endofunctor X) → UU (l2 ⊔ l3)
-  walk-coalgebra-polynomial-endofunctor =
-    walk-Directed-Graph graph-coalgebra-polynomial-endofunctor
+  walk-coalgebra-polynomial-endofunctor = {!!}
 
   concat-walk-coalgebra-polynomial-endofunctor :
     {x y z : type-coalgebra-polynomial-endofunctor X} →
     walk-coalgebra-polynomial-endofunctor x y →
     walk-coalgebra-polynomial-endofunctor y z →
     walk-coalgebra-polynomial-endofunctor x z
-  concat-walk-coalgebra-polynomial-endofunctor =
-    concat-walk-Directed-Graph graph-coalgebra-polynomial-endofunctor
+  concat-walk-coalgebra-polynomial-endofunctor = {!!}
 ```

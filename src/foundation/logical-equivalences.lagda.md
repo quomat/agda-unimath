@@ -44,17 +44,17 @@ Curry-Howard interpretation of logical equivalences between
 infix 6 _↔_
 
 _↔_ : {l1 l2 : Level} → UU l1 → UU l2 → UU (l1 ⊔ l2)
-A ↔ B = (A → B) × (B → A)
+A ↔ B = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (H : A ↔ B)
   where
 
   forward-implication : A → B
-  forward-implication = pr1 H
+  forward-implication = {!!}
 
   backward-implication : B → A
-  backward-implication = pr2 H
+  backward-implication = {!!}
 ```
 
 ### Logical equivalences between propositions
@@ -65,22 +65,18 @@ module _
   where
 
   type-iff-Prop : UU (l1 ⊔ l2)
-  type-iff-Prop = type-Prop P ↔ type-Prop Q
+  type-iff-Prop = {!!}
 
   is-prop-iff-Prop : is-prop type-iff-Prop
-  is-prop-iff-Prop =
-    is-prop-prod
-      ( is-prop-function-type (is-prop-type-Prop Q))
-      ( is-prop-function-type (is-prop-type-Prop P))
+  is-prop-iff-Prop = {!!}
 
   iff-Prop : Prop (l1 ⊔ l2)
-  pr1 iff-Prop = type-iff-Prop
-  pr2 iff-Prop = is-prop-iff-Prop
+  pr1 iff-Prop = {!!}
 
   infix 6 _⇔_
 
   _⇔_ : UU (l1 ⊔ l2)
-  _⇔_ = type-iff-Prop
+  _⇔_ = {!!}
 ```
 
 ### Composition of logical equivalences
@@ -91,8 +87,8 @@ infixr 15 _∘iff_
 _∘iff_ :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : UU l3} →
   (B ↔ C) → (A ↔ B) → (A ↔ C)
-pr1 ((g1 , g2) ∘iff (f1 , f2)) = g1 ∘ f1
-pr2 ((g1 , g2) ∘iff (f1 , f2)) = f2 ∘ g2
+pr1 ((g1 , g2) ∘iff (f1 , f2)) = {!!}
+pr2 ((g1 , g2) ∘iff (f1 , f2)) = {!!}
 ```
 
 ### Inverting a logical equivalence
@@ -100,8 +96,8 @@ pr2 ((g1 , g2) ∘iff (f1 , f2)) = f2 ∘ g2
 ```agda
 inv-iff :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → (A ↔ B) → (B ↔ A)
-pr1 (inv-iff (f , g)) = g
-pr2 (inv-iff (f , g)) = f
+pr1 (inv-iff (f , g)) = {!!}
+pr2 (inv-iff (f , g)) = {!!}
 ```
 
 ## Properties
@@ -114,22 +110,19 @@ module _
   where
 
   htpy-iff : (f g : A ↔ B) → UU (l1 ⊔ l2)
-  htpy-iff f g =
-    ( forward-implication f ~ forward-implication g) ×
-    ( backward-implication f ~ backward-implication g)
+  htpy-iff f g = {!!}
 
   ext-iff : (f g : A ↔ B) → (f ＝ g) ≃ htpy-iff f g
-  ext-iff f g = equiv-prod equiv-funext equiv-funext ∘e equiv-pair-eq f g
+  ext-iff f g = {!!}
 
   refl-htpy-iff : (f : A ↔ B) → htpy-iff f f
-  pr1 (refl-htpy-iff f) = refl-htpy
-  pr2 (refl-htpy-iff f) = refl-htpy
+  pr1 (refl-htpy-iff f) = {!!}
 
   htpy-eq-iff : {f g : A ↔ B} → f ＝ g → htpy-iff f g
-  htpy-eq-iff {f} {g} = map-equiv (ext-iff f g)
+  htpy-eq-iff {f} {g} = {!!}
 
   eq-htpy-iff : (f g : A ↔ B) → htpy-iff f g → (f ＝ g)
-  eq-htpy-iff f g = map-inv-equiv (ext-iff f g)
+  eq-htpy-iff f g = {!!}
 ```
 
 ### Logical equivalences between propositions induce equivalences
@@ -140,36 +133,29 @@ module _
   where
 
   equiv-iff' : (P ⇔ Q) → (type-Prop P ≃ type-Prop Q)
-  pr1 (equiv-iff' t) = pr1 t
-  pr2 (equiv-iff' t) = is-equiv-is-prop (pr2 P) (pr2 Q) (pr2 t)
+  pr1 (equiv-iff' t) = {!!}
 
   equiv-iff :
     (type-Prop P → type-Prop Q) → (type-Prop Q → type-Prop P) →
     type-Prop P ≃ type-Prop Q
-  equiv-iff f g = equiv-iff' (f , g)
+  equiv-iff f g = {!!}
 ```
 
 ### Equivalences are logical equivalences
 
 ```agda
 iff-equiv : {l1 l2 : Level} {A : UU l1} {B : UU l2} → (A ≃ B) → (A ↔ B)
-pr1 (iff-equiv e) = map-equiv e
-pr2 (iff-equiv e) = map-inv-equiv e
+pr1 (iff-equiv e) = {!!}
+pr2 (iff-equiv e) = {!!}
 
 is-injective-iff-equiv :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → is-injective (iff-equiv {A = A} {B})
-is-injective-iff-equiv p = eq-htpy-equiv (pr1 (htpy-eq-iff p))
+is-injective-iff-equiv p = {!!}
 
 compute-fiber-iff-equiv :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} ((f , g) : A ↔ B) →
   fiber (iff-equiv) (f , g) ≃ Σ (is-equiv f) (λ f' → map-inv-is-equiv f' ~ g)
-compute-fiber-iff-equiv {A = A} {B} (f , g) =
-  ( ( ( ( ( equiv-tot (λ _ → equiv-funext)) ∘e
-          ( left-unit-law-Σ-is-contr (is-torsorial-path' f) (f , refl))) ∘e
-        ( inv-associative-Σ (A → B) (_＝ f) _)) ∘e
-      ( equiv-tot (λ _ → equiv-left-swap-Σ))) ∘e
-    ( associative-Σ (A → B) _ _)) ∘e
-  ( equiv-tot (λ e → equiv-pair-eq (iff-equiv e) (f , g)))
+compute-fiber-iff-equiv {A = A} {B} (f , g) = {!!}
 ```
 
 ### Two equal propositions are logically equivalent
@@ -177,8 +163,8 @@ compute-fiber-iff-equiv {A = A} {B} (f , g) =
 ```agda
 iff-eq :
   {l1 : Level} {P Q : Prop l1} → P ＝ Q → P ⇔ Q
-pr1 (iff-eq refl) = id
-pr2 (iff-eq refl) = id
+pr1 (iff-eq refl) = {!!}
+pr2 (iff-eq refl) = {!!}
 ```
 
 ### Logical equivalence of propositions is equivalent to equivalence of propositions
@@ -188,17 +174,13 @@ abstract
   is-equiv-equiv-iff :
     {l1 l2 : Level} (P : Prop l1) (Q : Prop l2) →
     is-equiv (equiv-iff' P Q)
-  is-equiv-equiv-iff P Q =
-    is-equiv-is-prop
-      ( is-prop-iff-Prop P Q)
-      ( is-prop-type-equiv-Prop P Q)
-      ( iff-equiv)
+  is-equiv-equiv-iff P Q = {!!}
 
 equiv-equiv-iff :
   {l1 l2 : Level} (P : Prop l1) (Q : Prop l2) →
   (P ⇔ Q) ≃ (type-Prop P ≃ type-Prop Q)
-pr1 (equiv-equiv-iff P Q) = equiv-iff' P Q
-pr2 (equiv-equiv-iff P Q) = is-equiv-equiv-iff P Q
+pr1 (equiv-equiv-iff P Q) = {!!}
+pr2 (equiv-equiv-iff P Q) = {!!}
 ```
 
 ## Logical equivalences between dependent function types
@@ -209,8 +191,7 @@ module _
   where
 
   iff-Π-iff-family : ((i : I) → A i ↔ B i) → ((i : I) → A i) ↔ ((i : I) → B i)
-  pr1 (iff-Π-iff-family e) a i = forward-implication (e i) (a i)
-  pr2 (iff-Π-iff-family e) b i = backward-implication (e i) (b i)
+  pr1 (iff-Π-iff-family e) a i = {!!}
 ```
 
 ## Reasoning with logical equivalences
@@ -231,13 +212,13 @@ infixl 0 step-logical-equivalence-reasoning
 
 logical-equivalence-reasoning_ :
   {l1 : Level} (X : UU l1) → X ↔ X
-pr1 (logical-equivalence-reasoning X) = id
-pr2 (logical-equivalence-reasoning X) = id
+pr1 (logical-equivalence-reasoning X) = {!!}
+pr2 (logical-equivalence-reasoning X) = {!!}
 
 step-logical-equivalence-reasoning :
   {l1 l2 l3 : Level} {X : UU l1} {Y : UU l2} →
   (X ↔ Y) → (Z : UU l3) → (Y ↔ Z) → (X ↔ Z)
-step-logical-equivalence-reasoning e Z f = f ∘iff e
+step-logical-equivalence-reasoning e Z f = {!!}
 
-syntax step-logical-equivalence-reasoning e Z f = e ↔ Z by f
+syntax step-logical-equivalence-reasoning e Z f = {!!}
 ```

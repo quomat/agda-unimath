@@ -29,16 +29,15 @@ module _
   where
 
   preserves-mul-Magma : (type-Magma M → type-Magma N) → UU (l1 ⊔ l2)
-  preserves-mul-Magma f =
-    (x y : type-Magma M) → Id (f (mul-Magma M x y)) (mul-Magma N (f x) (f y))
+  preserves-mul-Magma f = {!!}
 
   hom-Magma : UU (l1 ⊔ l2)
-  hom-Magma = Σ (type-Magma M → type-Magma N) preserves-mul-Magma
+  hom-Magma = {!!}
 
   map-hom-Magma : hom-Magma → type-Magma M → type-Magma N
-  map-hom-Magma = pr1
+  map-hom-Magma = {!!}
 
   preserves-mul-map-hom-Magma :
     (f : hom-Magma) → preserves-mul-Magma (map-hom-Magma f)
-  preserves-mul-map-hom-Magma = pr2
+  preserves-mul-map-hom-Magma = {!!}
 ```

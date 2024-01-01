@@ -50,8 +50,8 @@ of universe level `l₀ ⊔ l₁ ⊔ l₂ ⊔ l₃`.
 
 ```agda
 iterated-Σ : {l : Level} {n : ℕ} → telescope l n → UU l
-iterated-Σ (base-telescope A) = A
-iterated-Σ (cons-telescope {X = X} A) = Σ X (λ x → iterated-Σ (A x))
+iterated-Σ (base-telescope A) = {!!}
+iterated-Σ (cons-telescope {X = X} A) = {!!}
 ```
 
 ### Iterated elements of iterated type families
@@ -73,9 +73,9 @@ data
 iterated-pair :
   {l : Level} {n : ℕ} {A : telescope l n} →
   iterated-element A → iterated-Σ A
-iterated-pair (base-iterated-element x) = x
-pr1 (iterated-pair (cons-iterated-element y a)) = y
-pr2 (iterated-pair (cons-iterated-element y a)) = iterated-pair a
+iterated-pair (base-iterated-element x) = {!!}
+pr1 (iterated-pair (cons-iterated-element y a)) = {!!}
+pr2 (iterated-pair (cons-iterated-element y a)) = {!!}
 ```
 
 ## Properties
@@ -84,32 +84,28 @@ pr2 (iterated-pair (cons-iterated-element y a)) = iterated-pair a
 
 ```agda
 is-contr-Σ-telescope : {l : Level} {n : ℕ} → telescope l n → UU l
-is-contr-Σ-telescope (base-telescope A) = is-contr A
-is-contr-Σ-telescope (cons-telescope {X = X} A) =
-  (is-contr X) × (Σ X (λ x → is-contr-Σ-telescope (A x)))
+is-contr-Σ-telescope (base-telescope A) = {!!}
+is-contr-Σ-telescope (cons-telescope {X = X} A) = {!!}
 
 is-contr-iterated-Σ :
   {l : Level} (n : ℕ) {{A : telescope l n}} →
   is-contr-Σ-telescope A → is-contr (iterated-Σ A)
-is-contr-iterated-Σ .0 {{base-telescope A}} is-contr-A = is-contr-A
-is-contr-iterated-Σ ._ {{cons-telescope A}} (is-contr-X , x , H) =
-  is-contr-Σ is-contr-X x (is-contr-iterated-Σ _ {{A x}} H)
+is-contr-iterated-Σ .0 {{base-telescope A}} is-contr-A = {!!}
+is-contr-iterated-Σ ._ {{cons-telescope A}} (is-contr-X , x , H) = {!!}
 ```
 
 ### Contractiblity of iterated Σ-types without choice of contracting center
 
 ```agda
 is-contr-Σ-telescope' : {l : Level} {n : ℕ} → telescope l n → UU l
-is-contr-Σ-telescope' (base-telescope A) = is-contr A
-is-contr-Σ-telescope' (cons-telescope {X = X} A) =
-  (is-contr X) × ((x : X) → is-contr-Σ-telescope' (A x))
+is-contr-Σ-telescope' (base-telescope A) = {!!}
+is-contr-Σ-telescope' (cons-telescope {X = X} A) = {!!}
 
 is-contr-iterated-Σ' :
   {l : Level} (n : ℕ) {{A : telescope l n}} →
   is-contr-Σ-telescope' A → is-contr (iterated-Σ A)
-is-contr-iterated-Σ' .0 {{base-telescope A}} is-contr-A = is-contr-A
-is-contr-iterated-Σ' ._ {{cons-telescope A}} (is-contr-X , H) =
-  is-contr-Σ' is-contr-X (λ x → is-contr-iterated-Σ' _ {{A x}} (H x))
+is-contr-iterated-Σ' .0 {{base-telescope A}} is-contr-A = {!!}
+is-contr-iterated-Σ' ._ {{cons-telescope A}} (is-contr-X , H) = {!!}
 ```
 
 ## See also

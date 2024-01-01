@@ -24,32 +24,28 @@ A wild semigroup is a magma of with associative multiplication
 
 ```agda
 Wild-Semigroup : (l : Level) → UU (lsuc l)
-Wild-Semigroup l =
-  Σ ( Magma l)
-    ( λ M →
-      (x y z : type-Magma M) →
-      Id (mul-Magma M (mul-Magma M x y) z) (mul-Magma M x (mul-Magma M y z)))
+Wild-Semigroup l = {!!}
 
 module _
   {l : Level} (G : Wild-Semigroup l)
   where
 
   magma-Wild-Semigroup : Magma l
-  magma-Wild-Semigroup = pr1 G
+  magma-Wild-Semigroup = {!!}
 
   type-Wild-Semigroup : UU l
-  type-Wild-Semigroup = type-Magma magma-Wild-Semigroup
+  type-Wild-Semigroup = {!!}
 
   mul-Wild-Semigroup : (x y : type-Wild-Semigroup) → type-Wild-Semigroup
-  mul-Wild-Semigroup = mul-Magma magma-Wild-Semigroup
+  mul-Wild-Semigroup = {!!}
 
   mul-Wild-Semigroup' : (x y : type-Wild-Semigroup) → type-Wild-Semigroup
-  mul-Wild-Semigroup' = mul-Magma' magma-Wild-Semigroup
+  mul-Wild-Semigroup' = {!!}
 
   associative-mul-Wild-Semigroup :
     (x y z : type-Wild-Semigroup) →
     Id
       ( mul-Wild-Semigroup (mul-Wild-Semigroup x y) z)
       ( mul-Wild-Semigroup x (mul-Wild-Semigroup y z))
-  associative-mul-Wild-Semigroup = pr2 G
+  associative-mul-Wild-Semigroup = {!!}
 ```

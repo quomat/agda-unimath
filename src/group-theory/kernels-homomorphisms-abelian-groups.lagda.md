@@ -37,51 +37,36 @@ module _
   where
 
   subset-kernel-hom-Ab : subset-Ab l2 A
-  subset-kernel-hom-Ab =
-    subset-kernel-hom-Group (group-Ab A) (group-Ab B) f
+  subset-kernel-hom-Ab = {!!}
 
   is-in-kernel-hom-Ab : type-Ab A → UU l2
-  is-in-kernel-hom-Ab =
-    is-in-kernel-hom-Group (group-Ab A) (group-Ab B) f
+  is-in-kernel-hom-Ab = {!!}
 
   contains-zero-subset-kernel-hom-Ab :
     is-in-kernel-hom-Ab (zero-Ab A)
-  contains-zero-subset-kernel-hom-Ab =
-    contains-unit-subset-kernel-hom-Group (group-Ab A) (group-Ab B) f
+  contains-zero-subset-kernel-hom-Ab = {!!}
 
   is-closed-under-addition-subset-kernel-hom-Ab :
     is-closed-under-addition-subset-Ab A subset-kernel-hom-Ab
-  is-closed-under-addition-subset-kernel-hom-Ab =
-    is-closed-under-multiplication-subset-kernel-hom-Group
-      ( group-Ab A)
-      ( group-Ab B)
-      ( f)
+  is-closed-under-addition-subset-kernel-hom-Ab = {!!}
 
   is-closed-under-negatives-subset-kernel-hom-Ab :
     is-closed-under-negatives-subset-Ab A subset-kernel-hom-Ab
-  is-closed-under-negatives-subset-kernel-hom-Ab =
-    is-closed-under-inverses-subset-kernel-hom-Group
-      ( group-Ab A)
-      ( group-Ab B)
-      ( f)
+  is-closed-under-negatives-subset-kernel-hom-Ab = {!!}
 
   kernel-hom-Ab : Subgroup-Ab l2 A
-  kernel-hom-Ab =
-    subgroup-kernel-hom-Group (group-Ab A) (group-Ab B) f
+  kernel-hom-Ab = {!!}
 
   ab-kernel-hom-Ab : Ab (l1 ⊔ l2)
-  ab-kernel-hom-Ab = ab-Subgroup-Ab A kernel-hom-Ab
+  ab-kernel-hom-Ab = {!!}
 
   inclusion-kernel-hom-Ab : hom-Ab ab-kernel-hom-Ab A
-  inclusion-kernel-hom-Ab =
-    inclusion-kernel-hom-Group (group-Ab A) (group-Ab B) f
+  inclusion-kernel-hom-Ab = {!!}
 
   is-emb-inclusion-kernel-hom-Ab :
     is-emb-hom-Ab ab-kernel-hom-Ab A inclusion-kernel-hom-Ab
-  is-emb-inclusion-kernel-hom-Ab =
-    is-emb-inclusion-kernel-hom-Group (group-Ab A) (group-Ab B) f
+  is-emb-inclusion-kernel-hom-Ab = {!!}
 
   emb-inclusion-kernel-hom-Ab : emb-Ab ab-kernel-hom-Ab A
-  emb-inclusion-kernel-hom-Ab =
-    emb-inclusion-kernel-hom-Group (group-Ab A) (group-Ab B) f
+  emb-inclusion-kernel-hom-Ab = {!!}
 ```

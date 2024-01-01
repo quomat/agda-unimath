@@ -30,7 +30,7 @@ The **powerset** of a type is the set of all
 ```agda
 powerset :
   {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-powerset = subtype
+powerset = {!!}
 ```
 
 ## Properties
@@ -43,10 +43,10 @@ module _
   where
 
   is-set-powerset : {l2 : Level} → is-set (powerset l2 A)
-  is-set-powerset = is-set-subtype
+  is-set-powerset = {!!}
 
   powerset-Set : (l2 : Level) → Set (l1 ⊔ lsuc l2)
-  powerset-Set l2 = subtype-Set l2 A
+  powerset-Set l2 = {!!}
 ```
 
 ### The powerset large preorder
@@ -58,10 +58,7 @@ module _
 
   powerset-Large-Preorder :
     Large-Preorder (λ l → l1 ⊔ lsuc l) (λ l2 l3 → l1 ⊔ l2 ⊔ l3)
-  type-Large-Preorder powerset-Large-Preorder l = subtype l A
-  leq-prop-Large-Preorder powerset-Large-Preorder = leq-prop-subtype
-  refl-leq-Large-Preorder powerset-Large-Preorder = refl-leq-subtype
-  transitive-leq-Large-Preorder powerset-Large-Preorder = transitive-leq-subtype
+  type-Large-Preorder powerset-Large-Preorder l = {!!}
 ```
 
 ### The powerset large poset
@@ -73,9 +70,7 @@ module _
 
   powerset-Large-Poset :
     Large-Poset (λ l → l1 ⊔ lsuc l) (λ l2 l3 → l1 ⊔ l2 ⊔ l3)
-  large-preorder-Large-Poset powerset-Large-Poset = powerset-Large-Preorder A
-  antisymmetric-leq-Large-Poset powerset-Large-Poset P Q =
-    antisymmetric-leq-subtype P Q
+  large-preorder-Large-Poset powerset-Large-Poset = {!!}
 ```
 
 ### The powerset preorder at a universe level
@@ -86,7 +81,7 @@ module _
   where
 
   powerset-Preorder : (l2 : Level) → Preorder (l1 ⊔ lsuc l2) (l1 ⊔ l2)
-  powerset-Preorder = preorder-Large-Preorder (powerset-Large-Preorder A)
+  powerset-Preorder = {!!}
 ```
 
 ### The powerset poset at a universe level
@@ -97,5 +92,5 @@ module _
   where
 
   powerset-Poset : (l2 : Level) → Poset (l1 ⊔ lsuc l2) (l1 ⊔ l2)
-  powerset-Poset = poset-Large-Poset (powerset-Large-Poset A)
+  powerset-Poset = {!!}
 ```

@@ -38,18 +38,18 @@ section of `B` it suffices to construct an element in `B a`.
 ```agda
 is-singleton :
   (l1 : Level) {l2 : Level} (A : UU l2) → A → UU (lsuc l1 ⊔ l2)
-is-singleton l A a = (B : A → UU l) → section (ev-point a {B})
+is-singleton l A a = {!!}
 
 ind-is-singleton :
   {l1 l2 : Level} {A : UU l1} (a : A) →
   ({l : Level} → is-singleton l A a) → (B : A → UU l2) →
   B a → (x : A) → B x
-ind-is-singleton a is-sing-A B = pr1 (is-sing-A B)
+ind-is-singleton a is-sing-A B = {!!}
 
 compute-ind-is-singleton :
   {l1 l2 : Level} {A : UU l1} (a : A) (H : {l : Level} → is-singleton l A a) →
   (B : A → UU l2) → (ev-point a {B} ∘ ind-is-singleton a H B) ~ id
-compute-ind-is-singleton a H B = pr2 (H B)
+compute-ind-is-singleton a H B = {!!}
 ```
 
 ## Properties
@@ -61,16 +61,14 @@ abstract
   ind-singleton :
     {l1 l2 : Level} {A : UU l1} (a : A) (is-contr-A : is-contr A)
     (B : A → UU l2) → B a → (x : A) → B x
-  ind-singleton a is-contr-A B b x =
-    tr B (inv (contraction is-contr-A a) ∙ contraction is-contr-A x) b
+  ind-singleton a is-contr-A B b x = {!!}
 
 abstract
   compute-ind-singleton :
     {l1 l2 : Level} {A : UU l1}
     (a : A) (is-contr-A : is-contr A) (B : A → UU l2) →
     (ev-point a {B} ∘ ind-singleton a is-contr-A B) ~ id
-  compute-ind-singleton a is-contr-A B b =
-    ap (λ p → tr B p b) (left-inv (contraction is-contr-A a))
+  compute-ind-singleton a is-contr-A B b = {!!}
 ```
 
 ### A type satisfies singleton induction if and only if it is contractible
@@ -78,23 +76,20 @@ abstract
 ```agda
 is-singleton-is-contr :
   {l1 l2 : Level} {A : UU l1} (a : A) → is-contr A → is-singleton l2 A a
-pr1 (is-singleton-is-contr a is-contr-A B) =
-  ind-singleton a is-contr-A B
-pr2 (is-singleton-is-contr a is-contr-A B) =
-  compute-ind-singleton a is-contr-A B
+pr1 (is-singleton-is-contr a is-contr-A B) = {!!}
+pr2 (is-singleton-is-contr a is-contr-A B) = {!!}
 
 abstract
   is-contr-ind-singleton :
     {l1 : Level} (A : UU l1) (a : A) →
     ({l2 : Level} (B : A → UU l2) → B a → (x : A) → B x) → is-contr A
-  pr1 (is-contr-ind-singleton A a S) = a
-  pr2 (is-contr-ind-singleton A a S) = S (λ x → a ＝ x) refl
+  pr1 (is-contr-ind-singleton A a S) = {!!}
 
 abstract
   is-contr-is-singleton :
     {l1 : Level} (A : UU l1) (a : A) →
     ({l2 : Level} → is-singleton l2 A a) → is-contr A
-  is-contr-is-singleton A a S = is-contr-ind-singleton A a (pr1 ∘ S)
+  is-contr-is-singleton A a S = {!!}
 ```
 
 ## Examples
@@ -106,8 +101,7 @@ abstract
   is-singleton-total-path :
     {l1 l2 : Level} (A : UU l1) (a : A) →
     is-singleton l2 (Σ A (λ x → a ＝ x)) (a , refl)
-  pr1 (is-singleton-total-path A a B) = ind-Σ ∘ ind-Id a _
-  pr2 (is-singleton-total-path A a B) = refl-htpy
+  pr1 (is-singleton-total-path A a B) = {!!}
 ```
 
 ## See also

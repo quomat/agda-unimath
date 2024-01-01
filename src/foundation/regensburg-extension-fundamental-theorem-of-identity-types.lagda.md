@@ -91,37 +91,20 @@ module _
       is-0-connected A →
       ((f : (x : A) → (a ＝ x) → B x) (x : A) → is-in-subuniverse-map P (f x)) →
       is-separated P (Σ A B)
-    forward-implication-extended-fundamental-theorem-id H K (x , y) (x' , y') =
-      apply-universal-property-trunc-Prop
-        ( mere-eq-is-0-connected H a x)
-        ( P _)
-        ( λ where
-          refl →
-            is-in-subuniverse-equiv P
-              ( compute-fiber-map-out-of-identity-type
-                ( ind-Id a (λ u v → B u) y)
-                ( x')
-                ( y'))
-              ( K (ind-Id a (λ u v → B u) y) x' y'))
+    forward-implication-extended-fundamental-theorem-id H K (x , y) (x' , y') = {!!}
 
   abstract
     backward-implication-extended-fundamental-theorem-id :
       is-separated P (Σ A B) →
       (f : (x : A) → (a ＝ x) → B x) (x : A) → is-in-subuniverse-map P (f x)
-    backward-implication-extended-fundamental-theorem-id K f x y =
-      is-in-subuniverse-equiv' P
-        ( compute-fiber-map-out-of-identity-type f x y)
-        ( K (a , f a refl) (x , y))
+    backward-implication-extended-fundamental-theorem-id K f x y = {!!}
 
   abstract
     extended-fundamental-theorem-id :
       is-0-connected A →
       ((f : (x : A) → (a ＝ x) → B x) (x : A) → is-in-subuniverse-map P (f x)) ↔
       is-separated P (Σ A B)
-    pr1 (extended-fundamental-theorem-id H) =
-      forward-implication-extended-fundamental-theorem-id H
-    pr2 (extended-fundamental-theorem-id H) =
-      backward-implication-extended-fundamental-theorem-id
+    pr1 (extended-fundamental-theorem-id H) = {!!}
 ```
 
 ## Corollaries
@@ -137,32 +120,18 @@ module _
     is-0-connected A →
     ( (f : (x : A) → (a ＝ x) → B x) → (x : A) → is-surjective (f x)) →
     is-inhabited (B a) → is-0-connected (Σ A B)
-  forward-implication-extended-fundamental-theorem-id-surjective H K L =
-    is-0-connected-mere-eq-is-inhabited
-      ( map-trunc-Prop (fiber-inclusion B a) L)
-      ( forward-implication-extended-fundamental-theorem-id
-        ( is-inhabited-Prop)
-        ( a)
-        ( H)
-        ( K))
+  forward-implication-extended-fundamental-theorem-id-surjective H K L = {!!}
 
   backward-implication-extended-fundamental-theorem-id-surjective :
     is-0-connected (Σ A B) →
     (f : (x : A) → (a ＝ x) → B x) (x : A) → is-surjective (f x)
-  backward-implication-extended-fundamental-theorem-id-surjective L =
-    backward-implication-extended-fundamental-theorem-id
-      ( is-inhabited-Prop)
-      ( a)
-      ( mere-eq-is-0-connected L)
+  backward-implication-extended-fundamental-theorem-id-surjective L = {!!}
 
   extended-fundamental-theorem-id-surjective :
     is-0-connected A → is-inhabited (B a) →
     ( (f : (x : A) → (a ＝ x) → B x) → (x : A) → is-surjective (f x)) ↔
     is-0-connected (Σ A B)
-  pr1 (extended-fundamental-theorem-id-surjective H K) L =
-    forward-implication-extended-fundamental-theorem-id-surjective H L K
-  pr2 ( extended-fundamental-theorem-id-surjective H K) =
-    backward-implication-extended-fundamental-theorem-id-surjective
+  pr1 (extended-fundamental-theorem-id-surjective H K) L = {!!}
 ```
 
 ### Characterizing families of connected maps out of identity types
@@ -176,32 +145,18 @@ module _
   forward-implication-extended-fundamental-theorem-id-connected :
     ( (f : (x : A) → (a ＝ x) → B x) → (x : A) → is-connected-map k (f x)) →
     is-inhabited (B a) → is-connected (succ-𝕋 k) (Σ A B)
-  forward-implication-extended-fundamental-theorem-id-connected K L =
-    is-connected-succ-is-connected-eq
-      ( map-trunc-Prop (fiber-inclusion B a) L)
-      ( forward-implication-extended-fundamental-theorem-id
-        ( is-connected-Prop k)
-        ( a)
-        ( H)
-        ( K))
+  forward-implication-extended-fundamental-theorem-id-connected K L = {!!}
 
   backward-implication-extended-fundamental-theorem-id-connected :
     is-connected (succ-𝕋 k) (Σ A B) →
     (f : (x : A) → (a ＝ x) → B x) (x : A) → is-connected-map k (f x)
-  backward-implication-extended-fundamental-theorem-id-connected K =
-    backward-implication-extended-fundamental-theorem-id
-      ( is-connected-Prop k)
-      ( a)
-      ( λ x y → is-connected-eq-is-connected K)
+  backward-implication-extended-fundamental-theorem-id-connected K = {!!}
 
   extended-fundamental-theorem-id-connected :
     is-0-connected A → is-inhabited (B a) →
     ((f : (x : A) → (a ＝ x) → B x) (x : A) → is-connected-map k (f x)) ↔
     is-connected (succ-𝕋 k) (Σ A B)
-  pr1 (extended-fundamental-theorem-id-connected H K) L =
-    forward-implication-extended-fundamental-theorem-id-connected L K
-  pr2 (extended-fundamental-theorem-id-connected H K) =
-    backward-implication-extended-fundamental-theorem-id-connected
+  pr1 (extended-fundamental-theorem-id-connected H K) L = {!!}
 ```
 
 ### Characterizing families of truncated maps out of identity types
@@ -215,27 +170,18 @@ module _
     is-0-connected A →
     ((f : (x : A) → (a ＝ x) → B x) → (x : A) → is-trunc-map k (f x)) →
     is-trunc (succ-𝕋 k) (Σ A B)
-  forward-implication-extended-fundamental-theorem-id-truncated =
-    forward-implication-extended-fundamental-theorem-id
-      ( is-trunc-Prop k)
-      ( a)
+  forward-implication-extended-fundamental-theorem-id-truncated = {!!}
 
   backward-implication-extended-fundamental-theorem-id-truncated :
     is-trunc (succ-𝕋 k) (Σ A B) →
     (f : (x : A) → (a ＝ x) → B x) (x : A) → is-trunc-map k (f x)
-  backward-implication-extended-fundamental-theorem-id-truncated =
-    backward-implication-extended-fundamental-theorem-id
-      ( is-trunc-Prop k)
-      ( a)
+  backward-implication-extended-fundamental-theorem-id-truncated = {!!}
 
   extended-fundamental-theorem-id-truncated :
     is-0-connected A →
     ((f : (x : A) → (a ＝ x) → B x) (x : A) → is-trunc-map k (f x)) ↔
     is-trunc (succ-𝕋 k) (Σ A B)
-  pr1 (extended-fundamental-theorem-id-truncated H) =
-    forward-implication-extended-fundamental-theorem-id-truncated H
-  pr2 (extended-fundamental-theorem-id-truncated H) =
-    backward-implication-extended-fundamental-theorem-id-truncated
+  pr1 (extended-fundamental-theorem-id-truncated H) = {!!}
 ```
 
 ## See also

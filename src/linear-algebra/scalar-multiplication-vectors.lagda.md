@@ -28,5 +28,5 @@ operation `B → vec n A → vec n A`.
 scalar-mul-vec :
   {l1 l2 : Level} {B : UU l1} {A : UU l2} {n : ℕ} →
   (B → A → A) → B → vec A n → vec A n
-scalar-mul-vec μ x = map-vec (μ x)
+scalar-mul-vec μ x = {!!}
 ```

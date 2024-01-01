@@ -67,13 +67,13 @@ module _
   where
 
   is-acyclic-map-Prop : (A → B) → Prop (l1 ⊔ l2)
-  is-acyclic-map-Prop f = Π-Prop B (λ b → is-acyclic-Prop (fiber f b))
+  is-acyclic-map-Prop f = {!!}
 
   is-acyclic-map : (A → B) → UU (l1 ⊔ l2)
-  is-acyclic-map f = type-Prop (is-acyclic-map-Prop f)
+  is-acyclic-map f = {!!}
 
   is-prop-is-acyclic-map : (f : A → B) → is-prop (is-acyclic-map f)
-  is-prop-is-acyclic-map f = is-prop-type-Prop (is-acyclic-map-Prop f)
+  is-prop-is-acyclic-map f = {!!}
 ```
 
 ## Properties
@@ -86,23 +86,10 @@ module _
   where
 
   is-acyclic-map-is-epimorphism : is-epimorphism f → is-acyclic-map f
-  is-acyclic-map-is-epimorphism e b =
-    is-contr-equiv
-      ( fiber (codiagonal-map f) b)
-      ( equiv-fiber-codiagonal-map-suspension-fiber f b)
-      ( is-contr-map-is-equiv
-        ( is-equiv-codiagonal-map-is-epimorphism f e)
-        ( b))
+  is-acyclic-map-is-epimorphism e b = {!!}
 
   is-epimorphism-is-acyclic-map : is-acyclic-map f → is-epimorphism f
-  is-epimorphism-is-acyclic-map ac =
-    is-epimorphism-is-equiv-codiagonal-map f
-      ( is-equiv-is-contr-map
-        ( λ b →
-          is-contr-equiv
-            ( suspension (fiber f b))
-            ( inv-equiv (equiv-fiber-codiagonal-map-suspension-fiber f b))
-            ( ac b)))
+  is-epimorphism-is-acyclic-map ac = {!!}
 ```
 
 ### A type is acyclic if and only if its terminal map is an acyclic map
@@ -114,13 +101,11 @@ module _
 
   is-acyclic-map-terminal-map-is-acyclic :
     is-acyclic A → is-acyclic-map (terminal-map {A = A})
-  is-acyclic-map-terminal-map-is-acyclic ac u =
-    is-acyclic-equiv (equiv-fiber-terminal-map u) ac
+  is-acyclic-map-terminal-map-is-acyclic ac u = {!!}
 
   is-acyclic-is-acyclic-map-terminal-map :
     is-acyclic-map (terminal-map {A = A}) → is-acyclic A
-  is-acyclic-is-acyclic-map-terminal-map ac =
-    is-acyclic-equiv inv-equiv-fiber-terminal-map-star (ac star)
+  is-acyclic-is-acyclic-map-terminal-map ac = {!!}
 ```
 
 ### A type is acyclic if and only if the constant map from any type is an embedding
@@ -141,30 +126,12 @@ module _
   is-emb-const-is-acyclic :
     is-acyclic A →
     {l' : Level} (X : UU l') → is-emb (const A X)
-  is-emb-const-is-acyclic ac X =
-    is-emb-comp
-      ( precomp terminal-map X)
-      ( map-inv-left-unit-law-function-type X)
-      ( is-epimorphism-is-acyclic-map terminal-map
-        ( is-acyclic-map-terminal-map-is-acyclic A ac)
-        ( X))
-      ( is-emb-is-equiv (is-equiv-map-inv-left-unit-law-function-type X))
+  is-emb-const-is-acyclic ac X = {!!}
 
   is-acyclic-is-emb-const :
     ({l' : Level} (X : UU l') → is-emb (const A X)) →
     is-acyclic A
-  is-acyclic-is-emb-const e =
-    is-acyclic-is-acyclic-map-terminal-map A
-      ( is-acyclic-map-is-epimorphism
-        ( terminal-map)
-        ( λ X →
-          is-emb-triangle-is-equiv'
-            ( const A X)
-            ( precomp terminal-map X)
-            ( map-inv-left-unit-law-function-type X)
-            ( refl-htpy)
-            ( is-equiv-map-inv-left-unit-law-function-type X)
-            ( e X)))
+  is-acyclic-is-emb-const e = {!!}
 ```
 
 ### A type is acyclic if and only if the constant map from any identity type is an equivalence
@@ -186,31 +153,12 @@ module _
   is-equiv-const-Id-is-acyclic :
     is-acyclic A →
     {l' : Level} {X : UU l'} (x y : X) → is-equiv (const A (x ＝ y))
-  is-equiv-const-Id-is-acyclic ac {X = X} x y =
-    is-equiv-htpy
-      ( htpy-eq ∘ ap (const A X) {x} {y})
-      ( htpy-ap-diagonal-htpy-eq-diagonal-Id A x y)
-      ( is-equiv-comp
-        ( htpy-eq)
-        ( ap (const A X))
-        ( is-emb-const-is-acyclic A ac X x y)
-        ( funext (const A X x) (const A X y)))
+  is-equiv-const-Id-is-acyclic ac {X = X} x y = {!!}
 
   is-acyclic-is-equiv-const-Id :
     ({l' : Level} {X : UU l'} (x y : X) → is-equiv (const A (x ＝ y))) →
     is-acyclic A
-  is-acyclic-is-equiv-const-Id h =
-    is-acyclic-is-emb-const A
-      ( λ X →
-        ( λ x y →
-          is-equiv-right-factor
-            ( htpy-eq)
-            ( ap (const A X))
-            ( funext (const A X x) (const A X y))
-            ( is-equiv-htpy
-              ( const A (x ＝ y))
-              ( htpy-diagonal-Id-ap-diagonal-htpy-eq A x y)
-              ( h x y))))
+  is-acyclic-is-equiv-const-Id h = {!!}
 ```
 
 ### A map is acyclic if and only if it is an [dependent epimorphism](foundation.dependent-epimorphisms.md)
@@ -240,24 +188,11 @@ module _
 
   is-acyclic-map-is-dependent-epimorphism :
     is-dependent-epimorphism f → is-acyclic-map f
-  is-acyclic-map-is-dependent-epimorphism e =
-    is-acyclic-map-is-epimorphism f
-      ( is-epimorphism-is-dependent-epimorphism f e)
+  is-acyclic-map-is-dependent-epimorphism e = {!!}
 
   is-dependent-epimorphism-is-acyclic-map :
     is-acyclic-map f → is-dependent-epimorphism f
-  is-dependent-epimorphism-is-acyclic-map ac C =
-    is-emb-comp
-      ( precomp-Π (map-inv-equiv-total-fiber f) (C ∘ pr1) ∘ ind-Σ)
-      ( map-Π (λ b → const (fiber f b) (C b)))
-      ( is-emb-comp
-        ( precomp-Π (map-inv-equiv-total-fiber f) (C ∘ pr1))
-        ( ind-Σ)
-        ( is-emb-is-equiv
-          ( is-equiv-precomp-Π-is-equiv
-            ( is-equiv-map-inv-equiv-total-fiber f) (C ∘ pr1)))
-        ( is-emb-is-equiv is-equiv-ind-Σ))
-      ( is-emb-map-Π (λ b → is-emb-const-is-acyclic (fiber f b) (ac b) (C b)))
+  is-dependent-epimorphism-is-acyclic-map ac C = {!!}
 ```
 
 In particular, every epimorphism is actually a dependent epimorphism.
@@ -269,9 +204,7 @@ module _
 
   is-dependent-epimorphism-is-epimorphism :
     is-epimorphism f → is-dependent-epimorphism f
-  is-dependent-epimorphism-is-epimorphism e =
-    is-dependent-epimorphism-is-acyclic-map f
-      ( is-acyclic-map-is-epimorphism f e)
+  is-dependent-epimorphism-is-epimorphism e = {!!}
 ```
 
 ### The class of acyclic maps is closed under composition and has the right cancellation property
@@ -287,19 +220,11 @@ module _
 
   is-acyclic-map-comp :
     is-acyclic-map g → is-acyclic-map f → is-acyclic-map (g ∘ f)
-  is-acyclic-map-comp ag af =
-    is-acyclic-map-is-epimorphism (g ∘ f)
-      ( is-epimorphism-comp g f
-        ( is-epimorphism-is-acyclic-map g ag)
-        ( is-epimorphism-is-acyclic-map f af))
+  is-acyclic-map-comp ag af = {!!}
 
   is-acyclic-map-left-factor :
     is-acyclic-map (g ∘ f) → is-acyclic-map f → is-acyclic-map g
-  is-acyclic-map-left-factor ac af =
-    is-acyclic-map-is-epimorphism g
-      ( is-epimorphism-left-factor g f
-        ( is-epimorphism-is-acyclic-map (g ∘ f) ac)
-        ( is-epimorphism-is-acyclic-map f af))
+  is-acyclic-map-left-factor ac af = {!!}
 ```
 
 ### Acyclic maps are closed under pushouts
@@ -325,9 +250,7 @@ computes to the identity:
 ```text
           cocone-map f (j ∘ g)
  (C → X) ---------------------> cocone f (j ∘ g) X
-                             ̇= Σ (l : A → X) , Σ (r : C → X) , l ∘ f ~ r ∘ j ∘ g
-     (using the left square)
-                             ≃ Σ (l : A → X) , Σ (r : C → X) , l ∘ f ~ r ∘ i ∘ f
+                             ̇= {!!}
    (since f is acyclic/epic)
                              ≃ Σ (l : A → X) , Σ (r : C → X) , l ~ r ∘ i
                              ≃ Σ (r : C → X) , Σ (l : A → X) , l ~ r ∘ i
@@ -348,64 +271,13 @@ module _
     is-acyclic-map f →
     {l5 : Level} (X : UU l5) →
     cocone f (vertical-map-cocone f g c ∘ g) X ≃ (C → X)
-  equiv-cocone-postcomp-vertical-map-cocone ac X =
-    equivalence-reasoning
-        cocone f (vertical-map-cocone f g c ∘ g) X
-      ≃ cocone f (horizontal-map-cocone f g c ∘ f) X
-        by
-          equiv-tot
-          ( λ u →
-            equiv-tot
-              ( λ v →
-                equiv-concat-htpy'
-                  ( u ∘ f)
-                  ( λ s → ap v (inv-htpy (coherence-square-cocone f g c) s))))
-      ≃ Σ ( A → X)
-          ( λ u →
-            Σ (C → X) (λ v → u ∘ f ＝ v ∘ horizontal-map-cocone f g c ∘ f))
-        by equiv-tot ( λ u → equiv-tot ( λ v → equiv-eq-htpy))
-      ≃ Σ (A → X) (λ u → Σ (C → X) (λ v → u ＝ v ∘ horizontal-map-cocone f g c))
-        by
-          equiv-tot
-          ( λ u →
-            equiv-tot
-              ( λ v →
-                inv-equiv-ap-is-emb (is-epimorphism-is-acyclic-map f ac X)))
-      ≃ Σ (C → X) (λ v → Σ (A → X) (λ u → u ＝ v ∘ horizontal-map-cocone f g c))
-        by
-          equiv-left-swap-Σ
-      ≃ (C → X)
-        by
-          equiv-pr1 (λ v → is-torsorial-path' (v ∘ horizontal-map-cocone f g c))
+  equiv-cocone-postcomp-vertical-map-cocone ac X = {!!}
 
   is-acyclic-map-vertical-map-cocone-is-pushout :
     is-pushout f g c →
     is-acyclic-map f →
     is-acyclic-map (vertical-map-cocone f g c)
-  is-acyclic-map-vertical-map-cocone-is-pushout po ac =
-    is-acyclic-map-is-epimorphism
-      ( vertical-map-cocone f g c)
-      ( is-epimorphism-universal-property-pushout
-        ( vertical-map-cocone f g c)
-        ( universal-property-pushout-right-universal-property-pushout-rectangle
-          ( f)
-          ( g)
-          ( vertical-map-cocone f g c)
-          ( c)
-          ( cocone-codiagonal-map (vertical-map-cocone f g c))
-          ( universal-property-pushout-is-pushout f g c po)
-          ( λ X →
-            is-equiv-right-factor
-              ( map-equiv (equiv-cocone-postcomp-vertical-map-cocone ac X))
-              ( cocone-map f
-                ( vertical-map-cocone f g c ∘ g)
-                ( cocone-comp-horizontal f g
-                  ( vertical-map-cocone f g c)
-                  ( c)
-                  ( cocone-codiagonal-map (vertical-map-cocone f g c))))
-              ( is-equiv-map-equiv
-                ( equiv-cocone-postcomp-vertical-map-cocone ac X))
-              ( is-equiv-id))))
+  is-acyclic-map-vertical-map-cocone-is-pushout po ac = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {S : UU l1} {A : UU l2} {B : UU l3}
@@ -416,10 +288,7 @@ module _
     is-pushout f g c →
     is-acyclic-map g →
     is-acyclic-map (horizontal-map-cocone f g c)
-  is-acyclic-map-horizontal-map-cocone-is-pushout po =
-    is-acyclic-map-vertical-map-cocone-is-pushout g f
-      ( swap-cocone f g C c)
-      ( is-pushout-swap-cocone-is-pushout f g C c po)
+  is-acyclic-map-horizontal-map-cocone-is-pushout po = {!!}
 ```
 
 ### Acyclic maps are closed under pullbacks
@@ -434,11 +303,7 @@ module _
     is-pullback f g c →
     is-acyclic-map g →
     is-acyclic-map (vertical-map-cone f g c)
-  is-acyclic-map-vertical-map-cone-is-pullback pb ac a =
-    is-acyclic-equiv
-      ( map-fiber-cone f g c a ,
-        is-fiberwise-equiv-map-fiber-cone-is-pullback f g c pb a)
-      ( ac (f a))
+  is-acyclic-map-vertical-map-cone-is-pullback pb ac a = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {C : UU l3}
@@ -449,10 +314,7 @@ module _
     is-pullback f g c →
     is-acyclic-map f →
     is-acyclic-map (horizontal-map-cone f g c)
-  is-acyclic-map-horizontal-map-cone-is-pullback pb =
-    is-acyclic-map-vertical-map-cone-is-pullback g f
-      ( swap-cone f g c)
-      ( is-pullback-swap-cone f g c pb)
+  is-acyclic-map-horizontal-map-cone-is-pullback pb = {!!}
 ```
 
 ### Acyclic types are closed under dependent pair types
@@ -464,14 +326,7 @@ module _
 
   is-acyclic-Σ :
     is-acyclic A → ((a : A) → is-acyclic (B a)) → is-acyclic (Σ A B)
-  is-acyclic-Σ ac-A ac-B =
-    is-acyclic-is-acyclic-map-terminal-map
-      ( Σ A B)
-      ( is-acyclic-map-comp
-        ( terminal-map)
-        ( pr1)
-        ( is-acyclic-map-terminal-map-is-acyclic A ac-A)
-        ( λ a → is-acyclic-equiv (equiv-fiber-pr1 B a) (ac-B a)))
+  is-acyclic-Σ ac-A ac-B = {!!}
 ```
 
 ### Acyclic types are closed under binary products
@@ -483,19 +338,7 @@ module _
 
   is-acyclic-prod :
     is-acyclic A → is-acyclic B → is-acyclic (A × B)
-  is-acyclic-prod ac-A ac-B =
-    is-acyclic-is-acyclic-map-terminal-map
-      ( A × B)
-      ( is-acyclic-map-comp
-        ( terminal-map)
-        ( pr2)
-        ( is-acyclic-map-terminal-map-is-acyclic B ac-B)
-        ( is-acyclic-map-horizontal-map-cone-is-pullback
-          ( terminal-map)
-          ( terminal-map)
-          ( cone-prod A B)
-          ( is-pullback-prod A B)
-          ( is-acyclic-map-terminal-map-is-acyclic A ac-A)))
+  is-acyclic-prod ac-A ac-B = {!!}
 ```
 
 ### Inhabited, locally acyclic types are acyclic
@@ -509,16 +352,7 @@ module _
     is-inhabited A →
     ((a b : A) → is-acyclic (a ＝ b)) →
     is-acyclic A
-  is-acyclic-inhabited-is-acyclic-Id h l-ac =
-    apply-universal-property-trunc-Prop h
-      ( is-acyclic-Prop A)
-      ( λ a →
-        is-acyclic-is-acyclic-map-terminal-map A
-          ( is-acyclic-map-left-factor
-            ( terminal-map)
-            ( point a)
-            ( is-acyclic-map-terminal-map-is-acyclic unit is-acyclic-unit)
-            ( λ b → is-acyclic-equiv (fiber-const a b) (l-ac a b))))
+  is-acyclic-inhabited-is-acyclic-Id h l-ac = {!!}
 ```
 
 ## See also

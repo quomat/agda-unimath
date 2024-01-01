@@ -37,7 +37,7 @@ module _
 
   power-Commutative-Monoid :
     ℕ → type-Commutative-Monoid M → type-Commutative-Monoid M
-  power-Commutative-Monoid = power-Monoid (monoid-Commutative-Monoid M)
+  power-Commutative-Monoid = {!!}
 ```
 
 ### The predicate of being a power of an element in a commutative monoid
@@ -53,19 +53,16 @@ module _
 
   is-power-of-element-prop-Commutative-Monoid :
     (x y : type-Commutative-Monoid M) → Prop l
-  is-power-of-element-prop-Commutative-Monoid =
-    is-power-of-element-prop-Monoid (monoid-Commutative-Monoid M)
+  is-power-of-element-prop-Commutative-Monoid = {!!}
 
   is-power-of-element-Commutative-Monoid :
     (x y : type-Commutative-Monoid M) → UU l
-  is-power-of-element-Commutative-Monoid =
-    is-power-of-element-Monoid (monoid-Commutative-Monoid M)
+  is-power-of-element-Commutative-Monoid = {!!}
 
   is-prop-is-power-of-element-Commutative-Monoid :
     (x y : type-Commutative-Monoid M) →
     is-prop (is-power-of-element-Commutative-Monoid x y)
-  is-prop-is-power-of-element-Commutative-Monoid =
-    is-prop-is-power-of-element-Monoid (monoid-Commutative-Monoid M)
+  is-prop-is-power-of-element-Commutative-Monoid = {!!}
 ```
 
 ## Properties
@@ -81,14 +78,10 @@ module _
     (n : ℕ) →
     power-Commutative-Monoid M n (unit-Commutative-Monoid M) ＝
     unit-Commutative-Monoid M
-  power-unit-Commutative-Monoid zero-ℕ = refl
-  power-unit-Commutative-Monoid (succ-ℕ zero-ℕ) = refl
-  power-unit-Commutative-Monoid (succ-ℕ (succ-ℕ n)) =
-    right-unit-law-mul-Commutative-Monoid M _ ∙
-    power-unit-Commutative-Monoid (succ-ℕ n)
+  power-unit-Commutative-Monoid zero-ℕ = {!!}
 ```
 
-### `xⁿ⁺¹ = xⁿx`
+### `xⁿ⁺¹ = {!!}
 
 ```agda
 module _
@@ -99,8 +92,7 @@ module _
     (n : ℕ) (x : type-Commutative-Monoid M) →
     power-Commutative-Monoid M (succ-ℕ n) x ＝
     mul-Commutative-Monoid M (power-Commutative-Monoid M n x) x
-  power-succ-Commutative-Monoid =
-    power-succ-Monoid (monoid-Commutative-Monoid M)
+  power-succ-Commutative-Monoid = {!!}
 ```
 
 ### `xⁿ⁺¹ ＝ xxⁿ`
@@ -114,8 +106,7 @@ module _
     (n : ℕ) (x : type-Commutative-Monoid M) →
     power-Commutative-Monoid M (succ-ℕ n) x ＝
     mul-Commutative-Monoid M x (power-Commutative-Monoid M n x)
-  power-succ-Commutative-Monoid' =
-    power-succ-Monoid' (monoid-Commutative-Monoid M)
+  power-succ-Commutative-Monoid' = {!!}
 ```
 
 ### Powers by sums of natural numbers are products of powers
@@ -131,8 +122,7 @@ module _
     mul-Commutative-Monoid M
       ( power-Commutative-Monoid M m x)
       ( power-Commutative-Monoid M n x)
-  distributive-power-add-Commutative-Monoid =
-    distributive-power-add-Monoid (monoid-Commutative-Monoid M)
+  distributive-power-add-Commutative-Monoid = {!!}
 ```
 
 ### If `x` commutes with `y`, then powers distribute over the product of `x` and `y`
@@ -149,8 +139,7 @@ module _
     mul-Commutative-Monoid M
       ( power-Commutative-Monoid M n x)
       ( power-Commutative-Monoid M n y)
-  distributive-power-mul-Commutative-Monoid =
-    distributive-power-mul-Monoid (monoid-Commutative-Monoid M)
+  distributive-power-mul-Commutative-Monoid = {!!}
 ```
 
 ### Powers by products of natural numbers are iterated powers
@@ -164,8 +153,7 @@ module _
     (m n : ℕ) {x : type-Commutative-Monoid M} →
     power-Commutative-Monoid M (m *ℕ n) x ＝
     power-Commutative-Monoid M n (power-Commutative-Monoid M m x)
-  power-mul-Commutative-Monoid =
-    power-mul-Monoid (monoid-Commutative-Monoid M)
+  power-mul-Commutative-Monoid = {!!}
 ```
 
 ### Commutative-Monoid homomorphisms preserve powers
@@ -180,9 +168,5 @@ module _
     (n : ℕ) (x : type-Commutative-Monoid M) →
     map-hom-Commutative-Monoid M N f (power-Commutative-Monoid M n x) ＝
     power-Commutative-Monoid N n (map-hom-Commutative-Monoid M N f x)
-  preserves-powers-hom-Commutative-Monoid =
-    preserves-powers-hom-Monoid
-      ( monoid-Commutative-Monoid M)
-      ( monoid-Commutative-Monoid N)
-      ( f)
+  preserves-powers-hom-Commutative-Monoid = {!!}
 ```

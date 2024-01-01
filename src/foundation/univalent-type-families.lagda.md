@@ -31,5 +31,5 @@ is an equivalence for every `x y : A`.
 ```agda
 is-univalent :
   {l1 l2 : Level} {A : UU l1} → (A → UU l2) → UU (l1 ⊔ l2)
-is-univalent {A = A} B = (x y : A) → is-equiv (λ (p : x ＝ y) → equiv-tr B p)
+is-univalent {A = A} B = {!!}
 ```

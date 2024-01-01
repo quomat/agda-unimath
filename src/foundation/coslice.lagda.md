@@ -53,18 +53,18 @@ module _
   {l1 l2 l3 : Level} {X : UU l1} {A : UU l2} {B : UU l3} (f : X → A) (g : X → B)
   where
 
-  hom-coslice = Σ (A → B) (λ h → h ∘ f ~ g)
+  hom-coslice = {!!}
 
 module _
   {l1 l2 l3 : Level} {X : UU l1} {A : UU l2} {B : UU l3} {f : X → A} {g : X → B}
   where
 
   map-hom-coslice : hom-coslice f g → A → B
-  map-hom-coslice = pr1
+  map-hom-coslice = {!!}
 
   triangle-hom-coslice :
     (h : hom-coslice f g) → map-hom-coslice h ∘ f ~ g
-  triangle-hom-coslice = pr2
+  triangle-hom-coslice = {!!}
 ```
 
 ## Properties
@@ -79,33 +79,20 @@ module _
   coherence-htpy-hom-coslice :
     (h k : hom-coslice f g) →
     map-hom-coslice h ~ map-hom-coslice k → UU (l1 ⊔ l3)
-  coherence-htpy-hom-coslice h k H =
-    coherence-triangle-homotopies
-      ( triangle-hom-coslice h)
-      ( triangle-hom-coslice k)
-      ( H ·r f)
+  coherence-htpy-hom-coslice h k H = {!!}
 
   htpy-hom-coslice :
     (h k : hom-coslice f g) → UU (l1 ⊔ l2 ⊔ l3)
-  htpy-hom-coslice h k =
-    Σ ( map-hom-coslice h ~ map-hom-coslice k)
-      ( coherence-htpy-hom-coslice h k)
+  htpy-hom-coslice h k = {!!}
 
   extensionality-hom-coslice :
     (h k : hom-coslice f g) → (h ＝ k) ≃ htpy-hom-coslice h k
-  extensionality-hom-coslice (h , H) =
-    extensionality-Σ
-      ( λ {h' : A → B} (H' : h' ∘ f ~ g) (K : h ~ h') → H ~ ((K ·r f) ∙h H'))
-      ( refl-htpy)
-      ( refl-htpy)
-      ( λ h' → equiv-funext)
-      ( λ H' → equiv-funext)
+  extensionality-hom-coslice (h , H) = {!!}
 
   eq-htpy-hom-coslice :
     ( h k : hom-coslice f g)
     ( H : map-hom-coslice h ~ map-hom-coslice k)
     ( K : coherence-htpy-hom-coslice h k H) →
     h ＝ k
-  eq-htpy-hom-coslice h k H K =
-    map-inv-equiv (extensionality-hom-coslice h k) (H , K)
+  eq-htpy-hom-coslice h k H K = {!!}
 ```

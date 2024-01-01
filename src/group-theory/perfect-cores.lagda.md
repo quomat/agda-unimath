@@ -38,9 +38,7 @@ module _
   where
 
   is-perfect-core-Subgroup : UUω
-  is-perfect-core-Subgroup =
-    {l : Level} (K : Subgroup l G) →
-    is-perfect-Subgroup G K ↔ leq-Subgroup G K H
+  is-perfect-core-Subgroup = {!!}
 ```
 
 ## External links

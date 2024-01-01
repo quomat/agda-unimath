@@ -69,7 +69,7 @@ A very slight reformulation of `cons-telescope` for convenience:
 prepend-telescope :
   {l1 l2 : Level} {n : ℕ} →
   (A : UU l1) → ({x : A} → telescope l2 n) → telescope (l1 ⊔ l2) (succ-ℕ n)
-prepend-telescope A B = cons-telescope {X = A} (λ x → B {x})
+prepend-telescope A B = {!!}
 ```
 
 ### Telescopes at a universe level
@@ -100,9 +100,8 @@ Given an operation on universes, we can apply it at the base of the telescope.
 apply-base-telescope :
   {l1 : Level} {n : ℕ}
   (P : {l : Level} → UU l → UU l) → telescope l1 n → telescope l1 n
-apply-base-telescope P (base-telescope A) = base-telescope (P A)
-apply-base-telescope P (cons-telescope A) =
-  cons-telescope (λ x → apply-base-telescope P (A x))
+apply-base-telescope P (base-telescope A) = {!!}
+apply-base-telescope P (cons-telescope A) = {!!}
 ```
 
 ### Telescopes as instance arguments
@@ -121,30 +120,27 @@ general length using this approach, it can infer them up to this given length.
 
 ```agda
 instance-telescope : {l : Level} {n : ℕ} → {{telescope l n}} → telescope l n
-instance-telescope {{x}} = x
+instance-telescope {{x}} = {!!}
 
 instance
   instance-telescope⁰ : {l : Level} {X : UU l} → telescope l 0
-  instance-telescope⁰ {X = X} = base-telescope X
+  instance-telescope⁰ {X = X} = {!!}
 
   instance-telescope¹ :
     { l1 l : Level} {A1 : UU l1} {X : A1 → UU l} → telescope (l1 ⊔ l) 1
-  instance-telescope¹ {X = X} =
-    cons-telescope (λ x → instance-telescope⁰ {X = X x})
+  instance-telescope¹ {X = X} = {!!}
 
   instance-telescope² :
     { l1 l2 l : Level} {A1 : UU l1} {A2 : A1 → UU l2}
     { X : (x1 : A1) → A2 x1 → UU l} → telescope (l1 ⊔ l2 ⊔ l) 2
-  instance-telescope² {X = X} =
-    cons-telescope (λ x → instance-telescope¹ {X = X x})
+  instance-telescope² {X = X} = {!!}
 
   instance-telescope³ :
     { l1 l2 l3 l : Level}
     { A1 : UU l1} {A2 : A1 → UU l2} {A3 : (x1 : A1) → A2 x1 → UU l3}
     { X : (x1 : A1) (x2 : A2 x1) (x2 : A3 x1 x2) → UU l} →
     telescope (l1 ⊔ l2 ⊔ l3 ⊔ l) 3
-  instance-telescope³ {X = X} =
-    cons-telescope (λ x → instance-telescope² {X = X x})
+  instance-telescope³ {X = X} = {!!}
 
   instance-telescope⁴ :
     { l1 l2 l3 l4 l : Level}
@@ -152,8 +148,7 @@ instance
     { A4 : (x1 : A1) (x2 : A2 x1) → A3 x1 x2 → UU l4}
     { X : (x1 : A1) (x2 : A2 x1) (x3 : A3 x1 x2) (x4 : A4 x1 x2 x3) → UU l} →
     telescope (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l) 4
-  instance-telescope⁴ {X = X} =
-    cons-telescope (λ x → instance-telescope³ {X = X x})
+  instance-telescope⁴ {X = X} = {!!}
 
   instance-telescope⁵ :
     { l1 l2 l3 l4 l5 l : Level}
@@ -164,8 +159,7 @@ instance
       (x1 : A1) (x2 : A2 x1) (x3 : A3 x1 x2) (x4 : A4 x1 x2 x3)
       (x5 : A5 x1 x2 x3 x4) → UU l} →
     telescope (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l) 5
-  instance-telescope⁵ {X = X} =
-    cons-telescope (λ x → instance-telescope⁴ {X = X x})
+  instance-telescope⁵ {X = X} = {!!}
 
   instance-telescope⁶ :
     { l1 l2 l3 l4 l5 l6 l : Level}
@@ -179,8 +173,7 @@ instance
       (x1 : A1) (x2 : A2 x1) (x3 : A3 x1 x2) (x4 : A4 x1 x2 x3)
       (x5 : A5 x1 x2 x3 x4) (x6 : A6 x1 x2 x3 x4 x5) → UU l} →
     telescope (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6 ⊔ l) 6
-  instance-telescope⁶ {X = X} =
-    cons-telescope (λ x → instance-telescope⁵ {X = X x})
+  instance-telescope⁶ {X = X} = {!!}
 
   instance-telescope⁷ :
     { l1 l2 l3 l4 l5 l6 l7 l : Level}
@@ -198,8 +191,7 @@ instance
       (x5 : A5 x1 x2 x3 x4) (x6 : A6 x1 x2 x3 x4 x5)
       (x7 : A7 x1 x2 x3 x4 x5 x6) → UU l} →
     telescope (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6 ⊔ l7 ⊔ l) 7
-  instance-telescope⁷ {X = X} =
-    cons-telescope (λ x → instance-telescope⁶ {X = X x})
+  instance-telescope⁷ {X = X} = {!!}
 
   instance-telescope⁸ :
     { l1 l2 l3 l4 l5 l6 l7 l8 l : Level}
@@ -221,8 +213,7 @@ instance
       (x5 : A5 x1 x2 x3 x4) (x6 : A6 x1 x2 x3 x4 x5)
       (x7 : A7 x1 x2 x3 x4 x5 x6) (x8 : A8 x1 x2 x3 x4 x5 x6 x7) → UU l} →
     telescope (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6 ⊔ l7 ⊔ l8 ⊔ l) 8
-  instance-telescope⁸ {X = X} =
-    cons-telescope (λ x → instance-telescope⁷ {X = X x})
+  instance-telescope⁸ {X = X} = {!!}
 
   instance-telescope⁹ :
     { l1 l2 l3 l4 l5 l6 l7 l8 l9 l : Level}
@@ -250,8 +241,7 @@ instance
       (x7 : A7 x1 x2 x3 x4 x5 x6) (x8 : A8 x1 x2 x3 x4 x5 x6 x7)
       (x9 : A9 x1 x2 x3 x4 x5 x6 x7 x8) → UU l} →
     telescope (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6 ⊔ l7 ⊔ l8 ⊔ l9 ⊔ l) 9
-  instance-telescope⁹ {X = X} =
-    cons-telescope (λ x → instance-telescope⁸ {X = X x})
+  instance-telescope⁹ {X = X} = {!!}
 
   instance-telescope¹⁰ :
     { l1 l2 l3 l4 l5 l6 l7 l8 l9 l10 l : Level}
@@ -286,8 +276,7 @@ instance
       (x9 : A9 x1 x2 x3 x4 x5 x6 x7 x8) (x10 : A10 x1 x2 x3 x4 x5 x6 x7 x8 x9) →
       UU l} →
     telescope (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6 ⊔ l7 ⊔ l8 ⊔ l9 ⊔ l10 ⊔ l) 10
-  instance-telescope¹⁰ {X = X} =
-    cons-telescope (λ x → instance-telescope⁹ {X = X x})
+  instance-telescope¹⁰ {X = X} = {!!}
 
   instance-telescope¹¹ :
     { l1 l2 l3 l4 l5 l6 l7 l8 l9 l10 l11 l : Level}
@@ -328,8 +317,7 @@ instance
       (x9 : A9 x1 x2 x3 x4 x5 x6 x7 x8) (x10 : A10 x1 x2 x3 x4 x5 x6 x7 x8 x9)
       (x11 : A11 x1 x2 x3 x4 x5 x6 x7 x8 x9 x10) → UU l} →
     telescope (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6 ⊔ l7 ⊔ l8 ⊔ l9 ⊔ l10 ⊔ l11 ⊔ l) 11
-  instance-telescope¹¹ {X = X} =
-    cons-telescope (λ x → instance-telescope¹⁰ {X = X x})
+  instance-telescope¹¹ {X = X} = {!!}
 
   instance-telescope¹² :
     { l1 l2 l3 l4 l5 l6 l7 l8 l9 l10 l11 l12 l : Level}
@@ -379,8 +367,7 @@ instance
     telescope
       ( l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6 ⊔ l7 ⊔ l8 ⊔ l9 ⊔ l10 ⊔ l11 ⊔ l12 ⊔ l)
       ( 12)
-  instance-telescope¹² {X = X} =
-    cons-telescope (λ x → instance-telescope¹¹ {X = X x})
+  instance-telescope¹² {X = X} = {!!}
 
   instance-telescope¹³ :
     { l1 l2 l3 l4 l5 l6 l7 l8 l9 l10 l11 l12 l13 l : Level}
@@ -438,8 +425,7 @@ instance
     telescope
       ( l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6 ⊔ l7 ⊔ l8 ⊔ l9 ⊔ l10 ⊔ l11 ⊔ l12 ⊔ l13 ⊔ l)
       ( 13)
-  instance-telescope¹³ {X = X} =
-    cons-telescope (λ x → instance-telescope¹² {X = X x})
+  instance-telescope¹³ {X = X} = {!!}
 
   instance-telescope¹⁴ :
     { l1 l2 l3 l4 l5 l6 l7 l8 l9 l10 l11 l12 l13 l14 l : Level}
@@ -507,8 +493,7 @@ instance
       ( l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6 ⊔ l7 ⊔ l8 ⊔ l9 ⊔ l10 ⊔ l11 ⊔ l12 ⊔ l13 ⊔
         l14 ⊔ l)
       ( 14)
-  instance-telescope¹⁴ {X = X} =
-    cons-telescope (λ x → instance-telescope¹³ {X = X x})
+  instance-telescope¹⁴ {X = X} = {!!}
 
   instance-telescope¹⁵ :
     { l1 l2 l3 l4 l5 l6 l7 l8 l9 l10 l11 l12 l13 l14 l15 l : Level}
@@ -586,8 +571,7 @@ instance
       ( l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6 ⊔ l7 ⊔ l8 ⊔ l9 ⊔ l10 ⊔ l11 ⊔ l12 ⊔ l13 ⊔
         l14 ⊔ l15 ⊔ l)
       ( 15)
-  instance-telescope¹⁵ {X = X} =
-    cons-telescope (λ x → instance-telescope¹⁴ {X = X x})
+  instance-telescope¹⁵ {X = X} = {!!}
 
   instance-telescope¹⁶ :
     { l1 l2 l3 l4 l5 l6 l7 l8 l9 l10 l11 l12 l13 l14 l15 l16 l : Level}
@@ -676,8 +660,7 @@ instance
       ( l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6 ⊔ l7 ⊔ l8 ⊔ l9 ⊔ l10 ⊔ l11 ⊔ l12 ⊔ l13 ⊔
         l14 ⊔ l15 ⊔ l16 ⊔ l)
       ( 16)
-  instance-telescope¹⁶ {X = X} =
-    cons-telescope (λ x → instance-telescope¹⁵ {X = X x})
+  instance-telescope¹⁶ {X = X} = {!!}
 
   instance-telescope¹⁷ :
     { l1 l2 l3 l4 l5 l6 l7 l8 l9 l10 l11 l12 l13 l14 l15 l16 l17 l : Level}
@@ -779,8 +762,7 @@ instance
       ( l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6 ⊔ l7 ⊔ l8 ⊔ l9 ⊔ l10 ⊔ l11 ⊔ l12 ⊔ l13 ⊔
         l14 ⊔ l15 ⊔ l16 ⊔ l17 ⊔ l)
       ( 17)
-  instance-telescope¹⁷ {X = X} =
-    cons-telescope (λ x → instance-telescope¹⁶ {X = X x})
+  instance-telescope¹⁷ {X = X} = {!!}
 
   instance-telescope¹⁸ :
     { l1 l2 l3 l4 l5 l6 l7 l8 l9 l10 l11 l12 l13 l14 l15 l16 l17 l18 l : Level}
@@ -896,8 +878,7 @@ instance
       ( l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6 ⊔ l7 ⊔ l8 ⊔ l9 ⊔ l10 ⊔ l11 ⊔ l12 ⊔ l13 ⊔
         l14 ⊔ l15 ⊔ l16 ⊔ l17 ⊔ l18 ⊔ l)
       ( 18)
-  instance-telescope¹⁸ {X = X} =
-    cons-telescope (λ x → instance-telescope¹⁷ {X = X x})
+  instance-telescope¹⁸ {X = X} = {!!}
 ```
 
 ## See also

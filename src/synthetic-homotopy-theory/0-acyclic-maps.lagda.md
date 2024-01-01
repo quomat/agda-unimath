@@ -38,15 +38,14 @@ module _
   where
 
   is-0-acyclic-map-Prop : (A → B) → Prop (l1 ⊔ l2)
-  is-0-acyclic-map-Prop = is-truncated-acyclic-map-Prop (zero-𝕋)
+  is-0-acyclic-map-Prop = {!!}
 
   is-0-acyclic-map : (A → B) → UU (l1 ⊔ l2)
-  is-0-acyclic-map f = type-Prop (is-0-acyclic-map-Prop f)
+  is-0-acyclic-map f = {!!}
 
   is-prop-is-0-acyclic-map :
     (f : A → B) → is-prop (is-0-acyclic-map f)
-  is-prop-is-0-acyclic-map f =
-    is-prop-type-Prop (is-0-acyclic-map-Prop f)
+  is-prop-is-0-acyclic-map f = {!!}
 ```
 
 ## Properties
@@ -60,15 +59,11 @@ module _
 
   is-surjective-is-0-acyclic-map :
     is-0-acyclic-map f → is-surjective f
-  is-surjective-is-0-acyclic-map ac =
-    is-surjective-is-epimorphism-Set
-      ( is-epimorphism-is-truncated-acyclic-map-Truncated-Type f ac)
+  is-surjective-is-0-acyclic-map ac = {!!}
 
   is-0-acyclic-map-is-surjective :
     is-surjective f → is-0-acyclic-map f
-  is-0-acyclic-map-is-surjective s =
-    is-truncated-acyclic-map-is-epimorphism-Truncated-Type f
-      ( is-epimorphism-is-surjective-Set s)
+  is-0-acyclic-map-is-surjective s = {!!}
 ```
 
 ## See also

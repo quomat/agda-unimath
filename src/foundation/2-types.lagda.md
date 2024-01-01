@@ -22,17 +22,17 @@ A 2-type is a type that is 2-truncated
 
 ```agda
 is-2-type : {l : Level} → UU l → UU l
-is-2-type = is-trunc (two-𝕋)
+is-2-type = {!!}
 
 UU-2-Type : (l : Level) → UU (lsuc l)
-UU-2-Type l = Σ (UU l) is-2-type
+UU-2-Type l = {!!}
 
 type-2-Type :
   {l : Level} → UU-2-Type l → UU l
-type-2-Type = pr1
+type-2-Type = {!!}
 
 abstract
   is-2-type-type-2-Type :
     {l : Level} (A : UU-2-Type l) → is-2-type (type-2-Type A)
-  is-2-type-type-2-Type = pr2
+  is-2-type-type-2-Type = {!!}
 ```

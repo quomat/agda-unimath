@@ -41,9 +41,7 @@ module _
 
   is-greatest-binary-lower-bound-Large-Poset :
     {l3 : Level} → type-Large-Poset P l3 → UUω
-  is-greatest-binary-lower-bound-Large-Poset x =
-    {l4 : Level} (y : type-Large-Poset P l4) →
-    is-binary-lower-bound-Large-Poset P a b y ↔ leq-Large-Poset P y x
+  is-greatest-binary-lower-bound-Large-Poset x = {!!}
 ```
 
 ## Properties
@@ -64,13 +62,5 @@ module _
     ( (i : I) →
       is-greatest-binary-lower-bound-Large-Poset (P i) (x i) (y i) (z i)) →
     is-greatest-binary-lower-bound-Large-Poset (Π-Large-Poset P) x y z
-  is-greatest-binary-lower-bound-Π-Large-Poset H u =
-    logical-equivalence-reasoning
-      is-binary-lower-bound-Large-Poset (Π-Large-Poset P) x y u
-        ↔ ((i : I) → is-binary-lower-bound-Large-Poset (P i) (x i) (y i) (u i))
-          by
-          inv-iff
-            ( logical-equivalence-is-binary-lower-bound-Π-Large-Poset P x y u)
-        ↔ leq-Π-Large-Poset P u z
-          by iff-Π-iff-family (λ i → H i (u i))
+  is-greatest-binary-lower-bound-Π-Large-Poset H u = {!!}
 ```

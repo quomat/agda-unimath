@@ -80,65 +80,11 @@ module _
           ( transposition Y))
         ( orientation-aut-count
           (n +ℕ 2 , compute-raise l (Fin (n +ℕ 2))) star (transposition Y))))
-  not-even-difference-action-equiv-family-on-subuniverse n =
-    tr
-      ( λ f →
-        ( Y : 2-Element-Decidable-Subtype l
-          ( raise-Fin l (n +ℕ 2))) →
-            ¬ ( sim-equivalence-relation
-              ( even-difference-orientation-Complete-Undirected-Graph
-                ( n +ℕ 2)
-                ( raise-Fin l (n +ℕ 2) ,
-                  unit-trunc-Prop (compute-raise-Fin l (n +ℕ 2))))
-              ( orientation-aut-count
-                  ( n +ℕ 2 , compute-raise l (Fin (n +ℕ 2)))
-                  ( star)
-                  ( transposition Y))
-              ( map-equiv
-                ( f
-                  ( raise l (Fin (n +ℕ 2)) ,
-                    unit-trunc-Prop (compute-raise-Fin l (n +ℕ 2)))
-                  ( raise l (Fin (n +ℕ 2)) ,
-                    unit-trunc-Prop (compute-raise-Fin l (n +ℕ 2)))
-                  ( transposition Y))
-                ( orientation-aut-count
-                  ( n +ℕ 2 , compute-raise l (Fin (n +ℕ 2)))
-                  ( star)
-                  ( transposition Y)))))
-      ( ap pr1
-        { x =
-          orientation-complete-undirected-graph-equiv (n +ℕ 2) ,
-          preserves-id-equiv-orientation-complete-undirected-graph-equiv
-            ( n +ℕ 2)}
-        { y =
-          ( action-equiv-family-over-subuniverse
-            ( mere-equiv-Prop (Fin (n +ℕ 2)))
-            ( orientation-Complete-Undirected-Graph (n +ℕ 2))) ,
-          ( compute-id-equiv-action-equiv-family-over-subuniverse
-            ( mere-equiv-Prop (Fin (n +ℕ 2)))
-            ( orientation-Complete-Undirected-Graph (n +ℕ 2)))}
-        ( eq-is-contr
-          ( is-contr-equiv' _
-            ( distributive-Π-Σ)
-            ( is-contr-Π
-              ( unique-action-equiv-family-over-subuniverse
-                ( mere-equiv-Prop (Fin (n +ℕ 2)))
-                ( orientation-Complete-Undirected-Graph (n +ℕ 2)))))))
-      ( not-even-difference-orientation-aut-transposition-count
-        (n +ℕ 2 , (compute-raise l (Fin (n +ℕ 2)))) (star))
+  not-even-difference-action-equiv-family-on-subuniverse n = {!!}
 
   cartier-delooping-sign :
     (n : ℕ) → hom-Concrete-Group (UU-Fin-Group l n) (UU-Fin-Group (lsuc l) 2)
-  cartier-delooping-sign =
-    quotient-delooping-sign
-      ( orientation-Complete-Undirected-Graph)
-      ( even-difference-orientation-Complete-Undirected-Graph)
-      ( λ n _ →
-        is-decidable-even-difference-orientation-Complete-Undirected-Graph n)
-      ( equiv-fin-2-quotient-sign-equiv-Fin)
-      ( λ n →
-        orientation-aut-count (n +ℕ 2 , compute-raise l (Fin (n +ℕ 2))) (star))
-      ( not-even-difference-action-equiv-family-on-subuniverse)
+  cartier-delooping-sign = {!!}
 
   eq-cartier-delooping-sign-homomorphism :
     (n : ℕ) →
@@ -188,16 +134,7 @@ module _
           ( Fin-Set (n +ℕ 2))
           ( raise-Fin-Set l (n +ℕ 2))
           ( compute-raise l (Fin (n +ℕ 2)))))
-  eq-cartier-delooping-sign-homomorphism =
-    eq-quotient-delooping-sign-homomorphism
-      ( orientation-Complete-Undirected-Graph)
-      ( even-difference-orientation-Complete-Undirected-Graph)
-      ( λ n _ →
-        is-decidable-even-difference-orientation-Complete-Undirected-Graph n)
-      ( equiv-fin-2-quotient-sign-equiv-Fin)
-      ( λ n →
-        orientation-aut-count (n +ℕ 2 , compute-raise l (Fin (n +ℕ 2))) (star))
-      ( not-even-difference-action-equiv-family-on-subuniverse)
+  eq-cartier-delooping-sign-homomorphism = {!!}
 ```
 
 ## References

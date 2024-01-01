@@ -36,17 +36,13 @@ module _
   where
 
   is-initial-prop-obj-Precategory : Prop (l1 ⊔ l2)
-  is-initial-prop-obj-Precategory =
-    Π-Prop
-      ( obj-Precategory C)
-      ( λ y → is-contr-Prop (hom-Precategory C x y))
+  is-initial-prop-obj-Precategory = {!!}
 
   is-initial-obj-Precategory : UU (l1 ⊔ l2)
-  is-initial-obj-Precategory = type-Prop is-initial-prop-obj-Precategory
+  is-initial-obj-Precategory = {!!}
 
   is-prop-is-initial-obj-Precategory : is-prop is-initial-obj-Precategory
-  is-prop-is-initial-obj-Precategory =
-    is-prop-type-Prop is-initial-prop-obj-Precategory
+  is-prop-is-initial-obj-Precategory = {!!}
 
 module _
   {l1 l2 : Level} (C : Precategory l1 l2)
@@ -57,13 +53,13 @@ module _
   hom-is-initial-obj-Precategory :
     (y : obj-Precategory C) →
     hom-Precategory C x y
-  hom-is-initial-obj-Precategory = center ∘ t
+  hom-is-initial-obj-Precategory = {!!}
 
   is-unique-hom-is-initial-obj-Precategory :
     (y : obj-Precategory C) →
     (f : hom-Precategory C x y) →
     hom-is-initial-obj-Precategory y ＝ f
-  is-unique-hom-is-initial-obj-Precategory = contraction ∘ t
+  is-unique-hom-is-initial-obj-Precategory = {!!}
 ```
 
 ### Initial objects in precategories
@@ -71,8 +67,7 @@ module _
 ```agda
 initial-obj-Precategory :
   {l1 l2 : Level} (C : Precategory l1 l2) → UU (l1 ⊔ l2)
-initial-obj-Precategory C =
-  Σ (obj-Precategory C) (is-initial-obj-Precategory C)
+initial-obj-Precategory C = {!!}
 
 module _
   {l1 l2 : Level}
@@ -81,26 +76,20 @@ module _
   where
 
   obj-initial-obj-Precategory : obj-Precategory C
-  obj-initial-obj-Precategory = pr1 t
+  obj-initial-obj-Precategory = {!!}
 
   is-initial-obj-initial-obj-Precategory :
     is-initial-obj-Precategory C obj-initial-obj-Precategory
-  is-initial-obj-initial-obj-Precategory = pr2 t
+  is-initial-obj-initial-obj-Precategory = {!!}
 
   hom-initial-obj-Precategory :
     (y : obj-Precategory C) →
     hom-Precategory C obj-initial-obj-Precategory y
-  hom-initial-obj-Precategory =
-    hom-is-initial-obj-Precategory C
-      ( obj-initial-obj-Precategory)
-      ( is-initial-obj-initial-obj-Precategory)
+  hom-initial-obj-Precategory = {!!}
 
   is-unique-hom-initial-obj-Precategory :
     (y : obj-Precategory C) →
     (f : hom-Precategory C obj-initial-obj-Precategory y) →
     hom-initial-obj-Precategory y ＝ f
-  is-unique-hom-initial-obj-Precategory =
-    is-unique-hom-is-initial-obj-Precategory C
-      ( obj-initial-obj-Precategory)
-      ( is-initial-obj-initial-obj-Precategory)
+  is-unique-hom-initial-obj-Precategory = {!!}
 ```

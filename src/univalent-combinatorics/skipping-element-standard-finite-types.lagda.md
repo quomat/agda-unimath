@@ -26,31 +26,21 @@ open import univalent-combinatorics.standard-finite-types
 ```agda
 skip-Fin :
   (k : ℕ) → Fin (succ-ℕ k) → Fin k → Fin (succ-ℕ k)
-skip-Fin (succ-ℕ k) (inl x) (inl y) = inl (skip-Fin k x y)
-skip-Fin (succ-ℕ k) (inl x) (inr y) = inr star
-skip-Fin (succ-ℕ k) (inr x) y = inl y
+skip-Fin (succ-ℕ k) (inl x) (inl y) = {!!}
+skip-Fin (succ-ℕ k) (inl x) (inr y) = {!!}
+skip-Fin (succ-ℕ k) (inr x) y = {!!}
 
 abstract
   is-injective-skip-Fin :
     (k : ℕ) (x : Fin (succ-ℕ k)) → is-injective (skip-Fin k x)
-  is-injective-skip-Fin (succ-ℕ k) (inl x) {inl y} {inl z} p =
-    ap
-      ( inl)
-      ( is-injective-skip-Fin k x
-        ( is-injective-is-emb (is-emb-inl (Fin (succ-ℕ k)) unit) p))
-  is-injective-skip-Fin (succ-ℕ k) (inl x) {inr star} {inr star} p = refl
-  is-injective-skip-Fin (succ-ℕ k) (inr star) {y} {z} p =
-    is-injective-is-emb (is-emb-inl (Fin (succ-ℕ k)) unit) p
+  is-injective-skip-Fin (succ-ℕ k) (inl x) {inl y} {inl z} p = {!!}
 
 abstract
   is-emb-skip-Fin :
     (k : ℕ) (x : Fin (succ-ℕ k)) → is-emb (skip-Fin k x)
-  is-emb-skip-Fin k x =
-    is-emb-is-injective
-      ( is-set-Fin (succ-ℕ k))
-      ( is-injective-skip-Fin k x)
+  is-emb-skip-Fin k x = {!!}
 
 emb-skip-Fin : (k : ℕ) (x : Fin (succ-ℕ k)) → Fin k ↪ Fin (succ-ℕ k)
-pr1 (emb-skip-Fin k x) = skip-Fin k x
-pr2 (emb-skip-Fin k x) = is-emb-skip-Fin k x
+pr1 (emb-skip-Fin k x) = {!!}
+pr2 (emb-skip-Fin k x) = {!!}
 ```

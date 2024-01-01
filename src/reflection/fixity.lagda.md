@@ -62,8 +62,8 @@ primitive
 
 ```agda
 _ : primQNameFixity (quote add-ℤ) ＝ fixity non-associative unrelated
-_ = refl
+_ = {!!}
 
 _ : primQNameFixity (quote (_+ℤ_)) ＝ fixity left-associative (related 35.0)
-_ = refl
+_ = {!!}
 ```

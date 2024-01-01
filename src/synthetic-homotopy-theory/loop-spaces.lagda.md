@@ -42,13 +42,13 @@ module _
   where
 
   type-Ω : UU l
-  type-Ω = Id (point-Pointed-Type A) (point-Pointed-Type A)
+  type-Ω = {!!}
 
   refl-Ω : type-Ω
-  refl-Ω = refl
+  refl-Ω = {!!}
 
   Ω : Pointed-Type l
-  Ω = pair type-Ω refl-Ω
+  Ω = {!!}
 ```
 
 ### The magma of loops on a pointed space
@@ -59,11 +59,10 @@ module _
   where
 
   mul-Ω : type-Ω A → type-Ω A → type-Ω A
-  mul-Ω x y = x ∙ y
+  mul-Ω x y = {!!}
 
   Ω-Magma : Magma l
-  pr1 Ω-Magma = type-Ω A
-  pr2 Ω-Magma = mul-Ω
+  pr1 Ω-Magma = {!!}
 ```
 
 ### The H-space of loops on a pointed space
@@ -75,18 +74,14 @@ module _
 
   left-unit-law-mul-Ω :
     (x : type-Ω A) → Id (mul-Ω A (refl-Ω A) x) x
-  left-unit-law-mul-Ω x = left-unit
+  left-unit-law-mul-Ω x = {!!}
 
   right-unit-law-mul-Ω :
     (x : type-Ω A) → Id (mul-Ω A x (refl-Ω A)) x
-  right-unit-law-mul-Ω x = right-unit
+  right-unit-law-mul-Ω x = {!!}
 
   Ω-H-Space : H-Space l
-  pr1 Ω-H-Space = Ω A
-  pr1 (pr2 Ω-H-Space) = mul-Ω A
-  pr1 (pr2 (pr2 Ω-H-Space)) = left-unit-law-mul-Ω
-  pr1 (pr2 (pr2 (pr2 Ω-H-Space))) = right-unit-law-mul-Ω
-  pr2 (pr2 (pr2 (pr2 Ω-H-Space))) = refl
+  pr1 Ω-H-Space = {!!}
 ```
 
 ### The wild quasigroup of loops on a pointed space
@@ -97,19 +92,18 @@ module _
   where
 
   inv-Ω : type-Ω A → type-Ω A
-  inv-Ω = inv
+  inv-Ω = {!!}
 
   left-inverse-law-mul-Ω :
     (x : type-Ω A) → Id (mul-Ω A (inv-Ω x) x) (refl-Ω A)
-  left-inverse-law-mul-Ω x = left-inv x
+  left-inverse-law-mul-Ω x = {!!}
 
   right-inverse-law-mul-Ω :
     (x : type-Ω A) → Id (mul-Ω A x (inv-Ω x)) (refl-Ω A)
-  right-inverse-law-mul-Ω x = right-inv x
+  right-inverse-law-mul-Ω x = {!!}
 
   Ω-Wild-Quasigroup : Wild-Quasigroup l
-  pr1 Ω-Wild-Quasigroup = Ω-Magma A
-  pr2 Ω-Wild-Quasigroup = is-binary-equiv-concat
+  pr1 Ω-Wild-Quasigroup = {!!}
 ```
 
 ### Associativity of concatenation on loop spaces
@@ -122,7 +116,7 @@ module _
   associative-mul-Ω :
     (x y z : type-Ω A) →
     Id (mul-Ω A (mul-Ω A x y) z) (mul-Ω A x (mul-Ω A y z))
-  associative-mul-Ω x y z = assoc x y z
+  associative-mul-Ω x y z = {!!}
 ```
 
 We compute transport of `type-Ω`.
@@ -133,39 +127,38 @@ module _
   where
 
   equiv-tr-Ω : Id x y → Ω (pair A x) ≃∗ Ω (pair A y)
-  equiv-tr-Ω refl = pair id-equiv refl
+  equiv-tr-Ω refl = {!!}
 
   equiv-tr-type-Ω : Id x y → type-Ω (pair A x) ≃ type-Ω (pair A y)
-  equiv-tr-type-Ω p =
-    equiv-pointed-equiv (equiv-tr-Ω p)
+  equiv-tr-type-Ω p = {!!}
 
   tr-type-Ω : Id x y → type-Ω (pair A x) → type-Ω (pair A y)
-  tr-type-Ω p = map-equiv (equiv-tr-type-Ω p)
+  tr-type-Ω p = {!!}
 
   is-equiv-tr-type-Ω : (p : Id x y) → is-equiv (tr-type-Ω p)
-  is-equiv-tr-type-Ω p = is-equiv-map-equiv (equiv-tr-type-Ω p)
+  is-equiv-tr-type-Ω p = {!!}
 
   preserves-refl-tr-Ω : (p : Id x y) → Id (tr-type-Ω p refl) refl
-  preserves-refl-tr-Ω refl = refl
+  preserves-refl-tr-Ω refl = {!!}
 
   preserves-mul-tr-Ω :
     (p : Id x y) (u v : type-Ω (pair A x)) →
     Id
       ( tr-type-Ω p (mul-Ω (pair A x) u v))
       ( mul-Ω (pair A y) (tr-type-Ω p u) (tr-type-Ω p v))
-  preserves-mul-tr-Ω refl u v = refl
+  preserves-mul-tr-Ω refl u v = {!!}
 
   preserves-inv-tr-Ω :
     (p : Id x y) (u : type-Ω (pair A x)) →
     Id
       ( tr-type-Ω p (inv-Ω (pair A x) u))
       ( inv-Ω (pair A y) (tr-type-Ω p u))
-  preserves-inv-tr-Ω refl u = refl
+  preserves-inv-tr-Ω refl u = {!!}
 
   eq-tr-type-Ω :
     (p : Id x y) (q : type-Ω (pair A x)) →
     Id (tr-type-Ω p q) (inv p ∙ (q ∙ p))
-  eq-tr-type-Ω refl q = inv right-unit
+  eq-tr-type-Ω refl q = {!!}
 ```
 
 ## Properties
@@ -180,8 +173,5 @@ module _
 
   pointed-equiv-loop-pointed-identity :
     ( pair (point-Pointed-Type A ＝ x) p) ≃∗ Ω A
-  pr1 pointed-equiv-loop-pointed-identity =
-    equiv-concat' (point-Pointed-Type A) (inv p)
-  pr2 pointed-equiv-loop-pointed-identity =
-    right-inv p
+  pr1 pointed-equiv-loop-pointed-identity = {!!}
 ```

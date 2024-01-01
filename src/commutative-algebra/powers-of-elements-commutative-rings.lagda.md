@@ -33,12 +33,12 @@ defined by iteratively multiplying `x` with itself `n` times.
 power-Commutative-Ring :
   {l : Level} (A : Commutative-Ring l) →
   ℕ → type-Commutative-Ring A → type-Commutative-Ring A
-power-Commutative-Ring A = power-Ring (ring-Commutative-Ring A)
+power-Commutative-Ring A = {!!}
 ```
 
 ## Properties
 
-### `xⁿ⁺¹ = xⁿx` and `xⁿ⁺¹ ＝ xxⁿ`
+### `xⁿ⁺¹ = {!!}
 
 ```agda
 module _
@@ -49,15 +49,13 @@ module _
     (n : ℕ) (x : type-Commutative-Ring A) →
     power-Commutative-Ring A (succ-ℕ n) x ＝
     mul-Commutative-Ring A (power-Commutative-Ring A n x) x
-  power-succ-Commutative-Ring =
-    power-succ-Ring (ring-Commutative-Ring A)
+  power-succ-Commutative-Ring = {!!}
 
   power-succ-Commutative-Ring' :
     (n : ℕ) (x : type-Commutative-Ring A) →
     power-Commutative-Ring A (succ-ℕ n) x ＝
     mul-Commutative-Ring A x (power-Commutative-Ring A n x)
-  power-succ-Commutative-Ring' =
-    power-succ-Ring' (ring-Commutative-Ring A)
+  power-succ-Commutative-Ring' = {!!}
 ```
 
 ### Powers by sums of natural numbers are products of powers
@@ -73,8 +71,7 @@ module _
     mul-Commutative-Ring A
       ( power-Commutative-Ring A m x)
       ( power-Commutative-Ring A n x)
-  distributive-power-add-Commutative-Ring =
-    distributive-power-add-Ring (ring-Commutative-Ring A)
+  distributive-power-add-Commutative-Ring = {!!}
 ```
 
 ### Powers by products of natural numbers are iterated powers
@@ -88,8 +85,7 @@ module _
     (m n : ℕ) {x : type-Commutative-Ring A} →
     power-Commutative-Ring A (m *ℕ n) x ＝
     power-Commutative-Ring A n (power-Commutative-Ring A m x)
-  power-mul-Commutative-Ring =
-    power-mul-Ring (ring-Commutative-Ring A)
+  power-mul-Commutative-Ring = {!!}
 ```
 
 ### Powers distribute over multiplication
@@ -105,14 +101,10 @@ module _
     mul-Commutative-Ring A
       ( power-Commutative-Ring A n x)
       ( power-Commutative-Ring A n y)
-  distributive-power-mul-Commutative-Ring n x y =
-    distributive-power-mul-Ring
-      ( ring-Commutative-Ring A)
-      ( n)
-      ( commutative-mul-Commutative-Ring A x y)
+  distributive-power-mul-Commutative-Ring n x y = {!!}
 ```
 
-### `(-x)ⁿ = (-1)ⁿxⁿ`
+### `(-x)ⁿ = {!!}
 
 ```agda
 module _
@@ -125,22 +117,19 @@ module _
     mul-Commutative-Ring A
       ( power-Commutative-Ring A n (neg-one-Commutative-Ring A))
       ( power-Commutative-Ring A n x)
-  power-neg-Commutative-Ring =
-    power-neg-Ring (ring-Commutative-Ring A)
+  power-neg-Commutative-Ring = {!!}
 
   even-power-neg-Commutative-Ring :
     (n : ℕ) (x : type-Commutative-Ring A) →
     is-even-ℕ n →
     power-Commutative-Ring A n (neg-Commutative-Ring A x) ＝
     power-Commutative-Ring A n x
-  even-power-neg-Commutative-Ring =
-    even-power-neg-Ring (ring-Commutative-Ring A)
+  even-power-neg-Commutative-Ring = {!!}
 
   odd-power-neg-Commutative-Ring :
     (n : ℕ) (x : type-Commutative-Ring A) →
     is-odd-ℕ n →
     power-Commutative-Ring A n (neg-Commutative-Ring A x) ＝
     neg-Commutative-Ring A (power-Commutative-Ring A n x)
-  odd-power-neg-Commutative-Ring =
-    odd-power-neg-Ring (ring-Commutative-Ring A)
+  odd-power-neg-Commutative-Ring = {!!}
 ```

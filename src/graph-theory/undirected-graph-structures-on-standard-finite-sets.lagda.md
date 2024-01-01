@@ -22,7 +22,7 @@ open import univalent-combinatorics.standard-finite-types
 
 ```agda
 Undirected-Graph-Fin : UU (lsuc lzero)
-Undirected-Graph-Fin = Σ ℕ (λ V → unordered-pair (Fin V) → ℕ)
+Undirected-Graph-Fin = {!!}
 ```
 
 ## External links

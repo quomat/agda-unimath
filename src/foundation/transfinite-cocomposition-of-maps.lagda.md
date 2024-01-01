@@ -38,7 +38,7 @@ module _
   where
 
   transfinite-cocomp : standard-sequential-limit f → type-tower f 0
-  transfinite-cocomp x = sequence-standard-sequential-limit f x 0
+  transfinite-cocomp x = {!!}
 ```
 
 ## Table of files about sequential limits

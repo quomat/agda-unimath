@@ -56,8 +56,7 @@ A **cocone under a [span](foundation.spans.md)** `A <-f- S -g-> B` with codomain
 cocone :
   {l1 l2 l3 l4 : Level} {S : UU l1} {A : UU l2} {B : UU l3}
   (f : S → A) (g : S → B) → UU l4 → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-cocone {A = A} {B = B} f g X =
-  Σ (A → X) (λ i → Σ (B → X) (λ j → coherence-square-maps g f j i))
+cocone {A = A} {B = B} f g X = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {S : UU l1} {A : UU l2} {B : UU l3} {X : UU l4}
@@ -65,14 +64,14 @@ module _
   where
 
   horizontal-map-cocone : A → X
-  horizontal-map-cocone = pr1 c
+  horizontal-map-cocone = {!!}
 
   vertical-map-cocone : B → X
-  vertical-map-cocone = pr1 (pr2 c)
+  vertical-map-cocone = {!!}
 
   coherence-square-cocone :
     coherence-square-maps g f vertical-map-cocone horizontal-map-cocone
-  coherence-square-cocone = pr2 (pr2 c)
+  coherence-square-cocone = {!!}
 ```
 
 ### Homotopies of cocones
@@ -88,16 +87,10 @@ module _
     (K : horizontal-map-cocone f g c ~ horizontal-map-cocone f g c')
     (L : vertical-map-cocone f g c ~ vertical-map-cocone f g c') →
     UU (l1 ⊔ l4)
-  statement-coherence-htpy-cocone c c' K L =
-    (coherence-square-cocone f g c ∙h (L ·r g)) ~
-    ((K ·r f) ∙h coherence-square-cocone f g c')
+  statement-coherence-htpy-cocone c c' K L = {!!}
 
   htpy-cocone : (c c' : cocone f g X) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  htpy-cocone c c' =
-    Σ ( horizontal-map-cocone f g c ~ horizontal-map-cocone f g c')
-      ( λ K →
-        Σ ( vertical-map-cocone f g c ~ vertical-map-cocone f g c')
-          ( statement-coherence-htpy-cocone c c' K))
+  htpy-cocone c c' = {!!}
 
   module _
     (c c' : cocone f g X) (H : htpy-cocone c c')
@@ -105,66 +98,41 @@ module _
 
     horizontal-htpy-cocone :
       horizontal-map-cocone f g c ~ horizontal-map-cocone f g c'
-    horizontal-htpy-cocone = pr1 H
+    horizontal-htpy-cocone = {!!}
 
     vertical-htpy-cocone :
       vertical-map-cocone f g c ~ vertical-map-cocone f g c'
-    vertical-htpy-cocone = pr1 (pr2 H)
+    vertical-htpy-cocone = {!!}
 
     coherence-htpy-cocone :
       statement-coherence-htpy-cocone c c'
         ( horizontal-htpy-cocone)
         ( vertical-htpy-cocone)
-    coherence-htpy-cocone = pr2 (pr2 H)
+    coherence-htpy-cocone = {!!}
 
   reflexive-htpy-cocone :
     (c : cocone f g X) → htpy-cocone c c
-  pr1 (reflexive-htpy-cocone (i , j , H)) = refl-htpy
-  pr1 (pr2 (reflexive-htpy-cocone (i , j , H))) = refl-htpy
-  pr2 (pr2 (reflexive-htpy-cocone (i , j , H))) = right-unit-htpy
+  pr1 (reflexive-htpy-cocone (i , j , H)) = {!!}
 
   htpy-eq-cocone :
     (c c' : cocone f g X) → c ＝ c' → htpy-cocone c c'
-  htpy-eq-cocone c .c refl = reflexive-htpy-cocone c
+  htpy-eq-cocone c .c refl = {!!}
 
   is-torsorial-htpy-cocone :
     (c : cocone f g X) → is-torsorial (htpy-cocone c)
-  is-torsorial-htpy-cocone c =
-    is-torsorial-Eq-structure
-      ( λ i' jH' K →
-        Σ ( vertical-map-cocone f g c ~ pr1 jH')
-          ( statement-coherence-htpy-cocone c (i' , jH') K))
-      ( is-torsorial-htpy (horizontal-map-cocone f g c))
-      ( horizontal-map-cocone f g c , refl-htpy)
-      ( is-torsorial-Eq-structure
-        ( λ j' H' →
-          statement-coherence-htpy-cocone c
-            ( horizontal-map-cocone f g c , j' , H')
-            ( refl-htpy))
-        ( is-torsorial-htpy (vertical-map-cocone f g c))
-        ( vertical-map-cocone f g c , refl-htpy)
-        ( is-contr-is-equiv'
-          ( Σ ( horizontal-map-cocone f g c ∘ f ~ vertical-map-cocone f g c ∘ g)
-              ( λ H' → coherence-square-cocone f g c ~ H'))
-          ( tot (λ H' M → right-unit-htpy ∙h M))
-          ( is-equiv-tot-is-fiberwise-equiv (λ H' → is-equiv-concat-htpy _ _))
-          ( is-torsorial-htpy (coherence-square-cocone f g c))))
+  is-torsorial-htpy-cocone c = {!!}
 
   is-equiv-htpy-eq-cocone :
     (c c' : cocone f g X) → is-equiv (htpy-eq-cocone c c')
-  is-equiv-htpy-eq-cocone c =
-    fundamental-theorem-id
-      ( is-torsorial-htpy-cocone c)
-      ( htpy-eq-cocone c)
+  is-equiv-htpy-eq-cocone c = {!!}
 
   extensionality-cocone :
     (c c' : cocone f g X) → (c ＝ c') ≃ htpy-cocone c c'
-  pr1 (extensionality-cocone c c') = htpy-eq-cocone c c'
-  pr2 (extensionality-cocone c c') = is-equiv-htpy-eq-cocone c c'
+  pr1 (extensionality-cocone c c') = {!!}
 
   eq-htpy-cocone :
     (c c' : cocone f g X) → htpy-cocone c c' → c ＝ c'
-  eq-htpy-cocone c c' = map-inv-is-equiv (is-equiv-htpy-eq-cocone c c')
+  eq-htpy-cocone c c' = {!!}
 ```
 
 ### Postcomposing cocones under spans with maps
@@ -174,25 +142,22 @@ cocone-map :
   {l1 l2 l3 l4 l5 : Level} {S : UU l1} {A : UU l2} {B : UU l3}
   (f : S → A) (g : S → B) {X : UU l4} {Y : UU l5} →
   cocone f g X → (X → Y) → cocone f g Y
-pr1 (cocone-map f g c h) = h ∘ horizontal-map-cocone f g c
-pr1 (pr2 (cocone-map f g c h)) = h ∘ vertical-map-cocone f g c
-pr2 (pr2 (cocone-map f g c h)) = h ·l coherence-square-cocone f g c
+pr1 (cocone-map f g c h) = {!!}
+pr1 (pr2 (cocone-map f g c h)) = {!!}
+pr2 (pr2 (cocone-map f g c h)) = {!!}
 
 cocone-map-id :
   {l1 l2 l3 l4 : Level} {S : UU l1} {A : UU l2} {B : UU l3}
   (f : S → A) (g : S → B) {X : UU l4} (c : cocone f g X) →
   Id (cocone-map f g c id) c
-cocone-map-id f g c =
-  eq-pair-eq-pr2
-    ( eq-pair-eq-pr2 (eq-htpy (ap-id ∘ coherence-square-cocone f g c)))
+cocone-map-id f g c = {!!}
 
 cocone-map-comp :
   {l1 l2 l3 l4 l5 l6 : Level} {S : UU l1} {A : UU l2} {B : UU l3}
   (f : S → A) (g : S → B) {X : UU l4} (c : cocone f g X)
   {Y : UU l5} (h : X → Y) {Z : UU l6} (k : Y → Z) →
   cocone-map f g c (k ∘ h) ＝ cocone-map f g (cocone-map f g c h) k
-cocone-map-comp f g (i , j , H) h k =
-  eq-pair-eq-pr2 (eq-pair-eq-pr2 (eq-htpy (ap-comp k h ∘ H)))
+cocone-map-comp f g (i , j , H) h k = {!!}
 ```
 
 ### Horizontal composition of cocones
@@ -212,22 +177,9 @@ cocone-comp-horizontal :
   { A : UU l1} {B : UU l2} {C : UU l3} {X : UU l4} {Y : UU l5} {Z : UU l6}
   ( f : A → X) (i : A → B) (k : B → C) ( c : cocone f i Y) →
   cocone (vertical-map-cocone f i c) k Z → cocone f (k ∘ i) Z
-pr1 (cocone-comp-horizontal f i k c d) =
-  ( horizontal-map-cocone (vertical-map-cocone f i c) k d) ∘
-  ( horizontal-map-cocone f i c)
-pr1 (pr2 (cocone-comp-horizontal f i k c d)) =
-  vertical-map-cocone (vertical-map-cocone f i c) k d
-pr2 (pr2 (cocone-comp-horizontal f i k c d)) =
-  pasting-horizontal-coherence-square-maps
-    ( i)
-    ( k)
-    ( f)
-    ( vertical-map-cocone f i c)
-    ( vertical-map-cocone (vertical-map-cocone f i c) k d)
-    ( horizontal-map-cocone f i c)
-    ( horizontal-map-cocone (vertical-map-cocone f i c) k d)
-    ( coherence-square-cocone f i c)
-    ( coherence-square-cocone (vertical-map-cocone f i c) k d)
+pr1 (cocone-comp-horizontal f i k c d) = {!!}
+pr1 (pr2 (cocone-comp-horizontal f i k c d)) = {!!}
+pr2 (pr2 (cocone-comp-horizontal f i k c d)) = {!!}
 ```
 
 A variation on the above:
@@ -249,8 +201,7 @@ cocone-comp-horizontal' :
   ( f : A → X) (i : A → B) (k : B → C) (g : B → Y) (j : X → Y) →
   cocone g k Z → coherence-square-maps i f g j →
   cocone f (k ∘ i) Z
-cocone-comp-horizontal' f i k g j c coh =
-  cocone-comp-horizontal f i k (j , g , coh) c
+cocone-comp-horizontal' f i k g j c coh = {!!}
 ```
 
 ### Vertical composition of cocones
@@ -274,22 +225,9 @@ cocone-comp-vertical :
   { A : UU l1} {B : UU l2} {C : UU l3} {X : UU l4} {Y : UU l5} {Z : UU l6}
   ( f : A → B) (i : A → X) (k : B → C) ( c : cocone f i Y) →
   cocone k (horizontal-map-cocone f i c) Z → cocone (k ∘ f) i Z
-pr1 (cocone-comp-vertical f i k c d) =
-  horizontal-map-cocone k (horizontal-map-cocone f i c) d
-pr1 (pr2 (cocone-comp-vertical f i k c d)) =
-  vertical-map-cocone k (horizontal-map-cocone f i c) d ∘
-  vertical-map-cocone f i c
-pr2 (pr2 (cocone-comp-vertical f i k c d)) =
-  pasting-vertical-coherence-square-maps
-    ( i)
-    ( f)
-    ( vertical-map-cocone f i c)
-    ( horizontal-map-cocone f i c)
-    ( k)
-    ( vertical-map-cocone k (horizontal-map-cocone f i c) d)
-    ( horizontal-map-cocone k (horizontal-map-cocone f i c) d)
-    ( coherence-square-cocone f i c)
-    ( coherence-square-cocone k (horizontal-map-cocone f i c) d)
+pr1 (cocone-comp-vertical f i k c d) = {!!}
+pr1 (pr2 (cocone-comp-vertical f i k c d)) = {!!}
+pr2 (pr2 (cocone-comp-vertical f i k c d)) = {!!}
 ```
 
 A variation on the above:
@@ -314,8 +252,7 @@ cocone-comp-vertical' :
   ( f : A → B) (i : A → X) (g : X → Y) (j : B → Y) (k : B → C) →
   cocone k j Z → coherence-square-maps i f g j →
   cocone (k ∘ f) i Z
-cocone-comp-vertical' f i g j k c coh =
-  cocone-comp-vertical f i k (j , g , coh) c
+cocone-comp-vertical' f i g j k c coh = {!!}
 ```
 
 Given a commutative diagram like this,
@@ -357,13 +294,7 @@ comp-cocone-hom-span :
   cocone f g X →
   coherence-square-maps k f' f i → coherence-square-maps g' k j g →
   cocone f' g' X
-comp-cocone-hom-span f g f' g' i j k c coh-l coh-r =
-  cocone-comp-vertical
-    ( id)
-    ( g')
-    ( f')
-    ( (g ∘ k , j , coh-r))
-    ( cocone-comp-horizontal f' k g (i , f , coh-l) c)
+comp-cocone-hom-span f g f' g' i j k c coh-l coh-r = {!!}
 ```
 
 ### The diagonal cocone on a span of identical maps
@@ -375,9 +306,7 @@ module _
 
   diagonal-into-cocone :
     (B → X) → cocone f f X
-  pr1 (diagonal-into-cocone g) = g
-  pr1 (pr2 (diagonal-into-cocone g)) = g
-  pr2 (pr2 (diagonal-into-cocone g)) = refl-htpy
+  pr1 (diagonal-into-cocone g) = {!!}
 ```
 
 ### Cocones obtained from morphisms of arrows
@@ -389,9 +318,7 @@ module _
   where
 
   cocone-hom-arrow : cocone f (map-domain-hom-arrow f g h) Y
-  pr1 cocone-hom-arrow = map-codomain-hom-arrow f g h
-  pr1 (pr2 cocone-hom-arrow) = g
-  pr2 (pr2 cocone-hom-arrow) = coh-hom-arrow f g h
+  pr1 cocone-hom-arrow = {!!}
 ```
 
 ### The swapping function on cocones over spans
@@ -403,9 +330,7 @@ module _
   where
 
   swap-cocone : cocone f g X → cocone g f X
-  pr1 (swap-cocone c) = vertical-map-cocone f g c
-  pr1 (pr2 (swap-cocone c)) = horizontal-map-cocone f g c
-  pr2 (pr2 (swap-cocone c)) = inv-htpy (coherence-square-cocone f g c)
+  pr1 (swap-cocone c) = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {S : UU l1} {A : UU l2} {B : UU l3}
@@ -413,17 +338,7 @@ module _
   where
 
   is-involution-swap-cocone : swap-cocone g f X ∘ swap-cocone f g X ~ id
-  is-involution-swap-cocone c =
-    eq-htpy-cocone f g
-      ( swap-cocone g f X (swap-cocone f g X c))
-      ( c)
-      ( ( refl-htpy) ,
-        ( refl-htpy) ,
-        ( λ s →
-          concat
-            ( right-unit)
-            ( coherence-square-cocone f g c s)
-            ( inv-inv (coherence-square-cocone f g c s))))
+  is-involution-swap-cocone c = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {S : UU l1} {A : UU l2} {B : UU l3}
@@ -431,13 +346,8 @@ module _
   where
 
   is-equiv-swap-cocone : is-equiv (swap-cocone f g X)
-  is-equiv-swap-cocone =
-    is-equiv-is-invertible
-      ( swap-cocone g f X)
-      ( is-involution-swap-cocone g f X)
-      ( is-involution-swap-cocone f g X)
+  is-equiv-swap-cocone = {!!}
 
   equiv-swap-cocone : cocone f g X ≃ cocone g f X
-  pr1 equiv-swap-cocone = swap-cocone f g X
-  pr2 equiv-swap-cocone = is-equiv-swap-cocone
+  pr1 equiv-swap-cocone = {!!}
 ```

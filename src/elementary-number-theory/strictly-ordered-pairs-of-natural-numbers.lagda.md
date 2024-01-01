@@ -33,21 +33,21 @@ A strictly ordered pair of natural numbers consists of `x y : ℕ` such that
 
 ```agda
 strictly-ordered-pair-ℕ : UU lzero
-strictly-ordered-pair-ℕ = Σ ℕ (λ x → Σ ℕ (λ y → le-ℕ x y))
+strictly-ordered-pair-ℕ = {!!}
 
 module _
   (p : strictly-ordered-pair-ℕ)
   where
 
   first-strictly-ordered-pair-ℕ : ℕ
-  first-strictly-ordered-pair-ℕ = pr1 p
+  first-strictly-ordered-pair-ℕ = {!!}
 
   second-strictly-ordered-pair-ℕ : ℕ
-  second-strictly-ordered-pair-ℕ = pr1 (pr2 p)
+  second-strictly-ordered-pair-ℕ = {!!}
 
   strict-inequality-strictly-ordered-pair-ℕ :
     le-ℕ first-strictly-ordered-pair-ℕ second-strictly-ordered-pair-ℕ
-  strict-inequality-strictly-ordered-pair-ℕ = pr2 (pr2 p)
+  strict-inequality-strictly-ordered-pair-ℕ = {!!}
 ```
 
 ## Properties
@@ -57,8 +57,7 @@ module _
 ```agda
 pair-of-distinct-elements-strictly-ordered-pair-ℕ :
   strictly-ordered-pair-ℕ → pair-of-distinct-elements ℕ
-pair-of-distinct-elements-strictly-ordered-pair-ℕ (a , b , H) =
-  (a , b , neq-le-ℕ H)
+pair-of-distinct-elements-strictly-ordered-pair-ℕ (a , b , H) = {!!}
 ```
 
 ### Any pair of distinct elements of natural numbers can be strictly ordered
@@ -66,23 +65,12 @@ pair-of-distinct-elements-strictly-ordered-pair-ℕ (a , b , H) =
 ```agda
 strictly-ordered-pair-pair-of-distinct-elements-ℕ' :
   (a b : ℕ) → a ≠ b → strictly-ordered-pair-ℕ
-strictly-ordered-pair-pair-of-distinct-elements-ℕ' zero-ℕ zero-ℕ H =
-  ex-falso (H refl)
-strictly-ordered-pair-pair-of-distinct-elements-ℕ' zero-ℕ (succ-ℕ b) H =
-  (0 , succ-ℕ b , star)
-strictly-ordered-pair-pair-of-distinct-elements-ℕ' (succ-ℕ a) zero-ℕ H =
-  (0 , succ-ℕ a , star)
-strictly-ordered-pair-pair-of-distinct-elements-ℕ' (succ-ℕ a) (succ-ℕ b) H =
-  map-Σ
-    ( λ x → Σ ℕ (λ y → le-ℕ x y))
-    ( succ-ℕ)
-    ( λ x →
-      map-Σ (le-ℕ (succ-ℕ x)) succ-ℕ (λ y → id))
-    ( strictly-ordered-pair-pair-of-distinct-elements-ℕ' a b
-      ( λ p → H (ap succ-ℕ p)))
+strictly-ordered-pair-pair-of-distinct-elements-ℕ' zero-ℕ zero-ℕ H = {!!}
+strictly-ordered-pair-pair-of-distinct-elements-ℕ' zero-ℕ (succ-ℕ b) H = {!!}
+strictly-ordered-pair-pair-of-distinct-elements-ℕ' (succ-ℕ a) zero-ℕ H = {!!}
+strictly-ordered-pair-pair-of-distinct-elements-ℕ' (succ-ℕ a) (succ-ℕ b) H = {!!}
 
 strictly-ordered-pair-pair-of-distinct-elements-ℕ :
   pair-of-distinct-elements ℕ → strictly-ordered-pair-ℕ
-strictly-ordered-pair-pair-of-distinct-elements-ℕ (a , b , H) =
-  strictly-ordered-pair-pair-of-distinct-elements-ℕ' a b H
+strictly-ordered-pair-pair-of-distinct-elements-ℕ (a , b , H) = {!!}
 ```

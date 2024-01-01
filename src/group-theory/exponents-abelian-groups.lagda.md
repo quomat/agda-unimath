@@ -49,5 +49,5 @@ module _
   where
 
   exponent-Ab : Subgroup-Ab l ℤ-Ab
-  exponent-Ab = exponent-Group (group-Ab A)
+  exponent-Ab = {!!}
 ```

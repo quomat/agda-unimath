@@ -79,36 +79,7 @@ module _
         ( left-top)
         ( left-bottom))
       ( bottom)
-  pasting-vertical-coherence-prism-maps prism-top prism-bottom =
-    ( ap-concat-htpy
-      ( bottom ·r hA' ·r hA)
-      ( commutative-pasting-vertical-pasting-horizontal-coherence-square-maps
-        h g hA hB hC h' g' hA' hB' hC' h'' g''
-        ( left-top)
-        ( right-top)
-        ( left-bottom)
-        ( right-bottom))) ∙h
-    ( right-whisk-square-htpy
-      ( front-bottom ·r hA)
-      ( bottom ·r hA' ·r hA)
-      ( hC' ·l ((g' ·l left-top) ∙h (right-top ·r h)))
-      ( prism-bottom ·r hA)) ∙h
-    ( ap-concat-htpy
-      ( front-bottom ·r hA)
-      ( ( ap-left-whisk-coherence-square-homotopies hC'
-          ( front-top)
-          ( mid ·r hA)
-          ( prism-top)) ∙h
-        ( ap-concat-htpy
-          ( hC' ·l front-top)
-          ( associative-left-whisk-comp
-            ( hC')
-            ( hC)
-            ( top))))) ∙h
-    ( inv-htpy-assoc-htpy
-      ( front-bottom ·r hA)
-      ( hC' ·l front-top)
-      ( ( hC' ∘ hC) ·l top))
+  pasting-vertical-coherence-prism-maps prism-top prism-bottom = {!!}
 ```
 
 ## Properties
@@ -143,25 +114,7 @@ module _
       ( inv-htpy inv-right)
       ( left)
       ( bottom)
-  equiv-rotate-vertical-coherence-prism-maps =
-    equiv-Π-equiv-family
-      ( λ a →
-        ( equiv-concat-assoc
-          ( bottom (hA a))
-          ( ap g' (left a))
-          ( inv (inv-right (h a))) _) ∘e
-        ( equiv-right-transpose-eq-concat' _
-          ( inv (inv-front a) ∙ ap hC (top a))
-          ( inv-right (h a))) ∘e
-        ( inv-equiv
-          ( equiv-concat-assoc' _
-            ( inv (inv-front a))
-            ( ap hC (top a))
-            ( inv-right (h a)))) ∘e
-        ( equiv-left-transpose-eq-concat
-          ( inv-front a)
-          ( bottom (hA a) ∙ ap g' (left a))
-          ( _)))
+  equiv-rotate-vertical-coherence-prism-maps = {!!}
 
   rotate-vertical-coherence-prism-maps :
     vertical-coherence-prism-maps' f g h f' g' h' hA hB hC
@@ -176,6 +129,5 @@ module _
       ( inv-htpy inv-right)
       ( left)
       ( bottom)
-  rotate-vertical-coherence-prism-maps =
-    map-equiv equiv-rotate-vertical-coherence-prism-maps
+  rotate-vertical-coherence-prism-maps = {!!}
 ```

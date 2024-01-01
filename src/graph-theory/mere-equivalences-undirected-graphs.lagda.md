@@ -34,14 +34,13 @@ module _
   where
 
   mere-equiv-Undirected-Graph-Prop : Prop (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  mere-equiv-Undirected-Graph-Prop = trunc-Prop (equiv-Undirected-Graph G H)
+  mere-equiv-Undirected-Graph-Prop = {!!}
 
   mere-equiv-Undirected-Graph : UU (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  mere-equiv-Undirected-Graph = type-Prop mere-equiv-Undirected-Graph-Prop
+  mere-equiv-Undirected-Graph = {!!}
 
   is-prop-mere-equiv-Undirected-Graph : is-prop mere-equiv-Undirected-Graph
-  is-prop-mere-equiv-Undirected-Graph =
-    is-prop-type-Prop mere-equiv-Undirected-Graph-Prop
+  is-prop-mere-equiv-Undirected-Graph = {!!}
 ```
 
 ## Properties
@@ -54,8 +53,7 @@ module _
   where
 
   refl-mere-equiv-Undirected-Graph : mere-equiv-Undirected-Graph G G
-  refl-mere-equiv-Undirected-Graph =
-    unit-trunc-Prop (id-equiv-Undirected-Graph G)
+  refl-mere-equiv-Undirected-Graph = {!!}
 ```
 
 ## External links

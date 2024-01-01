@@ -37,12 +37,7 @@ module _
   where
 
   is-essentially-injective-functor-Precategory : UU (l1 ⊔ l2 ⊔ l4)
-  is-essentially-injective-functor-Precategory =
-    (x y : obj-Precategory C) →
-    iso-Precategory D
-      ( obj-functor-Precategory C D F x)
-      ( obj-functor-Precategory C D F y) →
-    iso-Precategory C x y
+  is-essentially-injective-functor-Precategory = {!!}
 ```
 
 ### The type of essentially injective functors
@@ -51,9 +46,7 @@ module _
 essentially-injective-functor-Precategory :
   {l1 l2 l3 l4 : Level} (C : Precategory l1 l2) (D : Precategory l3 l4) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-essentially-injective-functor-Precategory C D =
-  Σ ( functor-Precategory C D)
-    ( is-essentially-injective-functor-Precategory C D)
+essentially-injective-functor-Precategory C D = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}
@@ -63,18 +56,16 @@ module _
 
   functor-essentially-injective-functor-Precategory :
     functor-Precategory C D
-  functor-essentially-injective-functor-Precategory = pr1 F
+  functor-essentially-injective-functor-Precategory = {!!}
 
   is-essentially-injective-essentially-injective-functor-Precategory :
     is-essentially-injective-functor-Precategory C D
       ( functor-essentially-injective-functor-Precategory)
-  is-essentially-injective-essentially-injective-functor-Precategory = pr2 F
+  is-essentially-injective-essentially-injective-functor-Precategory = {!!}
 
   obj-essentially-injective-functor-Precategory :
     obj-Precategory C → obj-Precategory D
-  obj-essentially-injective-functor-Precategory =
-    obj-functor-Precategory C D
-      ( functor-essentially-injective-functor-Precategory)
+  obj-essentially-injective-functor-Precategory = {!!}
 
   hom-essentially-injective-functor-Precategory :
     {x y : obj-Precategory C} →
@@ -82,9 +73,7 @@ module _
     hom-Precategory D
       ( obj-essentially-injective-functor-Precategory x)
       ( obj-essentially-injective-functor-Precategory y)
-  hom-essentially-injective-functor-Precategory =
-    hom-functor-Precategory C D
-      ( functor-essentially-injective-functor-Precategory)
+  hom-essentially-injective-functor-Precategory = {!!}
 ```
 
 ## See also

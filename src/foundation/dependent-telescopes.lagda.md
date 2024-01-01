@@ -65,10 +65,8 @@ new telescope of the same length as `A`, constructed by taking
 expand-telescope :
   {l1 l2 : Level} {n : ℕ} {A : telescope l1 n} →
   dependent-telescope l2 A → telescope (l1 ⊔ l2) n
-expand-telescope (base-dependent-telescope Y) =
-  base-telescope (Σ _ Y)
-expand-telescope (cons-dependent-telescope B) =
-  cons-telescope (λ x → expand-telescope (B (pr1 x) (pr2 x)))
+expand-telescope (base-dependent-telescope Y) = {!!}
+expand-telescope (cons-dependent-telescope B) = {!!}
 ```
 
 ### Interleaving telescopes
@@ -80,10 +78,8 @@ can define the **interleaved telescope** whose length is `2n`.
 interleave-telescope :
   {l1 l2 : Level} {n : ℕ} {A : telescope l1 n} →
   dependent-telescope l2 A → telescope (l1 ⊔ l2) (succ-ℕ (n *ℕ 2))
-interleave-telescope (base-dependent-telescope A) =
-  cons-telescope (λ x → base-telescope (A x))
-interleave-telescope (cons-dependent-telescope B) =
-  cons-telescope (λ x → cons-telescope λ y → interleave-telescope (B x y))
+interleave-telescope (base-dependent-telescope A) = {!!}
+interleave-telescope (cons-dependent-telescope B) = {!!}
 ```
 
 ### Mapping telescopes
@@ -95,8 +91,6 @@ Given a telescope `A` and a dependent telescope `B` over it, we can define the
 telescope-Π :
   {l1 l2 : Level} {n : ℕ} {A : telescope l1 n} →
   dependent-telescope l2 A → telescope (l1 ⊔ l2) n
-telescope-Π (base-dependent-telescope Y) =
-  base-telescope ((x : _) → Y x)
-telescope-Π (cons-dependent-telescope B) =
-  cons-telescope (λ x → telescope-Π (B (pr1 x) (pr2 x)))
+telescope-Π (base-dependent-telescope Y) = {!!}
+telescope-Π (cons-dependent-telescope B) = {!!}
 ```

@@ -36,18 +36,12 @@ module _
   where
 
   map-Small-Large-Category : (γ : Level) → UU (l1 ⊔ l2 ⊔ α γ ⊔ β γ γ)
-  map-Small-Large-Category =
-    map-Small-Large-Precategory
-      ( precategory-Category C)
-      ( large-precategory-Large-Category D)
+  map-Small-Large-Category = {!!}
 
   obj-map-Small-Large-Category :
     {γ : Level} → map-Small-Large-Category γ →
     obj-Category C → obj-Large-Category D γ
-  obj-map-Small-Large-Category {γ} =
-    obj-map-Small-Large-Precategory
-      ( precategory-Category C)
-      ( large-precategory-Large-Category D)
+  obj-map-Small-Large-Category {γ} = {!!}
 
   hom-map-Small-Large-Category :
     {γ : Level} →
@@ -57,10 +51,7 @@ module _
     hom-Large-Category D
       ( obj-map-Small-Large-Category F X)
       ( obj-map-Small-Large-Category F Y)
-  hom-map-Small-Large-Category {γ} =
-    hom-map-Small-Large-Precategory
-      ( precategory-Category C)
-      ( large-precategory-Large-Category D)
+  hom-map-Small-Large-Category {γ} = {!!}
 ```
 
 ## Properties
@@ -75,50 +66,32 @@ module _
 
   htpy-map-Small-Large-Category :
     (f g : map-Small-Large-Category C D γ) → UU (l1 ⊔ l2 ⊔ α γ ⊔ β γ γ)
-  htpy-map-Small-Large-Category =
-    htpy-map-Small-Large-Precategory
-      ( precategory-Category C)
-      ( large-precategory-Large-Category D)
+  htpy-map-Small-Large-Category = {!!}
 
   htpy-eq-map-Small-Large-Category :
     (f g : map-Small-Large-Category C D γ) →
     (f ＝ g) → htpy-map-Small-Large-Category f g
-  htpy-eq-map-Small-Large-Category =
-    htpy-eq-map-Small-Large-Precategory
-      ( precategory-Category C)
-      ( large-precategory-Large-Category D)
+  htpy-eq-map-Small-Large-Category = {!!}
 
   is-torsorial-htpy-map-Small-Large-Category :
     (f : map-Small-Large-Category C D γ) →
     is-torsorial (htpy-map-Small-Large-Category f)
-  is-torsorial-htpy-map-Small-Large-Category =
-    is-torsorial-htpy-map-Small-Large-Precategory
-      ( precategory-Category C)
-      ( large-precategory-Large-Category D)
+  is-torsorial-htpy-map-Small-Large-Category = {!!}
 
   is-equiv-htpy-eq-map-Small-Large-Category :
     (f g : map-Small-Large-Category C D γ) →
     is-equiv (htpy-eq-map-Small-Large-Category f g)
-  is-equiv-htpy-eq-map-Small-Large-Category =
-    is-equiv-htpy-eq-map-Small-Large-Precategory
-      ( precategory-Category C)
-      ( large-precategory-Large-Category D)
+  is-equiv-htpy-eq-map-Small-Large-Category = {!!}
 
   equiv-htpy-eq-map-Small-Large-Category :
     (f g : map-Small-Large-Category C D γ) →
     (f ＝ g) ≃ htpy-map-Small-Large-Category f g
-  equiv-htpy-eq-map-Small-Large-Category =
-    equiv-htpy-eq-map-Small-Large-Precategory
-      ( precategory-Category C)
-      ( large-precategory-Large-Category D)
+  equiv-htpy-eq-map-Small-Large-Category = {!!}
 
   eq-htpy-map-Small-Large-Category :
     (f g : map-Small-Large-Category C D γ) →
     htpy-map-Small-Large-Category f g → (f ＝ g)
-  eq-htpy-map-Small-Large-Category =
-    eq-htpy-map-Small-Large-Precategory
-      ( precategory-Category C)
-      ( large-precategory-Large-Category D)
+  eq-htpy-map-Small-Large-Category = {!!}
 ```
 
 ## See also

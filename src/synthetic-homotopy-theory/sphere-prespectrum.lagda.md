@@ -42,5 +42,5 @@ equivalences.
 
 ```agda
 sphere-Prespectrum : Prespectrum lzero
-sphere-Prespectrum = suspension-Prespectrum (Fin 2 , zero-Fin 1)
+sphere-Prespectrum = {!!}
 ```

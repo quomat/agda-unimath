@@ -45,6 +45,5 @@ module _
   where
 
   is-cocartesian-hom-arrow : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-cocartesian-hom-arrow =
-    is-pushout f (map-domain-hom-arrow f g h) (cocone-hom-arrow f g h)
+  is-cocartesian-hom-arrow = {!!}
 ```

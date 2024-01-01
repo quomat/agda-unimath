@@ -32,10 +32,10 @@ rational numbers.
 
 ```agda
 mul-ℚ : ℚ → ℚ → ℚ
-mul-ℚ (x , p) (y , q) = in-fraction-ℤ (mul-fraction-ℤ x y)
+mul-ℚ (x , p) (y , q) = {!!}
 
 infixl 40 _*ℚ_
-_*ℚ_ = mul-ℚ
+_*ℚ_ = {!!}
 ```
 
 ## Properties
@@ -44,18 +44,8 @@ _*ℚ_ = mul-ℚ
 
 ```agda
 left-unit-law-mul-ℚ : (x : ℚ) → one-ℚ *ℚ x ＝ x
-left-unit-law-mul-ℚ x =
-  ( eq-ℚ-sim-fractions-ℤ
-    ( mul-fraction-ℤ one-fraction-ℤ (fraction-ℚ x))
-    ( fraction-ℚ x)
-    ( left-unit-law-mul-fraction-ℤ (fraction-ℚ x))) ∙
-  ( in-fraction-fraction-ℚ x)
+left-unit-law-mul-ℚ x = {!!}
 
 right-unit-law-mul-ℚ : (x : ℚ) → x *ℚ one-ℚ ＝ x
-right-unit-law-mul-ℚ x =
-  ( eq-ℚ-sim-fractions-ℤ
-    ( mul-fraction-ℤ (fraction-ℚ x) one-fraction-ℤ)
-    ( fraction-ℚ x)
-    ( right-unit-law-mul-fraction-ℤ (fraction-ℚ x))) ∙
-  ( in-fraction-fraction-ℚ x)
+right-unit-law-mul-ℚ x = {!!}
 ```

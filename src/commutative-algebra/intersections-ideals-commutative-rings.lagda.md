@@ -42,12 +42,7 @@ module _
 
   is-intersection-ideal-Commutative-Ring :
     {l4 : Level} (K : ideal-Commutative-Ring l4 A) → UUω
-  is-intersection-ideal-Commutative-Ring K =
-    is-greatest-binary-lower-bound-Large-Poset
-      ( ideal-Commutative-Ring-Large-Poset A)
-      ( I)
-      ( J)
-      ( K)
+  is-intersection-ideal-Commutative-Ring K = {!!}
 ```
 
 ### Intersections of ideals in commutative rings
@@ -60,22 +55,15 @@ module _
 
   subset-intersection-ideal-Commutative-Ring :
     subset-Commutative-Ring (l2 ⊔ l3) R
-  subset-intersection-ideal-Commutative-Ring =
-    intersection-subtype
-      ( subset-ideal-Commutative-Ring R I)
-      ( subset-ideal-Commutative-Ring R J)
+  subset-intersection-ideal-Commutative-Ring = {!!}
 
   is-in-intersection-ideal-Commutative-Ring :
     type-Commutative-Ring R → UU (l2 ⊔ l3)
-  is-in-intersection-ideal-Commutative-Ring =
-    is-in-subtype subset-intersection-ideal-Commutative-Ring
+  is-in-intersection-ideal-Commutative-Ring = {!!}
 
   contains-zero-intersection-ideal-Commutative-Ring :
     is-in-intersection-ideal-Commutative-Ring (zero-Commutative-Ring R)
-  pr1 contains-zero-intersection-ideal-Commutative-Ring =
-    contains-zero-ideal-Commutative-Ring R I
-  pr2 contains-zero-intersection-ideal-Commutative-Ring =
-    contains-zero-ideal-Commutative-Ring R J
+  pr1 contains-zero-intersection-ideal-Commutative-Ring = {!!}
 
   is-closed-under-addition-intersection-ideal-Commutative-Ring :
     is-closed-under-addition-subset-Commutative-Ring R
@@ -83,60 +71,32 @@ module _
   pr1
     ( is-closed-under-addition-intersection-ideal-Commutative-Ring
       ( H1 , H2)
-      ( K1 , K2)) =
-    is-closed-under-addition-ideal-Commutative-Ring R I H1 K1
-  pr2
-    ( is-closed-under-addition-intersection-ideal-Commutative-Ring
-      ( H1 , H2)
-      ( K1 , K2)) =
-    is-closed-under-addition-ideal-Commutative-Ring R J H2 K2
+      ( K1 , K2)) = {!!}
 
   is-closed-under-negatives-intersection-ideal-Commutative-Ring :
     is-closed-under-negatives-subset-Commutative-Ring R
       ( subset-intersection-ideal-Commutative-Ring)
   pr1
     ( is-closed-under-negatives-intersection-ideal-Commutative-Ring
-      ( H1 , H2)) =
-    is-closed-under-negatives-ideal-Commutative-Ring R I H1
-  pr2
-    ( is-closed-under-negatives-intersection-ideal-Commutative-Ring
-      ( H1 , H2)) =
-    is-closed-under-negatives-ideal-Commutative-Ring R J H2
+      ( H1 , H2)) = {!!}
 
   is-additive-subgroup-intersection-ideal-Commutative-Ring :
     is-additive-subgroup-subset-Commutative-Ring R
       ( subset-intersection-ideal-Commutative-Ring)
-  pr1 is-additive-subgroup-intersection-ideal-Commutative-Ring =
-    contains-zero-intersection-ideal-Commutative-Ring
-  pr1 (pr2 is-additive-subgroup-intersection-ideal-Commutative-Ring) =
-    is-closed-under-addition-intersection-ideal-Commutative-Ring
-  pr2 (pr2 is-additive-subgroup-intersection-ideal-Commutative-Ring) =
-    is-closed-under-negatives-intersection-ideal-Commutative-Ring
+  pr1 is-additive-subgroup-intersection-ideal-Commutative-Ring = {!!}
 
   is-closed-under-left-multiplication-intersection-ideal-Commutative-Ring :
     is-closed-under-left-multiplication-subset-Commutative-Ring R
       ( subset-intersection-ideal-Commutative-Ring)
   pr1
     ( is-closed-under-left-multiplication-intersection-ideal-Commutative-Ring
-      x y (H1 , H2)) =
-    is-closed-under-left-multiplication-ideal-Commutative-Ring R I x y H1
-  pr2
-    ( is-closed-under-left-multiplication-intersection-ideal-Commutative-Ring
-      x y (H1 , H2)) =
-    is-closed-under-left-multiplication-ideal-Commutative-Ring R J x y H2
+      x y (H1 , H2)) = {!!}
 
   intersection-ideal-Commutative-Ring : ideal-Commutative-Ring (l2 ⊔ l3) R
-  intersection-ideal-Commutative-Ring =
-    ideal-left-ideal-Commutative-Ring R
-      subset-intersection-ideal-Commutative-Ring
-      contains-zero-intersection-ideal-Commutative-Ring
-      is-closed-under-addition-intersection-ideal-Commutative-Ring
-      is-closed-under-negatives-intersection-ideal-Commutative-Ring
-      is-closed-under-left-multiplication-intersection-ideal-Commutative-Ring
+  intersection-ideal-Commutative-Ring = {!!}
 
   is-intersection-intersection-ideal-Commutative-Ring :
     is-intersection-ideal-Commutative-Ring R I J
       ( intersection-ideal-Commutative-Ring)
-  is-intersection-intersection-ideal-Commutative-Ring =
-    is-intersection-intersection-ideal-Ring (ring-Commutative-Ring R) I J
+  is-intersection-intersection-ideal-Commutative-Ring = {!!}
 ```

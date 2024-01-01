@@ -41,7 +41,7 @@ in a type `A` is defined by [iterated](foundation.iterating-functions.md)
 ```agda
 power-nat-Ω :
   {l : Level} → ℕ → (A : Pointed-Type l) → type-Ω A → type-Ω A
-power-nat-Ω n A ω = iterate n (concat' (point-Pointed-Type A) ω) refl
+power-nat-Ω n A ω = {!!}
 ```
 
 ### Powers of loops by integers
@@ -49,42 +49,38 @@ power-nat-Ω n A ω = iterate n (concat' (point-Pointed-Type A) ω) refl
 ```agda
 equiv-power-int-Ω :
   {l : Level} → ℤ → (A : Pointed-Type l) → type-Ω A → type-Ω A ≃ type-Ω A
-equiv-power-int-Ω k A ω =
-  iterate-automorphism-ℤ k (equiv-concat' (point-Pointed-Type A) ω)
+equiv-power-int-Ω k A ω = {!!}
 
 power-int-Ω :
   {l : Level} → ℤ → (A : Pointed-Type l) → type-Ω A → type-Ω A
-power-int-Ω k A ω = map-equiv (equiv-power-int-Ω k A ω) refl
+power-int-Ω k A ω = {!!}
 ```
 
 ## Properties
 
-### `reflⁿ = refl`
+### `reflⁿ = {!!}
 
 ```agda
 power-nat-refl-Ω :
   {l : Level} (n : ℕ) (A : Pointed-Type l) →
   power-nat-Ω n A refl ＝ refl
-power-nat-refl-Ω zero-ℕ A = refl
-power-nat-refl-Ω (succ-ℕ n) A =
-  ap (concat' (point-Pointed-Type A) refl) (power-nat-refl-Ω n A)
+power-nat-refl-Ω zero-ℕ A = {!!}
+power-nat-refl-Ω (succ-ℕ n) A = {!!}
 ```
 
-### `ωⁿ⁺¹ = ωⁿ ∙ ω`
+### `ωⁿ⁺¹ = {!!}
 
 ```agda
 power-nat-succ-Ω :
   {l : Level} (n : ℕ) (A : Pointed-Type l) (ω : type-Ω A) →
   power-nat-Ω (succ-ℕ n) A ω ＝ (power-nat-Ω n A ω ∙ ω)
-power-nat-succ-Ω n A ω = refl
+power-nat-succ-Ω n A ω = {!!}
 
 power-nat-succ-Ω' :
   {l : Level} (n : ℕ) (A : Pointed-Type l) (ω : type-Ω A) →
   power-nat-Ω (succ-ℕ n) A ω ＝ (ω ∙ power-nat-Ω n A ω)
-power-nat-succ-Ω' zero-ℕ A ω = inv right-unit
-power-nat-succ-Ω' (succ-ℕ n) A ω =
-  ( ap (concat' (point-Pointed-Type A) ω) (power-nat-succ-Ω' n A ω)) ∙
-  ( assoc ω (power-nat-Ω n A ω) ω)
+power-nat-succ-Ω' zero-ℕ A ω = {!!}
+power-nat-succ-Ω' (succ-ℕ n) A ω = {!!}
 ```
 
 ### `ωᵐ⁺ⁿ ＝ ωᵐ ∙ ωⁿ`
@@ -93,31 +89,23 @@ power-nat-succ-Ω' (succ-ℕ n) A ω =
 power-nat-add-Ω :
   {l : Level} (m n : ℕ) (A : Pointed-Type l) (ω : type-Ω A) →
   power-nat-Ω (m +ℕ n) A ω ＝ (power-nat-Ω m A ω ∙ power-nat-Ω n A ω)
-power-nat-add-Ω m zero-ℕ A ω = inv right-unit
-power-nat-add-Ω m (succ-ℕ n) A ω =
-  ( ap (concat' (point-Pointed-Type A) ω) (power-nat-add-Ω m n A ω)) ∙
-  ( assoc (power-nat-Ω m A ω) (power-nat-Ω n A ω) ω)
+power-nat-add-Ω m zero-ℕ A ω = {!!}
+power-nat-add-Ω m (succ-ℕ n) A ω = {!!}
 ```
 
-### `ωᵐⁿ = (ωᵐ)ⁿ`
+### `ωᵐⁿ = {!!}
 
 ```agda
 power-nat-mul-Ω :
   {l : Level} (m n : ℕ) (A : Pointed-Type l) (ω : type-Ω A) →
   power-nat-Ω (m *ℕ n) A ω ＝ power-nat-Ω m A (power-nat-Ω n A ω)
-power-nat-mul-Ω zero-ℕ n A ω = refl
-power-nat-mul-Ω (succ-ℕ m) n A ω =
-  ( power-nat-add-Ω (m *ℕ n) n A ω) ∙
-  ( ( ap
-      ( concat' (point-Pointed-Type A) (power-nat-Ω n A ω))
-      ( power-nat-mul-Ω m n A ω)))
+power-nat-mul-Ω zero-ℕ n A ω = {!!}
+power-nat-mul-Ω (succ-ℕ m) n A ω = {!!}
 
 power-nat-mul-Ω' :
   {l : Level} (m n : ℕ) (A : Pointed-Type l) (ω : type-Ω A) →
   power-nat-Ω (m *ℕ n) A ω ＝ power-nat-Ω n A (power-nat-Ω m A ω)
-power-nat-mul-Ω' m n A ω =
-  ( ap (λ u → power-nat-Ω u A ω) (commutative-mul-ℕ m n)) ∙
-  ( power-nat-mul-Ω n m A ω)
+power-nat-mul-Ω' m n A ω = {!!}
 ```
 
 ### The action on identifications of a function preserves powers
@@ -127,10 +115,6 @@ map-power-nat-Ω :
   {l1 l2 : Level} (n : ℕ) {A : Pointed-Type l1} {B : Pointed-Type l2}
   (f : A →∗ B) (ω : type-Ω A) →
   map-Ω f (power-nat-Ω n A ω) ＝ power-nat-Ω n B (map-Ω f ω)
-map-power-nat-Ω zero-ℕ {A} {B} f ω = preserves-refl-map-Ω f
-map-power-nat-Ω (succ-ℕ n) {A} {B} f ω =
-  ( preserves-mul-map-Ω f) ∙
-  ( ap
-    ( concat' (point-Pointed-Type B) (map-Ω f ω))
-    ( map-power-nat-Ω n f ω))
+map-power-nat-Ω zero-ℕ {A} {B} f ω = {!!}
+map-power-nat-Ω (succ-ℕ n) {A} {B} f ω = {!!}
 ```

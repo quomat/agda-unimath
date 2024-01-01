@@ -30,7 +30,7 @@ The **crisp law of excluded middle** asserts that any crisp
 
 ```agda
 Crisp-LEM : (@♭ l : Level) → UU (lsuc l)
-Crisp-LEM l = (@♭ P : Prop l) → is-decidable (type-Prop P)
+Crisp-LEM l = {!!}
 ```
 
 ## Properties
@@ -40,9 +40,9 @@ Crisp-LEM l = (@♭ P : Prop l) → is-decidable (type-Prop P)
 ```agda
 decidable-prop-Crisp-Prop :
   {@♭ l : Level} → Crisp-LEM l → @♭ Prop l → Decidable-Prop l
-pr1 (decidable-prop-Crisp-Prop lem P) = type-Prop P
-pr1 (pr2 (decidable-prop-Crisp-Prop lem P)) = is-prop-type-Prop P
-pr2 (pr2 (decidable-prop-Crisp-Prop lem P)) = lem P
+pr1 (decidable-prop-Crisp-Prop lem P) = {!!}
+pr1 (pr2 (decidable-prop-Crisp-Prop lem P)) = {!!}
+pr2 (pr2 (decidable-prop-Crisp-Prop lem P)) = {!!}
 ```
 
 ## See also

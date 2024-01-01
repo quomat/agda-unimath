@@ -59,14 +59,14 @@ module _
   where
 
   is-singleton-subtype-Prop : Prop (l1 ⊔ l2)
-  is-singleton-subtype-Prop = is-contr-Prop (type-subtype P)
+  is-singleton-subtype-Prop = {!!}
 
   is-singleton-subtype : UU (l1 ⊔ l2)
-  is-singleton-subtype = type-Prop is-singleton-subtype-Prop
+  is-singleton-subtype = {!!}
 
   is-prop-is-singleton-subtype :
     is-prop is-singleton-subtype
-  is-prop-is-singleton-subtype = is-prop-type-Prop is-singleton-subtype-Prop
+  is-prop-is-singleton-subtype = {!!}
 ```
 
 ### The type of singleton subtypes
@@ -74,18 +74,18 @@ module _
 ```agda
 singleton-subtype :
   {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-singleton-subtype l2 X = type-subtype (is-singleton-subtype-Prop {l2 = l2} {X})
+singleton-subtype l2 X = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} (P : singleton-subtype l2 X)
   where
 
   subtype-singleton-subtype : subtype l2 X
-  subtype-singleton-subtype = pr1 P
+  subtype-singleton-subtype = {!!}
 
   is-singleton-subtype-singleton-subtype :
     is-singleton-subtype subtype-singleton-subtype
-  is-singleton-subtype-singleton-subtype = pr2 P
+  is-singleton-subtype-singleton-subtype = {!!}
 ```
 
 ### Standard singleton subtypes
@@ -96,27 +96,21 @@ module _
   where
 
   subtype-standard-singleton-subtype : subtype l (type-Set X)
-  subtype-standard-singleton-subtype y = Id-Prop X x y
+  subtype-standard-singleton-subtype y = {!!}
 
   type-standard-singleton-subtype : UU l
-  type-standard-singleton-subtype =
-    type-subtype subtype-standard-singleton-subtype
+  type-standard-singleton-subtype = {!!}
 
   inclusion-standard-singleton-subtype :
     type-standard-singleton-subtype → type-Set X
-  inclusion-standard-singleton-subtype =
-    inclusion-subtype subtype-standard-singleton-subtype
+  inclusion-standard-singleton-subtype = {!!}
 
   standard-singleton-subtype : singleton-subtype l (type-Set X)
-  pr1 standard-singleton-subtype = subtype-standard-singleton-subtype
-  pr2 standard-singleton-subtype = is-torsorial-path x
+  pr1 standard-singleton-subtype = {!!}
 
   inhabited-subtype-standard-singleton-subtype :
     inhabited-subtype l (type-Set X)
-  pr1 inhabited-subtype-standard-singleton-subtype =
-    subtype-standard-singleton-subtype
-  pr2 inhabited-subtype-standard-singleton-subtype =
-    unit-trunc-Prop (pair x refl)
+  pr1 inhabited-subtype-standard-singleton-subtype = {!!}
 ```
 
 ## Properties
@@ -130,9 +124,7 @@ module _
 
   is-least-subtype-containing-element-is-singleton-subtype :
     is-singleton-subtype P → is-least-subtype-containing-element x P
-  pr1 (is-least-subtype-containing-element-is-singleton-subtype H Q) L = L x p
-  pr2 (is-least-subtype-containing-element-is-singleton-subtype H Q) q y r =
-    ind-singleton (x , p) H (is-in-subtype Q ∘ pr1) q (y , r)
+  pr1 (is-least-subtype-containing-element-is-singleton-subtype H Q) L = {!!}
 ```
 
 ### If the identity type `y ↦ x ＝ y` is a subtype, then a subtype containing `x` is a singleton subtype if and only if it is the least subtype containing `x`
@@ -161,17 +153,13 @@ module _
   is-singleton-subtype-is-least-subtype-containing-element :
     (H : (y : X) → is-prop (x ＝ y)) →
     is-least-subtype-containing-element x P → is-singleton-subtype P
-  pr1 (is-singleton-subtype-is-least-subtype-containing-element H L) = (x , p)
-  pr2 (is-singleton-subtype-is-least-subtype-containing-element H L) (y , q) =
-    eq-type-subtype P (backward-implication (L (λ y → x ＝ y , H y)) refl y q)
+  pr1 (is-singleton-subtype-is-least-subtype-containing-element H L) = {!!}
 
 is-singleton-subtype-is-least-subtype-containing-element-Set :
   {l1 l2 : Level} (X : Set l1) {x : type-Set X} (P : subtype l2 (type-Set X))
   (p : is-in-subtype P x) →
   is-least-subtype-containing-element x P → is-singleton-subtype P
-is-singleton-subtype-is-least-subtype-containing-element-Set X P p =
-  is-singleton-subtype-is-least-subtype-containing-element P p
-    ( is-set-type-Set X _)
+is-singleton-subtype-is-least-subtype-containing-element-Set X P p = {!!}
 ```
 
 ### Any two singleton subtypes containing a given element `x` have the same elements
@@ -184,10 +172,7 @@ module _
 
   inclusion-is-singleton-subtype :
     is-singleton-subtype P → P ⊆ Q
-  inclusion-is-singleton-subtype s =
-    backward-implication
-      ( is-least-subtype-containing-element-is-singleton-subtype P p s Q)
-      ( q)
+  inclusion-is-singleton-subtype s = {!!}
 
 module _
   {l1 l2 l3 : Level} {X : UU l1} {x : X} (P : subtype l2 X) (Q : subtype l3 X)
@@ -197,10 +182,7 @@ module _
   has-same-elements-is-singleton-subtype :
     is-singleton-subtype P → is-singleton-subtype Q →
     has-same-elements-subtype P Q
-  pr1 (has-same-elements-is-singleton-subtype s t y) =
-    inclusion-is-singleton-subtype P Q p q s y
-  pr2 (has-same-elements-is-singleton-subtype s t y) =
-    inclusion-is-singleton-subtype Q P q p t y
+  pr1 (has-same-elements-is-singleton-subtype s t y) = {!!}
 ```
 
 ### The standard singleton subtype `{x}` of a set is the least subtype containing `x`
@@ -213,8 +195,7 @@ module _
   is-least-subtype-containing-element-Set :
     is-least-subtype-containing-element x
       ( subtype-standard-singleton-subtype X x)
-  pr1 (is-least-subtype-containing-element-Set A) H = H x refl
-  pr2 (is-least-subtype-containing-element-Set A) H .x refl = H
+  pr1 (is-least-subtype-containing-element-Set A) H = {!!}
 ```
 
 ### The image of the standard singleton subtype `{x}` under a map `f : X → Y` is the standard singleton subtype `{f(x)}`
@@ -245,28 +226,13 @@ module _
     is-singleton-im-singleton-subtype :
       is-singleton-subtype
         ( im-subtype f (subtype-standard-singleton-subtype X x))
-    is-singleton-im-singleton-subtype =
-      is-contr-equiv
-        ( Σ (type-Set Y) (λ y → f x ＝ y))
-        ( equiv-tot
-            ( λ y →
-              ( inv-equiv (equiv-unit-trunc-Prop (Id-Prop Y (f x) y))) ∘e
-              ( equiv-trunc-Prop
-                ( left-unit-law-Σ-is-contr (is-torsorial-path x) (x , refl)))))
-        ( is-torsorial-path (f x))
+    is-singleton-im-singleton-subtype = {!!}
 
   compute-im-singleton-subtype :
     has-same-elements-subtype
       ( subtype-standard-singleton-subtype Y (f x))
       ( im-subtype f (subtype-standard-singleton-subtype X x))
-  compute-im-singleton-subtype =
-    has-same-elements-is-singleton-subtype
-      ( subtype-standard-singleton-subtype Y (f x))
-      ( im-subtype f (subtype-standard-singleton-subtype X x))
-      ( refl)
-      ( unit-trunc-Prop ((x , refl) , refl))
-      ( is-torsorial-path (f x))
-      ( is-singleton-im-singleton-subtype)
+  compute-im-singleton-subtype = {!!}
 ```
 
 ## See also

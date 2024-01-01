@@ -55,13 +55,7 @@ hom-algebra-polynomial-endofunctor :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : A → UU l2}
   (X : algebra-polynomial-endofunctor l3 A B) →
   (Y : algebra-polynomial-endofunctor l4 A B) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-hom-algebra-polynomial-endofunctor {A = A} {B} X Y =
-  Σ ( type-algebra-polynomial-endofunctor X →
-      type-algebra-polynomial-endofunctor Y)
-    ( λ f →
-      ( f ∘ (structure-algebra-polynomial-endofunctor X)) ~
-      ( ( structure-algebra-polynomial-endofunctor Y) ∘
-        ( map-polynomial-endofunctor A B f)))
+hom-algebra-polynomial-endofunctor {A = A} {B} X Y = {!!}
 
 map-hom-algebra-polynomial-endofunctor :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : A → UU l2}
@@ -70,7 +64,7 @@ map-hom-algebra-polynomial-endofunctor :
   hom-algebra-polynomial-endofunctor X Y →
   type-algebra-polynomial-endofunctor X →
   type-algebra-polynomial-endofunctor Y
-map-hom-algebra-polynomial-endofunctor X Y f = pr1 f
+map-hom-algebra-polynomial-endofunctor X Y f = {!!}
 
 structure-hom-algebra-polynomial-endofunctor :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : A → UU l2}
@@ -82,7 +76,7 @@ structure-hom-algebra-polynomial-endofunctor :
   ( ( structure-algebra-polynomial-endofunctor Y) ∘
     ( map-polynomial-endofunctor A B
       ( map-hom-algebra-polynomial-endofunctor X Y f)))
-structure-hom-algebra-polynomial-endofunctor X Y f = pr2 f
+structure-hom-algebra-polynomial-endofunctor X Y f = {!!}
 ```
 
 ## Properties
@@ -99,90 +93,33 @@ module _
 
   htpy-hom-algebra-polynomial-endofunctor :
     (g : hom-algebra-polynomial-endofunctor X Y) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  htpy-hom-algebra-polynomial-endofunctor g =
-    Σ ( map-hom-algebra-polynomial-endofunctor X Y f ~
-        map-hom-algebra-polynomial-endofunctor X Y g)
-      ( λ H →
-        ( ( structure-hom-algebra-polynomial-endofunctor X Y f) ∙h
-          ( ( structure-algebra-polynomial-endofunctor Y) ·l
-            ( htpy-polynomial-endofunctor A B H))) ~
-        ( ( H ·r structure-algebra-polynomial-endofunctor X) ∙h
-          ( structure-hom-algebra-polynomial-endofunctor X Y g)))
+  htpy-hom-algebra-polynomial-endofunctor g = {!!}
 
   refl-htpy-hom-algebra-polynomial-endofunctor :
     htpy-hom-algebra-polynomial-endofunctor f
-  pr1 refl-htpy-hom-algebra-polynomial-endofunctor = refl-htpy
-  pr2 refl-htpy-hom-algebra-polynomial-endofunctor z =
-    ( ap
-      ( λ t →
-        concat
-          ( structure-hom-algebra-polynomial-endofunctor X Y f z)
-          ( structure-algebra-polynomial-endofunctor Y
-            ( map-polynomial-endofunctor A B
-              ( map-hom-algebra-polynomial-endofunctor X Y f) z))
-          ( ap (structure-algebra-polynomial-endofunctor Y) t))
-      ( coh-refl-htpy-polynomial-endofunctor A B
-        ( map-hom-algebra-polynomial-endofunctor X Y f) z)) ∙
-    ( right-unit)
+  pr1 refl-htpy-hom-algebra-polynomial-endofunctor = {!!}
 
   htpy-eq-hom-algebra-polynomial-endofunctor :
     (g : hom-algebra-polynomial-endofunctor X Y) →
     f ＝ g → htpy-hom-algebra-polynomial-endofunctor g
-  htpy-eq-hom-algebra-polynomial-endofunctor .f refl =
-    refl-htpy-hom-algebra-polynomial-endofunctor
+  htpy-eq-hom-algebra-polynomial-endofunctor .f refl = {!!}
 
   is-torsorial-htpy-hom-algebra-polynomial-endofunctor :
     is-torsorial htpy-hom-algebra-polynomial-endofunctor
-  is-torsorial-htpy-hom-algebra-polynomial-endofunctor =
-    is-torsorial-Eq-structure
-      ( λ ( g : pr1 X → pr1 Y)
-          ( G : (g ∘ pr2 X) ~ ((pr2 Y) ∘ (map-polynomial-endofunctor A B g)))
-          ( H : map-hom-algebra-polynomial-endofunctor X Y f ~ g) →
-          ( ( structure-hom-algebra-polynomial-endofunctor X Y f) ∙h
-            ( ( structure-algebra-polynomial-endofunctor Y) ·l
-              ( htpy-polynomial-endofunctor A B H))) ~
-          ( ( H ·r structure-algebra-polynomial-endofunctor X) ∙h G))
-      ( is-torsorial-htpy (map-hom-algebra-polynomial-endofunctor X Y f))
-      ( pair (map-hom-algebra-polynomial-endofunctor X Y f) refl-htpy)
-      ( is-contr-equiv'
-        ( Σ ( ( (pr1 f) ∘ pr2 X) ~
-              ( pr2 Y ∘ map-polynomial-endofunctor A B (pr1 f)))
-            ( λ H → (pr2 f) ~ H))
-        ( equiv-tot
-          ( λ H →
-            ( equiv-concat-htpy
-              ( λ x →
-                ap
-                  ( concat
-                    ( pr2 f x)
-                    ( structure-algebra-polynomial-endofunctor Y
-                      ( map-polynomial-endofunctor A B (pr1 f) x)))
-                  ( ap
-                    ( ap (pr2 Y))
-                    ( coh-refl-htpy-polynomial-endofunctor A B (pr1 f) x)))
-              ( H)) ∘e
-            ( equiv-concat-htpy right-unit-htpy H)))
-        ( is-torsorial-htpy (pr2 f)))
+  is-torsorial-htpy-hom-algebra-polynomial-endofunctor = {!!}
 
   is-equiv-htpy-eq-hom-algebra-polynomial-endofunctor :
     (g : hom-algebra-polynomial-endofunctor X Y) →
     is-equiv (htpy-eq-hom-algebra-polynomial-endofunctor g)
-  is-equiv-htpy-eq-hom-algebra-polynomial-endofunctor =
-    fundamental-theorem-id
-      ( is-torsorial-htpy-hom-algebra-polynomial-endofunctor)
-      ( htpy-eq-hom-algebra-polynomial-endofunctor)
+  is-equiv-htpy-eq-hom-algebra-polynomial-endofunctor = {!!}
 
   extensionality-hom-algebra-polynomial-endofunctor :
     (g : hom-algebra-polynomial-endofunctor X Y) →
     (f ＝ g) ≃ htpy-hom-algebra-polynomial-endofunctor g
-  pr1 (extensionality-hom-algebra-polynomial-endofunctor g) =
-    htpy-eq-hom-algebra-polynomial-endofunctor g
-  pr2 (extensionality-hom-algebra-polynomial-endofunctor g) =
-    is-equiv-htpy-eq-hom-algebra-polynomial-endofunctor g
+  pr1 (extensionality-hom-algebra-polynomial-endofunctor g) = {!!}
 
   eq-htpy-hom-algebra-polynomial-endofunctor :
     (g : hom-algebra-polynomial-endofunctor X Y) →
     htpy-hom-algebra-polynomial-endofunctor g → f ＝ g
-  eq-htpy-hom-algebra-polynomial-endofunctor g =
-    map-inv-is-equiv (is-equiv-htpy-eq-hom-algebra-polynomial-endofunctor g)
+  eq-htpy-hom-algebra-polynomial-endofunctor g = {!!}
 ```

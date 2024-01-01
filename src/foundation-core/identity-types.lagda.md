@@ -63,7 +63,7 @@ module _
 
   infix 6 _＝_
   _＝_ : A → A → UU l
-  (a ＝ b) = Id a b
+  (a ＝ b) = {!!}
 
 {-# BUILTIN EQUALITY Id #-}
 ```
@@ -84,7 +84,7 @@ ind-Id :
   {l1 l2 : Level} {A : UU l1}
   (x : A) (B : (y : A) (p : x ＝ y) → UU l2) →
   (B x refl) → (y : A) (p : x ＝ y) → B y p
-ind-Id x B b y refl = b
+ind-Id x B b y refl = {!!}
 ```
 
 ## Structure
@@ -100,13 +100,13 @@ module _
 
   infixl 15 _∙_
   _∙_ : {x y z : A} → x ＝ y → y ＝ z → x ＝ z
-  refl ∙ q = q
+  refl ∙ q = {!!}
 
   concat : {x y : A} → x ＝ y → (z : A) → y ＝ z → x ＝ z
-  concat p z q = p ∙ q
+  concat p z q = {!!}
 
   concat' : (x : A) {y z : A} → y ＝ z → x ＝ y → x ＝ z
-  concat' x q p = p ∙ q
+  concat' x q p = {!!}
 ```
 
 ### Inverting identifications
@@ -117,7 +117,7 @@ module _
   where
 
   inv : {x y : A} → x ＝ y → y ＝ x
-  inv refl = refl
+  inv refl = {!!}
 ```
 
 ### The groupoidal laws for types
@@ -130,27 +130,27 @@ module _
   assoc :
     {x y z w : A} (p : x ＝ y) (q : y ＝ z) (r : z ＝ w) →
     ((p ∙ q) ∙ r) ＝ (p ∙ (q ∙ r))
-  assoc refl q r = refl
+  assoc refl q r = {!!}
 
   left-unit : {x y : A} {p : x ＝ y} → refl ∙ p ＝ p
-  left-unit = refl
+  left-unit = {!!}
 
   right-unit : {x y : A} {p : x ＝ y} → p ∙ refl ＝ p
-  right-unit {p = refl} = refl
+  right-unit {p = refl} = {!!}
 
   left-inv : {x y : A} (p : x ＝ y) → inv p ∙ p ＝ refl
-  left-inv refl = refl
+  left-inv refl = {!!}
 
   right-inv : {x y : A} (p : x ＝ y) → p ∙ (inv p) ＝ refl
-  right-inv refl = refl
+  right-inv refl = {!!}
 
   inv-inv : {x y : A} (p : x ＝ y) → inv (inv p) ＝ p
-  inv-inv refl = refl
+  inv-inv refl = {!!}
 
   distributive-inv-concat :
     {x y : A} (p : x ＝ y) {z : A} (q : y ＝ z) →
     inv (p ∙ q) ＝ inv q ∙ inv p
-  distributive-inv-concat refl refl = refl
+  distributive-inv-concat refl refl = {!!}
 ```
 
 ### Transposing inverses
@@ -163,23 +163,22 @@ module _
   left-transpose-eq-concat :
     {x y : A} (p : x ＝ y) {z : A} (q : y ＝ z) (r : x ＝ z) →
     p ∙ q ＝ r → q ＝ inv p ∙ r
-  left-transpose-eq-concat refl q r s = s
+  left-transpose-eq-concat refl q r s = {!!}
 
   right-transpose-eq-concat :
     {x y : A} (p : x ＝ y) {z : A} (q : y ＝ z) (r : x ＝ z) →
     p ∙ q ＝ r → p ＝ r ∙ inv q
-  right-transpose-eq-concat p refl r s = (inv right-unit ∙ s) ∙ inv right-unit
+  right-transpose-eq-concat p refl r s = {!!}
 
   double-transpose-eq-concat :
     {x y u v : A} (r : x ＝ u) (p : x ＝ y) (s : u ＝ v) (q : y ＝ v) →
     p ∙ q ＝ r ∙ s → (inv r) ∙ p ＝ s ∙ (inv q)
-  double-transpose-eq-concat refl p s refl α =
-    (inv right-unit ∙ α) ∙ inv right-unit
+  double-transpose-eq-concat refl p s refl α = {!!}
 
   double-transpose-eq-concat' :
     {x y u v : A} (r : x ＝ u) (p : x ＝ y) (s : u ＝ v) (q : y ＝ v) →
     p ∙ q ＝ r ∙ s → q ∙ inv s ＝ inv p ∙ r
-  double-transpose-eq-concat' r refl refl q α = right-unit ∙ (α ∙ right-unit)
+  double-transpose-eq-concat' r refl refl q α = {!!}
 ```
 
 The fact that `left-transpose-eq-concat` and `right-transpose-eq-concat` are
@@ -195,11 +194,11 @@ module _
 
   is-injective-concat :
     {x y z : A} (p : x ＝ y) {q r : y ＝ z} → (p ∙ q) ＝ (p ∙ r) → q ＝ r
-  is-injective-concat refl s = s
+  is-injective-concat refl s = {!!}
 
   is-injective-concat' :
     {x y z : A} (r : y ＝ z) {p q : x ＝ y} → (p ∙ r) ＝ (q ∙ r) → p ＝ q
-  is-injective-concat' refl s = (inv right-unit) ∙ (s ∙ right-unit)
+  is-injective-concat' refl s = {!!}
 ```
 
 ## Equational reasoning

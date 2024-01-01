@@ -31,17 +31,17 @@ Properties of addition with respect to inequality are derived in
 
 ```agda
 add-ℚ : ℚ → ℚ → ℚ
-add-ℚ (x , p) (y , q) = in-fraction-ℤ (add-fraction-ℤ x y)
+add-ℚ (x , p) (y , q) = {!!}
 
 add-ℚ' : ℚ → ℚ → ℚ
-add-ℚ' x y = add-ℚ y x
+add-ℚ' x y = {!!}
 
 infixl 35 _+ℚ_
-_+ℚ_ = add-ℚ
+_+ℚ_ = {!!}
 
 ap-add-ℚ :
   {x y x' y' : ℚ} → x ＝ x' → y ＝ y' → x +ℚ y ＝ x' +ℚ y'
-ap-add-ℚ p q = ap-binary add-ℚ p q
+ap-add-ℚ p q = {!!}
 ```
 
 ## Properties
@@ -50,20 +50,10 @@ ap-add-ℚ p q = ap-binary add-ℚ p q
 
 ```agda
 left-unit-law-add-ℚ : (x : ℚ) → zero-ℚ +ℚ x ＝ x
-left-unit-law-add-ℚ (x , p) =
-  eq-ℚ-sim-fractions-ℤ
-    ( add-fraction-ℤ zero-fraction-ℤ x)
-    ( x)
-    ( left-unit-law-add-fraction-ℤ x) ∙
-  in-fraction-fraction-ℚ (x , p)
+left-unit-law-add-ℚ (x , p) = {!!}
 
 right-unit-law-add-ℚ : (x : ℚ) → x +ℚ zero-ℚ ＝ x
-right-unit-law-add-ℚ (x , p) =
-  eq-ℚ-sim-fractions-ℤ
-    ( add-fraction-ℤ x zero-fraction-ℤ)
-    ( x)
-    ( right-unit-law-add-fraction-ℤ x) ∙
-  in-fraction-fraction-ℚ (x , p)
+right-unit-law-add-ℚ (x , p) = {!!}
 ```
 
 ### Addition is associative
@@ -72,23 +62,7 @@ right-unit-law-add-ℚ (x , p) =
 associative-add-ℚ :
   (x y z : ℚ) →
   (x +ℚ y) +ℚ z ＝ x +ℚ (y +ℚ z)
-associative-add-ℚ (x , px) (y , py) (z , pz) =
-  equational-reasoning
-    in-fraction-ℤ (add-fraction-ℤ (pr1 (in-fraction-ℤ (add-fraction-ℤ x y))) z)
-    ＝ in-fraction-ℤ (add-fraction-ℤ (add-fraction-ℤ x y) z)
-      by eq-ℚ-sim-fractions-ℤ _ _
-        ( sim-fraction-add-fraction-ℤ
-          ( symmetric-sim-fraction-ℤ _ _
-            ( sim-reduced-fraction-ℤ (add-fraction-ℤ x y)))
-          ( refl-sim-fraction-ℤ z))
-    ＝ in-fraction-ℤ (add-fraction-ℤ x (add-fraction-ℤ y z))
-      by eq-ℚ-sim-fractions-ℤ _ _ (associative-add-fraction-ℤ x y z)
-    ＝ in-fraction-ℤ
-        ( add-fraction-ℤ x (pr1 (in-fraction-ℤ (add-fraction-ℤ y z))))
-      by eq-ℚ-sim-fractions-ℤ _ _
-        ( sim-fraction-add-fraction-ℤ
-          ( refl-sim-fraction-ℤ x)
-          ( sim-reduced-fraction-ℤ (add-fraction-ℤ y z)))
+associative-add-ℚ (x , px) (y , py) (z , pz) = {!!}
 ```
 
 ### Addition is commutative
@@ -97,9 +71,5 @@ associative-add-ℚ (x , px) (y , py) (z , pz) =
 commutative-add-ℚ :
   (x y : ℚ) →
   x +ℚ y ＝ y +ℚ x
-commutative-add-ℚ (x , px) (y , py) =
-  eq-ℚ-sim-fractions-ℤ
-    ( add-fraction-ℤ x y)
-    ( add-fraction-ℤ y x)
-    ( commutative-add-fraction-ℤ x y)
+commutative-add-ℚ (x , px) (y , py) = {!!}
 ```

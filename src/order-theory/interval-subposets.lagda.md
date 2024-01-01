@@ -30,9 +30,8 @@ module _
   where
 
   is-in-interval-Poset : (z : type-Poset X) → Prop l2
-  is-in-interval-Poset z =
-    prod-Prop (leq-Poset-Prop X x z) (leq-Poset-Prop X z y)
+  is-in-interval-Poset z = {!!}
 
   poset-interval-Subposet : Poset (l1 ⊔ l2) l2
-  poset-interval-Subposet = poset-Subposet X is-in-interval-Poset
+  poset-interval-Subposet = {!!}
 ```

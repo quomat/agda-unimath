@@ -43,10 +43,7 @@ module _
 
   htpy-natural-transformation-Large-Precategory :
     (σ τ : natural-transformation-Large-Precategory C D F G) → UUω
-  htpy-natural-transformation-Large-Precategory σ τ =
-    { l : Level} (X : obj-Large-Precategory C l) →
-    ( hom-natural-transformation-Large-Precategory σ X) ＝
-    ( hom-natural-transformation-Large-Precategory τ X)
+  htpy-natural-transformation-Large-Precategory σ τ = {!!}
 ```
 
 ### The reflexivity homotopy
@@ -62,7 +59,7 @@ module _
   refl-htpy-natural-transformation-Large-Precategory :
     (α : natural-transformation-Large-Precategory C D F G) →
     htpy-natural-transformation-Large-Precategory C D α α
-  refl-htpy-natural-transformation-Large-Precategory α = refl-htpy
+  refl-htpy-natural-transformation-Large-Precategory α = {!!}
 ```
 
 ### Concatenation of homotopies
@@ -83,7 +80,7 @@ module _
     htpy-natural-transformation-Large-Precategory C D σ τ →
     htpy-natural-transformation-Large-Precategory C D τ υ →
     htpy-natural-transformation-Large-Precategory C D σ υ
-  concat-htpy-natural-transformation-Large-Precategory σ τ υ H K = H ∙h K
+  concat-htpy-natural-transformation-Large-Precategory σ τ υ H K = {!!}
 
   associative-concat-htpy-natural-transformation-Large-Precategory :
     (σ τ υ ϕ : natural-transformation-Large-Precategory C D F G)
@@ -100,6 +97,5 @@ module _
       ( concat-htpy-natural-transformation-Large-Precategory τ υ ϕ K L)
       ( X))
   associative-concat-htpy-natural-transformation-Large-Precategory
-    σ τ υ ϕ H K L =
-    assoc-htpy H K L
+    σ τ υ ϕ H K L = {!!}
 ```

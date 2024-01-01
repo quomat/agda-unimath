@@ -29,6 +29,5 @@ module _
   subst-action-Concrete-Group :
     {l : Level} →
     action-Concrete-Group l H → action-Concrete-Group l G
-  subst-action-Concrete-Group Y x =
-    Y (classifying-map-hom-Concrete-Group G H f x)
+  subst-action-Concrete-Group Y x = {!!}
 ```

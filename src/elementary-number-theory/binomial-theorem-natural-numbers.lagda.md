@@ -32,7 +32,7 @@ The binomial theorem for natural numbers asserts that for any two natural
 numbers `x` and `y` and any natural number `n`, we have
 
 ```text
-  (x + y)ⁿ = ∑_{0 ≤ i < n+1} (n choose i) xⁱ yⁿ⁻ⁱ.
+  (x + y)ⁿ = {!!}
 ```
 
 ## Definitions
@@ -41,7 +41,7 @@ numbers `x` and `y` and any natural number `n`, we have
 
 ```agda
 binomial-sum-ℕ : (n : ℕ) (f : functional-vec ℕ (succ-ℕ n)) → ℕ
-binomial-sum-ℕ = binomial-sum-Commutative-Semiring ℕ-Commutative-Semiring
+binomial-sum-ℕ = {!!}
 ```
 
 ## Properties
@@ -51,14 +51,12 @@ binomial-sum-ℕ = binomial-sum-Commutative-Semiring ℕ-Commutative-Semiring
 ```agda
 binomial-sum-one-element-ℕ :
   (f : functional-vec ℕ 1) → binomial-sum-ℕ 0 f ＝ head-functional-vec 0 f
-binomial-sum-one-element-ℕ =
-  binomial-sum-one-element-Commutative-Semiring ℕ-Commutative-Semiring
+binomial-sum-one-element-ℕ = {!!}
 
 binomial-sum-two-elements-ℕ :
   (f : functional-vec ℕ 2) →
   binomial-sum-ℕ 1 f ＝ (f (zero-Fin 1)) +ℕ (f (one-Fin 1))
-binomial-sum-two-elements-ℕ =
-  binomial-sum-two-elements-Commutative-Semiring ℕ-Commutative-Semiring
+binomial-sum-two-elements-ℕ = {!!}
 ```
 
 ### Binomial sums are homotopy invariant
@@ -67,8 +65,7 @@ binomial-sum-two-elements-ℕ =
 htpy-binomial-sum-ℕ :
   (n : ℕ) {f g : functional-vec ℕ (succ-ℕ n)} →
   (f ~ g) → binomial-sum-ℕ n f ＝ binomial-sum-ℕ n g
-htpy-binomial-sum-ℕ =
-  htpy-binomial-sum-Commutative-Semiring ℕ-Commutative-Semiring
+htpy-binomial-sum-ℕ = {!!}
 ```
 
 ### Multiplication distributes over sums
@@ -77,15 +74,12 @@ htpy-binomial-sum-ℕ =
 left-distributive-mul-binomial-sum-ℕ :
   (n : ℕ) (x : ℕ) (f : functional-vec ℕ (succ-ℕ n)) →
   x *ℕ (binomial-sum-ℕ n f) ＝ binomial-sum-ℕ n (λ i → x *ℕ (f i))
-left-distributive-mul-binomial-sum-ℕ =
-  left-distributive-mul-binomial-sum-Commutative-Semiring ℕ-Commutative-Semiring
+left-distributive-mul-binomial-sum-ℕ = {!!}
 
 right-distributive-mul-binomial-sum-ℕ :
   (n : ℕ) (f : functional-vec ℕ (succ-ℕ n)) (x : ℕ) →
   (binomial-sum-ℕ n f) *ℕ x ＝ binomial-sum-ℕ n (λ i → (f i) *ℕ x)
-right-distributive-mul-binomial-sum-ℕ =
-  right-distributive-mul-binomial-sum-Commutative-Semiring
-    ℕ-Commutative-Semiring
+right-distributive-mul-binomial-sum-ℕ = {!!}
 ```
 
 ## Theorem
@@ -100,6 +94,5 @@ binomial-theorem-ℕ :
     ( λ i →
       ( power-ℕ (nat-Fin (succ-ℕ n) i) x) *ℕ
       ( power-ℕ (dist-ℕ (nat-Fin (succ-ℕ n) i) n) y))
-binomial-theorem-ℕ =
-  binomial-theorem-Commutative-Semiring ℕ-Commutative-Semiring
+binomial-theorem-ℕ = {!!}
 ```

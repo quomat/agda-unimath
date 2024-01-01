@@ -54,21 +54,14 @@ module _
   where
 
   is-full-on-isos-functor-Precategory : UU (l1 ⊔ l2 ⊔ l4)
-  is-full-on-isos-functor-Precategory =
-    (x y : obj-Precategory C) →
-    is-surjective (preserves-iso-functor-Precategory C D F {x} {y})
+  is-full-on-isos-functor-Precategory = {!!}
 
   is-prop-is-full-on-isos-functor-Precategory :
     is-prop is-full-on-isos-functor-Precategory
-  is-prop-is-full-on-isos-functor-Precategory =
-    is-prop-iterated-Π 2
-      ( λ x y → is-prop-is-surjective (preserves-iso-functor-Precategory C D F))
+  is-prop-is-full-on-isos-functor-Precategory = {!!}
 
   is-full-on-isos-prop-functor-Precategory : Prop (l1 ⊔ l2 ⊔ l4)
-  pr1 is-full-on-isos-prop-functor-Precategory =
-    is-full-on-isos-functor-Precategory
-  pr2 is-full-on-isos-prop-functor-Precategory =
-    is-prop-is-full-on-isos-functor-Precategory
+  pr1 is-full-on-isos-prop-functor-Precategory = {!!}
 ```
 
 ### The predicate of being pseudomonic
@@ -82,29 +75,24 @@ module _
   where
 
   is-pseudomonic-prop-functor-Precategory : Prop (l1 ⊔ l2 ⊔ l4)
-  is-pseudomonic-prop-functor-Precategory =
-    prod-Prop
-      ( is-faithful-prop-functor-Precategory C D F)
-      ( is-full-on-isos-prop-functor-Precategory C D F)
+  is-pseudomonic-prop-functor-Precategory = {!!}
 
   is-pseudomonic-functor-Precategory : UU (l1 ⊔ l2 ⊔ l4)
-  is-pseudomonic-functor-Precategory =
-    type-Prop is-pseudomonic-prop-functor-Precategory
+  is-pseudomonic-functor-Precategory = {!!}
 
   is-prop-is-pseudomonic-functor-Precategory :
     is-prop is-pseudomonic-functor-Precategory
-  is-prop-is-pseudomonic-functor-Precategory =
-    is-prop-type-Prop is-pseudomonic-prop-functor-Precategory
+  is-prop-is-pseudomonic-functor-Precategory = {!!}
 
   is-faithful-is-pseudomonic-functor-Precategory :
     is-pseudomonic-functor-Precategory →
     is-faithful-functor-Precategory C D F
-  is-faithful-is-pseudomonic-functor-Precategory = pr1
+  is-faithful-is-pseudomonic-functor-Precategory = {!!}
 
   is-full-on-isos-is-pseudomonic-functor-Precategory :
     is-pseudomonic-functor-Precategory →
     is-full-on-isos-functor-Precategory C D F
-  is-full-on-isos-is-pseudomonic-functor-Precategory = pr2
+  is-full-on-isos-is-pseudomonic-functor-Precategory = {!!}
 ```
 
 ### The type of pseudomonic functors between two precategories
@@ -114,8 +102,7 @@ pseudomonic-functor-Precategory :
   {l1 l2 l3 l4 : Level}
   (C : Precategory l1 l2) (D : Precategory l3 l4) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-pseudomonic-functor-Precategory C D =
-  Σ (functor-Precategory C D) (is-pseudomonic-functor-Precategory C D)
+pseudomonic-functor-Precategory C D = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}
@@ -125,16 +112,15 @@ module _
   where
 
   functor-pseudomonic-functor-Precategory : functor-Precategory C D
-  functor-pseudomonic-functor-Precategory = pr1 F
+  functor-pseudomonic-functor-Precategory = {!!}
 
   is-pseudomonic-pseudomonic-functor-Precategory :
     is-pseudomonic-functor-Precategory C D
       functor-pseudomonic-functor-Precategory
-  is-pseudomonic-pseudomonic-functor-Precategory = pr2 F
+  is-pseudomonic-pseudomonic-functor-Precategory = {!!}
 
   obj-pseudomonic-functor-Precategory : obj-Precategory C → obj-Precategory D
-  obj-pseudomonic-functor-Precategory =
-    obj-functor-Precategory C D functor-pseudomonic-functor-Precategory
+  obj-pseudomonic-functor-Precategory = {!!}
 
   hom-pseudomonic-functor-Precategory :
     {x y : obj-Precategory C} →
@@ -142,23 +128,16 @@ module _
     hom-Precategory D
       ( obj-pseudomonic-functor-Precategory x)
       ( obj-pseudomonic-functor-Precategory y)
-  hom-pseudomonic-functor-Precategory =
-    hom-functor-Precategory C D functor-pseudomonic-functor-Precategory
+  hom-pseudomonic-functor-Precategory = {!!}
 
   is-faithful-pseudomonic-functor-Precategory :
     is-faithful-functor-Precategory C D functor-pseudomonic-functor-Precategory
-  is-faithful-pseudomonic-functor-Precategory =
-    is-faithful-is-pseudomonic-functor-Precategory C D
-      functor-pseudomonic-functor-Precategory
-      is-pseudomonic-pseudomonic-functor-Precategory
+  is-faithful-pseudomonic-functor-Precategory = {!!}
 
   is-full-on-isos-pseudomonic-functor-Precategory :
     is-full-on-isos-functor-Precategory C D
       functor-pseudomonic-functor-Precategory
-  is-full-on-isos-pseudomonic-functor-Precategory =
-    is-full-on-isos-is-pseudomonic-functor-Precategory C D
-      functor-pseudomonic-functor-Precategory
-      is-pseudomonic-pseudomonic-functor-Precategory
+  is-full-on-isos-pseudomonic-functor-Precategory = {!!}
 ```
 
 ## Properties
@@ -177,37 +156,28 @@ module _
 
   is-equiv-preserves-iso-is-pseudomonic-functor-Precategory :
     is-equiv (preserves-iso-functor-Precategory C D F {x} {y})
-  is-equiv-preserves-iso-is-pseudomonic-functor-Precategory =
-    is-equiv-is-emb-is-surjective
-      ( pr2 is-pseudomonic-F x y)
-      ( is-faithful-on-isos-is-faithful-functor-Precategory
-          C D F (pr1 is-pseudomonic-F) x y)
+  is-equiv-preserves-iso-is-pseudomonic-functor-Precategory = {!!}
 
   equiv-iso-is-pseudomonic-functor-Precategory :
     iso-Precategory C x y ≃
     iso-Precategory D
       ( obj-functor-Precategory C D F x)
       ( obj-functor-Precategory C D F y)
-  pr1 equiv-iso-is-pseudomonic-functor-Precategory =
-    preserves-iso-functor-Precategory C D F
-  pr2 equiv-iso-is-pseudomonic-functor-Precategory =
-    is-equiv-preserves-iso-is-pseudomonic-functor-Precategory
+  pr1 equiv-iso-is-pseudomonic-functor-Precategory = {!!}
 
   inv-equiv-iso-is-pseudomonic-functor-Precategory :
     iso-Precategory D
       ( obj-functor-Precategory C D F x)
       ( obj-functor-Precategory C D F y) ≃
     iso-Precategory C x y
-  inv-equiv-iso-is-pseudomonic-functor-Precategory =
-    inv-equiv equiv-iso-is-pseudomonic-functor-Precategory
+  inv-equiv-iso-is-pseudomonic-functor-Precategory = {!!}
 
   map-inv-iso-is-pseudomonic-functor-Precategory :
     iso-Precategory D
       ( obj-functor-Precategory C D F x)
       ( obj-functor-Precategory C D F y) →
     iso-Precategory C x y
-  map-inv-iso-is-pseudomonic-functor-Precategory =
-    map-equiv inv-equiv-iso-is-pseudomonic-functor-Precategory
+  map-inv-iso-is-pseudomonic-functor-Precategory = {!!}
 ```
 
 The previous entry records what is also known as "essential injectivivty".
@@ -225,26 +195,21 @@ module _
     iso-Precategory D
       ( obj-pseudomonic-functor-Precategory C D F x)
       ( obj-pseudomonic-functor-Precategory C D F y)
-  equiv-iso-pseudomonic-functor-Precategory =
-    equiv-iso-is-pseudomonic-functor-Precategory C D
-      ( functor-pseudomonic-functor-Precategory C D F)
-      ( is-pseudomonic-pseudomonic-functor-Precategory C D F)
+  equiv-iso-pseudomonic-functor-Precategory = {!!}
 
   inv-equiv-iso-pseudomonic-functor-Precategory :
     iso-Precategory D
       ( obj-pseudomonic-functor-Precategory C D F x)
       ( obj-pseudomonic-functor-Precategory C D F y) ≃
     iso-Precategory C x y
-  inv-equiv-iso-pseudomonic-functor-Precategory =
-    inv-equiv equiv-iso-pseudomonic-functor-Precategory
+  inv-equiv-iso-pseudomonic-functor-Precategory = {!!}
 
   map-inv-hom-pseudomonic-functor-Precategory :
     iso-Precategory D
       ( obj-pseudomonic-functor-Precategory C D F x)
       ( obj-pseudomonic-functor-Precategory C D F y) →
     iso-Precategory C x y
-  map-inv-hom-pseudomonic-functor-Precategory =
-    map-equiv inv-equiv-iso-pseudomonic-functor-Precategory
+  map-inv-hom-pseudomonic-functor-Precategory = {!!}
 ```
 
 The previous entry records what is also known as "essential injectivivty".
@@ -263,28 +228,7 @@ module _
 
   is-conservative-is-pseudomonic-functor-Precategory :
     is-conservative-functor-Precategory C D F
-  is-conservative-is-pseudomonic-functor-Precategory f is-iso-Ff =
-    ind-trunc-Prop
-      ( λ _ → is-iso-prop-Precategory C f)
-      ( λ ((e , e' , l , r) , p) →
-        ( e' ,
-          ( inv
-            ( ap
-              ( λ g → comp-hom-Precategory C g e')
-              ( is-injective-is-emb
-                ( is-faithful-is-pseudomonic-functor-Precategory
-                    ( C) D F is-pseudomonic-F _ _)
-                ( ap pr1 p)))) ∙
-          ( l) ,
-          ( inv
-            ( ap
-              ( comp-hom-Precategory C e')
-              ( is-injective-is-emb
-                ( is-faithful-is-pseudomonic-functor-Precategory
-                    ( C) D F is-pseudomonic-F _ _)
-                ( ap pr1 p)))) ∙
-          ( r)))
-      ( pr2 is-pseudomonic-F _ _ (hom-functor-Precategory C D F f , is-iso-Ff))
+  is-conservative-is-pseudomonic-functor-Precategory f is-iso-Ff = {!!}
 ```
 
 ## See also

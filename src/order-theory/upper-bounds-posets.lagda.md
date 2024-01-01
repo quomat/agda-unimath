@@ -34,18 +34,15 @@ module _
 
   is-binary-upper-bound-Poset-Prop :
     (x y z : type-Poset P) → Prop l2
-  is-binary-upper-bound-Poset-Prop x y z =
-    prod-Prop (leq-Poset-Prop P x z) (leq-Poset-Prop P y z)
+  is-binary-upper-bound-Poset-Prop x y z = {!!}
 
   is-binary-upper-bound-Poset :
     (x y z : type-Poset P) → UU l2
-  is-binary-upper-bound-Poset x y z =
-    type-Prop (is-binary-upper-bound-Poset-Prop x y z)
+  is-binary-upper-bound-Poset x y z = {!!}
 
   is-prop-is-binary-upper-bound-Poset :
     (x y z : type-Poset P) → is-prop (is-binary-upper-bound-Poset x y z)
-  is-prop-is-binary-upper-bound-Poset x y z =
-    is-prop-type-Prop (is-binary-upper-bound-Poset-Prop x y z)
+  is-prop-is-binary-upper-bound-Poset x y z = {!!}
 
 module _
   {l1 l2 : Level} (P : Poset l1 l2) {a b x : type-Poset P}
@@ -53,10 +50,10 @@ module _
   where
 
   leq-left-is-binary-upper-bound-Poset : leq-Poset P a x
-  leq-left-is-binary-upper-bound-Poset = pr1 H
+  leq-left-is-binary-upper-bound-Poset = {!!}
 
   leq-right-is-binary-upper-bound-Poset : leq-Poset P b x
-  leq-right-is-binary-upper-bound-Poset = pr2 H
+  leq-right-is-binary-upper-bound-Poset = {!!}
 ```
 
 ### Upper bounds of families of elements
@@ -69,20 +66,17 @@ module _
   is-upper-bound-family-of-elements-Poset-Prop :
     {l : Level} {I : UU l} → (I → type-Poset P) → type-Poset P →
     Prop (l2 ⊔ l)
-  is-upper-bound-family-of-elements-Poset-Prop {l} {I} f z =
-    Π-Prop I (λ i → leq-Poset-Prop P (f i) z)
+  is-upper-bound-family-of-elements-Poset-Prop {l} {I} f z = {!!}
 
   is-upper-bound-family-of-elements-Poset :
     {l : Level} {I : UU l} → (I → type-Poset P) → type-Poset P →
     UU (l2 ⊔ l)
-  is-upper-bound-family-of-elements-Poset f z =
-    type-Prop (is-upper-bound-family-of-elements-Poset-Prop f z)
+  is-upper-bound-family-of-elements-Poset f z = {!!}
 
   is-prop-is-upper-bound-family-of-elements-Poset :
     {l : Level} {I : UU l} (f : I → type-Poset P) (z : type-Poset P) →
     is-prop (is-upper-bound-family-of-elements-Poset f z)
-  is-prop-is-upper-bound-family-of-elements-Poset f z =
-    is-prop-type-Prop (is-upper-bound-family-of-elements-Poset-Prop f z)
+  is-prop-is-upper-bound-family-of-elements-Poset f z = {!!}
 ```
 
 ## Properties
@@ -98,14 +92,7 @@ module _
   is-binary-upper-bound-leq-Poset :
     {y : type-Poset P} →
     leq-Poset P x y → is-binary-upper-bound-Poset P a b y
-  pr1 (is-binary-upper-bound-leq-Poset K) =
-    transitive-leq-Poset P a x _
-      ( K)
-      ( leq-left-is-binary-upper-bound-Poset P H)
-  pr2 (is-binary-upper-bound-leq-Poset K) =
-    transitive-leq-Poset P b x _
-      ( K)
-      ( leq-right-is-binary-upper-bound-Poset P H)
+  pr1 (is-binary-upper-bound-leq-Poset K) = {!!}
 ```
 
 ### Any element greater than an upper bound of a family of elements `a` is an upper bound of `a`
@@ -119,6 +106,5 @@ module _
   is-upper-bound-family-of-elements-leq-Poset :
     {y : type-Poset P} → leq-Poset P x y →
     is-upper-bound-family-of-elements-Poset P a y
-  is-upper-bound-family-of-elements-leq-Poset K i =
-    transitive-leq-Poset P (a i) x _ K (H i)
+  is-upper-bound-family-of-elements-leq-Poset K i = {!!}
 ```

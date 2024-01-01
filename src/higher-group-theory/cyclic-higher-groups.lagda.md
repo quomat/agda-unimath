@@ -52,23 +52,20 @@ an embedding.
 ev-element-∞-Group :
   {l1 l2 : Level} (G : ∞-Group l1) (H : ∞-Group l2) (g : type-∞-Group G) →
   hom-∞-Group G H → type-∞-Group H
-ev-element-∞-Group G H g f = map-hom-∞-Group G H f g
+ev-element-∞-Group G H g f = {!!}
 
 module _
   {l1 : Level} (l2 : Level) (G : ∞-Group l1)
   where
 
   is-cyclic-prop-∞-Group : Prop (l1 ⊔ lsuc l2)
-  is-cyclic-prop-∞-Group =
-    ∃-Prop
-      ( type-∞-Group G)
-      ( λ g → (H : ∞-Group l2) → is-emb (ev-element-∞-Group G H g))
+  is-cyclic-prop-∞-Group = {!!}
 
   is-cyclic-∞-Group : UU (l1 ⊔ lsuc l2)
-  is-cyclic-∞-Group = type-Prop is-cyclic-prop-∞-Group
+  is-cyclic-∞-Group = {!!}
 
   is-prop-is-cyclic-∞-Group : is-prop is-cyclic-∞-Group
-  is-prop-is-cyclic-∞-Group = is-prop-type-Prop is-cyclic-prop-∞-Group
+  is-prop-is-cyclic-∞-Group = {!!}
 ```
 
 ## See also

@@ -33,10 +33,7 @@ equivalence.
 ```agda
 is-central-h-space :
   {l : Level} (A : Pointed-Type l) → UU l
-is-central-h-space A =
-  is-equiv
-    { A = type-Pointed-Type A → type-Pointed-Type A}
-    ( ev-point-Pointed-Type A)
+is-central-h-space A = {!!}
 ```
 
 ## References

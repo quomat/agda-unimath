@@ -25,93 +25,79 @@ open import foundation-core.identity-types
 ```agda
 ev-true-false :
   {l : Level} (A : UU l) → (f : bool → A) → A × A
-ev-true-false A f = pair (f true) (f false)
+ev-true-false A f = {!!}
 
 map-universal-property-bool :
   {l : Level} {A : UU l} →
   A × A → (bool → A)
-map-universal-property-bool (pair x y) true = x
-map-universal-property-bool (pair x y) false = y
+map-universal-property-bool (pair x y) true = {!!}
+map-universal-property-bool (pair x y) false = {!!}
 
 abstract
   is-section-map-universal-property-bool :
     {l : Level} {A : UU l} →
     ((ev-true-false A) ∘ map-universal-property-bool) ~ id
-  is-section-map-universal-property-bool (pair x y) =
-    eq-pair refl refl
+  is-section-map-universal-property-bool (pair x y) = {!!}
 
 abstract
   is-retraction-map-universal-property-bool' :
     {l : Level} {A : UU l} (f : bool → A) →
     (map-universal-property-bool (ev-true-false A f)) ~ f
-  is-retraction-map-universal-property-bool' f true = refl
-  is-retraction-map-universal-property-bool' f false = refl
+  is-retraction-map-universal-property-bool' f true = {!!}
 
 abstract
   is-retraction-map-universal-property-bool :
     {l : Level} {A : UU l} →
     (map-universal-property-bool ∘ (ev-true-false A)) ~ id
-  is-retraction-map-universal-property-bool f =
-    eq-htpy (is-retraction-map-universal-property-bool' f)
+  is-retraction-map-universal-property-bool f = {!!}
 
 abstract
   universal-property-bool :
     {l : Level} (A : UU l) →
     is-equiv (λ (f : bool → A) → pair (f true) (f false))
-  universal-property-bool A =
-    is-equiv-is-invertible
-      map-universal-property-bool
-      is-section-map-universal-property-bool
-      is-retraction-map-universal-property-bool
+  universal-property-bool A = {!!}
 
 ev-true :
   {l : Level} {A : UU l} → (bool → A) → A
-ev-true f = f true
+ev-true f = {!!}
 
 triangle-ev-true :
   {l : Level} (A : UU l) →
   ev-true ~ pr1 ∘ ev-true-false A
-triangle-ev-true A = refl-htpy
+triangle-ev-true A = {!!}
 
 {-
 aut-bool-bool :
   bool → (bool ≃ bool)
-aut-bool-bool true = id-equiv
-aut-bool-bool false = equiv-neg-𝟚
+aut-bool-bool true = {!!}
+aut-bool-bool false = {!!}
 
 bool-aut-bool :
   (bool ≃ bool) → bool
-bool-aut-bool e = map-equiv e true
+bool-aut-bool e = {!!}
 
 decide-true-false :
   (b : bool) → coprod (b ＝ true) (b ＝ false)
-decide-true-false true = inl refl
-decide-true-false false = inr refl
+decide-true-false true = {!!}
+decide-true-false false = {!!}
 
 eq-false :
   (b : bool) → (b ≠ true) → (b ＝ false)
-eq-false true p = ind-empty (p refl)
-eq-false false p = refl
+eq-false true p = {!!}
+eq-false false p = {!!}
 
 eq-true :
   (b : bool) → b ≠ false → b ＝ true
-eq-true true p = refl
-eq-true false p = ind-empty (p refl)
+eq-true true p = {!!}
+eq-true false p = {!!}
 
 Eq-𝟚-eq : (x y : bool) → x ＝ y → Eq-𝟚 x y
-Eq-𝟚-eq x .x refl = reflexive-Eq-𝟚 x
+Eq-𝟚-eq x .x refl = {!!}
 
 eq-false-equiv' :
   (e : bool ≃ bool) → map-equiv e true ＝ true →
   is-decidable (map-equiv e false ＝ false) → map-equiv e false ＝ false
-eq-false-equiv' e p (inl q) = q
-eq-false-equiv' e p (inr x) =
-  ind-empty
-    ( Eq-𝟚-eq true false
-      ( ap pr1
-        ( eq-is-contr'
-          ( is-contr-map-is-equiv (is-equiv-map-equiv e) true)
-          ( pair true p)
-          ( pair false (eq-true (map-equiv e false) x)))))
+eq-false-equiv' e p (inl q) = {!!}
+eq-false-equiv' e p (inr x) = {!!}
 -}
 ```

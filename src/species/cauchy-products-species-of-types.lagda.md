@@ -35,9 +35,5 @@ module _
   where
 
   cauchy-product-species-types : species-types l1 (lsuc l1 ⊔ l2 ⊔ l3)
-  cauchy-product-species-types X =
-    Σ ( binary-coproduct-Decomposition l1 l1 X)
-      ( λ d →
-        S (left-summand-binary-coproduct-Decomposition d) ×
-        T (right-summand-binary-coproduct-Decomposition d))
+  cauchy-product-species-types X = {!!}
 ```

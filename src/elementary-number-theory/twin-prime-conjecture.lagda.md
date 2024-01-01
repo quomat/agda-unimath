@@ -26,9 +26,8 @@ there is a twin prime that is larger than n.
 
 ```agda
 is-twin-prime-ℕ : ℕ → UU lzero
-is-twin-prime-ℕ n = (is-prime-ℕ n) × (is-prime-ℕ (succ-ℕ (succ-ℕ n)))
+is-twin-prime-ℕ n = {!!}
 
 twin-prime-conjecture : UU lzero
-twin-prime-conjecture =
-  (n : ℕ) → Σ ℕ (λ p → (is-twin-prime-ℕ p) × (leq-ℕ n p))
+twin-prime-conjecture = {!!}
 ```

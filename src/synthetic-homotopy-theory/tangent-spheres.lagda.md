@@ -61,45 +61,32 @@ module _
   where
 
   has-tangent-sphere : UU (lsuc l)
-  has-tangent-sphere =
-    Σ ( mere-sphere lzero n)
-      ( λ T →
-        Σ ( UU l)
-          ( λ C →
-            Σ ( type-mere-sphere n T → C)
-              ( λ j →
-                Σ ( C → X)
-                  ( λ i →
-                    Σ ( coherence-square-maps j terminal-map i (point x))
-                      ( λ H →
-                        is-pushout terminal-map j (point x , i , H))))))
+  has-tangent-sphere = {!!}
 
 module _
   {l : Level} (n : ℕ) {X : UU l} {x : X} (T : has-tangent-sphere n x)
   where
 
   tangent-sphere-has-tangent-sphere : mere-sphere lzero n
-  tangent-sphere-has-tangent-sphere = pr1 T
+  tangent-sphere-has-tangent-sphere = {!!}
 
   type-tangent-sphere-has-tangent-sphere : UU lzero
-  type-tangent-sphere-has-tangent-sphere =
-    type-mere-sphere n tangent-sphere-has-tangent-sphere
+  type-tangent-sphere-has-tangent-sphere = {!!}
 
   mere-equiv-tangent-sphere-has-tangent-sphere :
     mere-equiv (sphere n) type-tangent-sphere-has-tangent-sphere
-  mere-equiv-tangent-sphere-has-tangent-sphere =
-    mere-equiv-mere-sphere n tangent-sphere-has-tangent-sphere
+  mere-equiv-tangent-sphere-has-tangent-sphere = {!!}
 
   complement-has-tangent-sphere : UU l
-  complement-has-tangent-sphere = pr1 (pr2 T)
+  complement-has-tangent-sphere = {!!}
 
   inclusion-tangent-sphere-has-tangent-sphere :
     type-tangent-sphere-has-tangent-sphere → complement-has-tangent-sphere
-  inclusion-tangent-sphere-has-tangent-sphere = pr1 (pr2 (pr2 T))
+  inclusion-tangent-sphere-has-tangent-sphere = {!!}
 
   inclusion-complement-has-tangent-sphere :
     complement-has-tangent-sphere → X
-  inclusion-complement-has-tangent-sphere = pr1 (pr2 (pr2 (pr2 T)))
+  inclusion-complement-has-tangent-sphere = {!!}
 
   coherence-square-has-tangent-sphere :
     coherence-square-maps
@@ -107,20 +94,16 @@ module _
       ( terminal-map)
       ( inclusion-complement-has-tangent-sphere)
       ( point x)
-  coherence-square-has-tangent-sphere =
-    pr1 (pr2 (pr2 (pr2 (pr2 T))))
+  coherence-square-has-tangent-sphere = {!!}
 
   cocone-has-tangent-sphere :
     cocone terminal-map inclusion-tangent-sphere-has-tangent-sphere X
-  pr1 cocone-has-tangent-sphere = point x
-  pr1 (pr2 cocone-has-tangent-sphere) = inclusion-complement-has-tangent-sphere
-  pr2 (pr2 cocone-has-tangent-sphere) = coherence-square-has-tangent-sphere
+  pr1 cocone-has-tangent-sphere = {!!}
 
   is-pushout-has-tangent-sphere :
     is-pushout
       ( terminal-map)
       ( inclusion-tangent-sphere-has-tangent-sphere)
       ( cocone-has-tangent-sphere)
-  is-pushout-has-tangent-sphere =
-    pr2 (pr2 (pr2 (pr2 (pr2 T))))
+  is-pushout-has-tangent-sphere = {!!}
 ```

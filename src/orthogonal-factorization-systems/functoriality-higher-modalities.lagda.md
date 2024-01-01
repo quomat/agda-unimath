@@ -61,8 +61,7 @@ module _
   ap-map-higher-modality :
     {X Y : UU l1} →
     (X → Y) → operator-higher-modality m X → operator-higher-modality m Y
-  ap-map-higher-modality =
-    ap-map-ind-modality (unit-higher-modality m) (ind-higher-modality m)
+  ap-map-higher-modality = {!!}
 ```
 
 ### Functoriality
@@ -76,19 +75,7 @@ module _
     {X Y Z : UU l} (g : Y → Z) (f : X → Y) →
     ( ap-map-higher-modality m g ∘ ap-map-higher-modality m f) ~
     ( ap-map-higher-modality m (g ∘ f))
-  functoriality-higher-modality {X} {Y} {Z} g f =
-    ind-subuniverse-Id-higher-modality m
-      ( ap-map-higher-modality m g ∘ ap-map-higher-modality m f)
-      ( ap-map-higher-modality m (g ∘ f))
-      ( λ x →
-        ( ap
-          ( ap-map-higher-modality m g)
-          ( compute-rec-higher-modality m (unit-higher-modality m ∘ f) x)) ∙
-        ( ( compute-rec-higher-modality m (unit-higher-modality m ∘ g) (f x)) ∙
-          ( inv
-            ( compute-rec-higher-modality m
-              ( unit-higher-modality m ∘ (g ∘ f))
-              ( x)))))
+  functoriality-higher-modality {X} {Y} {Z} g f = {!!}
 ```
 
 ### Naturality of the unit of a higher modality
@@ -114,11 +101,7 @@ module _
     {X Y : UU l1} (f : X → Y) →
     ( ap-map-higher-modality m f ∘ unit-higher-modality m) ~
     ( unit-higher-modality m ∘ f)
-  naturality-unit-higher-modality =
-    naturality-unit-ind-modality
-      ( unit-higher-modality m)
-      ( ind-higher-modality m)
-      ( compute-ind-higher-modality m)
+  naturality-unit-higher-modality = {!!}
 ```
 
 ```agda
@@ -126,11 +109,7 @@ module _
     {X Y : UU l1} (f : X → Y) {x x' : X} →
     unit-higher-modality m x ＝ unit-higher-modality m x' →
     unit-higher-modality m (f x) ＝ unit-higher-modality m (f x')
-  naturality-unit-higher-modality' =
-    naturality-unit-ind-modality'
-      ( unit-higher-modality m)
-      ( ind-higher-modality m)
-      ( compute-ind-higher-modality m)
+  naturality-unit-higher-modality' = {!!}
 
 module _
   {l : Level} (m : higher-modality l l)
@@ -144,30 +123,7 @@ module _
         ( ap-map-higher-modality m g)
         ( naturality-unit-higher-modality m f x)) ∙
       ( naturality-unit-higher-modality m g (f x)))
-  compute-naturality-unit-ind-modality g f x =
-    ( ap
-      ( _∙
-        compute-rec-higher-modality m (unit-higher-modality m ∘ (g ∘ f)) x)
-      ( compute-ind-subuniverse-Id-higher-modality m
-        ( ap-map-higher-modality m g ∘ ap-map-higher-modality m f)
-        ( ap-map-higher-modality m (g ∘ f))
-        ( _)
-        ( x))) ∙
-    ( assoc
-      ( ap
-        ( ap-map-higher-modality m g)
-        ( compute-rec-higher-modality m (unit-higher-modality m ∘ f) x))
-      ( ( compute-rec-higher-modality m (unit-higher-modality m ∘ g) (f x)) ∙
-        ( inv
-          ( compute-rec-higher-modality m (unit-higher-modality m ∘ g ∘ f) x)))
-      ( compute-rec-higher-modality m (unit-higher-modality m ∘ g ∘ f) x)) ∙
-    ( ap
-      ( ap
-        ( ap-map-higher-modality m g)
-        ( compute-rec-higher-modality m (unit-higher-modality m ∘ f) x) ∙_)
-      ( is-section-right-concat-inv
-        ( compute-rec-higher-modality m (unit-higher-modality m ∘ g) (f x))
-        ( compute-rec-higher-modality m (unit-higher-modality m ∘ g ∘ f) x)))
+  compute-naturality-unit-ind-modality g f x = {!!}
 ```
 
 ### Action on homotopies
@@ -185,8 +141,7 @@ module _
   htpy-ap-higher-modality :
     {X Y : UU l} {f g : X → Y} →
     f ~ g → ap-map-higher-modality m f ~ ap-map-higher-modality m g
-  htpy-ap-higher-modality H x' =
-    ap (λ f → ap-map-higher-modality m f x') (eq-htpy H)
+  htpy-ap-higher-modality H x' = {!!}
 ```
 
 ## References

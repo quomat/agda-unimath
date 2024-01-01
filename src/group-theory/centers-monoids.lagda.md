@@ -33,35 +33,30 @@ module _
   where
 
   subtype-center-Monoid : type-Monoid M → Prop l
-  subtype-center-Monoid = is-central-element-prop-Monoid M
+  subtype-center-Monoid = {!!}
 
   center-Monoid : Submonoid l M
-  pr1 center-Monoid = subtype-center-Monoid
-  pr1 (pr2 center-Monoid) = is-central-element-unit-Monoid M
-  pr2 (pr2 center-Monoid) = is-central-element-mul-Monoid M
+  pr1 center-Monoid = {!!}
 
   monoid-center-Monoid : Monoid l
-  monoid-center-Monoid = monoid-Submonoid M center-Monoid
+  monoid-center-Monoid = {!!}
 
   type-center-Monoid : UU l
-  type-center-Monoid =
-    type-Submonoid M center-Monoid
+  type-center-Monoid = {!!}
 
   mul-center-Monoid :
     (x y : type-center-Monoid) → type-center-Monoid
-  mul-center-Monoid = mul-Submonoid M center-Monoid
+  mul-center-Monoid = {!!}
 
   associative-mul-center-Monoid :
     (x y z : type-center-Monoid) →
     mul-center-Monoid (mul-center-Monoid x y) z ＝
     mul-center-Monoid x (mul-center-Monoid y z)
-  associative-mul-center-Monoid =
-    associative-mul-Submonoid M center-Monoid
+  associative-mul-center-Monoid = {!!}
 
   inclusion-center-Monoid :
     type-center-Monoid → type-Monoid M
-  inclusion-center-Monoid =
-    inclusion-Submonoid M center-Monoid
+  inclusion-center-Monoid = {!!}
 
   preserves-mul-inclusion-center-Monoid :
     {x y : type-center-Monoid} →
@@ -69,11 +64,9 @@ module _
     mul-Monoid M
       ( inclusion-center-Monoid x)
       ( inclusion-center-Monoid y)
-  preserves-mul-inclusion-center-Monoid {x} {y} =
-    preserves-mul-inclusion-Submonoid M center-Monoid {x} {y}
+  preserves-mul-inclusion-center-Monoid {x} {y} = {!!}
 
   hom-inclusion-center-Monoid :
     hom-Monoid monoid-center-Monoid M
-  hom-inclusion-center-Monoid =
-    hom-inclusion-Submonoid M center-Monoid
+  hom-inclusion-center-Monoid = {!!}
 ```

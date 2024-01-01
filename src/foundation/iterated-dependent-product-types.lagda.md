@@ -54,14 +54,13 @@ of universe level `l₀ ⊔ l₁ ⊔ l₂ ⊔ l₃`.
 ```agda
 iterated-Π :
   {l : Level} {n : ℕ} → telescope l n → UU l
-iterated-Π (base-telescope A) = A
-iterated-Π (cons-telescope {X = X} A) = (x : X) → iterated-Π (A x)
+iterated-Π (base-telescope A) = {!!}
+iterated-Π (cons-telescope {X = X} A) = {!!}
 
 iterated-implicit-Π :
   {l : Level} {n : ℕ} → telescope l n → UU l
-iterated-implicit-Π (base-telescope A) = A
-iterated-implicit-Π (cons-telescope {X = X} A) =
-  {x : X} → iterated-implicit-Π (A x)
+iterated-implicit-Π (base-telescope A) = {!!}
+iterated-implicit-Π (cons-telescope {X = X} A) = {!!}
 ```
 
 ### Iterated sections of type families
@@ -83,8 +82,8 @@ data
 iterated-λ :
   {l : Level} {n : ℕ} {A : telescope l n} →
   iterated-section A → iterated-Π A
-iterated-λ (base-iterated-section a) = a
-iterated-λ (cons-iterated-section f) x = iterated-λ (f x)
+iterated-λ (base-iterated-section a) = {!!}
+iterated-λ (cons-iterated-section f) x = {!!}
 ```
 
 ### Transforming iterated products
@@ -96,13 +95,12 @@ product.
 apply-codomain-iterated-Π :
   {l1 : Level} {n : ℕ}
   (P : {l : Level} → UU l → UU l) → telescope l1 n → UU l1
-apply-codomain-iterated-Π P A = iterated-Π (apply-base-telescope P A)
+apply-codomain-iterated-Π P A = {!!}
 
 apply-codomain-iterated-implicit-Π :
   {l1 : Level} {n : ℕ}
   (P : {l : Level} → UU l → UU l) → telescope l1 n → UU l1
-apply-codomain-iterated-implicit-Π P A =
-  iterated-implicit-Π (apply-base-telescope P A)
+apply-codomain-iterated-implicit-Π P A = {!!}
 ```
 
 ## Properties
@@ -116,10 +114,8 @@ section-iterated-Π-section-Π-section-codomain :
     ((x : A) → P (B x)) → P ((x : A) → B x)) →
   {l : Level} (n : ℕ) {{A : telescope l n}} →
   apply-codomain-iterated-Π P A → P (iterated-Π A)
-section-iterated-Π-section-Π-section-codomain P f .0 {{base-telescope A}} H =
-  H
-section-iterated-Π-section-Π-section-codomain P f ._ {{cons-telescope A}} H =
-  f (λ x → section-iterated-Π-section-Π-section-codomain P f _ {{A x}} (H x))
+section-iterated-Π-section-Π-section-codomain P f .0 {{base-telescope A}} H = {!!}
+section-iterated-Π-section-Π-section-codomain P f ._ {{cons-telescope A}} H = {!!}
 
 section-iterated-implicit-Π-section-Π-section-codomain :
   (P : {l : Level} → UU l → UU l) →
@@ -128,13 +124,9 @@ section-iterated-implicit-Π-section-Π-section-codomain :
   {l : Level} (n : ℕ) {{A : telescope l n}} →
   apply-codomain-iterated-Π P A → P (iterated-implicit-Π A)
 section-iterated-implicit-Π-section-Π-section-codomain
-  P f .0 {{base-telescope A}} H =
-  H
+  P f .0 {{base-telescope A}} H = {!!}
 section-iterated-implicit-Π-section-Π-section-codomain
-  P f ._ {{cons-telescope A}} H =
-  f ( λ x →
-      section-iterated-implicit-Π-section-Π-section-codomain
-        P f _ {{A x}} (H x))
+  P f ._ {{cons-telescope A}} H = {!!}
 ```
 
 ### Multivariable function types are equivalent to multivariable implicit function types
@@ -143,16 +135,13 @@ section-iterated-implicit-Π-section-Π-section-codomain
 equiv-explicit-implicit-iterated-Π :
   {l : Level} (n : ℕ) {{A : telescope l n}} →
   iterated-implicit-Π A ≃ iterated-Π A
-equiv-explicit-implicit-iterated-Π .0 ⦃ base-telescope A ⦄ = id-equiv
-equiv-explicit-implicit-iterated-Π ._ ⦃ cons-telescope A ⦄ =
-  equiv-Π-equiv-family (λ x → equiv-explicit-implicit-iterated-Π _ {{A x}}) ∘e
-  equiv-explicit-implicit-Π
+equiv-explicit-implicit-iterated-Π .0 ⦃ base-telescope A ⦄ = {!!}
+equiv-explicit-implicit-iterated-Π ._ ⦃ cons-telescope A ⦄ = {!!}
 
 equiv-implicit-explicit-iterated-Π :
   {l : Level} (n : ℕ) {{A : telescope l n}} →
   iterated-Π A ≃ iterated-implicit-Π A
-equiv-implicit-explicit-iterated-Π n {{A}} =
-  inv-equiv (equiv-explicit-implicit-iterated-Π n {{A}})
+equiv-implicit-explicit-iterated-Π n {{A}} = {!!}
 ```
 
 ### Iterated products of contractible types is contractible
@@ -161,16 +150,12 @@ equiv-implicit-explicit-iterated-Π n {{A}} =
 is-contr-iterated-Π :
   {l : Level} (n : ℕ) {{A : telescope l n}} →
   apply-codomain-iterated-Π is-contr A → is-contr (iterated-Π A)
-is-contr-iterated-Π =
-  section-iterated-Π-section-Π-section-codomain is-contr is-contr-Π
+is-contr-iterated-Π = {!!}
 
 is-contr-iterated-implicit-Π :
   {l : Level} (n : ℕ) {{A : telescope l n}} →
   apply-codomain-iterated-Π is-contr A → is-contr (iterated-implicit-Π A)
-is-contr-iterated-implicit-Π =
-  section-iterated-implicit-Π-section-Π-section-codomain
-    ( is-contr)
-    ( is-contr-implicit-Π)
+is-contr-iterated-implicit-Π = {!!}
 ```
 
 ### Iterated products of propositions are propositions
@@ -179,14 +164,12 @@ is-contr-iterated-implicit-Π =
 is-prop-iterated-Π :
   {l : Level} (n : ℕ) {{A : telescope l n}} →
   apply-codomain-iterated-Π is-prop A → is-prop (iterated-Π A)
-is-prop-iterated-Π =
-  section-iterated-Π-section-Π-section-codomain is-prop is-prop-Π
+is-prop-iterated-Π = {!!}
 
 is-prop-iterated-implicit-Π :
   {l : Level} (n : ℕ) {{A : telescope l n}} →
   apply-codomain-iterated-Π is-prop A → is-prop (iterated-implicit-Π A)
-is-prop-iterated-implicit-Π =
-  section-iterated-implicit-Π-section-Π-section-codomain is-prop is-prop-Π'
+is-prop-iterated-implicit-Π = {!!}
 ```
 
 ### Iterated products of truncated types are truncated
@@ -195,8 +178,7 @@ is-prop-iterated-implicit-Π =
 is-trunc-iterated-Π :
   {l : Level} (k : 𝕋) (n : ℕ) {{A : telescope l n}} →
   apply-codomain-iterated-Π (is-trunc k) A → is-trunc k (iterated-Π A)
-is-trunc-iterated-Π k =
-  section-iterated-Π-section-Π-section-codomain (is-trunc k) (is-trunc-Π k)
+is-trunc-iterated-Π k = {!!}
 ```
 
 ## See also

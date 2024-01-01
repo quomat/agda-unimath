@@ -39,14 +39,14 @@ A type is said to be **`k`-connected** if its `k`-truncation is contractible.
 
 ```agda
 is-connected-Prop : {l : Level} (k : 𝕋) → UU l → Prop l
-is-connected-Prop k A = is-contr-Prop (type-trunc k A)
+is-connected-Prop k A = {!!}
 
 is-connected : {l : Level} (k : 𝕋) → UU l → UU l
-is-connected k A = type-Prop (is-connected-Prop k A)
+is-connected k A = {!!}
 
 is-prop-is-connected :
   {l : Level} (k : 𝕋) (A : UU l) → is-prop (is-connected k A)
-is-prop-is-connected k A = is-prop-type-Prop (is-connected-Prop k A)
+is-prop-is-connected k A = {!!}
 ```
 
 ## Properties
@@ -55,7 +55,7 @@ is-prop-is-connected k A = is-prop-type-Prop (is-connected-Prop k A)
 
 ```agda
 is-neg-two-connected : {l : Level} (A : UU l) → is-connected neg-two-𝕋 A
-is-neg-two-connected A = is-trunc-type-trunc
+is-neg-two-connected A = {!!}
 ```
 
 ### A type `A` is `k`-connected if and only if the map `B → (A → B)` is an equivalence for every `k`-truncated type `B`
@@ -65,26 +65,14 @@ is-equiv-diagonal-is-connected :
   {l1 l2 : Level} {k : 𝕋} {A : UU l1} (B : Truncated-Type l2 k) →
   is-connected k A →
   is-equiv (const A (type-Truncated-Type B))
-is-equiv-diagonal-is-connected B H =
-  is-equiv-comp
-    ( precomp unit-trunc (type-Truncated-Type B))
-    ( λ b → const _ _ b)
-    ( is-equiv-diagonal-is-contr H (type-Truncated-Type B))
-    ( is-truncation-trunc B)
+is-equiv-diagonal-is-connected B H = {!!}
 
 is-connected-is-equiv-diagonal :
   {l1 : Level} {k : 𝕋} {A : UU l1} →
   ({l2 : Level} (B : Truncated-Type l2 k) →
   is-equiv (const A (type-Truncated-Type B))) →
   is-connected k A
-is-connected-is-equiv-diagonal {k = k} {A = A} H =
-  tot
-    ( λ x →
-      function-dependent-universal-property-trunc
-        ( Id-Truncated-Type' (trunc k A) x))
-    ( tot
-      ( λ _ → htpy-eq)
-      ( center (is-contr-map-is-equiv (H (trunc k A)) unit-trunc)))
+is-connected-is-equiv-diagonal {k = k} {A = A} H = {!!}
 ```
 
 ### A contractible type is `k`-connected for any `k`
@@ -95,9 +83,7 @@ module _
   where
 
   is-connected-is-contr : is-contr A → is-connected k A
-  is-connected-is-contr H =
-    is-connected-is-equiv-diagonal
-      ( λ B → is-equiv-diagonal-is-contr H (type-Truncated-Type B))
+  is-connected-is-contr H = {!!}
 ```
 
 ### A type that is `(k+1)`-connected is `k`-connected
@@ -106,12 +92,7 @@ module _
 is-connected-is-connected-succ-𝕋 :
   {l1 : Level} (k : 𝕋) {A : UU l1} →
   is-connected (succ-𝕋 k) A → is-connected k A
-is-connected-is-connected-succ-𝕋 k H =
-  is-connected-is-equiv-diagonal
-    ( λ B →
-      is-equiv-diagonal-is-connected
-        ( truncated-type-succ-Truncated-Type k B)
-        ( H))
+is-connected-is-connected-succ-𝕋 k H = {!!}
 ```
 
 ### The total space of a family of `k`-connected types over a `k`-connected type is `k`-connected
@@ -121,8 +102,7 @@ is-connected-Σ :
   {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : A → UU l2} →
   is-connected k A → ((x : A) → is-connected k (B x)) →
   is-connected k (Σ A B)
-is-connected-Σ k H K =
-  is-contr-equiv _ (equiv-trunc k (equiv-pr1 K) ∘e equiv-trunc-Σ k) H
+is-connected-Σ k H K = {!!}
 ```
 
 ### An inhabited type `A` is `k + 1`-connected if and only if its identity types are `k`-connected
@@ -135,44 +115,18 @@ module _
   abstract
     is-inhabited-is-connected :
       is-connected (succ-𝕋 k) A → is-inhabited A
-    is-inhabited-is-connected H =
-      map-universal-property-trunc
-        ( truncated-type-Prop k (is-inhabited-Prop A))
-        ( unit-trunc-Prop)
-        ( center H)
+    is-inhabited-is-connected H = {!!}
 
   abstract
     is-connected-eq-is-connected :
       is-connected (succ-𝕋 k) A → {x y : A} → is-connected k (x ＝ y)
-    is-connected-eq-is-connected H {x} {y} =
-      is-contr-equiv
-        ( unit-trunc x ＝ unit-trunc y)
-        ( effectiveness-trunc k x y)
-        ( is-prop-is-contr H (unit-trunc x) (unit-trunc y))
+    is-connected-eq-is-connected H {x} {y} = {!!}
 
   abstract
     is-connected-succ-is-connected-eq :
       is-inhabited A → ((x y : A) → is-connected k (x ＝ y)) →
       is-connected (succ-𝕋 k) A
-    is-connected-succ-is-connected-eq H K =
-      apply-universal-property-trunc-Prop H
-        ( is-connected-Prop (succ-𝕋 k) A)
-        ( λ a →
-          ( unit-trunc a) ,
-          ( function-dependent-universal-property-trunc
-            ( Id-Truncated-Type
-              ( truncated-type-succ-Truncated-Type
-                ( succ-𝕋 k)
-                ( trunc (succ-𝕋 k) A))
-              ( unit-trunc a))
-            ( λ x →
-              map-universal-property-trunc
-                ( Id-Truncated-Type
-                  ( trunc (succ-𝕋 k) A)
-                  ( unit-trunc a)
-                  ( unit-trunc x))
-                ( λ where refl → refl)
-                ( center (K a x)))))
+    is-connected-succ-is-connected-eq H K = {!!}
 ```
 
 ### Being connected is invariant under equivalence
@@ -184,16 +138,11 @@ module _
 
   is-connected-is-equiv :
     (f : A → B) → is-equiv f → is-connected k B → is-connected k A
-  is-connected-is-equiv f e =
-    is-contr-is-equiv
-      ( type-trunc k B)
-      ( map-trunc k f)
-      ( is-equiv-map-equiv-trunc k (f , e))
+  is-connected-is-equiv f e = {!!}
 
   is-connected-equiv :
     A ≃ B → is-connected k B → is-connected k A
-  is-connected-equiv f =
-    is-connected-is-equiv (map-equiv f) (is-equiv-map-equiv f)
+  is-connected-equiv f = {!!}
 
 module _
   {l1 l2 : Level} {k : 𝕋} {A : UU l1} {B : UU l2}
@@ -201,11 +150,11 @@ module _
 
   is-connected-equiv' :
     A ≃ B → is-connected k A → is-connected k B
-  is-connected-equiv' f = is-connected-equiv (inv-equiv f)
+  is-connected-equiv' f = {!!}
 
   is-connected-is-equiv' :
     (f : A → B) → is-equiv f → is-connected k A → is-connected k B
-  is-connected-is-equiv' f e = is-connected-equiv' (f , e)
+  is-connected-is-equiv' f e = {!!}
 ```
 
 ### Retracts of `k`-connected types are `k`-connected
@@ -219,6 +168,5 @@ module _
     A retract-of B →
     is-connected k B →
     is-connected k A
-  is-connected-retract-of R c =
-    is-contr-retract-of (type-trunc k B) (retract-of-trunc-retract-of R) c
+  is-connected-retract-of R c = {!!}
 ```

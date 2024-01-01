@@ -29,18 +29,13 @@ case-paths-induction-principle-propositional-truncation :
   { l : Level} {l1 l2 : Level} {A : UU l1}
   ( P : Prop l2) (α : (p q : type-Prop P) → p ＝ q) (f : A → type-Prop P) →
   ( B : type-Prop P → UU l) → UU (l ⊔ l2)
-case-paths-induction-principle-propositional-truncation P α f B =
-  (p q : type-Prop P) (x : B p) (y : B q) → tr B (α p q) x ＝ y
+case-paths-induction-principle-propositional-truncation P α f B = {!!}
 
 induction-principle-propositional-truncation :
   (l : Level) {l1 l2 : Level} {A : UU l1}
   (P : Prop l2) (α : (p q : type-Prop P) → p ＝ q) (f : A → type-Prop P) →
   UU (lsuc l ⊔ l1 ⊔ l2)
-induction-principle-propositional-truncation l {l1} {l2} {A} P α f =
-  ( B : type-Prop P → UU l) →
-  ( g : (x : A) → (B (f x))) →
-  ( β : case-paths-induction-principle-propositional-truncation P α f B) →
-  Σ ((p : type-Prop P) → B p) (λ h → (x : A) → h (f x) ＝ g x)
+induction-principle-propositional-truncation l {l1} {l2} {A} P α f = {!!}
 ```
 
 ## Properties
@@ -55,8 +50,7 @@ abstract
     ( B : type-Prop P → UU l) →
     case-paths-induction-principle-propositional-truncation P α f B →
     ( p : type-Prop P) → is-prop (B p)
-  is-prop-case-paths-induction-principle-propositional-truncation P α f B β p =
-    is-prop-is-proof-irrelevant (λ x → pair (tr B (α p p) x) (β p p x))
+  is-prop-case-paths-induction-principle-propositional-truncation P α f B β p = {!!}
 
   case-paths-induction-principle-propositional-truncation-is-prop :
     { l : Level} {l1 l2 : Level} {A : UU l1}
@@ -65,6 +59,5 @@ abstract
     ( (p : type-Prop P) → is-prop (B p)) →
     case-paths-induction-principle-propositional-truncation P α f B
   case-paths-induction-principle-propositional-truncation-is-prop
-    P α f B is-prop-B p q x y =
-    eq-is-prop (is-prop-B q)
+    P α f B is-prop-B p q x y = {!!}
 ```

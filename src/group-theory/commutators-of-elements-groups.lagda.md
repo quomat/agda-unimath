@@ -23,7 +23,7 @@ open import group-theory.homomorphisms-groups
 
 The **commutator** of two elements `x` and `y` of a
 [group](group-theory.groups.md) `G` is defined to be the element
-`[x,y] = (xy)(yx)⁻¹`. The commutator of two elements `x` and `y` is equal to the
+`[x,y] = {!!}
 unit if and only if `x` and `y` commute.
 
 ## Definition
@@ -36,7 +36,7 @@ module _
   where
 
   commutator-Group : type-Group G → type-Group G → type-Group G
-  commutator-Group x y = right-div-Group G (mul-Group G x y) (mul-Group G y x)
+  commutator-Group x y = {!!}
 ```
 
 ## Properties
@@ -54,14 +54,12 @@ module _
   is-unit-commutator-commute-Group :
     (x y : type-Group G) →
     commute-Group G x y → is-unit-Group G (commutator-Group G x y)
-  is-unit-commutator-commute-Group x y H =
-    is-unit-right-div-eq-Group G H
+  is-unit-commutator-commute-Group x y H = {!!}
 
   commute-is-unit-commutator-Group :
     (x y : type-Group G) →
     is-unit-Group G (commutator-Group G x y) → commute-Group G x y
-  commute-is-unit-commutator-Group x y H =
-    eq-is-unit-right-div-Group G H
+  commute-is-unit-commutator-Group x y H = {!!}
 ```
 
 ### The inverse of the commutator `[x,y]` is `[y,x]`
@@ -73,8 +71,7 @@ that `((xy)(yx)⁻¹)⁻¹ ＝ (yx)(xy)⁻¹`.
   inv-commutator-Group :
     (x y : type-Group G) →
     inv-Group G (commutator-Group G x y) ＝ commutator-Group G y x
-  inv-commutator-Group x y =
-    inv-right-div-Group G (mul-Group G x y) (mul-Group G y x)
+  inv-commutator-Group x y = {!!}
 ```
 
 ### Conjugation distributes over the commutator
@@ -98,12 +95,7 @@ module _
     (u x y : type-Group G) →
     conjugation-Group G u (commutator-Group G x y) ＝
     commutator-Group G (conjugation-Group G u x) (conjugation-Group G u y)
-  distributive-conjugation-commutator-Group u x y =
-    ( distributive-conjugation-mul-Group G u _ _) ∙
-    ( ap-mul-Group G
-      ( distributive-conjugation-mul-Group G u x y)
-      ( ( conjugation-inv-Group G u _) ∙
-        ( ap (inv-Group G) (distributive-conjugation-mul-Group G u y x))))
+  distributive-conjugation-commutator-Group u x y = {!!}
 ```
 
 ### Group homomorphisms preserve commutators
@@ -113,9 +105,7 @@ module _
 
 ```text
   f([x,y]) ≐ f((xy)(yx)⁻¹)
-           = f(xy)f(yx)⁻¹
-           = (f(x)f(y))(f(y)f(x))⁻¹
-           ≐ [f(x),f(y)].
+           = {!!}
 ```
 
 ```agda
@@ -127,11 +117,7 @@ module _
     {x y : type-Group G} →
     map-hom-Group G H f (commutator-Group G x y) ＝
     commutator-Group H (map-hom-Group G H f x) (map-hom-Group G H f y)
-  preserves-commutator-hom-Group =
-    ( preserves-right-div-hom-Group G H f) ∙
-    ( ap-right-div-Group H
-      ( preserves-mul-hom-Group G H f)
-      ( preserves-mul-hom-Group G H f))
+  preserves-commutator-hom-Group = {!!}
 ```
 
 ## External links

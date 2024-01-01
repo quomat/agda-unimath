@@ -34,122 +34,83 @@ open import univalent-combinatorics.finite-types
 
 ```agda
 equiv-cube : (k : ℕ) → cube k → cube k → UU lzero
-equiv-cube k X Y =
-  Σ ( (dim-cube k X) ≃ (dim-cube k Y))
-    ( λ e →
-      (x : dim-cube k X) → (axis-cube k X x) ≃ (axis-cube k Y (map-equiv e x)))
+equiv-cube k X Y = {!!}
 
 dim-equiv-cube :
   (k : ℕ) (X Y : cube k) → equiv-cube k X Y → dim-cube k X ≃ dim-cube k Y
-dim-equiv-cube k X Y e = pr1 e
+dim-equiv-cube k X Y e = {!!}
 
 map-dim-equiv-cube :
   (k : ℕ) (X Y : cube k) → equiv-cube k X Y → dim-cube k X → dim-cube k Y
-map-dim-equiv-cube k X Y e = map-equiv (dim-equiv-cube k X Y e)
+map-dim-equiv-cube k X Y e = {!!}
 
 axis-equiv-cube :
   (k : ℕ) (X Y : cube k) (e : equiv-cube k X Y) (d : dim-cube k X) →
   axis-cube k X d ≃ axis-cube k Y (map-dim-equiv-cube k X Y e d)
-axis-equiv-cube k X Y e = pr2 e
+axis-equiv-cube k X Y e = {!!}
 
 map-axis-equiv-cube :
   (k : ℕ) (X Y : cube k) (e : equiv-cube k X Y) (d : dim-cube k X) →
   axis-cube k X d → axis-cube k Y (map-dim-equiv-cube k X Y e d)
-map-axis-equiv-cube k X Y e d =
-  map-equiv (axis-equiv-cube k X Y e d)
+map-axis-equiv-cube k X Y e d = {!!}
 
 id-equiv-cube :
   (k : ℕ) (X : cube k) → equiv-cube k X X
-id-equiv-cube k X = pair id-equiv (λ x → id-equiv)
+id-equiv-cube k X = {!!}
 
 equiv-eq-cube :
   (k : ℕ) {X Y : cube k} → Id X Y → equiv-cube k X Y
-equiv-eq-cube k {X} refl = id-equiv-cube k X
+equiv-eq-cube k {X} refl = {!!}
 
 is-torsorial-equiv-cube :
   (k : ℕ) (X : cube k) → is-torsorial (equiv-cube k X)
-is-torsorial-equiv-cube k X =
-  is-torsorial-Eq-structure
-    ( λ D (A : type-UU-Fin k D → UU-Fin lzero 2)
-          (e : equiv-UU-Fin k (dim-cube-UU-Fin k X) D) →
-          (i : dim-cube k X) → axis-cube k X i ≃ pr1 (A (map-equiv e i)))
-    ( is-torsorial-equiv-UU-Fin {k = k} (dim-cube-UU-Fin k X))
-    ( pair
-      ( dim-cube-UU-Fin k X)
-      ( id-equiv-UU-Fin {k = k} (dim-cube-UU-Fin k X)))
-    ( is-torsorial-Eq-Π
-      ( λ i (A : UU-Fin lzero 2) → equiv-UU-Fin 2 (axis-cube-UU-2 k X i) A)
-      ( λ i → is-torsorial-equiv-UU-Fin {k = 2} (axis-cube-UU-2 k X i)))
+is-torsorial-equiv-cube k X = {!!}
 
 is-equiv-equiv-eq-cube :
   (k : ℕ) (X Y : cube k) → is-equiv (equiv-eq-cube k {X} {Y})
-is-equiv-equiv-eq-cube k X =
-  fundamental-theorem-id
-    ( is-torsorial-equiv-cube k X)
-    ( λ Y → equiv-eq-cube k {X = X} {Y})
+is-equiv-equiv-eq-cube k X = {!!}
 
 eq-equiv-cube :
   (k : ℕ) (X Y : cube k) → equiv-cube k X Y → Id X Y
-eq-equiv-cube k X Y =
-  map-inv-is-equiv (is-equiv-equiv-eq-cube k X Y)
+eq-equiv-cube k X Y = {!!}
 
 comp-equiv-cube :
   (k : ℕ) (X Y Z : cube k) →
   equiv-cube k Y Z → equiv-cube k X Y → equiv-cube k X Z
-comp-equiv-cube k X Y Z (pair dim-f axis-f) (pair dim-e axis-e) =
-  pair (dim-f ∘e dim-e) (λ d → axis-f (map-equiv (dim-e) d) ∘e axis-e d)
+comp-equiv-cube k X Y Z (pair dim-f axis-f) (pair dim-e axis-e) = {!!}
 
 htpy-equiv-cube :
   (k : ℕ) (X Y : cube k) (e f : equiv-cube k X Y) → UU lzero
-htpy-equiv-cube k X Y e f =
-  Σ ( map-dim-equiv-cube k X Y e ~ map-dim-equiv-cube k X Y f)
-    ( λ H →
-      ( d : dim-cube k X) →
-      ( tr (axis-cube k Y) (H d) ∘ map-axis-equiv-cube k X Y e d) ~
-      ( map-axis-equiv-cube k X Y f d))
+htpy-equiv-cube k X Y e f = {!!}
 
 refl-htpy-equiv-cube :
   (k : ℕ) (X Y : cube k) (e : equiv-cube k X Y) → htpy-equiv-cube k X Y e e
-refl-htpy-equiv-cube k X Y e = pair refl-htpy (λ d → refl-htpy)
+refl-htpy-equiv-cube k X Y e = {!!}
 
 htpy-eq-equiv-cube :
   (k : ℕ) (X Y : cube k) (e f : equiv-cube k X Y) →
   Id e f → htpy-equiv-cube k X Y e f
-htpy-eq-equiv-cube k X Y e .e refl = refl-htpy-equiv-cube k X Y e
+htpy-eq-equiv-cube k X Y e .e refl = {!!}
 
 is-torsorial-htpy-equiv-cube :
   (k : ℕ) (X Y : cube k) (e : equiv-cube k X Y) →
   is-torsorial (htpy-equiv-cube k X Y e)
-is-torsorial-htpy-equiv-cube k X Y e =
-  is-torsorial-Eq-structure
-    ( λ α β H →
-      ( d : dim-cube k X) →
-      ( tr (axis-cube k Y) (H d) ∘ map-axis-equiv-cube k X Y e d) ~
-      ( map-equiv (β d)))
-    ( is-torsorial-htpy-equiv (dim-equiv-cube k X Y e))
-    ( pair (dim-equiv-cube k X Y e) refl-htpy)
-    ( is-torsorial-Eq-Π
-      ( λ d β → htpy-equiv (axis-equiv-cube k X Y e d) β)
-      ( λ d → is-torsorial-htpy-equiv (axis-equiv-cube k X Y e d)))
+is-torsorial-htpy-equiv-cube k X Y e = {!!}
 
 is-equiv-htpy-eq-equiv-cube :
   (k : ℕ) (X Y : cube k) (e f : equiv-cube k X Y) →
   is-equiv (htpy-eq-equiv-cube k X Y e f)
-is-equiv-htpy-eq-equiv-cube k X Y e =
-  fundamental-theorem-id
-    ( is-torsorial-htpy-equiv-cube k X Y e)
-    ( htpy-eq-equiv-cube k X Y e)
+is-equiv-htpy-eq-equiv-cube k X Y e = {!!}
 
 eq-htpy-equiv-cube :
   (k : ℕ) (X Y : cube k) (e f : equiv-cube k X Y) →
   htpy-equiv-cube k X Y e f → Id e f
-eq-htpy-equiv-cube k X Y e f =
-  map-inv-is-equiv (is-equiv-htpy-eq-equiv-cube k X Y e f)
+eq-htpy-equiv-cube k X Y e f = {!!}
 ```
 
 ### Labelings of cubes
 
 ```agda
 labelling-cube : (k : ℕ) (X : cube k) → UU lzero
-labelling-cube k X = equiv-cube k (standard-cube k) X
+labelling-cube k X = {!!}
 ```

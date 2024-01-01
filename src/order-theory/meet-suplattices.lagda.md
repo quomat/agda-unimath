@@ -38,83 +38,74 @@ module _
   where
 
   is-meet-suplattice-Meet-Semilattice-Prop : Prop (l1 ⊔ lsuc l2)
-  is-meet-suplattice-Meet-Semilattice-Prop =
-    is-suplattice-Poset-Prop l2 (poset-Meet-Semilattice X)
+  is-meet-suplattice-Meet-Semilattice-Prop = {!!}
 
   is-meet-suplattice-Meet-Semilattice : UU (l1 ⊔ lsuc l2)
-  is-meet-suplattice-Meet-Semilattice =
-    type-Prop is-meet-suplattice-Meet-Semilattice-Prop
+  is-meet-suplattice-Meet-Semilattice = {!!}
 
   is-prop-is-meet-suplattice-Meet-Semilattice :
     is-prop is-meet-suplattice-Meet-Semilattice
-  is-prop-is-meet-suplattice-Meet-Semilattice =
-    is-prop-type-Prop is-meet-suplattice-Meet-Semilattice-Prop
+  is-prop-is-meet-suplattice-Meet-Semilattice = {!!}
 ```
 
 ### Meet-suplattices
 
 ```agda
 Meet-Suplattice : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Meet-Suplattice l1 l2 =
-  Σ (Meet-Semilattice l1) (is-meet-suplattice-Meet-Semilattice l2)
+Meet-Suplattice l1 l2 = {!!}
 
 module _
   {l1 l2 : Level} (A : Meet-Suplattice l1 l2)
   where
 
   meet-semilattice-Meet-Suplattice : Meet-Semilattice l1
-  meet-semilattice-Meet-Suplattice = pr1 A
+  meet-semilattice-Meet-Suplattice = {!!}
 
   poset-Meet-Suplattice : Poset l1 l1
-  poset-Meet-Suplattice =
-    poset-Meet-Semilattice meet-semilattice-Meet-Suplattice
+  poset-Meet-Suplattice = {!!}
 
   type-Meet-Suplattice : UU l1
-  type-Meet-Suplattice =
-    type-Poset poset-Meet-Suplattice
+  type-Meet-Suplattice = {!!}
 
   leq-meet-suplattice-Prop : (x y : type-Meet-Suplattice) → Prop l1
-  leq-meet-suplattice-Prop = leq-Poset-Prop poset-Meet-Suplattice
+  leq-meet-suplattice-Prop = {!!}
 
   leq-Meet-Suplattice : (x y : type-Meet-Suplattice) → UU l1
-  leq-Meet-Suplattice = leq-Poset poset-Meet-Suplattice
+  leq-Meet-Suplattice = {!!}
 
   is-prop-leq-Meet-Suplattice :
     (x y : type-Meet-Suplattice) → is-prop (leq-Meet-Suplattice x y)
-  is-prop-leq-Meet-Suplattice = is-prop-leq-Poset poset-Meet-Suplattice
+  is-prop-leq-Meet-Suplattice = {!!}
 
   refl-leq-Meet-Suplattice : is-reflexive leq-Meet-Suplattice
-  refl-leq-Meet-Suplattice = refl-leq-Poset poset-Meet-Suplattice
+  refl-leq-Meet-Suplattice = {!!}
 
   antisymmetric-leq-Meet-Suplattice : is-antisymmetric leq-Meet-Suplattice
-  antisymmetric-leq-Meet-Suplattice =
-    antisymmetric-leq-Poset poset-Meet-Suplattice
+  antisymmetric-leq-Meet-Suplattice = {!!}
 
   transitive-leq-Meet-Suplattice : is-transitive leq-Meet-Suplattice
-  transitive-leq-Meet-Suplattice = transitive-leq-Poset poset-Meet-Suplattice
+  transitive-leq-Meet-Suplattice = {!!}
 
   is-set-type-Meet-Suplattice : is-set type-Meet-Suplattice
-  is-set-type-Meet-Suplattice = is-set-type-Poset poset-Meet-Suplattice
+  is-set-type-Meet-Suplattice = {!!}
 
   set-Meet-Suplattice : Set l1
-  set-Meet-Suplattice = set-Poset poset-Meet-Suplattice
+  set-Meet-Suplattice = {!!}
 
   is-suplattice-Meet-Suplattice :
     is-suplattice-Poset l2 poset-Meet-Suplattice
-  is-suplattice-Meet-Suplattice = pr2 A
+  is-suplattice-Meet-Suplattice = {!!}
 
   suplattice-Meet-Suplattice : Suplattice l1 l1 l2
-  suplattice-Meet-Suplattice =
-    ( poset-Meet-Suplattice , is-suplattice-Meet-Suplattice)
+  suplattice-Meet-Suplattice = {!!}
 
   meet-Meet-Suplattice :
     (x y : type-Meet-Suplattice) →
     type-Meet-Suplattice
-  meet-Meet-Suplattice =
-    meet-Meet-Semilattice meet-semilattice-Meet-Suplattice
+  meet-Meet-Suplattice = {!!}
 
   sup-Meet-Suplattice :
     {I : UU l2} → (I → type-Meet-Suplattice) →
     type-Meet-Suplattice
-  sup-Meet-Suplattice {I} f = pr1 (is-suplattice-Meet-Suplattice I f)
+  sup-Meet-Suplattice {I} f = {!!}
 ```

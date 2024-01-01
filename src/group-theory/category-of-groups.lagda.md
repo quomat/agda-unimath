@@ -27,18 +27,15 @@ open import group-theory.precategory-of-groups
 ```agda
 is-large-category-Group :
   is-large-category-Large-Precategory Group-Large-Precategory
-is-large-category-Group G =
-  fundamental-theorem-id
-    ( is-torsorial-iso-Group G)
-    ( iso-eq-Group G)
+is-large-category-Group G = {!!}
 
 eq-iso-Group : {l : Level} (G H : Group l) → iso-Group G H → Id G H
-eq-iso-Group G H = map-inv-is-equiv (is-large-category-Group G H)
+eq-iso-Group G H = {!!}
 
 Group-Large-Category : Large-Category lsuc (_⊔_)
-large-precategory-Large-Category Group-Large-Category = Group-Large-Precategory
-is-large-category-Large-Category Group-Large-Category = is-large-category-Group
+large-precategory-Large-Category Group-Large-Category = {!!}
+is-large-category-Large-Category Group-Large-Category = {!!}
 
 Group-Category : (l : Level) → Category (lsuc l) l
-Group-Category = category-Large-Category Group-Large-Category
+Group-Category = {!!}
 ```

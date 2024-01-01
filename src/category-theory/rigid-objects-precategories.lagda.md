@@ -34,33 +34,32 @@ module _
   where
 
   is-rigid-obj-prop-Precategory : Prop l2
-  is-rigid-obj-prop-Precategory = is-contr-Prop (iso-Precategory C x x)
+  is-rigid-obj-prop-Precategory = {!!}
 
   is-rigid-obj-Precategory : UU l2
-  is-rigid-obj-Precategory = type-Prop is-rigid-obj-prop-Precategory
+  is-rigid-obj-Precategory = {!!}
 
   is-prop-is-rigid-obj-Precategory : is-prop is-rigid-obj-Precategory
-  is-prop-is-rigid-obj-Precategory =
-    is-prop-type-Prop is-rigid-obj-prop-Precategory
+  is-prop-is-rigid-obj-Precategory = {!!}
 ```
 
 ### The type of rigid objects in a precategory
 
 ```agda
 rigid-obj-Precategory : {l1 l2 : Level} (C : Precategory l1 l2) → UU (l1 ⊔ l2)
-rigid-obj-Precategory C = Σ (obj-Precategory C) (is-rigid-obj-Precategory C)
+rigid-obj-Precategory C = {!!}
 
 module _
   {l1 l2 : Level} (C : Precategory l1 l2)
   where
 
   obj-rigid-obj-Precategory : rigid-obj-Precategory C → obj-Precategory C
-  obj-rigid-obj-Precategory = pr1
+  obj-rigid-obj-Precategory = {!!}
 
   is-rigid-rigid-obj-Precategory :
     (x : rigid-obj-Precategory C) →
     is-rigid-obj-Precategory C (obj-rigid-obj-Precategory x)
-  is-rigid-rigid-obj-Precategory = pr2
+  is-rigid-rigid-obj-Precategory = {!!}
 ```
 
 ## External links

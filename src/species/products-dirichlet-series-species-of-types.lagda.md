@@ -44,9 +44,7 @@ module _
   where
 
   product-dirichlet-series-species-types : UU (lsuc l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5)
-  product-dirichlet-series-species-types =
-    dirichlet-series-species-types H C1 S X ×
-    dirichlet-series-species-types H C1 T X
+  product-dirichlet-series-species-types = {!!}
 ```
 
 ## Properties
@@ -75,25 +73,13 @@ module _
             ( λ B →
               Σ ( Σ ( UU l1) (λ F → F ≃ (A × B)))
                 ( λ F → ((S A) × (T B)) × (X → H (pr1 F)))))
-    pr1 reassociate (F , ((A , B , e) , x) , y) = (A , B , (F , e) , x , y)
-    pr2 reassociate =
-      is-equiv-is-invertible
-        ( λ (A , B , (F , e) , x , y) → (F , ((A , B , e) , x) , y))
-        ( refl-htpy)
-        ( refl-htpy)
+    pr1 reassociate (F , ((A , B , e) , x) , y) = {!!}
 
     reassociate' :
       Σ ( UU l1)
         ( λ A → Σ (UU l1) (λ B → (S A × T B) × ((X → H A) × (X → H B)))) ≃
       product-dirichlet-series-species-types H C1 S T X
-    pr1 reassociate' (A , B , (s , t) , (fs , ft)) =
-      ((A , (s , fs)) , (B , (t , ft)))
-    pr2 reassociate' =
-      is-equiv-is-invertible
-        ( λ ((A , (s , fs)) , (B , (t , ft))) →
-          (A , B , (s , t) , (fs , ft)))
-        ( refl-htpy)
-        ( refl-htpy)
+    pr1 reassociate' (A , B , (s , t) , (fs , ft)) = {!!}
 
   equiv-dirichlet-series-dirichlet-product-species-types :
     dirichlet-series-species-types
@@ -102,17 +88,5 @@ module _
       ( dirichlet-product-species-types S T)
       ( X) ≃
     product-dirichlet-series-species-types H C1 S T X
-  equiv-dirichlet-series-dirichlet-product-species-types =
-    ( reassociate') ∘e
-    ( ( equiv-tot
-        ( λ A →
-          equiv-tot
-            ( λ B →
-              ( equiv-prod
-                ( id-equiv)
-                ( equiv-up-product ∘e equiv-postcomp X (C1 A B))) ∘e
-              ( left-unit-law-Σ-is-contr
-                ( is-torsorial-equiv' (A × B))
-                ( A × B , id-equiv))))) ∘e
-      ( reassociate))
+  equiv-dirichlet-series-dirichlet-product-species-types = {!!}
 ```

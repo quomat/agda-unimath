@@ -49,53 +49,37 @@ module _
       ( north-suspension ＝ south-suspension)
       ( meridian-suspension (point-Pointed-Type X))) ≃∗
     ( Ω (suspension-Pointed-Type X))
-  pointed-equiv-loop-pointed-identity-suspension =
-    pointed-equiv-loop-pointed-identity
-      ( suspension-Pointed-Type X)
-      ( meridian-suspension (point-Pointed-Type X))
+  pointed-equiv-loop-pointed-identity-suspension = {!!}
 
   pointed-map-loop-pointed-identity-suspension :
     ( pair
       ( north-suspension ＝ south-suspension)
       ( meridian-suspension (point-Pointed-Type X))) →∗
     Ω (suspension-Pointed-Type X)
-  pointed-map-loop-pointed-identity-suspension =
-    pointed-map-pointed-equiv
-      ( pointed-equiv-loop-pointed-identity-suspension)
+  pointed-map-loop-pointed-identity-suspension = {!!}
 
   pointed-map-concat-meridian-suspension :
     X →∗
     ( pair
       ( north-suspension ＝ south-suspension)
       ( meridian-suspension (point-Pointed-Type X)))
-  pr1 pointed-map-concat-meridian-suspension = meridian-suspension
-  pr2 pointed-map-concat-meridian-suspension = refl
+  pr1 pointed-map-concat-meridian-suspension = {!!}
 
   pointed-map-unit-suspension-loop-adjunction :
     X →∗ Ω (suspension-Pointed-Type X)
-  pointed-map-unit-suspension-loop-adjunction =
-    pointed-map-loop-pointed-identity-suspension ∘∗
-    pointed-map-concat-meridian-suspension
+  pointed-map-unit-suspension-loop-adjunction = {!!}
 
   map-unit-suspension-loop-adjunction :
     type-Pointed-Type X → type-Ω (suspension-Pointed-Type X)
-  map-unit-suspension-loop-adjunction =
-    map-pointed-map pointed-map-unit-suspension-loop-adjunction
+  map-unit-suspension-loop-adjunction = {!!}
 
   map-counit-suspension-loop-adjunction :
     suspension (type-Ω X) → type-Pointed-Type X
-  map-counit-suspension-loop-adjunction =
-    map-inv-is-equiv
-      ( up-suspension (type-Pointed-Type X))
-      ( point-Pointed-Type X , point-Pointed-Type X , id)
+  map-counit-suspension-loop-adjunction = {!!}
 
   pointed-map-counit-suspension-loop-adjunction :
     pair (suspension (type-Ω X)) (north-suspension) →∗ X
-  pr1 pointed-map-counit-suspension-loop-adjunction =
-    map-counit-suspension-loop-adjunction
-  pr2 pointed-map-counit-suspension-loop-adjunction =
-    compute-north-cogap-suspension
-      ( point-Pointed-Type X , point-Pointed-Type X , id)
+  pr1 pointed-map-counit-suspension-loop-adjunction = {!!}
 ```
 
 #### The transposing maps of the adjunction
@@ -107,8 +91,7 @@ module _
 
   transpose-suspension-loop-adjunction :
     (suspension-Pointed-Type X →∗ Y) → (X →∗ Ω Y)
-  transpose-suspension-loop-adjunction f∗ =
-    pointed-map-Ω f∗ ∘∗ pointed-map-unit-suspension-loop-adjunction X
+  transpose-suspension-loop-adjunction f∗ = {!!}
 
 module _
   {l1 l2 : Level} (X : Pointed-Type l1) (Y : Pointed-Type l2)
@@ -116,18 +99,7 @@ module _
 
   inv-transpose-suspension-loop-adjunction :
     (X →∗ Ω Y) → (suspension-Pointed-Type X →∗ Y)
-  pr1 (inv-transpose-suspension-loop-adjunction f∗) =
-    cogap-suspension
-      ( suspension-structure-map-into-Ω
-        ( type-Pointed-Type X)
-        ( Y)
-        ( map-pointed-map f∗))
-  pr2 (inv-transpose-suspension-loop-adjunction f∗) =
-    compute-north-cogap-suspension
-      ( suspension-structure-map-into-Ω
-        ( type-Pointed-Type X)
-        ( Y)
-        ( map-pointed-map f∗))
+  pr1 (inv-transpose-suspension-loop-adjunction f∗) = {!!}
 ```
 
 We now show these maps are inverses of each other.
@@ -141,32 +113,7 @@ module _
 
   equiv-transpose-suspension-loop-adjunction :
     (suspension-Pointed-Type X →∗ Y) ≃ (X →∗ Ω Y)
-  equiv-transpose-suspension-loop-adjunction =
-    ( left-unit-law-Σ-is-contr
-      ( is-torsorial-path (point-Pointed-Type Y))
-      ( point-Pointed-Type Y , refl)) ∘e
-    ( inv-associative-Σ
-      ( type-Pointed-Type Y)
-      ( λ z → point-Pointed-Type Y ＝ z)
-      ( λ t →
-        Σ ( type-Pointed-Type X → point-Pointed-Type Y ＝ pr1 t)
-          ( λ f → f (point-Pointed-Type X) ＝ pr2 t))) ∘e
-    ( equiv-tot (λ y1 → equiv-left-swap-Σ)) ∘e
-    ( associative-Σ
-      ( type-Pointed-Type Y)
-      ( λ y1 → type-Pointed-Type X → point-Pointed-Type Y ＝ y1)
-      ( λ z →
-        Σ ( point-Pointed-Type Y ＝ pr1 z)
-          ( λ x → pr2 z (point-Pointed-Type X) ＝ x))) ∘e
-    ( inv-right-unit-law-Σ-is-contr
-      ( λ z → is-torsorial-path (pr2 z (point-Pointed-Type X)))) ∘e
-    ( left-unit-law-Σ-is-contr
-      ( is-torsorial-path' (point-Pointed-Type Y))
-      ( point-Pointed-Type Y , refl)) ∘e
-    ( equiv-right-swap-Σ) ∘e
-    ( equiv-Σ-equiv-base
-      ( λ c → pr1 c ＝ point-Pointed-Type Y)
-      ( equiv-up-suspension))
+  equiv-transpose-suspension-loop-adjunction = {!!}
 ```
 
 #### The equivalence in the suspension-loop space adjunction is pointed

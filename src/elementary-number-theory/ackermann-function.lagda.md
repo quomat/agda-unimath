@@ -21,7 +21,7 @@ numbers.
 
 ```agda
 ackermann : ℕ → ℕ → ℕ
-ackermann zero-ℕ n = succ-ℕ n
-ackermann (succ-ℕ m) zero-ℕ = ackermann m 1
-ackermann (succ-ℕ m) (succ-ℕ n) = ackermann m (ackermann (succ-ℕ m) n)
+ackermann zero-ℕ n = {!!}
+ackermann (succ-ℕ m) zero-ℕ = {!!}
+ackermann (succ-ℕ m) (succ-ℕ n) = {!!}
 ```

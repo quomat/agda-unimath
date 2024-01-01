@@ -33,22 +33,22 @@ postulated in [`foundation.univalence`](foundation.univalence.md) as
 
 ```agda
 equiv-eq : {l : Level} {A : UU l} {B : UU l} → A ＝ B → A ≃ B
-equiv-eq refl = id-equiv
+equiv-eq refl = {!!}
 
 map-eq : {l : Level} {A : UU l} {B : UU l} → A ＝ B → A → B
-map-eq = map-equiv ∘ equiv-eq
+map-eq = {!!}
 
 instance-univalence : {l : Level} (A B : UU l) → UU (lsuc l)
-instance-univalence A B = is-equiv (equiv-eq {A = A} {B = B})
+instance-univalence A B = {!!}
 
 based-univalence-axiom : {l : Level} (A : UU l) → UU (lsuc l)
-based-univalence-axiom {l} A = (B : UU l) → instance-univalence A B
+based-univalence-axiom {l} A = {!!}
 
 univalence-axiom-Level : (l : Level) → UU (lsuc l)
-univalence-axiom-Level l = (A B : UU l) → instance-univalence A B
+univalence-axiom-Level l = {!!}
 
 univalence-axiom : UUω
-univalence-axiom = {l : Level} → univalence-axiom-Level l
+univalence-axiom = {!!}
 ```
 
 ## Properties
@@ -60,8 +60,7 @@ abstract
   is-torsorial-equiv-based-univalence :
     {l : Level} (A : UU l) →
     based-univalence-axiom A → is-torsorial (λ (B : UU l) → A ≃ B)
-  is-torsorial-equiv-based-univalence A UA =
-    fundamental-theorem-id' (λ B → equiv-eq) UA
+  is-torsorial-equiv-based-univalence A UA = {!!}
 ```
 
 ### Contractibility of the total space of equivalences implies univalence
@@ -71,8 +70,7 @@ abstract
   based-univalence-is-torsorial-equiv :
     {l : Level} (A : UU l) →
     is-torsorial (λ (B : UU l) → A ≃ B) → based-univalence-axiom A
-  based-univalence-is-torsorial-equiv A c =
-    fundamental-theorem-id c (λ B → equiv-eq)
+  based-univalence-is-torsorial-equiv A c = {!!}
 ```
 
 ### Computing transport
@@ -81,5 +79,5 @@ abstract
 compute-equiv-eq-ap :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} {x y : A}
   (p : x ＝ y) → map-equiv (equiv-eq (ap B p)) ＝ tr B p
-compute-equiv-eq-ap refl = refl
+compute-equiv-eq-ap refl = {!!}
 ```

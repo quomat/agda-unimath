@@ -38,8 +38,7 @@ associativity and the left unit law for the category `C`.
 representable-functor-Category :
   {l1 l2 : Level} (C : Category l1 l2) (c : obj-Category C) →
   functor-Category C (Set-Category l2)
-representable-functor-Category C =
-  representable-functor-Precategory (precategory-Category C)
+representable-functor-Category C = {!!}
 ```
 
 ## Natural transformations between representable functors
@@ -58,6 +57,5 @@ representable-natural-transformation-Category :
     ( Set-Category l2)
     ( representable-functor-Category C c)
     ( representable-functor-Category C b)
-representable-natural-transformation-Category C =
-  representable-natural-transformation-Precategory (precategory-Category C)
+representable-natural-transformation-Category C = {!!}
 ```

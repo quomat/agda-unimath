@@ -79,9 +79,7 @@ module _
   where
 
   is-abelianization-Group : UUω
-  is-abelianization-Group =
-    {l : Level} (B : Ab l) →
-    is-equiv (λ h → comp-hom-Group G (group-Ab A) (group-Ab B) h f)
+  is-abelianization-Group = {!!}
 ```
 
 ### The abelianization of a group
@@ -92,67 +90,59 @@ module _
   where
 
   group-abelianization-Group : Group l1
-  group-abelianization-Group =
-    quotient-Group G (commutator-normal-subgroup-Group G)
+  group-abelianization-Group = {!!}
 
   hom-abelianization-Group : hom-Group G group-abelianization-Group
-  hom-abelianization-Group =
-    quotient-hom-Group G (commutator-normal-subgroup-Group G)
+  hom-abelianization-Group = {!!}
 
   set-abelianization-Group : Set l1
-  set-abelianization-Group = set-Group group-abelianization-Group
+  set-abelianization-Group = {!!}
 
   type-abelianization-Group : UU l1
-  type-abelianization-Group = type-Group group-abelianization-Group
+  type-abelianization-Group = {!!}
 
   zero-abelianization-Group : type-abelianization-Group
-  zero-abelianization-Group = unit-Group group-abelianization-Group
+  zero-abelianization-Group = {!!}
 
   add-abelianization-Group :
     (x y : type-abelianization-Group) → type-abelianization-Group
-  add-abelianization-Group = mul-Group group-abelianization-Group
+  add-abelianization-Group = {!!}
 
   neg-abelianization-Group :
     type-abelianization-Group → type-abelianization-Group
-  neg-abelianization-Group = inv-Group group-abelianization-Group
+  neg-abelianization-Group = {!!}
 
   associative-add-abelianization-Group :
     (x y z : type-abelianization-Group) →
     add-abelianization-Group (add-abelianization-Group x y) z ＝
     add-abelianization-Group x (add-abelianization-Group y z)
-  associative-add-abelianization-Group =
-    associative-mul-Group group-abelianization-Group
+  associative-add-abelianization-Group = {!!}
 
   left-unit-law-add-abelianization-Group :
     (x : type-abelianization-Group) →
     add-abelianization-Group zero-abelianization-Group x ＝ x
-  left-unit-law-add-abelianization-Group =
-    left-unit-law-mul-Group group-abelianization-Group
+  left-unit-law-add-abelianization-Group = {!!}
 
   right-unit-law-add-abelianization-Group :
     (x : type-abelianization-Group) →
     add-abelianization-Group x zero-abelianization-Group ＝ x
-  right-unit-law-add-abelianization-Group =
-    right-unit-law-mul-Group group-abelianization-Group
+  right-unit-law-add-abelianization-Group = {!!}
 
   left-inverse-law-add-abelianization-Group :
     (x : type-abelianization-Group) →
     add-abelianization-Group (neg-abelianization-Group x) x ＝
     zero-abelianization-Group
-  left-inverse-law-add-abelianization-Group =
-    left-inverse-law-mul-Group group-abelianization-Group
+  left-inverse-law-add-abelianization-Group = {!!}
 
   right-inverse-law-add-abelianization-Group :
     (x : type-abelianization-Group) →
     add-abelianization-Group x (neg-abelianization-Group x) ＝
     zero-abelianization-Group
-  right-inverse-law-add-abelianization-Group =
-    right-inverse-law-mul-Group group-abelianization-Group
+  right-inverse-law-add-abelianization-Group = {!!}
 
   map-abelianization-Group :
     type-Group G → type-abelianization-Group
-  map-abelianization-Group =
-    map-hom-Group G group-abelianization-Group hom-abelianization-Group
+  map-abelianization-Group = {!!}
 
   compute-add-abelianization-Group :
     (x y : type-Group G) →
@@ -160,32 +150,16 @@ module _
       ( map-abelianization-Group x)
       ( map-abelianization-Group y) ＝
     map-abelianization-Group (mul-Group G x y)
-  compute-add-abelianization-Group =
-    compute-mul-quotient-Group G (commutator-normal-subgroup-Group G)
+  compute-add-abelianization-Group = {!!}
 
   abstract
     commutative-add-abelianization-Group :
       (x y : type-abelianization-Group) →
       add-abelianization-Group x y ＝ add-abelianization-Group y x
-    commutative-add-abelianization-Group =
-      double-induction-quotient-Group G G
-        ( commutator-normal-subgroup-Group G)
-        ( commutator-normal-subgroup-Group G)
-        ( λ x y → Id-Prop set-abelianization-Group _ _)
-        ( λ x y →
-          ( compute-add-abelianization-Group x y) ∙
-          ( apply-effectiveness-map-quotient-hom-Group' G
-            ( commutator-normal-subgroup-Group G)
-            ( sim-left-sim-congruence-Normal-Subgroup G
-              ( commutator-normal-subgroup-Group G)
-              ( mul-Group G x y)
-              ( mul-Group G y x)
-              ( contains-commutator-commutator-subgroup-Group G x y))) ∙
-          ( inv (compute-add-abelianization-Group y x)))
+    commutative-add-abelianization-Group = {!!}
 
   abelianization-Group : Ab l1
-  pr1 abelianization-Group = group-abelianization-Group
-  pr2 abelianization-Group = commutative-add-abelianization-Group
+  pr1 abelianization-Group = {!!}
 ```
 
 ### The abelianization functor
@@ -194,20 +168,13 @@ module _
 abelianization-hom-Group :
   {l1 l2 : Level} (G : Group l1) (H : Group l2) (f : hom-Group G H) →
   hom-Ab (abelianization-Group G) (abelianization-Group H)
-abelianization-hom-Group G H f =
-  hom-quotient-Group G H
-    ( commutator-normal-subgroup-Group G)
-    ( commutator-normal-subgroup-Group H)
-    ( f , preserves-commutator-subgroup-hom-Group G H f)
+abelianization-hom-Group G H f = {!!}
 
 preserves-id-abelianization-functor-Group :
   {l1 : Level} (G : Group l1) →
   abelianization-hom-Group G G (id-hom-Group G) ＝
   id-hom-Ab (abelianization-Group G)
-preserves-id-abelianization-functor-Group G =
-  preserves-id-hom-quotient-Group' G
-    ( commutator-normal-subgroup-Group G)
-    ( preserves-commutator-subgroup-hom-Group G G (id-hom-Group G))
+preserves-id-abelianization-functor-Group G = {!!}
 
 preserves-comp-abelianization-functor-Group :
   {l1 l2 l3 : Level} (G : Group l1) (H : Group l2) (K : Group l3)
@@ -219,29 +186,18 @@ preserves-comp-abelianization-functor-Group :
     ( abelianization-Group K)
     ( abelianization-hom-Group H K g)
     ( abelianization-hom-Group G H f)
-preserves-comp-abelianization-functor-Group G H K g f =
-  preserves-comp-hom-quotient-Group' G H K
-    ( commutator-normal-subgroup-Group G)
-    ( commutator-normal-subgroup-Group H)
-    ( commutator-normal-subgroup-Group K)
-    ( g , preserves-commutator-subgroup-hom-Group H K g)
-    ( f , preserves-commutator-subgroup-hom-Group G H f)
-    ( preserves-commutator-subgroup-hom-Group G K (comp-hom-Group G H K g f))
+preserves-comp-abelianization-functor-Group G H K g f = {!!}
 
 abelianization-functor-Group :
   functor-Large-Category id Group-Large-Category Ab-Large-Category
 obj-functor-Large-Precategory
-  abelianization-functor-Group =
-  abelianization-Group
+  abelianization-functor-Group = {!!}
 hom-functor-Large-Precategory
-  abelianization-functor-Group {l1} {l2} {G} {H} =
-  abelianization-hom-Group G H
+  abelianization-functor-Group {l1} {l2} {G} {H} = {!!}
 preserves-comp-functor-Large-Precategory
-  abelianization-functor-Group {l1} {l2} {l3} {G} {H} {K} =
-  preserves-comp-abelianization-functor-Group G H K
+  abelianization-functor-Group {l1} {l2} {l3} {G} {H} {K} = {!!}
 preserves-id-functor-Large-Precategory
-  abelianization-functor-Group {l1} {G} =
-  preserves-id-abelianization-functor-Group G
+  abelianization-functor-Group {l1} {G} = {!!}
 ```
 
 ### The unit of the abelianization adjunction
@@ -249,8 +205,7 @@ preserves-id-functor-Large-Precategory
 ```agda
 hom-unit-abelianization-Group :
   {l1 : Level} (G : Group l1) → hom-Group G (group-abelianization-Group G)
-hom-unit-abelianization-Group G =
-  quotient-hom-Group G (commutator-normal-subgroup-Group G)
+hom-unit-abelianization-Group G = {!!}
 
 naturality-unit-abelianization-Group :
   {l1 l2 : Level} (G : Group l1) (H : Group l2) (f : hom-Group G H) →
@@ -261,11 +216,7 @@ naturality-unit-abelianization-Group :
     ( hom-unit-abelianization-Group G)
     ( hom-unit-abelianization-Group H)
     ( abelianization-hom-Group G H f)
-naturality-unit-abelianization-Group G H f =
-  naturality-hom-quotient-Group G H
-    ( commutator-normal-subgroup-Group G)
-    ( commutator-normal-subgroup-Group H)
-    ( f , preserves-commutator-subgroup-hom-Group G H f)
+naturality-unit-abelianization-Group G H f = {!!}
 
 naturality-unit-abelianization-Group' :
   naturality-family-of-morphisms-functor-Large-Category
@@ -279,10 +230,7 @@ naturality-unit-abelianization-Group' :
       ( forgetful-functor-Ab)
       ( abelianization-functor-Group))
     ( hom-unit-abelianization-Group)
-naturality-unit-abelianization-Group' {X = G} {H} f =
-  eq-htpy-hom-Group G
-    ( group-abelianization-Group H)
-    ( naturality-unit-abelianization-Group G H f)
+naturality-unit-abelianization-Group' {X = G} {H} f = {!!}
 
 unit-abelianization-Group :
   natural-transformation-Large-Category
@@ -297,11 +245,9 @@ unit-abelianization-Group :
       ( abelianization-functor-Group))
 
 hom-natural-transformation-Large-Precategory
-  unit-abelianization-Group =
-  hom-unit-abelianization-Group
+  unit-abelianization-Group = {!!}
 naturality-natural-transformation-Large-Precategory
-  unit-abelianization-Group =
-  naturality-unit-abelianization-Group'
+  unit-abelianization-Group = {!!}
 ```
 
 ### The universal property of abelianization
@@ -333,26 +279,13 @@ module _
       ( commutator-normal-subgroup-Group G)
       ( group-abelianization-Group G)
       ( nullifying-quotient-hom-Group G (commutator-normal-subgroup-Group G))
-  is-quotient-group-abelianization-Group =
-    is-quotient-group-quotient-Group G (commutator-normal-subgroup-Group G)
+  is-quotient-group-abelianization-Group = {!!}
 
   is-abelianization-abelianization-Group :
     is-abelianization-Group G
       ( abelianization-Group G)
       ( hom-unit-abelianization-Group G)
-  is-abelianization-abelianization-Group A =
-    is-equiv-comp
-      ( hom-nullifying-hom-Group G
-        ( group-Ab A)
-        ( commutator-normal-subgroup-Group G))
-      ( precomp-nullifying-hom-Group G
-        ( commutator-normal-subgroup-Group G)
-        ( group-abelianization-Group G)
-        ( nullifying-quotient-hom-Group G
-          ( commutator-normal-subgroup-Group G))
-        ( group-Ab A))
-      ( is-quotient-group-abelianization-Group (group-Ab A))
-      ( is-equiv-hom-nullifying-hom-group-Ab G A)
+  is-abelianization-abelianization-Group A = {!!}
 ```
 
 ### The abelianization adjunction
@@ -361,14 +294,8 @@ module _
 equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab :
   {l1 l2 : Level} (G : Group l1) (A : Ab l2) →
   hom-Ab (abelianization-Group G) A ≃ hom-Group G (group-Ab A)
-pr1 (equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab G A) h =
-  comp-hom-Group G
-    ( group-abelianization-Group G)
-    ( group-Ab A)
-    ( h)
-    ( hom-unit-abelianization-Group G)
-pr2 (equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab G A) =
-  is-abelianization-abelianization-Group G A
+pr1 (equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab G A) h = {!!}
+pr2 (equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab G A) = {!!}
 
 naturality-equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab :
   {l1 l2 l3 l4 : Level}
@@ -390,11 +317,7 @@ naturality-equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab :
         ( f))
     ( map-equiv (equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab G B))
 naturality-equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab
-  G H f A B g h =
-  eq-htpy-hom-Group G
-    ( group-Ab B)
-    ( ( map-hom-Ab A B g ∘ map-hom-Ab (abelianization-Group H) A h) ·l
-      ( naturality-unit-abelianization-Group G H f))
+  G H f A B g h = {!!}
 
 is-adjoint-pair-abelianization-forgetful-functor-Ab :
   is-adjoint-pair-Large-Category
@@ -403,8 +326,7 @@ is-adjoint-pair-abelianization-forgetful-functor-Ab :
     ( abelianization-functor-Group)
     ( forgetful-functor-Ab)
 equiv-is-adjoint-pair-Large-Precategory
-  is-adjoint-pair-abelianization-forgetful-functor-Ab G A =
-  equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab G A
+  is-adjoint-pair-abelianization-forgetful-functor-Ab G A = {!!}
 naturality-equiv-is-adjoint-pair-Large-Precategory
   is-adjoint-pair-abelianization-forgetful-functor-Ab
   { X1 = G}
@@ -412,9 +334,7 @@ naturality-equiv-is-adjoint-pair-Large-Precategory
   { Y1 = A}
   { Y2 = B}
   ( f)
-  ( g) =
-  naturality-equiv-is-adjoint-pair-abelianization-forgetful-functor-Ab H G f
-    A B g
+  ( g) = {!!}
 
 abelianization-adjunction-Group :
   Adjunction-Large-Category
@@ -423,14 +343,11 @@ abelianization-adjunction-Group :
     ( Group-Large-Category)
     ( Ab-Large-Category)
 left-adjoint-Adjunction-Large-Precategory
-  abelianization-adjunction-Group =
-  abelianization-functor-Group
+  abelianization-adjunction-Group = {!!}
 right-adjoint-Adjunction-Large-Precategory
-  abelianization-adjunction-Group =
-  forgetful-functor-Ab
+  abelianization-adjunction-Group = {!!}
 is-adjoint-pair-Adjunction-Large-Precategory
-  abelianization-adjunction-Group =
-  is-adjoint-pair-abelianization-forgetful-functor-Ab
+  abelianization-adjunction-Group = {!!}
 ```
 
 ## External links

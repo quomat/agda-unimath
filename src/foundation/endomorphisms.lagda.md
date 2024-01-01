@@ -35,27 +35,27 @@ An **endomorphism** on a type `A` is a map `A → A`.
 
 ```agda
 endo-Wild-Monoid : {l : Level} → UU l → Wild-Monoid l
-pr1 (pr1 (endo-Wild-Monoid A)) = endo-Pointed-Type A
-pr1 (pr2 (pr1 (endo-Wild-Monoid A))) g f = g ∘ f
-pr1 (pr2 (pr2 (pr1 (endo-Wild-Monoid A)))) f = refl
-pr1 (pr2 (pr2 (pr2 (pr1 (endo-Wild-Monoid A))))) f = refl
-pr2 (pr2 (pr2 (pr2 (pr1 (endo-Wild-Monoid A))))) = refl
-pr1 (pr2 (endo-Wild-Monoid A)) h g f = refl
-pr1 (pr2 (pr2 (endo-Wild-Monoid A))) g f = refl
-pr1 (pr2 (pr2 (pr2 (endo-Wild-Monoid A)))) g f = refl
-pr1 (pr2 (pr2 (pr2 (pr2 (endo-Wild-Monoid A))))) g f = refl
-pr2 (pr2 (pr2 (pr2 (pr2 (endo-Wild-Monoid A))))) = star
+pr1 (pr1 (endo-Wild-Monoid A)) = {!!}
+pr1 (pr2 (pr1 (endo-Wild-Monoid A))) g f = {!!}
+pr1 (pr2 (pr2 (pr1 (endo-Wild-Monoid A)))) f = {!!}
+pr1 (pr2 (pr2 (pr2 (pr1 (endo-Wild-Monoid A))))) f = {!!}
+pr2 (pr2 (pr2 (pr2 (pr1 (endo-Wild-Monoid A))))) = {!!}
+pr1 (pr2 (endo-Wild-Monoid A)) h g f = {!!}
+pr1 (pr2 (pr2 (endo-Wild-Monoid A))) g f = {!!}
+pr1 (pr2 (pr2 (pr2 (endo-Wild-Monoid A)))) g f = {!!}
+pr1 (pr2 (pr2 (pr2 (pr2 (endo-Wild-Monoid A))))) g f = {!!}
+pr2 (pr2 (pr2 (pr2 (pr2 (endo-Wild-Monoid A))))) = {!!}
 
 endo-Semigroup : {l : Level} → Set l → Semigroup l
-pr1 (endo-Semigroup A) = endo-Set A
-pr1 (pr2 (endo-Semigroup A)) g f = g ∘ f
-pr2 (pr2 (endo-Semigroup A)) h g f = refl
+pr1 (endo-Semigroup A) = {!!}
+pr1 (pr2 (endo-Semigroup A)) g f = {!!}
+pr2 (pr2 (endo-Semigroup A)) h g f = {!!}
 
 endo-Monoid : {l : Level} → Set l → Monoid l
-pr1 (endo-Monoid A) = endo-Semigroup A
-pr1 (pr2 (endo-Monoid A)) = id
-pr1 (pr2 (pr2 (endo-Monoid A))) f = refl
-pr2 (pr2 (pr2 (endo-Monoid A))) f = refl
+pr1 (endo-Monoid A) = {!!}
+pr1 (pr2 (endo-Monoid A)) = {!!}
+pr1 (pr2 (pr2 (endo-Monoid A))) f = {!!}
+pr2 (pr2 (pr2 (endo-Monoid A))) f = {!!}
 ```
 
 ## See also

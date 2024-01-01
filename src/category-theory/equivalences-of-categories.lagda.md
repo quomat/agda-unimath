@@ -32,12 +32,8 @@ module _
   where
 
   is-equiv-functor-Category : functor-Category C D → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-equiv-functor-Category =
-    is-equiv-functor-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
+  is-equiv-functor-Category = {!!}
 
   equiv-Category : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  equiv-Category =
-    equiv-Precategory (precategory-Category C) (precategory-Category D)
+  equiv-Category = {!!}
 ```

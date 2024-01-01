@@ -35,7 +35,7 @@ module _
   where
 
   eq-value : X → UU l2
-  eq-value x = (f x ＝ g x)
+  eq-value x = {!!}
 
   {-# INLINE eq-value #-}
 
@@ -43,8 +43,7 @@ module _
     {x y : X} (p : x ＝ y) (q : eq-value x) (r : eq-value y) →
     coherence-square-identifications (ap (tr P p) q) (apd f p) (apd g p) r →
     dependent-identification eq-value p q r
-  map-compute-dependent-identification-eq-value refl q r =
-    inv ∘ (concat' r (right-unit ∙ ap-id q))
+  map-compute-dependent-identification-eq-value refl q r = {!!}
 ```
 
 ### The type family of identifications between values of two ordinary functions
@@ -55,7 +54,7 @@ module _
   where
 
   eq-value-function : X → UU l2
-  eq-value-function = eq-value f g
+  eq-value-function = {!!}
 
   {-# INLINE eq-value-function #-}
 
@@ -63,23 +62,20 @@ module _
     {x y : X} (p : x ＝ y) (q : eq-value f g x) (r : eq-value f g y) →
     coherence-square-identifications q (ap f p) (ap g p) r →
     dependent-identification eq-value-function p q r
-  map-compute-dependent-identification-eq-value-function refl q r =
-    inv ∘ concat' r right-unit
+  map-compute-dependent-identification-eq-value-function refl q r = {!!}
 
 map-compute-dependent-identification-eq-value-id-id :
   {l1 : Level} {A : UU l1} {a b : A} (p : a ＝ b) (q : a ＝ a) (r : b ＝ b) →
   coherence-square-identifications q p p r →
   dependent-identification (eq-value id id) p q r
-map-compute-dependent-identification-eq-value-id-id refl q r s =
-  inv (s ∙ right-unit)
+map-compute-dependent-identification-eq-value-id-id refl q r s = {!!}
 
 map-compute-dependent-identification-eq-value-comp-id :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (g : B → A) (f : A → B) {a b : A}
   (p : a ＝ b) (q : eq-value (g ∘ f) id a) (r : eq-value (g ∘ f) id b) →
   coherence-square-identifications q (ap g (ap f p)) p r →
   dependent-identification (eq-value (g ∘ f) id) p q r
-map-compute-dependent-identification-eq-value-comp-id g f refl q r s =
-  inv (s ∙ right-unit)
+map-compute-dependent-identification-eq-value-comp-id g f refl q r s = {!!}
 ```
 
 ### Homotopies
@@ -91,7 +87,7 @@ module _
 
   infix 6 _~_
   _~_ : (f g : (x : A) → B x) → UU (l1 ⊔ l2)
-  f ~ g = (x : A) → eq-value f g x
+  f ~ g = {!!}
 ```
 
 ## Properties
@@ -104,17 +100,17 @@ module _
   where
 
   refl-htpy : {f : (x : A) → B x} → f ~ f
-  refl-htpy x = refl
+  refl-htpy x = {!!}
 
   refl-htpy' : (f : (x : A) → B x) → f ~ f
-  refl-htpy' f = refl-htpy
+  refl-htpy' f = {!!}
 ```
 
 ### Inverting homotopies
 
 ```agda
   inv-htpy : {f g : (x : A) → B x} → f ~ g → g ~ f
-  inv-htpy H x = inv (H x)
+  inv-htpy H x = {!!}
 ```
 
 ### Concatenating homotopies
@@ -126,27 +122,27 @@ module _
 
   infixl 15 _∙h_
   _∙h_ : {f g h : (x : A) → B x} → f ~ g → g ~ h → f ~ h
-  (H ∙h K) x = (H x) ∙ (K x)
+  (H ∙h K) x = {!!}
 
   concat-htpy :
     {f g : (x : A) → B x} →
     f ~ g → (h : (x : A) → B x) → g ~ h → f ~ h
-  concat-htpy H h K x = concat (H x) (h x) (K x)
+  concat-htpy H h K x = {!!}
 
   concat-htpy' :
     (f : (x : A) → B x) {g h : (x : A) → B x} →
     g ~ h → f ~ g → f ~ h
-  concat-htpy' f K H = H ∙h K
+  concat-htpy' f K H = {!!}
 
   concat-inv-htpy :
     {f g : (x : A) → B x} →
     f ~ g → (h : (x : A) → B x) → f ~ h → g ~ h
-  concat-inv-htpy = concat-htpy ∘ inv-htpy
+  concat-inv-htpy = {!!}
 
   concat-inv-htpy' :
     (f : (x : A) → B x) {g h : (x : A) → B x} →
     (g ~ h) → (f ~ h) → (f ~ g)
-  concat-inv-htpy' f K = concat-htpy' f (inv-htpy K)
+  concat-inv-htpy' f K = {!!}
 ```
 
 ### Transposition of homotopies
@@ -158,18 +154,16 @@ module _
   where
 
   left-transpose-htpy-concat : K ~ ((inv-htpy H) ∙h L)
-  left-transpose-htpy-concat x =
-    left-transpose-eq-concat (H x) (K x) (L x) (M x)
+  left-transpose-htpy-concat x = {!!}
 
   inv-htpy-left-transpose-htpy-concat : ((inv-htpy H) ∙h L) ~ K
-  inv-htpy-left-transpose-htpy-concat = inv-htpy left-transpose-htpy-concat
+  inv-htpy-left-transpose-htpy-concat = {!!}
 
   right-transpose-htpy-concat : H ~ (L ∙h (inv-htpy K))
-  right-transpose-htpy-concat x =
-    right-transpose-eq-concat (H x) (K x) (L x) (M x)
+  right-transpose-htpy-concat x = {!!}
 
   inv-htpy-right-transpose-htpy-concat : (L ∙h (inv-htpy K)) ~ H
-  inv-htpy-right-transpose-htpy-concat = inv-htpy right-transpose-htpy-concat
+  inv-htpy-right-transpose-htpy-concat = {!!}
 ```
 
 ### Associativity of concatenation of homotopies
@@ -181,10 +175,10 @@ module _
   where
 
   assoc-htpy : ((H ∙h K) ∙h L) ~ (H ∙h (K ∙h L))
-  assoc-htpy x = assoc (H x) (K x) (L x)
+  assoc-htpy x = {!!}
 
   inv-htpy-assoc-htpy : (H ∙h (K ∙h L)) ~ ((H ∙h K) ∙h L)
-  inv-htpy-assoc-htpy = inv-htpy assoc-htpy
+  inv-htpy-assoc-htpy = {!!}
 ```
 
 ### Unit laws for homotopies
@@ -196,16 +190,16 @@ module _
   where
 
   left-unit-htpy : (refl-htpy ∙h H) ~ H
-  left-unit-htpy x = left-unit
+  left-unit-htpy x = {!!}
 
   inv-htpy-left-unit-htpy : H ~ (refl-htpy ∙h H)
-  inv-htpy-left-unit-htpy = inv-htpy left-unit-htpy
+  inv-htpy-left-unit-htpy = {!!}
 
   right-unit-htpy : (H ∙h refl-htpy) ~ H
-  right-unit-htpy x = right-unit
+  right-unit-htpy x = {!!}
 
   inv-htpy-right-unit-htpy : H ~ (H ∙h refl-htpy)
-  inv-htpy-right-unit-htpy = inv-htpy right-unit-htpy
+  inv-htpy-right-unit-htpy = {!!}
 ```
 
 ### Inverse laws for homotopies
@@ -217,16 +211,16 @@ module _
   where
 
   left-inv-htpy : ((inv-htpy H) ∙h H) ~ refl-htpy
-  left-inv-htpy = left-inv ∘ H
+  left-inv-htpy = {!!}
 
   inv-htpy-left-inv-htpy : refl-htpy ~ ((inv-htpy H) ∙h H)
-  inv-htpy-left-inv-htpy = inv-htpy left-inv-htpy
+  inv-htpy-left-inv-htpy = {!!}
 
   right-inv-htpy : (H ∙h (inv-htpy H)) ~ refl-htpy
-  right-inv-htpy = right-inv ∘ H
+  right-inv-htpy = {!!}
 
   inv-htpy-right-inv-htpy : refl-htpy ~ (H ∙h (inv-htpy H))
-  inv-htpy-right-inv-htpy = inv-htpy right-inv-htpy
+  inv-htpy-right-inv-htpy = {!!}
 ```
 
 ### Distributivity of `inv` over `concat` for homotopies
@@ -239,12 +233,11 @@ module _
 
   distributive-inv-concat-htpy :
     (inv-htpy (H ∙h K)) ~ ((inv-htpy K) ∙h (inv-htpy H))
-  distributive-inv-concat-htpy x = distributive-inv-concat (H x) (K x)
+  distributive-inv-concat-htpy x = {!!}
 
   inv-htpy-distributive-inv-concat-htpy :
     ((inv-htpy K) ∙h (inv-htpy H)) ~ (inv-htpy (H ∙h K))
-  inv-htpy-distributive-inv-concat-htpy =
-    inv-htpy distributive-inv-concat-htpy
+  inv-htpy-distributive-inv-concat-htpy = {!!}
 ```
 
 ### Naturality of homotopies with respect to identifications
@@ -254,23 +247,23 @@ nat-htpy :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} {f g : A → B} (H : f ~ g)
   {x y : A} (p : x ＝ y) →
   ((H x) ∙ (ap g p)) ＝ ((ap f p) ∙ (H y))
-nat-htpy H refl = right-unit
+nat-htpy H refl = {!!}
 
 inv-nat-htpy :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} {f g : A → B} (H : f ~ g)
   {x y : A} (p : x ＝ y) →
   ((ap f p) ∙ (H y)) ＝ ((H x) ∙ (ap g p))
-inv-nat-htpy H p = inv (nat-htpy H p)
+inv-nat-htpy H p = {!!}
 
 nat-htpy-id :
   {l : Level} {A : UU l} {f : A → A} (H : f ~ id)
   {x y : A} (p : x ＝ y) → ((H x) ∙ p) ＝ ((ap f p) ∙ (H y))
-nat-htpy-id H refl = right-unit
+nat-htpy-id H refl = {!!}
 
 inv-nat-htpy-id :
   {l : Level} {A : UU l} {f : A → A} (H : f ~ id)
   {x y : A} (p : x ＝ y) → ((ap f p) ∙ (H y)) ＝ ((H x) ∙ p)
-inv-nat-htpy-id H p = inv (nat-htpy-id H p)
+inv-nat-htpy-id H p = {!!}
 ```
 
 ### Homotopies preserve the laws of the action on identity types
@@ -282,12 +275,11 @@ module _
 
   ap-concat-htpy :
     (H : f ~ g) {K K' : g ~ h} → K ~ K' → (H ∙h K) ~ (H ∙h K')
-  ap-concat-htpy H L x = ap (concat (H x) (h x)) (L x)
+  ap-concat-htpy H L x = {!!}
 
   ap-concat-htpy' :
     {H H' : f ~ g} (K : g ~ h) → H ~ H' → (H ∙h K) ~ (H' ∙h K)
-  ap-concat-htpy' K L x =
-    ap (concat' (f x) (K x)) (L x)
+  ap-concat-htpy' K L x = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} {f g : (x : A) → B x}
@@ -296,7 +288,7 @@ module _
 
   ap-inv-htpy :
     H ~ H' → (inv-htpy H) ~ (inv-htpy H')
-  ap-inv-htpy K x = ap inv (K x)
+  ap-inv-htpy K x = {!!}
 ```
 
 ## Reasoning with homotopies
@@ -320,15 +312,15 @@ infixl 0 step-homotopy-reasoning
 homotopy-reasoning_ :
   {l1 l2 : Level} {X : UU l1} {Y : X → UU l2}
   (f : (x : X) → Y x) → f ~ f
-homotopy-reasoning f = refl-htpy
+homotopy-reasoning f = {!!}
 
 step-homotopy-reasoning :
   {l1 l2 : Level} {X : UU l1} {Y : X → UU l2}
   {f g : (x : X) → Y x} → (f ~ g) →
   (h : (x : X) → Y x) → (g ~ h) → (f ~ h)
-step-homotopy-reasoning p h q = p ∙h q
+step-homotopy-reasoning p h q = {!!}
 
-syntax step-homotopy-reasoning p h q = p ~ h by q
+syntax step-homotopy-reasoning p h q = {!!}
 ```
 
 ## See also

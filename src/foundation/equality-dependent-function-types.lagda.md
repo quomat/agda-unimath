@@ -37,21 +37,10 @@ module _
   where
 
   is-torsorial-Eq-Π : is-torsorial (λ g → (x : A) → C x (g x))
-  is-torsorial-Eq-Π =
-    is-contr-equiv'
-      ( (x : A) → Σ (B x) (C x))
-      ( distributive-Π-Σ)
-      ( is-contr-Π is-torsorial-C)
+  is-torsorial-Eq-Π = {!!}
 
   is-torsorial-Eq-implicit-Π : is-torsorial (λ g → {x : A} → C x (g {x}))
-  is-torsorial-Eq-implicit-Π =
-    is-contr-equiv
-      ( Σ ((x : A) → B x) (λ g → (x : A) → C x (g x)))
-      ( equiv-Σ
-        ( λ g → (x : A) → C x (g x))
-        ( equiv-explicit-implicit-Π)
-        ( λ _ → equiv-explicit-implicit-Π))
-      ( is-torsorial-Eq-Π)
+  is-torsorial-Eq-implicit-Π = {!!}
 ```
 
 ### Extensionality
@@ -66,26 +55,18 @@ module _
   map-extensionality-Π :
     ( (x : A) (y : B x) → (f x ＝ y) ≃ Eq-B x y) →
     ( g : (x : A) → B x) → f ＝ g → ((x : A) → Eq-B x (g x))
-  map-extensionality-Π e .f refl x = map-equiv (e x (f x)) refl
+  map-extensionality-Π e .f refl x = {!!}
 
   abstract
     is-equiv-map-extensionality-Π :
       (e : (x : A) (y : B x) → (f x ＝ y) ≃ Eq-B x y) →
       (g : (x : A) → B x) → is-equiv (map-extensionality-Π e g)
-    is-equiv-map-extensionality-Π e =
-      fundamental-theorem-id
-        ( is-torsorial-Eq-Π Eq-B
-          ( λ x →
-            fundamental-theorem-id'
-              ( λ y → map-equiv (e x y))
-              ( λ y → is-equiv-map-equiv (e x y))))
-        ( map-extensionality-Π e)
+    is-equiv-map-extensionality-Π e = {!!}
 
   extensionality-Π :
     ( (x : A) (y : B x) → (f x ＝ y) ≃ Eq-B x y) →
     ( g : (x : A) → B x) → (f ＝ g) ≃ ((x : A) → Eq-B x (g x))
-  pr1 (extensionality-Π e g) = map-extensionality-Π e g
-  pr2 (extensionality-Π e g) = is-equiv-map-extensionality-Π e g
+  pr1 (extensionality-Π e g) = {!!}
 ```
 
 ## See also

@@ -45,15 +45,10 @@ an equivalence for type families over types in the image of the operator:
 is-uniquely-eliminating-modality :
   {l1 l2 : Level} {○ : operator-modality l1 l2} →
   unit-modality ○ → UU (lsuc l1 ⊔ l2)
-is-uniquely-eliminating-modality {l1} {l2} {○} unit-○ =
-  {X : UU l1} (P : ○ X → UU l1) → is-local-dependent-type (unit-○) (○ ∘ P)
+is-uniquely-eliminating-modality {l1} {l2} {○} unit-○ = {!!}
 
 uniquely-eliminating-modality : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-uniquely-eliminating-modality l1 l2 =
-  Σ ( operator-modality l1 l2)
-    ( λ ○ →
-      Σ ( unit-modality ○)
-        ( is-uniquely-eliminating-modality))
+uniquely-eliminating-modality l1 l2 = {!!}
 ```
 
 ### Components of a uniquely eliminating modality
@@ -67,14 +62,12 @@ module _
   ind-modality-is-uniquely-eliminating-modality :
     {X : UU l1} (P : ○ X → UU l1) →
     ((x : X) → ○ (P (unit-○ x))) → (x' : ○ X) → ○ (P x')
-  ind-modality-is-uniquely-eliminating-modality P =
-    map-inv-is-equiv (is-uem-○ P)
+  ind-modality-is-uniquely-eliminating-modality P = {!!}
 
   compute-ind-modality-is-uniquely-eliminating-modality :
     {X : UU l1} (P : ○ X → UU l1) (f : (x : X) → ○ (P (unit-○ x))) →
     (pr1 (pr1 (is-uem-○ P)) f ∘ unit-○) ~ f
-  compute-ind-modality-is-uniquely-eliminating-modality P =
-    htpy-eq ∘ pr2 (pr1 (is-uem-○ P))
+  compute-ind-modality-is-uniquely-eliminating-modality P = {!!}
 
 module _
   {l1 l2 : Level}
@@ -82,14 +75,14 @@ module _
   where
 
   operator-modality-uniquely-eliminating-modality : operator-modality l1 l2
-  operator-modality-uniquely-eliminating-modality = ○
+  operator-modality-uniquely-eliminating-modality = {!!}
 
   unit-modality-uniquely-eliminating-modality : unit-modality ○
-  unit-modality-uniquely-eliminating-modality = unit-○
+  unit-modality-uniquely-eliminating-modality = {!!}
 
   is-uniquely-eliminating-modality-uniquely-eliminating-modality :
     is-uniquely-eliminating-modality unit-○
-  is-uniquely-eliminating-modality-uniquely-eliminating-modality = is-uem-○
+  is-uniquely-eliminating-modality-uniquely-eliminating-modality = {!!}
 ```
 
 ## Properties
@@ -103,17 +96,11 @@ module _
 
   is-prop-is-uniquely-eliminating-modality :
     is-prop (is-uniquely-eliminating-modality unit-○)
-  is-prop-is-uniquely-eliminating-modality =
-    is-prop-Π'
-      ( λ X →
-        is-prop-Π
-          ( λ P → is-property-is-local-dependent-type unit-○ (○ ∘ P)))
+  is-prop-is-uniquely-eliminating-modality = {!!}
 
   is-uniquely-eliminating-modality-Prop : Prop (lsuc l1 ⊔ l2)
-  pr1 is-uniquely-eliminating-modality-Prop =
-    is-uniquely-eliminating-modality unit-○
-  pr2 is-uniquely-eliminating-modality-Prop =
-    is-prop-is-uniquely-eliminating-modality
+  pr1 is-uniquely-eliminating-modality-Prop = {!!}
+  pr2 is-uniquely-eliminating-modality-Prop = {!!}
 ```
 
 ### `○ X` is modal
@@ -126,35 +113,18 @@ module _
   where
 
   map-inv-unit-uniquely-eliminating-modality : ○ (○ X) → ○ X
-  map-inv-unit-uniquely-eliminating-modality =
-    ind-modality-is-uniquely-eliminating-modality is-uem-○ (λ _ → X) id
+  map-inv-unit-uniquely-eliminating-modality = {!!}
 
   is-section-unit-uniquely-eliminating-modality :
     (map-inv-unit-uniquely-eliminating-modality ∘ unit-○) ~ id
-  is-section-unit-uniquely-eliminating-modality =
-    compute-ind-modality-is-uniquely-eliminating-modality
-      ( is-uem-○)
-      ( λ _ → X)
-      ( id)
+  is-section-unit-uniquely-eliminating-modality = {!!}
 
   is-retraction-unit-uniquely-eliminating-modality :
     (unit-○ ∘ map-inv-unit-uniquely-eliminating-modality) ~ id
-  is-retraction-unit-uniquely-eliminating-modality =
-    htpy-eq
-      ( ap pr1
-        ( eq-is-contr'
-          ( is-contr-map-is-equiv (is-uem-○ (λ _ → ○ X)) unit-○)
-          ( unit-○ ∘ map-inv-unit-uniquely-eliminating-modality ,
-            eq-htpy
-              ( ap unit-○ ∘ (is-section-unit-uniquely-eliminating-modality)))
-          ( id , refl)))
+  is-retraction-unit-uniquely-eliminating-modality = {!!}
 
   is-modal-uniquely-eliminating-modality : is-modal unit-○ (○ X)
-  is-modal-uniquely-eliminating-modality =
-    is-equiv-is-invertible
-      map-inv-unit-uniquely-eliminating-modality
-      is-retraction-unit-uniquely-eliminating-modality
-      is-section-unit-uniquely-eliminating-modality
+  is-modal-uniquely-eliminating-modality = {!!}
 ```
 
 ### Uniquely eliminating modalities are uniquely determined by their modal types
@@ -173,21 +143,17 @@ module _
 
   htpy-uniquely-eliminating-modality :
     (○ ● : uniquely-eliminating-modality l1 l2) → UU (lsuc l1 ⊔ l2)
-  htpy-uniquely-eliminating-modality ○ ● =
-    equiv-fam
-      ( is-modal (unit-modality-uniquely-eliminating-modality ○))
-      ( is-modal (unit-modality-uniquely-eliminating-modality ●))
+  htpy-uniquely-eliminating-modality ○ ● = {!!}
 
   refl-htpy-uniquely-eliminating-modality :
     (○ : uniquely-eliminating-modality l1 l2) →
     htpy-uniquely-eliminating-modality ○ ○
-  refl-htpy-uniquely-eliminating-modality ○ X = id-equiv
+  refl-htpy-uniquely-eliminating-modality ○ X = {!!}
 
   htpy-eq-uniquely-eliminating-modality :
     (○ ● : uniquely-eliminating-modality l1 l2) →
     ○ ＝ ● → htpy-uniquely-eliminating-modality ○ ●
-  htpy-eq-uniquely-eliminating-modality ○ .○ refl =
-    refl-htpy-uniquely-eliminating-modality ○
+  htpy-eq-uniquely-eliminating-modality ○ .○ refl = {!!}
 ```
 
 It remains to show that `htpy-eq-uniquely-eliminating-modality` is an

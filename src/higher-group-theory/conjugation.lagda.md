@@ -36,25 +36,20 @@ module _
   where
 
   conjugation-∞-Group : hom-∞-Group G G
-  conjugation-∞-Group =
-    conjugation-Pointed-Type (classifying-pointed-type-∞-Group G) g
+  conjugation-∞-Group = {!!}
 
   classifying-map-conjugation-∞-Group :
     classifying-type-∞-Group G → classifying-type-∞-Group G
-  classifying-map-conjugation-∞-Group =
-    classifying-map-hom-∞-Group G G conjugation-∞-Group
+  classifying-map-conjugation-∞-Group = {!!}
 
   preserves-point-classifying-map-conjugation-∞-Group :
     classifying-map-conjugation-∞-Group (shape-∞-Group G) ＝ shape-∞-Group G
-  preserves-point-classifying-map-conjugation-∞-Group =
-    preserves-point-classifying-map-hom-∞-Group G G conjugation-∞-Group
+  preserves-point-classifying-map-conjugation-∞-Group = {!!}
 
   map-conjugation-∞-Group : type-∞-Group G → type-∞-Group G
-  map-conjugation-∞-Group = map-hom-∞-Group G G conjugation-∞-Group
+  map-conjugation-∞-Group = {!!}
 
   compute-map-conjugation-∞-Group :
     map-conjugation-Ω g ~ map-conjugation-∞-Group
-  compute-map-conjugation-∞-Group =
-    htpy-compute-action-on-loops-conjugation-Pointed-Type
-      ( g)
+  compute-map-conjugation-∞-Group = {!!}
 ```

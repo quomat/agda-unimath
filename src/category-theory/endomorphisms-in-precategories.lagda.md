@@ -30,42 +30,37 @@ module _
   where
 
   type-endo-Precategory : UU l2
-  type-endo-Precategory = hom-Precategory C X X
+  type-endo-Precategory = {!!}
 
   comp-endo-Precategory :
     type-endo-Precategory → type-endo-Precategory → type-endo-Precategory
-  comp-endo-Precategory g f = comp-hom-Precategory C g f
+  comp-endo-Precategory g f = {!!}
 
   id-endo-Precategory : type-endo-Precategory
-  id-endo-Precategory = id-hom-Precategory C
+  id-endo-Precategory = {!!}
 
   associative-comp-endo-Precategory :
     (h g f : type-endo-Precategory) →
     ( comp-endo-Precategory (comp-endo-Precategory h g) f) ＝
     ( comp-endo-Precategory h (comp-endo-Precategory g f))
-  associative-comp-endo-Precategory = associative-comp-hom-Precategory C
+  associative-comp-endo-Precategory = {!!}
 
   left-unit-law-comp-endo-Precategory :
     (f : type-endo-Precategory) →
     comp-endo-Precategory id-endo-Precategory f ＝ f
-  left-unit-law-comp-endo-Precategory = left-unit-law-comp-hom-Precategory C
+  left-unit-law-comp-endo-Precategory = {!!}
 
   right-unit-law-comp-endo-Precategory :
     (f : type-endo-Precategory) →
     comp-endo-Precategory f id-endo-Precategory ＝ f
-  right-unit-law-comp-endo-Precategory = right-unit-law-comp-hom-Precategory C
+  right-unit-law-comp-endo-Precategory = {!!}
 
   set-endo-Precategory : Set l2
-  set-endo-Precategory = hom-set-Precategory C X X
+  set-endo-Precategory = {!!}
 
   semigroup-endo-Precategory : Semigroup l2
-  pr1 semigroup-endo-Precategory = set-endo-Precategory
-  pr1 (pr2 semigroup-endo-Precategory) = comp-endo-Precategory
-  pr2 (pr2 semigroup-endo-Precategory) = associative-comp-endo-Precategory
+  pr1 semigroup-endo-Precategory = {!!}
 
   monoid-endo-Precategory : Monoid l2
-  pr1 monoid-endo-Precategory = semigroup-endo-Precategory
-  pr1 (pr2 monoid-endo-Precategory) = id-endo-Precategory
-  pr1 (pr2 (pr2 monoid-endo-Precategory)) = left-unit-law-comp-endo-Precategory
-  pr2 (pr2 (pr2 monoid-endo-Precategory)) = right-unit-law-comp-endo-Precategory
+  pr1 monoid-endo-Precategory = {!!}
 ```

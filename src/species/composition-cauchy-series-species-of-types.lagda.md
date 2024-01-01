@@ -38,8 +38,7 @@ defined as the Cauchy series of `S` applied to the Cauchy series of `T` at `X`
 composition-cauchy-series-species-types :
   {l1 l2 l3 l4 : Level} → species-types l1 l2 → species-types l1 l3 →
   UU l4 → UU (lsuc l1 ⊔ l2 ⊔ l3 ⊔ l4)
-composition-cauchy-series-species-types S T X =
-  cauchy-series-species-types S (cauchy-series-species-types T X)
+composition-cauchy-series-species-types S T X = {!!}
 ```
 
 ## Property
@@ -63,35 +62,12 @@ module _
             ( λ V →
               Σ ( Σ ( UU l1) (λ F → F ≃ Σ U V))
                 ( λ F → (S U) × (((y : U) → T (V y)) × (pr1 F → X)))))
-    pr1 reassociate (F , ((U , V , e) , s , fs) , ft) =
-      (U , V , (F , e) , s , fs , ft)
-    pr2 reassociate =
-      is-equiv-is-invertible
-        ( λ (U , V , (F , e) , s , fs , ft) →
-          (F , ((U , V , e) , s , fs) , ft))
-        ( refl-htpy)
-        ( refl-htpy)
+    pr1 reassociate (F , ((U , V , e) , s , fs) , ft) = {!!}
 
   equiv-cauchy-series-composition-species-types :
     cauchy-series-species-types
       ( cauchy-composition-species-types S T)
       ( X) ≃
     composition-cauchy-series-species-types S T X
-  equiv-cauchy-series-composition-species-types =
-    ( equiv-tot
-      ( λ U →
-        ( equiv-prod
-          ( id-equiv)
-          ( inv-equiv distributive-Π-Σ)) ∘e
-        ( ( inv-equiv left-distributive-prod-Σ) ∘e
-          ( equiv-tot
-            ( λ V →
-              ( equiv-prod
-                ( id-equiv)
-                ( ( inv-equiv equiv-up-product) ∘e
-                  ( equiv-prod id-equiv equiv-ev-pair))) ∘e
-              ( left-unit-law-Σ-is-contr
-                ( is-torsorial-equiv' (Σ U V))
-                ( Σ U V , id-equiv))))))) ∘e
-      ( reassociate)
+  equiv-cauchy-series-composition-species-types = {!!}
 ```

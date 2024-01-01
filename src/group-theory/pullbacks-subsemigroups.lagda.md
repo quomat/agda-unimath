@@ -47,38 +47,29 @@ module _
   where
 
   subset-pullback-Subsemigroup : subset-Semigroup l3 G
-  subset-pullback-Subsemigroup =
-    subset-Subsemigroup H K ∘ map-hom-Semigroup G H f
+  subset-pullback-Subsemigroup = {!!}
 
   is-closed-under-multiplication-pullback-Subsemigroup :
     is-closed-under-multiplication-subset-Semigroup G
       subset-pullback-Subsemigroup
-  is-closed-under-multiplication-pullback-Subsemigroup p q =
-    is-closed-under-eq-Subsemigroup' H K
-      ( is-closed-under-multiplication-Subsemigroup H K p q)
-      ( preserves-mul-hom-Semigroup G H f)
+  is-closed-under-multiplication-pullback-Subsemigroup p q = {!!}
 
   pullback-Subsemigroup : Subsemigroup l3 G
-  pr1 pullback-Subsemigroup =
-    subset-pullback-Subsemigroup
-  pr2 pullback-Subsemigroup =
-    is-closed-under-multiplication-pullback-Subsemigroup
+  pr1 pullback-Subsemigroup = {!!}
+  pr2 pullback-Subsemigroup = {!!}
 
   is-in-pullback-Subsemigroup : type-Semigroup G → UU l3
-  is-in-pullback-Subsemigroup =
-    is-in-Subsemigroup G pullback-Subsemigroup
+  is-in-pullback-Subsemigroup = {!!}
 
   is-closed-under-eq-pullback-Subsemigroup :
     {x y : type-Semigroup G} →
     is-in-pullback-Subsemigroup x → x ＝ y → is-in-pullback-Subsemigroup y
-  is-closed-under-eq-pullback-Subsemigroup =
-    is-closed-under-eq-Subsemigroup G pullback-Subsemigroup
+  is-closed-under-eq-pullback-Subsemigroup = {!!}
 
   is-closed-under-eq-pullback-Subsemigroup' :
     {x y : type-Semigroup G} →
     is-in-pullback-Subsemigroup y → x ＝ y → is-in-pullback-Subsemigroup x
-  is-closed-under-eq-pullback-Subsemigroup' =
-    is-closed-under-eq-Subsemigroup' G pullback-Subsemigroup
+  is-closed-under-eq-pullback-Subsemigroup' = {!!}
 ```
 
 ### The order preserving operation `pullback-Subsemigroup
@@ -94,21 +85,15 @@ module _
     leq-Subsemigroup G
       ( pullback-Subsemigroup G H f S)
       ( pullback-Subsemigroup G H f T)
-  preserves-order-pullback-Subsemigroup S T =
-    preserves-order-pullback-subtype
-      ( map-hom-Semigroup G H f)
-      ( subset-Subsemigroup H S)
-      ( subset-Subsemigroup H T)
+  preserves-order-pullback-Subsemigroup S T = {!!}
 
   pullback-hom-large-poset-Subsemigroup :
     hom-Large-Poset
       ( λ l → l)
       ( Subsemigroup-Large-Poset H)
       ( Subsemigroup-Large-Poset G)
-  map-hom-Large-Preorder pullback-hom-large-poset-Subsemigroup =
-    pullback-Subsemigroup G H f
-  preserves-order-hom-Large-Preorder pullback-hom-large-poset-Subsemigroup =
-    preserves-order-pullback-Subsemigroup
+  map-hom-Large-Preorder pullback-hom-large-poset-Subsemigroup = {!!}
+  preserves-order-hom-Large-Preorder pullback-hom-large-poset-Subsemigroup = {!!}
 ```
 
 ## Properties
@@ -147,14 +132,5 @@ module _
       ( subset-subsemigroup-hom-large-poset-Semigroup H)
       ( subset-subsemigroup-hom-large-poset-Semigroup G)
       ( pullback-subtype-hom-Large-Poset (map-hom-Semigroup G H f))
-  coherence-square-pullback-subset-Subsemigroup =
-    refl-sim-hom-Large-Poset
-      ( Subsemigroup-Large-Poset H)
-      ( powerset-Large-Poset (type-Semigroup G))
-      ( comp-hom-Large-Poset
-        ( Subsemigroup-Large-Poset H)
-        ( Subsemigroup-Large-Poset G)
-        ( powerset-Large-Poset (type-Semigroup G))
-        ( subset-subsemigroup-hom-large-poset-Semigroup G)
-        ( pullback-hom-large-poset-Subsemigroup G H f))
+  coherence-square-pullback-subset-Subsemigroup = {!!}
 ```

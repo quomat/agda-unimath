@@ -35,13 +35,11 @@ H-space, then `λ x → μ a x` and `λ x → μ x a` are
 unit-laws-mul-Pointed-Type :
   {l : Level} (A : Pointed-Type l)
   (μ : (x y : type-Pointed-Type A) → type-Pointed-Type A) → UU l
-unit-laws-mul-Pointed-Type A μ = unit-laws μ (point-Pointed-Type A)
+unit-laws-mul-Pointed-Type A μ = {!!}
 
 unital-mul-Pointed-Type :
   {l : Level} → Pointed-Type l → UU l
-unital-mul-Pointed-Type A =
-  Σ ( type-Pointed-Type A → type-Pointed-Type A → type-Pointed-Type A)
-    ( unit-laws-mul-Pointed-Type A)
+unital-mul-Pointed-Type A = {!!}
 ```
 
 ### Non-coherent Noncoherent-H-Spaces
@@ -49,44 +47,41 @@ unital-mul-Pointed-Type A =
 ```agda
 noncoherent-h-space-structure :
   {l : Level} (A : Pointed-Type l) → UU l
-noncoherent-h-space-structure A =
-  Σ ( (x y : type-Pointed-Type A) → type-Pointed-Type A)
-    ( λ μ → unit-laws μ (point-Pointed-Type A))
+noncoherent-h-space-structure A = {!!}
 
 Noncoherent-H-Space : (l : Level) → UU (lsuc l)
-Noncoherent-H-Space l = Σ (Pointed-Type l) (noncoherent-h-space-structure)
+Noncoherent-H-Space l = {!!}
 
 module _
   {l : Level} (A : Noncoherent-H-Space l)
   where
 
   pointed-type-Noncoherent-H-Space : Pointed-Type l
-  pointed-type-Noncoherent-H-Space = pr1 A
+  pointed-type-Noncoherent-H-Space = {!!}
 
   type-Noncoherent-H-Space : UU l
-  type-Noncoherent-H-Space = type-Pointed-Type pointed-type-Noncoherent-H-Space
+  type-Noncoherent-H-Space = {!!}
 
   point-Noncoherent-H-Space : type-Noncoherent-H-Space
-  point-Noncoherent-H-Space =
-    point-Pointed-Type pointed-type-Noncoherent-H-Space
+  point-Noncoherent-H-Space = {!!}
 
   mul-Noncoherent-H-Space :
     type-Noncoherent-H-Space →
     type-Noncoherent-H-Space →
     type-Noncoherent-H-Space
-  mul-Noncoherent-H-Space = pr1 (pr2 A)
+  mul-Noncoherent-H-Space = {!!}
 
   unit-laws-mul-Noncoherent-H-Space :
     unit-laws mul-Noncoherent-H-Space point-Noncoherent-H-Space
-  unit-laws-mul-Noncoherent-H-Space = pr2 (pr2 A)
+  unit-laws-mul-Noncoherent-H-Space = {!!}
 
   left-unit-law-mul-Noncoherent-H-Space :
     (x : type-Noncoherent-H-Space) →
     mul-Noncoherent-H-Space point-Noncoherent-H-Space x ＝ x
-  left-unit-law-mul-Noncoherent-H-Space = pr1 unit-laws-mul-Noncoherent-H-Space
+  left-unit-law-mul-Noncoherent-H-Space = {!!}
 
   right-unit-law-mul-Noncoherent-H-Space :
     (x : type-Noncoherent-H-Space) →
     mul-Noncoherent-H-Space x point-Noncoherent-H-Space ＝ x
-  right-unit-law-mul-Noncoherent-H-Space = pr2 unit-laws-mul-Noncoherent-H-Space
+  right-unit-law-mul-Noncoherent-H-Space = {!!}
 ```

@@ -36,37 +36,37 @@ proof that they are nonzero.
 
 ```agda
 nonzero-ℕ : UU lzero
-nonzero-ℕ = Σ ℕ is-nonzero-ℕ
+nonzero-ℕ = {!!}
 
 nat-nonzero-ℕ : nonzero-ℕ → ℕ
-nat-nonzero-ℕ = pr1
+nat-nonzero-ℕ = {!!}
 
 is-nonzero-nat-nonzero-ℕ : (n : nonzero-ℕ) → is-nonzero-ℕ (nat-nonzero-ℕ n)
-is-nonzero-nat-nonzero-ℕ = pr2
+is-nonzero-nat-nonzero-ℕ = {!!}
 ```
 
 ### The nonzero natural number `1`
 
 ```agda
 one-nonzero-ℕ : nonzero-ℕ
-pr1 one-nonzero-ℕ = 1
-pr2 one-nonzero-ℕ = is-nonzero-one-ℕ
+pr1 one-nonzero-ℕ = {!!}
+pr2 one-nonzero-ℕ = {!!}
 ```
 
 ### The successor function on the nonzero natural numbers
 
 ```agda
 succ-nonzero-ℕ : nonzero-ℕ → nonzero-ℕ
-pr1 (succ-nonzero-ℕ (pair x _)) = succ-ℕ x
-pr2 (succ-nonzero-ℕ (pair x _)) = is-nonzero-succ-ℕ x
+pr1 (succ-nonzero-ℕ (pair x _)) = {!!}
+pr2 (succ-nonzero-ℕ (pair x _)) = {!!}
 ```
 
 ### The successor function from the natural numbers to the nonzero natural numbers
 
 ```agda
 succ-nonzero-ℕ' : ℕ → nonzero-ℕ
-pr1 (succ-nonzero-ℕ' n) = succ-ℕ n
-pr2 (succ-nonzero-ℕ' n) = is-nonzero-succ-ℕ n
+pr1 (succ-nonzero-ℕ' n) = {!!}
+pr2 (succ-nonzero-ℕ' n) = {!!}
 ```
 
 ### The quotient of a nonzero natural number by a divisor
@@ -74,6 +74,6 @@ pr2 (succ-nonzero-ℕ' n) = is-nonzero-succ-ℕ n
 ```agda
 quotient-div-nonzero-ℕ :
   (d : ℕ) (x : nonzero-ℕ) (H : div-ℕ d (pr1 x)) → nonzero-ℕ
-pr1 (quotient-div-nonzero-ℕ d (pair x K) H) = quotient-div-ℕ d x H
-pr2 (quotient-div-nonzero-ℕ d (pair x K) H) = is-nonzero-quotient-div-ℕ H K
+pr1 (quotient-div-nonzero-ℕ d (pair x K) H) = {!!}
+pr2 (quotient-div-nonzero-ℕ d (pair x K) H) = {!!}
 ```

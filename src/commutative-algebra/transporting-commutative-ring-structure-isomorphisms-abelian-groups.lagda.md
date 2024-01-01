@@ -54,111 +54,65 @@ module _
   where
 
   ring-transport-commutative-ring-structure-iso-Ab : Ring l2
-  ring-transport-commutative-ring-structure-iso-Ab =
-    transport-ring-structure-iso-Ab (ring-Commutative-Ring A) B f
+  ring-transport-commutative-ring-structure-iso-Ab = {!!}
 
   one-transport-commutative-ring-structure-iso-Ab : type-Ab B
-  one-transport-commutative-ring-structure-iso-Ab =
-    one-transport-ring-structure-iso-Ab (ring-Commutative-Ring A) B f
+  one-transport-commutative-ring-structure-iso-Ab = {!!}
 
   mul-transport-commutative-ring-structure-iso-Ab :
     (x y : type-Ab B) → type-Ab B
-  mul-transport-commutative-ring-structure-iso-Ab =
-    mul-transport-ring-structure-iso-Ab (ring-Commutative-Ring A) B f
+  mul-transport-commutative-ring-structure-iso-Ab = {!!}
 
   private
-    one = one-transport-commutative-ring-structure-iso-Ab
-    mul = mul-transport-commutative-ring-structure-iso-Ab
-    map-f = map-iso-Ab (ab-Commutative-Ring A) B f
-    map-inv-f = map-inv-iso-Ab (ab-Commutative-Ring A) B f
+    one = {!!}
 
   associative-mul-transport-commutative-ring-structure-iso-Ab :
     (x y z : type-Ab B) → mul (mul x y) z ＝ mul x (mul y z)
-  associative-mul-transport-commutative-ring-structure-iso-Ab =
-    associative-mul-transport-ring-structure-iso-Ab
-      ( ring-Commutative-Ring A)
-      ( B)
-      ( f)
+  associative-mul-transport-commutative-ring-structure-iso-Ab = {!!}
 
   left-unit-law-mul-transport-commutative-ring-structure-iso-Ab :
     (x : type-Ab B) → mul one x ＝ x
-  left-unit-law-mul-transport-commutative-ring-structure-iso-Ab =
-    left-unit-law-mul-transport-ring-structure-iso-Ab
-      ( ring-Commutative-Ring A)
-      ( B)
-      ( f)
+  left-unit-law-mul-transport-commutative-ring-structure-iso-Ab = {!!}
 
   right-unit-law-mul-transport-commutative-ring-structure-iso-Ab :
     (x : type-Ab B) → mul x one ＝ x
-  right-unit-law-mul-transport-commutative-ring-structure-iso-Ab =
-    right-unit-law-mul-transport-ring-structure-iso-Ab
-      ( ring-Commutative-Ring A)
-      ( B)
-      ( f)
+  right-unit-law-mul-transport-commutative-ring-structure-iso-Ab = {!!}
 
   left-distributive-mul-add-transport-commutative-ring-structure-iso-Ab :
     (x y z : type-Ab B) → mul x (add-Ab B y z) ＝ add-Ab B (mul x y) (mul x z)
-  left-distributive-mul-add-transport-commutative-ring-structure-iso-Ab =
-    left-distributive-mul-add-transport-ring-structure-iso-Ab
-      ( ring-Commutative-Ring A)
-      ( B)
-      ( f)
+  left-distributive-mul-add-transport-commutative-ring-structure-iso-Ab = {!!}
 
   right-distributive-mul-add-transport-commutative-ring-structure-iso-Ab :
     (x y z : type-Ab B) → mul (add-Ab B x y) z ＝ add-Ab B (mul x z) (mul y z)
-  right-distributive-mul-add-transport-commutative-ring-structure-iso-Ab =
-    right-distributive-mul-add-transport-ring-structure-iso-Ab
-      ( ring-Commutative-Ring A)
-      ( B)
-      ( f)
+  right-distributive-mul-add-transport-commutative-ring-structure-iso-Ab = {!!}
 
   commutative-mul-transport-commutative-ring-structure-iso-Ab :
     (x y : type-Ab B) → mul x y ＝ mul y x
-  commutative-mul-transport-commutative-ring-structure-iso-Ab x y =
-    ap map-f (commutative-mul-Commutative-Ring A _ _)
+  commutative-mul-transport-commutative-ring-structure-iso-Ab x y = {!!}
 
   transport-commutative-ring-structure-iso-Ab :
     Commutative-Ring l2
-  pr1 transport-commutative-ring-structure-iso-Ab =
-    ring-transport-commutative-ring-structure-iso-Ab
-  pr2 transport-commutative-ring-structure-iso-Ab =
-    commutative-mul-transport-commutative-ring-structure-iso-Ab
+  pr1 transport-commutative-ring-structure-iso-Ab = {!!}
 
   preserves-mul-transport-commutative-ring-structure-iso-Ab :
     preserves-mul-hom-Ab
       ( ring-Commutative-Ring A)
       ( ring-transport-commutative-ring-structure-iso-Ab)
       ( hom-iso-Ab (ab-Commutative-Ring A) B f)
-  preserves-mul-transport-commutative-ring-structure-iso-Ab =
-    preserves-mul-transport-ring-structure-iso-Ab
-      ( ring-Commutative-Ring A)
-      ( B)
-      ( f)
+  preserves-mul-transport-commutative-ring-structure-iso-Ab = {!!}
 
   hom-iso-transport-commutative-ring-structure-iso-Ab :
     hom-Commutative-Ring A transport-commutative-ring-structure-iso-Ab
-  hom-iso-transport-commutative-ring-structure-iso-Ab =
-    hom-iso-transport-ring-structure-iso-Ab
-      ( ring-Commutative-Ring A)
-      ( B)
-      ( f)
+  hom-iso-transport-commutative-ring-structure-iso-Ab = {!!}
 
   is-iso-iso-transport-commutative-ring-structure-iso-Ab :
     is-iso-Commutative-Ring
       ( A)
       ( transport-commutative-ring-structure-iso-Ab)
       ( hom-iso-transport-commutative-ring-structure-iso-Ab)
-  is-iso-iso-transport-commutative-ring-structure-iso-Ab =
-    is-iso-iso-transport-ring-structure-iso-Ab
-      ( ring-Commutative-Ring A)
-      ( B)
-      ( f)
+  is-iso-iso-transport-commutative-ring-structure-iso-Ab = {!!}
 
   iso-transport-commutative-ring-structure-iso-Ab :
     iso-Commutative-Ring A transport-commutative-ring-structure-iso-Ab
-  iso-transport-commutative-ring-structure-iso-Ab =
-    iso-transport-ring-structure-iso-Ab
-      ( ring-Commutative-Ring A)
-      ( B)
-      ( f)
+  iso-transport-commutative-ring-structure-iso-Ab = {!!}
 ```

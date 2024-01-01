@@ -55,13 +55,12 @@ module _
     {l : Level} (P : (B : obj-Category C) → (iso-Category C A B) → UU l) →
     ((B : obj-Category C) (e : iso-Category C A B) → P B e) →
     P A (id-iso-Category C)
-  ev-id-iso-Category = ev-id-iso-Precategory (precategory-Category C)
+  ev-id-iso-Category = {!!}
 
   induction-principle-iso-Category :
     {l : Level} (P : (B : obj-Category C) (e : iso-Category C A B) → UU l) →
     UU (l1 ⊔ l2 ⊔ l)
-  induction-principle-iso-Category =
-    induction-principle-iso-Precategory (precategory-Category C)
+  induction-principle-iso-Category = {!!}
 
   triangle-ev-id-iso-Category :
     {l : Level}
@@ -70,8 +69,7 @@ module _
       ( ev-point (A , id-iso-Category C))
       ( ev-id-iso-Category P)
       ( ev-pair)
-  triangle-ev-id-iso-Category =
-    triangle-ev-id-iso-Precategory (precategory-Category C)
+  triangle-ev-id-iso-Category = {!!}
 ```
 
 ## Properties
@@ -86,20 +84,16 @@ module _
 
   abstract
     is-identity-system-iso-Category : section (ev-id-iso-Category C P)
-    is-identity-system-iso-Category =
-      is-identity-system-is-torsorial-iso-Precategory
-        ( precategory-Category C)
-        ( is-torsorial-iso-Category C A)
-        ( P)
+    is-identity-system-iso-Category = {!!}
 
   ind-iso-Category :
     P A (id-iso-Category C) →
     {B : obj-Category C} (e : iso-Category C A B) → P B e
-  ind-iso-Category p {B} = pr1 is-identity-system-iso-Category p B
+  ind-iso-Category p {B} = {!!}
 
   compute-ind-iso-Category :
     (u : P A (id-iso-Category C)) → ind-iso-Category u (id-iso-Category C) ＝ u
-  compute-ind-iso-Category = pr2 is-identity-system-iso-Category
+  compute-ind-iso-Category = {!!}
 ```
 
 ### The evaluation map `ev-id-iso-Category` is an equivalence
@@ -111,14 +105,9 @@ module _
   where
 
   is-equiv-ev-id-iso-Category : is-equiv (ev-id-iso-Category C P)
-  is-equiv-ev-id-iso-Category =
-    dependent-universal-property-identity-system-is-torsorial
-      ( id-iso-Category C)
-      ( is-torsorial-iso-Category C A)
-      ( P)
+  is-equiv-ev-id-iso-Category = {!!}
 
   is-contr-map-ev-id-iso-Category :
     is-contr-map (ev-id-iso-Category C P)
-  is-contr-map-ev-id-iso-Category =
-    is-contr-map-is-equiv is-equiv-ev-id-iso-Category
+  is-contr-map-ev-id-iso-Category = {!!}
 ```

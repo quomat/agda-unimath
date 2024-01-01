@@ -33,7 +33,5 @@ module _
   where
 
   is-initial-obj-Large-Precategory : UUω
-  is-initial-obj-Large-Precategory =
-    {l2 : Level} (Y : obj-Large-Precategory C l2) →
-    is-contr (hom-Large-Precategory C X Y)
+  is-initial-obj-Large-Precategory = {!!}
 ```

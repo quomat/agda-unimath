@@ -66,34 +66,21 @@ module _
 
   bottom-map-cofork-flattening-lemma-coequalizer :
     Σ A (P ∘ map-cofork f g e ∘ f) → Σ B (P ∘ map-cofork f g e)
-  bottom-map-cofork-flattening-lemma-coequalizer =
-    map-Σ-map-base f (P ∘ map-cofork f g e)
+  bottom-map-cofork-flattening-lemma-coequalizer = {!!}
 
   top-map-cofork-flattening-lemma-coequalizer :
     Σ A (P ∘ map-cofork f g e ∘ f) → Σ B (P ∘ map-cofork f g e)
-  top-map-cofork-flattening-lemma-coequalizer =
-    map-Σ (P ∘ map-cofork f g e) g (λ a → tr P (coherence-cofork f g e a))
+  top-map-cofork-flattening-lemma-coequalizer = {!!}
 
   cofork-flattening-lemma-coequalizer :
     cofork
       ( bottom-map-cofork-flattening-lemma-coequalizer)
       ( top-map-cofork-flattening-lemma-coequalizer)
       ( Σ X P)
-  pr1 cofork-flattening-lemma-coequalizer = map-Σ-map-base (map-cofork f g e) P
-  pr2 cofork-flattening-lemma-coequalizer =
-    coherence-square-maps-map-Σ-map-base P g f
-      ( map-cofork f g e)
-      ( map-cofork f g e)
-      ( coherence-cofork f g e)
+  pr1 cofork-flattening-lemma-coequalizer = {!!}
 
   flattening-lemma-coequalizer-statement : UUω
-  flattening-lemma-coequalizer-statement =
-    ( {l : Level} → dependent-universal-property-coequalizer l f g e) →
-    { l : Level} →
-    universal-property-coequalizer l
-      ( bottom-map-cofork-flattening-lemma-coequalizer)
-      ( top-map-cofork-flattening-lemma-coequalizer)
-      ( cofork-flattening-lemma-coequalizer)
+  flattening-lemma-coequalizer-statement = {!!}
 ```
 
 ## Properties
@@ -123,89 +110,5 @@ module _
   abstract
     flattening-lemma-coequalizer :
       flattening-lemma-coequalizer-statement f g P e
-    flattening-lemma-coequalizer dup-coequalizer =
-      universal-property-coequalizer-universal-property-pushout
-        ( bottom-map-cofork-flattening-lemma-coequalizer f g P e)
-        ( top-map-cofork-flattening-lemma-coequalizer f g P e)
-        ( cofork-flattening-lemma-coequalizer f g P e)
-        ( universal-property-pushout-bottom-universal-property-pushout-top-cube-is-equiv
-          ( vertical-map-span-cocone-cofork
-            ( bottom-map-cofork-flattening-lemma-coequalizer f g P e)
-            ( top-map-cofork-flattening-lemma-coequalizer f g P e))
-          ( horizontal-map-span-cocone-cofork
-            ( bottom-map-cofork-flattening-lemma-coequalizer f g P e)
-            ( top-map-cofork-flattening-lemma-coequalizer f g P e))
-          ( horizontal-map-cocone-flattening-pushout P
-            ( vertical-map-span-cocone-cofork f g)
-            ( horizontal-map-span-cocone-cofork f g)
-            ( cocone-codiagonal-cofork f g e))
-          ( vertical-map-cocone-flattening-pushout P
-            ( vertical-map-span-cocone-cofork f g)
-            ( horizontal-map-span-cocone-cofork f g)
-            ( cocone-codiagonal-cofork f g e))
-          ( vertical-map-span-flattening-pushout P
-            ( vertical-map-span-cocone-cofork f g)
-            ( horizontal-map-span-cocone-cofork f g)
-            ( cocone-codiagonal-cofork f g e))
-          ( horizontal-map-span-flattening-pushout P
-            ( vertical-map-span-cocone-cofork f g)
-            ( horizontal-map-span-cocone-cofork f g)
-            ( cocone-codiagonal-cofork f g e))
-          ( horizontal-map-cocone-flattening-pushout P
-            ( vertical-map-span-cocone-cofork f g)
-            ( horizontal-map-span-cocone-cofork f g)
-            ( cocone-codiagonal-cofork f g e))
-          ( vertical-map-cocone-flattening-pushout P
-            ( vertical-map-span-cocone-cofork f g)
-            ( horizontal-map-span-cocone-cofork f g)
-            ( cocone-codiagonal-cofork f g e))
-          ( map-equiv
-            ( right-distributive-Σ-coprod A A
-              ( ( P) ∘
-                ( horizontal-map-cocone-cofork f g e) ∘
-                ( vertical-map-span-cocone-cofork f g))))
-          ( id)
-          ( id)
-          ( id)
-          ( coherence-square-cocone-flattening-pushout P
-            ( vertical-map-span-cocone-cofork f g)
-            ( horizontal-map-span-cocone-cofork f g)
-            ( cocone-codiagonal-cofork f g e))
-          ( λ where
-            (inl a , t) → refl
-            (inr a , t) → refl)
-          ( λ where
-            (inl a , t) → refl
-            (inr a , t) → refl)
-          ( refl-htpy)
-          ( refl-htpy)
-          ( coherence-square-cocone-cofork
-            ( bottom-map-cofork-flattening-lemma-coequalizer f g P e)
-            ( top-map-cofork-flattening-lemma-coequalizer f g P e)
-            ( cofork-flattening-lemma-coequalizer f g P e))
-          ( λ where
-            (inl a , t) → refl
-            (inr a , t) →
-              ( ap-id
-                ( eq-pair-Σ
-                  ( coherence-cofork f g e a)
-                  ( refl))) ∙
-              ( inv right-unit))
-          ( is-equiv-map-equiv
-            ( right-distributive-Σ-coprod A A
-              ( ( P) ∘
-                ( horizontal-map-cocone-cofork f g e) ∘
-                ( vertical-map-span-cocone-cofork f g))))
-          ( is-equiv-id)
-          ( is-equiv-id)
-          ( is-equiv-id)
-          ( flattening-lemma-pushout P
-            ( vertical-map-span-cocone-cofork f g)
-            ( horizontal-map-span-cocone-cofork f g)
-            ( cocone-codiagonal-cofork f g e)
-            ( dependent-universal-property-pushout-dependent-universal-property-coequalizer
-              ( f)
-              ( g)
-              ( e)
-              ( dup-coequalizer))))
+    flattening-lemma-coequalizer dup-coequalizer = {!!}
 ```

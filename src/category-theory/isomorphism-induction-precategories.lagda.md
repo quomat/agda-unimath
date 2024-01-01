@@ -54,12 +54,12 @@ module _
     {l : Level} (P : (B : obj-Precategory C) → (iso-Precategory C A B) → UU l) →
     ((B : obj-Precategory C) (e : iso-Precategory C A B) → P B e) →
     P A (id-iso-Precategory C)
-  ev-id-iso-Precategory P f = f A (id-iso-Precategory C)
+  ev-id-iso-Precategory P f = {!!}
 
   induction-principle-iso-Precategory :
     {l : Level} (P : (B : obj-Precategory C) → iso-Precategory C A B → UU l) →
     UU (l1 ⊔ l2 ⊔ l)
-  induction-principle-iso-Precategory P = section (ev-id-iso-Precategory P)
+  induction-principle-iso-Precategory P = {!!}
 
   triangle-ev-id-iso-Precategory :
     {l : Level}
@@ -68,7 +68,7 @@ module _
       ( ev-point (A , id-iso-Precategory C))
       ( ev-id-iso-Precategory P)
       ( ev-pair)
-  triangle-ev-id-iso-Precategory P f = refl
+  triangle-ev-id-iso-Precategory P f = {!!}
 ```
 
 ## Properties
@@ -84,8 +84,7 @@ module _
     is-identity-system-is-torsorial-iso-Precategory :
       is-torsorial (iso-Precategory C A) →
       is-identity-system (iso-Precategory C A) A (id-iso-Precategory C)
-    is-identity-system-is-torsorial-iso-Precategory =
-      is-identity-system-is-torsorial A (id-iso-Precategory C)
+    is-identity-system-is-torsorial-iso-Precategory = {!!}
 ```
 
 ### Isomorphism induction implies contractibility of the total space of isomorphisms
@@ -98,6 +97,5 @@ module _
   is-torsorial-equiv-induction-principle-iso-Precategory :
     is-identity-system (iso-Precategory C A) A (id-iso-Precategory C) →
     is-torsorial (iso-Precategory C A)
-  is-torsorial-equiv-induction-principle-iso-Precategory =
-    is-torsorial-is-identity-system A (id-iso-Precategory C)
+  is-torsorial-equiv-induction-principle-iso-Precategory = {!!}
 ```

@@ -47,13 +47,10 @@ module _
 
   ev-suspension :
     {l3 : Level} (Z : UU l3) → (Y → Z) → suspension-structure X Z
-  pr1 (ev-suspension Z h) = h (north-suspension-structure s)
-  pr1 (pr2 (ev-suspension Z h)) = h (south-suspension-structure s)
-  pr2 (pr2 (ev-suspension Z h)) = h ·l meridian-suspension-structure s
+  pr1 (ev-suspension Z h) = {!!}
 
   universal-property-suspension : UUω
-  universal-property-suspension =
-    {l : Level} (Z : UU l) → is-equiv (ev-suspension Z)
+  universal-property-suspension = {!!}
 ```
 
 ### The universal property of the suspension as a pushout
@@ -62,11 +59,7 @@ module _
 universal-property-pushout-suspension :
   (l : Level) {l1 l2 : Level} (X : UU l1) (Y : UU l2)
   (s : suspension-structure X Y) → UU (lsuc l ⊔ l1 ⊔ l2)
-universal-property-pushout-suspension l X Y s =
-  universal-property-pushout l
-    ( const X unit star)
-    ( const X unit star)
-    ( suspension-cocone-suspension-structure s)
+universal-property-pushout-suspension l X Y s = {!!}
 ```
 
 ## Properties
@@ -82,22 +75,12 @@ triangle-ev-suspension :
       ( const X unit star)
       ( suspension-cocone-suspension-structure s))) ~
   ( ev-suspension s Z)
-triangle-ev-suspension (N , S , merid) Z h = refl
+triangle-ev-suspension (N , S , merid) Z h = {!!}
 
 is-equiv-ev-suspension :
   { l1 l2 l3 : Level} {X : UU l1} {Y : UU l2} →
   ( s : suspension-structure X Y) →
   ( up-Y : universal-property-pushout-suspension l3 X Y s) →
   ( Z : UU l3) → is-equiv (ev-suspension s Z)
-is-equiv-ev-suspension {X = X} s up-Y Z =
-  is-equiv-left-map-triangle
-    ( ev-suspension s Z)
-    ( suspension-structure-suspension-cocone)
-    ( cocone-map
-      ( const X unit star)
-      ( const X unit star)
-      ( suspension-cocone-suspension-structure s))
-    ( inv-htpy (triangle-ev-suspension s Z))
-    ( up-Y Z)
-    ( is-equiv-suspension-structure-suspension-cocone)
+is-equiv-ev-suspension {X = X} s up-Y Z = {!!}
 ```

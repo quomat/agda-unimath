@@ -51,12 +51,7 @@ module _
 
   node-rooted-hom-combinator-Directed-Tree :
     node-combinator-Directed-Tree S → node-combinator-Directed-Tree T
-  node-rooted-hom-combinator-Directed-Tree root-combinator-Directed-Tree =
-    root-combinator-Directed-Tree
-  node-rooted-hom-combinator-Directed-Tree
-    ( node-inclusion-combinator-Directed-Tree i x) =
-    node-inclusion-combinator-Directed-Tree i
-      ( node-rooted-hom-Directed-Tree (S i) (T i) (f i) x)
+  node-rooted-hom-combinator-Directed-Tree root-combinator-Directed-Tree = {!!}
 
   edge-rooted-hom-combinator-Directed-Tree :
     (x y : node-combinator-Directed-Tree S) →
@@ -65,37 +60,22 @@ module _
       ( node-rooted-hom-combinator-Directed-Tree x)
       ( node-rooted-hom-combinator-Directed-Tree y)
   edge-rooted-hom-combinator-Directed-Tree ._ ._
-    ( edge-to-root-combinator-Directed-Tree i) =
-    tr
-      ( λ u → edge-combinator-Directed-Tree T u root-combinator-Directed-Tree)
-      ( ap
-        ( node-inclusion-combinator-Directed-Tree i)
-        ( preserves-root-rooted-hom-Directed-Tree (S i) (T i) (f i)))
-      ( edge-to-root-combinator-Directed-Tree i)
-  edge-rooted-hom-combinator-Directed-Tree ._ ._
-    ( edge-inclusion-combinator-Directed-Tree i x y e) =
-    edge-inclusion-combinator-Directed-Tree i
-      ( node-rooted-hom-Directed-Tree (S i) (T i) (f i) x)
-      ( node-rooted-hom-Directed-Tree (S i) (T i) (f i) y)
-      ( edge-rooted-hom-Directed-Tree (S i) (T i) (f i) e)
+    ( edge-to-root-combinator-Directed-Tree i) = {!!}
 
   hom-combinator-Directed-Tree :
     hom-Directed-Tree (combinator-Directed-Tree S) (combinator-Directed-Tree T)
-  pr1 hom-combinator-Directed-Tree = node-rooted-hom-combinator-Directed-Tree
-  pr2 hom-combinator-Directed-Tree = edge-rooted-hom-combinator-Directed-Tree
+  pr1 hom-combinator-Directed-Tree = {!!}
 
   preserves-root-rooted-hom-combinator-Directed-Tree :
     node-rooted-hom-combinator-Directed-Tree root-combinator-Directed-Tree ＝
     root-combinator-Directed-Tree
-  preserves-root-rooted-hom-combinator-Directed-Tree = refl
+  preserves-root-rooted-hom-combinator-Directed-Tree = {!!}
 
   rooted-hom-combinator-Directed-Tree :
     rooted-hom-Directed-Tree
       ( combinator-Directed-Tree S)
       ( combinator-Directed-Tree T)
-  pr1 rooted-hom-combinator-Directed-Tree = hom-combinator-Directed-Tree
-  pr2 rooted-hom-combinator-Directed-Tree =
-    preserves-root-rooted-hom-combinator-Directed-Tree
+  pr1 rooted-hom-combinator-Directed-Tree = {!!}
 ```
 
 ### The action of the combinator is functorial
@@ -110,11 +90,7 @@ module _
   node-id-rooted-hom-combinator-Directed-Tree :
     node-rooted-hom-combinator-Directed-Tree T T
       ( λ i → id-rooted-hom-Directed-Tree (T i)) ~ id
-  node-id-rooted-hom-combinator-Directed-Tree root-combinator-Directed-Tree =
-    refl
-  node-id-rooted-hom-combinator-Directed-Tree
-    ( node-inclusion-combinator-Directed-Tree i x) =
-    refl
+  node-id-rooted-hom-combinator-Directed-Tree root-combinator-Directed-Tree = {!!}
 
   edge-id-rooted-hom-combinator-Directed-Tree :
     (x y : node-combinator-Directed-Tree T) →
@@ -129,9 +105,7 @@ module _
         ( y)
         ( e)) ＝ e
   edge-id-rooted-hom-combinator-Directed-Tree ._ ._
-    ( edge-to-root-combinator-Directed-Tree i) = refl
-  edge-id-rooted-hom-combinator-Directed-Tree ._ ._
-    ( edge-inclusion-combinator-Directed-Tree i x y e) = refl
+    ( edge-to-root-combinator-Directed-Tree i) = {!!}
 
   id-rooted-hom-combinator-Directed-Tree :
     htpy-hom-Directed-Tree
@@ -140,10 +114,7 @@ module _
       ( hom-combinator-Directed-Tree T T
         ( λ i → id-rooted-hom-Directed-Tree (T i)))
       ( id-hom-Directed-Tree (combinator-Directed-Tree T))
-  pr1 id-rooted-hom-combinator-Directed-Tree =
-    node-id-rooted-hom-combinator-Directed-Tree
-  pr2 id-rooted-hom-combinator-Directed-Tree =
-    edge-id-rooted-hom-combinator-Directed-Tree
+  pr1 id-rooted-hom-combinator-Directed-Tree = {!!}
 ```
 
 #### The action of the combinator on morphisms preserves composition
@@ -169,37 +140,7 @@ module _
         ( combinator-Directed-Tree T)
         ( hom-combinator-Directed-Tree S T g)
         ( hom-combinator-Directed-Tree R S f))
-  pr1 comp-rooted-hom-combinator-Directed-Tree root-combinator-Directed-Tree =
-    refl
-  pr1 comp-rooted-hom-combinator-Directed-Tree
-    ( node-inclusion-combinator-Directed-Tree i x) =
-    refl
-  pr2 comp-rooted-hom-combinator-Directed-Tree ._ ._
-    ( edge-to-root-combinator-Directed-Tree i) =
-    eq-is-contr
-      ( is-proof-irrelevant-edge-to-root-Directed-Tree
-        ( combinator-Directed-Tree T)
-        ( node-comp-hom-Directed-Tree
-          ( combinator-Directed-Tree R)
-          ( combinator-Directed-Tree S)
-          ( combinator-Directed-Tree T)
-          ( hom-combinator-Directed-Tree S T g)
-          ( hom-combinator-Directed-Tree R S f)
-          ( node-inclusion-combinator-Directed-Tree i
-            ( root-Directed-Tree (R i))))
-        ( tr
-          ( λ u →
-            edge-combinator-Directed-Tree T u root-combinator-Directed-Tree)
-          ( ap
-            ( node-inclusion-combinator-Directed-Tree i)
-            ( ( preserves-root-rooted-hom-Directed-Tree (S i) (T i) (g i)) ∙
-              ( ap
-                ( node-rooted-hom-Directed-Tree (S i) (T i) (g i))
-                ( preserves-root-rooted-hom-Directed-Tree (R i) (S i) (f i)))))
-          ( edge-to-root-combinator-Directed-Tree i)))
-  pr2 comp-rooted-hom-combinator-Directed-Tree ._ ._
-    ( edge-inclusion-combinator-Directed-Tree i x y e) =
-    refl
+  pr1 comp-rooted-hom-combinator-Directed-Tree root-combinator-Directed-Tree = {!!}
 ```
 
 #### The action of the combinator on morphisms preserves homotopies
@@ -215,12 +156,7 @@ module _
   node-htpy-hom-combinator-Directed-Tree :
     node-rooted-hom-combinator-Directed-Tree S T f ~
     node-rooted-hom-combinator-Directed-Tree S T g
-  node-htpy-hom-combinator-Directed-Tree root-combinator-Directed-Tree = refl
-  node-htpy-hom-combinator-Directed-Tree
-    ( node-inclusion-combinator-Directed-Tree i x) =
-    ap
-      ( node-inclusion-combinator-Directed-Tree i)
-      ( node-htpy-rooted-hom-Directed-Tree (S i) (T i) (f i) (g i) (H i) x)
+  node-htpy-hom-combinator-Directed-Tree root-combinator-Directed-Tree = {!!}
 
   edge-htpy-hom-combinator-Directed-Tree :
     ( x y : node-combinator-Directed-Tree S)
@@ -232,16 +168,7 @@ module _
       ( edge-rooted-hom-combinator-Directed-Tree S T f x y e) ＝
     edge-rooted-hom-combinator-Directed-Tree S T g x y e
   edge-htpy-hom-combinator-Directed-Tree ._ ._
-    ( edge-to-root-combinator-Directed-Tree i) =
-    eq-edge-to-root-Directed-Tree (combinator-Directed-Tree T) _ _ _
-  edge-htpy-hom-combinator-Directed-Tree ._ ._
-    ( edge-inclusion-combinator-Directed-Tree i x y e) =
-    binary-tr-ap
-      ( edge-combinator-Directed-Tree T)
-      ( edge-inclusion-combinator-Directed-Tree i)
-      ( node-htpy-rooted-hom-Directed-Tree (S i) (T i) (f i) (g i) (H i) x)
-      ( node-htpy-rooted-hom-Directed-Tree (S i) (T i) (f i) (g i) (H i) y)
-      ( edge-htpy-rooted-hom-Directed-Tree (S i) (T i) (f i) (g i) (H i) x y e)
+    ( edge-to-root-combinator-Directed-Tree i) = {!!}
 
   htpy-hom-combinator-Directed-Tree :
     htpy-hom-Directed-Tree
@@ -249,10 +176,7 @@ module _
       ( combinator-Directed-Tree T)
       ( hom-combinator-Directed-Tree S T f)
       ( hom-combinator-Directed-Tree S T g)
-  pr1 htpy-hom-combinator-Directed-Tree =
-    node-htpy-hom-combinator-Directed-Tree
-  pr2 htpy-hom-combinator-Directed-Tree =
-    edge-htpy-hom-combinator-Directed-Tree
+  pr1 htpy-hom-combinator-Directed-Tree = {!!}
 ```
 
 ### The action of the combinator on families of equivalences of directed trees
@@ -268,25 +192,15 @@ module _
     rooted-hom-Directed-Tree
       ( combinator-Directed-Tree S)
       ( combinator-Directed-Tree T)
-  rooted-hom-equiv-combinator-Directed-Tree =
-    rooted-hom-combinator-Directed-Tree S T
-      ( λ i → rooted-hom-equiv-Directed-Tree (S i) (T i) (f i))
+  rooted-hom-equiv-combinator-Directed-Tree = {!!}
 
   hom-equiv-combinator-Directed-Tree :
     hom-Directed-Tree (combinator-Directed-Tree S) (combinator-Directed-Tree T)
-  hom-equiv-combinator-Directed-Tree =
-    hom-rooted-hom-Directed-Tree
-      ( combinator-Directed-Tree S)
-      ( combinator-Directed-Tree T)
-      ( rooted-hom-equiv-combinator-Directed-Tree)
+  hom-equiv-combinator-Directed-Tree = {!!}
 
   node-equiv-combinator-Directed-Tree :
     node-combinator-Directed-Tree S → node-combinator-Directed-Tree T
-  node-equiv-combinator-Directed-Tree =
-    node-hom-Directed-Tree
-      ( combinator-Directed-Tree S)
-      ( combinator-Directed-Tree T)
-      ( hom-equiv-combinator-Directed-Tree)
+  node-equiv-combinator-Directed-Tree = {!!}
 
   edge-equiv-combinator-Directed-Tree :
     {x y : node-combinator-Directed-Tree S} →
@@ -294,9 +208,5 @@ module _
     edge-combinator-Directed-Tree T
       ( node-equiv-combinator-Directed-Tree x)
       ( node-equiv-combinator-Directed-Tree y)
-  edge-equiv-combinator-Directed-Tree =
-    edge-hom-Directed-Tree
-      ( combinator-Directed-Tree S)
-      ( combinator-Directed-Tree T)
-      ( hom-equiv-combinator-Directed-Tree)
+  edge-equiv-combinator-Directed-Tree = {!!}
 ```

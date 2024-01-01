@@ -47,22 +47,18 @@ kolakoski-helper-inductive :
   ((i : ℕ) → i ≤-ℕ n → bool × (bool × (Σ ℕ (λ j → j ≤-ℕ i)))) →
   bool × (bool × (Σ ℕ (λ j → j ≤-ℕ (succ-ℕ n))))
 kolakoski-helper-inductive n f with f n (refl-leq-ℕ n)
-... | b , false , i , H = b , true , i , preserves-leq-succ-ℕ i n H
+... | b , false , i , H = {!!}
 ... | b , true , i , H with f i H
-... | true , true , j , K = neg-bool b , true , succ-ℕ i , H
-... | true , false , j , K = neg-bool b , false , succ-ℕ i , H
-... | false , true , j , K = neg-bool b , false , succ-ℕ i , H
-... | false , false , j , K = neg-bool b , true , succ-ℕ i , H
+... | true , true , j , K = {!!}
+... | true , false , j , K = {!!}
+... | false , true , j , K = {!!}
+... | false , false , j , K = {!!}
 
 kolakoski-helper : (n : ℕ) → bool × (bool × Σ ℕ (λ i → i ≤-ℕ n))
-kolakoski-helper =
-  strong-ind-ℕ
-    ( λ n → bool × (bool × Σ ℕ (λ j → j ≤-ℕ n)))
-    ( false , true , 0 , refl-leq-ℕ 0)
-    ( λ n f → kolakoski-helper-inductive n f)
+kolakoski-helper = {!!}
 
 kolakoski : ℕ → ℕ
 kolakoski n with pr1 (kolakoski-helper n)
-... | true = 2
-... | false = 1
+... | true = {!!}
+... | false = {!!}
 ```

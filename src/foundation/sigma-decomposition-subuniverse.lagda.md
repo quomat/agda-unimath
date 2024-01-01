@@ -38,10 +38,7 @@ indexed over `X`, equipped with an equivalence
 is-in-subuniverse-Σ-Decomposition :
   {l1 l2 l3 : Level} (P : subuniverse l1 l2) {A : UU l3} →
   Relaxed-Σ-Decomposition l1 l1 A → UU (l1 ⊔ l2)
-is-in-subuniverse-Σ-Decomposition P D =
-  ( is-in-subuniverse P (indexing-type-Relaxed-Σ-Decomposition D)) ×
-  ( ( x : indexing-type-Relaxed-Σ-Decomposition D) →
-    ( is-in-subuniverse P (cotype-Relaxed-Σ-Decomposition D x)))
+is-in-subuniverse-Σ-Decomposition P D = {!!}
 ```
 
 ### Σ-decompositions in a subuniverse
@@ -50,14 +47,7 @@ is-in-subuniverse-Σ-Decomposition P D =
 Σ-Decomposition-Subuniverse :
   {l1 l2 : Level} (P : subuniverse l1 l2) →
   type-subuniverse P → UU (lsuc l1 ⊔ l2)
-Σ-Decomposition-Subuniverse P A =
-  Σ ( type-subuniverse P)
-    ( λ X →
-      Σ ( fam-subuniverse P (inclusion-subuniverse P X))
-        ( λ Y →
-          inclusion-subuniverse P A ≃
-          Σ ( inclusion-subuniverse P X)
-            ( λ x → inclusion-subuniverse P (Y x))))
+Σ-Decomposition-Subuniverse P A = {!!}
 
 module _
   {l1 l2 : Level} (P : subuniverse l1 l2) (A : type-subuniverse P)
@@ -65,38 +55,33 @@ module _
   where
 
   subuniverse-indexing-type-Σ-Decomposition-Subuniverse : type-subuniverse P
-  subuniverse-indexing-type-Σ-Decomposition-Subuniverse = pr1 D
+  subuniverse-indexing-type-Σ-Decomposition-Subuniverse = {!!}
 
   indexing-type-Σ-Decomposition-Subuniverse : UU l1
-  indexing-type-Σ-Decomposition-Subuniverse =
-    inclusion-subuniverse P
-      subuniverse-indexing-type-Σ-Decomposition-Subuniverse
+  indexing-type-Σ-Decomposition-Subuniverse = {!!}
 
   is-in-subuniverse-indexing-type-Σ-Decomposition-Subuniverse :
     type-Prop (P indexing-type-Σ-Decomposition-Subuniverse)
-  is-in-subuniverse-indexing-type-Σ-Decomposition-Subuniverse =
-    pr2 subuniverse-indexing-type-Σ-Decomposition-Subuniverse
+  is-in-subuniverse-indexing-type-Σ-Decomposition-Subuniverse = {!!}
 
   subuniverse-cotype-Σ-Decomposition-Subuniverse :
     fam-subuniverse P indexing-type-Σ-Decomposition-Subuniverse
-  subuniverse-cotype-Σ-Decomposition-Subuniverse = pr1 (pr2 D)
+  subuniverse-cotype-Σ-Decomposition-Subuniverse = {!!}
 
   cotype-Σ-Decomposition-Subuniverse :
     (indexing-type-Σ-Decomposition-Subuniverse → UU l1)
-  cotype-Σ-Decomposition-Subuniverse X =
-    inclusion-subuniverse P (subuniverse-cotype-Σ-Decomposition-Subuniverse X)
+  cotype-Σ-Decomposition-Subuniverse X = {!!}
 
   is-in-subuniverse-cotype-Σ-Decomposition-Subuniverse :
     ((x : indexing-type-Σ-Decomposition-Subuniverse) →
     type-Prop (P (cotype-Σ-Decomposition-Subuniverse x)))
-  is-in-subuniverse-cotype-Σ-Decomposition-Subuniverse x =
-    pr2 (subuniverse-cotype-Σ-Decomposition-Subuniverse x)
+  is-in-subuniverse-cotype-Σ-Decomposition-Subuniverse x = {!!}
 
   matching-correspondence-Σ-Decomposition-Subuniverse :
     inclusion-subuniverse P A ≃
     Σ ( indexing-type-Σ-Decomposition-Subuniverse)
       ( λ x → cotype-Σ-Decomposition-Subuniverse x)
-  matching-correspondence-Σ-Decomposition-Subuniverse = pr2 (pr2 D)
+  matching-correspondence-Σ-Decomposition-Subuniverse = {!!}
 ```
 
 ## Properties
@@ -109,33 +94,20 @@ map-equiv-total-is-in-subuniverse-Σ-Decomposition :
   Σ-Decomposition-Subuniverse P A →
   Σ ( Relaxed-Σ-Decomposition l1 l1 (inclusion-subuniverse P A))
     ( is-in-subuniverse-Σ-Decomposition P)
-map-equiv-total-is-in-subuniverse-Σ-Decomposition P A D =
-  ( indexing-type-Σ-Decomposition-Subuniverse P A D ,
-    ( cotype-Σ-Decomposition-Subuniverse P A D ,
-      matching-correspondence-Σ-Decomposition-Subuniverse P A D)) ,
-  ( is-in-subuniverse-indexing-type-Σ-Decomposition-Subuniverse P A D ,
-    is-in-subuniverse-cotype-Σ-Decomposition-Subuniverse P A D)
+map-equiv-total-is-in-subuniverse-Σ-Decomposition P A D = {!!}
 
 map-inv-equiv-Relaxed-Σ-Decomposition-Σ-Decomposition-Subuniverse :
   {l1 l2 : Level} (P : subuniverse l1 l2) (A : type-subuniverse P) →
   Σ ( Relaxed-Σ-Decomposition l1 l1 (inclusion-subuniverse P A))
     ( is-in-subuniverse-Σ-Decomposition P) →
   Σ-Decomposition-Subuniverse P A
-map-inv-equiv-Relaxed-Σ-Decomposition-Σ-Decomposition-Subuniverse P A X =
-  ( ( indexing-type-Relaxed-Σ-Decomposition (pr1 X) , (pr1 (pr2 X))) ,
-    ( (λ x → cotype-Relaxed-Σ-Decomposition (pr1 X) x , pr2 (pr2 X) x) ,
-      matching-correspondence-Relaxed-Σ-Decomposition (pr1 X)))
+map-inv-equiv-Relaxed-Σ-Decomposition-Σ-Decomposition-Subuniverse P A X = {!!}
 
 equiv-total-is-in-subuniverse-Σ-Decomposition :
   {l1 l2 : Level} (P : subuniverse l1 l2) (A : type-subuniverse P) →
   ( Σ-Decomposition-Subuniverse P A) ≃
   ( Σ ( Relaxed-Σ-Decomposition l1 l1 (inclusion-subuniverse P A))
       ( is-in-subuniverse-Σ-Decomposition P))
-pr1 (equiv-total-is-in-subuniverse-Σ-Decomposition P A) =
-  map-equiv-total-is-in-subuniverse-Σ-Decomposition P A
-pr2 (equiv-total-is-in-subuniverse-Σ-Decomposition P A) =
-  is-equiv-is-invertible
-    ( map-inv-equiv-Relaxed-Σ-Decomposition-Σ-Decomposition-Subuniverse P A)
-    ( refl-htpy)
-    ( refl-htpy)
+pr1 (equiv-total-is-in-subuniverse-Σ-Decomposition P A) = {!!}
+pr2 (equiv-total-is-in-subuniverse-Σ-Decomposition P A) = {!!}
 ```

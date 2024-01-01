@@ -34,19 +34,13 @@ module _
   where
 
   is-suplattice-Poset-Prop : Prop (l1 ⊔ l2 ⊔ lsuc l3)
-  is-suplattice-Poset-Prop =
-    Π-Prop
-      (UU l3)
-      (λ I →
-        Π-Prop
-          ( I → type-Poset P)
-          ( λ f → has-least-upper-bound-family-of-elements-Poset-Prop P f))
+  is-suplattice-Poset-Prop = {!!}
 
   is-suplattice-Poset : UU (l1 ⊔ l2 ⊔ lsuc l3)
-  is-suplattice-Poset = type-Prop is-suplattice-Poset-Prop
+  is-suplattice-Poset = {!!}
 
   is-prop-suplattice-Poset : is-prop is-suplattice-Poset
-  is-prop-suplattice-Poset = is-prop-type-Prop is-suplattice-Poset-Prop
+  is-prop-suplattice-Poset = {!!}
 
 module _
   {l1 l2 l3 : Level} (P : Poset l1 l2) (H : is-suplattice-Poset l3 P)
@@ -54,75 +48,68 @@ module _
 
   sup-is-suplattice-Poset :
     {I : UU l3} → (I → type-Poset P) → type-Poset P
-  sup-is-suplattice-Poset {I} x = pr1 (H I x)
+  sup-is-suplattice-Poset {I} x = {!!}
 
   is-least-upper-bound-sup-is-suplattice-Poset :
     {I : UU l3} (x : I → type-Poset P) →
     is-least-upper-bound-family-of-elements-Poset P x
       ( sup-is-suplattice-Poset x)
-  is-least-upper-bound-sup-is-suplattice-Poset {I} x = pr2 (H I x)
+  is-least-upper-bound-sup-is-suplattice-Poset {I} x = {!!}
 ```
 
 ### `l`-Suplattices
 
 ```agda
 Suplattice : (l1 l2 l3 : Level) → UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-Suplattice l1 l2 l3 = Σ (Poset l1 l2) (λ P → is-suplattice-Poset l3 P)
+Suplattice l1 l2 l3 = {!!}
 
 module _
   {l1 l2 l3 : Level} (A : Suplattice l1 l2 l3)
   where
 
   poset-Suplattice : Poset l1 l2
-  poset-Suplattice = pr1 A
+  poset-Suplattice = {!!}
 
   type-Suplattice : UU l1
-  type-Suplattice = type-Poset poset-Suplattice
+  type-Suplattice = {!!}
 
   leq-Suplattice-Prop : (x y : type-Suplattice) → Prop l2
-  leq-Suplattice-Prop = leq-Poset-Prop poset-Suplattice
+  leq-Suplattice-Prop = {!!}
 
   leq-Suplattice : (x y : type-Suplattice) → UU l2
-  leq-Suplattice = leq-Poset poset-Suplattice
+  leq-Suplattice = {!!}
 
   is-prop-leq-Suplattice :
     (x y : type-Suplattice) → is-prop (leq-Suplattice x y)
-  is-prop-leq-Suplattice = is-prop-leq-Poset poset-Suplattice
+  is-prop-leq-Suplattice = {!!}
 
   refl-leq-Suplattice :
     (x : type-Suplattice) → leq-Suplattice x x
-  refl-leq-Suplattice = refl-leq-Poset poset-Suplattice
+  refl-leq-Suplattice = {!!}
 
   antisymmetric-leq-Suplattice : is-antisymmetric leq-Suplattice
-  antisymmetric-leq-Suplattice =
-    antisymmetric-leq-Poset poset-Suplattice
+  antisymmetric-leq-Suplattice = {!!}
 
   transitive-leq-Suplattice : is-transitive leq-Suplattice
-  transitive-leq-Suplattice = transitive-leq-Poset poset-Suplattice
+  transitive-leq-Suplattice = {!!}
 
   is-set-type-Suplattice : is-set type-Suplattice
-  is-set-type-Suplattice = is-set-type-Poset poset-Suplattice
+  is-set-type-Suplattice = {!!}
 
   set-Suplattice : Set l1
-  set-Suplattice = set-Poset poset-Suplattice
+  set-Suplattice = {!!}
 
   is-suplattice-Suplattice :
     is-suplattice-Poset l3 poset-Suplattice
-  is-suplattice-Suplattice = pr2 A
+  is-suplattice-Suplattice = {!!}
 
   sup-Suplattice :
     {I : UU l3} → (I → type-Suplattice) → type-Suplattice
-  sup-Suplattice =
-    sup-is-suplattice-Poset
-      ( poset-Suplattice)
-      ( is-suplattice-Suplattice)
+  sup-Suplattice = {!!}
 
   is-least-upper-bound-sup-Suplattice :
     {I : UU l3} (x : I → type-Suplattice) →
     is-least-upper-bound-family-of-elements-Poset poset-Suplattice x
       ( sup-Suplattice x)
-  is-least-upper-bound-sup-Suplattice =
-    is-least-upper-bound-sup-is-suplattice-Poset
-      ( poset-Suplattice)
-      ( is-suplattice-Suplattice)
+  is-least-upper-bound-sup-Suplattice = {!!}
 ```

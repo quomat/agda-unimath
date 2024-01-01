@@ -30,11 +30,7 @@ inequality relations from the standard finite types.
 
 ```agda
 leq-count : {l : Level} {X : UU l} → count X → X → X → UU lzero
-leq-count e x y =
-  leq-Fin
-    ( number-of-elements-count e)
-    ( map-inv-equiv-count e x)
-    ( map-inv-equiv-count e y)
+leq-count e x y = {!!}
 ```
 
 ## Properties
@@ -42,49 +38,31 @@ leq-count e x y =
 ```agda
 refl-leq-count :
   {l : Level} {X : UU l} (e : count X) (x : X) → leq-count e x x
-refl-leq-count e x =
-  refl-leq-Fin (number-of-elements-count e) (map-inv-equiv-count e x)
+refl-leq-count e x = {!!}
 
 antisymmetric-leq-count :
   {l : Level} {X : UU l} (e : count X) {x y : X} →
   leq-count e x y → leq-count e y x → Id x y
-antisymmetric-leq-count e H K =
-  is-injective-map-inv-equiv
-    ( equiv-count e)
-    ( antisymmetric-leq-Fin (number-of-elements-count e) _ _ H K)
+antisymmetric-leq-count e H K = {!!}
 
 transitive-leq-count :
   {l : Level} {X : UU l} (e : count X) {x y z : X} →
   leq-count e y z → leq-count e x y → leq-count e x z
-transitive-leq-count (pair k e) {x} {y} {z} =
-  transitive-leq-Fin k
-    ( map-inv-equiv e x)
-    ( map-inv-equiv e y)
-    ( map-inv-equiv-count (pair k e) z)
+transitive-leq-count (pair k e) {x} {y} {z} = {!!}
 
 preserves-leq-equiv-count :
   {l : Level} {X : UU l} (e : count X)
   {x y : Fin (number-of-elements-count e)} →
   leq-Fin (number-of-elements-count e) x y →
   leq-count e (map-equiv-count e x) (map-equiv-count e y)
-preserves-leq-equiv-count e {x} {y} H =
-  concatenate-eq-leq-eq-Fin
-    ( number-of-elements-count e)
-    ( is-retraction-map-inv-equiv (equiv-count e) x)
-    ( H)
-    ( inv (is-retraction-map-inv-equiv (equiv-count e) y))
+preserves-leq-equiv-count e {x} {y} H = {!!}
 
 reflects-leq-equiv-count :
   {l : Level} {X : UU l} (e : count X)
   {x y : Fin (number-of-elements-count e)} →
   leq-count e (map-equiv-count e x) (map-equiv-count e y) →
   leq-Fin (number-of-elements-count e) x y
-reflects-leq-equiv-count e {x} {y} H =
-  concatenate-eq-leq-eq-Fin
-    ( number-of-elements-count e)
-    ( inv (is-retraction-map-inv-equiv (equiv-count e) x))
-    ( H)
-    ( is-retraction-map-inv-equiv (equiv-count e) y)
+reflects-leq-equiv-count e {x} {y} H = {!!}
 
 transpose-leq-equiv-count :
   {l : Level} {X : UU l} (e : count X) →
@@ -92,22 +70,12 @@ transpose-leq-equiv-count :
   leq-Fin
     ( number-of-elements-count e) x (map-inv-equiv-count e y) →
   leq-count e (map-equiv-count e x) y
-transpose-leq-equiv-count e {x} {y} H =
-  concatenate-eq-leq-eq-Fin
-    ( number-of-elements-count e)
-    ( is-retraction-map-inv-equiv (equiv-count e) x)
-    ( H)
-    ( refl)
+transpose-leq-equiv-count e {x} {y} H = {!!}
 
 transpose-leq-equiv-count' :
   {l : Level} {X : UU l} (e : count X) →
   {x : X} {y : Fin (number-of-elements-count e)} →
   leq-Fin (number-of-elements-count e) (map-inv-equiv-count e x) y →
   leq-count e x (map-equiv-count e y)
-transpose-leq-equiv-count' e {x} {y} H =
-  concatenate-eq-leq-eq-Fin
-    ( number-of-elements-count e)
-    ( refl)
-    ( H)
-    ( inv (is-retraction-map-inv-equiv (equiv-count e) y))
+transpose-leq-equiv-count' e {x} {y} H = {!!}
 ```

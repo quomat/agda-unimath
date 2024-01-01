@@ -44,35 +44,29 @@ module _
   where
 
   preserves-root-hom-directed-tree-Prop : hom-Directed-Tree S T → Prop l3
-  preserves-root-hom-directed-tree-Prop f =
-    is-root-directed-tree-Prop T
-      ( node-hom-Directed-Tree S T f (root-Directed-Tree S))
+  preserves-root-hom-directed-tree-Prop f = {!!}
 
   preserves-root-hom-Directed-Tree :
     hom-Directed-Tree S T → UU l3
-  preserves-root-hom-Directed-Tree f =
-    type-Prop (preserves-root-hom-directed-tree-Prop f)
+  preserves-root-hom-Directed-Tree f = {!!}
 
   is-prop-preserves-root-hom-Directed-Tree :
     (f : hom-Directed-Tree S T) → is-prop (preserves-root-hom-Directed-Tree f)
-  is-prop-preserves-root-hom-Directed-Tree f =
-    is-prop-type-Prop (preserves-root-hom-directed-tree-Prop f)
+  is-prop-preserves-root-hom-Directed-Tree f = {!!}
 
   rooted-hom-Directed-Tree : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  rooted-hom-Directed-Tree =
-    Σ (hom-Directed-Tree S T) preserves-root-hom-Directed-Tree
+  rooted-hom-Directed-Tree = {!!}
 
   module _
     (f : rooted-hom-Directed-Tree)
     where
 
     hom-rooted-hom-Directed-Tree : hom-Directed-Tree S T
-    hom-rooted-hom-Directed-Tree = pr1 f
+    hom-rooted-hom-Directed-Tree = {!!}
 
     node-rooted-hom-Directed-Tree :
       node-Directed-Tree S → node-Directed-Tree T
-    node-rooted-hom-Directed-Tree =
-      node-hom-Directed-Tree S T hom-rooted-hom-Directed-Tree
+    node-rooted-hom-Directed-Tree = {!!}
 
     edge-rooted-hom-Directed-Tree :
       {x y : node-Directed-Tree S} →
@@ -80,8 +74,7 @@ module _
       edge-Directed-Tree T
         ( node-rooted-hom-Directed-Tree x)
         ( node-rooted-hom-Directed-Tree y)
-    edge-rooted-hom-Directed-Tree =
-      edge-hom-Directed-Tree S T hom-rooted-hom-Directed-Tree
+    edge-rooted-hom-Directed-Tree = {!!}
 
     walk-rooted-hom-Directed-Tree :
       {x y : node-Directed-Tree S} →
@@ -89,28 +82,21 @@ module _
       walk-Directed-Tree T
         ( node-rooted-hom-Directed-Tree x)
         ( node-rooted-hom-Directed-Tree y)
-    walk-rooted-hom-Directed-Tree =
-      walk-hom-Directed-Tree S T hom-rooted-hom-Directed-Tree
+    walk-rooted-hom-Directed-Tree = {!!}
 
     direct-predecessor-rooted-hom-Directed-Tree :
       (x : node-Directed-Tree S) →
       direct-predecessor-Directed-Tree S x →
       direct-predecessor-Directed-Tree T (node-rooted-hom-Directed-Tree x)
-    direct-predecessor-rooted-hom-Directed-Tree =
-      direct-predecessor-hom-Directed-Tree S T hom-rooted-hom-Directed-Tree
+    direct-predecessor-rooted-hom-Directed-Tree = {!!}
 
     preserves-root-rooted-hom-Directed-Tree :
       preserves-root-hom-Directed-Tree hom-rooted-hom-Directed-Tree
-    preserves-root-rooted-hom-Directed-Tree = pr2 f
+    preserves-root-rooted-hom-Directed-Tree = {!!}
 
     base-rooted-hom-Directed-Tree :
       base-Directed-Tree S → base-Directed-Tree T
-    base-rooted-hom-Directed-Tree (x , e) =
-      node-rooted-hom-Directed-Tree x ,
-      tr
-        ( edge-Directed-Tree T (node-rooted-hom-Directed-Tree x))
-        ( inv preserves-root-rooted-hom-Directed-Tree)
-        ( edge-rooted-hom-Directed-Tree e)
+    base-rooted-hom-Directed-Tree (x , e) = {!!}
 ```
 
 ### The identity rooted morphism of directed trees
@@ -118,8 +104,8 @@ module _
 ```agda
 id-rooted-hom-Directed-Tree :
   {l1 l2 : Level} (T : Directed-Tree l1 l2) → rooted-hom-Directed-Tree T T
-pr1 (id-rooted-hom-Directed-Tree T) = id-hom-Directed-Tree T
-pr2 (id-rooted-hom-Directed-Tree T) = refl
+pr1 (id-rooted-hom-Directed-Tree T) = {!!}
+pr2 (id-rooted-hom-Directed-Tree T) = {!!}
 ```
 
 ### Composition of rooted morphisms of directed trees
@@ -134,24 +120,15 @@ module _
 
   hom-comp-rooted-hom-Directed-Tree :
     hom-Directed-Tree R T
-  hom-comp-rooted-hom-Directed-Tree =
-    comp-hom-Directed-Tree R S T
-      ( hom-rooted-hom-Directed-Tree S T g)
-      ( hom-rooted-hom-Directed-Tree R S f)
+  hom-comp-rooted-hom-Directed-Tree = {!!}
 
   preserves-root-comp-rooted-hom-Directed-Tree :
     preserves-root-hom-Directed-Tree R T hom-comp-rooted-hom-Directed-Tree
-  preserves-root-comp-rooted-hom-Directed-Tree =
-    ( preserves-root-rooted-hom-Directed-Tree S T g) ∙
-    ( ap
-      ( node-rooted-hom-Directed-Tree S T g)
-      ( preserves-root-rooted-hom-Directed-Tree R S f))
+  preserves-root-comp-rooted-hom-Directed-Tree = {!!}
 
   comp-rooted-hom-Directed-Tree :
     rooted-hom-Directed-Tree R T
-  pr1 comp-rooted-hom-Directed-Tree = hom-comp-rooted-hom-Directed-Tree
-  pr2 comp-rooted-hom-Directed-Tree =
-    preserves-root-comp-rooted-hom-Directed-Tree
+  pr1 comp-rooted-hom-Directed-Tree = {!!}
 ```
 
 ### Homotopies of rooted morphisms of directed trees
@@ -163,16 +140,12 @@ module _
 
   htpy-rooted-hom-Directed-Tree :
     (f g : rooted-hom-Directed-Tree S T) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  htpy-rooted-hom-Directed-Tree f g =
-    htpy-hom-Directed-Tree S T
-      ( hom-rooted-hom-Directed-Tree S T f)
-      ( hom-rooted-hom-Directed-Tree S T g)
+  htpy-rooted-hom-Directed-Tree f g = {!!}
 
   refl-htpy-rooted-hom-Directed-Tree :
     (f : rooted-hom-Directed-Tree S T) →
     htpy-rooted-hom-Directed-Tree f f
-  refl-htpy-rooted-hom-Directed-Tree f =
-    refl-htpy-hom-Directed-Tree S T (hom-rooted-hom-Directed-Tree S T f)
+  refl-htpy-rooted-hom-Directed-Tree f = {!!}
 
   module _
     (f g : rooted-hom-Directed-Tree S T)
@@ -181,11 +154,7 @@ module _
 
     node-htpy-rooted-hom-Directed-Tree :
       node-rooted-hom-Directed-Tree S T f ~ node-rooted-hom-Directed-Tree S T g
-    node-htpy-rooted-hom-Directed-Tree =
-      node-htpy-hom-Directed-Tree S T
-        ( hom-rooted-hom-Directed-Tree S T f)
-        ( hom-rooted-hom-Directed-Tree S T g)
-        ( H)
+    node-htpy-rooted-hom-Directed-Tree = {!!}
 
     edge-htpy-rooted-hom-Directed-Tree :
       ( x y : node-Directed-Tree S) (e : edge-Directed-Tree S x y) →
@@ -195,11 +164,7 @@ module _
         ( node-htpy-rooted-hom-Directed-Tree y)
         ( edge-rooted-hom-Directed-Tree S T f e) ＝
       edge-rooted-hom-Directed-Tree S T g e
-    edge-htpy-rooted-hom-Directed-Tree =
-      edge-htpy-hom-Directed-Tree S T
-        ( hom-rooted-hom-Directed-Tree S T f)
-        ( hom-rooted-hom-Directed-Tree S T g)
-        ( H)
+    edge-htpy-rooted-hom-Directed-Tree = {!!}
 
     direct-predecessor-htpy-rooted-hom-Directed-Tree :
       ( x : node-Directed-Tree S) →
@@ -210,11 +175,7 @@ module _
               ( node-htpy-rooted-hom-Directed-Tree x))) ∘
         ( direct-predecessor-rooted-hom-Directed-Tree S T f x)) ~
       ( direct-predecessor-rooted-hom-Directed-Tree S T g x)
-    direct-predecessor-htpy-rooted-hom-Directed-Tree =
-      direct-predecessor-htpy-hom-Directed-Tree S T
-        ( hom-rooted-hom-Directed-Tree S T f)
-        ( hom-rooted-hom-Directed-Tree S T g)
-        ( H)
+    direct-predecessor-htpy-rooted-hom-Directed-Tree = {!!}
 ```
 
 ## Properties
@@ -230,31 +191,19 @@ module _
   extensionality-rooted-hom-Directed-Tree :
     (g : rooted-hom-Directed-Tree S T) →
     (f ＝ g) ≃ htpy-rooted-hom-Directed-Tree S T f g
-  extensionality-rooted-hom-Directed-Tree =
-    extensionality-type-subtype
-      ( preserves-root-hom-directed-tree-Prop S T)
-      ( preserves-root-rooted-hom-Directed-Tree S T f)
-      ( refl-htpy-rooted-hom-Directed-Tree S T f)
-      ( extensionality-hom-Directed-Tree S T
-        ( hom-rooted-hom-Directed-Tree S T f))
+  extensionality-rooted-hom-Directed-Tree = {!!}
 
   htpy-eq-rooted-hom-Directed-Tree :
     (g : rooted-hom-Directed-Tree S T) →
     (f ＝ g) → htpy-rooted-hom-Directed-Tree S T f g
-  htpy-eq-rooted-hom-Directed-Tree g =
-    map-equiv (extensionality-rooted-hom-Directed-Tree g)
+  htpy-eq-rooted-hom-Directed-Tree g = {!!}
 
   eq-htpy-rooted-hom-Directed-Tree :
     (g : rooted-hom-Directed-Tree S T) →
     htpy-rooted-hom-Directed-Tree S T f g → f ＝ g
-  eq-htpy-rooted-hom-Directed-Tree g =
-    map-inv-equiv (extensionality-rooted-hom-Directed-Tree g)
+  eq-htpy-rooted-hom-Directed-Tree g = {!!}
 
   is-torsorial-htpy-rooted-hom-Directed-Tree :
     is-torsorial (htpy-rooted-hom-Directed-Tree S T f)
-  is-torsorial-htpy-rooted-hom-Directed-Tree =
-    is-contr-equiv'
-      ( Σ (rooted-hom-Directed-Tree S T) (λ g → f ＝ g))
-      ( equiv-tot extensionality-rooted-hom-Directed-Tree)
-      ( is-torsorial-path f)
+  is-torsorial-htpy-rooted-hom-Directed-Tree = {!!}
 ```

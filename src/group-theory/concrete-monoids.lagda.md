@@ -33,21 +33,21 @@ analogue of [monoids](group-theory.monoids.md). We define it as a
 
 ```agda
 is-concrete-monoid-Category : {l1 l2 : Level} → Category l1 l2 → UU l1
-is-concrete-monoid-Category C = obj-Category C × is-0-connected (obj-Category C)
+is-concrete-monoid-Category C = {!!}
 
 Concrete-Monoid : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Concrete-Monoid l1 l2 = Σ (Category l1 l2) (is-concrete-monoid-Category)
+Concrete-Monoid l1 l2 = {!!}
 
 module _
   {l1 l2 : Level} (M : Concrete-Monoid l1 l2)
   where
 
   category-Concrete-Monoid : Category l1 l2
-  category-Concrete-Monoid = pr1 M
+  category-Concrete-Monoid = {!!}
 
   is-concrete-monoid-category-Concrete-Monoid :
     is-concrete-monoid-Category category-Concrete-Monoid
-  is-concrete-monoid-category-Concrete-Monoid = pr2 M
+  is-concrete-monoid-category-Concrete-Monoid = {!!}
 ```
 
 ## Properties
@@ -68,7 +68,7 @@ module _
   where
 
   obj-concrete-monoid-Monoid : UU (lsuc l)
-  obj-concrete-monoid-Monoid = classifying-type-Group (core-Monoid M)
+  obj-concrete-monoid-Monoid = {!!}
 ```
 
 The remainder of the construction remains to be written down. We note that this

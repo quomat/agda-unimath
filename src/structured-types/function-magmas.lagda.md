@@ -29,13 +29,12 @@ module _
   where
 
   type-function-Magma : UU (l1 ⊔ l2)
-  type-function-Magma = X → type-Magma M
+  type-function-Magma = {!!}
 
   mul-function-Magma :
     type-function-Magma → type-function-Magma → type-function-Magma
-  mul-function-Magma f g x = mul-Magma M (f x) (g x)
+  mul-function-Magma f g x = {!!}
 
   function-Magma : Magma (l1 ⊔ l2)
-  pr1 function-Magma = type-function-Magma
-  pr2 function-Magma = mul-function-Magma
+  pr1 function-Magma = {!!}
 ```

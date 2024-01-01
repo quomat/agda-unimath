@@ -37,31 +37,5 @@ module _
 
   prod-Precategory :
     Precategory (l1 ⊔ l3) (l2 ⊔ l4)
-  pr1 prod-Precategory = obj-Precategory C × obj-Precategory D
-  pr1 (pr2 prod-Precategory) (x , y) (x' , y') =
-    prod-Set (hom-set-Precategory C x x') (hom-set-Precategory D y y')
-  pr1 (pr1 (pr1 (pr2 (pr2 prod-Precategory))) (f' , g') (f , g)) =
-    comp-hom-Precategory C f' f
-  pr2 (pr1 (pr1 (pr2 (pr2 prod-Precategory))) (f' , g') (f , g)) =
-    comp-hom-Precategory D g' g
-  pr1 (pr2 (pr1 (pr2 (pr2 prod-Precategory))) (f'' , g'') (f' , g') (f , g)) =
-    eq-pair
-      ( associative-comp-hom-Precategory C f'' f' f)
-      ( associative-comp-hom-Precategory D g'' g' g)
-  pr2 (pr2 (pr1 (pr2 (pr2 prod-Precategory))) (f'' , g'') (f' , g') (f , g)) =
-    eq-pair
-      ( inv-associative-comp-hom-Precategory C f'' f' f)
-      ( inv-associative-comp-hom-Precategory D g'' g' g)
-  pr1 (pr1 (pr2 (pr2 (pr2 prod-Precategory))) (x , y)) =
-    id-hom-Precategory C {x}
-  pr2 (pr1 (pr2 (pr2 (pr2 prod-Precategory))) (x , y)) =
-    id-hom-Precategory D {y}
-  pr1 (pr2 (pr2 (pr2 (pr2 prod-Precategory)))) (f , g) =
-    eq-pair
-      ( left-unit-law-comp-hom-Precategory C f)
-      ( left-unit-law-comp-hom-Precategory D g)
-  pr2 (pr2 (pr2 (pr2 (pr2 prod-Precategory)))) (f , g) =
-    eq-pair
-      ( right-unit-law-comp-hom-Precategory C f)
-      ( right-unit-law-comp-hom-Precategory D g)
+  pr1 prod-Precategory = {!!}
 ```

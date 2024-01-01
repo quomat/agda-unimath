@@ -46,7 +46,5 @@ coherence-square-hom-Set-Magmoid :
   (right : hom-Set-Magmoid C y w)
   (bottom : hom-Set-Magmoid C z w) →
   UU l2
-coherence-square-hom-Set-Magmoid C top left right bottom =
-  ( comp-hom-Set-Magmoid C bottom left) ＝
-  ( comp-hom-Set-Magmoid C right top)
+coherence-square-hom-Set-Magmoid C top left right bottom = {!!}
 ```

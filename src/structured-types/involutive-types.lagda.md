@@ -30,14 +30,14 @@ over `2-Element-Type lzero` equipped with an equivalence `X ≃ Y (Fin 2)`.
 
 ```agda
 Involutive-Type : (l : Level) → UU (lsuc l)
-Involutive-Type l = 2-Element-Type lzero → UU l
+Involutive-Type l = {!!}
 
 module _
   {l : Level} (X : Involutive-Type l)
   where
 
   type-Involutive-Type : UU l
-  type-Involutive-Type = X (standard-2-Element-Type lzero)
+  type-Involutive-Type = {!!}
 ```
 
 ### Involutive structure on a type
@@ -45,6 +45,5 @@ module _
 ```agda
 involutive-structure :
   {l1 : Level} (l2 : Level) (X : UU l1) → UU (l1 ⊔ lsuc l2)
-involutive-structure l2 X =
-  Σ (Involutive-Type l2) (λ Y → X ≃ type-Involutive-Type Y)
+involutive-structure l2 X = {!!}
 ```

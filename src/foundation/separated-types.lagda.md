@@ -33,13 +33,13 @@ module _
   where
 
   is-separated-Prop : (X : UU l1) → Prop (l1 ⊔ l2)
-  is-separated-Prop X = Π-Prop X (λ x → Π-Prop X (λ y → P (x ＝ y)))
+  is-separated-Prop X = {!!}
 
   is-separated : (X : UU l1) → UU (l1 ⊔ l2)
-  is-separated X = type-Prop (is-separated-Prop X)
+  is-separated X = {!!}
 
   is-prop-is-separated : (X : UU l1) → is-prop (is-separated X)
-  is-prop-is-separated X = is-prop-type-Prop (is-separated-Prop X)
+  is-prop-is-separated X = {!!}
 ```
 
 ### The predicate of being essentially separated
@@ -50,6 +50,5 @@ module _
   where
 
   is-essentially-separated : {l3 : Level} (X : UU l3) → UU (lsuc l1 ⊔ l2 ⊔ l3)
-  is-essentially-separated X =
-    (x y : X) → is-essentially-in-subuniverse P (x ＝ y)
+  is-essentially-separated X = {!!}
 ```

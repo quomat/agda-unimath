@@ -42,17 +42,13 @@ module _
   where
 
   is-transitive-prop-action-Group : Prop (l1 ⊔ l2)
-  is-transitive-prop-action-Group =
-    Π-Prop
-      ( type-action-Group G X)
-      ( λ x → is-surjective-Prop (λ g → mul-action-Group G X g x))
+  is-transitive-prop-action-Group = {!!}
 
   is-transitive-action-Group : UU (l1 ⊔ l2)
-  is-transitive-action-Group = type-Prop is-transitive-prop-action-Group
+  is-transitive-action-Group = {!!}
 
   is-prop-is-transitive-action-Group : is-prop is-transitive-action-Group
-  is-prop-is-transitive-action-Group =
-    is-prop-type-Prop is-transitive-prop-action-Group
+  is-prop-is-transitive-action-Group = {!!}
 ```
 
 ## External links

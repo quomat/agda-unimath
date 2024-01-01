@@ -33,11 +33,5 @@ is-small-is-surjective :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {f : A → B} →
   is-surjective f → is-small l3 A → is-locally-small l3 B →
   is-small l3 B
-is-small-is-surjective {f = f} H K L =
-  is-small-equiv'
-    ( im f)
-    ( equiv-equiv-slice-uniqueness-im f id-emb
-      ( pair f refl-htpy)
-      ( is-image-is-surjective f id-emb (pair f refl-htpy) H))
-    ( replacement f K L)
+is-small-is-surjective {f = f} H K L = {!!}
 ```

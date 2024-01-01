@@ -45,7 +45,7 @@ hom-descent-data-circle :
   { l1 l2 : Level}
   ( P : descent-data-circle l1) (Q : descent-data-circle l2) →
   UU (l1 ⊔ l2)
-hom-descent-data-circle = hom-Type-With-Automorphism
+hom-descent-data-circle = {!!}
 
 module _
   { l1 l2 : Level} (P : descent-data-circle l1) (Q : descent-data-circle l2)
@@ -54,8 +54,7 @@ module _
 
   map-hom-descent-data-circle :
     type-descent-data-circle P → type-descent-data-circle Q
-  map-hom-descent-data-circle =
-    map-hom-Type-With-Automorphism P Q h
+  map-hom-descent-data-circle = {!!}
 
   coherence-square-hom-descent-data-circle :
     coherence-square-maps
@@ -63,6 +62,5 @@ module _
       ( map-descent-data-circle P)
       ( map-descent-data-circle Q)
       ( map-hom-descent-data-circle)
-  coherence-square-hom-descent-data-circle =
-    coherence-square-hom-Type-With-Automorphism P Q h
+  coherence-square-hom-descent-data-circle = {!!}
 ```

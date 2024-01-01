@@ -41,16 +41,11 @@ module _
 
   contains-product-ideal-Ring :
     {l4 : Level} (K : ideal-Ring l4 R) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  contains-product-ideal-Ring K =
-    (x y : type-Ring R) →
-    is-in-ideal-Ring R I x → is-in-ideal-Ring R J y →
-    is-in-ideal-Ring R K (mul-Ring R x y)
+  contains-product-ideal-Ring K = {!!}
 
   is-product-ideal-Ring :
     {l4 : Level} (K : ideal-Ring l4 R) → contains-product-ideal-Ring K → UUω
-  is-product-ideal-Ring K H =
-    {l5 : Level} (L : ideal-Ring l5 R) →
-    contains-product-ideal-Ring L → leq-ideal-Ring R K L
+  is-product-ideal-Ring K H = {!!}
 ```
 
 ### The product of two ideals in a ring
@@ -61,43 +56,28 @@ module _
   where
 
   generating-subset-product-ideal-Ring : subset-Ring (l1 ⊔ l2 ⊔ l3) R
-  generating-subset-product-ideal-Ring =
-    product-subset-Ring R
-      ( subset-ideal-Ring R I)
-      ( subset-ideal-Ring R J)
+  generating-subset-product-ideal-Ring = {!!}
 
   product-ideal-Ring : ideal-Ring (l1 ⊔ l2 ⊔ l3) R
-  product-ideal-Ring = ideal-subset-Ring R generating-subset-product-ideal-Ring
+  product-ideal-Ring = {!!}
 
   subset-product-ideal-Ring : subset-Ring (l1 ⊔ l2 ⊔ l3) R
-  subset-product-ideal-Ring = subset-ideal-Ring R product-ideal-Ring
+  subset-product-ideal-Ring = {!!}
 
   is-in-product-ideal-Ring : type-Ring R → UU (l1 ⊔ l2 ⊔ l3)
-  is-in-product-ideal-Ring = is-in-ideal-Ring R product-ideal-Ring
+  is-in-product-ideal-Ring = {!!}
 
   contains-product-product-ideal-Ring :
     (x y : type-Ring R) →
     is-in-ideal-Ring R I x → is-in-ideal-Ring R J y →
     is-in-product-ideal-Ring (mul-Ring R x y)
-  contains-product-product-ideal-Ring x y H K =
-    contains-subset-ideal-subset-Ring R
-      ( generating-subset-product-ideal-Ring)
-      ( mul-Ring R x y)
-      ( unit-trunc-Prop ((x , H) , (y , K) , refl))
+  contains-product-product-ideal-Ring x y H K = {!!}
 
   is-product-product-ideal-Ring :
     is-product-ideal-Ring R I J
       ( product-ideal-Ring)
       ( contains-product-product-ideal-Ring)
-  is-product-product-ideal-Ring K H =
-    is-ideal-generated-by-subset-ideal-subset-Ring R
-      ( generating-subset-product-ideal-Ring)
-      ( K)
-      ( λ x p →
-        apply-universal-property-trunc-Prop p
-          ( subset-ideal-Ring R K x)
-          ( λ ((r , p) , ((s , q) , z)) →
-            is-closed-under-eq-ideal-Ring R K (H r s p q) (inv z)))
+  is-product-product-ideal-Ring K H = {!!}
 ```
 
 ## Properties
@@ -119,13 +99,7 @@ module _
     leq-ideal-Ring A
       ( product-ideal-Ring A I K)
       ( product-ideal-Ring A J L)
-  preserves-leq-product-ideal-Ring p q =
-    is-product-product-ideal-Ring A I K
-      ( product-ideal-Ring A J L)
-      ( λ x y u v →
-        contains-product-product-ideal-Ring A J L _ _
-          ( p x u)
-          ( q y v))
+  preserves-leq-product-ideal-Ring p q = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} (A : Ring l1)
@@ -139,16 +113,12 @@ module _
     leq-ideal-Ring A
       ( product-ideal-Ring A I K)
       ( product-ideal-Ring A J K)
-  preserves-leq-left-product-ideal-Ring p =
-    preserves-leq-product-ideal-Ring A I J K K p
-      ( refl-leq-ideal-Ring A K)
+  preserves-leq-left-product-ideal-Ring p = {!!}
 
   preserves-leq-right-product-ideal-Ring :
     leq-ideal-Ring A J K →
     leq-ideal-Ring A
       ( product-ideal-Ring A I J)
       ( product-ideal-Ring A I K)
-  preserves-leq-right-product-ideal-Ring =
-    preserves-leq-product-ideal-Ring A I I J K
-      ( refl-leq-ideal-Ring A I)
+  preserves-leq-right-product-ideal-Ring = {!!}
 ```

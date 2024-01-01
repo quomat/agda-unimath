@@ -49,16 +49,13 @@ module _
   where
 
   is-free-prop-action-Concrete-Group : Prop (l1 ⊔ l2)
-  is-free-prop-action-Concrete-Group =
-    is-free-prop-action-∞-Group (∞-group-Concrete-Group G) (type-Set ∘ X)
+  is-free-prop-action-Concrete-Group = {!!}
 
   is-free-action-Concrete-Group : UU (l1 ⊔ l2)
-  is-free-action-Concrete-Group =
-    is-free-action-∞-Group (∞-group-Concrete-Group G) (type-Set ∘ X)
+  is-free-action-Concrete-Group = {!!}
 
   is-prop-is-free-action-Concrete-Group : is-prop is-free-action-Concrete-Group
-  is-prop-is-free-action-Concrete-Group =
-    is-prop-is-free-action-∞-Group (∞-group-Concrete-Group G) (type-Set ∘ X)
+  is-prop-is-free-action-Concrete-Group = {!!}
 ```
 
 ### The predicate of being an abstractly free concrete group action
@@ -69,23 +66,14 @@ module _
   where
 
   is-abstractly-free-prop-action-Concrete-Group : Prop (l1 ⊔ l2)
-  is-abstractly-free-prop-action-Concrete-Group =
-    is-abstractly-free-prop-action-∞-Group
-      ( ∞-group-Concrete-Group G)
-      ( type-Set ∘ X)
+  is-abstractly-free-prop-action-Concrete-Group = {!!}
 
   is-abstractly-free-action-Concrete-Group : UU (l1 ⊔ l2)
-  is-abstractly-free-action-Concrete-Group =
-    is-abstractly-free-action-∞-Group
-      ( ∞-group-Concrete-Group G)
-      ( type-Set ∘ X)
+  is-abstractly-free-action-Concrete-Group = {!!}
 
   is-prop-is-abstractly-free-action-Concrete-Group :
     is-prop is-abstractly-free-action-Concrete-Group
-  is-prop-is-abstractly-free-action-Concrete-Group =
-    is-prop-is-abstractly-free-action-∞-Group
-      ( ∞-group-Concrete-Group G)
-      ( type-Set ∘ X)
+  is-prop-is-abstractly-free-action-Concrete-Group = {!!}
 ```
 
 ### Free concrete group actions
@@ -93,8 +81,7 @@ module _
 ```agda
 free-action-Concrete-Group :
   {l1 : Level} (l2 : Level) → Concrete-Group l1 → UU (l1 ⊔ lsuc l2)
-free-action-Concrete-Group l2 G =
-  Σ (action-Concrete-Group l2 G) (is-free-action-Concrete-Group G)
+free-action-Concrete-Group l2 G = {!!}
 ```
 
 ## Properties
@@ -109,16 +96,10 @@ module _
   is-abstractly-free-is-free-action-Concrete-Group :
     is-free-action-Concrete-Group G X →
     is-abstractly-free-action-Concrete-Group G X
-  is-abstractly-free-is-free-action-Concrete-Group =
-    is-abstractly-free-is-free-action-∞-Group
-      ( ∞-group-Concrete-Group G)
-      ( type-Set ∘ X)
+  is-abstractly-free-is-free-action-Concrete-Group = {!!}
 
   is-free-is-abstractly-free-action-Concrete-Group :
     is-abstractly-free-action-Concrete-Group G X →
     is-free-action-Concrete-Group G X
-  is-free-is-abstractly-free-action-Concrete-Group =
-    is-free-is-abstractly-free-action-∞-Group
-      ( ∞-group-Concrete-Group G)
-      ( type-Set ∘ X)
+  is-free-is-abstractly-free-action-Concrete-Group = {!!}
 ```

@@ -45,34 +45,24 @@ property is also known as the **type theoretic Yoneda lemma**.
 ev-refl :
   {l1 l2 : Level} {A : UU l1} (a : A) {B : (x : A) → a ＝ x → UU l2} →
   ((x : A) (p : a ＝ x) → B x p) → B a refl
-ev-refl a f = f a refl
+ev-refl a f = {!!}
 
 abstract
   is-equiv-ev-refl :
     {l1 l2 : Level} {A : UU l1} (a : A)
     {B : (x : A) → a ＝ x → UU l2} → is-equiv (ev-refl a {B = B})
-  is-equiv-ev-refl a =
-    is-equiv-is-invertible
-      ( ind-Id a _)
-      ( λ b → refl)
-      ( λ f → eq-htpy
-        ( λ x → eq-htpy
-          ( ind-Id a
-            ( λ x' p' → ind-Id a _ (f a refl) x' p' ＝ f x' p')
-            ( refl) x)))
+  is-equiv-ev-refl a = {!!}
 
 equiv-ev-refl :
   {l1 l2 : Level} {A : UU l1} (a : A) {B : (x : A) → a ＝ x → UU l2} →
   ((x : A) (p : a ＝ x) → B x p) ≃ (B a refl)
-pr1 (equiv-ev-refl a) = ev-refl a
-pr2 (equiv-ev-refl a) = is-equiv-ev-refl a
+pr1 (equiv-ev-refl a) = {!!}
+pr2 (equiv-ev-refl a) = {!!}
 
 equiv-ev-refl' :
   {l1 l2 : Level} {A : UU l1} (a : A) {B : (x : A) → x ＝ a → UU l2} →
   ((x : A) (p : x ＝ a) → B x p) ≃ B a refl
-equiv-ev-refl' a {B} =
-  ( equiv-ev-refl a) ∘e
-  ( equiv-Π-equiv-family (λ x → equiv-precomp-Π (equiv-inv a x) (B x)))
+equiv-ev-refl' a {B} = {!!}
 ```
 
 ### `Id : A → (A → 𝒰)` is an embedding
@@ -120,41 +110,17 @@ module _
 
   emb-fiber-Id-preunivalent-Id :
     (a : A) → fiber' Id (Id a) ↪ Σ A (Id a)
-  emb-fiber-Id-preunivalent-Id a =
-    comp-emb
-      ( comp-emb
-        ( emb-equiv
-          ( equiv-tot
-            ( λ x →
-              ( equiv-ev-refl x) ∘e
-              ( equiv-inclusion-is-full-subtype
-                ( Π-Prop A ∘ (is-equiv-Prop ∘_))
-                ( fundamental-theorem-id (is-torsorial-path a))) ∘e
-              ( distributive-Π-Σ))))
-        ( emb-tot
-          ( λ x →
-            comp-emb
-              ( emb-Π (λ y → _ , L a x y))
-              ( emb-equiv equiv-funext))))
-      ( emb-equiv (inv-equiv (equiv-fiber Id (Id a))))
+  emb-fiber-Id-preunivalent-Id a = {!!}
 
   is-emb-Id-preunivalent-Id : is-emb (Id {A = A})
-  is-emb-Id-preunivalent-Id a =
-    fundamental-theorem-id
-      ( ( a , refl) ,
-        ( λ _ →
-          is-injective-emb
-            ( emb-fiber-Id-preunivalent-Id a)
-            ( eq-is-contr (is-torsorial-path a))))
-      ( λ _ → ap Id)
+  is-emb-Id-preunivalent-Id a = {!!}
 
 module _
   (L : preunivalence-axiom) {l : Level} (A : UU l)
   where
 
   is-emb-Id-preunivalence-axiom : is-emb (Id {A = A})
-  is-emb-Id-preunivalence-axiom =
-    is-emb-Id-preunivalent-Id A (λ a x y → L (Id x y) (Id a y))
+  is-emb-Id-preunivalence-axiom = {!!}
 ```
 
 #### `Id : A → (A → 𝒰)` is an embedding
@@ -165,7 +131,7 @@ module _
   where
 
   is-emb-Id : is-emb (Id {A = A})
-  is-emb-Id = is-emb-Id-preunivalence-axiom preunivalence A
+  is-emb-Id = {!!}
 ```
 
 #### For any type family `B` over `A`, the type of pairs `(a , e)` consisting of `a : A` and a family of equivalences `e : (x : A) → (a ＝ x) ≃ B x` is a proposition
@@ -177,27 +143,11 @@ module _
 
   is-proof-irrelevant-total-family-of-equivalences-Id :
     is-proof-irrelevant (Σ A (λ a → (x : A) → (a ＝ x) ≃ B x))
-  is-proof-irrelevant-total-family-of-equivalences-Id (a , e) =
-    is-contr-equiv
-      ( Σ A (λ b → (x : A) → (b ＝ x) ≃ (a ＝ x)))
-      ( equiv-tot
-        ( λ b →
-          equiv-Π-equiv-family
-            ( λ x → equiv-postcomp-equiv (inv-equiv (e x)) (b ＝ x))))
-      ( is-contr-equiv'
-        ( fiber Id (Id a))
-        ( equiv-tot
-          ( λ b →
-            equiv-Π-equiv-family (λ x → equiv-univalence) ∘e equiv-funext))
-        ( is-proof-irrelevant-is-prop
-          ( is-prop-map-is-emb (is-emb-Id A) (Id a))
-          ( a , refl)))
+  is-proof-irrelevant-total-family-of-equivalences-Id (a , e) = {!!}
 
   is-prop-total-family-of-equivalences-Id :
     is-prop (Σ A (λ a → (x : A) → (a ＝ x) ≃ B x))
-  is-prop-total-family-of-equivalences-Id =
-    is-prop-is-proof-irrelevant
-      ( is-proof-irrelevant-total-family-of-equivalences-Id)
+  is-prop-total-family-of-equivalences-Id = {!!}
 ```
 
 ## See also

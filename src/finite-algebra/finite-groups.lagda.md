@@ -39,11 +39,8 @@ operation `x, y ↦ xy`, and an inverse operation `x ↦ x⁻¹` satisfying the 
 laws
 
 ```text
-  (xy)z = x(yz)      (associativity)
-     ex = x          (left unit law)
-     xe = x          (right unit law)
-   x⁻¹x = e          (left inverse law)
-   xx⁻¹ = e          (right inverse law)
+  (xy)z = {!!}
+   x⁻¹x = {!!}
 ```
 
 ## Definition
@@ -53,7 +50,7 @@ laws
 ```agda
 is-group-𝔽 :
   {l : Level} (G : Semigroup-𝔽 l) → UU l
-is-group-𝔽 G = is-group (semigroup-Semigroup-𝔽 G)
+is-group-𝔽 G = {!!}
 ```
 
 ### The type of groups
@@ -61,117 +58,115 @@ is-group-𝔽 G = is-group (semigroup-Semigroup-𝔽 G)
 ```agda
 Group-𝔽 :
   (l : Level) → UU (lsuc l)
-Group-𝔽 l = Σ (Semigroup-𝔽 l) is-group-𝔽
+Group-𝔽 l = {!!}
 
 compute-group-𝔽 :
   {l : Level} → (G : Group l) → is-finite (type-Group G) → Group-𝔽 l
-pr1 (compute-group-𝔽 G f) = compute-semigroup-𝔽 (semigroup-Group G) f
-pr2 (compute-group-𝔽 G f) = is-group-Group G
+pr1 (compute-group-𝔽 G f) = {!!}
+pr2 (compute-group-𝔽 G f) = {!!}
 
 module _
   {l : Level} (G : Group-𝔽 l)
   where
 
   finite-semigroup-Group-𝔽 : Semigroup-𝔽 l
-  finite-semigroup-Group-𝔽 = pr1 G
+  finite-semigroup-Group-𝔽 = {!!}
 
   semigroup-Group-𝔽 : Semigroup l
-  semigroup-Group-𝔽 = semigroup-Semigroup-𝔽 finite-semigroup-Group-𝔽
+  semigroup-Group-𝔽 = {!!}
 
   is-group-Group-𝔽 : is-group-𝔽 finite-semigroup-Group-𝔽
-  is-group-Group-𝔽 = pr2 G
+  is-group-Group-𝔽 = {!!}
 
   group-Group-𝔽 : Group l
-  pr1 group-Group-𝔽 = semigroup-Group-𝔽
-  pr2 group-Group-𝔽 = is-group-Group-𝔽
+  pr1 group-Group-𝔽 = {!!}
 
   finite-type-Group-𝔽 : 𝔽 l
-  finite-type-Group-𝔽 = finite-type-Semigroup-𝔽 finite-semigroup-Group-𝔽
+  finite-type-Group-𝔽 = {!!}
 
   type-Group-𝔽 : UU l
-  type-Group-𝔽 = type-Semigroup semigroup-Group-𝔽
+  type-Group-𝔽 = {!!}
 
   is-finite-type-Group-𝔽 : is-finite type-Group-𝔽
-  is-finite-type-Group-𝔽 = is-finite-type-Semigroup-𝔽 finite-semigroup-Group-𝔽
+  is-finite-type-Group-𝔽 = {!!}
 
   set-Group-𝔽 : Set l
-  set-Group-𝔽 = set-Group group-Group-𝔽
+  set-Group-𝔽 = {!!}
 
   is-set-type-Group-𝔽 : is-set type-Group-𝔽
-  is-set-type-Group-𝔽 = is-set-type-Group group-Group-𝔽
+  is-set-type-Group-𝔽 = {!!}
 
   has-associative-mul-Group-𝔽 : has-associative-mul type-Group-𝔽
-  has-associative-mul-Group-𝔽 = has-associative-mul-Group group-Group-𝔽
+  has-associative-mul-Group-𝔽 = {!!}
 
   mul-Group-𝔽 : type-Group-𝔽 → type-Group-𝔽 → type-Group-𝔽
-  mul-Group-𝔽 = mul-Group group-Group-𝔽
+  mul-Group-𝔽 = {!!}
 
   ap-mul-Group-𝔽 :
     {x x' y y' : type-Group-𝔽} (p : Id x x') (q : Id y y') →
     Id (mul-Group-𝔽 x y) (mul-Group-𝔽 x' y')
-  ap-mul-Group-𝔽 = ap-mul-Group group-Group-𝔽
+  ap-mul-Group-𝔽 = {!!}
 
   mul-Group-𝔽' : type-Group-𝔽 → type-Group-𝔽 → type-Group-𝔽
-  mul-Group-𝔽' = mul-Group' group-Group-𝔽
+  mul-Group-𝔽' = {!!}
 
   commute-Group-𝔽 : type-Group-𝔽 → type-Group-𝔽 → UU l
-  commute-Group-𝔽 = commute-Group group-Group-𝔽
+  commute-Group-𝔽 = {!!}
 
   associative-mul-Group-𝔽 :
     (x y z : type-Group-𝔽) →
     Id (mul-Group-𝔽 (mul-Group-𝔽 x y) z) (mul-Group-𝔽 x (mul-Group-𝔽 y z))
-  associative-mul-Group-𝔽 = associative-mul-Group group-Group-𝔽
+  associative-mul-Group-𝔽 = {!!}
 
   is-unital-Group-𝔽 : is-unital-Semigroup semigroup-Group-𝔽
-  is-unital-Group-𝔽 = is-unital-Group group-Group-𝔽
+  is-unital-Group-𝔽 = {!!}
 
   monoid-Group-𝔽 : Monoid l
-  monoid-Group-𝔽 = monoid-Group group-Group-𝔽
+  monoid-Group-𝔽 = {!!}
 
   finite-monoid-Group-𝔽 : Monoid-𝔽 l
-  pr1 finite-monoid-Group-𝔽 = finite-semigroup-Group-𝔽
-  pr2 finite-monoid-Group-𝔽 = is-unital-Group-𝔽
+  pr1 finite-monoid-Group-𝔽 = {!!}
 
   unit-Group-𝔽 : type-Group-𝔽
-  unit-Group-𝔽 = unit-Group group-Group-𝔽
+  unit-Group-𝔽 = {!!}
 
   is-unit-Group-𝔽 : type-Group-𝔽 → UU l
-  is-unit-Group-𝔽 = is-unit-Group group-Group-𝔽
+  is-unit-Group-𝔽 = {!!}
 
   is-prop-is-unit-Group-𝔽 : (x : type-Group-𝔽) → is-prop (is-unit-Group-𝔽 x)
-  is-prop-is-unit-Group-𝔽 = is-prop-is-unit-Group group-Group-𝔽
+  is-prop-is-unit-Group-𝔽 = {!!}
 
   is-unit-prop-Group-𝔽 : type-Group-𝔽 → Prop l
-  is-unit-prop-Group-𝔽 = is-unit-prop-Group group-Group-𝔽
+  is-unit-prop-Group-𝔽 = {!!}
 
   left-unit-law-mul-Group-𝔽 :
     (x : type-Group-𝔽) → Id (mul-Group-𝔽 unit-Group-𝔽 x) x
-  left-unit-law-mul-Group-𝔽 = left-unit-law-mul-Group group-Group-𝔽
+  left-unit-law-mul-Group-𝔽 = {!!}
 
   right-unit-law-mul-Group-𝔽 :
     (x : type-Group-𝔽) → Id (mul-Group-𝔽 x unit-Group-𝔽) x
-  right-unit-law-mul-Group-𝔽 = right-unit-law-mul-Group group-Group-𝔽
+  right-unit-law-mul-Group-𝔽 = {!!}
 
   pointed-type-Group-𝔽 : Pointed-Type l
-  pointed-type-Group-𝔽 = pointed-type-Group group-Group-𝔽
+  pointed-type-Group-𝔽 = {!!}
 
   has-inverses-Group-𝔽 : is-group' semigroup-Group-𝔽 is-unital-Group-𝔽
-  has-inverses-Group-𝔽 = has-inverses-Group group-Group-𝔽
+  has-inverses-Group-𝔽 = {!!}
 
   inv-Group-𝔽 : type-Group-𝔽 → type-Group-𝔽
-  inv-Group-𝔽 = inv-Group group-Group-𝔽
+  inv-Group-𝔽 = {!!}
 
   left-inverse-law-mul-Group-𝔽 :
     (x : type-Group-𝔽) → Id (mul-Group-𝔽 (inv-Group-𝔽 x) x) unit-Group-𝔽
-  left-inverse-law-mul-Group-𝔽 = left-inverse-law-mul-Group group-Group-𝔽
+  left-inverse-law-mul-Group-𝔽 = {!!}
 
   right-inverse-law-mul-Group-𝔽 :
     (x : type-Group-𝔽) → Id (mul-Group-𝔽 x (inv-Group-𝔽 x)) unit-Group-𝔽
-  right-inverse-law-mul-Group-𝔽 = right-inverse-law-mul-Group group-Group-𝔽
+  right-inverse-law-mul-Group-𝔽 = {!!}
 
   inv-unit-Group-𝔽 :
     Id (inv-Group-𝔽 unit-Group-𝔽) unit-Group-𝔽
-  inv-unit-Group-𝔽 = inv-unit-Group group-Group-𝔽
+  inv-unit-Group-𝔽 = {!!}
 ```
 
 ## Properties
@@ -185,33 +180,13 @@ module _
   where
 
   structure-group-𝔽 : UU l
-  structure-group-𝔽 =
-    Σ (structure-semigroup-𝔽 X) (λ s → is-group-𝔽 (X , s))
+  structure-group-𝔽 = {!!}
 
   compute-structure-group-𝔽 :
     structure-group-𝔽 → Group-𝔽 l
-  pr1 (compute-structure-group-𝔽 (s , g)) = (X , s)
-  pr2 (compute-structure-group-𝔽 (s , g)) = g
+  pr1 (compute-structure-group-𝔽 (s , g)) = {!!}
 
   is-finite-structure-group-𝔽 :
     is-finite (structure-group-𝔽)
-  is-finite-structure-group-𝔽 =
-    is-finite-Σ
-      ( is-finite-structure-semigroup-𝔽 X)
-      ( λ s →
-        is-finite-Σ
-          ( is-finite-is-unital-Semigroup-𝔽 (X , s))
-          ( λ u →
-            is-finite-Σ
-              ( is-finite-Π
-                ( is-finite-type-𝔽 X)
-                ( λ _ → is-finite-type-𝔽 X))
-              ( λ i →
-                is-finite-prod
-                  ( is-finite-Π
-                    ( is-finite-type-𝔽 X)
-                    ( λ x → is-finite-eq-𝔽 X))
-                  ( is-finite-Π
-                    ( is-finite-type-𝔽 X)
-                    ( λ x → is-finite-eq-𝔽 X)))))
+  is-finite-structure-group-𝔽 = {!!}
 ```

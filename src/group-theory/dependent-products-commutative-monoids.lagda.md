@@ -35,52 +35,42 @@ module _
   where
 
   monoid-Π-Commutative-Monoid : Monoid (l1 ⊔ l2)
-  monoid-Π-Commutative-Monoid =
-    Π-Monoid I (λ i → monoid-Commutative-Monoid (M i))
+  monoid-Π-Commutative-Monoid = {!!}
 
   set-Π-Commutative-Monoid : Set (l1 ⊔ l2)
-  set-Π-Commutative-Monoid =
-    set-Π-Monoid I (λ i → monoid-Commutative-Monoid (M i))
+  set-Π-Commutative-Monoid = {!!}
 
   type-Π-Commutative-Monoid : UU (l1 ⊔ l2)
-  type-Π-Commutative-Monoid =
-    type-Π-Monoid I (λ i → monoid-Commutative-Monoid (M i))
+  type-Π-Commutative-Monoid = {!!}
 
   unit-Π-Commutative-Monoid : type-Π-Commutative-Monoid
-  unit-Π-Commutative-Monoid =
-    unit-Π-Monoid I (λ i → monoid-Commutative-Monoid (M i))
+  unit-Π-Commutative-Monoid = {!!}
 
   mul-Π-Commutative-Monoid :
     (f g : type-Π-Commutative-Monoid) → type-Π-Commutative-Monoid
-  mul-Π-Commutative-Monoid =
-    mul-Π-Monoid I (λ i → monoid-Commutative-Monoid (M i))
+  mul-Π-Commutative-Monoid = {!!}
 
   associative-mul-Π-Commutative-Monoid :
     (f g h : type-Π-Commutative-Monoid) →
     mul-Π-Commutative-Monoid (mul-Π-Commutative-Monoid f g) h ＝
     mul-Π-Commutative-Monoid f (mul-Π-Commutative-Monoid g h)
-  associative-mul-Π-Commutative-Monoid =
-    associative-mul-Π-Monoid I (λ i → monoid-Commutative-Monoid (M i))
+  associative-mul-Π-Commutative-Monoid = {!!}
 
   left-unit-law-mul-Π-Commutative-Monoid :
     (f : type-Π-Commutative-Monoid) →
     mul-Π-Commutative-Monoid unit-Π-Commutative-Monoid f ＝ f
-  left-unit-law-mul-Π-Commutative-Monoid =
-    left-unit-law-mul-Π-Monoid I (λ i → monoid-Commutative-Monoid (M i))
+  left-unit-law-mul-Π-Commutative-Monoid = {!!}
 
   right-unit-law-mul-Π-Commutative-Monoid :
     (f : type-Π-Commutative-Monoid) →
     mul-Π-Commutative-Monoid f unit-Π-Commutative-Monoid ＝ f
-  right-unit-law-mul-Π-Commutative-Monoid =
-    right-unit-law-mul-Π-Monoid I (λ i → monoid-Commutative-Monoid (M i))
+  right-unit-law-mul-Π-Commutative-Monoid = {!!}
 
   commutative-mul-Π-Commutative-Monoid :
     (f g : type-Π-Commutative-Monoid) →
     mul-Π-Commutative-Monoid f g ＝ mul-Π-Commutative-Monoid g f
-  commutative-mul-Π-Commutative-Monoid f g =
-    eq-htpy (λ i → commutative-mul-Commutative-Monoid (M i) (f i) (g i))
+  commutative-mul-Π-Commutative-Monoid f g = {!!}
 
   Π-Commutative-Monoid : Commutative-Monoid (l1 ⊔ l2)
-  pr1 Π-Commutative-Monoid = monoid-Π-Commutative-Monoid
-  pr2 Π-Commutative-Monoid = commutative-mul-Π-Commutative-Monoid
+  pr1 Π-Commutative-Monoid = {!!}
 ```

@@ -33,15 +33,13 @@ module _
   where
 
   is-surjective-prop-hom-Semigroup : Prop (l1 ⊔ l2)
-  is-surjective-prop-hom-Semigroup =
-    is-surjective-Prop (map-hom-Semigroup G H f)
+  is-surjective-prop-hom-Semigroup = {!!}
 
   is-surjective-hom-Semigroup : UU (l1 ⊔ l2)
-  is-surjective-hom-Semigroup = type-Prop is-surjective-prop-hom-Semigroup
+  is-surjective-hom-Semigroup = {!!}
 
   is-prop-is-surjective-hom-Semigroup : is-prop is-surjective-hom-Semigroup
-  is-prop-is-surjective-hom-Semigroup =
-    is-prop-type-Prop is-surjective-prop-hom-Semigroup
+  is-prop-is-surjective-hom-Semigroup = {!!}
 ```
 
 ## Properties
@@ -56,10 +54,10 @@ module _
   is-surjective-is-full-subsemigroup-image-hom-Semigroup :
     is-full-Subsemigroup H (image-hom-Semigroup G H f) →
     is-surjective-hom-Semigroup G H f
-  is-surjective-is-full-subsemigroup-image-hom-Semigroup u = u
+  is-surjective-is-full-subsemigroup-image-hom-Semigroup u = {!!}
 
   is-full-subsemigroup-image-is-surjective-hom-Semigroup :
     is-surjective-hom-Semigroup G H f →
     is-full-Subsemigroup H (image-hom-Semigroup G H f)
-  is-full-subsemigroup-image-is-surjective-hom-Semigroup u = u
+  is-full-subsemigroup-image-is-surjective-hom-Semigroup u = {!!}
 ```

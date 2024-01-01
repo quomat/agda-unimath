@@ -36,17 +36,14 @@ module _
   where
 
   mere-equiv-prop-Type-With-Endomorphism : Prop (l1 ⊔ l2)
-  mere-equiv-prop-Type-With-Endomorphism =
-    trunc-Prop (equiv-Type-With-Endomorphism X Y)
+  mere-equiv-prop-Type-With-Endomorphism = {!!}
 
   mere-equiv-Type-With-Endomorphism : UU (l1 ⊔ l2)
-  mere-equiv-Type-With-Endomorphism =
-    type-Prop mere-equiv-prop-Type-With-Endomorphism
+  mere-equiv-Type-With-Endomorphism = {!!}
 
   is-prop-mere-equiv-Type-With-Endomorphism :
     is-prop mere-equiv-Type-With-Endomorphism
-  is-prop-mere-equiv-Type-With-Endomorphism =
-    is-prop-type-Prop mere-equiv-prop-Type-With-Endomorphism
+  is-prop-mere-equiv-Type-With-Endomorphism = {!!}
 ```
 
 ### Refleivity of mere equivalences of types equipped with endomorphisms
@@ -57,8 +54,7 @@ module _
   where
 
   refl-mere-equiv-Type-With-Endomorphism : mere-equiv-Type-With-Endomorphism X X
-  refl-mere-equiv-Type-With-Endomorphism =
-    unit-trunc-Prop (id-equiv-Type-With-Endomorphism X)
+  refl-mere-equiv-Type-With-Endomorphism = {!!}
 ```
 
 ### Components of the universe of types equipped with endomorphisms
@@ -69,35 +65,30 @@ module _
   where
 
   Component-Type-With-Endomorphism : UU (lsuc l1)
-  Component-Type-With-Endomorphism =
-    Σ (Type-With-Endomorphism l1) (mere-equiv-Type-With-Endomorphism X)
+  Component-Type-With-Endomorphism = {!!}
 
   endo-Component-Type-With-Endomorphism :
     Component-Type-With-Endomorphism → Type-With-Endomorphism l1
-  endo-Component-Type-With-Endomorphism = pr1
+  endo-Component-Type-With-Endomorphism = {!!}
 
   type-Component-Type-With-Endomorphism :
     Component-Type-With-Endomorphism → UU l1
-  type-Component-Type-With-Endomorphism =
-    pr1 ∘ endo-Component-Type-With-Endomorphism
+  type-Component-Type-With-Endomorphism = {!!}
 
   endomorphism-Component-Type-With-Endomorphism :
     (T : Component-Type-With-Endomorphism) →
     type-Component-Type-With-Endomorphism T →
     type-Component-Type-With-Endomorphism T
-  endomorphism-Component-Type-With-Endomorphism T =
-    pr2 (endo-Component-Type-With-Endomorphism T)
+  endomorphism-Component-Type-With-Endomorphism T = {!!}
 
   mere-equiv-Component-Type-With-Endomorphism :
     (T : Component-Type-With-Endomorphism) →
     mere-equiv-Type-With-Endomorphism X
       ( endo-Component-Type-With-Endomorphism T)
-  mere-equiv-Component-Type-With-Endomorphism T = pr2 T
+  mere-equiv-Component-Type-With-Endomorphism T = {!!}
 
   canonical-Component-Type-With-Endomorphism : Component-Type-With-Endomorphism
-  pr1 canonical-Component-Type-With-Endomorphism = X
-  pr2 canonical-Component-Type-With-Endomorphism =
-    refl-mere-equiv-Type-With-Endomorphism X
+  pr1 canonical-Component-Type-With-Endomorphism = {!!}
 ```
 
 ### Equivalences of types equipped with an endomorphism in a given component
@@ -109,34 +100,23 @@ module _
 
   equiv-Component-Type-With-Endomorphism :
     (T S : Component-Type-With-Endomorphism X) → UU l1
-  equiv-Component-Type-With-Endomorphism T S =
-    equiv-Type-With-Endomorphism
-      ( endo-Component-Type-With-Endomorphism X T)
-      ( endo-Component-Type-With-Endomorphism X S)
+  equiv-Component-Type-With-Endomorphism T S = {!!}
 
   id-equiv-Component-Type-With-Endomorphism :
     ( T : Component-Type-With-Endomorphism X) →
     equiv-Component-Type-With-Endomorphism T T
-  id-equiv-Component-Type-With-Endomorphism T =
-    id-equiv-Type-With-Endomorphism (endo-Component-Type-With-Endomorphism X T)
+  id-equiv-Component-Type-With-Endomorphism T = {!!}
 
   equiv-eq-Component-Type-With-Endomorphism :
     (T S : Component-Type-With-Endomorphism X) →
     T ＝ S → equiv-Component-Type-With-Endomorphism T S
-  equiv-eq-Component-Type-With-Endomorphism T .T refl =
-    id-equiv-Component-Type-With-Endomorphism T
+  equiv-eq-Component-Type-With-Endomorphism T .T refl = {!!}
 
   is-torsorial-equiv-Component-Type-With-Endomorphism :
     is-torsorial
       ( equiv-Component-Type-With-Endomorphism
         ( canonical-Component-Type-With-Endomorphism X))
-  is-torsorial-equiv-Component-Type-With-Endomorphism =
-    is-torsorial-Eq-subtype
-      ( is-torsorial-equiv-Type-With-Endomorphism X)
-      ( λ Y → is-prop-type-trunc-Prop)
-      ( X)
-      ( id-equiv-Type-With-Endomorphism X)
-      ( refl-mere-equiv-Type-With-Endomorphism X)
+  is-torsorial-equiv-Component-Type-With-Endomorphism = {!!}
 
   is-equiv-equiv-eq-Component-Type-With-Endomorphism :
     (T : Component-Type-With-Endomorphism X) →
@@ -144,9 +124,5 @@ module _
       ( equiv-eq-Component-Type-With-Endomorphism
         ( canonical-Component-Type-With-Endomorphism X)
         ( T))
-  is-equiv-equiv-eq-Component-Type-With-Endomorphism =
-    fundamental-theorem-id
-      ( is-torsorial-equiv-Component-Type-With-Endomorphism)
-      ( equiv-eq-Component-Type-With-Endomorphism
-        ( canonical-Component-Type-With-Endomorphism X))
+  is-equiv-equiv-eq-Component-Type-With-Endomorphism = {!!}
 ```

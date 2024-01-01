@@ -38,22 +38,15 @@ parametric-Inhabited-Total-Order-𝔽-Full-Large-Subprecategory :
   Full-Large-Subprecategory
     ( λ l → α l ⊔ β l)
     ( parametric-Poset-Large-Precategory α β)
-parametric-Inhabited-Total-Order-𝔽-Full-Large-Subprecategory α β =
-  is-inhabited-finite-total-order-Poset-Prop
+parametric-Inhabited-Total-Order-𝔽-Full-Large-Subprecategory α β = {!!}
 
 Inhabited-Total-Order-𝔽-Large-Precategory : Large-Precategory lsuc (_⊔_)
-Inhabited-Total-Order-𝔽-Large-Precategory =
-  large-precategory-Full-Large-Subprecategory
-    ( Poset-Large-Precategory)
-    ( parametric-Inhabited-Total-Order-𝔽-Full-Large-Subprecategory
-      ( λ l → l)
-      ( λ l → l))
+Inhabited-Total-Order-𝔽-Large-Precategory = {!!}
 ```
 
 ### The precategory of finite total orders of universe level `l`
 
 ```agda
 Inhabited-Total-Order-𝔽-Precategory : (l : Level) → Precategory (lsuc l) l
-Inhabited-Total-Order-𝔽-Precategory =
-  precategory-Large-Precategory Inhabited-Total-Order-𝔽-Large-Precategory
+Inhabited-Total-Order-𝔽-Precategory = {!!}
 ```

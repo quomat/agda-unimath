@@ -34,11 +34,10 @@ module _
   where
 
   is-prop-is-prop-map : (f : A → B) → is-prop (is-prop-map f)
-  is-prop-is-prop-map f = is-prop-is-trunc-map neg-one-𝕋 f
+  is-prop-is-prop-map f = {!!}
 
   is-prop-map-Prop : (A → B) → Prop (l1 ⊔ l2)
-  pr1 (is-prop-map-Prop f) = is-prop-map f
-  pr2 (is-prop-map-Prop f) = is-prop-is-prop-map f
+  pr1 (is-prop-map-Prop f) = {!!}
 ```
 
 ### Being a propositional map is equivalent to being an embedding
@@ -49,20 +48,10 @@ module _
   where
 
   equiv-is-emb-is-prop-map : (f : A → B) → is-prop-map f ≃ is-emb f
-  equiv-is-emb-is-prop-map f =
-    equiv-iff
-      ( is-prop-map-Prop f)
-      ( is-emb-Prop f)
-      ( is-emb-is-prop-map)
-      ( is-prop-map-is-emb)
+  equiv-is-emb-is-prop-map f = {!!}
 
   equiv-is-prop-map-is-emb : (f : A → B) → is-emb f ≃ is-prop-map f
-  equiv-is-prop-map-is-emb f =
-    equiv-iff
-      ( is-emb-Prop f)
-      ( is-prop-map-Prop f)
-      ( is-prop-map-is-emb)
-      ( is-emb-is-prop-map)
+  equiv-is-prop-map-is-emb f = {!!}
 ```
 
 ### Propositional maps are closed under homotopies
@@ -73,7 +62,7 @@ module _
   where
 
   is-prop-map-htpy : is-prop-map g → is-prop-map f
-  is-prop-map-htpy = is-trunc-map-htpy neg-one-𝕋 H
+  is-prop-map-htpy = {!!}
 ```
 
 ### Propositional maps are closed under composition
@@ -85,15 +74,14 @@ module _
   where
 
   is-prop-map-comp : is-prop-map g → is-prop-map h → is-prop-map (g ∘ h)
-  is-prop-map-comp = is-trunc-map-comp neg-one-𝕋 g h
+  is-prop-map-comp = {!!}
 
 comp-prop-map :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2}
   {X : UU l3} (g : prop-map B X) (h : prop-map A B) →
   prop-map A X
-pr1 (comp-prop-map g h) = pr1 g ∘ pr1 h
-pr2 (comp-prop-map g h) =
-  is-prop-map-comp (pr1 g) (pr1 h) (pr2 g) (pr2 h)
+pr1 (comp-prop-map g h) = {!!}
+pr2 (comp-prop-map g h) = {!!}
 ```
 
 ### In a commuting triangle `f ~ g ∘ h`, if `g` and `h` are propositional maps, then `f` is a propositional map
@@ -106,8 +94,7 @@ module _
 
   is-prop-map-left-map-triangle :
     is-prop-map g → is-prop-map h → is-prop-map f
-  is-prop-map-left-map-triangle =
-    is-trunc-map-left-map-triangle neg-one-𝕋 f g h H
+  is-prop-map-left-map-triangle = {!!}
 ```
 
 ### In a commuting triangle `f ~ g ∘ h`, if `f` and `g` are propositional maps, then `h` is a propositional map
@@ -120,8 +107,7 @@ module _
 
   is-prop-map-top-map-triangle :
     is-prop-map g → is-prop-map f → is-prop-map h
-  is-prop-map-top-map-triangle =
-    is-trunc-map-top-map-triangle neg-one-𝕋 f g h H
+  is-prop-map-top-map-triangle = {!!}
 ```
 
 ### If a composite `g ∘ h` and its left factor `g` are propositional maps, then its right factor `h` is a propositional map
@@ -134,8 +120,7 @@ module _
 
   is-prop-map-right-factor :
     is-prop-map g → is-prop-map (g ∘ h) → is-prop-map h
-  is-prop-map-right-factor =
-    is-trunc-map-right-factor neg-one-𝕋 g h
+  is-prop-map-right-factor = {!!}
 ```
 
 ### A `-1`-truncated map is `k+1`-truncated
@@ -145,7 +130,5 @@ abstract
   is-trunc-map-is-prop-map :
     {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : UU l2} {f : A → B} →
     is-prop-map f → is-trunc-map (succ-𝕋 k) f
-  is-trunc-map-is-prop-map neg-two-𝕋 H = H
-  is-trunc-map-is-prop-map (succ-𝕋 k) H =
-    is-trunc-map-succ-is-trunc-map (succ-𝕋 k) (is-trunc-map-is-prop-map k H)
+  is-trunc-map-is-prop-map neg-two-𝕋 H = {!!}
 ```

@@ -33,13 +33,13 @@ module _
   where
 
   is-perfect-prop-Group : Prop l1
-  is-perfect-prop-Group = is-full-prop-Subgroup G (commutator-subgroup-Group G)
+  is-perfect-prop-Group = {!!}
 
   is-perfect-Group : UU l1
-  is-perfect-Group = type-Prop is-perfect-prop-Group
+  is-perfect-Group = {!!}
 
   is-prop-is-perfect-Group : is-prop is-perfect-Group
-  is-prop-is-perfect-Group = is-prop-type-Prop is-perfect-prop-Group
+  is-prop-is-perfect-Group = {!!}
 ```
 
 ## External links

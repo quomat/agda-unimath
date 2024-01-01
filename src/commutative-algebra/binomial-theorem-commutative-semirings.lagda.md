@@ -36,7 +36,7 @@ elements `x` and `y` of a commutative semiring `A` and any natural number `n`,
 we have
 
 ```text
-  (x + y)ⁿ = ∑_{0 ≤ i < n+1} (n choose i) xⁱ yⁿ⁻ⁱ.
+  (x + y)ⁿ = {!!}
 ```
 
 ## Definitions
@@ -48,8 +48,7 @@ binomial-sum-Commutative-Semiring :
   {l : Level} (A : Commutative-Semiring l)
   (n : ℕ) (f : functional-vec-Commutative-Semiring A (succ-ℕ n)) →
   type-Commutative-Semiring A
-binomial-sum-Commutative-Semiring A =
-  binomial-sum-Semiring (semiring-Commutative-Semiring A)
+binomial-sum-Commutative-Semiring A = {!!}
 ```
 
 ## Properties
@@ -65,15 +64,13 @@ module _
     (f : functional-vec-Commutative-Semiring A 1) →
     binomial-sum-Commutative-Semiring A 0 f ＝
     head-functional-vec-Commutative-Semiring A 0 f
-  binomial-sum-one-element-Commutative-Semiring =
-    binomial-sum-one-element-Semiring (semiring-Commutative-Semiring A)
+  binomial-sum-one-element-Commutative-Semiring = {!!}
 
   binomial-sum-two-elements-Commutative-Semiring :
     (f : functional-vec-Commutative-Semiring A 2) →
     binomial-sum-Commutative-Semiring A 1 f ＝
     add-Commutative-Semiring A (f (zero-Fin 1)) (f (one-Fin 1))
-  binomial-sum-two-elements-Commutative-Semiring =
-    binomial-sum-two-elements-Semiring (semiring-Commutative-Semiring A)
+  binomial-sum-two-elements-Commutative-Semiring = {!!}
 ```
 
 ### Binomial sums are homotopy invariant
@@ -88,8 +85,7 @@ module _
     (f ~ g) →
     binomial-sum-Commutative-Semiring A n f ＝
     binomial-sum-Commutative-Semiring A n g
-  htpy-binomial-sum-Commutative-Semiring =
-    htpy-binomial-sum-Semiring (semiring-Commutative-Semiring A)
+  htpy-binomial-sum-Commutative-Semiring = {!!}
 ```
 
 ### Multiplication distributes over sums
@@ -105,9 +101,7 @@ module _
     mul-Commutative-Semiring A x (binomial-sum-Commutative-Semiring A n f) ＝
     binomial-sum-Commutative-Semiring A n
       ( λ i → mul-Commutative-Semiring A x (f i))
-  left-distributive-mul-binomial-sum-Commutative-Semiring =
-    left-distributive-mul-binomial-sum-Semiring
-      ( semiring-Commutative-Semiring A)
+  left-distributive-mul-binomial-sum-Commutative-Semiring = {!!}
 
   right-distributive-mul-binomial-sum-Commutative-Semiring :
     (n : ℕ) (f : functional-vec-Commutative-Semiring A (succ-ℕ n)) →
@@ -115,9 +109,7 @@ module _
     mul-Commutative-Semiring A (binomial-sum-Commutative-Semiring A n f) x ＝
     binomial-sum-Commutative-Semiring A n
       ( λ i → mul-Commutative-Semiring A (f i) x)
-  right-distributive-mul-binomial-sum-Commutative-Semiring =
-    right-distributive-mul-binomial-sum-Semiring
-      ( semiring-Commutative-Semiring A)
+  right-distributive-mul-binomial-sum-Commutative-Semiring = {!!}
 ```
 
 ## Theorem
@@ -134,13 +126,7 @@ binomial-theorem-Commutative-Semiring :
       mul-Commutative-Semiring A
       ( power-Commutative-Semiring A (nat-Fin (succ-ℕ n) i) x)
       ( power-Commutative-Semiring A (dist-ℕ (nat-Fin (succ-ℕ n) i) n) y))
-binomial-theorem-Commutative-Semiring A n x y =
-  binomial-theorem-Semiring
-    ( semiring-Commutative-Semiring A)
-    ( n)
-    ( x)
-    ( y)
-    ( commutative-mul-Commutative-Semiring A x y)
+binomial-theorem-Commutative-Semiring A n x y = {!!}
 ```
 
 ## Corollaries
@@ -176,12 +162,5 @@ is-linear-combination-power-add-Commutative-Semiring :
               ( power-Commutative-Semiring A
                 ( dist-ℕ (nat-Fin (succ-ℕ m) i) m)
                 ( y))))))
-is-linear-combination-power-add-Commutative-Semiring A n m x y =
-  is-linear-combination-power-add-Semiring
-    ( semiring-Commutative-Semiring A)
-    ( n)
-    ( m)
-    ( x)
-    ( y)
-    ( commutative-mul-Commutative-Semiring A x y)
+is-linear-combination-power-add-Commutative-Semiring A n m x y = {!!}
 ```

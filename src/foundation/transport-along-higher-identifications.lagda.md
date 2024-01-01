@@ -28,7 +28,7 @@ module _
   where
 
   tr² : (B : A → UU l2) (α : p ＝ p') (b : B x) → (tr B p b) ＝ (tr B p' b)
-  tr² B α b = ap (λ t → tr B t b) α
+  tr² B α b = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {x y : A} {p p' : x ＝ y}
@@ -36,7 +36,7 @@ module _
   where
 
   tr³ : (B : A → UU l2) (β : α ＝ α') (b : B x) → (tr² B α b) ＝ (tr² B α' b)
-  tr³ B β b = ap (λ t → tr² B t b) β
+  tr³ B β b = {!!}
 ```
 
 ### Computing 2-dimensional transport in a family of identifications with a fixed source
@@ -53,8 +53,7 @@ module _
       ( tr² (Id a) α p)
       ( identification-left-whisk p α)
       ( tr-Id-right q' p)
-  tr²-Id-right α p =
-    inv-nat-htpy (λ (t : b ＝ c) → tr-Id-right t p) α
+  tr²-Id-right α p = {!!}
 ```
 
 ### Coherences and algebraic identities for `tr²`
@@ -68,7 +67,7 @@ module _
   tr²-concat :
     {p p' p'' : x ＝ y} (α : p ＝ p') (α' : p' ＝ p'') (b : B x) →
     (tr² B (α ∙ α') b) ＝ (tr² B α b ∙ tr² B α' b)
-  tr²-concat α α' b = ap-concat (λ t → tr B t b) α α'
+  tr²-concat α α' b = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {x y z : A}
@@ -82,7 +81,7 @@ module _
       ( tr² B (identification-left-whisk p β) b)
       ( htpy-right-whisk (tr² B β) (tr B p) b)
       ( tr-concat p q' b)
-  tr²-left-whisk refl refl b = refl
+  tr²-left-whisk refl refl b = {!!}
 
   tr²-right-whisk :
     {p p' : x ＝ y} (α : p ＝ p') (q : y ＝ z) (b : B x) →
@@ -91,7 +90,7 @@ module _
       ( tr² B (identification-right-whisk α q) b)
       ( htpy-left-whisk (tr B q) (tr² B α) b)
       ( tr-concat p' q b)
-  tr²-right-whisk refl refl b = inv right-unit
+  tr²-right-whisk refl refl b = {!!}
 ```
 
 #### Coherences and algebraic identities for `tr³`
@@ -143,5 +142,5 @@ module _
           ( htpy-right-whisk (tr² B β) (tr B p') b)
           ( tr²-right-whisk α q b)
           ( tr²-left-whisk p' β b)))
-  tr³-htpy-swap-path-swap {q = refl} refl {p = refl} refl b = refl
+  tr³-htpy-swap-path-swap {q = refl} refl {p = refl} refl b = {!!}
 ```

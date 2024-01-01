@@ -29,26 +29,24 @@ A fraction `m/n` is less (or equal) to a fraction `m'/n'` iff `m * n'` is less
 
 ```agda
 leq-fraction-ℤ-Prop : fraction-ℤ → fraction-ℤ → Prop lzero
-leq-fraction-ℤ-Prop (m , n , p) (m' , n' , p') =
-  leq-ℤ-Prop (m *ℤ n') (m' *ℤ n)
+leq-fraction-ℤ-Prop (m , n , p) (m' , n' , p') = {!!}
 
 leq-fraction-ℤ : fraction-ℤ → fraction-ℤ → UU lzero
-leq-fraction-ℤ x y = type-Prop (leq-fraction-ℤ-Prop x y)
+leq-fraction-ℤ x y = {!!}
 
 is-prop-leq-fraction-ℤ : (x y : fraction-ℤ) → is-prop (leq-fraction-ℤ x y)
-is-prop-leq-fraction-ℤ x y = is-prop-type-Prop (leq-fraction-ℤ-Prop x y)
+is-prop-leq-fraction-ℤ x y = {!!}
 ```
 
 ### Strict inequality of integer fractions
 
 ```agda
 le-fraction-ℤ-Prop : fraction-ℤ → fraction-ℤ → Prop lzero
-le-fraction-ℤ-Prop (m , n , p) (m' , n' , p') =
-  le-ℤ-Prop (m *ℤ n') (m' *ℤ n)
+le-fraction-ℤ-Prop (m , n , p) (m' , n' , p') = {!!}
 
 le-fraction-ℤ : fraction-ℤ → fraction-ℤ → UU lzero
-le-fraction-ℤ x y = type-Prop (le-fraction-ℤ-Prop x y)
+le-fraction-ℤ x y = {!!}
 
 is-prop-le-fraction-ℤ : (x y : fraction-ℤ) → is-prop (le-fraction-ℤ x y)
-is-prop-le-fraction-ℤ x y = is-prop-type-Prop (le-fraction-ℤ-Prop x y)
+is-prop-le-fraction-ℤ x y = {!!}
 ```

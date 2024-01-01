@@ -30,8 +30,5 @@ module _
   where
 
   principal-action-Group : action-Group G l1
-  pr1 principal-action-Group = set-Group G
-  pr1 (pr2 principal-action-Group) g = equiv-mul-Group G g
-  pr2 (pr2 principal-action-Group) {g} {h} =
-    eq-htpy-equiv (associative-mul-Group G g h)
+  pr1 principal-action-Group = {!!}
 ```

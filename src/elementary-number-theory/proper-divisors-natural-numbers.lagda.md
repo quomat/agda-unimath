@@ -36,23 +36,19 @@ divides `n`.
 
 ```agda
 is-proper-divisor-ℕ : ℕ → ℕ → UU lzero
-is-proper-divisor-ℕ n d = (d ≠ n) × (div-ℕ d n)
+is-proper-divisor-ℕ n d = {!!}
 
 is-decidable-is-proper-divisor-ℕ :
   (n d : ℕ) → is-decidable (is-proper-divisor-ℕ n d)
-is-decidable-is-proper-divisor-ℕ n d =
-  is-decidable-prod
-    ( is-decidable-neg (has-decidable-equality-ℕ d n))
-    ( is-decidable-div-ℕ d n)
+is-decidable-is-proper-divisor-ℕ n d = {!!}
 
 is-proper-divisor-zero-succ-ℕ : (n : ℕ) → is-proper-divisor-ℕ zero-ℕ (succ-ℕ n)
-pr1 (is-proper-divisor-zero-succ-ℕ n) = is-nonzero-succ-ℕ n
-pr2 (is-proper-divisor-zero-succ-ℕ n) = div-zero-ℕ (succ-ℕ n)
+pr1 (is-proper-divisor-zero-succ-ℕ n) = {!!}
+pr2 (is-proper-divisor-zero-succ-ℕ n) = {!!}
 
 le-is-proper-divisor-ℕ :
   (x y : ℕ) → is-nonzero-ℕ y → is-proper-divisor-ℕ y x → le-ℕ x y
-le-is-proper-divisor-ℕ x y H K =
-  le-leq-neq-ℕ (leq-div-ℕ x y H (pr2 K)) (pr1 K)
+le-is-proper-divisor-ℕ x y H K = {!!}
 ```
 
 ## Properties
@@ -61,10 +57,8 @@ le-is-proper-divisor-ℕ x y H K =
 
 ```agda
 is-prop-is-proper-divisor-ℕ : (n d : ℕ) → is-prop (is-proper-divisor-ℕ n d)
-is-prop-is-proper-divisor-ℕ n zero-ℕ (pair f g) =
-  ex-falso (f (inv (is-zero-div-zero-ℕ n g)))
-is-prop-is-proper-divisor-ℕ n (succ-ℕ d) =
-  is-prop-prod is-prop-neg (is-prop-div-ℕ (succ-ℕ d) n (is-nonzero-succ-ℕ d))
+is-prop-is-proper-divisor-ℕ n zero-ℕ (pair f g) = {!!}
+is-prop-is-proper-divisor-ℕ n (succ-ℕ d) = {!!}
 ```
 
 ### If a natural number has a proper divisor, then `1` is a proper divisor
@@ -72,11 +66,9 @@ is-prop-is-proper-divisor-ℕ n (succ-ℕ d) =
 ```agda
 is-proper-divisor-one-is-proper-divisor-ℕ :
   {n x : ℕ} → is-proper-divisor-ℕ n x → is-proper-divisor-ℕ n 1
-pr1 (is-proper-divisor-one-is-proper-divisor-ℕ {.1} {x} H) refl =
-  pr1 H (is-one-div-one-ℕ x (pr2 H))
-pr1 (pr2 (is-proper-divisor-one-is-proper-divisor-ℕ {n} {x} H)) = n
-pr2 (pr2 (is-proper-divisor-one-is-proper-divisor-ℕ {n} {x} H)) =
-  right-unit-law-mul-ℕ n
+pr1 (is-proper-divisor-one-is-proper-divisor-ℕ {.1} {x} H) refl = {!!}
+pr1 (pr2 (is-proper-divisor-one-is-proper-divisor-ℕ {n} {x} H)) = {!!}
+pr2 (pr2 (is-proper-divisor-one-is-proper-divisor-ℕ {n} {x} H)) = {!!}
 ```
 
 ### If `x` is nonzero and `d | x` is a proper divisor, then `1 < x/d`
@@ -85,12 +77,5 @@ pr2 (pr2 (is-proper-divisor-one-is-proper-divisor-ℕ {n} {x} H)) =
 le-one-quotient-div-is-proper-divisor-ℕ :
   (d x : ℕ) → is-nonzero-ℕ x → (H : div-ℕ d x) →
   d ≠ x → le-ℕ 1 (quotient-div-ℕ d x H)
-le-one-quotient-div-is-proper-divisor-ℕ d x f H g =
-  map-left-unit-law-coprod-is-empty
-    ( is-one-ℕ (quotient-div-ℕ d x H))
-    ( le-ℕ 1 (quotient-div-ℕ d x H))
-    ( map-neg (eq-is-one-quotient-div-ℕ d x H) g)
-    ( eq-or-le-leq-ℕ' 1
-      ( quotient-div-ℕ d x H)
-      ( leq-one-quotient-div-ℕ d x H (leq-one-is-nonzero-ℕ x f)))
+le-one-quotient-div-is-proper-divisor-ℕ d x f H g = {!!}
 ```

@@ -35,7 +35,7 @@ a commutative ring `R` and any natural number `n`, if `xy ＝ yx` holds then we
 have
 
 ```text
-  (x + y)ⁿ = ∑_{0 ≤ i < n+1} (n choose i) xⁱ yⁿ⁻ⁱ.
+  (x + y)ⁿ = {!!}
 ```
 
 ## Definitions
@@ -46,7 +46,7 @@ have
 binomial-sum-Ring :
   {l : Level} (R : Ring l)
   (n : ℕ) (f : functional-vec-Ring R (succ-ℕ n)) → type-Ring R
-binomial-sum-Ring R = binomial-sum-Semiring (semiring-Ring R)
+binomial-sum-Ring R = {!!}
 ```
 
 ## Properties
@@ -61,14 +61,12 @@ module _
   binomial-sum-one-element-Ring :
     (f : functional-vec-Ring R 1) →
     binomial-sum-Ring R 0 f ＝ head-functional-vec-Ring R 0 f
-  binomial-sum-one-element-Ring =
-    binomial-sum-one-element-Semiring (semiring-Ring R)
+  binomial-sum-one-element-Ring = {!!}
 
   binomial-sum-two-elements-Ring :
     (f : functional-vec-Ring R 2) →
     binomial-sum-Ring R 1 f ＝ add-Ring R (f (zero-Fin 1)) (f (one-Fin 1))
-  binomial-sum-two-elements-Ring =
-    binomial-sum-two-elements-Semiring (semiring-Ring R)
+  binomial-sum-two-elements-Ring = {!!}
 ```
 
 ### Binomial sums are homotopy invariant
@@ -81,7 +79,7 @@ module _
   htpy-binomial-sum-Ring :
     (n : ℕ) {f g : functional-vec-Ring R (succ-ℕ n)} →
     (f ~ g) → binomial-sum-Ring R n f ＝ binomial-sum-Ring R n g
-  htpy-binomial-sum-Ring = htpy-binomial-sum-Semiring (semiring-Ring R)
+  htpy-binomial-sum-Ring = {!!}
 ```
 
 ### Multiplication distributes over sums
@@ -95,15 +93,13 @@ module _
     (n : ℕ) (x : type-Ring R) (f : functional-vec-Ring R (succ-ℕ n)) →
     mul-Ring R x (binomial-sum-Ring R n f) ＝
     binomial-sum-Ring R n (λ i → mul-Ring R x (f i))
-  left-distributive-mul-binomial-sum-Ring =
-    left-distributive-mul-binomial-sum-Semiring (semiring-Ring R)
+  left-distributive-mul-binomial-sum-Ring = {!!}
 
   right-distributive-mul-binomial-sum-Ring :
     (n : ℕ) (f : functional-vec-Ring R (succ-ℕ n)) (x : type-Ring R) →
     mul-Ring R (binomial-sum-Ring R n f) x ＝
     binomial-sum-Ring R n (λ i → mul-Ring R (f i) x)
-  right-distributive-mul-binomial-sum-Ring =
-    right-distributive-mul-binomial-sum-Semiring (semiring-Ring R)
+  right-distributive-mul-binomial-sum-Ring = {!!}
 ```
 
 ## Theorem
@@ -120,7 +116,7 @@ binomial-theorem-Ring :
       mul-Ring R
       ( power-Ring R (nat-Fin (succ-ℕ n) i) x)
       ( power-Ring R (dist-ℕ (nat-Fin (succ-ℕ n) i) n) y))
-binomial-theorem-Ring R = binomial-theorem-Semiring (semiring-Ring R)
+binomial-theorem-Ring R = {!!}
 ```
 
 ## Corollaries
@@ -154,6 +150,5 @@ is-linear-combination-power-add-Ring :
             ( mul-Ring R
               ( power-Ring R (nat-Fin (succ-ℕ m) i) x)
               ( power-Ring R (dist-ℕ (nat-Fin (succ-ℕ m) i) m) y)))))
-is-linear-combination-power-add-Ring R =
-  is-linear-combination-power-add-Semiring (semiring-Ring R)
+is-linear-combination-power-add-Ring R = {!!}
 ```

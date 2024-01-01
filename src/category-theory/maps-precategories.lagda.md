@@ -49,17 +49,11 @@ module _
   where
 
   map-Precategory : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  map-Precategory =
-    map-Set-Magmoid
-      ( set-magmoid-Precategory C)
-      ( set-magmoid-Precategory D)
+  map-Precategory = {!!}
 
   obj-map-Precategory :
     (F : map-Precategory) → obj-Precategory C → obj-Precategory D
-  obj-map-Precategory =
-    obj-map-Set-Magmoid
-      ( set-magmoid-Precategory C)
-      ( set-magmoid-Precategory D)
+  obj-map-Precategory = {!!}
 
   hom-map-Precategory :
     (F : map-Precategory)
@@ -68,10 +62,7 @@ module _
     hom-Precategory D
       ( obj-map-Precategory F x)
       ( obj-map-Precategory F y)
-  hom-map-Precategory =
-    hom-map-Set-Magmoid
-      ( set-magmoid-Precategory C)
-      ( set-magmoid-Precategory D)
+  hom-map-Precategory = {!!}
 ```
 
 ## Properties
@@ -90,10 +81,7 @@ module _
       ( hom-eq-Precategory C y y' q)
       ( comp-hom-Precategory C f (hom-inv-eq-Precategory C x x' p))) ＝
     ( binary-tr (hom-Precategory C) p q f)
-  compute-binary-tr-hom-Precategory refl refl f =
-    ( left-unit-law-comp-hom-Precategory C
-      ( comp-hom-Precategory C f (id-hom-Precategory C))) ∙
-    ( right-unit-law-comp-hom-Precategory C f)
+  compute-binary-tr-hom-Precategory refl refl f = {!!}
 
   naturality-binary-tr-hom-Precategory :
     (p : x ＝ x') (q : y ＝ y')
@@ -103,9 +91,7 @@ module _
       ( hom-eq-Precategory C x x' p)
       ( hom-eq-Precategory C y y' q)
       ( binary-tr (hom-Precategory C) p q f))
-  naturality-binary-tr-hom-Precategory refl refl f =
-    ( right-unit-law-comp-hom-Precategory C f) ∙
-    ( inv (left-unit-law-comp-hom-Precategory C f))
+  naturality-binary-tr-hom-Precategory refl refl f = {!!}
 
   naturality-binary-tr-hom-Precategory' :
     (p : x ＝ x') (q : y ＝ y')
@@ -115,9 +101,7 @@ module _
       ( f)
       ( binary-tr (hom-Precategory C) p q f)
       ( hom-eq-Precategory C y y' q))
-  naturality-binary-tr-hom-Precategory' refl refl f =
-    ( left-unit-law-comp-hom-Precategory C f) ∙
-    ( inv (right-unit-law-comp-hom-Precategory C f))
+  naturality-binary-tr-hom-Precategory' refl refl f = {!!}
 ```
 
 ### Characterization of equality of maps between precategories
@@ -133,81 +117,35 @@ module _
     (f g : map-Precategory C D) →
     obj-map-Precategory C D f ~ obj-map-Precategory C D g →
     UU (l1 ⊔ l2 ⊔ l4)
-  coherence-htpy-map-Precategory f g H =
-    {x y : obj-Precategory C}
-    (a : hom-Precategory C x y) →
-    coherence-square-hom-Precategory D
-      ( hom-map-Precategory C D f a)
-      ( hom-eq-Precategory D
-        ( obj-map-Precategory C D f x)
-        ( obj-map-Precategory C D g x)
-        ( H x))
-      ( hom-eq-Precategory D
-        ( obj-map-Precategory C D f y)
-        ( obj-map-Precategory C D g y)
-        ( H y))
-      ( hom-map-Precategory C D g a)
+  coherence-htpy-map-Precategory f g H = {!!}
 
   htpy-map-Precategory :
     (f g : map-Precategory C D) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  htpy-map-Precategory f g =
-    Σ ( obj-map-Precategory C D f ~ obj-map-Precategory C D g)
-      ( coherence-htpy-map-Precategory f g)
+  htpy-map-Precategory f g = {!!}
 
   refl-htpy-map-Precategory :
     (f : map-Precategory C D) → htpy-map-Precategory f f
-  pr1 (refl-htpy-map-Precategory f) = refl-htpy
-  pr2 (refl-htpy-map-Precategory f) a =
-    naturality-binary-tr-hom-Precategory D
-      ( refl)
-      ( refl)
-      ( hom-map-Precategory C D f a)
+  pr1 (refl-htpy-map-Precategory f) = {!!}
 
   htpy-eq-map-Precategory :
     (f g : map-Precategory C D) → f ＝ g → htpy-map-Precategory f g
-  htpy-eq-map-Precategory f .f refl = refl-htpy-map-Precategory f
+  htpy-eq-map-Precategory f .f refl = {!!}
 
   is-torsorial-htpy-map-Precategory :
     (f : map-Precategory C D) → is-torsorial (htpy-map-Precategory f)
-  is-torsorial-htpy-map-Precategory f =
-    is-torsorial-Eq-structure _
-      ( is-torsorial-htpy (obj-map-Precategory C D f))
-      ( obj-map-Precategory C D f , refl-htpy)
-      ( is-torsorial-Eq-implicit-Π _
-        ( λ x →
-          is-torsorial-Eq-implicit-Π _
-            ( λ y →
-              is-contr-equiv
-                ( Σ
-                  ( (a : hom-Precategory C x y) →
-                    hom-Precategory D
-                      ( obj-map-Precategory C D f x)
-                      ( obj-map-Precategory C D f y))
-                  ( _~ hom-map-Precategory C D f))
-                ( equiv-tot
-                  ( λ g₁ →
-                    equiv-binary-concat-htpy
-                      ( inv-htpy (right-unit-law-comp-hom-Precategory D ∘ g₁))
-                      ( left-unit-law-comp-hom-Precategory D ∘
-                        hom-map-Precategory C D f)))
-                ( is-torsorial-htpy' (hom-map-Precategory C D f)))))
+  is-torsorial-htpy-map-Precategory f = {!!}
 
   is-equiv-htpy-eq-map-Precategory :
     (f g : map-Precategory C D) → is-equiv (htpy-eq-map-Precategory f g)
-  is-equiv-htpy-eq-map-Precategory f =
-    fundamental-theorem-id
-      ( is-torsorial-htpy-map-Precategory f)
-      ( htpy-eq-map-Precategory f)
+  is-equiv-htpy-eq-map-Precategory f = {!!}
 
   equiv-htpy-eq-map-Precategory :
     (f g : map-Precategory C D) → (f ＝ g) ≃ htpy-map-Precategory f g
-  pr1 (equiv-htpy-eq-map-Precategory f g) = htpy-eq-map-Precategory f g
-  pr2 (equiv-htpy-eq-map-Precategory f g) = is-equiv-htpy-eq-map-Precategory f g
+  pr1 (equiv-htpy-eq-map-Precategory f g) = {!!}
 
   eq-htpy-map-Precategory :
     (f g : map-Precategory C D) → htpy-map-Precategory f g → f ＝ g
-  eq-htpy-map-Precategory f g =
-    map-inv-equiv (equiv-htpy-eq-map-Precategory f g)
+  eq-htpy-map-Precategory f g = {!!}
 ```
 
 ## See also

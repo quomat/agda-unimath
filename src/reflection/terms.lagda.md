@@ -42,7 +42,7 @@ data Term : UU lzero
 data Sort : UU lzero
 data Pattern : UU lzero
 data Clause : UU lzero
-Telescope = list (String × Arg Term)
+Telescope = {!!}
 
 data Term where
   -- Variables, where the natural number is a de Bruijn index
@@ -138,7 +138,6 @@ data Clause where
 
 ```agda
 replicate-hidden-Arg : ℕ → list (Arg Term)
-replicate-hidden-Arg zero-ℕ = nil
-replicate-hidden-Arg (succ-ℕ n) =
-  cons (hidden-Arg (unknown)) (replicate-hidden-Arg n)
+replicate-hidden-Arg zero-ℕ = {!!}
+replicate-hidden-Arg (succ-ℕ n) = {!!}
 ```

@@ -32,33 +32,27 @@ module _
   where
 
   intersection-Subgroup-Ab : Subgroup-Ab (l2 ⊔ l3) A
-  intersection-Subgroup-Ab = intersection-Subgroup (group-Ab A) B C
+  intersection-Subgroup-Ab = {!!}
 
   subset-intersection-Subgroup-Ab : subtype (l2 ⊔ l3) (type-Ab A)
-  subset-intersection-Subgroup-Ab =
-    subset-intersection-Subgroup (group-Ab A) B C
+  subset-intersection-Subgroup-Ab = {!!}
 
   is-in-intersection-Subgroup-Ab : type-Ab A → UU (l2 ⊔ l3)
-  is-in-intersection-Subgroup-Ab =
-    is-in-intersection-Subgroup (group-Ab A) B C
+  is-in-intersection-Subgroup-Ab = {!!}
 
   contains-zero-intersection-Subgroup-Ab :
     contains-zero-subset-Ab A subset-intersection-Subgroup-Ab
-  contains-zero-intersection-Subgroup-Ab =
-    contains-unit-intersection-Subgroup (group-Ab A) B C
+  contains-zero-intersection-Subgroup-Ab = {!!}
 
   is-closed-under-addition-intersection-Subgroup-Ab :
     is-closed-under-addition-subset-Ab A subset-intersection-Subgroup-Ab
-  is-closed-under-addition-intersection-Subgroup-Ab =
-    is-closed-under-multiplication-intersection-Subgroup (group-Ab A) B C
+  is-closed-under-addition-intersection-Subgroup-Ab = {!!}
 
   is-closed-under-negatives-intersection-Subgroup-Ab :
     is-closed-under-negatives-subset-Ab A subset-intersection-Subgroup-Ab
-  is-closed-under-negatives-intersection-Subgroup-Ab =
-    is-closed-under-inverses-intersection-Subgroup (group-Ab A) B C
+  is-closed-under-negatives-intersection-Subgroup-Ab = {!!}
 
   is-subgroup-intersection-Subgroup-Ab :
     is-subgroup-Ab A subset-intersection-Subgroup-Ab
-  is-subgroup-intersection-Subgroup-Ab =
-    is-subgroup-intersection-Subgroup (group-Ab A) B C
+  is-subgroup-intersection-Subgroup-Ab = {!!}
 ```

@@ -25,7 +25,7 @@ open import univalent-combinatorics.standard-finite-types
 
 ```agda
 bracelet : ℕ → ℕ → UU (lsuc lzero)
-bracelet m n = Σ (Polygon m) (λ X → vertex-Polygon m X → Fin n)
+bracelet m n = {!!}
 ```
 
 ## See also

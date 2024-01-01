@@ -37,7 +37,7 @@ module _
   where
 
   intersection-subtype : subtype (l2 ⊔ l3) X
-  intersection-subtype = meet-powerset-Large-Locale P Q
+  intersection-subtype = {!!}
 
   is-greatest-binary-lower-bound-intersection-subtype :
     is-greatest-binary-lower-bound-Large-Poset
@@ -48,16 +48,7 @@ module _
   pr1
     ( pr1
       ( is-greatest-binary-lower-bound-intersection-subtype R)
-      ( p , q) x r) =
-    p x r
-  pr2
-    ( pr1
-      ( is-greatest-binary-lower-bound-intersection-subtype R)
-      ( p , q) x r) = q x r
-  pr1 (pr2 (is-greatest-binary-lower-bound-intersection-subtype R) p) x r =
-    pr1 (p x r)
-  pr2 (pr2 (is-greatest-binary-lower-bound-intersection-subtype R) p) x r =
-    pr2 (p x r)
+      ( p , q) x r) = {!!}
 ```
 
 ### The intersection of two decidable subtypes
@@ -70,7 +61,7 @@ module _
   intersection-decidable-subtype :
     decidable-subtype l1 X → decidable-subtype l2 X →
     decidable-subtype (l1 ⊔ l2) X
-  intersection-decidable-subtype P Q x = conjunction-Decidable-Prop (P x) (Q x)
+  intersection-decidable-subtype P Q x = {!!}
 ```
 
 ### The intersection of a family of subtypes
@@ -82,5 +73,5 @@ module _
 
   intersection-family-of-subtypes :
     {I : UU l2} (P : I → subtype l3 X) → subtype (l2 ⊔ l3) X
-  intersection-family-of-subtypes {I} P x = Π-Prop I (λ i → P i x)
+  intersection-family-of-subtypes {I} P x = {!!}
 ```

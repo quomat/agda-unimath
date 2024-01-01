@@ -28,6 +28,5 @@ of total partial elements of `A` is
 ```agda
 total-partial-element :
   {l1 : Level} (l2 : Level) (A : UU l1) → UU (l1 ⊔ lsuc l2)
-total-partial-element l2 A =
-  Σ (partial-element l2 A) is-defined-partial-element
+total-partial-element l2 A = {!!}
 ```

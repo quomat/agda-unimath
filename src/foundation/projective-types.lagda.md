@@ -54,9 +54,7 @@ a `k`-truncated type `B`.
 ```agda
 is-set-projective :
   {l1 : Level} (l2 l3 : Level) → UU l1 → UU (l1 ⊔ lsuc l2 ⊔ lsuc l3)
-is-set-projective l2 l3 X =
-  (A : UU l2) (B : Set l3) (f : A ↠ type-Set B) →
-  is-surjective (postcomp X (map-surjection f))
+is-set-projective l2 l3 X = {!!}
 ```
 
 ### `k`-projective types
@@ -64,14 +62,7 @@ is-set-projective l2 l3 X =
 ```agda
 is-projective :
   {l1 : Level} (l2 l3 : Level) (k : ℕ) → UU l1 → UU (l1 ⊔ lsuc l2 ⊔ lsuc l3)
-is-projective l2 l3 k X =
-  ( A : UU l2) (B : Truncated-Type l3 (truncation-level-ℕ k))
-  ( f :
-    connected-map
-      ( truncation-level-minus-one-ℕ k)
-      ( A)
-      ( type-Truncated-Type B)) →
-  is-surjective (postcomp X (map-connected-map f))
+is-projective l2 l3 k X = {!!}
 ```
 
 ## See also

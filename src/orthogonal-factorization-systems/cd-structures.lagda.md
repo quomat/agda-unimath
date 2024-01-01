@@ -56,16 +56,13 @@ module _
   where
 
   cd-structure : UUω
-  cd-structure =
-    {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} {Y : UU l4} →
-    (f : A → B) (g : X → Y) → subtype (α l1 l2 l3 l4) (hom-arrow f g)
+  cd-structure = {!!}
 
   is-distinguished-square-cd-structure :
     (Σ : cd-structure) →
     {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} {Y : UU l4} →
     (f : A → B) (g : X → Y) → hom-arrow f g → UU (α l1 l2 l3 l4)
-  is-distinguished-square-cd-structure Σ f g σ =
-    type-Prop (Σ f g σ)
+  is-distinguished-square-cd-structure Σ f g σ = {!!}
 ```
 
 ## Exernal links

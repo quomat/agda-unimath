@@ -34,20 +34,15 @@ module _
   where
 
   hom-Frame : UU (l1 ⊔ lsuc l2 ⊔ l3)
-  hom-Frame = Σ (type-Frame A → type-Frame B)
-    (λ f → preserves-order-Poset (poset-Frame A) (poset-Frame B) f ×
-      preserves-meets-sups
-        ( meet-suplattice-Frame A)
-        ( meet-suplattice-Frame B)
-        ( f))
+  hom-Frame = {!!}
 
   map-hom-Frame : hom-Frame → type-Frame A → type-Frame B
-  map-hom-Frame = pr1
+  map-hom-Frame = {!!}
 
   preserves-order-hom-Frame :
     (H : hom-Frame) →
     preserves-order-Poset (poset-Frame A) (poset-Frame B) (map-hom-Frame H)
-  preserves-order-hom-Frame = pr1 ∘ pr2
+  preserves-order-hom-Frame = {!!}
 
   preserves-meets-sups-hom-Frame :
     (H : hom-Frame) →
@@ -55,7 +50,7 @@ module _
       ( meet-suplattice-Frame A)
       ( meet-suplattice-Frame B)
       ( map-hom-Frame H)
-  preserves-meets-sups-hom-Frame = pr2 ∘ pr2
+  preserves-meets-sups-hom-Frame = {!!}
 
   preserves-meets-hom-Frame :
     (H : hom-Frame) →
@@ -63,7 +58,7 @@ module _
       ( meet-semilattice-Frame A)
       ( meet-semilattice-Frame B)
       ( map-hom-Frame H)
-  preserves-meets-hom-Frame = pr1 ∘ preserves-meets-sups-hom-Frame
+  preserves-meets-hom-Frame = {!!}
 
   preserves-sups-hom-Frame :
     (H : hom-Frame) →
@@ -71,5 +66,5 @@ module _
       ( suplattice-Frame A)
       ( suplattice-Frame B)
       ( map-hom-Frame H)
-  preserves-sups-hom-Frame = pr2 ∘ preserves-meets-sups-hom-Frame
+  preserves-sups-hom-Frame = {!!}
 ```

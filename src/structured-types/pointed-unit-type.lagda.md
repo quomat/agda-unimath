@@ -27,8 +27,8 @@ The pointed unit type is the initial pointed type.
 
 ```agda
 unit-Pointed-Type : Pointed-Type lzero
-pr1 unit-Pointed-Type = unit
-pr2 unit-Pointed-Type = star
+pr1 unit-Pointed-Type = {!!}
+pr2 unit-Pointed-Type = {!!}
 ```
 
 ## Properties
@@ -39,21 +39,16 @@ module _
   where
 
   terminal-pointed-map : X →∗ unit-Pointed-Type
-  pr1 terminal-pointed-map _ = star
-  pr2 terminal-pointed-map = refl
+  pr1 terminal-pointed-map _ = {!!}
 
   map-terminal-pointed-map : type-Pointed-Type X → unit
-  map-terminal-pointed-map =
-    map-pointed-map {A = X} {B = unit-Pointed-Type}
-      terminal-pointed-map
+  map-terminal-pointed-map = {!!}
 
   inclusion-point-Pointed-Type :
     unit-Pointed-Type →∗ X
-  pr1 inclusion-point-Pointed-Type = point (point-Pointed-Type X)
-  pr2 inclusion-point-Pointed-Type = refl
+  pr1 inclusion-point-Pointed-Type = {!!}
 
   is-initial-unit-Pointed-Type :
     ( f : unit-Pointed-Type →∗ X) → f ~∗ inclusion-point-Pointed-Type
-  pr1 (is-initial-unit-Pointed-Type f) _ = preserves-point-pointed-map f
-  pr2 (is-initial-unit-Pointed-Type f) = inv right-unit
+  pr1 (is-initial-unit-Pointed-Type f) _ = {!!}
 ```

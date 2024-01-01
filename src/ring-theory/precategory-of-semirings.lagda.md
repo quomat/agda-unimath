@@ -31,34 +31,26 @@ semirings.
 ```agda
 Semiring-Large-Precategory : Large-Precategory lsuc _⊔_
 obj-Large-Precategory
-  Semiring-Large-Precategory =
-  Semiring
+  Semiring-Large-Precategory = {!!}
 hom-set-Large-Precategory
-  Semiring-Large-Precategory =
-  hom-set-Semiring
+  Semiring-Large-Precategory = {!!}
 comp-hom-Large-Precategory
-  Semiring-Large-Precategory {X = R} {S} {T} =
-  comp-hom-Semiring R S T
+  Semiring-Large-Precategory {X = R} {S} {T} = {!!}
 id-hom-Large-Precategory
-  Semiring-Large-Precategory {X = R} =
-  id-hom-Semiring R
+  Semiring-Large-Precategory {X = R} = {!!}
 associative-comp-hom-Large-Precategory
-  Semiring-Large-Precategory {X = R} {S} {T} {U} =
-  associative-comp-hom-Semiring R S T U
+  Semiring-Large-Precategory {X = R} {S} {T} {U} = {!!}
 inv-associative-comp-hom-Large-Precategory
-  Semiring-Large-Precategory {X = R} {S} {T} {U} =
-  inv-associative-comp-hom-Semiring R S T U
+  Semiring-Large-Precategory {X = R} {S} {T} {U} = {!!}
 left-unit-law-comp-hom-Large-Precategory
-  Semiring-Large-Precategory {X = R} {S} =
-  left-unit-law-comp-hom-Semiring R S
+  Semiring-Large-Precategory {X = R} {S} = {!!}
 right-unit-law-comp-hom-Large-Precategory
-  Semiring-Large-Precategory {X = R} {S} =
-  right-unit-law-comp-hom-Semiring R S
+  Semiring-Large-Precategory {X = R} {S} = {!!}
 ```
 
 ### The precategory of semirings of universe level `l`
 
 ```agda
 Semiring-Precategory : (l : Level) → Precategory (lsuc l) l
-Semiring-Precategory = precategory-Large-Precategory Semiring-Large-Precategory
+Semiring-Precategory = {!!}
 ```

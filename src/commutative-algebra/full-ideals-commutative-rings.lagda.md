@@ -43,17 +43,14 @@ module _
   where
 
   is-full-ideal-Commutative-Ring-Prop : Prop (l1 ⊔ l2)
-  is-full-ideal-Commutative-Ring-Prop =
-    is-full-ideal-Ring-Prop (ring-Commutative-Ring A) I
+  is-full-ideal-Commutative-Ring-Prop = {!!}
 
   is-full-ideal-Commutative-Ring : UU (l1 ⊔ l2)
-  is-full-ideal-Commutative-Ring =
-    is-full-ideal-Ring (ring-Commutative-Ring A) I
+  is-full-ideal-Commutative-Ring = {!!}
 
   is-prop-is-full-ideal-Commutative-Ring :
     is-prop is-full-ideal-Commutative-Ring
-  is-prop-is-full-ideal-Commutative-Ring =
-    is-prop-is-full-ideal-Ring (ring-Commutative-Ring A) I
+  is-prop-is-full-ideal-Commutative-Ring = {!!}
 ```
 
 ### The (standard) full ideal
@@ -64,80 +61,64 @@ module _
   where
 
   subset-full-ideal-Commutative-Ring : subset-Commutative-Ring lzero A
-  subset-full-ideal-Commutative-Ring =
-    subset-full-ideal-Ring (ring-Commutative-Ring A)
+  subset-full-ideal-Commutative-Ring = {!!}
 
   is-in-full-ideal-Commutative-Ring : type-Commutative-Ring A → UU lzero
-  is-in-full-ideal-Commutative-Ring =
-    is-in-full-ideal-Ring (ring-Commutative-Ring A)
+  is-in-full-ideal-Commutative-Ring = {!!}
 
   contains-zero-full-ideal-Commutative-Ring :
     contains-zero-subset-Commutative-Ring A subset-full-ideal-Commutative-Ring
-  contains-zero-full-ideal-Commutative-Ring =
-    contains-zero-full-ideal-Ring (ring-Commutative-Ring A)
+  contains-zero-full-ideal-Commutative-Ring = {!!}
 
   is-closed-under-addition-full-ideal-Commutative-Ring :
     is-closed-under-addition-subset-Commutative-Ring A
       subset-full-ideal-Commutative-Ring
-  is-closed-under-addition-full-ideal-Commutative-Ring {x} {y} =
-    is-closed-under-addition-full-ideal-Ring (ring-Commutative-Ring A) {x} {y}
+  is-closed-under-addition-full-ideal-Commutative-Ring {x} {y} = {!!}
 
   is-closed-under-negatives-full-ideal-Commutative-Ring :
     is-closed-under-negatives-subset-Commutative-Ring A
       subset-full-ideal-Commutative-Ring
-  is-closed-under-negatives-full-ideal-Commutative-Ring {x} =
-    is-closed-under-negatives-full-ideal-Ring (ring-Commutative-Ring A) {x}
+  is-closed-under-negatives-full-ideal-Commutative-Ring {x} = {!!}
 
   is-additive-subgroup-full-ideal-Commutative-Ring :
     is-additive-subgroup-subset-Commutative-Ring A
       subset-full-ideal-Commutative-Ring
-  is-additive-subgroup-full-ideal-Commutative-Ring =
-    is-additive-subgroup-full-ideal-Ring (ring-Commutative-Ring A)
+  is-additive-subgroup-full-ideal-Commutative-Ring = {!!}
 
   is-closed-under-left-multiplication-full-ideal-Commutative-Ring :
     is-closed-under-left-multiplication-subset-Commutative-Ring A
       subset-full-ideal-Commutative-Ring
-  is-closed-under-left-multiplication-full-ideal-Commutative-Ring =
-    is-closed-under-left-multiplication-full-ideal-Ring
-      ( ring-Commutative-Ring A)
+  is-closed-under-left-multiplication-full-ideal-Commutative-Ring = {!!}
 
   is-closed-under-right-multiplication-full-ideal-Commutative-Ring :
     is-closed-under-right-multiplication-subset-Commutative-Ring A
       subset-full-ideal-Commutative-Ring
-  is-closed-under-right-multiplication-full-ideal-Commutative-Ring =
-    is-closed-under-right-multiplication-full-ideal-Ring
-      ( ring-Commutative-Ring A)
+  is-closed-under-right-multiplication-full-ideal-Commutative-Ring = {!!}
 
   is-left-ideal-full-ideal-Commutative-Ring :
     is-left-ideal-subset-Commutative-Ring A subset-full-ideal-Commutative-Ring
-  is-left-ideal-full-ideal-Commutative-Ring =
-    is-left-ideal-full-ideal-Ring (ring-Commutative-Ring A)
+  is-left-ideal-full-ideal-Commutative-Ring = {!!}
 
   full-left-ideal-Commutative-Ring : left-ideal-Commutative-Ring lzero A
-  full-left-ideal-Commutative-Ring =
-    full-left-ideal-Ring (ring-Commutative-Ring A)
+  full-left-ideal-Commutative-Ring = {!!}
 
   is-right-ideal-full-ideal-Commutative-Ring :
     is-right-ideal-subset-Commutative-Ring A subset-full-ideal-Commutative-Ring
-  is-right-ideal-full-ideal-Commutative-Ring =
-    is-right-ideal-full-ideal-Ring (ring-Commutative-Ring A)
+  is-right-ideal-full-ideal-Commutative-Ring = {!!}
 
   full-right-ideal-Commutative-Ring : right-ideal-Commutative-Ring lzero A
-  full-right-ideal-Commutative-Ring =
-    full-right-ideal-Ring (ring-Commutative-Ring A)
+  full-right-ideal-Commutative-Ring = {!!}
 
   is-ideal-full-ideal-Commutative-Ring :
     is-ideal-subset-Commutative-Ring A subset-full-ideal-Commutative-Ring
-  is-ideal-full-ideal-Commutative-Ring =
-    is-ideal-full-ideal-Ring (ring-Commutative-Ring A)
+  is-ideal-full-ideal-Commutative-Ring = {!!}
 
   full-ideal-Commutative-Ring : ideal-Commutative-Ring lzero A
-  full-ideal-Commutative-Ring = full-ideal-Ring (ring-Commutative-Ring A)
+  full-ideal-Commutative-Ring = {!!}
 
   is-full-full-ideal-Commutative-Ring :
     is-full-ideal-Commutative-Ring A full-ideal-Commutative-Ring
-  is-full-full-ideal-Commutative-Ring =
-    is-full-full-ideal-Ring (ring-Commutative-Ring A)
+  is-full-full-ideal-Commutative-Ring = {!!}
 ```
 
 ## Properties
@@ -152,14 +133,12 @@ module _
   is-full-contains-one-ideal-Commutative-Ring :
     is-in-ideal-Commutative-Ring A I (one-Commutative-Ring A) →
     is-full-ideal-Commutative-Ring A I
-  is-full-contains-one-ideal-Commutative-Ring =
-    is-full-contains-one-ideal-Ring (ring-Commutative-Ring A) I
+  is-full-contains-one-ideal-Commutative-Ring = {!!}
 
   contains-one-is-full-ideal-Commutative-Ring :
     is-full-ideal-Commutative-Ring A I →
     is-in-ideal-Commutative-Ring A I (one-Commutative-Ring A)
-  contains-one-is-full-ideal-Commutative-Ring =
-    contains-one-is-full-ideal-Ring (ring-Commutative-Ring A) I
+  contains-one-is-full-ideal-Commutative-Ring = {!!}
 ```
 
 ### Any ideal is full if and only if it is a top element in the large poset of ideals
@@ -172,14 +151,12 @@ module _
   is-full-is-top-element-ideal-Commutative-Ring :
     is-top-element-Large-Poset (ideal-Commutative-Ring-Large-Poset A) I →
     is-full-ideal-Commutative-Ring A I
-  is-full-is-top-element-ideal-Commutative-Ring =
-    is-full-is-top-element-ideal-Ring (ring-Commutative-Ring A) I
+  is-full-is-top-element-ideal-Commutative-Ring = {!!}
 
   is-top-element-is-full-ideal-Commutative-Ring :
     is-full-ideal-Commutative-Ring A I →
     is-top-element-Large-Poset (ideal-Commutative-Ring-Large-Poset A) I
-  is-top-element-is-full-ideal-Commutative-Ring =
-    is-top-element-is-full-ideal-Ring (ring-Commutative-Ring A) I
+  is-top-element-is-full-ideal-Commutative-Ring = {!!}
 
 module _
   {l1 : Level} (A : Commutative-Ring l1)
@@ -189,13 +166,11 @@ module _
     is-top-element-Large-Poset
       ( ideal-Commutative-Ring-Large-Poset A)
       ( full-ideal-Commutative-Ring A)
-  is-top-element-full-ideal-Commutative-Ring =
-    is-top-element-full-ideal-Ring (ring-Commutative-Ring A)
+  is-top-element-full-ideal-Commutative-Ring = {!!}
 
   has-top-element-ideal-Commutative-Ring :
     has-top-element-Large-Poset (ideal-Commutative-Ring-Large-Poset A)
-  has-top-element-ideal-Commutative-Ring =
-    has-top-element-ideal-Ring (ring-Commutative-Ring A)
+  has-top-element-ideal-Commutative-Ring = {!!}
 ```
 
 ### The full ideal of a commutative ring is radical
@@ -207,29 +182,20 @@ module _
 
   is-radical-full-ideal-Commutative-Ring :
     is-radical-ideal-Commutative-Ring A (full-ideal-Commutative-Ring A)
-  is-radical-full-ideal-Commutative-Ring x n H = raise-star
+  is-radical-full-ideal-Commutative-Ring x n H = {!!}
 
   full-radical-ideal-Commutative-Ring : radical-ideal-Commutative-Ring lzero A
-  pr1 full-radical-ideal-Commutative-Ring =
-    full-ideal-Commutative-Ring A
-  pr2 full-radical-ideal-Commutative-Ring =
-    is-radical-full-ideal-Commutative-Ring
+  pr1 full-radical-ideal-Commutative-Ring = {!!}
 
   is-top-element-full-radical-ideal-Commutative-Ring :
     is-top-element-Large-Poset
       ( radical-ideal-Commutative-Ring-Large-Poset A)
       ( full-radical-ideal-Commutative-Ring)
-  is-top-element-full-radical-ideal-Commutative-Ring I =
-    is-top-element-full-ideal-Commutative-Ring A
-      ( ideal-radical-ideal-Commutative-Ring A I)
+  is-top-element-full-radical-ideal-Commutative-Ring I = {!!}
 
   has-top-element-radical-ideal-Commutative-Ring :
     has-top-element-Large-Poset
       ( radical-ideal-Commutative-Ring-Large-Poset A)
   top-has-top-element-Large-Poset
-    has-top-element-radical-ideal-Commutative-Ring =
-    full-radical-ideal-Commutative-Ring
-  is-top-element-top-has-top-element-Large-Poset
-    has-top-element-radical-ideal-Commutative-Ring =
-    is-top-element-full-radical-ideal-Commutative-Ring
+    has-top-element-radical-ideal-Commutative-Ring = {!!}
 ```

@@ -39,7 +39,7 @@ module _
   where
 
   is-path-split : UU (l1 ⊔ l2)
-  is-path-split = section f × ((x y : A) → section (ap f {x = x} {y = y}))
+  is-path-split = {!!}
 ```
 
 ## Properties
@@ -53,27 +53,16 @@ module _
 
   abstract
     is-path-split-is-equiv : is-equiv f → is-path-split f
-    pr1 (is-path-split-is-equiv is-equiv-f) = pr1 is-equiv-f
-    pr2 (is-path-split-is-equiv is-equiv-f) x y =
-      pr1 (is-emb-is-equiv is-equiv-f x y)
+    pr1 (is-path-split-is-equiv is-equiv-f) = {!!}
 
   abstract
     is-coherently-invertible-is-path-split :
       is-path-split f → is-coherently-invertible f
-    pr1 (is-coherently-invertible-is-path-split ((g , G) , s)) =
-      g
-    pr1 (pr2 (is-coherently-invertible-is-path-split ((g , G) , s))) =
-      G
-    pr1 (pr2 (pr2 (is-coherently-invertible-is-path-split ((g , G) , s)))) x =
-      pr1 (s (g (f x)) x) (G (f x))
-    pr2 (pr2 (pr2 (is-coherently-invertible-is-path-split ((g , G) , s)))) x =
-      inv (pr2 (s (g (f x)) x) (G (f x)))
+    pr1 (is-coherently-invertible-is-path-split ((g , G) , s)) = {!!}
 
   abstract
     is-equiv-is-path-split : is-path-split f → is-equiv f
-    is-equiv-is-path-split =
-      is-equiv-is-coherently-invertible ∘
-      is-coherently-invertible-is-path-split
+    is-equiv-is-path-split = {!!}
 ```
 
 ## See also

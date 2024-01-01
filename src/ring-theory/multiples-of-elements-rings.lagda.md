@@ -39,7 +39,7 @@ module _
   where
 
   multiple-Ring : ℕ → type-Ring R → type-Ring R
-  multiple-Ring = multiple-Ab (ab-Ring R)
+  multiple-Ring = {!!}
 ```
 
 ### The predicate of being a natural multiple of an element in an ring
@@ -55,19 +55,16 @@ module _
 
   is-multiple-of-element-prop-Ring :
     (x y : type-Ring R) → Prop l
-  is-multiple-of-element-prop-Ring =
-    is-multiple-of-element-prop-Ab (ab-Ring R)
+  is-multiple-of-element-prop-Ring = {!!}
 
   is-multiple-of-element-Ring :
     (x y : type-Ring R) → UU l
-  is-multiple-of-element-Ring =
-    is-multiple-of-element-Ab (ab-Ring R)
+  is-multiple-of-element-Ring = {!!}
 
   is-prop-is-multiple-of-element-Ring :
     (x y : type-Ring R) →
     is-prop (is-multiple-of-element-Ring x y)
-  is-prop-is-multiple-of-element-Ring =
-    is-prop-is-multiple-of-element-Ab (ab-Ring R)
+  is-prop-is-multiple-of-element-Ring = {!!}
 ```
 
 ## Properties
@@ -81,10 +78,10 @@ module _
 
   multiple-zero-Ring :
     (n : ℕ) → multiple-Ring R n (zero-Ring R) ＝ zero-Ring R
-  multiple-zero-Ring = multiple-zero-Ab (ab-Ring R)
+  multiple-zero-Ring = {!!}
 ```
 
-### `(n + 1) · x = n · x + x`
+### `(n + 1) · x = {!!}
 
 ```agda
 module _
@@ -94,7 +91,7 @@ module _
   multiple-succ-Ring :
     (n : ℕ) (x : type-Ring R) →
     multiple-Ring R (succ-ℕ n) x ＝ add-Ring R (multiple-Ring R n x) x
-  multiple-succ-Ring = multiple-succ-Ab (ab-Ring R)
+  multiple-succ-Ring = {!!}
 ```
 
 ### `(n + 1) · x ＝ x + n · x`
@@ -107,7 +104,7 @@ module _
   multiple-succ-Ring' :
     (n : ℕ) (x : type-Ring R) →
     multiple-Ring R (succ-ℕ n) x ＝ add-Ring R x (multiple-Ring R n x)
-  multiple-succ-Ring' = multiple-succ-Ab' (ab-Ring R)
+  multiple-succ-Ring' = {!!}
 ```
 
 ### Multiples by sums of natural numbers are products of multiples
@@ -121,8 +118,7 @@ module _
     (m n : ℕ) {x : type-Ring R} →
     multiple-Ring R (m +ℕ n) x ＝
     add-Ring R (multiple-Ring R m x) (multiple-Ring R n x)
-  right-distributive-multiple-add-Ring =
-    right-distributive-multiple-add-Ab (ab-Ring R)
+  right-distributive-multiple-add-Ring = {!!}
 ```
 
 ### Multiples distribute over the sum of `x` and `y`
@@ -136,8 +132,7 @@ module _
     (n : ℕ) {x y : type-Ring R} →
     multiple-Ring R n (add-Ring R x y) ＝
     add-Ring R (multiple-Ring R n x) (multiple-Ring R n y)
-  left-distributive-multiple-add-Ring =
-    left-distributive-multiple-add-Ab (ab-Ring R)
+  left-distributive-multiple-add-Ring = {!!}
 ```
 
 ### Multiples by products of natural numbers are iterated multiples
@@ -150,5 +145,5 @@ module _
   multiple-mul-Ring :
     (m n : ℕ) {x : type-Ring R} →
     multiple-Ring R (m *ℕ n) x ＝ multiple-Ring R n (multiple-Ring R m x)
-  multiple-mul-Ring = multiple-mul-Ab (ab-Ring R)
+  multiple-mul-Ring = {!!}
 ```

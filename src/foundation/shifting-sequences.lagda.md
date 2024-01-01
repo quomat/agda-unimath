@@ -20,14 +20,13 @@ Given a sequence `f : ℕ → A` and an element `a : A` we define
 `shift-ℕ a f : ℕ → A` by
 
 ```text
-  shift-ℕ a f zero-ℕ := a
-  shift-ℕ a f (succ-ℕ n) := f n
+  shift-ℕ a f zero-ℕ := {!!}
 ```
 
 ## Definition
 
 ```agda
 shift-ℕ : {l : Level} {A : UU l} (a : A) (f : ℕ → A) → ℕ → A
-shift-ℕ a f zero-ℕ = a
-shift-ℕ a f (succ-ℕ n) = f n
+shift-ℕ a f zero-ℕ = {!!}
+shift-ℕ a f (succ-ℕ n) = {!!}
 ```

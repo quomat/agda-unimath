@@ -36,9 +36,9 @@ module _
   where
 
   is-orthogonal : (A → X) → (B → Y) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-orthogonal f g = is-equiv (pullback-hom f g)
+  is-orthogonal f g = {!!}
 
-  _⊥_ = is-orthogonal
+  _⊥_ = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} {Y : UU l4}
@@ -49,14 +49,14 @@ A term of `is-right-orthogonal f g` asserts that `g` is right orthogonal to `f`.
 
 ```agda
   is-right-orthogonal : (A → X) → (B → Y) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-right-orthogonal = is-orthogonal
+  is-right-orthogonal = {!!}
 ```
 
 A term of `is-left-orthogonal f g` asserts that `g` is left orthogonal to `f`.
 
 ```agda
   is-left-orthogonal : (A → X) → (B → Y) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-left-orthogonal g f = is-orthogonal f g
+  is-left-orthogonal g f = {!!}
 ```
 
 ## Properties
@@ -70,9 +70,8 @@ module _
   where
 
   is-property-is-orthogonal : is-prop (is-orthogonal f g)
-  is-property-is-orthogonal = is-property-is-equiv (pullback-hom f g)
+  is-property-is-orthogonal = {!!}
 
   is-orthogonal-Prop : Prop (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  pr1 is-orthogonal-Prop = is-orthogonal f g
-  pr2 is-orthogonal-Prop = is-property-is-orthogonal
+  pr1 is-orthogonal-Prop = {!!}
 ```

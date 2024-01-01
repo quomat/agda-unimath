@@ -31,12 +31,5 @@ abstract
   fixed-point-theorem-Lawvere :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → A → B} →
     is-surjective f → (h : B → B) → ∃ B (λ b → h b ＝ b)
-  fixed-point-theorem-Lawvere {A = A} {B} {f} H h =
-    apply-universal-property-trunc-Prop
-      ( H g)
-      ( ∃-Prop B (λ b → h b ＝ b))
-      ( λ p → intro-∃ (f (pr1 p) (pr1 p)) (inv (htpy-eq (pr2 p) (pr1 p))))
-    where
-    g : A → B
-    g a = h (f a a)
+  fixed-point-theorem-Lawvere {A = A} {B} {f} H h = {!!}
 ```

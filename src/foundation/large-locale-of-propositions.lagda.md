@@ -39,18 +39,18 @@ form a [large locale](order-theory.large-locales.md).
 
 ```agda
 Prop-Large-Preorder : Large-Preorder lsuc _⊔_
-type-Large-Preorder Prop-Large-Preorder = Prop
-leq-prop-Large-Preorder Prop-Large-Preorder = hom-Prop
-refl-leq-Large-Preorder Prop-Large-Preorder P = id
-transitive-leq-Large-Preorder Prop-Large-Preorder P Q R g f = g ∘ f
+type-Large-Preorder Prop-Large-Preorder = {!!}
+leq-prop-Large-Preorder Prop-Large-Preorder = {!!}
+refl-leq-Large-Preorder Prop-Large-Preorder P = {!!}
+transitive-leq-Large-Preorder Prop-Large-Preorder P Q R g f = {!!}
 ```
 
 ### The large poset of propositions
 
 ```agda
 Prop-Large-Poset : Large-Poset lsuc _⊔_
-large-preorder-Large-Poset Prop-Large-Poset = Prop-Large-Preorder
-antisymmetric-leq-Large-Poset Prop-Large-Poset P Q = eq-iff
+large-preorder-Large-Poset Prop-Large-Poset = {!!}
+antisymmetric-leq-Large-Poset Prop-Large-Poset P Q = {!!}
 ```
 
 ### Meets in the large poset of propositions
@@ -58,10 +58,9 @@ antisymmetric-leq-Large-Poset Prop-Large-Poset P Q = eq-iff
 ```agda
 has-meets-Prop-Large-Locale :
   has-meets-Large-Poset Prop-Large-Poset
-meet-has-meets-Large-Poset has-meets-Prop-Large-Locale = conjunction-Prop
+meet-has-meets-Large-Poset has-meets-Prop-Large-Locale = {!!}
 is-greatest-binary-lower-bound-meet-has-meets-Large-Poset
-  has-meets-Prop-Large-Locale =
-  iff-universal-property-conjunction-Prop
+  has-meets-Prop-Large-Locale = {!!}
 ```
 
 ### The largest element in the large poset of propositions
@@ -70,10 +69,9 @@ is-greatest-binary-lower-bound-meet-has-meets-Large-Poset
 has-top-element-Prop-Large-Locale :
   has-top-element-Large-Poset Prop-Large-Poset
 top-has-top-element-Large-Poset
-  has-top-element-Prop-Large-Locale = unit-Prop
+  has-top-element-Prop-Large-Locale = {!!}
 is-top-element-top-has-top-element-Large-Poset
-  has-top-element-Prop-Large-Locale P p =
-  star
+  has-top-element-Prop-Large-Locale P p = {!!}
 ```
 
 ### The large poset of propositions is a large meet-semilattice
@@ -82,11 +80,9 @@ is-top-element-top-has-top-element-Large-Poset
 is-large-meet-semilattice-Prop-Large-Locale :
   is-large-meet-semilattice-Large-Poset Prop-Large-Poset
 has-meets-is-large-meet-semilattice-Large-Poset
-  is-large-meet-semilattice-Prop-Large-Locale =
-  has-meets-Prop-Large-Locale
+  is-large-meet-semilattice-Prop-Large-Locale = {!!}
 has-top-element-is-large-meet-semilattice-Large-Poset
-  is-large-meet-semilattice-Prop-Large-Locale =
-  has-top-element-Prop-Large-Locale
+  is-large-meet-semilattice-Prop-Large-Locale = {!!}
 ```
 
 ### Suprema in the large poset of propositions
@@ -95,30 +91,24 @@ has-top-element-is-large-meet-semilattice-Large-Poset
 is-large-suplattice-Prop-Large-Locale :
   is-large-suplattice-Large-Poset lzero Prop-Large-Poset
 sup-has-least-upper-bound-family-of-elements-Large-Poset
-  ( is-large-suplattice-Prop-Large-Locale {I = I} P) =
-  exists-Prop I P
+  ( is-large-suplattice-Prop-Large-Locale {I = I} P) = {!!}
 is-least-upper-bound-sup-has-least-upper-bound-family-of-elements-Large-Poset
-  ( is-large-suplattice-Prop-Large-Locale {I = I} P) =
-  is-least-upper-bound-exists-Prop P
+  ( is-large-suplattice-Prop-Large-Locale {I = I} P) = {!!}
 ```
 
 ### The large frame of propositions
 
 ```agda
 Prop-Large-Frame : Large-Frame lsuc _⊔_ lzero
-large-poset-Large-Frame Prop-Large-Frame =
-  Prop-Large-Poset
-is-large-meet-semilattice-Large-Frame Prop-Large-Frame =
-  is-large-meet-semilattice-Prop-Large-Locale
-is-large-suplattice-Large-Frame Prop-Large-Frame =
-  is-large-suplattice-Prop-Large-Locale
-distributive-meet-sup-Large-Frame Prop-Large-Frame =
-  distributive-conjunction-exists-Prop
+large-poset-Large-Frame Prop-Large-Frame = {!!}
+is-large-meet-semilattice-Large-Frame Prop-Large-Frame = {!!}
+is-large-suplattice-Large-Frame Prop-Large-Frame = {!!}
+distributive-meet-sup-Large-Frame Prop-Large-Frame = {!!}
 ```
 
 ### The large locale of propositions
 
 ```agda
 Prop-Large-Locale : Large-Locale lsuc _⊔_ lzero
-Prop-Large-Locale = Prop-Large-Frame
+Prop-Large-Locale = {!!}
 ```

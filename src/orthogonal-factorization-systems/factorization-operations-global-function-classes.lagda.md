@@ -47,14 +47,10 @@ module _
 
   factorization-operation-global-function-class-Level :
     (l1 l2 l3 : Level) → UU (βL l1 l3 ⊔ βR l3 l2 ⊔ lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  factorization-operation-global-function-class-Level l1 l2 l3 =
-    {A : UU l1} {B : UU l2} (f : A → B) →
-    global-function-class-factorization L R l3 f
+  factorization-operation-global-function-class-Level l1 l2 l3 = {!!}
 
   factorization-operation-global-function-class : UUω
-  factorization-operation-global-function-class =
-    {l1 l2 l3 : Level} →
-    factorization-operation-global-function-class-Level l1 l2 l3
+  factorization-operation-global-function-class = {!!}
 ```
 
 ### Unique factorization operations into global function classes
@@ -68,32 +64,21 @@ module _
 
   unique-factorization-operation-global-function-class-Level :
     (l1 l2 l3 : Level) → UU (βL l1 l3 ⊔ βR l3 l2 ⊔ lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  unique-factorization-operation-global-function-class-Level l1 l2 l3 =
-    unique-factorization-operation-function-class
-      ( function-class-global-function-class L {l1} {l3})
-      ( function-class-global-function-class R {l3} {l2})
+  unique-factorization-operation-global-function-class-Level l1 l2 l3 = {!!}
 
   is-prop-unique-factorization-operation-global-function-class-Level :
     {l1 l2 l3 : Level} →
     is-prop
       ( unique-factorization-operation-global-function-class-Level l1 l2 l3)
-  is-prop-unique-factorization-operation-global-function-class-Level =
-    is-prop-unique-factorization-operation-function-class
-      ( function-class-global-function-class L)
-      ( function-class-global-function-class R)
+  is-prop-unique-factorization-operation-global-function-class-Level = {!!}
 
   unique-factorization-operation-global-function-class-Level-Prop :
     (l1 l2 l3 : Level) →
     Prop (βL l1 l3 ⊔ βR l3 l2 ⊔ lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  unique-factorization-operation-global-function-class-Level-Prop l1 l2 l3 =
-    unique-factorization-operation-function-class-Prop
-      ( function-class-global-function-class L {l1} {l3})
-      ( function-class-global-function-class R {l3} {l2})
+  unique-factorization-operation-global-function-class-Level-Prop l1 l2 l3 = {!!}
 
   unique-factorization-operation-global-function-class : UUω
-  unique-factorization-operation-global-function-class =
-    {l1 l2 l3 : Level} →
-    unique-factorization-operation-global-function-class-Level l1 l2 l3
+  unique-factorization-operation-global-function-class = {!!}
 ```
 
 ### Mere factorization properties into global function classes
@@ -107,29 +92,18 @@ module _
 
   mere-factorization-property-global-function-class-Level :
     (l1 l2 l3 : Level) → UU (βL l1 l3 ⊔ βR l3 l2 ⊔ lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  mere-factorization-property-global-function-class-Level l1 l2 l3 =
-    mere-factorization-property-function-class
-      ( function-class-global-function-class L {l1} {l3})
-      ( function-class-global-function-class R {l3} {l2})
+  mere-factorization-property-global-function-class-Level l1 l2 l3 = {!!}
 
   is-prop-mere-factorization-property-global-function-class-Level :
     {l1 l2 l3 : Level} →
     is-prop (mere-factorization-property-global-function-class-Level l1 l2 l3)
-  is-prop-mere-factorization-property-global-function-class-Level =
-    is-prop-mere-factorization-property-function-class
-      ( function-class-global-function-class L)
-      ( function-class-global-function-class R)
+  is-prop-mere-factorization-property-global-function-class-Level = {!!}
 
   mere-factorization-property-global-function-class-Prop :
     (l1 l2 l3 : Level) →
     Prop (βL l1 l3 ⊔ βR l3 l2 ⊔ lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  mere-factorization-property-global-function-class-Prop l1 l2 l3 =
-    mere-factorization-property-function-class-Prop
-      ( function-class-global-function-class L {l1} {l3})
-      ( function-class-global-function-class R {l3} {l2})
+  mere-factorization-property-global-function-class-Prop l1 l2 l3 = {!!}
 
   mere-factorization-property-global-function-class : UUω
-  mere-factorization-property-global-function-class =
-    {l1 l2 l3 : Level} →
-    mere-factorization-property-global-function-class-Level l1 l2 l3
+  mere-factorization-property-global-function-class = {!!}
 ```

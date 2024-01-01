@@ -32,7 +32,7 @@ module _
   where
 
   hom-Relation : Relation l2 A → Relation l3 A → UU (l1 ⊔ l2 ⊔ l3)
-  hom-Relation R S = (x y : A) → R x y → S x y
+  hom-Relation R S = {!!}
 ```
 
 ## Properties
@@ -45,19 +45,19 @@ module _
   where
 
   htpy-hom-Relation : (f g : hom-Relation R S) → UU (l1 ⊔ l2 ⊔ l3)
-  htpy-hom-Relation = binary-htpy
+  htpy-hom-Relation = {!!}
 
   extensionality-hom-Relation :
     (f g : hom-Relation R S) → (f ＝ g) ≃ binary-htpy f g
-  extensionality-hom-Relation = extensionality-binary-Π
+  extensionality-hom-Relation = {!!}
 
   htpy-eq-hom-Relation :
     (f g : hom-Relation R S) → (f ＝ g) → binary-htpy f g
-  htpy-eq-hom-Relation = binary-htpy-eq
+  htpy-eq-hom-Relation = {!!}
 
   eq-htpy-hom-Relation :
     (f g : hom-Relation R S) → binary-htpy f g → f ＝ g
-  eq-htpy-hom-Relation = eq-binary-htpy
+  eq-htpy-hom-Relation = {!!}
 ```
 
 ## See also

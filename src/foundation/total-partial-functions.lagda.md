@@ -34,11 +34,10 @@ module _
   where
 
   is-total-prop-partial-function : Prop (l1 ⊔ l3)
-  is-total-prop-partial-function =
-    Π-Prop A (is-defined-prop-partial-function f)
+  is-total-prop-partial-function = {!!}
 
   is-total-partial-function : UU (l1 ⊔ l3)
-  is-total-partial-function = type-Prop is-total-prop-partial-function
+  is-total-partial-function = {!!}
 ```
 
 ### The type of total partial functions
@@ -46,6 +45,5 @@ module _
 ```agda
 total-partial-function :
   {l1 l2 : Level} (l3 : Level) → UU l1 → UU l2 → UU (l1 ⊔ l2 ⊔ lsuc l3)
-total-partial-function l3 A B =
-  Σ (partial-function l3 A B) is-total-partial-function
+total-partial-function l3 A B = {!!}
 ```

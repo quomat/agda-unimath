@@ -41,12 +41,7 @@ module _
   where
 
   iso-family-functor-Large-Precategory : UUω
-  iso-family-functor-Large-Precategory =
-    { l : Level}
-    ( X : obj-Large-Precategory C l) →
-    iso-Large-Precategory D
-      ( obj-functor-Large-Precategory F X)
-      ( obj-functor-Large-Precategory G X)
+  iso-family-functor-Large-Precategory = {!!}
 
   record natural-isomorphism-Large-Precategory : UUω
     where
@@ -73,10 +68,5 @@ module _
     natural-isomorphism-Large-Precategory →
     natural-transformation-Large-Precategory C D F G
   hom-natural-transformation-Large-Precategory
-    ( natural-transformation-natural-isomorphism-Large-Precategory γ) X =
-    hom-iso-Large-Precategory D
-      ( iso-natural-isomorphism-Large-Precategory γ X)
-  naturality-natural-transformation-Large-Precategory
-    ( natural-transformation-natural-isomorphism-Large-Precategory γ) =
-      naturality-natural-isomorphism-Large-Precategory γ
+    ( natural-transformation-natural-isomorphism-Large-Precategory γ) X = {!!}
 ```

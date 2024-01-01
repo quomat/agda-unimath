@@ -40,20 +40,17 @@ type.
 ```agda
 has-presentation-of-cardinality-Prop :
   {l1 : Level} (k : ℕ) (A : UU l1) → Prop l1
-has-presentation-of-cardinality-Prop k A =
-  has-set-presentation-Prop (Fin-Set k) A
+has-presentation-of-cardinality-Prop k A = {!!}
 
 has-presentation-of-cardinality : {l1 : Level} (k : ℕ) (A : UU l1) → UU l1
-has-presentation-of-cardinality k A =
-  type-Prop (has-presentation-of-cardinality-Prop k A)
+has-presentation-of-cardinality k A = {!!}
 ```
 
 ### Finitely presented types
 
 ```agda
 is-finitely-presented : {l1 : Level} → UU l1 → UU l1
-is-finitely-presented A =
-  Σ ℕ (λ k → has-presentation-of-cardinality k A)
+is-finitely-presented A = {!!}
 ```
 
 ## Properties
@@ -64,35 +61,12 @@ is-finitely-presented A =
 has-presentation-of-cardinality-has-cardinality-components :
   {l : Level} (k : ℕ) {A : UU l} → has-cardinality-components k A →
   has-presentation-of-cardinality k A
-has-presentation-of-cardinality-has-cardinality-components {l} k {A} H =
-  apply-universal-property-trunc-Prop H
-    ( has-presentation-of-cardinality-Prop k A)
-    ( λ e →
-      apply-universal-property-trunc-Prop
-        ( P2 e)
-        ( has-presentation-of-cardinality-Prop k A)
-        ( λ g →
-          unit-trunc-Prop
-            ( pair
-              ( λ x → pr1 (g x))
-              ( is-equiv-htpy-equiv e (λ x → pr2 (g x))))))
-  where
-  P1 :
-    (e : Fin k ≃ type-trunc-Set A) (x : Fin k) →
-    type-trunc-Prop (fiber unit-trunc-Set (map-equiv e x))
-  P1 e x = is-surjective-unit-trunc-Set A (map-equiv e x)
-  P2 :
-    (e : Fin k ≃ type-trunc-Set A) →
-    type-trunc-Prop ((x : Fin k) → fiber unit-trunc-Set (map-equiv e x))
-  P2 e = finite-choice-Fin k (P1 e)
+has-presentation-of-cardinality-has-cardinality-components {l} k {A} H = {!!}
 
 has-cardinality-components-has-presentation-of-cardinality :
   {l : Level} (k : ℕ) {A : UU l} → has-presentation-of-cardinality k A →
   has-cardinality-components k A
-has-cardinality-components-has-presentation-of-cardinality {l} k {A} H =
-  apply-universal-property-trunc-Prop H
-    ( has-cardinality-components-Prop k A)
-    ( λ (f , E) → unit-trunc-Prop (unit-trunc-Set ∘ f , E))
+has-cardinality-components-has-presentation-of-cardinality {l} k {A} H = {!!}
 ```
 
 ### To be finitely presented is a property
@@ -100,19 +74,13 @@ has-cardinality-components-has-presentation-of-cardinality {l} k {A} H =
 ```agda
 all-elements-equal-is-finitely-presented :
   {l1 : Level} {A : UU l1} → all-elements-equal (is-finitely-presented A)
-all-elements-equal-is-finitely-presented {l1} {A} (pair k K) (pair l L) =
-  eq-type-subtype
-    ( λ n → has-set-presentation-Prop (Fin-Set n) A)
-    ( eq-cardinality
-      ( has-cardinality-components-has-presentation-of-cardinality k K)
-      ( has-cardinality-components-has-presentation-of-cardinality l L))
+all-elements-equal-is-finitely-presented {l1} {A} (pair k K) (pair l L) = {!!}
 
 is-prop-is-finitely-presented :
   {l1 : Level} {A : UU l1} → is-prop (is-finitely-presented A)
-is-prop-is-finitely-presented =
-  is-prop-all-elements-equal all-elements-equal-is-finitely-presented
+is-prop-is-finitely-presented = {!!}
 
 is-finitely-presented-Prop : {l : Level} (A : UU l) → Prop l
-pr1 (is-finitely-presented-Prop A) = is-finitely-presented A
-pr2 (is-finitely-presented-Prop A) = is-prop-is-finitely-presented
+pr1 (is-finitely-presented-Prop A) = {!!}
+pr2 (is-finitely-presented-Prop A) = {!!}
 ```

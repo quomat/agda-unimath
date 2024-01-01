@@ -53,25 +53,14 @@ module _
   where
 
   is-orthogonal-factorization-system : UU (lsuc l ⊔ lL ⊔ lR)
-  is-orthogonal-factorization-system =
-    ( is-wide-function-class L) ×
-    ( ( is-wide-function-class R) ×
-      ( unique-factorization-operation-function-class L R))
+  is-orthogonal-factorization-system = {!!}
 
   is-prop-is-orthogonal-factorization-system :
     is-prop is-orthogonal-factorization-system
-  is-prop-is-orthogonal-factorization-system =
-    is-prop-prod
-      ( is-prop-is-wide-function-class L)
-      ( is-prop-prod
-        ( is-prop-is-wide-function-class R)
-        ( is-prop-unique-factorization-operation-function-class L R))
+  is-prop-is-orthogonal-factorization-system = {!!}
 
   is-orthogonal-factorization-system-Prop : Prop (lsuc l ⊔ lL ⊔ lR)
-  pr1 is-orthogonal-factorization-system-Prop =
-    is-orthogonal-factorization-system
-  pr2 is-orthogonal-factorization-system-Prop =
-    is-prop-is-orthogonal-factorization-system
+  pr1 is-orthogonal-factorization-system-Prop = {!!}
 ```
 
 ### The type of orthogonal factorization systems
@@ -79,9 +68,7 @@ module _
 ```agda
 orthogonal-factorization-system :
   (l lL lR : Level) → UU (lsuc l ⊔ lsuc lL ⊔ lsuc lR)
-orthogonal-factorization-system l lL lR =
-  Σ ( function-class l l lL)
-    ( λ L → Σ (function-class l l lR) (is-orthogonal-factorization-system L))
+orthogonal-factorization-system l lL lR = {!!}
 ```
 
 ### Components of an orthogonal factorization system
@@ -96,46 +83,35 @@ module _
 
   is-wide-left-class-is-orthogonal-factorization-system :
     is-wide-function-class L
-  is-wide-left-class-is-orthogonal-factorization-system = pr1 is-OFS
+  is-wide-left-class-is-orthogonal-factorization-system = {!!}
 
   is-wide-right-class-is-orthogonal-factorization-system :
     is-wide-function-class R
-  is-wide-right-class-is-orthogonal-factorization-system = pr1 (pr2 is-OFS)
+  is-wide-right-class-is-orthogonal-factorization-system = {!!}
 
   has-equivalences-left-class-is-orthogonal-factorization-system :
     has-equivalences-function-class L
-  has-equivalences-left-class-is-orthogonal-factorization-system =
-    has-equivalences-is-wide-function-class L
-      ( is-wide-left-class-is-orthogonal-factorization-system)
+  has-equivalences-left-class-is-orthogonal-factorization-system = {!!}
 
   has-equivalences-right-class-is-orthogonal-factorization-system :
     has-equivalences-function-class R
-  has-equivalences-right-class-is-orthogonal-factorization-system =
-    has-equivalences-is-wide-function-class R
-      ( is-wide-right-class-is-orthogonal-factorization-system)
+  has-equivalences-right-class-is-orthogonal-factorization-system = {!!}
 
   is-closed-under-composition-left-class-is-orthogonal-factorization-system :
     is-closed-under-composition-function-class L
-  is-closed-under-composition-left-class-is-orthogonal-factorization-system =
-    is-closed-under-composition-is-wide-function-class L
-      ( is-wide-left-class-is-orthogonal-factorization-system)
+  is-closed-under-composition-left-class-is-orthogonal-factorization-system = {!!}
 
   is-closed-under-composition-right-class-is-orthogonal-factorization-system :
     is-closed-under-composition-function-class R
-  is-closed-under-composition-right-class-is-orthogonal-factorization-system =
-    is-closed-under-composition-is-wide-function-class R
-      ( is-wide-right-class-is-orthogonal-factorization-system)
+  is-closed-under-composition-right-class-is-orthogonal-factorization-system = {!!}
 
   unique-factorization-operation-is-orthogonal-factorization-system :
     unique-factorization-operation-function-class L R
-  unique-factorization-operation-is-orthogonal-factorization-system =
-    pr2 (pr2 is-OFS)
+  unique-factorization-operation-is-orthogonal-factorization-system = {!!}
 
   factorization-operation-is-orthogonal-factorization-system :
     factorization-operation-function-class L R
-  factorization-operation-is-orthogonal-factorization-system f =
-    center
-      ( unique-factorization-operation-is-orthogonal-factorization-system f)
+  factorization-operation-is-orthogonal-factorization-system f = {!!}
 
 module _
   {l lL lR : Level}
@@ -143,87 +119,54 @@ module _
   where
 
   left-class-orthogonal-factorization-system : function-class l l lL
-  left-class-orthogonal-factorization-system = pr1 OFS
+  left-class-orthogonal-factorization-system = {!!}
 
   right-class-orthogonal-factorization-system : function-class l l lR
-  right-class-orthogonal-factorization-system = pr1 (pr2 OFS)
+  right-class-orthogonal-factorization-system = {!!}
 
   is-orthogonal-factorization-system-orthogonal-factorization-system :
     is-orthogonal-factorization-system
       ( left-class-orthogonal-factorization-system)
       ( right-class-orthogonal-factorization-system)
-  is-orthogonal-factorization-system-orthogonal-factorization-system =
-    pr2 (pr2 OFS)
+  is-orthogonal-factorization-system-orthogonal-factorization-system = {!!}
 
   is-wide-left-class-orthogonal-factorization-system :
     is-wide-function-class left-class-orthogonal-factorization-system
-  is-wide-left-class-orthogonal-factorization-system =
-    is-wide-left-class-is-orthogonal-factorization-system
-      ( left-class-orthogonal-factorization-system)
-      ( right-class-orthogonal-factorization-system)
-      ( is-orthogonal-factorization-system-orthogonal-factorization-system)
+  is-wide-left-class-orthogonal-factorization-system = {!!}
 
   is-wide-right-class-orthogonal-factorization-system :
     is-wide-function-class right-class-orthogonal-factorization-system
-  is-wide-right-class-orthogonal-factorization-system =
-    is-wide-right-class-is-orthogonal-factorization-system
-      ( left-class-orthogonal-factorization-system)
-      ( right-class-orthogonal-factorization-system)
-      ( is-orthogonal-factorization-system-orthogonal-factorization-system)
+  is-wide-right-class-orthogonal-factorization-system = {!!}
 
   has-equivalences-left-class-orthogonal-factorization-system :
     has-equivalences-function-class left-class-orthogonal-factorization-system
-  has-equivalences-left-class-orthogonal-factorization-system =
-    has-equivalences-left-class-is-orthogonal-factorization-system
-      ( left-class-orthogonal-factorization-system)
-      ( right-class-orthogonal-factorization-system)
-      ( is-orthogonal-factorization-system-orthogonal-factorization-system)
+  has-equivalences-left-class-orthogonal-factorization-system = {!!}
 
   has-equivalences-right-class-orthogonal-factorization-system :
     has-equivalences-function-class right-class-orthogonal-factorization-system
-  has-equivalences-right-class-orthogonal-factorization-system =
-    has-equivalences-right-class-is-orthogonal-factorization-system
-      ( left-class-orthogonal-factorization-system)
-      ( right-class-orthogonal-factorization-system)
-      ( is-orthogonal-factorization-system-orthogonal-factorization-system)
+  has-equivalences-right-class-orthogonal-factorization-system = {!!}
 
   is-closed-under-composition-left-class-orthogonal-factorization-system :
     is-closed-under-composition-function-class
       left-class-orthogonal-factorization-system
-  is-closed-under-composition-left-class-orthogonal-factorization-system =
-    is-closed-under-composition-left-class-is-orthogonal-factorization-system
-      ( left-class-orthogonal-factorization-system)
-      ( right-class-orthogonal-factorization-system)
-      ( is-orthogonal-factorization-system-orthogonal-factorization-system)
+  is-closed-under-composition-left-class-orthogonal-factorization-system = {!!}
 
   is-closed-under-composition-right-class-orthogonal-factorization-system :
     is-closed-under-composition-function-class
       right-class-orthogonal-factorization-system
-  is-closed-under-composition-right-class-orthogonal-factorization-system =
-    is-closed-under-composition-right-class-is-orthogonal-factorization-system
-      ( left-class-orthogonal-factorization-system)
-      ( right-class-orthogonal-factorization-system)
-      ( is-orthogonal-factorization-system-orthogonal-factorization-system)
+  is-closed-under-composition-right-class-orthogonal-factorization-system = {!!}
 
   unique-factorization-operation-orthogonal-factorization-system :
     unique-factorization-operation-function-class
       ( left-class-orthogonal-factorization-system)
       ( right-class-orthogonal-factorization-system)
-  unique-factorization-operation-orthogonal-factorization-system =
-    unique-factorization-operation-is-orthogonal-factorization-system
-      ( left-class-orthogonal-factorization-system)
-      ( right-class-orthogonal-factorization-system)
-      ( is-orthogonal-factorization-system-orthogonal-factorization-system)
+  unique-factorization-operation-orthogonal-factorization-system = {!!}
 
   factorization-operation-orthogonal-factorization-system :
     factorization-operation-function-class
       ( left-class-orthogonal-factorization-system)
       ( right-class-orthogonal-factorization-system)
-  factorization-operation-orthogonal-factorization-system =
-    factorization-operation-is-orthogonal-factorization-system
-      ( left-class-orthogonal-factorization-system)
-      ( right-class-orthogonal-factorization-system)
-      ( is-orthogonal-factorization-system-orthogonal-factorization-system)
+  factorization-operation-orthogonal-factorization-system = {!!}
 ```
 
 ## Properties

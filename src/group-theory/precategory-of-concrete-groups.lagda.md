@@ -24,31 +24,19 @@ open import group-theory.homomorphisms-concrete-groups
 ```agda
 Concrete-Group-Large-Precategory : Large-Precategory lsuc (_⊔_)
 obj-Large-Precategory
-  Concrete-Group-Large-Precategory =
-  Concrete-Group
+  Concrete-Group-Large-Precategory = {!!}
 hom-set-Large-Precategory
-  Concrete-Group-Large-Precategory =
-  hom-set-Concrete-Group
+  Concrete-Group-Large-Precategory = {!!}
 comp-hom-Large-Precategory
-  Concrete-Group-Large-Precategory {X = G} {Y = H} {Z = K} =
-  comp-hom-Concrete-Group G H K
+  Concrete-Group-Large-Precategory {X = G} {Y = H} {Z = K} = {!!}
 id-hom-Large-Precategory
-  Concrete-Group-Large-Precategory {X = G} =
-  id-hom-Concrete-Group G
+  Concrete-Group-Large-Precategory {X = G} = {!!}
 associative-comp-hom-Large-Precategory
-  Concrete-Group-Large-Precategory {X = G} {Y = H} {Z = K} {W = L} h g f =
-  eq-htpy-hom-Concrete-Group G L _ _
-    ( associative-comp-hom-Concrete-Group G H K L h g f)
+  Concrete-Group-Large-Precategory {X = G} {Y = H} {Z = K} {W = L} h g f = {!!}
 inv-associative-comp-hom-Large-Precategory
-  Concrete-Group-Large-Precategory {X = G} {Y = H} {Z = K} {W = L} h g f =
-  eq-htpy-hom-Concrete-Group G L _ _
-    ( inv-associative-comp-hom-Concrete-Group G H K L h g f)
+  Concrete-Group-Large-Precategory {X = G} {Y = H} {Z = K} {W = L} h g f = {!!}
 left-unit-law-comp-hom-Large-Precategory
-  Concrete-Group-Large-Precategory {X = G} {Y = H} f =
-  eq-htpy-hom-Concrete-Group G H _ _
-    ( left-unit-law-comp-hom-Concrete-Group G H f)
+  Concrete-Group-Large-Precategory {X = G} {Y = H} f = {!!}
 right-unit-law-comp-hom-Large-Precategory
-  Concrete-Group-Large-Precategory {X = G} {Y = H} f =
-  eq-htpy-hom-Concrete-Group G H _ _
-    ( right-unit-law-comp-hom-Concrete-Group G H f)
+  Concrete-Group-Large-Precategory {X = G} {Y = H} f = {!!}
 ```

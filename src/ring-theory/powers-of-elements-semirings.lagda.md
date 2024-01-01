@@ -31,7 +31,7 @@ iteratively multiplying `x` with itself `n` times.
 ```agda
 power-Semiring :
   {l : Level} (R : Semiring l) → ℕ → type-Semiring R → type-Semiring R
-power-Semiring R n x = power-Monoid (multiplicative-monoid-Semiring R) n x
+power-Semiring R n x = {!!}
 ```
 
 ## Properties
@@ -45,10 +45,10 @@ module _
 
   power-one-Semiring :
     (n : ℕ) → power-Semiring R n (one-Semiring R) ＝ one-Semiring R
-  power-one-Semiring = power-unit-Monoid (multiplicative-monoid-Semiring R)
+  power-one-Semiring = {!!}
 ```
 
-### `xⁿ⁺¹ = xⁿx`
+### `xⁿ⁺¹ = {!!}
 
 ```agda
 module _
@@ -58,7 +58,7 @@ module _
   power-succ-Semiring :
     (n : ℕ) (x : type-Semiring R) →
     power-Semiring R (succ-ℕ n) x ＝ mul-Semiring R (power-Semiring R n x) x
-  power-succ-Semiring = power-succ-Monoid (multiplicative-monoid-Semiring R)
+  power-succ-Semiring = {!!}
 ```
 
 ### `xⁿ⁺¹ ＝ xxⁿ`
@@ -71,7 +71,7 @@ module _
   power-succ-Semiring' :
     (n : ℕ) (x : type-Semiring R) →
     power-Semiring R (succ-ℕ n) x ＝ mul-Semiring R x (power-Semiring R n x)
-  power-succ-Semiring' = power-succ-Monoid' (multiplicative-monoid-Semiring R)
+  power-succ-Semiring' = {!!}
 ```
 
 ### Powers by sums of natural numbers are products of powers
@@ -85,8 +85,7 @@ module _
     (m n : ℕ) {x : type-Semiring R} →
     power-Semiring R (m +ℕ n) x ＝
     mul-Semiring R (power-Semiring R m x) (power-Semiring R n x)
-  distributive-power-add-Semiring =
-    distributive-power-add-Monoid (multiplicative-monoid-Semiring R)
+  distributive-power-add-Semiring = {!!}
 ```
 
 ### If `x` commutes with `y` then so do their powers
@@ -101,8 +100,7 @@ module _
     ( mul-Semiring R x y ＝ mul-Semiring R y x) →
     ( mul-Semiring R (power-Semiring R n x) y) ＝
     ( mul-Semiring R y (power-Semiring R n x))
-  commute-powers-Semiring' =
-    commute-powers-Monoid' (multiplicative-monoid-Semiring R)
+  commute-powers-Semiring' = {!!}
 
   commute-powers-Semiring :
     (m n : ℕ) {x y : type-Semiring R} →
@@ -113,8 +111,7 @@ module _
     ( mul-Semiring R
       ( power-Semiring R n y)
       ( power-Semiring R m x))
-  commute-powers-Semiring =
-    commute-powers-Monoid (multiplicative-monoid-Semiring R)
+  commute-powers-Semiring = {!!}
 ```
 
 ### If `x` commutes with `y`, then powers distribute over the product of `x` and `y`
@@ -129,8 +126,7 @@ module _
     (H : mul-Semiring R x y ＝ mul-Semiring R y x) →
     power-Semiring R n (mul-Semiring R x y) ＝
     mul-Semiring R (power-Semiring R n x) (power-Semiring R n y)
-  distributive-power-mul-Semiring =
-    distributive-power-mul-Monoid (multiplicative-monoid-Semiring R)
+  distributive-power-mul-Semiring = {!!}
 ```
 
 ### Powers by products of natural numbers are iterated powers
@@ -143,5 +139,5 @@ module _
   power-mul-Semiring :
     (m n : ℕ) {x : type-Semiring R} →
     power-Semiring R (m *ℕ n) x ＝ power-Semiring R n (power-Semiring R m x)
-  power-mul-Semiring = power-mul-Monoid (multiplicative-monoid-Semiring R)
+  power-mul-Semiring = {!!}
 ```

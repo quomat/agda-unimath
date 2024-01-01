@@ -53,34 +53,31 @@ module _
 
   equiv-univalence :
     {A B : UU l} → (A ＝ B) ≃ (A ≃ B)
-  pr1 equiv-univalence = equiv-eq
-  pr2 (equiv-univalence {A} {B}) = univalence A B
+  pr1 equiv-univalence = {!!}
 
   eq-equiv : (A B : UU l) → A ≃ B → A ＝ B
-  eq-equiv A B = map-inv-is-equiv (univalence A B)
+  eq-equiv A B = {!!}
 
   abstract
     is-section-eq-equiv :
       {A B : UU l} → (equiv-eq ∘ eq-equiv A B) ~ id
-    is-section-eq-equiv {A} {B} = is-section-map-inv-is-equiv (univalence A B)
+    is-section-eq-equiv {A} {B} = {!!}
 
     is-retraction-eq-equiv :
       {A B : UU l} → (eq-equiv A B ∘ equiv-eq) ~ id
-    is-retraction-eq-equiv {A} {B} =
-      is-retraction-map-inv-is-equiv (univalence A B)
+    is-retraction-eq-equiv {A} {B} = {!!}
 
     is-equiv-eq-equiv :
       (A B : UU l) → is-equiv (eq-equiv A B)
-    is-equiv-eq-equiv A B = is-equiv-map-inv-is-equiv (univalence A B)
+    is-equiv-eq-equiv A B = {!!}
 
     compute-eq-equiv-id-equiv :
       (A : UU l) → eq-equiv A A id-equiv ＝ refl
-    compute-eq-equiv-id-equiv A = is-retraction-eq-equiv refl
+    compute-eq-equiv-id-equiv A = {!!}
 
     equiv-eq-equiv :
       (A B : UU l) → (A ≃ B) ≃ (A ＝ B)
-    pr1 (equiv-eq-equiv A B) = eq-equiv A B
-    pr2 (equiv-eq-equiv A B) = is-equiv-eq-equiv A B
+    pr1 (equiv-eq-equiv A B) = {!!}
 ```
 
 ### The total space of all equivalences out of a type or into a type is contractible
@@ -99,16 +96,11 @@ succinctly as the claim that the family of equivalences out of `A` is torsorial.
   abstract
     is-torsorial-equiv :
       (A : UU l) → is-torsorial (λ (X : UU l) → A ≃ X)
-    is-torsorial-equiv A =
-      is-torsorial-equiv-based-univalence A (univalence A)
+    is-torsorial-equiv A = {!!}
 
     is-torsorial-equiv' :
       (A : UU l) → is-torsorial (λ (X : UU l) → X ≃ A)
-    is-torsorial-equiv' A =
-      is-contr-equiv'
-        ( Σ (UU l) (λ X → X ＝ A))
-        ( equiv-tot (λ X → equiv-univalence))
-        ( is-torsorial-path' A)
+    is-torsorial-equiv' A = {!!}
 ```
 
 ### Univalence for type families
@@ -117,41 +109,35 @@ succinctly as the claim that the family of equivalences out of `A` is torsorial.
 equiv-fam :
   {l1 l2 l3 : Level} {A : UU l1} (B : A → UU l2) (C : A → UU l3) →
   UU (l1 ⊔ l2 ⊔ l3)
-equiv-fam {A = A} B C = (a : A) → B a ≃ C a
+equiv-fam {A = A} B C = {!!}
 
 id-equiv-fam :
   {l1 l2 : Level} {A : UU l1} (B : A → UU l2) → equiv-fam B B
-id-equiv-fam B a = id-equiv
+id-equiv-fam B a = {!!}
 
 equiv-eq-fam :
   {l1 l2 : Level} {A : UU l1} (B C : A → UU l2) → B ＝ C → equiv-fam B C
-equiv-eq-fam B .B refl = id-equiv-fam B
+equiv-eq-fam B .B refl = {!!}
 
 abstract
   is-torsorial-equiv-fam :
     {l1 l2 : Level} {A : UU l1} (B : A → UU l2) →
     is-torsorial (λ (C : A → UU l2) → equiv-fam B C)
-  is-torsorial-equiv-fam B =
-    is-torsorial-Eq-Π
-      ( λ x X → (B x) ≃ X)
-      ( λ x → is-torsorial-equiv (B x))
+  is-torsorial-equiv-fam B = {!!}
 
 abstract
   is-equiv-equiv-eq-fam :
     {l1 l2 : Level} {A : UU l1} (B C : A → UU l2) → is-equiv (equiv-eq-fam B C)
-  is-equiv-equiv-eq-fam B =
-    fundamental-theorem-id
-      ( is-torsorial-equiv-fam B)
-      ( equiv-eq-fam B)
+  is-equiv-equiv-eq-fam B = {!!}
 
 extensionality-fam :
   {l1 l2 : Level} {A : UU l1} (B C : A → UU l2) → (B ＝ C) ≃ equiv-fam B C
-pr1 (extensionality-fam B C) = equiv-eq-fam B C
-pr2 (extensionality-fam B C) = is-equiv-equiv-eq-fam B C
+pr1 (extensionality-fam B C) = {!!}
+pr2 (extensionality-fam B C) = {!!}
 
 eq-equiv-fam :
   {l1 l2 : Level} {A : UU l1} {B C : A → UU l2} → equiv-fam B C → B ＝ C
-eq-equiv-fam {B = B} {C} = map-inv-is-equiv (is-equiv-equiv-eq-fam B C)
+eq-equiv-fam {B = B} {C} = {!!}
 ```
 
 ### Computations with univalence
@@ -160,46 +146,25 @@ eq-equiv-fam {B = B} {C} = map-inv-is-equiv (is-equiv-equiv-eq-fam B C)
 compute-equiv-eq-concat :
   {l : Level} {A B C : UU l} (p : A ＝ B) (q : B ＝ C) →
   ((equiv-eq q) ∘e (equiv-eq p)) ＝ equiv-eq (p ∙ q)
-compute-equiv-eq-concat refl refl = eq-equiv-eq-map-equiv refl
+compute-equiv-eq-concat refl refl = {!!}
 
 compute-eq-equiv-comp-equiv :
   {l : Level} (A B C : UU l) (f : A ≃ B) (g : B ≃ C) →
   ((eq-equiv A B f) ∙ (eq-equiv B C g)) ＝ eq-equiv A C (g ∘e f)
-compute-eq-equiv-comp-equiv A B C f g =
-  is-injective-map-equiv
-    ( equiv-univalence)
-    ( ( inv ( compute-equiv-eq-concat (eq-equiv A B f) (eq-equiv B C g))) ∙
-      ( ( ap
-          ( λ e → (map-equiv e g) ∘e (equiv-eq (eq-equiv A B f)))
-          ( right-inverse-law-equiv equiv-univalence)) ∙
-        ( ( ap
-            ( λ e → g ∘e map-equiv e f)
-            ( right-inverse-law-equiv equiv-univalence)) ∙
-          ( ap
-            ( λ e → map-equiv e (g ∘e f))
-            ( inv (right-inverse-law-equiv equiv-univalence))))))
+compute-eq-equiv-comp-equiv A B C f g = {!!}
 
 compute-equiv-eq-ap-inv :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} {x y : A} (p : x ＝ y) →
   map-equiv (equiv-eq (ap B (inv p)) ∘e (equiv-eq (ap B p))) ~ id
-compute-equiv-eq-ap-inv refl = refl-htpy
+compute-equiv-eq-ap-inv refl = {!!}
 
 commutativity-inv-equiv-eq :
   {l : Level} (A B : UU l) (p : A ＝ B) →
   inv-equiv (equiv-eq p) ＝ equiv-eq (inv p)
-commutativity-inv-equiv-eq A .A refl = eq-equiv-eq-map-equiv refl
+commutativity-inv-equiv-eq A .A refl = {!!}
 
 commutativity-inv-eq-equiv :
   {l : Level} (A B : UU l) (f : A ≃ B) →
   inv (eq-equiv A B f) ＝ eq-equiv B A (inv-equiv f)
-commutativity-inv-eq-equiv A B f =
-  is-injective-map-equiv
-    ( equiv-univalence)
-    ( ( inv (commutativity-inv-equiv-eq A B (eq-equiv A B f))) ∙
-      ( ( ap
-          ( λ e → (inv-equiv (map-equiv e f)))
-          ( right-inverse-law-equiv equiv-univalence)) ∙
-        ( ap
-          ( λ e → map-equiv e (inv-equiv f))
-          ( inv (right-inverse-law-equiv equiv-univalence)))))
+commutativity-inv-eq-equiv A B f = {!!}
 ```

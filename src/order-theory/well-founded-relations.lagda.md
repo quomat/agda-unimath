@@ -48,29 +48,28 @@ module _
   where
 
   is-well-founded-prop-Relation : Prop (l1 ⊔ l2)
-  is-well-founded-prop-Relation =
-    Π-Prop X (is-accessible-element-prop-Relation _ϵ_)
+  is-well-founded-prop-Relation = {!!}
 
   is-well-founded-Relation : UU (l1 ⊔ l2)
-  is-well-founded-Relation = (x : X) → is-accessible-element-Relation _ϵ_ x
+  is-well-founded-Relation = {!!}
 ```
 
 ### Well-founded relations
 
 ```agda
 Well-Founded-Relation : {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-Well-Founded-Relation l X = Σ (Relation l X) is-well-founded-Relation
+Well-Founded-Relation l X = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} (R : Well-Founded-Relation l2 X)
   where
 
   rel-Well-Founded-Relation : Relation l2 X
-  rel-Well-Founded-Relation = pr1 R
+  rel-Well-Founded-Relation = {!!}
 
   is-well-founded-Well-Founded-Relation :
     is-well-founded-Relation rel-Well-Founded-Relation
-  is-well-founded-Well-Founded-Relation = pr2 R
+  is-well-founded-Well-Founded-Relation = {!!}
 ```
 
 ## Properties
@@ -85,8 +84,7 @@ module _
 
   ind-Well-Founded-Relation :
     ({x : X} → ({y : X} → y ϵ x → P y) → P x) → (x : X) → P x
-  ind-Well-Founded-Relation IH x =
-    ind-accessible-element-Relation _ϵ_ P (λ _ → IH) (w x)
+  ind-Well-Founded-Relation IH x = {!!}
 ```
 
 ### A well-founded relation is asymmetric (and thus irreflexive)
@@ -98,8 +96,7 @@ module _
 
   is-asymmetric-Well-Founded-Relation :
     is-asymmetric _ϵ_
-  is-asymmetric-Well-Founded-Relation x y =
-    is-asymmetric-is-accessible-element-Relation _ϵ_ (w x)
+  is-asymmetric-Well-Founded-Relation x y = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} (ϵ : Well-Founded-Relation l2 X)
@@ -107,8 +104,5 @@ module _
 
   is-irreflexive-Well-Founded-Relation :
     is-irreflexive (rel-Well-Founded-Relation ϵ)
-  is-irreflexive-Well-Founded-Relation =
-    is-irreflexive-is-asymmetric
-      ( rel-Well-Founded-Relation ϵ)
-      ( is-asymmetric-Well-Founded-Relation ϵ)
+  is-irreflexive-Well-Founded-Relation = {!!}
 ```

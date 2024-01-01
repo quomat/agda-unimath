@@ -43,26 +43,20 @@ module _
 
   leq-prop-ideal-Ring :
     {l2 l3 : Level} → ideal-Ring l2 R → ideal-Ring l3 R → Prop (l1 ⊔ l2 ⊔ l3)
-  leq-prop-ideal-Ring I J =
-    leq-prop-subtype
-      ( subset-ideal-Ring R I)
-      ( subset-ideal-Ring R J)
+  leq-prop-ideal-Ring I J = {!!}
 
   leq-ideal-Ring :
     {l2 l3 : Level} → ideal-Ring l2 R → ideal-Ring l3 R → UU (l1 ⊔ l2 ⊔ l3)
-  leq-ideal-Ring I J =
-    subset-ideal-Ring R I ⊆ subset-ideal-Ring R J
+  leq-ideal-Ring I J = {!!}
 
   is-prop-leq-ideal-Ring :
     {l2 l3 : Level} (I : ideal-Ring l2 R) (J : ideal-Ring l3 R) →
     is-prop (leq-ideal-Ring I J)
-  is-prop-leq-ideal-Ring I J =
-    is-prop-leq-subtype (subset-ideal-Ring R I) (subset-ideal-Ring R J)
+  is-prop-leq-ideal-Ring I J = {!!}
 
   refl-leq-ideal-Ring :
     {l2 : Level} → is-reflexive (leq-ideal-Ring {l2})
-  refl-leq-ideal-Ring I =
-    refl-leq-subtype (subset-ideal-Ring R I)
+  refl-leq-ideal-Ring I = {!!}
 
   transitive-leq-ideal-Ring :
     {l2 l3 l4 : Level}
@@ -72,16 +66,11 @@ module _
     leq-ideal-Ring J K →
     leq-ideal-Ring I J →
     leq-ideal-Ring I K
-  transitive-leq-ideal-Ring I J K =
-    transitive-leq-subtype
-      ( subset-ideal-Ring R I)
-      ( subset-ideal-Ring R J)
-      ( subset-ideal-Ring R K)
+  transitive-leq-ideal-Ring I J K = {!!}
 
   antisymmetric-leq-ideal-Ring :
     {l2 : Level} → is-antisymmetric (leq-ideal-Ring {l2})
-  antisymmetric-leq-ideal-Ring I J U V =
-    eq-has-same-elements-ideal-Ring R I J (λ x → U x , V x)
+  antisymmetric-leq-ideal-Ring I J U V = {!!}
 ```
 
 ### The large poset of ideals
@@ -93,17 +82,11 @@ module _
 
   ideal-Ring-Large-Preorder :
     Large-Preorder (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3)
-  type-Large-Preorder ideal-Ring-Large-Preorder l = ideal-Ring l R
-  leq-prop-Large-Preorder ideal-Ring-Large-Preorder = leq-prop-ideal-Ring R
-  refl-leq-Large-Preorder ideal-Ring-Large-Preorder = refl-leq-ideal-Ring R
-  transitive-leq-Large-Preorder ideal-Ring-Large-Preorder =
-    transitive-leq-ideal-Ring R
+  type-Large-Preorder ideal-Ring-Large-Preorder l = {!!}
 
   ideal-Ring-Large-Poset :
     Large-Poset (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3)
-  large-preorder-Large-Poset ideal-Ring-Large-Poset = ideal-Ring-Large-Preorder
-  antisymmetric-leq-Large-Poset ideal-Ring-Large-Poset =
-    antisymmetric-leq-ideal-Ring R
+  large-preorder-Large-Poset ideal-Ring-Large-Poset = {!!}
 ```
 
 ### The similarity relation on ideals in a ring
@@ -116,23 +99,21 @@ module _
   sim-prop-ideal-Ring :
     {l2 l3 : Level} (I : ideal-Ring l2 R) (J : ideal-Ring l3 R) →
     Prop (l1 ⊔ l2 ⊔ l3)
-  sim-prop-ideal-Ring =
-    sim-prop-Large-Poset (ideal-Ring-Large-Poset R)
+  sim-prop-ideal-Ring = {!!}
 
   sim-ideal-Ring :
     {l2 l3 : Level} (I : ideal-Ring l2 R) (J : ideal-Ring l3 R) →
     UU (l1 ⊔ l2 ⊔ l3)
-  sim-ideal-Ring = sim-Large-Poset (ideal-Ring-Large-Poset R)
+  sim-ideal-Ring = {!!}
 
   is-prop-sim-ideal-Ring :
     {l2 l3 : Level} (I : ideal-Ring l2 R) (J : ideal-Ring l3 R) →
     is-prop (sim-ideal-Ring I J)
-  is-prop-sim-ideal-Ring =
-    is-prop-sim-Large-Poset (ideal-Ring-Large-Poset R)
+  is-prop-sim-ideal-Ring = {!!}
 
   eq-sim-ideal-Ring :
     {l2 : Level} (I J : ideal-Ring l2 R) → sim-ideal-Ring I J → I ＝ J
-  eq-sim-ideal-Ring = eq-sim-Large-Poset (ideal-Ring-Large-Poset R)
+  eq-sim-ideal-Ring = {!!}
 ```
 
 ## Properties
@@ -147,15 +128,12 @@ module _
   preserves-order-subset-ideal-Ring :
     {l1 l2 : Level} (I : ideal-Ring l1 R) (J : ideal-Ring l2 R) →
     leq-ideal-Ring R I J → subset-ideal-Ring R I ⊆ subset-ideal-Ring R J
-  preserves-order-subset-ideal-Ring I J H = H
+  preserves-order-subset-ideal-Ring I J H = {!!}
 
   subset-ideal-hom-large-poset-Ring :
     hom-Large-Poset
       ( λ l → l)
       ( ideal-Ring-Large-Poset R)
       ( powerset-Large-Poset (type-Ring R))
-  map-hom-Large-Preorder subset-ideal-hom-large-poset-Ring =
-    subset-ideal-Ring R
-  preserves-order-hom-Large-Preorder subset-ideal-hom-large-poset-Ring =
-    preserves-order-subset-ideal-Ring
+  map-hom-Large-Preorder subset-ideal-hom-large-poset-Ring = {!!}
 ```

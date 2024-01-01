@@ -46,10 +46,5 @@ module _
   where
 
   coherence-square-hom-Group : UU (l1 ⊔ l4)
-  coherence-square-hom-Group =
-    coherence-square-maps
-      ( map-hom-Group G H f)
-      ( map-hom-Group G K g)
-      ( map-hom-Group H L h)
-      ( map-hom-Group K L k)
+  coherence-square-hom-Group = {!!}
 ```

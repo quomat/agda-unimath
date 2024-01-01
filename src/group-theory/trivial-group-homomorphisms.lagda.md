@@ -35,16 +35,13 @@ module _
   where
 
   is-trivial-prop-hom-Group : Prop (l1 ⊔ l2)
-  is-trivial-prop-hom-Group =
-    Π-Prop
-      ( type-Group G)
-      ( λ x → Id-Prop (set-Group H) (map-hom-Group G H f x) (unit-Group H))
+  is-trivial-prop-hom-Group = {!!}
 
   is-trivial-hom-Group : UU (l1 ⊔ l2)
-  is-trivial-hom-Group = type-Prop is-trivial-prop-hom-Group
+  is-trivial-hom-Group = {!!}
 
   is-prop-is-trivial-hom-Group : is-prop is-trivial-hom-Group
-  is-prop-is-trivial-hom-Group = is-prop-type-Prop is-trivial-prop-hom-Group
+  is-prop-is-trivial-hom-Group = {!!}
 ```
 
 ### The trivial group homomorphism
@@ -55,6 +52,5 @@ module _
   where
 
   trivial-hom-Group : hom-Group G H
-  pr1 trivial-hom-Group x = unit-Group H
-  pr2 trivial-hom-Group = inv (left-unit-law-mul-Group H (unit-Group H))
+  pr1 trivial-hom-Group x = {!!}
 ```

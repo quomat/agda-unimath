@@ -39,41 +39,32 @@ module _
   where
 
   base-Enriched-Directed-Tree : UU l2
-  base-Enriched-Directed-Tree = B (shape-root-Enriched-Directed-Tree A B T)
+  base-Enriched-Directed-Tree = {!!}
 
   compute-base-Enriched-Directed-Tree :
     base-Enriched-Directed-Tree ≃
     direct-predecessor-Enriched-Directed-Tree A B T
       ( root-Enriched-Directed-Tree A B T)
-  compute-base-Enriched-Directed-Tree =
-    enrichment-Enriched-Directed-Tree A B T (root-Enriched-Directed-Tree A B T)
+  compute-base-Enriched-Directed-Tree = {!!}
 
   map-compute-base-Enriched-Directed-Tree :
     base-Enriched-Directed-Tree →
     direct-predecessor-Enriched-Directed-Tree A B T
       ( root-Enriched-Directed-Tree A B T)
-  map-compute-base-Enriched-Directed-Tree =
-    map-enrichment-Enriched-Directed-Tree A B T
-      ( root-Enriched-Directed-Tree A B T)
+  map-compute-base-Enriched-Directed-Tree = {!!}
 
   module _
     (b : base-Enriched-Directed-Tree)
     where
 
     node-base-Enriched-Directed-Tree : node-Enriched-Directed-Tree A B T
-    node-base-Enriched-Directed-Tree =
-      node-base-Directed-Tree
-        ( directed-tree-Enriched-Directed-Tree A B T)
-        ( map-compute-base-Enriched-Directed-Tree b)
+    node-base-Enriched-Directed-Tree = {!!}
 
     edge-base-Enriched-Directed-Tree :
       edge-Enriched-Directed-Tree A B T
         ( node-base-Enriched-Directed-Tree)
         ( root-Enriched-Directed-Tree A B T)
-    edge-base-Enriched-Directed-Tree =
-      edge-base-Directed-Tree
-        ( directed-tree-Enriched-Directed-Tree A B T)
-        ( map-compute-base-Enriched-Directed-Tree b)
+    edge-base-Enriched-Directed-Tree = {!!}
 ```
 
 ## Properties
@@ -90,20 +81,14 @@ module _
     (b : base-Enriched-Directed-Tree A B T) →
     is-proper-node-Enriched-Directed-Tree A B T
       ( node-base-Enriched-Directed-Tree A B T b)
-  is-proper-node-base-Enriched-Directed-Tree b =
-    is-proper-node-base-Directed-Tree
-      ( directed-tree-Enriched-Directed-Tree A B T)
-      ( map-compute-base-Enriched-Directed-Tree A B T b)
+  is-proper-node-base-Enriched-Directed-Tree b = {!!}
 
   no-walk-to-base-root-Enriched-Directed-Tree :
     (b : base-Enriched-Directed-Tree A B T) →
     ¬ ( walk-Enriched-Directed-Tree A B T
         ( root-Enriched-Directed-Tree A B T)
         ( node-base-Enriched-Directed-Tree A B T b))
-  no-walk-to-base-root-Enriched-Directed-Tree b =
-    no-walk-to-base-root-Directed-Tree
-      ( directed-tree-Enriched-Directed-Tree A B T)
-      ( map-compute-base-Enriched-Directed-Tree A B T b)
+  no-walk-to-base-root-Enriched-Directed-Tree b = {!!}
 ```
 
 ### There are no edges between base elements
@@ -119,11 +104,7 @@ module _
     ¬ ( edge-Enriched-Directed-Tree A B T
         ( node-base-Enriched-Directed-Tree A B T a)
         ( node-base-Enriched-Directed-Tree A B T b))
-  no-edge-base-Enriched-Directed-Tree a b =
-    no-edge-base-Directed-Tree
-      ( directed-tree-Enriched-Directed-Tree A B T)
-      ( map-compute-base-Enriched-Directed-Tree A B T a)
-      ( map-compute-base-Enriched-Directed-Tree A B T b)
+  no-edge-base-Enriched-Directed-Tree a b = {!!}
 ```
 
 ### For any node `x`, the coproduct of `is-root x` and the type of base elements `b` equipped with a walk from `x` to `b` is contractible
@@ -141,21 +122,7 @@ module _
         Σ ( base-Enriched-Directed-Tree A B T)
           ( walk-Enriched-Directed-Tree A B T x ∘
             node-base-Enriched-Directed-Tree A B T))
-  unique-walk-to-base-Enriched-Directed-Tree x =
-    is-contr-equiv
-      ( is-root-Enriched-Directed-Tree A B T x +
-        Σ ( direct-predecessor-Enriched-Directed-Tree A B T
-            ( root-Enriched-Directed-Tree A B T))
-          ( walk-Enriched-Directed-Tree A B T x ∘ pr1))
-      ( equiv-coprod
-        ( id-equiv)
-        ( equiv-Σ
-          ( walk-Enriched-Directed-Tree A B T x ∘ pr1)
-          ( compute-base-Enriched-Directed-Tree A B T)
-          ( λ b → id-equiv)))
-      ( unique-walk-to-base-Directed-Tree
-        ( directed-tree-Enriched-Directed-Tree A B T)
-        ( x))
+  unique-walk-to-base-Enriched-Directed-Tree x = {!!}
 
   is-root-or-walk-to-base-Enriched-Directed-Tree :
     (x : node-Enriched-Directed-Tree A B T) →
@@ -163,17 +130,13 @@ module _
     Σ ( base-Enriched-Directed-Tree A B T)
       ( walk-Enriched-Directed-Tree A B T x ∘
         node-base-Enriched-Directed-Tree A B T)
-  is-root-or-walk-to-base-Enriched-Directed-Tree x =
-    center (unique-walk-to-base-Enriched-Directed-Tree x)
+  is-root-or-walk-to-base-Enriched-Directed-Tree x = {!!}
 
   is-root-is-root-or-walk-to-base-root-Enriched-Directed-Tree :
     is-root-or-walk-to-base-Enriched-Directed-Tree
       ( root-Enriched-Directed-Tree A B T) ＝
     inl refl
-  is-root-is-root-or-walk-to-base-root-Enriched-Directed-Tree =
-    eq-is-contr
-      ( unique-walk-to-base-Enriched-Directed-Tree
-        ( root-Enriched-Directed-Tree A B T))
+  is-root-is-root-or-walk-to-base-root-Enriched-Directed-Tree = {!!}
 
   unique-walk-to-base-is-not-root-Enriched-Directed-Tree :
     (x : node-Enriched-Directed-Tree A B T) →
@@ -182,19 +145,7 @@ module _
       ( Σ ( base-Enriched-Directed-Tree A B T)
           ( walk-Enriched-Directed-Tree A B T x ∘
             node-base-Enriched-Directed-Tree A B T))
-  unique-walk-to-base-is-not-root-Enriched-Directed-Tree x f =
-    is-contr-equiv'
-      ( is-root-Enriched-Directed-Tree A B T x +
-        Σ ( base-Enriched-Directed-Tree A B T)
-          ( walk-Enriched-Directed-Tree A B T x ∘
-            node-base-Enriched-Directed-Tree A B T))
-      ( left-unit-law-coprod-is-empty
-        ( is-root-Enriched-Directed-Tree A B T x)
-        ( Σ ( base-Enriched-Directed-Tree A B T)
-            ( walk-Enriched-Directed-Tree A B T x ∘
-              node-base-Enriched-Directed-Tree A B T))
-        ( f))
-      ( unique-walk-to-base-Enriched-Directed-Tree x)
+  unique-walk-to-base-is-not-root-Enriched-Directed-Tree x f = {!!}
 
   unique-walk-to-base-direct-successor-Enriched-Directed-Tree :
     (x : node-Enriched-Directed-Tree A B T)
@@ -205,7 +156,5 @@ module _
       ( Σ ( base-Enriched-Directed-Tree A B T)
           ( walk-Enriched-Directed-Tree A B T x ∘
             node-base-Enriched-Directed-Tree A B T))
-  unique-walk-to-base-direct-successor-Enriched-Directed-Tree x (y , e) =
-    unique-walk-to-base-is-not-root-Enriched-Directed-Tree x
-      ( is-proper-node-direct-successor-Enriched-Directed-Tree A B T e)
+  unique-walk-to-base-direct-successor-Enriched-Directed-Tree x (y , e) = {!!}
 ```

@@ -85,8 +85,8 @@ We create helper patterns for the two most common type of arguments.
 
 ```agda
 -- visible-Arg : {l : Level} {A : UU l} → A → Arg A
-pattern visible-Arg t = arg (arg-info visible (modality relevant quantity-ω)) t
+pattern visible-Arg t = {!!}
 
 -- hidden-Arg : {l : Level} {A : UU l} → A → Arg A
-pattern hidden-Arg t = arg (arg-info hidden (modality relevant quantity-ω)) t
+pattern hidden-Arg t = {!!}
 ```

@@ -18,12 +18,12 @@ open import foundation.universe-levels
 
 ## Idea
 
-A natural number `n` is said to be square-free if `x² | n ⇒ x = 1` for any
+A natural number `n` is said to be square-free if `x² | n ⇒ x = {!!}
 natural number `x`.
 
 ## Definition
 
 ```agda
 is-square-free-ℕ : ℕ → UU lzero
-is-square-free-ℕ n = (x : ℕ) → div-ℕ (square-ℕ x) n → is-one-ℕ x
+is-square-free-ℕ n = {!!}
 ```

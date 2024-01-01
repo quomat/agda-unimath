@@ -29,5 +29,5 @@ module _
 
   principal-torsor-Concrete-Group :
     classifying-type-Concrete-Group G → action-Concrete-Group l1 G
-  principal-torsor-Concrete-Group = Id-BG-Set G
+  principal-torsor-Concrete-Group = {!!}
 ```

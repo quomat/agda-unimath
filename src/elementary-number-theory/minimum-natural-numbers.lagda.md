@@ -34,16 +34,16 @@ numbers.
 
 ```agda
 min-ℕ : ℕ → (ℕ → ℕ)
-min-ℕ 0 n = 0
-min-ℕ (succ-ℕ m) 0 = 0
-min-ℕ (succ-ℕ m) (succ-ℕ n) = succ-ℕ (min-ℕ m n)
+min-ℕ 0 n = {!!}
+min-ℕ (succ-ℕ m) 0 = {!!}
+min-ℕ (succ-ℕ m) (succ-ℕ n) = {!!}
 
 ap-min-ℕ : {x x' y y' : ℕ} → x ＝ x' → y ＝ y' → min-ℕ x y ＝ min-ℕ x' y'
-ap-min-ℕ p q = ap-binary min-ℕ p q
+ap-min-ℕ p q = {!!}
 
 min-Fin-ℕ : (n : ℕ) → (Fin (succ-ℕ n) → ℕ) → ℕ
-min-Fin-ℕ zero-ℕ f = f (inr star)
-min-Fin-ℕ (succ-ℕ n) f = min-ℕ (f (inr star)) (min-Fin-ℕ n (λ k → f (inl k)))
+min-Fin-ℕ zero-ℕ f = {!!}
+min-Fin-ℕ (succ-ℕ n) f = {!!}
 ```
 
 ## Properties
@@ -53,38 +53,31 @@ min-Fin-ℕ (succ-ℕ n) f = min-ℕ (f (inr star)) (min-Fin-ℕ n (λ k → f (
 ```agda
 leq-min-ℕ :
   (k m n : ℕ) → k ≤-ℕ m → k ≤-ℕ n → k ≤-ℕ (min-ℕ m n)
-leq-min-ℕ zero-ℕ zero-ℕ zero-ℕ H K = star
-leq-min-ℕ zero-ℕ zero-ℕ (succ-ℕ n) H K = star
-leq-min-ℕ zero-ℕ (succ-ℕ m) zero-ℕ H K = star
-leq-min-ℕ zero-ℕ (succ-ℕ m) (succ-ℕ n) H K = star
-leq-min-ℕ (succ-ℕ k) (succ-ℕ m) (succ-ℕ n) H K = leq-min-ℕ k m n H K
+leq-min-ℕ zero-ℕ zero-ℕ zero-ℕ H K = {!!}
+leq-min-ℕ zero-ℕ zero-ℕ (succ-ℕ n) H K = {!!}
+leq-min-ℕ zero-ℕ (succ-ℕ m) zero-ℕ H K = {!!}
+leq-min-ℕ zero-ℕ (succ-ℕ m) (succ-ℕ n) H K = {!!}
+leq-min-ℕ (succ-ℕ k) (succ-ℕ m) (succ-ℕ n) H K = {!!}
 
 leq-left-leq-min-ℕ :
   (k m n : ℕ) → k ≤-ℕ (min-ℕ m n) → k ≤-ℕ m
-leq-left-leq-min-ℕ zero-ℕ zero-ℕ zero-ℕ H = star
-leq-left-leq-min-ℕ zero-ℕ zero-ℕ (succ-ℕ n) H = star
-leq-left-leq-min-ℕ zero-ℕ (succ-ℕ m) zero-ℕ H = star
-leq-left-leq-min-ℕ zero-ℕ (succ-ℕ m) (succ-ℕ n) H = star
-leq-left-leq-min-ℕ (succ-ℕ k) (succ-ℕ m) (succ-ℕ n) H =
-  leq-left-leq-min-ℕ k m n H
+leq-left-leq-min-ℕ zero-ℕ zero-ℕ zero-ℕ H = {!!}
+leq-left-leq-min-ℕ zero-ℕ zero-ℕ (succ-ℕ n) H = {!!}
+leq-left-leq-min-ℕ zero-ℕ (succ-ℕ m) zero-ℕ H = {!!}
+leq-left-leq-min-ℕ zero-ℕ (succ-ℕ m) (succ-ℕ n) H = {!!}
+leq-left-leq-min-ℕ (succ-ℕ k) (succ-ℕ m) (succ-ℕ n) H = {!!}
 
 leq-right-leq-min-ℕ :
   (k m n : ℕ) → k ≤-ℕ (min-ℕ m n) → k ≤-ℕ n
-leq-right-leq-min-ℕ zero-ℕ zero-ℕ zero-ℕ H = star
-leq-right-leq-min-ℕ zero-ℕ zero-ℕ (succ-ℕ n) H = star
-leq-right-leq-min-ℕ zero-ℕ (succ-ℕ m) zero-ℕ H = star
-leq-right-leq-min-ℕ zero-ℕ (succ-ℕ m) (succ-ℕ n) H = star
-leq-right-leq-min-ℕ (succ-ℕ k) (succ-ℕ m) (succ-ℕ n) H =
-  leq-right-leq-min-ℕ k m n H
+leq-right-leq-min-ℕ zero-ℕ zero-ℕ zero-ℕ H = {!!}
+leq-right-leq-min-ℕ zero-ℕ zero-ℕ (succ-ℕ n) H = {!!}
+leq-right-leq-min-ℕ zero-ℕ (succ-ℕ m) zero-ℕ H = {!!}
+leq-right-leq-min-ℕ zero-ℕ (succ-ℕ m) (succ-ℕ n) H = {!!}
+leq-right-leq-min-ℕ (succ-ℕ k) (succ-ℕ m) (succ-ℕ n) H = {!!}
 
 is-greatest-lower-bound-min-ℕ :
   (l m : ℕ) → is-greatest-binary-lower-bound-Poset ℕ-Poset l m (min-ℕ l m)
-is-greatest-lower-bound-min-ℕ l m =
-  prove-is-greatest-binary-lower-bound-Poset
-    ( ℕ-Poset)
-    ( leq-left-leq-min-ℕ (min-ℕ l m) l m (refl-leq-ℕ (min-ℕ l m)) ,
-      leq-right-leq-min-ℕ (min-ℕ l m) l m (refl-leq-ℕ (min-ℕ l m)))
-    ( λ x (H , K) → leq-min-ℕ x l m H K)
+is-greatest-lower-bound-min-ℕ l m = {!!}
 ```
 
 ### Associativity of `min-ℕ`
@@ -92,41 +85,40 @@ is-greatest-lower-bound-min-ℕ l m =
 ```agda
 associative-min-ℕ :
   (x y z : ℕ) → min-ℕ (min-ℕ x y) z ＝ min-ℕ x (min-ℕ y z)
-associative-min-ℕ zero-ℕ y z = refl
-associative-min-ℕ (succ-ℕ x) zero-ℕ zero-ℕ = refl
-associative-min-ℕ (succ-ℕ x) zero-ℕ (succ-ℕ z) = refl
-associative-min-ℕ (succ-ℕ x) (succ-ℕ y) zero-ℕ = refl
-associative-min-ℕ (succ-ℕ x) (succ-ℕ y) (succ-ℕ z) =
-  ap succ-ℕ (associative-min-ℕ x y z)
+associative-min-ℕ zero-ℕ y z = {!!}
+associative-min-ℕ (succ-ℕ x) zero-ℕ zero-ℕ = {!!}
+associative-min-ℕ (succ-ℕ x) zero-ℕ (succ-ℕ z) = {!!}
+associative-min-ℕ (succ-ℕ x) (succ-ℕ y) zero-ℕ = {!!}
+associative-min-ℕ (succ-ℕ x) (succ-ℕ y) (succ-ℕ z) = {!!}
 ```
 
 ### Zero laws for `min-ℕ`
 
 ```agda
 left-zero-law-min-ℕ : (x : ℕ) → min-ℕ 0 x ＝ 0
-left-zero-law-min-ℕ x = refl
+left-zero-law-min-ℕ x = {!!}
 
 right-zero-law-min-ℕ : (x : ℕ) → min-ℕ x 0 ＝ 0
-right-zero-law-min-ℕ zero-ℕ = refl
-right-zero-law-min-ℕ (succ-ℕ x) = refl
+right-zero-law-min-ℕ zero-ℕ = {!!}
+right-zero-law-min-ℕ (succ-ℕ x) = {!!}
 ```
 
 ### Commutativity of `min-ℕ`
 
 ```agda
 commutative-min-ℕ : (x y : ℕ) → min-ℕ x y ＝ min-ℕ y x
-commutative-min-ℕ zero-ℕ zero-ℕ = refl
-commutative-min-ℕ zero-ℕ (succ-ℕ y) = refl
-commutative-min-ℕ (succ-ℕ x) zero-ℕ = refl
-commutative-min-ℕ (succ-ℕ x) (succ-ℕ y) = ap succ-ℕ (commutative-min-ℕ x y)
+commutative-min-ℕ zero-ℕ zero-ℕ = {!!}
+commutative-min-ℕ zero-ℕ (succ-ℕ y) = {!!}
+commutative-min-ℕ (succ-ℕ x) zero-ℕ = {!!}
+commutative-min-ℕ (succ-ℕ x) (succ-ℕ y) = {!!}
 ```
 
 ### `min-ℕ` is idempotent
 
 ```agda
 idempotent-min-ℕ : (x : ℕ) → min-ℕ x x ＝ x
-idempotent-min-ℕ zero-ℕ = refl
-idempotent-min-ℕ (succ-ℕ x) = ap succ-ℕ (idempotent-min-ℕ x)
+idempotent-min-ℕ zero-ℕ = {!!}
+idempotent-min-ℕ (succ-ℕ x) = {!!}
 ```
 
 ### Addition distributes over `min-ℕ`
@@ -134,20 +126,10 @@ idempotent-min-ℕ (succ-ℕ x) = ap succ-ℕ (idempotent-min-ℕ x)
 ```agda
 left-distributive-add-min-ℕ :
   (x y z : ℕ) → x +ℕ (min-ℕ y z) ＝ min-ℕ (x +ℕ y) (x +ℕ z)
-left-distributive-add-min-ℕ zero-ℕ y z =
-  ( left-unit-law-add-ℕ (min-ℕ y z)) ∙
-  ( ap-min-ℕ (inv (left-unit-law-add-ℕ y)) (inv (left-unit-law-add-ℕ z)))
-left-distributive-add-min-ℕ (succ-ℕ x) y z =
-  ( left-successor-law-add-ℕ x (min-ℕ y z)) ∙
-  ( ( ap succ-ℕ (left-distributive-add-min-ℕ x y z)) ∙
-    ( ap-min-ℕ
-      ( inv (left-successor-law-add-ℕ x y))
-      ( inv (left-successor-law-add-ℕ x z))))
+left-distributive-add-min-ℕ zero-ℕ y z = {!!}
+left-distributive-add-min-ℕ (succ-ℕ x) y z = {!!}
 
 right-distributive-add-min-ℕ :
   (x y z : ℕ) → (min-ℕ x y) +ℕ z ＝ min-ℕ (x +ℕ z) (y +ℕ z)
-right-distributive-add-min-ℕ x y z =
-  ( commutative-add-ℕ (min-ℕ x y) z) ∙
-  ( ( left-distributive-add-min-ℕ z x y) ∙
-    ( ap-min-ℕ (commutative-add-ℕ z x) (commutative-add-ℕ z y)))
+right-distributive-add-min-ℕ x y z = {!!}
 ```

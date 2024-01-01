@@ -32,7 +32,7 @@ Two elements `x` and `y` in a large poset `P` are
 they have the same principal upper sets, and if `x` and `y` are of the same
 [universe level](foundation.universe-levels.md), then `x` and `y` are equal if
 and only if they have the same principal upper sets. To see this, note that if
-`↑{x} = ↑{y}`, then we have the implications `(x ≤ x) → (x ≤ y)` and
+`↑{x} = {!!}
 `(y ≤ y) → (y ≤ x)`.
 
 ## Definitions
@@ -47,9 +47,7 @@ module _
   where
 
   is-principal-upper-set-Large-Subposet : UUω
-  is-principal-upper-set-Large-Subposet =
-    {l : Level} (y : type-Large-Poset P l) →
-    leq-Large-Poset P y x ↔ is-in-Large-Subposet P S y
+  is-principal-upper-set-Large-Subposet = {!!}
 ```
 
 ### The principal upper set of an element
@@ -62,20 +60,15 @@ module _
 
   large-subpreorder-principal-upper-set-element-Large-Poset :
     Large-Subpreorder (λ l → β l1 l) (large-preorder-Large-Poset P)
-  large-subpreorder-principal-upper-set-element-Large-Poset y =
-    leq-prop-Large-Poset P x y
+  large-subpreorder-principal-upper-set-element-Large-Poset y = {!!}
 
   is-closed-under-sim-principal-upper-set-element-Large-Poset :
     is-closed-under-sim-Large-Subpreorder P
       ( large-subpreorder-principal-upper-set-element-Large-Poset)
-  is-closed-under-sim-principal-upper-set-element-Large-Poset y z p q l =
-    transitive-leq-Large-Poset P x y z p l
+  is-closed-under-sim-principal-upper-set-element-Large-Poset y z p q l = {!!}
 
   principal-upper-set-element-Large-Poset : Large-Subposet (λ l → β l1 l) P
-  large-subpreorder-Large-Subposet principal-upper-set-element-Large-Poset =
-    large-subpreorder-principal-upper-set-element-Large-Poset
-  is-closed-under-sim-Large-Subposet principal-upper-set-element-Large-Poset =
-    is-closed-under-sim-principal-upper-set-element-Large-Poset
+  large-subpreorder-Large-Subposet principal-upper-set-element-Large-Poset = {!!}
 ```
 
 ## Properties
@@ -93,10 +86,7 @@ module _
       ( principal-upper-set-element-Large-Poset P x)
       ( principal-upper-set-element-Large-Poset P y) →
     sim-Large-Poset P x y
-  pr1 (sim-has-same-elements-principal-upper-set-element-Large-Poset H) =
-    backward-implication (H y) (refl-leq-Large-Poset P y)
-  pr2 (sim-has-same-elements-principal-upper-set-element-Large-Poset H) =
-    forward-implication (H x) (refl-leq-Large-Poset P x)
+  pr1 (sim-has-same-elements-principal-upper-set-element-Large-Poset H) = {!!}
 
   has-same-elements-principal-upper-set-element-sim-Large-Poset :
     sim-Large-Poset P x y →
@@ -105,12 +95,7 @@ module _
       ( principal-upper-set-element-Large-Poset P y)
   pr1
     ( has-same-elements-principal-upper-set-element-sim-Large-Poset (H , K) z)
-    ( p) =
-    transitive-leq-Large-Poset P y x z p K
-  pr2
-    ( has-same-elements-principal-upper-set-element-sim-Large-Poset (H , K) z)
-    ( q) =
-    transitive-leq-Large-Poset P x y z q H
+    ( p) = {!!}
 ```
 
 ### For two elements `x` and `y` of a large poset of the same universe level, if the principal upper sets `↑{x}` and `↑{y}` have the same elements, then `x` and `y` are equal
@@ -126,8 +111,5 @@ module _
       ( principal-upper-set-element-Large-Poset P x)
       ( principal-upper-set-element-Large-Poset P y) →
     x ＝ y
-  eq-has-same-elements-principal-upper-set-element-Large-Poset H =
-    antisymmetric-leq-Large-Poset P x y
-      ( pr1 (sim-has-same-elements-principal-upper-set-element-Large-Poset P H))
-      ( pr2 (sim-has-same-elements-principal-upper-set-element-Large-Poset P H))
+  eq-has-same-elements-principal-upper-set-element-Large-Poset H = {!!}
 ```

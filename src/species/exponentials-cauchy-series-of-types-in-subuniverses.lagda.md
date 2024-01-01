@@ -40,14 +40,7 @@ module _
 
   exponential-cauchy-series-species-subuniverse :
     UU (lsuc l1 ⊔ l2 ⊔ l3 ⊔ l5)
-  exponential-cauchy-series-species-subuniverse =
-    Σ ( type-subuniverse P)
-      ( λ F →
-        inclusion-subuniverse P F →
-        Σ ( type-subuniverse P)
-          ( λ U →
-            ( inclusion-subuniverse Q (S U)) ×
-            ( inclusion-subuniverse P U → X)))
+  exponential-cauchy-series-species-subuniverse = {!!}
 ```
 
 ## Property
@@ -71,8 +64,7 @@ module _
       ( subuniverse-global-subuniverse Q l3)
       ( S)
       ( X)
-  equiv-exponential-cauchy-series-composition-unit-species-subuniverse =
-    equiv-tot (λ F → left-unit-law-prod-is-contr is-contr-unit)
+  equiv-exponential-cauchy-series-composition-unit-species-subuniverse = {!!}
 ```
 
 ### The Cauchy series associated to the Cauchy exponential of `S` is equal to the exponential of its Cauchy series
@@ -99,32 +91,5 @@ module _
       ( subuniverse-global-subuniverse Q l3)
       ( S)
       ( X)
-  equiv-cauchy-series-cauchy-exponential-species-subuniverse =
-    ( equiv-exponential-cauchy-series-composition-unit-species-subuniverse
-      ( P)
-      ( Q)
-      ( C2)
-      ( S)
-      ( X)) ∘e
-    ( ( equiv-cauchy-series-composition-species-subuniverse P Q C3 C4
-        ( λ _ → unit , C2)
-        ( S)
-        ( X)) ∘e
-      ( equiv-cauchy-series-equiv-species-subuniverse P Q
-        ( cauchy-exponential-species-subuniverse P Q C1 S)
-        ( cauchy-composition-species-subuniverse P Q C3 C4
-          ( λ _ → unit , C2)
-          ( S))
-        ( λ F →
-          inv-equiv
-            ( equiv-cauchy-exponential-composition-unit-species-subuniverse
-              ( P)
-              ( Q)
-              ( C1)
-              ( C2)
-              ( C3)
-              ( C4)
-              ( S)
-              ( F)))
-        ( X)))
+  equiv-cauchy-series-cauchy-exponential-species-subuniverse = {!!}
 ```

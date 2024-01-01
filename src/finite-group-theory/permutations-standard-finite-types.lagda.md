@@ -54,7 +54,7 @@ A permutation of `Fin n` is an automorphism of `Fin n`.
 
 ```agda
 Permutation : (n : ℕ) → UU lzero
-Permutation n = Aut (Fin n)
+Permutation n = {!!}
 ```
 
 ## Properties
@@ -71,47 +71,9 @@ list-transpositions-permutation-Fin' :
       ( λ P →
         has-cardinality 2
           ( Σ (Fin (succ-ℕ n)) (type-Decidable-Prop ∘ P)))))
-list-transpositions-permutation-Fin' zero-ℕ f x p = nil
-list-transpositions-permutation-Fin' (succ-ℕ n) f (inl x) p =
-  cons
-    ( t)
-    ( map-list
-      ( Fin-succ-Fin-transposition (succ-ℕ n))
-      ( list-transpositions-permutation-Fin'
-        ( n)
-        ( f')
-        ( map-equiv f' (inr star))
-        ( refl)))
-  where
-  t :
-    Σ ( Fin (succ-ℕ (succ-ℕ n)) → Decidable-Prop lzero)
-      ( λ P →
-        has-cardinality 2
-          ( Σ (Fin (succ-ℕ (succ-ℕ n))) (type-Decidable-Prop ∘ P)))
-  t = standard-2-Element-Decidable-Subtype
-      ( has-decidable-equality-Fin (succ-ℕ (succ-ℕ n)))
-      { inr star}
-      { inl x}
-      ( neq-inr-inl)
-  f' : (Permutation (succ-ℕ n))
-  f' =
-    map-inv-equiv
-      ( extend-equiv-Maybe (Fin-Set (succ-ℕ n)))
-      ( pair
-        ( transposition t ∘e f)
-        ( ( ap (λ y → map-transposition t y) p) ∙
-          ( right-computation-standard-transposition
-            ( has-decidable-equality-Fin (succ-ℕ (succ-ℕ n)))
-            { inr star}
-            { inl x}
-            ( neq-inr-inl))))
-list-transpositions-permutation-Fin' (succ-ℕ n) f (inr star) p =
-  map-list
-    ( Fin-succ-Fin-transposition (succ-ℕ n))
-    ( list-transpositions-permutation-Fin' n f' (map-equiv f' (inr star)) refl)
-  where
-  f' : (Permutation (succ-ℕ n))
-  f' = map-inv-equiv (extend-equiv-Maybe (Fin-Set (succ-ℕ n))) (pair f p)
+list-transpositions-permutation-Fin' zero-ℕ f x p = {!!}
+list-transpositions-permutation-Fin' (succ-ℕ n) f (inl x) p = {!!}
+list-transpositions-permutation-Fin' (succ-ℕ n) f (inr star) p = {!!}
 
 list-transpositions-permutation-Fin :
   (n : ℕ) (f : Permutation n) →
@@ -119,9 +81,8 @@ list-transpositions-permutation-Fin :
     ( Σ
       ( Fin n → Decidable-Prop lzero)
       ( λ P → has-cardinality 2 (Σ (Fin n) (type-Decidable-Prop ∘ P)))))
-list-transpositions-permutation-Fin zero-ℕ f = nil
-list-transpositions-permutation-Fin (succ-ℕ n) f =
-  list-transpositions-permutation-Fin' n f (map-equiv f (inr star)) refl
+list-transpositions-permutation-Fin zero-ℕ f = {!!}
+list-transpositions-permutation-Fin (succ-ℕ n) f = {!!}
 
 abstract
   retraction-permutation-list-transpositions-Fin' :
@@ -135,301 +96,7 @@ abstract
         ( y))
       ( map-equiv f y)
   retraction-permutation-list-transpositions-Fin'
-    zero-ℕ f (inr star) p (inr star) z q =
-    inv p
-  retraction-permutation-list-transpositions-Fin'
-    (succ-ℕ n) f (inl x) p (inl y) (inl z) q =
-    ap
-      (λ w →
-        map-equiv
-          ( permutation-list-transpositions
-            ( list-transpositions-permutation-Fin'
-              (succ-ℕ n) f (pr1 w) (pr2 w)))
-        ( inl y)) {y = pair (inl x) p}
-      ( eq-pair-Σ
-        ( p)
-        ( eq-is-prop
-          ( is-set-type-Set
-            ( Fin-Set (succ-ℕ (succ-ℕ n)))
-            ( map-equiv f (inr star))
-            ( inl x)))) ∙
-      ( ap
-        ( map-equiv (transposition t))
-        ( correct-Fin-succ-Fin-transposition-list
-          ( succ-ℕ n)
-          ( list-transpositions-permutation-Fin'
-              n _ (map-equiv F' (inr star)) refl)
-          ( inl y)) ∙
-        (ap
-          ( λ g →
-            map-equiv
-              ( transposition t)
-              ( map-equiv
-                ( pr1 (map-equiv (extend-equiv-Maybe (Fin-Set (succ-ℕ n))) g))
-                ( inl y)))
-          { x =
-            permutation-list-transpositions
-              ( list-transpositions-permutation-Fin (succ-ℕ n) _)}
-          { y = F'}
-          ( eq-htpy-equiv
-            ( λ w → retraction-permutation-list-transpositions-Fin'
-              n _ (map-equiv F' (inr star)) refl w (map-equiv F' w) refl)) ∙
-            ( (ap (map-equiv (transposition t)) lemma) ∙
-              (lemma2 ∙ inv q))))
-    where
-    t :
-      Σ ( Fin (succ-ℕ (succ-ℕ n)) → Decidable-Prop lzero)
-        ( λ P →
-          has-cardinality 2
-            ( Σ (Fin (succ-ℕ (succ-ℕ n))) (type-Decidable-Prop ∘ P)))
-    t =
-      standard-2-Element-Decidable-Subtype
-        ( has-decidable-equality-Fin (succ-ℕ (succ-ℕ n)))
-        { inr star}
-        { inl x}
-        ( neq-inr-inl)
-    P :
-      Σ ( Permutation (succ-ℕ (succ-ℕ n)))
-        ( λ g → Id (map-equiv g (inr star)) (inr star))
-    P =
-      pair
-        ( transposition t ∘e f)
-        ( ( ap (λ y → map-transposition t y) p) ∙
-          ( right-computation-standard-transposition
-            ( has-decidable-equality-Fin (succ-ℕ (succ-ℕ n)))
-            { inr star}
-            { inl x}
-            ( neq-inr-inl)))
-    F' : (Permutation (succ-ℕ n))
-    F' = map-inv-equiv (extend-equiv-Maybe (Fin-Set (succ-ℕ n))) P
-    lemma2 : (map-equiv (transposition t) (inl z)) ＝ (inl z)
-    lemma2 =
-      is-fixed-point-standard-transposition
-        ( has-decidable-equality-Fin (succ-ℕ (succ-ℕ n)))
-        { inr star}
-        { inl x}
-        ( neq-inr-inl)
-        ( inl z)
-        ( neq-inr-inl)
-        ( λ r →
-          neq-inr-inl
-            ( is-injective-map-equiv f (p ∙ (r ∙ inv q))))
-    lemma :
-      Id
-        ( map-equiv
-          ( pr1 (map-equiv (extend-equiv-Maybe (Fin-Set (succ-ℕ n))) F'))
-          ( inl y))
-        ( inl z)
-    lemma =
-      ( ap
-        ( λ e → map-equiv (pr1 (map-equiv e P)) (inl y))
-        ( right-inverse-law-equiv (extend-equiv-Maybe (Fin-Set (succ-ℕ n))))) ∙
-      ( ap (map-equiv (transposition t)) q ∙ lemma2)
-  retraction-permutation-list-transpositions-Fin'
-    (succ-ℕ n) f (inl x) p (inl y) (inr star) q =
-    ap
-      (λ w →
-        map-equiv
-          ( permutation-list-transpositions
-            ( list-transpositions-permutation-Fin'
-              (succ-ℕ n) f (pr1 w) (pr2 w)))
-        ( inl y)) {y = pair (inl x) p}
-      ( eq-pair-Σ
-        ( p)
-        ( eq-is-prop
-          ( is-set-type-Set
-            ( Fin-Set (succ-ℕ (succ-ℕ n)))
-            ( map-equiv f (inr star))
-            ( inl x)))) ∙
-      ( ap
-        ( map-equiv (transposition t))
-        ( correct-Fin-succ-Fin-transposition-list
-          ( succ-ℕ n)
-          ( list-transpositions-permutation-Fin'
-              n _ (map-equiv F' (inr star)) refl)
-          ( inl y)) ∙
-        (ap
-          ( λ g →
-            map-equiv
-              ( transposition t)
-              ( map-equiv
-                ( pr1 (map-equiv (extend-equiv-Maybe (Fin-Set (succ-ℕ n))) g))
-                ( inl y)))
-          { x =
-            permutation-list-transpositions
-              ( list-transpositions-permutation-Fin (succ-ℕ n) _)}
-          { y = F'}
-          ( eq-htpy-equiv
-            ( λ w →
-              retraction-permutation-list-transpositions-Fin'
-                n _ (map-equiv F' (inr star)) refl w (map-equiv F' w) refl)) ∙
-          ( ( ap (map-equiv (transposition t)) lemma) ∙
-            ( ( right-computation-standard-transposition
-                ( has-decidable-equality-Fin (succ-ℕ (succ-ℕ n)))
-                { inr star}
-                { inl x}
-                ( neq-inr-inl)) ∙
-              ( inv q)))))
-    where
-    t :
-      Σ ( Fin (succ-ℕ (succ-ℕ n)) → Decidable-Prop lzero)
-        ( λ P →
-          has-cardinality 2
-            ( Σ (Fin (succ-ℕ (succ-ℕ n))) (type-Decidable-Prop ∘ P)))
-    t =
-      standard-2-Element-Decidable-Subtype
-        ( has-decidable-equality-Fin (succ-ℕ (succ-ℕ n)))
-        { inr star}
-        { inl x}
-        ( neq-inr-inl)
-    P :
-      Σ ( Permutation (succ-ℕ (succ-ℕ n)))
-        ( λ g → Id (map-equiv g (inr star)) (inr star))
-    P = pair
-      ( transposition t ∘e f)
-      ( ( ap (map-transposition t) p) ∙
-        right-computation-standard-transposition
-          ( has-decidable-equality-Fin (succ-ℕ (succ-ℕ n)))
-          { inr star}
-          { inl x}
-          ( neq-inr-inl))
-    F' : (Permutation (succ-ℕ n))
-    F' = map-inv-equiv (extend-equiv-Maybe (Fin-Set (succ-ℕ n))) P
-    lemma :
-      Id
-        ( map-equiv
-          ( pr1
-            ( map-equiv (extend-equiv-Maybe (Fin-Set (succ-ℕ n))) F'))
-          ( inl y))
-        (inl x)
-    lemma =
-      ( ap
-        ( λ e → map-equiv (pr1 (map-equiv e P)) (inl y))
-        ( right-inverse-law-equiv (extend-equiv-Maybe (Fin-Set (succ-ℕ n))))) ∙
-      ( ap
-        ( map-equiv (transposition t))
-        ( q) ∙
-        ( left-computation-standard-transposition
-          ( has-decidable-equality-Fin (succ-ℕ (succ-ℕ n)))
-          { inr star}
-          { inl x}
-          ( neq-inr-inl)))
-  retraction-permutation-list-transpositions-Fin'
-    (succ-ℕ n) f (inl x) p (inr star) z q =
-    ap
-      (λ w →
-        map-equiv
-          ( permutation-list-transpositions
-            ( list-transpositions-permutation-Fin'
-              (succ-ℕ n) f (pr1 w) (pr2 w)))
-        ( inr star)) {y = pair (inl x) p}
-      ( eq-pair-Σ
-        ( p)
-        ( eq-is-prop
-          ( is-set-type-Set
-            ( Fin-Set (succ-ℕ (succ-ℕ n)))
-            ( map-equiv f (inr star))
-            ( inl x)))) ∙
-      ( ap
-        ( map-equiv (transposition t))
-        ( correct-Fin-succ-Fin-transposition-list
-          ( succ-ℕ n)
-          ( list-transpositions-permutation-Fin'
-              n _ (map-equiv F' (inr star)) refl)
-          ( inr star)) ∙
-        ( ap
-          ( map-equiv (transposition t))
-          ( pr2 (map-equiv (extend-equiv-Maybe (Fin-Set (succ-ℕ n))) F')) ∙
-          ( ( left-computation-standard-transposition
-              ( has-decidable-equality-Fin (succ-ℕ (succ-ℕ n)))
-              { inr star}
-              { inl x}
-              ( neq-inr-inl)) ∙
-            ( inv p))))
-    where
-    t :
-      Σ ( Fin (succ-ℕ (succ-ℕ n)) → Decidable-Prop lzero)
-        ( λ P →
-          has-cardinality 2
-            ( Σ (Fin (succ-ℕ (succ-ℕ n))) (type-Decidable-Prop ∘ P)))
-    t =
-      standard-2-Element-Decidable-Subtype
-        ( has-decidable-equality-Fin (succ-ℕ (succ-ℕ n)))
-        { inr star}
-        { inl x}
-        ( neq-inr-inl)
-    F' : (Permutation (succ-ℕ n))
-    F' =
-      map-inv-equiv
-        ( extend-equiv-Maybe (Fin-Set (succ-ℕ n)))
-        ( pair
-          ( transposition t ∘e f)
-          ( ( ap (map-transposition t) p) ∙
-            right-computation-standard-transposition
-              ( has-decidable-equality-Fin (succ-ℕ (succ-ℕ n)))
-              { inr star}
-              { inl x}
-              ( neq-inr-inl)))
-  retraction-permutation-list-transpositions-Fin'
-    (succ-ℕ n) f (inr star) p (inl y) (inl z) q =
-    ap
-      ( λ w →
-        map-equiv
-          ( permutation-list-transpositions
-            ( list-transpositions-permutation-Fin'
-              (succ-ℕ n) f (pr1 w) (pr2 w)))
-        ( inl y))
-      {y = pair (inr star) p}
-      ( eq-pair-Σ
-        ( p)
-        ( eq-is-prop
-          ( is-set-type-Set
-            ( Fin-Set (succ-ℕ (succ-ℕ n)))
-            ( map-equiv f (inr star))
-            ( inr star)))) ∙
-      ( ( correct-Fin-succ-Fin-transposition-list
-          ( succ-ℕ n)
-          ( list-transpositions-permutation-Fin'
-              n f' (map-equiv f' (inr star)) refl)
-          ( inl y)) ∙
-        ( ( ap
-            ( inl)
-            ( retraction-permutation-list-transpositions-Fin'
-              n f' (map-equiv f' (inr star)) refl y (map-equiv f' y) refl)) ∙
-          ( computation-inv-extend-equiv-Maybe (Fin-Set (succ-ℕ n)) f p y)))
-    where
-    f' : (Permutation (succ-ℕ n))
-    f' = map-inv-equiv (extend-equiv-Maybe (Fin-Set (succ-ℕ n))) (pair f p)
-  retraction-permutation-list-transpositions-Fin'
-    (succ-ℕ n) f (inr star) p (inl y) (inr star) q =
-    ex-falso
-      ( neq-inr-inl
-        ( is-injective-map-equiv f (p ∙ inv q)))
-  retraction-permutation-list-transpositions-Fin'
-    (succ-ℕ n) f (inr star) p (inr star) z q =
-    ap
-      (λ w →
-        map-equiv
-          ( permutation-list-transpositions
-            ( list-transpositions-permutation-Fin'
-              (succ-ℕ n) f (pr1 w) (pr2 w)))
-        ( inr star)) {y = pair (inr star) p}
-      ( eq-pair-Σ
-        ( p)
-        ( eq-is-prop
-          ( is-set-type-Set
-            ( Fin-Set (succ-ℕ (succ-ℕ n)))
-            ( map-equiv f (inr star))
-            ( inr star)))) ∙
-      ( ( correct-Fin-succ-Fin-transposition-list
-          ( succ-ℕ n)
-          ( list-transpositions-permutation-Fin'
-              n f' (map-equiv f' (inr star)) refl)
-          ( inr star)) ∙
-        ( inv p))
-    where
-    f' : (Permutation (succ-ℕ n))
-    f' = map-inv-equiv (extend-equiv-Maybe (Fin-Set (succ-ℕ n))) (pair f p)
+    zero-ℕ f (inr star) p (inr star) z q = {!!}
 
   retraction-permutation-list-transpositions-Fin :
     (n : ℕ) (f : Permutation n) →
@@ -438,9 +105,7 @@ abstract
         ( list-transpositions-permutation-Fin n f))
       ( f)
   retraction-permutation-list-transpositions-Fin zero-ℕ f ()
-  retraction-permutation-list-transpositions-Fin (succ-ℕ n) f y =
-    retraction-permutation-list-transpositions-Fin'
-      n f (map-equiv f (inr star)) refl y (map-equiv f y) refl
+  retraction-permutation-list-transpositions-Fin (succ-ℕ n) f y = {!!}
 ```
 
 ```agda
@@ -448,22 +113,12 @@ permutation-list-standard-transpositions-Fin :
   (n : ℕ) →
   list (Σ (Fin n × Fin n) (λ (i , j) → i ≠ j)) →
   Permutation n
-permutation-list-standard-transpositions-Fin n =
-  fold-list
-    ( id-equiv)
-    ( λ (_ , neq) p →
-      standard-transposition (has-decidable-equality-Fin n) neq ∘e p)
+permutation-list-standard-transpositions-Fin n = {!!}
 
 list-standard-transpositions-permutation-Fin :
   (n : ℕ) (f : Permutation n) →
   list (Σ (Fin n × Fin n) (λ (i , j) → i ≠ j))
-list-standard-transpositions-permutation-Fin n f =
-  map-list
-    ( λ P →
-      ( element-two-elements-transposition-Fin P ,
-        other-element-two-elements-transposition-Fin P) ,
-      neq-elements-two-elements-transposition-Fin P)
-    ( list-transpositions-permutation-Fin n f)
+list-standard-transpositions-permutation-Fin n f = {!!}
 
 private
   htpy-permutation-list :
@@ -480,20 +135,7 @@ private
             neq-elements-two-elements-transposition-Fin P)
           ( l)))
       ( permutation-list-transpositions l)
-  htpy-permutation-list n nil = refl-htpy
-  htpy-permutation-list n (cons P l) =
-    ( htpy-two-elements-transpositon-Fin P ·r
-      map-equiv
-        ( permutation-list-standard-transpositions-Fin
-          ( succ-ℕ n)
-          ( map-list
-            ( λ P →
-              ( element-two-elements-transposition-Fin P ,
-                other-element-two-elements-transposition-Fin P) ,
-              neq-elements-two-elements-transposition-Fin P)
-            ( l)))) ∙h
-    ( map-transposition P ·l
-      htpy-permutation-list n l)
+  htpy-permutation-list n nil = {!!}
 
 retraction-permutation-list-standard-transpositions-Fin :
   (n : ℕ) (f : Permutation n) →
@@ -503,7 +145,5 @@ retraction-permutation-list-standard-transpositions-Fin :
       ( list-standard-transpositions-permutation-Fin n f))
     ( f)
 retraction-permutation-list-standard-transpositions-Fin 0 f ()
-retraction-permutation-list-standard-transpositions-Fin (succ-ℕ n) f =
-  htpy-permutation-list n (list-transpositions-permutation-Fin (succ-ℕ n) f) ∙h
-  retraction-permutation-list-transpositions-Fin (succ-ℕ n) f
+retraction-permutation-list-standard-transpositions-Fin (succ-ℕ n) f = {!!}
 ```

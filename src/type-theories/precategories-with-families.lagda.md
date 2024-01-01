@@ -62,62 +62,56 @@ record
     ctx-category : Precategory l1 l2
 
   Ctx : UU l1
-  Ctx = obj-Precategory ctx-category
+  Ctx = {!!}
 
   Sub : Ctx → Ctx → UU l2
-  Sub = hom-Precategory ctx-category
+  Sub = {!!}
 
   field
     ty-presheaf : presheaf-Precategory ctx-category l3
 
   ∫Ty : Precategory (l1 ⊔ l3) (l2 ⊔ l3)
-  ∫Ty = precategory-of-elements-presheaf-Precategory ctx-category ty-presheaf
+  ∫Ty = {!!}
 
   obj-∫Ty : UU (l1 ⊔ l3)
-  obj-∫Ty = obj-Precategory ∫Ty
+  obj-∫Ty = {!!}
 
   hom-∫Ty : obj-∫Ty → obj-∫Ty → UU (l2 ⊔ l3)
-  hom-∫Ty = hom-Precategory ∫Ty
+  hom-∫Ty = {!!}
 
   proj-∫Ty : functor-Precategory ∫Ty ctx-category
-  proj-∫Ty =
-    proj-functor-precategory-of-elements-presheaf-Precategory
-      ( ctx-category)
-      ( ty-presheaf)
+  proj-∫Ty = {!!}
 
   Ty : Ctx → UU l3
-  Ty = element-presheaf-Precategory ctx-category ty-presheaf
+  Ty = {!!}
 
   _·_ : {Δ Γ : Ctx} (A : Ty Γ) (γ : Sub Δ Γ) → Ty Δ
-  A · γ = action-presheaf-Precategory ctx-category ty-presheaf γ A
+  A · γ = {!!}
 
   preserves-comp-Ty :
     {Δ Δ' Γ : Ctx} (A : Ty Γ) (γ : Sub Δ' Γ) (δ : Sub Δ Δ') →
     A · comp-hom-Precategory ctx-category γ δ ＝ (A · γ) · δ
-  preserves-comp-Ty A γ δ =
-    preserves-comp-action-presheaf-Precategory ctx-category ty-presheaf γ δ A
+  preserves-comp-Ty A γ δ = {!!}
 
   preserves-id-Ty :
     {Γ : Ctx} (A : Ty Γ) → A · id-hom-Precategory ctx-category ＝ A
-  preserves-id-Ty {Γ} =
-    preserves-id-action-presheaf-Precategory ctx-category ty-presheaf
+  preserves-id-Ty {Γ} = {!!}
 
   field
     tm-presheaf : presheaf-Precategory ∫Ty l4
 
   Tm : (Γ : Ctx) (A : Ty Γ) → UU l4
-  Tm Γ A = element-presheaf-Precategory ∫Ty tm-presheaf (Γ , A)
+  Tm Γ A = {!!}
 
   _[_] :
     {Δ Γ : Ctx} {A : Ty Γ} (M : Tm Γ A) (γ : Sub Δ Γ) → Tm Δ (A · γ)
-  _[_] {Δ} {Γ} {A} M γ =
-    action-presheaf-Precategory ∫Ty tm-presheaf (γ , refl) M
+  _[_] {Δ} {Γ} {A} M γ = {!!}
 
   field
     ext-functor : functor-Precategory ∫Ty ctx-category
 
   ext : (Γ : Ctx) (A : Ty Γ) → Ctx
-  ext Γ A = obj-functor-Precategory ∫Ty ctx-category ext-functor (Γ , A)
+  ext Γ A = {!!}
 
   field
     ext-iso :
@@ -126,24 +120,15 @@ record
 
   ext-sub :
     {Δ Γ : Ctx} (A : Ty Γ) (γ : Sub Δ Γ) → Tm Δ (A · γ) → Sub Δ (ext Γ A)
-  ext-sub {Δ} {Γ} A γ M = map-inv-equiv (ext-iso Δ Γ A) (γ , M)
+  ext-sub {Δ} {Γ} A γ M = {!!}
 
   wk : {Γ : Ctx} (A : Ty Γ) → Sub (ext Γ A) Γ
-  wk {Γ} A =
-    pr1 (map-equiv (ext-iso (ext Γ A) Γ A) (id-hom-Precategory ctx-category))
+  wk {Γ} A = {!!}
 
   q : {Γ : Ctx} (A : Ty Γ) → Tm (ext Γ A) (A · wk A)
-  q {Γ} A =
-    pr2 (map-equiv (ext-iso (ext Γ A) Γ A) (id-hom-Precategory ctx-category))
+  q {Γ} A = {!!}
 
   ⟨_,_⟩ :
     {Δ Γ : Ctx} (γ : Sub Δ Γ) (A : Ty Γ) → Sub (ext Δ (A · γ)) (ext Γ A)
-  ⟨_,_⟩ {Δ} {Γ} γ A =
-    ext-sub
-      ( A)
-      ( comp-hom-Precategory ctx-category γ (wk (A · γ)))
-      ( tr
-        ( Tm (ext Δ (A · γ)))
-        ( inv (preserves-comp-Ty A γ (wk (A · γ))))
-        ( q (A · γ)))
+  ⟨_,_⟩ {Δ} {Γ} γ A = {!!}
 ```

@@ -31,12 +31,9 @@ module _
   where
 
   pointed-Π : UU (l1 ⊔ l2)
-  pointed-Π =
-    fiber
-      ( ev-point (point-Pointed-Type A) {fam-Pointed-Fam A B})
-      ( point-Pointed-Fam A B)
+  pointed-Π = {!!}
 
-  Π∗ = pointed-Π
+  Π∗ = {!!}
 ```
 
 **Note**: the subscript asterisk symbol used for the pointed dependent function
@@ -51,10 +48,10 @@ module _
 
   function-pointed-Π :
     pointed-Π A B → (x : type-Pointed-Type A) → fam-Pointed-Fam A B x
-  function-pointed-Π = pr1
+  function-pointed-Π = {!!}
 
   preserves-point-function-pointed-Π :
     (f : pointed-Π A B) →
     Id (function-pointed-Π f (point-Pointed-Type A)) (point-Pointed-Fam A B)
-  preserves-point-function-pointed-Π = pr2
+  preserves-point-function-pointed-Π = {!!}
 ```

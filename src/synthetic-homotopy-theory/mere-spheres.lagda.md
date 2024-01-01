@@ -35,28 +35,28 @@ module _
   where
 
   is-mere-sphere-Prop : Prop l
-  is-mere-sphere-Prop = mere-equiv-Prop (sphere n) X
+  is-mere-sphere-Prop = {!!}
 
   is-mere-sphere : UU l
-  is-mere-sphere = type-Prop is-mere-sphere-Prop
+  is-mere-sphere = {!!}
 
   is-prop-is-mere-sphere : is-prop is-mere-sphere
-  is-prop-is-mere-sphere = is-prop-type-Prop is-mere-sphere-Prop
+  is-prop-is-mere-sphere = {!!}
 ```
 
 ### Mere spheres
 
 ```agda
 mere-sphere : (l : Level) (n : ℕ) → UU (lsuc l)
-mere-sphere l n = Σ (UU l) (is-mere-sphere n)
+mere-sphere l n = {!!}
 
 module _
   {l : Level} (n : ℕ) (X : mere-sphere l n)
   where
 
   type-mere-sphere : UU l
-  type-mere-sphere = pr1 X
+  type-mere-sphere = {!!}
 
   mere-equiv-mere-sphere : mere-equiv (sphere n) type-mere-sphere
-  mere-equiv-mere-sphere = pr2 X
+  mere-equiv-mere-sphere = {!!}
 ```

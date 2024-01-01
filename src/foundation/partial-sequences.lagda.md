@@ -35,7 +35,7 @@ from `ℕ` into the type of [partial elements](foundation.partial-elements.md) o
 
 ```agda
 partial-sequence : {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-partial-sequence l2 A = partial-function l2 ℕ A
+partial-sequence l2 A = {!!}
 ```
 
 ### Defined elements of partial sequences
@@ -46,8 +46,8 @@ module _
   where
 
   is-defined-prop-partial-sequence : ℕ → Prop l2
-  is-defined-prop-partial-sequence = is-defined-prop-partial-function a
+  is-defined-prop-partial-sequence = {!!}
 
   is-defined-partial-sequence : ℕ → UU l2
-  is-defined-partial-sequence = is-defined-partial-function a
+  is-defined-partial-sequence = {!!}
 ```

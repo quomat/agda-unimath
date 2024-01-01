@@ -56,13 +56,13 @@ module _
   where
 
   is-free-prop-action-∞-Group : Prop (l1 ⊔ l2)
-  is-free-prop-action-∞-Group = is-set-Prop (orbit-action-∞-Group G X)
+  is-free-prop-action-∞-Group = {!!}
 
   is-free-action-∞-Group : UU (l1 ⊔ l2)
-  is-free-action-∞-Group = type-Prop is-free-prop-action-∞-Group
+  is-free-action-∞-Group = {!!}
 
   is-prop-is-free-action-∞-Group : is-prop is-free-action-∞-Group
-  is-prop-is-free-action-∞-Group = is-prop-type-Prop is-free-prop-action-∞-Group
+  is-prop-is-free-action-∞-Group = {!!}
 ```
 
 ### The predicate of being an abstractly free ∞-group action
@@ -73,19 +73,14 @@ module _
   where
 
   is-abstractly-free-prop-action-∞-Group : Prop (l1 ⊔ l2)
-  is-abstractly-free-prop-action-∞-Group =
-    Π-Prop
-      ( type-action-∞-Group G X)
-      ( λ x → is-emb-Prop (λ g → mul-action-∞-Group G X g x))
+  is-abstractly-free-prop-action-∞-Group = {!!}
 
   is-abstractly-free-action-∞-Group : UU (l1 ⊔ l2)
-  is-abstractly-free-action-∞-Group =
-    type-Prop is-abstractly-free-prop-action-∞-Group
+  is-abstractly-free-action-∞-Group = {!!}
 
   is-prop-is-abstractly-free-action-∞-Group :
     is-prop is-abstractly-free-action-∞-Group
-  is-prop-is-abstractly-free-action-∞-Group =
-    is-prop-type-Prop is-abstractly-free-prop-action-∞-Group
+  is-prop-is-abstractly-free-action-∞-Group = {!!}
 ```
 
 ### Free group actions
@@ -93,8 +88,7 @@ module _
 ```agda
 free-action-∞-Group :
   {l1 : Level} (l2 : Level) → ∞-Group l1 → UU (l1 ⊔ lsuc l2)
-free-action-∞-Group l2 G =
-  type-subtype (is-free-prop-action-∞-Group {l2 = l2} G)
+free-action-∞-Group l2 G = {!!}
 ```
 
 ## Property
@@ -112,11 +106,7 @@ module _
       (u : classifying-type-∞-Group G)
       (x : type-action-∞-Group G X) →
       is-emb (λ (p : shape-∞-Group G ＝ u) → tr X p x)
-    is-emb-tr-is-abstractly-free-action-∞-Group H u x =
-      apply-universal-property-trunc-Prop
-        ( mere-eq-classifying-type-∞-Group G (shape-∞-Group G) u)
-        ( is-emb-Prop _)
-        ( λ where refl → H x)
+    is-emb-tr-is-abstractly-free-action-∞-Group H u x = {!!}
 ```
 
 ### A higher group action `X` is free if and only if it is abstractly free
@@ -130,28 +120,11 @@ module _
     is-free-is-abstractly-free-action-∞-Group :
       is-abstractly-free-action-∞-Group G X →
       is-free-action-∞-Group G X
-    is-free-is-abstractly-free-action-∞-Group H =
-      forward-implication-extended-fundamental-theorem-id-truncated
-        ( neg-one-𝕋)
-        ( shape-∞-Group G)
-        ( is-0-connected-classifying-type-∞-Group G)
-        ( λ f u →
-          is-prop-map-is-emb
-            ( is-emb-htpy
-              ( compute-map-out-of-identity-type f u)
-              ( is-emb-tr-is-abstractly-free-action-∞-Group G X H u
-                ( f (shape-∞-Group G) (unit-∞-Group G)))))
+    is-free-is-abstractly-free-action-∞-Group H = {!!}
 
   abstract
     is-abstractly-free-is-free-action-∞-Group :
       is-free-action-∞-Group G X →
       is-abstractly-free-action-∞-Group G X
-    is-abstractly-free-is-free-action-∞-Group H x =
-      is-emb-is-prop-map
-        ( backward-implication-extended-fundamental-theorem-id-truncated
-          ( neg-one-𝕋)
-          ( shape-∞-Group G)
-          ( H)
-          ( λ u p → tr X p x)
-          ( shape-∞-Group G))
+    is-abstractly-free-is-free-action-∞-Group H x = {!!}
 ```

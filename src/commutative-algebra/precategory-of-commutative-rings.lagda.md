@@ -30,35 +30,26 @@ homomorphisms of commutative rings.
 ```agda
 Commutative-Ring-Large-Precategory : Large-Precategory lsuc _⊔_
 obj-Large-Precategory
-  Commutative-Ring-Large-Precategory =
-  Commutative-Ring
+  Commutative-Ring-Large-Precategory = {!!}
 hom-set-Large-Precategory
-  Commutative-Ring-Large-Precategory =
-  hom-set-Commutative-Ring
+  Commutative-Ring-Large-Precategory = {!!}
 comp-hom-Large-Precategory
-  Commutative-Ring-Large-Precategory {X = A} {B} {C} =
-  comp-hom-Commutative-Ring A B C
+  Commutative-Ring-Large-Precategory {X = A} {B} {C} = {!!}
 id-hom-Large-Precategory
-  Commutative-Ring-Large-Precategory {X = A} =
-  id-hom-Commutative-Ring A
+  Commutative-Ring-Large-Precategory {X = A} = {!!}
 associative-comp-hom-Large-Precategory
-  Commutative-Ring-Large-Precategory {X = A} {B} {C} {D} =
-  associative-comp-hom-Commutative-Ring A B C D
+  Commutative-Ring-Large-Precategory {X = A} {B} {C} {D} = {!!}
 inv-associative-comp-hom-Large-Precategory
-  Commutative-Ring-Large-Precategory {X = A} {B} {C} {D} =
-  inv-associative-comp-hom-Commutative-Ring A B C D
+  Commutative-Ring-Large-Precategory {X = A} {B} {C} {D} = {!!}
 left-unit-law-comp-hom-Large-Precategory
-  Commutative-Ring-Large-Precategory {X = A} {B} =
-  left-unit-law-comp-hom-Commutative-Ring A B
+  Commutative-Ring-Large-Precategory {X = A} {B} = {!!}
 right-unit-law-comp-hom-Large-Precategory
-  Commutative-Ring-Large-Precategory {X = A} {B} =
-  right-unit-law-comp-hom-Commutative-Ring A B
+  Commutative-Ring-Large-Precategory {X = A} {B} = {!!}
 ```
 
 ### The precategory of commutative rings of universe level `l`
 
 ```agda
 Commutative-Ring-Precategory : (l : Level) → Precategory (lsuc l) l
-Commutative-Ring-Precategory =
-  precategory-Large-Precategory Commutative-Ring-Large-Precategory
+Commutative-Ring-Precategory = {!!}
 ```

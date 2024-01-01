@@ -24,15 +24,12 @@ open import univalent-combinatorics.standard-finite-types
 ## Idea
 
 A ring R is said to satisfy the invariant basis property if `R^m ≅ R^n` implies
-`m = n` for any two natural numbers `m` and `n`.
+`m = {!!}
 
 ## Definition
 
 ```agda
 invariant-basis-property-Ring :
   {l1 : Level} → Ring l1 → UU l1
-invariant-basis-property-Ring R =
-  (m n : ℕ) →
-  iso-Ring (Π-Ring (Fin m) (λ i → R)) (Π-Ring (Fin n) (λ i → R)) →
-  Id m n
+invariant-basis-property-Ring R = {!!}
 ```

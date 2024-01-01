@@ -36,9 +36,8 @@ precomp-quotient-Ring :
     ( λ g →
       (x : type-Ring R) →
       is-in-ideal-Ring R I x → map-hom-Ring R T g x ＝ zero-Ring T)
-pr1 (precomp-quotient-Ring R I S T f H h) = comp-hom-Ring R S T h f
-pr2 (precomp-quotient-Ring R I S T f H h) x K =
-  ap (map-hom-Ring S T h) (H x K) ∙ preserves-zero-hom-Ring S T h
+pr1 (precomp-quotient-Ring R I S T f H h) = {!!}
+pr2 (precomp-quotient-Ring R I S T f H h) x K = {!!}
 
 universal-property-quotient-Ring :
   {l1 l2 l3 : Level} (l : Level) (R : Ring l1) (I : ideal-Ring l2 R)
@@ -46,6 +45,5 @@ universal-property-quotient-Ring :
   ( H : (x : type-Ring R) → is-in-ideal-Ring R I x →
         map-hom-Ring R S f x ＝ zero-Ring S) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ lsuc l)
-universal-property-quotient-Ring l R I S f H =
-  (T : Ring l) → is-equiv (precomp-quotient-Ring R I S T f H)
+universal-property-quotient-Ring l R I S f H = {!!}
 ```

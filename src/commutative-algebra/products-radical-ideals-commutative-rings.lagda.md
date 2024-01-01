@@ -51,19 +51,12 @@ module _
   contains-product-radical-ideal-Commutative-Ring :
     {l4 : Level} (K : radical-ideal-Commutative-Ring l4 A) →
     UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  contains-product-radical-ideal-Commutative-Ring K =
-    contains-product-ideal-Commutative-Ring A
-      ( ideal-radical-ideal-Commutative-Ring A I)
-      ( ideal-radical-ideal-Commutative-Ring A J)
-      ( ideal-radical-ideal-Commutative-Ring A K)
+  contains-product-radical-ideal-Commutative-Ring K = {!!}
 
   is-product-radical-ideal-Commutative-Ring :
     {l4 : Level} (K : radical-ideal-Commutative-Ring l4 A) →
     contains-product-radical-ideal-Commutative-Ring K → UUω
-  is-product-radical-ideal-Commutative-Ring K H =
-    {l5 : Level} (L : radical-ideal-Commutative-Ring l5 A) →
-    contains-product-radical-ideal-Commutative-Ring L →
-    leq-radical-ideal-Commutative-Ring A K L
+  is-product-radical-ideal-Commutative-Ring K H = {!!}
 ```
 
 ### The product of two radical ideals in a commutative ring
@@ -77,63 +70,30 @@ module _
 
   generating-subset-product-radical-ideal-Commutative-Ring :
     subset-Commutative-Ring (l1 ⊔ l2 ⊔ l3) A
-  generating-subset-product-radical-ideal-Commutative-Ring =
-    generating-subset-product-ideal-Commutative-Ring A
-      ( ideal-radical-ideal-Commutative-Ring A I)
-      ( ideal-radical-ideal-Commutative-Ring A J)
+  generating-subset-product-radical-ideal-Commutative-Ring = {!!}
 
   product-radical-ideal-Commutative-Ring :
     radical-ideal-Commutative-Ring (l1 ⊔ l2 ⊔ l3) A
-  product-radical-ideal-Commutative-Ring =
-    radical-of-ideal-Commutative-Ring A
-      ( product-ideal-Commutative-Ring A
-        ( ideal-radical-ideal-Commutative-Ring A I)
-        ( ideal-radical-ideal-Commutative-Ring A J))
+  product-radical-ideal-Commutative-Ring = {!!}
 
   ideal-product-radical-ideal-Commutative-Ring :
     ideal-Commutative-Ring (l1 ⊔ l2 ⊔ l3) A
-  ideal-product-radical-ideal-Commutative-Ring =
-    ideal-radical-ideal-Commutative-Ring A
-      product-radical-ideal-Commutative-Ring
+  ideal-product-radical-ideal-Commutative-Ring = {!!}
 
   is-in-product-radical-ideal-Commutative-Ring :
     type-Commutative-Ring A → UU (l1 ⊔ l2 ⊔ l3)
-  is-in-product-radical-ideal-Commutative-Ring =
-    is-in-radical-ideal-Commutative-Ring A
-      product-radical-ideal-Commutative-Ring
+  is-in-product-radical-ideal-Commutative-Ring = {!!}
 
   contains-product-product-radical-ideal-Commutative-Ring :
     contains-product-radical-ideal-Commutative-Ring A I J
       product-radical-ideal-Commutative-Ring
-  contains-product-product-radical-ideal-Commutative-Ring x y H K =
-    contains-ideal-radical-of-ideal-Commutative-Ring A
-      ( product-ideal-Commutative-Ring A
-        ( ideal-radical-ideal-Commutative-Ring A I)
-        ( ideal-radical-ideal-Commutative-Ring A J))
-      ( mul-Commutative-Ring A x y)
-      ( contains-product-product-ideal-Commutative-Ring A
-        ( ideal-radical-ideal-Commutative-Ring A I)
-        ( ideal-radical-ideal-Commutative-Ring A J)
-        ( x)
-        ( y)
-        ( H)
-        ( K))
+  contains-product-product-radical-ideal-Commutative-Ring x y H K = {!!}
 
   is-product-product-radical-ideal-Commutative-Ring :
     is-product-radical-ideal-Commutative-Ring A I J
       product-radical-ideal-Commutative-Ring
       contains-product-product-radical-ideal-Commutative-Ring
-  is-product-product-radical-ideal-Commutative-Ring K H =
-    is-radical-of-ideal-radical-of-ideal-Commutative-Ring A
-      ( product-ideal-Commutative-Ring A
-        ( ideal-radical-ideal-Commutative-Ring A I)
-        ( ideal-radical-ideal-Commutative-Ring A J))
-      ( K)
-      ( is-product-product-ideal-Commutative-Ring A
-          ( ideal-radical-ideal-Commutative-Ring A I)
-          ( ideal-radical-ideal-Commutative-Ring A J)
-          ( ideal-radical-ideal-Commutative-Ring A K)
-          ( H))
+  is-product-product-radical-ideal-Commutative-Ring K H = {!!}
 ```
 
 ## Properties
@@ -146,7 +106,7 @@ For the forward inclusion, assume that `x ∈ I` and `y ∈ √ J`. Then there e
 an `n` such that `yⁿ ∈ J`. It follows that
 
 ```text
-  (xy)ⁿ⁺¹ ＝ xⁿ⁺¹yⁿ⁺¹ = (xxⁿ)(yⁿy) ＝ (xyⁿ)(xⁿy) ∈ IJ,
+  (xy)ⁿ⁺¹ ＝ xⁿ⁺¹yⁿ⁺¹ = {!!}
 ```
 
 and hence `xy ∈ √ IJ`. The backwards inclusion is clear, since `J ⊆ √ J`.
@@ -167,48 +127,7 @@ module _
         ( product-ideal-Commutative-Ring A
           ( ideal-radical-ideal-Commutative-Ring A I)
           ( J)))
-  forward-inclusion-right-radical-law-product-radical-ideal-Commutative-Ring =
-    is-product-product-radical-ideal-Commutative-Ring A I
-      ( radical-of-ideal-Commutative-Ring A J)
-      ( radical-of-ideal-Commutative-Ring A
-        ( product-ideal-Commutative-Ring A
-          ( ideal-radical-ideal-Commutative-Ring A I)
-          ( J)))
-      ( λ x y H K →
-        apply-universal-property-trunc-Prop K
-          ( subset-radical-of-ideal-Commutative-Ring A
-            ( product-ideal-Commutative-Ring A
-              ( ideal-radical-ideal-Commutative-Ring A I)
-              ( J))
-            ( mul-Commutative-Ring A x y))
-          ( λ (n , p) →
-            intro-∃
-              ( succ-ℕ n)
-              ( is-closed-under-eq-ideal-Commutative-Ring' A
-                ( product-ideal-Commutative-Ring A
-                  ( ideal-radical-ideal-Commutative-Ring A I)
-                  ( J))
-                ( is-closed-under-right-multiplication-ideal-Commutative-Ring A
-                  ( product-ideal-Commutative-Ring A
-                    ( ideal-radical-ideal-Commutative-Ring A I)
-                    ( J))
-                  ( mul-Commutative-Ring A x (power-Commutative-Ring A n y))
-                  ( mul-Commutative-Ring A (power-Commutative-Ring A n x) y)
-                  ( contains-product-product-ideal-Commutative-Ring A
-                    ( ideal-radical-ideal-Commutative-Ring A I)
-                    ( J)
-                    ( x)
-                    ( power-Commutative-Ring A n y)
-                    ( H)
-                    ( p)))
-                ( ( distributive-power-mul-Commutative-Ring A (succ-ℕ n) x y) ∙
-                  ( ( ap-mul-Commutative-Ring A
-                      ( power-succ-Commutative-Ring' A n x)
-                      ( power-succ-Commutative-Ring A n y)) ∙
-                    ( interchange-mul-mul-Commutative-Ring A x
-                      ( power-Commutative-Ring A n x)
-                      ( power-Commutative-Ring A n y)
-                      ( y)))))))
+  forward-inclusion-right-radical-law-product-radical-ideal-Commutative-Ring = {!!}
 
   backward-inclusion-right-radical-law-product-radical-ideal-Commutative-Ring :
     leq-radical-ideal-Commutative-Ring A
@@ -219,32 +138,7 @@ module _
       ( product-radical-ideal-Commutative-Ring A
         ( I)
         ( radical-of-ideal-Commutative-Ring A J))
-  backward-inclusion-right-radical-law-product-radical-ideal-Commutative-Ring =
-    is-radical-of-ideal-radical-of-ideal-Commutative-Ring A
-      ( product-ideal-Commutative-Ring A
-        ( ideal-radical-ideal-Commutative-Ring A I)
-        ( J))
-      ( product-radical-ideal-Commutative-Ring A
-        ( I)
-        ( radical-of-ideal-Commutative-Ring A J))
-      ( is-product-product-ideal-Commutative-Ring A
-        ( ideal-radical-ideal-Commutative-Ring A I)
-        ( J)
-        ( ideal-product-radical-ideal-Commutative-Ring A I
-          ( radical-of-ideal-Commutative-Ring A J))
-        ( λ x y p q →
-          contains-ideal-radical-of-ideal-Commutative-Ring A
-            ( product-ideal-Commutative-Ring A
-              ( ideal-radical-ideal-Commutative-Ring A I)
-              ( ideal-radical-of-ideal-Commutative-Ring A J))
-            ( mul-Commutative-Ring A x y)
-            ( contains-product-product-ideal-Commutative-Ring A
-              ( ideal-radical-ideal-Commutative-Ring A I)
-              ( ideal-radical-of-ideal-Commutative-Ring A J)
-              ( x)
-              ( y)
-              ( p)
-              ( contains-ideal-radical-of-ideal-Commutative-Ring A J y q))))
+  backward-inclusion-right-radical-law-product-radical-ideal-Commutative-Ring = {!!}
 
   right-radical-law-product-radical-ideal-Commutative-Ring :
     product-radical-ideal-Commutative-Ring A
@@ -254,15 +148,5 @@ module _
       ( product-ideal-Commutative-Ring A
         ( ideal-radical-ideal-Commutative-Ring A I)
         ( J))
-  right-radical-law-product-radical-ideal-Commutative-Ring =
-    antisymmetric-leq-radical-ideal-Commutative-Ring A
-      ( product-radical-ideal-Commutative-Ring A
-        ( I)
-        ( radical-of-ideal-Commutative-Ring A J))
-      ( radical-of-ideal-Commutative-Ring A
-        ( product-ideal-Commutative-Ring A
-          ( ideal-radical-ideal-Commutative-Ring A I)
-          ( J)))
-      ( forward-inclusion-right-radical-law-product-radical-ideal-Commutative-Ring)
-      ( backward-inclusion-right-radical-law-product-radical-ideal-Commutative-Ring)
+  right-radical-law-product-radical-ideal-Commutative-Ring = {!!}
 ```

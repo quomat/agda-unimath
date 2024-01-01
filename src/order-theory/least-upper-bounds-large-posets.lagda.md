@@ -45,9 +45,7 @@ module _
 
   is-least-upper-bound-family-of-elements-Large-Poset :
     type-Large-Poset P l3 → UUω
-  is-least-upper-bound-family-of-elements-Large-Poset y =
-    {l4 : Level} (z : type-Large-Poset P l4) →
-    is-upper-bound-family-of-elements-Large-Poset P x z ↔ leq-Large-Poset P y z
+  is-least-upper-bound-family-of-elements-Large-Poset y = {!!}
 
   leq-is-least-upper-bound-family-of-elements-Large-Poset :
     (y : type-Large-Poset P l3) →
@@ -55,8 +53,7 @@ module _
     {l4 : Level} (z : type-Large-Poset P l4) →
     is-upper-bound-family-of-elements-Large-Poset P x z →
     leq-Large-Poset P y z
-  leq-is-least-upper-bound-family-of-elements-Large-Poset y H z K =
-    forward-implication (H z) K
+  leq-is-least-upper-bound-family-of-elements-Large-Poset y H z K = {!!}
 ```
 
 ### The predicate on families of elements in large posets of having least upper bounds
@@ -97,8 +94,7 @@ module _
     {l3 : Level} {y : type-Large-Poset P l3} →
     is-least-upper-bound-family-of-elements-Large-Poset P x y →
     is-upper-bound-family-of-elements-Large-Poset P x y
-  is-upper-bound-is-least-upper-bound-family-of-elements-Large-Poset H =
-    backward-implication (H _) (refl-leq-Large-Poset P _)
+  is-upper-bound-is-least-upper-bound-family-of-elements-Large-Poset H = {!!}
 ```
 
 ### Least upper bounds of families of elements are unique up to similairity of elements
@@ -115,14 +111,7 @@ module _
     is-least-upper-bound-family-of-elements-Large-Poset P x y →
     is-least-upper-bound-family-of-elements-Large-Poset P x z →
     sim-Large-Poset P y z
-  pr1 (sim-is-least-upper-bound-family-of-elements-Large-Poset H K) =
-    forward-implication
-      ( H _)
-      ( is-upper-bound-is-least-upper-bound-family-of-elements-Large-Poset P K)
-  pr2 (sim-is-least-upper-bound-family-of-elements-Large-Poset H K) =
-    forward-implication
-      ( K _)
-      ( is-upper-bound-is-least-upper-bound-family-of-elements-Large-Poset P H)
+  pr1 (sim-is-least-upper-bound-family-of-elements-Large-Poset H K) = {!!}
 ```
 
 ### A family of least upper bounds of families of elements in a family of large poset is a least upper bound in their dependent product
@@ -142,23 +131,7 @@ module _
         ( λ j → a j i)
         ( x i)) →
     is-least-upper-bound-family-of-elements-Large-Poset (Π-Large-Poset P) a x
-  is-least-upper-bound-Π-Large-Poset H y =
-    logical-equivalence-reasoning
-      is-upper-bound-family-of-elements-Large-Poset (Π-Large-Poset P) a y
-      ↔ ( (i : I) →
-          is-upper-bound-family-of-elements-Large-Poset
-            ( P i)
-            ( λ j → a j i)
-            ( y i))
-        by
-        inv-iff
-          ( logical-equivalence-is-upper-bound-family-of-elements-Π-Large-Poset
-            ( P)
-              ( a)
-              ( y))
-      ↔ leq-Π-Large-Poset P x y
-        by
-        iff-Π-iff-family (λ i → H i (y i))
+  is-least-upper-bound-Π-Large-Poset H y = {!!}
 ```
 
 ### Least upper bounds in small posets from least upper bounds in large posets
@@ -175,6 +148,5 @@ module _
     is-least-upper-bound-family-of-elements-Large-Poset P x y →
     is-least-upper-bound-family-of-elements-Poset
       ( poset-Large-Poset P l2) (x) (y)
-  is-least-upper-bound-family-of-elements-poset-Large-Poset y is-lub-y z =
-    is-lub-y z
+  is-least-upper-bound-family-of-elements-poset-Large-Poset y is-lub-y z = {!!}
 ```

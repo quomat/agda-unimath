@@ -44,14 +44,13 @@ module _
   where
 
   hom-set-Cyclic-Ring : Set (l1 ⊔ l2)
-  hom-set-Cyclic-Ring = hom-set-Ring (ring-Cyclic-Ring R) (ring-Cyclic-Ring S)
+  hom-set-Cyclic-Ring = {!!}
 
   hom-Cyclic-Ring : UU (l1 ⊔ l2)
-  hom-Cyclic-Ring = hom-Ring (ring-Cyclic-Ring R) (ring-Cyclic-Ring S)
+  hom-Cyclic-Ring = {!!}
 
   is-set-hom-Cyclic-Ring : is-set hom-Cyclic-Ring
-  is-set-hom-Cyclic-Ring =
-    is-set-hom-Ring (ring-Cyclic-Ring R) (ring-Cyclic-Ring S)
+  is-set-hom-Cyclic-Ring = {!!}
 ```
 
 ### The identity homomorphism of cyclic rings
@@ -62,7 +61,7 @@ module _
   where
 
   id-hom-Cyclic-Ring : hom-Cyclic-Ring R R
-  id-hom-Cyclic-Ring = id-hom-Ring (ring-Cyclic-Ring R)
+  id-hom-Cyclic-Ring = {!!}
 ```
 
 ### Composition of homomorphisms of cyclci rings
@@ -76,11 +75,7 @@ module _
   comp-hom-Cyclic-Ring :
     (g : hom-Cyclic-Ring S T) (f : hom-Cyclic-Ring R S) →
     hom-Cyclic-Ring R T
-  comp-hom-Cyclic-Ring =
-    comp-hom-Ring
-      ( ring-Cyclic-Ring R)
-      ( ring-Cyclic-Ring S)
-      ( ring-Cyclic-Ring T)
+  comp-hom-Cyclic-Ring = {!!}
 ```
 
 ## Properties
@@ -107,50 +102,15 @@ module _
     htpy-all-elements-equal-hom-Cyclic-Ring-Ring :
       (f g : hom-Ring (ring-Cyclic-Ring R) S) →
       htpy-hom-Ring (ring-Cyclic-Ring R) S f g
-    htpy-all-elements-equal-hom-Cyclic-Ring-Ring f g x =
-      apply-universal-property-trunc-Prop
-        ( is-surjective-initial-hom-Cyclic-Ring R x)
-        ( Id-Prop
-          ( set-Ring S)
-          ( map-hom-Ring (ring-Cyclic-Ring R) S f x)
-          ( map-hom-Ring (ring-Cyclic-Ring R) S g x))
-        ( λ where
-          ( n , refl) →
-            ( preserves-integer-multiples-hom-Ring
-              ( ring-Cyclic-Ring R)
-              ( S)
-              ( f)
-              ( n)
-              ( one-Cyclic-Ring R)) ∙
-            ( ap
-              ( integer-multiple-Ring S n)
-              ( preserves-one-hom-Ring (ring-Cyclic-Ring R) S f)) ∙
-            ( inv
-              ( ap
-                ( integer-multiple-Ring S n)
-                ( preserves-one-hom-Ring (ring-Cyclic-Ring R) S g))) ∙
-            ( inv
-              ( preserves-integer-multiples-hom-Ring
-                ( ring-Cyclic-Ring R)
-                ( S)
-                ( g)
-                ( n)
-                ( one-Cyclic-Ring R))))
+    htpy-all-elements-equal-hom-Cyclic-Ring-Ring f g x = {!!}
 
   all-elements-equal-hom-Cyclic-Ring-Ring :
     all-elements-equal (hom-Ring (ring-Cyclic-Ring R) S)
-  all-elements-equal-hom-Cyclic-Ring-Ring f g =
-    eq-htpy-hom-Ring
-      ( ring-Cyclic-Ring R)
-      ( S)
-      ( f)
-      ( g)
-      ( htpy-all-elements-equal-hom-Cyclic-Ring-Ring f g)
+  all-elements-equal-hom-Cyclic-Ring-Ring f g = {!!}
 
   is-prop-hom-Cyclic-Ring-Ring :
     is-prop (hom-Ring (ring-Cyclic-Ring R) S)
-  is-prop-hom-Cyclic-Ring-Ring =
-    is-prop-all-elements-equal all-elements-equal-hom-Cyclic-Ring-Ring
+  is-prop-hom-Cyclic-Ring-Ring = {!!}
 
 module _
   {l1 l2 : Level} (R : Cyclic-Ring l1) (S : Cyclic-Ring l2)
@@ -158,8 +118,7 @@ module _
 
   is-prop-hom-Cyclic-Ring :
     is-prop (hom-Cyclic-Ring R S)
-  is-prop-hom-Cyclic-Ring =
-    is-prop-hom-Cyclic-Ring-Ring R (ring-Cyclic-Ring S)
+  is-prop-hom-Cyclic-Ring = {!!}
 ```
 
 ### Composition of morphisms of cyclic rings satisfies the laws of a category
@@ -172,19 +131,11 @@ module _
 
   left-unit-law-comp-hom-Cyclic-Ring :
     comp-hom-Cyclic-Ring R S S (id-hom-Cyclic-Ring S) f ＝ f
-  left-unit-law-comp-hom-Cyclic-Ring =
-    left-unit-law-comp-hom-Ring
-      ( ring-Cyclic-Ring R)
-      ( ring-Cyclic-Ring S)
-      ( f)
+  left-unit-law-comp-hom-Cyclic-Ring = {!!}
 
   right-unit-law-comp-hom-Cyclic-Ring :
     comp-hom-Cyclic-Ring R R S f (id-hom-Cyclic-Ring R) ＝ f
-  right-unit-law-comp-hom-Cyclic-Ring =
-    right-unit-law-comp-hom-Ring
-      ( ring-Cyclic-Ring R)
-      ( ring-Cyclic-Ring S)
-      ( f)
+  right-unit-law-comp-hom-Cyclic-Ring = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}
@@ -198,12 +149,7 @@ module _
     (f : hom-Cyclic-Ring R S) →
     comp-hom-Cyclic-Ring R S U (comp-hom-Cyclic-Ring S T U h g) f ＝
     comp-hom-Cyclic-Ring R T U h (comp-hom-Cyclic-Ring R S T g f)
-  associative-comp-hom-Cyclic-Ring =
-    associative-comp-hom-Ring
-      ( ring-Cyclic-Ring R)
-      ( ring-Cyclic-Ring S)
-      ( ring-Cyclic-Ring T)
-      ( ring-Cyclic-Ring U)
+  associative-comp-hom-Cyclic-Ring = {!!}
 
   inv-associative-comp-hom-Cyclic-Ring :
     (h : hom-Cyclic-Ring T U)
@@ -211,12 +157,7 @@ module _
     (f : hom-Cyclic-Ring R S) →
     comp-hom-Cyclic-Ring R T U h (comp-hom-Cyclic-Ring R S T g f) ＝
     comp-hom-Cyclic-Ring R S U (comp-hom-Cyclic-Ring S T U h g) f
-  inv-associative-comp-hom-Cyclic-Ring =
-    inv-associative-comp-hom-Ring
-      ( ring-Cyclic-Ring R)
-      ( ring-Cyclic-Ring S)
-      ( ring-Cyclic-Ring T)
-      ( ring-Cyclic-Ring U)
+  inv-associative-comp-hom-Cyclic-Ring = {!!}
 ```
 
 ## See also

@@ -36,34 +36,33 @@ module _
   where
 
   left-unit-law : UU l
-  left-unit-law = (x : A) → μ e x ＝ x
+  left-unit-law = {!!}
 
   right-unit-law : UU l
-  right-unit-law = (x : A) → μ x e ＝ x
+  right-unit-law = {!!}
 
   coh-unit-laws : left-unit-law → right-unit-law → UU l
-  coh-unit-laws α β = (α e ＝ β e)
+  coh-unit-laws α β = {!!}
 
   unit-laws : UU l
-  unit-laws = left-unit-law × right-unit-law
+  unit-laws = {!!}
 
   coherent-unit-laws : UU l
-  coherent-unit-laws =
-    Σ left-unit-law (λ α → Σ right-unit-law (coh-unit-laws α))
+  coherent-unit-laws = {!!}
 ```
 
 ### Unital binary operations
 
 ```agda
 is-unital : {l : Level} {A : UU l} (μ : A → A → A) → UU l
-is-unital {A = A} μ = Σ A (unit-laws μ)
+is-unital {A = A} μ = {!!}
 ```
 
 ### Coherently unital binary operations
 
 ```agda
 is-coherently-unital : {l : Level} {A : UU l} (μ : A → A → A) → UU l
-is-coherently-unital {A = A} μ = Σ A (coherent-unit-laws μ)
+is-coherently-unital {A = A} μ = {!!}
 ```
 
 ## Properties
@@ -76,23 +75,12 @@ module _
   where
 
   coherent-unit-laws-unit-laws : unit-laws μ e → coherent-unit-laws μ e
-  pr1 (coherent-unit-laws-unit-laws (pair H K)) = H
-  pr1 (pr2 (coherent-unit-laws-unit-laws (pair H K))) x =
-    ( inv (ap (μ x) (K e))) ∙ (( ap (μ x) (H e)) ∙ (K x))
-  pr2 (pr2 (coherent-unit-laws-unit-laws (pair H K))) =
-    left-transpose-eq-concat
-      ( ap (μ e) (K e))
-      ( H e)
-      ( (ap (μ e) (H e)) ∙ (K e))
-      ( ( inv-nat-htpy-id (H) (K e)) ∙
-        ( ap (concat' (μ e (μ e e)) (K e)) (coh-htpy-id (H) e)))
+  pr1 (coherent-unit-laws-unit-laws (pair H K)) = {!!}
 
 module _
   {l : Level} {A : UU l} {μ : A → A → A}
   where
 
   is-coherently-unital-is-unital : is-unital μ → is-coherently-unital μ
-  pr1 (is-coherently-unital-is-unital (pair e H)) = e
-  pr2 (is-coherently-unital-is-unital (pair e H)) =
-    coherent-unit-laws-unit-laws μ H
+  pr1 (is-coherently-unital-is-unital (pair e H)) = {!!}
 ```

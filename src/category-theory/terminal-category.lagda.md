@@ -45,15 +45,15 @@ one object and only the identity on that object. This category
 
 ```agda
 obj-terminal-Category : UU lzero
-obj-terminal-Category = unit
+obj-terminal-Category = {!!}
 
 hom-set-terminal-Category :
   obj-terminal-Category → obj-terminal-Category → Set lzero
-hom-set-terminal-Category _ _ = unit-Set
+hom-set-terminal-Category _ _ = {!!}
 
 hom-terminal-Category :
   obj-terminal-Category → obj-terminal-Category → UU lzero
-hom-terminal-Category x y = type-Set (hom-set-terminal-Category x y)
+hom-terminal-Category x y = {!!}
 ```
 
 ### The underlying precategory of the terminal category
@@ -64,7 +64,7 @@ comp-hom-terminal-Category :
   hom-terminal-Category y z →
   hom-terminal-Category x y →
   hom-terminal-Category x z
-comp-hom-terminal-Category _ _ = star
+comp-hom-terminal-Category _ _ = {!!}
 
 associative-comp-hom-terminal-Category :
   {x y z w : obj-terminal-Category} →
@@ -73,7 +73,7 @@ associative-comp-hom-terminal-Category :
   (f : hom-terminal-Category x y) →
   comp-hom-terminal-Category {x} (comp-hom-terminal-Category {y} h g) f ＝
   comp-hom-terminal-Category {x} h (comp-hom-terminal-Category {x} g f)
-associative-comp-hom-terminal-Category h g f = refl
+associative-comp-hom-terminal-Category h g f = {!!}
 
 inv-associative-comp-hom-terminal-Category :
   {x y z w : obj-terminal-Category} →
@@ -82,51 +82,43 @@ inv-associative-comp-hom-terminal-Category :
   (f : hom-terminal-Category x y) →
   comp-hom-terminal-Category {x} h (comp-hom-terminal-Category {x} g f) ＝
   comp-hom-terminal-Category {x} (comp-hom-terminal-Category {y} h g) f
-inv-associative-comp-hom-terminal-Category h g f = refl
+inv-associative-comp-hom-terminal-Category h g f = {!!}
 
 associative-composition-operation-terminal-Category :
   associative-composition-operation-binary-family-Set hom-set-terminal-Category
-pr1 associative-composition-operation-terminal-Category =
-  comp-hom-terminal-Category
-pr1 (pr2 associative-composition-operation-terminal-Category h g f) =
-  associative-comp-hom-terminal-Category h g f
-pr2 (pr2 associative-composition-operation-terminal-Category h g f) =
-  inv-associative-comp-hom-terminal-Category h g f
+pr1 associative-composition-operation-terminal-Category = {!!}
+pr1 (pr2 associative-composition-operation-terminal-Category h g f) = {!!}
+pr2 (pr2 associative-composition-operation-terminal-Category h g f) = {!!}
 
 id-hom-terminal-Category :
   {x : obj-terminal-Category} → hom-terminal-Category x x
-id-hom-terminal-Category = star
+id-hom-terminal-Category = {!!}
 
 left-unit-law-comp-hom-terminal-Category :
   {x y : obj-terminal-Category} →
   (f : hom-terminal-Category x y) →
   comp-hom-terminal-Category {x} (id-hom-terminal-Category {y}) f ＝ f
-left-unit-law-comp-hom-terminal-Category f = refl
+left-unit-law-comp-hom-terminal-Category f = {!!}
 
 right-unit-law-comp-hom-terminal-Category :
   {x y : obj-terminal-Category} →
   (f : hom-terminal-Category x y) →
   comp-hom-terminal-Category {x} f (id-hom-terminal-Category {x}) ＝ f
-right-unit-law-comp-hom-terminal-Category f = refl
+right-unit-law-comp-hom-terminal-Category f = {!!}
 
 is-unital-composition-operation-terminal-Category :
   is-unital-composition-operation-binary-family-Set
     ( hom-set-terminal-Category)
     ( λ {x} {y} {z} → comp-hom-terminal-Category {x} {y} {z})
-pr1 is-unital-composition-operation-terminal-Category _ =
-  id-hom-terminal-Category
-pr1 (pr2 is-unital-composition-operation-terminal-Category) =
-  left-unit-law-comp-hom-terminal-Category
-pr2 (pr2 is-unital-composition-operation-terminal-Category) =
-  right-unit-law-comp-hom-terminal-Category
+pr1 is-unital-composition-operation-terminal-Category _ = {!!}
+pr1 (pr2 is-unital-composition-operation-terminal-Category) = {!!}
+pr2 (pr2 is-unital-composition-operation-terminal-Category) = {!!}
 
 terminal-Precategory : Precategory lzero lzero
-pr1 terminal-Precategory = obj-terminal-Category
-pr1 (pr2 terminal-Precategory) = hom-set-terminal-Category
-pr1 (pr2 (pr2 terminal-Precategory)) =
-  associative-composition-operation-terminal-Category
-pr2 (pr2 (pr2 terminal-Precategory)) =
-  is-unital-composition-operation-terminal-Category
+pr1 terminal-Precategory = {!!}
+pr1 (pr2 terminal-Precategory) = {!!}
+pr1 (pr2 (pr2 terminal-Precategory)) = {!!}
+pr2 (pr2 (pr2 terminal-Precategory)) = {!!}
 ```
 
 ### The terminal category
@@ -134,18 +126,11 @@ pr2 (pr2 (pr2 terminal-Precategory)) =
 ```agda
 is-category-terminal-Category :
   is-category-Precategory terminal-Precategory
-is-category-terminal-Category x y =
-  is-equiv-is-contr
-    ( iso-eq-Precategory terminal-Precategory x y)
-    ( is-prop-is-contr is-contr-unit x y)
-    ( is-contr-Σ is-contr-unit star
-      ( is-proof-irrelevant-is-prop
-        ( is-prop-is-iso-Precategory terminal-Precategory star)
-        ( star , refl , refl)))
+is-category-terminal-Category x y = {!!}
 
 terminal-Category : Category lzero lzero
-pr1 terminal-Category = terminal-Precategory
-pr2 terminal-Category = is-category-terminal-Category
+pr1 terminal-Category = {!!}
+pr2 terminal-Category = {!!}
 ```
 
 ### The terminal preunivalent category
@@ -153,12 +138,10 @@ pr2 terminal-Category = is-category-terminal-Category
 ```agda
 is-preunivalent-terminal-Category :
   is-preunivalent-Precategory terminal-Precategory
-is-preunivalent-terminal-Category =
-  is-preunivalent-category-Category terminal-Category
+is-preunivalent-terminal-Category = {!!}
 
 terminal-Preunivalent-Category : Preunivalent-Category lzero lzero
-terminal-Preunivalent-Category =
-  preunivalent-category-Category terminal-Category
+terminal-Preunivalent-Category = {!!}
 ```
 
 ### The terminal strict category
@@ -166,23 +149,22 @@ terminal-Preunivalent-Category =
 ```agda
 is-strict-category-terminal-Category :
   is-strict-category-Precategory terminal-Precategory
-is-strict-category-terminal-Category = is-set-unit
+is-strict-category-terminal-Category = {!!}
 
 terminal-Strict-Category : Strict-Category lzero lzero
-pr1 terminal-Strict-Category = terminal-Precategory
-pr2 terminal-Strict-Category = is-strict-category-terminal-Category
+pr1 terminal-Strict-Category = {!!}
+pr2 terminal-Strict-Category = {!!}
 ```
 
 ### The terminal gaunt category
 
 ```agda
 is-gaunt-terminal-Category : is-gaunt-Category terminal-Category
-is-gaunt-terminal-Category _ _ =
-  is-prop-Σ is-prop-unit (λ _ → is-prop-is-iso-Category terminal-Category star)
+is-gaunt-terminal-Category _ _ = {!!}
 
 terminal-Gaunt-Category : Gaunt-Category lzero lzero
-pr1 terminal-Gaunt-Category = terminal-Category
-pr2 terminal-Gaunt-Category = is-gaunt-terminal-Category
+pr1 terminal-Gaunt-Category = {!!}
+pr2 terminal-Gaunt-Category = {!!}
 ```
 
 ### Points in categories
@@ -196,12 +178,12 @@ category to `C` at `x`.
 point-Precategory :
   {l1 l2 : Level} (C : Precategory l1 l2) (x : obj-Precategory C) →
   functor-Precategory terminal-Precategory C
-point-Precategory = constant-functor-Precategory terminal-Precategory
+point-Precategory = {!!}
 
 point-Category :
   {l1 l2 : Level} (C : Category l1 l2) (x : obj-Category C) →
   functor-Category terminal-Category C
-point-Category C = point-Precategory (precategory-Category C)
+point-Category C = {!!}
 ```
 
 ## Properties
@@ -214,27 +196,15 @@ module _
   where
 
   is-equiv-point-Precategory : is-equiv (point-Precategory C)
-  is-equiv-point-Precategory =
-    is-equiv-is-invertible
-      ( λ F → obj-functor-Precategory terminal-Precategory C F star)
-      ( λ F →
-        eq-htpy-functor-Precategory terminal-Precategory C _ F
-          ( ( refl-htpy) ,
-            ( λ _ →
-              ap
-                ( λ f → comp-hom-Precategory C f (id-hom-Precategory C))
-                ( preserves-id-functor-Precategory terminal-Precategory C F
-                  ( star)))))
-      ( refl-htpy)
+  is-equiv-point-Precategory = {!!}
 
   equiv-point-Precategory :
     obj-Precategory C ≃ functor-Precategory terminal-Precategory C
-  pr1 equiv-point-Precategory = point-Precategory C
-  pr2 equiv-point-Precategory = is-equiv-point-Precategory
+  pr1 equiv-point-Precategory = {!!}
 
   inv-equiv-point-Precategory :
     functor-Precategory terminal-Precategory C ≃ obj-Precategory C
-  inv-equiv-point-Precategory = inv-equiv equiv-point-Precategory
+  inv-equiv-point-Precategory = {!!}
 ```
 
 It remains to show functoriality of `point-Precategory`.
@@ -247,26 +217,16 @@ module _
   where
 
   terminal-functor-Precategory : functor-Precategory C terminal-Precategory
-  terminal-functor-Precategory =
-    constant-functor-Precategory C terminal-Precategory star
+  terminal-functor-Precategory = {!!}
 
   uniqueness-terminal-functor-Precategory :
     (F : functor-Precategory C terminal-Precategory) →
     terminal-functor-Precategory ＝ F
-  uniqueness-terminal-functor-Precategory F =
-    eq-htpy-functor-Precategory
-      ( C)
-      ( terminal-Precategory)
-      ( terminal-functor-Precategory)
-      ( F)
-      ( refl-htpy , refl-htpy)
+  uniqueness-terminal-functor-Precategory F = {!!}
 
   is-contr-functor-terminal-Precategory :
     is-contr (functor-Precategory C terminal-Precategory)
-  pr1 is-contr-functor-terminal-Precategory =
-    terminal-functor-Precategory
-  pr2 is-contr-functor-terminal-Precategory =
-    uniqueness-terminal-functor-Precategory
+  pr1 is-contr-functor-terminal-Precategory = {!!}
 ```
 
 ## See also

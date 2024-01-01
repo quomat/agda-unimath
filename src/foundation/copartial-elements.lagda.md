@@ -80,10 +80,7 @@ copartial elements induce copartial elements. Indeed, note that
                                          P Q x ↦ (P * Q , x)
     1     1       Σ (P Q : Prop), P * Q ---------------------> 1
     |     |               |                                    |
-  T |  □  | T   =   T □ T |                                    |
-    V     V               V                                    V
-  Prop   Prop           Prop² ------------------------------> Prop
-                                       P Q ↦ P * Q
+  T |  □  | T   = {!!}
 ```
 
 By this [morphism of arrows](foundation.morphisms-arrows.md) it follows that
@@ -107,19 +104,17 @@ experimental.
 
 ```agda
 copartial-element : {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-copartial-element l2 A =
-  Σ (Prop l2) (λ Q → operator-closed-modality Q A)
+copartial-element l2 A = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (a : copartial-element l2 A)
   where
 
   is-erased-prop-copartial-element : Prop l2
-  is-erased-prop-copartial-element = pr1 a
+  is-erased-prop-copartial-element = {!!}
 
   is-erased-copartial-element : UU l2
-  is-erased-copartial-element =
-    type-Prop is-erased-prop-copartial-element
+  is-erased-copartial-element = {!!}
 ```
 
 ### The unit of the copartial element operator
@@ -130,12 +125,11 @@ module _
   where
 
   is-erased-prop-unit-copartial-element : Prop lzero
-  is-erased-prop-unit-copartial-element = empty-Prop
+  is-erased-prop-unit-copartial-element = {!!}
 
   is-erased-unit-copartial-element : UU lzero
-  is-erased-unit-copartial-element = empty
+  is-erased-unit-copartial-element = {!!}
 
   unit-copartial-element : copartial-element lzero A
-  pr1 unit-copartial-element = is-erased-prop-unit-copartial-element
-  pr2 unit-copartial-element = unit-closed-modality empty-Prop a
+  pr1 unit-copartial-element = {!!}
 ```

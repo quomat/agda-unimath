@@ -52,8 +52,7 @@ where the composition operation is
 partial-dependent-function :
   {l1 l2 : Level} (l3 : Level) (A : UU l1) (B : A → UU l2) →
   UU (l1 ⊔ l2 ⊔ lsuc l3)
-partial-dependent-function l3 A B =
-  (x : A) → partial-element l3 (B x)
+partial-dependent-function l3 A B = {!!}
 ```
 
 ### Partial functions
@@ -61,7 +60,7 @@ partial-dependent-function l3 A B =
 ```agda
 partial-function :
   {l1 l2 : Level} (l3 : Level) → UU l1 → UU l2 → UU (l1 ⊔ l2 ⊔ lsuc l3)
-partial-function l3 A B = partial-dependent-function l3 A (λ _ → B)
+partial-function l3 A B = {!!}
 ```
 
 ### The predicate on partial dependent functions of being defined at an element in the domain
@@ -73,12 +72,10 @@ module _
   where
 
   is-defined-prop-partial-dependent-function : Prop l3
-  is-defined-prop-partial-dependent-function =
-    is-defined-prop-partial-element (f a)
+  is-defined-prop-partial-dependent-function = {!!}
 
   is-defined-partial-dependent-function : UU l3
-  is-defined-partial-dependent-function =
-    type-Prop is-defined-prop-partial-dependent-function
+  is-defined-partial-dependent-function = {!!}
 ```
 
 ### The predicate on partial functions of being defined at an element in the domain
@@ -90,12 +87,10 @@ module _
   where
 
   is-defined-prop-partial-function : Prop l3
-  is-defined-prop-partial-function =
-    is-defined-prop-partial-dependent-function f a
+  is-defined-prop-partial-function = {!!}
 
   is-defined-partial-function : UU l3
-  is-defined-partial-function =
-    is-defined-partial-dependent-function f a
+  is-defined-partial-function = {!!}
 ```
 
 ### The partial dependent function obtained from a dependent function
@@ -107,8 +102,7 @@ module _
 
   partial-dependent-function-dependent-function :
     partial-dependent-function lzero A B
-  partial-dependent-function-dependent-function a =
-    unit-partial-element (f a)
+  partial-dependent-function-dependent-function a = {!!}
 ```
 
 ### The partial function obtained from a function
@@ -119,7 +113,7 @@ module _
   where
 
   partial-function-function : partial-function lzero A B
-  partial-function-function = partial-dependent-function-dependent-function f
+  partial-function-function = {!!}
 ```
 
 ## See also

@@ -39,13 +39,11 @@ module _
   where
 
   map-Category : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  map-Category =
-    map-Precategory (precategory-Category C) (precategory-Category D)
+  map-Category = {!!}
 
   obj-map-Category :
     (F : map-Category) → obj-Category C → obj-Category D
-  obj-map-Category =
-    obj-map-Precategory (precategory-Category C) (precategory-Category D)
+  obj-map-Category = {!!}
 
   hom-map-Category :
     (F : map-Category)
@@ -54,8 +52,7 @@ module _
     hom-Category D
       ( obj-map-Category F x)
       ( obj-map-Category F y)
-  hom-map-Category =
-    hom-map-Precategory (precategory-Category C) (precategory-Category D)
+  hom-map-Category = {!!}
 ```
 
 ## Properties
@@ -73,53 +70,35 @@ module _
     (f g : map-Category C D) →
     (obj-map-Category C D f ~ obj-map-Category C D g) →
     UU (l1 ⊔ l2 ⊔ l4)
-  coherence-htpy-map-Category =
-    coherence-htpy-map-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
+  coherence-htpy-map-Category = {!!}
 
   htpy-map-Category :
     (f g : map-Category C D) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  htpy-map-Category =
-    htpy-map-Precategory (precategory-Category C) (precategory-Category D)
+  htpy-map-Category = {!!}
 
   refl-htpy-map-Category :
     (f : map-Category C D) → htpy-map-Category f f
-  refl-htpy-map-Category =
-    refl-htpy-map-Precategory (precategory-Category C) (precategory-Category D)
+  refl-htpy-map-Category = {!!}
 
   htpy-eq-map-Category :
     (f g : map-Category C D) → (f ＝ g) → htpy-map-Category f g
-  htpy-eq-map-Category =
-    htpy-eq-map-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
+  htpy-eq-map-Category = {!!}
 
   is-torsorial-htpy-map-Category :
     (f : map-Category C D) → is-torsorial (htpy-map-Category f)
-  is-torsorial-htpy-map-Category =
-    is-torsorial-htpy-map-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
+  is-torsorial-htpy-map-Category = {!!}
 
   is-equiv-htpy-eq-map-Category :
     (f g : map-Category C D) → is-equiv (htpy-eq-map-Category f g)
-  is-equiv-htpy-eq-map-Category =
-    is-equiv-htpy-eq-map-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
+  is-equiv-htpy-eq-map-Category = {!!}
 
   equiv-htpy-eq-map-Category :
     (f g : map-Category C D) → (f ＝ g) ≃ htpy-map-Category f g
-  equiv-htpy-eq-map-Category =
-    equiv-htpy-eq-map-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
+  equiv-htpy-eq-map-Category = {!!}
 
   eq-htpy-map-Category :
     (f g : map-Category C D) → htpy-map-Category f g → (f ＝ g)
-  eq-htpy-map-Category =
-    eq-htpy-map-Precategory (precategory-Category C) (precategory-Category D)
+  eq-htpy-map-Category = {!!}
 ```
 
 ## See also

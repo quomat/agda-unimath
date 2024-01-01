@@ -40,7 +40,7 @@ module _
   where
 
   multiple-Ab : ℕ → type-Ab A → type-Ab A
-  multiple-Ab = power-Group (group-Ab A)
+  multiple-Ab = {!!}
 ```
 
 ### The predicate of being a natural multiple of an element in an abelian group
@@ -56,19 +56,16 @@ module _
 
   is-multiple-of-element-prop-Ab :
     (x y : type-Ab A) → Prop l
-  is-multiple-of-element-prop-Ab =
-    is-power-of-element-prop-Group (group-Ab A)
+  is-multiple-of-element-prop-Ab = {!!}
 
   is-multiple-of-element-Ab :
     (x y : type-Ab A) → UU l
-  is-multiple-of-element-Ab =
-    is-power-of-element-Group (group-Ab A)
+  is-multiple-of-element-Ab = {!!}
 
   is-prop-is-multiple-of-element-Ab :
     (x y : type-Ab A) →
     is-prop (is-multiple-of-element-Ab x y)
-  is-prop-is-multiple-of-element-Ab =
-    is-prop-is-power-of-element-Group (group-Ab A)
+  is-prop-is-multiple-of-element-Ab = {!!}
 ```
 
 ## Properties
@@ -82,10 +79,10 @@ module _
 
   multiple-zero-Ab :
     (n : ℕ) → multiple-Ab A n (zero-Ab A) ＝ zero-Ab A
-  multiple-zero-Ab = power-unit-Group (group-Ab A)
+  multiple-zero-Ab = {!!}
 ```
 
-### `(n + 1) · x = n · x + x`
+### `(n + 1) · x = {!!}
 
 ```agda
 module _
@@ -95,7 +92,7 @@ module _
   multiple-succ-Ab :
     (n : ℕ) (x : type-Ab A) →
     multiple-Ab A (succ-ℕ n) x ＝ add-Ab A (multiple-Ab A n x) x
-  multiple-succ-Ab = power-succ-Group (group-Ab A)
+  multiple-succ-Ab = {!!}
 ```
 
 ### `(n + 1) · x ＝ x + n · x`
@@ -108,7 +105,7 @@ module _
   multiple-succ-Ab' :
     (n : ℕ) (x : type-Ab A) →
     multiple-Ab A (succ-ℕ n) x ＝ add-Ab A x (multiple-Ab A n x)
-  multiple-succ-Ab' = power-succ-Group' (group-Ab A)
+  multiple-succ-Ab' = {!!}
 ```
 
 ### Multiples by sums of natural numbers are products of multiples
@@ -122,7 +119,7 @@ module _
     (m n : ℕ) {x : type-Ab A} →
     multiple-Ab A (m +ℕ n) x ＝
     add-Ab A (multiple-Ab A m x) (multiple-Ab A n x)
-  right-distributive-multiple-add-Ab = distributive-power-add-Group (group-Ab A)
+  right-distributive-multiple-add-Ab = {!!}
 ```
 
 ### Multiples distribute over the sum of `x` and `y`
@@ -136,8 +133,7 @@ module _
     (n : ℕ) {x y : type-Ab A} →
     multiple-Ab A n (add-Ab A x y) ＝
     add-Ab A (multiple-Ab A n x) (multiple-Ab A n y)
-  left-distributive-multiple-add-Ab n =
-    distributive-power-mul-Group (group-Ab A) n (commutative-add-Ab A _ _)
+  left-distributive-multiple-add-Ab n = {!!}
 ```
 
 ### Multiples by products of natural numbers are iterated multiples
@@ -150,5 +146,5 @@ module _
   multiple-mul-Ab :
     (m n : ℕ) {x : type-Ab A} →
     multiple-Ab A (m *ℕ n) x ＝ multiple-Ab A n (multiple-Ab A m x)
-  multiple-mul-Ab = power-mul-Group (group-Ab A)
+  multiple-mul-Ab = {!!}
 ```

@@ -42,15 +42,13 @@ module _
   where
 
   is-split-essentially-surjective-functor-Precategory : UU (l1 ⊔ l3 ⊔ l4)
-  is-split-essentially-surjective-functor-Precategory =
-    (y : obj-Precategory D) → essential-fiber-functor-Precategory C D F y
+  is-split-essentially-surjective-functor-Precategory = {!!}
 
   obj-is-split-essentially-surjective-functor-Precategory :
     is-split-essentially-surjective-functor-Precategory →
     obj-Precategory D → obj-Precategory C
   obj-is-split-essentially-surjective-functor-Precategory
-    is-split-ess-surj-F y =
-    pr1 (is-split-ess-surj-F y)
+    is-split-ess-surj-F y = {!!}
 
   iso-is-split-essentially-surjective-functor-Precategory :
     ( is-split-ess-surj-F :
@@ -63,23 +61,20 @@ module _
           ( y)))
       ( y)
   iso-is-split-essentially-surjective-functor-Precategory
-    is-split-ess-surj-F y =
-    pr2 (is-split-ess-surj-F y)
+    is-split-ess-surj-F y = {!!}
 ```
 
 We also record a variant with the opposite variance:
 
 ```agda
   is-split-essentially-surjective-functor-Precategory' : UU (l1 ⊔ l3 ⊔ l4)
-  is-split-essentially-surjective-functor-Precategory' =
-    (y : obj-Precategory D) → essential-fiber-functor-Precategory' C D F y
+  is-split-essentially-surjective-functor-Precategory' = {!!}
 
   obj-is-split-essentially-surjective-functor-Precategory' :
     is-split-essentially-surjective-functor-Precategory' →
     obj-Precategory D → obj-Precategory C
   obj-is-split-essentially-surjective-functor-Precategory'
-    is-split-ess-surj-F' y =
-    pr1 (is-split-ess-surj-F' y)
+    is-split-ess-surj-F' y = {!!}
 
   iso-is-split-essentially-surjective-functor-Precategory' :
     ( is-split-ess-surj-F' :
@@ -92,8 +87,7 @@ We also record a variant with the opposite variance:
           ( is-split-ess-surj-F')
           ( y)))
   iso-is-split-essentially-surjective-functor-Precategory'
-    is-split-ess-surj-F' y =
-    pr2 (is-split-ess-surj-F' y)
+    is-split-ess-surj-F' y = {!!}
 ```
 
 ### The type of split essentially surjective functors
@@ -103,9 +97,7 @@ split-essentially-surjective-functor-Precategory :
   {l1 l2 l3 l4 : Level}
   (C : Precategory l1 l2) (D : Precategory l3 l4) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-split-essentially-surjective-functor-Precategory C D =
-  Σ ( functor-Precategory C D)
-    ( is-split-essentially-surjective-functor-Precategory C D)
+split-essentially-surjective-functor-Precategory C D = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}
@@ -115,19 +107,16 @@ module _
 
   functor-split-essentially-surjective-functor-Precategory :
     functor-Precategory C D
-  functor-split-essentially-surjective-functor-Precategory = pr1 F
+  functor-split-essentially-surjective-functor-Precategory = {!!}
 
   is-split-essentially-surjective-split-essentially-surjective-functor-Precategory :
     is-split-essentially-surjective-functor-Precategory C D
       ( functor-split-essentially-surjective-functor-Precategory)
-  is-split-essentially-surjective-split-essentially-surjective-functor-Precategory =
-    pr2 F
+  is-split-essentially-surjective-split-essentially-surjective-functor-Precategory = {!!}
 
   obj-split-essentially-surjective-functor-Precategory :
     obj-Precategory C → obj-Precategory D
-  obj-split-essentially-surjective-functor-Precategory =
-    obj-functor-Precategory C D
-      ( functor-split-essentially-surjective-functor-Precategory)
+  obj-split-essentially-surjective-functor-Precategory = {!!}
 
   hom-split-essentially-surjective-functor-Precategory :
     {x y : obj-Precategory C} →
@@ -135,9 +124,7 @@ module _
     hom-Precategory D
       ( obj-split-essentially-surjective-functor-Precategory x)
       ( obj-split-essentially-surjective-functor-Precategory y)
-  hom-split-essentially-surjective-functor-Precategory =
-    hom-functor-Precategory C D
-      ( functor-split-essentially-surjective-functor-Precategory)
+  hom-split-essentially-surjective-functor-Precategory = {!!}
 ```
 
 ## Properties
@@ -156,15 +143,12 @@ module _
         is-split-essentially-surjective-functor-Precategory C D F) →
     is-essentially-surjective-functor-Precategory C D F
   is-essentially-surjective-is-split-essentially-surjective-functor-Precategory
-    F is-split-ess-surj-F =
-    unit-trunc-Prop ∘ is-split-ess-surj-F
+    F is-split-ess-surj-F = {!!}
 
   essentially-surjective-functor-split-essentially-surjective-functor-Precategory :
     split-essentially-surjective-functor-Precategory C D →
     essentially-surjective-functor-Precategory C D
-  essentially-surjective-functor-split-essentially-surjective-functor-Precategory =
-    tot
-      ( is-essentially-surjective-is-split-essentially-surjective-functor-Precategory)
+  essentially-surjective-functor-split-essentially-surjective-functor-Precategory = {!!}
 ```
 
 ### Being split essentially surjective is a property of fully faithful functors when the codomain is a category

@@ -35,17 +35,17 @@ module _
   where
 
   is-retraction : (f : A → B) (g : B → A) → UU l1
-  is-retraction f g = g ∘ f ~ id
+  is-retraction f g = {!!}
 
   retraction : (f : A → B) → UU (l1 ⊔ l2)
-  retraction f = Σ (B → A) (is-retraction f)
+  retraction f = {!!}
 
   map-retraction : (f : A → B) → retraction f → B → A
-  map-retraction f = pr1
+  map-retraction f = {!!}
 
   is-retraction-map-retraction :
     (f : A → B) (r : retraction f) → map-retraction f r ∘ f ~ id
-  is-retraction-map-retraction f = pr2
+  is-retraction-map-retraction f = {!!}
 ```
 
 ## Properties
@@ -57,7 +57,7 @@ identification in `B`. Then we get the identification
 
 ```text
      (H x)⁻¹           ap r p           H y
-  x ========= r (i x) ======== r (i y) ===== y
+  x = {!!}
 ```
 
 This defines a map `s : (i x ＝ i y) → x ＝ y`. To see that `s ∘ ap i ~ id`,
@@ -65,7 +65,7 @@ i.e., that the concatenation
 
 ```text
      (H x)⁻¹           ap r (ap i p)           H y
-  x ========= r (i x) =============== r (i y) ===== y
+  x = {!!}
 ```
 
 is identical to `p : x ＝ y` for all `p : x ＝ y`, we proceed by identification
@@ -81,18 +81,16 @@ module _
   ap-retraction :
     (i : A → B) (r : B → A) (H : r ∘ i ~ id)
     (x y : A) → i x ＝ i y → x ＝ y
-  ap-retraction i r H x y p =
-      ( inv (H x)) ∙ ((ap r p) ∙ (H y))
+  ap-retraction i r H x y p = {!!}
 
   is-retraction-ap-retraction :
     (i : A → B) (r : B → A) (H : r ∘ i ~ id)
     (x y : A) → ((ap-retraction i r H x y) ∘ (ap i {x} {y})) ~ id
-  is-retraction-ap-retraction i r H x .x refl = left-inv (H x)
+  is-retraction-ap-retraction i r H x .x refl = {!!}
 
   retraction-ap :
     (i : A → B) → retraction i → (x y : A) → retraction (ap i {x} {y})
-  pr1 (retraction-ap i (pair r H) x y) = ap-retraction i r H x y
-  pr2 (retraction-ap i (pair r H) x y) = is-retraction-ap-retraction i r H x y
+  pr1 (retraction-ap i (pair r H) x y) = {!!}
 ```
 
 ### Composites of retractions are retractions
@@ -104,16 +102,13 @@ module _
   where
 
   map-retraction-comp : X → A
-  map-retraction-comp = map-retraction h s ∘ map-retraction g r
+  map-retraction-comp = {!!}
 
   is-retraction-map-retraction-comp : is-retraction (g ∘ h) map-retraction-comp
-  is-retraction-map-retraction-comp =
-    ( map-retraction h s ·l (is-retraction-map-retraction g r ·r h)) ∙h
-    ( is-retraction-map-retraction h s)
+  is-retraction-map-retraction-comp = {!!}
 
   retraction-comp : retraction (g ∘ h)
-  pr1 retraction-comp = map-retraction-comp
-  pr2 retraction-comp = is-retraction-map-retraction-comp
+  pr1 retraction-comp = {!!}
 ```
 
 ### If `g ∘ f` has a retraction then `f` has a retraction
@@ -125,16 +120,14 @@ module _
   where
 
   map-retraction-right-factor : B → A
-  map-retraction-right-factor = map-retraction (g ∘ h) r ∘ g
+  map-retraction-right-factor = {!!}
 
   is-retraction-map-retraction-right-factor :
     is-retraction h map-retraction-right-factor
-  is-retraction-map-retraction-right-factor =
-    is-retraction-map-retraction (g ∘ h) r
+  is-retraction-map-retraction-right-factor = {!!}
 
   retraction-right-factor : retraction h
-  pr1 retraction-right-factor = map-retraction-right-factor
-  pr2 retraction-right-factor = is-retraction-map-retraction-right-factor
+  pr1 retraction-right-factor = {!!}
 ```
 
 ### In a commuting triangle `f ~ g ∘ h`, any retraction of the left map `f` induces a retraction of the top map `h`
@@ -166,19 +159,14 @@ module _
   where
 
   map-retraction-top-map-triangle : B → A
-  map-retraction-top-map-triangle = map-retraction f r ∘ g
+  map-retraction-top-map-triangle = {!!}
 
   is-retraction-map-retraction-top-map-triangle :
     is-retraction h map-retraction-top-map-triangle
-  is-retraction-map-retraction-top-map-triangle =
-    ( inv-htpy (map-retraction f r ·l H)) ∙h
-    ( is-retraction-map-retraction f r)
+  is-retraction-map-retraction-top-map-triangle = {!!}
 
   retraction-top-map-triangle : retraction h
-  pr1 retraction-top-map-triangle =
-    map-retraction-top-map-triangle
-  pr2 retraction-top-map-triangle =
-    is-retraction-map-retraction-top-map-triangle
+  pr1 retraction-top-map-triangle = {!!}
 ```
 
 ### In a commuting triangle `f ~ g ∘ h`, retractions of `g` and `h` compose to a retraction of `f`
@@ -207,19 +195,14 @@ module _
   where
 
   map-retraction-left-map-triangle : X → A
-  map-retraction-left-map-triangle = map-retraction-comp g h r s
+  map-retraction-left-map-triangle = {!!}
 
   is-retraction-map-retraction-left-map-triangle :
     is-retraction f map-retraction-left-map-triangle
-  is-retraction-map-retraction-left-map-triangle =
-    ( map-retraction-comp g h r s ·l H) ∙h
-    ( is-retraction-map-retraction-comp g h r s)
+  is-retraction-map-retraction-left-map-triangle = {!!}
 
   retraction-left-map-triangle : retraction f
-  pr1 retraction-left-map-triangle =
-    map-retraction-left-map-triangle
-  pr2 retraction-left-map-triangle =
-    is-retraction-map-retraction-left-map-triangle
+  pr1 retraction-left-map-triangle = {!!}
 ```
 
 ## See also

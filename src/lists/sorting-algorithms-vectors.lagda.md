@@ -45,31 +45,23 @@ module _
 
   is-sort-vec :
     UU (l1 ⊔ l2)
-  is-sort-vec =
-    (n : ℕ) →
-    is-permutation-vec n f ×
-    ((v : vec (type-Decidable-Total-Order X) n) → is-sorted-vec X (f v))
+  is-sort-vec = {!!}
 
   is-permutation-vec-is-sort-vec :
     is-sort-vec → (n : ℕ) → is-permutation-vec n f
-  is-permutation-vec-is-sort-vec S n = pr1 (S n)
+  is-permutation-vec-is-sort-vec S n = {!!}
 
   permutation-vec-is-sort-vec :
     is-sort-vec → (n : ℕ) → vec (type-Decidable-Total-Order X) n → Permutation n
-  permutation-vec-is-sort-vec S n v =
-    permutation-is-permutation-vec n f (is-permutation-vec-is-sort-vec S n) v
+  permutation-vec-is-sort-vec S n v = {!!}
 
   eq-permute-vec-permutation-is-sort-vec :
     (S : is-sort-vec) (n : ℕ) (v : vec (type-Decidable-Total-Order X) n) →
     f v ＝ permute-vec n v (permutation-vec-is-sort-vec S n v)
-  eq-permute-vec-permutation-is-sort-vec S n v =
-    eq-permute-vec-permutation-is-permutation-vec
-      ( n)
-      ( f)
-      ( is-permutation-vec-is-sort-vec S n) v
+  eq-permute-vec-permutation-is-sort-vec S n v = {!!}
 
   is-sorting-vec-is-sort-vec :
     is-sort-vec → (n : ℕ) →
     (v : vec (type-Decidable-Total-Order X) n) → is-sorted-vec X (f v)
-  is-sorting-vec-is-sort-vec S n = pr2 (S n)
+  is-sorting-vec-is-sort-vec S n = {!!}
 ```

@@ -32,46 +32,41 @@ module _
   where
 
   function-Wild-Monoid : Wild-Monoid (l1 ⊔ l2)
-  function-Wild-Monoid = Π-Wild-Monoid I (λ _ → M)
+  function-Wild-Monoid = {!!}
 
   h-space-function-Wild-Monoid : H-Space (l1 ⊔ l2)
-  h-space-function-Wild-Monoid =
-      h-space-Wild-Monoid function-Wild-Monoid
+  h-space-function-Wild-Monoid = {!!}
 
   pointed-type-function-Wild-Monoid : Pointed-Type (l1 ⊔ l2)
-  pointed-type-function-Wild-Monoid =
-    pointed-type-Wild-Monoid function-Wild-Monoid
+  pointed-type-function-Wild-Monoid = {!!}
 
   type-function-Wild-Monoid : UU (l1 ⊔ l2)
-  type-function-Wild-Monoid = type-Wild-Monoid function-Wild-Monoid
+  type-function-Wild-Monoid = {!!}
 
   unit-function-Wild-Monoid : type-function-Wild-Monoid
-  unit-function-Wild-Monoid = unit-Wild-Monoid function-Wild-Monoid
+  unit-function-Wild-Monoid = {!!}
 
   mul-function-Wild-Monoid :
     type-function-Wild-Monoid →
     type-function-Wild-Monoid →
     type-function-Wild-Monoid
-  mul-function-Wild-Monoid = mul-Wild-Monoid function-Wild-Monoid
+  mul-function-Wild-Monoid = {!!}
 
   left-unit-law-mul-function-Wild-Monoid :
     ( f : type-function-Wild-Monoid) →
     ( mul-function-Wild-Monoid (unit-function-Wild-Monoid) f) ＝ f
-  left-unit-law-mul-function-Wild-Monoid =
-    left-unit-law-mul-Wild-Monoid function-Wild-Monoid
+  left-unit-law-mul-function-Wild-Monoid = {!!}
 
   right-unit-law-mul-function-Wild-Monoid :
     ( f : type-function-Wild-Monoid) →
     ( mul-function-Wild-Monoid f (unit-function-Wild-Monoid)) ＝ f
-  right-unit-law-mul-function-Wild-Monoid =
-    right-unit-law-mul-Wild-Monoid function-Wild-Monoid
+  right-unit-law-mul-function-Wild-Monoid = {!!}
 
   associator-function-Wild-Monoid :
     associator-H-Space h-space-function-Wild-Monoid
-  associator-function-Wild-Monoid = associator-Wild-Monoid function-Wild-Monoid
+  associator-function-Wild-Monoid = {!!}
 
   unital-associator-function-Wild-Monoid :
     unital-associator (h-space-Wild-Monoid function-Wild-Monoid)
-  unital-associator-function-Wild-Monoid =
-    unital-associator-Wild-Monoid function-Wild-Monoid
+  unital-associator-function-Wild-Monoid = {!!}
 ```

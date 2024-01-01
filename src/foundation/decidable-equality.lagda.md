@@ -40,7 +40,7 @@ A type `A` is said to have **decidable equality** if `x ＝ y` is a
 
 ```agda
 has-decidable-equality : {l : Level} (A : UU l) → UU l
-has-decidable-equality A = (x y : A) → is-decidable (x ＝ y)
+has-decidable-equality A = {!!}
 ```
 
 ## Examples
@@ -51,7 +51,7 @@ has-decidable-equality A = (x y : A) → is-decidable (x ＝ y)
 abstract
   has-decidable-equality-is-prop :
     {l1 : Level} {A : UU l1} → is-prop A → has-decidable-equality A
-  has-decidable-equality-is-prop H x y = inl (eq-is-prop H)
+  has-decidable-equality-is-prop H x y = {!!}
 ```
 
 ### The empty type has decidable equality
@@ -66,7 +66,7 @@ has-decidable-equality-empty ()
 ```agda
 has-decidable-equality-unit :
   has-decidable-equality unit
-has-decidable-equality-unit star star = inl refl
+has-decidable-equality-unit star star = {!!}
 ```
 
 ## Properties
@@ -80,17 +80,16 @@ has-decidable-equality-prod' :
   has-decidable-equality (A × B)
 has-decidable-equality-prod' f g (pair x y) (pair x' y') with
   f y x x' | g x y y'
-... | inl refl | inl refl = inl refl
-... | inl refl | inr nq = inr (λ r → nq (ap pr2 r))
-... | inr np | inl refl = inr (λ r → np (ap pr1 r))
-... | inr np | inr nq = inr (λ r → np (ap pr1 r))
+... | inl refl | inl refl = {!!}
+... | inl refl | inr nq = {!!}
+... | inr np | inl refl = {!!}
+... | inr np | inr nq = {!!}
 
 has-decidable-equality-prod :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   has-decidable-equality A → has-decidable-equality B →
   has-decidable-equality (A × B)
-has-decidable-equality-prod d e =
-  has-decidable-equality-prod' (λ y → d) (λ x → e)
+has-decidable-equality-prod d e = {!!}
 ```
 
 ### Decidability of equality of the factors of a cartesian product
@@ -103,15 +102,15 @@ has-decidable-equality-left-factor :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   has-decidable-equality (A × B) → B → has-decidable-equality A
 has-decidable-equality-left-factor d b x y with d (pair x b) (pair y b)
-... | inl p = inl (ap pr1 p)
-... | inr np = inr (λ q → np (ap (λ z → pair z b) q))
+... | inl p = {!!}
+... | inr np = {!!}
 
 has-decidable-equality-right-factor :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   has-decidable-equality (A × B) → A → has-decidable-equality B
 has-decidable-equality-right-factor d a x y with d (pair a x) (pair a y)
-... | inl p = inl (ap pr2 p)
-... | inr np = inr (λ q → np (ap (pair a) q))
+... | inl p = {!!}
+... | inr np = {!!}
 ```
 
 ### Types with decidable equality are closed under retracts
@@ -121,10 +120,7 @@ abstract
   has-decidable-equality-retract-of :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} →
     A retract-of B → has-decidable-equality B → has-decidable-equality A
-  has-decidable-equality-retract-of (pair i (pair r H)) d x y =
-    is-decidable-retract-of
-      ( retract-eq (pair i (pair r H)) x y)
-      ( d (i x) (i y))
+  has-decidable-equality-retract-of (pair i (pair r H)) d x y = {!!}
 ```
 
 ### Types with decidable equality are closed under equivalences
@@ -134,14 +130,13 @@ abstract
   has-decidable-equality-equiv :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (e : A ≃ B) →
     has-decidable-equality B → has-decidable-equality A
-  has-decidable-equality-equiv e dB x y =
-    is-decidable-equiv (equiv-ap e x y) (dB (map-equiv e x) (map-equiv e y))
+  has-decidable-equality-equiv e dB x y = {!!}
 
 abstract
   has-decidable-equality-equiv' :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (e : A ≃ B) →
     has-decidable-equality A → has-decidable-equality B
-  has-decidable-equality-equiv' e = has-decidable-equality-equiv (inv-equiv e)
+  has-decidable-equality-equiv' e = {!!}
 ```
 
 ### Hedberg's theorem
@@ -156,64 +151,52 @@ module _
 
   Eq-has-decidable-equality' :
     (x y : A) → is-decidable (x ＝ y) → UU lzero
-  Eq-has-decidable-equality' x y (inl p) = unit
-  Eq-has-decidable-equality' x y (inr f) = empty
+  Eq-has-decidable-equality' x y (inl p) = {!!}
 
   Eq-has-decidable-equality :
     (d : has-decidable-equality A) → A → A → UU lzero
-  Eq-has-decidable-equality d x y = Eq-has-decidable-equality' x y (d x y)
+  Eq-has-decidable-equality d x y = {!!}
 
   abstract
     is-prop-Eq-has-decidable-equality' :
       (x y : A) (t : is-decidable (x ＝ y)) →
       is-prop (Eq-has-decidable-equality' x y t)
-    is-prop-Eq-has-decidable-equality' x y (inl p) = is-prop-unit
-    is-prop-Eq-has-decidable-equality' x y (inr f) = is-prop-empty
+    is-prop-Eq-has-decidable-equality' x y (inl p) = {!!}
 
   abstract
     is-prop-Eq-has-decidable-equality :
       (d : has-decidable-equality A)
       {x y : A} → is-prop (Eq-has-decidable-equality d x y)
-    is-prop-Eq-has-decidable-equality d {x} {y} =
-      is-prop-Eq-has-decidable-equality' x y (d x y)
+    is-prop-Eq-has-decidable-equality d {x} {y} = {!!}
 
   abstract
     refl-Eq-has-decidable-equality :
       (d : has-decidable-equality A) (x : A) →
       Eq-has-decidable-equality d x x
     refl-Eq-has-decidable-equality d x with d x x
-    ... | inl α = star
-    ... | inr f = f refl
+    ... | inl α = {!!}
 
   abstract
     Eq-has-decidable-equality-eq :
       (d : has-decidable-equality A) {x y : A} →
       x ＝ y → Eq-has-decidable-equality d x y
-    Eq-has-decidable-equality-eq d {x} {.x} refl =
-      refl-Eq-has-decidable-equality d x
+    Eq-has-decidable-equality-eq d {x} {.x} refl = {!!}
 
   abstract
     eq-Eq-has-decidable-equality' :
       (x y : A) (t : is-decidable (x ＝ y)) →
       Eq-has-decidable-equality' x y t → x ＝ y
-    eq-Eq-has-decidable-equality' x y (inl p) t = p
-    eq-Eq-has-decidable-equality' x y (inr f) t = ex-falso t
+    eq-Eq-has-decidable-equality' x y (inl p) t = {!!}
 
   abstract
     eq-Eq-has-decidable-equality :
       (d : has-decidable-equality A) {x y : A} →
       Eq-has-decidable-equality d x y → x ＝ y
-    eq-Eq-has-decidable-equality d {x} {y} =
-      eq-Eq-has-decidable-equality' x y (d x y)
+    eq-Eq-has-decidable-equality d {x} {y} = {!!}
 
   abstract
     is-set-has-decidable-equality : has-decidable-equality A → is-set A
-    is-set-has-decidable-equality d =
-      is-set-prop-in-id
-        ( λ x y → Eq-has-decidable-equality d x y)
-        ( λ x y → is-prop-Eq-has-decidable-equality d)
-        ( λ x → refl-Eq-has-decidable-equality d x)
-        ( λ x y → eq-Eq-has-decidable-equality d)
+    is-set-has-decidable-equality d = {!!}
 ```
 
 ### Having decidable equality is a property
@@ -222,22 +205,12 @@ module _
 abstract
   is-prop-has-decidable-equality :
     {l1 : Level} {X : UU l1} → is-prop (has-decidable-equality X)
-  is-prop-has-decidable-equality {l1} {X} =
-    is-prop-is-inhabited
-      ( λ d →
-        is-prop-Π
-        ( λ x →
-          is-prop-Π
-          ( λ y →
-            is-prop-coprod
-            ( intro-double-negation)
-            ( is-set-has-decidable-equality d x y)
-            ( is-prop-neg))))
+  is-prop-has-decidable-equality {l1} {X} = {!!}
 
 has-decidable-equality-Prop :
   {l1 : Level} (X : UU l1) → Prop l1
-pr1 (has-decidable-equality-Prop X) = has-decidable-equality X
-pr2 (has-decidable-equality-Prop X) = is-prop-has-decidable-equality
+pr1 (has-decidable-equality-Prop X) = {!!}
+pr2 (has-decidable-equality-Prop X) = {!!}
 ```
 
 ### Types with decidable equality are closed under dependent pair types
@@ -249,15 +222,7 @@ abstract
     has-decidable-equality A → ((x : A) → has-decidable-equality (B x)) →
     has-decidable-equality (Σ A B)
   has-decidable-equality-Σ dA dB (pair x y) (pair x' y') with dA x x'
-  ... | inr np = inr (λ r → np (ap pr1 r))
-  ... | inl p =
-    is-decidable-iff eq-pair-Σ' pair-eq-Σ
-      ( is-decidable-equiv
-        ( left-unit-law-Σ-is-contr
-          ( is-proof-irrelevant-is-prop
-            ( is-set-has-decidable-equality dA x x') p)
-          ( p))
-        ( dB x' (tr _ p y) y'))
+  ... | inr np = {!!}
 ```
 
 ### A family of types over a type with decidable equality and decidable total space is a family of types with decidable equality
@@ -268,13 +233,7 @@ abstract
     {l1 l2 : Level} {A : UU l1} {B : A → UU l2} →
     has-decidable-equality A → has-decidable-equality (Σ A B) →
     (x : A) → has-decidable-equality (B x)
-  has-decidable-equality-fiber-has-decidable-equality-Σ {B = B} dA dΣ x =
-    has-decidable-equality-equiv'
-      ( equiv-fiber-pr1 B x)
-      ( has-decidable-equality-Σ dΣ
-        ( λ t →
-          has-decidable-equality-is-prop
-            ( is-set-has-decidable-equality dA (pr1 t) x)))
+  has-decidable-equality-fiber-has-decidable-equality-Σ {B = B} dA dΣ x = {!!}
 ```
 
 ### If `B` is a family of types with decidable equality, the total space has decidable equality, and `B` has a section, then the base type has decidable equality
@@ -285,16 +244,7 @@ abstract
     {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (b : (x : A) → B x) →
     has-decidable-equality (Σ A B) → ((x : A) → has-decidable-equality (B x)) →
     has-decidable-equality A
-  has-decidable-equality-base-has-decidable-equality-Σ b dΣ dB =
-    has-decidable-equality-equiv'
-      ( equiv-total-fiber (map-section-family b))
-      ( has-decidable-equality-Σ dΣ
-        ( λ t →
-          has-decidable-equality-is-prop
-            ( is-prop-map-is-injective
-              ( is-set-has-decidable-equality dΣ)
-              ( is-injective-map-section-family b)
-              ( t))))
+  has-decidable-equality-base-has-decidable-equality-Σ b dΣ dB = {!!}
 ```
 
 ### If `A` and `B` have decidable equality, then so does their coproduct
@@ -307,22 +257,13 @@ module _
   has-decidable-equality-coprod :
     has-decidable-equality A → has-decidable-equality B →
     has-decidable-equality (A + B)
-  has-decidable-equality-coprod d e (inl x) (inl y) =
-    is-decidable-iff (ap inl) is-injective-inl (d x y)
-  has-decidable-equality-coprod d e (inl x) (inr y) =
-    inr neq-inl-inr
-  has-decidable-equality-coprod d e (inr x) (inl y) =
-    inr neq-inr-inl
-  has-decidable-equality-coprod d e (inr x) (inr y) =
-    is-decidable-iff (ap inr) is-injective-inr (e x y)
+  has-decidable-equality-coprod d e (inl x) (inl y) = {!!}
 
   has-decidable-equality-left-summand :
     has-decidable-equality (A + B) → has-decidable-equality A
-  has-decidable-equality-left-summand d x y =
-    is-decidable-iff is-injective-inl (ap inl) (d (inl x) (inl y))
+  has-decidable-equality-left-summand d x y = {!!}
 
   has-decidable-equality-right-summand :
     has-decidable-equality (A + B) → has-decidable-equality B
-  has-decidable-equality-right-summand d x y =
-    is-decidable-iff is-injective-inr (ap inr) (d (inr x) (inr y))
+  has-decidable-equality-right-summand d x y = {!!}
 ```

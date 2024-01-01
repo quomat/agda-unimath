@@ -34,7 +34,7 @@ transformation** from a
 
 - a family of morphisms `a : (x : C) → hom (F x) (G x)` such that the following
   identity holds:
-- `(G f) ∘ (a x) = (a y) ∘ (F f)`, for all `f : hom x y`.
+- `(G f) ∘ (a x) = {!!}
 
 ## Definition
 
@@ -48,35 +48,25 @@ module _
   where
 
   hom-family-functor-Small-Large-Category : UU (l1 ⊔ β γF γG)
-  hom-family-functor-Small-Large-Category =
-    hom-family-functor-Small-Large-Precategory
-      ( precategory-Category C) (large-precategory-Large-Category D) F G
+  hom-family-functor-Small-Large-Category = {!!}
 
   is-natural-transformation-Small-Large-Category :
     hom-family-functor-Small-Large-Category → UU (l1 ⊔ l2 ⊔ β γF γG)
-  is-natural-transformation-Small-Large-Category =
-    is-natural-transformation-Small-Large-Precategory
-      ( precategory-Category C) (large-precategory-Large-Category D) F G
+  is-natural-transformation-Small-Large-Category = {!!}
 
   natural-transformation-Small-Large-Category : UU (l1 ⊔ l2 ⊔ β γF γG)
-  natural-transformation-Small-Large-Category =
-    natural-transformation-Small-Large-Precategory
-      ( precategory-Category C) (large-precategory-Large-Category D) F G
+  natural-transformation-Small-Large-Category = {!!}
 
   hom-natural-transformation-Small-Large-Category :
     natural-transformation-Small-Large-Category →
     hom-family-functor-Small-Large-Category
-  hom-natural-transformation-Small-Large-Category =
-    hom-natural-transformation-Small-Large-Precategory
-      ( precategory-Category C) (large-precategory-Large-Category D) F G
+  hom-natural-transformation-Small-Large-Category = {!!}
 
   naturality-natural-transformation-Small-Large-Category :
     (γ : natural-transformation-Small-Large-Category) →
     is-natural-transformation-Small-Large-Category
       ( hom-natural-transformation-Small-Large-Category γ)
-  naturality-natural-transformation-Small-Large-Category =
-    naturality-natural-transformation-Small-Large-Precategory
-      ( precategory-Category C) (large-precategory-Large-Category D) F G
+  naturality-natural-transformation-Small-Large-Category = {!!}
 ```
 
 ## Composition and identity of natural transformations
@@ -91,9 +81,7 @@ module _
   id-natural-transformation-Small-Large-Category :
     {γF : Level} (F : functor-Small-Large-Category C D γF) →
     natural-transformation-Small-Large-Category C D F F
-  id-natural-transformation-Small-Large-Category =
-    id-natural-transformation-Small-Large-Precategory
-      ( precategory-Category C) (large-precategory-Large-Category D)
+  id-natural-transformation-Small-Large-Category = {!!}
 
   comp-natural-transformation-Small-Large-Category :
     {γF γG γH : Level}
@@ -103,9 +91,7 @@ module _
     natural-transformation-Small-Large-Category C D G H →
     natural-transformation-Small-Large-Category C D F G →
     natural-transformation-Small-Large-Category C D F H
-  comp-natural-transformation-Small-Large-Category =
-    comp-natural-transformation-Small-Large-Precategory
-      ( precategory-Category C) (large-precategory-Large-Category D)
+  comp-natural-transformation-Small-Large-Category = {!!}
 ```
 
 ## Properties
@@ -127,16 +113,12 @@ module _
   is-prop-is-natural-transformation-Small-Large-Category :
     (γ : hom-family-functor-Small-Large-Category C D F G) →
     is-prop (is-natural-transformation-Small-Large-Category C D F G γ)
-  is-prop-is-natural-transformation-Small-Large-Category =
-    is-prop-is-natural-transformation-Small-Large-Precategory
-      ( precategory-Category C) (large-precategory-Large-Category D) F G
+  is-prop-is-natural-transformation-Small-Large-Category = {!!}
 
   is-natural-transformation-prop-Small-Large-Category :
     (γ : hom-family-functor-Small-Large-Category C D F G) →
     Prop (l1 ⊔ l2 ⊔ β γF γG)
-  is-natural-transformation-prop-Small-Large-Category =
-    is-natural-transformation-prop-Small-Large-Precategory
-      ( precategory-Category C) (large-precategory-Large-Category D) F G
+  is-natural-transformation-prop-Small-Large-Category = {!!}
 ```
 
 ### The set of natural transformations
@@ -152,47 +134,34 @@ module _
 
   is-emb-hom-natural-transformation-Small-Large-Category :
     is-emb (hom-natural-transformation-Small-Large-Category C D F G)
-  is-emb-hom-natural-transformation-Small-Large-Category =
-    is-emb-hom-family-natural-transformation-Small-Large-Precategory
-      ( precategory-Category C) (large-precategory-Large-Category D) F G
+  is-emb-hom-natural-transformation-Small-Large-Category = {!!}
 
   emb-hom-natural-transformation-Small-Large-Category :
     natural-transformation-Small-Large-Category C D F G ↪
     hom-family-functor-Small-Large-Category C D F G
-  emb-hom-natural-transformation-Small-Large-Category =
-    emb-hom-natural-transformation-Small-Large-Precategory
-      ( precategory-Category C) (large-precategory-Large-Category D) F G
+  emb-hom-natural-transformation-Small-Large-Category = {!!}
 
   is-set-natural-transformation-Small-Large-Category :
     is-set (natural-transformation-Small-Large-Category C D F G)
-  is-set-natural-transformation-Small-Large-Category =
-    is-set-natural-transformation-Small-Large-Precategory
-      ( precategory-Category C) (large-precategory-Large-Category D) F G
+  is-set-natural-transformation-Small-Large-Category = {!!}
 
   natural-transformation-set-Small-Large-Category :
     Set (l1 ⊔ l2 ⊔ β γF γG)
-  pr1 (natural-transformation-set-Small-Large-Category) =
-    natural-transformation-Small-Large-Category C D F G
-  pr2 (natural-transformation-set-Small-Large-Category) =
-    is-set-natural-transformation-Small-Large-Category
+  pr1 (natural-transformation-set-Small-Large-Category) = {!!}
 
   extensionality-natural-transformation-Small-Large-Category :
     (a b : natural-transformation-Small-Large-Category C D F G) →
     ( a ＝ b) ≃
     ( hom-natural-transformation-Small-Large-Category C D F G a ~
       hom-natural-transformation-Small-Large-Category C D F G b)
-  extensionality-natural-transformation-Small-Large-Category =
-    extensionality-natural-transformation-Small-Large-Precategory
-      ( precategory-Category C) (large-precategory-Large-Category D) F G
+  extensionality-natural-transformation-Small-Large-Category = {!!}
 
   eq-htpy-hom-natural-transformation-Small-Large-Category :
     (a b : natural-transformation-Small-Large-Category C D F G) →
     ( hom-natural-transformation-Small-Large-Category C D F G a ~
       hom-natural-transformation-Small-Large-Category C D F G b) →
     a ＝ b
-  eq-htpy-hom-natural-transformation-Small-Large-Category =
-    eq-htpy-hom-natural-transformation-Small-Large-Precategory
-      ( precategory-Category C) (large-precategory-Large-Category D) F G
+  eq-htpy-hom-natural-transformation-Small-Large-Category = {!!}
 ```
 
 ### Categorical laws for natural transformations
@@ -211,9 +180,7 @@ module _
     (a : natural-transformation-Small-Large-Category C D F G) →
     comp-natural-transformation-Small-Large-Category C D F F G a
       ( id-natural-transformation-Small-Large-Category C D F) ＝ a
-  right-unit-law-comp-natural-transformation-Small-Large-Category =
-    right-unit-law-comp-natural-transformation-Small-Large-Precategory
-      ( precategory-Category C) (large-precategory-Large-Category D)
+  right-unit-law-comp-natural-transformation-Small-Large-Category = {!!}
 
   left-unit-law-comp-natural-transformation-Small-Large-Category :
     {γF γG : Level}
@@ -222,9 +189,7 @@ module _
     (a : natural-transformation-Small-Large-Category C D F G) →
     comp-natural-transformation-Small-Large-Category C D F G G
       ( id-natural-transformation-Small-Large-Category C D G) a ＝ a
-  left-unit-law-comp-natural-transformation-Small-Large-Category =
-    left-unit-law-comp-natural-transformation-Small-Large-Precategory
-      ( precategory-Category C) (large-precategory-Large-Category D)
+  left-unit-law-comp-natural-transformation-Small-Large-Category = {!!}
 
   associative-comp-natural-transformation-Small-Large-Category :
     {γF γG γH γI : Level}
@@ -239,7 +204,5 @@ module _
       ( comp-natural-transformation-Small-Large-Category C D G H I c b) a ＝
     comp-natural-transformation-Small-Large-Category C D F H I c
       ( comp-natural-transformation-Small-Large-Category C D F G H b a)
-  associative-comp-natural-transformation-Small-Large-Category =
-    associative-comp-natural-transformation-Small-Large-Precategory
-      ( precategory-Category C) (large-precategory-Large-Category D)
+  associative-comp-natural-transformation-Small-Large-Category = {!!}
 ```

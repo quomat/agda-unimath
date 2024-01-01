@@ -61,12 +61,7 @@ module _
 
   is-intersection-radical-ideal-Commutative-Ring :
     {l4 : Level} (K : radical-ideal-Commutative-Ring l4 A) → UUω
-  is-intersection-radical-ideal-Commutative-Ring K =
-    is-greatest-binary-lower-bound-Large-Poset
-      ( radical-ideal-Commutative-Ring-Large-Poset A)
-      ( I)
-      ( J)
-      ( K)
+  is-intersection-radical-ideal-Commutative-Ring K = {!!}
 ```
 
 ### The intersection of radical ideals
@@ -83,34 +78,20 @@ module _
       ( intersection-ideal-Commutative-Ring A
         ( ideal-radical-ideal-Commutative-Ring A I)
         ( ideal-radical-ideal-Commutative-Ring A J))
-  pr1 (is-radical-intersection-radical-ideal-Commutative-Ring x n (H , K)) =
-    is-radical-radical-ideal-Commutative-Ring A I x n H
-  pr2 (is-radical-intersection-radical-ideal-Commutative-Ring x n (H , K)) =
-    is-radical-radical-ideal-Commutative-Ring A J x n K
+  pr1 (is-radical-intersection-radical-ideal-Commutative-Ring x n (H , K)) = {!!}
 
   intersection-radical-ideal-Commutative-Ring :
     radical-ideal-Commutative-Ring (l2 ⊔ l3) A
-  pr1 intersection-radical-ideal-Commutative-Ring =
-    intersection-ideal-Commutative-Ring A
-      ( ideal-radical-ideal-Commutative-Ring A I)
-      ( ideal-radical-ideal-Commutative-Ring A J)
-  pr2 intersection-radical-ideal-Commutative-Ring =
-    is-radical-intersection-radical-ideal-Commutative-Ring
+  pr1 intersection-radical-ideal-Commutative-Ring = {!!}
 
   ideal-intersection-radical-ideal-Commutative-Ring :
     ideal-Commutative-Ring (l2 ⊔ l3) A
-  ideal-intersection-radical-ideal-Commutative-Ring =
-    ideal-radical-ideal-Commutative-Ring A
-      intersection-radical-ideal-Commutative-Ring
+  ideal-intersection-radical-ideal-Commutative-Ring = {!!}
 
   is-intersection-intersection-radical-ideal-Commutative-Ring :
     is-intersection-radical-ideal-Commutative-Ring A I J
       intersection-radical-ideal-Commutative-Ring
-  is-intersection-intersection-radical-ideal-Commutative-Ring K =
-    is-intersection-intersection-ideal-Commutative-Ring A
-      ( ideal-radical-ideal-Commutative-Ring A I)
-      ( ideal-radical-ideal-Commutative-Ring A J)
-      ( ideal-radical-ideal-Commutative-Ring A K)
+  is-intersection-intersection-radical-ideal-Commutative-Ring K = {!!}
 ```
 
 ### The large meet-semilattice of radical ideals in a commutative ring
@@ -123,30 +104,18 @@ module _
   has-meets-radical-ideal-Commutative-Ring :
     has-meets-Large-Poset (radical-ideal-Commutative-Ring-Large-Poset A)
   meet-has-meets-Large-Poset
-    has-meets-radical-ideal-Commutative-Ring =
-    intersection-radical-ideal-Commutative-Ring A
-  is-greatest-binary-lower-bound-meet-has-meets-Large-Poset
-    has-meets-radical-ideal-Commutative-Ring =
-    is-intersection-intersection-radical-ideal-Commutative-Ring A
+    has-meets-radical-ideal-Commutative-Ring = {!!}
 
   is-large-meet-semilattice-radical-ideal-Commutative-Ring :
     is-large-meet-semilattice-Large-Poset
       ( radical-ideal-Commutative-Ring-Large-Poset A)
   has-meets-is-large-meet-semilattice-Large-Poset
-    is-large-meet-semilattice-radical-ideal-Commutative-Ring =
-    has-meets-radical-ideal-Commutative-Ring
-  has-top-element-is-large-meet-semilattice-Large-Poset
-    is-large-meet-semilattice-radical-ideal-Commutative-Ring =
-    has-top-element-radical-ideal-Commutative-Ring A
+    is-large-meet-semilattice-radical-ideal-Commutative-Ring = {!!}
 
   radical-ideal-Commutative-Ring-Large-Meet-Semilattice :
     Large-Meet-Semilattice (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3)
   large-poset-Large-Meet-Semilattice
-    radical-ideal-Commutative-Ring-Large-Meet-Semilattice =
-    radical-ideal-Commutative-Ring-Large-Poset A
-  is-large-meet-semilattice-Large-Meet-Semilattice
-    radical-ideal-Commutative-Ring-Large-Meet-Semilattice =
-    is-large-meet-semilattice-radical-ideal-Commutative-Ring
+    radical-ideal-Commutative-Ring-Large-Meet-Semilattice = {!!}
 ```
 
 ## Properties
@@ -166,35 +135,7 @@ module _
         ( ideal-radical-of-ideal-Commutative-Ring A J))
       ( ideal-radical-of-ideal-Commutative-Ring A
         ( intersection-ideal-Commutative-Ring A I J))
-  forward-inclusion-intersection-radical-of-ideal-Commutative-Ring x (H , K) =
-    apply-universal-property-trunc-Prop H
-      ( subset-radical-of-ideal-Commutative-Ring A
-        ( intersection-ideal-Commutative-Ring A I J)
-        ( x))
-      ( λ (n , H') →
-        apply-universal-property-trunc-Prop K
-          ( subset-radical-of-ideal-Commutative-Ring A
-            ( intersection-ideal-Commutative-Ring A I J)
-            ( x))
-          ( λ (m , K') →
-            intro-∃
-              ( add-ℕ n m)
-              ( ( is-closed-under-eq-ideal-Commutative-Ring A I
-                  ( is-closed-under-right-multiplication-ideal-Commutative-Ring
-                    ( A)
-                    ( I)
-                    ( power-Commutative-Ring A n x)
-                    ( power-Commutative-Ring A m x)
-                    ( H'))
-                  ( inv ( distributive-power-add-Commutative-Ring A n m))) ,
-                ( is-closed-under-eq-ideal-Commutative-Ring A J
-                  ( is-closed-under-left-multiplication-ideal-Commutative-Ring
-                    ( A)
-                    ( J)
-                    ( power-Commutative-Ring A n x)
-                    ( power-Commutative-Ring A m x)
-                    ( K'))
-                  ( inv ( distributive-power-add-Commutative-Ring A n m))))))
+  forward-inclusion-intersection-radical-of-ideal-Commutative-Ring x (H , K) = {!!}
 
   backward-inclusion-intersection-radical-of-ideal-Commutative-Ring :
     leq-ideal-Commutative-Ring A
@@ -203,13 +144,7 @@ module _
       ( intersection-ideal-Commutative-Ring A
         ( ideal-radical-of-ideal-Commutative-Ring A I)
         ( ideal-radical-of-ideal-Commutative-Ring A J))
-  backward-inclusion-intersection-radical-of-ideal-Commutative-Ring x H =
-    apply-universal-property-trunc-Prop H
-      ( subset-intersection-ideal-Commutative-Ring A
-        ( ideal-radical-of-ideal-Commutative-Ring A I)
-        ( ideal-radical-of-ideal-Commutative-Ring A J)
-        ( x))
-      ( λ (n , H' , K') → (intro-∃ n H' , intro-∃ n K'))
+  backward-inclusion-intersection-radical-of-ideal-Commutative-Ring x H = {!!}
 
   preserves-intersection-radical-of-ideal-Commutative-Ring :
     ( intersection-ideal-Commutative-Ring A
@@ -217,16 +152,7 @@ module _
       ( ideal-radical-of-ideal-Commutative-Ring A J)) ＝
     ( ideal-radical-of-ideal-Commutative-Ring A
       ( intersection-ideal-Commutative-Ring A I J))
-  preserves-intersection-radical-of-ideal-Commutative-Ring =
-    eq-has-same-elements-ideal-Commutative-Ring A
-      ( intersection-ideal-Commutative-Ring A
-        ( ideal-radical-of-ideal-Commutative-Ring A I)
-        ( ideal-radical-of-ideal-Commutative-Ring A J))
-      ( ideal-radical-of-ideal-Commutative-Ring A
-        ( intersection-ideal-Commutative-Ring A I J))
-      ( λ x →
-        forward-inclusion-intersection-radical-of-ideal-Commutative-Ring x ,
-        backward-inclusion-intersection-radical-of-ideal-Commutative-Ring x)
+  preserves-intersection-radical-of-ideal-Commutative-Ring = {!!}
 ```
 
 ### The intersection of radical ideals is the radical of the ideal generated by their product
@@ -259,71 +185,34 @@ module _
   contains-product-intersection-radical-ideal-Commutative-Ring :
     contains-product-radical-ideal-Commutative-Ring A I J
       ( intersection-radical-ideal-Commutative-Ring A I J)
-  pr1 (contains-product-intersection-radical-ideal-Commutative-Ring x y p q) =
-    is-closed-under-right-multiplication-radical-ideal-Commutative-Ring
-      A I x y p
-  pr2 (contains-product-intersection-radical-ideal-Commutative-Ring x y p q) =
-    is-closed-under-left-multiplication-radical-ideal-Commutative-Ring
-      A J x y q
+  pr1 (contains-product-intersection-radical-ideal-Commutative-Ring x y p q) = {!!}
 
   forward-inclusion-intersection-radical-ideal-Commutative-Ring :
     leq-radical-ideal-Commutative-Ring A
       ( intersection-radical-ideal-Commutative-Ring A I J)
       ( product-radical-ideal-Commutative-Ring A I J)
-  forward-inclusion-intersection-radical-ideal-Commutative-Ring x (H , K) =
-    is-radical-radical-of-ideal-Commutative-Ring A
-      ( product-ideal-Commutative-Ring A
-        ( ideal-radical-ideal-Commutative-Ring A I)
-        ( ideal-radical-ideal-Commutative-Ring A J))
-      ( x)
-      ( 2)
-      ( contains-product-product-radical-ideal-Commutative-Ring A I J x x H K)
+  forward-inclusion-intersection-radical-ideal-Commutative-Ring x (H , K) = {!!}
 
   backward-inclusion-intersection-radical-ideal-Commutative-Ring :
     leq-radical-ideal-Commutative-Ring A
       ( product-radical-ideal-Commutative-Ring A I J)
       ( intersection-radical-ideal-Commutative-Ring A I J)
-  backward-inclusion-intersection-radical-ideal-Commutative-Ring =
-    is-radical-of-ideal-radical-of-ideal-Commutative-Ring A
-      ( product-ideal-Commutative-Ring A
-        ( ideal-radical-ideal-Commutative-Ring A I)
-        ( ideal-radical-ideal-Commutative-Ring A J))
-      ( intersection-radical-ideal-Commutative-Ring A I J)
-      ( is-product-product-ideal-Commutative-Ring A
-        ( ideal-radical-ideal-Commutative-Ring A I)
-        ( ideal-radical-ideal-Commutative-Ring A J)
-        ( ideal-intersection-radical-ideal-Commutative-Ring A I J)
-        ( contains-product-intersection-radical-ideal-Commutative-Ring))
+  backward-inclusion-intersection-radical-ideal-Commutative-Ring = {!!}
 
   has-same-elements-intersection-radical-ideal-Commutative-Ring :
     has-same-elements-radical-ideal-Commutative-Ring A
       ( intersection-radical-ideal-Commutative-Ring A I J)
       ( product-radical-ideal-Commutative-Ring A I J)
-  pr1 (has-same-elements-intersection-radical-ideal-Commutative-Ring x) =
-    forward-inclusion-intersection-radical-ideal-Commutative-Ring x
-  pr2 (has-same-elements-intersection-radical-ideal-Commutative-Ring x) =
-    backward-inclusion-intersection-radical-ideal-Commutative-Ring x
+  pr1 (has-same-elements-intersection-radical-ideal-Commutative-Ring x) = {!!}
 
   is-product-intersection-radical-ideal-Commutative-Ring :
     is-product-radical-ideal-Commutative-Ring A I J
       ( intersection-radical-ideal-Commutative-Ring A I J)
       ( contains-product-intersection-radical-ideal-Commutative-Ring)
-  is-product-intersection-radical-ideal-Commutative-Ring K H x p =
-    is-product-product-radical-ideal-Commutative-Ring A I J K H x
-      ( forward-inclusion-intersection-radical-ideal-Commutative-Ring x p)
+  is-product-intersection-radical-ideal-Commutative-Ring K H x p = {!!}
 
   is-intersection-product-radical-ideal-Commutative-Ring :
     is-intersection-radical-ideal-Commutative-Ring A I J
       ( product-radical-ideal-Commutative-Ring A I J)
-  pr1 (is-intersection-product-radical-ideal-Commutative-Ring K) (L , M) x p =
-    forward-inclusion-intersection-radical-ideal-Commutative-Ring x
-      ( L x p , M x p)
-  pr1 (pr2 (is-intersection-product-radical-ideal-Commutative-Ring K) H) x p =
-    pr1
-      ( backward-inclusion-intersection-radical-ideal-Commutative-Ring x
-        ( H x p))
-  pr2 (pr2 (is-intersection-product-radical-ideal-Commutative-Ring K) H) x p =
-    pr2
-      ( backward-inclusion-intersection-radical-ideal-Commutative-Ring x
-        ( H x p))
+  pr1 (is-intersection-product-radical-ideal-Commutative-Ring K) (L , M) x p = {!!}
 ```

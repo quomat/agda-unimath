@@ -61,7 +61,7 @@ module _
   obj-functor-core-Precategory :
     obj-Precategory (core-precategory-Precategory C) →
     obj-Precategory (core-precategory-Precategory D)
-  obj-functor-core-Precategory = obj-functor-Precategory C D F
+  obj-functor-core-Precategory = {!!}
 
   hom-functor-core-Precategory :
     {x y : obj-Precategory (core-precategory-Precategory C)} →
@@ -70,54 +70,40 @@ module _
       ( core-precategory-Precategory D)
       ( obj-functor-core-Precategory x)
       ( obj-functor-core-Precategory y)
-  hom-functor-core-Precategory = preserves-iso-functor-Precategory C D F
+  hom-functor-core-Precategory = {!!}
 
   map-functor-core-Precategory :
     map-Precategory
       ( core-precategory-Precategory C)
       ( core-precategory-Precategory D)
-  pr1 map-functor-core-Precategory = obj-functor-core-Precategory
-  pr2 map-functor-core-Precategory = hom-functor-core-Precategory
+  pr1 map-functor-core-Precategory = {!!}
 
   preserves-id-functor-core-Precategory :
     preserves-id-hom-map-Precategory
       ( core-precategory-Precategory C)
       ( core-precategory-Precategory D)
       ( map-functor-core-Precategory)
-  preserves-id-functor-core-Precategory x =
-    eq-type-subtype
-      ( is-iso-prop-Precategory D)
-      ( preserves-id-functor-Precategory C D F x)
+  preserves-id-functor-core-Precategory x = {!!}
 
   preserves-comp-functor-core-Precategory :
     preserves-comp-hom-map-Precategory
       ( core-precategory-Precategory C)
       ( core-precategory-Precategory D)
       ( map-functor-core-Precategory)
-  preserves-comp-functor-core-Precategory g f =
-    eq-type-subtype
-      ( is-iso-prop-Precategory D)
-      ( preserves-comp-functor-Precategory C D F
-        ( hom-iso-Precategory C g)
-        ( hom-iso-Precategory C f))
+  preserves-comp-functor-core-Precategory g f = {!!}
 
   is-functor-functor-core-Precategory :
     is-functor-map-Precategory
       ( core-precategory-Precategory C)
       ( core-precategory-Precategory D)
       map-functor-core-Precategory
-  pr1 is-functor-functor-core-Precategory =
-    preserves-comp-functor-core-Precategory
-  pr2 is-functor-functor-core-Precategory =
-    preserves-id-functor-core-Precategory
+  pr1 is-functor-functor-core-Precategory = {!!}
 
   functor-core-Precategory :
     functor-Precategory
       ( core-precategory-Precategory C)
       ( core-precategory-Precategory D)
-  pr1 functor-core-Precategory = obj-functor-core-Precategory
-  pr1 (pr2 functor-core-Precategory) = hom-functor-core-Precategory
-  pr2 (pr2 functor-core-Precategory) = is-functor-functor-core-Precategory
+  pr1 functor-core-Precategory = {!!}
 ```
 
 ## Properties
@@ -137,8 +123,7 @@ module _
       ( core-precategory-Precategory C)
       ( core-precategory-Precategory D)
       ( functor-core-Precategory C D F)
-  is-faithful-functor-core-is-faithful-functor-Precategory =
-    is-faithful-on-isos-is-faithful-functor-Precategory C D
+  is-faithful-functor-core-is-faithful-functor-Precategory = {!!}
 ```
 
 ### Pseudomonic functors restrict to fully faithful functors on the core
@@ -156,9 +141,7 @@ module _
       ( core-precategory-Precategory C)
       ( core-precategory-Precategory D)
       ( functor-core-Precategory C D F)
-  is-fully-faithful-functor-core-is-pseudomonic-functor-Precategory x y =
-    is-equiv-preserves-iso-is-pseudomonic-functor-Precategory
-      C D F is-pseudomonic-F
+  is-fully-faithful-functor-core-is-pseudomonic-functor-Precategory x y = {!!}
 ```
 
 ### Fully faithful functors restrict to fully faithful functors on the core
@@ -176,9 +159,7 @@ module _
       ( core-precategory-Precategory C)
       ( core-precategory-Precategory D)
       ( functor-core-Precategory C D F)
-  is-fully-faithful-functor-core-is-fully-faithful-functor-Precategory =
-    is-fully-faithful-functor-core-is-pseudomonic-functor-Precategory C D F
-      ( is-pseudomonic-is-fully-faithful-functor-Precategory C D F is-ff-F)
+  is-fully-faithful-functor-core-is-fully-faithful-functor-Precategory = {!!}
 ```
 
 ## External links

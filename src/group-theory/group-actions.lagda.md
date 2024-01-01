@@ -43,57 +43,43 @@ module _
   where
 
   action-Group : (l : Level) → UU (l1 ⊔ lsuc l)
-  action-Group l =
-    Σ (Set l) (λ X → hom-Group G (symmetric-Group X))
+  action-Group l = {!!}
 
 module _
   {l1 l2 : Level} (G : Group l1) (X : action-Group G l2)
   where
 
   set-action-Group : Set l2
-  set-action-Group = pr1 X
+  set-action-Group = {!!}
 
   type-action-Group : UU l2
-  type-action-Group = type-Set set-action-Group
+  type-action-Group = {!!}
 
   is-set-type-action-Group : is-set type-action-Group
-  is-set-type-action-Group = is-set-type-Set set-action-Group
+  is-set-type-action-Group = {!!}
 
   equiv-mul-action-Group : type-Group G → type-action-Group ≃ type-action-Group
-  equiv-mul-action-Group =
-    map-hom-Group G (symmetric-Group set-action-Group) (pr2 X)
+  equiv-mul-action-Group = {!!}
 
   mul-action-Group : type-Group G → type-action-Group → type-action-Group
-  mul-action-Group g = map-equiv (equiv-mul-action-Group g)
+  mul-action-Group g = {!!}
 
   mul-action-Group' : type-action-Group → type-Group G → type-action-Group
-  mul-action-Group' x g = mul-action-Group g x
+  mul-action-Group' x g = {!!}
 
   preserves-unit-mul-action-Group : mul-action-Group (unit-Group G) ~ id
-  preserves-unit-mul-action-Group =
-    htpy-eq
-      ( ap pr1
-        ( preserves-unit-hom-Group G
-          ( symmetric-Group set-action-Group)
-          ( pr2 X)))
+  preserves-unit-mul-action-Group = {!!}
 
   preserves-mul-action-Group :
     (g : type-Group G) (h : type-Group G) (x : type-action-Group) →
     mul-action-Group (mul-Group G g h) x ＝
     mul-action-Group g (mul-action-Group h x)
-  preserves-mul-action-Group g h =
-    htpy-eq
-      ( ap pr1
-        ( preserves-mul-hom-Group G (symmetric-Group set-action-Group) (pr2 X)))
+  preserves-mul-action-Group g h = {!!}
 
   transpose-eq-mul-action-Group :
     (g : type-Group G) (x y : type-action-Group) →
     mul-action-Group g x ＝ y → x ＝ mul-action-Group (inv-Group G g) y
-  transpose-eq-mul-action-Group g x ._ refl =
-    ( inv
-      ( ( ap (mul-action-Group' x) (left-inverse-law-mul-Group G g)) ∙
-        ( preserves-unit-mul-action-Group x))) ∙
-    ( preserves-mul-action-Group (inv-Group G g) g x)
+  transpose-eq-mul-action-Group g x ._ refl = {!!}
 ```
 
 ## Examples
@@ -109,8 +95,7 @@ module _
   where
 
   trivial-action-Group : action-Group G l2
-  pr1 trivial-action-Group = X
-  pr2 trivial-action-Group = trivial-hom-Group G (symmetric-Group X)
+  pr1 trivial-action-Group = {!!}
 ```
 
 ## External links

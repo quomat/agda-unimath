@@ -38,28 +38,25 @@ module _
   where
 
   is-left-Prop : X + Y → Prop lzero
-  is-left-Prop (inl x) = unit-Prop
-  is-left-Prop (inr x) = empty-Prop
+  is-left-Prop (inl x) = {!!}
 
   is-left : X + Y → UU lzero
-  is-left x = type-Prop (is-left-Prop x)
+  is-left x = {!!}
 
   is-prop-is-left : (x : X + Y) → is-prop (is-left x)
-  is-prop-is-left x = is-prop-type-Prop (is-left-Prop x)
+  is-prop-is-left x = {!!}
 
   is-right-Prop : X + Y → Prop lzero
-  is-right-Prop (inl x) = empty-Prop
-  is-right-Prop (inr x) = unit-Prop
+  is-right-Prop (inl x) = {!!}
 
   is-right : X + Y → UU lzero
-  is-right x = type-Prop (is-right-Prop x)
+  is-right x = {!!}
 
   is-prop-is-right : (x : X + Y) → is-prop (is-right x)
-  is-prop-is-right x = is-prop-type-Prop (is-right-Prop x)
+  is-prop-is-right x = {!!}
 
   is-left-or-is-right : (x : X + Y) → is-left x + is-right x
-  is-left-or-is-right (inl x) = inl star
-  is-left-or-is-right (inr x) = inr star
+  is-left-or-is-right (inl x) = {!!}
 ```
 
 ### The predicate that a subuniverse is closed under coproducts
@@ -71,14 +68,11 @@ using a single subuniverse
 is-closed-under-coproducts-subuniverses :
   {l1 l2 l3 l4 l5 : Level} (P : subuniverse l1 l2) (Q : subuniverse l3 l4) →
   subuniverse (l1 ⊔ l3) l5 → UU (lsuc l1 ⊔ l2 ⊔ lsuc l3 ⊔ l4 ⊔ l5)
-is-closed-under-coproducts-subuniverses {l1} {l2} {l3} P Q R =
-  {X : UU l1} {Y : UU l3} →
-  is-in-subuniverse P X → is-in-subuniverse Q Y → is-in-subuniverse R (X + Y)
+is-closed-under-coproducts-subuniverses {l1} {l2} {l3} P Q R = {!!}
 
 is-closed-under-coproducts-subuniverse :
   {l1 l2 : Level} (P : subuniverse l1 l2) → UU (lsuc l1 ⊔ l2)
-is-closed-under-coproducts-subuniverse P =
-  is-closed-under-coproducts-subuniverses P P P
+is-closed-under-coproducts-subuniverse P = {!!}
 ```
 
 ## Properties
@@ -91,10 +85,10 @@ module _
   where
 
   is-injective-inl : is-injective {B = A + B} inl
-  is-injective-inl refl = refl
+  is-injective-inl refl = {!!}
 
   is-injective-inr : is-injective {B = A + B} inr
-  is-injective-inr refl = refl
+  is-injective-inr refl = {!!}
 
   neq-inl-inr : {x : A} {y : B} → inl x ≠ inr y
   neq-inl-inr ()
@@ -111,28 +105,21 @@ module _
   where
 
   map-equiv-left-summand : Σ (X + Y) is-left → X
-  map-equiv-left-summand (pair (inl x) star) = x
-  map-equiv-left-summand (pair (inr x) ())
+  map-equiv-left-summand (pair (inl x) star) = {!!}
 
   map-inv-equiv-left-summand : X → Σ (X + Y) is-left
-  map-inv-equiv-left-summand x = pair (inl x) star
+  map-inv-equiv-left-summand x = {!!}
 
   is-section-map-inv-equiv-left-summand :
     (map-equiv-left-summand ∘ map-inv-equiv-left-summand) ~ id
-  is-section-map-inv-equiv-left-summand x = refl
+  is-section-map-inv-equiv-left-summand x = {!!}
 
   is-retraction-map-inv-equiv-left-summand :
     (map-inv-equiv-left-summand ∘ map-equiv-left-summand) ~ id
-  is-retraction-map-inv-equiv-left-summand (pair (inl x) star) = refl
-  is-retraction-map-inv-equiv-left-summand (pair (inr x) ())
+  is-retraction-map-inv-equiv-left-summand (pair (inl x) star) = {!!}
 
   equiv-left-summand : (Σ (X + Y) is-left) ≃ X
-  pr1 equiv-left-summand = map-equiv-left-summand
-  pr2 equiv-left-summand =
-    is-equiv-is-invertible
-      map-inv-equiv-left-summand
-      is-section-map-inv-equiv-left-summand
-      is-retraction-map-inv-equiv-left-summand
+  pr1 equiv-left-summand = {!!}
 ```
 
 ### The type of right elements is equivalent to the right summand
@@ -144,27 +131,22 @@ module _
 
   map-equiv-right-summand : Σ (X + Y) is-right → Y
   map-equiv-right-summand (pair (inl x) ())
-  map-equiv-right-summand (pair (inr x) star) = x
+  map-equiv-right-summand (pair (inr x) star) = {!!}
 
   map-inv-equiv-right-summand : Y → Σ (X + Y) is-right
-  map-inv-equiv-right-summand y = pair (inr y) star
+  map-inv-equiv-right-summand y = {!!}
 
   is-section-map-inv-equiv-right-summand :
     (map-equiv-right-summand ∘ map-inv-equiv-right-summand) ~ id
-  is-section-map-inv-equiv-right-summand y = refl
+  is-section-map-inv-equiv-right-summand y = {!!}
 
   is-retraction-map-inv-equiv-right-summand :
     (map-inv-equiv-right-summand ∘ map-equiv-right-summand) ~ id
   is-retraction-map-inv-equiv-right-summand (pair (inl x) ())
-  is-retraction-map-inv-equiv-right-summand (pair (inr x) star) = refl
+  is-retraction-map-inv-equiv-right-summand (pair (inr x) star) = {!!}
 
   equiv-right-summand : (Σ (X + Y) is-right) ≃ Y
-  pr1 equiv-right-summand = map-equiv-right-summand
-  pr2 equiv-right-summand =
-    is-equiv-is-invertible
-      map-inv-equiv-right-summand
-      is-section-map-inv-equiv-right-summand
-      is-retraction-map-inv-equiv-right-summand
+  pr1 equiv-right-summand = {!!}
 ```
 
 ### Coproducts of contractible types are not contractible
@@ -177,8 +159,7 @@ module _
   abstract
     is-not-contractible-coprod-is-contr :
       is-contr A → is-contr B → is-not-contractible (A + B)
-    is-not-contractible-coprod-is-contr HA HB HAB =
-      neq-inl-inr {x = center HA} {y = center HB} (eq-is-contr HAB)
+    is-not-contractible-coprod-is-contr HA HB HAB = {!!}
 ```
 
 ### Coproducts of mutually exclusive propositions are propositions
@@ -192,27 +173,15 @@ module _
     all-elements-equal-coprod :
       (P → ¬ Q) → all-elements-equal P → all-elements-equal Q →
       all-elements-equal (P + Q)
-    all-elements-equal-coprod f is-prop-P is-prop-Q (inl p) (inl p') =
-      ap inl (is-prop-P p p')
-    all-elements-equal-coprod f is-prop-P is-prop-Q (inl p) (inr q') =
-      ex-falso (f p q')
-    all-elements-equal-coprod f is-prop-P is-prop-Q (inr q) (inl p') =
-      ex-falso (f p' q)
-    all-elements-equal-coprod f is-prop-P is-prop-Q (inr q) (inr q') =
-      ap inr (is-prop-Q q q')
+    all-elements-equal-coprod f is-prop-P is-prop-Q (inl p) (inl p') = {!!}
 
   abstract
     is-prop-coprod : (P → ¬ Q) → is-prop P → is-prop Q → is-prop (P + Q)
-    is-prop-coprod f is-prop-P is-prop-Q =
-      is-prop-all-elements-equal
-        ( all-elements-equal-coprod f
-          ( eq-is-prop' is-prop-P)
-          ( eq-is-prop' is-prop-Q))
+    is-prop-coprod f is-prop-P is-prop-Q = {!!}
 
 coprod-Prop :
   {l1 l2 : Level} (P : Prop l1) (Q : Prop l2) →
   (type-Prop P → ¬ (type-Prop Q)) → Prop (l1 ⊔ l2)
-pr1 (coprod-Prop P Q H) = type-Prop P + type-Prop Q
-pr2 (coprod-Prop P Q H) =
-  is-prop-coprod H (is-prop-type-Prop P) (is-prop-type-Prop Q)
+pr1 (coprod-Prop P Q H) = {!!}
+pr2 (coprod-Prop P Q H) = {!!}
 ```

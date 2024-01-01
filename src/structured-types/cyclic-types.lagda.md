@@ -58,19 +58,10 @@ module _
   where
 
   is-cyclic-prop-Set-With-Automorphism : Prop l
-  is-cyclic-prop-Set-With-Automorphism =
-    prod-Prop
-      ( trunc-Prop (type-Set-With-Automorphism X))
-      ( Π-Prop
-        ( type-Set-With-Automorphism X)
-        ( λ x →
-          is-surjective-Prop
-            ( λ k →
-              map-iterate-automorphism-ℤ k (aut-Set-With-Automorphism X) x)))
+  is-cyclic-prop-Set-With-Automorphism = {!!}
 
   is-cyclic-Set-With-Automorphism : UU l
-  is-cyclic-Set-With-Automorphism =
-    type-Prop is-cyclic-prop-Set-With-Automorphism
+  is-cyclic-Set-With-Automorphism = {!!}
 ```
 
 ### Cyclic sets
@@ -78,31 +69,29 @@ module _
 ```agda
 Cyclic-Set :
   (l : Level) → UU (lsuc l)
-Cyclic-Set l =
-  Σ (Set-With-Automorphism l) (λ X → is-cyclic-Set-With-Automorphism X)
+Cyclic-Set l = {!!}
 
 module _
   {l : Level} (X : Cyclic-Set l)
   where
 
   set-with-automorphism-Cyclic-Set : Set-With-Automorphism l
-  set-with-automorphism-Cyclic-Set = pr1 X
+  set-with-automorphism-Cyclic-Set = {!!}
 
   set-Cyclic-Set : Set l
-  set-Cyclic-Set = set-Set-With-Automorphism set-with-automorphism-Cyclic-Set
+  set-Cyclic-Set = {!!}
 
   type-Cyclic-Set : UU l
-  type-Cyclic-Set = type-Set-With-Automorphism set-with-automorphism-Cyclic-Set
+  type-Cyclic-Set = {!!}
 
   is-set-type-Cyclic-Set : is-set type-Cyclic-Set
-  is-set-type-Cyclic-Set =
-    is-set-type-Set-With-Automorphism set-with-automorphism-Cyclic-Set
+  is-set-type-Cyclic-Set = {!!}
 
   aut-Cyclic-Set : Aut type-Cyclic-Set
-  aut-Cyclic-Set = aut-Set-With-Automorphism set-with-automorphism-Cyclic-Set
+  aut-Cyclic-Set = {!!}
 
   map-Cyclic-Set : type-Cyclic-Set → type-Cyclic-Set
-  map-Cyclic-Set = map-Set-With-Automorphism set-with-automorphism-Cyclic-Set
+  map-Cyclic-Set = {!!}
 ```
 
 ## See also

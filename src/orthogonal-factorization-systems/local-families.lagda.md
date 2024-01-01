@@ -29,7 +29,7 @@ A family `B : A → UU l` is said to be **local at** `f : Y → X`, or
 is-local-family :
   {l1 l2 l3 l4 : Level} {Y : UU l1} {X : UU l2}
   (f : Y → X) {A : UU l3} → (A → UU l4) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-is-local-family f {A} B = (x : A) → is-local f (B x)
+is-local-family f {A} B = {!!}
 ```
 
 ## Properties
@@ -44,14 +44,12 @@ module _
   is-property-is-local-family :
     {l3 l4 : Level} {A : UU l3}
     (B : A → UU l4) → is-prop (is-local-family f B)
-  is-property-is-local-family B =
-    is-prop-Π (λ x → is-property-is-equiv (precomp f (B x)))
+  is-property-is-local-family B = {!!}
 
   is-local-family-Prop :
     {l3 l4 : Level} {A : UU l3}
     (B : A → UU l4) → Prop (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  pr1 (is-local-family-Prop B) = is-local-family f B
-  pr2 (is-local-family-Prop B) = is-property-is-local-family B
+  pr1 (is-local-family-Prop B) = {!!}
 ```
 
 ### A family is `f`-local if and only if it is `f`-orthogonal

@@ -42,24 +42,19 @@ module _
   where
 
   inv-tr : x ＝ y → B y → B x
-  inv-tr p = tr B (inv p)
+  inv-tr p = {!!}
 
   is-retraction-inv-tr : (p : x ＝ y) → (inv-tr p ∘ tr B p) ~ id
-  is-retraction-inv-tr refl b = refl
+  is-retraction-inv-tr refl b = {!!}
 
   is-section-inv-tr : (p : x ＝ y) → (tr B p ∘ inv-tr p) ~ id
-  is-section-inv-tr refl b = refl
+  is-section-inv-tr refl b = {!!}
 
   is-equiv-tr : (p : x ＝ y) → is-equiv (tr B p)
-  is-equiv-tr p =
-    is-equiv-is-invertible
-      ( inv-tr p)
-      ( is-section-inv-tr p)
-      ( is-retraction-inv-tr p)
+  is-equiv-tr p = {!!}
 
   equiv-tr : x ＝ y → (B x) ≃ (B y)
-  pr1 (equiv-tr p) = tr B p
-  pr2 (equiv-tr p) = is-equiv-tr p
+  pr1 (equiv-tr p) = {!!}
 ```
 
 ### Transporting along `refl` is the identity equivalence
@@ -68,7 +63,7 @@ module _
 equiv-tr-refl :
   {l1 l2 : Level} {A : UU l1} (B : A → UU l2) {x : A} →
   equiv-tr B refl ＝ id-equiv {A = B x}
-equiv-tr-refl B = refl
+equiv-tr-refl B = {!!}
 ```
 
 ### Computing transport of loops
@@ -77,5 +72,5 @@ equiv-tr-refl B = refl
 tr-loop :
   {l1 : Level} {A : UU l1} {a0 a1 : A} (p : a0 ＝ a1) (l : a0 ＝ a0) →
   (tr (λ y → y ＝ y) p l) ＝ ((inv p ∙ l) ∙ p)
-tr-loop refl l = inv right-unit
+tr-loop refl l = {!!}
 ```

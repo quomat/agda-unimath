@@ -33,16 +33,13 @@ module _
   where
 
   is-binary-lower-bound-Poset-Prop : Prop l2
-  is-binary-lower-bound-Poset-Prop =
-    prod-Prop (leq-Poset-Prop P x a) (leq-Poset-Prop P x b)
+  is-binary-lower-bound-Poset-Prop = {!!}
 
   is-binary-lower-bound-Poset : UU l2
-  is-binary-lower-bound-Poset =
-    type-Prop is-binary-lower-bound-Poset-Prop
+  is-binary-lower-bound-Poset = {!!}
 
   is-prop-is-binary-lower-bound-Poset : is-prop is-binary-lower-bound-Poset
-  is-prop-is-binary-lower-bound-Poset =
-    is-prop-type-Prop is-binary-lower-bound-Poset-Prop
+  is-prop-is-binary-lower-bound-Poset = {!!}
 
 module _
   {l1 l2 : Level} (P : Poset l1 l2) {a b x : type-Poset P}
@@ -50,10 +47,10 @@ module _
   where
 
   leq-left-is-binary-lower-bound-Poset : leq-Poset P x a
-  leq-left-is-binary-lower-bound-Poset = pr1 H
+  leq-left-is-binary-lower-bound-Poset = {!!}
 
   leq-right-is-binary-lower-bound-Poset : leq-Poset P x b
-  leq-right-is-binary-lower-bound-Poset = pr2 H
+  leq-right-is-binary-lower-bound-Poset = {!!}
 ```
 
 ### Lower bounds of families of elements
@@ -64,17 +61,14 @@ module _
   where
 
   is-lower-bound-family-of-elements-Poset-Prop : type-Poset P → Prop (l2 ⊔ l3)
-  is-lower-bound-family-of-elements-Poset-Prop z =
-    Π-Prop I (λ i → leq-Poset-Prop P z (x i))
+  is-lower-bound-family-of-elements-Poset-Prop z = {!!}
 
   is-lower-bound-family-of-elements-Poset : type-Poset P → UU (l2 ⊔ l3)
-  is-lower-bound-family-of-elements-Poset z =
-    type-Prop (is-lower-bound-family-of-elements-Poset-Prop z)
+  is-lower-bound-family-of-elements-Poset z = {!!}
 
   is-prop-is-lower-bound-family-of-elements-Poset :
     (z : type-Poset P) → is-prop (is-lower-bound-family-of-elements-Poset z)
-  is-prop-is-lower-bound-family-of-elements-Poset z =
-    is-prop-type-Prop (is-lower-bound-family-of-elements-Poset-Prop z)
+  is-prop-is-lower-bound-family-of-elements-Poset z = {!!}
 ```
 
 ## Properties
@@ -90,14 +84,7 @@ module _
   is-binary-lower-bound-leq-Poset :
     {y : type-Poset P} →
     leq-Poset P y x → is-binary-lower-bound-Poset P a b y
-  pr1 (is-binary-lower-bound-leq-Poset K) =
-    transitive-leq-Poset P _ x a
-      ( leq-left-is-binary-lower-bound-Poset P H)
-      ( K)
-  pr2 (is-binary-lower-bound-leq-Poset K) =
-    transitive-leq-Poset P _ x b
-      ( leq-right-is-binary-lower-bound-Poset P H)
-      ( K)
+  pr1 (is-binary-lower-bound-leq-Poset K) = {!!}
 ```
 
 ### Any element less than a lower bound of a family of elements `a` is a lower bound of `a`
@@ -111,6 +98,5 @@ module _
   is-lower-bound-family-of-elements-leq-Poset :
     {y : type-Poset P} → leq-Poset P y x →
     is-lower-bound-family-of-elements-Poset P a y
-  is-lower-bound-family-of-elements-leq-Poset K i =
-    transitive-leq-Poset P _ x (a i) (H i) K
+  is-lower-bound-family-of-elements-leq-Poset K i = {!!}
 ```

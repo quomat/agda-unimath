@@ -41,9 +41,7 @@ module _
 
   cone-fiberwise-prod :
     cone (pr1 {B = P}) (pr1 {B = Q}) (Σ X (λ x → (P x) × (Q x)))
-  pr1 cone-fiberwise-prod = tot (λ _ → pr1)
-  pr1 (pr2 cone-fiberwise-prod) = tot (λ _ → pr2)
-  pr2 (pr2 cone-fiberwise-prod) = refl-htpy
+  pr1 cone-fiberwise-prod = {!!}
 ```
 
 We will show that the fiberwise product is a pullback by showing that the gap
@@ -53,32 +51,26 @@ map.
 ```agda
   gap-fiberwise-prod :
     Σ X (λ x → (P x) × (Q x)) → standard-pullback (pr1 {B = P}) (pr1 {B = Q})
-  gap-fiberwise-prod = gap pr1 pr1 cone-fiberwise-prod
+  gap-fiberwise-prod = {!!}
 
   inv-gap-fiberwise-prod :
     standard-pullback (pr1 {B = P}) (pr1 {B = Q}) → Σ X (λ x → (P x) × (Q x))
-  pr1 (inv-gap-fiberwise-prod ((x , p) , ((.x , q) , refl))) = x
-  pr1 (pr2 (inv-gap-fiberwise-prod ((x , p) , ((.x , q) , refl)))) = p
-  pr2 (pr2 (inv-gap-fiberwise-prod ((x , p) , ((.x , q) , refl)))) = q
+  pr1 (inv-gap-fiberwise-prod ((x , p) , ((.x , q) , refl))) = {!!}
 
   abstract
     is-section-inv-gap-fiberwise-prod :
       (gap-fiberwise-prod ∘ inv-gap-fiberwise-prod) ~ id
-    is-section-inv-gap-fiberwise-prod ((x , p) , (.x , q) , refl) = refl
+    is-section-inv-gap-fiberwise-prod ((x , p) , (.x , q) , refl) = {!!}
 
   abstract
     is-retraction-inv-gap-fiberwise-prod :
       (inv-gap-fiberwise-prod ∘ gap-fiberwise-prod) ~ id
-    is-retraction-inv-gap-fiberwise-prod (x , p , q) = refl
+    is-retraction-inv-gap-fiberwise-prod (x , p , q) = {!!}
 
   abstract
     is-pullback-fiberwise-prod :
       is-pullback (pr1 {B = P}) (pr1 {B = Q}) cone-fiberwise-prod
-    is-pullback-fiberwise-prod =
-      is-equiv-is-invertible
-        inv-gap-fiberwise-prod
-        is-section-inv-gap-fiberwise-prod
-        is-retraction-inv-gap-fiberwise-prod
+    is-pullback-fiberwise-prod = {!!}
 
   abstract
     universal-property-pullback-fiberwise-prod :
@@ -86,10 +78,7 @@ map.
         ( pr1 {B = P})
         ( pr1 {B = Q})
         ( cone-fiberwise-prod)
-    universal-property-pullback-fiberwise-prod =
-      universal-property-pullback-is-pullback pr1 pr1
-        cone-fiberwise-prod
-        is-pullback-fiberwise-prod
+    universal-property-pullback-fiberwise-prod = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {X : UU l3}
@@ -97,43 +86,30 @@ module _
   where
 
   cone-total-prod-fibers : cone f g (Σ X (λ x → (fiber f x) × (fiber g x)))
-  pr1 cone-total-prod-fibers (x , (a , p) , (b , q)) = a
-  pr1 (pr2 cone-total-prod-fibers) (x , (a , p) , (b , q)) = b
-  pr2 (pr2 cone-total-prod-fibers) (x , (a , p) , (b , q)) = p ∙ inv q
+  pr1 cone-total-prod-fibers (x , (a , p) , (b , q)) = {!!}
 
   gap-total-prod-fibers :
     Σ X (λ x → (fiber f x) × (fiber g x)) → standard-pullback f g
-  gap-total-prod-fibers = gap f g cone-total-prod-fibers
+  gap-total-prod-fibers = {!!}
 
   inv-gap-total-prod-fibers :
     standard-pullback f g → Σ X (λ x → (fiber f x) × (fiber g x))
-  pr1 (inv-gap-total-prod-fibers (a , b , p)) = g b
-  pr1 (pr1 (pr2 (inv-gap-total-prod-fibers (a , b , p)))) = a
-  pr2 (pr1 (pr2 (inv-gap-total-prod-fibers (a , b , p)))) = p
-  pr1 (pr2 (pr2 (inv-gap-total-prod-fibers (a , b , p)))) = b
-  pr2 (pr2 (pr2 (inv-gap-total-prod-fibers (a , b , p)))) = refl
+  pr1 (inv-gap-total-prod-fibers (a , b , p)) = {!!}
 
   abstract
     is-section-inv-gap-total-prod-fibers :
       (gap-total-prod-fibers ∘ inv-gap-total-prod-fibers) ~ id
-    is-section-inv-gap-total-prod-fibers (a , b , p) =
-      map-extensionality-standard-pullback f g refl refl
-        ( inv right-unit ∙ inv right-unit)
+    is-section-inv-gap-total-prod-fibers (a , b , p) = {!!}
 
   abstract
     is-retraction-inv-gap-total-prod-fibers :
       (inv-gap-total-prod-fibers ∘ gap-total-prod-fibers) ~ id
-    is-retraction-inv-gap-total-prod-fibers (.(g b) , (a , p) , (b , refl)) =
-      eq-pair-eq-pr2 (eq-pair (eq-pair-eq-pr2 right-unit) refl)
+    is-retraction-inv-gap-total-prod-fibers (.(g b) , (a , p) , (b , refl)) = {!!}
 
   abstract
     is-pullback-total-prod-fibers :
       is-pullback f g cone-total-prod-fibers
-    is-pullback-total-prod-fibers =
-      is-equiv-is-invertible
-        inv-gap-total-prod-fibers
-        is-section-inv-gap-total-prod-fibers
-        is-retraction-inv-gap-total-prod-fibers
+    is-pullback-total-prod-fibers = {!!}
 ```
 
 ## Table of files about pullbacks

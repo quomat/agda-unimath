@@ -46,8 +46,7 @@ module _
   iterative-addition-by-element-Commutative-Ring :
     type-Commutative-Ring A →
     ℤ → type-Commutative-Ring A → type-Commutative-Ring A
-  iterative-addition-by-element-Commutative-Ring =
-    iterative-addition-by-element-Ring (ring-Commutative-Ring A)
+  iterative-addition-by-element-Commutative-Ring = {!!}
 ```
 
 ### Integer multiples of elements of commutative rings
@@ -59,8 +58,7 @@ module _
 
   integer-multiple-Commutative-Ring :
     ℤ → type-Commutative-Ring A → type-Commutative-Ring A
-  integer-multiple-Commutative-Ring =
-    integer-multiple-Ring (ring-Commutative-Ring A)
+  integer-multiple-Commutative-Ring = {!!}
 ```
 
 ## Properties
@@ -79,8 +77,7 @@ module _
     add-Commutative-Ring A
       ( iterative-addition-by-element-Commutative-Ring A a k h1)
       ( h2)
-  associative-iterative-addition-by-element-Commutative-Ring =
-    associative-iterative-addition-by-element-Ring (ring-Commutative-Ring A) a
+  associative-iterative-addition-by-element-Commutative-Ring = {!!}
 ```
 
 ### `integer-multiple-Commutative-Ring A (int-ℕ n) a ＝ multiple-Commutative-Ring A n a`
@@ -94,22 +91,19 @@ module _
     (n : ℕ) (a : type-Commutative-Ring A) →
     integer-multiple-Commutative-Ring A (int-ℕ n) a ＝
     multiple-Commutative-Ring A n a
-  integer-multiple-int-Commutative-Ring =
-    integer-multiple-int-Ring (ring-Commutative-Ring A)
+  integer-multiple-int-Commutative-Ring = {!!}
 
   integer-multiple-in-pos-Commutative-Ring :
     (n : ℕ) (a : type-Commutative-Ring A) →
     integer-multiple-Commutative-Ring A (in-pos n) a ＝
     multiple-Commutative-Ring A (succ-ℕ n) a
-  integer-multiple-in-pos-Commutative-Ring =
-    integer-multiple-in-pos-Ring (ring-Commutative-Ring A)
+  integer-multiple-in-pos-Commutative-Ring = {!!}
 
   integer-multiple-in-neg-Commutative-Ring :
     (n : ℕ) (a : type-Commutative-Ring A) →
     integer-multiple-Commutative-Ring A (in-neg n) a ＝
     neg-Commutative-Ring A (multiple-Commutative-Ring A (succ-ℕ n) a)
-  integer-multiple-in-neg-Commutative-Ring =
-    integer-multiple-in-neg-Ring (ring-Commutative-Ring A)
+  integer-multiple-in-neg-Commutative-Ring = {!!}
 ```
 
 ### The integer multiple `0x` is `0`
@@ -121,8 +115,7 @@ module _
 
   integer-multiple-zero-Commutative-Ring :
     integer-multiple-Commutative-Ring A zero-ℤ a ＝ zero-Commutative-Ring A
-  integer-multiple-zero-Commutative-Ring =
-    integer-multiple-zero-Ring (ring-Commutative-Ring A) a
+  integer-multiple-zero-Commutative-Ring = {!!}
 ```
 
 ### `1x ＝ x`
@@ -134,8 +127,7 @@ module _
 
   integer-multiple-one-Commutative-Ring :
     integer-multiple-Commutative-Ring A one-ℤ a ＝ a
-  integer-multiple-one-Commutative-Ring =
-    integer-multiple-one-Ring (ring-Commutative-Ring A) a
+  integer-multiple-one-Commutative-Ring = {!!}
 ```
 
 ### The integer multiple `(-1)x` is the negative of `x`
@@ -147,8 +139,7 @@ module _
 
   integer-multiple-neg-one-Commutative-Ring :
     integer-multiple-Commutative-Ring A neg-one-ℤ a ＝ neg-Commutative-Ring A a
-  integer-multiple-neg-one-Commutative-Ring =
-    integer-multiple-neg-one-Ring (ring-Commutative-Ring A) a
+  integer-multiple-neg-one-Commutative-Ring = {!!}
 ```
 
 ### The integer multiple `(x + y)a` computes to `xa + ya`
@@ -164,8 +155,7 @@ module _
     add-Commutative-Ring A
       ( integer-multiple-Commutative-Ring A x a)
       ( integer-multiple-Commutative-Ring A y a)
-  distributive-integer-multiple-add-Commutative-Ring =
-    distributive-integer-multiple-add-Ring (ring-Commutative-Ring A) a
+  distributive-integer-multiple-add-Commutative-Ring = {!!}
 ```
 
 ### The integer multiple `(-k)x` is the negative of the integer multiple `kx`
@@ -179,11 +169,10 @@ module _
     (k : ℤ) (x : type-Commutative-Ring A) →
     integer-multiple-Commutative-Ring A (neg-ℤ k) x ＝
     neg-Commutative-Ring A (integer-multiple-Commutative-Ring A k x)
-  integer-multiple-neg-Commutative-Ring =
-    integer-multiple-neg-Ring (ring-Commutative-Ring A)
+  integer-multiple-neg-Commutative-Ring = {!!}
 ```
 
-### `(k + 1)x = kx + x` and `(k+1)x = x + kx`
+### `(k + 1)x = {!!}
 
 ```agda
 module _
@@ -194,18 +183,16 @@ module _
     (k : ℤ) (x : type-Commutative-Ring A) →
     integer-multiple-Commutative-Ring A (succ-ℤ k) x ＝
     add-Commutative-Ring A (integer-multiple-Commutative-Ring A k x) x
-  integer-multiple-succ-Commutative-Ring =
-    integer-multiple-succ-Ring (ring-Commutative-Ring A)
+  integer-multiple-succ-Commutative-Ring = {!!}
 
   integer-multiple-succ-Commutative-Ring' :
     (k : ℤ) (x : type-Commutative-Ring A) →
     integer-multiple-Commutative-Ring A (succ-ℤ k) x ＝
     add-Commutative-Ring A x (integer-multiple-Commutative-Ring A k x)
-  integer-multiple-succ-Commutative-Ring' =
-    integer-multiple-succ-Ring' (ring-Commutative-Ring A)
+  integer-multiple-succ-Commutative-Ring' = {!!}
 ```
 
-### `(k - 1)x = kx - x` and `(k - 1)x = -x + kx`
+### `(k - 1)x = {!!}
 
 ```agda
 module _
@@ -218,8 +205,7 @@ module _
     right-subtraction-Commutative-Ring A
       ( integer-multiple-Commutative-Ring A k x)
       ( x)
-  integer-multiple-pred-Commutative-Ring =
-    integer-multiple-pred-Ring (ring-Commutative-Ring A)
+  integer-multiple-pred-Commutative-Ring = {!!}
 
   integer-multiple-pred-Commutative-Ring' :
     (k : ℤ) (x : type-Commutative-Ring A) →
@@ -227,8 +213,7 @@ module _
     left-subtraction-Commutative-Ring A
       ( x)
       ( integer-multiple-Commutative-Ring A k x)
-  integer-multiple-pred-Commutative-Ring' =
-    integer-multiple-pred-Ring' (ring-Commutative-Ring A)
+  integer-multiple-pred-Commutative-Ring' = {!!}
 ```
 
 ### `k0 ＝ 0`
@@ -242,8 +227,7 @@ module _
     (k : ℤ) →
     integer-multiple-Commutative-Ring A k (zero-Commutative-Ring A) ＝
     zero-Commutative-Ring A
-  right-zero-law-integer-multiple-Commutative-Ring =
-    right-zero-law-integer-multiple-Ring (ring-Commutative-Ring A)
+  right-zero-law-integer-multiple-Commutative-Ring = {!!}
 ```
 
 ### Integer multiples distribute over the sum of `x` and `y`
@@ -259,8 +243,7 @@ module _
     add-Commutative-Ring A
       ( integer-multiple-Commutative-Ring A k x)
       ( integer-multiple-Commutative-Ring A k y)
-  left-distributive-integer-multiple-add-Commutative-Ring =
-    left-distributive-integer-multiple-add-Ring (ring-Commutative-Ring A)
+  left-distributive-integer-multiple-add-Commutative-Ring = {!!}
 ```
 
 ### Left and right integer multiple laws for ring multiplication
@@ -274,15 +257,13 @@ module _
     (k : ℤ) (x y : type-Commutative-Ring A) →
     mul-Commutative-Ring A (integer-multiple-Commutative-Ring A k x) y ＝
     integer-multiple-Commutative-Ring A k (mul-Commutative-Ring A x y)
-  left-integer-multiple-law-mul-Commutative-Ring =
-    left-integer-multiple-law-mul-Ring (ring-Commutative-Ring A)
+  left-integer-multiple-law-mul-Commutative-Ring = {!!}
 
   right-integer-multiple-law-mul-Commutative-Ring :
     (k : ℤ) (x y : type-Commutative-Ring A) →
     mul-Commutative-Ring A x (integer-multiple-Commutative-Ring A k y) ＝
     integer-multiple-Commutative-Ring A k (mul-Commutative-Ring A x y)
-  right-integer-multiple-law-mul-Commutative-Ring =
-    right-integer-multiple-law-mul-Ring (ring-Commutative-Ring A)
+  right-integer-multiple-law-mul-Commutative-Ring = {!!}
 ```
 
 ### For each integer `k`, the operation of taking `k`-multiples is a group homomorphism
@@ -294,8 +275,7 @@ module _
 
   hom-ab-integer-multiple-Commutative-Ring :
     hom-Ab (ab-Commutative-Ring A) (ab-Commutative-Ring A)
-  hom-ab-integer-multiple-Commutative-Ring =
-    hom-ab-integer-multiple-Ring (ring-Commutative-Ring A) k
+  hom-ab-integer-multiple-Commutative-Ring = {!!}
 ```
 
 ### Multiples by products of integers are iterated integer multiples
@@ -310,8 +290,7 @@ module _
     integer-multiple-Commutative-Ring A (k *ℤ l) x ＝
     integer-multiple-Commutative-Ring A k
       ( integer-multiple-Commutative-Ring A l x)
-  integer-multiple-mul-Commutative-Ring =
-    integer-multiple-mul-Ring (ring-Commutative-Ring A)
+  integer-multiple-mul-Commutative-Ring = {!!}
 ```
 
 ### Commutative ring homomorphisms preserve integer multiples
@@ -326,11 +305,7 @@ module _
     (k : ℤ) (x : type-Commutative-Ring A) →
     map-hom-Commutative-Ring A B f (integer-multiple-Commutative-Ring A k x) ＝
     integer-multiple-Commutative-Ring B k (map-hom-Commutative-Ring A B f x)
-  preserves-integer-multiples-hom-Commutative-Ring =
-    preserves-integer-multiples-hom-Ring
-      ( ring-Commutative-Ring A)
-      ( ring-Commutative-Ring B)
-      ( f)
+  preserves-integer-multiples-hom-Commutative-Ring = {!!}
 
 module _
   {l1 l2 : Level} (A : Commutative-Ring l1) (B : Commutative-Ring l2)
@@ -342,10 +317,5 @@ module _
     ( map-hom-Commutative-Ring A B f x ＝ map-hom-Commutative-Ring A B g x) →
     map-hom-Commutative-Ring A B f (integer-multiple-Commutative-Ring A k x) ＝
     map-hom-Commutative-Ring A B g (integer-multiple-Commutative-Ring A k x)
-  eq-integer-multiple-hom-Commutative-Ring g =
-    eq-integer-multiple-hom-Ring
-      ( ring-Commutative-Ring A)
-      ( ring-Commutative-Ring B)
-      ( f)
-      ( g)
+  eq-integer-multiple-hom-Commutative-Ring g = {!!}
 ```

@@ -50,20 +50,15 @@ module _
   where
 
   is-closed-under-equiv-subuniverses : UU (α l1 ⊔ α l2 ⊔ lsuc l1 ⊔ lsuc l2)
-  is-closed-under-equiv-subuniverses =
-    (X : UU l1) (Y : UU l2) → X ≃ Y → type-Prop (P l1 X) → type-Prop (P l2 Y)
+  is-closed-under-equiv-subuniverses = {!!}
 
   is-prop-is-closed-under-equiv-subuniverses :
     is-prop is-closed-under-equiv-subuniverses
-  is-prop-is-closed-under-equiv-subuniverses =
-    is-prop-iterated-Π 4 (λ X Y e x → is-prop-type-Prop (P l2 Y))
+  is-prop-is-closed-under-equiv-subuniverses = {!!}
 
   is-closed-under-equiv-subuniverses-Prop :
     Prop (α l1 ⊔ α l2 ⊔ lsuc l1 ⊔ lsuc l2)
-  pr1 is-closed-under-equiv-subuniverses-Prop =
-    is-closed-under-equiv-subuniverses
-  pr2 is-closed-under-equiv-subuniverses-Prop =
-    is-prop-is-closed-under-equiv-subuniverses
+  pr1 is-closed-under-equiv-subuniverses-Prop = {!!}
 ```
 
 ### The global type of global subuniverses
@@ -85,17 +80,14 @@ module _
   where
 
   is-in-global-subuniverse : {l : Level} → UU l → UU (α l)
-  is-in-global-subuniverse {l} X =
-    is-in-subuniverse (subuniverse-global-subuniverse P l) X
+  is-in-global-subuniverse {l} X = {!!}
 
   type-global-subuniverse : (l : Level) → UU (α l ⊔ lsuc l)
-  type-global-subuniverse l =
-    type-subuniverse (subuniverse-global-subuniverse P l)
+  type-global-subuniverse l = {!!}
 
   inclusion-global-subuniverse :
     {l : Level} → type-global-subuniverse l → UU l
-  inclusion-global-subuniverse {l} =
-    inclusion-subuniverse (subuniverse-global-subuniverse P l)
+  inclusion-global-subuniverse {l} = {!!}
 ```
 
 ### Maps in a subuniverse
@@ -110,9 +102,7 @@ module _
   where
 
   is-in-map-global-subuniverse : (A → B) → UU (α (l1 ⊔ l2) ⊔ l2)
-  is-in-map-global-subuniverse f =
-    (y : B) →
-    is-in-subuniverse (subuniverse-global-subuniverse P (l1 ⊔ l2)) (fiber f y)
+  is-in-map-global-subuniverse f = {!!}
 ```
 
 ### The predicate of essentially being in a subuniverse
@@ -127,18 +117,14 @@ module _
   where
 
   is-essentially-in-global-subuniverse : UU (α l2 ⊔ l1 ⊔ lsuc l2)
-  is-essentially-in-global-subuniverse =
-    is-essentially-in-subuniverse (subuniverse-global-subuniverse P l2) X
+  is-essentially-in-global-subuniverse = {!!}
 
   is-prop-is-essentially-in-global-subuniverse :
     is-prop is-essentially-in-global-subuniverse
-  is-prop-is-essentially-in-global-subuniverse =
-    is-prop-is-essentially-in-subuniverse
-      ( subuniverse-global-subuniverse P l2) X
+  is-prop-is-essentially-in-global-subuniverse = {!!}
 
   is-essentially-in-global-subuniverse-Prop : Prop (α l2 ⊔ l1 ⊔ lsuc l2)
-  is-essentially-in-global-subuniverse-Prop =
-    is-essentially-in-subuniverse-Prop (subuniverse-global-subuniverse P l2) X
+  is-essentially-in-global-subuniverse-Prop = {!!}
 ```
 
 ## Properties
@@ -155,13 +141,11 @@ module _
 
   is-in-global-subuniverse-homogenous-equiv :
     X ≃ Y → is-in-global-subuniverse P X → is-in-global-subuniverse P Y
-  is-in-global-subuniverse-homogenous-equiv =
-    is-in-subuniverse-equiv (subuniverse-global-subuniverse P l)
+  is-in-global-subuniverse-homogenous-equiv = {!!}
 
   is-in-global-subuniverse-homogenous-equiv' :
     X ≃ Y → is-in-global-subuniverse P Y → is-in-global-subuniverse P X
-  is-in-global-subuniverse-homogenous-equiv' =
-    is-in-subuniverse-equiv' (subuniverse-global-subuniverse P l)
+  is-in-global-subuniverse-homogenous-equiv' = {!!}
 ```
 
 ### Characterization of the identity type of global subuniverses at a universe level
@@ -172,39 +156,33 @@ module _
   where
 
   equiv-global-subuniverse-Level : (X Y : type-global-subuniverse P l) → UU l
-  equiv-global-subuniverse-Level =
-    equiv-subuniverse (subuniverse-global-subuniverse P l)
+  equiv-global-subuniverse-Level = {!!}
 
   equiv-eq-global-subuniverse-Level :
     (X Y : type-global-subuniverse P l) →
     X ＝ Y → equiv-global-subuniverse-Level X Y
-  equiv-eq-global-subuniverse-Level =
-    equiv-eq-subuniverse (subuniverse-global-subuniverse P l)
+  equiv-eq-global-subuniverse-Level = {!!}
 
   abstract
     is-equiv-equiv-eq-global-subuniverse-Level :
       (X Y : type-global-subuniverse P l) →
       is-equiv (equiv-eq-global-subuniverse-Level X Y)
-    is-equiv-equiv-eq-global-subuniverse-Level =
-      is-equiv-equiv-eq-subuniverse (subuniverse-global-subuniverse P l)
+    is-equiv-equiv-eq-global-subuniverse-Level = {!!}
 
   extensionality-global-subuniverse-Level :
     (X Y : type-global-subuniverse P l) →
     (X ＝ Y) ≃ equiv-global-subuniverse-Level X Y
-  extensionality-global-subuniverse-Level =
-    extensionality-subuniverse (subuniverse-global-subuniverse P l)
+  extensionality-global-subuniverse-Level = {!!}
 
   eq-equiv-global-subuniverse-Level :
     {X Y : type-global-subuniverse P l} →
     equiv-global-subuniverse-Level X Y → X ＝ Y
-  eq-equiv-global-subuniverse-Level =
-    eq-equiv-subuniverse (subuniverse-global-subuniverse P l)
+  eq-equiv-global-subuniverse-Level = {!!}
 
   compute-eq-equiv-id-equiv-global-subuniverse-Level :
     {X : type-global-subuniverse P l} →
     eq-equiv-global-subuniverse-Level {X} {X} (id-equiv {A = pr1 X}) ＝ refl
-  compute-eq-equiv-id-equiv-global-subuniverse-Level =
-    compute-eq-equiv-id-equiv-subuniverse (subuniverse-global-subuniverse P l)
+  compute-eq-equiv-id-equiv-global-subuniverse-Level = {!!}
 ```
 
 ### Equivalences of families of types in a global subuniverse
@@ -213,7 +191,7 @@ module _
 fam-global-subuniverse :
   {α : Level → Level} (P : global-subuniverse α)
   {l1 : Level} (l2 : Level) (X : UU l1) → UU (α l2 ⊔ l1 ⊔ lsuc l2)
-fam-global-subuniverse P l2 X = X → type-global-subuniverse P l2
+fam-global-subuniverse P l2 X = {!!}
 
 module _
   {α : Level → Level} (P : global-subuniverse α)
@@ -222,27 +200,22 @@ module _
   where
 
   equiv-fam-global-subuniverse : UU (l1 ⊔ l2)
-  equiv-fam-global-subuniverse =
-    equiv-fam-subuniverse (subuniverse-global-subuniverse P l2) Y Z
+  equiv-fam-global-subuniverse = {!!}
 
   equiv-eq-fam-global-subuniverse :
     Y ＝ Z → equiv-fam-global-subuniverse
-  equiv-eq-fam-global-subuniverse =
-    equiv-eq-fam-subuniverse (subuniverse-global-subuniverse P l2) Y Z
+  equiv-eq-fam-global-subuniverse = {!!}
 
   is-equiv-equiv-eq-fam-global-subuniverse :
     is-equiv equiv-eq-fam-global-subuniverse
-  is-equiv-equiv-eq-fam-global-subuniverse =
-    is-equiv-equiv-eq-fam-subuniverse (subuniverse-global-subuniverse P l2) Y Z
+  is-equiv-equiv-eq-fam-global-subuniverse = {!!}
 
   extensionality-fam-global-subuniverse :
     (Y ＝ Z) ≃ equiv-fam-global-subuniverse
-  extensionality-fam-global-subuniverse =
-    extensionality-fam-subuniverse (subuniverse-global-subuniverse P l2) Y Z
+  extensionality-fam-global-subuniverse = {!!}
 
   eq-equiv-fam-global-subuniverse : equiv-fam-global-subuniverse → Y ＝ Z
-  eq-equiv-fam-global-subuniverse =
-    map-inv-is-equiv is-equiv-equiv-eq-fam-global-subuniverse
+  eq-equiv-fam-global-subuniverse = {!!}
 ```
 
 ## See also

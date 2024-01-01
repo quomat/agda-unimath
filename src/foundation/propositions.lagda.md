@@ -30,11 +30,11 @@ open import foundation-core.truncation-levels
 abstract
   is-trunc-is-prop :
     {l : Level} (k : 𝕋) {A : UU l} → is-prop A → is-trunc (succ-𝕋 k) A
-  is-trunc-is-prop k is-prop-A x y = is-trunc-is-contr k (is-prop-A x y)
+  is-trunc-is-prop k is-prop-A x y = {!!}
 
 truncated-type-Prop : {l : Level} (k : 𝕋) → Prop l → Truncated-Type l (succ-𝕋 k)
-pr1 (truncated-type-Prop k P) = type-Prop P
-pr2 (truncated-type-Prop k P) = is-trunc-is-prop k (is-prop-type-Prop P)
+pr1 (truncated-type-Prop k P) = {!!}
+pr2 (truncated-type-Prop k P) = {!!}
 ```
 
 ### Propositions are closed under retracts
@@ -45,7 +45,7 @@ module _
   where
 
   is-prop-retract-of : A retract-of B → is-prop B → is-prop A
-  is-prop-retract-of = is-trunc-retract-of
+  is-prop-retract-of = {!!}
 ```
 
 ### If a type embeds into a proposition, then it is a proposition
@@ -55,12 +55,12 @@ abstract
   is-prop-is-emb :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
     is-emb f → is-prop B → is-prop A
-  is-prop-is-emb = is-trunc-is-emb neg-two-𝕋
+  is-prop-is-emb = {!!}
 
 abstract
   is-prop-emb :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A ↪ B) → is-prop B → is-prop A
-  is-prop-emb = is-trunc-emb neg-two-𝕋
+  is-prop-emb = {!!}
 ```
 
 ### Two equivalent types are equivalently propositions
@@ -68,10 +68,5 @@ abstract
 ```agda
 equiv-is-prop-equiv : {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   A ≃ B → is-prop A ≃ is-prop B
-equiv-is-prop-equiv {A = A} {B = B} e =
-  equiv-prop
-    (is-prop-is-prop A)
-    (is-prop-is-prop B)
-    (is-prop-equiv' e)
-    (is-prop-equiv e)
+equiv-is-prop-equiv {A = A} {B = B} e = {!!}
 ```

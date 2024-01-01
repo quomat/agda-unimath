@@ -25,7 +25,7 @@ open import group-theory.subsets-groups
 ## Idea
 
 For each element `g : G` of a group `G` we have a unique group homomorphism
-`f : ℤ → G` such that `f 1 = g`. The order of `g` is defined to be the kernel of
+`f : ℤ → G` such that `f 1 = {!!}
 this group homomorphism `f`. Since kernels are ordered by inclusion, it follows
 that the orders of elements of a group are ordered by reversed inclusion.
 
@@ -33,7 +33,7 @@ If the group `G` has decidable equality, then we can reduce the order of `g` to
 a natural number. In this case, the orders of elements of `G` are ordered by
 divisibility.
 
-If the unique group homomorphism `f : ℤ → G` such that `f 1 = g` is injective,
+If the unique group homomorphism `f : ℤ → G` such that `f 1 = {!!}
 and `G` has decidable equality, then the order of `g` is set to be `0`, which is
 a consequence of the point of view that orders are normal subgroups of `ℤ`.
 
@@ -47,20 +47,16 @@ module _
   where
 
   order-element-Group : Normal-Subgroup l ℤ-Group
-  order-element-Group =
-    kernel-hom-Group ℤ-Group G (hom-element-Group G g)
+  order-element-Group = {!!}
 
   subgroup-order-element-Group : Subgroup l ℤ-Group
-  subgroup-order-element-Group =
-    subgroup-kernel-hom-Group ℤ-Group G (hom-element-Group G g)
+  subgroup-order-element-Group = {!!}
 
   subset-order-element-Group : subset-Group l ℤ-Group
-  subset-order-element-Group =
-    subset-kernel-hom-Group ℤ-Group G (hom-element-Group G g)
+  subset-order-element-Group = {!!}
 
   is-in-order-element-Group : ℤ → UU l
-  is-in-order-element-Group =
-    is-in-kernel-hom-Group ℤ-Group G (hom-element-Group G g)
+  is-in-order-element-Group = {!!}
 ```
 
 ### Divisibility of orders of elements of a group
@@ -76,9 +72,5 @@ module _
   where
 
   div-order-element-Group : (x y : type-Group G) → UU l
-  div-order-element-Group x y =
-    leq-Normal-Subgroup
-      ( ℤ-Group)
-      ( order-element-Group G y)
-      ( order-element-Group G x)
+  div-order-element-Group x y = {!!}
 ```

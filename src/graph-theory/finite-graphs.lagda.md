@@ -39,52 +39,42 @@ is also common to call such graphs _multigraphs_.
 
 ```agda
 Undirected-Graph-𝔽 : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Undirected-Graph-𝔽 l1 l2 = Σ (𝔽 l1) (λ X → unordered-pair (type-𝔽 X) → 𝔽 l2)
+Undirected-Graph-𝔽 l1 l2 = {!!}
 
 module _
   {l1 l2 : Level} (G : Undirected-Graph-𝔽 l1 l2)
   where
 
   vertex-Undirected-Graph-𝔽 : UU l1
-  vertex-Undirected-Graph-𝔽 = type-𝔽 (pr1 G)
+  vertex-Undirected-Graph-𝔽 = {!!}
 
   unordered-pair-vertices-Undirected-Graph-𝔽 : UU (lsuc lzero ⊔ l1)
-  unordered-pair-vertices-Undirected-Graph-𝔽 =
-    unordered-pair vertex-Undirected-Graph-𝔽
+  unordered-pair-vertices-Undirected-Graph-𝔽 = {!!}
 
   is-finite-vertex-Undirected-Graph-𝔽 : is-finite vertex-Undirected-Graph-𝔽
-  is-finite-vertex-Undirected-Graph-𝔽 = is-finite-type-𝔽 (pr1 G)
+  is-finite-vertex-Undirected-Graph-𝔽 = {!!}
 
   edge-Undirected-Graph-𝔽 :
     (p : unordered-pair-vertices-Undirected-Graph-𝔽) → UU l2
-  edge-Undirected-Graph-𝔽 p = type-𝔽 (pr2 G p)
+  edge-Undirected-Graph-𝔽 p = {!!}
 
   is-finite-edge-Undirected-Graph-𝔽 :
     (p : unordered-pair-vertices-Undirected-Graph-𝔽) →
     is-finite (edge-Undirected-Graph-𝔽 p)
-  is-finite-edge-Undirected-Graph-𝔽 p = is-finite-type-𝔽 (pr2 G p)
+  is-finite-edge-Undirected-Graph-𝔽 p = {!!}
 
   total-edge-Undirected-Graph-𝔽 : UU (lsuc lzero ⊔ l1 ⊔ l2)
-  total-edge-Undirected-Graph-𝔽 =
-    Σ unordered-pair-vertices-Undirected-Graph-𝔽 edge-Undirected-Graph-𝔽
+  total-edge-Undirected-Graph-𝔽 = {!!}
 
   undirected-graph-Undirected-Graph-𝔽 : Undirected-Graph l1 l2
-  pr1 undirected-graph-Undirected-Graph-𝔽 = vertex-Undirected-Graph-𝔽
-  pr2 undirected-graph-Undirected-Graph-𝔽 = edge-Undirected-Graph-𝔽
+  pr1 undirected-graph-Undirected-Graph-𝔽 = {!!}
 ```
 
 ### The following type is expected to be equivalent to Undirected-Graph-𝔽
 
 ```agda
 Undirected-Graph-𝔽' : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Undirected-Graph-𝔽' l1 l2 =
-  Σ ( 𝔽 l1)
-    ( λ V →
-      Σ ( type-𝔽 V → type-𝔽 V → 𝔽 l2)
-        ( λ E →
-          Σ ( (x y : type-𝔽 V) → type-𝔽 (E x y) ≃ type-𝔽 (E y x))
-            ( λ σ →
-              (x y : type-𝔽 V) → map-equiv ((σ y x) ∘e (σ x y)) ~ id)))
+Undirected-Graph-𝔽' l1 l2 = {!!}
 ```
 
 The degree of a vertex x of a graph G is the set of occurences of x as an
@@ -95,9 +85,7 @@ degree of x.
 incident-edges-vertex-Undirected-Graph-𝔽 :
   {l1 l2 : Level} (G : Undirected-Graph-𝔽 l1 l2)
   (x : vertex-Undirected-Graph-𝔽 G) → UU (lsuc lzero ⊔ l1)
-incident-edges-vertex-Undirected-Graph-𝔽 G x =
-  Σ ( unordered-pair (vertex-Undirected-Graph-𝔽 G))
-    ( λ p → fiber (element-unordered-pair p) x)
+incident-edges-vertex-Undirected-Graph-𝔽 G x = {!!}
 ```
 
 ## External links

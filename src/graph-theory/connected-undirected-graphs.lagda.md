@@ -31,9 +31,7 @@ module _
   where
 
   is-connected-Undirected-Graph : UU (l1 ⊔ l2 ⊔ lsuc lzero)
-  is-connected-Undirected-Graph =
-    (x y : vertex-Undirected-Graph G) →
-    type-trunc-Prop (walk-Undirected-Graph G x y)
+  is-connected-Undirected-Graph = {!!}
 ```
 
 ## Properties
@@ -43,8 +41,7 @@ module _
 ```agda
   is-prop-is-connected-Undirected-Graph
     : is-prop is-connected-Undirected-Graph
-  is-prop-is-connected-Undirected-Graph =
-    is-prop-Π (λ _ → is-prop-Π (λ _ → is-prop-type-trunc-Prop))
+  is-prop-is-connected-Undirected-Graph = {!!}
 ```
 
 ## External links

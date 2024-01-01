@@ -47,109 +47,82 @@ module _
   where
 
   set-quotient : UU (l1 ⊔ l2)
-  set-quotient = small-type-Small-Type (equivalence-class-Small-Type R)
+  set-quotient = {!!}
 
   compute-set-quotient : equivalence-class R ≃ set-quotient
-  compute-set-quotient =
-    equiv-is-small-type-Small-Type (equivalence-class-Small-Type R)
+  compute-set-quotient = {!!}
 
   set-quotient-equivalence-class : equivalence-class R → set-quotient
-  set-quotient-equivalence-class = map-equiv compute-set-quotient
+  set-quotient-equivalence-class = {!!}
 
   equivalence-class-set-quotient : set-quotient → equivalence-class R
-  equivalence-class-set-quotient = map-inv-equiv compute-set-quotient
+  equivalence-class-set-quotient = {!!}
 
   is-section-equivalence-class-set-quotient :
     (set-quotient-equivalence-class ∘ equivalence-class-set-quotient) ~ id
-  is-section-equivalence-class-set-quotient =
-    is-section-map-inv-equiv compute-set-quotient
+  is-section-equivalence-class-set-quotient = {!!}
 
   is-retraction-equivalence-class-set-quotient :
     (equivalence-class-set-quotient ∘ set-quotient-equivalence-class) ~ id
-  is-retraction-equivalence-class-set-quotient =
-    is-retraction-map-inv-equiv compute-set-quotient
+  is-retraction-equivalence-class-set-quotient = {!!}
 
   emb-equivalence-class-set-quotient : set-quotient ↪ equivalence-class R
-  emb-equivalence-class-set-quotient =
-    emb-equiv (inv-equiv compute-set-quotient)
+  emb-equivalence-class-set-quotient = {!!}
 
   emb-set-quotient-equivalence-class : equivalence-class R ↪ set-quotient
-  emb-set-quotient-equivalence-class = emb-equiv compute-set-quotient
+  emb-set-quotient-equivalence-class = {!!}
 
   quotient-map : A → set-quotient
-  quotient-map = set-quotient-equivalence-class ∘ class R
+  quotient-map = {!!}
 
   is-surjective-quotient-map : is-surjective quotient-map
-  is-surjective-quotient-map =
-    is-surjective-comp-equiv compute-set-quotient (is-surjective-class R)
+  is-surjective-quotient-map = {!!}
 
   surjection-quotient-map : A ↠ set-quotient
-  pr1 surjection-quotient-map = quotient-map
-  pr2 surjection-quotient-map = is-surjective-quotient-map
+  pr1 surjection-quotient-map = {!!}
 
   emb-subtype-set-quotient : set-quotient ↪ subtype l2 A
-  emb-subtype-set-quotient =
-    comp-emb (emb-equivalence-class R) emb-equivalence-class-set-quotient
+  emb-subtype-set-quotient = {!!}
 
   subtype-set-quotient : set-quotient → subtype l2 A
-  subtype-set-quotient =
-    subtype-equivalence-class R ∘ equivalence-class-set-quotient
+  subtype-set-quotient = {!!}
 
   is-inhabited-subtype-set-quotient :
     (x : set-quotient) → is-inhabited-subtype (subtype-set-quotient x)
-  is-inhabited-subtype-set-quotient x =
-    is-inhabited-subtype-equivalence-class R (equivalence-class-set-quotient x)
+  is-inhabited-subtype-set-quotient x = {!!}
 
   inhabited-subtype-set-quotient : set-quotient → inhabited-subtype l2 A
-  inhabited-subtype-set-quotient =
-    inhabited-subtype-equivalence-class R ∘ equivalence-class-set-quotient
+  inhabited-subtype-set-quotient = {!!}
 
   is-in-equivalence-class-set-quotient :
     (x : set-quotient) → A → UU l2
-  is-in-equivalence-class-set-quotient x =
-    is-in-equivalence-class R (equivalence-class-set-quotient x)
+  is-in-equivalence-class-set-quotient x = {!!}
 
   is-prop-is-in-equivalence-class-set-quotient :
     (x : set-quotient) (a : A) →
     is-prop (is-in-equivalence-class-set-quotient x a)
-  is-prop-is-in-equivalence-class-set-quotient x =
-    is-prop-is-in-equivalence-class R (equivalence-class-set-quotient x)
+  is-prop-is-in-equivalence-class-set-quotient x = {!!}
 
   is-in-equivalence-class-set-quotient-Prop :
     (x : set-quotient) → (A → Prop l2)
-  is-in-equivalence-class-set-quotient-Prop x =
-    is-in-equivalence-class-Prop R (equivalence-class-set-quotient x)
+  is-in-equivalence-class-set-quotient-Prop x = {!!}
 
   is-set-set-quotient : is-set set-quotient
-  is-set-set-quotient =
-    is-set-equiv'
-      ( equivalence-class R)
-      ( compute-set-quotient)
-      ( is-set-equivalence-class R)
+  is-set-set-quotient = {!!}
 
   quotient-Set : Set (l1 ⊔ l2)
-  pr1 quotient-Set = set-quotient
-  pr2 quotient-Set = is-set-set-quotient
+  pr1 quotient-Set = {!!}
 
   unit-im-set-quotient :
     hom-slice (prop-equivalence-relation R) subtype-set-quotient
-  pr1 unit-im-set-quotient = quotient-map
-  pr2 unit-im-set-quotient =
-    ( ( subtype-equivalence-class R) ·l
-      ( inv-htpy is-retraction-equivalence-class-set-quotient)) ·r
-    ( class R)
+  pr1 unit-im-set-quotient = {!!}
 
   is-image-set-quotient :
     is-image
       ( prop-equivalence-relation R)
       ( emb-subtype-set-quotient)
       ( unit-im-set-quotient)
-  is-image-set-quotient =
-    is-image-is-surjective
-      ( prop-equivalence-relation R)
-      ( emb-subtype-set-quotient)
-      ( unit-im-set-quotient)
-      ( is-surjective-quotient-map)
+  is-image-set-quotient = {!!}
 ```
 
 ### The map `class : A → equivalence-class R` is an effective quotient map
@@ -160,47 +133,25 @@ module _
   where
 
   is-effective-quotient-map : is-effective R (quotient-map R)
-  is-effective-quotient-map x y =
-    equivalence-reasoning
-      ( quotient-map R x ＝ quotient-map R y)
-      ≃ ( equivalence-class-set-quotient R (quotient-map R x) ＝
-          equivalence-class-set-quotient R (quotient-map R y))
-        by equiv-ap-emb (emb-equivalence-class-set-quotient R)
-      ≃ ( class R x ＝ equivalence-class-set-quotient R (quotient-map R y))
-        by
-        ( equiv-concat
-          ( (inv ( is-retraction-equivalence-class-set-quotient R (class R x))))
-          ( equivalence-class-set-quotient R (quotient-map R y)))
-      ≃ ( class R x ＝ class R y)
-        by
-        ( equiv-concat'
-          ( class R x)
-          ( is-retraction-equivalence-class-set-quotient R (class R y)))
-      ≃ ( sim-equivalence-relation R x y)
-        by
-        ( is-effective-class R x y)
+  is-effective-quotient-map x y = {!!}
 
   apply-effectiveness-quotient-map :
     {x y : A} → quotient-map R x ＝ quotient-map R y →
     sim-equivalence-relation R x y
-  apply-effectiveness-quotient-map {x} {y} =
-    map-equiv (is-effective-quotient-map x y)
+  apply-effectiveness-quotient-map {x} {y} = {!!}
 
   apply-effectiveness-quotient-map' :
     {x y : A} → sim-equivalence-relation R x y →
     quotient-map R x ＝ quotient-map R y
-  apply-effectiveness-quotient-map' {x} {y} =
-    map-inv-equiv (is-effective-quotient-map x y)
+  apply-effectiveness-quotient-map' {x} {y} = {!!}
 
   is-surjective-and-effective-quotient-map :
     is-surjective-and-effective R (quotient-map R)
-  pr1 is-surjective-and-effective-quotient-map = is-surjective-quotient-map R
-  pr2 is-surjective-and-effective-quotient-map = is-effective-quotient-map
+  pr1 is-surjective-and-effective-quotient-map = {!!}
 
   reflecting-map-quotient-map :
     reflecting-map-equivalence-relation R (set-quotient R)
-  pr1 reflecting-map-quotient-map = quotient-map R
-  pr2 reflecting-map-quotient-map = apply-effectiveness-quotient-map'
+  pr1 reflecting-map-quotient-map = {!!}
 ```
 
 ### The set quotient of `R` is a set quotient of `R`
@@ -212,18 +163,13 @@ module _
 
   is-set-quotient-set-quotient :
     is-set-quotient R (quotient-Set R) (reflecting-map-quotient-map R)
-  is-set-quotient-set-quotient =
-    is-set-quotient-is-surjective-and-effective R
-      ( quotient-Set R)
-      ( reflecting-map-quotient-map R)
-      ( is-surjective-and-effective-quotient-map R)
+  is-set-quotient-set-quotient = {!!}
 
   inv-precomp-set-quotient :
     {l : Level} (X : Set l) →
     reflecting-map-equivalence-relation R (type-Set X) →
     hom-Set (quotient-Set R) X
-  inv-precomp-set-quotient X =
-    pr1 (pr1 (is-set-quotient-set-quotient X))
+  inv-precomp-set-quotient X = {!!}
 
   is-section-inv-precomp-set-quotient :
     {l : Level} (X : Set l) →
@@ -231,13 +177,7 @@ module _
     (a : A) →
     inv-precomp-set-quotient X f (quotient-map R a) ＝
       map-reflecting-map-equivalence-relation R f a
-  is-section-inv-precomp-set-quotient X f =
-    htpy-eq
-      ( ap
-        ( map-reflecting-map-equivalence-relation R)
-        ( is-section-map-inv-is-equiv
-          ( is-set-quotient-set-quotient X)
-          ( f)))
+  is-section-inv-precomp-set-quotient X f = {!!}
 
   is-retraction-inv-precomp-set-quotient :
     {l : Level} (X : Set l) (f : hom-Set (quotient-Set R) X) →
@@ -248,8 +188,7 @@ module _
         ( X)
         ( f)) ＝
     f
-  is-retraction-inv-precomp-set-quotient X f =
-    is-retraction-map-inv-is-equiv (is-set-quotient-set-quotient X) f
+  is-retraction-inv-precomp-set-quotient X f = {!!}
 ```
 
 ### Induction into propositions on the set quotient
@@ -263,17 +202,13 @@ module _
     {l : Level} (P : set-quotient R → Prop l) →
     ((y : set-quotient R) → type-Prop (P y)) ≃
     ((x : A) → type-Prop (P (quotient-map R x)))
-  equiv-induction-set-quotient =
-    equiv-dependent-universal-property-surj-is-surjective
-      ( quotient-map R)
-      ( is-surjective-quotient-map R)
+  equiv-induction-set-quotient = {!!}
 
   induction-set-quotient :
     {l : Level} (P : set-quotient R → Prop l) →
     ((x : A) → type-Prop (P (quotient-map R x))) →
     ((y : set-quotient R) → type-Prop (P y))
-  induction-set-quotient P =
-    map-inv-equiv (equiv-induction-set-quotient P)
+  induction-set-quotient P = {!!}
 ```
 
 ### Double induction for set quotients
@@ -292,19 +227,13 @@ module _
     ((x : set-quotient R) (y : set-quotient S) → type-Prop (P x y)) ≃
     ( (x : A) (y : B) →
       type-Prop (P (quotient-map R x) (quotient-map S y)))
-  equiv-double-induction-set-quotient =
-    ( equiv-Π-equiv-family
-      ( λ x →
-        equiv-induction-set-quotient S (P (quotient-map R x)))) ∘e
-    ( equiv-induction-set-quotient R
-      ( λ x → Π-Prop (set-quotient S) (P x)))
+  equiv-double-induction-set-quotient = {!!}
 
   double-induction-set-quotient :
     ( (x : A) (y : B) →
       type-Prop (P (quotient-map R x) (quotient-map S y))) →
     (x : set-quotient R) (y : set-quotient S) → type-Prop (P x y)
-  double-induction-set-quotient =
-    map-inv-equiv equiv-double-induction-set-quotient
+  double-induction-set-quotient = {!!}
 ```
 
 #### Double induction over a single set quotient
@@ -318,15 +247,13 @@ module _
   equiv-double-induction-set-quotient' :
     ((x y : set-quotient R) → type-Prop (P x y)) ≃
     ((x y : A) → type-Prop (P (quotient-map R x) (quotient-map R y)))
-  equiv-double-induction-set-quotient' =
-    equiv-double-induction-set-quotient R R P
+  equiv-double-induction-set-quotient' = {!!}
 
   double-induction-set-quotient' :
     ( (x y : A) →
       type-Prop (P (quotient-map R x) (quotient-map R y))) →
     (x y : set-quotient R) → type-Prop (P x y)
-  double-induction-set-quotient' =
-    double-induction-set-quotient R R P
+  double-induction-set-quotient' = {!!}
 ```
 
 ### Triple induction for set quotients
@@ -348,16 +275,7 @@ module _
     ( (x : A) (y : B) (z : C) →
       type-Prop
         ( P (quotient-map R x) (quotient-map S y) (quotient-map T z)))
-  equiv-triple-induction-set-quotient =
-    ( equiv-Π-equiv-family
-      ( λ x →
-        equiv-double-induction-set-quotient S T
-          ( P (quotient-map R x)))) ∘e
-    ( equiv-induction-set-quotient R
-      ( λ x →
-        Π-Prop
-          ( set-quotient S)
-          ( λ y → Π-Prop (set-quotient T) (P x y))))
+  equiv-triple-induction-set-quotient = {!!}
 
   triple-induction-set-quotient :
     ( (x : A) (y : B) (z : C) →
@@ -367,8 +285,7 @@ module _
             ( quotient-map T z))) →
     ( x : set-quotient R) (y : set-quotient S)
     ( z : set-quotient T) → type-Prop (P x y z)
-  triple-induction-set-quotient =
-    map-inv-equiv equiv-triple-induction-set-quotient
+  triple-induction-set-quotient = {!!}
 ```
 
 #### Triple induction over a single set quotient
@@ -384,8 +301,7 @@ module _
     ( (x y z : A) →
       type-Prop
         ( P (quotient-map R x) (quotient-map R y) (quotient-map R z)))
-  equiv-triple-induction-set-quotient' =
-    equiv-triple-induction-set-quotient R R R P
+  equiv-triple-induction-set-quotient' = {!!}
 
   triple-induction-set-quotient' :
     ( (x y z : A) →
@@ -394,8 +310,7 @@ module _
             ( quotient-map R y)
             ( quotient-map R z))) →
     ( x y z : set-quotient R) → type-Prop (P x y z)
-  triple-induction-set-quotient' =
-    triple-induction-set-quotient R R R P
+  triple-induction-set-quotient' = {!!}
 ```
 
 ### Every set quotient is equivalent to the set quotient
@@ -409,10 +324,5 @@ module _
 
   equiv-uniqueness-set-quotient-set-quotient :
     set-quotient R ≃ type-Set B
-  equiv-uniqueness-set-quotient-set-quotient =
-    equiv-uniqueness-set-quotient R
-      ( quotient-Set R)
-      ( reflecting-map-quotient-map R)
-      ( is-set-quotient-set-quotient R)
-      B f Uf
+  equiv-uniqueness-set-quotient-set-quotient = {!!}
 ```

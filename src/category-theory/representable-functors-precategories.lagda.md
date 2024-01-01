@@ -47,42 +47,32 @@ module _
   where
 
   obj-representable-functor-Precategory : obj-Precategory C → Set l2
-  obj-representable-functor-Precategory = hom-set-Precategory C c
+  obj-representable-functor-Precategory = {!!}
 
   hom-representable-functor-Precategory :
     {x y : obj-Precategory C} (f : hom-Precategory C x y) →
     hom-Precategory C c x → hom-Precategory C c y
-  hom-representable-functor-Precategory f = postcomp-hom-Precategory C f c
+  hom-representable-functor-Precategory f = {!!}
 
   representable-map-Precategory : map-Precategory C (Set-Precategory l2)
-  pr1 representable-map-Precategory = obj-representable-functor-Precategory
-  pr2 representable-map-Precategory = hom-representable-functor-Precategory
+  pr1 representable-map-Precategory = {!!}
 
   preserves-comp-representable-functor-Precategory :
     preserves-comp-hom-map-Precategory
       ( C)
       ( Set-Precategory l2)
       ( representable-map-Precategory)
-  preserves-comp-representable-functor-Precategory g f =
-    eq-htpy (associative-comp-hom-Precategory C g f)
+  preserves-comp-representable-functor-Precategory g f = {!!}
 
   preserves-id-representable-functor-Precategory :
     preserves-id-hom-map-Precategory
       ( C)
       ( Set-Precategory l2)
       ( representable-map-Precategory)
-  preserves-id-representable-functor-Precategory x =
-    eq-htpy (left-unit-law-comp-hom-Precategory C)
+  preserves-id-representable-functor-Precategory x = {!!}
 
   representable-functor-Precategory : functor-Precategory C (Set-Precategory l2)
-  pr1 representable-functor-Precategory =
-    obj-representable-functor-Precategory
-  pr1 (pr2 representable-functor-Precategory) =
-    hom-representable-functor-Precategory
-  pr1 (pr2 (pr2 representable-functor-Precategory)) =
-    preserves-comp-representable-functor-Precategory
-  pr2 (pr2 (pr2 representable-functor-Precategory)) =
-    preserves-id-representable-functor-Precategory
+  pr1 representable-functor-Precategory = {!!}
 ```
 
 ## Natural transformations between representable functors
@@ -104,8 +94,7 @@ module _
       ( Set-Precategory l2)
       ( representable-functor-Precategory C c)
       ( representable-functor-Precategory C b)
-  hom-family-representable-natural-transformation-Precategory =
-    precomp-hom-Precategory C f
+  hom-family-representable-natural-transformation-Precategory = {!!}
 
   is-natural-transformation-representable-natural-transformation-Precategory :
     is-natural-transformation-Precategory
@@ -114,8 +103,7 @@ module _
       ( representable-functor-Precategory C c)
       ( representable-functor-Precategory C b)
       ( hom-family-representable-natural-transformation-Precategory)
-  is-natural-transformation-representable-natural-transformation-Precategory h =
-    eq-htpy (inv-htpy (λ g → associative-comp-hom-Precategory C h g f))
+  is-natural-transformation-representable-natural-transformation-Precategory h = {!!}
 
   representable-natural-transformation-Precategory :
     natural-transformation-Precategory
@@ -123,10 +111,7 @@ module _
       ( Set-Precategory l2)
       ( representable-functor-Precategory C c)
       ( representable-functor-Precategory C b)
-  pr1 (representable-natural-transformation-Precategory) =
-    hom-family-representable-natural-transformation-Precategory
-  pr2 (representable-natural-transformation-Precategory) =
-    is-natural-transformation-representable-natural-transformation-Precategory
+  pr1 (representable-natural-transformation-Precategory) = {!!}
 ```
 
 ## Properties
@@ -142,10 +127,7 @@ module _
     map-Precategory
       ( opposite-Precategory C)
       ( copresheaf-precategory-Precategory C l2)
-  pr1 map-representable-functor-copresheaf-Precategory =
-    representable-functor-Precategory C
-  pr2 map-representable-functor-copresheaf-Precategory =
-    representable-natural-transformation-Precategory C
+  pr1 map-representable-functor-copresheaf-Precategory = {!!}
 ```
 
 It remains to show that this map is functorial.

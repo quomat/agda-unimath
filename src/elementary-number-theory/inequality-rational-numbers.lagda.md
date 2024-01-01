@@ -29,27 +29,27 @@ of `y`.
 
 ```agda
 leq-ℚ-Prop : ℚ → ℚ → Prop lzero
-leq-ℚ-Prop (x , px) (y , py) = leq-fraction-ℤ-Prop x y
+leq-ℚ-Prop (x , px) (y , py) = {!!}
 
 leq-ℚ : ℚ → ℚ → UU lzero
-leq-ℚ x y = type-Prop (leq-ℚ-Prop x y)
+leq-ℚ x y = {!!}
 
 is-prop-leq-ℚ : (x y : ℚ) → is-prop (leq-ℚ x y)
-is-prop-leq-ℚ x y = is-prop-type-Prop (leq-ℚ-Prop x y)
+is-prop-leq-ℚ x y = {!!}
 
 infix 30 _≤-ℚ_
-_≤-ℚ_ = leq-ℚ
+_≤-ℚ_ = {!!}
 ```
 
 ### Strict inequality on the rational numbers
 
 ```agda
 le-ℚ-Prop : ℚ → ℚ → Prop lzero
-le-ℚ-Prop (x , px) (y , py) = le-fraction-ℤ-Prop x y
+le-ℚ-Prop (x , px) (y , py) = {!!}
 
 le-ℚ : ℚ → ℚ → UU lzero
-le-ℚ x y = type-Prop (le-ℚ-Prop x y)
+le-ℚ x y = {!!}
 
 is-prop-le-ℚ : (x y : ℚ) → is-prop (le-ℚ x y)
-is-prop-le-ℚ x y = is-prop-type-Prop (le-ℚ-Prop x y)
+is-prop-le-ℚ x y = {!!}
 ```

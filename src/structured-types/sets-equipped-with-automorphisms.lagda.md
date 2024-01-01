@@ -29,25 +29,25 @@ on `e : A ≃ A`.
 
 ```agda
 Set-With-Automorphism : (l : Level) → UU (lsuc l)
-Set-With-Automorphism l = Σ (Set l) (Aut ∘ type-Set)
+Set-With-Automorphism l = {!!}
 
 module _
   {l : Level} (A : Set-With-Automorphism l)
   where
 
   set-Set-With-Automorphism : Set l
-  set-Set-With-Automorphism = pr1 A
+  set-Set-With-Automorphism = {!!}
 
   type-Set-With-Automorphism : UU l
-  type-Set-With-Automorphism = type-Set set-Set-With-Automorphism
+  type-Set-With-Automorphism = {!!}
 
   is-set-type-Set-With-Automorphism : is-set type-Set-With-Automorphism
-  is-set-type-Set-With-Automorphism = is-set-type-Set set-Set-With-Automorphism
+  is-set-type-Set-With-Automorphism = {!!}
 
   aut-Set-With-Automorphism : Aut type-Set-With-Automorphism
-  aut-Set-With-Automorphism = pr2 A
+  aut-Set-With-Automorphism = {!!}
 
   map-Set-With-Automorphism :
     type-Set-With-Automorphism → type-Set-With-Automorphism
-  map-Set-With-Automorphism = map-equiv aut-Set-With-Automorphism
+  map-Set-With-Automorphism = {!!}
 ```

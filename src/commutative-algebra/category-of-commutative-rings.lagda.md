@@ -33,20 +33,16 @@ category consistsing of commutative rings and
 ```agda
 is-large-category-Commutative-Ring-Large-Category :
   is-large-category-Large-Precategory Commutative-Ring-Large-Precategory
-is-large-category-Commutative-Ring-Large-Category =
-  is-equiv-iso-eq-Commutative-Ring
+is-large-category-Commutative-Ring-Large-Category = {!!}
 
 Commutative-Ring-Large-Category : Large-Category lsuc _⊔_
-large-precategory-Large-Category Commutative-Ring-Large-Category =
-  Commutative-Ring-Large-Precategory
-is-large-category-Large-Category Commutative-Ring-Large-Category =
-  is-large-category-Commutative-Ring-Large-Category
+large-precategory-Large-Category Commutative-Ring-Large-Category = {!!}
+is-large-category-Large-Category Commutative-Ring-Large-Category = {!!}
 ```
 
 ### The small categories of commutative rings
 
 ```agda
 Commutative-Ring-Category : (l : Level) → Category (lsuc l) l
-Commutative-Ring-Category =
-  category-Large-Category Commutative-Ring-Large-Category
+Commutative-Ring-Category = {!!}
 ```

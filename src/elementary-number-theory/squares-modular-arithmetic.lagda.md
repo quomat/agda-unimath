@@ -25,19 +25,18 @@ open import univalent-combinatorics.fibers-of-maps
 
 ```agda
 square-ℤ-Mod : (p : ℕ) → ℤ-Mod p → ℤ-Mod p
-square-ℤ-Mod p a = mul-ℤ-Mod p a a
+square-ℤ-Mod p a = {!!}
 
 cube-ℤ-Mod : (p : ℕ) → ℤ-Mod p → ℤ-Mod p
-cube-ℤ-Mod p k = mul-ℤ-Mod p (square-ℤ-Mod p k) k
+cube-ℤ-Mod p k = {!!}
 
 is-square-ℤ-Mod : (p : ℕ) → ℤ-Mod p → UU lzero
-is-square-ℤ-Mod 0 k = is-square-ℤ k
-is-square-ℤ-Mod (succ-ℕ p) k =
-  Σ (ℤ-Mod (succ-ℕ p)) (λ x → square-ℤ-Mod (succ-ℕ p) x ＝ k)
+is-square-ℤ-Mod 0 k = {!!}
+is-square-ℤ-Mod (succ-ℕ p) k = {!!}
 
 square-root-ℤ-Mod : {p : ℕ} → (k : ℤ-Mod p) → is-square-ℤ-Mod p k → ℤ-Mod p
-square-root-ℤ-Mod {0} _ (root , _) = root
-square-root-ℤ-Mod {succ-ℕ p} _ (root , _) = root
+square-root-ℤ-Mod {0} _ (root , _) = {!!}
+square-root-ℤ-Mod {succ-ℕ p} _ (root , _) = {!!}
 ```
 
 ## Properties
@@ -48,7 +47,6 @@ square-root-ℤ-Mod {succ-ℕ p} _ (root , _) = root
 is-decidable-is-square-ℤ-Mod :
   (p : ℕ) (k : ℤ-Mod p) →
   is-decidable (is-square-ℤ-Mod p k)
-is-decidable-is-square-ℤ-Mod 0 k = is-decidable-is-square-ℤ k
-is-decidable-is-square-ℤ-Mod (succ-ℕ p) k =
-  is-decidable-fiber-Fin {succ-ℕ p} {succ-ℕ p} (square-ℤ-Mod (succ-ℕ p)) k
+is-decidable-is-square-ℤ-Mod 0 k = {!!}
+is-decidable-is-square-ℤ-Mod (succ-ℕ p) k = {!!}
 ```

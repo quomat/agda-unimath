@@ -35,43 +35,37 @@ module _
   where
 
   semigroup-Π-Monoid : Semigroup (l1 ⊔ l2)
-  semigroup-Π-Monoid = Π-Semigroup I (λ i → semigroup-Monoid (M i))
+  semigroup-Π-Monoid = {!!}
 
   set-Π-Monoid : Set (l1 ⊔ l2)
-  set-Π-Monoid = set-Semigroup semigroup-Π-Monoid
+  set-Π-Monoid = {!!}
 
   type-Π-Monoid : UU (l1 ⊔ l2)
-  type-Π-Monoid = type-Semigroup semigroup-Π-Monoid
+  type-Π-Monoid = {!!}
 
   mul-Π-Monoid : (f g : type-Π-Monoid) → type-Π-Monoid
-  mul-Π-Monoid = mul-Semigroup semigroup-Π-Monoid
+  mul-Π-Monoid = {!!}
 
   associative-mul-Π-Monoid :
     (f g h : type-Π-Monoid) →
     mul-Π-Monoid (mul-Π-Monoid f g) h ＝
     mul-Π-Monoid f (mul-Π-Monoid g h)
-  associative-mul-Π-Monoid =
-    associative-mul-Semigroup semigroup-Π-Monoid
+  associative-mul-Π-Monoid = {!!}
 
   unit-Π-Monoid : type-Π-Monoid
-  unit-Π-Monoid i = unit-Monoid (M i)
+  unit-Π-Monoid i = {!!}
 
   left-unit-law-mul-Π-Monoid :
     (f : type-Π-Monoid) → mul-Π-Monoid unit-Π-Monoid f ＝ f
-  left-unit-law-mul-Π-Monoid f =
-    eq-htpy (λ i → left-unit-law-mul-Monoid (M i) (f i))
+  left-unit-law-mul-Π-Monoid f = {!!}
 
   right-unit-law-mul-Π-Monoid :
     (f : type-Π-Monoid) → mul-Π-Monoid f unit-Π-Monoid ＝ f
-  right-unit-law-mul-Π-Monoid f =
-    eq-htpy (λ i → right-unit-law-mul-Monoid (M i) (f i))
+  right-unit-law-mul-Π-Monoid f = {!!}
 
   is-unital-Π-Monoid : is-unital-Semigroup semigroup-Π-Monoid
-  pr1 is-unital-Π-Monoid = unit-Π-Monoid
-  pr1 (pr2 is-unital-Π-Monoid) = left-unit-law-mul-Π-Monoid
-  pr2 (pr2 is-unital-Π-Monoid) = right-unit-law-mul-Π-Monoid
+  pr1 is-unital-Π-Monoid = {!!}
 
   Π-Monoid : Monoid (l1 ⊔ l2)
-  pr1 Π-Monoid = semigroup-Π-Monoid
-  pr2 Π-Monoid = is-unital-Π-Monoid
+  pr1 Π-Monoid = {!!}
 ```

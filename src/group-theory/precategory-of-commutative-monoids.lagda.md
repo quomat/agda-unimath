@@ -29,27 +29,19 @@ homomorphisms of monoids.
 ```agda
 Commutative-Monoid-Large-Precategory : Large-Precategory lsuc _⊔_
 obj-Large-Precategory
-  Commutative-Monoid-Large-Precategory =
-  Commutative-Monoid
+  Commutative-Monoid-Large-Precategory = {!!}
 hom-set-Large-Precategory
-  Commutative-Monoid-Large-Precategory =
-  hom-set-Commutative-Monoid
+  Commutative-Monoid-Large-Precategory = {!!}
 comp-hom-Large-Precategory
-  Commutative-Monoid-Large-Precategory {X = K} {L} {M} =
-  comp-hom-Commutative-Monoid K L M
+  Commutative-Monoid-Large-Precategory {X = K} {L} {M} = {!!}
 id-hom-Large-Precategory
-  Commutative-Monoid-Large-Precategory {X = M} =
-  id-hom-Commutative-Monoid M
+  Commutative-Monoid-Large-Precategory {X = M} = {!!}
 associative-comp-hom-Large-Precategory
-  Commutative-Monoid-Large-Precategory {X = K} {L} {M} {N} =
-  associative-comp-hom-Commutative-Monoid K L M N
+  Commutative-Monoid-Large-Precategory {X = K} {L} {M} {N} = {!!}
 inv-associative-comp-hom-Large-Precategory
-  Commutative-Monoid-Large-Precategory {X = K} {L} {M} {N} =
-  inv-associative-comp-hom-Commutative-Monoid K L M N
+  Commutative-Monoid-Large-Precategory {X = K} {L} {M} {N} = {!!}
 left-unit-law-comp-hom-Large-Precategory
-  Commutative-Monoid-Large-Precategory {X = M} {N} =
-  left-unit-law-comp-hom-Commutative-Monoid M N
+  Commutative-Monoid-Large-Precategory {X = M} {N} = {!!}
 right-unit-law-comp-hom-Large-Precategory
-  Commutative-Monoid-Large-Precategory {X = M} {N} =
-  right-unit-law-comp-hom-Commutative-Monoid M N
+  Commutative-Monoid-Large-Precategory {X = M} {N} = {!!}
 ```

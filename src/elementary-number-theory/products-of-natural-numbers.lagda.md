@@ -30,13 +30,13 @@ The product of a list of natural numbers is defined by iterated multiplication.
 
 ```agda
 product-list-ℕ : list ℕ → ℕ
-product-list-ℕ = fold-list 1 mul-ℕ
+product-list-ℕ = {!!}
 ```
 
 ### Products of families of natural numbers indexed by standard finite types
 
 ```agda
 Π-ℕ : (k : ℕ) → (Fin k → ℕ) → ℕ
-Π-ℕ zero-ℕ x = 1
-Π-ℕ (succ-ℕ k) x = (Π-ℕ k (λ i → x (inl i))) *ℕ (x (inr star))
+Π-ℕ zero-ℕ x = {!!}
+Π-ℕ (succ-ℕ k) x = {!!}
 ```

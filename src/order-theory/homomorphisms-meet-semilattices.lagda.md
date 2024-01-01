@@ -41,37 +41,25 @@ module _
 
   preserves-meet-Prop :
     (type-Meet-Semilattice A → type-Meet-Semilattice B) → Prop (l1 ⊔ l2)
-  preserves-meet-Prop =
-    preserves-mul-prop-Semigroup
-      ( semigroup-Meet-Semilattice A)
-      ( semigroup-Meet-Semilattice B)
+  preserves-meet-Prop = {!!}
 
   preserves-meet :
     (type-Meet-Semilattice A → type-Meet-Semilattice B) → UU (l1 ⊔ l2)
-  preserves-meet =
-    preserves-mul-Semigroup
-      ( semigroup-Meet-Semilattice A)
-      ( semigroup-Meet-Semilattice B)
+  preserves-meet = {!!}
 
   is-prop-preserves-meet :
     (f : type-Meet-Semilattice A → type-Meet-Semilattice B) →
     is-prop (preserves-meet f)
-  is-prop-preserves-meet =
-    is-prop-preserves-mul-Semigroup
-      ( semigroup-Meet-Semilattice A)
-      ( semigroup-Meet-Semilattice B)
+  is-prop-preserves-meet = {!!}
 
   hom-set-Meet-Semilattice : Set (l1 ⊔ l2)
-  hom-set-Meet-Semilattice =
-    hom-set-Semigroup
-      ( semigroup-Meet-Semilattice A)
-      ( semigroup-Meet-Semilattice B)
+  hom-set-Meet-Semilattice = {!!}
 
   hom-Meet-Semilattice : UU (l1 ⊔ l2)
-  hom-Meet-Semilattice = type-Set hom-set-Meet-Semilattice
+  hom-Meet-Semilattice = {!!}
 
   is-set-hom-Meet-Semilattice : is-set hom-Meet-Semilattice
-  is-set-hom-Meet-Semilattice = is-set-type-Set hom-set-Meet-Semilattice
+  is-set-hom-Meet-Semilattice = {!!}
 
   module _
     (f : hom-Meet-Semilattice)
@@ -79,25 +67,22 @@ module _
 
     map-hom-Meet-Semilattice :
       type-Meet-Semilattice A → type-Meet-Semilattice B
-    map-hom-Meet-Semilattice = pr1 f
+    map-hom-Meet-Semilattice = {!!}
 
     preserves-meet-hom-Meet-Semilattice :
       preserves-meet map-hom-Meet-Semilattice
-    preserves-meet-hom-Meet-Semilattice = pr2 f
+    preserves-meet-hom-Meet-Semilattice = {!!}
 
     preserves-order-hom-Meet-Semilattice :
       preserves-order-Poset
         ( poset-Meet-Semilattice A)
         ( poset-Meet-Semilattice B)
         ( map-hom-Meet-Semilattice)
-    preserves-order-hom-Meet-Semilattice x y H =
-      ( inv preserves-meet-hom-Meet-Semilattice) ∙
-      ( ap map-hom-Meet-Semilattice H)
+    preserves-order-hom-Meet-Semilattice x y H = {!!}
 
     hom-poset-hom-Meet-Semilattice :
       hom-Poset (poset-Meet-Semilattice A) (poset-Meet-Semilattice B)
-    pr1 hom-poset-hom-Meet-Semilattice = map-hom-Meet-Semilattice
-    pr2 hom-poset-hom-Meet-Semilattice = preserves-order-hom-Meet-Semilattice
+    pr1 hom-poset-hom-Meet-Semilattice = {!!}
 ```
 
 ### Homomorphisms of order-theoretic meet-semilattices
@@ -113,25 +98,13 @@ module _
     hom-Poset
       ( poset-Order-Theoretic-Meet-Semilattice A)
       ( poset-Order-Theoretic-Meet-Semilattice B) → Prop (l1 ⊔ l3 ⊔ l4)
-  preserves-meet-hom-Poset-Prop (f , H) =
-    Π-Prop
-      ( type-Order-Theoretic-Meet-Semilattice A)
-      ( λ x →
-        Π-Prop
-          ( type-Order-Theoretic-Meet-Semilattice A)
-          ( λ y →
-            is-greatest-binary-lower-bound-Poset-Prop
-              ( poset-Order-Theoretic-Meet-Semilattice B)
-              ( f x)
-              ( f y)
-              ( f (meet-Order-Theoretic-Meet-Semilattice A x y))))
+  preserves-meet-hom-Poset-Prop (f , H) = {!!}
 
   preserves-meet-hom-Poset :
     hom-Poset
       ( poset-Order-Theoretic-Meet-Semilattice A)
       ( poset-Order-Theoretic-Meet-Semilattice B) → UU (l1 ⊔ l3 ⊔ l4)
-  preserves-meet-hom-Poset f =
-    type-Prop (preserves-meet-hom-Poset-Prop f)
+  preserves-meet-hom-Poset f = {!!}
 
   is-prop-preserves-meet-hom-Prop :
     ( f :
@@ -139,14 +112,8 @@ module _
         ( poset-Order-Theoretic-Meet-Semilattice A)
         ( poset-Order-Theoretic-Meet-Semilattice B)) →
     is-prop (preserves-meet-hom-Poset f)
-  is-prop-preserves-meet-hom-Prop f =
-    is-prop-type-Prop (preserves-meet-hom-Poset-Prop f)
+  is-prop-preserves-meet-hom-Prop f = {!!}
 
   hom-set-Order-Theoretic-Meet-Semilattice : Set (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  hom-set-Order-Theoretic-Meet-Semilattice =
-    set-subset
-      ( hom-set-Poset
-        ( poset-Order-Theoretic-Meet-Semilattice A)
-        ( poset-Order-Theoretic-Meet-Semilattice B))
-      ( preserves-meet-hom-Poset-Prop)
+  hom-set-Order-Theoretic-Meet-Semilattice = {!!}
 ```

@@ -27,6 +27,5 @@ module _
   where
 
   codiagonal : A + A → A
-  codiagonal (inl a) = a
-  codiagonal (inr a) = a
+  codiagonal (inl a) = {!!}
 ```

@@ -40,7 +40,7 @@ call the **suspension prespectrum** of `A`. Its structure map is defined
 degreewise by the identity
 
 ```text
-  Σⁿ⁺¹A = Σⁿ⁺¹A   ↝   ΣⁿA →∗ ΩΣⁿ⁺¹A
+  Σⁿ⁺¹A = {!!}
 ```
 
 **Note:** Even though the suspension prespectrum is defined degreewise by the
@@ -57,20 +57,15 @@ pointed-structure-map-suspension-Prespectrum :
   {l : Level} (A : Pointed-Type l) (n : ℕ) →
   suspension-Pointed-Type (iterated-suspension-Pointed-Type n A) →∗
   iterated-suspension-Pointed-Type (succ-ℕ n) A
-pointed-structure-map-suspension-Prespectrum A n = id-pointed-map
+pointed-structure-map-suspension-Prespectrum A n = {!!}
 
 pointed-adjoint-structure-map-suspension-Prespectrum :
   {l : Level} (A : Pointed-Type l) (n : ℕ) →
   iterated-suspension-Pointed-Type n A →∗
   Ω (iterated-suspension-Pointed-Type (succ-ℕ n) A)
-pointed-adjoint-structure-map-suspension-Prespectrum A n =
-  transpose-suspension-loop-adjunction
-    ( iterated-suspension-Pointed-Type n A)
-    ( iterated-suspension-Pointed-Type (succ-ℕ n) A)
-    ( pointed-structure-map-suspension-Prespectrum A n)
+pointed-adjoint-structure-map-suspension-Prespectrum A n = {!!}
 
 suspension-Prespectrum : {l : Level} → Pointed-Type l → Prespectrum l
-pr1 (suspension-Prespectrum A) n = iterated-suspension-Pointed-Type n A
-pr2 (suspension-Prespectrum A) =
-  pointed-adjoint-structure-map-suspension-Prespectrum A
+pr1 (suspension-Prespectrum A) n = {!!}
+pr2 (suspension-Prespectrum A) = {!!}
 ```

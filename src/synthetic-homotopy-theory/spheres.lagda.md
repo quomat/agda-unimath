@@ -35,20 +35,20 @@ of the
 
 ```agda
 sphere-Pointed-Type : ℕ → Pointed-Type lzero
-sphere-Pointed-Type n = iterated-suspension-Pointed-Type n (Fin 2 , zero-Fin 1)
+sphere-Pointed-Type n = {!!}
 
 sphere : ℕ → UU lzero
-sphere = type-Pointed-Type ∘ sphere-Pointed-Type
+sphere = {!!}
 
 north-sphere : (n : ℕ) → sphere n
-north-sphere zero-ℕ = zero-Fin 1
-north-sphere (succ-ℕ n) = north-suspension
+north-sphere zero-ℕ = {!!}
+north-sphere (succ-ℕ n) = {!!}
 
 south-sphere : (n : ℕ) → sphere n
-south-sphere zero-ℕ = one-Fin 1
-south-sphere (succ-ℕ n) = south-suspension
+south-sphere zero-ℕ = {!!}
+south-sphere (succ-ℕ n) = {!!}
 
 meridian-sphere :
   (n : ℕ) → sphere n → north-sphere (succ-ℕ n) ＝ south-sphere (succ-ℕ n)
-meridian-sphere n = meridian-suspension
+meridian-sphere n = {!!}
 ```

@@ -26,7 +26,5 @@ A **pointed section** of a pointed map `f : A →∗ B` consists of a pointed ma
 pointed-section-Pointed-Type :
   {l1 l2 : Level} (A : Pointed-Type l1) (B : Pointed-Type l2) →
   (A →∗ B) → UU (l1 ⊔ l2)
-pointed-section-Pointed-Type A B f =
-  Σ ( B →∗ A)
-    ( λ g → (f ∘∗ g) ~∗ id-pointed-map)
+pointed-section-Pointed-Type A B f = {!!}
 ```

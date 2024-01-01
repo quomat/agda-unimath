@@ -41,11 +41,7 @@ module _
   where
 
   constant-functor-Precategory : functor-Precategory C D
-  pr1 constant-functor-Precategory _ = d
-  pr1 (pr2 constant-functor-Precategory) _ = id-hom-Precategory D
-  pr1 (pr2 (pr2 constant-functor-Precategory)) _ _ =
-    inv (left-unit-law-comp-hom-Precategory D (id-hom-Precategory D))
-  pr2 (pr2 (pr2 constant-functor-Precategory)) = refl-htpy
+  pr1 constant-functor-Precategory _ = {!!}
 ```
 
 ### Constant functors between categories
@@ -57,11 +53,7 @@ module _
   where
 
   constant-functor-Category : functor-Category C D
-  constant-functor-Category =
-    constant-functor-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( d)
+  constant-functor-Category = {!!}
 ```
 
 ### Constant functors between large precategories
@@ -74,15 +66,7 @@ module _
   where
 
   constant-functor-Large-Precategory : functor-Large-Precategory (λ _ → l) C D
-  obj-functor-Large-Precategory constant-functor-Large-Precategory _ = d
-  hom-functor-Large-Precategory constant-functor-Large-Precategory _ =
-    id-hom-Large-Precategory D
-  preserves-comp-functor-Large-Precategory constant-functor-Large-Precategory
-    _ _ =
-    inv
-      ( left-unit-law-comp-hom-Large-Precategory D (id-hom-Large-Precategory D))
-  preserves-id-functor-Large-Precategory constant-functor-Large-Precategory =
-    refl
+  obj-functor-Large-Precategory constant-functor-Large-Precategory _ = {!!}
 ```
 
 ### Constant functors between large categories
@@ -95,11 +79,7 @@ module _
   where
 
   constant-functor-Large-Category : functor-Large-Category (λ _ → l) C D
-  constant-functor-Large-Category =
-    constant-functor-Large-Precategory
-      ( large-precategory-Large-Category C)
-      ( large-precategory-Large-Category D)
-      ( d)
+  constant-functor-Large-Category = {!!}
 ```
 
 ## External links

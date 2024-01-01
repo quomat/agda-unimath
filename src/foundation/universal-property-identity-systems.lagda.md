@@ -36,9 +36,7 @@ also follows for identity systems.
 ```agda
 dependent-universal-property-identity-system :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} {a : A} (b : B a) → UUω
-dependent-universal-property-identity-system {A = A} {B} b =
-  {l3 : Level} (P : (x : A) (y : B x) → UU l3) →
-  is-equiv (ev-refl-identity-system b {P})
+dependent-universal-property-identity-system {A = A} {B} b = {!!}
 ```
 
 ## Properties
@@ -54,35 +52,18 @@ module _
     is-torsorial B →
     dependent-universal-property-identity-system {B = B} b
   dependent-universal-property-identity-system-is-torsorial
-    H P =
-    is-equiv-left-factor
-      ( ev-refl-identity-system b)
-      ( ev-pair)
-      ( dependent-universal-property-contr-is-contr
-        ( a , b)
-        ( H)
-        ( λ u → P (pr1 u) (pr2 u)))
-      ( is-equiv-ev-pair)
+    H P = {!!}
 
   equiv-dependent-universal-property-identity-system-is-torsorial :
     is-torsorial B →
     {l : Level} {C : (x : A) → B x → UU l} →
     ((x : A) (y : B x) → C x y) ≃ C a b
-  pr1 (equiv-dependent-universal-property-identity-system-is-torsorial H) =
-    ev-refl-identity-system b
-  pr2 (equiv-dependent-universal-property-identity-system-is-torsorial H) =
-    dependent-universal-property-identity-system-is-torsorial H _
+  pr1 (equiv-dependent-universal-property-identity-system-is-torsorial H) = {!!}
 
   is-torsorial-dependent-universal-property-identity-system :
     dependent-universal-property-identity-system {B = B} b →
     is-torsorial B
-  pr1 (is-torsorial-dependent-universal-property-identity-system H) = (a , b)
-  pr2 (is-torsorial-dependent-universal-property-identity-system H) u =
-    map-inv-is-equiv
-      ( H (λ x y → (a , b) ＝ (x , y)))
-      ( refl)
-      ( pr1 u)
-      ( pr2 u)
+  pr1 (is-torsorial-dependent-universal-property-identity-system H) = {!!}
 ```
 
 ### A type family satisfies the dependent universal property of identity systems if and only if it is an identity system
@@ -95,13 +76,10 @@ module _
   dependent-universal-property-identity-system-is-identity-system :
     is-identity-system B a b →
     dependent-universal-property-identity-system {B = B} b
-  dependent-universal-property-identity-system-is-identity-system H =
-    dependent-universal-property-identity-system-is-torsorial b
-      ( is-torsorial-is-identity-system a b H)
+  dependent-universal-property-identity-system-is-identity-system H = {!!}
 
   is-identity-system-dependent-universal-property-identity-system :
     dependent-universal-property-identity-system {B = B} b →
     is-identity-system B a b
-  is-identity-system-dependent-universal-property-identity-system H P =
-    section-is-equiv (H P)
+  is-identity-system-dependent-universal-property-identity-system H P = {!!}
 ```

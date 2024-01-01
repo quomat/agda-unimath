@@ -114,19 +114,14 @@ module _
   where
 
   domain-join-maps : UU (l1 ⊔ l2 ⊔ l3)
-  domain-join-maps =
-    pushout
-      ( vertical-map-standard-pullback {f = f} {g = g})
-      ( horizontal-map-standard-pullback {f = f} {g = g})
+  domain-join-maps = {!!}
 
   cocone-join-maps :
     cocone
       ( vertical-map-standard-pullback {f = f} {g = g})
       ( horizontal-map-standard-pullback {f = f} {g = g})
       ( X)
-  pr1 cocone-join-maps = f
-  pr1 (pr2 cocone-join-maps) = g
-  pr2 (pr2 cocone-join-maps) = coherence-square-standard-pullback
+  pr1 cocone-join-maps = {!!}
 
   abstract
     uniqueness-join-maps :
@@ -144,25 +139,17 @@ module _
                     ( horizontal-map-standard-pullback))
                   ( h))
                 ( cocone-join-maps)))
-    uniqueness-join-maps =
-      uniqueness-map-universal-property-pushout
-        ( vertical-map-standard-pullback)
-        ( horizontal-map-standard-pullback)
-        ( cocone-pushout
-          ( vertical-map-standard-pullback)
-          ( horizontal-map-standard-pullback))
-        ( up-pushout _ _)
-        ( cocone-join-maps)
+    uniqueness-join-maps = {!!}
 
   abstract
     join-maps : domain-join-maps → X
-    join-maps = pr1 (center uniqueness-join-maps)
+    join-maps = {!!}
 
     compute-inl-join-maps : join-maps ∘ inl-pushout _ _ ~ f
-    compute-inl-join-maps = pr1 (pr2 (center uniqueness-join-maps))
+    compute-inl-join-maps = {!!}
 
     compute-inr-join-maps : join-maps ∘ inr-pushout _ _ ~ g
-    compute-inr-join-maps = pr1 (pr2 (pr2 (center uniqueness-join-maps)))
+    compute-inr-join-maps = {!!}
 
     compute-glue-join-maps :
       statement-coherence-htpy-cocone
@@ -178,8 +165,7 @@ module _
         ( cocone-join-maps)
         ( compute-inl-join-maps)
         ( compute-inr-join-maps)
-    compute-glue-join-maps =
-      pr2 (pr2 (pr2 (center uniqueness-join-maps)))
+    compute-glue-join-maps = {!!}
 ```
 
 ## External links

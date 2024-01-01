@@ -50,25 +50,18 @@ module _
   where
 
   map-equiv-function-type : (A' → B') → (A → B)
-  map-equiv-function-type h = map-equiv f ∘ (h ∘ map-inv-equiv e)
+  map-equiv-function-type h = {!!}
 
   compute-map-equiv-function-type :
     (h : A' → B') (x : A') →
     map-equiv-function-type h (map-equiv e x) ＝ map-equiv f (h x)
-  compute-map-equiv-function-type h x =
-    ap (map-equiv f ∘ h) (is-retraction-map-inv-equiv e x)
+  compute-map-equiv-function-type h x = {!!}
 
   is-equiv-map-equiv-function-type : is-equiv map-equiv-function-type
-  is-equiv-map-equiv-function-type =
-    is-equiv-comp
-      ( precomp (map-equiv (inv-equiv e)) B)
-      ( postcomp A' (map-equiv f))
-      ( is-equiv-postcomp-equiv f A')
-      ( is-equiv-precomp-equiv (inv-equiv e) B)
+  is-equiv-map-equiv-function-type = {!!}
 
   equiv-function-type : (A' → B') ≃ (A → B)
-  pr1 equiv-function-type = map-equiv-function-type
-  pr2 equiv-function-type = is-equiv-map-equiv-function-type
+  pr1 equiv-function-type = {!!}
 ```
 
 ### A map is truncated iff postcomposition by it is truncated
@@ -81,20 +74,12 @@ module _
   is-trunc-map-postcomp-is-trunc-map :
     is-trunc-map k f →
     {l3 : Level} (A : UU l3) → is-trunc-map k (postcomp A f)
-  is-trunc-map-postcomp-is-trunc-map is-trunc-f A =
-    is-trunc-map-map-Π-is-trunc-map' k
-      ( const A unit star)
-      ( const unit (X → Y) f)
-      ( const unit (is-trunc-map k f) is-trunc-f)
+  is-trunc-map-postcomp-is-trunc-map is-trunc-f A = {!!}
 
   is-trunc-map-is-trunc-map-postcomp :
     ({l3 : Level} (A : UU l3) → is-trunc-map k (postcomp A f)) →
     is-trunc-map k f
-  is-trunc-map-is-trunc-map-postcomp is-trunc-postcomp-f =
-    is-trunc-map-is-trunc-map-map-Π' k
-      ( const unit (X → Y) f)
-      ( λ {l} {J} α → is-trunc-postcomp-f {l} J)
-      ( star)
+  is-trunc-map-is-trunc-map-postcomp is-trunc-postcomp-f = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} (f : X → Y)
@@ -103,25 +88,18 @@ module _
   is-emb-postcomp-is-emb :
     is-emb f →
     {l3 : Level} (A : UU l3) → is-emb (postcomp A f)
-  is-emb-postcomp-is-emb is-emb-f A =
-    is-emb-is-prop-map
-      ( is-trunc-map-postcomp-is-trunc-map neg-one-𝕋 f
-        ( is-prop-map-is-emb is-emb-f)
-        ( A))
+  is-emb-postcomp-is-emb is-emb-f A = {!!}
 
   is-emb-is-emb-postcomp :
     ({l3 : Level} (A : UU l3) → is-emb (postcomp A f)) →
     is-emb f
-  is-emb-is-emb-postcomp is-emb-postcomp-f =
-    is-emb-is-prop-map
-      ( is-trunc-map-is-trunc-map-postcomp neg-one-𝕋 f
-        ( is-prop-map-is-emb ∘ is-emb-postcomp-f))
+  is-emb-is-emb-postcomp is-emb-postcomp-f = {!!}
 
 emb-postcomp :
   {l1 l2 l3 : Level} {X : UU l1} {Y : UU l2} (f : X ↪ Y) (A : UU l3) →
   (A → X) ↪ (A → Y)
-pr1 (emb-postcomp f A) = postcomp A (map-emb f)
-pr2 (emb-postcomp f A) = is-emb-postcomp-is-emb (map-emb f) (is-emb-map-emb f) A
+pr1 (emb-postcomp f A) = {!!}
+pr2 (emb-postcomp f A) = {!!}
 ```
 
 ## See also

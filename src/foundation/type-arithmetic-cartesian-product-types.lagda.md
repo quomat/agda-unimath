@@ -38,31 +38,24 @@ module _
   where
 
   map-commutative-prod : A × B → B × A
-  pr1 (map-commutative-prod (pair a b)) = b
-  pr2 (map-commutative-prod (pair a b)) = a
+  pr1 (map-commutative-prod (pair a b)) = {!!}
 
   map-inv-commutative-prod : B × A → A × B
-  pr1 (map-inv-commutative-prod (pair b a)) = a
-  pr2 (map-inv-commutative-prod (pair b a)) = b
+  pr1 (map-inv-commutative-prod (pair b a)) = {!!}
 
   is-section-map-inv-commutative-prod :
     (map-commutative-prod ∘ map-inv-commutative-prod) ~ id
-  is-section-map-inv-commutative-prod (pair b a) = refl
+  is-section-map-inv-commutative-prod (pair b a) = {!!}
 
   is-retraction-map-inv-commutative-prod :
     (map-inv-commutative-prod ∘ map-commutative-prod) ~ id
-  is-retraction-map-inv-commutative-prod (pair a b) = refl
+  is-retraction-map-inv-commutative-prod (pair a b) = {!!}
 
   is-equiv-map-commutative-prod : is-equiv map-commutative-prod
-  is-equiv-map-commutative-prod =
-    is-equiv-is-invertible
-      map-inv-commutative-prod
-      is-section-map-inv-commutative-prod
-      is-retraction-map-inv-commutative-prod
+  is-equiv-map-commutative-prod = {!!}
 
   commutative-prod : (A × B) ≃ (B × A)
-  pr1 commutative-prod = map-commutative-prod
-  pr2 commutative-prod = is-equiv-map-commutative-prod
+  pr1 commutative-prod = {!!}
 ```
 
 ### Associativity of cartesian products
@@ -73,27 +66,24 @@ module _
   where
 
   map-associative-prod : (A × B) × C → A × (B × C)
-  map-associative-prod = map-associative-Σ A (λ x → B) (λ w → C)
+  map-associative-prod = {!!}
 
   map-inv-associative-prod : A × (B × C) → (A × B) × C
-  map-inv-associative-prod = map-inv-associative-Σ A (λ x → B) (λ w → C)
+  map-inv-associative-prod = {!!}
 
   is-section-map-inv-associative-prod :
     (map-associative-prod ∘ map-inv-associative-prod) ~ id
-  is-section-map-inv-associative-prod =
-    is-section-map-inv-associative-Σ A (λ x → B) (λ w → C)
+  is-section-map-inv-associative-prod = {!!}
 
   is-retraction-map-inv-associative-prod :
     (map-inv-associative-prod ∘ map-associative-prod) ~ id
-  is-retraction-map-inv-associative-prod =
-    is-retraction-map-inv-associative-Σ A (λ x → B) (λ w → C)
+  is-retraction-map-inv-associative-prod = {!!}
 
   is-equiv-map-associative-prod : is-equiv map-associative-prod
-  is-equiv-map-associative-prod =
-    is-equiv-map-associative-Σ A (λ x → B) (λ w → C)
+  is-equiv-map-associative-prod = {!!}
 
   associative-prod : ((A × B) × C) ≃ (A × (B × C))
-  associative-prod = associative-Σ A (λ x → B) (λ w → C)
+  associative-prod = {!!}
 ```
 
 ### The unit laws of cartesian product types with respect to contractible types
@@ -104,33 +94,26 @@ module _
   where
 
   right-unit-law-prod-is-contr : A × B ≃ A
-  right-unit-law-prod-is-contr = right-unit-law-Σ-is-contr (λ a → is-contr-B)
+  right-unit-law-prod-is-contr = {!!}
 
   inv-right-unit-law-prod-is-contr : A ≃ A × B
-  inv-right-unit-law-prod-is-contr = inv-equiv right-unit-law-prod-is-contr
+  inv-right-unit-law-prod-is-contr = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (is-contr-A : is-contr A)
   where
 
   left-unit-law-prod-is-contr : A × B ≃ B
-  left-unit-law-prod-is-contr =
-    left-unit-law-Σ-is-contr is-contr-A (center is-contr-A)
+  left-unit-law-prod-is-contr = {!!}
 
   inv-left-unit-law-prod-is-contr : B ≃ A × B
-  inv-left-unit-law-prod-is-contr = inv-equiv left-unit-law-prod-is-contr
+  inv-left-unit-law-prod-is-contr = {!!}
 
   is-equiv-pr2-prod-is-contr : is-equiv (pr2 {B = λ a → B})
-  is-equiv-pr2-prod-is-contr =
-    is-equiv-comp
-      ( pr1)
-      ( map-commutative-prod)
-      ( is-equiv-map-commutative-prod)
-      ( is-equiv-pr1-is-contr λ b → is-contr-A)
+  is-equiv-pr2-prod-is-contr = {!!}
 
   equiv-pr2-prod-is-contr : (A × B) ≃ B
-  pr1 equiv-pr2-prod-is-contr = pr2
-  pr2 equiv-pr2-prod-is-contr = is-equiv-pr2-prod-is-contr
+  pr1 equiv-pr2-prod-is-contr = {!!}
 ```
 
 ### Adding redundant property
@@ -139,12 +122,8 @@ module _
 equiv-add-redundant-prop :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   is-prop B → (f : A → B) → A ≃ A × B
-pr1 (equiv-add-redundant-prop is-prop-B f) a = a , f a
-pr2 (equiv-add-redundant-prop is-prop-B f) =
-  is-equiv-is-invertible
-    ( pr1)
-    ( λ p → eq-pair refl (eq-is-prop is-prop-B))
-    ( λ a → refl)
+pr1 (equiv-add-redundant-prop is-prop-B f) a = {!!}
+pr2 (equiv-add-redundant-prop is-prop-B f) = {!!}
 ```
 
 ## See also

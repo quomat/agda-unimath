@@ -36,51 +36,43 @@ Such an object may also be called a **semiprecategory**.
 ```agda
 Nonunital-Precategory :
   (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Nonunital-Precategory l1 l2 =
-  Σ ( UU l1)
-    ( λ A →
-      Σ ( A → A → Set l2)
-        ( associative-composition-operation-binary-family-Set))
+Nonunital-Precategory l1 l2 = {!!}
 
 module _
   {l1 l2 : Level} (C : Nonunital-Precategory l1 l2)
   where
 
   obj-Nonunital-Precategory : UU l1
-  obj-Nonunital-Precategory = pr1 C
+  obj-Nonunital-Precategory = {!!}
 
   hom-set-Nonunital-Precategory : (x y : obj-Nonunital-Precategory) → Set l2
-  hom-set-Nonunital-Precategory = pr1 (pr2 C)
+  hom-set-Nonunital-Precategory = {!!}
 
   hom-Nonunital-Precategory : (x y : obj-Nonunital-Precategory) → UU l2
-  hom-Nonunital-Precategory x y = type-Set (hom-set-Nonunital-Precategory x y)
+  hom-Nonunital-Precategory x y = {!!}
 
   is-set-hom-Nonunital-Precategory :
     (x y : obj-Nonunital-Precategory) → is-set (hom-Nonunital-Precategory x y)
-  is-set-hom-Nonunital-Precategory x y =
-    is-set-type-Set (hom-set-Nonunital-Precategory x y)
+  is-set-hom-Nonunital-Precategory x y = {!!}
 
   associative-composition-operation-Nonunital-Precategory :
     associative-composition-operation-binary-family-Set
       hom-set-Nonunital-Precategory
-  associative-composition-operation-Nonunital-Precategory = pr2 (pr2 C)
+  associative-composition-operation-Nonunital-Precategory = {!!}
 
   comp-hom-Nonunital-Precategory :
     {x y z : obj-Nonunital-Precategory} →
     hom-Nonunital-Precategory y z →
     hom-Nonunital-Precategory x y →
     hom-Nonunital-Precategory x z
-  comp-hom-Nonunital-Precategory =
-    comp-hom-associative-composition-operation-binary-family-Set
-      ( hom-set-Nonunital-Precategory)
-      ( associative-composition-operation-Nonunital-Precategory)
+  comp-hom-Nonunital-Precategory = {!!}
 
   comp-hom-Nonunital-Precategory' :
     {x y z : obj-Nonunital-Precategory} →
     hom-Nonunital-Precategory x y →
     hom-Nonunital-Precategory y z →
     hom-Nonunital-Precategory x z
-  comp-hom-Nonunital-Precategory' f g = comp-hom-Nonunital-Precategory g f
+  comp-hom-Nonunital-Precategory' f g = {!!}
 
   associative-comp-hom-Nonunital-Precategory :
     {x y z w : obj-Nonunital-Precategory}
@@ -89,10 +81,7 @@ module _
     (f : hom-Nonunital-Precategory x y) →
     comp-hom-Nonunital-Precategory (comp-hom-Nonunital-Precategory h g) f ＝
     comp-hom-Nonunital-Precategory h (comp-hom-Nonunital-Precategory g f)
-  associative-comp-hom-Nonunital-Precategory =
-    witness-associative-composition-operation-binary-family-Set
-      ( hom-set-Nonunital-Precategory)
-      ( associative-composition-operation-Nonunital-Precategory)
+  associative-comp-hom-Nonunital-Precategory = {!!}
 
   inv-associative-comp-hom-Nonunital-Precategory :
     {x y z w : obj-Nonunital-Precategory}
@@ -101,10 +90,7 @@ module _
     (f : hom-Nonunital-Precategory x y) →
     comp-hom-Nonunital-Precategory h (comp-hom-Nonunital-Precategory g f) ＝
     comp-hom-Nonunital-Precategory (comp-hom-Nonunital-Precategory h g) f
-  inv-associative-comp-hom-Nonunital-Precategory =
-    inv-witness-associative-composition-operation-binary-family-Set
-      ( hom-set-Nonunital-Precategory)
-      ( associative-composition-operation-Nonunital-Precategory)
+  inv-associative-comp-hom-Nonunital-Precategory = {!!}
 ```
 
 ### The underlying set-magmoid of a nonunital precategory
@@ -115,9 +101,7 @@ module _
   where
 
   set-magmoid-Nonunital-Precategory : Set-Magmoid l1 l2
-  pr1 set-magmoid-Nonunital-Precategory = obj-Nonunital-Precategory C
-  pr1 (pr2 set-magmoid-Nonunital-Precategory) = hom-set-Nonunital-Precategory C
-  pr2 (pr2 set-magmoid-Nonunital-Precategory) = comp-hom-Nonunital-Precategory C
+  pr1 set-magmoid-Nonunital-Precategory = {!!}
 ```
 
 ### The total hom-type of a nonunital precategory
@@ -125,16 +109,14 @@ module _
 ```agda
 total-hom-Nonunital-Precategory :
   {l1 l2 : Level} (C : Nonunital-Precategory l1 l2) → UU (l1 ⊔ l2)
-total-hom-Nonunital-Precategory C =
-  Σ ( obj-Nonunital-Precategory C)
-    ( λ x → Σ (obj-Nonunital-Precategory C) (hom-Nonunital-Precategory C x))
+total-hom-Nonunital-Precategory C = {!!}
 
 obj-total-hom-Nonunital-Precategory :
   {l1 l2 : Level} (C : Nonunital-Precategory l1 l2) →
   total-hom-Nonunital-Precategory C →
   obj-Nonunital-Precategory C × obj-Nonunital-Precategory C
-pr1 (obj-total-hom-Nonunital-Precategory C (x , y , f)) = x
-pr2 (obj-total-hom-Nonunital-Precategory C (x , y , f)) = y
+pr1 (obj-total-hom-Nonunital-Precategory C (x , y , f)) = {!!}
+pr2 (obj-total-hom-Nonunital-Precategory C (x , y , f)) = {!!}
 ```
 
 ### Pre- and postcomposition by a morphism
@@ -149,11 +131,11 @@ module _
 
   precomp-hom-Nonunital-Precategory :
     hom-Nonunital-Precategory C y z → hom-Nonunital-Precategory C x z
-  precomp-hom-Nonunital-Precategory g = comp-hom-Nonunital-Precategory C g f
+  precomp-hom-Nonunital-Precategory g = {!!}
 
   postcomp-hom-Nonunital-Precategory :
     hom-Nonunital-Precategory C z x → hom-Nonunital-Precategory C z y
-  postcomp-hom-Nonunital-Precategory = comp-hom-Nonunital-Precategory C f
+  postcomp-hom-Nonunital-Precategory = {!!}
 ```
 
 ### The predicate on nonunital precategories of being unital
@@ -172,26 +154,17 @@ module _
   where
 
   is-unital-Nonunital-Precategory : UU (l1 ⊔ l2)
-  is-unital-Nonunital-Precategory =
-    is-unital-composition-operation-binary-family-Set
-      ( hom-set-Nonunital-Precategory C)
-      ( comp-hom-Nonunital-Precategory C)
+  is-unital-Nonunital-Precategory = {!!}
 
   is-prop-is-unital-Nonunital-Precategory :
     is-prop
       ( is-unital-composition-operation-binary-family-Set
         ( hom-set-Nonunital-Precategory C)
         ( comp-hom-Nonunital-Precategory C))
-  is-prop-is-unital-Nonunital-Precategory =
-    is-prop-is-unital-composition-operation-binary-family-Set
-      ( hom-set-Nonunital-Precategory C)
-      ( comp-hom-Nonunital-Precategory C)
+  is-prop-is-unital-Nonunital-Precategory = {!!}
 
   is-unital-prop-Nonunital-Precategory : Prop (l1 ⊔ l2)
-  is-unital-prop-Nonunital-Precategory =
-    is-unital-prop-composition-operation-binary-family-Set
-      ( hom-set-Nonunital-Precategory C)
-      ( comp-hom-Nonunital-Precategory C)
+  is-unital-prop-Nonunital-Precategory = {!!}
 ```
 
 ## Properties
@@ -206,16 +179,12 @@ module _
   is-trunc-total-hom-is-trunc-obj-Nonunital-Precategory :
     is-trunc (succ-𝕋 (succ-𝕋 k)) (obj-Nonunital-Precategory C) →
     is-trunc (succ-𝕋 (succ-𝕋 k)) (total-hom-Nonunital-Precategory C)
-  is-trunc-total-hom-is-trunc-obj-Nonunital-Precategory =
-    is-trunc-total-hom-is-trunc-obj-Set-Magmoid
-      ( set-magmoid-Nonunital-Precategory C)
+  is-trunc-total-hom-is-trunc-obj-Nonunital-Precategory = {!!}
 
   total-hom-truncated-type-is-trunc-obj-Nonunital-Precategory :
     is-trunc (succ-𝕋 (succ-𝕋 k)) (obj-Nonunital-Precategory C) →
     Truncated-Type (l1 ⊔ l2) (succ-𝕋 (succ-𝕋 k))
-  total-hom-truncated-type-is-trunc-obj-Nonunital-Precategory =
-    total-hom-truncated-type-is-trunc-obj-Set-Magmoid
-      ( set-magmoid-Nonunital-Precategory C)
+  total-hom-truncated-type-is-trunc-obj-Nonunital-Precategory = {!!}
 ```
 
 ## Comments

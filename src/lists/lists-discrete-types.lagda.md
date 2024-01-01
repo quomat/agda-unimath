@@ -37,32 +37,15 @@ In this file we study lists of elements in discrete types.
 has-decidable-equality-list :
   {l1 : Level} {A : UU l1} →
   has-decidable-equality A → has-decidable-equality (list A)
-has-decidable-equality-list d nil nil = inl refl
-has-decidable-equality-list d nil (cons x l) =
-  inr (map-inv-raise ∘ Eq-eq-list nil (cons x l))
-has-decidable-equality-list d (cons x l) nil =
-  inr (map-inv-raise ∘ Eq-eq-list (cons x l) nil)
-has-decidable-equality-list d (cons x l) (cons x' l') =
-  is-decidable-iff
-    ( eq-Eq-list (cons x l) (cons x' l'))
-    ( Eq-eq-list (cons x l) (cons x' l'))
-    ( is-decidable-prod
-      ( d x x')
-      ( is-decidable-iff
-        ( Eq-eq-list l l')
-        ( eq-Eq-list l l')
-        ( has-decidable-equality-list d l l')))
+has-decidable-equality-list d nil nil = {!!}
+has-decidable-equality-list d nil (cons x l) = {!!}
+has-decidable-equality-list d (cons x l) nil = {!!}
+has-decidable-equality-list d (cons x l) (cons x' l') = {!!}
 
 has-decidable-equality-has-decidable-equality-list :
   {l1 : Level} {A : UU l1} →
   has-decidable-equality (list A) → has-decidable-equality A
-has-decidable-equality-has-decidable-equality-list d x y =
-  is-decidable-left-factor
-    ( is-decidable-iff
-      ( Eq-eq-list (cons x nil) (cons y nil))
-      ( eq-Eq-list (cons x nil) (cons y nil))
-      ( d (cons x nil) (cons y nil)))
-    ( raise-star)
+has-decidable-equality-has-decidable-equality-list d x y = {!!}
 ```
 
 ### Testing whether an element of a discrete type is in a list
@@ -72,10 +55,10 @@ elem-list :
   {l1 : Level} {A : UU l1} →
   has-decidable-equality A →
   A → list A → bool
-elem-list d x nil = false
+elem-list d x nil = {!!}
 elem-list d x (cons x' l) with (d x x')
-... | inl _ = true
-... | inr _ = elem-list d x l
+... | inl _ = {!!}
+... | inr _ = {!!}
 ```
 
 ### Removing duplicates in lists
@@ -85,10 +68,10 @@ union-list :
   {l1 : Level} {A : UU l1} →
   has-decidable-equality A →
   list A → list A → list A
-union-list d nil l' = l'
+union-list d nil l' = {!!}
 union-list d (cons x l) l' with (elem-list d x l')
-... | true = l'
-... | false = cons x l'
+... | true = {!!}
+... | false = {!!}
 ```
 
 ## Properties
@@ -116,12 +99,8 @@ is-nil-union-is-nil-list :
   (l l' : list A) →
   union-list d l l' ＝ nil →
   is-nil-list l × is-nil-list l'
-is-nil-union-is-nil-list d nil l' p = (refl , p)
+is-nil-union-is-nil-list d nil l' p = {!!}
 is-nil-union-is-nil-list d (cons x l) l' p with (elem-list d x l') in q
-... | true =
-  ex-falso (is-nonnil-elem-list d x l' q p)
-    -- ( is-nonnil-elem-list d x l' q
-    --   (pr2 (is-nil-union-is-nil-list d l l' p)))
-... | false = ex-falso (is-nonnil-cons-list x l' p)
-    -- (is-nonnil-cons-list x (union-list d l l') p)
+... | true = {!!}
+... | false = {!!}
 ```

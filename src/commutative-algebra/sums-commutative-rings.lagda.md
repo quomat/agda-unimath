@@ -1,3 +1,4 @@
+
 # Sums in commutative rings
 
 ```agda
@@ -42,7 +43,7 @@ ring `A` to any family of elements of `A` indexed by a standard finite type.
 sum-Commutative-Ring :
   {l : Level} (A : Commutative-Ring l) (n : ℕ) →
   (functional-vec-Commutative-Ring A n) → type-Commutative-Ring A
-sum-Commutative-Ring A = sum-Ring (ring-Commutative-Ring A)
+sum-Commutative-Ring A = {!!}
 ```
 
 ## Properties
@@ -57,15 +58,13 @@ module _
   sum-one-element-Commutative-Ring :
     (f : functional-vec-Commutative-Ring A 1) →
     sum-Commutative-Ring A 1 f ＝ head-functional-vec 0 f
-  sum-one-element-Commutative-Ring =
-    sum-one-element-Ring (ring-Commutative-Ring A)
+  sum-one-element-Commutative-Ring = {!!}
 
   sum-two-elements-Commutative-Ring :
     (f : functional-vec-Commutative-Ring A 2) →
     sum-Commutative-Ring A 2 f ＝
     add-Commutative-Ring A (f (zero-Fin 1)) (f (one-Fin 1))
-  sum-two-elements-Commutative-Ring =
-    sum-two-elements-Ring (ring-Commutative-Ring A)
+  sum-two-elements-Commutative-Ring = {!!}
 ```
 
 ### Sums are homotopy invariant
@@ -78,7 +77,7 @@ module _
   htpy-sum-Commutative-Ring :
     (n : ℕ) {f g : functional-vec-Commutative-Ring A n} →
     (f ~ g) → sum-Commutative-Ring A n f ＝ sum-Commutative-Ring A n g
-  htpy-sum-Commutative-Ring = htpy-sum-Ring (ring-Commutative-Ring A)
+  htpy-sum-Commutative-Ring = {!!}
 ```
 
 ### Sums are equal to the zero-th term plus the rest
@@ -94,7 +93,7 @@ module _
     sum-Commutative-Ring A (succ-ℕ n) f ＝
     add-Commutative-Ring A
       ( sum-Commutative-Ring A n (tail-functional-vec n f)) x
-  cons-sum-Commutative-Ring = cons-sum-Ring (ring-Commutative-Ring A)
+  cons-sum-Commutative-Ring = {!!}
 
   snoc-sum-Commutative-Ring :
     (n : ℕ) (f : functional-vec-Commutative-Ring A (succ-ℕ n)) →
@@ -103,7 +102,7 @@ module _
     add-Commutative-Ring A
       ( x)
       ( sum-Commutative-Ring A n (f ∘ inr-Fin n))
-  snoc-sum-Commutative-Ring = snoc-sum-Ring (ring-Commutative-Ring A)
+  snoc-sum-Commutative-Ring = {!!}
 ```
 
 ### Multiplication distributes over sums
@@ -118,16 +117,14 @@ module _
     (f : functional-vec-Commutative-Ring A n) →
     mul-Commutative-Ring A x (sum-Commutative-Ring A n f) ＝
     sum-Commutative-Ring A n (λ i → mul-Commutative-Ring A x (f i))
-  left-distributive-mul-sum-Commutative-Ring =
-    left-distributive-mul-sum-Ring (ring-Commutative-Ring A)
+  left-distributive-mul-sum-Commutative-Ring = {!!}
 
   right-distributive-mul-sum-Commutative-Ring :
     (n : ℕ) (f : functional-vec-Commutative-Ring A n)
     (x : type-Commutative-Ring A) →
     mul-Commutative-Ring A (sum-Commutative-Ring A n f) x ＝
     sum-Commutative-Ring A n (λ i → mul-Commutative-Ring A (f i) x)
-  right-distributive-mul-sum-Commutative-Ring =
-    right-distributive-mul-sum-Ring (ring-Commutative-Ring A)
+  right-distributive-mul-sum-Commutative-Ring = {!!}
 ```
 
 ### Interchange law of sums and addition in a commutative ring
@@ -144,8 +141,7 @@ module _
       ( sum-Commutative-Ring A n g) ＝
     sum-Commutative-Ring A n
       ( add-functional-vec-Commutative-Ring A n f g)
-  interchange-add-sum-Commutative-Ring =
-    interchange-add-sum-Ring (ring-Commutative-Ring A)
+  interchange-add-sum-Commutative-Ring = {!!}
 ```
 
 ### Extending a sum of elements in a commutative ring
@@ -161,7 +157,7 @@ module _
       ( succ-ℕ n)
       ( cons-functional-vec-Commutative-Ring A n (zero-Commutative-Ring A) f) ＝
     sum-Commutative-Ring A n f
-  extend-sum-Commutative-Ring = extend-sum-Ring (ring-Commutative-Ring A)
+  extend-sum-Commutative-Ring = {!!}
 ```
 
 ### Shifting a sum of elements in a commutative ring
@@ -178,7 +174,7 @@ module _
       ( snoc-functional-vec-Commutative-Ring A n f
         ( zero-Commutative-Ring A)) ＝
     sum-Commutative-Ring A n f
-  shift-sum-Commutative-Ring = shift-sum-Ring (ring-Commutative-Ring A)
+  shift-sum-Commutative-Ring = {!!}
 ```
 
 ### Splitting sums
@@ -191,13 +187,8 @@ split-sum-Commutative-Ring :
   add-Commutative-Ring A
     ( sum-Commutative-Ring A n (f ∘ inl-coprod-Fin n m))
     ( sum-Commutative-Ring A m (f ∘ inr-coprod-Fin n m))
-split-sum-Commutative-Ring A n zero-ℕ f =
-  inv (right-unit-law-add-Commutative-Ring A (sum-Commutative-Ring A n f))
-split-sum-Commutative-Ring A n (succ-ℕ m) f =
-  ( ap
-    ( add-Commutative-Ring' A (f (inr star)))
-    ( split-sum-Commutative-Ring A n m (f ∘ inl))) ∙
-  ( associative-add-Commutative-Ring A _ _ _)
+split-sum-Commutative-Ring A n zero-ℕ f = {!!}
+split-sum-Commutative-Ring A n (succ-ℕ m) f = {!!}
 ```
 
 ### A sum of zeroes is zero
@@ -212,5 +203,5 @@ module _
     sum-Commutative-Ring A n
       ( zero-functional-vec-Commutative-Ring A n) ＝
     zero-Commutative-Ring A
-  sum-zero-Commutative-Ring = sum-zero-Ring (ring-Commutative-Ring A)
+  sum-zero-Commutative-Ring = {!!}
 ```

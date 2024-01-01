@@ -39,22 +39,14 @@ module _
   where
 
   is-conservative-functor-Precategory : UU (l1 ⊔ l2 ⊔ l4)
-  is-conservative-functor-Precategory =
-    {x y : obj-Precategory C} (f : hom-Precategory C x y) →
-    is-iso-Precategory D (hom-functor-Precategory C D F f) →
-    is-iso-Precategory C f
+  is-conservative-functor-Precategory = {!!}
 
   is-prop-is-conservative-functor-Precategory :
     is-prop is-conservative-functor-Precategory
-  is-prop-is-conservative-functor-Precategory =
-    is-prop-iterated-implicit-Π 2
-      ( λ x y → is-prop-iterated-Π 2 (λ f _ → is-prop-is-iso-Precategory C f))
+  is-prop-is-conservative-functor-Precategory = {!!}
 
   is-conservative-prop-functor-Precategory : Prop (l1 ⊔ l2 ⊔ l4)
-  pr1 is-conservative-prop-functor-Precategory =
-    is-conservative-functor-Precategory
-  pr2 is-conservative-prop-functor-Precategory =
-    is-prop-is-conservative-functor-Precategory
+  pr1 is-conservative-prop-functor-Precategory = {!!}
 ```
 
 ### The type of conservative functors
@@ -63,9 +55,7 @@ module _
 conservative-functor-Precategory :
   {l1 l2 l3 l4 : Level} (C : Precategory l1 l2) (D : Precategory l3 l4) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-conservative-functor-Precategory C D =
-  Σ ( functor-Precategory C D)
-    ( is-conservative-functor-Precategory C D)
+conservative-functor-Precategory C D = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}
@@ -75,18 +65,16 @@ module _
 
   functor-conservative-functor-Precategory :
     functor-Precategory C D
-  functor-conservative-functor-Precategory = pr1 F
+  functor-conservative-functor-Precategory = {!!}
 
   is-conservative-conservative-functor-Precategory :
     is-conservative-functor-Precategory C D
       ( functor-conservative-functor-Precategory)
-  is-conservative-conservative-functor-Precategory = pr2 F
+  is-conservative-conservative-functor-Precategory = {!!}
 
   obj-conservative-functor-Precategory :
     obj-Precategory C → obj-Precategory D
-  obj-conservative-functor-Precategory =
-    obj-functor-Precategory C D
-      ( functor-conservative-functor-Precategory)
+  obj-conservative-functor-Precategory = {!!}
 
   hom-conservative-functor-Precategory :
     {x y : obj-Precategory C} →
@@ -94,9 +82,7 @@ module _
     hom-Precategory D
       ( obj-conservative-functor-Precategory x)
       ( obj-conservative-functor-Precategory y)
-  hom-conservative-functor-Precategory =
-    hom-functor-Precategory C D
-      ( functor-conservative-functor-Precategory)
+  hom-conservative-functor-Precategory = {!!}
 ```
 
 ## See also

@@ -52,31 +52,7 @@ module _
     is-pullback (j ∘ i) h (pasting-horizontal-cone i j h c d) →
     is-pullback j h c
   descent-is-equiv i j h c d
-    is-equiv-i is-equiv-k is-pb-rectangle =
-    is-pullback-is-fiberwise-equiv-map-fiber-cone j h c
-      ( map-inv-is-equiv-precomp-Π-is-equiv
-        ( is-equiv-i)
-        ( λ y → is-equiv (map-fiber-cone j h c y))
-        ( λ x →
-          is-equiv-right-map-triangle
-          ( map-fiber-cone (j ∘ i) h
-            ( pasting-horizontal-cone i j h c d) x)
-          ( map-fiber-cone j h c (i x))
-          ( map-fiber-cone i (vertical-map-cone j h c) d x)
-          ( preserves-pasting-horizontal-map-fiber-cone i j h c d x)
-          ( is-fiberwise-equiv-map-fiber-cone-is-pullback (j ∘ i) h
-            ( pasting-horizontal-cone i j h c d)
-            ( is-pb-rectangle)
-            ( x))
-          ( is-fiberwise-equiv-map-fiber-cone-is-pullback i
-            ( vertical-map-cone j h c)
-            ( d)
-            ( is-pullback-is-equiv' i
-              ( vertical-map-cone j h c)
-              ( d)
-              ( is-equiv-i)
-              ( is-equiv-k))
-            ( x))))
+    is-equiv-i is-equiv-k is-pb-rectangle = {!!}
 
   descent-equiv :
     (i : X ≃ Y) (j : Y → Z) (h : C → Z)
@@ -87,6 +63,5 @@ module _
       ( h)
       ( pasting-horizontal-cone (map-equiv i) j h c d) →
     is-pullback j h c
-  descent-equiv i j h c d =
-    descent-is-equiv (map-equiv i) j h c d (is-equiv-map-equiv i)
+  descent-equiv i j h c d = {!!}
 ```

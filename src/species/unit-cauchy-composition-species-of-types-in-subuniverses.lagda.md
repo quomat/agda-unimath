@@ -42,6 +42,5 @@ module _
 
   cauchy-composition-unit-species-subuniverse :
     species-subuniverse P (subuniverse-global-subuniverse Q l1)
-  cauchy-composition-unit-species-subuniverse X =
-    (is-contr (inclusion-subuniverse P X) , C4 X)
+  cauchy-composition-unit-species-subuniverse X = {!!}
 ```

@@ -51,17 +51,11 @@ module _
   where
 
   is-subterminal-Precategory : UU (l1 ⊔ l2)
-  is-subterminal-Precategory =
-    is-fully-faithful-functor-Precategory C terminal-Precategory
-      ( terminal-functor-Precategory C)
+  is-subterminal-Precategory = {!!}
 
   is-subterminal-prop-Precategory : Prop (l1 ⊔ l2)
-  is-subterminal-prop-Precategory =
-    is-fully-faithful-prop-functor-Precategory C terminal-Precategory
-      ( terminal-functor-Precategory C)
+  is-subterminal-prop-Precategory = {!!}
 
   is-prop-is-subterminal-Precategory : is-prop is-subterminal-Precategory
-  is-prop-is-subterminal-Precategory =
-    is-prop-is-fully-faithful-functor-Precategory C terminal-Precategory
-      ( terminal-functor-Precategory C)
+  is-prop-is-subterminal-Precategory = {!!}
 ```

@@ -28,11 +28,11 @@ The identity operation on types is trivially a
 ```agda
 operator-id-modality :
   (l : Level) → operator-modality l l
-operator-id-modality l = id
+operator-id-modality l = {!!}
 
 unit-id-modality :
   {l : Level} → unit-modality (operator-id-modality l)
-unit-id-modality = id
+unit-id-modality = {!!}
 ```
 
 ## Properties
@@ -42,9 +42,5 @@ unit-id-modality = id
 ```agda
 is-uniquely-eliminating-modality-id-modality :
   {l : Level} → is-uniquely-eliminating-modality (unit-id-modality {l})
-is-uniquely-eliminating-modality-id-modality {l} P =
-  is-local-dependent-type-is-equiv
-    ( unit-id-modality)
-    ( is-equiv-id)
-    ( operator-id-modality l ∘ P)
+is-uniquely-eliminating-modality-id-modality {l} P = {!!}
 ```

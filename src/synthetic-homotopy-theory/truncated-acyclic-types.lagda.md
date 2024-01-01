@@ -36,13 +36,13 @@ module _
   where
 
   is-truncated-acyclic-Prop : Prop l
-  is-truncated-acyclic-Prop = is-connected-Prop k (suspension A)
+  is-truncated-acyclic-Prop = {!!}
 
   is-truncated-acyclic : UU l
-  is-truncated-acyclic = type-Prop is-truncated-acyclic-Prop
+  is-truncated-acyclic = {!!}
 
   is-prop-is-truncated-acyclic : is-prop is-truncated-acyclic
-  is-prop-is-truncated-acyclic = is-prop-type-Prop is-truncated-acyclic-Prop
+  is-prop-is-truncated-acyclic = {!!}
 ```
 
 We use the name `is-truncated-acyclic` instead of `is-truncation-acyclic`,
@@ -59,13 +59,12 @@ notion we're interested in.
 is-truncated-acyclic-equiv :
   {l1 l2 : Level} {k : 𝕋} {A : UU l1} {B : UU l2} →
   A ≃ B → is-truncated-acyclic k B → is-truncated-acyclic k A
-is-truncated-acyclic-equiv {k = k} {B = B} e ac =
-  is-connected-equiv (equiv-suspension e) ac
+is-truncated-acyclic-equiv {k = k} {B = B} e ac = {!!}
 
 is-truncated-acyclic-equiv' :
   {l1 l2 : Level} {k : 𝕋} {A : UU l1} {B : UU l2} →
   A ≃ B → is-truncated-acyclic k A → is-truncated-acyclic k B
-is-truncated-acyclic-equiv' e = is-truncated-acyclic-equiv (inv-equiv e)
+is-truncated-acyclic-equiv' e = {!!}
 ```
 
 ### `k`-acyclic types are closed under retracts
@@ -79,10 +78,7 @@ module _
     A retract-of B →
     is-truncated-acyclic k B →
     is-truncated-acyclic k A
-  is-truncated-acyclic-retract-of R ac =
-    is-connected-retract-of
-      ( retract-of-suspension-retract-of R)
-      ( ac)
+  is-truncated-acyclic-retract-of R ac = {!!}
 ```
 
 ### Every `k`-connected type is `(k+1)`-acyclic
@@ -94,8 +90,7 @@ module _
 
   is-truncated-acyclic-succ-is-connected :
     is-connected k A → is-truncated-acyclic (succ-𝕋 k) A
-  is-truncated-acyclic-succ-is-connected =
-    is-connected-succ-suspension-is-connected
+  is-truncated-acyclic-succ-is-connected = {!!}
 ```
 
 ### Contractible types are `k`-acyclic for any `k`
@@ -103,11 +98,10 @@ module _
 ```agda
 is-truncated-acyclic-is-contr :
   {l : Level} {k : 𝕋} (A : UU l) → is-contr A → is-truncated-acyclic k A
-is-truncated-acyclic-is-contr {k = k} A c =
-  is-connected-is-contr k (is-contr-suspension-is-contr c)
+is-truncated-acyclic-is-contr {k = k} A c = {!!}
 
 is-truncated-acyclic-unit : {k : 𝕋} → is-truncated-acyclic k unit
-is-truncated-acyclic-unit = is-truncated-acyclic-is-contr unit is-contr-unit
+is-truncated-acyclic-unit = {!!}
 ```
 
 ### Every `(k+1)`-acyclic type is `k`-acyclic
@@ -119,8 +113,7 @@ module _
 
   is-truncated-acyclic-is-truncated-acyclic-succ :
     is-truncated-acyclic (succ-𝕋 k) A → is-truncated-acyclic k A
-  is-truncated-acyclic-is-truncated-acyclic-succ =
-    is-connected-is-connected-succ-𝕋 k
+  is-truncated-acyclic-is-truncated-acyclic-succ = {!!}
 ```
 
 ## See also

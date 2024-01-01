@@ -40,24 +40,21 @@ data Tree-Fin : UU lzero where
   tree-Fin : (n : ℕ) → (Fin n → Tree-Fin) → Tree-Fin
 
 root-Tree-Fin : Tree-Fin
-root-Tree-Fin = tree-Fin zero-ℕ ex-falso
+root-Tree-Fin = {!!}
 
 number-nodes-Tree-Fin : Tree-Fin → ℕ
-number-nodes-Tree-Fin (tree-Fin zero-ℕ _) = zero-ℕ
-number-nodes-Tree-Fin (tree-Fin (succ-ℕ n) f) =
-  succ-ℕ (sum-Fin-ℕ (succ-ℕ n) (λ k → number-nodes-Tree-Fin (f k)))
+number-nodes-Tree-Fin (tree-Fin zero-ℕ _) = {!!}
+number-nodes-Tree-Fin (tree-Fin (succ-ℕ n) f) = {!!}
 
 height-Tree-Fin : Tree-Fin → ℕ
-height-Tree-Fin (tree-Fin zero-ℕ f) = zero-ℕ
-height-Tree-Fin (tree-Fin (succ-ℕ n) f) =
-  succ-ℕ (max-Fin-ℕ (succ-ℕ n) (λ k → height-Tree-Fin (f k)))
+height-Tree-Fin (tree-Fin zero-ℕ f) = {!!}
+height-Tree-Fin (tree-Fin (succ-ℕ n) f) = {!!}
 
 is-leaf-Tree-Fin : Tree-Fin → UU lzero
-is-leaf-Tree-Fin (tree-Fin zero-ℕ _) = unit
-is-leaf-Tree-Fin (tree-Fin (succ-ℕ n) _) = empty
+is-leaf-Tree-Fin (tree-Fin zero-ℕ _) = {!!}
+is-leaf-Tree-Fin (tree-Fin (succ-ℕ n) _) = {!!}
 
 is-full-binary-Tree-Fin : Tree-Fin → UU lzero
-is-full-binary-Tree-Fin (tree-Fin zero-ℕ f) = unit
-is-full-binary-Tree-Fin (tree-Fin (succ-ℕ n) f) =
-  (Id 2 n) × ((k : Fin (succ-ℕ n)) → is-full-binary-Tree-Fin (f k))
+is-full-binary-Tree-Fin (tree-Fin zero-ℕ f) = {!!}
+is-full-binary-Tree-Fin (tree-Fin (succ-ℕ n) f) = {!!}
 ```

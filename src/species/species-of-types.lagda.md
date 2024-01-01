@@ -26,7 +26,7 @@ A **species of types** is defined to be a map from a universe to a universe.
 
 ```agda
 species-types : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-species-types l1 l2 = UU l1 → UU l2
+species-types l1 l2 = {!!}
 ```
 
 ### The predicate that a species preserves cartesian products
@@ -36,7 +36,7 @@ preserves-product-species-types :
   {l1 l2 : Level}
   (S : species-types l1 l2) →
   UU (lsuc l1 ⊔ l2)
-preserves-product-species-types {l1} S = (X Y : UU l1) → S (X × Y) ≃ (S X × S Y)
+preserves-product-species-types {l1} S = {!!}
 ```
 
 ### Transport in species
@@ -45,5 +45,5 @@ preserves-product-species-types {l1} S = (X Y : UU l1) → S (X × Y) ≃ (S X �
 tr-species-types :
   {l1 l2 : Level} (F : species-types l1 l2) (X Y : UU l1) →
   X ≃ Y → F X → F Y
-tr-species-types F X Y e = tr F (eq-equiv X Y e)
+tr-species-types F X Y e = {!!}
 ```

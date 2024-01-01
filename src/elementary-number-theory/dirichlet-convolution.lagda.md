@@ -33,14 +33,5 @@ module _
   dirichlet-convolution-arithmetic-functions-Ring :
     (f g : type-arithmetic-functions-Ring R) →
     type-arithmetic-functions-Ring R
-  dirichlet-convolution-arithmetic-functions-Ring f g (pair zero-ℕ H) =
-    ex-falso (H refl)
-  dirichlet-convolution-arithmetic-functions-Ring f g (pair (succ-ℕ n) H) =
-    bounded-sum-arithmetic-function-Ring R
-      ( succ-ℕ n)
-      ( λ x → div-ℕ-Decidable-Prop (pr1 x) (succ-ℕ n) (pr2 x))
-      ( λ (x , K) H →
-        mul-Ring R
-          ( f ( pair x K))
-          ( g ( quotient-div-nonzero-ℕ x (succ-nonzero-ℕ' n) H)))
+  dirichlet-convolution-arithmetic-functions-Ring f g (pair zero-ℕ H) = {!!}
 ```

@@ -66,9 +66,7 @@ module _
   where
 
   is-pullback-subtype : UUω
-  is-pullback-subtype =
-    {l : Level} (U : subtype l A) →
-    (U ⊆ S) ↔ ((x : A) → is-in-subtype U x → is-in-subtype T (f x))
+  is-pullback-subtype = {!!}
 ```
 
 ### Pullbacks of subtypes
@@ -79,20 +77,20 @@ module _
   where
 
   pullback-subtype : subtype l3 A
-  pullback-subtype = T ∘ f
+  pullback-subtype = {!!}
 
   is-in-pullback-subtype : A → UU l3
-  is-in-pullback-subtype = is-in-subtype pullback-subtype
+  is-in-pullback-subtype = {!!}
 
   is-prop-is-in-pullback-subtype :
     (x : A) → is-prop (is-in-pullback-subtype x)
-  is-prop-is-in-pullback-subtype = is-prop-is-in-subtype pullback-subtype
+  is-prop-is-in-pullback-subtype = {!!}
 
   type-pullback-subtype : UU (l1 ⊔ l3)
-  type-pullback-subtype = type-subtype pullback-subtype
+  type-pullback-subtype = {!!}
 
   inclusion-pullback-subtype : type-pullback-subtype → A
-  inclusion-pullback-subtype = inclusion-subtype pullback-subtype
+  inclusion-pullback-subtype = {!!}
 ```
 
 ### The order preserving pullback operation on subtypes
@@ -107,14 +105,11 @@ module _
       ( powerset-Large-Poset B)
       ( powerset-Large-Poset A)
       ( pullback-subtype f)
-  preserves-order-pullback-subtype S T H x = H (f x)
+  preserves-order-pullback-subtype S T H x = {!!}
 
   pullback-subtype-hom-Large-Poset :
     hom-Large-Poset (λ l → l) (powerset-Large-Poset B) (powerset-Large-Poset A)
-  map-hom-Large-Preorder pullback-subtype-hom-Large-Poset =
-    pullback-subtype f
-  preserves-order-hom-Large-Preorder pullback-subtype-hom-Large-Poset =
-    preserves-order-pullback-subtype
+  map-hom-Large-Preorder pullback-subtype-hom-Large-Poset = {!!}
 ```
 
 ## See also

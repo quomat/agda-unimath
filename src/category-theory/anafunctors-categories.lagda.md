@@ -29,8 +29,7 @@ only defined up to [isomorphism](category-theory.isomorphisms-in-categories.md).
 anafunctor-Category :
   {l1 l2 l3 l4 : Level} (l : Level) →
   Category l1 l2 → Category l3 l4 → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ lsuc l)
-anafunctor-Category l C D =
-  anafunctor-Precategory l (precategory-Category C) (precategory-Category D)
+anafunctor-Category l C D = {!!}
 
 module _
   {l1 l2 l3 l4 l5 : Level} (C : Category l1 l2) (D : Category l3 l4)
@@ -38,22 +37,14 @@ module _
   where
 
   object-anafunctor-Category : obj-Category C → obj-Category D → UU l5
-  object-anafunctor-Category =
-    object-anafunctor-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
+  object-anafunctor-Category = {!!}
 
   hom-anafunctor-Category :
     (X Y : obj-Category C) (U : obj-Category D)
     (u : object-anafunctor-Category X U)
     (V : obj-Category D) (v : object-anafunctor-Category Y V) →
     hom-Category C X Y → hom-Category D U V
-  hom-anafunctor-Category =
-    hom-anafunctor-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
+  hom-anafunctor-Category = {!!}
 ```
 
 ## Properties
@@ -67,10 +58,7 @@ module _
 
   anafunctor-functor-Category :
     functor-Category C D → anafunctor-Category l4 C D
-  anafunctor-functor-Category =
-    anafunctor-functor-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
+  anafunctor-functor-Category = {!!}
 ```
 
 ### The action on objects of an anafunctor between categories
@@ -79,7 +67,5 @@ module _
 image-object-anafunctor-Category :
   {l1 l2 l3 l4 l5 : Level} (C : Category l1 l2) (D : Category l3 l4) →
   anafunctor-Category l5 C D → obj-Category C → UU (l3 ⊔ l5)
-image-object-anafunctor-Category C D F X =
-  Σ ( obj-Category D)
-    ( λ U → type-trunc-Prop (object-anafunctor-Category C D F X U))
+image-object-anafunctor-Category C D F X = {!!}
 ```

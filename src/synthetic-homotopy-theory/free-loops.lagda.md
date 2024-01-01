@@ -36,17 +36,17 @@ in `X` is [equivalent](foundation-core.equivalences.md) to the type of maps
 
 ```agda
 free-loop : {l1 : Level} (X : UU l1) → UU l1
-free-loop X = Σ X (λ x → x ＝ x)
+free-loop X = {!!}
 
 module _
   {l1 : Level} {X : UU l1}
   where
 
   base-free-loop : free-loop X → X
-  base-free-loop = pr1
+  base-free-loop = {!!}
 
   loop-free-loop : (α : free-loop X) → base-free-loop α ＝ base-free-loop α
-  loop-free-loop = pr2
+  loop-free-loop = {!!}
 ```
 
 ### Free dependent loops
@@ -57,17 +57,16 @@ module _
   where
 
   free-dependent-loop : UU l2
-  free-dependent-loop =
-    Σ ( P (base-free-loop α)) (λ p₀ → tr P (loop-free-loop α) p₀ ＝ p₀)
+  free-dependent-loop = {!!}
 
   base-free-dependent-loop : free-dependent-loop → P (base-free-loop α)
-  base-free-dependent-loop = pr1
+  base-free-dependent-loop = {!!}
 
   loop-free-dependent-loop :
     (β : free-dependent-loop) →
     ( tr P (loop-free-loop α) (base-free-dependent-loop β)) ＝
     ( base-free-dependent-loop β)
-  loop-free-dependent-loop = pr2
+  loop-free-dependent-loop = {!!}
 ```
 
 ## Properties
@@ -80,38 +79,23 @@ module _
   where
 
   Eq-free-loop : (α α' : free-loop X) → UU l1
-  Eq-free-loop (pair x α) α' =
-    Σ (Id x (base-free-loop α')) (λ p → Id (α ∙ p) (p ∙ (loop-free-loop α')))
+  Eq-free-loop (pair x α) α' = {!!}
 
   refl-Eq-free-loop : (α : free-loop X) → Eq-free-loop α α
-  pr1 (refl-Eq-free-loop (pair x α)) = refl
-  pr2 (refl-Eq-free-loop (pair x α)) = right-unit
+  pr1 (refl-Eq-free-loop (pair x α)) = {!!}
 
   Eq-eq-free-loop : (α α' : free-loop X) → Id α α' → Eq-free-loop α α'
-  Eq-eq-free-loop α .α refl = refl-Eq-free-loop α
+  Eq-eq-free-loop α .α refl = {!!}
 
   abstract
     is-torsorial-Eq-free-loop :
       (α : free-loop X) → is-torsorial (Eq-free-loop α)
-    is-torsorial-Eq-free-loop (pair x α) =
-      is-torsorial-Eq-structure
-        ( λ x α' p → Id (α ∙ p) (p ∙ α'))
-        ( is-torsorial-path x)
-        ( pair x refl)
-        ( is-contr-is-equiv'
-          ( Σ (Id x x) (λ α' → Id α α'))
-          ( tot (λ α' α → right-unit ∙ α))
-          ( is-equiv-tot-is-fiberwise-equiv
-            ( λ α' → is-equiv-concat right-unit α'))
-          ( is-torsorial-path α))
+    is-torsorial-Eq-free-loop (pair x α) = {!!}
 
   abstract
     is-equiv-Eq-eq-free-loop :
       (α α' : free-loop X) → is-equiv (Eq-eq-free-loop α α')
-    is-equiv-Eq-eq-free-loop α =
-      fundamental-theorem-id
-        ( is-torsorial-Eq-free-loop α)
-        ( Eq-eq-free-loop α)
+    is-equiv-Eq-eq-free-loop α = {!!}
 ```
 
 ### Characterization of the identity type of free dependent loops
@@ -122,51 +106,31 @@ module _
   where
 
   Eq-free-dependent-loop : (p p' : free-dependent-loop α P) → UU l2
-  Eq-free-dependent-loop (pair y p) p' =
-    Σ ( Id y (base-free-dependent-loop α P p'))
-      ( λ q →
-        ( p ∙ q) ＝
-        ( ( ap (tr P (loop-free-loop α)) q) ∙
-          ( loop-free-dependent-loop α P p')))
+  Eq-free-dependent-loop (pair y p) p' = {!!}
 
   refl-Eq-free-dependent-loop :
     (p : free-dependent-loop α P) → Eq-free-dependent-loop p p
-  pr1 (refl-Eq-free-dependent-loop (pair y p)) = refl
-  pr2 (refl-Eq-free-dependent-loop (pair y p)) = right-unit
+  pr1 (refl-Eq-free-dependent-loop (pair y p)) = {!!}
 
   Eq-free-dependent-loop-eq :
     ( p p' : free-dependent-loop α P) → Id p p' → Eq-free-dependent-loop p p'
-  Eq-free-dependent-loop-eq p .p refl = refl-Eq-free-dependent-loop p
+  Eq-free-dependent-loop-eq p .p refl = {!!}
 
   abstract
     is-torsorial-Eq-free-dependent-loop :
       ( p : free-dependent-loop α P) → is-torsorial (Eq-free-dependent-loop p)
-    is-torsorial-Eq-free-dependent-loop (pair y p) =
-      is-torsorial-Eq-structure
-        ( λ y' p' q → Id (p ∙ q) ((ap (tr P (loop-free-loop α)) q) ∙ p'))
-        ( is-torsorial-path y)
-        ( pair y refl)
-        ( is-contr-is-equiv'
-          ( Σ (Id (tr P (loop-free-loop α) y) y) (λ p' → Id p p'))
-          ( tot (λ p' α → right-unit ∙ α))
-          ( is-equiv-tot-is-fiberwise-equiv
-            ( λ p' → is-equiv-concat right-unit p'))
-          ( is-torsorial-path p))
+    is-torsorial-Eq-free-dependent-loop (pair y p) = {!!}
 
   abstract
     is-equiv-Eq-free-dependent-loop-eq :
       (p p' : free-dependent-loop α P) →
       is-equiv (Eq-free-dependent-loop-eq p p')
-    is-equiv-Eq-free-dependent-loop-eq p =
-      fundamental-theorem-id
-        ( is-torsorial-Eq-free-dependent-loop p)
-        ( Eq-free-dependent-loop-eq p)
+    is-equiv-Eq-free-dependent-loop-eq p = {!!}
 
   eq-Eq-free-dependent-loop :
     (p p' : free-dependent-loop α P) →
     Eq-free-dependent-loop p p' → Id p p'
-  eq-Eq-free-dependent-loop p p' =
-    map-inv-is-equiv (is-equiv-Eq-free-dependent-loop-eq p p')
+  eq-Eq-free-dependent-loop p p' = {!!}
 ```
 
 ### The type of free dependent loops in a constant family of types is equivalent to the type of ordinary free loops
@@ -178,12 +142,9 @@ module _
 
   compute-free-dependent-loop-const :
     free-loop Y ≃ free-dependent-loop α (λ x → Y)
-  compute-free-dependent-loop-const =
-    equiv-tot
-      ( λ y → equiv-concat (tr-constant-type-family (loop-free-loop α) y) y)
+  compute-free-dependent-loop-const = {!!}
 
   map-compute-free-dependent-loop-const :
     free-loop Y → free-dependent-loop α (λ x → Y)
-  map-compute-free-dependent-loop-const =
-    map-equiv compute-free-dependent-loop-const
+  map-compute-free-dependent-loop-const = {!!}
 ```

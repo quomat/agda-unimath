@@ -28,7 +28,7 @@ is 1.
 
 ```agda
 is-relative-prime-ℤ : ℤ → ℤ → UU lzero
-is-relative-prime-ℤ x y = is-one-ℤ (gcd-ℤ x y)
+is-relative-prime-ℤ x y = {!!}
 ```
 
 ## Properties
@@ -37,7 +37,7 @@ is-relative-prime-ℤ x y = is-one-ℤ (gcd-ℤ x y)
 
 ```agda
 is-prop-is-relative-prime-ℤ : (x y : ℤ) → is-prop (is-relative-prime-ℤ x y)
-is-prop-is-relative-prime-ℤ x y = is-set-ℤ (gcd-ℤ x y) one-ℤ
+is-prop-is-relative-prime-ℤ x y = {!!}
 ```
 
 ### Two integers are relatively prime if and only if their absolute values are relatively prime natural numbers
@@ -46,12 +46,12 @@ is-prop-is-relative-prime-ℤ x y = is-set-ℤ (gcd-ℤ x y) one-ℤ
 is-relatively-prime-abs-is-relatively-prime-ℤ :
   {a b : ℤ} → is-relative-prime-ℤ a b →
   is-relatively-prime-ℕ (abs-ℤ a) (abs-ℤ b)
-is-relatively-prime-abs-is-relatively-prime-ℤ {a} {b} H = is-injective-int-ℕ H
+is-relatively-prime-abs-is-relatively-prime-ℤ {a} {b} H = {!!}
 
 is-relatively-prime-is-relatively-prime-abs-ℤ :
   {a b : ℤ} → is-relatively-prime-ℕ (abs-ℤ a) (abs-ℤ b) →
   is-relative-prime-ℤ a b
-is-relatively-prime-is-relatively-prime-abs-ℤ {a} {b} H = ap int-ℕ H
+is-relatively-prime-is-relatively-prime-abs-ℤ {a} {b} H = {!!}
 ```
 
 ### For any two integers `a` and `b` that are not both `0`, the integers `a/gcd(a,b)` and `b/gcd(a,b)` are relatively prime
@@ -63,8 +63,6 @@ relatively-prime-quotient-div-ℤ :
   is-relative-prime-ℤ
     ( quotient-div-ℤ (gcd-ℤ a b) a (div-left-gcd-ℤ a b))
     ( quotient-div-ℤ (gcd-ℤ a b) b (div-right-gcd-ℤ a b))
-relatively-prime-quotient-div-ℤ H =
-  is-relatively-prime-is-relatively-prime-abs-ℤ
-    {!!}
+relatively-prime-quotient-div-ℤ H = {!!}
 -}
 ```

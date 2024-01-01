@@ -37,13 +37,13 @@ module _
   where
 
   Ω² : Pointed-Type l → Pointed-Type l
-  Ω² A = iterated-loop-space 2 A
+  Ω² A = {!!}
 
   type-Ω² : {A : UU l} (a : A) → UU l
-  type-Ω² a = Id (refl {x = a}) (refl {x = a})
+  type-Ω² a = {!!}
 
   refl-Ω² : {A : UU l} {a : A} → type-Ω² a
-  refl-Ω² = refl
+  refl-Ω² = {!!}
 ```
 
 ### Vertical and horizontal concatination operations on double loop
@@ -53,11 +53,11 @@ spaces.
 ```agda
 vertical-concat-Ω² :
   {l : Level} {A : UU l} {a : A} → type-Ω² a → type-Ω² a → type-Ω² a
-vertical-concat-Ω² α β = vertical-concat-Id² α β
+vertical-concat-Ω² α β = {!!}
 
 horizontal-concat-Ω² :
   {l : Level} {A : UU l} {a : A} → type-Ω² a → type-Ω² a → type-Ω² a
-horizontal-concat-Ω² α β = horizontal-concat-Id² α β
+horizontal-concat-Ω² α β = {!!}
 ```
 
 ### Unit laws horizontal, vertical concatination, and whiskering
@@ -66,46 +66,42 @@ horizontal-concat-Ω² α β = horizontal-concat-Id² α β
 left-unit-law-vertical-concat-Ω² :
   {l : Level} {A : UU l} {a : A} {α : type-Ω² a} →
   Id (vertical-concat-Ω² refl-Ω² α) α
-left-unit-law-vertical-concat-Ω² = left-unit
+left-unit-law-vertical-concat-Ω² = {!!}
 
 right-unit-law-vertical-concat-Ω² :
   {l : Level} {A : UU l} {a : A} {α : type-Ω² a} →
   Id (vertical-concat-Ω² α refl-Ω²) α
-right-unit-law-vertical-concat-Ω² = right-unit
+right-unit-law-vertical-concat-Ω² = {!!}
 
 left-unit-law-horizontal-concat-Ω² :
   {l : Level} {A : UU l} {a : A} {α : type-Ω² a} →
   Id (horizontal-concat-Ω² refl-Ω² α) α
-left-unit-law-horizontal-concat-Ω² {α = α} =
-  ( left-unit-law-horizontal-concat-Id² α) ∙ (ap-id α)
+left-unit-law-horizontal-concat-Ω² {α = α} = {!!}
 
 naturality-right-unit :
   {l : Level} {A : UU l} {x y : A} {p q : Id x y} (α : Id p q) →
   Id (ap (concat' x refl) α ∙ right-unit) (right-unit ∙ α)
-naturality-right-unit {p = refl} refl = refl
+naturality-right-unit {p = refl} refl = {!!}
 
 naturality-right-unit-Ω² :
   {l : Level} {A : UU l} {x : A} (α : type-Ω² x) →
   Id (ap (concat' x refl) α) α
-naturality-right-unit-Ω² α = inv right-unit ∙ naturality-right-unit α
+naturality-right-unit-Ω² α = {!!}
 
 right-unit-law-horizontal-concat-Ω² :
   {l : Level} {A : UU l} {a : A} {α : type-Ω² a} →
   Id (horizontal-concat-Ω² α refl-Ω²) α
-right-unit-law-horizontal-concat-Ω² {α = α} =
-  ( right-unit-law-horizontal-concat-Id² α) ∙ (naturality-right-unit-Ω² α)
+right-unit-law-horizontal-concat-Ω² {α = α} = {!!}
 
 left-unit-law-identification-left-whisk-Ω² :
   {l : Level} {A : UU l} {a : A} (α : type-Ω² a) →
   identification-left-whisk (refl-Ω (pair A a)) α ＝ α
-left-unit-law-identification-left-whisk-Ω² α =
-  left-unit-law-identification-left-whisk α
+left-unit-law-identification-left-whisk-Ω² α = {!!}
 
 right-unit-law-identification-right-whisk-Ω² :
   {l : Level} {A : UU l} {a : A} (α : type-Ω² a) →
   identification-right-whisk α (refl-Ω (pair A a)) ＝ α
-right-unit-law-identification-right-whisk-Ω² α =
-  (right-unit-law-identification-right-whisk α) ∙ right-unit
+right-unit-law-identification-right-whisk-Ω² α = {!!}
 ```
 
 ### The interchange law for double loop spaces
@@ -116,7 +112,7 @@ interchange-Ω² :
   Id
     ( horizontal-concat-Ω² (vertical-concat-Ω² α β) (vertical-concat-Ω² γ δ))
     ( vertical-concat-Ω² (horizontal-concat-Ω² α γ) (horizontal-concat-Ω² β δ))
-interchange-Ω² α β γ δ = interchange-Id² α β γ δ
+interchange-Ω² α β γ δ = {!!}
 ```
 
 ## Properties
@@ -131,7 +127,5 @@ module _
 
   pointed-equiv-2-loop-pointed-identity :
     Ω (pair (point-Pointed-Type A ＝ x) p) ≃∗ Ω² A
-  pointed-equiv-2-loop-pointed-identity =
-    pointed-equiv-Ω-pointed-equiv
-      ( pointed-equiv-loop-pointed-identity A p)
+  pointed-equiv-2-loop-pointed-identity = {!!}
 ```

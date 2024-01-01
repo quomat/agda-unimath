@@ -24,24 +24,22 @@ A discrete type is a type that has decidable equality.
 
 ```agda
 Discrete-Type : (l : Level) → UU (lsuc l)
-Discrete-Type l = Σ (UU l) has-decidable-equality
+Discrete-Type l = {!!}
 
 module _
   {l : Level} (X : Discrete-Type l)
   where
 
   type-Discrete-Type : UU l
-  type-Discrete-Type = pr1 X
+  type-Discrete-Type = {!!}
 
   has-decidable-equality-type-Discrete-Type :
     has-decidable-equality type-Discrete-Type
-  has-decidable-equality-type-Discrete-Type = pr2 X
+  has-decidable-equality-type-Discrete-Type = {!!}
 
   is-set-type-Discrete-Type : is-set type-Discrete-Type
-  is-set-type-Discrete-Type =
-    is-set-has-decidable-equality has-decidable-equality-type-Discrete-Type
+  is-set-type-Discrete-Type = {!!}
 
   set-Discrete-Type : Set l
-  pr1 set-Discrete-Type = type-Discrete-Type
-  pr2 set-Discrete-Type = is-set-type-Discrete-Type
+  pr1 set-Discrete-Type = {!!}
 ```

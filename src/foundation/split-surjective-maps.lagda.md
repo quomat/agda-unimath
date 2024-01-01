@@ -44,17 +44,17 @@ module _
   where
 
   is-split-surjective : (A → B) → UU (l1 ⊔ l2)
-  is-split-surjective f = (b : B) → fiber f b
+  is-split-surjective f = {!!}
 
   split-surjection : UU (l1 ⊔ l2)
-  split-surjection = Σ (A → B) is-split-surjective
+  split-surjection = {!!}
 
   map-split-surjection : split-surjection → (A → B)
-  map-split-surjection = pr1
+  map-split-surjection = {!!}
 
   is-split-surjective-split-surjection :
     (f : split-surjection) → is-split-surjective (map-split-surjection f)
-  is-split-surjective-split-surjection = pr2
+  is-split-surjective-split-surjection = {!!}
 ```
 
 ## Properties
@@ -67,18 +67,16 @@ module _
   where
 
   section-is-split-surjective : is-split-surjective f → section f
-  pr1 (section-is-split-surjective s) = pr1 ∘ s
-  pr2 (section-is-split-surjective s) = pr2 ∘ s
+  pr1 (section-is-split-surjective s) = {!!}
 
   is-split-surjective-section : section f → is-split-surjective f
-  pr1 (is-split-surjective-section s b) = pr1 s b
-  pr2 (is-split-surjective-section s b) = pr2 s b
+  pr1 (is-split-surjective-section s b) = {!!}
 
   equiv-section-is-split-surjective : is-split-surjective f ≃ section f
-  equiv-section-is-split-surjective = distributive-Π-Σ
+  equiv-section-is-split-surjective = {!!}
 
   equiv-is-split-surjective-section : section f ≃ is-split-surjective f
-  equiv-is-split-surjective-section = inv-distributive-Π-Σ
+  equiv-is-split-surjective-section = {!!}
 ```
 
 ### A map is an equivalence if and only if it is injective and split surjective
@@ -90,23 +88,16 @@ module _
 
   retraction-is-split-surjective-is-injective :
     is-injective f → is-split-surjective f → retraction f
-  pr1 (retraction-is-split-surjective-is-injective l s) = pr1 ∘ s
-  pr2 (retraction-is-split-surjective-is-injective l s) = l ∘ (pr2 ∘ (s ∘ f))
+  pr1 (retraction-is-split-surjective-is-injective l s) = {!!}
 
   is-equiv-is-split-surjective-is-injective :
     is-injective f → is-split-surjective f → is-equiv f
-  pr1 (is-equiv-is-split-surjective-is-injective l s) =
-    section-is-split-surjective f s
-  pr2 (is-equiv-is-split-surjective-is-injective l s) =
-    retraction-is-split-surjective-is-injective l s
+  pr1 (is-equiv-is-split-surjective-is-injective l s) = {!!}
 
   is-split-surjective-is-equiv : is-equiv f → is-split-surjective f
-  is-split-surjective-is-equiv = is-split-surjective-section f ∘ pr1
+  is-split-surjective-is-equiv = {!!}
 
   is-split-surjective-is-injective-is-equiv :
     is-equiv f → is-injective f × is-split-surjective f
-  pr1 (is-split-surjective-is-injective-is-equiv is-equiv-f) =
-    is-injective-is-equiv is-equiv-f
-  pr2 (is-split-surjective-is-injective-is-equiv is-equiv-f) =
-    is-split-surjective-is-equiv is-equiv-f
+  pr1 (is-split-surjective-is-injective-is-equiv is-equiv-f) = {!!}
 ```

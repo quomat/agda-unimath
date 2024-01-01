@@ -35,7 +35,7 @@ An embedding between standard finite types is an embedding `Fin k ↪ Fin l`.
 
 ```agda
 emb-Fin : (k l : ℕ) → UU lzero
-emb-Fin k l = Fin k ↪ Fin l
+emb-Fin k l = {!!}
 ```
 
 ## Properties
@@ -47,24 +47,13 @@ cases-map-reduce-emb-Fin :
   (k l : ℕ) (f : emb-Fin (succ-ℕ k) (succ-ℕ l)) →
   is-decidable (is-inl-Fin l (map-emb f (inr star))) → (x : Fin k) →
   is-decidable (is-inl-Fin l (map-emb f (inl x))) → Fin l
-cases-map-reduce-emb-Fin k l f (inl (pair t p)) x d =
-  repeat-Fin l t (map-emb f (inl x))
-cases-map-reduce-emb-Fin k l f (inr g) x (inl (pair y p)) = y
-cases-map-reduce-emb-Fin k l f (inr g) x (inr h) =
-  ex-falso (Eq-Fin-eq (succ-ℕ k) (is-injective-emb f (p ∙ inv q)))
-  where
-  p : is-neg-one-Fin (succ-ℕ l) (map-emb f (inr star))
-  p = is-neg-one-is-not-inl-Fin l (map-emb f (inr star)) g
-  q : is-neg-one-Fin (succ-ℕ l) (map-emb f (inl x))
-  q = is-neg-one-is-not-inl-Fin l (map-emb f (inl x)) h
+cases-map-reduce-emb-Fin k l f (inl (pair t p)) x d = {!!}
+cases-map-reduce-emb-Fin k l f (inr g) x (inl (pair y p)) = {!!}
+cases-map-reduce-emb-Fin k l f (inr g) x (inr h) = {!!}
 
 map-reduce-emb-Fin :
   (k l : ℕ) (f : Fin (succ-ℕ k) ↪ Fin (succ-ℕ l)) → Fin k → Fin l
-map-reduce-emb-Fin k l f x =
-  cases-map-reduce-emb-Fin k l f
-    ( is-decidable-is-inl-Fin l (map-emb f (inr star)))
-    ( x)
-    ( is-decidable-is-inl-Fin l (map-emb f (inl x)))
+map-reduce-emb-Fin k l f x = {!!}
 
 abstract
   is-injective-cases-map-reduce-emb-Fin :
@@ -76,61 +65,31 @@ abstract
       ( cases-map-reduce-emb-Fin k l f d x e)
       ( cases-map-reduce-emb-Fin k l f d x' e') →
     Id x x'
-  is-injective-cases-map-reduce-emb-Fin k l f (inl (pair t q)) x e x' e' p =
-    is-injective-inl
-      ( is-injective-is-emb
-        ( is-emb-map-emb f)
-        ( is-almost-injective-repeat-Fin l t
-          ( λ α → Eq-Fin-eq (succ-ℕ k) (is-injective-emb f ((inv q) ∙ α)))
-          ( λ α → Eq-Fin-eq (succ-ℕ k) (is-injective-emb f ((inv q) ∙ α)))
-          ( p)))
+  is-injective-cases-map-reduce-emb-Fin k l f (inl (pair t q)) x e x' e' p = {!!}
   is-injective-cases-map-reduce-emb-Fin
-    k l f (inr g) x (inl (pair y q)) x' (inl (pair y' q')) p =
-    is-injective-inl (is-injective-emb f ((inv q) ∙ (ap inl p ∙ q')))
+    k l f (inr g) x (inl (pair y q)) x' (inl (pair y' q')) p = {!!}
   is-injective-cases-map-reduce-emb-Fin
-    k l f (inr g) x (inl (pair y q)) x' (inr h) p =
-    ex-falso
-    ( Eq-Fin-eq (succ-ℕ k)
-      ( is-injective-emb f
-        ( ( is-neg-one-is-not-inl-Fin l (pr1 f (inr star)) g) ∙
-          ( inv (is-neg-one-is-not-inl-Fin l (pr1 f (inl x')) h)))))
+    k l f (inr g) x (inl (pair y q)) x' (inr h) p = {!!}
   is-injective-cases-map-reduce-emb-Fin
-    k l f (inr g) x (inr h) x' (inl (pair y' q')) p =
-    ex-falso
-      ( Eq-Fin-eq (succ-ℕ k)
-        ( is-injective-emb f
-          ( ( is-neg-one-is-not-inl-Fin l (pr1 f (inr star)) g) ∙
-            ( inv (is-neg-one-is-not-inl-Fin l (pr1 f (inl x)) h)))))
-  is-injective-cases-map-reduce-emb-Fin k l f (inr g) x (inr h) x' (inr m) p =
-    ex-falso
-      ( Eq-Fin-eq (succ-ℕ k)
-        ( is-injective-emb f
-          ( ( is-neg-one-is-not-inl-Fin l (pr1 f (inr star)) g) ∙
-            ( inv (is-neg-one-is-not-inl-Fin l (pr1 f (inl x)) h)))))
+    k l f (inr g) x (inr h) x' (inl (pair y' q')) p = {!!}
+  is-injective-cases-map-reduce-emb-Fin k l f (inr g) x (inr h) x' (inr m) p = {!!}
 
 abstract
   is-injective-map-reduce-emb-Fin :
     (k l : ℕ) (f : Fin (succ-ℕ k) ↪ Fin (succ-ℕ l)) →
     is-injective (map-reduce-emb-Fin k l f)
-  is-injective-map-reduce-emb-Fin k l f {x} {y} =
-    is-injective-cases-map-reduce-emb-Fin k l f
-      ( is-decidable-is-inl-Fin l (map-emb f (inr star)))
-      ( x)
-      ( is-decidable-is-inl-Fin l (map-emb f (inl x)))
-      ( y)
-      ( is-decidable-is-inl-Fin l (map-emb f (inl y)))
+  is-injective-map-reduce-emb-Fin k l f {x} {y} = {!!}
 
 abstract
   is-emb-map-reduce-emb-Fin :
     (k l : ℕ) (f : Fin (succ-ℕ k) ↪ Fin (succ-ℕ l)) →
     is-emb (map-reduce-emb-Fin k l f)
-  is-emb-map-reduce-emb-Fin k l f =
-    is-emb-is-injective (is-set-Fin l) (is-injective-map-reduce-emb-Fin k l f)
+  is-emb-map-reduce-emb-Fin k l f = {!!}
 
 reduce-emb-Fin :
   (k l : ℕ) → emb-Fin (succ-ℕ k) (succ-ℕ l) → emb-Fin k l
-pr1 (reduce-emb-Fin k l f) = map-reduce-emb-Fin k l f
-pr2 (reduce-emb-Fin k l f) = is-emb-map-reduce-emb-Fin k l f
+pr1 (reduce-emb-Fin k l f) = {!!}
+pr2 (reduce-emb-Fin k l f) = {!!}
 ```
 
 ## To do

@@ -36,13 +36,13 @@ module _
   where
 
   is-trivial-prop-Group : Prop l1
-  is-trivial-prop-Group = is-contr-Prop (type-Group G)
+  is-trivial-prop-Group = {!!}
 
   is-trivial-Group : UU l1
-  is-trivial-Group = type-Prop is-trivial-prop-Group
+  is-trivial-Group = {!!}
 
   is-prop-is-trivial-Group : is-prop is-trivial-Group
-  is-prop-is-trivial-Group = is-prop-type-Prop is-trivial-prop-Group
+  is-prop-is-trivial-Group = {!!}
 ```
 
 ## Properties
@@ -57,17 +57,5 @@ module _
   abstract
     is-contr-subgroup-is-trivial-Group :
       is-trivial-Group G → is-contr (Subgroup l1 G)
-    pr1 (is-contr-subgroup-is-trivial-Group H) =
-      trivial-Subgroup G
-    pr2 (is-contr-subgroup-is-trivial-Group H) K =
-      eq-has-same-elements-Subgroup G
-        ( trivial-Subgroup G)
-        ( K)
-        ( λ x →
-          ( λ where refl → contains-unit-Subgroup G K) ,
-          ( λ _ →
-            is-closed-under-eq-Subgroup G
-              ( trivial-Subgroup G)
-              ( contains-unit-Subgroup G (trivial-Subgroup G))
-              ( eq-is-contr H)))
+    pr1 (is-contr-subgroup-is-trivial-Group H) = {!!}
 ```

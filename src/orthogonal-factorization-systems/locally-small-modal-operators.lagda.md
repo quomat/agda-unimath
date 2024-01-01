@@ -30,23 +30,20 @@ A [modal operator](orthogonal-factorization-systems.modal-operators.md) is
 is-locally-small-operator-modality :
   {l1 l2 : Level} (l3 : Level) (○ : operator-modality l1 l2) →
   UU (lsuc l1 ⊔ l2 ⊔ lsuc l3)
-is-locally-small-operator-modality {l1} l3 ○ =
-  (X : UU l1) → is-locally-small l3 (○ X)
+is-locally-small-operator-modality {l1} l3 ○ = {!!}
 
 locally-small-operator-modality :
   (l1 l2 l3 : Level) → UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-locally-small-operator-modality l1 l2 l3 =
-  Σ ( operator-modality l1 l2)
-    ( is-locally-small-operator-modality l3)
+locally-small-operator-modality l1 l2 l3 = {!!}
 
 operator-modality-locally-small-operator-modality :
   {l1 l2 l3 : Level} →
   locally-small-operator-modality l1 l2 l3 → operator-modality l1 l2
-operator-modality-locally-small-operator-modality = pr1
+operator-modality-locally-small-operator-modality = {!!}
 
 is-locally-small-locally-small-operator-modality :
   {l1 l2 l3 : Level} (○ : locally-small-operator-modality l1 l2 l3) →
   is-locally-small-operator-modality l3
     ( operator-modality-locally-small-operator-modality ○)
-is-locally-small-locally-small-operator-modality = pr2
+is-locally-small-locally-small-operator-modality = {!!}
 ```

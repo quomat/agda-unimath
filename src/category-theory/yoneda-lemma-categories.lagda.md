@@ -59,8 +59,7 @@ module _
     hom-copresheaf-Precategory
       ( precategory-Category C) (representable-functor-Category C c) F →
     element-copresheaf-Precategory (precategory-Category C) F c
-  map-yoneda-Category =
-    map-yoneda-Precategory (precategory-Category C) c F
+  map-yoneda-Category = {!!}
 ```
 
 The inverse to the Yoneda map:
@@ -70,33 +69,29 @@ The inverse to the Yoneda map:
     (u : element-copresheaf-Precategory (precategory-Category C) F c) →
     hom-family-functor-Small-Large-Category
       C Set-Large-Category (representable-functor-Category C c) F
-  hom-family-extension-yoneda-Category =
-    hom-family-extension-yoneda-Precategory (precategory-Category C) c F
+  hom-family-extension-yoneda-Category = {!!}
 
   naturality-extension-yoneda-Category :
     (u : element-copresheaf-Precategory (precategory-Category C) F c) →
     is-natural-transformation-Small-Large-Category
       C Set-Large-Category (representable-functor-Category C c) F
       ( hom-family-extension-yoneda-Category u)
-  naturality-extension-yoneda-Category =
-    naturality-extension-yoneda-Precategory (precategory-Category C) c F
+  naturality-extension-yoneda-Category = {!!}
 
   extension-yoneda-Category :
     element-copresheaf-Precategory (precategory-Category C) F c →
     hom-copresheaf-Precategory
       ( precategory-Category C) (representable-functor-Category C c) F
-  extension-yoneda-Category =
-    extension-yoneda-Precategory (precategory-Category C) c F
+  extension-yoneda-Category = {!!}
 
   lemma-yoneda-Category : is-equiv map-yoneda-Category
-  lemma-yoneda-Category = lemma-yoneda-Precategory (precategory-Category C) c F
+  lemma-yoneda-Category = {!!}
 
   equiv-lemma-yoneda-Category :
     hom-copresheaf-Precategory
       ( precategory-Category C) (representable-functor-Category C c) F ≃
     element-copresheaf-Precategory (precategory-Category C) F c
-  equiv-lemma-yoneda-Category =
-    equiv-lemma-yoneda-Precategory (precategory-Category C) c F
+  equiv-lemma-yoneda-Category = {!!}
 ```
 
 ## Corollaries
@@ -104,7 +99,7 @@ The inverse to the Yoneda map:
 ### The Yoneda lemma for representable functors
 
 An important special-case of the Yoneda lemma is when `F` is itself a
-representable functor `F = Hom(-, d)`.
+representable functor `F = {!!}
 
 ```agda
 module _
@@ -117,8 +112,7 @@ module _
       ( representable-functor-Category C c)
       ( representable-functor-Category C d) ≃
     hom-Category C d c
-  equiv-lemma-yoneda-representable-Category =
-    equiv-lemma-yoneda-Category C c (representable-functor-Category C d)
+  equiv-lemma-yoneda-representable-Category = {!!}
 ```
 
 ## See also

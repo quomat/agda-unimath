@@ -64,45 +64,34 @@ module _
   where
 
   is-function-class-factorization-Prop : Prop (lL ⊔ lR)
-  is-function-class-factorization-Prop =
-    conjunction-Prop
-      ( L (left-map-factorization F))
-      ( R (right-map-factorization F))
+  is-function-class-factorization-Prop = {!!}
 
   is-function-class-factorization : UU (lL ⊔ lR)
-  is-function-class-factorization =
-    type-Prop is-function-class-factorization-Prop
+  is-function-class-factorization = {!!}
 
   is-prop-is-function-class-factorization :
     is-prop is-function-class-factorization
-  is-prop-is-function-class-factorization =
-    is-prop-type-Prop is-function-class-factorization-Prop
+  is-prop-is-function-class-factorization = {!!}
 
   is-in-left-class-left-map-is-function-class-factorization :
     is-function-class-factorization →
     is-in-function-class L (left-map-factorization F)
-  is-in-left-class-left-map-is-function-class-factorization = pr1
+  is-in-left-class-left-map-is-function-class-factorization = {!!}
 
   is-in-right-class-right-map-is-function-class-factorization :
     is-function-class-factorization →
     is-in-function-class R (right-map-factorization F)
-  is-in-right-class-right-map-is-function-class-factorization = pr2
+  is-in-right-class-right-map-is-function-class-factorization = {!!}
 
   left-class-map-is-function-class-factorization :
     is-function-class-factorization →
     type-function-class L A (image-factorization F)
-  pr1 (left-class-map-is-function-class-factorization x) =
-    left-map-factorization F
-  pr2 (left-class-map-is-function-class-factorization x) =
-    is-in-left-class-left-map-is-function-class-factorization x
+  pr1 (left-class-map-is-function-class-factorization x) = {!!}
 
   right-class-map-is-function-class-factorization :
     is-function-class-factorization →
     type-function-class R (image-factorization F) B
-  pr1 (right-class-map-is-function-class-factorization x) =
-    right-map-factorization F
-  pr2 (right-class-map-is-function-class-factorization x) =
-    is-in-right-class-right-map-is-function-class-factorization x
+  pr1 (right-class-map-is-function-class-factorization x) = {!!}
 ```
 
 ### The type of factorizations into function classes
@@ -113,8 +102,7 @@ function-class-factorization :
   (L : function-class l1 l3 lL)
   (R : function-class l3 l2 lR)
   {A : UU l1} {B : UU l2} (f : A → B) → UU (l1 ⊔ l2 ⊔ lsuc l3 ⊔ lL ⊔ lR)
-function-class-factorization {l3 = l3} L R f =
-  Σ (factorization l3 f) (is-function-class-factorization L R)
+function-class-factorization {l3 = l3} L R f = {!!}
 
 module _
   {l1 l2 l3 lL lR : Level}
@@ -125,61 +113,45 @@ module _
   where
 
   factorization-function-class-factorization : factorization l3 f
-  factorization-function-class-factorization = pr1 F
+  factorization-function-class-factorization = {!!}
 
   is-function-class-factorization-function-class-factorization :
     is-function-class-factorization L R
       ( factorization-function-class-factorization)
-  is-function-class-factorization-function-class-factorization = pr2 F
+  is-function-class-factorization-function-class-factorization = {!!}
 
   image-function-class-factorization : UU l3
-  image-function-class-factorization =
-    image-factorization factorization-function-class-factorization
+  image-function-class-factorization = {!!}
 
   left-map-function-class-factorization :
     A → image-function-class-factorization
-  left-map-function-class-factorization =
-    left-map-factorization factorization-function-class-factorization
+  left-map-function-class-factorization = {!!}
 
   right-map-function-class-factorization :
     image-function-class-factorization → B
-  right-map-function-class-factorization =
-    right-map-factorization factorization-function-class-factorization
+  right-map-function-class-factorization = {!!}
 
   is-factorization-function-class-factorization :
     is-factorization f
       ( right-map-function-class-factorization)
       ( left-map-function-class-factorization)
-  is-factorization-function-class-factorization =
-    is-factorization-factorization factorization-function-class-factorization
+  is-factorization-function-class-factorization = {!!}
 
   is-in-left-class-left-map-function-class-factorization :
     is-in-function-class L left-map-function-class-factorization
-  is-in-left-class-left-map-function-class-factorization =
-    is-in-left-class-left-map-is-function-class-factorization L R
-      ( factorization-function-class-factorization)
-      ( is-function-class-factorization-function-class-factorization)
+  is-in-left-class-left-map-function-class-factorization = {!!}
 
   is-in-right-class-right-map-function-class-factorization :
     is-in-function-class R right-map-function-class-factorization
-  is-in-right-class-right-map-function-class-factorization =
-    is-in-right-class-right-map-is-function-class-factorization L R
-      ( factorization-function-class-factorization)
-      ( is-function-class-factorization-function-class-factorization)
+  is-in-right-class-right-map-function-class-factorization = {!!}
 
   left-class-map-function-class-factorization :
     type-function-class L A image-function-class-factorization
-  left-class-map-function-class-factorization =
-    left-class-map-is-function-class-factorization L R
-      ( factorization-function-class-factorization)
-      ( is-function-class-factorization-function-class-factorization)
+  left-class-map-function-class-factorization = {!!}
 
   right-class-map-function-class-factorization :
     type-function-class R image-function-class-factorization B
-  right-class-map-function-class-factorization =
-    right-class-map-is-function-class-factorization L R
-      ( factorization-function-class-factorization)
-      ( is-function-class-factorization-function-class-factorization)
+  right-class-map-function-class-factorization = {!!}
 ```
 
 ## Properties
@@ -202,60 +174,37 @@ module _
 
   equiv-function-class-factorization :
     (F E : function-class-factorization L R f) → UU (l1 ⊔ l2 ⊔ l3)
-  equiv-function-class-factorization F E =
-    equiv-factorization f
-      ( factorization-function-class-factorization L R F)
-      ( factorization-function-class-factorization L R E)
+  equiv-function-class-factorization F E = {!!}
 
   id-equiv-function-class-factorization :
     (F : function-class-factorization L R f) →
     equiv-function-class-factorization F F
-  id-equiv-function-class-factorization F =
-    id-equiv-factorization f
-      ( factorization-function-class-factorization L R F)
+  id-equiv-function-class-factorization F = {!!}
 
   equiv-eq-function-class-factorization :
     (F E : function-class-factorization L R f) →
     F ＝ E → equiv-function-class-factorization F E
-  equiv-eq-function-class-factorization F E p =
-    equiv-eq-factorization f
-      ( factorization-function-class-factorization L R F)
-      ( factorization-function-class-factorization L R E)
-      ( ap pr1 p)
+  equiv-eq-function-class-factorization F E p = {!!}
 
   is-torsorial-equiv-function-class-factorization :
     (F : function-class-factorization L R f) →
     is-torsorial (equiv-function-class-factorization F)
-  is-torsorial-equiv-function-class-factorization F =
-    is-torsorial-Eq-subtype
-      ( is-torsorial-equiv-factorization f
-        ( factorization-function-class-factorization L R F))
-      ( is-prop-is-function-class-factorization L R)
-      ( factorization-function-class-factorization L R F)
-      ( id-equiv-function-class-factorization F)
-      ( is-function-class-factorization-function-class-factorization L R F)
+  is-torsorial-equiv-function-class-factorization F = {!!}
 
   is-equiv-equiv-eq-function-class-factorization :
     (F E : function-class-factorization L R f) →
     is-equiv (equiv-eq-function-class-factorization F E)
-  is-equiv-equiv-eq-function-class-factorization F =
-    fundamental-theorem-id
-      ( is-torsorial-equiv-function-class-factorization F)
-      ( equiv-eq-function-class-factorization F)
+  is-equiv-equiv-eq-function-class-factorization F = {!!}
 
   extensionality-function-class-factorization :
     (F E : function-class-factorization L R f) →
     (F ＝ E) ≃ (equiv-function-class-factorization F E)
-  pr1 (extensionality-function-class-factorization F E) =
-    equiv-eq-function-class-factorization F E
-  pr2 (extensionality-function-class-factorization F E) =
-    is-equiv-equiv-eq-function-class-factorization F E
+  pr1 (extensionality-function-class-factorization F E) = {!!}
 
   eq-equiv-function-class-factorization :
     (F E : function-class-factorization L R f) →
     equiv-function-class-factorization F E → F ＝ E
-  eq-equiv-function-class-factorization F E =
-    map-inv-equiv (extensionality-function-class-factorization F E)
+  eq-equiv-function-class-factorization F E = {!!}
 ```
 
 ## See also

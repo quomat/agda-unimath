@@ -49,16 +49,11 @@ module _
   where
 
   fiber-inclusion : (x : A) → B x → Σ A B
-  pr1 (fiber-inclusion x y) = x
-  pr2 (fiber-inclusion x y) = y
+  pr1 (fiber-inclusion x y) = {!!}
 
   fiber-fiber-inclusion :
     (a : A) (t : Σ A B) → fiber (fiber-inclusion a) t ≃ (a ＝ pr1 t)
-  fiber-fiber-inclusion a t =
-    ( ( right-unit-law-Σ-is-contr
-        ( λ p → is-contr-map-is-equiv (is-equiv-tr B p) (pr2 t))) ∘e
-      ( equiv-left-swap-Σ)) ∘e
-    ( equiv-tot (λ b → equiv-pair-eq-Σ (pair a b) t))
+  fiber-fiber-inclusion a t = {!!}
 ```
 
 ## Properties
@@ -73,23 +68,12 @@ module _
   is-trunc-is-trunc-map-fiber-inclusion :
     ((B : A → UU l2) (a : A) → is-trunc-map k (fiber-inclusion B a)) →
     is-trunc (succ-𝕋 k) A
-  is-trunc-is-trunc-map-fiber-inclusion H x y =
-    is-trunc-equiv' k
-      ( fiber (fiber-inclusion B x) (pair y raise-star))
-      ( fiber-fiber-inclusion B x (pair y raise-star))
-      ( H B x (pair y raise-star))
-    where
-    B : A → UU l2
-    B a = raise-unit l2
+  is-trunc-is-trunc-map-fiber-inclusion H x y = {!!}
 
   is-trunc-map-fiber-inclusion-is-trunc :
     (B : A → UU l2) (a : A) →
     is-trunc (succ-𝕋 k) A → is-trunc-map k (fiber-inclusion B a)
-  is-trunc-map-fiber-inclusion-is-trunc B a H t =
-    is-trunc-equiv k
-      ( a ＝ pr1 t)
-      ( fiber-fiber-inclusion B a t)
-      ( H a (pr1 t))
+  is-trunc-map-fiber-inclusion-is-trunc B a H t = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (B : A → UU l2)
@@ -97,44 +81,37 @@ module _
 
   is-contr-map-fiber-inclusion :
     (x : A) → is-prop A → is-contr-map (fiber-inclusion B x)
-  is-contr-map-fiber-inclusion =
-    is-trunc-map-fiber-inclusion-is-trunc neg-two-𝕋 B
+  is-contr-map-fiber-inclusion = {!!}
 
   is-prop-map-fiber-inclusion :
     (x : A) → is-set A → is-prop-map (fiber-inclusion B x)
-  is-prop-map-fiber-inclusion =
-    is-trunc-map-fiber-inclusion-is-trunc neg-one-𝕋 B
+  is-prop-map-fiber-inclusion = {!!}
 
   is-0-map-fiber-inclusion :
     (x : A) → is-1-type A → is-0-map (fiber-inclusion B x)
-  is-0-map-fiber-inclusion =
-    is-trunc-map-fiber-inclusion-is-trunc zero-𝕋 B
+  is-0-map-fiber-inclusion = {!!}
 
   is-emb-fiber-inclusion : is-set A → (x : A) → is-emb (fiber-inclusion B x)
-  is-emb-fiber-inclusion H x =
-    is-emb-is-prop-map (is-prop-map-fiber-inclusion x H)
+  is-emb-fiber-inclusion H x = {!!}
 
   emb-fiber-inclusion : is-set A → (x : A) → B x ↪ Σ A B
-  pr1 (emb-fiber-inclusion H x) = fiber-inclusion B x
-  pr2 (emb-fiber-inclusion H x) = is-emb-fiber-inclusion H x
+  pr1 (emb-fiber-inclusion H x) = {!!}
 
   is-faithful-fiber-inclusion :
     is-1-type A → (x : A) → is-faithful (fiber-inclusion B x)
-  is-faithful-fiber-inclusion H x =
-    is-faithful-is-0-map (is-0-map-fiber-inclusion x H)
+  is-faithful-fiber-inclusion H x = {!!}
 
 fiber-inclusion-emb :
   {l1 l2 : Level} (A : Set l1) (B : type-Set A → UU l2) →
   (x : type-Set A) → B x ↪ Σ (type-Set A) B
-pr1 (fiber-inclusion-emb A B x) = fiber-inclusion B x
-pr2 (fiber-inclusion-emb A B x) = is-emb-fiber-inclusion B (is-set-type-Set A) x
+pr1 (fiber-inclusion-emb A B x) = {!!}
+pr2 (fiber-inclusion-emb A B x) = {!!}
 
 fiber-inclusion-faithful-map :
   {l1 l2 : Level} (A : 1-Type l1) (B : type-1-Type A → UU l2) →
   (x : type-1-Type A) → faithful-map (B x) (Σ (type-1-Type A) B)
-pr1 (fiber-inclusion-faithful-map A B x) = fiber-inclusion B x
-pr2 (fiber-inclusion-faithful-map A B x) =
-  is-faithful-fiber-inclusion B (is-1-type-type-1-Type A) x
+pr1 (fiber-inclusion-faithful-map A B x) = {!!}
+pr2 (fiber-inclusion-faithful-map A B x) = {!!}
 ```
 
 ### Any fiber inclusion is a pullback of a point inclusion
@@ -145,17 +122,10 @@ module _
   where
 
   cone-fiber-fam : cone (pr1 {B = B}) (point a) (B a)
-  pr1 cone-fiber-fam = fiber-inclusion B a
-  pr1 (pr2 cone-fiber-fam) = terminal-map
-  pr2 (pr2 cone-fiber-fam) = refl-htpy
+  pr1 cone-fiber-fam = {!!}
 
   abstract
     is-pullback-cone-fiber-fam :
       is-pullback (pr1 {B = B}) (point a) cone-fiber-fam
-    is-pullback-cone-fiber-fam =
-      is-equiv-comp
-        ( gap (pr1 {B = B}) (point a) (cone-fiber (pr1 {B = B}) a))
-        ( map-inv-fiber-pr1 B a)
-        ( is-equiv-map-inv-fiber-pr1 B a)
-        ( is-pullback-cone-fiber pr1 a)
+    is-pullback-cone-fiber-fam = {!!}
 ```

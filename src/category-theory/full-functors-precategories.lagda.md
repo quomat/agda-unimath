@@ -39,17 +39,14 @@ module _
   where
 
   is-full-functor-Precategory : UU (l1 ⊔ l2 ⊔ l4)
-  is-full-functor-Precategory =
-    is-full-map-Precategory C D (map-functor-Precategory C D F)
+  is-full-functor-Precategory = {!!}
 
   is-prop-is-full-functor-Precategory :
     is-prop is-full-functor-Precategory
-  is-prop-is-full-functor-Precategory =
-    is-prop-is-full-map-Precategory C D (map-functor-Precategory C D F)
+  is-prop-is-full-functor-Precategory = {!!}
 
   is-full-prop-functor-Precategory : Prop (l1 ⊔ l2 ⊔ l4)
-  is-full-prop-functor-Precategory =
-    is-full-prop-map-Precategory C D (map-functor-Precategory C D F)
+  is-full-prop-functor-Precategory = {!!}
 ```
 
 ### The type of full functors between two precategories
@@ -62,22 +59,20 @@ module _
   where
 
   full-functor-Precategory : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  full-functor-Precategory =
-    Σ (functor-Precategory C D) (is-full-functor-Precategory C D)
+  full-functor-Precategory = {!!}
 
   functor-full-functor-Precategory :
     full-functor-Precategory → functor-Precategory C D
-  functor-full-functor-Precategory = pr1
+  functor-full-functor-Precategory = {!!}
 
   is-full-full-functor-Precategory :
     (F : full-functor-Precategory) →
     is-full-functor-Precategory C D (functor-full-functor-Precategory F)
-  is-full-full-functor-Precategory = pr2
+  is-full-full-functor-Precategory = {!!}
 
   obj-full-functor-Precategory :
     full-functor-Precategory → obj-Precategory C → obj-Precategory D
-  obj-full-functor-Precategory =
-    obj-functor-Precategory C D ∘ functor-full-functor-Precategory
+  obj-full-functor-Precategory = {!!}
 
   hom-full-functor-Precategory :
     (F : full-functor-Precategory) {x y : obj-Precategory C} →
@@ -85,6 +80,5 @@ module _
     hom-Precategory D
       ( obj-full-functor-Precategory F x)
       ( obj-full-functor-Precategory F y)
-  hom-full-functor-Precategory =
-    hom-functor-Precategory C D ∘ functor-full-functor-Precategory
+  hom-full-functor-Precategory = {!!}
 ```

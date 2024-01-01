@@ -50,138 +50,67 @@ module _
   where
 
   one-transport-ring-structure-iso-Ab : type-Ab A
-  one-transport-ring-structure-iso-Ab =
-    map-iso-Ab (ab-Ring R) A f (one-Ring R)
+  one-transport-ring-structure-iso-Ab = {!!}
 
   mul-transport-ring-structure-iso-Ab :
     (x y : type-Ab A) → type-Ab A
-  mul-transport-ring-structure-iso-Ab x y =
-    map-iso-Ab (ab-Ring R) A f
-      ( mul-Ring R
-        ( map-inv-iso-Ab (ab-Ring R) A f x)
-        ( map-inv-iso-Ab (ab-Ring R) A f y))
+  mul-transport-ring-structure-iso-Ab x y = {!!}
 
   private
-    one = one-transport-ring-structure-iso-Ab
-    mul = mul-transport-ring-structure-iso-Ab
-    map-f = map-iso-Ab (ab-Ring R) A f
-    map-inv-f = map-inv-iso-Ab (ab-Ring R) A f
+    one = {!!}
 
   associative-mul-transport-ring-structure-iso-Ab :
     (x y z : type-Ab A) → mul (mul x y) z ＝ mul x (mul y z)
-  associative-mul-transport-ring-structure-iso-Ab x y z =
-    ap
-      ( map-f)
-      ( ( ap (mul-Ring' R _) (is-retraction-map-inv-iso-Ab (ab-Ring R) A f _)) ∙
-        ( ( associative-mul-Ring R _ _ _) ∙
-          ( inv
-            ( ap
-              ( mul-Ring R _)
-              ( is-retraction-map-inv-iso-Ab (ab-Ring R) A f _)))))
+  associative-mul-transport-ring-structure-iso-Ab x y z = {!!}
 
   left-unit-law-mul-transport-ring-structure-iso-Ab :
     (x : type-Ab A) → mul one x ＝ x
-  left-unit-law-mul-transport-ring-structure-iso-Ab x =
-    ( ap
-      ( map-f)
-      ( ( ap (mul-Ring' R _) (is-retraction-map-inv-iso-Ab (ab-Ring R) A f _)) ∙
-        ( left-unit-law-mul-Ring R _))) ∙
-    ( is-section-map-inv-iso-Ab (ab-Ring R) A f x)
+  left-unit-law-mul-transport-ring-structure-iso-Ab x = {!!}
 
   right-unit-law-mul-transport-ring-structure-iso-Ab :
     (x : type-Ab A) → mul x one ＝ x
-  right-unit-law-mul-transport-ring-structure-iso-Ab x =
-    ( ap
-      ( map-f)
-      ( ( ap (mul-Ring R _) (is-retraction-map-inv-iso-Ab (ab-Ring R) A f _)) ∙
-        ( right-unit-law-mul-Ring R _))) ∙
-    ( is-section-map-inv-iso-Ab (ab-Ring R) A f x)
+  right-unit-law-mul-transport-ring-structure-iso-Ab x = {!!}
 
   left-distributive-mul-add-transport-ring-structure-iso-Ab :
     (x y z : type-Ab A) → mul x (add-Ab A y z) ＝ add-Ab A (mul x y) (mul x z)
   left-distributive-mul-add-transport-ring-structure-iso-Ab
-    x y z =
-    ( ap
-      ( map-f)
-      ( ( ap (mul-Ring R _) (preserves-add-inv-iso-Ab (ab-Ring R) A f)) ∙
-        ( left-distributive-mul-add-Ring R _ _ _))) ∙
-    ( preserves-add-iso-Ab (ab-Ring R) A f)
+    x y z = {!!}
 
   right-distributive-mul-add-transport-ring-structure-iso-Ab :
     (x y z : type-Ab A) → mul (add-Ab A x y) z ＝ add-Ab A (mul x z) (mul y z)
   right-distributive-mul-add-transport-ring-structure-iso-Ab
-    x y z =
-    ( ap
-      ( map-f)
-      ( ( ap (mul-Ring' R _) (preserves-add-inv-iso-Ab (ab-Ring R) A f)) ∙
-        ( right-distributive-mul-add-Ring R _ _ _))) ∙
-    ( preserves-add-iso-Ab (ab-Ring R) A f)
+    x y z = {!!}
 
   has-associative-mul-transport-ring-structure-iso-Ab :
     has-associative-mul-Set (set-Ab A)
-  pr1 has-associative-mul-transport-ring-structure-iso-Ab =
-    mul
-  pr2 has-associative-mul-transport-ring-structure-iso-Ab =
-    associative-mul-transport-ring-structure-iso-Ab
+  pr1 has-associative-mul-transport-ring-structure-iso-Ab = {!!}
 
   is-unital-transport-ring-structure-iso-Ab :
     is-unital mul
-  pr1 is-unital-transport-ring-structure-iso-Ab = one
-  pr1 (pr2 is-unital-transport-ring-structure-iso-Ab) =
-    left-unit-law-mul-transport-ring-structure-iso-Ab
-  pr2 (pr2 is-unital-transport-ring-structure-iso-Ab) =
-    right-unit-law-mul-transport-ring-structure-iso-Ab
+  pr1 is-unital-transport-ring-structure-iso-Ab = {!!}
 
   transport-ring-structure-iso-Ab : Ring l2
-  pr1 transport-ring-structure-iso-Ab = A
-  pr1 (pr2 transport-ring-structure-iso-Ab) =
-    has-associative-mul-transport-ring-structure-iso-Ab
-  pr1 (pr2 (pr2 transport-ring-structure-iso-Ab)) =
-    is-unital-transport-ring-structure-iso-Ab
-  pr1 (pr2 (pr2 (pr2 transport-ring-structure-iso-Ab))) =
-    left-distributive-mul-add-transport-ring-structure-iso-Ab
-  pr2 (pr2 (pr2 (pr2 transport-ring-structure-iso-Ab))) =
-    right-distributive-mul-add-transport-ring-structure-iso-Ab
+  pr1 transport-ring-structure-iso-Ab = {!!}
 
   preserves-mul-transport-ring-structure-iso-Ab :
     preserves-mul-hom-Ab
       ( R)
       ( transport-ring-structure-iso-Ab)
       ( hom-iso-Ab (ab-Ring R) A f)
-  preserves-mul-transport-ring-structure-iso-Ab {x} {y} =
-    ap map-f
-      ( ap-mul-Ring R
-        ( inv (is-retraction-map-inv-iso-Ab (ab-Ring R) A f x))
-        ( inv (is-retraction-map-inv-iso-Ab (ab-Ring R) A f y)))
+  preserves-mul-transport-ring-structure-iso-Ab {x} {y} = {!!}
 
   hom-iso-transport-ring-structure-iso-Ab :
     hom-Ring R transport-ring-structure-iso-Ab
-  pr1 hom-iso-transport-ring-structure-iso-Ab =
-    hom-iso-Ab (ab-Ring R) A f
-  pr1 (pr2 hom-iso-transport-ring-structure-iso-Ab) =
-    preserves-mul-transport-ring-structure-iso-Ab
-  pr2 (pr2 hom-iso-transport-ring-structure-iso-Ab) =
-    refl
+  pr1 hom-iso-transport-ring-structure-iso-Ab = {!!}
 
   is-iso-iso-transport-ring-structure-iso-Ab :
     is-iso-Ring
       ( R)
       ( transport-ring-structure-iso-Ab)
       ( hom-iso-transport-ring-structure-iso-Ab)
-  is-iso-iso-transport-ring-structure-iso-Ab =
-    is-iso-ring-is-iso-Ab
-      ( R)
-      ( transport-ring-structure-iso-Ab)
-      ( hom-iso-transport-ring-structure-iso-Ab)
-      ( is-iso-iso-Ab (ab-Ring R) A f)
+  is-iso-iso-transport-ring-structure-iso-Ab = {!!}
 
   iso-transport-ring-structure-iso-Ab :
     iso-Ring R transport-ring-structure-iso-Ab
-  pr1 (pr1 iso-transport-ring-structure-iso-Ab) = hom-iso-Ab (ab-Ring R) A f
-  pr1 (pr2 (pr1 iso-transport-ring-structure-iso-Ab)) =
-    preserves-mul-transport-ring-structure-iso-Ab
-  pr2 (pr2 (pr1 iso-transport-ring-structure-iso-Ab)) =
-    refl
-  pr2 iso-transport-ring-structure-iso-Ab =
-    is-iso-iso-transport-ring-structure-iso-Ab
+  pr1 (pr1 iso-transport-ring-structure-iso-Ab) = {!!}
 ```

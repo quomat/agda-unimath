@@ -31,8 +31,7 @@ module _
   where
 
   type-stabilizer-action-Group : type-action-Group G X → UU (l1 ⊔ l2)
-  type-stabilizer-action-Group x =
-    Σ (type-Group G) (λ g → mul-action-Group G X g x ＝ x)
+  type-stabilizer-action-Group x = {!!}
 ```
 
 ## External links

@@ -40,8 +40,7 @@ module _
 
   insertion-sort-list :
     list (type-Decidable-Total-Order X) → list (type-Decidable-Total-Order X)
-  insertion-sort-list l =
-    list-vec (length-list l) (insertion-sort-vec X (vec-list l))
+  insertion-sort-list l = {!!}
 ```
 
 ## Properties
@@ -51,35 +50,23 @@ module _
 ```agda
   is-sort-insertion-sort-list :
     is-sort-list X insertion-sort-list
-  is-sort-insertion-sort-list =
-    is-sort-list-is-sort-vec
-      ( X)
-      ( insertion-sort-vec X)
-      ( is-sort-insertion-sort-vec X)
+  is-sort-insertion-sort-list = {!!}
 
   is-permutation-insertion-sort-list : is-permutation-list insertion-sort-list
-  is-permutation-insertion-sort-list = pr1 (is-sort-insertion-sort-list)
+  is-permutation-insertion-sort-list = {!!}
 
   permutation-insertion-sort-list :
     (l : list (type-Decidable-Total-Order X)) →
     Permutation (length-list l)
-  permutation-insertion-sort-list =
-    permutation-list-is-sort-list
-      X
-      insertion-sort-list
-      is-sort-insertion-sort-list
+  permutation-insertion-sort-list = {!!}
 
   eq-permute-list-permutation-insertion-sort-list :
     (l : list (type-Decidable-Total-Order X)) →
     insertion-sort-list l ＝ permute-list l (permutation-insertion-sort-list l)
-  eq-permute-list-permutation-insertion-sort-list =
-    eq-permute-list-permutation-is-sort-list
-      X
-      insertion-sort-list
-      is-sort-insertion-sort-list
+  eq-permute-list-permutation-insertion-sort-list = {!!}
 
   is-sorting-insertion-sort-list :
     (l : list (type-Decidable-Total-Order X)) →
     is-sorted-list X (insertion-sort-list l)
-  is-sorting-insertion-sort-list = pr2 (is-sort-insertion-sort-list)
+  is-sorting-insertion-sort-list = {!!}
 ```

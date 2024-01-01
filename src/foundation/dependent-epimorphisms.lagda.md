@@ -44,8 +44,7 @@ module _
   where
 
   is-dependent-epimorphism : (A → B) → UUω
-  is-dependent-epimorphism f =
-    {l : Level} (C : B → UU l) → is-emb (precomp-Π f C)
+  is-dependent-epimorphism f = {!!}
 ```
 
 ## Properties
@@ -59,7 +58,7 @@ module _
 
   is-epimorphism-is-dependent-epimorphism :
     is-dependent-epimorphism f → is-epimorphism f
-  is-epimorphism-is-dependent-epimorphism e X = e (λ _ → X)
+  is-epimorphism-is-dependent-epimorphism e X = {!!}
 ```
 
 The converse of the above, that every epimorphism is a dependent epimorphism,

@@ -59,56 +59,46 @@ module _
   where
 
   is-preunivalent-prop-Precategory : Prop (l1 ⊔ l2)
-  is-preunivalent-prop-Precategory =
-    Π-Prop
-      ( obj-Precategory C)
-      ( λ x →
-        Π-Prop
-          ( obj-Precategory C)
-          ( λ y → is-emb-Prop (iso-eq-Precategory C x y)))
+  is-preunivalent-prop-Precategory = {!!}
 
   is-preunivalent-Precategory : UU (l1 ⊔ l2)
-  is-preunivalent-Precategory = type-Prop is-preunivalent-prop-Precategory
+  is-preunivalent-Precategory = {!!}
 ```
 
 ### The type of preunivalent categories
 
 ```agda
 Preunivalent-Category : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Preunivalent-Category l1 l2 =
-  Σ (Precategory l1 l2) (is-preunivalent-Precategory)
+Preunivalent-Category l1 l2 = {!!}
 
 module _
   {l1 l2 : Level} (C : Preunivalent-Category l1 l2)
   where
 
   precategory-Preunivalent-Category : Precategory l1 l2
-  precategory-Preunivalent-Category = pr1 C
+  precategory-Preunivalent-Category = {!!}
 
   obj-Preunivalent-Category : UU l1
-  obj-Preunivalent-Category = obj-Precategory precategory-Preunivalent-Category
+  obj-Preunivalent-Category = {!!}
 
   hom-set-Preunivalent-Category :
     obj-Preunivalent-Category → obj-Preunivalent-Category → Set l2
-  hom-set-Preunivalent-Category =
-    hom-set-Precategory precategory-Preunivalent-Category
+  hom-set-Preunivalent-Category = {!!}
 
   hom-Preunivalent-Category :
     obj-Preunivalent-Category → obj-Preunivalent-Category → UU l2
-  hom-Preunivalent-Category = hom-Precategory precategory-Preunivalent-Category
+  hom-Preunivalent-Category = {!!}
 
   is-set-hom-Preunivalent-Category :
     (x y : obj-Preunivalent-Category) → is-set (hom-Preunivalent-Category x y)
-  is-set-hom-Preunivalent-Category =
-    is-set-hom-Precategory precategory-Preunivalent-Category
+  is-set-hom-Preunivalent-Category = {!!}
 
   comp-hom-Preunivalent-Category :
     {x y z : obj-Preunivalent-Category} →
     hom-Preunivalent-Category y z →
     hom-Preunivalent-Category x y →
     hom-Preunivalent-Category x z
-  comp-hom-Preunivalent-Category =
-    comp-hom-Precategory precategory-Preunivalent-Category
+  comp-hom-Preunivalent-Category = {!!}
 
   associative-comp-hom-Preunivalent-Category :
     {x y z w : obj-Preunivalent-Category}
@@ -117,8 +107,7 @@ module _
     (f : hom-Preunivalent-Category x y) →
     comp-hom-Preunivalent-Category (comp-hom-Preunivalent-Category h g) f ＝
     comp-hom-Preunivalent-Category h (comp-hom-Preunivalent-Category g f)
-  associative-comp-hom-Preunivalent-Category =
-    associative-comp-hom-Precategory precategory-Preunivalent-Category
+  associative-comp-hom-Preunivalent-Category = {!!}
 
   inv-associative-comp-hom-Preunivalent-Category :
     {x y z w : obj-Preunivalent-Category}
@@ -127,52 +116,41 @@ module _
     (f : hom-Preunivalent-Category x y) →
     comp-hom-Preunivalent-Category h (comp-hom-Preunivalent-Category g f) ＝
     comp-hom-Preunivalent-Category (comp-hom-Preunivalent-Category h g) f
-  inv-associative-comp-hom-Preunivalent-Category =
-    inv-associative-comp-hom-Precategory precategory-Preunivalent-Category
+  inv-associative-comp-hom-Preunivalent-Category = {!!}
 
   associative-composition-operation-Preunivalent-Category :
     associative-composition-operation-binary-family-Set
       hom-set-Preunivalent-Category
-  associative-composition-operation-Preunivalent-Category =
-    associative-composition-operation-Precategory
-      ( precategory-Preunivalent-Category)
+  associative-composition-operation-Preunivalent-Category = {!!}
 
   id-hom-Preunivalent-Category :
     {x : obj-Preunivalent-Category} → hom-Preunivalent-Category x x
-  id-hom-Preunivalent-Category =
-    id-hom-Precategory precategory-Preunivalent-Category
+  id-hom-Preunivalent-Category = {!!}
 
   left-unit-law-comp-hom-Preunivalent-Category :
     {x y : obj-Preunivalent-Category} (f : hom-Preunivalent-Category x y) →
     comp-hom-Preunivalent-Category id-hom-Preunivalent-Category f ＝ f
-  left-unit-law-comp-hom-Preunivalent-Category =
-    left-unit-law-comp-hom-Precategory precategory-Preunivalent-Category
+  left-unit-law-comp-hom-Preunivalent-Category = {!!}
 
   right-unit-law-comp-hom-Preunivalent-Category :
     {x y : obj-Preunivalent-Category} (f : hom-Preunivalent-Category x y) →
     comp-hom-Preunivalent-Category f id-hom-Preunivalent-Category ＝ f
-  right-unit-law-comp-hom-Preunivalent-Category =
-    right-unit-law-comp-hom-Precategory precategory-Preunivalent-Category
+  right-unit-law-comp-hom-Preunivalent-Category = {!!}
 
   is-unital-composition-operation-Preunivalent-Category :
     is-unital-composition-operation-binary-family-Set
       hom-set-Preunivalent-Category
       comp-hom-Preunivalent-Category
-  is-unital-composition-operation-Preunivalent-Category =
-    is-unital-composition-operation-Precategory
-      ( precategory-Preunivalent-Category)
+  is-unital-composition-operation-Preunivalent-Category = {!!}
 
   is-preunivalent-Preunivalent-Category :
     is-preunivalent-Precategory precategory-Preunivalent-Category
-  is-preunivalent-Preunivalent-Category = pr2 C
+  is-preunivalent-Preunivalent-Category = {!!}
 
   emb-iso-eq-Preunivalent-Category :
     {x y : obj-Preunivalent-Category} →
     (x ＝ y) ↪ (iso-Precategory precategory-Preunivalent-Category x y)
-  pr1 (emb-iso-eq-Preunivalent-Category {x} {y}) =
-    iso-eq-Precategory precategory-Preunivalent-Category x y
-  pr2 (emb-iso-eq-Preunivalent-Category {x} {y}) =
-    is-preunivalent-Preunivalent-Category x y
+  pr1 (emb-iso-eq-Preunivalent-Category {x} {y}) = {!!}
 ```
 
 ### The total hom-type of a preunivalent category
@@ -180,15 +158,13 @@ module _
 ```agda
 total-hom-Preunivalent-Category :
   {l1 l2 : Level} (C : Preunivalent-Category l1 l2) → UU (l1 ⊔ l2)
-total-hom-Preunivalent-Category C =
-  total-hom-Precategory (precategory-Preunivalent-Category C)
+total-hom-Preunivalent-Category C = {!!}
 
 obj-total-hom-Preunivalent-Category :
   {l1 l2 : Level} (C : Preunivalent-Category l1 l2) →
   total-hom-Preunivalent-Category C →
   obj-Preunivalent-Category C × obj-Preunivalent-Category C
-obj-total-hom-Preunivalent-Category C =
-  obj-total-hom-Precategory (precategory-Preunivalent-Category C)
+obj-total-hom-Preunivalent-Category C = {!!}
 ```
 
 ### Equalities induce morphisms
@@ -202,14 +178,12 @@ module _
   hom-eq-Preunivalent-Category :
     (x y : obj-Preunivalent-Category C) →
     x ＝ y → hom-Preunivalent-Category C x y
-  hom-eq-Preunivalent-Category =
-    hom-eq-Precategory (precategory-Preunivalent-Category C)
+  hom-eq-Preunivalent-Category = {!!}
 
   hom-inv-eq-Preunivalent-Category :
     (x y : obj-Preunivalent-Category C) →
     x ＝ y → hom-Preunivalent-Category C y x
-  hom-inv-eq-Preunivalent-Category =
-    hom-inv-eq-Precategory (precategory-Preunivalent-Category C)
+  hom-inv-eq-Preunivalent-Category = {!!}
 ```
 
 ### Pre- and postcomposition by a morphism
@@ -222,8 +196,7 @@ precomp-hom-Preunivalent-Category :
   (z : obj-Preunivalent-Category C) →
   hom-Preunivalent-Category C y z →
   hom-Preunivalent-Category C x z
-precomp-hom-Preunivalent-Category C =
-  precomp-hom-Precategory (precategory-Preunivalent-Category C)
+precomp-hom-Preunivalent-Category C = {!!}
 
 postcomp-hom-Preunivalent-Category :
   {l1 l2 : Level} (C : Preunivalent-Category l1 l2)
@@ -232,8 +205,7 @@ postcomp-hom-Preunivalent-Category :
   (z : obj-Preunivalent-Category C) →
   hom-Preunivalent-Category C z x →
   hom-Preunivalent-Category C z y
-postcomp-hom-Preunivalent-Category C =
-  postcomp-hom-Precategory (precategory-Preunivalent-Category C)
+postcomp-hom-Preunivalent-Category C = {!!}
 ```
 
 ## Properties
@@ -250,15 +222,10 @@ module _
   where
 
   is-1-type-obj-Preunivalent-Category : is-1-type (obj-Preunivalent-Category C)
-  is-1-type-obj-Preunivalent-Category x y =
-    is-set-is-emb
-      ( iso-eq-Precategory (precategory-Preunivalent-Category C) x y)
-      ( is-preunivalent-Preunivalent-Category C x y)
-      ( is-set-iso-Precategory (precategory-Preunivalent-Category C))
+  is-1-type-obj-Preunivalent-Category x y = {!!}
 
   obj-1-type-Preunivalent-Category : 1-Type l1
-  pr1 obj-1-type-Preunivalent-Category = obj-Preunivalent-Category C
-  pr2 obj-1-type-Preunivalent-Category = is-1-type-obj-Preunivalent-Category
+  pr1 obj-1-type-Preunivalent-Category = {!!}
 ```
 
 ### The total hom-type of a preunivalent category is a 1-type
@@ -270,16 +237,10 @@ module _
 
   is-1-type-total-hom-Preunivalent-Category :
     is-1-type (total-hom-Preunivalent-Category C)
-  is-1-type-total-hom-Preunivalent-Category =
-    is-trunc-total-hom-is-trunc-obj-Precategory
-      ( precategory-Preunivalent-Category C)
-      ( is-1-type-obj-Preunivalent-Category C)
+  is-1-type-total-hom-Preunivalent-Category = {!!}
 
   total-hom-1-type-Preunivalent-Category : 1-Type (l1 ⊔ l2)
-  total-hom-1-type-Preunivalent-Category =
-    total-hom-truncated-type-is-trunc-obj-Precategory
-      ( precategory-Preunivalent-Category C)
-      ( is-1-type-obj-Preunivalent-Category C)
+  total-hom-1-type-Preunivalent-Category = {!!}
 ```
 
 ## See also

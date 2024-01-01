@@ -46,17 +46,13 @@ equivalences, or other.
 is-equiv-inv-htpy :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2}
   (f g : (x : A) → B x) → is-equiv (inv-htpy {f = f} {g = g})
-is-equiv-inv-htpy f g =
-  is-equiv-is-invertible
-    ( inv-htpy)
-    ( λ H → eq-htpy (λ x → inv-inv (H x)))
-    ( λ H → eq-htpy (λ x → inv-inv (H x)))
+is-equiv-inv-htpy f g = {!!}
 
 equiv-inv-htpy :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2}
   (f g : (x : A) → B x) → (f ~ g) ≃ (g ~ f)
-pr1 (equiv-inv-htpy f g) = inv-htpy
-pr2 (equiv-inv-htpy f g) = is-equiv-inv-htpy f g
+pr1 (equiv-inv-htpy f g) = {!!}
+pr2 (equiv-inv-htpy f g) = {!!}
 ```
 
 ### Concatenating homotopies by a fixed homotopy is an equivalence
@@ -68,17 +64,14 @@ is-equiv-concat-htpy :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2}
   {f g : (x : A) → B x} (H : f ~ g) →
   (h : (x : A) → B x) → is-equiv (concat-htpy H h)
-is-equiv-concat-htpy {A = A} {B = B} {f} =
-  ind-htpy f
-    ( λ g H → (h : (x : A) → B x) → is-equiv (concat-htpy H h))
-    ( λ h → is-equiv-id)
+is-equiv-concat-htpy {A = A} {B = B} {f} = {!!}
 
 equiv-concat-htpy :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2}
   {f g : (x : A) → B x} (H : f ~ g) (h : (x : A) → B x) →
   (g ~ h) ≃ (f ~ h)
-pr1 (equiv-concat-htpy H h) = concat-htpy H h
-pr2 (equiv-concat-htpy H h) = is-equiv-concat-htpy H h
+pr1 (equiv-concat-htpy H h) = {!!}
+pr2 (equiv-concat-htpy H h) = {!!}
 ```
 
 #### Concatenating from the right
@@ -92,24 +85,17 @@ module _
 
   is-section-concat-inv-htpy' :
     ((concat-htpy' f K) ∘ (concat-inv-htpy' f K)) ~ id
-  is-section-concat-inv-htpy' L =
-    eq-htpy (λ x → is-section-inv-concat' (f x) (K x) (L x))
+  is-section-concat-inv-htpy' L = {!!}
 
   is-retraction-concat-inv-htpy' :
     ((concat-inv-htpy' f K) ∘ (concat-htpy' f K)) ~ id
-  is-retraction-concat-inv-htpy' L =
-    eq-htpy (λ x → is-retraction-inv-concat' (f x) (K x) (L x))
+  is-retraction-concat-inv-htpy' L = {!!}
 
   is-equiv-concat-htpy' : is-equiv (concat-htpy' f K)
-  is-equiv-concat-htpy' =
-    is-equiv-is-invertible
-      ( concat-inv-htpy' f K)
-      ( is-section-concat-inv-htpy')
-      ( is-retraction-concat-inv-htpy')
+  is-equiv-concat-htpy' = {!!}
 
   equiv-concat-htpy' : (f ~ g) ≃ (f ~ h)
-  pr1 equiv-concat-htpy' = concat-htpy' f K
-  pr2 equiv-concat-htpy' = is-equiv-concat-htpy'
+  pr1 equiv-concat-htpy' = {!!}
 ```
 
 ### Binary concatenation
@@ -122,12 +108,11 @@ module _
 
   is-binary-equiv-concat-htpy :
     is-binary-equiv (λ (H : f ~ g) (K : g ~ h) → H ∙h K)
-  pr1 is-binary-equiv-concat-htpy K = is-equiv-concat-htpy' f K
-  pr2 is-binary-equiv-concat-htpy H = is-equiv-concat-htpy H h
+  pr1 is-binary-equiv-concat-htpy K = {!!}
 
   equiv-binary-concat-htpy :
     (H : f ~ g) (K : h ~ k) → (g ~ h) ≃ (f ~ k)
-  equiv-binary-concat-htpy H K = equiv-concat-htpy' f K ∘e equiv-concat-htpy H h
+  equiv-binary-concat-htpy H K = {!!}
 ```
 
 ### Horizontal composition of homotopies
@@ -141,7 +126,7 @@ module _
     { H H' : f ~ g} → H ~ H' →
     { K K' : g ~ h} → K ~ K' →
     ( H ∙h K) ~ (H' ∙h K')
-  horizontal-concat-htpy² α β x = horizontal-concat-Id² (α x) (β x)
+  horizontal-concat-htpy² α β x = {!!}
 ```
 
 ### Transposing homotopies is an equivalence
@@ -154,23 +139,17 @@ module _
 
   is-equiv-left-transpose-htpy-concat :
     is-equiv (left-transpose-htpy-concat H K L)
-  is-equiv-left-transpose-htpy-concat =
-    is-equiv-map-Π-is-fiberwise-equiv
-      ( λ x → is-equiv-left-transpose-eq-concat (H x) (K x) (L x))
+  is-equiv-left-transpose-htpy-concat = {!!}
 
   equiv-left-transpose-htpy-concat : ((H ∙h K) ~ L) ≃ (K ~ ((inv-htpy H) ∙h L))
-  pr1 equiv-left-transpose-htpy-concat = left-transpose-htpy-concat H K L
-  pr2 equiv-left-transpose-htpy-concat = is-equiv-left-transpose-htpy-concat
+  pr1 equiv-left-transpose-htpy-concat = {!!}
 
   is-equiv-right-transpose-htpy-concat :
     is-equiv (right-transpose-htpy-concat H K L)
-  is-equiv-right-transpose-htpy-concat =
-    is-equiv-map-Π-is-fiberwise-equiv
-      ( λ x → is-equiv-right-transpose-eq-concat (H x) (K x) (L x))
+  is-equiv-right-transpose-htpy-concat = {!!}
 
   equiv-right-transpose-htpy-concat : ((H ∙h K) ~ L) ≃ (H ~ (L ∙h (inv-htpy K)))
-  pr1 equiv-right-transpose-htpy-concat = right-transpose-htpy-concat H K L
-  pr2 equiv-right-transpose-htpy-concat = is-equiv-right-transpose-htpy-concat
+  pr1 equiv-right-transpose-htpy-concat = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} {f g h : (x : A) → B x}
@@ -178,16 +157,10 @@ module _
   where
 
   equiv-left-transpose-htpy-concat' : (H ~ K ∙h L) ≃ (inv-htpy K ∙h H ~ L)
-  equiv-left-transpose-htpy-concat' =
-    ( equiv-inv-htpy L ((inv-htpy K) ∙h H)) ∘e
-    ( equiv-left-transpose-htpy-concat K L H) ∘e
-    ( equiv-inv-htpy H (K ∙h L))
+  equiv-left-transpose-htpy-concat' = {!!}
 
   equiv-right-transpose-htpy-concat' : (H ~ K ∙h L) ≃ (H ∙h inv-htpy L ~ K)
-  equiv-right-transpose-htpy-concat' =
-    ( equiv-inv-htpy K (H ∙h (inv-htpy L))) ∘e
-    ( equiv-right-transpose-htpy-concat K L H) ∘e
-    ( equiv-inv-htpy H (K ∙h L))
+  equiv-right-transpose-htpy-concat' = {!!}
 ```
 
 ### Computing dependent-identifications in the type family `eq-value` of dependent functions
@@ -200,28 +173,19 @@ module _
   is-equiv-map-compute-dependent-identification-eq-value :
     {x y : A} (p : x ＝ y) (q : eq-value f g x) (r : eq-value f g y) →
     is-equiv (map-compute-dependent-identification-eq-value f g p q r)
-  is-equiv-map-compute-dependent-identification-eq-value refl q r =
-    is-equiv-comp
-      ( inv)
-      ( concat' r (right-unit ∙ ap-id q))
-      ( is-equiv-concat' r (right-unit ∙ ap-id q))
-      ( is-equiv-inv r q)
+  is-equiv-map-compute-dependent-identification-eq-value refl q r = {!!}
 
   compute-dependent-identification-eq-value :
     {x y : A} (p : x ＝ y) (q : eq-value f g x) (r : eq-value f g y) →
     coherence-square-identifications (ap (tr B p) q) (apd f p) (apd g p) r ≃
     dependent-identification (eq-value f g) p q r
-  pr1 (compute-dependent-identification-eq-value p q r) =
-    map-compute-dependent-identification-eq-value f g p q r
-  pr2 (compute-dependent-identification-eq-value p q r) =
-    is-equiv-map-compute-dependent-identification-eq-value p q r
+  pr1 (compute-dependent-identification-eq-value p q r) = {!!}
 
   inv-map-compute-dependent-identification-eq-value :
     {x y : A} (p : x ＝ y) (q : eq-value f g x) (r : eq-value f g y) →
     dependent-identification (eq-value f g) p q r →
     coherence-square-identifications (ap (tr B p) q) (apd f p) (apd g p) r
-  inv-map-compute-dependent-identification-eq-value p q r =
-    map-inv-equiv (compute-dependent-identification-eq-value p q r)
+  inv-map-compute-dependent-identification-eq-value p q r = {!!}
 ```
 
 ### Computing dependent-identifications in the type family `eq-value` of ordinary functions
@@ -234,28 +198,19 @@ module _
   is-equiv-map-compute-dependent-identification-eq-value-function :
     {x y : A} (p : x ＝ y) (q : eq-value f g x) (r : eq-value f g y) →
     is-equiv (map-compute-dependent-identification-eq-value-function f g p q r)
-  is-equiv-map-compute-dependent-identification-eq-value-function refl q r =
-    is-equiv-comp
-      ( inv)
-      ( concat' r right-unit)
-      ( is-equiv-concat' r right-unit)
-      ( is-equiv-inv r q)
+  is-equiv-map-compute-dependent-identification-eq-value-function refl q r = {!!}
 
   compute-dependent-identification-eq-value-function :
     {x y : A} (p : x ＝ y) (q : f x ＝ g x) (r : f y ＝ g y) →
     coherence-square-identifications q (ap f p) (ap g p) r ≃
     dependent-identification (eq-value f g) p q r
-  pr1 (compute-dependent-identification-eq-value-function p q r) =
-    map-compute-dependent-identification-eq-value-function f g p q r
-  pr2 (compute-dependent-identification-eq-value-function p q r) =
-    is-equiv-map-compute-dependent-identification-eq-value-function p q r
+  pr1 (compute-dependent-identification-eq-value-function p q r) = {!!}
 
   inv-map-compute-dependent-identification-eq-value-function :
     {x y : A} (p : x ＝ y) (q : f x ＝ g x) (r : f y ＝ g y) →
     dependent-identification (eq-value f g) p q r →
     coherence-square-identifications q (ap f p) (ap g p) r
-  inv-map-compute-dependent-identification-eq-value-function p q r =
-    map-inv-equiv (compute-dependent-identification-eq-value-function p q r)
+  inv-map-compute-dependent-identification-eq-value-function p q r = {!!}
 ```
 
 ### Relation between between `compute-dependent-identification-eq-value-function` and `nat-htpy`
@@ -270,19 +225,7 @@ module _
     (p : a0 ＝ a1) →
     (map-inv-equiv (compute-dependent-identification-eq-value-function
       f g p (H a0) (H a1))) (apd H p) ＝ inv (nat-htpy H p)
-  nat-htpy-apd-htpy refl =
-    inv
-      ( ap
-        ( map-inv-equiv
-          ( compute-dependent-identification-eq-value-function f g refl
-            ( H a0)
-            ( H a0)))
-        ( ap inv (left-inv right-unit))) ∙
-      ( is-retraction-map-inv-equiv
-        ( compute-dependent-identification-eq-value-function f g refl
-          ( H a0)
-          ( H a1))
-        ( inv right-unit))
+  nat-htpy-apd-htpy refl = {!!}
 ```
 
 ### Eckmann-Hilton for homotopies
@@ -294,16 +237,12 @@ htpy-swap-nat-right-htpy :
   (H : f ~ g) →
   (htpy-right-whisk H' f ∙h htpy-left-whisk g' H) ~
   (htpy-left-whisk f' H ∙h htpy-right-whisk H' g)
-htpy-swap-nat-right-htpy H' H x =
-    nat-htpy H' (H x)
+htpy-swap-nat-right-htpy H' H x = {!!}
 
 eckmann-hilton-htpy :
   {l : Level} {X : UU l} (H K : id {A = X} ~ id) →
   (H ∙h K) ~ (K ∙h H)
-eckmann-hilton-htpy H K x =
-  ( inv (identification-left-whisk (H x) (ap-id (K x))) ∙
-  ( htpy-swap-nat-right-htpy H K x)) ∙
-  ( identification-right-whisk (ap-id (K x)) (H x))
+eckmann-hilton-htpy H K x = {!!}
 ```
 
 ### Action on identifications at `eq-htpy`
@@ -318,12 +257,7 @@ module _
   compute-eq-htpy-ap :
     (p : h ~ k) →
     eq-htpy (λ i → ap (f i) (p i)) ＝ ap (map-Π f) (eq-htpy p)
-  compute-eq-htpy-ap =
-    ind-htpy
-      ( h)
-      ( λ k p → eq-htpy (λ i → ap (f i) (p i)) ＝ ap (map-Π f) (eq-htpy p))
-      ( eq-htpy-refl-htpy (map-Π f h) ∙
-        ap (ap (map-Π f)) (inv (eq-htpy-refl-htpy h)))
+  compute-eq-htpy-ap = {!!}
 ```
 
 ## See also

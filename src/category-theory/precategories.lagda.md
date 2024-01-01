@@ -32,11 +32,9 @@ A **precategory** in Homotopy Type Theory consists of:
 - for each pair of objects `x y : A`, a [set](foundation-core.sets.md) of
   morphisms `hom x y : Set`, together with a composition operation
   `_∘_ : hom y z → hom x y → hom x z` such that:
-- `(h ∘ g) ∘ f = h ∘ (g ∘ f)` for any morphisms `h : hom z w`, `g : hom y z` and
-  `f : hom x y`,
+- `(h ∘ g) ∘ f = {!!}
 - for each object `x : A` there is a morphism `id_x : hom x x` such that
-  `id_x ∘ f = f` and `g ∘ id_x = g` for any morphisms `f : hom x y` and
-  `g : hom z x`.
+  `id_x ∘ f = {!!}
 
 The reason this is called a *pre*category and not a category in Homotopy Type
 Theory is that we want to reserve that name for precategories where the
@@ -54,22 +52,14 @@ module _
   where
 
   is-precategory-prop-composition-operation-binary-family-Set : Prop (l1 ⊔ l2)
-  is-precategory-prop-composition-operation-binary-family-Set =
-    prod-Prop
-      ( is-unital-prop-composition-operation-binary-family-Set hom-set comp-hom)
-      ( is-associative-prop-composition-operation-binary-family-Set
-        ( hom-set)
-        ( comp-hom))
+  is-precategory-prop-composition-operation-binary-family-Set = {!!}
 
   is-precategory-composition-operation-binary-family-Set : UU (l1 ⊔ l2)
-  is-precategory-composition-operation-binary-family-Set =
-    type-Prop is-precategory-prop-composition-operation-binary-family-Set
+  is-precategory-composition-operation-binary-family-Set = {!!}
 
   is-prop-is-precategory-composition-operation-binary-family-Set :
     is-prop is-precategory-composition-operation-binary-family-Set
-  is-prop-is-precategory-composition-operation-binary-family-Set =
-    is-prop-type-Prop
-      is-precategory-prop-composition-operation-binary-family-Set
+  is-prop-is-precategory-composition-operation-binary-family-Set = {!!}
 ```
 
 ### The type of precategories
@@ -77,54 +67,42 @@ module _
 ```agda
 Precategory :
   (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Precategory l1 l2 =
-  Σ ( UU l1)
-    ( λ A →
-      Σ ( A → A → Set l2)
-        ( λ hom-set →
-          Σ ( associative-composition-operation-binary-family-Set hom-set)
-            ( λ (comp-hom , assoc-comp) →
-              is-unital-composition-operation-binary-family-Set
-                ( hom-set)
-                ( comp-hom))))
+Precategory l1 l2 = {!!}
 
 module _
   {l1 l2 : Level} (C : Precategory l1 l2)
   where
 
   obj-Precategory : UU l1
-  obj-Precategory = pr1 C
+  obj-Precategory = {!!}
 
   hom-set-Precategory : (x y : obj-Precategory) → Set l2
-  hom-set-Precategory = pr1 (pr2 C)
+  hom-set-Precategory = {!!}
 
   hom-Precategory : (x y : obj-Precategory) → UU l2
-  hom-Precategory x y = type-Set (hom-set-Precategory x y)
+  hom-Precategory x y = {!!}
 
   is-set-hom-Precategory :
     (x y : obj-Precategory) → is-set (hom-Precategory x y)
-  is-set-hom-Precategory x y = is-set-type-Set (hom-set-Precategory x y)
+  is-set-hom-Precategory x y = {!!}
 
   associative-composition-operation-Precategory :
     associative-composition-operation-binary-family-Set hom-set-Precategory
-  associative-composition-operation-Precategory = pr1 (pr2 (pr2 C))
+  associative-composition-operation-Precategory = {!!}
 
   comp-hom-Precategory :
     {x y z : obj-Precategory} →
     hom-Precategory y z →
     hom-Precategory x y →
     hom-Precategory x z
-  comp-hom-Precategory =
-    comp-hom-associative-composition-operation-binary-family-Set
-      ( hom-set-Precategory)
-      ( associative-composition-operation-Precategory)
+  comp-hom-Precategory = {!!}
 
   comp-hom-Precategory' :
     {x y z : obj-Precategory} →
     hom-Precategory x y →
     hom-Precategory y z →
     hom-Precategory x z
-  comp-hom-Precategory' f g = comp-hom-Precategory g f
+  comp-hom-Precategory' f g = {!!}
 
   associative-comp-hom-Precategory :
     {x y z w : obj-Precategory}
@@ -133,10 +111,7 @@ module _
     (f : hom-Precategory x y) →
     ( comp-hom-Precategory (comp-hom-Precategory h g) f) ＝
     ( comp-hom-Precategory h (comp-hom-Precategory g f))
-  associative-comp-hom-Precategory =
-    witness-associative-composition-operation-binary-family-Set
-      ( hom-set-Precategory)
-      ( associative-composition-operation-Precategory)
+  associative-comp-hom-Precategory = {!!}
 
   inv-associative-comp-hom-Precategory :
     {x y z w : obj-Precategory}
@@ -145,31 +120,26 @@ module _
     (f : hom-Precategory x y) →
     ( comp-hom-Precategory h (comp-hom-Precategory g f)) ＝
     ( comp-hom-Precategory (comp-hom-Precategory h g) f)
-  inv-associative-comp-hom-Precategory =
-    inv-witness-associative-composition-operation-binary-family-Set
-      ( hom-set-Precategory)
-      ( associative-composition-operation-Precategory)
+  inv-associative-comp-hom-Precategory = {!!}
 
   is-unital-composition-operation-Precategory :
     is-unital-composition-operation-binary-family-Set
       ( hom-set-Precategory)
       ( comp-hom-Precategory)
-  is-unital-composition-operation-Precategory = pr2 (pr2 (pr2 C))
+  is-unital-composition-operation-Precategory = {!!}
 
   id-hom-Precategory : {x : obj-Precategory} → hom-Precategory x x
-  id-hom-Precategory {x} = pr1 is-unital-composition-operation-Precategory x
+  id-hom-Precategory {x} = {!!}
 
   left-unit-law-comp-hom-Precategory :
     {x y : obj-Precategory} (f : hom-Precategory x y) →
     comp-hom-Precategory id-hom-Precategory f ＝ f
-  left-unit-law-comp-hom-Precategory =
-    pr1 (pr2 is-unital-composition-operation-Precategory)
+  left-unit-law-comp-hom-Precategory = {!!}
 
   right-unit-law-comp-hom-Precategory :
     {x y : obj-Precategory} (f : hom-Precategory x y) →
     comp-hom-Precategory f id-hom-Precategory ＝ f
-  right-unit-law-comp-hom-Precategory =
-    pr2 (pr2 is-unital-composition-operation-Precategory)
+  right-unit-law-comp-hom-Precategory = {!!}
 ```
 
 ### The underlying nonunital precategory of a precategory
@@ -180,10 +150,7 @@ module _
   where
 
   nonunital-precategory-Precategory : Nonunital-Precategory l1 l2
-  pr1 nonunital-precategory-Precategory = obj-Precategory C
-  pr1 (pr2 nonunital-precategory-Precategory) = hom-set-Precategory C
-  pr2 (pr2 nonunital-precategory-Precategory) =
-    associative-composition-operation-Precategory C
+  pr1 nonunital-precategory-Precategory = {!!}
 ```
 
 ### The underlying set-magmoid of a precategory
@@ -194,8 +161,7 @@ module _
   where
 
   set-magmoid-Precategory : Set-Magmoid l1 l2
-  set-magmoid-Precategory =
-    set-magmoid-Nonunital-Precategory (nonunital-precategory-Precategory C)
+  set-magmoid-Precategory = {!!}
 ```
 
 ### The total hom-type of a precategory
@@ -203,14 +169,12 @@ module _
 ```agda
 total-hom-Precategory :
   {l1 l2 : Level} (C : Precategory l1 l2) → UU (l1 ⊔ l2)
-total-hom-Precategory C =
-  total-hom-Nonunital-Precategory (nonunital-precategory-Precategory C)
+total-hom-Precategory C = {!!}
 
 obj-total-hom-Precategory :
   {l1 l2 : Level} (C : Precategory l1 l2) →
   total-hom-Precategory C → obj-Precategory C × obj-Precategory C
-obj-total-hom-Precategory C =
-  obj-total-hom-Nonunital-Precategory (nonunital-precategory-Precategory C)
+obj-total-hom-Precategory C = {!!}
 ```
 
 ### Equalities induce morphisms
@@ -222,11 +186,11 @@ module _
 
   hom-eq-Precategory :
     (x y : obj-Precategory C) → x ＝ y → hom-Precategory C x y
-  hom-eq-Precategory x .x refl = id-hom-Precategory C
+  hom-eq-Precategory x .x refl = {!!}
 
   hom-inv-eq-Precategory :
     (x y : obj-Precategory C) → x ＝ y → hom-Precategory C y x
-  hom-inv-eq-Precategory x y = hom-eq-Precategory y x ∘ inv
+  hom-inv-eq-Precategory x y = {!!}
 ```
 
 ### Pre- and postcomposition by a morphism
@@ -240,10 +204,10 @@ module _
   where
 
   precomp-hom-Precategory : hom-Precategory C y z → hom-Precategory C x z
-  precomp-hom-Precategory g = comp-hom-Precategory C g f
+  precomp-hom-Precategory g = {!!}
 
   postcomp-hom-Precategory : hom-Precategory C z x → hom-Precategory C z y
-  postcomp-hom-Precategory = comp-hom-Precategory C f
+  postcomp-hom-Precategory = {!!}
 ```
 
 ## Properties
@@ -258,16 +222,12 @@ module _
   is-trunc-total-hom-is-trunc-obj-Precategory :
     is-trunc (succ-𝕋 (succ-𝕋 k)) (obj-Precategory C) →
     is-trunc (succ-𝕋 (succ-𝕋 k)) (total-hom-Precategory C)
-  is-trunc-total-hom-is-trunc-obj-Precategory =
-    is-trunc-total-hom-is-trunc-obj-Nonunital-Precategory
-      ( nonunital-precategory-Precategory C)
+  is-trunc-total-hom-is-trunc-obj-Precategory = {!!}
 
   total-hom-truncated-type-is-trunc-obj-Precategory :
     is-trunc (succ-𝕋 (succ-𝕋 k)) (obj-Precategory C) →
     Truncated-Type (l1 ⊔ l2) (succ-𝕋 (succ-𝕋 k))
-  total-hom-truncated-type-is-trunc-obj-Precategory =
-    total-hom-truncated-type-is-trunc-obj-Nonunital-Precategory
-      ( nonunital-precategory-Precategory C)
+  total-hom-truncated-type-is-trunc-obj-Precategory = {!!}
 ```
 
 ## See also

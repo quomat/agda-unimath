@@ -33,14 +33,7 @@ set of vertices that includes at least one extremity of each edge of the graph.
 ```agda
 vertex-cover :
   {l1 l2 : Level} → Undirected-Graph l1 l2 → UU (lsuc lzero ⊔ l1 ⊔ l2)
-vertex-cover G =
-  Σ ( vertex-Undirected-Graph G → Fin 2)
-    ( λ c →
-      (p : unordered-pair-vertices-Undirected-Graph G) →
-      edge-Undirected-Graph G p →
-        type-trunc-Prop
-          ( Σ (vertex-Undirected-Graph G)
-            ( λ x → is-in-unordered-pair p x × Id (c x) (inr star))))
+vertex-cover G = {!!}
 ```
 
 ## External links

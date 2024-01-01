@@ -55,7 +55,7 @@ module _
     propagate-leq-𝕎 : {y z : 𝕎 A B} → y ∈-𝕎 z → x ≤-𝕎 y → x ≤-𝕎 z
 
   leq-∈-𝕎 : {x y : 𝕎 A B} → x ∈-𝕎 y → x ≤-𝕎 y
-  leq-∈-𝕎 H = propagate-leq-𝕎 H refl-leq-𝕎
+  leq-∈-𝕎 H = {!!}
 ```
 
 ### Walks in W-types
@@ -72,8 +72,7 @@ module _
       walk-𝕎 (f b) → walk-𝕎 (tree-𝕎 a f)
 
   length-walk-𝕎 : (w : 𝕎 A B) → walk-𝕎 w → ℕ
-  length-walk-𝕎 w (root .w) = zero-ℕ
-  length-walk-𝕎 .(tree-𝕎 a f) (cons a f b p) = succ-ℕ (length-walk-𝕎 (f b) p)
+  length-walk-𝕎 w (root .w) = {!!}
 ```
 
 ## Properties
@@ -86,10 +85,7 @@ module _
   where
 
   transitive-le-𝕎 : {x y z : 𝕎 A B} → y <-𝕎 z → x <-𝕎 y → x <-𝕎 z
-  transitive-le-𝕎 {x = x} {y} {z} (le-∈-𝕎 H) K =
-    propagate-le-𝕎 H K
-  transitive-le-𝕎 {x = x} {y} {z} (propagate-le-𝕎 L H) K =
-    propagate-le-𝕎 L (transitive-le-𝕎 H K)
+  transitive-le-𝕎 {x = x} {y} {z} (le-∈-𝕎 H) K = {!!}
 ```
 
 ### The strict ordering on W-types is irreflexive
@@ -101,9 +97,7 @@ module _
 
   irreflexive-le-𝕎 :
     {x : 𝕎 A B} → ¬ (x <-𝕎 x)
-  irreflexive-le-𝕎 {x = x} (le-∈-𝕎 H) = irreflexive-∈-𝕎 x H
-  irreflexive-le-𝕎 {x = tree-𝕎 x α} (propagate-le-𝕎 (pair b refl) H) =
-    irreflexive-le-𝕎 {x = α b} (transitive-le-𝕎 H (le-∈-𝕎 (pair b refl)))
+  irreflexive-le-𝕎 {x = x} (le-∈-𝕎 H) = {!!}
 ```
 
 ### The strict ordering on W-types is asymmetric
@@ -115,7 +109,7 @@ module _
 
   asymmetric-le-𝕎 :
     {x y : 𝕎 A B} → x <-𝕎 y → y <-𝕎 x → empty
-  asymmetric-le-𝕎 H K = irreflexive-le-𝕎 (transitive-le-𝕎 H K)
+  asymmetric-le-𝕎 H K = {!!}
 ```
 
 ### Transitivity of `≤-𝕎`
@@ -127,7 +121,5 @@ module _
 
   transitive-leq-𝕎 :
     {x y z : 𝕎 A B} → x ≤-𝕎 y → y ≤-𝕎 z → x ≤-𝕎 z
-  transitive-leq-𝕎 H refl-leq-𝕎 = H
-  transitive-leq-𝕎 H (propagate-leq-𝕎 e K) =
-    propagate-leq-𝕎 e (transitive-leq-𝕎 H K)
+  transitive-leq-𝕎 H refl-leq-𝕎 = {!!}
 ```

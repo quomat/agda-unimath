@@ -32,49 +32,41 @@ module _
   where
 
   is-well-founded-order-Relation : UU (l1 ⊔ l2)
-  is-well-founded-order-Relation = is-transitive R × is-well-founded-Relation R
+  is-well-founded-order-Relation = {!!}
 ```
 
 ### Well-founded orders
 
 ```agda
 Well-Founded-Order : {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-Well-Founded-Order l2 X = Σ (Relation l2 X) is-well-founded-order-Relation
+Well-Founded-Order l2 X = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} (R : Well-Founded-Order l2 X)
   where
 
   rel-Well-Founded-Order : Relation l2 X
-  rel-Well-Founded-Order = pr1 R
+  rel-Well-Founded-Order = {!!}
 
   is-well-founded-order-Well-Founded-Order :
     is-well-founded-order-Relation rel-Well-Founded-Order
-  is-well-founded-order-Well-Founded-Order = pr2 R
+  is-well-founded-order-Well-Founded-Order = {!!}
 
   is-transitive-Well-Founded-Order : is-transitive rel-Well-Founded-Order
-  is-transitive-Well-Founded-Order =
-    pr1 is-well-founded-order-Well-Founded-Order
+  is-transitive-Well-Founded-Order = {!!}
 
   is-well-founded-relation-Well-Founded-Order :
     is-well-founded-Relation rel-Well-Founded-Order
-  is-well-founded-relation-Well-Founded-Order =
-    pr2 is-well-founded-order-Well-Founded-Order
+  is-well-founded-relation-Well-Founded-Order = {!!}
 
   well-founded-relation-Well-Founded-Order : Well-Founded-Relation l2 X
-  pr1 well-founded-relation-Well-Founded-Order =
-    rel-Well-Founded-Order
-  pr2 well-founded-relation-Well-Founded-Order =
-    is-well-founded-relation-Well-Founded-Order
+  pr1 well-founded-relation-Well-Founded-Order = {!!}
 
   is-asymmetric-Well-Founded-Order :
     is-asymmetric rel-Well-Founded-Order
-  is-asymmetric-Well-Founded-Order =
-    is-asymmetric-Well-Founded-Relation well-founded-relation-Well-Founded-Order
+  is-asymmetric-Well-Founded-Order = {!!}
 
   is-irreflexive-Well-Founded-Order :
     is-irreflexive rel-Well-Founded-Order
-  is-irreflexive-Well-Founded-Order =
-    is-irreflexive-Well-Founded-Relation
-      ( well-founded-relation-Well-Founded-Order)
+  is-irreflexive-Well-Founded-Order = {!!}
 ```

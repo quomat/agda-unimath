@@ -31,21 +31,21 @@ open import foundation-core.truncation-levels
 abstract
   is-prop-is-1-type :
     {l : Level} (A : UU l) → is-prop (is-1-type A)
-  is-prop-is-1-type A = is-prop-is-trunc one-𝕋 A
+  is-prop-is-1-type A = {!!}
 
 is-1-type-Prop :
   {l : Level} → UU l → Prop l
-is-1-type-Prop = is-trunc-Prop one-𝕋
+is-1-type-Prop = {!!}
 ```
 
 ### The type of all 1-types in a universe is a 2-type
 
 ```agda
 is-trunc-1-Type : {l : Level} → is-trunc two-𝕋 (1-Type l)
-is-trunc-1-Type = is-trunc-Truncated-Type one-𝕋
+is-trunc-1-Type = {!!}
 
 1-Type-Truncated-Type : (l : Level) → Truncated-Type (lsuc l) two-𝕋
-1-Type-Truncated-Type l = Truncated-Type-Truncated-Type l one-𝕋
+1-Type-Truncated-Type l = {!!}
 ```
 
 ### Products of families of 1-types are 1-types
@@ -55,37 +55,36 @@ abstract
   is-1-type-Π :
     {l1 l2 : Level} {A : UU l1} {B : A → UU l2} →
     ((x : A) → is-1-type (B x)) → is-1-type ((x : A) → B x)
-  is-1-type-Π = is-trunc-Π one-𝕋
+  is-1-type-Π = {!!}
 
 type-Π-1-Type' :
   {l1 l2 : Level} (A : UU l1) (B : A → 1-Type l2) → UU (l1 ⊔ l2)
-type-Π-1-Type' A B = (x : A) → type-1-Type (B x)
+type-Π-1-Type' A B = {!!}
 
 is-1-type-type-Π-1-Type' :
   {l1 l2 : Level} (A : UU l1) (B : A → 1-Type l2) →
   is-1-type (type-Π-1-Type' A B)
-is-1-type-type-Π-1-Type' A B =
-  is-1-type-Π (λ x → is-1-type-type-1-Type (B x))
+is-1-type-type-Π-1-Type' A B = {!!}
 
 Π-1-Type' :
   {l1 l2 : Level} (A : UU l1) (B : A → 1-Type l2) → 1-Type (l1 ⊔ l2)
-pr1 (Π-1-Type' A B) = type-Π-1-Type' A B
-pr2 (Π-1-Type' A B) = is-1-type-type-Π-1-Type' A B
+pr1 (Π-1-Type' A B) = {!!}
+pr2 (Π-1-Type' A B) = {!!}
 
 type-Π-1-Type :
   {l1 l2 : Level} (A : 1-Type l1) (B : type-1-Type A → 1-Type l2) →
   UU (l1 ⊔ l2)
-type-Π-1-Type A = type-Π-1-Type' (type-1-Type A)
+type-Π-1-Type A = {!!}
 
 is-1-type-type-Π-1-Type :
   {l1 l2 : Level} (A : 1-Type l1) (B : type-1-Type A → 1-Type l2) →
   is-1-type (type-Π-1-Type A B)
-is-1-type-type-Π-1-Type A = is-1-type-type-Π-1-Type' (type-1-Type A)
+is-1-type-type-Π-1-Type A = {!!}
 
 Π-1-Type :
   {l1 l2 : Level} (A : 1-Type l1) (B : type-1-Type A → 1-Type l2) →
   1-Type (l1 ⊔ l2)
-Π-1-Type = Π-Truncated-Type one-𝕋
+Π-1-Type = {!!}
 ```
 
 ### The type of functions into a 1-type is a 1-type
@@ -95,21 +94,20 @@ abstract
   is-1-type-function-type :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} →
     is-1-type B → is-1-type (A → B)
-  is-1-type-function-type = is-trunc-function-type one-𝕋
+  is-1-type-function-type = {!!}
 
 type-hom-1-Type :
   {l1 l2 : Level} (A : 1-Type l1) (B : 1-Type l2) → UU (l1 ⊔ l2)
-type-hom-1-Type A B = type-1-Type A → type-1-Type B
+type-hom-1-Type A B = {!!}
 
 is-1-type-type-hom-1-Type :
   {l1 l2 : Level} (A : 1-Type l1) (B : 1-Type l2) →
   is-1-type (type-hom-1-Type A B)
-is-1-type-type-hom-1-Type A B =
-  is-1-type-function-type (is-1-type-type-1-Type B)
+is-1-type-type-hom-1-Type A B = {!!}
 
 hom-1-Type :
   {l1 l2 : Level} (A : 1-Type l1) (B : 1-Type l2) → 1-Type (l1 ⊔ l2)
-hom-1-Type = hom-Truncated-Type one-𝕋
+hom-1-Type = {!!}
 ```
 
 ### 1-Types are closed under dependent pair types
@@ -119,11 +117,11 @@ abstract
   is-1-type-Σ :
     {l1 l2 : Level} {A : UU l1} {B : A → UU l2} →
     is-1-type A → ((x : A) → is-1-type (B x)) → is-1-type (Σ A B)
-  is-1-type-Σ = is-trunc-Σ {k = one-𝕋}
+  is-1-type-Σ = {!!}
 
 Σ-1-Type :
   {l1 l2 : Level} (A : 1-Type l1) (B : pr1 A → 1-Type l2) → 1-Type (l1 ⊔ l2)
-Σ-1-Type = Σ-Truncated-Type
+Σ-1-Type = {!!}
 ```
 
 ### 1-Types are closed under cartesian product types
@@ -133,11 +131,11 @@ abstract
   is-1-type-prod :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} →
     is-1-type A → is-1-type B → is-1-type (A × B)
-  is-1-type-prod = is-trunc-prod one-𝕋
+  is-1-type-prod = {!!}
 
 prod-1-Type :
   {l1 l2 : Level} (A : 1-Type l1) (B : 1-Type l2) → 1-Type (l1 ⊔ l2)
-prod-1-Type A B = Σ-1-Type A (λ x → B)
+prod-1-Type A B = {!!}
 ```
 
 ### Subtypes of 1-types are 1-types
@@ -149,7 +147,7 @@ module _
 
   abstract
     is-1-type-type-subtype : is-1-type A → is-1-type (type-subtype P)
-    is-1-type-type-subtype = is-trunc-type-subtype zero-𝕋 P
+    is-1-type-type-subtype = {!!}
 ```
 
 ```agda
@@ -158,26 +156,24 @@ module _
   where
 
   type-equiv-1-Type : {l2 : Level} (Y : 1-Type l2) → UU (l ⊔ l2)
-  type-equiv-1-Type Y = type-1-Type X ≃ type-1-Type Y
+  type-equiv-1-Type Y = {!!}
 
   equiv-eq-1-Type : (Y : 1-Type l) → X ＝ Y → type-equiv-1-Type Y
-  equiv-eq-1-Type = equiv-eq-subuniverse is-1-type-Prop X
+  equiv-eq-1-Type = {!!}
 
   abstract
     is-torsorial-equiv-1-Type :
       is-torsorial (λ (Y : 1-Type l) → type-equiv-1-Type Y)
-    is-torsorial-equiv-1-Type =
-      is-torsorial-equiv-subuniverse is-1-type-Prop X
+    is-torsorial-equiv-1-Type = {!!}
 
   abstract
     is-equiv-equiv-eq-1-Type : (Y : 1-Type l) → is-equiv (equiv-eq-1-Type Y)
-    is-equiv-equiv-eq-1-Type = is-equiv-equiv-eq-subuniverse is-1-type-Prop X
+    is-equiv-equiv-eq-1-Type = {!!}
 
   extensionality-1-Type :
     (Y : 1-Type l) → (X ＝ Y) ≃ type-equiv-1-Type Y
-  pr1 (extensionality-1-Type Y) = equiv-eq-1-Type Y
-  pr2 (extensionality-1-Type Y) = is-equiv-equiv-eq-1-Type Y
+  pr1 (extensionality-1-Type Y) = {!!}
 
   eq-equiv-1-Type : (Y : 1-Type l) → type-equiv-1-Type Y → X ＝ Y
-  eq-equiv-1-Type Y = eq-equiv-subuniverse is-1-type-Prop
+  eq-equiv-1-Type Y = {!!}
 ```

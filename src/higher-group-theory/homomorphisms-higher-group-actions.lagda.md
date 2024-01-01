@@ -32,18 +32,18 @@ module _
   where
 
   hom-action-∞-Group : UU (l1 ⊔ l2 ⊔ l3)
-  hom-action-∞-Group = (u : classifying-type-∞-Group G) → X u → Y u
+  hom-action-∞-Group = {!!}
 
   map-hom-action-∞-Group :
     hom-action-∞-Group → type-action-∞-Group G X → type-action-∞-Group G Y
-  map-hom-action-∞-Group f = f (shape-∞-Group G)
+  map-hom-action-∞-Group f = {!!}
 
   preserves-mul-hom-action-∞-Group :
     (f : hom-action-∞-Group) (g : type-∞-Group G)
     (x : type-action-∞-Group G X) →
     ( map-hom-action-∞-Group f (mul-action-∞-Group G X g x)) ＝
     ( mul-action-∞-Group G Y g (map-hom-action-∞-Group f x))
-  preserves-mul-hom-action-∞-Group f g x = preserves-tr f g x
+  preserves-mul-hom-action-∞-Group f g x = {!!}
 ```
 
 ### Homotopies of morphisms of higher group actions
@@ -55,25 +55,20 @@ module _
   where
 
   htpy-hom-action-∞-Group : (g : hom-action-∞-Group G X Y) → UU (l1 ⊔ l2 ⊔ l3)
-  htpy-hom-action-∞-Group g = (u : classifying-type-∞-Group G) → (f u) ~ (g u)
+  htpy-hom-action-∞-Group g = {!!}
 
   extensionality-hom-action-∞-Group :
     (g : hom-action-∞-Group G X Y) →
     (f ＝ g) ≃ htpy-hom-action-∞-Group g
-  extensionality-hom-action-∞-Group =
-    extensionality-Π f
-      ( λ u g → f u ~ g)
-      ( λ u g → equiv-funext)
+  extensionality-hom-action-∞-Group = {!!}
 
   htpy-eq-hom-action-∞-Group :
     (g : hom-action-∞-Group G X Y) →
     (f ＝ g) → htpy-hom-action-∞-Group g
-  htpy-eq-hom-action-∞-Group g =
-    map-equiv (extensionality-hom-action-∞-Group g)
+  htpy-eq-hom-action-∞-Group g = {!!}
 
   eq-htpy-hom-action-∞-Group :
     (g : hom-action-∞-Group G X Y) →
     htpy-hom-action-∞-Group g → (f ＝ g)
-  eq-htpy-hom-action-∞-Group g =
-    map-inv-equiv (extensionality-hom-action-∞-Group g)
+  eq-htpy-hom-action-∞-Group g = {!!}
 ```

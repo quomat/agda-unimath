@@ -21,7 +21,7 @@ open import foundation.universe-levels
 ## Idea
 
 A morphism `f : x → y` is a monomorphism if whenever we have two morphisms
-`g h : w → x` such that `f ∘ g = f ∘ h`, then in fact `g = h`. The way to state
+`g h : w → x` such that `f ∘ g = {!!}
 this in Homotopy Type Theory is to say that postcomposition by `f` is an
 embedding.
 
@@ -36,17 +36,13 @@ module _
   where
 
   is-mono-prop-Large-Precategory : Prop (α l3 ⊔ β l3 l1 ⊔ β l3 l2)
-  is-mono-prop-Large-Precategory =
-    Π-Prop
-      ( obj-Large-Precategory C l3)
-      ( λ Z → is-emb-Prop (comp-hom-Large-Precategory C {X = Z} f))
+  is-mono-prop-Large-Precategory = {!!}
 
   is-mono-Large-Precategory : UU (α l3 ⊔ β l3 l1 ⊔ β l3 l2)
-  is-mono-Large-Precategory = type-Prop is-mono-prop-Large-Precategory
+  is-mono-Large-Precategory = {!!}
 
   is-prop-is-mono-Large-Precategory : is-prop is-mono-Large-Precategory
-  is-prop-is-mono-Large-Precategory =
-    is-prop-type-Prop is-mono-prop-Large-Precategory
+  is-prop-is-mono-Large-Precategory = {!!}
 ```
 
 ## Properties
@@ -63,6 +59,5 @@ module _
 
   is-mono-iso-Large-Precategory :
     is-mono-Large-Precategory C l3 X Y (hom-iso-Large-Precategory C f)
-  is-mono-iso-Large-Precategory Z =
-    is-emb-is-equiv (is-equiv-postcomp-hom-iso-Large-Precategory C f Z)
+  is-mono-iso-Large-Precategory Z = {!!}
 ```

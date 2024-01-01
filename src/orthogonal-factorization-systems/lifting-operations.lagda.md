@@ -54,14 +54,14 @@ module _
   where
 
   diagonal-lift : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  diagonal-lift = section (pullback-hom f g)
+  diagonal-lift = {!!}
 
-  _⧄_ = diagonal-lift
+  _⧄_ = {!!}
 
   map-diagonal-lift : diagonal-lift → fibered-map f g → X → B
-  map-diagonal-lift = pr1
+  map-diagonal-lift = {!!}
 
   is-section-map-diagonal-lift :
     (d : diagonal-lift) → (pullback-hom f g ∘ map-diagonal-lift d) ~ id
-  is-section-map-diagonal-lift = pr2
+  is-section-map-diagonal-lift = {!!}
 ```

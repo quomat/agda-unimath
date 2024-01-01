@@ -46,52 +46,42 @@ module _
   where
 
   is-rational-prop-Commutative-Monoid : Prop l
-  is-rational-prop-Commutative-Monoid =
-    Π-Prop ℕ
-      ( λ n →
-        is-equiv-Prop (power-Commutative-Monoid M (succ-ℕ n)))
+  is-rational-prop-Commutative-Monoid = {!!}
 
   is-rational-Commutative-Monoid : UU l
-  is-rational-Commutative-Monoid =
-    type-Prop is-rational-prop-Commutative-Monoid
+  is-rational-Commutative-Monoid = {!!}
 
   is-prop-is-rational-Commutative-Monoid :
     is-prop is-rational-Commutative-Monoid
-  is-prop-is-rational-Commutative-Monoid =
-    is-prop-type-Prop is-rational-prop-Commutative-Monoid
+  is-prop-is-rational-Commutative-Monoid = {!!}
 ```
 
 ### Rational commutative monoids
 
 ```agda
 Rational-Commutative-Monoid : (l : Level) → UU (lsuc l)
-Rational-Commutative-Monoid l =
-  Σ (Commutative-Monoid l) is-rational-Commutative-Monoid
+Rational-Commutative-Monoid l = {!!}
 
 module _
   {l : Level} (M : Rational-Commutative-Monoid l)
   where
 
   commutative-monoid-Rational-Commutative-Monoid : Commutative-Monoid l
-  commutative-monoid-Rational-Commutative-Monoid = pr1 M
+  commutative-monoid-Rational-Commutative-Monoid = {!!}
 
   monoid-Rational-Commutative-Monoid : Monoid l
-  monoid-Rational-Commutative-Monoid =
-    monoid-Commutative-Monoid commutative-monoid-Rational-Commutative-Monoid
+  monoid-Rational-Commutative-Monoid = {!!}
 
   type-Rational-Commutative-Monoid : UU l
-  type-Rational-Commutative-Monoid =
-    type-Commutative-Monoid commutative-monoid-Rational-Commutative-Monoid
+  type-Rational-Commutative-Monoid = {!!}
 
   add-Rational-Commutative-Monoid :
     (x y : type-Rational-Commutative-Monoid) →
     type-Rational-Commutative-Monoid
-  add-Rational-Commutative-Monoid =
-    mul-Commutative-Monoid commutative-monoid-Rational-Commutative-Monoid
+  add-Rational-Commutative-Monoid = {!!}
 
   zero-Rational-Commutative-Monoid : type-Rational-Commutative-Monoid
-  zero-Rational-Commutative-Monoid =
-    unit-Commutative-Monoid commutative-monoid-Rational-Commutative-Monoid
+  zero-Rational-Commutative-Monoid = {!!}
 
   associative-add-Rational-Commutative-Monoid :
     (x y z : type-Rational-Commutative-Monoid) →
@@ -101,31 +91,24 @@ module _
     add-Rational-Commutative-Monoid
       ( x)
       ( add-Rational-Commutative-Monoid y z)
-  associative-add-Rational-Commutative-Monoid =
-    associative-mul-Commutative-Monoid
-      commutative-monoid-Rational-Commutative-Monoid
+  associative-add-Rational-Commutative-Monoid = {!!}
 
   left-unit-law-add-Rational-Commutative-Monoid :
     (x : type-Rational-Commutative-Monoid) →
     add-Rational-Commutative-Monoid zero-Rational-Commutative-Monoid x ＝ x
-  left-unit-law-add-Rational-Commutative-Monoid =
-    left-unit-law-mul-Commutative-Monoid
-      commutative-monoid-Rational-Commutative-Monoid
+  left-unit-law-add-Rational-Commutative-Monoid = {!!}
 
   right-unit-law-add-Rational-Commutative-Monoid :
     (x : type-Rational-Commutative-Monoid) →
     add-Rational-Commutative-Monoid x zero-Rational-Commutative-Monoid ＝ x
-  right-unit-law-add-Rational-Commutative-Monoid =
-    right-unit-law-mul-Commutative-Monoid
-      commutative-monoid-Rational-Commutative-Monoid
+  right-unit-law-add-Rational-Commutative-Monoid = {!!}
 
   multiple-Rational-Commutative-Monoid :
     ℕ → type-Rational-Commutative-Monoid → type-Rational-Commutative-Monoid
-  multiple-Rational-Commutative-Monoid =
-    power-Commutative-Monoid commutative-monoid-Rational-Commutative-Monoid
+  multiple-Rational-Commutative-Monoid = {!!}
 
   is-rational-Rational-Commutative-Monoid :
     is-rational-Commutative-Monoid
       commutative-monoid-Rational-Commutative-Monoid
-  is-rational-Rational-Commutative-Monoid = pr2 M
+  is-rational-Rational-Commutative-Monoid = {!!}
 ```

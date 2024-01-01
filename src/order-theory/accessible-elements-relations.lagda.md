@@ -56,7 +56,7 @@ module _
   where
 
   accessible-element-Relation : UU (l1 ⊔ l2)
-  accessible-element-Relation = Σ X (is-accessible-element-Relation _<_)
+  accessible-element-Relation = {!!}
 ```
 
 ## Properties
@@ -71,8 +71,7 @@ module _
   is-accessible-element-is-related-to-accessible-element-Relation :
     {x : X} → is-accessible-element-Relation _<_ x →
     {y : X} → y < x → is-accessible-element-Relation _<_ y
-  is-accessible-element-is-related-to-accessible-element-Relation (access f) =
-    f
+  is-accessible-element-is-related-to-accessible-element-Relation (access f) = {!!}
 ```
 
 ### An induction principle for accessible elements
@@ -86,8 +85,7 @@ module _
     ( {x : X} → is-accessible-element-Relation _<_ x →
       ({y : X} → y < x → P y) → P x) →
     {x : X} → is-accessible-element-Relation _<_ x → P x
-  ind-accessible-element-Relation IH (access f) =
-    IH (access f) (λ H → ind-accessible-element-Relation IH (f H))
+  ind-accessible-element-Relation IH (access f) = {!!}
 ```
 
 ### Accessibility is a property
@@ -117,28 +115,14 @@ module _ {l1 l2} {X : UU l1} (_<_ : Relation l2 X) where
 
   all-elements-equal-is-accessible-element-Relation :
     (x : X) → all-elements-equal (is-accessible-element-Relation _<_ x)
-  all-elements-equal-is-accessible-element-Relation x (access f) (access f') =
-    ap
-      ( access)
-      ( eq-htpy-implicit
-        ( λ y →
-          eq-htpy
-            ( λ H →
-              all-elements-equal-is-accessible-element-Relation y
-                ( f H)
-                ( f' H))))
+  all-elements-equal-is-accessible-element-Relation x (access f) (access f') = {!!}
 
   is-prop-is-accessible-element-Relation :
     (x : X) → is-prop (is-accessible-element-Relation _<_ x)
-  is-prop-is-accessible-element-Relation x =
-    is-prop-all-elements-equal
-      ( all-elements-equal-is-accessible-element-Relation x)
+  is-prop-is-accessible-element-Relation x = {!!}
 
   is-accessible-element-prop-Relation : (x : X) → Prop (l1 ⊔ l2)
-  pr1 (is-accessible-element-prop-Relation x) =
-    is-accessible-element-Relation _<_ x
-  pr2 (is-accessible-element-prop-Relation x) =
-    is-prop-is-accessible-element-Relation x
+  pr1 (is-accessible-element-prop-Relation x) = {!!}
 ```
 
 ### If `x` is an `<`-accessible element, then `<` is antisymmetric at `x`
@@ -151,8 +135,7 @@ module _
   is-asymmetric-is-accessible-element-Relation :
     {x : X} → is-accessible-element-Relation _<_ x →
     {y : X} → x < y → ¬ (y < x)
-  is-asymmetric-is-accessible-element-Relation (access f) H K =
-    is-asymmetric-is-accessible-element-Relation (f K) K H
+  is-asymmetric-is-accessible-element-Relation (access f) H K = {!!}
 ```
 
 ### If `x` is an `<`-accessible element, then `<` is irreflexive at `x`
@@ -164,6 +147,5 @@ module _
 
   is-irreflexive-is-accessible-element-Relation :
     {x : X} → is-accessible-element-Relation _<_ x → ¬ (x < x)
-  is-irreflexive-is-accessible-element-Relation a H =
-    is-asymmetric-is-accessible-element-Relation _<_ a H H
+  is-irreflexive-is-accessible-element-Relation a H = {!!}
 ```

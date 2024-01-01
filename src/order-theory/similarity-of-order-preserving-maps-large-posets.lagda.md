@@ -52,12 +52,7 @@ module _
   where
 
   sim-hom-Large-Poset : UUω
-  sim-hom-Large-Poset =
-    sim-hom-Large-Preorder
-      ( large-preorder-Large-Poset P)
-      ( large-preorder-Large-Poset Q)
-      ( f)
-      ( g)
+  sim-hom-Large-Poset = {!!}
 ```
 
 ### The reflexive similarity of order preserving maps between large posets
@@ -71,11 +66,7 @@ module _
   where
 
   refl-sim-hom-Large-Poset : sim-hom-Large-Poset P Q f f
-  refl-sim-hom-Large-Poset =
-    refl-sim-hom-Large-Preorder
-      ( large-preorder-Large-Poset P)
-      ( large-preorder-Large-Poset Q)
-      ( f)
+  refl-sim-hom-Large-Poset = {!!}
 ```
 
 ## Properties
@@ -93,18 +84,9 @@ module _
 
   sim-htpy-hom-Large-Poset :
     htpy-hom-Large-Poset P Q f g → sim-hom-Large-Poset P Q f g
-  sim-htpy-hom-Large-Poset =
-    sim-htpy-hom-Large-Preorder
-      ( large-preorder-Large-Poset P)
-      ( large-preorder-Large-Poset Q)
-      ( f)
-      ( g)
+  sim-htpy-hom-Large-Poset = {!!}
 
   htpy-sim-hom-Large-Poset :
     sim-hom-Large-Poset P Q f g → htpy-hom-Large-Poset P Q f g
-  htpy-sim-hom-Large-Poset H x =
-    eq-sim-Large-Poset Q
-      ( map-hom-Large-Poset P Q f x)
-      ( map-hom-Large-Poset P Q g x)
-      ( H x)
+  htpy-sim-hom-Large-Poset H x = {!!}
 ```

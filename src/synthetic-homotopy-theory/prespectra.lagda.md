@@ -50,21 +50,20 @@ specifying structure maps `Aₙ →∗ Ω Aₙ₊₁` is
 
 ```agda
 Prespectrum : (l : Level) → UU (lsuc l)
-Prespectrum l =
-  Σ (ℕ → Pointed-Type l) (λ A → (n : ℕ) → A n →∗ Ω (A (succ-ℕ n)))
+Prespectrum l = {!!}
 
 module _
   {l : Level} (A : Prespectrum l) (n : ℕ)
   where
 
   pointed-type-Prespectrum : Pointed-Type l
-  pointed-type-Prespectrum = pr1 A n
+  pointed-type-Prespectrum = {!!}
 
   type-Prespectrum : UU l
-  type-Prespectrum = type-Pointed-Type pointed-type-Prespectrum
+  type-Prespectrum = {!!}
 
   point-Prespectrum : type-Prespectrum
-  point-Prespectrum = point-Pointed-Type pointed-type-Prespectrum
+  point-Prespectrum = {!!}
 
 module _
   {l : Level} (A : Prespectrum l) (n : ℕ)
@@ -72,18 +71,16 @@ module _
 
   pointed-adjoint-structure-map-Prespectrum :
     pointed-type-Prespectrum A n →∗ Ω (pointed-type-Prespectrum A (succ-ℕ n))
-  pointed-adjoint-structure-map-Prespectrum = pr2 A n
+  pointed-adjoint-structure-map-Prespectrum = {!!}
 
   adjoint-structure-map-Prespectrum :
     type-Prespectrum A n → type-Ω (pointed-type-Prespectrum A (succ-ℕ n))
-  adjoint-structure-map-Prespectrum =
-    map-pointed-map pointed-adjoint-structure-map-Prespectrum
+  adjoint-structure-map-Prespectrum = {!!}
 
   preserves-point-adjoint-structure-map-Prespectrum :
     adjoint-structure-map-Prespectrum (point-Prespectrum A n) ＝
     refl-Ω (pointed-type-Prespectrum A (succ-ℕ n))
-  preserves-point-adjoint-structure-map-Prespectrum =
-    preserves-point-pointed-map pointed-adjoint-structure-map-Prespectrum
+  preserves-point-adjoint-structure-map-Prespectrum = {!!}
 ```
 
 ### The structure maps of a prespectrum
@@ -96,20 +93,15 @@ module _
   pointed-structure-map-Prespectrum :
     suspension-Pointed-Type (pointed-type-Prespectrum A n) →∗
     pointed-type-Prespectrum A (succ-ℕ n)
-  pointed-structure-map-Prespectrum =
-    inv-transpose-suspension-loop-adjunction
-      ( pointed-type-Prespectrum A n)
-      ( pointed-type-Prespectrum A (succ-ℕ n))
-      ( pointed-adjoint-structure-map-Prespectrum A n)
+  pointed-structure-map-Prespectrum = {!!}
 
   structure-map-Prespectrum :
     suspension (type-Prespectrum A n) → type-Prespectrum A (succ-ℕ n)
-  structure-map-Prespectrum = map-pointed-map pointed-structure-map-Prespectrum
+  structure-map-Prespectrum = {!!}
 
   preserves-point-structure-map-Prespectrum :
     structure-map-Prespectrum north-suspension ＝ point-Prespectrum A (succ-ℕ n)
-  preserves-point-structure-map-Prespectrum =
-    preserves-point-pointed-map pointed-structure-map-Prespectrum
+  preserves-point-structure-map-Prespectrum = {!!}
 ```
 
 ## References

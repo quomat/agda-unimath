@@ -33,11 +33,10 @@ module _
   where
 
   is-prop-is-contr-map : (f : A → B) → is-prop (is-contr-map f)
-  is-prop-is-contr-map f = is-prop-is-trunc-map neg-two-𝕋 f
+  is-prop-is-contr-map f = {!!}
 
   is-contr-map-Prop : (A → B) → Prop (l1 ⊔ l2)
-  pr1 (is-contr-map-Prop f) = is-contr-map f
-  pr2 (is-contr-map-Prop f) = is-prop-is-contr-map f
+  pr1 (is-contr-map-Prop f) = {!!}
 ```
 
 ### Being a contractible map is equivalent to being an equivalence
@@ -48,20 +47,10 @@ module _
   where
 
   equiv-is-equiv-is-contr-map : (f : A → B) → is-contr-map f ≃ is-equiv f
-  equiv-is-equiv-is-contr-map f =
-    equiv-iff
-      ( is-contr-map-Prop f)
-      ( is-equiv-Prop f)
-      ( is-equiv-is-contr-map)
-      ( is-contr-map-is-equiv)
+  equiv-is-equiv-is-contr-map f = {!!}
 
   equiv-is-contr-map-is-equiv : (f : A → B) → is-equiv f ≃ is-contr-map f
-  equiv-is-contr-map-is-equiv f =
-    equiv-iff
-      ( is-equiv-Prop f)
-      ( is-contr-map-Prop f)
-      ( is-contr-map-is-equiv)
-      ( is-equiv-is-contr-map)
+  equiv-is-contr-map-is-equiv f = {!!}
 ```
 
 ### Contractible maps are closed under homotopies
@@ -72,7 +61,7 @@ module _
   where
 
   is-contr-map-htpy : is-contr-map g → is-contr-map f
-  is-contr-map-htpy = is-trunc-map-htpy neg-two-𝕋 H
+  is-contr-map-htpy = {!!}
 ```
 
 ### Contractible maps are closed under composition
@@ -84,7 +73,7 @@ module _
   where
 
   is-contr-map-comp : is-contr-map g → is-contr-map h → is-contr-map (g ∘ h)
-  is-contr-map-comp = is-trunc-map-comp neg-two-𝕋 g h
+  is-contr-map-comp = {!!}
 ```
 
 ### In a commuting triangle `f ~ g ∘ h`, if `g` and `h` are contractible maps, then `f` is a contractible map
@@ -97,8 +86,7 @@ module _
 
   is-contr-map-left-map-triangle :
     is-contr-map g → is-contr-map h → is-contr-map f
-  is-contr-map-left-map-triangle =
-    is-trunc-map-left-map-triangle neg-two-𝕋 f g h H
+  is-contr-map-left-map-triangle = {!!}
 ```
 
 ### In a commuting triangle `f ~ g ∘ h`, if `f` and `g` are contractible maps, then `h` is a contractible map
@@ -111,8 +99,7 @@ module _
 
   is-contr-map-top-map-triangle :
     is-contr-map g → is-contr-map f → is-contr-map h
-  is-contr-map-top-map-triangle =
-    is-trunc-map-top-map-triangle neg-two-𝕋 f g h H
+  is-contr-map-top-map-triangle = {!!}
 ```
 
 ### If a composite `g ∘ h` and its left factor `g` are contractible maps, then its right factor `h` is a contractible map
@@ -125,8 +112,7 @@ module _
 
   is-contr-map-right-factor :
     is-contr-map g → is-contr-map (g ∘ h) → is-contr-map h
-  is-contr-map-right-factor =
-    is-trunc-map-right-factor neg-two-𝕋 g h
+  is-contr-map-right-factor = {!!}
 ```
 
 ## See also

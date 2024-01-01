@@ -77,27 +77,20 @@ module _
   vertical-map-span-flattening-pushout :
     Σ S (P ∘ horizontal-map-cocone f g c ∘ f) →
     Σ A (P ∘ horizontal-map-cocone f g c)
-  vertical-map-span-flattening-pushout =
-    map-Σ-map-base f (P ∘ horizontal-map-cocone f g c)
+  vertical-map-span-flattening-pushout = {!!}
 
   horizontal-map-span-flattening-pushout :
     Σ S (P ∘ horizontal-map-cocone f g c ∘ f) →
     Σ B (P ∘ vertical-map-cocone f g c)
-  horizontal-map-span-flattening-pushout =
-    map-Σ
-      ( P ∘ vertical-map-cocone f g c)
-      ( g)
-      ( λ s → tr P (coherence-square-cocone f g c s))
+  horizontal-map-span-flattening-pushout = {!!}
 
   horizontal-map-cocone-flattening-pushout :
     Σ A (P ∘ horizontal-map-cocone f g c) → Σ X P
-  horizontal-map-cocone-flattening-pushout =
-    map-Σ-map-base (horizontal-map-cocone f g c) P
+  horizontal-map-cocone-flattening-pushout = {!!}
 
   vertical-map-cocone-flattening-pushout :
     Σ B (P ∘ vertical-map-cocone f g c) → Σ X P
-  vertical-map-cocone-flattening-pushout =
-    map-Σ-map-base (vertical-map-cocone f g c) P
+  vertical-map-cocone-flattening-pushout = {!!}
 
   coherence-square-cocone-flattening-pushout :
     coherence-square-maps
@@ -105,32 +98,17 @@ module _
       ( vertical-map-span-flattening-pushout)
       ( vertical-map-cocone-flattening-pushout)
       ( horizontal-map-cocone-flattening-pushout)
-  coherence-square-cocone-flattening-pushout =
-    coherence-square-maps-map-Σ-map-base P g f
-      ( vertical-map-cocone f g c)
-      ( horizontal-map-cocone f g c)
-      ( coherence-square-cocone f g c)
+  coherence-square-cocone-flattening-pushout = {!!}
 
   cocone-flattening-pushout :
     cocone
       ( vertical-map-span-flattening-pushout)
       ( horizontal-map-span-flattening-pushout)
       ( Σ X P)
-  pr1 cocone-flattening-pushout =
-    horizontal-map-cocone-flattening-pushout
-  pr1 (pr2 cocone-flattening-pushout) =
-    vertical-map-cocone-flattening-pushout
-  pr2 (pr2 cocone-flattening-pushout) =
-    coherence-square-cocone-flattening-pushout
+  pr1 cocone-flattening-pushout = {!!}
 
   flattening-lemma-pushout-statement : UUω
-  flattening-lemma-pushout-statement =
-    ( {l : Level} → dependent-universal-property-pushout l f g c) →
-    { l : Level} →
-    universal-property-pushout l
-      ( vertical-map-span-flattening-pushout)
-      ( horizontal-map-span-flattening-pushout)
-      ( cocone-flattening-pushout)
+  flattening-lemma-pushout-statement = {!!}
 ```
 
 ### The statement of the flattening lemma for pushouts, phrased using descent data
@@ -150,27 +128,19 @@ module _
 
   vertical-map-span-flattening-descent-data-pushout :
     Σ S (pr1 P ∘ f) → Σ A (pr1 P)
-  vertical-map-span-flattening-descent-data-pushout =
-    map-Σ-map-base f (pr1 P)
+  vertical-map-span-flattening-descent-data-pushout = {!!}
 
   horizontal-map-span-flattening-descent-data-pushout :
     Σ S (pr1 P ∘ f) → Σ B (pr1 (pr2 P))
-  horizontal-map-span-flattening-descent-data-pushout =
-    map-Σ (pr1 (pr2 P)) g (λ s → map-equiv (pr2 (pr2 P) s))
+  horizontal-map-span-flattening-descent-data-pushout = {!!}
 
   horizontal-map-cocone-flattening-descent-data-pushout :
     Σ A (pr1 P) → Σ X Q
-  horizontal-map-cocone-flattening-descent-data-pushout =
-    map-Σ Q
-      ( horizontal-map-cocone f g c)
-      ( λ a → map-equiv (pr1 e a))
+  horizontal-map-cocone-flattening-descent-data-pushout = {!!}
 
   vertical-map-cocone-flattening-descent-data-pushout :
     Σ B (pr1 (pr2 P)) → Σ X Q
-  vertical-map-cocone-flattening-descent-data-pushout =
-    map-Σ Q
-      ( vertical-map-cocone f g c)
-      ( λ b → map-equiv (pr1 (pr2 e) b))
+  vertical-map-cocone-flattening-descent-data-pushout = {!!}
 
   coherence-square-cocone-flattening-descent-data-pushout :
     coherence-square-maps
@@ -178,32 +148,17 @@ module _
       ( vertical-map-span-flattening-descent-data-pushout)
       ( vertical-map-cocone-flattening-descent-data-pushout)
       ( horizontal-map-cocone-flattening-descent-data-pushout)
-  coherence-square-cocone-flattening-descent-data-pushout =
-    htpy-map-Σ Q
-      ( coherence-square-cocone f g c)
-      ( λ s → map-equiv (pr1 e (f s)))
-      ( λ s → inv-htpy (pr2 (pr2 e) s))
+  coherence-square-cocone-flattening-descent-data-pushout = {!!}
 
   cocone-flattening-descent-data-pushout :
     cocone
       ( vertical-map-span-flattening-descent-data-pushout)
       ( horizontal-map-span-flattening-descent-data-pushout)
       ( Σ X Q)
-  pr1 cocone-flattening-descent-data-pushout =
-    horizontal-map-cocone-flattening-descent-data-pushout
-  pr1 (pr2 cocone-flattening-descent-data-pushout) =
-    vertical-map-cocone-flattening-descent-data-pushout
-  pr2 (pr2 cocone-flattening-descent-data-pushout) =
-    coherence-square-cocone-flattening-descent-data-pushout
+  pr1 cocone-flattening-descent-data-pushout = {!!}
 
   flattening-lemma-descent-data-pushout-statement : UUω
-  flattening-lemma-descent-data-pushout-statement =
-    ( {l : Level} → dependent-universal-property-pushout l f g c) →
-    { l : Level} →
-    universal-property-pushout l
-      ( vertical-map-span-flattening-descent-data-pushout)
-      ( horizontal-map-span-flattening-descent-data-pushout)
-      ( cocone-flattening-descent-data-pushout)
+  flattening-lemma-descent-data-pushout-statement = {!!}
 ```
 
 ## Properties
@@ -228,11 +183,7 @@ module _
       ( vertical-map-span-flattening-pushout P f g c)
       ( horizontal-map-span-flattening-pushout P f g c)
       ( Y)
-  cocone-map-flattening-pushout Y =
-    cocone-map
-      ( vertical-map-span-flattening-pushout P f g c)
-      ( horizontal-map-span-flattening-pushout P f g c)
-      ( cocone-flattening-pushout P f g c)
+  cocone-map-flattening-pushout Y = {!!}
 
   comparison-dependent-cocone-ind-Σ-cocone :
     { l : Level} (Y : UU l) →
@@ -244,17 +195,7 @@ module _
             ( k (f s) t) ＝
             ( l (g s) (tr P (coherence-square-cocone f g c s) t)))) ≃
     dependent-cocone f g c (λ x → P x → Y)
-  comparison-dependent-cocone-ind-Σ-cocone Y =
-    equiv-tot
-      ( λ k →
-        equiv-tot
-          ( λ l →
-            equiv-Π-equiv-family
-              ( equiv-htpy-dependent-function-dependent-identification-function-type
-                ( Y)
-                ( coherence-square-cocone f g c)
-                ( k ∘ f)
-                ( l ∘ g))))
+  comparison-dependent-cocone-ind-Σ-cocone Y = {!!}
 
   triangle-comparison-dependent-cocone-ind-Σ-cocone :
     { l : Level} (Y : UU l) →
@@ -262,36 +203,11 @@ module _
       ( dependent-cocone-map f g c (λ x → P x → Y))
       ( map-equiv (comparison-dependent-cocone-ind-Σ-cocone Y))
       ( map-equiv equiv-ev-pair³ ∘ cocone-map-flattening-pushout Y ∘ ind-Σ)
-  triangle-comparison-dependent-cocone-ind-Σ-cocone Y h =
-    eq-pair-Σ
-      ( refl)
-      ( eq-pair-Σ
-        ( refl)
-        ( eq-htpy
-          ( inv-htpy
-            ( compute-equiv-htpy-dependent-function-dependent-identification-function-type
-              ( Y)
-              ( coherence-square-cocone f g c)
-              ( h)))))
+  triangle-comparison-dependent-cocone-ind-Σ-cocone Y h = {!!}
 
   flattening-lemma-pushout :
     flattening-lemma-pushout-statement P f g c
-  flattening-lemma-pushout dup-pushout Y =
-    is-equiv-left-factor
-      ( cocone-map-flattening-pushout Y)
-      ( ind-Σ)
-      ( is-equiv-right-factor
-        ( map-equiv equiv-ev-pair³)
-        ( cocone-map-flattening-pushout Y ∘ ind-Σ)
-        ( is-equiv-map-equiv equiv-ev-pair³)
-        ( is-equiv-top-map-triangle
-          ( dependent-cocone-map f g c (λ x → P x → Y))
-          ( map-equiv (comparison-dependent-cocone-ind-Σ-cocone Y))
-          ( map-equiv equiv-ev-pair³ ∘ cocone-map-flattening-pushout Y ∘ ind-Σ)
-          ( triangle-comparison-dependent-cocone-ind-Σ-cocone Y)
-          ( is-equiv-map-equiv (comparison-dependent-cocone-ind-Σ-cocone Y))
-          ( dup-pushout (λ x → P x → Y))))
-      ( is-equiv-ind-Σ)
+  flattening-lemma-pushout dup-pushout Y = {!!}
 ```
 
 ### Proof of the descent data statement of the flattening lemma
@@ -351,57 +267,9 @@ module _
       ( refl-htpy)
       ( refl-htpy)
       ( coherence-square-cocone-flattening-pushout Q f g c)
-  coherence-cube-flattening-lemma-descent-data-pushout (s , t) =
-    ( ap-id
-      ( coherence-square-cocone-flattening-descent-data-pushout f g c P Q e
-        ( s , t))) ∙
-    ( triangle-eq-pair-Σ Q
-      ( coherence-square-cocone f g c s)
-      ( inv (pr2 (pr2 e) s t))) ∙
-    ( ap
-      ( eq-pair-Σ (coherence-square-cocone f g c s) refl ∙_)
-      ( inv
-        ( ( right-unit) ∙
-          ( compute-ap-map-Σ-map-base-eq-pair-Σ
-            ( vertical-map-cocone f g c)
-            ( Q)
-            ( refl)
-            ( inv (pr2 (pr2 e) s t))))))
+  coherence-cube-flattening-lemma-descent-data-pushout (s , t) = {!!}
 
   flattening-lemma-descent-data-pushout :
     flattening-lemma-descent-data-pushout-statement f g c P Q e
-  flattening-lemma-descent-data-pushout dup-pushout =
-    universal-property-pushout-top-universal-property-pushout-bottom-cube-is-equiv
-      ( vertical-map-span-flattening-pushout Q f g c)
-      ( horizontal-map-span-flattening-pushout Q f g c)
-      ( horizontal-map-cocone-flattening-pushout Q f g c)
-      ( vertical-map-cocone-flattening-pushout Q f g c)
-      ( vertical-map-span-flattening-descent-data-pushout f g c P Q e)
-      ( horizontal-map-span-flattening-descent-data-pushout f g c P Q e)
-      ( horizontal-map-cocone-flattening-descent-data-pushout f g c P Q e)
-      ( vertical-map-cocone-flattening-descent-data-pushout f g c P Q e)
-      ( tot (λ s → map-equiv (pr1 e (f s))))
-      ( tot (λ a → map-equiv (pr1 e a)))
-      ( tot (λ b → map-equiv (pr1 (pr2 e) b)))
-      ( id)
-      ( coherence-square-cocone-flattening-descent-data-pushout f g c P Q e)
-      ( refl-htpy)
-      ( htpy-map-Σ
-        ( Q ∘ vertical-map-cocone f g c)
-        ( refl-htpy)
-        ( λ s →
-          tr Q (coherence-square-cocone f g c s) ∘ (map-equiv (pr1 e (f s))))
-        ( λ s → inv-htpy (pr2 (pr2 e) s)))
-      ( refl-htpy)
-      ( refl-htpy)
-      ( coherence-square-cocone-flattening-pushout Q f g c)
-      ( coherence-cube-flattening-lemma-descent-data-pushout)
-      ( is-equiv-tot-is-fiberwise-equiv
-        ( λ s → is-equiv-map-equiv (pr1 e (f s))))
-      ( is-equiv-tot-is-fiberwise-equiv
-        ( λ a → is-equiv-map-equiv (pr1 e a)))
-      ( is-equiv-tot-is-fiberwise-equiv
-        ( λ b → is-equiv-map-equiv (pr1 (pr2 e) b)))
-      ( is-equiv-id)
-      ( flattening-lemma-pushout Q f g c dup-pushout)
+  flattening-lemma-descent-data-pushout dup-pushout = {!!}
 ```

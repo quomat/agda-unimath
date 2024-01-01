@@ -34,5 +34,5 @@ module _
   where
 
   is-generating-set-Group : UU (l1 ⊔ l2)
-  is-generating-set-Group = is-full-Subgroup G (subgroup-subset-Group G S)
+  is-generating-set-Group = {!!}
 ```

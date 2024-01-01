@@ -32,12 +32,7 @@ module _
   where
 
   left-unit-law-Π-is-contr : ((a : A) → (B a)) ≃ B a
-  left-unit-law-Π-is-contr =
-    ( left-unit-law-Π ( λ _ → B a)) ∘e
-    ( equiv-Π
-      ( λ _ → B a)
-      ( terminal-map , is-equiv-terminal-map-is-contr C)
-      ( λ a → equiv-eq (ap B ( eq-is-contr C))))
+  left-unit-law-Π-is-contr = {!!}
 ```
 
 ### The swap function `((x : A) (y : B) → C x y) → ((y : B) (x : A) → C x y)` is an equivalence
@@ -48,18 +43,17 @@ module _
   where
 
   swap-Π : ((x : A) (y : B) → C x y) → ((y : B) (x : A) → C x y)
-  swap-Π f y x = f x y
+  swap-Π f y x = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : A → B → UU l3}
   where
 
   is-equiv-swap-Π : is-equiv (swap-Π {C = C})
-  is-equiv-swap-Π = is-equiv-is-invertible swap-Π refl-htpy refl-htpy
+  is-equiv-swap-Π = {!!}
 
   equiv-swap-Π : ((x : A) (y : B) → C x y) ≃ ((y : B) (x : A) → C x y)
-  pr1 equiv-swap-Π = swap-Π
-  pr2 equiv-swap-Π = is-equiv-swap-Π
+  pr1 equiv-swap-Π = {!!}
 ```
 
 ## See also

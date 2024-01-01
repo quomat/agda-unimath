@@ -47,7 +47,7 @@ is an [equivalence](foundation-core.equivalences.md). The symmetric core of a
 binary relation `R` is defined as the relation
 
 ```text
-  core R (I,a) := (i : I) → R (a i) (a -i)
+  core R (I,a) := {!!}
 ```
 
 where `-i` is the element of the
@@ -70,18 +70,12 @@ module _
   where
 
   symmetric-core-Relation : Symmetric-Relation l2 A
-  symmetric-core-Relation p =
-    (i : type-unordered-pair p) →
-    R (element-unordered-pair p i) (other-element-unordered-pair p i)
+  symmetric-core-Relation p = {!!}
 
   counit-symmetric-core-Relation :
     {x y : A} →
     relation-Symmetric-Relation symmetric-core-Relation x y → R x y
-  counit-symmetric-core-Relation {x} {y} r =
-    tr
-      ( R x)
-      ( compute-other-element-standard-unordered-pair x y (zero-Fin 1))
-      ( r (zero-Fin 1))
+  counit-symmetric-core-Relation {x} {y} r = {!!}
 ```
 
 ## Properties
@@ -97,32 +91,14 @@ module _
   map-universal-property-symmetric-core-Relation :
     hom-Symmetric-Relation S (symmetric-core-Relation R) →
     hom-Relation (relation-Symmetric-Relation S) R
-  map-universal-property-symmetric-core-Relation f x y s =
-    counit-symmetric-core-Relation R (f (standard-unordered-pair x y) s)
+  map-universal-property-symmetric-core-Relation f x y s = {!!}
 
   equiv-universal-property-symmetric-core-Relation :
     hom-Symmetric-Relation S (symmetric-core-Relation R) ≃
     hom-Relation (relation-Symmetric-Relation S) R
-  equiv-universal-property-symmetric-core-Relation =
-    ( equiv-Π-equiv-family
-      ( λ x →
-        equiv-Π-equiv-family
-          ( λ y →
-            equiv-postcomp
-              ( S (standard-unordered-pair x y))
-              ( equiv-tr
-                ( R _)
-                ( compute-other-element-standard-unordered-pair x y
-                  ( zero-Fin 1)))))) ∘e
-    ( equiv-dependent-universal-property-pointed-unordered-pairs
-      ( λ p i →
-        S p →
-        R (element-unordered-pair p i) (other-element-unordered-pair p i))) ∘e
-    ( equiv-Π-equiv-family (λ p → equiv-swap-Π))
+  equiv-universal-property-symmetric-core-Relation = {!!}
 
   universal-property-symmetric-core-Relation :
     is-equiv map-universal-property-symmetric-core-Relation
-  universal-property-symmetric-core-Relation =
-    is-equiv-map-equiv
-      ( equiv-universal-property-symmetric-core-Relation)
+  universal-property-symmetric-core-Relation = {!!}
 ```

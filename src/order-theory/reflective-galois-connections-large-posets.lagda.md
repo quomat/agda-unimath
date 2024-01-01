@@ -36,14 +36,10 @@ module _
   where
 
   private
-    f = map-lower-adjoint-galois-connection-Large-Poset P Q G
-    g = map-upper-adjoint-galois-connection-Large-Poset P Q G
+    f = {!!}
 
   is-reflective-galois-connection-Large-Poset : UUω
-  is-reflective-galois-connection-Large-Poset =
-    {l : Level} (x : type-Large-Poset Q l) →
-    leq-Large-Poset Q (f (g x)) x ×
-    leq-Large-Poset Q x (f (g x))
+  is-reflective-galois-connection-Large-Poset = {!!}
 ```
 
 ### The type of reflective Galois connections
@@ -72,7 +68,5 @@ module _
 
     lower-adjoint-reflective-galois-connection-Large-Poset :
       hom-Large-Poset γ P Q
-    lower-adjoint-reflective-galois-connection-Large-Poset =
-      lower-adjoint-galois-connection-Large-Poset
-        ( galois-connection-reflective-galois-connection-Large-Poset G)
+    lower-adjoint-reflective-galois-connection-Large-Poset = {!!}
 ```

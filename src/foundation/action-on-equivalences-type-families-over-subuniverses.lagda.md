@@ -46,19 +46,16 @@ module _
       (X : type-subuniverse P) →
       is-contr
         ( fiber (ev-id-equiv-subuniverse P X {λ Y e → B X ≃ B Y}) id-equiv)
-    unique-action-equiv-family-over-subuniverse X =
-      is-contr-map-ev-id-equiv-subuniverse P X (λ Y e → B X ≃ B Y) id-equiv
+    unique-action-equiv-family-over-subuniverse X = {!!}
 
   action-equiv-family-over-subuniverse :
     (X Y : type-subuniverse P) → pr1 X ≃ pr1 Y → B X ≃ B Y
-  action-equiv-family-over-subuniverse X Y =
-    equiv-eq ∘ ap B ∘ eq-equiv-subuniverse P
+  action-equiv-family-over-subuniverse X Y = {!!}
 
   compute-id-equiv-action-equiv-family-over-subuniverse :
     (X : type-subuniverse P) →
     action-equiv-family-over-subuniverse X X id-equiv ＝ id-equiv
-  compute-id-equiv-action-equiv-family-over-subuniverse X =
-    ap (equiv-eq ∘ ap B) (compute-eq-equiv-id-equiv-subuniverse P)
+  compute-id-equiv-action-equiv-family-over-subuniverse X = {!!}
 ```
 
 ## Properties
@@ -90,6 +87,5 @@ coherence-square-action-equiv-family-over-subuniverse :
     ( equiv-eq)
     ( action-equiv-family-over-subuniverse P B X Y)
 coherence-square-action-equiv-family-over-subuniverse
-  P B X .X refl =
-  compute-id-equiv-action-equiv-family-over-subuniverse P B X
+  P B X .X refl = {!!}
 ```

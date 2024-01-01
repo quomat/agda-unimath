@@ -34,8 +34,8 @@ module _
   where
 
   mere-equiv-prop-action-Group : Prop (l1 ⊔ l2 ⊔ l3)
-  mere-equiv-prop-action-Group = trunc-Prop (equiv-action-Group G X Y)
+  mere-equiv-prop-action-Group = {!!}
 
   mere-equiv-action-Group : UU (l1 ⊔ l2 ⊔ l3)
-  mere-equiv-action-Group = type-Prop mere-equiv-prop-action-Group
+  mere-equiv-action-Group = {!!}
 ```

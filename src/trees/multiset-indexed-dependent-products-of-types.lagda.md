@@ -32,6 +32,6 @@ product of this tower of type families.
 
 ```agda
 iterated-Π-𝕍 : {l : Level} → ℕ → 𝕍 l → UU l
-iterated-Π-𝕍 zero-ℕ (tree-𝕎 X Y) = X
-iterated-Π-𝕍 (succ-ℕ n) (tree-𝕎 X Y) = (x : X) → iterated-Π-𝕍 n (Y x)
+iterated-Π-𝕍 zero-ℕ (tree-𝕎 X Y) = {!!}
+iterated-Π-𝕍 (succ-ℕ n) (tree-𝕎 X Y) = {!!}
 ```

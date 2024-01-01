@@ -37,7 +37,7 @@ numbers in exactly two distinct ways. Specifically, we have the identifications
 
 ```agda
 Hardy-Ramanujan-ℕ : ℕ
-Hardy-Ramanujan-ℕ = 1729
+Hardy-Ramanujan-ℕ = {!!}
 ```
 
 ## Properties
@@ -47,25 +47,17 @@ Hardy-Ramanujan-ℕ = 1729
 ```agda
 first-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ :
   sum-of-cubes-decomposition-ℕ Hardy-Ramanujan-ℕ
-pr1 first-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ =
-  (1 , is-nonzero-one-ℕ)
-pr1 (pr2 first-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ) =
-  (12 , is-nonzero-succ-ℕ 11)
-pr1 (pr2 (pr2 first-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ)) =
-  star
-pr2 (pr2 (pr2 first-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ)) =
-  refl
+pr1 first-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ = {!!}
+pr1 (pr2 first-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ) = {!!}
+pr1 (pr2 (pr2 first-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ)) = {!!}
+pr2 (pr2 (pr2 first-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ)) = {!!}
 
 second-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ :
   sum-of-cubes-decomposition-ℕ Hardy-Ramanujan-ℕ
-pr1 second-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ =
-  (9 , is-nonzero-succ-ℕ 8)
-pr1 (pr2 second-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ) =
-  (10 , is-nonzero-succ-ℕ 9)
-pr1 (pr2 (pr2 second-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ)) =
-  star
-pr2 (pr2 (pr2 second-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ)) =
-  refl
+pr1 second-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ = {!!}
+pr1 (pr2 second-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ) = {!!}
+pr1 (pr2 (pr2 second-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ)) = {!!}
+pr2 (pr2 (pr2 second-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ)) = {!!}
 ```
 
 ## External links

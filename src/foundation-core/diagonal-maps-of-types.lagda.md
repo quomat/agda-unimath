@@ -36,8 +36,7 @@ module _
   where
 
   diagonal : A → A × A
-  pr1 (diagonal x) = x
-  pr2 (diagonal x) = x
+  pr1 (diagonal x) = {!!}
 ```
 
 ## Properties
@@ -48,7 +47,7 @@ module _
 ap-diagonal :
   {l : Level} {A : UU l} {x y : A} (p : x ＝ y) →
   ap (diagonal A) p ＝ eq-pair p p
-ap-diagonal refl = refl
+ap-diagonal refl = {!!}
 ```
 
 ### If the diagonal of `A` is an equivalence, then `A` is a proposition
@@ -60,20 +59,11 @@ module _
 
   abstract
     is-prop-is-equiv-diagonal : is-equiv (diagonal A) → is-prop A
-    is-prop-is-equiv-diagonal is-equiv-d =
-      is-prop-all-elements-equal
-        ( λ x y →
-          ( inv (ap pr1 (is-section-map-inv-is-equiv is-equiv-d (pair x y)))) ∙
-          ( ap pr2 (is-section-map-inv-is-equiv is-equiv-d (pair x y))))
+    is-prop-is-equiv-diagonal is-equiv-d = {!!}
 
   equiv-diagonal-is-prop :
     is-prop A → A ≃ (A × A)
-  pr1 (equiv-diagonal-is-prop is-prop-A) = diagonal A
-  pr2 (equiv-diagonal-is-prop is-prop-A) =
-    is-equiv-is-invertible
-      ( pr1)
-      ( λ pair-a → eq-pair (eq-is-prop is-prop-A) (eq-is-prop is-prop-A))
-      ( λ a → eq-is-prop is-prop-A)
+  pr1 (equiv-diagonal-is-prop is-prop-A) = {!!}
 ```
 
 ### The fibers of the diagonal map
@@ -84,25 +74,20 @@ module _
   where
 
   eq-fiber-diagonal : (t : A × A) → fiber (diagonal A) t → pr1 t ＝ pr2 t
-  eq-fiber-diagonal (pair x y) (pair z α) = (inv (ap pr1 α)) ∙ (ap pr2 α)
+  eq-fiber-diagonal (pair x y) (pair z α) = {!!}
 
   fiber-diagonal-eq : (t : A × A) → pr1 t ＝ pr2 t → fiber (diagonal A) t
-  pr1 (fiber-diagonal-eq (pair x y) β) = x
-  pr2 (fiber-diagonal-eq (pair x y) β) = eq-pair refl β
+  pr1 (fiber-diagonal-eq (pair x y) β) = {!!}
 
   is-section-fiber-diagonal-eq :
     (t : A × A) → ((eq-fiber-diagonal t) ∘ (fiber-diagonal-eq t)) ~ id
-  is-section-fiber-diagonal-eq (pair x .x) refl = refl
+  is-section-fiber-diagonal-eq (pair x .x) refl = {!!}
 
   is-retraction-fiber-diagonal-eq :
     (t : A × A) → ((fiber-diagonal-eq t) ∘ (eq-fiber-diagonal t)) ~ id
-  is-retraction-fiber-diagonal-eq .(pair z z) (pair z refl) = refl
+  is-retraction-fiber-diagonal-eq .(pair z z) (pair z refl) = {!!}
 
   abstract
     is-equiv-eq-fiber-diagonal : (t : A × A) → is-equiv (eq-fiber-diagonal t)
-    is-equiv-eq-fiber-diagonal t =
-      is-equiv-is-invertible
-        ( fiber-diagonal-eq t)
-        ( is-section-fiber-diagonal-eq t)
-        ( is-retraction-fiber-diagonal-eq t)
+    is-equiv-eq-fiber-diagonal t = {!!}
 ```

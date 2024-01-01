@@ -41,69 +41,37 @@ module _
 
   is-choice-of-representatives :
     (A → UU l3) → UU (l1 ⊔ l2 ⊔ l3)
-  is-choice-of-representatives P =
-    (a : A) → is-contr (Σ A (λ x → P x × sim-equivalence-relation R a x))
+  is-choice-of-representatives P = {!!}
 
   representatives :
     {P : A → UU l3} → is-choice-of-representatives P → UU (l1 ⊔ l3)
-  representatives {P} H = Σ A P
+  representatives {P} H = {!!}
 
   class-representatives :
     {P : A → UU l3} (H : is-choice-of-representatives P) →
     representatives H → equivalence-class R
-  class-representatives H a =
-    class R (pr1 a)
+  class-representatives H a = {!!}
 
   abstract
     is-surjective-class-representatives :
       {P : A → UU l3} (H : is-choice-of-representatives P) →
       is-surjective (class-representatives H)
-    is-surjective-class-representatives H (pair Q K) =
-      apply-universal-property-trunc-Prop K
-        ( trunc-Prop
-          ( fiber (class-representatives H) (pair Q K)))
-        ( λ (pair a φ) →
-          unit-trunc-Prop
-            ( pair
-              ( pair (pr1 (center (H a))) (pr1 (pr2 (center (H a)))))
-              ( ( apply-effectiveness-class' R
-                  ( symmetric-equivalence-relation R _ _
-                    ( pr2 (pr2 (center (H a)))))) ∙
-                ( eq-class-equivalence-class R
-                  ( pair Q K)
-                  ( backward-implication
-                    ( φ a)
-                    ( refl-equivalence-relation R _))))))
+    is-surjective-class-representatives H (pair Q K) = {!!}
 
   abstract
     is-emb-class-representatives :
       {P : A → UU l3} (H : is-choice-of-representatives P) →
       is-emb (class-representatives H)
-    is-emb-class-representatives {P} H (pair a p) =
-      fundamental-theorem-id
-        ( is-contr-equiv
-          ( Σ A (λ x → P x × sim-equivalence-relation R a x))
-          ( ( associative-Σ A P (λ z → sim-equivalence-relation R a (pr1 z))) ∘e
-            ( equiv-tot
-              ( λ t →
-                is-effective-class R a (pr1 t))))
-          ( H a))
-        ( λ y →
-          ap (class-representatives H) {pair a p} {y})
+    is-emb-class-representatives {P} H (pair a p) = {!!}
 
   abstract
     is-equiv-class-representatives :
       {P : A → UU l3} (H : is-choice-of-representatives P) →
       is-equiv (class-representatives H)
-    is-equiv-class-representatives H =
-      is-equiv-is-emb-is-surjective
-        ( is-surjective-class-representatives H)
-        ( is-emb-class-representatives H)
+    is-equiv-class-representatives H = {!!}
 
   equiv-equivalence-class-representatives :
     {P : A → UU l3} (H : is-choice-of-representatives P) →
     representatives H ≃ equivalence-class R
-  pr1 (equiv-equivalence-class-representatives H) = class-representatives H
-  pr2 (equiv-equivalence-class-representatives H) =
-    is-equiv-class-representatives H
+  pr1 (equiv-equivalence-class-representatives H) = {!!}
 ```

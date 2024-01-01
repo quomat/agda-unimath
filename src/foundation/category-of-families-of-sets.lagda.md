@@ -35,8 +35,7 @@ The **[large category](category-theory.large-categories.md) of families of
 Family-Of-Sets-Large-Precategory :
   {l : Level} → UU l →
   Large-Precategory (λ l1 → l ⊔ lsuc l1) (λ l1 l2 → l ⊔ l1 ⊔ l2)
-Family-Of-Sets-Large-Precategory A =
-  Large-Function-Precategory A Set-Large-Precategory
+Family-Of-Sets-Large-Precategory A = {!!}
 ```
 
 ### The small precategory of families of sets over a type
@@ -44,8 +43,7 @@ Family-Of-Sets-Large-Precategory A =
 ```agda
 Family-Of-Sets-Precategory :
   {l1 : Level} (l2 : Level) → UU l1 → Precategory (l1 ⊔ lsuc l2) (l1 ⊔ l2)
-Family-Of-Sets-Precategory l2 A =
-  precategory-Large-Precategory (Family-Of-Sets-Large-Precategory A) l2
+Family-Of-Sets-Precategory l2 A = {!!}
 ```
 
 ### The large category of families of sets over a type
@@ -57,13 +55,11 @@ module _
 
   Family-Of-Sets-Large-Category :
     Large-Category (λ l1 → l ⊔ lsuc l1) (λ l1 l2 → l ⊔ l1 ⊔ l2)
-  Family-Of-Sets-Large-Category =
-    Large-Function-Category A Set-Large-Category
+  Family-Of-Sets-Large-Category = {!!}
 
   is-large-category-Family-Of-Sets-Large-Category :
     is-large-category-Large-Precategory (Family-Of-Sets-Large-Precategory A)
-  is-large-category-Family-Of-Sets-Large-Category =
-    is-large-category-Large-Category Family-Of-Sets-Large-Category
+  is-large-category-Family-Of-Sets-Large-Category = {!!}
 ```
 
 ### The small category of families of sets over a type
@@ -74,11 +70,9 @@ module _
   where
 
   Family-Of-Sets-Category : Category (l1 ⊔ lsuc l2) (l1 ⊔ l2)
-  Family-Of-Sets-Category =
-    category-Large-Category (Family-Of-Sets-Large-Category A) l2
+  Family-Of-Sets-Category = {!!}
 
   is-category-Family-Of-Sets-Category :
     is-category-Precategory (Family-Of-Sets-Precategory l2 A)
-  is-category-Family-Of-Sets-Category =
-    is-category-Category Family-Of-Sets-Category
+  is-category-Family-Of-Sets-Category = {!!}
 ```

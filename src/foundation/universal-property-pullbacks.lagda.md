@@ -60,11 +60,7 @@ module _
     htpy-cone f g
       ( cone-map f g c (map-universal-property-pullback f g c up c'))
       ( c')
-  htpy-cone-map-universal-property-pullback c up c' =
-    htpy-eq-cone f g
-      ( cone-map f g c (map-universal-property-pullback f g c up c'))
-      ( c')
-      ( compute-map-universal-property-pullback f g c up c')
+  htpy-cone-map-universal-property-pullback c up c' = {!!}
 ```
 
 ### Uniquely uniqueness of pullbacks
@@ -82,16 +78,7 @@ module _
       ( up-c : universal-property-pullback f g c) →
       is-contr
         ( Σ (C' ≃ C) (λ e → htpy-cone f g (cone-map f g c (map-equiv e)) c'))
-    uniquely-unique-pullback c' c up-c' up-c =
-      is-torsorial-Eq-subtype
-        ( uniqueness-universal-property-pullback f g c up-c C' c')
-        ( is-property-is-equiv)
-        ( map-universal-property-pullback f g c up-c c')
-        ( htpy-cone-map-universal-property-pullback f g c up-c c')
-        ( is-equiv-up-pullback-up-pullback c c'
-          ( map-universal-property-pullback f g c up-c c')
-          ( htpy-cone-map-universal-property-pullback f g c up-c c')
-          up-c up-c')
+    uniquely-unique-pullback c' c up-c' up-c = {!!}
 ```
 
 ## Table of files about pullbacks

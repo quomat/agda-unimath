@@ -42,29 +42,23 @@ module _
   where
 
   conjugation-Concrete-Group : hom-Concrete-Group G G
-  conjugation-Concrete-Group = conjugation-∞-Group (∞-group-Concrete-Group G) g
+  conjugation-Concrete-Group = {!!}
 
   classifying-map-conjugation-Concrete-Group :
     classifying-type-Concrete-Group G → classifying-type-Concrete-Group G
-  classifying-map-conjugation-Concrete-Group =
-    classifying-map-hom-Concrete-Group G G conjugation-Concrete-Group
+  classifying-map-conjugation-Concrete-Group = {!!}
 
   preserves-point-classifying-map-conjugation-Concrete-Group :
     classifying-map-conjugation-Concrete-Group (shape-Concrete-Group G) ＝
     shape-Concrete-Group G
-  preserves-point-classifying-map-conjugation-Concrete-Group =
-    preserves-point-classifying-map-hom-Concrete-Group G G
-      ( conjugation-Concrete-Group)
+  preserves-point-classifying-map-conjugation-Concrete-Group = {!!}
 
   map-conjugation-Concrete-Group :
     type-Concrete-Group G → type-Concrete-Group G
-  map-conjugation-Concrete-Group =
-    map-hom-Concrete-Group G G conjugation-Concrete-Group
+  map-conjugation-Concrete-Group = {!!}
 
   compute-map-conjugation-Concrete-Group :
     conjugation-Group' (group-Concrete-Group G) g ~
     map-conjugation-Concrete-Group
-  compute-map-conjugation-Concrete-Group x =
-    ( assoc (inv g) x g) ∙
-    ( compute-map-conjugation-∞-Group (∞-group-Concrete-Group G) g x)
+  compute-map-conjugation-Concrete-Group x = {!!}
 ```

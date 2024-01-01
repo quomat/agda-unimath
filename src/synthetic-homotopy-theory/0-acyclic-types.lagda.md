@@ -43,13 +43,13 @@ module _
   where
 
   is-0-acyclic-Prop : Prop l
-  is-0-acyclic-Prop = is-truncated-acyclic-Prop zero-𝕋 A
+  is-0-acyclic-Prop = {!!}
 
   is-0-acyclic : UU l
-  is-0-acyclic = type-Prop is-0-acyclic-Prop
+  is-0-acyclic = {!!}
 
   is-prop-is-0-acyclic : is-prop is-0-acyclic
-  is-prop-is-0-acyclic = is-prop-type-Prop is-0-acyclic-Prop
+  is-prop-is-0-acyclic = {!!}
 ```
 
 ## Properties
@@ -62,23 +62,10 @@ module _
   where
 
   is-inhabited-is-0-acyclic : is-0-acyclic A → is-inhabited A
-  is-inhabited-is-0-acyclic ac =
-    map-trunc-Prop
-      ( pr1)
-      ( is-surjective-is-0-acyclic-map
-        ( terminal-map)
-        ( is-truncated-acyclic-map-terminal-map-is-truncated-acyclic A ac)
-        ( star))
+  is-inhabited-is-0-acyclic ac = {!!}
 
   is-0-acyclic-is-inhabited : is-inhabited A → is-0-acyclic A
-  is-0-acyclic-is-inhabited h =
-    is-truncated-acyclic-is-truncated-acyclic-map-terminal-map A
-      ( is-0-acyclic-map-is-surjective
-        ( terminal-map)
-        ( λ u →
-          map-trunc-Prop
-            (λ a → pair a (contraction is-contr-unit u))
-            ( h)))
+  is-0-acyclic-is-inhabited h = {!!}
 ```
 
 ## See also

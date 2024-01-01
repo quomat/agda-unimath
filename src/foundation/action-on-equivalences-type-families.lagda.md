@@ -68,22 +68,19 @@ module _
     unique-action-equiv-family :
       {X : UU l1} →
       is-contr (fiber (ev-id-equiv (λ Y e → B X ≃ B Y)) id-equiv)
-    unique-action-equiv-family =
-      is-contr-map-ev-id-equiv (λ Y e → B _ ≃ B Y) id-equiv
+    unique-action-equiv-family = {!!}
 
   action-equiv-family :
     {X Y : UU l1} → (X ≃ Y) → B X ≃ B Y
-  action-equiv-family {X} {Y} =
-    equiv-eq ∘ action-equiv-function B
+  action-equiv-family {X} {Y} = {!!}
 
   compute-action-equiv-family-id-equiv :
     {X : UU l1} →
     action-equiv-family {X} {X} id-equiv ＝ id-equiv
-  compute-action-equiv-family-id-equiv {X} =
-    ap equiv-eq (compute-action-equiv-function-id-equiv B X)
+  compute-action-equiv-family-id-equiv {X} = {!!}
 
   map-action-equiv-family : {X Y : UU l1} → X ≃ Y → B X → B Y
-  map-action-equiv-family = map-equiv ∘ action-equiv-family
+  map-action-equiv-family = {!!}
 ```
 
 ## Properties
@@ -112,8 +109,7 @@ coherence-square-action-equiv-family :
     ( equiv-eq)
     ( equiv-eq)
     ( action-equiv-family B)
-coherence-square-action-equiv-family B X .X refl =
-  compute-action-equiv-family-id-equiv B
+coherence-square-action-equiv-family B X .X refl = {!!}
 ```
 
 ### The identity function acts trivially on equivalences
@@ -121,8 +117,7 @@ coherence-square-action-equiv-family B X .X refl =
 ```agda
 compute-action-equiv-family-id :
   {l : Level} {X Y : UU l} (e : X ≃ Y) → (action-equiv-family id e) ＝ e
-compute-action-equiv-family-id {l} {X} {Y} e =
-  (ap equiv-eq (ap-id (eq-equiv X Y e))) ∙ (is-section-eq-equiv e)
+compute-action-equiv-family-id {l} {X} {Y} e = {!!}
 ```
 
 ### The action on equivalences of a constant map is constant
@@ -131,8 +126,7 @@ compute-action-equiv-family-id {l} {X} {Y} e =
 compute-action-equiv-family-const :
   {l1 l2 : Level} (B : UU l2) {X Y : UU l1}
   (e : X ≃ Y) → (action-equiv-family (const (UU l1) (UU l2) B) e) ＝ id-equiv
-compute-action-equiv-family-const B {X} {Y} e =
-  ap equiv-eq (compute-action-equiv-function-const B e)
+compute-action-equiv-family-const B {X} {Y} e = {!!}
 ```
 
 ### The action on equivalences of a composite function is the composite of the actions
@@ -143,17 +137,14 @@ distributive-action-equiv-function-comp :
   {X Y : UU l1} →
   action-equiv-function (g ∘ f) ~
   action-equiv-function g ∘ action-equiv-family f
-distributive-action-equiv-function-comp g f {X} {Y} e =
-  ( ap-comp g f (eq-equiv X Y e)) ∙
-  ( ap (ap g) (inv (is-retraction-eq-equiv (action-equiv-function f e))))
+distributive-action-equiv-function-comp g f {X} {Y} e = {!!}
 
 distributive-action-equiv-family-comp :
   {l1 l2 l3 : Level} (g : UU l2 → UU l3) (f : UU l1 → UU l2)
   {X Y : UU l1} →
   action-equiv-family (g ∘ f) ~
   action-equiv-family g ∘ action-equiv-family f
-distributive-action-equiv-family-comp g f {X} {Y} e =
-  ap equiv-eq (distributive-action-equiv-function-comp g f {X} {Y} e)
+distributive-action-equiv-family-comp g f {X} {Y} e = {!!}
 ```
 
 ### The action on equivalences of any map preserves composition of equivalences
@@ -164,12 +155,7 @@ distributive-action-equiv-family-comp-equiv :
   (e : X ≃ Y) (e' : Y ≃ Z) →
   action-equiv-family f (e' ∘e e) ＝
   action-equiv-family f e' ∘e action-equiv-family f e
-distributive-action-equiv-family-comp-equiv f e e' =
-  ( ap equiv-eq (distributive-action-equiv-function-comp-equiv f e e')) ∙
-  ( inv
-    ( compute-equiv-eq-concat
-      ( action-equiv-function f e)
-      ( action-equiv-function f e')))
+distributive-action-equiv-family-comp-equiv f e e' = {!!}
 ```
 
 ### The action on equivalences of any map preserves inverses
@@ -179,7 +165,5 @@ compute-action-equiv-family-inv-equiv :
   {l1 l2 : Level} (f : UU l1 → UU l2) {X Y : UU l1}
   (e : X ≃ Y) →
   action-equiv-family f (inv-equiv e) ＝ inv-equiv (action-equiv-family f e)
-compute-action-equiv-family-inv-equiv f {X} {Y} e =
-  ( ap equiv-eq (compute-action-equiv-function-inv-equiv f e)) ∙
-  ( inv (commutativity-inv-equiv-eq (f X) (f Y) (action-equiv-function f e)))
+compute-action-equiv-family-inv-equiv f {X} {Y} e = {!!}
 ```

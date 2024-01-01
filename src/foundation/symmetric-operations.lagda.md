@@ -48,7 +48,7 @@ Recall that there is a standard unordered pairing operation
 A binary operation `μ : A → A → B` is symmetric if it extends to an operation
 `μ̃ : unordered-pair A → B` along `{-,-}`. That is, a binary operation `μ` is
 symmetric if there is an operation `μ̃` on the undordered pairs in `A`, such that
-`μ̃({x,y}) = μ(x,y)` for all `x, y : A`. Symmetric operations can be understood
+`μ̃({x,y}) = {!!}
 to be fully coherent commutative operations. One can check that if `B` is a set,
 then `μ` has such an extension if and only if it is commutative in the usual
 algebraic sense.
@@ -63,13 +63,12 @@ module _
   where
 
   is-commutative : (A → A → B) → UU (l1 ⊔ l2)
-  is-commutative f = (x y : A) → f x y ＝ f y x
+  is-commutative f = {!!}
 
 is-commutative-Prop :
   {l1 l2 : Level} {A : UU l1} (B : Set l2) →
   (A → A → type-Set B) → Prop (l1 ⊔ l2)
-is-commutative-Prop B f =
-  Π-Prop _ (λ x → Π-Prop _ (λ y → Id-Prop B (f x y) (f y x)))
+is-commutative-Prop B f = {!!}
 ```
 
 ### Commutative operations
@@ -80,11 +79,10 @@ module _
   where
 
   symmetric-operation : UU (lsuc lzero ⊔ l1 ⊔ l2)
-  symmetric-operation = unordered-pair A → B
+  symmetric-operation = {!!}
 
   map-symmetric-operation : symmetric-operation → A → A → B
-  map-symmetric-operation f x y =
-    f (standard-unordered-pair x y)
+  map-symmetric-operation f x y = {!!}
 ```
 
 ## Properties
@@ -95,8 +93,7 @@ module _
 is-commutative-symmetric-operation :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : symmetric-operation A B) →
   is-commutative (λ x y → f (standard-unordered-pair x y))
-is-commutative-symmetric-operation f x y =
-  ap f (is-commutative-standard-unordered-pair x y)
+is-commutative-symmetric-operation f x y = {!!}
 ```
 
 ### A binary operation from `A` to `B` is commutative if and only if it extends to the unordered pairs in `A`
@@ -112,56 +109,18 @@ module _
     (htpy-equiv e e') + (htpy-equiv e (e' ∘e equiv-succ-Fin 2)) →
     ( f (p (map-equiv e (zero-Fin 1))) (p (map-equiv e (one-Fin 1)))) ＝
     ( f (p (map-equiv e' (zero-Fin 1))) (p (map-equiv e' (one-Fin 1))))
-  is-weakly-constant-on-equivalences-is-commutative f H X p e e' (inl K) =
-    ap-binary f (ap p (K (zero-Fin 1))) (ap p (K (one-Fin 1)))
-  is-weakly-constant-on-equivalences-is-commutative f H X p e e' (inr K) =
-    ( ap-binary f (ap p (K (zero-Fin 1))) (ap p (K (one-Fin 1)))) ∙
-    ( H (p (map-equiv e' (one-Fin 1))) (p (map-equiv e' (zero-Fin 1))))
+  is-weakly-constant-on-equivalences-is-commutative f H X p e e' (inl K) = {!!}
 
   symmetric-operation-is-commutative :
     (f : A → A → type-Set B) → is-commutative f →
     symmetric-operation A (type-Set B)
-  symmetric-operation-is-commutative f H (pair (pair X K) p) =
-    map-universal-property-set-quotient-trunc-Prop B
-      ( λ e → f (p (map-equiv e (zero-Fin 1))) (p (map-equiv e (one-Fin 1))))
-      ( λ e e' →
-        is-weakly-constant-on-equivalences-is-commutative f H X p e e'
-          ( map-equiv-coprod
-            ( inv-equiv (equiv-ev-zero-htpy-equiv-Fin-two-ℕ (pair X K) e e'))
-            ( inv-equiv (equiv-ev-zero-htpy-equiv-Fin-two-ℕ
-              ( pair X K)
-              ( e)
-              ( e' ∘e equiv-succ-Fin 2)))
-            ( decide-value-equiv-Fin-two-ℕ
-              ( pair X K)
-              ( e')
-              ( map-equiv e (zero-Fin 1)))))
-      ( K)
+  symmetric-operation-is-commutative f H (pair (pair X K) p) = {!!}
 
   compute-symmetric-operation-is-commutative :
     (f : A → A → type-Set B) (H : is-commutative f) (x y : A) →
     symmetric-operation-is-commutative f H (standard-unordered-pair x y) ＝
     f x y
-  compute-symmetric-operation-is-commutative f H x y =
-    htpy-universal-property-set-quotient-trunc-Prop B
-      ( λ e → f (p (map-equiv e (zero-Fin 1))) (p (map-equiv e (one-Fin 1))))
-      ( λ e e' →
-        is-weakly-constant-on-equivalences-is-commutative f H (Fin 2) p e e'
-          ( map-equiv-coprod
-            ( inv-equiv
-              ( equiv-ev-zero-htpy-equiv-Fin-two-ℕ (Fin-UU-Fin' 2) e e'))
-            ( inv-equiv (equiv-ev-zero-htpy-equiv-Fin-two-ℕ
-              ( Fin-UU-Fin' 2)
-              ( e)
-              ( e' ∘e equiv-succ-Fin 2)))
-            ( decide-value-equiv-Fin-two-ℕ
-              ( Fin-UU-Fin' 2)
-              ( e')
-              ( map-equiv e (zero-Fin 1)))))
-      ( id-equiv)
-    where
-    p : Fin 2 → A
-    p = pr2 (standard-unordered-pair x y)
+  compute-symmetric-operation-is-commutative f H x y = {!!}
 ```
 
 ### Characterization of equality of symmetric operations into sets
@@ -174,25 +133,16 @@ module _
 
   htpy-symmetric-operation-Set-Prop :
     (g : symmetric-operation A (type-Set B)) → Prop (l1 ⊔ l2)
-  htpy-symmetric-operation-Set-Prop g =
-    Π-Prop A
-      ( λ x →
-        Π-Prop A
-          ( λ y →
-            Id-Prop B
-              ( map-symmetric-operation A (type-Set B) f x y)
-              ( map-symmetric-operation A (type-Set B) g x y)))
+  htpy-symmetric-operation-Set-Prop g = {!!}
 
   htpy-symmetric-operation-Set :
     (g : symmetric-operation A (type-Set B)) → UU (l1 ⊔ l2)
-  htpy-symmetric-operation-Set g =
-    type-Prop (htpy-symmetric-operation-Set-Prop g)
+  htpy-symmetric-operation-Set g = {!!}
 
   center-total-htpy-symmetric-operation-Set :
     Σ ( symmetric-operation A (type-Set B))
       ( htpy-symmetric-operation-Set)
-  pr1 center-total-htpy-symmetric-operation-Set = f
-  pr2 center-total-htpy-symmetric-operation-Set x y = refl
+  pr1 center-total-htpy-symmetric-operation-Set = {!!}
 
   abstract
     contraction-total-htpy-symmetric-operation-Set :
@@ -200,49 +150,31 @@ module _
         Σ ( symmetric-operation A (type-Set B))
           ( htpy-symmetric-operation-Set)) →
       center-total-htpy-symmetric-operation-Set ＝ t
-    contraction-total-htpy-symmetric-operation-Set (g , H) =
-      eq-type-subtype
-        htpy-symmetric-operation-Set-Prop
-        ( eq-htpy
-          ( λ p →
-            apply-universal-property-trunc-Prop
-              ( is-surjective-standard-unordered-pair p)
-              ( Id-Prop B (f p) (g p))
-              ( λ where (x , y , refl) → H x y)))
+    contraction-total-htpy-symmetric-operation-Set (g , H) = {!!}
 
   is-torsorial-htpy-symmetric-operation-Set :
     is-torsorial (htpy-symmetric-operation-Set)
-  pr1 is-torsorial-htpy-symmetric-operation-Set =
-    center-total-htpy-symmetric-operation-Set
-  pr2 is-torsorial-htpy-symmetric-operation-Set =
-    contraction-total-htpy-symmetric-operation-Set
+  pr1 is-torsorial-htpy-symmetric-operation-Set = {!!}
 
   htpy-eq-symmetric-operation-Set :
     (g : symmetric-operation A (type-Set B)) →
     (f ＝ g) → htpy-symmetric-operation-Set g
-  htpy-eq-symmetric-operation-Set g refl x y = refl
+  htpy-eq-symmetric-operation-Set g refl x y = {!!}
 
   is-equiv-htpy-eq-symmetric-operation-Set :
     (g : symmetric-operation A (type-Set B)) →
     is-equiv (htpy-eq-symmetric-operation-Set g)
-  is-equiv-htpy-eq-symmetric-operation-Set =
-    fundamental-theorem-id
-      is-torsorial-htpy-symmetric-operation-Set
-      htpy-eq-symmetric-operation-Set
+  is-equiv-htpy-eq-symmetric-operation-Set = {!!}
 
   extensionality-symmetric-operation-Set :
     (g : symmetric-operation A (type-Set B)) →
     (f ＝ g) ≃ htpy-symmetric-operation-Set g
-  pr1 (extensionality-symmetric-operation-Set g) =
-    htpy-eq-symmetric-operation-Set g
-  pr2 (extensionality-symmetric-operation-Set g) =
-    is-equiv-htpy-eq-symmetric-operation-Set g
+  pr1 (extensionality-symmetric-operation-Set g) = {!!}
 
   eq-htpy-symmetric-operation-Set :
     (g : symmetric-operation A (type-Set B)) →
     htpy-symmetric-operation-Set g → (f ＝ g)
-  eq-htpy-symmetric-operation-Set g =
-    map-inv-equiv (extensionality-symmetric-operation-Set g)
+  eq-htpy-symmetric-operation-Set g = {!!}
 ```
 
 ### The type of commutative operations into a set is equivalent to the type of symmetric operations
@@ -254,52 +186,27 @@ module _
 
   map-compute-symmetric-operation-Set :
     symmetric-operation A (type-Set B) → Σ (A → A → type-Set B) is-commutative
-  pr1 (map-compute-symmetric-operation-Set f) =
-    map-symmetric-operation A (type-Set B) f
-  pr2 (map-compute-symmetric-operation-Set f) =
-    is-commutative-symmetric-operation f
+  pr1 (map-compute-symmetric-operation-Set f) = {!!}
 
   map-inv-compute-symmetric-operation-Set :
     Σ (A → A → type-Set B) is-commutative → symmetric-operation A (type-Set B)
-  map-inv-compute-symmetric-operation-Set (f , H) =
-    symmetric-operation-is-commutative B f H
+  map-inv-compute-symmetric-operation-Set (f , H) = {!!}
 
   is-section-map-inv-compute-symmetric-operation-Set :
     ( map-compute-symmetric-operation-Set ∘
       map-inv-compute-symmetric-operation-Set) ~ id
-  is-section-map-inv-compute-symmetric-operation-Set (f , H) =
-    eq-type-subtype
-      ( is-commutative-Prop B)
-      ( eq-htpy
-        ( λ x →
-          eq-htpy
-            ( λ y →
-              compute-symmetric-operation-is-commutative B f H x y)))
+  is-section-map-inv-compute-symmetric-operation-Set (f , H) = {!!}
 
   is-retraction-map-inv-compute-symmetric-operation-Set :
     ( map-inv-compute-symmetric-operation-Set ∘
       map-compute-symmetric-operation-Set) ~ id
-  is-retraction-map-inv-compute-symmetric-operation-Set g =
-    eq-htpy-symmetric-operation-Set A B
-      ( map-inv-compute-symmetric-operation-Set
-        ( map-compute-symmetric-operation-Set g))
-      ( g)
-      ( compute-symmetric-operation-is-commutative B
-        ( map-symmetric-operation A (type-Set B) g)
-        ( is-commutative-symmetric-operation g))
+  is-retraction-map-inv-compute-symmetric-operation-Set g = {!!}
 
   is-equiv-map-compute-symmetric-operation-Set :
     is-equiv map-compute-symmetric-operation-Set
-  is-equiv-map-compute-symmetric-operation-Set =
-    is-equiv-is-invertible
-      map-inv-compute-symmetric-operation-Set
-      is-section-map-inv-compute-symmetric-operation-Set
-      is-retraction-map-inv-compute-symmetric-operation-Set
+  is-equiv-map-compute-symmetric-operation-Set = {!!}
 
   compute-symmetric-operation-Set :
     symmetric-operation A (type-Set B) ≃ Σ (A → A → type-Set B) is-commutative
-  pr1 compute-symmetric-operation-Set =
-    map-compute-symmetric-operation-Set
-  pr2 compute-symmetric-operation-Set =
-    is-equiv-map-compute-symmetric-operation-Set
+  pr1 compute-symmetric-operation-Set = {!!}
 ```

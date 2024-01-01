@@ -31,12 +31,12 @@ is defined by iteratively multiplying `x` with itself `n` times.
 power-Commutative-Semiring :
   {l : Level} (A : Commutative-Semiring l) →
   ℕ → type-Commutative-Semiring A → type-Commutative-Semiring A
-power-Commutative-Semiring A = power-Semiring (semiring-Commutative-Semiring A)
+power-Commutative-Semiring A = {!!}
 ```
 
 ## Properties
 
-### `xⁿ⁺¹ = xⁿx`
+### `xⁿ⁺¹ = {!!}
 
 ```agda
 module _
@@ -47,8 +47,7 @@ module _
     (n : ℕ) (x : type-Commutative-Semiring A) →
     power-Commutative-Semiring A (succ-ℕ n) x ＝
     mul-Commutative-Semiring A (power-Commutative-Semiring A n x) x
-  power-succ-Commutative-Semiring =
-    power-succ-Semiring (semiring-Commutative-Semiring A)
+  power-succ-Commutative-Semiring = {!!}
 ```
 
 ### Powers by sums of natural numbers are products of powers
@@ -64,8 +63,7 @@ module _
     mul-Commutative-Semiring A
       ( power-Commutative-Semiring A m x)
       ( power-Commutative-Semiring A n x)
-  distributive-power-add-Commutative-Semiring =
-    distributive-power-add-Semiring (semiring-Commutative-Semiring A)
+  distributive-power-add-Commutative-Semiring = {!!}
 ```
 
 ### If `x` commutes with `y`, then powers distribute over the product of `x` and `y`
@@ -81,9 +79,5 @@ module _
     mul-Commutative-Semiring A
       ( power-Commutative-Semiring A n x)
       ( power-Commutative-Semiring A n y)
-  distributive-power-mul-Commutative-Semiring n x y =
-    distributive-power-mul-Semiring
-      ( semiring-Commutative-Semiring A)
-      ( n)
-      ( commutative-mul-Commutative-Semiring A x y)
+  distributive-power-mul-Commutative-Semiring n x y = {!!}
 ```

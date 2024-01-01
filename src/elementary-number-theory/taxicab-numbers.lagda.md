@@ -40,7 +40,7 @@ that if `n` is a cube, i.e., if `n ＝ c³`, then the only solutions to the
 equation
 
 ```text
-  a³ + b³ = c³
+  a³ + b³ = {!!}
 ```
 
 have either `a ＝ 0` or `b ＝ 0` by
@@ -58,13 +58,7 @@ cubes of arbitrary natural numbers.
 
 ```agda
 sum-of-cubes-decomposition-ℕ : ℕ → UU lzero
-sum-of-cubes-decomposition-ℕ x =
-  Σ ( nonzero-ℕ)
-    ( λ y →
-      Σ ( nonzero-ℕ)
-        ( λ z →
-          ( leq-ℕ (nat-nonzero-ℕ y) (nat-nonzero-ℕ z)) ×
-          ( cube-ℕ (nat-nonzero-ℕ y) +ℕ cube-ℕ (nat-nonzero-ℕ z) ＝ x)))
+sum-of-cubes-decomposition-ℕ x = {!!}
 ```
 
 ### The predicate of being a sum of two cubes in exactly `n` distinct ways
@@ -81,17 +75,14 @@ type `sum-of-cubes-decomposition-ℕ x` of ways of writing `x` as a sum of cubes
 
 ```agda
 is-sum-of-cubes-in-number-of-distinct-ways-ℕ : ℕ → ℕ → UU lzero
-is-sum-of-cubes-in-number-of-distinct-ways-ℕ n x =
-  Fin n ≃ sum-of-cubes-decomposition-ℕ x
+is-sum-of-cubes-in-number-of-distinct-ways-ℕ n x = {!!}
 ```
 
 ### The predicate of being the `n`-th taxicab number
 
 ```agda
 is-taxicab-number-ℕ : ℕ → ℕ → UU lzero
-is-taxicab-number-ℕ n x =
-  is-sum-of-cubes-in-number-of-distinct-ways-ℕ n x ×
-  ((y : ℕ) → is-sum-of-cubes-in-number-of-distinct-ways-ℕ n y → leq-ℕ x y)
+is-taxicab-number-ℕ n x = {!!}
 ```
 
 ## See also

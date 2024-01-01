@@ -54,20 +54,12 @@ coherence-map-Prespectrum :
   ( (n : ℕ) →
     pointed-type-Prespectrum A n →∗ pointed-type-Prespectrum B n) →
   UU (l1 ⊔ l2)
-coherence-map-Prespectrum n A B f =
-  coherence-square-pointed-maps
-    ( f n)
-    ( pointed-adjoint-structure-map-Prespectrum A n)
-    ( pointed-adjoint-structure-map-Prespectrum B n)
-    ( pointed-map-Ω (f (succ-ℕ n)))
+coherence-map-Prespectrum n A B f = {!!}
 
 map-Prespectrum :
   {l1 l2 : Level} (A : Prespectrum l1) (B : Prespectrum l2) →
   UU (l1 ⊔ l2)
-map-Prespectrum A B =
-  Σ ( (n : ℕ) →
-      pointed-type-Prespectrum A n →∗ pointed-type-Prespectrum B n)
-    ( λ f → (n : ℕ) → coherence-map-Prespectrum n A B f)
+map-Prespectrum A B = {!!}
 ```
 
 ## References

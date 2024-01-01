@@ -49,12 +49,7 @@ module _
   where
 
   iso-family-functor-Category : UU (l1 ⊔ l4)
-  iso-family-functor-Category =
-    iso-family-functor-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
+  iso-family-functor-Category = {!!}
 ```
 
 ### The predicate of being an isomorphism in a category
@@ -69,12 +64,7 @@ module _
 
   is-natural-isomorphism-Category :
     natural-transformation-Category C D F G → UU (l1 ⊔ l4)
-  is-natural-isomorphism-Category =
-    is-natural-isomorphism-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
+  is-natural-isomorphism-Category = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}
@@ -87,13 +77,7 @@ module _
   hom-inv-family-is-natural-isomorphism-Category :
     is-natural-isomorphism-Category C D F G f →
     hom-family-functor-Category C D G F
-  hom-inv-family-is-natural-isomorphism-Category =
-    hom-inv-family-is-natural-isomorphism-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
-      ( f)
+  hom-inv-family-is-natural-isomorphism-Category = {!!}
 
   is-section-hom-inv-family-is-natural-isomorphism-Category :
     (is-iso-f : is-natural-isomorphism-Category C D F G f) →
@@ -102,13 +86,7 @@ module _
       ( hom-family-natural-transformation-Category C D F G f x)
       ( hom-inv-is-iso-Category D (is-iso-f x)) ＝
     id-hom-Category D
-  is-section-hom-inv-family-is-natural-isomorphism-Category =
-    is-section-hom-inv-family-is-natural-isomorphism-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
-      ( f)
+  is-section-hom-inv-family-is-natural-isomorphism-Category = {!!}
 
   is-retraction-hom-inv-family-is-natural-isomorphism-Category :
     (is-iso-f : is-natural-isomorphism-Category C D F G f) →
@@ -117,35 +95,17 @@ module _
       ( hom-inv-is-iso-Category D (is-iso-f x))
       ( hom-family-natural-transformation-Category C D F G f x) ＝
     id-hom-Category D
-  is-retraction-hom-inv-family-is-natural-isomorphism-Category =
-    is-retraction-hom-inv-family-is-natural-isomorphism-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
-      ( f)
+  is-retraction-hom-inv-family-is-natural-isomorphism-Category = {!!}
 
   iso-family-is-natural-isomorphism-Category :
     is-natural-isomorphism-Category C D F G f →
     iso-family-functor-Category C D F G
-  iso-family-is-natural-isomorphism-Category =
-    iso-family-is-natural-isomorphism-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
-      ( f)
+  iso-family-is-natural-isomorphism-Category = {!!}
 
   inv-iso-family-is-natural-isomorphism-Category :
     is-natural-isomorphism-Category C D F G f →
     iso-family-functor-Category C D G F
-  inv-iso-family-is-natural-isomorphism-Category =
-    inv-iso-family-is-natural-isomorphism-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
-      ( f)
+  inv-iso-family-is-natural-isomorphism-Category = {!!}
 ```
 
 ### Natural isomorphisms in a category
@@ -159,12 +119,7 @@ module _
   where
 
   natural-isomorphism-Category : UU (l1 ⊔ l2 ⊔ l4)
-  natural-isomorphism-Category =
-    natural-isomorphism-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
+  natural-isomorphism-Category = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}
@@ -176,39 +131,26 @@ module _
 
   natural-transformation-natural-isomorphism-Category :
     natural-transformation-Category C D F G
-  natural-transformation-natural-isomorphism-Category =
-    natural-transformation-natural-isomorphism-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
-      ( f)
+  natural-transformation-natural-isomorphism-Category = {!!}
 
   hom-family-natural-isomorphism-Category :
     hom-family-functor-Category C D F G
-  hom-family-natural-isomorphism-Category =
-    hom-family-natural-transformation-Category C D F G
-      ( natural-transformation-natural-isomorphism-Category)
+  hom-family-natural-isomorphism-Category = {!!}
 
   coherence-square-natural-isomorphism-Category :
     is-natural-transformation-Category C D F G
       ( hom-family-natural-transformation-Category C D F G
         ( natural-transformation-natural-isomorphism-Category))
-  coherence-square-natural-isomorphism-Category =
-    naturality-natural-transformation-Category C D F G
-      ( natural-transformation-natural-isomorphism-Category)
+  coherence-square-natural-isomorphism-Category = {!!}
 
   is-natural-isomorphism-natural-isomorphism-Category :
     is-natural-isomorphism-Category C D F G
       ( natural-transformation-natural-isomorphism-Category)
-  is-natural-isomorphism-natural-isomorphism-Category = pr2 f
+  is-natural-isomorphism-natural-isomorphism-Category = {!!}
 
   hom-inv-family-natural-isomorphism-Category :
     hom-family-functor-Category C D G F
-  hom-inv-family-natural-isomorphism-Category =
-    hom-inv-family-is-natural-isomorphism-Category C D F G
-      ( natural-transformation-natural-isomorphism-Category)
-      ( is-natural-isomorphism-natural-isomorphism-Category)
+  hom-inv-family-natural-isomorphism-Category = {!!}
 
   is-section-hom-inv-family-natural-isomorphism-Category :
     (x : obj-Category C) →
@@ -216,10 +158,7 @@ module _
       ( hom-family-natural-isomorphism-Category x)
       ( hom-inv-family-natural-isomorphism-Category x) ＝
     id-hom-Category D
-  is-section-hom-inv-family-natural-isomorphism-Category =
-    is-section-hom-inv-family-is-natural-isomorphism-Category C D F G
-      ( natural-transformation-natural-isomorphism-Category)
-      ( is-natural-isomorphism-natural-isomorphism-Category)
+  is-section-hom-inv-family-natural-isomorphism-Category = {!!}
 
   is-retraction-hom-inv-family-natural-isomorphism-Category :
     (x : obj-Category C) →
@@ -227,24 +166,15 @@ module _
       ( hom-inv-family-natural-isomorphism-Category x)
       ( hom-family-natural-isomorphism-Category x) ＝
     id-hom-Category D
-  is-retraction-hom-inv-family-natural-isomorphism-Category =
-    is-retraction-hom-inv-family-is-natural-isomorphism-Category C D F G
-      ( natural-transformation-natural-isomorphism-Category)
-      ( is-natural-isomorphism-natural-isomorphism-Category)
+  is-retraction-hom-inv-family-natural-isomorphism-Category = {!!}
 
   iso-family-natural-isomorphism-Category :
     iso-family-functor-Category C D F G
-  iso-family-natural-isomorphism-Category =
-    iso-family-is-natural-isomorphism-Category C D F G
-      ( natural-transformation-natural-isomorphism-Category)
-      ( is-natural-isomorphism-natural-isomorphism-Category)
+  iso-family-natural-isomorphism-Category = {!!}
 
   inv-iso-family-natural-isomorphism-Category :
     iso-family-functor-Category C D G F
-  inv-iso-family-natural-isomorphism-Category =
-    inv-iso-family-is-natural-isomorphism-Category C D F G
-      ( natural-transformation-natural-isomorphism-Category)
-      ( is-natural-isomorphism-natural-isomorphism-Category)
+  inv-iso-family-natural-isomorphism-Category = {!!}
 ```
 
 ## Examples
@@ -260,10 +190,7 @@ module _
 
   id-natural-isomorphism-Category :
     (F : functor-Category C D) → natural-isomorphism-Category C D F F
-  id-natural-isomorphism-Category =
-    id-natural-isomorphism-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
+  id-natural-isomorphism-Category = {!!}
 ```
 
 ### Equalities induce natural isomorphisms
@@ -280,8 +207,7 @@ natural-isomorphism-eq-Category :
   (D : Category l3 l4)
   (F G : functor-Category C D) →
   F ＝ G → natural-isomorphism-Category C D F G
-natural-isomorphism-eq-Category C D F .F refl =
-  id-natural-isomorphism-Category C D F
+natural-isomorphism-eq-Category C D F .F refl = {!!}
 ```
 
 ## Propositions
@@ -302,21 +228,11 @@ module _
   is-prop-is-natural-isomorphism-Category :
     (f : natural-transformation-Category C D F G) →
     is-prop (is-natural-isomorphism-Category C D F G f)
-  is-prop-is-natural-isomorphism-Category =
-    is-prop-is-natural-isomorphism-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
+  is-prop-is-natural-isomorphism-Category = {!!}
 
   is-natural-isomorphism-prop-hom-Category :
     (f : natural-transformation-Category C D F G) → Prop (l1 ⊔ l4)
-  is-natural-isomorphism-prop-hom-Category =
-    is-natural-isomorphism-prop-hom-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
+  is-natural-isomorphism-prop-hom-Category = {!!}
 ```
 
 ### Equality of natural isomorphisms is equality of their underlying natural transformations
@@ -334,32 +250,21 @@ module _
     (f ＝ g) ≃
     ( hom-family-natural-isomorphism-Category C D F G f ~
       hom-family-natural-isomorphism-Category C D F G g)
-  extensionality-natural-isomorphism-Category =
-    extensionality-natural-isomorphism-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
+  extensionality-natural-isomorphism-Category = {!!}
 
   eq-eq-natural-transformation-natural-isomorphism-Category :
     (f g : natural-isomorphism-Category C D F G) →
     ( natural-transformation-natural-isomorphism-Category C D F G f ＝
       natural-transformation-natural-isomorphism-Category C D F G g) →
     f ＝ g
-  eq-eq-natural-transformation-natural-isomorphism-Category f g =
-    eq-type-subtype (is-natural-isomorphism-prop-hom-Category C D F G)
+  eq-eq-natural-transformation-natural-isomorphism-Category f g = {!!}
 
   eq-htpy-hom-family-natural-isomorphism-Category :
         (f g : natural-isomorphism-Category C D F G) →
     ( hom-family-natural-isomorphism-Category C D F G f ~
       hom-family-natural-isomorphism-Category C D F G g) →
     f ＝ g
-  eq-htpy-hom-family-natural-isomorphism-Category =
-    eq-htpy-hom-family-natural-isomorphism-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
+  eq-htpy-hom-family-natural-isomorphism-Category = {!!}
 ```
 
 ### The type of natural isomorphisms form a set
@@ -378,16 +283,10 @@ module _
 
   is-set-natural-isomorphism-Category :
     is-set (natural-isomorphism-Category C D F G)
-  is-set-natural-isomorphism-Category =
-    is-set-type-subtype
-      ( is-natural-isomorphism-prop-hom-Category C D F G)
-      ( is-set-natural-transformation-Category C D F G)
+  is-set-natural-isomorphism-Category = {!!}
 
   natural-isomorphism-set-Category : Set (l1 ⊔ l2 ⊔ l4)
-  pr1 natural-isomorphism-set-Category =
-    natural-isomorphism-Category C D F G
-  pr2 natural-isomorphism-set-Category =
-    is-set-natural-isomorphism-Category
+  pr1 natural-isomorphism-set-Category = {!!}
 ```
 
 ### Inverses of natural isomorphisms are natural isomorphisms
@@ -404,13 +303,7 @@ module _
   natural-transformation-inv-is-natural-isomorphism-Category :
     is-natural-isomorphism-Category C D F G f →
     natural-transformation-Category C D G F
-  natural-transformation-inv-is-natural-isomorphism-Category =
-    natural-transformation-inv-is-natural-isomorphism-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
-      ( f)
+  natural-transformation-inv-is-natural-isomorphism-Category = {!!}
 
   is-section-natural-transformation-inv-is-natural-isomorphism-Category :
     (is-iso-f : is-natural-isomorphism-Category C D F G f) →
@@ -420,9 +313,7 @@ module _
         ( is-iso-f)) ＝
     id-natural-transformation-Category C D G
   is-section-natural-transformation-inv-is-natural-isomorphism-Category
-    is-iso-f =
-    eq-htpy-hom-family-natural-transformation-Category C D G G _ _
-      ( is-section-hom-inv-is-iso-Category D ∘ is-iso-f)
+    is-iso-f = {!!}
 
   is-retraction-natural-transformation-inv-is-natural-isomorphism-Category :
     (is-iso-f : is-natural-isomorphism-Category C D F G f) →
@@ -431,16 +322,13 @@ module _
       ( f) ＝
     id-natural-transformation-Category C D F
   is-retraction-natural-transformation-inv-is-natural-isomorphism-Category
-    is-iso-f =
-    eq-htpy-hom-family-natural-transformation-Category C D F F _ _
-      ( is-retraction-hom-inv-is-iso-Category D ∘ is-iso-f)
+    is-iso-f = {!!}
 
   is-natural-isomorphism-inv-is-natural-isomorphism-Category :
     (is-iso-f : is-natural-isomorphism-Category C D F G f) →
     is-natural-isomorphism-Category C D G F
       ( natural-transformation-inv-is-natural-isomorphism-Category is-iso-f)
-  is-natural-isomorphism-inv-is-natural-isomorphism-Category is-iso-f =
-    is-iso-inv-is-iso-Category D ∘ is-iso-f
+  is-natural-isomorphism-inv-is-natural-isomorphism-Category is-iso-f = {!!}
 ```
 
 ### Inverses of natural isomorphisms
@@ -456,47 +344,30 @@ module _
 
   natural-transformation-inv-natural-isomorphism-Category :
     natural-transformation-Category C D G F
-  natural-transformation-inv-natural-isomorphism-Category =
-    natural-transformation-inv-is-natural-isomorphism-Category C D F G
-      ( natural-transformation-natural-isomorphism-Category C D F G f)
-      ( is-natural-isomorphism-natural-isomorphism-Category C D F G f)
+  natural-transformation-inv-natural-isomorphism-Category = {!!}
 
   is-section-natural-transformation-inv-natural-isomorphism-Category :
     ( comp-natural-transformation-Category C D G F G
       ( natural-transformation-natural-isomorphism-Category C D F G f)
       ( natural-transformation-inv-natural-isomorphism-Category)) ＝
     ( id-natural-transformation-Category C D G)
-  is-section-natural-transformation-inv-natural-isomorphism-Category =
-    is-section-natural-transformation-inv-is-natural-isomorphism-Category
-      C D F G
-      ( natural-transformation-natural-isomorphism-Category C D F G f)
-      ( is-natural-isomorphism-natural-isomorphism-Category C D F G f)
+  is-section-natural-transformation-inv-natural-isomorphism-Category = {!!}
 
   is-retraction-natural-transformation-inv-natural-isomorphism-Category :
     ( comp-natural-transformation-Category C D F G F
       ( natural-transformation-inv-natural-isomorphism-Category)
       ( natural-transformation-natural-isomorphism-Category C D F G f)) ＝
     ( id-natural-transformation-Category C D F)
-  is-retraction-natural-transformation-inv-natural-isomorphism-Category =
-    is-retraction-natural-transformation-inv-is-natural-isomorphism-Category
-      C D F G
-      ( natural-transformation-natural-isomorphism-Category C D F G f)
-      ( is-natural-isomorphism-natural-isomorphism-Category C D F G f)
+  is-retraction-natural-transformation-inv-natural-isomorphism-Category = {!!}
 
   is-natural-isomorphism-inv-natural-isomorphism-Category :
     is-natural-isomorphism-Category C D G F
       ( natural-transformation-inv-natural-isomorphism-Category)
-  is-natural-isomorphism-inv-natural-isomorphism-Category =
-    is-natural-isomorphism-inv-is-natural-isomorphism-Category C D F G
-      ( natural-transformation-natural-isomorphism-Category C D F G f)
-      ( is-natural-isomorphism-natural-isomorphism-Category C D F G f)
+  is-natural-isomorphism-inv-natural-isomorphism-Category = {!!}
 
   inv-natural-isomorphism-Category :
     natural-isomorphism-Category C D G F
-  pr1 inv-natural-isomorphism-Category =
-    natural-transformation-inv-natural-isomorphism-Category
-  pr2 inv-natural-isomorphism-Category =
-    is-natural-isomorphism-inv-natural-isomorphism-Category
+  pr1 inv-natural-isomorphism-Category = {!!}
 ```
 
 ### Natural isomorphisms are closed under composition
@@ -517,8 +388,7 @@ module _
     is-natural-isomorphism-Category C D F H
       ( comp-natural-transformation-Category C D F G H g f)
   is-natural-isomorphism-comp-is-natural-isomorphism-Category
-    is-iso-g is-iso-f x =
-      is-iso-comp-is-iso-Category D (is-iso-g x) (is-iso-f x)
+    is-iso-g is-iso-f x = {!!}
 ```
 
 ### The composition operation on natural isomorphisms
@@ -535,50 +405,33 @@ module _
 
   hom-comp-natural-isomorphism-Category :
     natural-transformation-Category C D F H
-  hom-comp-natural-isomorphism-Category =
-    comp-natural-transformation-Category C D F G H
-      ( natural-transformation-natural-isomorphism-Category C D G H g)
-      ( natural-transformation-natural-isomorphism-Category C D F G f)
+  hom-comp-natural-isomorphism-Category = {!!}
 
   is-natural-isomorphism-comp-natural-isomorphism-Category :
     is-natural-isomorphism-Category C D F H
       ( hom-comp-natural-isomorphism-Category)
-  is-natural-isomorphism-comp-natural-isomorphism-Category =
-    is-natural-isomorphism-comp-is-natural-isomorphism-Category C D F G H
-      ( natural-transformation-natural-isomorphism-Category C D G H g)
-      ( natural-transformation-natural-isomorphism-Category C D F G f)
-      ( is-natural-isomorphism-natural-isomorphism-Category C D G H g)
-      ( is-natural-isomorphism-natural-isomorphism-Category C D F G f)
+  is-natural-isomorphism-comp-natural-isomorphism-Category = {!!}
 
   comp-natural-isomorphism-Category : natural-isomorphism-Category C D F H
-  pr1 comp-natural-isomorphism-Category =
-    hom-comp-natural-isomorphism-Category
-  pr2 comp-natural-isomorphism-Category =
-    is-natural-isomorphism-comp-natural-isomorphism-Category
+  pr1 comp-natural-isomorphism-Category = {!!}
 
   natural-transformation-inv-comp-natural-isomorphism-Category :
     natural-transformation-Category C D H F
-  natural-transformation-inv-comp-natural-isomorphism-Category =
-    natural-transformation-inv-natural-isomorphism-Category C D F H
-      ( comp-natural-isomorphism-Category)
+  natural-transformation-inv-comp-natural-isomorphism-Category = {!!}
 
   is-section-inv-comp-natural-isomorphism-Category :
     ( comp-natural-transformation-Category C D H F H
       ( hom-comp-natural-isomorphism-Category)
       ( natural-transformation-inv-comp-natural-isomorphism-Category)) ＝
     ( id-natural-transformation-Category C D H)
-  is-section-inv-comp-natural-isomorphism-Category =
-    is-section-natural-transformation-inv-natural-isomorphism-Category
-      C D F H comp-natural-isomorphism-Category
+  is-section-inv-comp-natural-isomorphism-Category = {!!}
 
   is-retraction-inv-comp-natural-isomorphism-Category :
     ( comp-natural-transformation-Category C D F H F
       ( natural-transformation-inv-comp-natural-isomorphism-Category)
       ( hom-comp-natural-isomorphism-Category)) ＝
     ( id-natural-transformation-Category C D F)
-  is-retraction-inv-comp-natural-isomorphism-Category =
-    is-retraction-natural-transformation-inv-natural-isomorphism-Category
-      C D F H comp-natural-isomorphism-Category
+  is-retraction-inv-comp-natural-isomorphism-Category = {!!}
 ```
 
 ### Groupoid laws of natural isomorphisms in categories
@@ -599,25 +452,13 @@ module _
       ( id-natural-isomorphism-Category C D G)
       ( f) ＝
     f
-  left-unit-law-comp-natural-isomorphism-Category =
-    left-unit-law-comp-natural-isomorphism-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
-      ( f)
+  left-unit-law-comp-natural-isomorphism-Category = {!!}
 
   right-unit-law-comp-natural-isomorphism-Category :
     comp-natural-isomorphism-Category C D F F G f
       ( id-natural-isomorphism-Category C D F) ＝
     f
-  right-unit-law-comp-natural-isomorphism-Category =
-    right-unit-law-comp-natural-isomorphism-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
-      ( f)
+  right-unit-law-comp-natural-isomorphism-Category = {!!}
 ```
 
 #### Composition of natural isomorphisms is associative
@@ -639,17 +480,7 @@ module _
       ( f)) ＝
     ( comp-natural-isomorphism-Category C D F H I h
       ( comp-natural-isomorphism-Category C D F G H g f))
-  associative-comp-natural-isomorphism-Category =
-    associative-comp-natural-isomorphism-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
-      ( H)
-      ( I)
-      ( f)
-      ( g)
-      ( h)
+  associative-comp-natural-isomorphism-Category = {!!}
 ```
 
 #### Composition of natural isomorphisms satisfies inverse laws
@@ -668,26 +499,14 @@ module _
       ( inv-natural-isomorphism-Category C D F G f)
       ( f)) ＝
     ( id-natural-isomorphism-Category C D F)
-  left-inverse-law-comp-natural-isomorphism-Category =
-    left-inverse-law-comp-natural-isomorphism-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
-      ( f)
+  left-inverse-law-comp-natural-isomorphism-Category = {!!}
 
   right-inverse-law-comp-natural-isomorphism-Category :
     ( comp-natural-isomorphism-Category C D G F G
       ( f)
       ( inv-natural-isomorphism-Category C D F G f)) ＝
     ( id-natural-isomorphism-Category C D G)
-  right-inverse-law-comp-natural-isomorphism-Category =
-    right-inverse-law-comp-natural-isomorphism-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
-      ( f)
+  right-inverse-law-comp-natural-isomorphism-Category = {!!}
 ```
 
 ### When the type of natural transformations is a proposition, the type of natural isomorphisms is a proposition
@@ -707,21 +526,11 @@ module _
   is-prop-natural-isomorphism-Category :
     is-prop (natural-transformation-Category C D F G) →
     is-prop (natural-isomorphism-Category C D F G)
-  is-prop-natural-isomorphism-Category =
-    is-prop-natural-isomorphism-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
+  is-prop-natural-isomorphism-Category = {!!}
 
   natural-isomorphism-prop-Category :
     is-prop (natural-transformation-Category C D F G) → Prop (l1 ⊔ l2 ⊔ l4)
-  natural-isomorphism-prop-Category =
-    natural-isomorphism-prop-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( F)
-      ( G)
+  natural-isomorphism-prop-Category = {!!}
 ```
 
 ### Functoriality of `natural-isomorphism-eq`
@@ -740,8 +549,5 @@ module _
     comp-natural-isomorphism-Category C D F G H
       ( natural-isomorphism-eq-Category C D G H q)
       ( natural-isomorphism-eq-Category C D F G p)
-  preserves-concat-natural-isomorphism-eq-Category refl q =
-    inv
-      ( right-unit-law-comp-natural-isomorphism-Category C D F H
-        ( natural-isomorphism-eq-Category C D G H q))
+  preserves-concat-natural-isomorphism-eq-Category refl q = {!!}
 ```

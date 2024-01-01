@@ -30,13 +30,13 @@ A type `A` is said to be **acyclic** if its
 
 ```agda
 is-acyclic-Prop : {l : Level} → UU l → Prop l
-is-acyclic-Prop A = is-contr-Prop (suspension A)
+is-acyclic-Prop A = {!!}
 
 is-acyclic : {l : Level} → UU l → UU l
-is-acyclic A = type-Prop (is-acyclic-Prop A)
+is-acyclic A = {!!}
 
 is-prop-is-acyclic : {l : Level} (A : UU l) → is-prop (is-acyclic A)
-is-prop-is-acyclic A = is-prop-type-Prop (is-acyclic-Prop A)
+is-prop-is-acyclic A = {!!}
 ```
 
 ## Properties
@@ -47,13 +47,12 @@ is-prop-is-acyclic A = is-prop-type-Prop (is-acyclic-Prop A)
 is-acyclic-equiv :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   A ≃ B → is-acyclic B → is-acyclic A
-is-acyclic-equiv {B = B} e ac =
-  is-contr-equiv (suspension B) (equiv-suspension e) ac
+is-acyclic-equiv {B = B} e ac = {!!}
 
 is-acyclic-equiv' :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   A ≃ B → is-acyclic A → is-acyclic B
-is-acyclic-equiv' e = is-acyclic-equiv (inv-equiv e)
+is-acyclic-equiv' e = {!!}
 ```
 
 ### Acyclic types are closed under retracts
@@ -64,18 +63,17 @@ module _
   where
 
   is-acyclic-retract-of : A retract-of B → is-acyclic B → is-acyclic A
-  is-acyclic-retract-of R ac =
-    is-contr-retract-of (suspension B) (retract-of-suspension-retract-of R) ac
+  is-acyclic-retract-of R ac = {!!}
 ```
 
 ### Contractible types are acyclic
 
 ```agda
 is-acyclic-is-contr : {l : Level} (A : UU l) → is-contr A → is-acyclic A
-is-acyclic-is-contr A = is-contr-suspension-is-contr
+is-acyclic-is-contr A = {!!}
 
 is-acyclic-unit : is-acyclic unit
-is-acyclic-unit = is-acyclic-is-contr unit is-contr-unit
+is-acyclic-unit = {!!}
 ```
 
 ## See also

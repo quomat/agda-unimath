@@ -36,14 +36,10 @@ module _
   where
 
   essential-fiber-functor-Precategory : (y : obj-Precategory D) → UU (l1 ⊔ l4)
-  essential-fiber-functor-Precategory y =
-    Σ ( obj-Precategory C)
-      ( λ x → iso-Precategory D (obj-functor-Precategory C D F x) y)
+  essential-fiber-functor-Precategory y = {!!}
 
   essential-fiber-functor-Precategory' : (y : obj-Precategory D) → UU (l1 ⊔ l4)
-  essential-fiber-functor-Precategory' y =
-    Σ ( obj-Precategory C)
-      ( λ x → iso-Precategory D y (obj-functor-Precategory C D F x))
+  essential-fiber-functor-Precategory' y = {!!}
 ```
 
 ## See also

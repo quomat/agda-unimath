@@ -36,10 +36,10 @@ open import foundation-core.transport-along-identifications
 
 ## Idea
 
-Consider two maps `f : A → B` and `g : B → A`. For `(g ◦ f ) ^ n (a₀) = a`,
+Consider two maps `f : A → B` and `g : B → A`. For `(g ◦ f ) ^ n (a₀) = {!!}
 consider also the following chain
 
-`a₀ --> f (a₀) --> g (f (a₀)) --> f (g (f (a₀))) --> ... --> (g ◦ f ) ^ n (a₀) = a`
+`a₀ --> f (a₀) --> g (f (a₀)) --> f (g (f (a₀))) --> ... --> (g ◦ f ) ^ n (a₀) = {!!}
 
 We say `a₀` is an origin for `a`, and `a` is `perfect image` for `g` if any
 origin of `a` is in the image of `g`.
@@ -52,8 +52,7 @@ module _
   where
 
   is-perfect-image : (a : A) → UU (l1 ⊔ l2)
-  is-perfect-image a =
-    (a₀ : A) (n : ℕ) → (iterate n (g ∘ f)) a₀ ＝ a → fiber g a₀
+  is-perfect-image a = {!!}
 ```
 
 ## Properties
@@ -70,22 +69,18 @@ module _
 
   is-prop-is-perfect-image-is-emb :
     (a : A) → is-prop (is-perfect-image f g a)
-  is-prop-is-perfect-image-is-emb a =
-    is-prop-Π (λ a₀ → (is-prop-Π λ n →
-      is-prop-Π (λ p → (is-prop-map-is-emb is-emb-g a₀))))
+  is-prop-is-perfect-image-is-emb a = {!!}
 
   is-perfect-image-Prop : A → Prop (l1 ⊔ l2)
-  pr1 (is-perfect-image-Prop a) = is-perfect-image f g a
-  pr2 (is-perfect-image-Prop a) = is-prop-is-perfect-image-is-emb a
+  pr1 (is-perfect-image-Prop a) = {!!}
 
   is-decidable-is-perfect-image-is-emb :
     LEM (l1 ⊔ l2) → (a : A) → is-decidable (is-perfect-image f g a)
-  is-decidable-is-perfect-image-is-emb lem a =
-    lem (is-perfect-image-Prop a)
+  is-decidable-is-perfect-image-is-emb lem a = {!!}
 ```
 
 If `a` is a perfect image for `g`, then `a` has a preimage under `g`. Just take
-n=zero in the definition.
+n= {!!}
 
 ```agda
 module _
@@ -95,7 +90,7 @@ module _
   is-perfect-image-is-fiber :
     {f : A → B} {g : B → A} → (a : A) →
     is-perfect-image f g a → fiber g a
-  is-perfect-image-is-fiber a ρ = ρ a 0 refl
+  is-perfect-image-is-fiber a ρ = {!!}
 ```
 
 One can define a map from `A` to `B` restricting the domain to the perfect
@@ -109,14 +104,12 @@ module _
 
   inverse-of-perfect-image :
     (a : A) → (is-perfect-image f g a) → B
-  inverse-of-perfect-image a ρ =
-    pr1 (is-perfect-image-is-fiber a ρ)
+  inverse-of-perfect-image a ρ = {!!}
 
   is-section-inverse-of-perfect-image :
     (a : A) (ρ : is-perfect-image f g a) →
     g (inverse-of-perfect-image a ρ) ＝ a
-  is-section-inverse-of-perfect-image a ρ =
-    pr2 (is-perfect-image-is-fiber a ρ)
+  is-section-inverse-of-perfect-image a ρ = {!!}
 ```
 
 ```agda
@@ -128,10 +121,7 @@ module _
   is-retraction-inverse-of-perfect-image :
     (b : B) (ρ : is-perfect-image f g (g b)) →
     inverse-of-perfect-image (g b) ρ ＝ b
-  is-retraction-inverse-of-perfect-image b ρ =
-    is-injective-is-emb
-      is-emb-g
-      (is-section-inverse-of-perfect-image (g b) ρ)
+  is-retraction-inverse-of-perfect-image b ρ = {!!}
 ```
 
 If `g (f (a))` is a perfect image for `g`, so is `a`.
@@ -145,7 +135,7 @@ module _
     (a : A) →
     is-perfect-image f g (g (f (a))) →
     is-perfect-image f g a
-  previous-perfect-image a γ a₀ n p = γ a₀ (succ-ℕ n) (ap (g ∘ f) p)
+  previous-perfect-image a γ a₀ n p = {!!}
 ```
 
 Perfect images goes to a disjoint place under `inverse-of-perfect-image` than
@@ -159,17 +149,13 @@ module _
   perfect-image-has-distinct-image :
     (a a₀ : A) → ¬ (is-perfect-image f g a) → (ρ : is-perfect-image f g a₀) →
     f a ≠ inverse-of-perfect-image a₀ ρ
-  perfect-image-has-distinct-image a a₀ nρ ρ p =
-    v ρ
-    where
-    q : g (f a) ＝ a₀
-    q = ap g p ∙ is-section-inverse-of-perfect-image a₀ ρ
+  perfect-image-has-distinct-image a a₀ nρ ρ p = {!!}
 
     s : ¬ (is-perfect-image f g (g (f a)))
-    s = λ η → nρ (previous-perfect-image a η)
+    s = {!!}
 
     v : ¬ (is-perfect-image f g a₀)
-    v = tr (λ _ → ¬ (is-perfect-image f g _)) q s
+    v = {!!}
 ```
 
 Using the property above, we can talk about origins of `a` which are not images
@@ -181,8 +167,7 @@ module _
   where
 
   is-not-perfect-image : (a : A) → UU (l1 ⊔ l2)
-  is-not-perfect-image a =
-    Σ A (λ a₀ → (Σ ℕ (λ n → ((iterate n (g ∘ f)) a₀ ＝ a) × ¬ (fiber g a₀))))
+  is-not-perfect-image a = {!!}
 ```
 
 If we assume law of excluded middle and `g` is embedding, we can prove that if
@@ -199,11 +184,7 @@ module _
     (a : A) →
     ¬ (is-not-perfect-image a) →
     (is-perfect-image f g a)
-  not-not-perfect-is-perfect a nρ a₀ n p =
-    ind-coprod _
-      (id)
-      (λ a₁ → ex-falso (nρ (pair a₀ (pair n (pair p a₁)))))
-      (lem (pair (fiber g a₀) (is-prop-map-is-emb is-emb-g a₀)))
+  not-not-perfect-is-perfect a nρ a₀ n p = {!!}
 ```
 
 The following property states that if `g (b)` is not a perfect image, then `b`
@@ -222,37 +203,25 @@ module _
       (b : B) →
       ¬ (is-perfect-image f g (g b)) →
       Σ (fiber f b) (λ s → ¬ (is-perfect-image f g (pr1 s)))
-  not-perfect-image-has-not-perfect-fiber b nρ = v
-      where
-      i : ¬¬ (is-not-perfect-image {f = f} (g b))
-      i = λ nμ → nρ (not-not-perfect-is-perfect is-emb-g lem (g b) nμ)
+  not-perfect-image-has-not-perfect-fiber b nρ = {!!}
 
       ii :
         is-not-perfect-image (g b) →
         Σ (fiber f b) (λ s → ¬ (is-perfect-image f g (pr1 s)))
-      ii (pair x₀ (pair zero-ℕ u)) =
-        ex-falso (pr2 u (pair b (inv (pr1 u))))
-      ii (pair x₀ (pair (succ-ℕ n) u)) =
-        pair a w
-        where
-        q : f ((iterate n (g ∘ f)) x₀) ＝ b
-        q = is-injective-is-emb is-emb-g (pr1 u)
+      ii (pair x₀ (pair zero-ℕ u)) = {!!}
 
         a : fiber f b
-        a = pair ((iterate n (g ∘ f)) x₀) q
+        a = {!!}
 
         w : ¬ (is-perfect-image f g ((iterate n (g ∘ f)) x₀))
-        w = λ s → pr2 u (s x₀ n refl)
+        w = {!!}
 
       iii : ¬¬ (Σ (fiber f b) (λ s → ¬ (is-perfect-image f g (pr1 s))))
-      iii = λ t → i (λ s → t (ii s))
+      iii = {!!}
 
       iv : is-prop (Σ (fiber f b) (λ s → ¬ (is-perfect-image f g (pr1 s))))
-      iv =
-        is-prop-Σ
-          (is-prop-map-is-emb is-emb-f b)
-          (λ s → is-prop-neg {A = is-perfect-image f g (pr1 s)})
+      iv = {!!}
 
       v : Σ (fiber f b) (λ s → ¬ (is-perfect-image f g (pr1 s)))
-      v = double-negation-elim-is-decidable (lem (pair _ iv)) iii
+      v = {!!}
 ```

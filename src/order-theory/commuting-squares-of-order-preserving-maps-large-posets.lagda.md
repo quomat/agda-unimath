@@ -65,8 +65,5 @@ module _
   where
 
   coherence-square-hom-Large-Poset : UUω
-  coherence-square-hom-Large-Poset =
-    sim-hom-Large-Poset P V
-      ( comp-hom-Large-Poset P Q V j f)
-      ( comp-hom-Large-Poset P U V g i)
+  coherence-square-hom-Large-Poset = {!!}
 ```

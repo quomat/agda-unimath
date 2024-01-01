@@ -37,9 +37,7 @@ to the [wild monoid](structured-types.wild-monoids.md) of
 ```agda
 wild-representation-type-Monoid :
   (l1 : Level) {l2 : Level} (M : Monoid l2) → UU (lsuc l1 ⊔ l2)
-wild-representation-type-Monoid l1 M =
-  Σ ( UU l1)
-    ( λ X → hom-Wild-Monoid (wild-monoid-Monoid M) (endo-Wild-Monoid X))
+wild-representation-type-Monoid l1 M = {!!}
 
 module _
   {l1 l2 : Level} (M : Monoid l1)
@@ -47,38 +45,26 @@ module _
   where
 
   type-wild-representation-type-Monoid : UU l2
-  type-wild-representation-type-Monoid = pr1 ρ
+  type-wild-representation-type-Monoid = {!!}
 
   hom-action-wild-representation-type-Monoid :
     hom-Wild-Monoid
       ( wild-monoid-Monoid M)
       ( endo-Wild-Monoid type-wild-representation-type-Monoid)
-  hom-action-wild-representation-type-Monoid = pr2 ρ
+  hom-action-wild-representation-type-Monoid = {!!}
 
   action-wild-representation-type-Monoid :
     type-Monoid M → endo type-wild-representation-type-Monoid
-  action-wild-representation-type-Monoid =
-    map-hom-Wild-Monoid
-      ( wild-monoid-Monoid M)
-      ( endo-Wild-Monoid type-wild-representation-type-Monoid)
-      ( hom-action-wild-representation-type-Monoid)
+  action-wild-representation-type-Monoid = {!!}
 
   preserves-mul-action-wild-representation-type-Monoid :
     { x y : type-Monoid M} →
     ( action-wild-representation-type-Monoid (mul-Monoid M x y)) ＝
     ( ( action-wild-representation-type-Monoid x) ∘
       ( action-wild-representation-type-Monoid y))
-  preserves-mul-action-wild-representation-type-Monoid =
-    preserves-mul-map-hom-Wild-Monoid
-      ( wild-monoid-Monoid M)
-      ( endo-Wild-Monoid type-wild-representation-type-Monoid)
-      ( hom-action-wild-representation-type-Monoid)
+  preserves-mul-action-wild-representation-type-Monoid = {!!}
 
   preserves-unit-action-wild-representation-type-Monoid :
     action-wild-representation-type-Monoid (unit-Monoid M) ＝ id
-  preserves-unit-action-wild-representation-type-Monoid =
-    preserves-unit-map-hom-Wild-Monoid
-      ( wild-monoid-Monoid M)
-      ( endo-Wild-Monoid type-wild-representation-type-Monoid)
-      ( hom-action-wild-representation-type-Monoid)
+  preserves-unit-action-wild-representation-type-Monoid = {!!}
 ```

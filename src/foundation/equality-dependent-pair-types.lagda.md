@@ -49,7 +49,7 @@ module _
     (q' : dependent-identification B q y' z') →
     eq-pair-Σ (p ∙ q) (concat-dependent-identification B p q p' q') ＝
     ( eq-pair-Σ p p' ∙ eq-pair-Σ q q')
-  interchange-concat-eq-pair-Σ refl q refl q' = refl
+  interchange-concat-eq-pair-Σ refl q refl q' = {!!}
 ```
 
 ### Interchange law for concatenation and `pair-eq-Σ`
@@ -68,13 +68,12 @@ module _
         ( pr1 (pair-eq-Σ q))
         ( pr2 (pair-eq-Σ p))
         ( pr2 (pair-eq-Σ q)))
-  interchange-concat-pair-eq-Σ refl q = refl
+  interchange-concat-pair-eq-Σ refl q = {!!}
 
   pr1-interchange-concat-pair-eq-Σ :
     {x y z : Σ A B} (p : x ＝ y) (q : y ＝ z) →
     pr1 (pair-eq-Σ (p ∙ q)) ＝ (pr1 (pair-eq-Σ p) ∙ pr1 (pair-eq-Σ q))
-  pr1-interchange-concat-pair-eq-Σ p q =
-    ap pr1 (interchange-concat-pair-eq-Σ p q)
+  pr1-interchange-concat-pair-eq-Σ p q = {!!}
 ```
 
 ### Distributivity of `inv` over `eq-pair-Σ`
@@ -89,7 +88,7 @@ module _
     (p' : dependent-identification B p x' y') →
     inv (eq-pair-Σ p p') ＝
     eq-pair-Σ (inv p) (inv-dependent-identification B p p')
-  distributive-inv-eq-pair-Σ refl refl = refl
+  distributive-inv-eq-pair-Σ refl refl = {!!}
 ```
 
 ### Computing `pair-eq-Σ` at an identification of the form `ap f p`
@@ -104,12 +103,12 @@ module _
     pair-eq-Σ (ap f p) ＝
     ( ( ap (pr1 ∘ f) p) ,
       ( substitution-law-tr B (pr1 ∘ f) p ∙ apd (pr2 ∘ f) p))
-  pair-eq-Σ-ap refl = refl
+  pair-eq-Σ-ap refl = {!!}
 
   pr1-pair-eq-Σ-ap :
     {x y : X} (p : x ＝ y) →
     pr1 (pair-eq-Σ (ap f p)) ＝ ap (pr1 ∘ f) p
-  pr1-pair-eq-Σ-ap refl = refl
+  pr1-pair-eq-Σ-ap refl = {!!}
 ```
 
 ### Computing action of functions on identifications of the form `eq-pair-Σ p q`
@@ -123,7 +122,7 @@ module _
     { x y : A} (p : x ＝ y) {b : B x} {b' : B y} →
     ( q : dependent-identification B p b b') →
     ap f (eq-pair-Σ p q) ＝ (ap f (eq-pair-Σ p refl) ∙ ap (ev-pair f y) q)
-  compute-ap-eq-pair-Σ refl refl = refl
+  compute-ap-eq-pair-Σ refl refl = {!!}
 ```
 
 ### Equality of dependent pair types consists of two orthogonal components
@@ -137,7 +136,7 @@ module _
     { a a' : A} (p : a ＝ a') →
     { b : B a} {b' : B a'} (q : dependent-identification B p b b') →
     eq-pair-Σ p q ＝ (eq-pair-Σ p refl ∙ eq-pair-Σ refl q)
-  triangle-eq-pair-Σ refl q = refl
+  triangle-eq-pair-Σ refl q = {!!}
 ```
 
 ### Computing identifications in iterated dependent pair types
@@ -150,32 +149,17 @@ module _
   where
 
   Eq-Σ²' : (s t : Σ (Σ A B) C) → UU (l1 ⊔ l2 ⊔ l3)
-  Eq-Σ²' s t =
-    Σ ( Eq-Σ (pr1 s) (pr1 t))
-      ( λ q → dependent-identification C (eq-pair-Σ' q) (pr2 s) (pr2 t))
+  Eq-Σ²' s t = {!!}
 
   equiv-triple-eq-Σ' :
     (s t : Σ (Σ A B) C) →
     (s ＝ t) ≃ Eq-Σ²' s t
-  equiv-triple-eq-Σ' s t =
-    ( equiv-Σ
-      ( λ q →
-        ( dependent-identification
-          ( C)
-          ( eq-pair-Σ' q)
-          ( pr2 s)
-          ( pr2 t)))
-      ( equiv-pair-eq-Σ (pr1 s) (pr1 t))
-      ( λ p →
-        ( equiv-tr
-          ( λ q → dependent-identification C q (pr2 s) (pr2 t))
-          ( inv (is-section-pair-eq-Σ (pr1 s) (pr1 t) p))))) ∘e
-    ( equiv-pair-eq-Σ s t)
+  equiv-triple-eq-Σ' s t = {!!}
 
   triple-eq-Σ' :
     (s t : Σ (Σ A B) C) →
     (s ＝ t) → Eq-Σ²' s t
-  triple-eq-Σ' s t = map-equiv (equiv-triple-eq-Σ' s t)
+  triple-eq-Σ' s t = {!!}
 ```
 
 #### Computing dependent identifications on the second component
@@ -189,19 +173,12 @@ module _
     {s t : Σ A (λ x → Σ (B x) λ y → C x y)} (p : s ＝ t) →
     eq-base-eq-pair-Σ p ＝
     eq-base-eq-pair-Σ (eq-base-eq-pair-Σ (ap (map-inv-associative-Σ' A B C) p))
-  coh-eq-base-Σ² refl = refl
+  coh-eq-base-Σ² refl = {!!}
 
   dependent-eq-second-component-eq-Σ² :
     {s t : Σ A (λ x → Σ (B x) λ y → C x y)} (p : s ＝ t) →
     dependent-identification B (eq-base-eq-pair-Σ p) (pr1 (pr2 s)) (pr1 (pr2 t))
-  dependent-eq-second-component-eq-Σ² {s = s} {t = t} p =
-    ( ap (λ q → tr B q (pr1 (pr2 s))) (coh-eq-base-Σ² p)) ∙
-    ( pr2
-      ( pr1
-        ( triple-eq-Σ'
-          ( map-inv-associative-Σ' A B C s)
-          ( map-inv-associative-Σ' A B C t)
-          ( ap (map-inv-associative-Σ' A B C) p))))
+  dependent-eq-second-component-eq-Σ² {s = s} {t = t} p = {!!}
 ```
 
 #### Computing dependent identifications on the third component
@@ -216,7 +193,7 @@ module _
     { s t : Σ A (λ x → Σ (B x) (λ y → Σ (C x) (D x y)))} (p : s ＝ t) →
     eq-base-eq-pair-Σ p ＝
     eq-base-eq-pair-Σ (ap (map-equiv (interchange-Σ-Σ-Σ D)) p)
-  coh-eq-base-Σ³ refl = refl
+  coh-eq-base-Σ³ refl = {!!}
 
   dependent-eq-third-component-eq-Σ³ :
     { s t : Σ A (λ x → Σ (B x) (λ y → Σ (C x) (D x y)))} (p : s ＝ t) →
@@ -224,10 +201,7 @@ module _
       ( eq-base-eq-pair-Σ p)
       ( pr1 (pr2 (pr2 s)))
       ( pr1 (pr2 (pr2 t)))
-  dependent-eq-third-component-eq-Σ³ {s = s} {t = t} p =
-    ( ap (λ q → tr C q (pr1 (pr2 (pr2 s)))) (coh-eq-base-Σ³ p)) ∙
-    ( dependent-eq-second-component-eq-Σ²
-      ( ap (map-equiv (interchange-Σ-Σ-Σ D)) p))
+  dependent-eq-third-component-eq-Σ³ {s = s} {t = t} p = {!!}
 ```
 
 ## See also

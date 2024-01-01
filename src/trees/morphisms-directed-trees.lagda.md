@@ -43,8 +43,7 @@ underlying directed graphs.
 hom-Directed-Tree :
   {l1 l2 l3 l4 : Level} (S : Directed-Tree l1 l2) (T : Directed-Tree l3 l4) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-hom-Directed-Tree S T =
-  hom-Directed-Graph (graph-Directed-Tree S) (graph-Directed-Tree T)
+hom-Directed-Tree S T = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} (S : Directed-Tree l1 l2) (T : Directed-Tree l3 l4)
@@ -52,42 +51,26 @@ module _
   where
 
   node-hom-Directed-Tree : node-Directed-Tree S → node-Directed-Tree T
-  node-hom-Directed-Tree =
-    vertex-hom-Directed-Graph
-      ( graph-Directed-Tree S)
-      ( graph-Directed-Tree T)
-      ( f)
+  node-hom-Directed-Tree = {!!}
 
   edge-hom-Directed-Tree :
     {x y : node-Directed-Tree S} →
     edge-Directed-Tree S x y →
     edge-Directed-Tree T (node-hom-Directed-Tree x) (node-hom-Directed-Tree y)
-  edge-hom-Directed-Tree =
-    edge-hom-Directed-Graph
-      ( graph-Directed-Tree S)
-      ( graph-Directed-Tree T)
-      ( f)
+  edge-hom-Directed-Tree = {!!}
 
   direct-predecessor-hom-Directed-Tree :
     (x : node-Directed-Tree S) →
     Σ ( node-Directed-Tree S) (λ y → edge-Directed-Tree S y x) →
     Σ ( node-Directed-Tree T)
       ( λ y → edge-Directed-Tree T y (node-hom-Directed-Tree x))
-  direct-predecessor-hom-Directed-Tree x =
-    map-Σ
-      ( λ y → edge-Directed-Tree T y (node-hom-Directed-Tree x))
-      ( node-hom-Directed-Tree)
-      ( λ y → edge-hom-Directed-Tree)
+  direct-predecessor-hom-Directed-Tree x = {!!}
 
   walk-hom-Directed-Tree :
     {x y : node-Directed-Tree S} →
     walk-Directed-Tree S x y →
     walk-Directed-Tree T (node-hom-Directed-Tree x) (node-hom-Directed-Tree y)
-  walk-hom-Directed-Tree =
-    walk-hom-Directed-Graph
-      ( graph-Directed-Tree S)
-      ( graph-Directed-Tree T)
-      ( f)
+  walk-hom-Directed-Tree = {!!}
 ```
 
 ### Identity morphisms of directed trees
@@ -95,8 +78,7 @@ module _
 ```agda
 id-hom-Directed-Tree :
   {l1 l2 : Level} (T : Directed-Tree l1 l2) → hom-Directed-Tree T T
-id-hom-Directed-Tree T =
-  id-hom-Directed-Graph (graph-Directed-Tree T)
+id-hom-Directed-Tree T = {!!}
 ```
 
 ### Composition of morphisms of directed trees
@@ -110,36 +92,18 @@ module _
 
   node-comp-hom-Directed-Tree :
     node-Directed-Tree R → node-Directed-Tree T
-  node-comp-hom-Directed-Tree =
-    vertex-comp-hom-Directed-Graph
-      ( graph-Directed-Tree R)
-      ( graph-Directed-Tree S)
-      ( graph-Directed-Tree T)
-      ( g)
-      ( f)
+  node-comp-hom-Directed-Tree = {!!}
 
   edge-comp-hom-Directed-Tree :
     (x y : node-Directed-Tree R) (e : edge-Directed-Tree R x y) →
     edge-Directed-Tree T
       ( node-comp-hom-Directed-Tree x)
       ( node-comp-hom-Directed-Tree y)
-  edge-comp-hom-Directed-Tree =
-    edge-comp-hom-Directed-Graph
-      ( graph-Directed-Tree R)
-      ( graph-Directed-Tree S)
-      ( graph-Directed-Tree T)
-      ( g)
-      ( f)
+  edge-comp-hom-Directed-Tree = {!!}
 
   comp-hom-Directed-Tree :
     hom-Directed-Tree R T
-  comp-hom-Directed-Tree =
-    comp-hom-Directed-Graph
-      ( graph-Directed-Tree R)
-      ( graph-Directed-Tree S)
-      ( graph-Directed-Tree T)
-      ( g)
-      ( f)
+  comp-hom-Directed-Tree = {!!}
 ```
 
 ### Homotopies of morphisms of directed trees
@@ -151,22 +115,12 @@ module _
   where
 
   htpy-hom-Directed-Tree : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  htpy-hom-Directed-Tree =
-    htpy-hom-Directed-Graph
-      ( graph-Directed-Tree S)
-      ( graph-Directed-Tree T)
-      ( f)
-      ( g)
+  htpy-hom-Directed-Tree = {!!}
 
   node-htpy-hom-Directed-Tree :
     htpy-hom-Directed-Tree →
     node-hom-Directed-Tree S T f ~ node-hom-Directed-Tree S T g
-  node-htpy-hom-Directed-Tree =
-    vertex-htpy-hom-Directed-Graph
-      ( graph-Directed-Tree S)
-      ( graph-Directed-Tree T)
-      ( f)
-      ( g)
+  node-htpy-hom-Directed-Tree = {!!}
 
   edge-htpy-hom-Directed-Tree :
     ( α : htpy-hom-Directed-Tree) →
@@ -177,12 +131,7 @@ module _
       ( node-htpy-hom-Directed-Tree α y)
       ( edge-hom-Directed-Tree S T f e) ＝
     edge-hom-Directed-Tree S T g e
-  edge-htpy-hom-Directed-Tree =
-    edge-htpy-hom-Directed-Graph
-      ( graph-Directed-Tree S)
-      ( graph-Directed-Tree T)
-      ( f)
-      ( g)
+  edge-htpy-hom-Directed-Tree = {!!}
 
   direct-predecessor-htpy-hom-Directed-Tree :
     ( α : htpy-hom-Directed-Tree) →
@@ -194,15 +143,7 @@ module _
             ( node-htpy-hom-Directed-Tree α x))) ∘
       ( direct-predecessor-hom-Directed-Tree S T f x)) ~
     ( direct-predecessor-hom-Directed-Tree S T g x)
-  direct-predecessor-htpy-hom-Directed-Tree α x (y , e) =
-    eq-pair-Σ
-      ( node-htpy-hom-Directed-Tree α y)
-      ( ( compute-binary-tr
-          ( edge-Directed-Tree T)
-          ( node-htpy-hom-Directed-Tree α y)
-          ( node-htpy-hom-Directed-Tree α x)
-          ( edge-hom-Directed-Tree S T f e)) ∙
-        ( edge-htpy-hom-Directed-Tree α y x e))
+  direct-predecessor-htpy-hom-Directed-Tree α x (y , e) = {!!}
 ```
 
 ### The reflexivity homotopy of morphisms of directed trees
@@ -211,11 +152,7 @@ module _
 refl-htpy-hom-Directed-Tree :
   {l1 l2 l3 l4 : Level} (S : Directed-Tree l1 l2) (T : Directed-Tree l3 l4) →
   (f : hom-Directed-Tree S T) → htpy-hom-Directed-Tree S T f f
-refl-htpy-hom-Directed-Tree S T f =
-  refl-htpy-hom-Directed-Graph
-    ( graph-Directed-Tree S)
-    ( graph-Directed-Tree T)
-    ( f)
+refl-htpy-hom-Directed-Tree S T f = {!!}
 ```
 
 ## Properties
@@ -230,43 +167,23 @@ module _
 
   is-torsorial-htpy-hom-Directed-Tree :
     is-torsorial (htpy-hom-Directed-Tree S T f)
-  is-torsorial-htpy-hom-Directed-Tree =
-    is-torsorial-htpy-hom-Directed-Graph
-      ( graph-Directed-Tree S)
-      ( graph-Directed-Tree T)
-      ( f)
+  is-torsorial-htpy-hom-Directed-Tree = {!!}
 
   htpy-eq-hom-Directed-Tree :
     (g : hom-Directed-Tree S T) → f ＝ g → htpy-hom-Directed-Tree S T f g
-  htpy-eq-hom-Directed-Tree =
-    htpy-eq-hom-Directed-Graph
-      ( graph-Directed-Tree S)
-      ( graph-Directed-Tree T)
-      ( f)
+  htpy-eq-hom-Directed-Tree = {!!}
 
   is-equiv-htpy-eq-hom-Directed-Tree :
     (g : hom-Directed-Tree S T) → is-equiv (htpy-eq-hom-Directed-Tree g)
-  is-equiv-htpy-eq-hom-Directed-Tree =
-    is-equiv-htpy-eq-hom-Directed-Graph
-      ( graph-Directed-Tree S)
-      ( graph-Directed-Tree T)
-      ( f)
+  is-equiv-htpy-eq-hom-Directed-Tree = {!!}
 
   extensionality-hom-Directed-Tree :
     (g : hom-Directed-Tree S T) → (f ＝ g) ≃ htpy-hom-Directed-Tree S T f g
-  extensionality-hom-Directed-Tree =
-    extensionality-hom-Directed-Graph
-      ( graph-Directed-Tree S)
-      ( graph-Directed-Tree T)
-      ( f)
+  extensionality-hom-Directed-Tree = {!!}
 
   eq-htpy-hom-Directed-Tree :
     (g : hom-Directed-Tree S T) → htpy-hom-Directed-Tree S T f g → f ＝ g
-  eq-htpy-hom-Directed-Tree =
-    eq-htpy-hom-Directed-Graph
-      ( graph-Directed-Tree S)
-      ( graph-Directed-Tree T)
-      ( f)
+  eq-htpy-hom-Directed-Tree = {!!}
 ```
 
 ### If `f x` is the root of `T`, then `x` is the root of `S`
@@ -281,25 +198,13 @@ module _
     (x : node-Directed-Tree S) →
     is-root-Directed-Tree T (node-hom-Directed-Tree S T f x) →
     is-root-Directed-Tree S x
-  is-root-is-root-node-hom-Directed-Tree x H =
-    map-right-unit-law-coprod-is-empty
-      ( is-root-Directed-Tree S x)
-      ( Σ (node-Directed-Tree S) (edge-Directed-Tree S x))
-      ( λ (y , e) →
-        no-direct-successor-root-Directed-Tree T
-          ( tr
-            ( λ u → Σ (node-Directed-Tree T) (edge-Directed-Tree T u))
-            ( inv H)
-            ( node-hom-Directed-Tree S T f y ,
-              edge-hom-Directed-Tree S T f e)))
-      ( center (unique-direct-successor-Directed-Tree S x))
+  is-root-is-root-node-hom-Directed-Tree x H = {!!}
 
   is-not-root-node-hom-is-not-root-Directed-Tree :
     (x : node-Directed-Tree S) →
     ¬ (is-root-Directed-Tree S x) →
     ¬ (is-root-Directed-Tree T (node-hom-Directed-Tree S T f x))
-  is-not-root-node-hom-is-not-root-Directed-Tree x =
-    map-neg (is-root-is-root-node-hom-Directed-Tree x)
+  is-not-root-node-hom-is-not-root-Directed-Tree x = {!!}
 ```
 
 ## See also

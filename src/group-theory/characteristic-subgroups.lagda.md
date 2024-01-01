@@ -44,13 +44,7 @@ module _
   where
 
   is-characteristic-prop-Subgroup : Prop (l1 ⊔ l2)
-  is-characteristic-prop-Subgroup =
-    Π-Prop
-      ( iso-Group G G)
-      ( λ f →
-        leq-prop-Subgroup G
-          ( im-hom-Subgroup G G (hom-iso-Group G G f) H)
-          ( H))
+  is-characteristic-prop-Subgroup = {!!}
 ```
 
 ### The stronger predicate of being a characteristic subgroup
@@ -61,13 +55,7 @@ module _
   where
 
   is-characteristic-prop-Subgroup' : Prop (l1 ⊔ l2)
-  is-characteristic-prop-Subgroup' =
-    Π-Prop
-      ( iso-Group G G)
-      ( λ f →
-        has-same-elements-prop-Subgroup G
-          ( im-hom-Subgroup G G (hom-iso-Group G G f) H)
-          ( H))
+  is-characteristic-prop-Subgroup' = {!!}
 ```
 
 ## See also

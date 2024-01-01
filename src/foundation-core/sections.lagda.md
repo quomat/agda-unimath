@@ -42,7 +42,7 @@ module _
   where
 
   is-section : (B → A) → UU l2
-  is-section g = f ∘ g ~ id
+  is-section g = {!!}
 ```
 
 ### The type of sections of a map
@@ -53,13 +53,13 @@ module _
   where
 
   section : UU (l1 ⊔ l2)
-  section = Σ (B → A) (is-section f)
+  section = {!!}
 
   map-section : section → B → A
-  map-section = pr1
+  map-section = {!!}
 
   is-section-map-section : (s : section) → is-section f (map-section s)
-  is-section-map-section = pr2
+  is-section-map-section = {!!}
 ```
 
 ## Properties
@@ -73,14 +73,13 @@ module _
   where
 
   map-section-left-factor : X → B
-  map-section-left-factor = h ∘ map-section (g ∘ h) s
+  map-section-left-factor = {!!}
 
   is-section-map-section-left-factor : is-section g map-section-left-factor
-  is-section-map-section-left-factor = pr2 s
+  is-section-map-section-left-factor = {!!}
 
   section-left-factor : section g
-  pr1 section-left-factor = map-section-left-factor
-  pr2 section-left-factor = is-section-map-section-left-factor
+  pr1 section-left-factor = {!!}
 ```
 
 ### Composites of sections are sections of composites
@@ -92,17 +91,14 @@ module _
   where
 
   map-section-comp : X → A
-  map-section-comp = map-section h t ∘ map-section g s
+  map-section-comp = {!!}
 
   is-section-map-section-comp :
     is-section (g ∘ h) map-section-comp
-  is-section-map-section-comp =
-    ( g ·l (is-section-map-section h t ·r map-section g s)) ∙h
-    ( is-section-map-section g s)
+  is-section-map-section-comp = {!!}
 
   section-comp : section (g ∘ h)
-  pr1 section-comp = map-section-comp
-  pr2 section-comp = is-section-map-section-comp
+  pr1 section-comp = {!!}
 ```
 
 ### In a commuting triangle `g ∘ h ~ f`, any section of `f` induces a section of `g`
@@ -139,18 +135,14 @@ module _
   where
 
   map-section-right-map-triangle' : X → B
-  map-section-right-map-triangle' = h ∘ map-section f s
+  map-section-right-map-triangle' = {!!}
 
   is-section-map-section-right-map-triangle' :
     is-section g map-section-right-map-triangle'
-  is-section-map-section-right-map-triangle' =
-    (H' ·r map-section f s) ∙h is-section-map-section f s
+  is-section-map-section-right-map-triangle' = {!!}
 
   section-right-map-triangle' : section g
-  pr1 section-right-map-triangle' =
-    map-section-right-map-triangle'
-  pr2 section-right-map-triangle' =
-    is-section-map-section-right-map-triangle'
+  pr1 section-right-map-triangle' = {!!}
 ```
 
 #### Second version, with the commutativity of the triangle accoring to our convention
@@ -165,17 +157,14 @@ module _
   where
 
   map-section-right-map-triangle : X → B
-  map-section-right-map-triangle =
-    map-section-right-map-triangle' f g h (inv-htpy H) s
+  map-section-right-map-triangle = {!!}
 
   is-section-map-section-right-map-triangle :
     is-section g map-section-right-map-triangle
-  is-section-map-section-right-map-triangle =
-    is-section-map-section-right-map-triangle' f g h (inv-htpy H) s
+  is-section-map-section-right-map-triangle = {!!}
 
   section-right-map-triangle : section g
-  section-right-map-triangle =
-    section-right-map-triangle' f g h (inv-htpy H) s
+  section-right-map-triangle = {!!}
 ```
 
 ### Composites of sections in commuting triangles are sections
@@ -203,15 +192,12 @@ module _
   where
 
   map-section-left-map-triangle : section g → X → A
-  map-section-left-map-triangle s = map-section-comp g h t s
+  map-section-left-map-triangle s = {!!}
 
   is-section-map-section-left-map-triangle :
     (s : section g) → is-section f (map-section-left-map-triangle s)
-  is-section-map-section-left-map-triangle s =
-    ( H ·r map-section-comp g h t s) ∙h
-    ( is-section-map-section-comp g h t s)
+  is-section-map-section-left-map-triangle s = {!!}
 
   section-left-map-triangle : section g → section f
-  pr1 (section-left-map-triangle s) = map-section-left-map-triangle s
-  pr2 (section-left-map-triangle s) = is-section-map-section-left-map-triangle s
+  pr1 (section-left-map-triangle s) = {!!}
 ```

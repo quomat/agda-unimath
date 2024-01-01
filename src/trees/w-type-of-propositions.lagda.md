@@ -31,21 +31,20 @@ and the canonical type family over it.
 
 ```agda
 𝕎-Prop : (l : Level) → UU (lsuc l)
-𝕎-Prop l = 𝕎 (Prop l) type-Prop
+𝕎-Prop l = {!!}
 
 zero-𝕎-Prop : {l : Level} → 𝕎-Prop l
-zero-𝕎-Prop {l} = constant-𝕎 (raise-empty-Prop l) is-empty-raise-empty
+zero-𝕎-Prop {l} = {!!}
 
 succ-𝕎-Prop : {l : Level} → 𝕎-Prop l → 𝕎-Prop l
-succ-𝕎-Prop {l} P = tree-𝕎 (raise-unit-Prop l) (λ x → P)
+succ-𝕎-Prop {l} P = {!!}
 ```
 
 ### Standard subfinite types(?)
 
 ```agda
 standard-subfinite-type : {l : Level} → 𝕎-Prop l → UU l
-standard-subfinite-type (tree-𝕎 P α) =
-  Σ (type-Prop P) (λ p → standard-subfinite-type (α p)) + type-Prop P
+standard-subfinite-type (tree-𝕎 P α) = {!!}
 ```
 
 ## Properties
@@ -54,12 +53,12 @@ standard-subfinite-type (tree-𝕎 P α) =
 
 ```agda
 is-extensional-𝕎-Prop : {l : Level} → is-extensional-𝕎 (Prop l) type-Prop
-is-extensional-𝕎-Prop = is-extensional-is-univalent-𝕎 is-univalent-type-Prop
+is-extensional-𝕎-Prop = {!!}
 ```
 
 ### 𝕎-Prop is a set
 
 ```agda
 is-set-𝕎-Prop : {l : Level} → is-set (𝕎-Prop l)
-is-set-𝕎-Prop = is-set-𝕎 is-set-type-Prop
+is-set-𝕎-Prop = {!!}
 ```

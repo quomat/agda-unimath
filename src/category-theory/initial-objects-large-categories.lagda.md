@@ -33,6 +33,5 @@ module _
   where
 
   is-initial-obj-Large-Category : UUω
-  is-initial-obj-Large-Category =
-    is-initial-obj-Large-Precategory (large-precategory-Large-Category C) X
+  is-initial-obj-Large-Category = {!!}
 ```

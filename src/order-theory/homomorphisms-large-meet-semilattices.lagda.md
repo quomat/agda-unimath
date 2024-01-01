@@ -80,11 +80,7 @@ module _
       {l1 : Level} →
       type-Large-Meet-Semilattice K l1 →
       type-Large-Meet-Semilattice L l1
-    map-hom-Large-Meet-Semilattice =
-      map-hom-Large-Poset
-        ( large-poset-Large-Meet-Semilattice K)
-        ( large-poset-Large-Meet-Semilattice L)
-        ( hom-large-poset-hom-Large-Meet-Semilattice f)
+    map-hom-Large-Meet-Semilattice = {!!}
 
     preserves-order-hom-Large-Meet-Semilattice :
       {l1 l2 : Level}
@@ -94,9 +90,5 @@ module _
       leq-Large-Meet-Semilattice L
         ( map-hom-Large-Meet-Semilattice x)
         ( map-hom-Large-Meet-Semilattice y)
-    preserves-order-hom-Large-Meet-Semilattice =
-      preserves-order-hom-Large-Poset
-        ( large-poset-Large-Meet-Semilattice K)
-        ( large-poset-Large-Meet-Semilattice L)
-        ( hom-large-poset-hom-Large-Meet-Semilattice f)
+    preserves-order-hom-Large-Meet-Semilattice = {!!}
 ```

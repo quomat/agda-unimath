@@ -55,14 +55,11 @@ module _
   where
 
   cone-tower : {l2 : Level} → UU l2 → UU (l1 ⊔ l2)
-  cone-tower X =
-    Σ ( (n : ℕ) → X → type-tower A n)
-      ( λ f →
-        (n : ℕ) → coherence-triangle-maps (f n) (map-tower A n) (f (succ-ℕ n)))
+  cone-tower X = {!!}
 
   map-cone-tower :
     {l2 : Level} {X : UU l2} → cone-tower X → (n : ℕ) → X → type-tower A n
-  map-cone-tower = pr1
+  map-cone-tower = {!!}
 
   coherence-cone-tower :
     {l2 : Level} {X : UU l2} (c : cone-tower X) (n : ℕ) →
@@ -70,7 +67,7 @@ module _
       ( map-cone-tower c n)
       ( map-tower A n)
       ( map-cone-tower c (succ-ℕ n))
-  coherence-cone-tower = pr2
+  coherence-cone-tower = {!!}
 ```
 
 ### Identifications of cones over towers of types
@@ -83,48 +80,31 @@ module _
   coherence-htpy-cone-tower :
     (c c' : cone-tower A X) →
     ((n : ℕ) → map-cone-tower A c n ~ map-cone-tower A c' n) → UU (l1 ⊔ l2)
-  coherence-htpy-cone-tower c c' H =
-    (n : ℕ) →
-    ( coherence-cone-tower A c n ∙h (map-tower A n ·l H (succ-ℕ n))) ~
-    ( H n ∙h coherence-cone-tower A c' n)
+  coherence-htpy-cone-tower c c' H = {!!}
 
   htpy-cone-tower : cone-tower A X → cone-tower A X → UU (l1 ⊔ l2)
-  htpy-cone-tower c c' =
-    Σ ( (n : ℕ) → map-cone-tower A c n ~ map-cone-tower A c' n)
-      ( coherence-htpy-cone-tower c c')
+  htpy-cone-tower c c' = {!!}
 
   refl-htpy-cone-tower : (c : cone-tower A X) → htpy-cone-tower c c
-  pr1 (refl-htpy-cone-tower c) n = refl-htpy
-  pr2 (refl-htpy-cone-tower c) n = right-unit-htpy
+  pr1 (refl-htpy-cone-tower c) n = {!!}
 
   htpy-eq-cone-tower : (c c' : cone-tower A X) → c ＝ c' → htpy-cone-tower c c'
-  htpy-eq-cone-tower c .c refl = refl-htpy-cone-tower c
+  htpy-eq-cone-tower c .c refl = {!!}
 
   is-torsorial-htpy-cone-tower :
     (c : cone-tower A X) → is-torsorial (htpy-cone-tower c)
-  is-torsorial-htpy-cone-tower c =
-    is-torsorial-Eq-structure
-      ( λ x z → coherence-htpy-cone-tower c (x , z))
-      ( is-torsorial-binary-htpy (map-cone-tower A c))
-      ( map-cone-tower A c , (λ n → refl-htpy))
-      ( is-torsorial-Eq-Π
-        ( λ n → (coherence-cone-tower A c n ∙h refl-htpy) ~_)
-        ( λ n → is-torsorial-htpy (coherence-cone-tower A c n ∙h refl-htpy)))
+  is-torsorial-htpy-cone-tower c = {!!}
 
   is-equiv-htpy-eq-cone-tower :
     (c c' : cone-tower A X) → is-equiv (htpy-eq-cone-tower c c')
-  is-equiv-htpy-eq-cone-tower c =
-    fundamental-theorem-id
-      ( is-torsorial-htpy-cone-tower c)
-      ( htpy-eq-cone-tower c)
+  is-equiv-htpy-eq-cone-tower c = {!!}
 
   extensionality-cone-tower :
     (c c' : cone-tower A X) → (c ＝ c') ≃ htpy-cone-tower c c'
-  pr1 (extensionality-cone-tower c c') = htpy-eq-cone-tower c c'
-  pr2 (extensionality-cone-tower c c') = is-equiv-htpy-eq-cone-tower c c'
+  pr1 (extensionality-cone-tower c c') = {!!}
 
   eq-htpy-cone-tower : (c c' : cone-tower A X) → htpy-cone-tower c c' → c ＝ c'
-  eq-htpy-cone-tower c c' = map-inv-equiv (extensionality-cone-tower c c')
+  eq-htpy-cone-tower c c' = {!!}
 ```
 
 ### Precomposing cones over towers with a map
@@ -135,8 +115,7 @@ module _
   where
 
   cone-map-tower : cone-tower A X → (Y → X) → cone-tower A Y
-  pr1 (cone-map-tower c f) n x = map-cone-tower A c n (f x)
-  pr2 (cone-map-tower c f) n x = coherence-cone-tower A c n (f x)
+  pr1 (cone-map-tower c f) n x = {!!}
 ```
 
 ### Postcomposition cones over postcomposition towers
@@ -148,8 +127,7 @@ module _
 
   cone-postcomp-tower :
     cone-tower (postcomp-tower X A) (X → Y)
-  pr1 cone-postcomp-tower n g x = map-cone-tower A c n (g x)
-  pr2 cone-postcomp-tower n g = eq-htpy (λ x → coherence-cone-tower A c n (g x))
+  pr1 cone-postcomp-tower n g x = {!!}
 ```
 
 ## Table of files about sequential limits

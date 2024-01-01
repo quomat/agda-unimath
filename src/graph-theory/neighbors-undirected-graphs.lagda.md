@@ -36,9 +36,7 @@ module _
   where
 
   neighbor-Undirected-Graph : vertex-Undirected-Graph G → UU (l1 ⊔ l2)
-  neighbor-Undirected-Graph x =
-    Σ ( vertex-Undirected-Graph G)
-      ( λ y → edge-Undirected-Graph G (standard-unordered-pair x y))
+  neighbor-Undirected-Graph x = {!!}
 ```
 
 ## Properties
@@ -55,30 +53,19 @@ module _
     (e : equiv-Undirected-Graph G H) (x : vertex-Undirected-Graph G) →
     neighbor-Undirected-Graph G x ≃
     neighbor-Undirected-Graph H (vertex-equiv-Undirected-Graph G H e x)
-  equiv-neighbor-equiv-Undirected-Graph e x =
-    equiv-Σ
-      ( λ y →
-        edge-Undirected-Graph H
-          ( standard-unordered-pair (vertex-equiv-Undirected-Graph G H e x) y))
-      ( equiv-vertex-equiv-Undirected-Graph G H e)
-      ( equiv-edge-standard-unordered-pair-vertices-equiv-Undirected-Graph
-          G H e x)
+  equiv-neighbor-equiv-Undirected-Graph e x = {!!}
 
   neighbor-equiv-Undirected-Graph :
     (e : equiv-Undirected-Graph G H) (x : vertex-Undirected-Graph G) →
     neighbor-Undirected-Graph G x →
     neighbor-Undirected-Graph H (vertex-equiv-Undirected-Graph G H e x)
-  neighbor-equiv-Undirected-Graph e x =
-    map-equiv (equiv-neighbor-equiv-Undirected-Graph e x)
+  neighbor-equiv-Undirected-Graph e x = {!!}
 
 neighbor-id-equiv-Undirected-Graph :
   {l1 l2 : Level}
   (G : Undirected-Graph l1 l2) (x : vertex-Undirected-Graph G) →
   neighbor-equiv-Undirected-Graph G G (id-equiv-Undirected-Graph G) x ~ id
-neighbor-id-equiv-Undirected-Graph G x (pair y e) =
-  eq-pair-Σ
-    ( refl)
-    ( edge-standard-unordered-pair-vertices-id-equiv-Undirected-Graph G x y e)
+neighbor-id-equiv-Undirected-Graph G x (pair y e) = {!!}
 ```
 
 ## External links

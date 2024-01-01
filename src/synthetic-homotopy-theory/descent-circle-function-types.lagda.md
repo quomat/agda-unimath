@@ -55,21 +55,10 @@ module _
   where
 
   family-descent-data-circle-function-type : S → UU (l2 ⊔ l3)
-  family-descent-data-circle-function-type x =
-    family-family-with-descent-data-circle A x →
-    family-family-with-descent-data-circle B x
+  family-descent-data-circle-function-type x = {!!}
 
   descent-data-circle-function-type : descent-data-circle (l2 ⊔ l3)
-  pr1 descent-data-circle-function-type =
-    type-family-with-descent-data-circle A →
-    type-family-with-descent-data-circle B
-  pr2 descent-data-circle-function-type =
-    ( equiv-postcomp
-      ( type-family-with-descent-data-circle A)
-      ( aut-family-with-descent-data-circle B)) ∘e
-    ( equiv-precomp
-      ( inv-equiv (aut-family-with-descent-data-circle A))
-      ( type-family-with-descent-data-circle B))
+  pr1 descent-data-circle-function-type = {!!}
 ```
 
 ## Properties
@@ -89,47 +78,11 @@ module _
       ( descent-data-family-circle
         ( l)
         ( family-descent-data-circle-function-type l A B))
-  pr1 eq-descent-data-circle-function-type =
-    ( equiv-postcomp
-      ( family-family-with-descent-data-circle A (base-free-loop l))
-      ( equiv-family-with-descent-data-circle B)) ∘e
-    ( equiv-precomp
-      ( inv-equiv (equiv-family-with-descent-data-circle A))
-      ( type-family-with-descent-data-circle B))
-  pr2 eq-descent-data-circle-function-type h =
-    ( eq-htpy
-      ( htpy-comp-horizontal
-        ( h ·l
-          inv-htpy
-            ( coherence-square-inv-all
-              ( equiv-family-with-descent-data-circle A)
-              ( aut-family-with-descent-data-circle A)
-              ( equiv-tr
-                ( family-family-with-descent-data-circle A)
-                ( loop-free-loop l))
-              ( equiv-family-with-descent-data-circle A)
-              ( coherence-square-family-with-descent-data-circle A)))
-        ( coherence-square-family-with-descent-data-circle B))) ∙
-    ( inv
-      ( ( tr-function-type
-          ( family-family-with-descent-data-circle A)
-          ( family-family-with-descent-data-circle B) (loop-free-loop l))
-        ( map-equiv-descent-data-circle
-          ( descent-data-circle-function-type l A B)
-          ( descent-data-family-circle
-            ( l)
-            ( family-descent-data-circle-function-type l A B))
-          ( eq-descent-data-circle-function-type)
-          ( h))))
+  pr1 eq-descent-data-circle-function-type = {!!}
 
   family-with-descent-data-circle-function-type :
     family-with-descent-data-circle l (l2 ⊔ l3)
-  pr1 family-with-descent-data-circle-function-type =
-    family-descent-data-circle-function-type l A B
-  pr1 (pr2 family-with-descent-data-circle-function-type) =
-    descent-data-circle-function-type l A B
-  pr2 (pr2 family-with-descent-data-circle-function-type) =
-    eq-descent-data-circle-function-type
+  pr1 family-with-descent-data-circle-function-type = {!!}
 ```
 
 ### Maps between families over the circle are equivalent to homomorphisms between the families' descent data
@@ -146,19 +99,7 @@ module _
     hom-descent-data-circle
       ( descent-data-family-with-descent-data-circle A)
       ( descent-data-family-with-descent-data-circle B)
-  equiv-fixpoint-descent-data-circle-function-type-hom =
-    equiv-tot
-      ( λ h →
-        ( equiv-inv-htpy
-          ( map-aut-family-with-descent-data-circle B ∘ h)
-          ( h ∘ map-aut-family-with-descent-data-circle A)) ∘e
-        ( inv-equiv
-          ( equiv-coherence-triangle-maps-inv-top
-            ( map-aut-family-with-descent-data-circle B ∘ h)
-            ( h)
-            ( aut-family-with-descent-data-circle A))) ∘e
-        ( equiv-inv-htpy _ _) ∘e
-        ( equiv-funext))
+  equiv-fixpoint-descent-data-circle-function-type-hom = {!!}
 
   equiv-descent-data-family-circle-function-type-hom :
     dependent-universal-property-circle (l2 ⊔ l3) l →
@@ -166,10 +107,5 @@ module _
     hom-descent-data-circle
       ( descent-data-family-with-descent-data-circle A)
       ( descent-data-family-with-descent-data-circle B)
-  equiv-descent-data-family-circle-function-type-hom dup-circle =
-    equiv-fixpoint-descent-data-circle-function-type-hom ∘e
-    ( equiv-ev-fixpoint-descent-data-circle
-      ( l)
-      ( family-with-descent-data-circle-function-type l A B)
-      ( dup-circle))
+  equiv-descent-data-family-circle-function-type-hom dup-circle = {!!}
 ```

@@ -21,5 +21,5 @@ open import foundation-core.truncation-levels
 
 ```agda
 trunc-eq : {l : Level} (k : 𝕋) {A : UU l} → A → A → Truncated-Type l k
-trunc-eq k x y = trunc k (x ＝ y)
+trunc-eq k x y = {!!}
 ```

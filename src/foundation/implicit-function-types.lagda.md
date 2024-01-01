@@ -27,30 +27,22 @@ module _
   where
 
   implicit-explicit-Π : ((x : A) → B x) → {x : A} → B x
-  implicit-explicit-Π f {x} = f x
+  implicit-explicit-Π f {x} = {!!}
 
   explicit-implicit-Π : ({x : A} → B x) → (x : A) → B x
-  explicit-implicit-Π f x = f {x}
+  explicit-implicit-Π f x = {!!}
 
   is-equiv-implicit-explicit-Π : is-equiv implicit-explicit-Π
-  pr1 (pr1 is-equiv-implicit-explicit-Π) = explicit-implicit-Π
-  pr2 (pr1 is-equiv-implicit-explicit-Π) = refl-htpy
-  pr1 (pr2 is-equiv-implicit-explicit-Π) = explicit-implicit-Π
-  pr2 (pr2 is-equiv-implicit-explicit-Π) = refl-htpy
+  pr1 (pr1 is-equiv-implicit-explicit-Π) = {!!}
 
   is-equiv-explicit-implicit-Π : is-equiv explicit-implicit-Π
-  pr1 (pr1 is-equiv-explicit-implicit-Π) = implicit-explicit-Π
-  pr2 (pr1 is-equiv-explicit-implicit-Π) = refl-htpy
-  pr1 (pr2 is-equiv-explicit-implicit-Π) = implicit-explicit-Π
-  pr2 (pr2 is-equiv-explicit-implicit-Π) = refl-htpy
+  pr1 (pr1 is-equiv-explicit-implicit-Π) = {!!}
 
   equiv-implicit-explicit-Π : ((x : A) → B x) ≃ ({x : A} → B x)
-  pr1 equiv-implicit-explicit-Π = implicit-explicit-Π
-  pr2 equiv-implicit-explicit-Π = is-equiv-implicit-explicit-Π
+  pr1 equiv-implicit-explicit-Π = {!!}
 
   equiv-explicit-implicit-Π : ({x : A} → B x) ≃ ((x : A) → B x)
-  pr1 equiv-explicit-implicit-Π = explicit-implicit-Π
-  pr2 equiv-explicit-implicit-Π = is-equiv-explicit-implicit-Π
+  pr1 equiv-explicit-implicit-Π = {!!}
 ```
 
 ### Equality of explicit functions is equality of implicit functions
@@ -62,17 +54,16 @@ module _
   where
 
   equiv-eq-implicit-eq-explicit-Π : (f ＝ g) ≃ (Id (λ {x} → f x) (λ {x} → g x))
-  equiv-eq-implicit-eq-explicit-Π = equiv-ap equiv-implicit-explicit-Π f g
+  equiv-eq-implicit-eq-explicit-Π = {!!}
 
   eq-implicit-eq-explicit-Π : (f ＝ g) → (Id (λ {x} → f x) (λ {x} → g x))
-  eq-implicit-eq-explicit-Π = map-equiv equiv-eq-implicit-eq-explicit-Π
+  eq-implicit-eq-explicit-Π = {!!}
 
   equiv-eq-explicit-eq-implicit-Π : (Id (λ {x} → f x) (λ {x} → g x)) ≃ (f ＝ g)
-  equiv-eq-explicit-eq-implicit-Π =
-    equiv-ap equiv-explicit-implicit-Π (λ {x} → f x) (λ {x} → g x)
+  equiv-eq-explicit-eq-implicit-Π = {!!}
 
   eq-explicit-eq-implicit-Π : (Id (λ {x} → f x) (λ {x} → g x)) → (f ＝ g)
-  eq-explicit-eq-implicit-Π = map-equiv equiv-eq-explicit-eq-implicit-Π
+  eq-explicit-eq-implicit-Π = {!!}
 ```
 
 ## See also

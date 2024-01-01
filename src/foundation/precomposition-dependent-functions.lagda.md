@@ -42,8 +42,7 @@ module _
   equiv-htpy-precomp-htpy-Π :
     {B : UU l2} {C : B → UU l3} (f g : (b : B) → C b) (e : A ≃ B) →
     (f ~ g) ≃ (f ∘ map-equiv e ~ g ∘ map-equiv e)
-  equiv-htpy-precomp-htpy-Π f g e =
-    equiv-precomp-Π e (eq-value f g)
+  equiv-htpy-precomp-htpy-Π f g e = {!!}
 ```
 
 ### Precomposing functions `Π B C` by `f : A → B` is `k+1`-truncated if and only if precomposing homotopies is `k`-truncated
@@ -54,16 +53,5 @@ is-trunc-map-succ-precomp-Π :
   {C : B → UU l3} →
   ((g h : (b : B) → C b) → is-trunc-map k (precomp-Π f (eq-value g h))) →
   is-trunc-map (succ-𝕋 k) (precomp-Π f C)
-is-trunc-map-succ-precomp-Π {k = k} {f = f} {C = C} H =
-  is-trunc-map-is-trunc-map-ap k (precomp-Π f C)
-    ( λ g h →
-      is-trunc-map-top-is-trunc-map-bottom-is-equiv k
-        ( ap (precomp-Π f C))
-        ( htpy-eq)
-        ( htpy-eq)
-        ( precomp-Π f (eq-value g h))
-        ( coherence-square-ap-precomp-Π f g h)
-        ( funext g h)
-        ( funext (g ∘ f) (h ∘ f))
-        ( H g h))
+is-trunc-map-succ-precomp-Π {k = k} {f = f} {C = C} H = {!!}
 ```

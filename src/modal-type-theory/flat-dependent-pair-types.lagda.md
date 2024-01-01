@@ -33,7 +33,7 @@ We study interactions between the
 
 ```agda
 Σ-♭ : {@♭ l1 l2 : Level} (@♭ A : UU l1) (@♭ B : A → UU l2) → UU (l1 ⊔ l2)
-Σ-♭ A B = Σ (♭ A) (λ where (cons-flat x) → ♭ (B x))
+Σ-♭ A B = {!!}
 ```
 
 ## Properties
@@ -46,38 +46,33 @@ module _
   where
 
   map-distributive-flat-Σ : ♭ (Σ A B) → Σ-♭ A B
-  pr1 (map-distributive-flat-Σ (cons-flat (x , y))) = cons-flat x
-  pr2 (map-distributive-flat-Σ (cons-flat (x , y))) = cons-flat y
+  pr1 (map-distributive-flat-Σ (cons-flat (x , y))) = {!!}
 
   map-inv-distributive-flat-Σ : Σ-♭ A B → ♭ (Σ A B)
-  map-inv-distributive-flat-Σ (cons-flat x , cons-flat y) = cons-flat (x , y)
+  map-inv-distributive-flat-Σ (cons-flat x , cons-flat y) = {!!}
 
   is-section-distributive-flat-Σ :
     (map-inv-distributive-flat-Σ ∘ map-distributive-flat-Σ) ~ id
-  is-section-distributive-flat-Σ (cons-flat _) = refl
+  is-section-distributive-flat-Σ (cons-flat _) = {!!}
 
   is-retraction-distributive-flat-Σ :
     (map-distributive-flat-Σ ∘ map-inv-distributive-flat-Σ) ~ id
-  is-retraction-distributive-flat-Σ (cons-flat _ , cons-flat _) = refl
+  is-retraction-distributive-flat-Σ (cons-flat _ , cons-flat _) = {!!}
 
   section-distributive-flat-Σ : section map-distributive-flat-Σ
-  pr1 section-distributive-flat-Σ = map-inv-distributive-flat-Σ
-  pr2 section-distributive-flat-Σ = is-retraction-distributive-flat-Σ
+  pr1 section-distributive-flat-Σ = {!!}
 
   retraction-distributive-flat-Σ : retraction map-distributive-flat-Σ
-  pr1 retraction-distributive-flat-Σ = map-inv-distributive-flat-Σ
-  pr2 retraction-distributive-flat-Σ = is-section-distributive-flat-Σ
+  pr1 retraction-distributive-flat-Σ = {!!}
 
   is-equiv-distributive-flat-Σ : is-equiv map-distributive-flat-Σ
-  pr1 is-equiv-distributive-flat-Σ = section-distributive-flat-Σ
-  pr2 is-equiv-distributive-flat-Σ = retraction-distributive-flat-Σ
+  pr1 is-equiv-distributive-flat-Σ = {!!}
 
   equiv-distributive-flat-Σ : ♭ (Σ A B) ≃ Σ-♭ A B
-  pr1 equiv-distributive-flat-Σ = map-distributive-flat-Σ
-  pr2 equiv-distributive-flat-Σ = is-equiv-distributive-flat-Σ
+  pr1 equiv-distributive-flat-Σ = {!!}
 
   inv-equiv-distributive-flat-Σ : Σ-♭ A B ≃ ♭ (Σ A B)
-  inv-equiv-distributive-flat-Σ = inv-equiv equiv-distributive-flat-Σ
+  inv-equiv-distributive-flat-Σ = {!!}
 ```
 
 ## See also

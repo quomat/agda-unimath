@@ -38,21 +38,19 @@ module _
   tr-function-type :
     (p : x ＝ y) (f : B x → C x) →
     tr (λ a → B a → C a) p f ＝ (tr C p ∘ (f ∘ tr B (inv p)))
-  tr-function-type refl f = refl
+  tr-function-type refl f = {!!}
 
   compute-dependent-identification-function-type :
     (p : x ＝ y) (f : B x → C x) (g : B y → C y) →
     ((b : B x) → tr C p (f b) ＝ g (tr B p b)) ≃
     (tr (λ a → B a → C a) p f ＝ g)
-  compute-dependent-identification-function-type refl f g =
-    inv-equiv equiv-funext
+  compute-dependent-identification-function-type refl f g = {!!}
 
   map-compute-dependent-identification-function-type :
     (p : x ＝ y) (f : B x → C x) (g : B y → C y) →
     ((b : B x) → tr C p (f b) ＝ g (tr B p b)) →
     (tr (λ a → B a → C a) p f ＝ g)
-  map-compute-dependent-identification-function-type p f g =
-    map-equiv (compute-dependent-identification-function-type p f g)
+  map-compute-dependent-identification-function-type p f g = {!!}
 ```
 
 ### Relation between `compute-dependent-identification-function-type` and `preserves-tr`
@@ -69,7 +67,7 @@ module _
       ( compute-dependent-identification-function-type A B p (f i0) (f i1))
       ( apd f p) a ＝
     inv-htpy (preserves-tr f p) a
-  preserves-tr-apd-function refl = refl-htpy
+  preserves-tr-apd-function refl = {!!}
 ```
 
 ### Computation of dependent identifications of functions over homotopies
@@ -92,19 +90,7 @@ module _
       ( H s)
       ( k s)
       ( l s))
-  equiv-htpy-dependent-function-dependent-identification-function-type =
-    ind-htpy i
-      ( λ j H →
-        ( k : (s : S) → P (i s) → Y) →
-        ( l : (s : S) → P (j s) → Y) →
-        ( s : S) →
-        ( k s ~ (l s ∘ tr P (H s))) ≃
-        ( dependent-identification
-          ( λ x → P x → Y)
-          ( H s)
-          ( k s)
-          ( l s)))
-      ( λ k l s → inv-equiv (equiv-funext))
+  equiv-htpy-dependent-function-dependent-identification-function-type = {!!}
 
   compute-equiv-htpy-dependent-function-dependent-identification-function-type :
     { j : S → X} (H : i ~ j) →
@@ -117,35 +103,7 @@ module _
         ( s))
       ( λ t → ap (ind-Σ h) (eq-pair-Σ (H s) refl))) ＝
     ( apd h (H s))
-  compute-equiv-htpy-dependent-function-dependent-identification-function-type =
-    ind-htpy i
-      ( λ j H →
-        ( h : (x : X) → P x → Y) →
-        ( s : S) →
-        ( map-equiv
-          ( equiv-htpy-dependent-function-dependent-identification-function-type
-            ( H)
-            ( h ∘ i)
-            ( h ∘ j)
-            ( s))
-          ( λ t → ap (ind-Σ h) (eq-pair-Σ (H s) refl))) ＝
-        ( apd h (H s)))
-      ( λ h s →
-        ( ap
-          ( λ f → map-equiv (f (h ∘ i) (h ∘ i) s) refl-htpy)
-          ( compute-ind-htpy i
-            ( λ j H →
-              ( k : (s : S) → P (i s) → Y) →
-              ( l : (s : S) → P (j s) → Y) →
-              ( s : S) →
-              ( k s ~ (l s ∘ tr P (H s))) ≃
-              ( dependent-identification
-                ( λ x → P x → Y)
-                ( H s)
-                ( k s)
-                ( l s)))
-            ( λ k l s → inv-equiv (equiv-funext)))) ∙
-        ( eq-htpy-refl-htpy (h (i s))))
+  compute-equiv-htpy-dependent-function-dependent-identification-function-type = {!!}
 ```
 
 ### Composing families of functions
@@ -158,7 +116,7 @@ module _
 
   dependent-comp :
     ((a : A) → C a → D a) → ((a : A) → B a → C a) → (a : A) → B a → D a
-  dependent-comp g f a b = g a (f a b)
+  dependent-comp g f a b = {!!}
 ```
 
 ## See also

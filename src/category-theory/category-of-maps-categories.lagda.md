@@ -59,25 +59,13 @@ module _
     (F G : map-Precategory C D) →
     ( htpy-map-Precategory C D F G) ≃
     ( natural-isomorphism-map-Precategory C D F G)
-  equiv-natural-isomorphism-htpy-map-is-category-Precategory F G =
-      ( equiv-right-swap-Σ) ∘e
-      ( equiv-Σ-equiv-base
-        ( is-natural-transformation-map-Precategory C D F G ∘ pr1)
-        ( ( distributive-Π-Σ) ∘e
-          ( equiv-Π-equiv-family
-            ( λ x →
-              extensionality-obj-Category
-                ( D , is-category-D)
-                ( obj-map-Precategory C D F x)
-                ( obj-map-Precategory C D G x)))))
+  equiv-natural-isomorphism-htpy-map-is-category-Precategory F G = {!!}
 
   extensionality-map-is-category-Precategory :
     (F G : map-Precategory C D) →
     ( F ＝ G) ≃
     ( natural-isomorphism-map-Precategory C D F G)
-  extensionality-map-is-category-Precategory F G =
-    ( equiv-natural-isomorphism-htpy-map-is-category-Precategory F G) ∘e
-    ( equiv-htpy-eq-map-Precategory C D F G)
+  extensionality-map-is-category-Precategory F G = {!!}
 ```
 
 ### When the codomain is a category the map precategory is a category
@@ -93,13 +81,7 @@ module _
   abstract
     is-category-map-precategory-is-category-Precategory :
       is-category-Precategory (map-precategory-Precategory C D)
-    is-category-map-precategory-is-category-Precategory F G =
-      is-equiv-htpy-equiv
-        ( ( equiv-iso-map-natural-isomorphism-map-Precategory C D F G) ∘e
-          ( extensionality-map-is-category-Precategory C D is-category-D F G))
-        ( λ where
-          refl →
-            compute-iso-map-natural-isomorphism-map-eq-Precategory C D F G refl)
+    is-category-map-precategory-is-category-Precategory F G = {!!}
 ```
 
 ## Definitions
@@ -114,28 +96,15 @@ module _
 
   map-category-Category :
     Category (l1 ⊔ l2 ⊔ l3 ⊔ l4) (l1 ⊔ l2 ⊔ l4)
-  pr1 map-category-Category =
-    map-precategory-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-  pr2 map-category-Category =
-    is-category-map-precategory-is-category-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D)
-      ( is-category-Category D)
+  pr1 map-category-Category = {!!}
 
   extensionality-map-Category :
     (F G : map-Category C D) →
     (F ＝ G) ≃ natural-isomorphism-map-Category C D F G
-  extensionality-map-Category F G =
-    ( equiv-natural-isomorphism-map-iso-map-Precategory
-      ( precategory-Category C)
-      ( precategory-Category D) F G) ∘e
-    ( extensionality-obj-Category map-category-Category F G)
+  extensionality-map-Category F G = {!!}
 
   eq-natural-isomorphism-map-Category :
     (F G : map-Category C D) →
     natural-isomorphism-map-Category C D F G → F ＝ G
-  eq-natural-isomorphism-map-Category F G =
-    map-inv-equiv (extensionality-map-Category F G)
+  eq-natural-isomorphism-map-Category F G = {!!}
 ```

@@ -27,18 +27,18 @@ A type equipped with an endomorphism consists of a type `A` equipped with a map
 
 ```agda
 Type-With-Endomorphism : (l : Level) → UU (lsuc l)
-Type-With-Endomorphism l = Σ (UU l) endo
+Type-With-Endomorphism l = {!!}
 
 module _
   {l : Level} (X : Type-With-Endomorphism l)
   where
 
   type-Type-With-Endomorphism : UU l
-  type-Type-With-Endomorphism = pr1 X
+  type-Type-With-Endomorphism = {!!}
 
   endomorphism-Type-With-Endomorphism :
     type-Type-With-Endomorphism → type-Type-With-Endomorphism
-  endomorphism-Type-With-Endomorphism = pr2 X
+  endomorphism-Type-With-Endomorphism = {!!}
 ```
 
 ## Example
@@ -47,6 +47,6 @@ module _
 
 ```agda
 trivial-Type-With-Endomorphism : {l : Level} → Type-With-Endomorphism l
-pr1 (trivial-Type-With-Endomorphism {l}) = raise-unit l
-pr2 trivial-Type-With-Endomorphism = id
+pr1 (trivial-Type-With-Endomorphism {l}) = {!!}
+pr2 trivial-Type-With-Endomorphism = {!!}
 ```

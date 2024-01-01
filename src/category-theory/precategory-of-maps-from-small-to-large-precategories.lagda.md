@@ -47,8 +47,7 @@ module _
     natural-transformation-map-Small-Large-Precategory C D G H →
     natural-transformation-map-Small-Large-Precategory C D F G →
     natural-transformation-map-Small-Large-Precategory C D F H
-  comp-hom-map-large-precategory-Small-Large-Precategory {F = F} {G} {H} =
-    comp-natural-transformation-map-Small-Large-Precategory C D F G H
+  comp-hom-map-large-precategory-Small-Large-Precategory {F = F} {G} {H} = {!!}
 
   associative-comp-hom-map-large-precategory-Small-Large-Precategory :
     {γF γG γH γI : Level}
@@ -66,9 +65,7 @@ module _
       ( h)
       ( comp-natural-transformation-map-Small-Large-Precategory C D F G H g f)
   associative-comp-hom-map-large-precategory-Small-Large-Precategory
-    {F = F} {G} {H} {I} h g f =
-    associative-comp-natural-transformation-map-Small-Large-Precategory
-      C D F G H I f g h
+    {F = F} {G} {H} {I} h g f = {!!}
 
   inv-associative-comp-hom-map-large-precategory-Small-Large-Precategory :
     {γF γG γH γI : Level}
@@ -86,15 +83,12 @@ module _
       ( comp-natural-transformation-map-Small-Large-Precategory C D G H I h g)
       ( f)
   inv-associative-comp-hom-map-large-precategory-Small-Large-Precategory
-    {F = F} {G} {H} {I} h g f =
-    inv-associative-comp-natural-transformation-map-Small-Large-Precategory
-      C D F G H I f g h
+    {F = F} {G} {H} {I} h g f = {!!}
 
   id-hom-map-large-precategory-Small-Large-Precategory :
     {γF : Level} {F : map-Small-Large-Precategory C D γF} →
     natural-transformation-map-Small-Large-Precategory C D F F
-  id-hom-map-large-precategory-Small-Large-Precategory {F = F} =
-    id-natural-transformation-map-Small-Large-Precategory C D F
+  id-hom-map-large-precategory-Small-Large-Precategory {F = F} = {!!}
 
   left-unit-law-comp-hom-map-large-precategory-Small-Large-Precategory :
     {γF γG : Level}
@@ -105,9 +99,7 @@ module _
       ( id-natural-transformation-map-Small-Large-Precategory C D G) a) ＝
     ( a)
   left-unit-law-comp-hom-map-large-precategory-Small-Large-Precategory
-    { F = F} {G} =
-    left-unit-law-comp-natural-transformation-map-Small-Large-Precategory
-      C D F G
+    { F = F} {G} = {!!}
 
   right-unit-law-comp-hom-map-large-precategory-Small-Large-Precategory :
     {γF γG : Level}
@@ -118,32 +110,11 @@ module _
         a (id-natural-transformation-map-Small-Large-Precategory C D F)) ＝
     ( a)
   right-unit-law-comp-hom-map-large-precategory-Small-Large-Precategory
-    { F = F} {G} =
-    right-unit-law-comp-natural-transformation-map-Small-Large-Precategory
-      C D F G
+    { F = F} {G} = {!!}
 
   map-large-precategory-Small-Large-Precategory :
     Large-Precategory (λ l → l1 ⊔ l2 ⊔ α l ⊔ β l l) (λ l l' → l1 ⊔ l2 ⊔ β l l')
-  obj-Large-Precategory map-large-precategory-Small-Large-Precategory =
-    map-Small-Large-Precategory C D
-  hom-set-Large-Precategory map-large-precategory-Small-Large-Precategory =
-    natural-transformation-map-set-Small-Large-Precategory C D
-  comp-hom-Large-Precategory map-large-precategory-Small-Large-Precategory =
-    comp-hom-map-large-precategory-Small-Large-Precategory
-  id-hom-Large-Precategory map-large-precategory-Small-Large-Precategory =
-    id-hom-map-large-precategory-Small-Large-Precategory
-  associative-comp-hom-Large-Precategory
-    map-large-precategory-Small-Large-Precategory =
-    associative-comp-hom-map-large-precategory-Small-Large-Precategory
-  inv-associative-comp-hom-Large-Precategory
-    map-large-precategory-Small-Large-Precategory =
-    inv-associative-comp-hom-map-large-precategory-Small-Large-Precategory
-  left-unit-law-comp-hom-Large-Precategory
-    map-large-precategory-Small-Large-Precategory =
-    left-unit-law-comp-hom-map-large-precategory-Small-Large-Precategory
-  right-unit-law-comp-hom-Large-Precategory
-    map-large-precategory-Small-Large-Precategory =
-    right-unit-law-comp-hom-map-large-precategory-Small-Large-Precategory
+  obj-Large-Precategory map-large-precategory-Small-Large-Precategory = {!!}
 ```
 
 ### The small precategories of maps and natural transformations from a small to a large precategory
@@ -156,7 +127,5 @@ module _
 
   map-precategory-Small-Large-Precategory :
     (l : Level) → Precategory (l1 ⊔ l2 ⊔ α l ⊔ β l l) (l1 ⊔ l2 ⊔ β l l)
-  map-precategory-Small-Large-Precategory =
-    precategory-Large-Precategory
-      ( map-large-precategory-Small-Large-Precategory C D)
+  map-precategory-Small-Large-Precategory = {!!}
 ```

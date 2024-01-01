@@ -33,13 +33,12 @@ ev-refl-htpy :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2}
   (f : (x : A) → B x) (C : (g : (x : A) → B x) → f ~ g → UU l3) →
   ((g : (x : A) → B x) (H : f ~ g) → C g H) → C f refl-htpy
-ev-refl-htpy f C φ = φ f refl-htpy
+ev-refl-htpy f C φ = {!!}
 
 induction-principle-homotopies :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2}
   (f : (x : A) → B x) → UUω
-induction-principle-homotopies f =
-  is-identity-system (f ~_) f (refl-htpy)
+induction-principle-homotopies f = {!!}
 ```
 
 ## Propositions
@@ -63,19 +62,11 @@ module _
 
   abstract
     is-torsorial-htpy : is-torsorial (λ g → f ~ g)
-    is-torsorial-htpy =
-      is-contr-equiv'
-        ( Σ ((x : A) → B x) (Id f))
-        ( equiv-tot (λ g → equiv-funext))
-        ( is-torsorial-path f)
+    is-torsorial-htpy = {!!}
 
   abstract
     is-torsorial-htpy' : is-torsorial (λ g → g ~ f)
-    is-torsorial-htpy' =
-      is-contr-equiv'
-        ( Σ ((x : A) → B x) (λ g → g ＝ f))
-        ( equiv-tot (λ g → equiv-funext))
-        ( is-torsorial-path' f)
+    is-torsorial-htpy' = {!!}
 ```
 
 ### Homotopy induction is equivalent to function extensionality
@@ -87,21 +78,14 @@ abstract
     based-function-extensionality f →
     induction-principle-homotopies f
   induction-principle-homotopies-based-function-extensionality
-    {A = A} {B} f funext-f =
-    is-identity-system-is-torsorial f
-      ( refl-htpy)
-      ( is-torsorial-htpy f)
+    {A = A} {B} f funext-f = {!!}
 
 abstract
   based-function-extensionality-induction-principle-homotopies :
     {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (f : (x : A) → B x) →
     induction-principle-homotopies f →
     based-function-extensionality f
-  based-function-extensionality-induction-principle-homotopies f ind-htpy-f =
-    fundamental-theorem-id-is-identity-system f
-      ( refl-htpy)
-      ( ind-htpy-f)
-      ( λ _ → htpy-eq)
+  based-function-extensionality-induction-principle-homotopies f ind-htpy-f = {!!}
 ```
 
 ### Homotopy induction
@@ -114,20 +98,19 @@ module _
   abstract
     induction-principle-htpy :
       (f : (x : A) → B x) → induction-principle-homotopies f
-    induction-principle-htpy f =
-      induction-principle-homotopies-based-function-extensionality f (funext f)
+    induction-principle-htpy f = {!!}
 
     ind-htpy :
       {l3 : Level} (f : (x : A) → B x)
       (C : (g : (x : A) → B x) → f ~ g → UU l3) →
       C f refl-htpy → {g : (x : A) → B x} (H : f ~ g) → C g H
-    ind-htpy f C t {g} = pr1 (induction-principle-htpy f C) t g
+    ind-htpy f C t {g} = {!!}
 
     compute-ind-htpy :
       {l3 : Level} (f : (x : A) → B x)
       (C : (g : (x : A) → B x) → f ~ g → UU l3) →
       (c : C f refl-htpy) → ind-htpy f C c refl-htpy ＝ c
-    compute-ind-htpy f C = pr2 (induction-principle-htpy f C)
+    compute-ind-htpy f C = {!!}
 ```
 
 ## See also

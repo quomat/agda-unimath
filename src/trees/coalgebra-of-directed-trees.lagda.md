@@ -33,7 +33,7 @@ structure of a coalgebra for the polynomial endofunctor
 ```agda
 coalgebra-Directed-Tree :
   (l : Level) → coalgebra-polynomial-endofunctor (lsuc l) (UU l) (λ X → X)
-pr1 (coalgebra-Directed-Tree l) = Directed-Tree l l
-pr1 (pr2 (coalgebra-Directed-Tree l) T) = base-Directed-Tree T
-pr2 (pr2 (coalgebra-Directed-Tree l) T) = fiber-base-Directed-Tree T
+pr1 (coalgebra-Directed-Tree l) = {!!}
+pr1 (pr2 (coalgebra-Directed-Tree l) T) = {!!}
+pr2 (pr2 (coalgebra-Directed-Tree l) T) = {!!}
 ```

@@ -33,10 +33,7 @@ The **universal multiset** of universe level `l` is the multiset of level
 
 ```agda
 universal-multiset-𝕍 : (l : Level) → 𝕍 (lsuc l)
-universal-multiset-𝕍 l =
-  tree-𝕎
-    ( 𝕍 l)
-    ( λ X → resize-𝕍 X (is-small-multiset-𝕍 is-small-lsuc X))
+universal-multiset-𝕍 l = {!!}
 ```
 
 ## Properties
@@ -47,27 +44,5 @@ universal-multiset-𝕍 l =
 is-small-universal-multiset-𝕍 :
   (l : Level) {l1 : Level} →
   is-small-universe l l1 → is-small-𝕍 l (universal-multiset-𝕍 l1)
-is-small-universal-multiset-𝕍 l {l1} (pair (pair U e) H) =
-  pair
-    ( pair
-      ( 𝕎 U (λ x → pr1 (H (map-inv-equiv e x))))
-      ( equiv-𝕎
-        ( λ u → type-is-small (H (map-inv-equiv e u)))
-        ( e)
-        ( λ X →
-          tr
-            ( λ t → X ≃ pr1 (H t))
-            ( inv (is-retraction-map-inv-equiv e X))
-            ( pr2 (H X)))))
-    ( f)
-    where
-    f :
-      (X : 𝕍 l1) →
-      is-small-𝕍 l (resize-𝕍 X (is-small-multiset-𝕍 is-small-lsuc X))
-    f (tree-𝕎 A α) =
-      pair
-        ( pair
-          ( type-is-small (H A))
-          ( equiv-is-small (H A) ∘e inv-equiv (compute-raise (lsuc l1) A)))
-        ( λ x → f (α (map-inv-raise x)))
+is-small-universal-multiset-𝕍 l {l1} (pair (pair U e) H) = {!!}
 ```

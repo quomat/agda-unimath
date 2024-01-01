@@ -42,24 +42,21 @@ module _
 
   is-path-walk-Undirected-Graph :
     {x y : vertex-Undirected-Graph G} → walk-Undirected-Graph G x y → UU l1
-  is-path-walk-Undirected-Graph w =
-    is-injective (vertex-vertex-on-walk-Undirected-Graph G w)
+  is-path-walk-Undirected-Graph w = {!!}
 
   path-Undirected-Graph :
     (x y : vertex-Undirected-Graph G) → UU (lsuc lzero ⊔ l1 ⊔ l2)
-  path-Undirected-Graph x y =
-    Σ (walk-Undirected-Graph G x y) is-path-walk-Undirected-Graph
+  path-Undirected-Graph x y = {!!}
 
   walk-path-Undirected-Graph :
     {x y : vertex-Undirected-Graph G} →
     path-Undirected-Graph x y → walk-Undirected-Graph G x y
-  walk-path-Undirected-Graph p = pr1 p
+  walk-path-Undirected-Graph p = {!!}
 
   length-path-Undirected-Graph :
     {x y : vertex-Undirected-Graph G} →
     path-Undirected-Graph x y → ℕ
-  length-path-Undirected-Graph p =
-    length-walk-Undirected-Graph G (walk-path-Undirected-Graph p)
+  length-path-Undirected-Graph p = {!!}
 ```
 
 ## Properties
@@ -70,10 +67,7 @@ module _
 is-path-refl-walk-Undirected-Graph :
   {l1 l2 : Level} (G : Undirected-Graph l1 l2) (x : vertex-Undirected-Graph G) →
   is-path-walk-Undirected-Graph G (refl-walk-Undirected-Graph {x = x})
-is-path-refl-walk-Undirected-Graph G x =
-  is-injective-is-contr
-    ( vertex-vertex-on-walk-Undirected-Graph G refl-walk-Undirected-Graph)
-    ( is-contr-vertex-on-walk-refl-walk-Undirected-Graph G x)
+is-path-refl-walk-Undirected-Graph G x = {!!}
 ```
 
 ## External links

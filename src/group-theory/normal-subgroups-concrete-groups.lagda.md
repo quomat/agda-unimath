@@ -27,9 +27,7 @@ of all subgroups
 ```agda
 normal-subgroup-Concrete-Group :
   {l1 : Level} (l2 : Level) (G : Concrete-Group l1) → UU (l1 ⊔ lsuc l2)
-normal-subgroup-Concrete-Group l2 G =
-  (u : classifying-type-Concrete-Group G) →
-  subgroup-action-Concrete-Group l2 G u
+normal-subgroup-Concrete-Group l2 G = {!!}
 
 module _
   {l1 l2 : Level} (G : Concrete-Group l1)
@@ -37,15 +35,12 @@ module _
   where
 
   subgroup-normal-subgroup-Concrete-Group : subgroup-Concrete-Group l2 G
-  subgroup-normal-subgroup-Concrete-Group = H (shape-Concrete-Group G)
+  subgroup-normal-subgroup-Concrete-Group = {!!}
 
   action-normal-subgroup-Concrete-Group : action-Concrete-Group l2 G
-  action-normal-subgroup-Concrete-Group =
-    action-subgroup-Concrete-Group G subgroup-normal-subgroup-Concrete-Group
+  action-normal-subgroup-Concrete-Group = {!!}
 
   transitive-action-normal-subgroup-Concrete-Group :
     transitive-action-Concrete-Group l2 G
-  transitive-action-normal-subgroup-Concrete-Group =
-    transitive-action-subgroup-Concrete-Group G
-      ( subgroup-normal-subgroup-Concrete-Group)
+  transitive-action-normal-subgroup-Concrete-Group = {!!}
 ```

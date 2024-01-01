@@ -69,8 +69,7 @@ module _
   where
 
   dependent-double-lift-family-of-elements : UU (l1 ⊔ l4)
-  dependent-double-lift-family-of-elements =
-    dependent-lift-family-of-elements b (λ i → C i (a i))
+  dependent-double-lift-family-of-elements = {!!}
 ```
 
 ### Double lifts of families of elements
@@ -82,8 +81,7 @@ module _
   where
 
   double-lift-family-of-elements : UU (l1 ⊔ l4)
-  double-lift-family-of-elements =
-    dependent-lift-family-of-elements b (λ i → C (a i))
+  double-lift-family-of-elements = {!!}
 ```
 
 ## See also

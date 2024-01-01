@@ -53,21 +53,10 @@ module _
   equiv-coherence-triangle-maps-inv-top :
     coherence-triangle-maps left right (map-equiv e) ≃
     coherence-triangle-maps right left (map-inv-equiv e)
-  equiv-coherence-triangle-maps-inv-top =
-    ( equiv-inv-htpy
-      ( left ∘ (map-inv-equiv e))
-      ( right)) ∘e
-    ( equiv-Π
-      ( λ b → left (map-inv-equiv e b) ＝ right b)
-      ( e)
-      ( λ a →
-        equiv-concat
-          ( ap left (is-retraction-map-inv-equiv e a))
-          ( right (map-equiv e a))))
+  equiv-coherence-triangle-maps-inv-top = {!!}
 
   coherence-triangle-maps-inv-top :
     coherence-triangle-maps left right (map-equiv e) →
     coherence-triangle-maps right left (map-inv-equiv e)
-  coherence-triangle-maps-inv-top =
-    map-equiv equiv-coherence-triangle-maps-inv-top
+  coherence-triangle-maps-inv-top = {!!}
 ```

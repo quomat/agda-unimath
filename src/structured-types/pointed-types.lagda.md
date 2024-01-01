@@ -23,17 +23,17 @@ A **pointed type** is a type `A` equipped with an element `a : A`.
 
 ```agda
 Pointed-Type : (l : Level) → UU (lsuc l)
-Pointed-Type l = Σ (UU l) (λ X → X)
+Pointed-Type l = {!!}
 
 module _
   {l : Level} (A : Pointed-Type l)
   where
 
   type-Pointed-Type : UU l
-  type-Pointed-Type = pr1 A
+  type-Pointed-Type = {!!}
 
   point-Pointed-Type : type-Pointed-Type
-  point-Pointed-Type = pr2 A
+  point-Pointed-Type = {!!}
 ```
 
 ### Evaluation at the base point
@@ -42,7 +42,7 @@ module _
 ev-point-Pointed-Type :
   {l1 l2 : Level} (A : Pointed-Type l1) {B : UU l2} →
   (type-Pointed-Type A → B) → B
-ev-point-Pointed-Type A f = f (point-Pointed-Type A)
+ev-point-Pointed-Type A f = {!!}
 ```
 
 ## See also

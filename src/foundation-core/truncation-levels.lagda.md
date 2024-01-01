@@ -33,14 +33,14 @@ data 𝕋 : UU lzero where
 
 ```agda
 neg-one-𝕋 : 𝕋
-neg-one-𝕋 = succ-𝕋 neg-two-𝕋
+neg-one-𝕋 = {!!}
 
 zero-𝕋 : 𝕋
-zero-𝕋 = succ-𝕋 neg-one-𝕋
+zero-𝕋 = {!!}
 
 one-𝕋 : 𝕋
-one-𝕋 = succ-𝕋 zero-𝕋
+one-𝕋 = {!!}
 
 two-𝕋 : 𝕋
-two-𝕋 = succ-𝕋 one-𝕋
+two-𝕋 = {!!}
 ```

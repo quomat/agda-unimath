@@ -30,8 +30,8 @@ When `X` is a pointed type, the suspension of `X` has nice properties
 ```agda
 suspension-Pointed-Type :
   {l : Level} → Pointed-Type l → Pointed-Type l
-pr1 (suspension-Pointed-Type X) = suspension (type-Pointed-Type X)
-pr2 (suspension-Pointed-Type X) = north-suspension
+pr1 (suspension-Pointed-Type X) = {!!}
+pr2 (suspension-Pointed-Type X) = {!!}
 ```
 
 #### Suspension structure induced by a pointed type
@@ -40,12 +40,9 @@ pr2 (suspension-Pointed-Type X) = north-suspension
 constant-suspension-structure-Pointed-Type :
   {l1 l2 : Level} (X : UU l1) (Y : Pointed-Type l2) →
   suspension-structure X (type-Pointed-Type Y)
-pr1 (constant-suspension-structure-Pointed-Type X Y) =
-  point-Pointed-Type Y
-pr1 (pr2 (constant-suspension-structure-Pointed-Type X Y)) =
-  point-Pointed-Type Y
-pr2 (pr2 (constant-suspension-structure-Pointed-Type X Y)) =
-  const X (point-Pointed-Type Y ＝ point-Pointed-Type Y) refl
+pr1 (constant-suspension-structure-Pointed-Type X Y) = {!!}
+pr1 (pr2 (constant-suspension-structure-Pointed-Type X Y)) = {!!}
+pr2 (pr2 (constant-suspension-structure-Pointed-Type X Y)) = {!!}
 ```
 
 #### Suspension structure induced by a map into a loop space
@@ -59,7 +56,5 @@ module _
   where
   suspension-structure-map-into-Ω :
     (X → type-Ω Y) → suspension-structure X (type-Pointed-Type Y)
-  pr1 (suspension-structure-map-into-Ω f) = point-Pointed-Type Y
-  pr1 (pr2 (suspension-structure-map-into-Ω f)) = point-Pointed-Type Y
-  pr2 (pr2 (suspension-structure-map-into-Ω f)) = f
+  pr1 (suspension-structure-map-into-Ω f) = {!!}
 ```

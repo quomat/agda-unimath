@@ -23,7 +23,7 @@ open import orthogonal-factorization-systems.uniquely-eliminating-modalities
 The operations of
 [raising universe levels](foundation.raising-universe-levels.md) are trivially
 [higher modalities](orthogonal-factorization-systems.higher-modalities.md), and
-in the case that `l1 ⊔ l2 = l1`, we recover the
+in the case that `l1 ⊔ l2 = {!!}
 [identity modality](orthogonal-factorization-systems.identity-modality.md).
 
 ## Definition
@@ -31,11 +31,11 @@ in the case that `l1 ⊔ l2 = l1`, we recover the
 ```agda
 operator-raise-modality :
   (l1 l2 : Level) → operator-modality l1 (l1 ⊔ l2)
-operator-raise-modality l1 l2 = raise l2
+operator-raise-modality l1 l2 = {!!}
 
 unit-raise-modality :
   {l1 l2 : Level} → unit-modality (operator-raise-modality l1 l2)
-unit-raise-modality = map-raise
+unit-raise-modality = {!!}
 ```
 
 ## Properties
@@ -46,14 +46,10 @@ unit-raise-modality = map-raise
 is-uniquely-eliminating-modality-raise-modality :
   {l1 l2 : Level} →
   is-uniquely-eliminating-modality (unit-raise-modality {l1} {l2})
-is-uniquely-eliminating-modality-raise-modality {l1} {l2} P =
-  is-local-dependent-type-is-equiv
-    ( unit-raise-modality)
-    ( is-equiv-map-raise)
-    ( operator-raise-modality l1 l2 ∘ P)
+is-uniquely-eliminating-modality-raise-modality {l1} {l2} P = {!!}
 ```
 
-### In the case that `l1 ⊔ l2 = l1` we recover the identity modality
+### In the case that `l1 ⊔ l2 = {!!}
 
 This remains to be made formal.
 [#739](https://github.com/UniMath/agda-unimath/issues/739)

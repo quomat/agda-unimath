@@ -28,6 +28,5 @@ The **plus-principle** asserts that any
 
 ```agda
 plus-principle : (l : Level) → UU (lsuc l)
-plus-principle l =
-  (A : UU l) → is-acyclic A → is-connected one-𝕋 A → is-contr A
+plus-principle l = {!!}
 ```

@@ -35,31 +35,28 @@ module _
   where
 
   multisubset : Set l1 → UU (l1 ⊔ lsuc l2)
-  multisubset U = Σ (UU l2) (λ B → B → type-Set U)
+  multisubset U = {!!}
 
   is-locally-finite-multisubset :
     (U : Set l1) → multisubset U → UU (l1 ⊔ l2)
-  is-locally-finite-multisubset U (pair B f) =
-    (x : type-Set U) → is-finite (fiber f x)
+  is-locally-finite-multisubset U (pair B f) = {!!}
 
   is-finite-multisubset :
     (U : Set l1) → multisubset U → UU (l1 ⊔ l2)
-  is-finite-multisubset U (pair B f) = is-finite (im f)
+  is-finite-multisubset U (pair B f) = {!!}
 
 module _
   {l1 : Level}
   where
 
   locally-finite-multisubset : Set l1 → UU l1
-  locally-finite-multisubset U = type-Set U → ℕ
+  locally-finite-multisubset U = {!!}
 
   support-locally-finite-multisubset :
     (U : Set l1) → locally-finite-multisubset U → UU l1
-  support-locally-finite-multisubset U μ =
-    Σ (type-Set U) (λ x → μ x ≠ 0)
+  support-locally-finite-multisubset U μ = {!!}
 
   is-finite-locally-finite-multisubset :
     (U : Set l1) → locally-finite-multisubset U → UU l1
-  is-finite-locally-finite-multisubset U μ =
-    is-finite (support-locally-finite-multisubset U μ)
+  is-finite-locally-finite-multisubset U μ = {!!}
 ```

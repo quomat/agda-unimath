@@ -35,8 +35,5 @@ module _
 
   prod-Relation-Prop :
     Relation-Prop (l2 ⊔ l4) (A × B)
-  prod-Relation-Prop (a , b) (a' , b') =
-    prod-Prop
-      ( R a a')
-      ( S b b')
+  prod-Relation-Prop (a , b) (a' , b') = {!!}
 ```

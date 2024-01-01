@@ -32,8 +32,7 @@ object.
 ```agda
 is-terminal-obj-Precategory :
   {l1 l2 : Level} (C : Precategory l1 l2) → obj-Precategory C → UU (l1 ⊔ l2)
-is-terminal-obj-Precategory C x =
-  (y : obj-Precategory C) → is-contr (hom-Precategory C y x)
+is-terminal-obj-Precategory C x = {!!}
 
 module _
   {l1 l2 : Level} (C : Precategory l1 l2)
@@ -44,13 +43,13 @@ module _
   hom-is-terminal-obj-Precategory :
     (y : obj-Precategory C) →
     hom-Precategory C y x
-  hom-is-terminal-obj-Precategory = center ∘ t
+  hom-is-terminal-obj-Precategory = {!!}
 
   is-unique-hom-is-terminal-obj-Precategory :
     (y : obj-Precategory C) →
     (f : hom-Precategory C y x) →
     hom-is-terminal-obj-Precategory y ＝ f
-  is-unique-hom-is-terminal-obj-Precategory = contraction ∘ t
+  is-unique-hom-is-terminal-obj-Precategory = {!!}
 ```
 
 ### Terminal objects in precategories
@@ -58,8 +57,7 @@ module _
 ```agda
 terminal-obj-Precategory :
   {l1 l2 : Level} (C : Precategory l1 l2) → UU (l1 ⊔ l2)
-terminal-obj-Precategory C =
-  Σ (obj-Precategory C) (is-terminal-obj-Precategory C)
+terminal-obj-Precategory C = {!!}
 
 module _
   {l1 l2 : Level}
@@ -68,26 +66,20 @@ module _
   where
 
   obj-terminal-obj-Precategory : obj-Precategory C
-  obj-terminal-obj-Precategory = pr1 t
+  obj-terminal-obj-Precategory = {!!}
 
   is-terminal-obj-terminal-obj-Precategory :
     is-terminal-obj-Precategory C obj-terminal-obj-Precategory
-  is-terminal-obj-terminal-obj-Precategory = pr2 t
+  is-terminal-obj-terminal-obj-Precategory = {!!}
 
   hom-terminal-obj-Precategory :
     (y : obj-Precategory C) →
     hom-Precategory C y obj-terminal-obj-Precategory
-  hom-terminal-obj-Precategory =
-    hom-is-terminal-obj-Precategory C
-      ( obj-terminal-obj-Precategory)
-      ( is-terminal-obj-terminal-obj-Precategory)
+  hom-terminal-obj-Precategory = {!!}
 
   is-unique-hom-terminal-obj-Precategory :
     (y : obj-Precategory C) →
     (f : hom-Precategory C y obj-terminal-obj-Precategory) →
     hom-terminal-obj-Precategory y ＝ f
-  is-unique-hom-terminal-obj-Precategory =
-    is-unique-hom-is-terminal-obj-Precategory C
-      ( obj-terminal-obj-Precategory)
-      ( is-terminal-obj-terminal-obj-Precategory)
+  is-unique-hom-terminal-obj-Precategory = {!!}
 ```

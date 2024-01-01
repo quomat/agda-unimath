@@ -35,89 +35,67 @@ properties of contractible types.
 ```agda
 ev-star :
   {l : Level} (P : unit → UU l) → ((x : unit) → P x) → P star
-ev-star P f = f star
+ev-star P f = {!!}
 
 ev-star' :
   {l : Level} (Y : UU l) → (unit → Y) → Y
-ev-star' Y = ev-star (λ t → Y)
+ev-star' Y = {!!}
 
 abstract
   dependent-universal-property-unit :
     {l : Level} (P : unit → UU l) → is-equiv (ev-star P)
-  dependent-universal-property-unit =
-    dependent-universal-property-contr-is-contr star is-contr-unit
+  dependent-universal-property-unit = {!!}
 
 equiv-dependent-universal-property-unit :
   {l : Level} (P : unit → UU l) → ((x : unit) → P x) ≃ P star
-pr1 (equiv-dependent-universal-property-unit P) = ev-star P
-pr2 (equiv-dependent-universal-property-unit P) =
-  dependent-universal-property-unit P
+pr1 (equiv-dependent-universal-property-unit P) = {!!}
+pr2 (equiv-dependent-universal-property-unit P) = {!!}
 
 abstract
   universal-property-unit :
     {l : Level} (Y : UU l) → is-equiv (ev-star' Y)
-  universal-property-unit Y = dependent-universal-property-unit (λ t → Y)
+  universal-property-unit Y = {!!}
 
 equiv-universal-property-unit :
   {l : Level} (Y : UU l) → (unit → Y) ≃ Y
-pr1 (equiv-universal-property-unit Y) = ev-star' Y
-pr2 (equiv-universal-property-unit Y) = universal-property-unit Y
+pr1 (equiv-universal-property-unit Y) = {!!}
+pr2 (equiv-universal-property-unit Y) = {!!}
 
 inv-equiv-universal-property-unit :
   {l : Level} (Y : UU l) → Y ≃ (unit → Y)
-inv-equiv-universal-property-unit Y =
-  inv-equiv (equiv-universal-property-unit Y)
+inv-equiv-universal-property-unit Y = {!!}
 
 abstract
   is-equiv-point-is-contr :
     {l1 : Level} {X : UU l1} (x : X) →
     is-contr X → is-equiv (point x)
-  is-equiv-point-is-contr x is-contr-X =
-    is-equiv-is-contr (point x) is-contr-unit is-contr-X
+  is-equiv-point-is-contr x is-contr-X = {!!}
 
 abstract
   is-equiv-point-universal-property-unit :
     {l1 : Level} (X : UU l1) (x : X) →
     ({l2 : Level} (Y : UU l2) → is-equiv (λ (f : X → Y) → f x)) →
     is-equiv (point x)
-  is-equiv-point-universal-property-unit X x H =
-    is-equiv-is-equiv-precomp
-      ( point x)
-      ( λ Y →
-        is-equiv-right-factor
-          ( ev-star' Y)
-          ( precomp (point x) Y)
-          ( universal-property-unit Y)
-          ( H Y))
+  is-equiv-point-universal-property-unit X x H = {!!}
 
 abstract
   universal-property-unit-is-equiv-point :
     {l1 : Level} {X : UU l1} (x : X) →
     is-equiv (point x) →
     ({l2 : Level} (Y : UU l2) → is-equiv (λ (f : X → Y) → f x))
-  universal-property-unit-is-equiv-point x is-equiv-point Y =
-    is-equiv-comp
-      ( ev-star' Y)
-      ( precomp (point x) Y)
-      ( is-equiv-precomp-is-equiv (point x) is-equiv-point Y)
-      ( universal-property-unit Y)
+  universal-property-unit-is-equiv-point x is-equiv-point Y = {!!}
 
 abstract
   universal-property-unit-is-contr :
     {l1 : Level} {X : UU l1} (x : X) →
     is-contr X →
     ({l2 : Level} (Y : UU l2) → is-equiv (λ (f : X → Y) → f x))
-  universal-property-unit-is-contr x is-contr-X =
-    universal-property-unit-is-equiv-point x
-      ( is-equiv-point-is-contr x is-contr-X)
+  universal-property-unit-is-contr x is-contr-X = {!!}
 
 abstract
   is-equiv-diagonal-is-equiv-point :
     {l1 : Level} {X : UU l1} (x : X) →
     is-equiv (point x) →
     ({l2 : Level} (Y : UU l2) → is-equiv (λ y → const X Y y))
-  is-equiv-diagonal-is-equiv-point {X = X} x is-equiv-point Y =
-    is-equiv-is-section
-      ( universal-property-unit-is-equiv-point x is-equiv-point Y)
-      ( refl-htpy)
+  is-equiv-diagonal-is-equiv-point {X = X} x is-equiv-point Y = {!!}
 ```

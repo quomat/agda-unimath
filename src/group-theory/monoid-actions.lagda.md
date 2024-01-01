@@ -41,55 +41,44 @@ monoid action `μ` of `M` on `X` satisfies the following laws:
 
 ```agda
 action-Monoid : {l1 : Level} (l : Level) (M : Monoid l1) → UU (l1 ⊔ lsuc l)
-action-Monoid l M = Σ (Set l) (λ X → hom-Monoid M (endo-Monoid X))
+action-Monoid l M = {!!}
 
 module _
   {l1 l2 : Level} (M : Monoid l1) (X : action-Monoid l2 M)
   where
 
   set-action-Monoid : Set l2
-  set-action-Monoid = pr1 X
+  set-action-Monoid = {!!}
 
   type-action-Monoid : UU l2
-  type-action-Monoid = type-Set set-action-Monoid
+  type-action-Monoid = {!!}
 
   is-set-type-action-Monoid : is-set type-action-Monoid
-  is-set-type-action-Monoid = is-set-type-Set set-action-Monoid
+  is-set-type-action-Monoid = {!!}
 
   mul-hom-monoid-action-Monoid : hom-Monoid M (endo-Monoid set-action-Monoid)
-  mul-hom-monoid-action-Monoid = pr2 X
+  mul-hom-monoid-action-Monoid = {!!}
 
   mul-action-Monoid : type-Monoid M → type-action-Monoid → type-action-Monoid
-  mul-action-Monoid =
-    map-hom-Monoid M
-      ( endo-Monoid set-action-Monoid)
-      ( mul-hom-monoid-action-Monoid)
+  mul-action-Monoid = {!!}
 
   ap-mul-action-Monoid :
     {m : type-Monoid M} {x y : type-action-Monoid} →
     x ＝ y → mul-action-Monoid m x ＝ mul-action-Monoid m y
-  ap-mul-action-Monoid {m} = ap (mul-action-Monoid m)
+  ap-mul-action-Monoid {m} = {!!}
 
   ap-mul-action-Monoid' :
     {m n : type-Monoid M} (p : m ＝ n) {x : type-action-Monoid} →
     mul-action-Monoid m x ＝ mul-action-Monoid n x
-  ap-mul-action-Monoid' p {x} = ap (λ t → mul-action-Monoid t x) p
+  ap-mul-action-Monoid' p {x} = {!!}
 
   associative-mul-action-Monoid :
     (x y : type-Monoid M) (z : type-action-Monoid) →
     mul-action-Monoid (mul-Monoid M x y) z ＝
     mul-action-Monoid x (mul-action-Monoid y z)
-  associative-mul-action-Monoid x y =
-    htpy-eq
-      ( preserves-mul-hom-Monoid M
-        ( endo-Monoid set-action-Monoid)
-        ( mul-hom-monoid-action-Monoid))
+  associative-mul-action-Monoid x y = {!!}
 
   unit-law-mul-action-Monoid :
     (x : type-action-Monoid) → mul-action-Monoid (unit-Monoid M) x ＝ x
-  unit-law-mul-action-Monoid =
-    htpy-eq
-      ( preserves-unit-hom-Monoid M
-        ( endo-Monoid set-action-Monoid)
-        ( mul-hom-monoid-action-Monoid))
+  unit-law-mul-action-Monoid = {!!}
 ```

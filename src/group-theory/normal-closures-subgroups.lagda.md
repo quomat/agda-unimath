@@ -61,9 +61,7 @@ module _
   where
 
   is-normal-closure-Subgroup : UUω
-  is-normal-closure-Subgroup =
-    {l : Level} (M : Normal-Subgroup l G) →
-    leq-Normal-Subgroup G N M ↔ leq-Subgroup G H (subgroup-Normal-Subgroup G M)
+  is-normal-closure-Subgroup = {!!}
 ```
 
 ### The construction of the normal closure
@@ -74,146 +72,93 @@ module _
   where
 
   generating-subset-normal-closure-Subgroup : subset-Group (l1 ⊔ l2) G
-  generating-subset-normal-closure-Subgroup x =
-    ∃-Prop
-      ( type-Group G)
-      ( λ y → fiber (conjugation-Group G y ∘ inclusion-Subgroup G H) x)
+  generating-subset-normal-closure-Subgroup x = {!!}
 
   contains-subgroup-generating-subset-normal-closure-Subgroup :
     subset-Subgroup G H ⊆ generating-subset-normal-closure-Subgroup
-  contains-subgroup-generating-subset-normal-closure-Subgroup x h =
-    unit-trunc-Prop
-      ( unit-Group G , (x , h) , compute-conjugation-unit-Group G x)
+  contains-subgroup-generating-subset-normal-closure-Subgroup x h = {!!}
 
   abstract
     is-closed-under-conjugation-generating-subset-normal-closure-Subgroup :
       is-closed-under-conjugation-subset-Group G
         generating-subset-normal-closure-Subgroup
     is-closed-under-conjugation-generating-subset-normal-closure-Subgroup
-      x y s =
-      apply-universal-property-trunc-Prop s
-        ( generating-subset-normal-closure-Subgroup (conjugation-Group G x y))
-        ( λ where
-          ( z , h , refl) →
-            unit-trunc-Prop
-              ( mul-Group G x z ,
-                h ,
-                compute-conjugation-mul-Group G x z (pr1 h)))
+      x y s = {!!}
 
   subgroup-normal-closure-Subgroup : Subgroup (l1 ⊔ l2) G
-  subgroup-normal-closure-Subgroup =
-    subgroup-subset-Group G generating-subset-normal-closure-Subgroup
+  subgroup-normal-closure-Subgroup = {!!}
 
   subset-normal-closure-Subgroup : subset-Group (l1 ⊔ l2) G
-  subset-normal-closure-Subgroup =
-    subset-Subgroup G subgroup-normal-closure-Subgroup
+  subset-normal-closure-Subgroup = {!!}
 
   is-in-normal-closure-Subgroup : type-Group G → UU (l1 ⊔ l2)
-  is-in-normal-closure-Subgroup =
-    is-in-Subgroup G subgroup-normal-closure-Subgroup
+  is-in-normal-closure-Subgroup = {!!}
 
   is-closed-under-eq-normal-closure-Subgroup :
     {x y : type-Group G} → is-in-normal-closure-Subgroup x → x ＝ y →
     is-in-normal-closure-Subgroup y
-  is-closed-under-eq-normal-closure-Subgroup =
-    is-closed-under-eq-Subgroup G subgroup-normal-closure-Subgroup
+  is-closed-under-eq-normal-closure-Subgroup = {!!}
 
   is-closed-under-eq-normal-closure-Subgroup' :
     {x y : type-Group G} → is-in-normal-closure-Subgroup y → x ＝ y →
     is-in-normal-closure-Subgroup x
-  is-closed-under-eq-normal-closure-Subgroup' =
-    is-closed-under-eq-Subgroup' G subgroup-normal-closure-Subgroup
+  is-closed-under-eq-normal-closure-Subgroup' = {!!}
 
   contains-unit-normal-closure-Subgroup :
     contains-unit-subset-Group G subset-normal-closure-Subgroup
-  contains-unit-normal-closure-Subgroup =
-    contains-unit-Subgroup G subgroup-normal-closure-Subgroup
+  contains-unit-normal-closure-Subgroup = {!!}
 
   is-closed-under-multiplication-normal-closure-Subgroup :
     is-closed-under-multiplication-subset-Group G subset-normal-closure-Subgroup
-  is-closed-under-multiplication-normal-closure-Subgroup =
-    is-closed-under-multiplication-Subgroup G subgroup-normal-closure-Subgroup
+  is-closed-under-multiplication-normal-closure-Subgroup = {!!}
 
   is-closed-under-inverses-normal-closure-Subgroup :
     is-closed-under-inverses-subset-Group G subset-normal-closure-Subgroup
-  is-closed-under-inverses-normal-closure-Subgroup =
-    is-closed-under-inverses-Subgroup G subgroup-normal-closure-Subgroup
+  is-closed-under-inverses-normal-closure-Subgroup = {!!}
 
   contains-generating-subset-normal-closure-Subgroup :
     generating-subset-normal-closure-Subgroup ⊆ subset-normal-closure-Subgroup
-  contains-generating-subset-normal-closure-Subgroup =
-    contains-subset-subgroup-subset-Group G
-      generating-subset-normal-closure-Subgroup
+  contains-generating-subset-normal-closure-Subgroup = {!!}
 
   is-subgroup-generated-by-generating-subset-normal-closure-Subgroup :
     is-subgroup-generated-by-subset-Group G
       generating-subset-normal-closure-Subgroup
       subgroup-normal-closure-Subgroup
-  is-subgroup-generated-by-generating-subset-normal-closure-Subgroup =
-    is-subgroup-generated-by-subset-subgroup-subset-Group G
-      generating-subset-normal-closure-Subgroup
+  is-subgroup-generated-by-generating-subset-normal-closure-Subgroup = {!!}
 
   is-normal-subgroup-normal-closure-Subgroup :
     is-normal-Subgroup G subgroup-normal-closure-Subgroup
-  is-normal-subgroup-normal-closure-Subgroup =
-    is-normal-is-closed-under-conjugation-subgroup-subset-Group G
-      generating-subset-normal-closure-Subgroup
-      is-closed-under-conjugation-generating-subset-normal-closure-Subgroup
+  is-normal-subgroup-normal-closure-Subgroup = {!!}
 
   normal-closure-Subgroup : Normal-Subgroup (l1 ⊔ l2) G
-  pr1 normal-closure-Subgroup = subgroup-normal-closure-Subgroup
-  pr2 normal-closure-Subgroup = is-normal-subgroup-normal-closure-Subgroup
+  pr1 normal-closure-Subgroup = {!!}
 
   contains-subgroup-normal-closure-Subgroup :
     leq-Subgroup G H subgroup-normal-closure-Subgroup
-  contains-subgroup-normal-closure-Subgroup =
-    transitive-leq-subtype
-      ( subset-Subgroup G H)
-      ( generating-subset-normal-closure-Subgroup)
-      ( subset-normal-closure-Subgroup)
-      ( contains-subset-subgroup-subset-Group G
-        generating-subset-normal-closure-Subgroup)
-      ( contains-subgroup-generating-subset-normal-closure-Subgroup)
+  contains-subgroup-normal-closure-Subgroup = {!!}
 
   forward-implication-is-normal-closure-normal-closure-Subgroup :
     {l : Level} (N : Normal-Subgroup l G) →
     leq-Normal-Subgroup G normal-closure-Subgroup N →
     leq-Subgroup G H (subgroup-Normal-Subgroup G N)
-  forward-implication-is-normal-closure-normal-closure-Subgroup N u =
-    transitive-leq-subtype
-      ( subset-Subgroup G H)
-      ( subset-normal-closure-Subgroup)
-      ( subset-Normal-Subgroup G N)
-      ( u)
-      ( contains-subgroup-normal-closure-Subgroup)
+  forward-implication-is-normal-closure-normal-closure-Subgroup N u = {!!}
 
   abstract
     contains-generating-subset-normal-closure-Normal-Subgroup :
       {l : Level} (N : Normal-Subgroup l G) →
       leq-Subgroup G H (subgroup-Normal-Subgroup G N) →
       generating-subset-normal-closure-Subgroup ⊆ subset-Normal-Subgroup G N
-    contains-generating-subset-normal-closure-Normal-Subgroup N u x g =
-      apply-universal-property-trunc-Prop g
-        ( subset-Normal-Subgroup G N x)
-        ( λ where
-          ( z , (y , h) , refl) → is-normal-Normal-Subgroup G N z y (u y h))
+    contains-generating-subset-normal-closure-Normal-Subgroup N u x g = {!!}
 
   backward-implication-is-normal-closure-normal-closure-Subgroup :
     {l : Level} (N : Normal-Subgroup l G) →
     leq-Subgroup G H (subgroup-Normal-Subgroup G N) →
     leq-Normal-Subgroup G normal-closure-Subgroup N
-  backward-implication-is-normal-closure-normal-closure-Subgroup N u =
-    backward-implication
-      ( is-subgroup-generated-by-generating-subset-normal-closure-Subgroup
-        ( subgroup-Normal-Subgroup G N))
-      ( contains-generating-subset-normal-closure-Normal-Subgroup N u)
+  backward-implication-is-normal-closure-normal-closure-Subgroup N u = {!!}
 
   is-normal-closure-normal-closure-Subgroup :
     is-normal-closure-Subgroup G H normal-closure-Subgroup
-  pr1 (is-normal-closure-normal-closure-Subgroup N) =
-    forward-implication-is-normal-closure-normal-closure-Subgroup N
-  pr2 (is-normal-closure-normal-closure-Subgroup N) =
-    backward-implication-is-normal-closure-normal-closure-Subgroup N
+  pr1 (is-normal-closure-normal-closure-Subgroup N) = {!!}
 ```
 
 ### The normal closure Galois connection
@@ -229,25 +174,14 @@ module _
     leq-Normal-Subgroup G
       ( normal-closure-Subgroup G H)
       ( normal-closure-Subgroup G K)
-  preserves-order-normal-closure-Subgroup H K u =
-    backward-implication-is-normal-closure-normal-closure-Subgroup G H
-      ( normal-closure-Subgroup G K)
-      ( transitive-leq-subtype
-        ( subset-Subgroup G H)
-        ( subset-Subgroup G K)
-        ( subset-normal-closure-Subgroup G K)
-        ( contains-subgroup-normal-closure-Subgroup G K)
-        ( u))
+  preserves-order-normal-closure-Subgroup H K u = {!!}
 
   normal-closure-subgroup-hom-Large-Poset :
     hom-Large-Poset
       ( λ l2 → l1 ⊔ l2)
       ( Subgroup-Large-Poset G)
       ( Normal-Subgroup-Large-Poset G)
-  normal-closure-subgroup-hom-Large-Poset =
-    make-hom-Large-Preorder
-      ( normal-closure-Subgroup G)
-      ( preserves-order-normal-closure-Subgroup)
+  normal-closure-subgroup-hom-Large-Poset = {!!}
 
   normal-closure-Galois-Connection :
     galois-connection-Large-Poset
@@ -255,11 +189,7 @@ module _
       ( λ l → l)
       ( Subgroup-Large-Poset G)
       ( Normal-Subgroup-Large-Poset G)
-  normal-closure-Galois-Connection =
-    make-galois-connection-Large-Poset
-      ( normal-closure-subgroup-hom-Large-Poset)
-      ( subgroup-normal-subgroup-hom-Large-Poset G)
-      ( λ H N → is-normal-closure-normal-closure-Subgroup G H N)
+  normal-closure-Galois-Connection = {!!}
 ```
 
 ## See also

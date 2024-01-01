@@ -33,39 +33,24 @@ module _
   where
 
   subset-intersection-ideal-Semiring : subset-Semiring (l2 ⊔ l3) R
-  subset-intersection-ideal-Semiring =
-    intersection-subtype
-      ( subset-ideal-Semiring R A)
-      ( subset-ideal-Semiring R B)
+  subset-intersection-ideal-Semiring = {!!}
 
   contains-zero-intersection-ideal-Semiring :
     contains-zero-subset-Semiring R subset-intersection-ideal-Semiring
-  pr1 contains-zero-intersection-ideal-Semiring =
-    contains-zero-ideal-Semiring R A
-  pr2 contains-zero-intersection-ideal-Semiring =
-    contains-zero-ideal-Semiring R B
+  pr1 contains-zero-intersection-ideal-Semiring = {!!}
 
   is-closed-under-addition-intersection-ideal-Semiring :
     is-closed-under-addition-subset-Semiring R
       subset-intersection-ideal-Semiring
-  pr1 (is-closed-under-addition-intersection-ideal-Semiring x y H K) =
-    is-closed-under-addition-ideal-Semiring R A x y (pr1 H) (pr1 K)
-  pr2 (is-closed-under-addition-intersection-ideal-Semiring x y H K) =
-    is-closed-under-addition-ideal-Semiring R B x y (pr2 H) (pr2 K)
+  pr1 (is-closed-under-addition-intersection-ideal-Semiring x y H K) = {!!}
 
   is-closed-under-left-multiplication-intersection-ideal-Semiring :
     is-closed-under-left-multiplication-subset-Semiring R
       subset-intersection-ideal-Semiring
-  pr1 (is-closed-under-left-multiplication-intersection-ideal-Semiring x y H) =
-    is-closed-under-left-multiplication-ideal-Semiring R A x y (pr1 H)
-  pr2 (is-closed-under-left-multiplication-intersection-ideal-Semiring x y H) =
-    is-closed-under-left-multiplication-ideal-Semiring R B x y (pr2 H)
+  pr1 (is-closed-under-left-multiplication-intersection-ideal-Semiring x y H) = {!!}
 
   is-closed-under-right-multiplication-intersection-ideal-Semiring :
     is-closed-under-right-multiplication-subset-Semiring R
       subset-intersection-ideal-Semiring
-  pr1 (is-closed-under-right-multiplication-intersection-ideal-Semiring x y H) =
-    is-closed-under-right-multiplication-ideal-Semiring R A x y (pr1 H)
-  pr2 (is-closed-under-right-multiplication-intersection-ideal-Semiring x y H) =
-    is-closed-under-right-multiplication-ideal-Semiring R B x y (pr2 H)
+  pr1 (is-closed-under-right-multiplication-intersection-ideal-Semiring x y H) = {!!}
 ```

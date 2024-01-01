@@ -37,10 +37,7 @@ module _
   where
 
   is-lower-set-Large-Subposet : UUω
-  is-lower-set-Large-Subposet =
-    {l1 l2 : Level} (x : type-Large-Poset P l1) (y : type-Large-Poset P l2) →
-    leq-Large-Poset P y x →
-    is-in-Large-Subposet P S x → is-in-Large-Subposet P S y
+  is-lower-set-Large-Subposet = {!!}
 ```
 
 ### Lower sets of a large poset
@@ -69,8 +66,7 @@ module _
 
   is-in-lower-set-Large-Poset :
     {l : Level} (x : type-Large-Poset P l) → UU (γ l)
-  is-in-lower-set-Large-Poset =
-    is-in-Large-Subposet P (large-subposet-lower-set-Large-Poset L)
+  is-in-lower-set-Large-Poset = {!!}
 ```
 
 ## See also

@@ -61,99 +61,42 @@ module _
   where
 
   classifying-type-quotient-Concrete-Group : UU (l1 ⊔ lsuc l2)
-  classifying-type-quotient-Concrete-Group =
-    Σ ( transitive-action-Concrete-Group l2 G)
-      ( λ X →
-        mere-equiv-action-Concrete-Group G
-        ( action-normal-subgroup-Concrete-Group G N)
-        ( action-transitive-action-Concrete-Group G X))
+  classifying-type-quotient-Concrete-Group = {!!}
 
   shape-quotient-Concrete-Group :
     classifying-type-quotient-Concrete-Group
-  pr1 shape-quotient-Concrete-Group =
-    transitive-action-normal-subgroup-Concrete-Group G N
-  pr2 shape-quotient-Concrete-Group =
-    refl-mere-equiv-action-Concrete-Group G
-      ( action-normal-subgroup-Concrete-Group G N)
+  pr1 shape-quotient-Concrete-Group = {!!}
 
   classifying-pointed-type-quotient-Concrete-Group :
     Pointed-Type (l1 ⊔ lsuc l2)
-  pr1 classifying-pointed-type-quotient-Concrete-Group =
-    classifying-type-quotient-Concrete-Group
-  pr2 classifying-pointed-type-quotient-Concrete-Group =
-    shape-quotient-Concrete-Group
+  pr1 classifying-pointed-type-quotient-Concrete-Group = {!!}
 
   type-quotient-Concrete-Group : UU (l1 ⊔ lsuc l2)
-  type-quotient-Concrete-Group =
-    type-Ω classifying-pointed-type-quotient-Concrete-Group
+  type-quotient-Concrete-Group = {!!}
 
   extensionality-classifying-type-quotient-Concrete-Group :
     (u v : classifying-type-quotient-Concrete-Group) →
     (u ＝ v) ≃ equiv-transitive-action-Concrete-Group G (pr1 u) (pr1 v)
-  extensionality-classifying-type-quotient-Concrete-Group u =
-    extensionality-type-subtype
-      ( λ (X : transitive-action-Concrete-Group l2 G) →
-        mere-equiv-prop-action-Concrete-Group G
-          ( action-normal-subgroup-Concrete-Group G N)
-          ( action-transitive-action-Concrete-Group G X))
-      ( pr2 u)
-      ( id-equiv-transitive-action-Concrete-Group G
-        ( pr1 u))
-      ( extensionality-transitive-action-Concrete-Group G (pr1 u))
+  extensionality-classifying-type-quotient-Concrete-Group u = {!!}
 
   is-0-connected-classifying-type-quotient-Concrete-Group :
     is-0-connected classifying-type-quotient-Concrete-Group
-  is-0-connected-classifying-type-quotient-Concrete-Group =
-    is-0-connected-mere-eq
-      ( shape-quotient-Concrete-Group)
-      ( λ (pair u p) →
-        apply-universal-property-trunc-Prop p
-          ( mere-eq-Prop
-            ( shape-quotient-Concrete-Group)
-            ( pair u p))
-          ( λ e →
-            unit-trunc-Prop
-              ( eq-type-subtype
-                ( λ X →
-                  mere-equiv-prop-action-Concrete-Group G
-                    ( action-normal-subgroup-Concrete-Group G N)
-                    ( action-transitive-action-Concrete-Group G X))
-                ( eq-type-subtype
-                  ( is-transitive-prop-action-Concrete-Group G)
-                  ( eq-equiv-action-Concrete-Group G
-                    ( action-normal-subgroup-Concrete-Group G N)
-                    ( pr1 u)
-                    ( e))))))
+  is-0-connected-classifying-type-quotient-Concrete-Group = {!!}
 
   is-1-type-classifying-type-quotient-Concrete-Group :
     is-1-type classifying-type-quotient-Concrete-Group
-  is-1-type-classifying-type-quotient-Concrete-Group =
-    is-1-type-type-subtype
-      ( λ X →
-        mere-equiv-prop-action-Concrete-Group G
-          ( action-normal-subgroup-Concrete-Group G N)
-          ( action-transitive-action-Concrete-Group G X))
-      ( is-1-type-transitive-action-Concrete-Group G)
+  is-1-type-classifying-type-quotient-Concrete-Group = {!!}
 
   is-set-type-quotient-Concrete-Group :
     is-set type-quotient-Concrete-Group
-  is-set-type-quotient-Concrete-Group =
-    is-1-type-classifying-type-quotient-Concrete-Group
-      shape-quotient-Concrete-Group
-      shape-quotient-Concrete-Group
+  is-set-type-quotient-Concrete-Group = {!!}
 
   ∞-group-quotient-Concrete-Group : ∞-Group (l1 ⊔ lsuc l2)
-  pr1 ∞-group-quotient-Concrete-Group =
-    classifying-pointed-type-quotient-Concrete-Group
-  pr2 ∞-group-quotient-Concrete-Group =
-    is-0-connected-classifying-type-quotient-Concrete-Group
+  pr1 ∞-group-quotient-Concrete-Group = {!!}
 
   concrete-group-quotient-Concrete-Group :
     Concrete-Group (l1 ⊔ lsuc l2)
-  pr1 concrete-group-quotient-Concrete-Group =
-    ∞-group-quotient-Concrete-Group
-  pr2 concrete-group-quotient-Concrete-Group =
-    is-set-type-quotient-Concrete-Group
+  pr1 concrete-group-quotient-Concrete-Group = {!!}
 ```
 
 ### The 0-image construction of `G/N`
@@ -165,24 +108,16 @@ module _
   where
 
   classifying-type-0-image-quotient-Concrete-Group : UU (l1 ⊔ lsuc l2)
-  classifying-type-0-image-quotient-Concrete-Group =
-    0-im (action-normal-subgroup-Concrete-Group G N)
+  classifying-type-0-image-quotient-Concrete-Group = {!!}
 
   shape-0-image-quotient-Concrete-Group :
     classifying-type-0-image-quotient-Concrete-Group
-  shape-0-image-quotient-Concrete-Group =
-    unit-0-im
-      ( action-normal-subgroup-Concrete-Group G N)
-      ( shape-Concrete-Group G)
+  shape-0-image-quotient-Concrete-Group = {!!}
 
   classifying-pointed-type-0-image-quotient-Concrete-Group :
     Pointed-Type (l1 ⊔ lsuc l2)
-  pr1 classifying-pointed-type-0-image-quotient-Concrete-Group =
-    classifying-type-0-image-quotient-Concrete-Group
-  pr2 classifying-pointed-type-0-image-quotient-Concrete-Group =
-    shape-0-image-quotient-Concrete-Group
+  pr1 classifying-pointed-type-0-image-quotient-Concrete-Group = {!!}
 
   type-0-image-quotient-Concrete-Group : UU (l1 ⊔ lsuc l2)
-  type-0-image-quotient-Concrete-Group =
-    type-Ω classifying-pointed-type-0-image-quotient-Concrete-Group
+  type-0-image-quotient-Concrete-Group = {!!}
 ```

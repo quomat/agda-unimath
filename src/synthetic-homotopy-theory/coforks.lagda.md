@@ -61,17 +61,17 @@ module _
   where
 
   cofork : UU l3 → UU (l1 ⊔ l2 ⊔ l3)
-  cofork X = Σ (B → X) (λ e → e ∘ f ~ e ∘ g)
+  cofork X = {!!}
 
   module _
     { X : UU l3} (e : cofork X)
     where
 
     map-cofork : B → X
-    map-cofork = pr1 e
+    map-cofork = {!!}
 
     coherence-cofork : map-cofork ∘ f ~ map-cofork ∘ g
-    coherence-cofork = pr2 e
+    coherence-cofork = {!!}
 ```
 
 ### Homotopies of coforks
@@ -89,14 +89,10 @@ module _
     ( e e' : cofork f g X) →
     ( K : map-cofork f g e ~ map-cofork f g e') →
     UU (l1 ⊔ l3)
-  coherence-htpy-cofork e e' K =
-    ( (coherence-cofork f g e) ∙h (K ·r g)) ~
-    ( (K ·r f) ∙h (coherence-cofork f g e'))
+  coherence-htpy-cofork e e' K = {!!}
 
   htpy-cofork : cofork f g X → cofork f g X → UU (l1 ⊔ l2 ⊔ l3)
-  htpy-cofork e e' =
-    Σ ( map-cofork f g e ~ map-cofork f g e')
-      ( coherence-htpy-cofork e e')
+  htpy-cofork e e' = {!!}
 ```
 
 ### Postcomposing coforks
@@ -118,8 +114,7 @@ module _
   where
 
   cofork-map : {l : Level} {Y : UU l} → (X → Y) → cofork f g Y
-  pr1 (cofork-map h) = h ∘ map-cofork f g e
-  pr2 (cofork-map h) = h ·l (coherence-cofork f g e)
+  pr1 (cofork-map h) = {!!}
 ```
 
 ## Properties
@@ -132,37 +127,24 @@ module _
   where
 
   reflexive-htpy-cofork : (e : cofork f g X) → htpy-cofork f g e e
-  pr1 (reflexive-htpy-cofork e) = refl-htpy
-  pr2 (reflexive-htpy-cofork e) = right-unit-htpy
+  pr1 (reflexive-htpy-cofork e) = {!!}
 
   htpy-cofork-eq :
     ( e e' : cofork f g X) → (e ＝ e') → htpy-cofork f g e e'
-  htpy-cofork-eq e .e refl = reflexive-htpy-cofork e
+  htpy-cofork-eq e .e refl = {!!}
 
   abstract
     is-torsorial-htpy-cofork :
       ( e : cofork f g X) → is-torsorial (htpy-cofork f g e)
-    is-torsorial-htpy-cofork e =
-      is-torsorial-Eq-structure
-        ( ev-pair (coherence-htpy-cofork f g e))
-        ( is-torsorial-htpy (map-cofork f g e))
-        ( map-cofork f g e , refl-htpy)
-        ( is-contr-is-equiv'
-          ( Σ ( map-cofork f g e ∘ f ~ map-cofork f g e ∘ g)
-              ( λ K → coherence-cofork f g e ~ K))
-          ( tot (λ K M → right-unit-htpy ∙h M))
-          ( is-equiv-tot-is-fiberwise-equiv
-            ( is-equiv-concat-htpy right-unit-htpy))
-          ( is-torsorial-htpy (coherence-cofork f g e)))
+    is-torsorial-htpy-cofork e = {!!}
 
     is-equiv-htpy-cofork-eq :
       ( e e' : cofork f g X) → is-equiv (htpy-cofork-eq e e')
-    is-equiv-htpy-cofork-eq e =
-      fundamental-theorem-id (is-torsorial-htpy-cofork e) (htpy-cofork-eq e)
+    is-equiv-htpy-cofork-eq e = {!!}
 
   eq-htpy-cofork :
     ( e e' : cofork f g X) → htpy-cofork f g e e' → e ＝ e'
-  eq-htpy-cofork e e' = map-inv-is-equiv (is-equiv-htpy-cofork-eq e e')
+  eq-htpy-cofork e e' = {!!}
 ```
 
 ### Postcomposing a cofork by identity is the identity
@@ -174,11 +156,7 @@ module _
   where
 
   cofork-map-id : cofork-map f g e id ＝ e
-  cofork-map-id =
-    eq-htpy-cofork f g
-      ( cofork-map f g e id)
-      ( e)
-      ( refl-htpy , (right-unit-htpy ∙h (ap-id ∘ coherence-cofork f g e)))
+  cofork-map-id = {!!}
 ```
 
 ### Postcomposing coforks distributes over function composition
@@ -200,11 +178,7 @@ module _
   cofork-map-comp :
     (h : X → Y) (k : Y → Z) →
     cofork-map f g e (k ∘ h) ＝ cofork-map f g (cofork-map f g e h) k
-  cofork-map-comp h k =
-    eq-htpy-cofork f g
-      ( cofork-map f g e (k ∘ h))
-      ( cofork-map f g (cofork-map f g e h) k)
-      ( refl-htpy , (right-unit-htpy ∙h (ap-comp k h ∘ coherence-cofork f g e)))
+  cofork-map-comp h k = {!!}
 ```
 
 ### Coforks are special cases of cocones under spans
@@ -223,11 +197,10 @@ module _
   where
 
   vertical-map-span-cocone-cofork : A + A → A
-  vertical-map-span-cocone-cofork = codiagonal A
+  vertical-map-span-cocone-cofork = {!!}
 
   horizontal-map-span-cocone-cofork : A + A → B
-  horizontal-map-span-cocone-cofork (inl a) = f a
-  horizontal-map-span-cocone-cofork (inr a) = g a
+  horizontal-map-span-cocone-cofork (inl a) = {!!}
 
   module _
     { l3 : Level} {X : UU l3}
@@ -239,29 +212,13 @@ module _
         ( horizontal-map-span-cocone-cofork)
         ( X) →
       cofork f g X
-    pr1 (cofork-cocone-codiagonal c) =
-      vertical-map-cocone
-        ( vertical-map-span-cocone-cofork)
-        ( horizontal-map-span-cocone-cofork)
-        ( c)
-    pr2 (cofork-cocone-codiagonal c) =
-      ( ( inv-htpy
-          ( coherence-square-cocone
-            ( vertical-map-span-cocone-cofork)
-            ( horizontal-map-span-cocone-cofork)
-            ( c))) ·r
-        ( inl)) ∙h
-      ( ( coherence-square-cocone
-          ( vertical-map-span-cocone-cofork)
-          ( horizontal-map-span-cocone-cofork)
-          ( c)) ·r
-        ( inr))
+    pr1 (cofork-cocone-codiagonal c) = {!!}
 
     horizontal-map-cocone-cofork : cofork f g X → A → X
-    horizontal-map-cocone-cofork e = map-cofork f g e ∘ f
+    horizontal-map-cocone-cofork e = {!!}
 
     vertical-map-cocone-cofork : cofork f g X → B → X
-    vertical-map-cocone-cofork e = map-cofork f g e
+    vertical-map-cocone-cofork e = {!!}
 
     coherence-square-cocone-cofork :
       ( e : cofork f g X) →
@@ -270,8 +227,7 @@ module _
         ( vertical-map-span-cocone-cofork)
         ( vertical-map-cocone-cofork e)
         ( horizontal-map-cocone-cofork e)
-    coherence-square-cocone-cofork e (inl a) = refl
-    coherence-square-cocone-cofork e (inr a) = coherence-cofork f g e a
+    coherence-square-cocone-cofork e (inl a) = {!!}
 
     cocone-codiagonal-cofork :
       cofork f g X →
@@ -279,52 +235,20 @@ module _
         ( vertical-map-span-cocone-cofork)
         ( horizontal-map-span-cocone-cofork)
         ( X)
-    pr1 (cocone-codiagonal-cofork e) = horizontal-map-cocone-cofork e
-    pr1 (pr2 (cocone-codiagonal-cofork e)) = vertical-map-cocone-cofork e
-    pr2 (pr2 (cocone-codiagonal-cofork e)) = coherence-square-cocone-cofork e
+    pr1 (cocone-codiagonal-cofork e) = {!!}
 
     abstract
       is-section-cocone-codiagonal-cofork :
         cofork-cocone-codiagonal ∘ cocone-codiagonal-cofork ~ id
-      is-section-cocone-codiagonal-cofork e =
-        eq-htpy-cofork f g
-          ( cofork-cocone-codiagonal (cocone-codiagonal-cofork e))
-          ( e)
-          ( refl-htpy , right-unit-htpy)
+      is-section-cocone-codiagonal-cofork e = {!!}
 
       is-retraction-cocone-codiagonal-fork :
         cocone-codiagonal-cofork ∘ cofork-cocone-codiagonal ~ id
-      is-retraction-cocone-codiagonal-fork c =
-        eq-htpy-cocone
-          ( vertical-map-span-cocone-cofork)
-          ( horizontal-map-span-cocone-cofork)
-          ( cocone-codiagonal-cofork (cofork-cocone-codiagonal c))
-          ( c)
-          ( ( ( inv-htpy
-                ( coherence-square-cocone
-                  ( vertical-map-span-cocone-cofork)
-                  ( horizontal-map-span-cocone-cofork)
-                  ( c))) ·r
-              ( inl)) ,
-            ( refl-htpy) ,
-            ( λ where
-              ( inl a) →
-                inv
-                  ( left-inv
-                    ( coherence-square-cocone
-                      ( vertical-map-span-cocone-cofork)
-                      ( horizontal-map-span-cocone-cofork)
-                      ( c)
-                      ( inl a)))
-              ( inr a) → right-unit))
+      is-retraction-cocone-codiagonal-fork c = {!!}
 
     is-equiv-cofork-cocone-codiagonal :
       is-equiv cofork-cocone-codiagonal
-    is-equiv-cofork-cocone-codiagonal =
-      is-equiv-is-invertible
-        ( cocone-codiagonal-cofork)
-        ( is-section-cocone-codiagonal-cofork)
-        ( is-retraction-cocone-codiagonal-fork)
+    is-equiv-cofork-cocone-codiagonal = {!!}
 
     equiv-cocone-codiagonal-cofork :
       cocone
@@ -332,8 +256,7 @@ module _
         ( horizontal-map-span-cocone-cofork)
         ( X) ≃
       cofork f g X
-    pr1 equiv-cocone-codiagonal-cofork = cofork-cocone-codiagonal
-    pr2 equiv-cocone-codiagonal-cofork = is-equiv-cofork-cocone-codiagonal
+    pr1 equiv-cocone-codiagonal-cofork = {!!}
 
   triangle-cofork-cocone :
     { l3 l4 : Level} {X : UU l3} {Y : UU l4} →
@@ -345,15 +268,5 @@ module _
         ( vertical-map-span-cocone-cofork)
         ( horizontal-map-span-cocone-cofork)
         ( cocone-codiagonal-cofork e))
-  triangle-cofork-cocone e h =
-    eq-htpy-cofork f g
-      ( cofork-map f g e h)
-      ( cofork-cocone-codiagonal
-        ( cocone-map
-          ( vertical-map-span-cocone-cofork)
-          ( horizontal-map-span-cocone-cofork)
-          ( cocone-codiagonal-cofork e)
-          ( h)))
-      ( refl-htpy ,
-        right-unit-htpy)
+  triangle-cofork-cocone e h = {!!}
 ```

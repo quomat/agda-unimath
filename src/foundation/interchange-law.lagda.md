@@ -44,9 +44,7 @@ module _
   where
 
   fully-generalized-interchange-law : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l10)
-  fully-generalized-interchange-law =
-    (a : A) (b : B a) (c : C a) (d : D a b c) →
-    R (μ3 (μ1 a b) (μ2 a b c d)) (μ6 (μ4 a c) (μ5 a c b d))
+  fully-generalized-interchange-law = {!!}
 ```
 
 ### The interchange law for two binary operations on a type
@@ -57,15 +55,10 @@ module _
   where
 
   interchange-law : (X → X → X) → UU l
-  interchange-law ν = (x y u v : X) → μ (ν x y) (ν u v) ＝ ν (μ x u) (μ y v)
+  interchange-law ν = {!!}
 
   interchange-law-commutative-and-associative :
     ((x y : X) → μ x y ＝ μ y x) → ((x y z : X) → μ (μ x y) z ＝ μ x (μ y z)) →
     interchange-law μ
-  interchange-law-commutative-and-associative C A x y u v =
-    ( A x y (μ u v)) ∙
-    ( ( ap
-        ( μ x)
-        ( (inv (A y u v)) ∙ ((ap (λ z → μ z v) (C y u)) ∙ (A u y v)))) ∙
-      ( inv (A x u (μ y v))))
+  interchange-law-commutative-and-associative C A x y u v = {!!}
 ```

@@ -32,16 +32,16 @@ module _
   where
 
   commute-prop-Monoid : (x y : type-Monoid M) → Prop l
-  commute-prop-Monoid = commute-prop-Semigroup (semigroup-Monoid M)
+  commute-prop-Monoid = {!!}
 
   commute-Monoid : (x y : type-Monoid M) → UU l
-  commute-Monoid = commute-Semigroup (semigroup-Monoid M)
+  commute-Monoid = {!!}
 
   commute-Monoid' : (x y : type-Monoid M) → UU l
-  commute-Monoid' = commute-Semigroup' (semigroup-Monoid M)
+  commute-Monoid' = {!!}
 
   is-prop-commute-Monoid : (x y : type-Monoid M) → is-prop (commute-Monoid x y)
-  is-prop-commute-Monoid = is-prop-commute-Semigroup (semigroup-Monoid M)
+  is-prop-commute-Monoid = {!!}
 ```
 
 ## Properties
@@ -54,7 +54,7 @@ module _
   where
 
   refl-commute-Monoid : (x : type-Monoid M) → commute-Monoid M x x
-  refl-commute-Monoid = refl-commute-Semigroup (semigroup-Monoid M)
+  refl-commute-Monoid = {!!}
 ```
 
 ### The relation `commute-Monoid` is symmetric
@@ -66,7 +66,7 @@ module _
 
   symmetric-commute-Monoid :
     (x y : type-Monoid M) → commute-Monoid M x y → commute-Monoid M y x
-  symmetric-commute-Monoid = symmetric-commute-Semigroup (semigroup-Monoid M)
+  symmetric-commute-Monoid = {!!}
 ```
 
 ### The unit element commutes with every element of the monoid
@@ -77,8 +77,7 @@ module _
   where
 
   commute-unit-Monoid : (x : type-Monoid M) → commute-Monoid M x (unit-Monoid M)
-  commute-unit-Monoid x =
-    right-unit-law-mul-Monoid M x ∙ inv (left-unit-law-mul-Monoid M x)
+  commute-unit-Monoid x = {!!}
 ```
 
 ### If `x` commutes with `y`, then `x * (y * z) ＝ y * (x * z)` for any element `z`
@@ -90,17 +89,17 @@ module _
 
   private
     infix 45 _*_
-    _*_ = mul-Monoid M
+    _*_ = {!!}
 
   left-swap-commute-Monoid :
     (x y z : type-Monoid M) → commute-Monoid M x y →
     x * (y * z) ＝ y * (x * z)
-  left-swap-commute-Monoid = left-swap-commute-Semigroup (semigroup-Monoid M)
+  left-swap-commute-Monoid = {!!}
 
   right-swap-commute-Monoid :
     (x y z : type-Monoid M) → commute-Monoid M y z →
     (x * y) * z ＝ (x * z) * y
-  right-swap-commute-Monoid = right-swap-commute-Semigroup (semigroup-Monoid M)
+  right-swap-commute-Monoid = {!!}
 ```
 
 ### If `x` commutes with `y` and with `z`, then `x` commutes with `yz`
@@ -114,5 +113,5 @@ module _
     (x y z : type-Monoid M) →
     commute-Monoid M x y → commute-Monoid M x z →
     commute-Monoid M x (mul-Monoid M y z)
-  commute-mul-Monoid = commute-mul-Semigroup (semigroup-Monoid M)
+  commute-mul-Monoid = {!!}
 ```

@@ -38,27 +38,19 @@ module _
 
   mul-fin-Commutative-Monoid :
     (n : ℕ) → (Fin n → type-Commutative-Monoid M) → type-Commutative-Monoid M
-  mul-fin-Commutative-Monoid zero-ℕ x = unit-Commutative-Monoid M
-  mul-fin-Commutative-Monoid (succ-ℕ n) x =
-    mul-Commutative-Monoid M
-      ( mul-fin-Commutative-Monoid n (x ∘ inl))
-      ( x (inr star))
+  mul-fin-Commutative-Monoid zero-ℕ x = {!!}
 
   mul-count-Commutative-Monoid :
     {l2 : Level} {A : UU l2} → count A →
     (A → type-Commutative-Monoid M) → type-Commutative-Monoid M
-  mul-count-Commutative-Monoid e x =
-    mul-fin-Commutative-Monoid
-      ( number-of-elements-count e)
-      ( x ∘ map-equiv-count e)
+  mul-count-Commutative-Monoid e x = {!!}
 
 {-
   compute-permutation-mul-fin-Commutative-Monoid :
     (n : ℕ) (e : Fin n ≃ Fin n) (x : Fin n → type-Commutative-Monoid M) →
     Id ( mul-fin-Commutative-Monoid n (x ∘ map-equiv e))
        ( mul-fin-Commutative-Monoid n x)
-  compute-permutation-mul-fin-Commutative-Monoid zero-ℕ e x = refl
-  compute-permutation-mul-fin-Commutative-Monoid (succ-ℕ n) e x = {!!}
+  compute-permutation-mul-fin-Commutative-Monoid zero-ℕ e x = {!!}
 
   compute-mul-double-counting-Commutative-Monoid :
     {l2 : Level} {A : UU l2} (e1 : count A) (e2 : count A) →

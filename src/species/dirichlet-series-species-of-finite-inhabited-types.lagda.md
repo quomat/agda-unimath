@@ -61,14 +61,5 @@ equal to `1/n`.
 dirichlet-series-species-Inhabited-𝔽 :
   {l1 l2 l3 : Level} → species-Inhabited-𝔽 l1 l2 → UU l3 →
   UU (lsuc l1 ⊔ l2 ⊔ l3)
-dirichlet-series-species-Inhabited-𝔽 {l1} T S =
-  Σ ( ℕ)
-    ( λ n →
-      Σ ( UU-Fin l1 (succ-ℕ n))
-        ( λ F →
-          type-𝔽
-            ( T
-              ( type-UU-Fin (succ-ℕ n) F ,
-                is-finite-and-inhabited-type-UU-Fin-succ-ℕ n F)) ×
-          S → cycle-prime-decomposition-ℕ (succ-ℕ n) _))
+dirichlet-series-species-Inhabited-𝔽 {l1} T S = {!!}
 ```

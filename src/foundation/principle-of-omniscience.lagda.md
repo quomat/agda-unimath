@@ -28,13 +28,10 @@ A type `X` is said to satisfy the **principle of omniscience** if every
 
 ```agda
 is-omniscient-Prop : {l : Level} → UU l → Prop (lsuc lzero ⊔ l)
-is-omniscient-Prop X =
-  Π-Prop
-    ( decidable-subtype lzero X)
-    ( λ P → is-decidable-Prop (trunc-Prop (type-decidable-subtype P)))
+is-omniscient-Prop X = {!!}
 
 is-omniscient : {l : Level} → UU l → UU (lsuc lzero ⊔ l)
-is-omniscient X = type-Prop (is-omniscient-Prop X)
+is-omniscient X = {!!}
 ```
 
 ## See also

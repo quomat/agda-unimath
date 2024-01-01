@@ -33,26 +33,19 @@ module _
   where
 
   is-inhabited-Total-Order-𝔽-Prop : Prop l1
-  is-inhabited-Total-Order-𝔽-Prop = is-inhabited-Prop (type-Total-Order-𝔽 P)
+  is-inhabited-Total-Order-𝔽-Prop = {!!}
 
   is-inhabited-Total-Order-𝔽 : UU (l1 ⊔ l2)
-  is-inhabited-Total-Order-𝔽 = is-finite-Poset (poset-Total-Order-𝔽 P)
+  is-inhabited-Total-Order-𝔽 = {!!}
 
   is-prop-is-inhabited-Total-Order-𝔽 : is-prop is-inhabited-Total-Order-𝔽
-  is-prop-is-inhabited-Total-Order-𝔽 =
-    is-prop-is-finite-Poset (poset-Total-Order-𝔽 P)
+  is-prop-is-inhabited-Total-Order-𝔽 = {!!}
 
   is-finite-type-is-inhabited-Total-Order-𝔽 :
     is-inhabited-Total-Order-𝔽 → is-finite (type-Total-Order-𝔽 P)
-  is-finite-type-is-inhabited-Total-Order-𝔽 =
-    is-finite-type-is-finite-Poset (poset-Total-Order-𝔽 P)
+  is-finite-type-is-inhabited-Total-Order-𝔽 = {!!}
 
 is-inhabited-finite-total-order-Poset-Prop :
   {l1 l2 : Level} (P : Poset l1 l2) → Prop (l1 ⊔ l2)
-is-inhabited-finite-total-order-Poset-Prop P =
-  prod-Prop
-    ( is-total-Poset-Prop P)
-    ( prod-Prop
-      ( is-finite-Poset-Prop P)
-      ( is-inhabited-Prop (type-Poset P)))
+is-inhabited-finite-total-order-Poset-Prop P = {!!}
 ```

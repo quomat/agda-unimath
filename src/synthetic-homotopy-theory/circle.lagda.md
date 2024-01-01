@@ -61,12 +61,12 @@ postulate
   loop-𝕊¹ : Id base-𝕊¹ base-𝕊¹
 
 free-loop-𝕊¹ : free-loop 𝕊¹
-pr1 free-loop-𝕊¹ = base-𝕊¹
-pr2 free-loop-𝕊¹ = loop-𝕊¹
+pr1 free-loop-𝕊¹ = {!!}
+pr2 free-loop-𝕊¹ = {!!}
 
 𝕊¹-Pointed-Type : Pointed-Type lzero
-pr1 𝕊¹-Pointed-Type = 𝕊¹
-pr2 𝕊¹-Pointed-Type = base-𝕊¹
+pr1 𝕊¹-Pointed-Type = {!!}
+pr2 𝕊¹-Pointed-Type = {!!}
 
 postulate
   ind-𝕊¹ : {l : Level} → induction-principle-circle l free-loop-𝕊¹
@@ -79,8 +79,7 @@ postulate
 ```agda
 dependent-universal-property-𝕊¹ :
   {l : Level} → dependent-universal-property-circle l free-loop-𝕊¹
-dependent-universal-property-𝕊¹ =
-  dependent-universal-property-induction-principle-circle free-loop-𝕊¹ ind-𝕊¹
+dependent-universal-property-𝕊¹ = {!!}
 
 uniqueness-dependent-universal-property-𝕊¹ :
   {l : Level} {P : 𝕊¹ → UU l} (k : free-dependent-loop free-loop-𝕊¹ P) →
@@ -89,42 +88,31 @@ uniqueness-dependent-universal-property-𝕊¹ :
         ( λ h →
           Eq-free-dependent-loop free-loop-𝕊¹ P
             ( ev-free-loop-Π free-loop-𝕊¹ P h) k))
-uniqueness-dependent-universal-property-𝕊¹ {l} {P} =
-  uniqueness-dependent-universal-property-circle
-    free-loop-𝕊¹
-    dependent-universal-property-𝕊¹
+uniqueness-dependent-universal-property-𝕊¹ {l} {P} = {!!}
 
 module _
   {l : Level} (P : 𝕊¹ → UU l) (p0 : P base-𝕊¹) (α : Id (tr P loop-𝕊¹ p0) p0)
   where
 
   Π-𝕊¹ : UU l
-  Π-𝕊¹ =
-    Σ ( (x : 𝕊¹) → P x)
-      ( λ h →
-        Eq-free-dependent-loop free-loop-𝕊¹ P
-          ( ev-free-loop-Π free-loop-𝕊¹ P h) (pair p0 α))
+  Π-𝕊¹ = {!!}
 
   apply-dependent-universal-property-𝕊¹ : Π-𝕊¹
-  apply-dependent-universal-property-𝕊¹ =
-    center (uniqueness-dependent-universal-property-𝕊¹ (pair p0 α))
+  apply-dependent-universal-property-𝕊¹ = {!!}
 
   function-apply-dependent-universal-property-𝕊¹ : (x : 𝕊¹) → P x
-  function-apply-dependent-universal-property-𝕊¹ =
-    pr1 apply-dependent-universal-property-𝕊¹
+  function-apply-dependent-universal-property-𝕊¹ = {!!}
 
   base-dependent-universal-property-𝕊¹ :
     Id (function-apply-dependent-universal-property-𝕊¹ base-𝕊¹) p0
-  base-dependent-universal-property-𝕊¹ =
-    pr1 (pr2 apply-dependent-universal-property-𝕊¹)
+  base-dependent-universal-property-𝕊¹ = {!!}
 
   loop-dependent-universal-property-𝕊¹ :
     Id
       ( apd function-apply-dependent-universal-property-𝕊¹ loop-𝕊¹ ∙
         base-dependent-universal-property-𝕊¹)
       ( ap (tr P loop-𝕊¹) base-dependent-universal-property-𝕊¹ ∙ α)
-  loop-dependent-universal-property-𝕊¹ =
-    pr2 (pr2 apply-dependent-universal-property-𝕊¹)
+  loop-dependent-universal-property-𝕊¹ = {!!}
 ```
 
 ### The universal property of the circle
@@ -132,73 +120,56 @@ module _
 ```agda
 universal-property-𝕊¹ :
   {l : Level} → universal-property-circle l free-loop-𝕊¹
-universal-property-𝕊¹ =
-  universal-property-dependent-universal-property-circle
-    free-loop-𝕊¹
-    dependent-universal-property-𝕊¹
+universal-property-𝕊¹ = {!!}
 
 uniqueness-universal-property-𝕊¹ :
   {l : Level} {X : UU l} (α : free-loop X) →
   is-contr
     ( Σ ( 𝕊¹ → X)
         ( λ h → Eq-free-loop (ev-free-loop free-loop-𝕊¹ X h) α))
-uniqueness-universal-property-𝕊¹ {l} {X} =
-  uniqueness-universal-property-circle free-loop-𝕊¹ universal-property-𝕊¹ X
+uniqueness-universal-property-𝕊¹ {l} {X} = {!!}
 
 module _
   {l : Level} {X : UU l} (x : X) (α : Id x x)
   where
 
   Map-𝕊¹ : UU l
-  Map-𝕊¹ =
-    Σ ( 𝕊¹ → X)
-      ( λ h → Eq-free-loop (ev-free-loop free-loop-𝕊¹ X h) (pair x α))
+  Map-𝕊¹ = {!!}
 
   apply-universal-property-𝕊¹ : Map-𝕊¹
-  apply-universal-property-𝕊¹ =
-    center (uniqueness-universal-property-𝕊¹ (pair x α))
+  apply-universal-property-𝕊¹ = {!!}
 
   map-apply-universal-property-𝕊¹ : 𝕊¹ → X
-  map-apply-universal-property-𝕊¹ =
-    pr1 apply-universal-property-𝕊¹
+  map-apply-universal-property-𝕊¹ = {!!}
 
   base-universal-property-𝕊¹ :
     Id (map-apply-universal-property-𝕊¹ base-𝕊¹) x
-  base-universal-property-𝕊¹ =
-    pr1 (pr2 apply-universal-property-𝕊¹)
+  base-universal-property-𝕊¹ = {!!}
 
   loop-universal-property-𝕊¹ :
     Id
       ( ap map-apply-universal-property-𝕊¹ loop-𝕊¹ ∙
         base-universal-property-𝕊¹)
       ( base-universal-property-𝕊¹ ∙ α)
-  loop-universal-property-𝕊¹ =
-    pr2 (pr2 apply-universal-property-𝕊¹)
+  loop-universal-property-𝕊¹ = {!!}
 ```
 
 ### The circle is 0-connected
 
 ```agda
 mere-eq-𝕊¹ : (x y : 𝕊¹) → mere-eq x y
-mere-eq-𝕊¹ =
-  function-apply-dependent-universal-property-𝕊¹
-    ( λ x → (y : 𝕊¹) → mere-eq x y)
-    ( function-apply-dependent-universal-property-𝕊¹
-      ( mere-eq base-𝕊¹)
-      ( refl-mere-eq base-𝕊¹)
-      ( eq-is-prop is-prop-type-trunc-Prop))
-    ( eq-is-prop (is-prop-Π (λ y → is-prop-type-trunc-Prop)))
+mere-eq-𝕊¹ = {!!}
 
 is-0-connected-𝕊¹ : is-0-connected 𝕊¹
-is-0-connected-𝕊¹ = is-0-connected-mere-eq base-𝕊¹ (mere-eq-𝕊¹ base-𝕊¹)
+is-0-connected-𝕊¹ = {!!}
 ```
 
 ### The circle as a higher group
 
 ```agda
 𝕊¹-∞-Group : ∞-Group lzero
-pr1 𝕊¹-∞-Group = 𝕊¹-Pointed-Type
-pr2 𝕊¹-∞-Group = is-0-connected-𝕊¹
+pr1 𝕊¹-∞-Group = {!!}
+pr2 𝕊¹-∞-Group = {!!}
 ```
 
 ### The circle is equivalent to the 1-sphere
@@ -207,7 +178,7 @@ The [1-sphere](synthetic-homotopy-theory.spheres.md) is defined as the
 [suspension](synthetic-homotopy-theory.suspensions-of-types.md) of the
 [0-sphere](synthetic-homotopy-theory.spheres.md). We may understand this as the
 1-sphere having two points `N` and `S` and two
-[identifications](foundation-core.identity-types.md) (meridians) `e, w : N = S`
+[identifications](foundation-core.identity-types.md) (meridians) `e, w : N = {!!}
 between them. The following shows that the 1-sphere and the circle are
 [equivalent](foundation-core.equivalences.md).
 
@@ -220,24 +191,18 @@ informs the rest of the construction hereafter.
 
 ```agda
 north-sphere-1-loop : Id (north-sphere 1) (north-sphere 1)
-north-sphere-1-loop =
-  ( meridian-sphere 0 (zero-Fin 1)) ∙
-  ( inv (meridian-sphere 0 (one-Fin 1)))
+north-sphere-1-loop = {!!}
 
 sphere-1-circle : 𝕊¹ → sphere 1
-sphere-1-circle =
-  map-apply-universal-property-𝕊¹ (north-sphere 1) north-sphere-1-loop
+sphere-1-circle = {!!}
 
 sphere-1-circle-base-𝕊¹-eq-north-sphere-1 :
   Id (sphere-1-circle base-𝕊¹) (north-sphere 1)
-sphere-1-circle-base-𝕊¹-eq-north-sphere-1 =
-  base-universal-property-𝕊¹ (north-sphere 1) north-sphere-1-loop
+sphere-1-circle-base-𝕊¹-eq-north-sphere-1 = {!!}
 
 sphere-1-circle-base-𝕊¹-eq-south-sphere-1 :
   Id (sphere-1-circle base-𝕊¹) (south-sphere 1)
-sphere-1-circle-base-𝕊¹-eq-south-sphere-1 =
-  ( sphere-1-circle-base-𝕊¹-eq-north-sphere-1) ∙
-  ( meridian-sphere 0 (one-Fin 1))
+sphere-1-circle-base-𝕊¹-eq-south-sphere-1 = {!!}
 ```
 
 #### The map from the 1-sphere to the circle
@@ -249,31 +214,25 @@ circle, which would not form an equivalence.
 
 ```agda
 map-sphere-0-eq-base-𝕊¹ : (sphere 0) → base-𝕊¹ ＝ base-𝕊¹
-map-sphere-0-eq-base-𝕊¹ (inl n) = loop-𝕊¹
-map-sphere-0-eq-base-𝕊¹ (inr n) = refl
+map-sphere-0-eq-base-𝕊¹ (inl n) = {!!}
+map-sphere-0-eq-base-𝕊¹ (inr n) = {!!}
 
 suspension-structure-sphere-0-𝕊¹ :
   suspension-structure (sphere 0) 𝕊¹
-pr1 suspension-structure-sphere-0-𝕊¹ = base-𝕊¹
-pr1 (pr2 suspension-structure-sphere-0-𝕊¹) = base-𝕊¹
-pr2 (pr2 suspension-structure-sphere-0-𝕊¹) = map-sphere-0-eq-base-𝕊¹
+pr1 suspension-structure-sphere-0-𝕊¹ = {!!}
+pr1 (pr2 suspension-structure-sphere-0-𝕊¹) = {!!}
+pr2 (pr2 suspension-structure-sphere-0-𝕊¹) = {!!}
 
 circle-sphere-1 : sphere 1 → 𝕊¹
-circle-sphere-1 =
-  cogap-suspension
-    ( suspension-structure-sphere-0-𝕊¹)
+circle-sphere-1 = {!!}
 
 circle-sphere-1-north-sphere-1-eq-base-𝕊¹ :
   circle-sphere-1 (north-sphere 1) ＝ base-𝕊¹
-circle-sphere-1-north-sphere-1-eq-base-𝕊¹ =
-  compute-north-cogap-suspension
-    ( suspension-structure-sphere-0-𝕊¹)
+circle-sphere-1-north-sphere-1-eq-base-𝕊¹ = {!!}
 
 circle-sphere-1-south-sphere-1-eq-base-𝕊¹ :
   Id (circle-sphere-1 (south-sphere 1)) base-𝕊¹
-circle-sphere-1-south-sphere-1-eq-base-𝕊¹ =
-  compute-south-cogap-suspension
-    ( suspension-structure-sphere-0-𝕊¹)
+circle-sphere-1-south-sphere-1-eq-base-𝕊¹ = {!!}
 ```
 
 #### The map from the circle to the 1-sphere has a section
@@ -281,21 +240,17 @@ circle-sphere-1-south-sphere-1-eq-base-𝕊¹ =
 Some care needs to be taken when proving this part of the equivalence. The point
 `N` is mapped to the basepoint and then back to `N`, but so is the point `S`. It
 needs to be further identified back with `S` using the meridian `w`. The
-meridian `w` is thus mapped to `refl` and then back to `w ∙ refl = w`, while the
-meridian `e` is mapped to the loop and then back to `w ∙ w⁻¹∙ e = e`.
+meridian `w` is thus mapped to `refl` and then back to `w ∙ refl = {!!}
+meridian `e` is mapped to the loop and then back to `w ∙ w⁻¹∙ e = {!!}
 
 ```agda
 sphere-1-circle-sphere-1-north-sphere-1 :
     ( sphere-1-circle (circle-sphere-1 (north-sphere 1))) ＝ ( north-sphere 1)
-sphere-1-circle-sphere-1-north-sphere-1 =
-  ( ap sphere-1-circle circle-sphere-1-north-sphere-1-eq-base-𝕊¹) ∙
-  ( sphere-1-circle-base-𝕊¹-eq-north-sphere-1)
+sphere-1-circle-sphere-1-north-sphere-1 = {!!}
 
 sphere-1-circle-sphere-1-south-sphere-1 :
     ( sphere-1-circle (circle-sphere-1 (south-sphere 1))) ＝ ( south-sphere 1)
-sphere-1-circle-sphere-1-south-sphere-1 =
-  ( ap sphere-1-circle circle-sphere-1-south-sphere-1-eq-base-𝕊¹) ∙
-  ( sphere-1-circle-base-𝕊¹-eq-south-sphere-1)
+sphere-1-circle-sphere-1-south-sphere-1 = {!!}
 
 apply-up-suspension-meridian-suspension-sphere-1-circle-sphere-1 :
   ( n : Fin 2) →
@@ -308,26 +263,7 @@ apply-up-suspension-meridian-suspension-sphere-1-circle-sphere-1 :
     ( sphere-1-circle-base-𝕊¹-eq-south-sphere-1)
     ( sphere-1-circle-sphere-1-south-sphere-1)
 apply-up-suspension-meridian-suspension-sphere-1-circle-sphere-1
-  n =
-  ( inv
-    ( assoc
-      ( ap sphere-1-circle (ap circle-sphere-1 (meridian-suspension n)))
-      ( ap sphere-1-circle circle-sphere-1-south-sphere-1-eq-base-𝕊¹)
-      ( sphere-1-circle-base-𝕊¹-eq-south-sphere-1))) ∙
-  ( identification-right-whisk
-    ( inv
-      ( ap-concat
-        ( sphere-1-circle)
-        ( ap circle-sphere-1 (meridian-sphere 0 n))
-        ( circle-sphere-1-south-sphere-1-eq-base-𝕊¹)))
-    ( sphere-1-circle-base-𝕊¹-eq-south-sphere-1)) ∙
-  ( ap
-    ( λ x →
-      ( ap sphere-1-circle x) ∙
-      ( sphere-1-circle-base-𝕊¹-eq-south-sphere-1))
-    ( compute-meridian-cogap-suspension
-      ( suspension-structure-sphere-0-𝕊¹)
-      ( n)))
+  n = {!!}
 
 apply-loop-universal-property-𝕊¹-sphere-1-circle-sphere-1 :
   coherence-square-identifications
@@ -335,26 +271,7 @@ apply-loop-universal-property-𝕊¹-sphere-1-circle-sphere-1 :
     ( ap sphere-1-circle loop-𝕊¹)
     ( meridian-sphere 0 (zero-Fin 1))
     ( sphere-1-circle-base-𝕊¹-eq-south-sphere-1)
-apply-loop-universal-property-𝕊¹-sphere-1-circle-sphere-1 =
-  ( inv
-    ( assoc
-      ( ap sphere-1-circle loop-𝕊¹)
-      ( sphere-1-circle-base-𝕊¹-eq-north-sphere-1)
-      ( meridian-sphere 0 (one-Fin 1)))) ∙
-  ( identification-right-whisk
-    ( loop-universal-property-𝕊¹
-      ( north-sphere 1)
-      ( north-sphere-1-loop))
-    ( meridian-sphere 0 (one-Fin 1))) ∙
-  ( assoc
-    ( sphere-1-circle-base-𝕊¹-eq-north-sphere-1)
-    ( north-sphere-1-loop)
-    ( meridian-sphere 0 (one-Fin 1))) ∙
-  ( identification-left-whisk
-    ( sphere-1-circle-base-𝕊¹-eq-north-sphere-1)
-    ( is-section-right-concat-inv
-      ( meridian-sphere 0 (zero-Fin 1))
-      ( meridian-sphere 0 (one-Fin 1))))
+apply-loop-universal-property-𝕊¹-sphere-1-circle-sphere-1 = {!!}
 
 map-sphere-1-circle-sphere-1-meridian :
   ( n : Fin 2) →
@@ -365,83 +282,31 @@ map-sphere-1-circle-sphere-1-meridian :
       ( n))
     ( sphere-1-circle-sphere-1-north-sphere-1)
     ( sphere-1-circle-sphere-1-south-sphere-1))
-map-sphere-1-circle-sphere-1-meridian (inl (inr n)) =
-  map-compute-dependent-identification-eq-value-comp-id
-    ( sphere-1-circle)
-    ( circle-sphere-1)
-    ( meridian-sphere 0 (inl (inr n)))
-    ( sphere-1-circle-sphere-1-north-sphere-1)
-    ( sphere-1-circle-sphere-1-south-sphere-1)
-    ( ( apply-up-suspension-meridian-suspension-sphere-1-circle-sphere-1
-        ( inl (inr n))) ∙
-      ( identification-right-whisk
-        ( ap-concat
-          ( sphere-1-circle)
-          ( circle-sphere-1-north-sphere-1-eq-base-𝕊¹)
-          ( loop-𝕊¹))
-        ( sphere-1-circle-base-𝕊¹-eq-south-sphere-1)) ∙
-      ( assoc
-        ( ap sphere-1-circle (circle-sphere-1-north-sphere-1-eq-base-𝕊¹))
-        ( ap sphere-1-circle loop-𝕊¹)
-        ( sphere-1-circle-base-𝕊¹-eq-south-sphere-1)) ∙
-      ( identification-left-whisk
-        ( ap sphere-1-circle (circle-sphere-1-north-sphere-1-eq-base-𝕊¹))
-        ( apply-loop-universal-property-𝕊¹-sphere-1-circle-sphere-1)) ∙
-      ( inv
-        ( assoc
-          ( ap sphere-1-circle (circle-sphere-1-north-sphere-1-eq-base-𝕊¹))
-          ( sphere-1-circle-base-𝕊¹-eq-north-sphere-1)
-          ( meridian-sphere 0 (zero-Fin 1)))))
-map-sphere-1-circle-sphere-1-meridian (inr n) =
-  map-compute-dependent-identification-eq-value-comp-id
-    ( sphere-1-circle)
-    ( circle-sphere-1)
-    ( meridian-sphere 0 (inr n))
-    ( sphere-1-circle-sphere-1-north-sphere-1)
-    ( sphere-1-circle-sphere-1-south-sphere-1)
-    ( ( apply-up-suspension-meridian-suspension-sphere-1-circle-sphere-1
-        ( inr n)) ∙
-      ( ap
-        ( λ x →
-          ( ap sphere-1-circle x) ∙
-          ( sphere-1-circle-base-𝕊¹-eq-south-sphere-1))
-        ( right-unit {p = circle-sphere-1-north-sphere-1-eq-base-𝕊¹})) ∙
-      ( inv
-        ( assoc
-          ( ap sphere-1-circle circle-sphere-1-north-sphere-1-eq-base-𝕊¹)
-          ( sphere-1-circle-base-𝕊¹-eq-north-sphere-1)
-          ( meridian-sphere 0 (one-Fin 1)))))
+map-sphere-1-circle-sphere-1-meridian (inl (inr n)) = {!!}
+map-sphere-1-circle-sphere-1-meridian (inr n) = {!!}
 
 dependent-suspension-structure-sphere-1-circle-sphere-1 :
   dependent-suspension-structure
     ( λ x → (sphere-1-circle (circle-sphere-1 x)) ＝ x)
     ( suspension-structure-suspension (Fin 2))
-pr1 dependent-suspension-structure-sphere-1-circle-sphere-1 =
-  sphere-1-circle-sphere-1-north-sphere-1
-pr1 (pr2 dependent-suspension-structure-sphere-1-circle-sphere-1) =
-  sphere-1-circle-sphere-1-south-sphere-1
-pr2 (pr2 dependent-suspension-structure-sphere-1-circle-sphere-1) =
-  map-sphere-1-circle-sphere-1-meridian
+pr1 dependent-suspension-structure-sphere-1-circle-sphere-1 = {!!}
+pr1 (pr2 dependent-suspension-structure-sphere-1-circle-sphere-1) = {!!}
+pr2 (pr2 dependent-suspension-structure-sphere-1-circle-sphere-1) = {!!}
 
 sphere-1-circle-sphere-1 : section sphere-1-circle
-pr1 sphere-1-circle-sphere-1 = circle-sphere-1
-pr2 sphere-1-circle-sphere-1 =
-  dependent-cogap-suspension
-    ( λ x → (sphere-1-circle (circle-sphere-1 x)) ＝ x)
-    ( dependent-suspension-structure-sphere-1-circle-sphere-1)
+pr1 sphere-1-circle-sphere-1 = {!!}
+pr2 sphere-1-circle-sphere-1 = {!!}
 ```
 
 #### The map from the circle to the 1-sphere has a retraction
 
 The basepoint is mapped to `N` and then back to the basepoint, while the loop is
-mapped to `w⁻¹∙ e` and then back to `refl⁻¹ ∙ loop = loop`.
+mapped to `w⁻¹∙ e` and then back to `refl⁻¹ ∙ loop = {!!}
 
 ```agda
 circle-sphere-1-circle-base-𝕊¹ :
   Id (circle-sphere-1 (sphere-1-circle base-𝕊¹)) base-𝕊¹
-circle-sphere-1-circle-base-𝕊¹ =
-  ( ap circle-sphere-1 sphere-1-circle-base-𝕊¹-eq-north-sphere-1) ∙
-  ( circle-sphere-1-north-sphere-1-eq-base-𝕊¹)
+circle-sphere-1-circle-base-𝕊¹ = {!!}
 
 apply-up-suspension-meridian-one-suspension-circle-sphere-1-circle :
   coherence-square-identifications
@@ -449,31 +314,7 @@ apply-up-suspension-meridian-one-suspension-circle-sphere-1-circle :
     ( ap circle-sphere-1 (inv (meridian-sphere 0 (one-Fin 1))))
     ( circle-sphere-1-south-sphere-1-eq-base-𝕊¹)
     ( circle-sphere-1-north-sphere-1-eq-base-𝕊¹)
-apply-up-suspension-meridian-one-suspension-circle-sphere-1-circle =
-  ( identification-right-whisk
-    ( ap-inv
-      ( circle-sphere-1)
-      ( meridian-suspension (one-Fin 1)))
-    ( circle-sphere-1-north-sphere-1-eq-base-𝕊¹)) ∙
-  ( inv right-unit) ∙
-  ( assoc
-    ( inv (ap circle-sphere-1 (meridian-suspension (one-Fin 1))))
-    ( circle-sphere-1-north-sphere-1-eq-base-𝕊¹)
-    ( refl)) ∙
-  ( identification-left-whisk
-    ( inv (ap circle-sphere-1 (meridian-suspension (one-Fin 1))))
-    ( inv
-      ( compute-meridian-cogap-suspension
-          ( suspension-structure-sphere-0-𝕊¹)
-          ( one-Fin 1)))) ∙
-  ( inv
-    ( assoc
-      ( inv (ap circle-sphere-1 (meridian-suspension (one-Fin 1))))
-      ( ap circle-sphere-1 (meridian-suspension (one-Fin 1)))
-      ( circle-sphere-1-south-sphere-1-eq-base-𝕊¹))) ∙
-  ( identification-right-whisk
-    ( left-inv (ap circle-sphere-1 (meridian-suspension (one-Fin 1))))
-    ( circle-sphere-1-south-sphere-1-eq-base-𝕊¹))
+apply-up-suspension-meridian-one-suspension-circle-sphere-1-circle = {!!}
 
 apply-up-suspension-meridian-zero-suspension-circle-sphere-1-circle :
   coherence-square-identifications
@@ -481,23 +322,7 @@ apply-up-suspension-meridian-zero-suspension-circle-sphere-1-circle :
     ( ap (circle-sphere-1) (north-sphere-1-loop))
     ( loop-𝕊¹)
     ( circle-sphere-1-north-sphere-1-eq-base-𝕊¹)
-apply-up-suspension-meridian-zero-suspension-circle-sphere-1-circle =
-  ( identification-right-whisk
-    ( ap-concat
-      ( circle-sphere-1)
-      ( meridian-sphere 0 (zero-Fin 1))
-      ( inv (meridian-suspension (one-Fin 1))))
-    ( circle-sphere-1-north-sphere-1-eq-base-𝕊¹)) ∙
-  ( assoc
-    ( ap circle-sphere-1 (meridian-suspension (zero-Fin 1)))
-    ( ap circle-sphere-1 (inv ( meridian-sphere 0 (one-Fin 1))))
-    ( circle-sphere-1-north-sphere-1-eq-base-𝕊¹)) ∙
-  ( identification-left-whisk
-    ( ap circle-sphere-1 (meridian-suspension (zero-Fin 1)))
-    ( apply-up-suspension-meridian-one-suspension-circle-sphere-1-circle)) ∙
-  ( compute-meridian-cogap-suspension
-    ( suspension-structure-sphere-0-𝕊¹)
-    ( zero-Fin 1))
+apply-up-suspension-meridian-zero-suspension-circle-sphere-1-circle = {!!}
 
 circle-sphere-1-circle-loop-𝕊¹ :
   coherence-square-identifications
@@ -505,74 +330,23 @@ circle-sphere-1-circle-loop-𝕊¹ :
     ( ap circle-sphere-1 (ap sphere-1-circle loop-𝕊¹))
     ( loop-𝕊¹)
     ( circle-sphere-1-circle-base-𝕊¹)
-circle-sphere-1-circle-loop-𝕊¹ =
-  ( inv
-    ( assoc
-      ( ap circle-sphere-1 (ap sphere-1-circle loop-𝕊¹))
-      ( ap
-        ( circle-sphere-1)
-        ( sphere-1-circle-base-𝕊¹-eq-north-sphere-1))
-      ( circle-sphere-1-north-sphere-1-eq-base-𝕊¹)) ∙
-    ( identification-right-whisk
-      ( inv
-        ( ap-concat
-          ( circle-sphere-1)
-          ( ap sphere-1-circle loop-𝕊¹)
-          ( sphere-1-circle-base-𝕊¹-eq-north-sphere-1)))
-      ( circle-sphere-1-north-sphere-1-eq-base-𝕊¹)) ∙
-    ( identification-right-whisk
-      ( ap
-        ( ap circle-sphere-1)
-        ( loop-universal-property-𝕊¹
-          ( north-sphere 1)
-          ( north-sphere-1-loop)))
-      ( circle-sphere-1-north-sphere-1-eq-base-𝕊¹)) ∙
-    ( identification-right-whisk
-      ( ap-concat
-        ( circle-sphere-1)
-        ( sphere-1-circle-base-𝕊¹-eq-north-sphere-1)
-        ( north-sphere-1-loop))
-      ( circle-sphere-1-north-sphere-1-eq-base-𝕊¹)) ∙
-    ( assoc
-      ( ap circle-sphere-1 sphere-1-circle-base-𝕊¹-eq-north-sphere-1)
-      ( ap circle-sphere-1 north-sphere-1-loop)
-      ( circle-sphere-1-north-sphere-1-eq-base-𝕊¹)) ∙
-    ( identification-left-whisk
-      ( ap circle-sphere-1 sphere-1-circle-base-𝕊¹-eq-north-sphere-1)
-      ( apply-up-suspension-meridian-zero-suspension-circle-sphere-1-circle)) ∙
-    ( inv
-      ( assoc
-        ( ap circle-sphere-1 sphere-1-circle-base-𝕊¹-eq-north-sphere-1)
-        ( circle-sphere-1-north-sphere-1-eq-base-𝕊¹)
-        ( loop-𝕊¹))))
+circle-sphere-1-circle-loop-𝕊¹ = {!!}
 
 circle-sphere-1-circle : retraction sphere-1-circle
-pr1 circle-sphere-1-circle = circle-sphere-1
-pr2 circle-sphere-1-circle =
-  function-apply-dependent-universal-property-𝕊¹
-    ( λ x → (circle-sphere-1 (sphere-1-circle x)) ＝ x)
-    ( circle-sphere-1-circle-base-𝕊¹)
-    ( map-compute-dependent-identification-eq-value-comp-id
-      ( circle-sphere-1)
-      ( sphere-1-circle)
-      ( loop-𝕊¹)
-      ( circle-sphere-1-circle-base-𝕊¹)
-      ( circle-sphere-1-circle-base-𝕊¹)
-      ( circle-sphere-1-circle-loop-𝕊¹))
+pr1 circle-sphere-1-circle = {!!}
+pr2 circle-sphere-1-circle = {!!}
 ```
 
 #### The equivalence between the circle and the 1-sphere
 
 ```agda
 is-equiv-sphere-1-circle : is-equiv sphere-1-circle
-pr1 is-equiv-sphere-1-circle =
-  sphere-1-circle-sphere-1
-pr2 is-equiv-sphere-1-circle =
-  circle-sphere-1-circle
+pr1 is-equiv-sphere-1-circle = {!!}
+pr2 is-equiv-sphere-1-circle = {!!}
 
 equiv-sphere-1-circle : 𝕊¹ ≃ sphere 1
-pr1 equiv-sphere-1-circle = sphere-1-circle
-pr2 equiv-sphere-1-circle = is-equiv-sphere-1-circle
+pr1 equiv-sphere-1-circle = {!!}
+pr2 equiv-sphere-1-circle = {!!}
 ```
 
 ## See also

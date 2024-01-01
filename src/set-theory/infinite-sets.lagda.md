@@ -28,8 +28,8 @@ subsets.
 
 ```agda
 is-infinite-Set-Prop : {l : Level} → Set l → Prop l
-is-infinite-Set-Prop X = Π-Prop ℕ (λ n → mere-emb-Prop (Fin n) (type-Set X))
+is-infinite-Set-Prop X = {!!}
 
 is-infinite-Set : {l : Level} → Set l → UU l
-is-infinite-Set X = type-Prop (is-infinite-Set-Prop X)
+is-infinite-Set X = {!!}
 ```

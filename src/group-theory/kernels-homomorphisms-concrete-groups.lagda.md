@@ -41,66 +41,36 @@ module _
   where
 
   classifying-type-kernel-hom-Concrete-Group : UU (l1 ⊔ l2)
-  classifying-type-kernel-hom-Concrete-Group =
-    connected-component
-      ( fiber
-        ( classifying-map-hom-Concrete-Group G H f)
-        ( shape-Concrete-Group H))
-      ( pair
-        ( shape-Concrete-Group G)
-        ( preserves-point-classifying-map-hom-Concrete-Group G H f))
+  classifying-type-kernel-hom-Concrete-Group = {!!}
 
   shape-kernel-hom-Concrete-Group :
     classifying-type-kernel-hom-Concrete-Group
-  shape-kernel-hom-Concrete-Group =
-    point-connected-component
-      ( fiber
-        ( classifying-map-hom-Concrete-Group G H f)
-        ( shape-Concrete-Group H))
-      ( shape-Concrete-Group G
-        , preserves-point-classifying-map-hom-Concrete-Group G H f)
+  shape-kernel-hom-Concrete-Group = {!!}
 
   classifying-pointed-type-kernel-hom-Concrete-Group : Pointed-Type (l1 ⊔ l2)
-  pr1 classifying-pointed-type-kernel-hom-Concrete-Group =
-    classifying-type-kernel-hom-Concrete-Group
-  pr2 classifying-pointed-type-kernel-hom-Concrete-Group =
-    shape-kernel-hom-Concrete-Group
+  pr1 classifying-pointed-type-kernel-hom-Concrete-Group = {!!}
+  pr2 classifying-pointed-type-kernel-hom-Concrete-Group = {!!}
 
   is-0-connected-classifying-type-kernel-hom-Concrete-Group :
     is-0-connected classifying-type-kernel-hom-Concrete-Group
-  is-0-connected-classifying-type-kernel-hom-Concrete-Group =
-    is-0-connected-connected-component _ _
+  is-0-connected-classifying-type-kernel-hom-Concrete-Group = {!!}
 
   is-1-type-classifying-type-kernel-hom-Concrete-Group :
     is-1-type classifying-type-kernel-hom-Concrete-Group
-  is-1-type-classifying-type-kernel-hom-Concrete-Group =
-    is-trunc-connected-component _ _
-      ( is-trunc-map-is-trunc-domain-codomain
-        ( one-𝕋)
-        ( is-1-type-classifying-type-Concrete-Group G)
-        ( is-1-type-classifying-type-Concrete-Group H)
-        ( shape-Concrete-Group H))
+  is-1-type-classifying-type-kernel-hom-Concrete-Group = {!!}
 
   ∞-group-kernel-hom-Concrete-Group : ∞-Group (l1 ⊔ l2)
-  pr1 ∞-group-kernel-hom-Concrete-Group =
-    classifying-pointed-type-kernel-hom-Concrete-Group
-  pr2 ∞-group-kernel-hom-Concrete-Group =
-    is-0-connected-classifying-type-kernel-hom-Concrete-Group
+  pr1 ∞-group-kernel-hom-Concrete-Group = {!!}
+  pr2 ∞-group-kernel-hom-Concrete-Group = {!!}
 
   type-kernel-hom-Concrete-Group : UU (l1 ⊔ l2)
-  type-kernel-hom-Concrete-Group =
-    type-∞-Group ∞-group-kernel-hom-Concrete-Group
+  type-kernel-hom-Concrete-Group = {!!}
 
   is-set-type-kernel-hom-Concrete-Group :
     is-set type-kernel-hom-Concrete-Group
-  is-set-type-kernel-hom-Concrete-Group =
-    is-1-type-classifying-type-kernel-hom-Concrete-Group
-      shape-kernel-hom-Concrete-Group
-      shape-kernel-hom-Concrete-Group
+  is-set-type-kernel-hom-Concrete-Group = {!!}
 
   concrete-group-kernel-hom-Concrete-Group : Concrete-Group (l1 ⊔ l2)
-  pr1 concrete-group-kernel-hom-Concrete-Group =
-    ∞-group-kernel-hom-Concrete-Group
-  pr2 concrete-group-kernel-hom-Concrete-Group =
-    is-set-type-kernel-hom-Concrete-Group
+  pr1 concrete-group-kernel-hom-Concrete-Group = {!!}
+  pr2 concrete-group-kernel-hom-Concrete-Group = {!!}
 ```

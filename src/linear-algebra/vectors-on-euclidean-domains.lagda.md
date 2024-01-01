@@ -46,20 +46,20 @@ module _
   where
 
   vec-Euclidean-Domain : ℕ → UU l
-  vec-Euclidean-Domain = vec (type-Euclidean-Domain R)
+  vec-Euclidean-Domain = {!!}
 
   head-vec-Euclidean-Domain :
     {n : ℕ} → vec-Euclidean-Domain (succ-ℕ n) → type-Euclidean-Domain R
-  head-vec-Euclidean-Domain v = head-vec v
+  head-vec-Euclidean-Domain v = {!!}
 
   tail-vec-Euclidean-Domain :
     {n : ℕ} → vec-Euclidean-Domain (succ-ℕ n) → vec-Euclidean-Domain n
-  tail-vec-Euclidean-Domain v = tail-vec v
+  tail-vec-Euclidean-Domain v = {!!}
 
   snoc-vec-Euclidean-Domain :
     {n : ℕ} → vec-Euclidean-Domain n →
     type-Euclidean-Domain R → vec-Euclidean-Domain (succ-ℕ n)
-  snoc-vec-Euclidean-Domain v r = snoc-vec v r
+  snoc-vec-Euclidean-Domain v r = {!!}
 ```
 
 ### Functional vectors on euclidean domains
@@ -70,30 +70,30 @@ module _
   where
 
   functional-vec-Euclidean-Domain : ℕ → UU l
-  functional-vec-Euclidean-Domain = functional-vec (type-Euclidean-Domain R)
+  functional-vec-Euclidean-Domain = {!!}
 
   head-functional-vec-Euclidean-Domain :
     (n : ℕ) →
     functional-vec-Euclidean-Domain (succ-ℕ n) →
     type-Euclidean-Domain R
-  head-functional-vec-Euclidean-Domain n v = head-functional-vec n v
+  head-functional-vec-Euclidean-Domain n v = {!!}
 
   tail-functional-vec-Euclidean-Domain :
     (n : ℕ) →
     functional-vec-Euclidean-Domain (succ-ℕ n) →
     functional-vec-Euclidean-Domain n
-  tail-functional-vec-Euclidean-Domain = tail-functional-vec
+  tail-functional-vec-Euclidean-Domain = {!!}
 
   cons-functional-vec-Euclidean-Domain :
     (n : ℕ) → type-Euclidean-Domain R →
     functional-vec-Euclidean-Domain n →
     functional-vec-Euclidean-Domain (succ-ℕ n)
-  cons-functional-vec-Euclidean-Domain = cons-functional-vec
+  cons-functional-vec-Euclidean-Domain = {!!}
 
   snoc-functional-vec-Euclidean-Domain :
     (n : ℕ) → functional-vec-Euclidean-Domain n → type-Euclidean-Domain R →
     functional-vec-Euclidean-Domain (succ-ℕ n)
-  snoc-functional-vec-Euclidean-Domain = snoc-functional-vec
+  snoc-functional-vec-Euclidean-Domain = {!!}
 ```
 
 ### Zero vector on a euclidean domain
@@ -106,7 +106,7 @@ module _
   where
 
   zero-vec-Euclidean-Domain : {n : ℕ} → vec-Euclidean-Domain R n
-  zero-vec-Euclidean-Domain = constant-vec (zero-Euclidean-Domain R)
+  zero-vec-Euclidean-Domain = {!!}
 ```
 
 #### The zero functional vector
@@ -118,7 +118,7 @@ module _
 
   zero-functional-vec-Euclidean-Domain :
     (n : ℕ) → functional-vec-Euclidean-Domain R n
-  zero-functional-vec-Euclidean-Domain n i = zero-Euclidean-Domain R
+  zero-functional-vec-Euclidean-Domain n i = {!!}
 ```
 
 ### Pointwise addition of vectors on a euclidean domain
@@ -135,65 +135,38 @@ module _
     vec-Euclidean-Domain R n →
     vec-Euclidean-Domain R n →
     vec-Euclidean-Domain R n
-  add-vec-Euclidean-Domain = binary-map-vec (add-Euclidean-Domain R)
+  add-vec-Euclidean-Domain = {!!}
 
   associative-add-vec-Euclidean-Domain :
     {n : ℕ} (v1 v2 v3 : vec-Euclidean-Domain R n) →
     Id
       ( add-vec-Euclidean-Domain (add-vec-Euclidean-Domain v1 v2) v3)
       ( add-vec-Euclidean-Domain v1 (add-vec-Euclidean-Domain v2 v3))
-  associative-add-vec-Euclidean-Domain empty-vec empty-vec empty-vec = refl
-  associative-add-vec-Euclidean-Domain (x ∷ v1) (y ∷ v2) (z ∷ v3) =
-    ap-binary _∷_
-      ( associative-add-Euclidean-Domain R x y z)
-      ( associative-add-vec-Euclidean-Domain v1 v2 v3)
+  associative-add-vec-Euclidean-Domain empty-vec empty-vec empty-vec = {!!}
 
   vec-Euclidean-Domain-Semigroup : ℕ → Semigroup l
-  pr1 (vec-Euclidean-Domain-Semigroup n) = vec-Set (set-Euclidean-Domain R) n
-  pr1 (pr2 (vec-Euclidean-Domain-Semigroup n)) = add-vec-Euclidean-Domain
-  pr2 (pr2 (vec-Euclidean-Domain-Semigroup n)) =
-    associative-add-vec-Euclidean-Domain
+  pr1 (vec-Euclidean-Domain-Semigroup n) = {!!}
 
   left-unit-law-add-vec-Euclidean-Domain :
     {n : ℕ} (v : vec-Euclidean-Domain R n) →
     Id (add-vec-Euclidean-Domain (zero-vec-Euclidean-Domain R) v) v
-  left-unit-law-add-vec-Euclidean-Domain empty-vec = refl
-  left-unit-law-add-vec-Euclidean-Domain (x ∷ v) =
-    ap-binary _∷_
-      ( left-unit-law-add-Euclidean-Domain R x)
-      ( left-unit-law-add-vec-Euclidean-Domain v)
+  left-unit-law-add-vec-Euclidean-Domain empty-vec = {!!}
 
   right-unit-law-add-vec-Euclidean-Domain :
     {n : ℕ} (v : vec-Euclidean-Domain R n) →
     Id (add-vec-Euclidean-Domain v (zero-vec-Euclidean-Domain R)) v
-  right-unit-law-add-vec-Euclidean-Domain empty-vec = refl
-  right-unit-law-add-vec-Euclidean-Domain (x ∷ v) =
-    ap-binary _∷_
-      ( right-unit-law-add-Euclidean-Domain R x)
-      ( right-unit-law-add-vec-Euclidean-Domain v)
+  right-unit-law-add-vec-Euclidean-Domain empty-vec = {!!}
 
   vec-Euclidean-Domain-Monoid : ℕ → Monoid l
-  pr1 (vec-Euclidean-Domain-Monoid n) = vec-Euclidean-Domain-Semigroup n
-  pr1 (pr2 (vec-Euclidean-Domain-Monoid n)) = zero-vec-Euclidean-Domain R
-  pr1 (pr2 (pr2 (vec-Euclidean-Domain-Monoid n))) =
-    left-unit-law-add-vec-Euclidean-Domain
-  pr2 (pr2 (pr2 (vec-Euclidean-Domain-Monoid n))) =
-    right-unit-law-add-vec-Euclidean-Domain
+  pr1 (vec-Euclidean-Domain-Monoid n) = {!!}
 
   commutative-add-vec-Euclidean-Domain :
     {n : ℕ} (v w : vec-Euclidean-Domain R n) →
     Id (add-vec-Euclidean-Domain v w) (add-vec-Euclidean-Domain w v)
-  commutative-add-vec-Euclidean-Domain empty-vec empty-vec = refl
-  commutative-add-vec-Euclidean-Domain (x ∷ v) (y ∷ w) =
-    ap-binary _∷_
-      ( commutative-add-Euclidean-Domain R x y)
-      ( commutative-add-vec-Euclidean-Domain v w)
+  commutative-add-vec-Euclidean-Domain empty-vec empty-vec = {!!}
 
   vec-Euclidean-Domain-Commutative-Monoid : ℕ → Commutative-Monoid l
-  pr1 (vec-Euclidean-Domain-Commutative-Monoid n) =
-    vec-Euclidean-Domain-Monoid n
-  pr2 (vec-Euclidean-Domain-Commutative-Monoid n) =
-    commutative-add-vec-Euclidean-Domain
+  pr1 (vec-Euclidean-Domain-Commutative-Monoid n) = {!!}
 ```
 
 #### Pointwise addition of functional vectors on a euclidean domain
@@ -206,8 +179,7 @@ module _
   add-functional-vec-Euclidean-Domain :
     (n : ℕ) (v w : functional-vec-Euclidean-Domain R n) →
     functional-vec-Euclidean-Domain R n
-  add-functional-vec-Euclidean-Domain n =
-    binary-map-functional-vec n (add-Euclidean-Domain R)
+  add-functional-vec-Euclidean-Domain n = {!!}
 
   associative-add-functional-vec-Euclidean-Domain :
     (n : ℕ) (v1 v2 v3 : functional-vec-Euclidean-Domain R n) →
@@ -219,16 +191,10 @@ module _
       ( n)
       ( v1)
       ( add-functional-vec-Euclidean-Domain n v2 v3))
-  associative-add-functional-vec-Euclidean-Domain n v1 v2 v3 =
-    eq-htpy (λ i → associative-add-Euclidean-Domain R (v1 i) (v2 i) (v3 i))
+  associative-add-functional-vec-Euclidean-Domain n v1 v2 v3 = {!!}
 
   functional-vec-Euclidean-Domain-Semigroup : ℕ → Semigroup l
-  pr1 (functional-vec-Euclidean-Domain-Semigroup n) =
-    functional-vec-Set (set-Euclidean-Domain R) n
-  pr1 (pr2 (functional-vec-Euclidean-Domain-Semigroup n)) =
-    add-functional-vec-Euclidean-Domain n
-  pr2 (pr2 (functional-vec-Euclidean-Domain-Semigroup n)) =
-    associative-add-functional-vec-Euclidean-Domain n
+  pr1 (functional-vec-Euclidean-Domain-Semigroup n) = {!!}
 
   left-unit-law-add-functional-vec-Euclidean-Domain :
     (n : ℕ) (v : functional-vec-Euclidean-Domain R n) →
@@ -237,8 +203,7 @@ module _
       ( zero-functional-vec-Euclidean-Domain R n)
       ( v)) ＝
     ( v)
-  left-unit-law-add-functional-vec-Euclidean-Domain n v =
-    eq-htpy (λ i → left-unit-law-add-Euclidean-Domain R (v i))
+  left-unit-law-add-functional-vec-Euclidean-Domain n v = {!!}
 
   right-unit-law-add-functional-vec-Euclidean-Domain :
     (n : ℕ) (v : functional-vec-Euclidean-Domain R n) →
@@ -247,31 +212,19 @@ module _
       ( v)
       ( zero-functional-vec-Euclidean-Domain R n)) ＝
     ( v)
-  right-unit-law-add-functional-vec-Euclidean-Domain n v =
-    eq-htpy (λ i → right-unit-law-add-Euclidean-Domain R (v i))
+  right-unit-law-add-functional-vec-Euclidean-Domain n v = {!!}
 
   functional-vec-Euclidean-Domain-Monoid : ℕ → Monoid l
-  pr1 (functional-vec-Euclidean-Domain-Monoid n) =
-    functional-vec-Euclidean-Domain-Semigroup n
-  pr1 (pr2 (functional-vec-Euclidean-Domain-Monoid n)) =
-    zero-functional-vec-Euclidean-Domain R n
-  pr1 (pr2 (pr2 (functional-vec-Euclidean-Domain-Monoid n))) =
-    left-unit-law-add-functional-vec-Euclidean-Domain n
-  pr2 (pr2 (pr2 (functional-vec-Euclidean-Domain-Monoid n))) =
-    right-unit-law-add-functional-vec-Euclidean-Domain n
+  pr1 (functional-vec-Euclidean-Domain-Monoid n) = {!!}
 
   commutative-add-functional-vec-Euclidean-Domain :
     (n : ℕ) (v w : functional-vec-Euclidean-Domain R n) →
     add-functional-vec-Euclidean-Domain n v w ＝
     add-functional-vec-Euclidean-Domain n w v
-  commutative-add-functional-vec-Euclidean-Domain n v w =
-    eq-htpy (λ i → commutative-add-Euclidean-Domain R (v i) (w i))
+  commutative-add-functional-vec-Euclidean-Domain n v w = {!!}
 
   functional-vec-Euclidean-Domain-Commutative-Monoid : ℕ → Commutative-Monoid l
-  pr1 (functional-vec-Euclidean-Domain-Commutative-Monoid n) =
-    functional-vec-Euclidean-Domain-Monoid n
-  pr2 (functional-vec-Euclidean-Domain-Commutative-Monoid n) =
-    commutative-add-functional-vec-Euclidean-Domain n
+  pr1 (functional-vec-Euclidean-Domain-Commutative-Monoid n) = {!!}
 ```
 
 ### The negative of a vector on a euclidean domain
@@ -283,52 +236,33 @@ module _
 
   neg-vec-Euclidean-Domain :
     {n : ℕ} → vec-Euclidean-Domain R n → vec-Euclidean-Domain R n
-  neg-vec-Euclidean-Domain = map-vec (neg-Euclidean-Domain R)
+  neg-vec-Euclidean-Domain = {!!}
 
   left-inverse-law-add-vec-Euclidean-Domain :
     {n : ℕ} (v : vec-Euclidean-Domain R n) →
     Id
       ( add-vec-Euclidean-Domain R (neg-vec-Euclidean-Domain v) v)
       ( zero-vec-Euclidean-Domain R)
-  left-inverse-law-add-vec-Euclidean-Domain empty-vec = refl
-  left-inverse-law-add-vec-Euclidean-Domain (x ∷ v) =
-    ap-binary _∷_
-      ( left-inverse-law-add-Euclidean-Domain R x)
-      ( left-inverse-law-add-vec-Euclidean-Domain v)
+  left-inverse-law-add-vec-Euclidean-Domain empty-vec = {!!}
 
   right-inverse-law-add-vec-Euclidean-Domain :
     {n : ℕ} (v : vec-Euclidean-Domain R n) →
     Id
       ( add-vec-Euclidean-Domain R v (neg-vec-Euclidean-Domain v))
       ( zero-vec-Euclidean-Domain R)
-  right-inverse-law-add-vec-Euclidean-Domain empty-vec = refl
-  right-inverse-law-add-vec-Euclidean-Domain (x ∷ v) =
-    ap-binary _∷_
-      ( right-inverse-law-add-Euclidean-Domain R x)
-      ( right-inverse-law-add-vec-Euclidean-Domain v)
+  right-inverse-law-add-vec-Euclidean-Domain empty-vec = {!!}
 
   is-unital-vec-Euclidean-Domain :
     (n : ℕ) → is-unital (add-vec-Euclidean-Domain R {n})
-  pr1 (is-unital-vec-Euclidean-Domain n) = zero-vec-Euclidean-Domain R
-  pr1 (pr2 (is-unital-vec-Euclidean-Domain n)) =
-    left-unit-law-add-vec-Euclidean-Domain R
-  pr2 (pr2 (is-unital-vec-Euclidean-Domain n)) =
-    right-unit-law-add-vec-Euclidean-Domain R
+  pr1 (is-unital-vec-Euclidean-Domain n) = {!!}
 
   is-group-vec-Euclidean-Domain :
     (n : ℕ) → is-group (vec-Euclidean-Domain-Semigroup R n)
-  pr1 (is-group-vec-Euclidean-Domain n) = is-unital-vec-Euclidean-Domain n
-  pr1 (pr2 (is-group-vec-Euclidean-Domain n)) = neg-vec-Euclidean-Domain
-  pr1 (pr2 (pr2 (is-group-vec-Euclidean-Domain n))) =
-    left-inverse-law-add-vec-Euclidean-Domain
-  pr2 (pr2 (pr2 (is-group-vec-Euclidean-Domain n))) =
-    right-inverse-law-add-vec-Euclidean-Domain
+  pr1 (is-group-vec-Euclidean-Domain n) = {!!}
 
   vec-Euclidean-Domain-Group : ℕ → Group l
-  pr1 (vec-Euclidean-Domain-Group n) = vec-Euclidean-Domain-Semigroup R n
-  pr2 (vec-Euclidean-Domain-Group n) = is-group-vec-Euclidean-Domain n
+  pr1 (vec-Euclidean-Domain-Group n) = {!!}
 
   vec-Euclidean-Domain-Ab : ℕ → Ab l
-  pr1 (vec-Euclidean-Domain-Ab n) = vec-Euclidean-Domain-Group n
-  pr2 (vec-Euclidean-Domain-Ab n) = commutative-add-vec-Euclidean-Domain R
+  pr1 (vec-Euclidean-Domain-Ab n) = {!!}
 ```

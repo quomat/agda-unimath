@@ -44,12 +44,8 @@ module _
   where
 
   coherence-3-simplex-maps : UU (l1 ⊔ l4)
-  coherence-3-simplex-maps =
-    ( upper-right ∙h (right ·l upper-left)) ~
-    ( lower-left ∙h (lower-right ·r left))
+  coherence-3-simplex-maps = {!!}
 
   coherence-3-simplex-maps' : UU (l1 ⊔ l4)
-  coherence-3-simplex-maps' =
-    ( lower-left ∙h (lower-right ·r left)) ~
-    ( upper-right ∙h (right ·l upper-left))
+  coherence-3-simplex-maps' = {!!}
 ```

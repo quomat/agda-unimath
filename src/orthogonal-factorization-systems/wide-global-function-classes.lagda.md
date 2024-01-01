@@ -50,15 +50,12 @@ open wide-global-function-class public
 function-class-wide-global-function-class :
   {β : Level → Level → Level} (P : wide-global-function-class β) →
   {l1 l2 : Level} → function-class l1 l2 (β l1 l2)
-function-class-wide-global-function-class P =
-  function-class-global-function-class
-    ( global-function-class-wide-global-function-class P)
+function-class-wide-global-function-class P = {!!}
 
 type-wide-global-function-class :
   {β : Level → Level → Level} (P : wide-global-function-class β)
   {l1 l2 : Level} (A : UU l1) (B : UU l2) → UU (β l1 l2 ⊔ l1 ⊔ l2)
-type-wide-global-function-class P =
-  type-function-class (function-class-wide-global-function-class P)
+type-wide-global-function-class P = {!!}
 
 module _
   {β : Level → Level → Level} (P : wide-global-function-class β)
@@ -66,27 +63,21 @@ module _
   where
 
   is-in-wide-global-function-class : (A → B) → UU (β l1 l2)
-  is-in-wide-global-function-class =
-    is-in-function-class (function-class-wide-global-function-class P)
+  is-in-wide-global-function-class = {!!}
 
   is-prop-is-in-wide-global-function-class :
     (f : A → B) → is-prop (is-in-wide-global-function-class f)
-  is-prop-is-in-wide-global-function-class =
-    is-prop-is-in-function-class (function-class-wide-global-function-class P)
+  is-prop-is-in-wide-global-function-class = {!!}
 
   inclusion-wide-global-function-class :
     type-wide-global-function-class P A B → A → B
-  inclusion-wide-global-function-class =
-    inclusion-function-class (function-class-wide-global-function-class P)
+  inclusion-wide-global-function-class = {!!}
 
   is-emb-inclusion-wide-global-function-class :
     is-emb inclusion-wide-global-function-class
-  is-emb-inclusion-wide-global-function-class =
-    is-emb-inclusion-function-class
-      ( function-class-wide-global-function-class P)
+  is-emb-inclusion-wide-global-function-class = {!!}
 
   emb-wide-global-function-class :
     type-wide-global-function-class P A B ↪ (A → B)
-  emb-wide-global-function-class =
-    emb-function-class (function-class-wide-global-function-class P)
+  emb-wide-global-function-class = {!!}
 ```

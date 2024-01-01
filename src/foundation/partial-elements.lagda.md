@@ -37,9 +37,7 @@ codomain of the
 ```text
     1   ∅     ∅
     |   |     |
-  T | ∘ |  =  |
-    V   V     V
-  Prop  X   P T X
+  T | ∘ |  = {!!}
 ```
 
 of [polynomial-endofunctors.md](trees.polynomial-endofunctors.md). Indeed, the
@@ -53,17 +51,17 @@ the type of partial elements of `X`.
 
 ```agda
 partial-element : {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-partial-element l2 X = Σ (Prop l2) (λ P → type-Prop P → X)
+partial-element l2 X = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} (x : partial-element l2 X)
   where
 
   is-defined-prop-partial-element : Prop l2
-  is-defined-prop-partial-element = pr1 x
+  is-defined-prop-partial-element = {!!}
 
   is-defined-partial-element : UU l2
-  is-defined-partial-element = type-Prop is-defined-prop-partial-element
+  is-defined-partial-element = {!!}
 ```
 
 ### The unit of the partial element operator
@@ -71,8 +69,8 @@ module _
 ```agda
 unit-partial-element :
   {l1 : Level} {X : UU l1} → X → partial-element lzero X
-pr1 (unit-partial-element x) = unit-Prop
-pr2 (unit-partial-element x) y = x
+pr1 (unit-partial-element x) = {!!}
+pr2 (unit-partial-element x) y = {!!}
 ```
 
 ## Properties

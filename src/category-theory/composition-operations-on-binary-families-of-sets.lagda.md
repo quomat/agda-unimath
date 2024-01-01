@@ -45,9 +45,7 @@ module _
   where
 
   composition-operation-binary-family-Set : UU (l1 ⊔ l2)
-  composition-operation-binary-family-Set =
-    {x y z : A} →
-    type-Set (hom-set y z) → type-Set (hom-set x y) → type-Set (hom-set x z)
+  composition-operation-binary-family-Set = {!!}
 ```
 
 ### Associative composition operations in binary families of sets
@@ -66,18 +64,10 @@ module _
 
   is-associative-composition-operation-binary-family-Set :
     composition-operation-binary-family-Set hom-set → UU (l1 ⊔ l2)
-  is-associative-composition-operation-binary-family-Set comp-hom =
-    {x y z w : A}
-    (h : type-Set (hom-set z w))
-    (g : type-Set (hom-set y z))
-    (f : type-Set (hom-set x y)) →
-    ( comp-hom (comp-hom h g) f ＝ comp-hom h (comp-hom g f)) ×
-    ( comp-hom h (comp-hom g f) ＝ comp-hom (comp-hom h g) f)
+  is-associative-composition-operation-binary-family-Set comp-hom = {!!}
 
   associative-composition-operation-binary-family-Set : UU (l1 ⊔ l2)
-  associative-composition-operation-binary-family-Set =
-    Σ ( composition-operation-binary-family-Set hom-set)
-      ( is-associative-composition-operation-binary-family-Set)
+  associative-composition-operation-binary-family-Set = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (hom-set : A → A → Set l2)
@@ -86,7 +76,7 @@ module _
 
   comp-hom-associative-composition-operation-binary-family-Set :
     composition-operation-binary-family-Set hom-set
-  comp-hom-associative-composition-operation-binary-family-Set = pr1 H
+  comp-hom-associative-composition-operation-binary-family-Set = {!!}
 
   witness-associative-composition-operation-binary-family-Set :
     {x y z w : A}
@@ -97,8 +87,7 @@ module _
       ( comp-hom-associative-composition-operation-binary-family-Set h g) (f)) ＝
     ( comp-hom-associative-composition-operation-binary-family-Set
       ( h) (comp-hom-associative-composition-operation-binary-family-Set g f))
-  witness-associative-composition-operation-binary-family-Set h g f =
-    pr1 (pr2 H h g f)
+  witness-associative-composition-operation-binary-family-Set h g f = {!!}
 
   inv-witness-associative-composition-operation-binary-family-Set :
     {x y z w : A}
@@ -109,8 +98,7 @@ module _
       ( h) (comp-hom-associative-composition-operation-binary-family-Set g f)) ＝
     ( comp-hom-associative-composition-operation-binary-family-Set
       ( comp-hom-associative-composition-operation-binary-family-Set h g) (f))
-  inv-witness-associative-composition-operation-binary-family-Set h g f =
-    pr2 (pr2 H h g f)
+  inv-witness-associative-composition-operation-binary-family-Set h g f = {!!}
 ```
 
 ```agda
@@ -129,12 +117,7 @@ module _
     is-associative-composition-operation-binary-family-Set hom-set comp-hom
   pr1
     ( is-associative-witness-associative-composition-operation-binary-family-Set
-        H h g f) =
-    H h g f
-  pr2
-    ( is-associative-witness-associative-composition-operation-binary-family-Set
-        H h g f) =
-    inv (H h g f)
+        H h g f) = {!!}
 
   is-associative-inv-witness-associative-composition-operation-binary-family-Set :
     ( {x y z w : A}
@@ -145,12 +128,7 @@ module _
     is-associative-composition-operation-binary-family-Set hom-set comp-hom
   pr1
     ( is-associative-inv-witness-associative-composition-operation-binary-family-Set
-        H h g f) =
-    inv (H h g f)
-  pr2
-    ( is-associative-inv-witness-associative-composition-operation-binary-family-Set
-        H h g f) =
-    H h g f
+        H h g f) = {!!}
 ```
 
 ### Unital composition operations in binary families of sets
@@ -162,11 +140,7 @@ module _
 
   is-unital-composition-operation-binary-family-Set :
     composition-operation-binary-family-Set hom-set → UU (l1 ⊔ l2)
-  is-unital-composition-operation-binary-family-Set comp-hom =
-    Σ ( (x : A) → type-Set (hom-set x x))
-      ( λ e →
-        ( {x y : A} (f : type-Set (hom-set x y)) → comp-hom (e y) f ＝ f) ×
-        ( {x y : A} (f : type-Set (hom-set x y)) → comp-hom f (e x) ＝ f))
+  is-unital-composition-operation-binary-family-Set comp-hom = {!!}
 ```
 
 ## Properties
@@ -182,26 +156,10 @@ module _
   is-prop-is-associative-composition-operation-binary-family-Set :
     is-prop
       ( is-associative-composition-operation-binary-family-Set hom-set comp-hom)
-  is-prop-is-associative-composition-operation-binary-family-Set =
-    is-prop-iterated-implicit-Π 4
-      ( λ x y z w →
-        is-prop-iterated-Π 3
-          ( λ h g f →
-            is-prop-prod
-              ( is-set-type-Set
-                ( hom-set x w)
-                ( comp-hom (comp-hom h g) f)
-                ( comp-hom h (comp-hom g f)))
-              ( is-set-type-Set
-                ( hom-set x w)
-                ( comp-hom h (comp-hom g f))
-                ( comp-hom (comp-hom h g) f))))
+  is-prop-is-associative-composition-operation-binary-family-Set = {!!}
 
   is-associative-prop-composition-operation-binary-family-Set : Prop (l1 ⊔ l2)
-  pr1 is-associative-prop-composition-operation-binary-family-Set =
-    is-associative-composition-operation-binary-family-Set hom-set comp-hom
-  pr2 is-associative-prop-composition-operation-binary-family-Set =
-    is-prop-is-associative-composition-operation-binary-family-Set
+  pr1 is-associative-prop-composition-operation-binary-family-Set = {!!}
 ```
 
 ### Being unital is a property of composition operations in binary families of sets
@@ -226,40 +184,16 @@ module _
         ( is-unital-composition-operation-binary-family-Set hom-set comp-hom)
     all-elements-equal-is-unital-composition-operation-binary-family-Set
       ( e , left-unit-law-e , right-unit-law-e)
-      ( e' , left-unit-law-e' , right-unit-law-e') =
-      eq-type-subtype
-        ( λ x →
-          prod-Prop
-            ( Π-Prop' A
-              ( λ a →
-                Π-Prop' A
-                ( λ b →
-                  Π-Prop
-                    ( type-Set (hom-set a b))
-                    ( λ f' → Id-Prop (hom-set a b) (comp-hom (x b) f') f'))))
-            ( Π-Prop' A
-              ( λ a →
-                Π-Prop' A
-                ( λ b →
-                  Π-Prop
-                    ( type-Set (hom-set a b))
-                    ( λ f' → Id-Prop (hom-set a b) (comp-hom f' (x a)) f')))))
-        ( eq-htpy
-          ( λ x → inv (left-unit-law-e' (e x)) ∙ right-unit-law-e (e' x)))
+      ( e' , left-unit-law-e' , right-unit-law-e') = {!!}
 
   abstract
     is-prop-is-unital-composition-operation-binary-family-Set :
       is-prop
         ( is-unital-composition-operation-binary-family-Set hom-set comp-hom)
-    is-prop-is-unital-composition-operation-binary-family-Set =
-      is-prop-all-elements-equal
-        all-elements-equal-is-unital-composition-operation-binary-family-Set
+    is-prop-is-unital-composition-operation-binary-family-Set = {!!}
 
   is-unital-prop-composition-operation-binary-family-Set : Prop (l1 ⊔ l2)
-  pr1 is-unital-prop-composition-operation-binary-family-Set =
-    is-unital-composition-operation-binary-family-Set hom-set comp-hom
-  pr2 is-unital-prop-composition-operation-binary-family-Set =
-    is-prop-is-unital-composition-operation-binary-family-Set
+  pr1 is-unital-prop-composition-operation-binary-family-Set = {!!}
 ```
 
 ## See also

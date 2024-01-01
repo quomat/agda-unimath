@@ -38,19 +38,16 @@ module _
 
   is-upper-bound-prop-family-of-elements-Large-Poset :
     {l3 : Level} (y : type-Large-Poset P l3) → Prop (β l2 l3 ⊔ l1)
-  is-upper-bound-prop-family-of-elements-Large-Poset y =
-    Π-Prop I (λ i → leq-prop-Large-Poset P (x i) y)
+  is-upper-bound-prop-family-of-elements-Large-Poset y = {!!}
 
   is-upper-bound-family-of-elements-Large-Poset :
     {l3 : Level} (y : type-Large-Poset P l3) → UU (β l2 l3 ⊔ l1)
-  is-upper-bound-family-of-elements-Large-Poset y =
-    type-Prop (is-upper-bound-prop-family-of-elements-Large-Poset y)
+  is-upper-bound-family-of-elements-Large-Poset y = {!!}
 
   is-prop-is-upper-bound-family-of-elements-Large-Poset :
     {l3 : Level} (y : type-Large-Poset P l3) →
     is-prop (is-upper-bound-family-of-elements-Large-Poset y)
-  is-prop-is-upper-bound-family-of-elements-Large-Poset y =
-    is-prop-type-Prop (is-upper-bound-prop-family-of-elements-Large-Poset y)
+  is-prop-is-upper-bound-family-of-elements-Large-Poset y = {!!}
 ```
 
 ## Properties
@@ -69,20 +66,17 @@ module _
     ( (i : I) →
       is-upper-bound-family-of-elements-Large-Poset (P i) (λ j → a j i) (x i)) →
     is-upper-bound-family-of-elements-Large-Poset (Π-Large-Poset P) a x
-  is-upper-bound-family-of-elements-Π-Large-Poset H j i = H i j
+  is-upper-bound-family-of-elements-Π-Large-Poset H j i = {!!}
 
   map-inv-is-upper-bound-family-of-elements-Π-Large-Poset :
     is-upper-bound-family-of-elements-Large-Poset (Π-Large-Poset P) a x →
     (i : I) →
     is-upper-bound-family-of-elements-Large-Poset (P i) (λ j → a j i) (x i)
-  map-inv-is-upper-bound-family-of-elements-Π-Large-Poset H i j = H j i
+  map-inv-is-upper-bound-family-of-elements-Π-Large-Poset H i j = {!!}
 
   logical-equivalence-is-upper-bound-family-of-elements-Π-Large-Poset :
     ( (i : I) →
       is-upper-bound-family-of-elements-Large-Poset (P i) (λ j → a j i) (x i)) ↔
     is-upper-bound-family-of-elements-Large-Poset (Π-Large-Poset P) a x
-  pr1 logical-equivalence-is-upper-bound-family-of-elements-Π-Large-Poset =
-    is-upper-bound-family-of-elements-Π-Large-Poset
-  pr2 logical-equivalence-is-upper-bound-family-of-elements-Π-Large-Poset =
-    map-inv-is-upper-bound-family-of-elements-Π-Large-Poset
+  pr1 logical-equivalence-is-upper-bound-family-of-elements-Π-Large-Poset = {!!}
 ```

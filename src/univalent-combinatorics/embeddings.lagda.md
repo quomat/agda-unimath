@@ -40,11 +40,7 @@ Embeddings in the presence of finite types enjoy further properties.
 is-decidable-is-emb-is-finite :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
   is-finite A → is-finite B → is-decidable (is-emb f)
-is-decidable-is-emb-is-finite f HA HB =
-  is-decidable-iff
-    ( is-emb-is-injective (is-set-is-finite HB))
-    ( is-injective-is-emb)
-    ( is-decidable-is-injective-is-finite f HA HB)
+is-decidable-is-emb-is-finite f HA HB = {!!}
 ```
 
 ### If `A` can be count, then `trunc-Prop A ↪ᵈ A`
@@ -53,13 +49,8 @@ is-decidable-is-emb-is-finite f HA HB =
 decidable-emb-trunc-Prop-count :
   {l : Level} {A : UU l} →
   count A → type-trunc-Prop (A) ↪ᵈ A
-decidable-emb-trunc-Prop-count (zero-ℕ , empty-A) =
-  decidable-emb-is-empty (is-empty-type-trunc-Prop ( map-inv-equiv empty-A))
-decidable-emb-trunc-Prop-count {A = A} (succ-ℕ n , e) =
-  decidable-emb-retract-count
-    ( succ-ℕ n , e)
-    ( λ _ → map-equiv e (inr star))
-    ((λ x → unit-trunc-Prop x) , (λ x → eq-is-prop is-prop-type-trunc-Prop))
+decidable-emb-trunc-Prop-count (zero-ℕ , empty-A) = {!!}
+decidable-emb-trunc-Prop-count {A = A} (succ-ℕ n , e) = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {P : A → UU l2}
@@ -67,6 +58,5 @@ module _
 
   decidable-emb-tot-trunc-Prop-count :
     ((a : A) → count (P a)) → (Σ A (λ a → type-trunc-Prop (P a)) ↪ᵈ Σ A P)
-  decidable-emb-tot-trunc-Prop-count c =
-    decidable-emb-tot ( λ a → decidable-emb-trunc-Prop-count (c a))
+  decidable-emb-tot-trunc-Prop-count c = {!!}
 ```

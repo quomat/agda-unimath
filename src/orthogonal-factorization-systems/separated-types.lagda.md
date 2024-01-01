@@ -29,10 +29,10 @@ module _
   where
 
   is-separated-family : (X → UU l3) → UU (l1 ⊔ l2 ⊔ l3)
-  is-separated-family A = (x : X) (y z : A x) → is-local f (y ＝ z)
+  is-separated-family A = {!!}
 
   is-separated : UU l3 → UU (l1 ⊔ l2 ⊔ l3)
-  is-separated A = is-separated-family (λ _ → A)
+  is-separated A = {!!}
 ```
 
 ## References

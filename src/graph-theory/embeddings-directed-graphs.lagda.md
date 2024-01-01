@@ -46,29 +46,21 @@ module _
 
   is-emb-hom-Directed-Graph-Prop :
     hom-Directed-Graph G H → Prop (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-emb-hom-Directed-Graph-Prop f =
-    prod-Prop
-      ( is-emb-Prop (vertex-hom-Directed-Graph G H f))
-      ( Π-Prop
-        ( vertex-Directed-Graph G)
-        ( λ x →
-          Π-Prop
-            ( vertex-Directed-Graph G)
-            ( λ y → is-emb-Prop (edge-hom-Directed-Graph G H f {x} {y}))))
+  is-emb-hom-Directed-Graph-Prop f = {!!}
 
   is-emb-hom-Directed-Graph : hom-Directed-Graph G H → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-emb-hom-Directed-Graph f = type-Prop (is-emb-hom-Directed-Graph-Prop f)
+  is-emb-hom-Directed-Graph f = {!!}
 
   emb-Directed-Graph : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  emb-Directed-Graph = Σ (hom-Directed-Graph G H) is-emb-hom-Directed-Graph
+  emb-Directed-Graph = {!!}
 
   hom-emb-Directed-Graph : emb-Directed-Graph → hom-Directed-Graph G H
-  hom-emb-Directed-Graph = pr1
+  hom-emb-Directed-Graph = {!!}
 
   is-emb-emb-Directed-Graph :
     (f : emb-Directed-Graph) →
     is-emb-hom-Directed-Graph (hom-emb-Directed-Graph f)
-  is-emb-emb-Directed-Graph = pr2
+  is-emb-emb-Directed-Graph = {!!}
 ```
 
 ## External links

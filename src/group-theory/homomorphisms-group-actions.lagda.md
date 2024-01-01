@@ -59,21 +59,13 @@ module _
   where
 
   preserves-action-Group : UU (l1 ⊔ l2 ⊔ l3)
-  preserves-action-Group =
-    (g : type-Group G) →
-    coherence-square-maps f (mul-action-Group G X g) (mul-action-Group G Y g) f
+  preserves-action-Group = {!!}
 
   is-prop-preserves-action-Group : is-prop preserves-action-Group
-  is-prop-preserves-action-Group =
-    is-prop-iterated-Π 2
-      ( λ g x →
-        is-set-type-action-Group G Y
-          ( f (mul-action-Group G X g x))
-          ( mul-action-Group G Y g (f x)))
+  is-prop-preserves-action-Group = {!!}
 
   preserves-action-prop-Group : Prop (l1 ⊔ l2 ⊔ l3)
-  pr1 preserves-action-prop-Group = preserves-action-Group
-  pr2 preserves-action-prop-Group = is-prop-preserves-action-Group
+  pr1 preserves-action-prop-Group = {!!}
 ```
 
 ### Morphisms of `G`-sets
@@ -85,18 +77,16 @@ module _
   where
 
   hom-action-Group : UU (l1 ⊔ l2 ⊔ l3)
-  hom-action-Group =
-    Σ ( type-action-Group G X → type-action-Group G Y)
-      ( preserves-action-Group G X Y)
+  hom-action-Group = {!!}
 
   map-hom-action-Group :
     hom-action-Group → type-action-Group G X → type-action-Group G Y
-  map-hom-action-Group = pr1
+  map-hom-action-Group = {!!}
 
   preserves-action-hom-action-Group :
     (f : hom-action-Group) →
     preserves-action-Group G X Y (map-hom-action-Group f)
-  preserves-action-hom-action-Group = pr2
+  preserves-action-hom-action-Group = {!!}
 ```
 
 ### The identity morphism
@@ -107,8 +97,7 @@ module _
   where
 
   id-hom-action-Group : hom-action-Group G X X
-  pr1 id-hom-action-Group = id
-  pr2 id-hom-action-Group g = refl-htpy
+  pr1 id-hom-action-Group = {!!}
 ```
 
 ### Composition of morphisms
@@ -122,28 +111,16 @@ module _
   map-comp-hom-action-Group :
     hom-action-Group G Y Z → hom-action-Group G X Y →
     type-action-Group G X → type-action-Group G Z
-  map-comp-hom-action-Group g f =
-    map-hom-action-Group G Y Z g ∘ map-hom-action-Group G X Y f
+  map-comp-hom-action-Group g f = {!!}
 
   preserves-action-comp-hom-action-Group :
     (g : hom-action-Group G Y Z) (f : hom-action-Group G X Y) →
     preserves-action-Group G X Z (map-comp-hom-action-Group g f)
-  preserves-action-comp-hom-action-Group g f x =
-    pasting-horizontal-coherence-square-maps
-      ( map-hom-action-Group G X Y f)
-      ( map-hom-action-Group G Y Z g)
-      ( mul-action-Group G X x)
-      ( mul-action-Group G Y x)
-      ( mul-action-Group G Z x)
-      ( map-hom-action-Group G X Y f)
-      ( map-hom-action-Group G Y Z g)
-      ( preserves-action-hom-action-Group G X Y f x)
-      ( preserves-action-hom-action-Group G Y Z g x)
+  preserves-action-comp-hom-action-Group g f x = {!!}
 
   comp-hom-action-Group :
     hom-action-Group G Y Z → hom-action-Group G X Y → hom-action-Group G X Z
-  pr1 (comp-hom-action-Group g f) = map-comp-hom-action-Group g f
-  pr2 (comp-hom-action-Group g f) = preserves-action-comp-hom-action-Group g f
+  pr1 (comp-hom-action-Group g f) = {!!}
 ```
 
 ## Properties
@@ -158,54 +135,31 @@ module _
 
   htpy-hom-action-Group :
     (g : hom-action-Group G X Y) → UU (l2 ⊔ l3)
-  htpy-hom-action-Group g =
-    map-hom-action-Group G X Y f ~ map-hom-action-Group G X Y g
+  htpy-hom-action-Group g = {!!}
 
   refl-htpy-hom-action-Group : htpy-hom-action-Group f
-  refl-htpy-hom-action-Group = refl-htpy
+  refl-htpy-hom-action-Group = {!!}
 
   htpy-eq-hom-action-Group :
     (g : hom-action-Group G X Y) →
     f ＝ g → htpy-hom-action-Group g
-  htpy-eq-hom-action-Group .f refl =
-    refl-htpy-hom-action-Group
+  htpy-eq-hom-action-Group .f refl = {!!}
 
   is-torsorial-htpy-hom-action-Group :
     is-torsorial htpy-hom-action-Group
-  is-torsorial-htpy-hom-action-Group =
-    is-torsorial-Eq-subtype
-      ( is-torsorial-htpy (map-hom-action-Group G X Y f))
-      ( λ g →
-        is-prop-Π
-          ( λ x →
-            is-prop-Π
-              ( λ y →
-                is-set-type-Set
-                  ( set-action-Group G Y)
-                  ( g (mul-action-Group G X x y))
-                  ( mul-action-Group G Y x (g y)))))
-      ( map-hom-action-Group G X Y f)
-      ( refl-htpy)
-      ( preserves-action-hom-action-Group G X Y f)
+  is-torsorial-htpy-hom-action-Group = {!!}
 
   is-equiv-htpy-eq-hom-action-Group :
     (g : hom-action-Group G X Y) → is-equiv (htpy-eq-hom-action-Group g)
-  is-equiv-htpy-eq-hom-action-Group =
-    fundamental-theorem-id
-      is-torsorial-htpy-hom-action-Group
-      htpy-eq-hom-action-Group
+  is-equiv-htpy-eq-hom-action-Group = {!!}
 
   extensionality-hom-action-Group :
     (g : hom-action-Group G X Y) → (f ＝ g) ≃ htpy-hom-action-Group g
-  pr1 (extensionality-hom-action-Group g) =
-    htpy-eq-hom-action-Group g
-  pr2 (extensionality-hom-action-Group g) =
-    is-equiv-htpy-eq-hom-action-Group g
+  pr1 (extensionality-hom-action-Group g) = {!!}
 
   eq-htpy-hom-action-Group :
     (g : hom-action-Group G X Y) → htpy-hom-action-Group g → f ＝ g
-  eq-htpy-hom-action-Group g =
-    map-inv-is-equiv (is-equiv-htpy-eq-hom-action-Group g)
+  eq-htpy-hom-action-Group g = {!!}
 ```
 
 ### The type of morphisms of group actions is a set
@@ -218,18 +172,10 @@ module _
 
   is-set-hom-action-Group :
     is-set (hom-action-Group G X Y)
-  is-set-hom-action-Group f g =
-    is-prop-equiv
-      ( extensionality-hom-action-Group G X Y f g)
-      ( is-prop-Π
-        ( λ x →
-          is-set-type-action-Group G Y
-            ( map-hom-action-Group G X Y f x)
-            ( map-hom-action-Group G X Y g x)))
+  is-set-hom-action-Group f g = {!!}
 
   hom-set-action-Group : Set (l1 ⊔ l2 ⊔ l3)
-  pr1 hom-set-action-Group = hom-action-Group G X Y
-  pr2 hom-set-action-Group = is-set-hom-action-Group
+  pr1 hom-set-action-Group = {!!}
 ```
 
 ### Composition is associative
@@ -247,28 +193,12 @@ module _
   associative-comp-hom-action-Group :
     comp-hom-action-Group G X1 X2 X4 (comp-hom-action-Group G X2 X3 X4 h g) f ＝
     comp-hom-action-Group G X1 X3 X4 h (comp-hom-action-Group G X1 X2 X3 g f)
-  associative-comp-hom-action-Group =
-    eq-htpy-hom-action-Group G X1 X4
-      ( comp-hom-action-Group G X1 X2 X4
-        ( comp-hom-action-Group G X2 X3 X4 h g)
-        ( f))
-      ( comp-hom-action-Group G X1 X3 X4
-        ( h)
-        ( comp-hom-action-Group G X1 X2 X3 g f))
-      ( refl-htpy)
+  associative-comp-hom-action-Group = {!!}
 
   inv-associative-comp-hom-action-Group :
     comp-hom-action-Group G X1 X3 X4 h (comp-hom-action-Group G X1 X2 X3 g f) ＝
     comp-hom-action-Group G X1 X2 X4 (comp-hom-action-Group G X2 X3 X4 h g) f
-  inv-associative-comp-hom-action-Group =
-    eq-htpy-hom-action-Group G X1 X4
-      ( comp-hom-action-Group G X1 X3 X4
-        ( h)
-        ( comp-hom-action-Group G X1 X2 X3 g f))
-      ( comp-hom-action-Group G X1 X2 X4
-        ( comp-hom-action-Group G X2 X3 X4 h g)
-        ( f))
-      ( refl-htpy)
+  inv-associative-comp-hom-action-Group = {!!}
 ```
 
 ### Composition satisfies the left and right unit laws
@@ -282,18 +212,10 @@ module _
   left-unit-law-comp-hom-action-Group :
     (f : hom-action-Group G X Y) →
     comp-hom-action-Group G X Y Y (id-hom-action-Group G Y) f ＝ f
-  left-unit-law-comp-hom-action-Group f =
-    eq-htpy-hom-action-Group G X Y
-      ( comp-hom-action-Group G X Y Y (id-hom-action-Group G Y) f)
-      ( f)
-      ( refl-htpy)
+  left-unit-law-comp-hom-action-Group f = {!!}
 
   right-unit-law-comp-hom-action-Group :
     (f : hom-action-Group G X Y) →
     comp-hom-action-Group G X X Y f (id-hom-action-Group G X) ＝ f
-  right-unit-law-comp-hom-action-Group f =
-    eq-htpy-hom-action-Group G X Y
-      ( comp-hom-action-Group G X X Y f (id-hom-action-Group G X))
-      ( f)
-      ( refl-htpy)
+  right-unit-law-comp-hom-action-Group f = {!!}
 ```

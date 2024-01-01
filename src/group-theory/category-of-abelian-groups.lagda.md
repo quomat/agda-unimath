@@ -39,32 +39,28 @@ The **category of abelian groups** is the
 
 ```agda
 Ab-Large-Category : Large-Category lsuc _⊔_
-Ab-Large-Category =
-  large-category-Full-Large-Subcategory
-    ( Group-Large-Category)
-    ( is-abelian-prop-Group)
+Ab-Large-Category = {!!}
 ```
 
 ### The large precategory of abelian groups
 
 ```agda
 Ab-Large-Precategory : Large-Precategory lsuc _⊔_
-Ab-Large-Precategory =
-  large-precategory-Large-Category Ab-Large-Category
+Ab-Large-Precategory = {!!}
 ```
 
 ### The category of abelian groups of a given universe level
 
 ```agda
 Ab-Category : (l : Level) → Category (lsuc l) l
-Ab-Category = category-Large-Category Ab-Large-Category
+Ab-Category = {!!}
 ```
 
 ### The precategory of abelian groups of a given universe level
 
 ```agda
 Ab-Precategory : (l : Level) → Precategory (lsuc l) l
-Ab-Precategory = precategory-Large-Category Ab-Large-Category
+Ab-Precategory = {!!}
 ```
 
 ### The forgetful functor from abelian groups to groups
@@ -72,8 +68,5 @@ Ab-Precategory = precategory-Large-Category Ab-Large-Category
 ```agda
 forgetful-functor-Ab :
   functor-Large-Category (λ l → l) Ab-Large-Category Group-Large-Category
-forgetful-functor-Ab =
-  forgetful-functor-Full-Large-Subcategory
-    ( Group-Large-Category)
-    ( is-abelian-prop-Group)
+forgetful-functor-Ab = {!!}
 ```

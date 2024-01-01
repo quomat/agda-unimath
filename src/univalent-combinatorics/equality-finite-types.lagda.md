@@ -37,13 +37,7 @@ type is finite.
 ```agda
 has-decidable-equality-is-finite :
   {l1 : Level} {X : UU l1} → is-finite X → has-decidable-equality X
-has-decidable-equality-is-finite {l1} {X} is-finite-X =
-  apply-universal-property-trunc-Prop is-finite-X
-    ( has-decidable-equality-Prop X)
-    ( λ e →
-      has-decidable-equality-equiv'
-        ( equiv-count e)
-        ( has-decidable-equality-Fin (number-of-elements-count e)))
+has-decidable-equality-is-finite {l1} {X} is-finite-X = {!!}
 ```
 
 ### Any type of finite cardinality has decidable equality
@@ -52,10 +46,7 @@ has-decidable-equality-is-finite {l1} {X} is-finite-X =
 has-decidable-equality-has-cardinality :
   {l1 : Level} {X : UU l1} (k : ℕ) →
   has-cardinality k X → has-decidable-equality X
-has-decidable-equality-has-cardinality {l1} {X} k H =
-  apply-universal-property-trunc-Prop H
-    ( has-decidable-equality-Prop X)
-    ( λ e → has-decidable-equality-equiv' e (has-decidable-equality-Fin k))
+has-decidable-equality-has-cardinality {l1} {X} k H = {!!}
 ```
 
 ### The type of identifications between any two elements in a finite type is finite
@@ -65,14 +56,13 @@ abstract
   is-finite-eq :
     {l1 : Level} {X : UU l1} →
     has-decidable-equality X → {x y : X} → is-finite (Id x y)
-  is-finite-eq d {x} {y} = is-finite-count (count-eq d x y)
+  is-finite-eq d {x} {y} = {!!}
 
 is-finite-eq-𝔽 :
   {l : Level} → (X : 𝔽 l) {x y : type-𝔽 X} → is-finite (x ＝ y)
-is-finite-eq-𝔽 X =
-  is-finite-eq (has-decidable-equality-is-finite (is-finite-type-𝔽 X))
+is-finite-eq-𝔽 X = {!!}
 
 Id-𝔽 : {l : Level} → (X : 𝔽 l) (x y : type-𝔽 X) → 𝔽 l
-pr1 (Id-𝔽 X x y) = Id x y
-pr2 (Id-𝔽 X x y) = is-finite-eq-𝔽 X
+pr1 (Id-𝔽 X x y) = {!!}
+pr2 (Id-𝔽 X x y) = {!!}
 ```

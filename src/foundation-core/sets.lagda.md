@@ -29,25 +29,24 @@ A type is a set if its identity types are propositions.
 
 ```agda
 is-set : {l : Level} → UU l → UU l
-is-set A = (x y : A) → is-prop (x ＝ y)
+is-set A = {!!}
 
 Set : (l : Level) → UU (lsuc l)
-Set l = Σ (UU l) is-set
+Set l = {!!}
 
 module _
   {l : Level} (X : Set l)
   where
 
   type-Set : UU l
-  type-Set = pr1 X
+  type-Set = {!!}
 
   abstract
     is-set-type-Set : is-set type-Set
-    is-set-type-Set = pr2 X
+    is-set-type-Set = {!!}
 
   Id-Prop : (x y : type-Set) → Prop l
-  pr1 (Id-Prop x y) = (x ＝ y)
-  pr2 (Id-Prop x y) = is-set-type-Set x y
+  pr1 (Id-Prop x y) = {!!}
 ```
 
 ## Properties
@@ -56,13 +55,13 @@ module _
 
 ```agda
 instance-axiom-K : {l : Level} → UU l → UU l
-instance-axiom-K A = (x : A) (p : x ＝ x) → refl ＝ p
+instance-axiom-K A = {!!}
 
 axiom-K-Level : (l : Level) → UU (lsuc l)
-axiom-K-Level l = (A : UU l) → instance-axiom-K A
+axiom-K-Level l = {!!}
 
 axiom-K : UUω
-axiom-K = {l : Level} → axiom-K-Level l
+axiom-K = {!!}
 
 module _
   {l : Level} {A : UU l}
@@ -72,17 +71,15 @@ module _
     is-set-axiom-K' :
       instance-axiom-K A → (x y : A) → all-elements-equal (x ＝ y)
     is-set-axiom-K' K x .x refl q with K x q
-    ... | refl = refl
+    ... | refl = {!!}
 
   abstract
     is-set-axiom-K : instance-axiom-K A → is-set A
-    is-set-axiom-K H x y = is-prop-all-elements-equal (is-set-axiom-K' H x y)
+    is-set-axiom-K H x y = {!!}
 
   abstract
     axiom-K-is-set : is-set A → instance-axiom-K A
-    axiom-K-is-set H x p =
-      ( inv (contraction (is-proof-irrelevant-is-prop (H x x) refl) refl)) ∙
-      ( contraction (is-proof-irrelevant-is-prop (H x x) refl) p)
+    axiom-K-is-set H x p = {!!}
 ```
 
 ### If a reflexive binary relation maps into the identity type of `A`, then `A` is a set
@@ -96,16 +93,11 @@ module _
 
   abstract
     is-equiv-prop-in-id : (x y : A) → is-equiv (i x y)
-    is-equiv-prop-in-id x =
-      fundamental-theorem-id-retraction x (i x)
-        ( λ y →
-          pair
-            ( ind-Id x (λ z p → R x z) (ρ x) y)
-            ( λ r → eq-is-prop (p x y)))
+    is-equiv-prop-in-id x = {!!}
 
   abstract
     is-set-prop-in-id : is-set A
-    is-set-prop-in-id x y = is-prop-is-equiv' (is-equiv-prop-in-id x y) (p x y)
+    is-set-prop-in-id x y = {!!}
 ```
 
 ### Any proposition is a set
@@ -114,11 +106,11 @@ module _
 abstract
   is-set-is-prop :
     {l : Level} {P : UU l} → is-prop P → is-set P
-  is-set-is-prop = is-trunc-succ-is-trunc neg-one-𝕋
+  is-set-is-prop = {!!}
 
 set-Prop :
   {l : Level} → Prop l → Set l
-set-Prop P = truncated-type-succ-Truncated-Type neg-one-𝕋 P
+set-Prop P = {!!}
 ```
 
 ### Sets are closed under equivalences
@@ -128,23 +120,23 @@ abstract
   is-set-is-equiv :
     {l1 l2 : Level} {A : UU l1} (B : UU l2) (f : A → B) → is-equiv f →
     is-set B → is-set A
-  is-set-is-equiv = is-trunc-is-equiv zero-𝕋
+  is-set-is-equiv = {!!}
 
 abstract
   is-set-equiv :
     {l1 l2 : Level} {A : UU l1} (B : UU l2) (e : A ≃ B) →
     is-set B → is-set A
-  is-set-equiv = is-trunc-equiv zero-𝕋
+  is-set-equiv = {!!}
 
 abstract
   is-set-is-equiv' :
     {l1 l2 : Level} (A : UU l1) {B : UU l2} (f : A → B) → is-equiv f →
     is-set A → is-set B
-  is-set-is-equiv' = is-trunc-is-equiv' zero-𝕋
+  is-set-is-equiv' = {!!}
 
 abstract
   is-set-equiv' :
     {l1 l2 : Level} (A : UU l1) {B : UU l2} (e : A ≃ B) →
     is-set A → is-set B
-  is-set-equiv' = is-trunc-equiv' zero-𝕋
+  is-set-equiv' = {!!}
 ```

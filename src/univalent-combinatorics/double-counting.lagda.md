@@ -30,13 +30,11 @@ abstract
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (count-A : count A)
     (count-B : count B) (e : A ≃ B) →
     Id (number-of-elements-count count-A) (number-of-elements-count count-B)
-  double-counting-equiv (pair k f) (pair l g) e =
-    is-injective-Fin ((inv-equiv g ∘e e) ∘e f)
+  double-counting-equiv (pair k f) (pair l g) e = {!!}
 
 abstract
   double-counting :
     {l : Level} {A : UU l} (count-A count-A' : count A) →
     Id (number-of-elements-count count-A) (number-of-elements-count count-A')
-  double-counting count-A count-A' =
-    double-counting-equiv count-A count-A' id-equiv
+  double-counting count-A count-A' = {!!}
 ```

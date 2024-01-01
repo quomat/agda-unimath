@@ -68,18 +68,11 @@ module _
   where
 
   multivariable-section : UU (l1 ⊔ l2)
-  multivariable-section =
-    Σ ( iterated-Π B → iterated-Π A)
-      ( λ s →
-        multivariable-htpy
-          { n = succ-ℕ n}
-          {{A = prepend-telescope (iterated-Π B) B}}
-          ( f ∘ s)
-          ( id))
+  multivariable-section = {!!}
 
   map-multivariable-section :
     multivariable-section → iterated-Π B → iterated-Π A
-  map-multivariable-section = pr1
+  map-multivariable-section = {!!}
 
   is-multivariable-section-map-multivariable-section :
     (s : multivariable-section) →
@@ -88,5 +81,5 @@ module _
       {{A = prepend-telescope (iterated-Π B) B}}
       ( f ∘ map-multivariable-section s)
       ( id)
-  is-multivariable-section-map-multivariable-section = pr2
+  is-multivariable-section-map-multivariable-section = {!!}
 ```

@@ -25,5 +25,5 @@ sections `(u : BG) → X u`.
 ```agda
 fixed-point-action-∞-Group :
   {l1 l2 : Level} (G : ∞-Group l1) (X : action-∞-Group l2 G) → UU (l1 ⊔ l2)
-fixed-point-action-∞-Group G X = (u : classifying-type-∞-Group G) → X u
+fixed-point-action-∞-Group G X = {!!}
 ```

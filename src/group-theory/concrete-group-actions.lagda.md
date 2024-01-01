@@ -32,23 +32,23 @@ module _
   where
 
   action-Concrete-Group : UU (l1 ⊔ lsuc l2)
-  action-Concrete-Group = classifying-type-Concrete-Group G → Set l2
+  action-Concrete-Group = {!!}
 
 module _
   {l1 l2 : Level} (G : Concrete-Group l1) (X : action-Concrete-Group l2 G)
   where
 
   set-action-Concrete-Group : Set l2
-  set-action-Concrete-Group = X (shape-Concrete-Group G)
+  set-action-Concrete-Group = {!!}
 
   type-action-Concrete-Group : UU l2
-  type-action-Concrete-Group = type-Set set-action-Concrete-Group
+  type-action-Concrete-Group = {!!}
 
   is-set-type-action-Concrete-Group : is-set type-action-Concrete-Group
-  is-set-type-action-Concrete-Group = is-set-type-Set set-action-Concrete-Group
+  is-set-type-action-Concrete-Group = {!!}
 
   mul-action-Concrete-Group :
     type-Concrete-Group G →
     type-action-Concrete-Group → type-action-Concrete-Group
-  mul-action-Concrete-Group g x = tr (type-Set ∘ X) g x
+  mul-action-Concrete-Group g x = {!!}
 ```

@@ -36,18 +36,18 @@ open import ring-theory.rings
 
 ```agda
 ℤ-Ring : Ring lzero
-pr1 ℤ-Ring = ℤ-Ab
-pr1 (pr1 (pr2 ℤ-Ring)) = mul-ℤ
-pr2 (pr1 (pr2 ℤ-Ring)) = associative-mul-ℤ
-pr1 (pr1 (pr2 (pr2 ℤ-Ring))) = one-ℤ
-pr1 (pr2 (pr1 (pr2 (pr2 ℤ-Ring)))) = left-unit-law-mul-ℤ
-pr2 (pr2 (pr1 (pr2 (pr2 ℤ-Ring)))) = right-unit-law-mul-ℤ
-pr1 (pr2 (pr2 (pr2 ℤ-Ring))) = left-distributive-mul-add-ℤ
-pr2 (pr2 (pr2 (pr2 ℤ-Ring))) = right-distributive-mul-add-ℤ
+pr1 ℤ-Ring = {!!}
+pr1 (pr1 (pr2 ℤ-Ring)) = {!!}
+pr2 (pr1 (pr2 ℤ-Ring)) = {!!}
+pr1 (pr1 (pr2 (pr2 ℤ-Ring))) = {!!}
+pr1 (pr2 (pr1 (pr2 (pr2 ℤ-Ring)))) = {!!}
+pr2 (pr2 (pr1 (pr2 (pr2 ℤ-Ring)))) = {!!}
+pr1 (pr2 (pr2 (pr2 ℤ-Ring))) = {!!}
+pr2 (pr2 (pr2 (pr2 ℤ-Ring))) = {!!}
 
 ℤ-Commutative-Ring : Commutative-Ring lzero
-pr1 ℤ-Commutative-Ring = ℤ-Ring
-pr2 ℤ-Commutative-Ring = commutative-mul-ℤ
+pr1 ℤ-Commutative-Ring = {!!}
+pr2 ℤ-Commutative-Ring = {!!}
 ```
 
 ## Properties
@@ -57,33 +57,15 @@ pr2 ℤ-Commutative-Ring = commutative-mul-ℤ
 ```agda
 is-mul-integer-multiple-ℤ-Ring :
   (k l : ℤ) → integer-multiple-Ring ℤ-Ring k l ＝ mul-ℤ k l
-is-mul-integer-multiple-ℤ-Ring (inl zero-ℕ) l =
-  ( integer-multiple-neg-one-Ring ℤ-Ring l) ∙
-  ( is-left-mul-neg-one-neg-ℤ l)
-is-mul-integer-multiple-ℤ-Ring (inl (succ-ℕ k)) l =
-  ( integer-multiple-pred-Ring ℤ-Ring (inl k) l) ∙
-  ( ap
-    ( λ t → right-subtraction-Ring ℤ-Ring t l)
-    ( is-mul-integer-multiple-ℤ-Ring (inl k) l)) ∙
-  ( commutative-add-ℤ (mul-ℤ (inl k) l) (neg-ℤ l)) ∙
-  ( inv (left-predecessor-law-mul-ℤ (inl k) l))
-is-mul-integer-multiple-ℤ-Ring (inr (inl _)) l =
-  ( integer-multiple-zero-Ring ℤ-Ring l) ∙
-  ( inv (left-zero-law-mul-ℤ l))
-is-mul-integer-multiple-ℤ-Ring (inr (inr zero-ℕ)) l =
-  ( integer-multiple-one-Ring ℤ-Ring l) ∙
-  ( inv (left-unit-law-mul-ℤ l))
-is-mul-integer-multiple-ℤ-Ring (inr (inr (succ-ℕ k))) l =
-  ( integer-multiple-succ-Ring ℤ-Ring (inr (inr k)) l) ∙
-  ( ap (add-ℤ' l) (is-mul-integer-multiple-ℤ-Ring (inr (inr k)) l)) ∙
-  ( commutative-add-ℤ _ l) ∙
-  ( inv (left-successor-law-mul-ℤ (inr (inr k)) l))
+is-mul-integer-multiple-ℤ-Ring (inl zero-ℕ) l = {!!}
+is-mul-integer-multiple-ℤ-Ring (inl (succ-ℕ k)) l = {!!}
+is-mul-integer-multiple-ℤ-Ring (inr (inl _)) l = {!!}
+is-mul-integer-multiple-ℤ-Ring (inr (inr zero-ℕ)) l = {!!}
+is-mul-integer-multiple-ℤ-Ring (inr (inr (succ-ℕ k))) l = {!!}
 
 is-integer-multiple-ℤ :
   (k : ℤ) → integer-multiple-Ring ℤ-Ring k one-ℤ ＝ k
-is-integer-multiple-ℤ k =
-  ( is-mul-integer-multiple-ℤ-Ring k one-ℤ) ∙
-  ( right-unit-law-mul-ℤ k)
+is-integer-multiple-ℤ k = {!!}
 ```
 
 ### The ring of integers is the initial ring
@@ -96,41 +78,28 @@ module _
   where
 
   hom-group-initial-hom-Ring : hom-Group ℤ-Group (group-Ring R)
-  hom-group-initial-hom-Ring = hom-element-Group (group-Ring R) (one-Ring R)
+  hom-group-initial-hom-Ring = {!!}
 
   map-initial-hom-Ring : ℤ → type-Ring R
-  map-initial-hom-Ring =
-    map-hom-Group ℤ-Group (group-Ring R) hom-group-initial-hom-Ring
+  map-initial-hom-Ring = {!!}
 
   preserves-add-initial-hom-Ring :
     (k l : ℤ) →
     map-initial-hom-Ring (add-ℤ k l) ＝
     add-Ring R (map-initial-hom-Ring k) (map-initial-hom-Ring l)
-  preserves-add-initial-hom-Ring k l =
-    preserves-mul-hom-Group
-      ( ℤ-Group)
-      ( group-Ring R)
-      ( hom-group-initial-hom-Ring)
-      { k}
-      { l}
+  preserves-add-initial-hom-Ring k l = {!!}
 
   preserves-one-initial-hom-Ring : map-initial-hom-Ring one-ℤ ＝ one-Ring R
-  preserves-one-initial-hom-Ring = integer-multiple-one-Ring R (one-Ring R)
+  preserves-one-initial-hom-Ring = {!!}
 
   preserves-mul-initial-hom-Ring :
     (k l : ℤ) →
     map-initial-hom-Ring (mul-ℤ k l) ＝
     mul-Ring R (map-initial-hom-Ring k) (map-initial-hom-Ring l)
-  preserves-mul-initial-hom-Ring k l =
-    ( ap map-initial-hom-Ring (commutative-mul-ℤ k l)) ∙
-    ( integer-multiple-mul-Ring R l k (one-Ring R)) ∙
-    ( ap (integer-multiple-Ring R l) (inv (right-unit-law-mul-Ring R _))) ∙
-    ( inv (right-integer-multiple-law-mul-Ring R l _ _))
+  preserves-mul-initial-hom-Ring k l = {!!}
 
   initial-hom-Ring : hom-Ring ℤ-Ring R
-  pr1 initial-hom-Ring = hom-group-initial-hom-Ring
-  pr1 (pr2 initial-hom-Ring) {x} {y} = preserves-mul-initial-hom-Ring x y
-  pr2 (pr2 initial-hom-Ring) = preserves-one-initial-hom-Ring
+  pr1 initial-hom-Ring = {!!}
 ```
 
 #### Any ring homomorphisms from `ℤ` to `R` is equal to the homomorphism `initial-hom-Ring`
@@ -142,26 +111,19 @@ module _
 
   htpy-initial-hom-Ring :
     (f : hom-Ring ℤ-Ring R) → htpy-hom-Ring ℤ-Ring R (initial-hom-Ring R) f
-  htpy-initial-hom-Ring f k =
-    ( inv
-      ( ( preserves-integer-multiples-hom-Ring ℤ-Ring R f k one-ℤ) ∙
-        ( ap
-          ( integer-multiple-Ring R k)
-          ( preserves-one-hom-Ring ℤ-Ring R f)))) ∙
-    ( ap (map-hom-Ring ℤ-Ring R f) (is-integer-multiple-ℤ k))
+  htpy-initial-hom-Ring f k = {!!}
 
   contraction-initial-hom-Ring :
     (f : hom-Ring ℤ-Ring R) → initial-hom-Ring R ＝ f
-  contraction-initial-hom-Ring f =
-    eq-htpy-hom-Ring ℤ-Ring R (initial-hom-Ring R) f (htpy-initial-hom-Ring f)
+  contraction-initial-hom-Ring f = {!!}
 ```
 
 #### The ring of integers is the initial ring
 
 ```agda
 is-initial-ℤ-Ring : is-initial-Ring ℤ-Ring
-pr1 (is-initial-ℤ-Ring S) = initial-hom-Ring S
-pr2 (is-initial-ℤ-Ring S) f = contraction-initial-hom-Ring S f
+pr1 (is-initial-ℤ-Ring S) = {!!}
+pr2 (is-initial-ℤ-Ring S) f = {!!}
 ```
 
 ### Integer multiplication in the ring of integers coincides with multiplication of integers
@@ -169,28 +131,13 @@ pr2 (is-initial-ℤ-Ring S) f = contraction-initial-hom-Ring S f
 ```agda
 integer-multiple-one-ℤ-Ring :
   (k : ℤ) → integer-multiple-Ring ℤ-Ring k one-ℤ ＝ k
-integer-multiple-one-ℤ-Ring (inl zero-ℕ) = refl
-integer-multiple-one-ℤ-Ring (inl (succ-ℕ n)) =
-  ap pred-ℤ (integer-multiple-one-ℤ-Ring (inl n))
-integer-multiple-one-ℤ-Ring (inr (inl _)) = refl
-integer-multiple-one-ℤ-Ring (inr (inr zero-ℕ)) = refl
-integer-multiple-one-ℤ-Ring (inr (inr (succ-ℕ n))) =
-  ap succ-ℤ (integer-multiple-one-ℤ-Ring (inr (inr n)))
+integer-multiple-one-ℤ-Ring (inl zero-ℕ) = {!!}
+integer-multiple-one-ℤ-Ring (inl (succ-ℕ n)) = {!!}
+integer-multiple-one-ℤ-Ring (inr (inl _)) = {!!}
+integer-multiple-one-ℤ-Ring (inr (inr zero-ℕ)) = {!!}
+integer-multiple-one-ℤ-Ring (inr (inr (succ-ℕ n))) = {!!}
 
 compute-integer-multiple-ℤ-Ring :
   (k l : ℤ) → integer-multiple-Ring ℤ-Ring k l ＝ mul-ℤ k l
-compute-integer-multiple-ℤ-Ring k l =
-  equational-reasoning
-    integer-multiple-Ring ℤ-Ring k l
-    ＝ integer-multiple-Ring ℤ-Ring k (integer-multiple-Ring ℤ-Ring l one-ℤ)
-      by
-      ap
-        ( integer-multiple-Ring ℤ-Ring k)
-        ( inv (integer-multiple-one-ℤ-Ring l))
-    ＝ integer-multiple-Ring ℤ-Ring (mul-ℤ k l) one-ℤ
-      by
-      inv (integer-multiple-mul-Ring ℤ-Ring k l one-ℤ)
-    ＝ mul-ℤ k l
-      by
-      integer-multiple-one-ℤ-Ring _
+compute-integer-multiple-ℤ-Ring k l = {!!}
 ```

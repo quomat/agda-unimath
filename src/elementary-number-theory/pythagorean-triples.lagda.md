@@ -20,11 +20,11 @@ open import foundation.universe-levels
 ## Idea
 
 A Pythagorean triple is a triple `(a,b,c)` of natural numbers such that
-`a² + b² = c²`.
+`a² + b² = {!!}
 
 ## Definition
 
 ```agda
 is-pythagorean-triple : ℕ → ℕ → ℕ → UU lzero
-is-pythagorean-triple a b c = ((square-ℕ a) +ℕ (square-ℕ b) ＝ square-ℕ c)
+is-pythagorean-triple a b c = {!!}
 ```

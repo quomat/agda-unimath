@@ -56,16 +56,13 @@ module unityped where
 
   id-hom-system :
     {l : Level} (σ : system l) → hom-system σ σ
-  hom-system.element (id-hom-system σ) = id
-  hom-system.slice (id-hom-system σ) = id-hom-system (system.slice σ)
+  hom-system.element (id-hom-system σ) = {!!}
 
   comp-hom-system :
     {l1 l2 l3 : Level} {σ : system l1} {τ : system l2} {υ : system l3}
     (β : hom-system τ υ) (α : hom-system σ τ) → hom-system σ υ
-  hom-system.element (comp-hom-system β α) =
-    hom-system.element β ∘ hom-system.element α
-  hom-system.slice (comp-hom-system β α) =
-    comp-hom-system (hom-system.slice β) (hom-system.slice α)
+  hom-system.element (comp-hom-system β α) = {!!}
+  hom-system.slice (comp-hom-system β α) = {!!}
 
   record htpy-hom-system
     {l1 l2 : Level}
@@ -332,32 +329,19 @@ module unityped where
 
   slice-type-theory :
     {l : Level} (T : type-theory l) → type-theory l
-  type-theory.sys (slice-type-theory T) =
-    system.slice (type-theory.sys T)
-  type-theory.W (slice-type-theory T) =
-    weakening.slice (type-theory.W T)
-  type-theory.S (slice-type-theory T) =
-    substitution.slice (type-theory.S T)
-  type-theory.δ (slice-type-theory T) =
-    generic-element.slice (type-theory.δ T)
-  type-theory.WW (slice-type-theory T) =
-    weakening-preserves-weakening.slice (type-theory.WW T)
-  type-theory.SS (slice-type-theory T) =
-    substitution-preserves-substitution.slice (type-theory.SS T)
-  type-theory.WS (slice-type-theory T) =
-    weakening-preserves-substitution.slice (type-theory.WS T)
-  type-theory.SW (slice-type-theory T) =
-    substitution-preserves-weakening.slice (type-theory.SW T)
-  type-theory.Wδ (slice-type-theory T) =
-    weakening-preserves-generic-element.slice (type-theory.Wδ T)
-  type-theory.Sδ (slice-type-theory T) =
-    substitution-preserves-generic-element.slice (type-theory.Sδ T)
-  type-theory.S!W (slice-type-theory T) =
-    substitution-cancels-weakening.slice (type-theory.S!W T)
-  type-theory.δid (slice-type-theory T) =
-    generic-element-is-identity.slice (type-theory.δid T)
-  type-theory.Sδ! (slice-type-theory T) =
-    substitution-by-generic-element.slice (type-theory.Sδ! T)
+  type-theory.sys (slice-type-theory T) = {!!}
+  type-theory.W (slice-type-theory T) = {!!}
+  type-theory.S (slice-type-theory T) = {!!}
+  type-theory.δ (slice-type-theory T) = {!!}
+  type-theory.WW (slice-type-theory T) = {!!}
+  type-theory.SS (slice-type-theory T) = {!!}
+  type-theory.WS (slice-type-theory T) = {!!}
+  type-theory.SW (slice-type-theory T) = {!!}
+  type-theory.Wδ (slice-type-theory T) = {!!}
+  type-theory.Sδ (slice-type-theory T) = {!!}
+  type-theory.S!W (slice-type-theory T) = {!!}
+  type-theory.δid (slice-type-theory T) = {!!}
+  type-theory.Sδ! (slice-type-theory T) = {!!}
 ```
 
 ---
@@ -366,26 +350,23 @@ module unityped where
   module C-system where
 
     El : {l : Level} (A : type-theory l) → ℕ → UU l
-    El A zero-ℕ = system.element (type-theory.sys A)
-    El A (succ-ℕ n) = El (slice-type-theory A) n
+    El A zero-ℕ = {!!}
 
     iterated-weakening :
       {l : Level} {A : type-theory l} {m n : ℕ} →
       El A n → El A (succ-ℕ (m +ℕ n))
-    iterated-weakening {l} {A} {zero-ℕ} {n} x =
-      {!hom-system.element (weakening.element (type-theory.W A)) !}
+    iterated-weakening {l} {A} {zero-ℕ} {n} x = {!!}
     iterated-weakening {l} {A} {succ-ℕ m} {n} x = {!!}
 ```
 
-`hom(X,Y) := Tm(W(X,Y))`
+`hom(X,Y) := {!!}
 
 ```agda
     hom : {l : Level} (A : type-theory l) → ℕ → ℕ → UU l
-    hom A m n = El A (succ-ℕ (m +ℕ n))
+    hom A m n = {!!}
 
     id-hom : {l : Level} (A : type-theory l) (n : ℕ) → hom A n n
-    id-hom A zero-ℕ = generic-element.element (type-theory.δ A)
-    id-hom A (succ-ℕ n) = {!!}
+    id-hom A zero-ℕ = {!!}
 ```
 
 ### The forgetful functor from unityped type theories to simple type theories
@@ -396,8 +377,7 @@ module simple-unityped where
 {-
   system :
     {l : Level} → unityped.system l → simple.system l unit
-  simple.system.element (system A) x = unityped.system.element A
-  simple.system.slice (system A) x = system (unityped.system.slice A)
+  simple.system.element (system A) x = {!!}
 
   hom-system :
     {l1 l2 : Level} {A : unityped.system l1} {B : unityped.system l2} →
@@ -405,18 +385,14 @@ module simple-unityped where
     simple.hom-system id
       ( system A)
       ( system B)
-  simple.hom-system.element (hom-system f) = unityped.hom-system.element f
-  simple.hom-system.slice (hom-system f) x =
-    hom-system (unityped.hom-system.slice f)
+  simple.hom-system.element (hom-system f) = {!!}
 
   id-hom-system :
     {l : Level} (A : unityped.system l) →
     simple.htpy-hom-system
       ( hom-system (unityped.id-hom-system A))
       ( simple.id-hom-system (system A))
-  simple.htpy-hom-system.element (id-hom-system A) x = refl-htpy
-  simple.htpy-hom-system.slice (id-hom-system A) x =
-    id-hom-system (unityped.system.slice A)
+  simple.htpy-hom-system.element (id-hom-system A) x = {!!}
 
   comp-hom-system :
     {l1 l2 l3 : Level} {A : unityped.system l1} {B : unityped.system l2}
@@ -427,29 +403,21 @@ module simple-unityped where
       ( simple.comp-hom-system
         ( hom-system g)
         ( hom-system f))
-  simple.htpy-hom-system.element (comp-hom-system g f) x = refl-htpy
-  simple.htpy-hom-system.slice (comp-hom-system g f) x =
-    comp-hom-system
-      ( unityped.hom-system.slice g)
-      ( unityped.hom-system.slice f)
+  simple.htpy-hom-system.element (comp-hom-system g f) x = {!!}
 
   htpy-hom-system :
     {l1 l2 : Level} {A : unityped.system l1} {B : unityped.system l2}
     {f g : unityped.hom-system A B} →
     unityped.htpy-hom-system f g →
     simple.htpy-hom-system (hom-system f) (hom-system g)
-  simple.htpy-hom-system.element (htpy-hom-system H) x =
-    unityped.htpy-hom-system.element H
-  simple.htpy-hom-system.slice (htpy-hom-system H) x =
-    htpy-hom-system (unityped.htpy-hom-system.slice H)
+  simple.htpy-hom-system.element (htpy-hom-system H) x = {!!}
+  simple.htpy-hom-system.slice (htpy-hom-system H) x = {!!}
 
   weakening :
     {l : Level} {A : unityped.system l} → unityped.weakening A →
     simple.weakening (system A)
-  simple.weakening.element (weakening W) x =
-    hom-system (unityped.weakening.element W)
-  simple.weakening.slice (weakening W) x =
-    weakening (unityped.weakening.slice W)
+  simple.weakening.element (weakening W) x = {!!}
+  simple.weakening.slice (weakening W) x = {!!}
 
   preserves-weakening :
     {l1 l2 : Level} {A : unityped.system l1} {B : unityped.system l2}
@@ -457,24 +425,19 @@ module simple-unityped where
     {f : unityped.hom-system A B} →
     unityped.preserves-weakening WA WB f →
     simple.preserves-weakening (weakening WA) (weakening WB) (hom-system f)
-  simple.preserves-weakening.element (preserves-weakening Wf) x =
-    {!simple.concat-htpy-hom-system!}
+  simple.preserves-weakening.element (preserves-weakening Wf) x = {!!}
   simple.preserves-weakening.slice (preserves-weakening Wf) = {!!}
 
   substitution :
     {l : Level} {A : unityped.system l} → unityped.substitution A →
     simple.substitution (system A)
-  simple.substitution.element (substitution S) x =
-    hom-system (unityped.substitution.element S x)
-  simple.substitution.slice (substitution S) x =
-    substitution (unityped.substitution.slice S)
+  simple.substitution.element (substitution S) x = {!!}
+  simple.substitution.slice (substitution S) x = {!!}
 
   generic-element :
     {l : Level} {A : unityped.system l} → unityped.generic-element A →
     simple.generic-element (system A)
-  simple.generic-element.element (generic-element δ) x =
-    unityped.generic-element.element δ
-  simple.generic-element.slice (generic-element δ) x =
-    generic-element (unityped.generic-element.slice δ)
+  simple.generic-element.element (generic-element δ) x = {!!}
+  simple.generic-element.slice (generic-element δ) x = {!!}
 -}
 ```

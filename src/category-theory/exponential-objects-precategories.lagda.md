@@ -27,7 +27,7 @@ an exponential (often denoted y^x) consists of:
 - an object `e`
 - a morphism `ev : hom (e × x) y` such that for every object `z` and morphism
   `f : hom (z × x) y` there exists a unique morphism `g : hom z e` such that
-- `(g × id x) ∘ ev = f`.
+- `(g × id x) ∘ ev = {!!}
 
 We say that `C` has all exponentials if there is a choice of an exponential for
 each pair of objects.
@@ -44,26 +44,14 @@ module _
     (x y e : obj-Precategory C) →
     hom-Precategory C (object-product-Precategory C p e x) y →
     UU (l1 ⊔ l2)
-  is-exponential-Precategory x y e ev =
-    (z : obj-Precategory C)
-    (f : hom-Precategory C (object-product-Precategory C p z x) y) →
-    ∃!
-      ( hom-Precategory C z e)
-      ( λ g →
-        comp-hom-Precategory C ev
-          ( map-product-Precategory C p g (id-hom-Precategory C)) ＝
-          ( f))
+  is-exponential-Precategory x y e ev = {!!}
 
   exponential-Precategory :
     obj-Precategory C → obj-Precategory C → UU (l1 ⊔ l2)
-  exponential-Precategory x y =
-    Σ (obj-Precategory C) (λ e →
-    Σ (hom-Precategory C (object-product-Precategory C p e x) y) λ ev →
-      is-exponential-Precategory x y e ev)
+  exponential-Precategory x y = {!!}
 
   has-all-exponentials-Precategory : UU (l1 ⊔ l2)
-  has-all-exponentials-Precategory =
-    (x y : obj-Precategory C) → exponential-Precategory x y
+  has-all-exponentials-Precategory = {!!}
 
 module _
   {l1 l2 : Level} (C : Precategory l1 l2)
@@ -73,13 +61,13 @@ module _
   where
 
   object-exponential-Precategory : obj-Precategory C
-  object-exponential-Precategory = pr1 (t x y)
+  object-exponential-Precategory = {!!}
 
   eval-exponential-Precategory :
     hom-Precategory C
       ( object-product-Precategory C p object-exponential-Precategory x)
       ( y)
-  eval-exponential-Precategory = pr1 (pr2 (t x y))
+  eval-exponential-Precategory = {!!}
 
   module _
     (z : obj-Precategory C)
@@ -88,7 +76,7 @@ module _
 
     morphism-into-exponential-Precategory :
       hom-Precategory C z object-exponential-Precategory
-    morphism-into-exponential-Precategory = pr1 (pr1 (pr2 (pr2 (t x y)) z f))
+    morphism-into-exponential-Precategory = {!!}
 
     morphism-into-exponential-Precategory-comm :
       ( comp-hom-Precategory C
@@ -97,8 +85,7 @@ module _
           ( morphism-into-exponential-Precategory)
           ( id-hom-Precategory C))) ＝
       ( f)
-    morphism-into-exponential-Precategory-comm =
-      pr2 (pr1 (pr2 (pr2 (t x y)) z f))
+    morphism-into-exponential-Precategory-comm = {!!}
 
     is-unique-morphism-into-exponential-Precategory :
       ( g : hom-Precategory C z object-exponential-Precategory) →
@@ -106,6 +93,5 @@ module _
         ( eval-exponential-Precategory)
         ( map-product-Precategory C p g (id-hom-Precategory C)) ＝ f) →
       morphism-into-exponential-Precategory ＝ g
-    is-unique-morphism-into-exponential-Precategory g q =
-      ap pr1 (pr2 (pr2 (pr2 (t x y)) z f) (g , q))
+    is-unique-morphism-into-exponential-Precategory g q = {!!}
 ```

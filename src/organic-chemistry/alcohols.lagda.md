@@ -31,22 +31,7 @@ distinguished subset of the available (unbonded) electrons of the carbon atoms.
 
 ```agda
 alcohol : UU (lsuc lzero)
-alcohol =
-  Σ ( hydrocarbon lzero lzero)
-    ( λ X →
-      Σ ( (c : vertex-hydrocarbon X) →
-          decidable-subtype lzero (electron-carbon-atom-hydrocarbon X c))
-        ( λ OH →
-          ( ( c c' : vertex-hydrocarbon X) →
-            ( b : edge-hydrocarbon X (standard-unordered-pair c c')) →
-            ¬ (is-in-decidable-subtype (OH c) (bonding-hydrocarbon X b))) ×
-          ( ( type-trunc-Prop
-            ( Σ ( vertex-hydrocarbon X)
-                ( λ c → type-decidable-subtype (OH c)))) ×
-            ( ( c : vertex-hydrocarbon X) →
-              type-decidable-subtype (OH c) →
-              is-saturated-carbon-hydrocarbon X c
-              ))))
+alcohol = {!!}
 ```
 
 More explicitly, an alcohol is a hydrocarbon equipped with, for each of its

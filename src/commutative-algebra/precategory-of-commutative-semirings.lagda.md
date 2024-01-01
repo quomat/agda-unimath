@@ -30,35 +30,26 @@ and homomorphisms of semirings.
 ```agda
 Commutative-Semiring-Large-Precategory : Large-Precategory lsuc _⊔_
 obj-Large-Precategory
-  Commutative-Semiring-Large-Precategory =
-  Commutative-Semiring
+  Commutative-Semiring-Large-Precategory = {!!}
 hom-set-Large-Precategory
-  Commutative-Semiring-Large-Precategory =
-  hom-set-Commutative-Semiring
+  Commutative-Semiring-Large-Precategory = {!!}
 comp-hom-Large-Precategory
-  Commutative-Semiring-Large-Precategory {X = A} {B} {C} =
-  comp-hom-Commutative-Semiring A B C
+  Commutative-Semiring-Large-Precategory {X = A} {B} {C} = {!!}
 id-hom-Large-Precategory
-  Commutative-Semiring-Large-Precategory {X = A} =
-  id-hom-Commutative-Semiring A
+  Commutative-Semiring-Large-Precategory {X = A} = {!!}
 associative-comp-hom-Large-Precategory
-  Commutative-Semiring-Large-Precategory {X = A} {B} {C} {D} =
-  associative-comp-hom-Commutative-Semiring A B C D
+  Commutative-Semiring-Large-Precategory {X = A} {B} {C} {D} = {!!}
 inv-associative-comp-hom-Large-Precategory
-  Commutative-Semiring-Large-Precategory {X = A} {B} {C} {D} =
-  inv-associative-comp-hom-Commutative-Semiring A B C D
+  Commutative-Semiring-Large-Precategory {X = A} {B} {C} {D} = {!!}
 left-unit-law-comp-hom-Large-Precategory
-  Commutative-Semiring-Large-Precategory {X = A} {B} =
-  left-unit-law-comp-hom-Commutative-Semiring A B
+  Commutative-Semiring-Large-Precategory {X = A} {B} = {!!}
 right-unit-law-comp-hom-Large-Precategory
-  Commutative-Semiring-Large-Precategory {X = A} {B} =
-  right-unit-law-comp-hom-Commutative-Semiring A B
+  Commutative-Semiring-Large-Precategory {X = A} {B} = {!!}
 ```
 
 ### The precategory of commutative semirings of universe level `l`
 
 ```agda
 Commutative-Semiring-Precategory : (l : Level) → Precategory (lsuc l) l
-Commutative-Semiring-Precategory =
-  precategory-Large-Precategory Commutative-Semiring-Large-Precategory
+Commutative-Semiring-Precategory = {!!}
 ```

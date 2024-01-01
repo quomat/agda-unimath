@@ -29,14 +29,10 @@ module _
   where
 
   is-covering-Locale : {I : UU l2} → (I → type-Locale L) → UU l1
-  is-covering-Locale x = (u ＝ sup-Locale L x)
+  is-covering-Locale x = {!!}
 
   covering-Locale : UU (l1 ⊔ lsuc l2)
-  covering-Locale =
-    Σ ( UU l2)
-      ( λ I →
-        Σ ( I → type-Locale L)
-          ( is-covering-Locale))
+  covering-Locale = {!!}
 
 module _
   {l1 l2 : Level} (L : Locale l1 l2)
@@ -44,13 +40,13 @@ module _
   where
 
   indexing-type-covering-Locale : UU l2
-  indexing-type-covering-Locale = pr1 v
+  indexing-type-covering-Locale = {!!}
 
   covering-family-covering-Locale :
     indexing-type-covering-Locale → type-Locale L
-  covering-family-covering-Locale = pr1 (pr2 v)
+  covering-family-covering-Locale = {!!}
 
   is-covering-covering-Locale :
     is-covering-Locale L u covering-family-covering-Locale
-  is-covering-covering-Locale = pr2 (pr2 v)
+  is-covering-covering-Locale = {!!}
 ```

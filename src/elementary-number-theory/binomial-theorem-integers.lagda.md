@@ -33,7 +33,7 @@ The binomial theorem for the integers asserts that for any two integers `x` and
 `y` and any natural number `n`, we have
 
 ```text
-  (x + y)ⁿ = ∑_{0 ≤ i < n+1} (n choose i) xⁱ yⁿ⁻ⁱ.
+  (x + y)ⁿ = {!!}
 ```
 
 ## Definitions
@@ -42,7 +42,7 @@ The binomial theorem for the integers asserts that for any two integers `x` and
 
 ```agda
 binomial-sum-ℤ : (n : ℕ) (f : functional-vec ℤ (succ-ℕ n)) → ℤ
-binomial-sum-ℤ = binomial-sum-Commutative-Ring ℤ-Commutative-Ring
+binomial-sum-ℤ = {!!}
 ```
 
 ## Properties
@@ -52,14 +52,12 @@ binomial-sum-ℤ = binomial-sum-Commutative-Ring ℤ-Commutative-Ring
 ```agda
 binomial-sum-one-element-ℤ :
   (f : functional-vec ℤ 1) → binomial-sum-ℤ 0 f ＝ head-functional-vec 0 f
-binomial-sum-one-element-ℤ =
-  binomial-sum-one-element-Commutative-Ring ℤ-Commutative-Ring
+binomial-sum-one-element-ℤ = {!!}
 
 binomial-sum-two-elements-ℤ :
   (f : functional-vec ℤ 2) →
   binomial-sum-ℤ 1 f ＝ (f (zero-Fin 1)) +ℤ (f (one-Fin 1))
-binomial-sum-two-elements-ℤ =
-  binomial-sum-two-elements-Commutative-Ring ℤ-Commutative-Ring
+binomial-sum-two-elements-ℤ = {!!}
 ```
 
 ### Binomial sums are homotopy invariant
@@ -68,8 +66,7 @@ binomial-sum-two-elements-ℤ =
 htpy-binomial-sum-ℤ :
   (n : ℕ) {f g : functional-vec ℤ (succ-ℕ n)} →
   (f ~ g) → binomial-sum-ℤ n f ＝ binomial-sum-ℤ n g
-htpy-binomial-sum-ℤ =
-  htpy-binomial-sum-Commutative-Ring ℤ-Commutative-Ring
+htpy-binomial-sum-ℤ = {!!}
 ```
 
 ### Multiplication distributes over sums
@@ -78,15 +75,12 @@ htpy-binomial-sum-ℤ =
 left-distributive-mul-binomial-sum-ℤ :
   (n : ℕ) (x : ℤ) (f : functional-vec ℤ (succ-ℕ n)) →
   x *ℤ (binomial-sum-ℤ n f) ＝ binomial-sum-ℤ n (λ i → x *ℤ (f i))
-left-distributive-mul-binomial-sum-ℤ =
-  left-distributive-mul-binomial-sum-Commutative-Ring ℤ-Commutative-Ring
+left-distributive-mul-binomial-sum-ℤ = {!!}
 
 right-distributive-mul-binomial-sum-ℤ :
   (n : ℕ) (f : functional-vec ℤ (succ-ℕ n)) (x : ℤ) →
   (binomial-sum-ℤ n f) *ℤ x ＝ binomial-sum-ℤ n (λ i → (f i) *ℤ x)
-right-distributive-mul-binomial-sum-ℤ =
-  right-distributive-mul-binomial-sum-Commutative-Ring
-    ℤ-Commutative-Ring
+right-distributive-mul-binomial-sum-ℤ = {!!}
 ```
 
 ## Theorem
@@ -101,5 +95,5 @@ binomial-theorem-ℤ :
     ( λ i →
         ( power-ℤ (nat-Fin (succ-ℕ n) i) x) *ℤ
         ( power-ℤ (dist-ℕ (nat-Fin (succ-ℕ n) i) n) y))
-binomial-theorem-ℤ = binomial-theorem-Commutative-Ring ℤ-Commutative-Ring
+binomial-theorem-ℤ = {!!}
 ```

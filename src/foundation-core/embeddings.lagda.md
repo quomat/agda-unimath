@@ -38,39 +38,38 @@ module _
   where
 
   is-emb : (A → B) → UU (l1 ⊔ l2)
-  is-emb f = (x y : A) → is-equiv (ap f {x} {y})
+  is-emb f = {!!}
 
   equiv-ap-is-emb :
     {f : A → B} (e : is-emb f) {x y : A} → (x ＝ y) ≃ (f x ＝ f y)
-  pr1 (equiv-ap-is-emb {f} e) = ap f
-  pr2 (equiv-ap-is-emb {f} e {x} {y}) = e x y
+  pr1 (equiv-ap-is-emb {f} e) = {!!}
 
   inv-equiv-ap-is-emb :
     {f : A → B} (e : is-emb f) {x y : A} → (f x ＝ f y) ≃ (x ＝ y)
-  inv-equiv-ap-is-emb e = inv-equiv (equiv-ap-is-emb e)
+  inv-equiv-ap-is-emb e = {!!}
 
 infix 5 _↪_
 _↪_ :
   {l1 l2 : Level} → UU l1 → UU l2 → UU (l1 ⊔ l2)
-A ↪ B = Σ (A → B) is-emb
+A ↪ B = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
   where
 
   map-emb : A ↪ B → A → B
-  map-emb = pr1
+  map-emb = {!!}
 
   is-emb-map-emb : (f : A ↪ B) → is-emb (map-emb f)
-  is-emb-map-emb = pr2
+  is-emb-map-emb = {!!}
 
   equiv-ap-emb :
     (e : A ↪ B) {x y : A} → (x ＝ y) ≃ (map-emb e x ＝ map-emb e y)
-  equiv-ap-emb e = equiv-ap-is-emb (is-emb-map-emb e)
+  equiv-ap-emb e = {!!}
 
   inv-equiv-ap-emb :
     (e : A ↪ B) {x y : A} → (map-emb e x ＝ map-emb e y) ≃ (x ＝ y)
-  inv-equiv-ap-emb e = inv-equiv (equiv-ap-emb e)
+  inv-equiv-ap-emb e = {!!}
 ```
 
 ## Examples
@@ -83,11 +82,10 @@ module _
   where
 
   is-emb-id : is-emb (id {A = A})
-  is-emb-id x y = is-equiv-htpy id ap-id is-equiv-id
+  is-emb-id x y = {!!}
 
   id-emb : A ↪ A
-  pr1 id-emb = id
-  pr2 id-emb = is-emb-id
+  pr1 id-emb = {!!}
 ```
 
 ### To prove that a map is an embedding, a point in the domain may be assumed
@@ -99,5 +97,5 @@ module _
 
   abstract
     is-emb-is-emb : (A → is-emb f) → is-emb f
-    is-emb-is-emb H x y = H x x y
+    is-emb-is-emb H x y = {!!}
 ```

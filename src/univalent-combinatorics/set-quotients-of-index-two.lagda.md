@@ -58,63 +58,7 @@ module _
     h' (map-reflecting-map-equivalence-relation R f y) ＝
     map-reflecting-map-equivalence-relation R f (h y)
   cases-coherence-square-maps-eq-one-value-emb-is-set-quotient H' y
-    ( inl (inr _)) (inl (inr _)) k'' p q r =
-    ( is-injective-map-equiv eA (q ∙ inv p)) ∙
-      ( P ∙
-        reflects-map-reflecting-map-equivalence-relation R f
-          ( pr1 H
-            ( map-equiv
-              ( is-effective-is-set-quotient R QR f Uf x y)
-              ( map-inv-is-equiv
-                ( H'
-                  ( map-reflecting-map-equivalence-relation R f x)
-                  ( map-reflecting-map-equivalence-relation R f y))
-                ( is-injective-map-equiv eA (p ∙ inv q))))))
-  cases-coherence-square-maps-eq-one-value-emb-is-set-quotient H' y
-    ( inl (inr _)) (inr _) (inl (inr _)) p q r =
-    ex-falso
-      ( neq-inl-inr
-        ( inv p ∙
-          ( ( ap
-            ( map-equiv eA ∘ h')
-            ( reflects-map-reflecting-map-equivalence-relation R f
-              ( pr2 H
-                (map-equiv
-                  ( is-effective-is-set-quotient R QR f Uf (h x) (h y))
-                  ( inv P ∙ is-injective-map-equiv eA (p ∙ inv r)))))) ∙
-            ( q))))
-  cases-coherence-square-maps-eq-one-value-emb-is-set-quotient H' y
-    ( inl (inr _)) (inr _) (inr _) p q r =
-    is-injective-map-equiv eA (q ∙ inv r)
-  cases-coherence-square-maps-eq-one-value-emb-is-set-quotient H' y
-    ( inr _) (inl (inr _)) (inl (inr _)) p q r =
-    is-injective-map-equiv eA (q ∙ inv r)
-  cases-coherence-square-maps-eq-one-value-emb-is-set-quotient H' y
-    ( inr _) (inl (inr _)) (inr _) p q r =
-    ex-falso
-      ( neq-inr-inl
-        ( inv p ∙
-          ( ( ap
-            ( map-equiv eA ∘ h')
-            ( reflects-map-reflecting-map-equivalence-relation R f
-              ( pr2 H
-                (map-equiv
-                  ( is-effective-is-set-quotient R QR f Uf (h x) (h y))
-                  ( inv P ∙ is-injective-map-equiv eA (p ∙ inv r)))))) ∙
-            ( q))))
-  cases-coherence-square-maps-eq-one-value-emb-is-set-quotient H' y
-    ( inr _) (inr _) k'' p q r =
-    ( is-injective-map-equiv eA (q ∙ inv p)) ∙
-      ( P ∙
-        reflects-map-reflecting-map-equivalence-relation R f
-          ( pr1 H
-            ( map-equiv
-              ( is-effective-is-set-quotient R QR f Uf x y)
-              ( map-inv-is-equiv
-                ( H'
-                  ( map-reflecting-map-equivalence-relation R f x)
-                  ( map-reflecting-map-equivalence-relation R f y))
-                ( is-injective-map-equiv eA (p ∙ inv q))))))
+    ( inl (inr _)) (inl (inr _)) k'' p q r = {!!}
 
   coherence-square-maps-eq-one-value-emb-is-set-quotient :
     is-emb h' →
@@ -123,28 +67,10 @@ module _
       ( map-reflecting-map-equivalence-relation R f)
       ( map-reflecting-map-equivalence-relation R f)
       ( h')
-  coherence-square-maps-eq-one-value-emb-is-set-quotient H' y =
-    cases-coherence-square-maps-eq-one-value-emb-is-set-quotient H' y
-      ( map-equiv eA (h' (map-reflecting-map-equivalence-relation R f x)))
-      ( map-equiv eA (h' (map-reflecting-map-equivalence-relation R f y)))
-      ( map-equiv eA (map-reflecting-map-equivalence-relation R f (h y)))
-      ( refl)
-      ( refl)
-      ( refl)
+  coherence-square-maps-eq-one-value-emb-is-set-quotient H' y = {!!}
 
   eq-equiv-eq-one-value-equiv-is-set-quotient :
     (P : is-equiv h) (Q : is-equiv h') →
     pair h' Q ＝ equiv-is-set-quotient R QR f R QR f Uf Uf ((h , P) , H)
-  eq-equiv-eq-one-value-equiv-is-set-quotient P Q =
-    ap pr1
-      { x =
-        pair
-          ( pair h' Q)
-          ( coherence-square-maps-eq-one-value-emb-is-set-quotient
-            ( is-emb-is-equiv Q))}
-      { y =
-        center
-          ( unique-equiv-is-set-quotient R QR f R QR f Uf Uf ((h , P) , H))}
-      ( eq-is-contr
-        ( unique-equiv-is-set-quotient R QR f R QR f Uf Uf ((h , P) , H)))
+  eq-equiv-eq-one-value-equiv-is-set-quotient P Q = {!!}
 ```

@@ -33,16 +33,14 @@ module _
   where
 
   is-central-element-prop-Group : type-Group G → Prop l
-  is-central-element-prop-Group =
-    is-central-element-prop-Monoid (monoid-Group G)
+  is-central-element-prop-Group = {!!}
 
   is-central-element-Group : type-Group G → UU l
-  is-central-element-Group = is-central-element-Monoid (monoid-Group G)
+  is-central-element-Group = {!!}
 
   is-prop-is-central-element-Group :
     (x : type-Group G) → is-prop (is-central-element-Group x)
-  is-prop-is-central-element-Group =
-    is-prop-is-central-element-Monoid (monoid-Group G)
+  is-prop-is-central-element-Group = {!!}
 ```
 
 ## Properties
@@ -55,8 +53,7 @@ module _
   where
 
   is-central-element-unit-Group : is-central-element-Group G (unit-Group G)
-  is-central-element-unit-Group =
-    is-central-element-unit-Monoid (monoid-Group G)
+  is-central-element-unit-Group = {!!}
 ```
 
 ### The product of two central elements is central
@@ -70,8 +67,7 @@ module _
     {x y : type-Group G} →
     is-central-element-Group G x → is-central-element-Group G y →
     is-central-element-Group G (mul-Group G x y)
-  is-central-element-mul-Group {x} {y} =
-    is-central-element-mul-Monoid (monoid-Group G) x y
+  is-central-element-mul-Group {x} {y} = {!!}
 ```
 
 ### The inverse of a central element is central
@@ -84,10 +80,7 @@ module _
   is-central-element-inv-Group :
     {x : type-Group G} → is-central-element-Group G x →
     is-central-element-Group G (inv-Group G x)
-  is-central-element-inv-Group {x} H y =
-    ( inv (inv-left-div-Group G y x)) ∙
-    ( ap (inv-Group G) (inv (H (inv-Group G y)))) ∙
-    ( inv-right-div-Group G x y)
+  is-central-element-inv-Group {x} H y = {!!}
 ```
 
 ### The central elements are closed under conjugation
@@ -100,16 +93,10 @@ module _
   is-fixed-point-conjugation-is-central-element-Group :
     (x y : type-Group G) → is-central-element-Group G x →
     conjugation-Group G y x ＝ x
-  is-fixed-point-conjugation-is-central-element-Group x y H =
-    ( ap (λ z → right-div-Group G z y) (inv (H y))) ∙
-    ( is-retraction-right-div-Group G y x)
+  is-fixed-point-conjugation-is-central-element-Group x y H = {!!}
 
   is-central-element-conjugation-Group :
     (x y : type-Group G) → is-central-element-Group G x →
     is-central-element-Group G (conjugation-Group G y x)
-  is-central-element-conjugation-Group x y H =
-    is-closed-under-eq-subtype'
-      ( is-central-element-prop-Group G)
-      ( H)
-      ( is-fixed-point-conjugation-is-central-element-Group x y H)
+  is-central-element-conjugation-Group x y H = {!!}
 ```

@@ -33,46 +33,38 @@ module _
   where
 
   subtype-center-Group : type-Group G → Prop l
-  subtype-center-Group = is-central-element-prop-Group G
+  subtype-center-Group = {!!}
 
   subgroup-center-Group : Subgroup l G
-  pr1 subgroup-center-Group =
-    subtype-center-Group
-  pr1 (pr2 subgroup-center-Group) =
-    is-central-element-unit-Group G
-  pr1 (pr2 (pr2 subgroup-center-Group)) =
-    is-central-element-mul-Group G
-  pr2 (pr2 (pr2 subgroup-center-Group)) =
-    is-central-element-inv-Group G
+  pr1 subgroup-center-Group = {!!}
+  pr1 (pr2 subgroup-center-Group) = {!!}
+  pr1 (pr2 (pr2 subgroup-center-Group)) = {!!}
+  pr2 (pr2 (pr2 subgroup-center-Group)) = {!!}
 
   group-center-Group : Group l
-  group-center-Group = group-Subgroup G subgroup-center-Group
+  group-center-Group = {!!}
 
   type-center-Group : UU l
-  type-center-Group =
-    type-Subgroup G subgroup-center-Group
+  type-center-Group = {!!}
 
   mul-center-Group :
     (x y : type-center-Group) → type-center-Group
-  mul-center-Group = mul-Subgroup G subgroup-center-Group
+  mul-center-Group = {!!}
 
   associative-mul-center-Group :
     (x y z : type-center-Group) →
     mul-center-Group (mul-center-Group x y) z ＝
     mul-center-Group x (mul-center-Group y z)
-  associative-mul-center-Group =
-    associative-mul-Subgroup G subgroup-center-Group
+  associative-mul-center-Group = {!!}
 
   inclusion-center-Group :
     type-center-Group → type-Group G
-  inclusion-center-Group =
-    inclusion-Subgroup G subgroup-center-Group
+  inclusion-center-Group = {!!}
 
   is-central-element-inclusion-center-Group :
     (x : type-center-Group) →
     is-central-element-Group G (inclusion-center-Group x)
-  is-central-element-inclusion-center-Group x =
-    is-in-subgroup-inclusion-Subgroup G subgroup-center-Group x
+  is-central-element-inclusion-center-Group x = {!!}
 
   preserves-mul-inclusion-center-Group :
     {x y : type-center-Group} →
@@ -80,23 +72,16 @@ module _
     mul-Group G
       ( inclusion-center-Group x)
       ( inclusion-center-Group y)
-  preserves-mul-inclusion-center-Group {x} {y} =
-    preserves-mul-inclusion-Subgroup G subgroup-center-Group {x} {y}
+  preserves-mul-inclusion-center-Group {x} {y} = {!!}
 
   hom-inclusion-center-Group :
     hom-Group group-center-Group G
-  hom-inclusion-center-Group =
-    hom-inclusion-Subgroup G subgroup-center-Group
+  hom-inclusion-center-Group = {!!}
 
   is-normal-subgroup-center-Group :
     is-normal-Subgroup G subgroup-center-Group
-  is-normal-subgroup-center-Group x y =
-    is-central-element-conjugation-Group G
-      ( inclusion-center-Group y)
-      ( x)
-      ( is-central-element-inclusion-center-Group y)
+  is-normal-subgroup-center-Group x y = {!!}
 
   center-Group : Normal-Subgroup l G
-  pr1 center-Group = subgroup-center-Group
-  pr2 center-Group = is-normal-subgroup-center-Group
+  pr1 center-Group = {!!}
 ```

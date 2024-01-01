@@ -55,14 +55,14 @@ data Definition : UU lzero where
 
 ```agda
 _ : quoteTerm ℕ ＝ def (quote ℕ) nil
-_ = refl
+_ = {!!}
 
 _ :
   quoteTerm (succ-ℕ zero-ℕ) ＝
   con
     ( quote succ-ℕ)
     ( unit-list (visible-Arg (con (quote zero-ℕ) nil)))
-_ = refl
+_ = {!!}
 
 _ :
   {l : Level} {A : UU l} →
@@ -72,7 +72,7 @@ _ :
     ( cons
       ( hidden-Arg (var 1 nil))
       ( unit-list (visible-Arg (var 0 nil))))
-_ = refl
+_ = {!!}
 ```
 
 ### Lambda abstractions
@@ -80,16 +80,16 @@ _ = refl
 ```agda
 _ :
   quoteTerm (λ (x : ℕ) → x) ＝ lam visible (abs "x" (var 0 nil))
-_ = refl
+_ = {!!}
 
 _ :
   quoteTerm (λ {x : ℕ} (y : ℕ) → x) ＝
   lam hidden (abs "x" (lam visible (abs "y" (var 1 nil))))
-_ = refl
+_ = {!!}
 
 private
   helper : (A : UU lzero) → A → A
-  helper A x = x
+  helper A x = {!!}
 
   _ :
     quoteTerm (helper (ℕ → ℕ) (λ { zero-ℕ → zero-ℕ ; (succ-ℕ x) → x})) ＝
@@ -128,7 +128,7 @@ private
                     -- Right side of the second lambda case
                     ( var 0 nil))))
               ( nil)))))
-  _ = refl
+  _ = {!!}
 
   _ :
     quoteTerm (helper (empty → ℕ) (λ ())) ＝
@@ -150,7 +150,7 @@ private
                   ( unit-list
                     ( visible-Arg (absurd 0)))))
               ( nil)))))
-  _ = refl
+  _ = {!!}
 ```
 
 ### Pi terms
@@ -160,7 +160,7 @@ _ : quoteTerm (ℕ → ℕ) ＝
     pi
       ( visible-Arg (def (quote ℕ) nil))
       ( abs "_" (def (quote ℕ) nil))
-_ = refl
+_ = {!!}
 
 _ : quoteTerm ((x : ℕ) → is-zero-ℕ x) ＝
     pi
@@ -171,28 +171,28 @@ _ : quoteTerm ((x : ℕ) → is-zero-ℕ x) ＝
           ( cons
             ( visible-Arg (var 0 nil))
             ( nil))))
-_ = refl
+_ = {!!}
 ```
 
 ### Universes
 
 ```agda
 _ : {l : Level} → quoteTerm (UU l) ＝ agda-sort (set (var 0 nil))
-_ = refl
+_ = {!!}
 
 _ : quoteTerm (UU (lsuc lzero)) ＝ agda-sort (lit 1)
-_ = refl
+_ = {!!}
 
 _ : quoteTerm (UUω) ＝ agda-sort (inf 0)
-_ = refl
+_ = {!!}
 ```
 
 ### Literals
 
 ```agda
 _ : quoteTerm 3 ＝ lit (nat 3)
-_ = refl
+_ = {!!}
 
 _ : quoteTerm "hello" ＝ lit (string "hello")
-_ = refl
+_ = {!!}
 ```

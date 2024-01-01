@@ -29,7 +29,7 @@ A map is said to be **(sharp) codiscrete** if its
 ```agda
 is-sharp-codiscrete-map :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → (A → B) → UU (l1 ⊔ l2)
-is-sharp-codiscrete-map f = is-sharp-codiscrete-family (fiber f)
+is-sharp-codiscrete-map f = {!!}
 ```
 
 ## Properties
@@ -42,9 +42,8 @@ module _
   where
 
   is-sharp-codiscrete-map-Prop : Prop (l1 ⊔ l2)
-  is-sharp-codiscrete-map-Prop = is-sharp-codiscrete-family-Prop (fiber f)
+  is-sharp-codiscrete-map-Prop = {!!}
 
   is-prop-is-sharp-codiscrete-map : is-prop (is-sharp-codiscrete-map f)
-  is-prop-is-sharp-codiscrete-map =
-    is-prop-type-Prop is-sharp-codiscrete-map-Prop
+  is-prop-is-sharp-codiscrete-map = {!!}
 ```

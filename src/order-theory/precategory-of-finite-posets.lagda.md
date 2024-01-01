@@ -38,19 +38,16 @@ parametric-Poset-𝔽-Full-Large-Subprecategory :
   Full-Large-Subprecategory
     ( λ l → α l ⊔ β l)
     ( parametric-Poset-Large-Precategory α β)
-parametric-Poset-𝔽-Full-Large-Subprecategory α β = is-finite-Poset-Prop
+parametric-Poset-𝔽-Full-Large-Subprecategory α β = {!!}
 
 Poset-𝔽-Large-Precategory :
   Large-Precategory lsuc (_⊔_)
-Poset-𝔽-Large-Precategory =
-  large-precategory-Full-Large-Subprecategory
-    ( Poset-Large-Precategory)
-    ( parametric-Poset-𝔽-Full-Large-Subprecategory (λ l → l) (λ l → l))
+Poset-𝔽-Large-Precategory = {!!}
 ```
 
 ### The precategory of finite posets of universe level `l`
 
 ```agda
 Poset-𝔽-Precategory : (l : Level) → Precategory (lsuc l) l
-Poset-𝔽-Precategory = precategory-Large-Precategory Poset-𝔽-Large-Precategory
+Poset-𝔽-Precategory = {!!}
 ```

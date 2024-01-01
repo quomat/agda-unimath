@@ -34,7 +34,7 @@ module _
   where
 
   matrix-Ring : ℕ → ℕ → UU l
-  matrix-Ring m n = matrix (type-Ring R) m n
+  matrix-Ring m n = {!!}
 ```
 
 ### The zero matrix
@@ -45,7 +45,7 @@ module _
   where
 
   zero-matrix-Ring : {m n : ℕ} → matrix-Ring R m n
-  zero-matrix-Ring = constant-matrix (zero-Ring R)
+  zero-matrix-Ring = {!!}
 ```
 
 ### Addition of matrices on rings
@@ -56,7 +56,7 @@ module _
   where
 
   add-matrix-Ring : {m n : ℕ} (A B : matrix-Ring R m n) → matrix-Ring R m n
-  add-matrix-Ring = binary-map-matrix (add-Ring R)
+  add-matrix-Ring = {!!}
 ```
 
 ## Properties
@@ -73,11 +73,7 @@ module _
     Id
       ( add-matrix-Ring R (add-matrix-Ring R A B) C)
       ( add-matrix-Ring R A (add-matrix-Ring R B C))
-  associative-add-matrix-Ring empty-vec empty-vec empty-vec = refl
-  associative-add-matrix-Ring (v ∷ A) (w ∷ B) (z ∷ C) =
-    ap-binary _∷_
-      ( associative-add-vec-Ring R v w z)
-      ( associative-add-matrix-Ring A B C)
+  associative-add-matrix-Ring empty-vec empty-vec empty-vec = {!!}
 ```
 
 ### Addition of matrices is commutative
@@ -90,11 +86,7 @@ module _
   commutative-add-matrix-Ring :
     {m n : ℕ} (A B : matrix-Ring R m n) →
     Id (add-matrix-Ring R A B) (add-matrix-Ring R B A)
-  commutative-add-matrix-Ring empty-vec empty-vec = refl
-  commutative-add-matrix-Ring (v ∷ A) (w ∷ B) =
-    ap-binary _∷_
-      ( commutative-add-vec-Ring R v w)
-      ( commutative-add-matrix-Ring A B)
+  commutative-add-matrix-Ring empty-vec empty-vec = {!!}
 ```
 
 ### Left unit law for addition of matrices
@@ -107,11 +99,7 @@ module _
   left-unit-law-add-matrix-Ring :
     {m n : ℕ} (A : matrix-Ring R m n) →
     Id (add-matrix-Ring R (zero-matrix-Ring R) A) A
-  left-unit-law-add-matrix-Ring empty-vec = refl
-  left-unit-law-add-matrix-Ring (v ∷ A) =
-    ap-binary _∷_
-      ( left-unit-law-add-vec-Ring R v)
-      ( left-unit-law-add-matrix-Ring A)
+  left-unit-law-add-matrix-Ring empty-vec = {!!}
 ```
 
 ### Right unit law for addition of matrices
@@ -124,9 +112,5 @@ module _
   right-unit-law-add-matrix-Ring :
     {m n : ℕ} (A : matrix-Ring R m n) →
     Id (add-matrix-Ring R A (zero-matrix-Ring R)) A
-  right-unit-law-add-matrix-Ring empty-vec = refl
-  right-unit-law-add-matrix-Ring (v ∷ A) =
-    ap-binary _∷_
-      ( right-unit-law-add-vec-Ring R v)
-      ( right-unit-law-add-matrix-Ring A)
+  right-unit-law-add-matrix-Ring empty-vec = {!!}
 ```

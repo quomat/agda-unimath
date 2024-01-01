@@ -35,12 +35,12 @@ subuniverse `Q`.
 species-subuniverse :
   {l1 l2 l3 l4 : Level} → subuniverse l1 l2 → subuniverse l3 l4 →
   UU (lsuc l1 ⊔ l2 ⊔ lsuc l3 ⊔ l4)
-species-subuniverse P Q = type-subuniverse P → type-subuniverse Q
+species-subuniverse P Q = {!!}
 
 species-subuniverse-domain :
   {l1 l2 : Level} (l3 : Level) → subuniverse l1 l2 →
   UU (lsuc l1 ⊔ l2 ⊔ lsuc l3)
-species-subuniverse-domain l3 P = type-subuniverse P → UU l3
+species-subuniverse-domain l3 P = {!!}
 ```
 
 ### The predicate that a species preserves cartesian products
@@ -51,14 +51,7 @@ preserves-product-species-subuniverse-domain :
   (C : is-closed-under-products-subuniverse P)
   (S : species-subuniverse-domain l3 P) →
   UU (lsuc l1 ⊔ l2 ⊔ l3)
-preserves-product-species-subuniverse-domain P C S =
-  ( X Y : type-subuniverse P) →
-  S
-    ( inclusion-subuniverse P X × inclusion-subuniverse P Y ,
-      C
-        ( is-in-subuniverse-inclusion-subuniverse P X)
-        ( is-in-subuniverse-inclusion-subuniverse P Y)) ≃
-  (S X × S Y)
+preserves-product-species-subuniverse-domain P C S = {!!}
 ```
 
 ### Transport along equivalences of in species of types in subuniverses
@@ -73,8 +66,7 @@ module _
     (X Y : type-subuniverse P) →
     inclusion-subuniverse P X ≃ inclusion-subuniverse P Y →
     inclusion-subuniverse Q (F X) → inclusion-subuniverse Q (F Y)
-  tr-species-subuniverse X Y e =
-    tr (inclusion-subuniverse Q ∘ F) (eq-equiv-subuniverse P e)
+  tr-species-subuniverse X Y e = {!!}
 ```
 
 ### Σ-extension to species of types in subuniverses
@@ -87,19 +79,13 @@ module _
 
   Σ-extension-species-subuniverse :
     species-types l1 (l2 ⊔ l3)
-  Σ-extension-species-subuniverse X =
-    Σ (is-in-subuniverse P X) (λ p → inclusion-subuniverse Q (F (X , p)))
+  Σ-extension-species-subuniverse X = {!!}
 
   equiv-Σ-extension-species-subuniverse :
     ( X : type-subuniverse P) →
     inclusion-subuniverse Q (F X) ≃
     Σ-extension-species-subuniverse (inclusion-subuniverse P X)
-  equiv-Σ-extension-species-subuniverse X =
-    inv-left-unit-law-Σ-is-contr
-      ( is-proof-irrelevant-is-prop
-        ( is-subtype-subuniverse P (inclusion-subuniverse P X))
-        ( pr2 X))
-      ( pr2 X)
+  equiv-Σ-extension-species-subuniverse X = {!!}
 ```
 
 ### Σ-extension to species with domain in a subuniverse
@@ -112,19 +98,13 @@ module _
 
   Σ-extension-species-subuniverse-domain :
     species-types l1 (l2 ⊔ l3)
-  Σ-extension-species-subuniverse-domain X =
-    Σ (is-in-subuniverse P X) (λ p → (F (X , p)))
+  Σ-extension-species-subuniverse-domain X = {!!}
 
   equiv-Σ-extension-species-subuniverse-domain :
     ( X : type-subuniverse P) →
     F X ≃
     Σ-extension-species-subuniverse-domain (inclusion-subuniverse P X)
-  equiv-Σ-extension-species-subuniverse-domain X =
-    inv-left-unit-law-Σ-is-contr
-      ( is-proof-irrelevant-is-prop
-        ( is-subtype-subuniverse P (inclusion-subuniverse P X))
-        ( pr2 X))
-      ( pr2 X)
+  equiv-Σ-extension-species-subuniverse-domain X = {!!}
 ```
 
 ### Π-extension to species of types in subuniverses
@@ -137,6 +117,5 @@ module _
 
   Π-extension-species-subuniverse :
     species-types l1 (l2 ⊔ l3)
-  Π-extension-species-subuniverse X =
-    (p : is-in-subuniverse P X) → inclusion-subuniverse Q (S (X , p))
+  Π-extension-species-subuniverse X = {!!}
 ```

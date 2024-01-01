@@ -38,18 +38,17 @@ implication on the [booleans](foundation.booleans.md).
 
 ```agda
 obj-representing-arrow-Category : UU lzero
-obj-representing-arrow-Category = bool
+obj-representing-arrow-Category = {!!}
 
 hom-set-representing-arrow-Category :
   obj-representing-arrow-Category → obj-representing-arrow-Category → Set lzero
-hom-set-representing-arrow-Category true true = unit-Set
-hom-set-representing-arrow-Category true false = empty-Set
-hom-set-representing-arrow-Category false _ = unit-Set
+hom-set-representing-arrow-Category true true = {!!}
+hom-set-representing-arrow-Category true false = {!!}
+hom-set-representing-arrow-Category false _ = {!!}
 
 hom-representing-arrow-Category :
   obj-representing-arrow-Category → obj-representing-arrow-Category → UU lzero
-hom-representing-arrow-Category x y =
-  type-Set (hom-set-representing-arrow-Category x y)
+hom-representing-arrow-Category x y = {!!}
 ```
 
 ### The underlying precategory of the representing arrow
@@ -60,8 +59,8 @@ comp-hom-representing-arrow-Category :
   hom-representing-arrow-Category y z →
   hom-representing-arrow-Category x y →
   hom-representing-arrow-Category x z
-comp-hom-representing-arrow-Category {true} {true} {true} _ _ = star
-comp-hom-representing-arrow-Category {false} _ _ = star
+comp-hom-representing-arrow-Category {true} {true} {true} _ _ = {!!}
+comp-hom-representing-arrow-Category {false} _ _ = {!!}
 
 associative-comp-hom-representing-arrow-Category :
   {x y z w : obj-representing-arrow-Category} →
@@ -73,9 +72,8 @@ associative-comp-hom-representing-arrow-Category :
   ( comp-hom-representing-arrow-Category
     { x} h (comp-hom-representing-arrow-Category {x} g f))
 associative-comp-hom-representing-arrow-Category
-  { true} {true} {true} {true} h g f =
-  refl
-associative-comp-hom-representing-arrow-Category {false} h g f = refl
+  { true} {true} {true} {true} h g f = {!!}
+associative-comp-hom-representing-arrow-Category {false} h g f = {!!}
 
 inv-associative-comp-hom-representing-arrow-Category :
   {x y z w : obj-representing-arrow-Category} →
@@ -87,24 +85,20 @@ inv-associative-comp-hom-representing-arrow-Category :
   ( comp-hom-representing-arrow-Category
     { x} (comp-hom-representing-arrow-Category {y} h g) f)
 inv-associative-comp-hom-representing-arrow-Category
-  { true} {true} {true} {true} h g f =
-  refl
-inv-associative-comp-hom-representing-arrow-Category {false} h g f = refl
+  { true} {true} {true} {true} h g f = {!!}
+inv-associative-comp-hom-representing-arrow-Category {false} h g f = {!!}
 
 associative-composition-operation-representing-arrow-Category :
   associative-composition-operation-binary-family-Set
     ( hom-set-representing-arrow-Category)
-pr1 associative-composition-operation-representing-arrow-Category {x} =
-  comp-hom-representing-arrow-Category {x}
-pr1 (pr2 associative-composition-operation-representing-arrow-Category h g f) =
-  associative-comp-hom-representing-arrow-Category h g f
-pr2 (pr2 associative-composition-operation-representing-arrow-Category h g f) =
-  inv-associative-comp-hom-representing-arrow-Category h g f
+pr1 associative-composition-operation-representing-arrow-Category {x} = {!!}
+pr1 (pr2 associative-composition-operation-representing-arrow-Category h g f) = {!!}
+pr2 (pr2 associative-composition-operation-representing-arrow-Category h g f) = {!!}
 
 id-hom-representing-arrow-Category :
   {x : obj-representing-arrow-Category} → hom-representing-arrow-Category x x
-id-hom-representing-arrow-Category {true} = star
-id-hom-representing-arrow-Category {false} = star
+id-hom-representing-arrow-Category {true} = {!!}
+id-hom-representing-arrow-Category {false} = {!!}
 
 left-unit-law-comp-hom-representing-arrow-Category :
   {x y : obj-representing-arrow-Category} →
@@ -112,8 +106,8 @@ left-unit-law-comp-hom-representing-arrow-Category :
   comp-hom-representing-arrow-Category
     { x} (id-hom-representing-arrow-Category {y}) f ＝
   f
-left-unit-law-comp-hom-representing-arrow-Category {true} {true} f = refl
-left-unit-law-comp-hom-representing-arrow-Category {false} f = refl
+left-unit-law-comp-hom-representing-arrow-Category {true} {true} f = {!!}
+left-unit-law-comp-hom-representing-arrow-Category {false} f = {!!}
 
 right-unit-law-comp-hom-representing-arrow-Category :
   {x y : obj-representing-arrow-Category} →
@@ -121,27 +115,22 @@ right-unit-law-comp-hom-representing-arrow-Category :
   comp-hom-representing-arrow-Category
     { x} f (id-hom-representing-arrow-Category {x}) ＝
   f
-right-unit-law-comp-hom-representing-arrow-Category {true} {true} f = refl
-right-unit-law-comp-hom-representing-arrow-Category {false} f = refl
+right-unit-law-comp-hom-representing-arrow-Category {true} {true} f = {!!}
+right-unit-law-comp-hom-representing-arrow-Category {false} f = {!!}
 
 is-unital-composition-operation-representing-arrow-Category :
   is-unital-composition-operation-binary-family-Set
     ( hom-set-representing-arrow-Category)
     ( λ {x} {y} {z} → comp-hom-representing-arrow-Category {x} {y} {z})
-pr1 is-unital-composition-operation-representing-arrow-Category x =
-  id-hom-representing-arrow-Category {x}
-pr1 (pr2 is-unital-composition-operation-representing-arrow-Category) =
-  left-unit-law-comp-hom-representing-arrow-Category
-pr2 (pr2 is-unital-composition-operation-representing-arrow-Category) =
-  right-unit-law-comp-hom-representing-arrow-Category
+pr1 is-unital-composition-operation-representing-arrow-Category x = {!!}
+pr1 (pr2 is-unital-composition-operation-representing-arrow-Category) = {!!}
+pr2 (pr2 is-unital-composition-operation-representing-arrow-Category) = {!!}
 
 representing-arrow-Precategory : Precategory lzero lzero
-pr1 representing-arrow-Precategory = obj-representing-arrow-Category
-pr1 (pr2 representing-arrow-Precategory) = hom-set-representing-arrow-Category
-pr1 (pr2 (pr2 representing-arrow-Precategory)) =
-  associative-composition-operation-representing-arrow-Category
-pr2 (pr2 (pr2 representing-arrow-Precategory)) =
-  is-unital-composition-operation-representing-arrow-Category
+pr1 representing-arrow-Precategory = {!!}
+pr1 (pr2 representing-arrow-Precategory) = {!!}
+pr1 (pr2 (pr2 representing-arrow-Precategory)) = {!!}
+pr2 (pr2 (pr2 representing-arrow-Precategory)) = {!!}
 ```
 
 ### The representing arrow category
@@ -149,32 +138,14 @@ pr2 (pr2 (pr2 representing-arrow-Precategory)) =
 ```agda
 is-category-representing-arrow-Category :
   is-category-Precategory representing-arrow-Precategory
-is-category-representing-arrow-Category true true =
-    is-equiv-is-prop
-    ( is-set-bool true true)
-    ( is-prop-type-subtype
-      ( is-iso-prop-Precategory representing-arrow-Precategory {true} {true})
-      ( is-prop-unit))
-    ( λ _ → refl)
-is-category-representing-arrow-Category true false =
-  is-equiv-is-empty
-    ( iso-eq-Precategory representing-arrow-Precategory true false)
-    ( hom-iso-Precategory representing-arrow-Precategory)
-is-category-representing-arrow-Category false true =
-  is-equiv-is-empty
-    ( iso-eq-Precategory representing-arrow-Precategory false true)
-    ( hom-inv-iso-Precategory representing-arrow-Precategory)
-is-category-representing-arrow-Category false false =
-  is-equiv-is-prop
-    ( is-set-bool false false)
-    ( is-prop-type-subtype
-      ( is-iso-prop-Precategory representing-arrow-Precategory {false} {false})
-      ( is-prop-unit))
-    ( λ _ → refl)
+is-category-representing-arrow-Category true true = {!!}
+is-category-representing-arrow-Category true false = {!!}
+is-category-representing-arrow-Category false true = {!!}
+is-category-representing-arrow-Category false false = {!!}
 
 representing-arrow-Category : Category lzero lzero
-pr1 representing-arrow-Category = representing-arrow-Precategory
-pr2 representing-arrow-Category = is-category-representing-arrow-Category
+pr1 representing-arrow-Category = {!!}
+pr2 representing-arrow-Category = {!!}
 ```
 
 ## Properties

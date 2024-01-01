@@ -37,7 +37,7 @@ module _
   where
 
   is-fiberwise-equiv : (f : (x : A) → B x → C x) → UU (l1 ⊔ l2 ⊔ l3)
-  is-fiberwise-equiv f = (x : A) → is-equiv (f x)
+  is-fiberwise-equiv f = {!!}
 ```
 
 ### Fiberwise equivalences
@@ -48,18 +48,18 @@ module _
   where
 
   fiberwise-equiv : (B : A → UU l2) (C : A → UU l3) → UU (l1 ⊔ l2 ⊔ l3)
-  fiberwise-equiv B C = Σ ((x : A) → B x → C x) is-fiberwise-equiv
+  fiberwise-equiv B C = {!!}
 
   map-fiberwise-equiv :
     {B : A → UU l2} {C : A → UU l3} →
     fiberwise-equiv B C → (a : A) → B a → C a
-  map-fiberwise-equiv = pr1
+  map-fiberwise-equiv = {!!}
 
   is-fiberwise-equiv-fiberwise-equiv :
     {B : A → UU l2} {C : A → UU l3} →
     (e : fiberwise-equiv B C) →
     is-fiberwise-equiv (map-fiberwise-equiv e)
-  is-fiberwise-equiv-fiberwise-equiv = pr2
+  is-fiberwise-equiv-fiberwise-equiv = {!!}
 ```
 
 ### Families of equivalences
@@ -70,7 +70,7 @@ module _
   where
 
   fam-equiv : (B : A → UU l2) (C : A → UU l3) → UU (l1 ⊔ l2 ⊔ l3)
-  fam-equiv B C = (x : A) → B x ≃ C x
+  fam-equiv B C = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} {C : A → UU l3}
@@ -78,10 +78,10 @@ module _
   where
 
   map-fam-equiv : (x : A) → B x → C x
-  map-fam-equiv x = map-equiv (e x)
+  map-fam-equiv x = {!!}
 
   is-equiv-map-fam-equiv : is-fiberwise-equiv map-fam-equiv
-  is-equiv-map-fam-equiv x = is-equiv-map-equiv (e x)
+  is-equiv-map-fam-equiv x = {!!}
 ```
 
 ## Properties
@@ -92,7 +92,7 @@ module _
 equiv-fiberwise-equiv-fam-equiv :
   {l1 l2 l3 : Level} {A : UU l1} (B : A → UU l2) (C : A → UU l3) →
   fam-equiv B C ≃ fiberwise-equiv B C
-equiv-fiberwise-equiv-fam-equiv B C = distributive-Π-Σ
+equiv-fiberwise-equiv-fam-equiv B C = {!!}
 ```
 
 ## See also

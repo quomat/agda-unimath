@@ -40,8 +40,7 @@ we can encode this as a functor of categories `M → C`.
 ```agda
 representation-precategory-Monoid :
   {l1 l2 l3 : Level} (M : Monoid l1) (C : Precategory l2 l3) → UU (l1 ⊔ l2 ⊔ l3)
-representation-precategory-Monoid M C =
-  functor-Precategory (precategory-one-object-precategory-Monoid M) C
+representation-precategory-Monoid M C = {!!}
 
 module _
   {l1 l2 l3 : Level} (M : Monoid l1) (C : Precategory l2 l3)
@@ -49,12 +48,12 @@ module _
   where
 
   obj-representation-precategory-Monoid : obj-Precategory C
-  obj-representation-precategory-Monoid = pr1 ρ star
+  obj-representation-precategory-Monoid = {!!}
 
   action-representation-precategory-Monoid :
     type-Monoid M →
     type-endo-Precategory C obj-representation-precategory-Monoid
-  action-representation-precategory-Monoid = pr1 (pr2 ρ)
+  action-representation-precategory-Monoid = {!!}
 
   preserves-mul-action-representation-precategory-Monoid :
     ( x y : type-Monoid M) →
@@ -63,16 +62,12 @@ module _
       ( obj-representation-precategory-Monoid)
       ( action-representation-precategory-Monoid x)
       ( action-representation-precategory-Monoid y))
-  preserves-mul-action-representation-precategory-Monoid =
-    preserves-comp-functor-Precategory
-      ( precategory-one-object-precategory-Monoid M) C ρ
+  preserves-mul-action-representation-precategory-Monoid = {!!}
 
   preserves-unit-action-representation-precategory-Monoid :
     action-representation-precategory-Monoid (unit-Monoid M) ＝
     id-endo-Precategory C obj-representation-precategory-Monoid
-  preserves-unit-action-representation-precategory-Monoid =
-    preserves-id-functor-Precategory
-      ( precategory-one-object-precategory-Monoid M) C ρ star
+  preserves-unit-action-representation-precategory-Monoid = {!!}
 ```
 
 ### The total type of representations of a monoid
@@ -80,8 +75,7 @@ module _
 ```agda
 Representation-Precategory-Monoid :
   {l1 : Level} (M : Monoid l1) (l2 l3 : Level) → UU (l1 ⊔ lsuc l2 ⊔ lsuc l3)
-Representation-Precategory-Monoid M l2 l3 =
-  Σ (Precategory l2 l3) (representation-precategory-Monoid M)
+Representation-Precategory-Monoid M l2 l3 = {!!}
 
 module _
   {l1 l2 l3 : Level} (M : Monoid l1)
@@ -89,29 +83,23 @@ module _
   where
 
   precategory-Representation-Precategory-Monoid : Precategory l2 l3
-  precategory-Representation-Precategory-Monoid = pr1 ρ
+  precategory-Representation-Precategory-Monoid = {!!}
 
   representation-precategory-Representation-Precategory-Monoid :
     representation-precategory-Monoid M
       ( precategory-Representation-Precategory-Monoid)
-  representation-precategory-Representation-Precategory-Monoid = pr2 ρ
+  representation-precategory-Representation-Precategory-Monoid = {!!}
 
   obj-Representation-Precategory-Monoid :
     obj-Precategory precategory-Representation-Precategory-Monoid
-  obj-Representation-Precategory-Monoid =
-    obj-representation-precategory-Monoid M
-      ( precategory-Representation-Precategory-Monoid)
-      ( representation-precategory-Representation-Precategory-Monoid)
+  obj-Representation-Precategory-Monoid = {!!}
 
   action-Representation-Precategory-Monoid :
     type-Monoid M →
     type-endo-Precategory
       ( precategory-Representation-Precategory-Monoid)
       ( obj-Representation-Precategory-Monoid)
-  action-Representation-Precategory-Monoid =
-    action-representation-precategory-Monoid M
-      ( precategory-Representation-Precategory-Monoid)
-      ( representation-precategory-Representation-Precategory-Monoid)
+  action-Representation-Precategory-Monoid = {!!}
 
   preserves-mul-action-Representation-Precategory-Monoid :
     ( x y : type-Monoid M) →
@@ -121,18 +109,12 @@ module _
       ( obj-Representation-Precategory-Monoid)
       ( action-Representation-Precategory-Monoid x)
       ( action-Representation-Precategory-Monoid y))
-  preserves-mul-action-Representation-Precategory-Monoid =
-    preserves-mul-action-representation-precategory-Monoid M
-      ( precategory-Representation-Precategory-Monoid)
-      ( representation-precategory-Representation-Precategory-Monoid)
+  preserves-mul-action-Representation-Precategory-Monoid = {!!}
 
   preserves-unit-action-Representation-Precategory-Monoid :
     action-Representation-Precategory-Monoid (unit-Monoid M) ＝
     id-endo-Precategory
       ( precategory-Representation-Precategory-Monoid)
       ( obj-Representation-Precategory-Monoid)
-  preserves-unit-action-Representation-Precategory-Monoid =
-    preserves-unit-action-representation-precategory-Monoid M
-      ( precategory-Representation-Precategory-Monoid)
-      ( representation-precategory-Representation-Precategory-Monoid)
+  preserves-unit-action-Representation-Precategory-Monoid = {!!}
 ```

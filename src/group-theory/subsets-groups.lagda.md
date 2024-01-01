@@ -37,7 +37,7 @@ module _
 
   powerset-large-locale-Group :
     Large-Locale (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3) lzero
-  powerset-large-locale-Group = powerset-Large-Locale (type-Group G)
+  powerset-large-locale-Group = {!!}
 ```
 
 ### The large poset of subsets of a group
@@ -49,8 +49,7 @@ module _
 
   powerset-large-poset-Group :
     Large-Poset (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3)
-  powerset-large-poset-Group =
-    large-poset-Large-Locale (powerset-large-locale-Group G)
+  powerset-large-poset-Group = {!!}
 ```
 
 ### Subsets of groups
@@ -58,10 +57,9 @@ module _
 ```agda
 subset-Group :
   (l : Level) {l1 : Level} (G : Group l1) → UU ((lsuc l) ⊔ l1)
-subset-Group l G = type-Large-Locale (powerset-large-locale-Group G) l
+subset-Group l G = {!!}
 
 is-set-subset-Group :
   {l1 l2 : Level} (G : Group l1) → is-set (subset-Group l2 G)
-is-set-subset-Group G =
-  is-set-type-Large-Locale (powerset-large-locale-Group G)
+is-set-subset-Group G = {!!}
 ```

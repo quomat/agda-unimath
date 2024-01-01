@@ -65,15 +65,7 @@ module _
   map-yoneda-Precategory :
     hom-copresheaf-Precategory C (representable-functor-Precategory C c) F →
     element-copresheaf-Precategory C F c
-  map-yoneda-Precategory σ =
-    hom-natural-transformation-Small-Large-Precategory
-      ( C)
-      ( Set-Large-Precategory)
-      ( representable-functor-Precategory C c)
-      ( F)
-      ( σ)
-      ( c)
-      ( id-hom-Precategory C)
+  map-yoneda-Precategory σ = {!!}
 ```
 
 The inverse to the Yoneda map:
@@ -83,30 +75,19 @@ The inverse to the Yoneda map:
     (u : element-copresheaf-Precategory C F c) →
     hom-family-functor-Small-Large-Precategory
       C Set-Large-Precategory (representable-functor-Precategory C c) F
-  hom-family-extension-yoneda-Precategory u x f =
-    hom-functor-Small-Large-Precategory C Set-Large-Precategory F f u
+  hom-family-extension-yoneda-Precategory u x f = {!!}
 
   naturality-extension-yoneda-Precategory :
     (u : element-copresheaf-Precategory C F c) →
     is-natural-transformation-Small-Large-Precategory
       C Set-Large-Precategory (representable-functor-Precategory C c) F
       ( hom-family-extension-yoneda-Precategory u)
-  naturality-extension-yoneda-Precategory u g =
-    eq-htpy
-      ( λ f →
-        htpy-eq
-          ( inv
-            ( preserves-comp-functor-Small-Large-Precategory
-                C Set-Large-Precategory F g f))
-          ( u))
+  naturality-extension-yoneda-Precategory u g = {!!}
 
   extension-yoneda-Precategory :
     element-copresheaf-Precategory C F c →
     hom-copresheaf-Precategory C (representable-functor-Precategory C c) F
-  pr1 (extension-yoneda-Precategory u) =
-    hom-family-extension-yoneda-Precategory u
-  pr2 (extension-yoneda-Precategory u) =
-    naturality-extension-yoneda-Precategory u
+  pr1 (extension-yoneda-Precategory u) = {!!}
 ```
 
 The inverse is an inverse:
@@ -116,40 +97,21 @@ The inverse is an inverse:
     ( map-yoneda-Precategory ∘
       extension-yoneda-Precategory) ~
     id
-  is-section-extension-yoneda-Precategory =
-    htpy-eq
-      ( preserves-id-functor-Small-Large-Precategory
-          C Set-Large-Precategory F c)
+  is-section-extension-yoneda-Precategory = {!!}
 
   is-retraction-extension-yoneda-Precategory :
     ( extension-yoneda-Precategory ∘
       map-yoneda-Precategory) ~
     id
-  is-retraction-extension-yoneda-Precategory σ =
-    eq-type-subtype
-      ( is-natural-transformation-prop-Small-Large-Precategory
-        ( C) Set-Large-Precategory (representable-functor-Precategory C c) F)
-      ( eq-htpy
-        ( λ x →
-          eq-htpy
-            ( λ f →
-              ( htpy-eq
-                ( pr2 σ f)
-                ( id-hom-Precategory C)) ∙
-              ( ap (pr1 σ x) (right-unit-law-comp-hom-Precategory C f)))))
+  is-retraction-extension-yoneda-Precategory σ = {!!}
 
   lemma-yoneda-Precategory : is-equiv map-yoneda-Precategory
-  lemma-yoneda-Precategory =
-    is-equiv-is-invertible
-      ( extension-yoneda-Precategory)
-      ( is-section-extension-yoneda-Precategory)
-      ( is-retraction-extension-yoneda-Precategory)
+  lemma-yoneda-Precategory = {!!}
 
   equiv-lemma-yoneda-Precategory :
     hom-copresheaf-Precategory C (representable-functor-Precategory C c) F ≃
     element-copresheaf-Precategory C F c
-  pr1 equiv-lemma-yoneda-Precategory = map-yoneda-Precategory
-  pr2 equiv-lemma-yoneda-Precategory = lemma-yoneda-Precategory
+  pr1 equiv-lemma-yoneda-Precategory = {!!}
 ```
 
 ## Corollaries
@@ -157,7 +119,7 @@ The inverse is an inverse:
 ### The Yoneda lemma for representable functors
 
 An important special-case of the Yoneda lemma is when `F` is itself a
-representable functor `F = Hom(-, d)`.
+representable functor `F = {!!}
 
 ```agda
 module _
@@ -169,8 +131,7 @@ module _
       ( representable-functor-Precategory C c)
       ( representable-functor-Precategory C d) ≃
     hom-Precategory C d c
-  equiv-lemma-yoneda-representable-Precategory =
-    equiv-lemma-yoneda-Precategory C c (representable-functor-Precategory C d)
+  equiv-lemma-yoneda-representable-Precategory = {!!}
 ```
 
 ## See also

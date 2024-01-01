@@ -39,7 +39,7 @@ module _
   where
 
   is-contr-map : (A → B) → UU (l1 ⊔ l2)
-  is-contr-map f = (y : B) → is-contr (fiber f y)
+  is-contr-map f = {!!}
 ```
 
 ## Properties
@@ -52,32 +52,19 @@ module _
   where
 
   map-inv-is-contr-map : is-contr-map f → B → A
-  map-inv-is-contr-map H y = pr1 (center (H y))
+  map-inv-is-contr-map H y = {!!}
 
   is-section-map-inv-is-contr-map :
     (H : is-contr-map f) → (f ∘ (map-inv-is-contr-map H)) ~ id
-  is-section-map-inv-is-contr-map H y = pr2 (center (H y))
+  is-section-map-inv-is-contr-map H y = {!!}
 
   is-retraction-map-inv-is-contr-map :
     (H : is-contr-map f) → ((map-inv-is-contr-map H) ∘ f) ~ id
-  is-retraction-map-inv-is-contr-map H x =
-    ap
-      ( pr1 {B = λ z → (f z) ＝ (f x)})
-      ( ( inv
-          ( contraction
-            ( H (f x))
-            ( pair
-              ( map-inv-is-contr-map H (f x))
-              ( is-section-map-inv-is-contr-map H (f x))))) ∙
-        ( contraction (H (f x)) (pair x refl)))
+  is-retraction-map-inv-is-contr-map H x = {!!}
 
   abstract
     is-equiv-is-contr-map : is-contr-map f → is-equiv f
-    is-equiv-is-contr-map H =
-      is-equiv-is-invertible
-        ( map-inv-is-contr-map H)
-        ( is-section-map-inv-is-contr-map H)
-        ( is-retraction-map-inv-is-contr-map H)
+    is-equiv-is-contr-map H = {!!}
 ```
 
 ### Any coherently invertible map is a contractible map
@@ -90,26 +77,16 @@ module _
   abstract
     center-fiber-is-coherently-invertible :
       is-coherently-invertible f → (y : B) → fiber f y
-    pr1 (center-fiber-is-coherently-invertible H y) =
-      map-inv-is-coherently-invertible H y
-    pr2 (center-fiber-is-coherently-invertible H y) =
-      is-retraction-is-coherently-invertible H y
+    pr1 (center-fiber-is-coherently-invertible H y) = {!!}
 
     contraction-fiber-is-coherently-invertible :
       (H : is-coherently-invertible f) → (y : B) → (t : fiber f y) →
       (center-fiber-is-coherently-invertible H y) ＝ t
-    contraction-fiber-is-coherently-invertible H y (pair x refl) =
-      eq-Eq-fiber f y
-        ( is-section-is-coherently-invertible H x)
-        ( ( right-unit) ∙
-          ( inv ( coh-is-coherently-invertible H x)))
+    contraction-fiber-is-coherently-invertible H y (pair x refl) = {!!}
 
   is-contr-map-is-coherently-invertible :
     is-coherently-invertible f → is-contr-map f
-  pr1 (is-contr-map-is-coherently-invertible H y) =
-    center-fiber-is-coherently-invertible H y
-  pr2 (is-contr-map-is-coherently-invertible H y) =
-    contraction-fiber-is-coherently-invertible H y
+  pr1 (is-contr-map-is-coherently-invertible H y) = {!!}
 ```
 
 ### Any equivalence is a contractible map
@@ -121,8 +98,7 @@ module _
 
   abstract
     is-contr-map-is-equiv : is-equiv f → is-contr-map f
-    is-contr-map-is-equiv =
-      is-contr-map-is-coherently-invertible ∘ is-coherently-invertible-is-equiv
+    is-contr-map-is-equiv = {!!}
 ```
 
 ## See also

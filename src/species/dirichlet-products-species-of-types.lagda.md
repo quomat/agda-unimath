@@ -35,9 +35,5 @@ module _
   where
 
   dirichlet-product-species-types : species-types l1 (lsuc l1 ⊔ l2 ⊔ l3)
-  dirichlet-product-species-types X =
-    Σ ( binary-product-Decomposition l1 l1 X)
-      ( λ d →
-        S (left-summand-binary-product-Decomposition d) ×
-        T (right-summand-binary-product-Decomposition d))
+  dirichlet-product-species-types X = {!!}
 ```

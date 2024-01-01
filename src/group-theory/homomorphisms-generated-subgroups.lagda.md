@@ -76,219 +76,21 @@ module _
               ( ( ev-formal-combination-subset-Group G S (unit-list (s , x))) ,
                 ( unit-trunc-Prop (unit-list (s , x) , refl)))))
         ( l))
-  distributivity-hom-group-ev-formal-combination f nil =
-    preserves-unit-hom-Group (group-Subgroup G (subgroup-subset-Group G S)) G' f
-  distributivity-hom-group-ev-formal-combination f (cons (s , x) l) =
-    ( ap
-      ( map-hom-Group (group-Subgroup G (subgroup-subset-Group G S)) G' f)
-      ( eq-pair-Σ
-        ( preserves-concat-ev-formal-combination-subset-Group G S
-          ( unit-list (s , x))
-          ( l))
-        ( eq-is-prop is-prop-type-trunc-Prop))) ∙
-    ( preserves-mul-hom-Group
-      ( group-Subgroup G (subgroup-subset-Group G S))
-      ( G')
-      ( f)) ∙
-    ( ap
-      ( mul-Group G'
-        ( map-hom-Group
-          ( group-Subgroup G (subgroup-subset-Group G S))
-          ( G')
-          ( f)
-          ( pair
-            ( ev-formal-combination-subset-Group G S (unit-list (s , x)))
-            ( unit-trunc-Prop (unit-list (s , x) , refl)))))
-      ( distributivity-hom-group-ev-formal-combination f l))
+  distributivity-hom-group-ev-formal-combination f nil = {!!}
 
   map-restriction-generating-subset-Subgroup :
     hom-Group (group-Subgroup G (subgroup-subset-Group G S)) G' →
     type-subtype S → type-Group G'
-  map-restriction-generating-subset-Subgroup f x =
-    map-hom-Group
-      ( group-Subgroup G (subgroup-subset-Group G S))
-      ( G')
-      ( f)
-      ( pair
-        ( ev-formal-combination-subset-Group
-          ( G)
-          ( S)
-          ( unit-list (inr star , x)))
-        ( unit-trunc-Prop
-          ( unit-list (inr star , x) , refl)))
+  map-restriction-generating-subset-Subgroup f x = {!!}
 
   is-emb-map-restriction-generating-subset-Subgroup :
     is-emb (map-restriction-generating-subset-Subgroup)
-  is-emb-map-restriction-generating-subset-Subgroup f g =
-    is-equiv-is-invertible
-      ( λ P →
-        eq-htpy-hom-Group
-          ( group-Subgroup G (subgroup-subset-Group G S))
-          ( G')
-          ( λ x →
-            apply-universal-property-trunc-Prop
-              ( pr2 x)
-              ( Id-Prop
-                ( set-Group G')
-                ( map-hom-Group
-                  ( group-Subgroup G (subgroup-subset-Group G S))
-                  ( G')
-                  ( f)
-                  ( x))
-                ( map-hom-Group
-                  ( group-Subgroup G (subgroup-subset-Group G S))
-                  ( G')
-                  ( g)
-                  ( x)))
-              ( λ (y , Q) →
-                ( ap
-                  ( map-hom-Group
-                    ( group-Subgroup G (subgroup-subset-Group G S))
-                    ( G')
-                    ( f))
-                  ( eq-pair-Σ (inv Q) (eq-is-prop is-prop-type-trunc-Prop))) ∙
-                ( distributivity-hom-group-ev-formal-combination f y) ∙
-                ( ap
-                  ( λ F →
-                    fold-list (unit-Group G') (λ Y → mul-Group G' (F Y)) y)
-                  ( eq-htpy (lemma (htpy-eq P)))) ∙
-                ( inv
-                  ( distributivity-hom-group-ev-formal-combination g y)) ∙
-                ( ap
-                  ( map-hom-Group
-                    ( group-Subgroup G (subgroup-subset-Group G S))
-                    ( G')
-                    ( g))
-                  ( eq-pair-Σ
-                    ( Q)
-                    ( eq-is-prop is-prop-type-trunc-Prop))))))
-      ( λ p →
-        eq-is-prop
-          ( is-trunc-Π
-            ( zero-𝕋)
-            ( λ z → is-set-type-Group G')
-            ( λ S → map-restriction-generating-subset-Subgroup f S)
-            ( λ S → map-restriction-generating-subset-Subgroup g S)))
-      ( λ p →
-        eq-is-prop
-          ( is-set-hom-Group
-            ( group-Subgroup G (subgroup-subset-Group G S))
-            ( G')
-            ( f)
-            ( g)))
-    where
-    lemma :
-      ( (x : type-subtype S) →
-        Id
-          ( map-hom-Group
-            ( group-Subgroup G (subgroup-subset-Group G S))
-            ( G')
-            ( f)
-            ( pair
-              ( ev-formal-combination-subset-Group
-                ( G)
-                ( S)
-                ( unit-list (inr star , x)))
-              ( unit-trunc-Prop (unit-list (pair (inr star) x) , refl))))
-          ( map-hom-Group
-            ( group-Subgroup G (subgroup-subset-Group G S))
-            ( G')
-            ( g)
-            ( pair
-              ( ev-formal-combination-subset-Group
-                ( G)
-                ( S)
-                ( unit-list (inr star , x)))
-              ( unit-trunc-Prop
-                ( unit-list (pair (inr star) x) , refl))))) →
-      ( z : Fin 2 × type-subtype S) →
-      Id
-        ( map-hom-Group
-          ( group-Subgroup G (subgroup-subset-Group G S))
-          ( G')
-          ( f)
-          ( pair
-            ( ev-formal-combination-subset-Group G S (unit-list z))
-            ( unit-trunc-Prop (unit-list z , refl))))
-        ( map-hom-Group
-          ( group-Subgroup G (subgroup-subset-Group G S))
-          ( G')
-          ( g)
-          ( pair
-            ( ev-formal-combination-subset-Group G S (unit-list z))
-            ( unit-trunc-Prop (unit-list z , refl))))
-    lemma P (inl (inr star) , x , s) =
-      ( ap
-        ( map-hom-Group (group-Subgroup G (subgroup-subset-Group G S)) G' f)
-        ( eq-pair-Σ
-          ( right-unit-law-mul-Group G (inv-Group G x))
-          ( eq-is-prop is-prop-type-trunc-Prop))) ∙
-      ( preserves-inv-hom-Group
-        ( group-Subgroup G (subgroup-subset-Group G S))
-        ( G')
-        ( f)) ∙
-      ( ap
-        ( inv-Group G')
-        ( ( ap
-          ( map-hom-Group
-            ( group-Subgroup G (subgroup-subset-Group G S))
-            ( G')
-            ( f))
-          ( eq-pair-Σ
-            { s =
-              pair
-                ( x)
-                ( unit-trunc-Prop
-                  ( pair
-                    ( unit-list (inr star , x , s))
-                    ( right-unit-law-mul-Group G x)))}
-            ( inv (right-unit-law-mul-Group G x))
-            ( eq-is-prop is-prop-type-trunc-Prop))) ∙
-          ( ( P (x , s)) ∙
-            ( ap
-              ( map-hom-Group
-                ( group-Subgroup G (subgroup-subset-Group G S))
-                ( G')
-                ( g))
-              ( eq-pair-Σ
-                { s =
-                  pair
-                    ( mul-Group G x (unit-Group G))
-                    ( unit-trunc-Prop
-                      ( pair
-                        ( unit-list (inr star , x , s))
-                        ( refl)))}
-                { t =
-                  pair
-                    ( x)
-                    ( unit-trunc-Prop
-                      ( pair
-                        ( unit-list (inr star , x , s))
-                        ( right-unit-law-mul-Group G x)))}
-                ( right-unit-law-mul-Group G x)
-                ( eq-is-prop is-prop-type-trunc-Prop)))))) ∙
-      ( inv
-        ( preserves-inv-hom-Group
-          ( group-Subgroup G (subgroup-subset-Group G S))
-          ( G')
-          ( g))) ∙
-      ( ap
-        ( map-hom-Group
-          ( group-Subgroup G (subgroup-subset-Group G S))
-          ( G')
-          ( g))
-        ( eq-pair-Σ
-          ( inv (right-unit-law-mul-Group G (inv-Group G x)))
-          ( eq-is-prop is-prop-type-trunc-Prop)))
-    lemma P (inr star , x) = P x
+  is-emb-map-restriction-generating-subset-Subgroup f g = {!!}
 
   restriction-generating-subset-Subgroup :
     hom-Group (group-Subgroup G (subgroup-subset-Group G S)) G' ↪
       ( type-subtype S → type-Group G')
-  pr1 restriction-generating-subset-Subgroup =
-    map-restriction-generating-subset-Subgroup
-  pr2 restriction-generating-subset-Subgroup =
-    is-emb-map-restriction-generating-subset-Subgroup
+  pr1 restriction-generating-subset-Subgroup = {!!}
 
 module _
   {l1 l2 l3 : Level}
@@ -298,30 +100,12 @@ module _
 
   restriction-generating-subset-Group :
     hom-Group G G' ↪ (type-subtype S → type-Group G')
-  restriction-generating-subset-Group =
-    comp-emb
-      ( restriction-generating-subset-Subgroup G S G')
-      ( pair
-        ( λ f →
-          comp-hom-Group
-            ( group-Subgroup G (subgroup-subset-Group G S))
-            ( G)
-            ( G')
-            ( f)
-            ( pr1 , λ {x} {y} → refl))
-        ( is-epi-iso-Group l3
-          ( group-Subgroup G (subgroup-subset-Group G S))
-          ( G)
-          ( iso-inclusion-is-full-Subgroup G (subgroup-subset-Group G S) H)
-          ( G')))
+  restriction-generating-subset-Group = {!!}
 
   eq-map-restriction-generating-subset-Group :
     ( f : hom-Group G G') (x : type-subtype S) →
     Id
       ( map-emb restriction-generating-subset-Group f x)
       ( map-hom-Group G G' f (pr1 x))
-  eq-map-restriction-generating-subset-Group f x =
-    ap
-      ( map-hom-Group G G' f)
-      ( right-unit-law-mul-Group G (pr1 x))
+  eq-map-restriction-generating-subset-Group f x = {!!}
 ```

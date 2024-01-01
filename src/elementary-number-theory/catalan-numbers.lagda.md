@@ -29,26 +29,8 @@ combinatorics problems.
 
 ```agda
 catalan-numbers : ℕ → ℕ
-catalan-numbers =
-  strong-ind-ℕ (λ _ → ℕ) (succ-ℕ zero-ℕ)
-    ( λ k C →
-      sum-Fin-ℕ k
-        ( λ i →
-          mul-ℕ
-            ( C ( nat-Fin k i)
-                ( leq-le-ℕ (nat-Fin k i) k (strict-upper-bound-nat-Fin k i)))
-            ( C ( dist-ℕ (nat-Fin k i) k)
-                ( leq-dist-ℕ
-                  ( nat-Fin k i)
-                  ( k)
-                  ( leq-le-ℕ
-                    ( nat-Fin k i)
-                    ( k)
-                    ( strict-upper-bound-nat-Fin k i))))))
+catalan-numbers = {!!}
 
 catalan-numbers-binomial : ℕ → ℕ
-catalan-numbers-binomial n =
-  dist-ℕ
-    ( binomial-coefficient-ℕ (2 *ℕ n) n)
-    ( binomial-coefficient-ℕ (2 *ℕ n) (succ-ℕ n))
+catalan-numbers-binomial n = {!!}
 ```

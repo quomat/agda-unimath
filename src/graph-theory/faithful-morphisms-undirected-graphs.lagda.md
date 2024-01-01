@@ -44,25 +44,19 @@ module _
 
   is-faithful-hom-undirected-graph-Prop :
     hom-Undirected-Graph G H → Prop (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l4)
-  is-faithful-hom-undirected-graph-Prop f =
-    Π-Prop
-      ( unordered-pair-vertices-Undirected-Graph G)
-      ( λ p → is-emb-Prop (edge-hom-Undirected-Graph G H f p))
+  is-faithful-hom-undirected-graph-Prop f = {!!}
 
   is-faithful-hom-Undirected-Graph :
     hom-Undirected-Graph G H → UU (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l4)
-  is-faithful-hom-Undirected-Graph f =
-    type-Prop (is-faithful-hom-undirected-graph-Prop f)
+  is-faithful-hom-Undirected-Graph f = {!!}
 
   is-prop-is-faithful-hom-Undirected-Graph :
     (f : hom-Undirected-Graph G H) →
     is-prop (is-faithful-hom-Undirected-Graph f)
-  is-prop-is-faithful-hom-Undirected-Graph f =
-    is-prop-type-Prop (is-faithful-hom-undirected-graph-Prop f)
+  is-prop-is-faithful-hom-Undirected-Graph f = {!!}
 
   faithful-hom-Undirected-Graph : UU (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  faithful-hom-Undirected-Graph =
-    Σ (hom-Undirected-Graph G H) is-faithful-hom-Undirected-Graph
+  faithful-hom-Undirected-Graph = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}
@@ -71,47 +65,40 @@ module _
   where
 
   hom-faithful-hom-Undirected-Graph : hom-Undirected-Graph G H
-  hom-faithful-hom-Undirected-Graph = pr1 f
+  hom-faithful-hom-Undirected-Graph = {!!}
 
   is-faithful-faithful-hom-Undirected-Graph :
     is-faithful-hom-Undirected-Graph G H hom-faithful-hom-Undirected-Graph
-  is-faithful-faithful-hom-Undirected-Graph = pr2 f
+  is-faithful-faithful-hom-Undirected-Graph = {!!}
 
   vertex-faithful-hom-Undirected-Graph :
     vertex-Undirected-Graph G → vertex-Undirected-Graph H
-  vertex-faithful-hom-Undirected-Graph =
-    vertex-hom-Undirected-Graph G H hom-faithful-hom-Undirected-Graph
+  vertex-faithful-hom-Undirected-Graph = {!!}
 
   unordered-pair-vertices-faithful-hom-Undirected-Graph :
     unordered-pair-vertices-Undirected-Graph G →
     unordered-pair-vertices-Undirected-Graph H
-  unordered-pair-vertices-faithful-hom-Undirected-Graph =
-    unordered-pair-vertices-hom-Undirected-Graph G H
-      hom-faithful-hom-Undirected-Graph
+  unordered-pair-vertices-faithful-hom-Undirected-Graph = {!!}
 
   edge-faithful-hom-Undirected-Graph :
     (p : unordered-pair-vertices-Undirected-Graph G) →
     edge-Undirected-Graph G p →
     edge-Undirected-Graph H
       ( unordered-pair-vertices-faithful-hom-Undirected-Graph p)
-  edge-faithful-hom-Undirected-Graph =
-    edge-hom-Undirected-Graph G H hom-faithful-hom-Undirected-Graph
+  edge-faithful-hom-Undirected-Graph = {!!}
 
   is-emb-edge-faithful-hom-Undirected-Graph :
     (p : unordered-pair-vertices-Undirected-Graph G) →
     is-emb (edge-faithful-hom-Undirected-Graph p)
-  is-emb-edge-faithful-hom-Undirected-Graph =
-    is-faithful-faithful-hom-Undirected-Graph
+  is-emb-edge-faithful-hom-Undirected-Graph = {!!}
 
   emb-edge-faithful-hom-Undirected-Graph :
     (p : unordered-pair-vertices-Undirected-Graph G) →
     edge-Undirected-Graph G p ↪
     edge-Undirected-Graph H
       ( unordered-pair-vertices-faithful-hom-Undirected-Graph p)
-  pr1 (emb-edge-faithful-hom-Undirected-Graph p) =
-    edge-faithful-hom-Undirected-Graph p
-  pr2 (emb-edge-faithful-hom-Undirected-Graph p) =
-    is-emb-edge-faithful-hom-Undirected-Graph p
+  pr1 (emb-edge-faithful-hom-Undirected-Graph p) = {!!}
+  pr2 (emb-edge-faithful-hom-Undirected-Graph p) = {!!}
 ```
 
 ## See also

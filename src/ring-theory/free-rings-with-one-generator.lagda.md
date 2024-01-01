@@ -45,6 +45,5 @@ module _
   where
 
   is-free-ring-with-one-generator : UUω
-  is-free-ring-with-one-generator =
-    {l2 : Level} (S : Ring l2) → is-equiv (ev-element-hom-Ring R S g)
+  is-free-ring-with-one-generator = {!!}
 ```

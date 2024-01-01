@@ -40,27 +40,19 @@ module _
 
   square-fiber :
     f ∘ pr1 ~ const unit B b ∘ const (fiber f b) unit star
-  square-fiber = pr2
+  square-fiber = {!!}
 
   cone-fiber : cone f (const unit B b) (fiber f b)
-  pr1 cone-fiber = pr1
-  pr1 (pr2 cone-fiber) = const (fiber f b) unit star
-  pr2 (pr2 cone-fiber) = square-fiber
+  pr1 cone-fiber = {!!}
 
   abstract
     is-pullback-cone-fiber : is-pullback f (const unit B b) cone-fiber
-    is-pullback-cone-fiber =
-      is-equiv-tot-is-fiberwise-equiv
-        ( λ a → is-equiv-map-inv-left-unit-law-prod)
+    is-pullback-cone-fiber = {!!}
 
   abstract
     universal-property-pullback-cone-fiber :
       universal-property-pullback f (const unit B b) cone-fiber
-    universal-property-pullback-cone-fiber =
-      universal-property-pullback-is-pullback f
-        ( const unit B b)
-        ( cone-fiber)
-        ( is-pullback-cone-fiber)
+    universal-property-pullback-cone-fiber = {!!}
 ```
 
 ### The fiber of the terminal map at any point is equivalent to its domain
@@ -72,23 +64,19 @@ module _
 
   equiv-fiber-terminal-map :
     (u : unit) → fiber (terminal-map {A = A}) u ≃ A
-  equiv-fiber-terminal-map u =
-    right-unit-law-Σ-is-contr
-      ( λ a → is-prop-is-contr is-contr-unit (terminal-map a) u)
+  equiv-fiber-terminal-map u = {!!}
 
   inv-equiv-fiber-terminal-map :
     (u : unit) → A ≃ fiber (terminal-map {A = A}) u
-  inv-equiv-fiber-terminal-map u =
-    inv-equiv (equiv-fiber-terminal-map u)
+  inv-equiv-fiber-terminal-map u = {!!}
 
   equiv-fiber-terminal-map-star :
     fiber (terminal-map {A = A}) star ≃ A
-  equiv-fiber-terminal-map-star = equiv-fiber-terminal-map star
+  equiv-fiber-terminal-map-star = {!!}
 
   inv-equiv-fiber-terminal-map-star :
     A ≃ fiber (terminal-map {A = A}) star
-  inv-equiv-fiber-terminal-map-star =
-    inv-equiv equiv-fiber-terminal-map-star
+  inv-equiv-fiber-terminal-map-star = {!!}
 ```
 
 ### The total space of the fibers of the terminal map is equivalent to its domain
@@ -100,14 +88,11 @@ module _
 
   equiv-total-fiber-terminal-map :
     Σ unit (fiber (terminal-map {A = A})) ≃ A
-  equiv-total-fiber-terminal-map =
-    ( left-unit-law-Σ-is-contr is-contr-unit star) ∘e
-    ( equiv-tot equiv-fiber-terminal-map)
+  equiv-total-fiber-terminal-map = {!!}
 
   inv-equiv-total-fiber-terminal-map :
     A ≃ Σ unit (fiber (terminal-map {A = A}))
-  inv-equiv-total-fiber-terminal-map =
-    inv-equiv equiv-total-fiber-terminal-map
+  inv-equiv-total-fiber-terminal-map = {!!}
 ```
 
 ### Transport in fibers
@@ -120,7 +105,7 @@ module _
   compute-tr-fiber :
     {y y' : B} (p : y ＝ y') (u : fiber f y) →
     tot (λ x → concat' _ p) u ＝ tr (fiber f) p u
-  compute-tr-fiber refl u = ap (pair _) right-unit
+  compute-tr-fiber refl u = {!!}
 ```
 
 ## Table of files about fibers of maps

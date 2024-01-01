@@ -42,76 +42,61 @@ module _
   abstract
     is-trunc-is-trunc-map-diagonal :
       (k : 𝕋) → is-trunc-map k (diagonal A) → is-trunc (succ-𝕋 k) A
-    is-trunc-is-trunc-map-diagonal k is-trunc-d x y =
-      is-trunc-is-equiv' k
-        ( fiber (diagonal A) (pair x y))
-        ( eq-fiber-diagonal A (pair x y))
-        ( is-equiv-eq-fiber-diagonal A (pair x y))
-        ( is-trunc-d (pair x y))
+    is-trunc-is-trunc-map-diagonal k is-trunc-d x y = {!!}
 
   abstract
     is-prop-is-contr-map-diagonal : is-contr-map (diagonal A) → is-prop A
-    is-prop-is-contr-map-diagonal = is-trunc-is-trunc-map-diagonal neg-two-𝕋
+    is-prop-is-contr-map-diagonal = {!!}
 
   abstract
     is-set-is-prop-map-diagonal : is-prop-map (diagonal A) → is-set A
-    is-set-is-prop-map-diagonal = is-trunc-is-trunc-map-diagonal neg-one-𝕋
+    is-set-is-prop-map-diagonal = {!!}
 
   abstract
     is-set-is-emb-diagonal : is-emb (diagonal A) → is-set A
-    is-set-is-emb-diagonal H =
-      is-set-is-prop-map-diagonal (is-prop-map-is-emb H)
+    is-set-is-emb-diagonal H = {!!}
 
   abstract
     is-1-type-is-0-map-diagonal : is-0-map (diagonal A) → is-1-type A
-    is-1-type-is-0-map-diagonal = is-trunc-is-trunc-map-diagonal zero-𝕋
+    is-1-type-is-0-map-diagonal = {!!}
 
   abstract
     is-1-type-is-faithful-diagonal : is-faithful (diagonal A) → is-1-type A
-    is-1-type-is-faithful-diagonal H =
-      is-1-type-is-0-map-diagonal (is-0-map-is-faithful H)
+    is-1-type-is-faithful-diagonal H = {!!}
 
   abstract
     is-trunc-map-diagonal-is-trunc :
       (k : 𝕋) → is-trunc (succ-𝕋 k) A → is-trunc-map k (diagonal A)
-    is-trunc-map-diagonal-is-trunc k is-trunc-A t =
-      is-trunc-is-equiv k
-        ( pr1 t ＝ pr2 t)
-        ( eq-fiber-diagonal A t)
-        ( is-equiv-eq-fiber-diagonal A t)
-          ( is-trunc-A (pr1 t) (pr2 t))
+    is-trunc-map-diagonal-is-trunc k is-trunc-A t = {!!}
 
   abstract
     is-contr-map-diagonal-is-prop : is-prop A → is-contr-map (diagonal A)
-    is-contr-map-diagonal-is-prop = is-trunc-map-diagonal-is-trunc neg-two-𝕋
+    is-contr-map-diagonal-is-prop = {!!}
 
   abstract
     is-prop-map-diagonal-is-set : is-set A → is-prop-map (diagonal A)
-    is-prop-map-diagonal-is-set = is-trunc-map-diagonal-is-trunc neg-one-𝕋
+    is-prop-map-diagonal-is-set = {!!}
 
   abstract
     is-emb-diagonal-is-set : is-set A → is-emb (diagonal A)
-    is-emb-diagonal-is-set H =
-      is-emb-is-prop-map (is-prop-map-diagonal-is-set H)
+    is-emb-diagonal-is-set H = {!!}
 
   abstract
     is-0-map-diagonal-is-1-type : is-1-type A → is-0-map (diagonal A)
-    is-0-map-diagonal-is-1-type = is-trunc-map-diagonal-is-trunc zero-𝕋
+    is-0-map-diagonal-is-1-type = {!!}
 
   abstract
     is-faithful-diagonal-is-1-type : is-1-type A → is-faithful (diagonal A)
-    is-faithful-diagonal-is-1-type H =
-      is-faithful-is-0-map (is-0-map-diagonal-is-1-type H)
+    is-faithful-diagonal-is-1-type H = {!!}
 
 diagonal-emb :
   {l : Level} (A : Set l) → (type-Set A) ↪ ((type-Set A) × (type-Set A))
-pr1 (diagonal-emb A) = diagonal (type-Set A)
-pr2 (diagonal-emb A) = is-emb-diagonal-is-set (is-set-type-Set A)
+pr1 (diagonal-emb A) = {!!}
+pr2 (diagonal-emb A) = {!!}
 
 diagonal-faithful-map :
   {l : Level} (A : 1-Type l) →
   faithful-map (type-1-Type A) (type-1-Type A × type-1-Type A)
-pr1 (diagonal-faithful-map A) = diagonal (type-1-Type A)
-pr2 (diagonal-faithful-map A) =
-  is-faithful-diagonal-is-1-type (is-1-type-type-1-Type A)
+pr1 (diagonal-faithful-map A) = {!!}
+pr2 (diagonal-faithful-map A) = {!!}
 ```

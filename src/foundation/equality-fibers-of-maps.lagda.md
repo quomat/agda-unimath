@@ -52,63 +52,45 @@ module _
     (s t : fiber f b) (p : pr1 s ＝ pr1 t) →
     tr (λ (a : A) → f a ＝ b) p (pr2 s) ＝ pr2 t →
     ap f p ＝ pr2 s ∙ inv (pr2 t)
-  fiber-ap-eq-fiber-fiberwise (.x' , p) (x' , refl) refl =
-    inv ∘ concat right-unit refl
+  fiber-ap-eq-fiber-fiberwise (.x' , p) (x' , refl) refl = {!!}
 
   abstract
     is-fiberwise-equiv-fiber-ap-eq-fiber-fiberwise :
       (s t : fiber f b) → is-fiberwise-equiv (fiber-ap-eq-fiber-fiberwise s t)
-    is-fiberwise-equiv-fiber-ap-eq-fiber-fiberwise (x , y) (.x , refl) refl =
-      is-equiv-comp
-        ( inv)
-        ( concat right-unit refl)
-        ( is-equiv-concat right-unit refl)
-        ( is-equiv-inv (y ∙ refl) refl)
+    is-fiberwise-equiv-fiber-ap-eq-fiber-fiberwise (x , y) (.x , refl) refl = {!!}
 
   fiber-ap-eq-fiber :
     (s t : fiber f b) → s ＝ t →
     fiber (ap f {x = pr1 s} {y = pr1 t}) (pr2 s ∙ inv (pr2 t))
-  pr1 (fiber-ap-eq-fiber s .s refl) = refl
-  pr2 (fiber-ap-eq-fiber s .s refl) = inv (right-inv (pr2 s))
+  pr1 (fiber-ap-eq-fiber s .s refl) = {!!}
 
   triangle-fiber-ap-eq-fiber :
     (s t : fiber f b) →
     fiber-ap-eq-fiber s t ~
     tot (fiber-ap-eq-fiber-fiberwise s t) ∘ pair-eq-Σ {s = s} {t}
-  triangle-fiber-ap-eq-fiber (x , refl) .(x , refl) refl = refl
+  triangle-fiber-ap-eq-fiber (x , refl) .(x , refl) refl = {!!}
 
   abstract
     is-equiv-fiber-ap-eq-fiber :
       (s t : fiber f b) → is-equiv (fiber-ap-eq-fiber s t)
-    is-equiv-fiber-ap-eq-fiber s t =
-      is-equiv-left-map-triangle
-        ( fiber-ap-eq-fiber s t)
-        ( tot (fiber-ap-eq-fiber-fiberwise s t))
-        ( pair-eq-Σ {s = s} {t})
-        ( triangle-fiber-ap-eq-fiber s t)
-        ( is-equiv-pair-eq-Σ s t)
-        ( is-equiv-tot-is-fiberwise-equiv
-          ( is-fiberwise-equiv-fiber-ap-eq-fiber-fiberwise s t))
+    is-equiv-fiber-ap-eq-fiber s t = {!!}
 
   equiv-fiber-ap-eq-fiber :
     (s t : fiber f b) →
     (s ＝ t) ≃ fiber (ap f {x = pr1 s} {y = pr1 t}) (pr2 s ∙ inv (pr2 t))
-  pr1 (equiv-fiber-ap-eq-fiber s t) = fiber-ap-eq-fiber s t
-  pr2 (equiv-fiber-ap-eq-fiber s t) = is-equiv-fiber-ap-eq-fiber s t
+  pr1 (equiv-fiber-ap-eq-fiber s t) = {!!}
 
   map-inv-fiber-ap-eq-fiber :
     (s t : fiber f b) →
     fiber (ap f {x = pr1 s} {y = pr1 t}) (pr2 s ∙ inv (pr2 t)) →
     s ＝ t
-  map-inv-fiber-ap-eq-fiber (x , refl) (.x , p) (refl , u) =
-    eq-pair-eq-pr2 (ap inv u ∙ inv-inv p)
+  map-inv-fiber-ap-eq-fiber (x , refl) (.x , p) (refl , u) = {!!}
 
   ap-pr1-map-inv-fiber-ap-eq-fiber :
     (s t : fiber f b) →
     (v : fiber (ap f {x = pr1 s} {y = pr1 t}) (pr2 s ∙ inv (pr2 t))) →
     ap pr1 (map-inv-fiber-ap-eq-fiber s t v) ＝ pr1 v
-  ap-pr1-map-inv-fiber-ap-eq-fiber (x , refl) (.x , p) (refl , u) =
-    ap-pr1-eq-pair-eq-pr2 (ap inv u ∙ inv-inv p)
+  ap-pr1-map-inv-fiber-ap-eq-fiber (x , refl) (.x , p) (refl , u) = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) (x y : A)
@@ -116,18 +98,12 @@ module _
 
   eq-fiber-fiber-ap :
     (q : f x ＝ f y) → (x , q) ＝ (y , refl) → fiber (ap f {x} {y}) q
-  eq-fiber-fiber-ap q =
-    tr (fiber (ap f)) right-unit ∘ fiber-ap-eq-fiber f (x , q) (y , refl)
+  eq-fiber-fiber-ap q = {!!}
 
   abstract
     is-equiv-eq-fiber-fiber-ap :
       (q : (f x) ＝ f y) → is-equiv (eq-fiber-fiber-ap q)
-    is-equiv-eq-fiber-fiber-ap q =
-      is-equiv-comp
-        ( tr (fiber (ap f)) right-unit)
-        ( fiber-ap-eq-fiber f (x , q) (y , refl))
-        ( is-equiv-fiber-ap-eq-fiber f (x , q) (y , refl))
-        ( is-equiv-tr (fiber (ap f)) right-unit)
+    is-equiv-eq-fiber-fiber-ap q = {!!}
 ```
 
 ## Table of files about fibers of maps

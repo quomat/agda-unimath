@@ -35,7 +35,7 @@ module _
   where
 
   mere-diagonal-lift : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  mere-diagonal-lift = is-surjective (pullback-hom f g)
+  mere-diagonal-lift = {!!}
 ```
 
 ## Properties
@@ -49,8 +49,8 @@ module _
   where
 
   is-prop-mere-diagonal-lift : is-prop (mere-diagonal-lift f g)
-  is-prop-mere-diagonal-lift = is-prop-is-surjective (pullback-hom f g)
+  is-prop-mere-diagonal-lift = {!!}
 
   mere-diagonal-lift-Prop : Prop (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  mere-diagonal-lift-Prop = is-surjective-Prop (pullback-hom f g)
+  mere-diagonal-lift-Prop = {!!}
 ```

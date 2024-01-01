@@ -32,50 +32,39 @@ that each `R x y` is a decidable proposition.
 ```agda
 is-decidable-Relation-Prop :
   {l1 l2 : Level} {A : UU l1} → Relation-Prop l2 A → UU (l1 ⊔ l2)
-is-decidable-Relation-Prop {A = A} R =
-  (x y : A) → is-decidable ( type-Relation-Prop R x y)
+is-decidable-Relation-Prop {A = A} R = {!!}
 
 Decidable-Relation : {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-Decidable-Relation l2 X = X → X → Decidable-Prop l2
+Decidable-Relation l2 X = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} (R : Decidable-Relation l2 X)
   where
 
   relation-Decidable-Relation : X → X → Prop l2
-  relation-Decidable-Relation x y = prop-Decidable-Prop (R x y)
+  relation-Decidable-Relation x y = {!!}
 
   rel-Decidable-Relation : X → X → UU l2
-  rel-Decidable-Relation x y = type-Decidable-Prop (R x y)
+  rel-Decidable-Relation x y = {!!}
 
   is-prop-rel-Decidable-Relation :
     (x y : X) → is-prop (rel-Decidable-Relation x y)
-  is-prop-rel-Decidable-Relation x y = is-prop-type-Decidable-Prop (R x y)
+  is-prop-rel-Decidable-Relation x y = {!!}
 
   is-decidable-Decidable-Relation :
     (x y : X) → is-decidable (rel-Decidable-Relation x y)
-  is-decidable-Decidable-Relation x y =
-    is-decidable-Decidable-Prop (R x y)
+  is-decidable-Decidable-Relation x y = {!!}
 
 map-inv-equiv-relation-is-decidable-Decidable-Relation :
   {l1 l2 : Level} {X : UU l1} →
   Σ ( Relation-Prop l2 X) (λ R → is-decidable-Relation-Prop R) →
   Decidable-Relation l2 X
-map-inv-equiv-relation-is-decidable-Decidable-Relation (R , d) x y =
-  ( ( type-Relation-Prop R x y) ,
-    ( is-prop-type-Relation-Prop R x y) ,
-    ( d x y))
+map-inv-equiv-relation-is-decidable-Decidable-Relation (R , d) x y = {!!}
 
 equiv-relation-is-decidable-Decidable-Relation :
   {l1 l2 : Level} {X : UU l1} →
   Decidable-Relation l2 X ≃
   Σ ( Relation-Prop l2 X) (λ R → is-decidable-Relation-Prop R)
-pr1 equiv-relation-is-decidable-Decidable-Relation dec-R =
-  ( relation-Decidable-Relation dec-R ,
-    is-decidable-Decidable-Relation dec-R)
-pr2 equiv-relation-is-decidable-Decidable-Relation =
-  is-equiv-is-invertible
-    ( map-inv-equiv-relation-is-decidable-Decidable-Relation)
-    ( refl-htpy)
-    ( refl-htpy)
+pr1 equiv-relation-is-decidable-Decidable-Relation dec-R = {!!}
+pr2 equiv-relation-is-decidable-Decidable-Relation = {!!}
 ```

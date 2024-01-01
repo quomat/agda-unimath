@@ -49,29 +49,22 @@ module _
   where
 
   prod-set-quotient-Set : Set (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  prod-set-quotient-Set = prod-Set (quotient-Set R) (quotient-Set S)
+  prod-set-quotient-Set = {!!}
 
   prod-set-quotient : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  prod-set-quotient = pr1 prod-set-quotient-Set
+  prod-set-quotient = {!!}
 
   is-set-prod-set-quotient : is-set prod-set-quotient
-  is-set-prod-set-quotient = pr2 prod-set-quotient-Set
+  is-set-prod-set-quotient = {!!}
 
   prod-set-quotient-map : (A × B) → prod-set-quotient
-  prod-set-quotient-map (a , b) =
-    pair (quotient-map R a) (quotient-map S b)
+  prod-set-quotient-map (a , b) = {!!}
 
   reflecting-map-prod-quotient-map :
     reflecting-map-equivalence-relation
       ( prod-equivalence-relation R S)
       ( prod-set-quotient)
-  reflecting-map-prod-quotient-map =
-    pair
-      prod-set-quotient-map
-      ( λ (p , q) →
-        ( eq-pair
-          ( apply-effectiveness-quotient-map' R p)
-          ( apply-effectiveness-quotient-map' S q)))
+  reflecting-map-prod-quotient-map = {!!}
 ```
 
 ## Properties
@@ -86,25 +79,7 @@ module _
       ( prod-equivalence-relation R S)
       ( type-Set X) →
     hom-Set prod-set-quotient-Set X
-  inv-precomp-set-quotient-prod-set-quotient X (f , H) (qa , qb) =
-    inv-precomp-set-quotient
-      ( R)
-      ( hom-set-Set (quotient-Set S) X)
-      ( pair
-        ( λ a qb' →
-          inv-precomp-set-quotient S X
-            ( pair
-              (λ b → f (a , b))
-              (λ p → H (refl-equivalence-relation R a , p)))
-            qb')
-        ( λ {a1} {a2} p →
-          ( ap (inv-precomp-set-quotient S X)
-            ( eq-pair-Σ
-              ( eq-htpy (λ b → H (p , refl-equivalence-relation S b)))
-              ( eq-is-prop
-                ( is-prop-reflects-equivalence-relation S X _))))))
-      ( qa)
-      ( qb)
+  inv-precomp-set-quotient-prod-set-quotient X (f , H) (qa , qb) = {!!}
 
   is-section-inv-precomp-set-quotient-prod-set-quotient :
     { l : Level}
@@ -116,18 +91,7 @@ module _
       ( X) ∘
       ( inv-precomp-set-quotient-prod-set-quotient X)) ~
     ( id)
-  is-section-inv-precomp-set-quotient-prod-set-quotient X (f , H) =
-    eq-pair-Σ
-      ( eq-htpy
-        ( λ (a , b) →
-          ( htpy-eq
-            ( is-section-inv-precomp-set-quotient R
-              ( hom-set-Set (quotient-Set S) X) _ a)
-            ( quotient-map S b) ∙
-          ( is-section-inv-precomp-set-quotient S X _ b))))
-      ( eq-is-prop
-        ( is-prop-reflects-equivalence-relation
-          ( prod-equivalence-relation R S) X f))
+  is-section-inv-precomp-set-quotient-prod-set-quotient X (f , H) = {!!}
 
   is-retraction-inv-precomp-set-quotient-prod-set-quotient :
     { l : Level}
@@ -139,75 +103,28 @@ module _
         ( reflecting-map-prod-quotient-map)
         ( X))) ~
     ( id)
-  is-retraction-inv-precomp-set-quotient-prod-set-quotient X f =
-    ( eq-htpy
-      ( λ (qa , qb) →
-        htpy-eq
-        ( htpy-eq
-          ( ap
-            ( inv-precomp-set-quotient
-              ( R)
-              ( hom-set-Set (quotient-Set S) X))
-              ( eq-pair-Σ
-                ( eq-htpy λ a →
-                  ( ap
-                    ( inv-precomp-set-quotient S X)
-                    ( eq-pair-Σ refl
-                      ( eq-is-prop
-                        ( is-prop-reflects-equivalence-relation S X _)))) ∙
-                    ( is-retraction-inv-precomp-set-quotient S X _))
-                ( eq-is-prop
-                  ( is-prop-reflects-equivalence-relation R
-                    ( hom-set-Set (quotient-Set S) X) _))) ∙
-            ( is-retraction-inv-precomp-set-quotient R
-                ( hom-set-Set (quotient-Set S) X)
-                ( λ qa qb → f (qa , qb))))
-          ( qa))
-          ( qb)))
+  is-retraction-inv-precomp-set-quotient-prod-set-quotient X f = {!!}
 
   is-set-quotient-prod-set-quotient :
     is-set-quotient
       ( prod-equivalence-relation R S)
       ( prod-set-quotient-Set)
       ( reflecting-map-prod-quotient-map)
-  pr1 (pr1 (is-set-quotient-prod-set-quotient X)) =
-    inv-precomp-set-quotient-prod-set-quotient X
-  pr2 (pr1 (is-set-quotient-prod-set-quotient X)) =
-    is-section-inv-precomp-set-quotient-prod-set-quotient X
-  pr1 (pr2 (is-set-quotient-prod-set-quotient X)) =
-    inv-precomp-set-quotient-prod-set-quotient X
-  pr2 (pr2 (is-set-quotient-prod-set-quotient X)) =
-    is-retraction-inv-precomp-set-quotient-prod-set-quotient X
+  pr1 (pr1 (is-set-quotient-prod-set-quotient X)) = {!!}
 
   quotient-prod : Set (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  quotient-prod = quotient-Set (prod-equivalence-relation R S)
+  quotient-prod = {!!}
 
   type-quotient-prod : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  type-quotient-prod = pr1 quotient-prod
+  type-quotient-prod = {!!}
 
   equiv-quotient-prod-prod-set-quotient :
     prod-set-quotient ≃ type-Set (quotient-prod)
-  equiv-quotient-prod-prod-set-quotient =
-    equiv-uniqueness-set-quotient
-      ( prod-equivalence-relation R S)
-      ( prod-set-quotient-Set)
-      ( reflecting-map-prod-quotient-map)
-      ( is-set-quotient-prod-set-quotient)
-      ( quotient-prod)
-      ( reflecting-map-quotient-map (prod-equivalence-relation R S))
-      ( is-set-quotient-set-quotient (prod-equivalence-relation R S))
+  equiv-quotient-prod-prod-set-quotient = {!!}
 
   triangle-uniqueness-prod-set-quotient :
     ( map-equiv equiv-quotient-prod-prod-set-quotient ∘
       prod-set-quotient-map) ~
     quotient-map (prod-equivalence-relation R S)
-  triangle-uniqueness-prod-set-quotient =
-    triangle-uniqueness-set-quotient
-      ( prod-equivalence-relation R S)
-      ( prod-set-quotient-Set)
-      ( reflecting-map-prod-quotient-map)
-      ( is-set-quotient-prod-set-quotient)
-      ( quotient-prod)
-      ( reflecting-map-quotient-map (prod-equivalence-relation R S))
-      ( is-set-quotient-set-quotient (prod-equivalence-relation R S))
+  triangle-uniqueness-prod-set-quotient = {!!}
 ```

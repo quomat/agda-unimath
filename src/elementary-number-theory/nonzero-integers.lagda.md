@@ -38,30 +38,30 @@ holds.
 
 ```agda
 is-nonzero-prop-ℤ : ℤ → Prop lzero
-is-nonzero-prop-ℤ k = neg-Prop' (k ＝ zero-ℤ)
+is-nonzero-prop-ℤ k = {!!}
 
 is-nonzero-ℤ : ℤ → UU lzero
-is-nonzero-ℤ k = type-Prop (is-nonzero-prop-ℤ k)
+is-nonzero-ℤ k = {!!}
 
 is-prop-is-nonzero-ℤ : (k : ℤ) → is-prop (is-nonzero-ℤ k)
-is-prop-is-nonzero-ℤ k = is-prop-type-Prop (is-nonzero-prop-ℤ k)
+is-prop-is-nonzero-ℤ k = {!!}
 ```
 
 ### The nonzero integers
 
 ```agda
 nonzero-ℤ : UU lzero
-nonzero-ℤ = type-subtype is-nonzero-prop-ℤ
+nonzero-ℤ = {!!}
 
 module _
   (k : nonzero-ℤ)
   where
 
   int-nonzero-ℤ : ℤ
-  int-nonzero-ℤ = pr1 k
+  int-nonzero-ℤ = {!!}
 
   is-nonzero-nonzero-ℤ : is-nonzero-ℤ int-nonzero-ℤ
-  is-nonzero-nonzero-ℤ = pr2 k
+  is-nonzero-nonzero-ℤ = {!!}
 ```
 
 ### The nonzero integer `1`
@@ -71,8 +71,8 @@ is-nonzero-one-ℤ : is-nonzero-ℤ one-ℤ
 is-nonzero-one-ℤ ()
 
 one-nonzero-ℤ : nonzero-ℤ
-pr1 one-nonzero-ℤ = one-ℤ
-pr2 one-nonzero-ℤ = is-nonzero-one-ℤ
+pr1 one-nonzero-ℤ = {!!}
+pr2 one-nonzero-ℤ = {!!}
 ```
 
 ## Properties
@@ -81,7 +81,7 @@ pr2 one-nonzero-ℤ = is-nonzero-one-ℤ
 
 ```agda
 is-nonzero-int-ℕ : (n : ℕ) → is-nonzero-ℕ n → is-nonzero-ℤ (int-ℕ n)
-is-nonzero-int-ℕ zero-ℕ H p = H refl
+is-nonzero-int-ℕ zero-ℕ H p = {!!}
 ```
 
 ### Positive integers are nonzero

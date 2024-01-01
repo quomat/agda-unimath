@@ -27,5 +27,5 @@ to the cyclic group `ℤ-Mod k`.
 
 ```agda
 dihedral-group : ℕ → Group lzero
-dihedral-group k = dihedral-group-Ab (ℤ-Mod-Ab k)
+dihedral-group k = {!!}
 ```

@@ -64,14 +64,11 @@ module _
 
   instance-factorization-operation-function-class :
     (A : UU l1) (B : UU l2) → UU (l1 ⊔ l2 ⊔ lsuc l3 ⊔ lL ⊔ lR)
-  instance-factorization-operation-function-class A B =
-    (f : A → B) → function-class-factorization L R f
+  instance-factorization-operation-function-class A B = {!!}
 
   factorization-operation-function-class :
     UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3 ⊔ lL ⊔ lR)
-  factorization-operation-function-class =
-    {A : UU l1} {B : UU l2} →
-    instance-factorization-operation-function-class A B
+  factorization-operation-function-class = {!!}
 ```
 
 ### Unique factorization operations into function classes
@@ -85,33 +82,24 @@ module _
 
   instance-unique-factorization-operation-function-class :
     (A : UU l1) (B : UU l2) → UU (l1 ⊔ l2 ⊔ lsuc l3 ⊔ lL ⊔ lR)
-  instance-unique-factorization-operation-function-class A B =
-    (f : A → B) → is-contr (function-class-factorization L R f)
+  instance-unique-factorization-operation-function-class A B = {!!}
 
   unique-factorization-operation-function-class :
     UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3 ⊔ lL ⊔ lR)
-  unique-factorization-operation-function-class =
-    {A : UU l1} {B : UU l2} →
-    instance-unique-factorization-operation-function-class A B
+  unique-factorization-operation-function-class = {!!}
 
   is-prop-unique-factorization-operation-function-class :
     is-prop unique-factorization-operation-function-class
-  is-prop-unique-factorization-operation-function-class =
-    is-prop-iterated-implicit-Π 2
-      ( λ A B → is-prop-Π (λ f → is-property-is-contr))
+  is-prop-unique-factorization-operation-function-class = {!!}
 
   unique-factorization-operation-function-class-Prop :
     Prop (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3 ⊔ lL ⊔ lR)
-  pr1 unique-factorization-operation-function-class-Prop =
-    unique-factorization-operation-function-class
-  pr2 unique-factorization-operation-function-class-Prop =
-    is-prop-unique-factorization-operation-function-class
+  pr1 unique-factorization-operation-function-class-Prop = {!!}
 
   factorization-operation-unique-factorization-operation-function-class :
     unique-factorization-operation-function-class →
     factorization-operation-function-class L R
-  factorization-operation-unique-factorization-operation-function-class F f =
-    center (F f)
+  factorization-operation-unique-factorization-operation-function-class F f = {!!}
 ```
 
 ### Mere factorization properties into function classes
@@ -125,30 +113,19 @@ module _
 
   instance-mere-factorization-property-function-class :
     (A : UU l1) (B : UU l2) → UU (l1 ⊔ l2 ⊔ lsuc l3 ⊔ lL ⊔ lR)
-  instance-mere-factorization-property-function-class A B =
-    (f : A → B) → is-inhabited (function-class-factorization L R f)
+  instance-mere-factorization-property-function-class A B = {!!}
 
   mere-factorization-property-function-class :
     UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3 ⊔ lL ⊔ lR)
-  mere-factorization-property-function-class =
-    {A : UU l1} {B : UU l2} →
-    instance-mere-factorization-property-function-class A B
+  mere-factorization-property-function-class = {!!}
 
   is-prop-mere-factorization-property-function-class :
     is-prop mere-factorization-property-function-class
-  is-prop-mere-factorization-property-function-class =
-    is-prop-iterated-implicit-Π 2
-      ( λ A B →
-        is-prop-Π
-          ( λ f →
-            is-property-is-inhabited (function-class-factorization L R f)))
+  is-prop-mere-factorization-property-function-class = {!!}
 
   mere-factorization-property-function-class-Prop :
     Prop (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3 ⊔ lL ⊔ lR)
-  pr1 mere-factorization-property-function-class-Prop =
-    mere-factorization-property-function-class
-  pr2 mere-factorization-property-function-class-Prop =
-    is-prop-mere-factorization-property-function-class
+  pr1 mere-factorization-property-function-class-Prop = {!!}
 ```
 
 ## References

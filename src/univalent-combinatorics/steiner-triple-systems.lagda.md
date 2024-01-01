@@ -20,5 +20,5 @@ open import univalent-combinatorics.steiner-systems
 
 ```agda
 Steiner-Triple-System : ℕ → UU (lsuc lzero)
-Steiner-Triple-System n = Steiner-System 2 3 n
+Steiner-Triple-System n = {!!}
 ```

@@ -44,19 +44,7 @@ module _
   where
 
   eulerian-circuit-Undirected-Graph : UU (lsuc lzero ⊔ l1 ⊔ l2)
-  eulerian-circuit-Undirected-Graph =
-    Σ ( ℕ)
-      ( λ k →
-        Σ ( Polygon k)
-          ( λ H →
-            Σ ( hom-Undirected-Graph (undirected-graph-Polygon k H) G)
-              ( λ f →
-                is-equiv
-                  ( tot
-                    ( edge-hom-Undirected-Graph
-                      ( undirected-graph-Polygon k H)
-                      ( G)
-                      ( f))))))
+  eulerian-circuit-Undirected-Graph = {!!}
 ```
 
 ## External links

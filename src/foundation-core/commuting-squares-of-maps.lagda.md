@@ -43,10 +43,10 @@ module _
   where
 
   coherence-square-maps : UU (l3 ⊔ l4)
-  coherence-square-maps = bottom ∘ left ~ right ∘ top
+  coherence-square-maps = {!!}
 
   coherence-square-maps' : UU (l3 ⊔ l4)
-  coherence-square-maps' = right ∘ top ~ bottom ∘ left
+  coherence-square-maps' = {!!}
 ```
 
 ## Properties
@@ -67,8 +67,7 @@ module _
     coherence-square-maps top-right mid right bottom-right →
     coherence-square-maps
       (top-right ∘ top-left) left right (bottom-right ∘ bottom-left)
-  pasting-horizontal-coherence-square-maps sq-left sq-right =
-    (bottom-right ·l sq-left) ∙h (sq-right ·r top-left)
+  pasting-horizontal-coherence-square-maps sq-left sq-right = {!!}
 
   pasting-horizontal-up-to-htpy-coherence-square-maps :
     {top : A → C} (H : coherence-triangle-maps top top-right top-left)
@@ -77,10 +76,7 @@ module _
     coherence-square-maps top-left left mid bottom-left →
     coherence-square-maps top-right mid right bottom-right →
     coherence-square-maps top left right bottom
-  pasting-horizontal-up-to-htpy-coherence-square-maps H K sq-left sq-right =
-    ( ( K ·r left) ∙h
-      ( pasting-horizontal-coherence-square-maps sq-left sq-right)) ∙h
-    ( inv-htpy (right ·l H))
+  pasting-horizontal-up-to-htpy-coherence-square-maps H K sq-left sq-right = {!!}
 ```
 
 ### Pasting commuting squares vertically
@@ -101,8 +97,7 @@ module _
     coherence-square-maps mid left-bottom right-bottom bottom →
     coherence-square-maps
       top (left-bottom ∘ left-top) (right-bottom ∘ right-top) bottom
-  pasting-vertical-coherence-square-maps sq-top sq-bottom =
-    (sq-bottom ·r left-top) ∙h (right-bottom ·l sq-top)
+  pasting-vertical-coherence-square-maps sq-top sq-bottom = {!!}
 
   pasting-vertical-up-to-htpy-coherence-square-maps :
     {left : A → C} (H : coherence-triangle-maps left left-bottom left-top)
@@ -110,10 +105,7 @@ module _
     coherence-square-maps top left-top right-top mid →
     coherence-square-maps mid left-bottom right-bottom bottom →
     coherence-square-maps top left right bottom
-  pasting-vertical-up-to-htpy-coherence-square-maps H K sq-top sq-bottom =
-    ( ( bottom ·l H) ∙h
-      ( pasting-vertical-coherence-square-maps sq-top sq-bottom)) ∙h
-    ( inv-htpy (K ·r top))
+  pasting-vertical-up-to-htpy-coherence-square-maps H K sq-top sq-bottom = {!!}
 ```
 
 ### Associativity of horizontal pasting
@@ -176,12 +168,7 @@ module _
       ( γ₁ ∘ β₁)
       ( α)
       ( pasting-horizontal-coherence-square-maps β₀ γ₀ g h i β₁ γ₁ β γ)
-  assoc-pasting-horizontal-coherence-square-maps a =
-    ( ap
-      ( _∙ _)
-      ( ( ap-concat γ₁ (ap β₁ (α a)) (β (α₀ a))) ∙
-        ( inv (ap (_∙ _) (ap-comp γ₁ β₁ (α a)))))) ∙
-    ( assoc (ap (γ₁ ∘ β₁) (α a)) (ap γ₁ (β (α₀ a))) (γ (β₀ (α₀ a))))
+  assoc-pasting-horizontal-coherence-square-maps a = {!!}
 ```
 
 ### The unit laws for horizontal pasting of commuting squares of maps
@@ -197,7 +184,7 @@ module _
 
   left-unit-law-pasting-horizontal-coherence-square-maps :
     pasting-horizontal-coherence-square-maps id i f f g id j refl-htpy α ~ α
-  left-unit-law-pasting-horizontal-coherence-square-maps = refl-htpy
+  left-unit-law-pasting-horizontal-coherence-square-maps = {!!}
 ```
 
 ### The right unit law
@@ -211,8 +198,7 @@ module _
 
   right-unit-law-pasting-horizontal-coherence-square-maps :
     pasting-horizontal-coherence-square-maps i id f g g j id α refl-htpy ~ α
-  right-unit-law-pasting-horizontal-coherence-square-maps a =
-    right-unit ∙ ap-id (α a)
+  right-unit-law-pasting-horizontal-coherence-square-maps a = {!!}
 ```
 
 ## See also

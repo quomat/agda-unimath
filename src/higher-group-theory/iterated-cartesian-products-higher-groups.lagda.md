@@ -47,11 +47,8 @@ recursively on `Fin n`.
 ```agda
 iterated-product-∞-Group :
   {l : Level} (n : ℕ) (G : Fin n → (∞-Group l)) → ∞-Group l
-iterated-product-∞-Group zero-ℕ G = trivial-∞-Group
-iterated-product-∞-Group (succ-ℕ n) G =
-  product-∞-Group
-    ( G (inr star))
-    ( iterated-product-∞-Group n (G ∘ inl))
+iterated-product-∞-Group zero-ℕ G = {!!}
+iterated-product-∞-Group (succ-ℕ n) G = {!!}
 
 module _
   {l : Level} (n : ℕ) (G : Fin n → ∞-Group l)
@@ -59,31 +56,23 @@ module _
 
   classifying-pointed-type-iterated-product-∞-Group :
     Pointed-Type l
-  classifying-pointed-type-iterated-product-∞-Group =
-    pr1 (iterated-product-∞-Group n G)
+  classifying-pointed-type-iterated-product-∞-Group = {!!}
 
   classifying-type-iterated-product-∞-Group : UU l
-  classifying-type-iterated-product-∞-Group =
-    type-Pointed-Type
-      classifying-pointed-type-iterated-product-∞-Group
+  classifying-type-iterated-product-∞-Group = {!!}
 
   shape-iterated-product-∞-Group :
     classifying-type-iterated-product-∞-Group
-  shape-iterated-product-∞-Group =
-    point-Pointed-Type
-      classifying-pointed-type-iterated-product-∞-Group
+  shape-iterated-product-∞-Group = {!!}
 
   is-0-connected-classifying-type-iterated-product-∞-Group :
     is-0-connected classifying-type-iterated-product-∞-Group
-  is-0-connected-classifying-type-iterated-product-∞-Group =
-    pr2 (iterated-product-∞-Group n G)
+  is-0-connected-classifying-type-iterated-product-∞-Group = {!!}
 
   mere-eq-classifying-type-iterated-product-∞-Group :
     (X Y : classifying-type-iterated-product-∞-Group) →
     mere-eq X Y
-  mere-eq-classifying-type-iterated-product-∞-Group =
-    mere-eq-is-0-connected
-      is-0-connected-classifying-type-iterated-product-∞-Group
+  mere-eq-classifying-type-iterated-product-∞-Group = {!!}
 
   elim-prop-classifying-type-iterated-product-∞-Group :
     {l2 : Level}
@@ -91,25 +80,19 @@ module _
     type-Prop (P shape-iterated-product-∞-Group) →
     ((X : classifying-type-iterated-product-∞-Group) →
     type-Prop (P X))
-  elim-prop-classifying-type-iterated-product-∞-Group =
-    apply-dependent-universal-property-is-0-connected
-      shape-iterated-product-∞-Group
-      is-0-connected-classifying-type-iterated-product-∞-Group
+  elim-prop-classifying-type-iterated-product-∞-Group = {!!}
 
   type-iterated-product-∞-Group : UU (l)
-  type-iterated-product-∞-Group =
-    type-Ω classifying-pointed-type-iterated-product-∞-Group
+  type-iterated-product-∞-Group = {!!}
 
   unit-iterated-product-∞-Group :
     type-iterated-product-∞-Group
-  unit-iterated-product-∞-Group =
-    refl-Ω classifying-pointed-type-iterated-product-∞-Group
+  unit-iterated-product-∞-Group = {!!}
 
   mul-iterated-product-∞-Group :
     (x y : type-iterated-product-∞-Group) →
     type-iterated-product-∞-Group
-  mul-iterated-product-∞-Group =
-    mul-Ω classifying-pointed-type-iterated-product-∞-Group
+  mul-iterated-product-∞-Group = {!!}
 
   assoc-mul-iterated-product-∞-Group :
     (x y z : type-iterated-product-∞-Group) →
@@ -120,9 +103,7 @@ module _
       ( mul-iterated-product-∞-Group
         ( x)
         ( mul-iterated-product-∞-Group y z))
-  assoc-mul-iterated-product-∞-Group =
-    associative-mul-Ω
-      classifying-pointed-type-iterated-product-∞-Group
+  assoc-mul-iterated-product-∞-Group = {!!}
 
   left-unit-law-mul-iterated-product-∞-Group :
     (x : type-iterated-product-∞-Group) →
@@ -131,9 +112,7 @@ module _
         ( unit-iterated-product-∞-Group)
         ( x))
       ( x)
-  left-unit-law-mul-iterated-product-∞-Group =
-    left-unit-law-mul-Ω
-      classifying-pointed-type-iterated-product-∞-Group
+  left-unit-law-mul-iterated-product-∞-Group = {!!}
 
   right-unit-law-mul-iterated-product-∞-Group :
     (y : type-iterated-product-∞-Group) →
@@ -142,9 +121,7 @@ module _
         ( y)
         ( unit-iterated-product-∞-Group))
       ( y)
-  right-unit-law-mul-iterated-product-∞-Group =
-    right-unit-law-mul-Ω
-      classifying-pointed-type-iterated-product-∞-Group
+  right-unit-law-mul-iterated-product-∞-Group = {!!}
 
   coherence-unit-laws-mul-iterated-product-∞-Group :
     Id
@@ -152,12 +129,11 @@ module _
           unit-iterated-product-∞-Group)
       ( right-unit-law-mul-iterated-product-∞-Group
           unit-iterated-product-∞-Group)
-  coherence-unit-laws-mul-iterated-product-∞-Group = refl
+  coherence-unit-laws-mul-iterated-product-∞-Group = {!!}
 
   inv-iterated-product-∞-Group :
     type-iterated-product-∞-Group → type-iterated-product-∞-Group
-  inv-iterated-product-∞-Group =
-    inv-Ω classifying-pointed-type-iterated-product-∞-Group
+  inv-iterated-product-∞-Group = {!!}
 
   left-inverse-law-mul-iterated-product-∞-Group :
     (x : type-iterated-product-∞-Group) →
@@ -166,9 +142,7 @@ module _
         ( inv-iterated-product-∞-Group x)
         ( x))
       ( unit-iterated-product-∞-Group)
-  left-inverse-law-mul-iterated-product-∞-Group =
-    left-inverse-law-mul-Ω
-      classifying-pointed-type-iterated-product-∞-Group
+  left-inverse-law-mul-iterated-product-∞-Group = {!!}
 
   right-inverse-law-mul-iterated-product-∞-Group :
     (x : type-iterated-product-∞-Group) →
@@ -177,9 +151,7 @@ module _
         ( x)
         ( inv-iterated-product-∞-Group x))
       ( unit-iterated-product-∞-Group)
-  right-inverse-law-mul-iterated-product-∞-Group =
-    right-inverse-law-mul-Ω
-      classifying-pointed-type-iterated-product-∞-Group
+  right-inverse-law-mul-iterated-product-∞-Group = {!!}
 ```
 
 ## Properties
@@ -191,18 +163,6 @@ equiv-type-∞-Group-iterated-product-∞-Group :
   {l : Level} (n : ℕ) (G : Fin n → ∞-Group l) →
   ( type-iterated-product-∞-Group n G) ≃
   ( iterated-product-Fin-recursive n (type-∞-Group ∘ G))
-equiv-type-∞-Group-iterated-product-∞-Group zero-ℕ G =
-  equiv-is-contr
-    ( is-proof-irrelevant-is-prop
-        ( is-set-is-contr is-contr-raise-unit raise-star raise-star) refl)
-    is-contr-raise-unit
-equiv-type-∞-Group-iterated-product-∞-Group (succ-ℕ n) G =
-  ( ( equiv-prod
-        ( id-equiv)
-        ( equiv-type-∞-Group-iterated-product-∞-Group
-            ( n)
-            (G ∘ inl))) ∘e
-    ( ( equiv-type-∞-Group-product-∞-Group
-          ( G (inr star))
-          ( iterated-product-∞-Group n (G ∘ inl)))))
+equiv-type-∞-Group-iterated-product-∞-Group zero-ℕ G = {!!}
+equiv-type-∞-Group-iterated-product-∞-Group (succ-ℕ n) G = {!!}
 ```

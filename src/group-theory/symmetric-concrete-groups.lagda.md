@@ -35,14 +35,13 @@ module _
   where
 
   classifying-type-symmetric-Concrete-Group : UU (lsuc l)
-  classifying-type-symmetric-Concrete-Group =
-    classifying-type-Automorphism-Group (Set-1-Type l) A
+  classifying-type-symmetric-Concrete-Group = {!!}
 
   shape-symmetric-Concrete-Group : classifying-type-symmetric-Concrete-Group
-  shape-symmetric-Concrete-Group = shape-Automorphism-Group (Set-1-Type l) A
+  shape-symmetric-Concrete-Group = {!!}
 
   symmetric-Concrete-Group : Concrete-Group (lsuc l)
-  symmetric-Concrete-Group = Automorphism-Group (Set-1-Type l) A
+  symmetric-Concrete-Group = {!!}
 ```
 
 ## Properties
@@ -56,35 +55,25 @@ module _
 
   equiv-classifying-type-symmetric-Concrete-Group :
     (X Y : classifying-type-symmetric-Concrete-Group A) → UU l
-  equiv-classifying-type-symmetric-Concrete-Group X Y =
-    type-equiv-Set (pr1 X) (pr1 Y)
+  equiv-classifying-type-symmetric-Concrete-Group X Y = {!!}
 
   type-symmetric-Concrete-Group : UU l
-  type-symmetric-Concrete-Group =
-    equiv-classifying-type-symmetric-Concrete-Group
-      ( shape-symmetric-Concrete-Group A)
-      ( shape-symmetric-Concrete-Group A)
+  type-symmetric-Concrete-Group = {!!}
 
   extensionality-classifying-type-symmetric-Concrete-Group :
     (X Y : classifying-type-symmetric-Concrete-Group A) →
     (X ＝ Y) ≃ equiv-classifying-type-symmetric-Concrete-Group X Y
-  extensionality-classifying-type-symmetric-Concrete-Group X =
-    extensionality-type-subtype
-      ( λ Y → mere-eq-Prop Y A)
-      ( pr2 X)
-      ( id-equiv)
-      ( extensionality-Set (pr1 X))
+  extensionality-classifying-type-symmetric-Concrete-Group X = {!!}
 
   equiv-eq-classifying-type-symmetric-Concrete-Group :
     (X Y : classifying-type-symmetric-Concrete-Group A) →
     (X ＝ Y) → equiv-classifying-type-symmetric-Concrete-Group X Y
-  equiv-eq-classifying-type-symmetric-Concrete-Group X Y =
-    map-equiv (extensionality-classifying-type-symmetric-Concrete-Group X Y)
+  equiv-eq-classifying-type-symmetric-Concrete-Group X Y = {!!}
 
   refl-equiv-eq-classifying-type-symmetric-Concrete-Group :
     (X : classifying-type-symmetric-Concrete-Group A) →
     equiv-eq-classifying-type-symmetric-Concrete-Group X X refl ＝ id-equiv
-  refl-equiv-eq-classifying-type-symmetric-Concrete-Group X = refl
+  refl-equiv-eq-classifying-type-symmetric-Concrete-Group X = {!!}
 
   preserves-mul-equiv-eq-classifying-type-symmetric-Concrete-Group :
     (X Y Z : classifying-type-symmetric-Concrete-Group A)
@@ -93,10 +82,7 @@ module _
     ( ( equiv-eq-classifying-type-symmetric-Concrete-Group Y Z q) ∘e
       ( equiv-eq-classifying-type-symmetric-Concrete-Group X Y p))
   preserves-mul-equiv-eq-classifying-type-symmetric-Concrete-Group
-    X .X Z q refl =
-    inv
-      ( right-unit-law-equiv
-        ( equiv-eq-classifying-type-symmetric-Concrete-Group X Z q))
+    X .X Z q refl = {!!}
 ```
 
 ### Equivalent sets have isomorphic symmetric concrete groups

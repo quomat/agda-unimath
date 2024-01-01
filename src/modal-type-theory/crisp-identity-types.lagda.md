@@ -28,10 +28,10 @@ ind-path-crisp :
   (C : (@♭ y : A) (p : a ＝ y) → UU l2) →
   C a refl →
   (@♭ y : A) (@♭ p : a ＝ y) → C y p
-ind-path-crisp C b _ refl = b
+ind-path-crisp C b _ refl = {!!}
 
 ap-crisp :
   {@♭ l1 : Level} {l2 : Level} {@♭ A : UU l1} {B : UU l2} {@♭ x y : A}
   (f : (@♭ x : A) → B) → @♭ (x ＝ y) → (f x) ＝ (f y)
-ap-crisp f refl = refl
+ap-crisp f refl = {!!}
 ```

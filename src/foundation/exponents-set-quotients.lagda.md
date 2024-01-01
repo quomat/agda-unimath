@@ -41,7 +41,7 @@ set quotient
   (X → A) / ~
 ```
 
-where `f ~ g := (x : A) → R (f x) (g x)`, embeds into the type `X → A/R`. This
+where `f ~ g := {!!}
 embedding for every `X`, `A`, and `R` if and only if the axiom of choice holds.
 
 Consequently, we get embeddings
@@ -62,43 +62,33 @@ module _
   where
 
   rel-function-type : Relation-Prop (l1 ⊔ l3) (X → A)
-  rel-function-type f g =
-    Π-Prop X (λ x → prop-equivalence-relation R (f x) (g x))
+  rel-function-type f g = {!!}
 
   sim-function-type : (f g : X → A) → UU (l1 ⊔ l3)
-  sim-function-type = type-Relation-Prop rel-function-type
+  sim-function-type = {!!}
 
   refl-sim-function-type : is-reflexive sim-function-type
-  refl-sim-function-type f x = refl-equivalence-relation R (f x)
+  refl-sim-function-type f x = {!!}
 
   symmetric-sim-function-type : is-symmetric sim-function-type
-  symmetric-sim-function-type f g r x =
-    symmetric-equivalence-relation R (f x) (g x) (r x)
+  symmetric-sim-function-type f g r x = {!!}
 
   transitive-sim-function-type : is-transitive sim-function-type
-  transitive-sim-function-type f g h r s x =
-    transitive-equivalence-relation R (f x) (g x) (h x) (r x) (s x)
+  transitive-sim-function-type f g h r s x = {!!}
 
   equivalence-relation-function-type : equivalence-relation (l1 ⊔ l3) (X → A)
-  pr1 equivalence-relation-function-type = rel-function-type
-  pr1 (pr2 equivalence-relation-function-type) = refl-sim-function-type
-  pr1 (pr2 (pr2 equivalence-relation-function-type)) =
-    symmetric-sim-function-type
-  pr2 (pr2 (pr2 equivalence-relation-function-type)) =
-    transitive-sim-function-type
+  pr1 equivalence-relation-function-type = {!!}
 
   map-exponent-reflecting-map-equivalence-relation :
     {l4 : Level} {B : UU l4} →
     reflecting-map-equivalence-relation R B → (X → A) → (X → B)
-  map-exponent-reflecting-map-equivalence-relation q =
-    postcomp X (map-reflecting-map-equivalence-relation R q)
+  map-exponent-reflecting-map-equivalence-relation q = {!!}
 
   reflects-exponent-reflecting-map-equivalence-relation :
     {l4 : Level} {B : UU l4} (q : reflecting-map-equivalence-relation R B) →
     reflects-equivalence-relation equivalence-relation-function-type
       ( map-exponent-reflecting-map-equivalence-relation q)
-  reflects-exponent-reflecting-map-equivalence-relation q {f} {g} H =
-    eq-htpy (λ x → reflects-map-reflecting-map-equivalence-relation R q (H x))
+  reflects-exponent-reflecting-map-equivalence-relation q {f} {g} H = {!!}
 
   exponent-reflecting-map-equivalence-relation :
     {l4 : Level} {B : UU l4} →
@@ -106,10 +96,7 @@ module _
     reflecting-map-equivalence-relation
       ( equivalence-relation-function-type)
       ( X → B)
-  pr1 (exponent-reflecting-map-equivalence-relation q) =
-    map-exponent-reflecting-map-equivalence-relation q
-  pr2 (exponent-reflecting-map-equivalence-relation q) =
-    reflects-exponent-reflecting-map-equivalence-relation q
+  pr1 (exponent-reflecting-map-equivalence-relation q) = {!!}
 
   module _
     {l4 l5 : Level}
@@ -133,25 +120,11 @@ module _
                 ( q))
               ~
               ( map-exponent-reflecting-map-equivalence-relation qR)))
-    unique-inclusion-is-set-quotient-equivalence-relation-function-type =
-      universal-property-set-quotient-is-set-quotient
-        ( equivalence-relation-function-type)
-        ( Q)
-        ( q)
-        ( Uq)
-        ( function-Set X QR)
-        ( exponent-reflecting-map-equivalence-relation qR)
+    unique-inclusion-is-set-quotient-equivalence-relation-function-type = {!!}
 
     map-inclusion-is-set-quotient-equivalence-relation-function-type :
       type-Set Q → (X → type-Set QR)
-    map-inclusion-is-set-quotient-equivalence-relation-function-type =
-      map-universal-property-set-quotient-is-set-quotient
-        ( equivalence-relation-function-type)
-        ( Q)
-        ( q)
-        ( Uq)
-        ( function-Set X QR)
-        ( exponent-reflecting-map-equivalence-relation qR)
+    map-inclusion-is-set-quotient-equivalence-relation-function-type = {!!}
 
     triangle-inclusion-is-set-quotient-equivalence-relation-function-type :
       ( ( map-inclusion-is-set-quotient-equivalence-relation-function-type) ∘
@@ -159,14 +132,7 @@ module _
           ( equivalence-relation-function-type)
           ( q))) ~
       ( map-exponent-reflecting-map-equivalence-relation qR)
-    triangle-inclusion-is-set-quotient-equivalence-relation-function-type =
-      triangle-universal-property-set-quotient-is-set-quotient
-        ( equivalence-relation-function-type)
-        ( Q)
-        ( q)
-        ( Uq)
-        ( function-Set X QR)
-        ( exponent-reflecting-map-equivalence-relation qR)
+    triangle-inclusion-is-set-quotient-equivalence-relation-function-type = {!!}
 ```
 
 ### An equivalence relation on relation preserving maps
@@ -180,47 +146,26 @@ module _
 
   rel-hom-equivalence-relation :
     Relation-Prop (l1 ⊔ l4) (hom-equivalence-relation R S)
-  rel-hom-equivalence-relation f g =
-    rel-function-type A S
-      ( map-hom-equivalence-relation R S f)
-      ( map-hom-equivalence-relation R S g)
+  rel-hom-equivalence-relation f g = {!!}
 
   sim-hom-equivalence-relation :
     (f g : hom-equivalence-relation R S) → UU (l1 ⊔ l4)
-  sim-hom-equivalence-relation f g =
-    sim-function-type A S
-      ( map-hom-equivalence-relation R S f)
-      ( map-hom-equivalence-relation R S g)
+  sim-hom-equivalence-relation f g = {!!}
 
   refl-sim-hom-equivalence-relation : is-reflexive sim-hom-equivalence-relation
-  refl-sim-hom-equivalence-relation f =
-    refl-sim-function-type A S (map-hom-equivalence-relation R S f)
+  refl-sim-hom-equivalence-relation f = {!!}
 
   symmetric-sim-hom-equivalence-relation :
     is-symmetric sim-hom-equivalence-relation
-  symmetric-sim-hom-equivalence-relation f g =
-    symmetric-sim-function-type A S
-      ( map-hom-equivalence-relation R S f)
-      ( map-hom-equivalence-relation R S g)
+  symmetric-sim-hom-equivalence-relation f g = {!!}
 
   transitive-sim-hom-equivalence-relation :
     is-transitive sim-hom-equivalence-relation
-  transitive-sim-hom-equivalence-relation f g h =
-    transitive-sim-function-type A S
-      ( map-hom-equivalence-relation R S f)
-      ( map-hom-equivalence-relation R S g)
-      ( map-hom-equivalence-relation R S h)
+  transitive-sim-hom-equivalence-relation f g h = {!!}
 
   equivalence-relation-hom-equivalence-relation :
     equivalence-relation (l1 ⊔ l4) (hom-equivalence-relation R S)
-  pr1 equivalence-relation-hom-equivalence-relation =
-    rel-hom-equivalence-relation
-  pr1 (pr2 equivalence-relation-hom-equivalence-relation) =
-    refl-sim-hom-equivalence-relation
-  pr1 (pr2 (pr2 equivalence-relation-hom-equivalence-relation)) =
-    symmetric-sim-hom-equivalence-relation
-  pr2 (pr2 (pr2 equivalence-relation-hom-equivalence-relation)) =
-    transitive-sim-hom-equivalence-relation
+  pr1 equivalence-relation-hom-equivalence-relation = {!!}
 ```
 
 ### The universal reflecting map from `hom-equivalence-relation R S` to `A/R → B/S`
@@ -240,35 +185,19 @@ module _
 
   universal-map-is-set-quotient-hom-equivalence-relation :
     hom-equivalence-relation R S → hom-Set QR QS
-  universal-map-is-set-quotient-hom-equivalence-relation =
-    map-is-set-quotient R QR qR S QS qS UqR UqS
+  universal-map-is-set-quotient-hom-equivalence-relation = {!!}
 
   reflects-universal-map-is-set-quotient-hom-equivalence-relation :
     reflects-equivalence-relation
       ( equivalence-relation-hom-equivalence-relation R S)
       ( universal-map-is-set-quotient-hom-equivalence-relation)
-  reflects-universal-map-is-set-quotient-hom-equivalence-relation {f} {g} s =
-    eq-htpy
-      ( ind-is-set-quotient R QR qR UqR
-        ( λ x →
-          Id-Prop QS
-            ( map-is-set-quotient R QR qR S QS qS UqR UqS f x)
-            ( map-is-set-quotient R QR qR S QS qS UqR UqS g x))
-        ( λ a →
-          ( coherence-square-map-is-set-quotient R QR qR S QS qS UqR UqS f a) ∙
-          ( apply-effectiveness-is-set-quotient' S QS qS UqS (s a)) ∙
-          ( inv
-            ( coherence-square-map-is-set-quotient
-              R QR qR S QS qS UqR UqS g a))))
+  reflects-universal-map-is-set-quotient-hom-equivalence-relation {f} {g} s = {!!}
 
   universal-reflecting-map-is-set-quotient-hom-equivalence-relation :
     reflecting-map-equivalence-relation
       ( equivalence-relation-hom-equivalence-relation R S)
       ( hom-Set QR QS)
-  pr1 universal-reflecting-map-is-set-quotient-hom-equivalence-relation =
-    universal-map-is-set-quotient-hom-equivalence-relation
-  pr2 universal-reflecting-map-is-set-quotient-hom-equivalence-relation =
-    reflects-universal-map-is-set-quotient-hom-equivalence-relation
+  pr1 universal-reflecting-map-is-set-quotient-hom-equivalence-relation = {!!}
 ```
 
 #### Second variant using the designated set quotients
@@ -284,32 +213,17 @@ module _
     reflecting-map-equivalence-relation
       ( equivalence-relation-hom-equivalence-relation R S)
       ( set-quotient R → set-quotient S)
-  universal-reflecting-map-set-quotient-hom-equivalence-relation =
-    universal-reflecting-map-is-set-quotient-hom-equivalence-relation
-      ( R)
-      ( quotient-Set R)
-      ( reflecting-map-quotient-map R)
-      ( λ {l} → is-set-quotient-set-quotient R {l})
-      ( S)
-      ( quotient-Set S)
-      ( reflecting-map-quotient-map S)
-      ( λ {l} → is-set-quotient-set-quotient S {l})
+  universal-reflecting-map-set-quotient-hom-equivalence-relation = {!!}
 
   universal-map-set-quotient-hom-equivalence-relation :
     hom-equivalence-relation R S → set-quotient R → set-quotient S
-  universal-map-set-quotient-hom-equivalence-relation =
-    map-reflecting-map-equivalence-relation
-      ( equivalence-relation-hom-equivalence-relation R S)
-      ( universal-reflecting-map-set-quotient-hom-equivalence-relation)
+  universal-map-set-quotient-hom-equivalence-relation = {!!}
 
   reflects-universal-map-set-quotient-hom-equivalence-relation :
     reflects-equivalence-relation
       ( equivalence-relation-hom-equivalence-relation R S)
       ( universal-map-set-quotient-hom-equivalence-relation)
-  reflects-universal-map-set-quotient-hom-equivalence-relation =
-    reflects-map-reflecting-map-equivalence-relation
-      ( equivalence-relation-hom-equivalence-relation R S)
-      ( universal-reflecting-map-set-quotient-hom-equivalence-relation)
+  reflects-universal-map-set-quotient-hom-equivalence-relation = {!!}
 ```
 
 ## Properties
@@ -334,16 +248,7 @@ module _
     is-emb
       ( map-inclusion-is-set-quotient-equivalence-relation-function-type
         X R Q q Uq QR qR UqR)
-  is-emb-inclusion-is-set-quotient-equivalence-relation-function-type =
-    is-emb-map-universal-property-set-quotient-is-set-quotient
-      ( equivalence-relation-function-type X R)
-      ( Q)
-      ( q)
-      ( Uq)
-      ( function-Set X QR)
-      ( exponent-reflecting-map-equivalence-relation X R qR)
-      ( λ g h p x →
-        apply-effectiveness-is-set-quotient R QR qR UqR (htpy-eq p x))
+  is-emb-inclusion-is-set-quotient-equivalence-relation-function-type = {!!}
 ```
 
 ### The extension of the universal map from `hom-equivalence-relation R S` to `A/R → B/S` to the quotient is an embedding
@@ -378,20 +283,11 @@ module _
                 ( qH)) ~
             ( universal-map-is-set-quotient-hom-equivalence-relation
                 R QR qR UR S QS qS US)))
-  unique-inclusion-is-set-quotient-hom-equivalence-relation =
-    universal-property-set-quotient-is-set-quotient
-      ( equivalence-relation-hom-equivalence-relation R S)
-      ( QH)
-      ( qH)
-      ( UH)
-      ( hom-set-Set QR QS)
-      ( universal-reflecting-map-is-set-quotient-hom-equivalence-relation
-        R QR qR UR S QS qS US)
+  unique-inclusion-is-set-quotient-hom-equivalence-relation = {!!}
 
   inclusion-is-set-quotient-hom-equivalence-relation :
     hom-Set QH (hom-set-Set QR QS)
-  inclusion-is-set-quotient-hom-equivalence-relation =
-    pr1 (center (unique-inclusion-is-set-quotient-hom-equivalence-relation))
+  inclusion-is-set-quotient-hom-equivalence-relation = {!!}
 
   triangle-inclusion-is-set-quotient-hom-equivalence-relation :
     ( inclusion-is-set-quotient-hom-equivalence-relation ∘
@@ -400,35 +296,15 @@ module _
         ( qH)) ~
     ( universal-map-is-set-quotient-hom-equivalence-relation
         R QR qR UR S QS qS US)
-  triangle-inclusion-is-set-quotient-hom-equivalence-relation =
-    pr2 (center (unique-inclusion-is-set-quotient-hom-equivalence-relation))
+  triangle-inclusion-is-set-quotient-hom-equivalence-relation = {!!}
 
   is-emb-inclusion-is-set-quotient-hom-equivalence-relation :
     is-emb inclusion-is-set-quotient-hom-equivalence-relation
-  is-emb-inclusion-is-set-quotient-hom-equivalence-relation =
-    is-emb-map-universal-property-set-quotient-is-set-quotient
-      ( equivalence-relation-hom-equivalence-relation R S)
-      ( QH)
-      ( qH)
-      ( UH)
-      ( hom-set-Set QR QS)
-      ( universal-reflecting-map-is-set-quotient-hom-equivalence-relation
-        R QR qR UR S QS qS US)
-      ( λ g h p a →
-        apply-effectiveness-is-set-quotient S QS qS US
-          ( ( inv-htpy
-              ( coherence-square-map-is-set-quotient R QR qR S QS qS UR US g) ∙h
-              ( ( htpy-eq p ·r map-reflecting-map-equivalence-relation R qR) ∙h
-                ( coherence-square-map-is-set-quotient
-                  R QR qR S QS qS UR US h)))
-            ( a)))
+  is-emb-inclusion-is-set-quotient-hom-equivalence-relation = {!!}
 
   emb-inclusion-is-set-quotient-hom-equivalence-relation :
     type-Set QH ↪ hom-Set QR QS
-  pr1 emb-inclusion-is-set-quotient-hom-equivalence-relation =
-    inclusion-is-set-quotient-hom-equivalence-relation
-  pr2 emb-inclusion-is-set-quotient-hom-equivalence-relation =
-    is-emb-inclusion-is-set-quotient-hom-equivalence-relation
+  pr1 emb-inclusion-is-set-quotient-hom-equivalence-relation = {!!}
 ```
 
 #### Second variant using the official set quotients
@@ -441,39 +317,31 @@ module _
   where
 
   quotient-hom-equivalence-relation-Set : Set (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  quotient-hom-equivalence-relation-Set =
-    quotient-Set (equivalence-relation-hom-equivalence-relation R S)
+  quotient-hom-equivalence-relation-Set = {!!}
 
   set-quotient-hom-equivalence-relation : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  set-quotient-hom-equivalence-relation =
-    type-Set quotient-hom-equivalence-relation-Set
+  set-quotient-hom-equivalence-relation = {!!}
 
   is-set-set-quotient-hom-equivalence-relation :
     is-set set-quotient-hom-equivalence-relation
-  is-set-set-quotient-hom-equivalence-relation =
-    is-set-type-Set quotient-hom-equivalence-relation-Set
+  is-set-set-quotient-hom-equivalence-relation = {!!}
 
   reflecting-map-quotient-map-hom-equivalence-relation :
     reflecting-map-equivalence-relation
       ( equivalence-relation-hom-equivalence-relation R S)
       ( set-quotient-hom-equivalence-relation)
-  reflecting-map-quotient-map-hom-equivalence-relation =
-    reflecting-map-quotient-map
-      ( equivalence-relation-hom-equivalence-relation R S)
+  reflecting-map-quotient-map-hom-equivalence-relation = {!!}
 
   quotient-map-hom-equivalence-relation :
     hom-equivalence-relation R S → set-quotient-hom-equivalence-relation
-  quotient-map-hom-equivalence-relation =
-    quotient-map (equivalence-relation-hom-equivalence-relation R S)
+  quotient-map-hom-equivalence-relation = {!!}
 
   is-set-quotient-set-quotient-hom-equivalence-relation :
     is-set-quotient
       ( equivalence-relation-hom-equivalence-relation R S)
       ( quotient-hom-equivalence-relation-Set)
       ( reflecting-map-quotient-map-hom-equivalence-relation)
-  is-set-quotient-set-quotient-hom-equivalence-relation =
-    is-set-quotient-set-quotient
-      ( equivalence-relation-hom-equivalence-relation R S)
+  is-set-quotient-set-quotient-hom-equivalence-relation = {!!}
 
   unique-inclusion-set-quotient-hom-equivalence-relation :
     is-contr
@@ -483,52 +351,25 @@ module _
             μ ∘
             quotient-map (equivalence-relation-hom-equivalence-relation R S) ~
             universal-map-set-quotient-hom-equivalence-relation R S))
-  unique-inclusion-set-quotient-hom-equivalence-relation =
-    universal-property-set-quotient-is-set-quotient
-      ( equivalence-relation-hom-equivalence-relation R S)
-      ( quotient-hom-equivalence-relation-Set)
-      ( reflecting-map-quotient-map-hom-equivalence-relation)
-      ( is-set-quotient-set-quotient-hom-equivalence-relation)
-      ( hom-set-Set (quotient-Set R) (quotient-Set S))
-      ( universal-reflecting-map-set-quotient-hom-equivalence-relation R S)
+  unique-inclusion-set-quotient-hom-equivalence-relation = {!!}
 
   inclusion-set-quotient-hom-equivalence-relation :
     set-quotient (equivalence-relation-hom-equivalence-relation R S) →
     set-quotient R → set-quotient S
-  inclusion-set-quotient-hom-equivalence-relation =
-    pr1 (center (unique-inclusion-set-quotient-hom-equivalence-relation))
+  inclusion-set-quotient-hom-equivalence-relation = {!!}
 
   triangle-inclusion-set-quotient-hom-equivalence-relation :
     ( inclusion-set-quotient-hom-equivalence-relation ∘
       quotient-map (equivalence-relation-hom-equivalence-relation R S)) ~
     ( universal-map-set-quotient-hom-equivalence-relation R S)
-  triangle-inclusion-set-quotient-hom-equivalence-relation =
-    pr2 (center (unique-inclusion-set-quotient-hom-equivalence-relation))
+  triangle-inclusion-set-quotient-hom-equivalence-relation = {!!}
 
   is-emb-inclusion-set-quotient-hom-equivalence-relation :
     is-emb inclusion-set-quotient-hom-equivalence-relation
-  is-emb-inclusion-set-quotient-hom-equivalence-relation =
-    is-emb-map-universal-property-set-quotient-is-set-quotient
-      ( equivalence-relation-hom-equivalence-relation R S)
-      ( quotient-hom-equivalence-relation-Set)
-      ( reflecting-map-quotient-map-hom-equivalence-relation)
-      ( is-set-quotient-set-quotient-hom-equivalence-relation)
-      ( hom-set-Set (quotient-Set R) (quotient-Set S))
-      ( universal-reflecting-map-set-quotient-hom-equivalence-relation R S)
-      ( λ g h p a →
-        apply-effectiveness-quotient-map S
-          ( ( inv-htpy
-              ( coherence-square-map-set-quotient R S g) ∙h
-              ( ( htpy-eq p ·r quotient-map R) ∙h
-                ( coherence-square-map-set-quotient
-                  R S h)))
-            ( a)))
+  is-emb-inclusion-set-quotient-hom-equivalence-relation = {!!}
 
   emb-inclusion-set-quotient-hom-equivalence-relation :
     set-quotient (equivalence-relation-hom-equivalence-relation R S) ↪
     ( set-quotient R → set-quotient S)
-  pr1 emb-inclusion-set-quotient-hom-equivalence-relation =
-    inclusion-set-quotient-hom-equivalence-relation
-  pr2 emb-inclusion-set-quotient-hom-equivalence-relation =
-    is-emb-inclusion-set-quotient-hom-equivalence-relation
+  pr1 emb-inclusion-set-quotient-hom-equivalence-relation = {!!}
 ```

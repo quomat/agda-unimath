@@ -36,8 +36,7 @@ module _
   where
 
   cycle-Undirected-Graph : UU (lsuc lzero ⊔ l1 ⊔ l2)
-  cycle-Undirected-Graph =
-    Σ (Polygon k) (λ H → emb-Undirected-Graph (undirected-graph-Polygon k H) G)
+  cycle-Undirected-Graph = {!!}
 ```
 
 ## External links

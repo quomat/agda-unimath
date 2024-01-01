@@ -49,16 +49,7 @@ module _
   multivariable-map-set-quotient :
     ( h : hom-equivalence-relation (all-sim-equivalence-relation n A R) S) →
     set-quotient-vector n A R → set-quotient S
-  multivariable-map-set-quotient =
-    map-is-set-quotient
-      ( all-sim-equivalence-relation n A R)
-      ( set-quotient-vector-Set n A R)
-      ( reflecting-map-quotient-vector-map n A R)
-      ( S)
-      ( quotient-Set S)
-      ( reflecting-map-quotient-map S)
-      ( is-set-quotient-vector-set-quotient n A R)
-      ( is-set-quotient-set-quotient S)
+  multivariable-map-set-quotient = {!!}
 
   compute-multivariable-map-set-quotient :
     ( h : hom-equivalence-relation (all-sim-equivalence-relation n A R) S) →
@@ -66,14 +57,5 @@ module _
       quotient-vector-map n A R) ~
     ( quotient-map S ∘
       map-hom-equivalence-relation (all-sim-equivalence-relation n A R) S h)
-  compute-multivariable-map-set-quotient =
-    coherence-square-map-is-set-quotient
-      ( all-sim-equivalence-relation n A R)
-      ( set-quotient-vector-Set n A R)
-      ( reflecting-map-quotient-vector-map n A R)
-      ( S)
-      ( quotient-Set S)
-      ( reflecting-map-quotient-map S)
-      ( is-set-quotient-vector-set-quotient n A R)
-      ( is-set-quotient-set-quotient S)
+  compute-multivariable-map-set-quotient = {!!}
 ```

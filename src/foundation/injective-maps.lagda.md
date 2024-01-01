@@ -38,7 +38,7 @@ module _
   where
 
   is-not-injective : (A → B) → UU (l1 ⊔ l2)
-  is-not-injective f = ¬ (is-injective f)
+  is-not-injective f = {!!}
 ```
 
 ### Any map out of an empty type is injective
@@ -47,5 +47,5 @@ module _
 is-injective-is-empty :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
   is-empty A → is-injective f
-is-injective-is-empty f is-empty-A {x} = ex-falso (is-empty-A x)
+is-injective-is-empty f is-empty-A {x} = {!!}
 ```

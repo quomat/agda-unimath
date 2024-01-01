@@ -31,16 +31,14 @@ module _
   where
 
   is-central-element-ring-Prop : type-Ring R → Prop l
-  is-central-element-ring-Prop =
-    is-central-element-semiring-Prop (semiring-Ring R)
+  is-central-element-ring-Prop = {!!}
 
   is-central-element-Ring : type-Ring R → UU l
-  is-central-element-Ring = is-central-element-Semiring (semiring-Ring R)
+  is-central-element-Ring = {!!}
 
   is-prop-is-central-element-Ring :
     (x : type-Ring R) → is-prop (is-central-element-Ring x)
-  is-prop-is-central-element-Ring =
-    is-prop-is-central-element-Semiring (semiring-Ring R)
+  is-prop-is-central-element-Ring = {!!}
 ```
 
 ## Properties
@@ -53,8 +51,7 @@ module _
   where
 
   is-central-element-zero-Ring : is-central-element-Ring R (zero-Ring R)
-  is-central-element-zero-Ring =
-    is-central-element-zero-Semiring (semiring-Ring R)
+  is-central-element-zero-Ring = {!!}
 ```
 
 ### The unit element is central
@@ -65,8 +62,7 @@ module _
   where
 
   is-central-element-one-Ring : is-central-element-Ring R (one-Ring R)
-  is-central-element-one-Ring =
-    is-central-element-one-Semiring (semiring-Ring R)
+  is-central-element-one-Ring = {!!}
 ```
 
 ### The sum of two central elements is central
@@ -79,8 +75,7 @@ module _
   is-central-element-add-Ring :
     (x y : type-Ring R) → is-central-element-Ring R x →
     is-central-element-Ring R y → is-central-element-Ring R (add-Ring R x y)
-  is-central-element-add-Ring =
-    is-central-element-add-Semiring (semiring-Ring R)
+  is-central-element-add-Ring = {!!}
 ```
 
 ### The negative of a central element is central
@@ -93,10 +88,7 @@ module _
   is-central-element-neg-Ring :
     (x : type-Ring R) → is-central-element-Ring R x →
     is-central-element-Ring R (neg-Ring R x)
-  is-central-element-neg-Ring x H y =
-    ( left-negative-law-mul-Ring R x y) ∙
-    ( ( ap (neg-Ring R) (H y)) ∙
-      ( inv (right-negative-law-mul-Ring R y x)))
+  is-central-element-neg-Ring x H y = {!!}
 ```
 
 ### `-1` is a central element
@@ -108,8 +100,7 @@ module _
 
   is-central-element-neg-one-Ring :
     is-central-element-Ring R (neg-one-Ring R)
-  is-central-element-neg-one-Ring =
-    is-central-element-neg-Ring R (one-Ring R) (is-central-element-one-Ring R)
+  is-central-element-neg-one-Ring = {!!}
 ```
 
 ### The product of two central elements is central
@@ -122,6 +113,5 @@ module _
   is-central-element-mul-Ring :
     (x y : type-Ring R) → is-central-element-Ring R x →
     is-central-element-Ring R y → is-central-element-Ring R (mul-Ring R x y)
-  is-central-element-mul-Ring =
-    is-central-element-mul-Semiring (semiring-Ring R)
+  is-central-element-mul-Ring = {!!}
 ```

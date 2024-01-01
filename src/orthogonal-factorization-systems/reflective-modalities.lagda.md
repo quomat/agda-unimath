@@ -30,12 +30,10 @@ types is
 ```agda
 is-reflective-modality :
   {l : Level} {○ : operator-modality l l} → unit-modality ○ → UU (lsuc l)
-is-reflective-modality unit-○ =
-  is-reflective-subuniverse (modal-type-subuniverse unit-○)
+is-reflective-modality unit-○ = {!!}
 
 reflective-modality : (l : Level) → UU (lsuc l)
-reflective-modality l =
-  Σ (operator-modality l l) (λ ○ → Σ (unit-modality ○) (is-reflective-modality))
+reflective-modality l = {!!}
 ```
 
 ## See also

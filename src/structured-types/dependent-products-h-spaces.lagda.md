@@ -36,37 +36,30 @@ module _
   where
 
   pointed-type-Π-H-Space : Pointed-Type (l1 ⊔ l2)
-  pointed-type-Π-H-Space =
-    Π-Pointed-Type I (λ x → pointed-type-H-Space (M x))
+  pointed-type-Π-H-Space = {!!}
 
   type-Π-H-Space : UU (l1 ⊔ l2)
-  type-Π-H-Space = type-Pointed-Type pointed-type-Π-H-Space
+  type-Π-H-Space = {!!}
 
   unit-Π-H-Space : type-Π-H-Space
-  unit-Π-H-Space = point-Pointed-Type (pointed-type-Π-H-Space)
+  unit-Π-H-Space = {!!}
 
   mul-Π-H-Space :
     type-Π-H-Space → type-Π-H-Space → type-Π-H-Space
-  mul-Π-H-Space f g i = mul-H-Space (M i) (f i) (g i)
+  mul-Π-H-Space f g i = {!!}
 
   left-unit-law-mul-Π-H-Space :
     (f : type-Π-H-Space) →
     mul-Π-H-Space unit-Π-H-Space f ＝ f
-  left-unit-law-mul-Π-H-Space f =
-    eq-htpy (λ i → left-unit-law-mul-H-Space (M i) (f i))
+  left-unit-law-mul-Π-H-Space f = {!!}
 
   right-unit-law-mul-Π-H-Space :
     (f : type-Π-H-Space) →
     mul-Π-H-Space f unit-Π-H-Space ＝ f
-  right-unit-law-mul-Π-H-Space f =
-    eq-htpy (λ i → right-unit-law-mul-H-Space (M i) (f i))
+  right-unit-law-mul-Π-H-Space f = {!!}
 
   is-unital-mul-Π-H-Space : is-unital mul-Π-H-Space
-  pr1 is-unital-mul-Π-H-Space = unit-Π-H-Space
-  pr1 (pr2 is-unital-mul-Π-H-Space) =
-    left-unit-law-mul-Π-H-Space
-  pr2 (pr2 is-unital-mul-Π-H-Space) =
-    right-unit-law-mul-Π-H-Space
+  pr1 is-unital-mul-Π-H-Space = {!!}
 
   coh-unit-laws-mul-Π-H-Space :
     coh-unit-laws
@@ -74,31 +67,22 @@ module _
       ( unit-Π-H-Space)
       ( left-unit-law-mul-Π-H-Space)
       ( right-unit-law-mul-Π-H-Space)
-  coh-unit-laws-mul-Π-H-Space =
-    ap eq-htpy (eq-htpy (λ i → coh-unit-laws-mul-H-Space (M i)))
+  coh-unit-laws-mul-Π-H-Space = {!!}
 
   coherent-unit-laws-mul-Π-H-Space :
     coherent-unit-laws mul-Π-H-Space unit-Π-H-Space
-  pr1 coherent-unit-laws-mul-Π-H-Space =
-    left-unit-law-mul-Π-H-Space
-  pr1 (pr2 coherent-unit-laws-mul-Π-H-Space) =
-    right-unit-law-mul-Π-H-Space
-  pr2 (pr2 coherent-unit-laws-mul-Π-H-Space) =
-    coh-unit-laws-mul-Π-H-Space
+  pr1 coherent-unit-laws-mul-Π-H-Space = {!!}
+  pr1 (pr2 coherent-unit-laws-mul-Π-H-Space) = {!!}
+  pr2 (pr2 coherent-unit-laws-mul-Π-H-Space) = {!!}
 
   is-coherently-unital-mul-Π-H-Space :
     is-coherently-unital mul-Π-H-Space
-  pr1 is-coherently-unital-mul-Π-H-Space = unit-Π-H-Space
-  pr2 is-coherently-unital-mul-Π-H-Space =
-    coherent-unit-laws-mul-Π-H-Space
+  pr1 is-coherently-unital-mul-Π-H-Space = {!!}
 
   coherent-unital-mul-Π-H-Space :
     coherent-unital-mul-Pointed-Type pointed-type-Π-H-Space
-  pr1 coherent-unital-mul-Π-H-Space = mul-Π-H-Space
-  pr2 coherent-unital-mul-Π-H-Space =
-    coherent-unit-laws-mul-Π-H-Space
+  pr1 coherent-unital-mul-Π-H-Space = {!!}
 
   Π-H-Space : H-Space (l1 ⊔ l2)
-  pr1 Π-H-Space = pointed-type-Π-H-Space
-  pr2 Π-H-Space = coherent-unital-mul-Π-H-Space
+  pr1 Π-H-Space = {!!}
 ```

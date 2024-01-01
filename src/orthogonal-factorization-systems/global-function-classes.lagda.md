@@ -49,15 +49,11 @@ module _
 
   is-closed-under-equiv-precomp-function-classes :
     (l1 l2 l3 : Level) → UU (β l1 l2 ⊔ β l3 l2 ⊔ lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  is-closed-under-equiv-precomp-function-classes l1 l2 l3 =
-    {A : UU l1} {B : UU l2} {C : UU l3} (f : A → B) → is-in-subtype P f →
-    (e : C ≃ A) → is-in-subtype P (f ∘ map-equiv e)
+  is-closed-under-equiv-precomp-function-classes l1 l2 l3 = {!!}
 
   is-closed-under-equiv-postcomp-function-classes :
     (l1 l2 l3 : Level) → UU (β l1 l2 ⊔ β l3 l2 ⊔ lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  is-closed-under-equiv-postcomp-function-classes l1 l2 l3 =
-    {A : UU l1} {B : UU l2} {C : UU l3} (f : A → B) → is-in-subtype P f →
-    (e : C ≃ A) → is-in-subtype P (f ∘ map-equiv e)
+  is-closed-under-equiv-postcomp-function-classes l1 l2 l3 = {!!}
 ```
 
 ### The large type of global function classes
@@ -85,8 +81,7 @@ open global-function-class public
 type-global-function-class :
   {β : Level → Level → Level} (P : global-function-class β)
   {l1 l2 : Level} (A : UU l1) (B : UU l2) → UU (β l1 l2 ⊔ l1 ⊔ l2)
-type-global-function-class P =
-  type-function-class (function-class-global-function-class P)
+type-global-function-class P = {!!}
 
 module _
   {β : Level → Level → Level} (P : global-function-class β)
@@ -94,26 +89,21 @@ module _
   where
 
   is-in-global-function-class : (A → B) → UU (β l1 l2)
-  is-in-global-function-class =
-    is-in-function-class (function-class-global-function-class P)
+  is-in-global-function-class = {!!}
 
   is-prop-is-in-global-function-class :
     (f : A → B) → is-prop (is-in-global-function-class f)
-  is-prop-is-in-global-function-class =
-    is-prop-is-in-function-class (function-class-global-function-class P)
+  is-prop-is-in-global-function-class = {!!}
 
   inclusion-global-function-class : type-global-function-class P A B → A → B
-  inclusion-global-function-class =
-    inclusion-function-class (function-class-global-function-class P)
+  inclusion-global-function-class = {!!}
 
   is-emb-inclusion-global-function-class :
     is-emb inclusion-global-function-class
-  is-emb-inclusion-global-function-class =
-    is-emb-inclusion-function-class (function-class-global-function-class P)
+  is-emb-inclusion-global-function-class = {!!}
 
   emb-global-function-class : type-global-function-class P A B ↪ (A → B)
-  emb-global-function-class =
-    emb-function-class (function-class-global-function-class P)
+  emb-global-function-class = {!!}
 ```
 
 ### Global function classes containing identities
@@ -125,12 +115,10 @@ module _
 
   has-identity-maps-global-function-class-Level :
     (l : Level) → UU (β l l ⊔ lsuc l)
-  has-identity-maps-global-function-class-Level l =
-    (A : UU l) → is-in-global-function-class P (id {A = A})
+  has-identity-maps-global-function-class-Level l = {!!}
 
   has-identity-maps-global-function-class : UUω
-  has-identity-maps-global-function-class =
-    {l : Level} → has-identity-maps-global-function-class-Level l
+  has-identity-maps-global-function-class = {!!}
 ```
 
 ### Global function classes containing equivalences
@@ -142,13 +130,10 @@ module _
 
   has-equivalences-global-function-class-Level :
     (l1 l2 : Level) → UU (β l1 l2 ⊔ lsuc l1 ⊔ lsuc l2)
-  has-equivalences-global-function-class-Level l1 l2 =
-    {A : UU l1} {B : UU l2} (f : A → B) →
-    is-equiv f → is-in-global-function-class P f
+  has-equivalences-global-function-class-Level l1 l2 = {!!}
 
   has-equivalences-global-function-class : UUω
-  has-equivalences-global-function-class =
-    {l1 l2 : Level} → has-equivalences-global-function-class-Level l1 l2
+  has-equivalences-global-function-class = {!!}
 ```
 
 **Note:** The previous two conditions are equivalent by the closure property of
@@ -167,16 +152,10 @@ module _
   is-closed-under-composition-global-function-class-Level :
     (l1 l2 l3 : Level) →
     UU (β l1 l2 ⊔ β l1 l3 ⊔ β l2 l3 ⊔ lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  is-closed-under-composition-global-function-class-Level l1 l2 l3 =
-    {A : UU l1} {B : UU l2} {C : UU l3} {g : B → C} {f : A → B} →
-    is-in-global-function-class P g →
-    is-in-global-function-class P f →
-    is-in-global-function-class P (g ∘ f)
+  is-closed-under-composition-global-function-class-Level l1 l2 l3 = {!!}
 
   is-closed-under-composition-global-function-class : UUω
-  is-closed-under-composition-global-function-class =
-    {l1 l2 l3 : Level} →
-    is-closed-under-composition-global-function-class-Level l1 l2 l3
+  is-closed-under-composition-global-function-class = {!!}
 ```
 
 ## Pullback-stable global function classes
@@ -192,16 +171,10 @@ module _
   is-pullback-stable-global-function-class-Level :
     (l1 l2 l3 l4 : Level) →
     UU (β l1 l3 ⊔ β l4 l2 ⊔ lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3 ⊔ lsuc l4)
-  is-pullback-stable-global-function-class-Level l1 l2 l3 l4 =
-    {A : UU l1} {B : UU l2} {C : UU l3} (f : A → C) (g : B → C)
-    (c : Σ (UU l4) (pullback-cone f g)) →
-    is-in-global-function-class P f →
-    is-in-global-function-class P (horizontal-map-pullback-cone f g (pr2 c))
+  is-pullback-stable-global-function-class-Level l1 l2 l3 l4 = {!!}
 
   is-pullback-stable-global-function-class : UUω
-  is-pullback-stable-global-function-class =
-    {l1 l2 l3 l4 : Level} →
-    is-pullback-stable-global-function-class-Level l1 l2 l3 l4
+  is-pullback-stable-global-function-class = {!!}
 ```
 
 ## Properties
@@ -219,21 +192,16 @@ module _
     has-identity-maps-global-function-class P →
     has-equivalences-global-function-class P
   has-equivalences-has-identity-maps-global-function-class
-    has-id-P {B = B} f f' =
-    is-closed-under-equiv-precomp-global-function-class
-      P id (has-id-P B) (f , f')
+    has-id-P {B = B} f f' = {!!}
 
   has-equivalences-has-identity-maps-global-function-class' :
     has-identity-maps-global-function-class P →
     has-equivalences-global-function-class P
   has-equivalences-has-identity-maps-global-function-class'
-    has-id-P {B = B} f f' =
-    is-closed-under-equiv-postcomp-global-function-class
-      P id (has-id-P B) (f , f')
+    has-id-P {B = B} f f' = {!!}
 
   has-identity-maps-has-equivalences-global-function-class :
     has-equivalences-global-function-class P →
     has-identity-maps-global-function-class P
-  has-identity-maps-has-equivalences-global-function-class has-equiv-P A =
-    has-equiv-P id is-equiv-id
+  has-identity-maps-has-equivalences-global-function-class has-equiv-P A = {!!}
 ```

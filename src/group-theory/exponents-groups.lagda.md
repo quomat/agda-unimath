@@ -51,8 +51,5 @@ module _
   where
 
   exponent-Group : Subgroup l ℤ-Group
-  exponent-Group =
-    intersection-family-of-subgroups-Group ℤ-Group
-      ( λ (g : type-Group G) →
-        subgroup-kernel-hom-Group ℤ-Group G (hom-element-Group G g))
+  exponent-Group = {!!}
 ```

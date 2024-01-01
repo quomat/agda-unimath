@@ -45,19 +45,16 @@ module _
   where
 
   additive-order-element-Ring : Normal-Subgroup l ℤ-Group
-  additive-order-element-Ring = order-element-Group (group-Ring R) x
+  additive-order-element-Ring = {!!}
 
   subgroup-additive-order-element-Ring : Subgroup l ℤ-Group
-  subgroup-additive-order-element-Ring =
-    subgroup-order-element-Group (group-Ring R) x
+  subgroup-additive-order-element-Ring = {!!}
 
   subset-additive-order-element-Ring : subset-Group l ℤ-Group
-  subset-additive-order-element-Ring =
-    subset-order-element-Group (group-Ring R) x
+  subset-additive-order-element-Ring = {!!}
 
   is-in-additive-order-element-Ring : ℤ → UU l
-  is-in-additive-order-element-Ring =
-    is-in-order-element-Group (group-Ring R) x
+  is-in-additive-order-element-Ring = {!!}
 ```
 
 ### Divisibility of additive orders of elements of rings
@@ -69,8 +66,7 @@ module _
 
   div-additive-order-element-Ring :
     (x y : type-Ring R) → UU l
-  div-additive-order-element-Ring =
-    div-order-element-Group (group-Ring R)
+  div-additive-order-element-Ring = {!!}
 ```
 
 ## Properties
@@ -95,11 +91,7 @@ module _
   div-additive-order-element-additive-order-one-Ring :
     (x : type-Ring R) →
     div-order-element-Group (group-Ring R) x (one-Ring R)
-  div-additive-order-element-additive-order-one-Ring x k H =
-    ( inv (left-zero-law-mul-Ring R x)) ∙
-    ( ap (mul-Ring' R x) H) ∙
-    ( left-integer-multiple-law-mul-Ring R k _ _) ∙
-    ( ap (integer-multiple-Ring R k) (left-unit-law-mul-Ring R x))
+  div-additive-order-element-additive-order-one-Ring x k H = {!!}
 ```
 
 ### If there exists an integer `k` such that `k·x ＝ y` then the order of `y` divides the order of `x`
@@ -118,14 +110,7 @@ module _
   div-additive-order-element-is-integer-multiple-Ring :
     (x y : type-Ring R) → is-integer-multiple-of-element-Ring R x y →
     div-additive-order-element-Ring R y x
-  div-additive-order-element-is-integer-multiple-Ring x y H l p =
-    apply-universal-property-trunc-Prop H
-      ( subset-additive-order-element-Ring R y l)
-      ( λ (k , q) →
-        ( inv (right-zero-law-integer-multiple-Ring R k)) ∙
-        ( ap (integer-multiple-Ring R k) p) ∙
-        ( swap-integer-multiple-Ring R k l x ∙
-        ( ap (integer-multiple-Ring R l) q)))
+  div-additive-order-element-is-integer-multiple-Ring x y H l p = {!!}
 ```
 
 ### If there exists an integer `k` such that `k·x ＝ 1` then the order of `x` is the order of `1`
@@ -146,19 +131,11 @@ module _
       ( ℤ-Group)
       ( additive-order-element-Ring R x)
       ( additive-order-element-Ring R (one-Ring R))
-  pr1 (has-same-elements-additive-order-element-additive-order-one-Ring x H y) =
-    div-additive-order-element-is-integer-multiple-Ring R x (one-Ring R) H y
-  pr2 (has-same-elements-additive-order-element-additive-order-one-Ring x H y) =
-    div-additive-order-element-additive-order-one-Ring R x y
+  pr1 (has-same-elements-additive-order-element-additive-order-one-Ring x H y) = {!!}
 
   eq-additive-order-element-additive-order-one-Ring :
     (x : type-Ring R) → is-integer-multiple-of-element-Ring R x (one-Ring R) →
     additive-order-element-Ring R x ＝
     additive-order-element-Ring R (one-Ring R)
-  eq-additive-order-element-additive-order-one-Ring x H =
-    eq-has-same-elements-Normal-Subgroup
-      ( ℤ-Group)
-      ( additive-order-element-Ring R x)
-      ( additive-order-element-Ring R (one-Ring R))
-      ( has-same-elements-additive-order-element-additive-order-one-Ring x H)
+  eq-additive-order-element-additive-order-one-Ring x H = {!!}
 ```

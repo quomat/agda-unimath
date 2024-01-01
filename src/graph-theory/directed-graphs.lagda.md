@@ -45,47 +45,43 @@ $$
 
 ```agda
 Directed-Graph : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Directed-Graph l1 l2 = Σ (UU l1) (λ V → V → V → UU l2)
+Directed-Graph l1 l2 = {!!}
 
 module _
   {l1 l2 : Level} (G : Directed-Graph l1 l2)
   where
 
   vertex-Directed-Graph : UU l1
-  vertex-Directed-Graph = pr1 G
+  vertex-Directed-Graph = {!!}
 
   edge-Directed-Graph : (x y : vertex-Directed-Graph) → UU l2
-  edge-Directed-Graph = pr2 G
+  edge-Directed-Graph = {!!}
 
   total-edge-Directed-Graph : UU (l1 ⊔ l2)
-  total-edge-Directed-Graph =
-    Σ ( vertex-Directed-Graph)
-      ( λ x → Σ vertex-Directed-Graph (edge-Directed-Graph x))
+  total-edge-Directed-Graph = {!!}
 
   source-total-edge-Directed-Graph :
     total-edge-Directed-Graph → vertex-Directed-Graph
-  source-total-edge-Directed-Graph = pr1
+  source-total-edge-Directed-Graph = {!!}
 
   target-total-edge-Directed-Graph :
     total-edge-Directed-Graph → vertex-Directed-Graph
-  target-total-edge-Directed-Graph e = pr1 (pr2 e)
+  target-total-edge-Directed-Graph e = {!!}
 
   edge-total-edge-Directed-Graph :
     (e : total-edge-Directed-Graph) →
     edge-Directed-Graph
       ( source-total-edge-Directed-Graph e)
       ( target-total-edge-Directed-Graph e)
-  edge-total-edge-Directed-Graph e = pr2 (pr2 e)
+  edge-total-edge-Directed-Graph e = {!!}
 
   direct-predecessor-Directed-Graph :
     vertex-Directed-Graph → UU (l1 ⊔ l2)
-  direct-predecessor-Directed-Graph x =
-    Σ vertex-Directed-Graph (λ y → edge-Directed-Graph y x)
+  direct-predecessor-Directed-Graph x = {!!}
 
   direct-successor-Directed-Graph :
     vertex-Directed-Graph → UU (l1 ⊔ l2)
-  direct-successor-Directed-Graph x =
-    Σ vertex-Directed-Graph (edge-Directed-Graph x)
+  direct-successor-Directed-Graph x = {!!}
 ```
 
 ### Alternative definition
@@ -94,23 +90,23 @@ module _
 module alternative where
 
   Directed-Graph' : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-  Directed-Graph' l1 l2 = Σ (UU l1) λ V → Σ (UU l2) (λ E → (E → V) × (E → V))
+  Directed-Graph' l1 l2 = {!!}
 
   module _
     {l1 l2 : Level} (G : Directed-Graph' l1 l2)
     where
 
     vertex-Directed-Graph' : UU l1
-    vertex-Directed-Graph' = pr1 G
+    vertex-Directed-Graph' = {!!}
 
     edge-Directed-Graph' : UU l2
-    edge-Directed-Graph' = pr1 (pr2 G)
+    edge-Directed-Graph' = {!!}
 
     source-edge-Directed-Graph : edge-Directed-Graph' -> vertex-Directed-Graph'
-    source-edge-Directed-Graph = pr1 (pr2 (pr2 G))
+    source-edge-Directed-Graph = {!!}
 
     target-edge-Directed-Graph : edge-Directed-Graph' -> vertex-Directed-Graph'
-    target-edge-Directed-Graph = pr2 (pr2 (pr2 G))
+    target-edge-Directed-Graph = {!!}
 ```
 
 ```agda
@@ -119,18 +115,11 @@ module equiv {l1 l2 : Level} where
 
   Directed-Graph-to-Directed-Graph' :
     Directed-Graph l1 l2 -> Directed-Graph' l1 (l1 ⊔ l2)
-  pr1 (Directed-Graph-to-Directed-Graph' G) = vertex-Directed-Graph G
-  pr1 (pr2 (Directed-Graph-to-Directed-Graph' G)) =
-    Σ ( vertex-Directed-Graph G)
-      ( λ x → Σ (vertex-Directed-Graph G) λ y → edge-Directed-Graph G x y)
-  pr1 (pr2 (pr2 (Directed-Graph-to-Directed-Graph' G))) = pr1
-  pr2 (pr2 (pr2 (Directed-Graph-to-Directed-Graph' G))) = pr1 ∘ pr2
+  pr1 (Directed-Graph-to-Directed-Graph' G) = {!!}
 
   Directed-Graph'-to-Directed-Graph :
     Directed-Graph' l1 l2 -> Directed-Graph l1 (l1 ⊔ l2)
-  pr1 (Directed-Graph'-to-Directed-Graph (V , E , st , tg)) = V
-  pr2 (Directed-Graph'-to-Directed-Graph (V , E , st , tg)) x y =
-    Σ E (λ e → (Id (st e) x) × (Id (tg e) y))
+  pr1 (Directed-Graph'-to-Directed-Graph (V , E , st , tg)) = {!!}
 ```
 
 ## External links

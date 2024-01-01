@@ -61,23 +61,23 @@ module _
   where
 
   enumeration : UU l
-  enumeration = Σ (ℕ → Maybe (type-Set X)) is-surjective
+  enumeration = {!!}
 
   map-enumeration : enumeration → (ℕ → Maybe (type-Set X))
-  map-enumeration E = pr1 E
+  map-enumeration E = {!!}
 
   is-surjective-map-enumeration :
     (E : enumeration) → is-surjective (map-enumeration E)
-  is-surjective-map-enumeration E = pr2 E
+  is-surjective-map-enumeration E = {!!}
 
   is-countable-Prop : Prop l
-  is-countable-Prop = ∃-Prop (ℕ → Maybe (type-Set X)) is-surjective
+  is-countable-Prop = {!!}
 
   is-countable : UU l
-  is-countable = type-Prop (is-countable-Prop)
+  is-countable = {!!}
 
   is-prop-is-countable : is-prop is-countable
-  is-prop-is-countable = is-prop-type-Prop is-countable-Prop
+  is-prop-is-countable = {!!}
 ```
 
 ### Second definition of countable types
@@ -88,21 +88,16 @@ module _
   where
 
   decidable-subprojection-ℕ : UU (lsuc l ⊔ l)
-  decidable-subprojection-ℕ =
-    Σ ( decidable-subtype l ℕ)
-      ( λ P → type-decidable-subtype P ↠ type-Set X)
+  decidable-subprojection-ℕ = {!!}
 
   is-countable-Prop' : Prop (lsuc l ⊔ l)
-  is-countable-Prop' =
-    ∃-Prop
-      ( decidable-subtype l ℕ)
-      ( λ P → type-decidable-subtype P ↠ type-Set X)
+  is-countable-Prop' = {!!}
 
   is-countable' : UU (lsuc l ⊔ l)
-  is-countable' = type-Prop is-countable-Prop'
+  is-countable' = {!!}
 
   is-prop-is-countable' : is-prop is-countable'
-  is-prop-is-countable' = is-prop-type-Prop is-countable-Prop'
+  is-prop-is-countable' = {!!}
 ```
 
 ### Third definition of countable types
@@ -112,16 +107,14 @@ surjective map `f : ℕ → X`. Let us call the latter as "directly countable".
 
 ```agda
 is-directly-countable-Prop : {l : Level} → Set l → Prop l
-is-directly-countable-Prop X =
-  ∃-Prop (ℕ → type-Set X) is-surjective
+is-directly-countable-Prop X = {!!}
 
 is-directly-countable : {l : Level} → Set l → UU l
-is-directly-countable X = type-Prop (is-directly-countable-Prop X)
+is-directly-countable X = {!!}
 
 is-prop-is-directly-countable :
   {l : Level} (X : Set l) → is-prop (is-directly-countable X)
-is-prop-is-directly-countable X = is-prop-type-Prop
-  (is-directly-countable-Prop X)
+is-prop-is-directly-countable X = {!!}
 
 module _
   {l : Level} (X : Set l) (a : type-Set X)
@@ -129,41 +122,15 @@ module _
 
   is-directly-countable-is-countable :
     is-countable X → is-directly-countable X
-  is-directly-countable-is-countable H =
-    apply-universal-property-trunc-Prop H
-      ( is-directly-countable-Prop X)
-      ( λ P →
-        unit-trunc-Prop
-          ( pair
-            ( f ∘ (pr1 P))
-            ( is-surjective-comp is-surjective-f (pr2 P))))
-    where
-    f : Maybe (type-Set X) → type-Set X
-    f (inl x) = x
-    f (inr star) = a
+  is-directly-countable-is-countable H = {!!}
 
     is-surjective-f : is-surjective f
-    is-surjective-f x = unit-trunc-Prop (pair (inl x) refl)
+    is-surjective-f x = {!!}
 
   abstract
     is-countable-is-directly-countable :
       is-directly-countable X → is-countable X
-    is-countable-is-directly-countable H =
-      apply-universal-property-trunc-Prop H
-        ( is-countable-Prop X)
-        ( λ P →
-          unit-trunc-Prop
-            ( ( λ where
-                zero-ℕ → inr star
-                (succ-ℕ n) → inl ((shift-ℕ a (pr1 P)) n)) ,
-              ( λ where
-                ( inl x) →
-                  apply-universal-property-trunc-Prop (pr2 P x)
-                    ( trunc-Prop (fiber _ (inl x)))
-                    ( λ (n , p) →
-                      unit-trunc-Prop
-                        ( succ-ℕ (succ-ℕ n) , ap inl p))
-                ( inr star) → unit-trunc-Prop (zero-ℕ , refl))))
+    is-countable-is-directly-countable H = {!!}
 ```
 
 ## Properties
@@ -179,33 +146,15 @@ module _
 
   decidable-subprojection-ℕ-enumeration :
     enumeration X → decidable-subprojection-ℕ X
-  pr1 (pr1 (decidable-subprojection-ℕ-enumeration (f , H)) n) =
-    f n ≠ inr star
-  pr1 (pr2 (pr1 (decidable-subprojection-ℕ-enumeration (f , H)) n)) =
-    is-prop-neg
-  pr2 (pr2 (pr1 (decidable-subprojection-ℕ-enumeration (f , H)) n)) =
-    is-decidable-is-not-exception-Maybe (f n)
-  pr1 (pr2 (decidable-subprojection-ℕ-enumeration (f , H))) (n , p) =
-    value-is-not-exception-Maybe (f n) p
-  pr2 (pr2 (decidable-subprojection-ℕ-enumeration (f , H))) x =
-    apply-universal-property-trunc-Prop (H (inl x))
-      ( trunc-Prop (fiber _ x))
-      ( λ (n , p) →
-        unit-trunc-Prop
-          ( ( n , is-not-exception-is-value-Maybe (f n) (x , inv p)) ,
-            ( is-injective-inl
-              ( ( eq-is-not-exception-Maybe
-                ( f n)
-                ( is-not-exception-is-value-Maybe
-                  ( f n) (x , inv p))) ∙
-              ( p)))))
+  pr1 (pr1 (decidable-subprojection-ℕ-enumeration (f , H)) n) = {!!}
+  pr1 (pr2 (pr1 (decidable-subprojection-ℕ-enumeration (f , H)) n)) = {!!}
+  pr2 (pr2 (pr1 (decidable-subprojection-ℕ-enumeration (f , H)) n)) = {!!}
+  pr1 (pr2 (decidable-subprojection-ℕ-enumeration (f , H))) (n , p) = {!!}
+  pr2 (pr2 (decidable-subprojection-ℕ-enumeration (f , H))) x = {!!}
 
   is-countable'-is-countable :
     is-countable X → is-countable' X
-  is-countable'-is-countable H =
-    apply-universal-property-trunc-Prop H
-      ( is-countable-Prop' X)
-      ( λ E → unit-trunc-Prop (decidable-subprojection-ℕ-enumeration E))
+  is-countable'-is-countable H = {!!}
 ```
 
 Second, we will prove `is-countable' X → is-countable X`.
@@ -216,8 +165,8 @@ cases-map-decidable-subtype-ℕ :
   ( P : decidable-subtype l ℕ) →
   ( f : type-decidable-subtype P → type-Set X) →
   ( (n : ℕ) → is-decidable (pr1 (P n)) -> Maybe (type-Set X))
-cases-map-decidable-subtype-ℕ X P f n (inl x) = inl (f (n , x))
-cases-map-decidable-subtype-ℕ X P f n (inr x) = inr star
+cases-map-decidable-subtype-ℕ X P f n (inl x) = {!!}
+cases-map-decidable-subtype-ℕ X P f n (inr x) = {!!}
 
 module _
   {l : Level} (X : Set l)
@@ -226,48 +175,23 @@ module _
   where
 
   shift-decidable-subtype-ℕ : decidable-subtype l ℕ
-  shift-decidable-subtype-ℕ zero-ℕ =
-    ( raise-empty l) ,
-    ( is-prop-raise-empty ,
-      ( inr (is-empty-raise-empty)))
-  shift-decidable-subtype-ℕ (succ-ℕ n) = P n
+  shift-decidable-subtype-ℕ zero-ℕ = {!!}
+  shift-decidable-subtype-ℕ (succ-ℕ n) = {!!}
 
   map-shift-decidable-subtype-ℕ :
     type-decidable-subtype shift-decidable-subtype-ℕ → type-Set X
   map-shift-decidable-subtype-ℕ (zero-ℕ , map-raise ())
-  map-shift-decidable-subtype-ℕ (succ-ℕ n , p) = f (n , p)
+  map-shift-decidable-subtype-ℕ (succ-ℕ n , p) = {!!}
 
   map-enumeration-decidable-subprojection-ℕ : ℕ → Maybe (type-Set X)
-  map-enumeration-decidable-subprojection-ℕ n =
-    cases-map-decidable-subtype-ℕ
-      ( X)
-      ( shift-decidable-subtype-ℕ)
-      ( map-shift-decidable-subtype-ℕ)
-      ( n)
-      (pr2 (pr2 (shift-decidable-subtype-ℕ n)))
+  map-enumeration-decidable-subprojection-ℕ n = {!!}
 
   abstract
     is-surjective-map-enumeration-decidable-subprojection-ℕ :
       ( is-surjective f) →
       ( is-surjective map-enumeration-decidable-subprojection-ℕ)
-    is-surjective-map-enumeration-decidable-subprojection-ℕ H (inl x) =
-      ( apply-universal-property-trunc-Prop (H x)
-        ( trunc-Prop (fiber map-enumeration-decidable-subprojection-ℕ (inl x)))
-        ( λ where
-          ( ( n , s) , refl) →
-            unit-trunc-Prop
-              ( ( succ-ℕ n) ,
-                ( ap
-                  ( cases-map-decidable-subtype-ℕ X
-                    ( shift-decidable-subtype-ℕ)
-                    ( map-shift-decidable-subtype-ℕ)
-                    (succ-ℕ n))
-                  ( pr1
-                    ( is-prop-is-decidable (pr1 (pr2 (P n)))
-                      ( pr2 (pr2 (P n)))
-                      ( inl s)))))))
-    is-surjective-map-enumeration-decidable-subprojection-ℕ H (inr star) =
-      ( unit-trunc-Prop (0 , refl))
+    is-surjective-map-enumeration-decidable-subprojection-ℕ H (inl x) = {!!}
+    is-surjective-map-enumeration-decidable-subprojection-ℕ H (inr star) = {!!}
 
 module _
   {l : Level} (X : Set l)
@@ -275,17 +199,11 @@ module _
 
   enumeration-decidable-subprojection-ℕ :
     decidable-subprojection-ℕ X → enumeration X
-  enumeration-decidable-subprojection-ℕ (P , (f , H)) =
-    ( map-enumeration-decidable-subprojection-ℕ X P f) ,
-    ( is-surjective-map-enumeration-decidable-subprojection-ℕ X P f H)
+  enumeration-decidable-subprojection-ℕ (P , (f , H)) = {!!}
 
   is-countable-is-countable' :
     is-countable' X → is-countable X
-  is-countable-is-countable' H =
-    apply-universal-property-trunc-Prop H
-      ( is-countable-Prop X)
-      ( λ D →
-        ( unit-trunc-Prop (enumeration-decidable-subprojection-ℕ D)))
+  is-countable-is-countable' H = {!!}
 ```
 
 ## Useful Lemmas
@@ -298,18 +216,12 @@ module _
   where
 
   map-maybe-coprod : (Maybe A + Maybe B) → Maybe (A + B)
-  map-maybe-coprod (inl (inl x)) = inl (inl x)
-  map-maybe-coprod (inl (inr star)) = inr star
-  map-maybe-coprod (inr (inl x)) = inl (inr x)
-  map-maybe-coprod (inr (inr star)) = inr star
+  map-maybe-coprod (inl (inl x)) = {!!}
 
   is-surjective-map-maybe-coprod : is-surjective map-maybe-coprod
-  is-surjective-map-maybe-coprod (inl (inl x)) =
-    unit-trunc-Prop ((inl (inl x)) , refl)
-  is-surjective-map-maybe-coprod (inl (inr x)) =
-    unit-trunc-Prop ((inr (inl x)) , refl)
-  is-surjective-map-maybe-coprod (inr star) =
-    unit-trunc-Prop ((inl (inr star)) , refl)
+  is-surjective-map-maybe-coprod (inl (inl x)) = {!!}
+  is-surjective-map-maybe-coprod (inl (inr x)) = {!!}
+  is-surjective-map-maybe-coprod (inr star) = {!!}
 ```
 
 There is a surjection from `(Maybe A × Maybe B)` to `Maybe (A × B)`.
@@ -320,16 +232,11 @@ module _
   where
 
   map-maybe-prod : (Maybe A × Maybe B) → Maybe (A × B)
-  map-maybe-prod (inl a , inl b) = inl (a , b)
-  map-maybe-prod (inl a , inr star) = inr star
-  map-maybe-prod (inr star , inl b) = inr star
-  map-maybe-prod (inr star , inr star) = inr star
+  map-maybe-prod (inl a , inl b) = {!!}
 
   is-surjective-map-maybe-prod : is-surjective map-maybe-prod
-  is-surjective-map-maybe-prod (inl (a , b)) =
-    unit-trunc-Prop ((inl a , inl b) , refl)
-  is-surjective-map-maybe-prod (inr star) =
-    unit-trunc-Prop ((inr star , inr star) , refl)
+  is-surjective-map-maybe-prod (inl (a , b)) = {!!}
+  is-surjective-map-maybe-prod (inr star) = {!!}
 ```
 
 ## Examples
@@ -339,24 +246,14 @@ The set of natural numbers ℕ is itself countable.
 ```agda
 abstract
   is-countable-ℕ : is-countable ℕ-Set
-  is-countable-ℕ =
-    unit-trunc-Prop
-      ( ( λ where
-          zero-ℕ → inr star
-          (succ-ℕ n) → inl n) ,
-        ( λ where
-          ( inl n) → unit-trunc-Prop (succ-ℕ n , refl)
-          ( inr star) → unit-trunc-Prop (zero-ℕ , refl)))
+  is-countable-ℕ = {!!}
 ```
 
 The empty set is countable.
 
 ```agda
 is-countable-empty : is-countable empty-Set
-is-countable-empty =
-  is-countable-is-countable'
-    ( empty-Set)
-    ( unit-trunc-Prop ((λ _ → empty-Decidable-Prop) , (λ ()) , (λ ())))
+is-countable-empty = {!!}
 ```
 
 The unit set is countable.
@@ -364,14 +261,7 @@ The unit set is countable.
 ```agda
 abstract
   is-countable-unit : is-countable unit-Set
-  is-countable-unit =
-    unit-trunc-Prop
-      ( ( λ where
-          zero-ℕ → inl star
-          (succ-ℕ x) → inr star) ,
-        ( λ where
-          ( inl star) → unit-trunc-Prop (0 , refl)
-          ( inr star) → unit-trunc-Prop (1 , refl)))
+  is-countable-unit = {!!}
 ```
 
 If `X` and `Y` are countable sets, then so is their coproduct `X + Y`.
@@ -383,19 +273,7 @@ module _
 
   is-countable-coprod :
     is-countable X → is-countable Y → is-countable (coprod-Set X Y)
-  is-countable-coprod H H' =
-    apply-twice-universal-property-trunc-Prop H' H
-      ( is-countable-Prop (coprod-Set X Y))
-      ( λ h' h →
-        ( unit-trunc-Prop
-          ( pair
-            ( map-maybe-coprod ∘
-              ( map-coprod (pr1 h) (pr1 h') ∘ map-ℕ-to-ℕ+ℕ))
-            ( is-surjective-comp
-              ( is-surjective-map-maybe-coprod)
-              ( is-surjective-comp
-                ( is-surjective-map-coprod (pr2 h) (pr2 h'))
-                ( is-surjective-is-equiv (is-equiv-map-ℕ-to-ℕ+ℕ)))))))
+  is-countable-coprod H H' = {!!}
 ```
 
 If `X` and `Y` are countable sets, then so is their coproduct `X × Y`.
@@ -407,46 +285,26 @@ module _
 
   is-countable-prod :
     is-countable X → is-countable Y → is-countable (prod-Set X Y)
-  is-countable-prod H H' =
-    apply-twice-universal-property-trunc-Prop H' H
-      ( is-countable-Prop (prod-Set X Y))
-      ( λ h' h →
-        ( unit-trunc-Prop
-          ( pair
-            ( map-maybe-prod ∘
-              ( map-prod (pr1 h) (pr1 h') ∘ map-ℕ-to-ℕ×ℕ))
-            ( is-surjective-comp
-              ( is-surjective-map-maybe-prod)
-              ( is-surjective-comp
-                ( is-surjective-map-prod (pr2 h) (pr2 h'))
-                ( is-surjective-is-equiv (is-equiv-map-ℕ-to-ℕ×ℕ)))))))
+  is-countable-prod H H' = {!!}
 ```
 
 In particular, the sets ℕ + ℕ, ℕ × ℕ, and ℤ are countable.
 
 ```agda
 is-countable-ℕ+ℕ : is-countable (coprod-Set ℕ-Set ℕ-Set)
-is-countable-ℕ+ℕ =
-  is-countable-coprod ℕ-Set ℕ-Set is-countable-ℕ is-countable-ℕ
+is-countable-ℕ+ℕ = {!!}
 
 is-countable-ℕ×ℕ : is-countable (prod-Set ℕ-Set ℕ-Set)
-is-countable-ℕ×ℕ =
-  is-countable-prod ℕ-Set ℕ-Set is-countable-ℕ is-countable-ℕ
+is-countable-ℕ×ℕ = {!!}
 
 is-countable-ℤ : is-countable (ℤ-Set)
-is-countable-ℤ =
-  is-countable-coprod (ℕ-Set) (coprod-Set unit-Set ℕ-Set)
-    ( is-countable-ℕ)
-    ( is-countable-coprod (unit-Set) (ℕ-Set)
-      ( is-countable-unit) (is-countable-ℕ))
+is-countable-ℤ = {!!}
 ```
 
 All standart finite sets are countable.
 
 ```agda
 is-countable-Fin-Set : (n : ℕ) → is-countable (Fin-Set n)
-is-countable-Fin-Set zero-ℕ = is-countable-empty
-is-countable-Fin-Set (succ-ℕ n) =
-  is-countable-coprod (Fin-Set n) (unit-Set)
-    ( is-countable-Fin-Set n) (is-countable-unit)
+is-countable-Fin-Set zero-ℕ = {!!}
+is-countable-Fin-Set (succ-ℕ n) = {!!}
 ```

@@ -33,18 +33,17 @@ module _
   where
 
   commute-prop-Semigroup : (x y : type-Semigroup G) → Prop l
-  commute-prop-Semigroup x y =
-    Id-Prop (set-Semigroup G) (mul-Semigroup G x y) (mul-Semigroup G y x)
+  commute-prop-Semigroup x y = {!!}
 
   commute-Semigroup : (x y : type-Semigroup G) → UU l
-  commute-Semigroup x y = type-Prop (commute-prop-Semigroup x y)
+  commute-Semigroup x y = {!!}
 
   commute-Semigroup' : (x y : type-Semigroup G) → UU l
-  commute-Semigroup' x y = commute-Semigroup y x
+  commute-Semigroup' x y = {!!}
 
   is-prop-commute-Semigroup :
     (x y : type-Semigroup G) → is-prop (commute-Semigroup x y)
-  is-prop-commute-Semigroup x y = is-prop-type-Prop (commute-prop-Semigroup x y)
+  is-prop-commute-Semigroup x y = {!!}
 ```
 
 ## Properties
@@ -57,7 +56,7 @@ module _
   where
 
   refl-commute-Semigroup : (x : type-Semigroup G) → commute-Semigroup G x x
-  refl-commute-Semigroup x = refl
+  refl-commute-Semigroup x = {!!}
 ```
 
 ### The relation `commute-Semigroup` is symmetric
@@ -69,7 +68,7 @@ module _
 
   symmetric-commute-Semigroup :
     (x y : type-Semigroup G) → commute-Semigroup G x y → commute-Semigroup G y x
-  symmetric-commute-Semigroup x y = inv
+  symmetric-commute-Semigroup x y = {!!}
 ```
 
 ### If `x` commutes with `y`, then `x * (y * z) ＝ y * (x * z)` for any element `z`
@@ -81,23 +80,17 @@ module _
 
   private
     infix 45 _*_
-    _*_ = mul-Semigroup G
+    _*_ = {!!}
 
   left-swap-commute-Semigroup :
     (x y z : type-Semigroup G) → commute-Semigroup G x y →
     x * (y * z) ＝ y * (x * z)
-  left-swap-commute-Semigroup x y z H =
-    ( inv (associative-mul-Semigroup G _ _ _)) ∙
-    ( ap (_* z) H) ∙
-    ( associative-mul-Semigroup G _ _ _)
+  left-swap-commute-Semigroup x y z H = {!!}
 
   right-swap-commute-Semigroup :
     (x y z : type-Semigroup G) → commute-Semigroup G y z →
     (x * y) * z ＝ (x * z) * y
-  right-swap-commute-Semigroup x y z H =
-    ( associative-mul-Semigroup G _ _ _) ∙
-    ( ap (x *_) H) ∙
-    ( inv (associative-mul-Semigroup G _ _ _))
+  right-swap-commute-Semigroup x y z H = {!!}
 ```
 
 ### If `x` commutes with `y` and with `z`, then `x` commutes with `yz`
@@ -109,16 +102,11 @@ module _
 
   private
     infix 45 _*_
-    _*_ = mul-Semigroup G
+    _*_ = {!!}
 
   commute-mul-Semigroup :
     (x y z : type-Semigroup G) →
     commute-Semigroup G x y → commute-Semigroup G x z →
     commute-Semigroup G x (mul-Semigroup G y z)
-  commute-mul-Semigroup x y z H K =
-    equational-reasoning
-      (x * (y * z))
-      ＝ y * (x * z) by left-swap-commute-Semigroup G _ _ _ H
-      ＝ y * (z * x) by ap (y *_) K
-      ＝ (y * z) * x by inv (associative-mul-Semigroup G _ _ _)
+  commute-mul-Semigroup x y z H K = {!!}
 ```

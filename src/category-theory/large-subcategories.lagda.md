@@ -32,6 +32,5 @@ module _
   where
 
   Large-Subcategory : UUω
-  Large-Subcategory =
-    Large-Subprecategory γ δ (large-precategory-Large-Category C)
+  Large-Subcategory = {!!}
 ```

@@ -40,6 +40,5 @@ module _
   where
 
   is-sorial-family-of-types : UU (l1 ⊔ l2)
-  is-sorial-family-of-types =
-    (x : type-Pointed-Type B) → E x → (E (point-Pointed-Type B) ≃ E x)
+  is-sorial-family-of-types = {!!}
 ```

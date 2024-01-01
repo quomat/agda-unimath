@@ -31,14 +31,14 @@ forms a [decidable total order](order-theory.decidable-total-orders.md).
 
 ```agda
 is-total-leq-Fin : (k : ℕ) → is-total-Poset (Fin-Poset k)
-is-total-leq-Fin k n m = unit-trunc-Prop (linear-leq-Fin k n m)
+is-total-leq-Fin k n m = {!!}
 
 Fin-Total-Order : ℕ → Total-Order lzero lzero
-pr1 (Fin-Total-Order k) = Fin-Poset k
-pr2 (Fin-Total-Order k) = is-total-leq-Fin k
+pr1 (Fin-Total-Order k) = {!!}
+pr2 (Fin-Total-Order k) = {!!}
 
 Fin-Decidable-Total-Order : ℕ → Decidable-Total-Order lzero lzero
-pr1 (Fin-Decidable-Total-Order k) = Fin-Poset k
-pr1 (pr2 (Fin-Decidable-Total-Order k)) = is-total-leq-Fin k
-pr2 (pr2 (Fin-Decidable-Total-Order k)) = is-decidable-leq-Fin k
+pr1 (Fin-Decidable-Total-Order k) = {!!}
+pr1 (pr2 (Fin-Decidable-Total-Order k)) = {!!}
+pr2 (pr2 (Fin-Decidable-Total-Order k)) = {!!}
 ```

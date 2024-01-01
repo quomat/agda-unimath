@@ -97,13 +97,10 @@ module _
   where
 
   domain-pushout-product : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  domain-pushout-product =
-    pushout (map-prod id g) (map-prod f id)
+  domain-pushout-product = {!!}
 
   cocone-pushout-product : cocone (map-prod id g) (map-prod f id) (X × Y)
-  pr1 cocone-pushout-product = map-prod f id
-  pr1 (pr2 cocone-pushout-product) = map-prod id g
-  pr2 (pr2 cocone-pushout-product) = coherence-square-map-prod f g
+  pr1 cocone-pushout-product = {!!}
 
   abstract
     uniqueness-pushout-product :
@@ -119,29 +116,21 @@ module _
                   ( cocone-pushout (map-prod id g) (map-prod f id))
                   ( h))
                 ( cocone-pushout-product)))
-    uniqueness-pushout-product =
-      uniqueness-map-universal-property-pushout
-        ( map-prod id g)
-        ( map-prod f id)
-        ( cocone-pushout (map-prod id g) (map-prod f id))
-        ( up-pushout (map-prod id g) (map-prod f id))
-        ( cocone-pushout-product)
+    uniqueness-pushout-product = {!!}
 
   abstract
     pushout-product : domain-pushout-product → X × Y
-    pushout-product = pr1 (center uniqueness-pushout-product)
+    pushout-product = {!!}
 
     compute-inl-pushout-product :
       pushout-product ∘ inl-pushout (map-prod id g) (map-prod f id) ~
       map-prod f id
-    compute-inl-pushout-product =
-      pr1 (pr2 (center uniqueness-pushout-product))
+    compute-inl-pushout-product = {!!}
 
     compute-inr-pushout-product :
       pushout-product ∘ inr-pushout (map-prod id g) (map-prod f id) ~
       map-prod id g
-    compute-inr-pushout-product =
-      pr1 (pr2 (pr2 (center uniqueness-pushout-product)))
+    compute-inr-pushout-product = {!!}
 
     compute-glue-pushout-product :
       statement-coherence-htpy-cocone
@@ -155,8 +144,7 @@ module _
         ( cocone-pushout-product)
         ( compute-inl-pushout-product)
         ( compute-inr-pushout-product)
-    compute-glue-pushout-product =
-      pr2 (pr2 (pr2 (center uniqueness-pushout-product)))
+    compute-glue-pushout-product = {!!}
 ```
 
 ## See also

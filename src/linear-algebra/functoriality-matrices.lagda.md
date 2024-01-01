@@ -29,7 +29,7 @@ module _
   where
 
   map-matrix : {m n : ℕ} → matrix A m n → matrix B m n
-  map-matrix = map-vec (map-vec f)
+  map-matrix = {!!}
 ```
 
 ### Binar maps
@@ -41,5 +41,5 @@ module _
 
   binary-map-matrix :
     {m n : ℕ} → matrix A m n → matrix B m n → matrix C m n
-  binary-map-matrix = binary-map-vec (binary-map-vec f)
+  binary-map-matrix = {!!}
 ```

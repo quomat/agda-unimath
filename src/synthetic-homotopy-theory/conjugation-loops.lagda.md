@@ -37,15 +37,14 @@ module _
   where
 
   map-conjugation-Ω : {x y : A} (p : x ＝ y) → type-Ω (A , x) → type-Ω (A , y)
-  map-conjugation-Ω p ω = inv p ∙ (ω ∙ p)
+  map-conjugation-Ω p ω = {!!}
 
   preserves-point-conjugation-Ω :
     {x y : A} (p : x ＝ y) → map-conjugation-Ω p refl ＝ refl
-  preserves-point-conjugation-Ω p = left-inv p
+  preserves-point-conjugation-Ω p = {!!}
 
   conjugation-Ω : {x y : A} (p : x ＝ y) → Ω (A , x) →∗ Ω (A , y)
-  pr1 (conjugation-Ω p) = map-conjugation-Ω p
-  pr2 (conjugation-Ω p) = preserves-point-conjugation-Ω p
+  pr1 (conjugation-Ω p) = {!!}
 ```
 
 ### A second definition of conjugation on loop spaces
@@ -56,15 +55,14 @@ module _
   where
 
   conjugation-Ω' : {x y : A} (p : x ＝ y) → Ω (A , x) →∗ Ω (A , y)
-  conjugation-Ω' refl = id-pointed-map
+  conjugation-Ω' refl = {!!}
 
   map-conjugation-Ω' : {x y : A} (p : x ＝ y) → type-Ω (A , x) → type-Ω (A , y)
-  map-conjugation-Ω' p = map-pointed-map (conjugation-Ω' p)
+  map-conjugation-Ω' p = {!!}
 
   preserves-point-conjugation-Ω' :
     {x y : A} (p : x ＝ y) → map-conjugation-Ω' p refl ＝ refl
-  preserves-point-conjugation-Ω' p =
-    preserves-point-pointed-map (conjugation-Ω' p)
+  preserves-point-conjugation-Ω' p = {!!}
 ```
 
 ## Properties
@@ -78,16 +76,15 @@ module _
 
   htpy-compute-conjugation-Ω :
     {x y : A} (p : x ＝ y) → map-conjugation-Ω p ~ map-conjugation-Ω' p
-  htpy-compute-conjugation-Ω refl ω = right-unit
+  htpy-compute-conjugation-Ω refl ω = {!!}
 
   preserves-point-compute-conjugation-Ω :
     {x y : A} (p : x ＝ y) →
     ( htpy-compute-conjugation-Ω p refl) ＝
     ( preserves-point-conjugation-Ω p ∙ inv (preserves-point-conjugation-Ω' p))
-  preserves-point-compute-conjugation-Ω refl = refl
+  preserves-point-compute-conjugation-Ω refl = {!!}
 
   compute-conjugation-Ω :
     {x y : A} (p : x ＝ y) → conjugation-Ω p ~∗ conjugation-Ω' p
-  pr1 (compute-conjugation-Ω p) = htpy-compute-conjugation-Ω p
-  pr2 (compute-conjugation-Ω p) = preserves-point-compute-conjugation-Ω p
+  pr1 (compute-conjugation-Ω p) = {!!}
 ```

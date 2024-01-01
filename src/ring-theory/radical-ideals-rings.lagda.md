@@ -30,19 +30,12 @@ module _
   where
 
   is-radical-ideal-prop-Ring : Prop (l1 ⊔ l2)
-  is-radical-ideal-prop-Ring =
-    Π-Prop
-      ( type-ideal-Ring R I)
-      ( λ x →
-        is-invertible-element-prop-Ring R
-          ( add-Ring R (one-Ring R) (inclusion-ideal-Ring R I x)))
+  is-radical-ideal-prop-Ring = {!!}
 
   is-radical-ideal-Ring : UU (l1 ⊔ l2)
-  is-radical-ideal-Ring =
-    type-Prop is-radical-ideal-prop-Ring
+  is-radical-ideal-Ring = {!!}
 
   is-prop-is-radical-ideal-Ring :
     is-prop is-radical-ideal-Ring
-  is-prop-is-radical-ideal-Ring =
-    is-prop-type-Prop is-radical-ideal-prop-Ring
+  is-prop-is-radical-ideal-Ring = {!!}
 ```

@@ -29,17 +29,15 @@ module _
   where
 
   is-bottom-element-Preorder-Prop : type-Preorder X → Prop (l1 ⊔ l2)
-  is-bottom-element-Preorder-Prop x =
-    Π-Prop (type-Preorder X) (leq-Preorder-Prop X x)
+  is-bottom-element-Preorder-Prop x = {!!}
 
   is-bottom-element-Preorder : type-Preorder X → UU (l1 ⊔ l2)
-  is-bottom-element-Preorder x = type-Prop (is-bottom-element-Preorder-Prop x)
+  is-bottom-element-Preorder x = {!!}
 
   is-prop-is-bottom-element-Preorder :
     (x : type-Preorder X) → is-prop (is-bottom-element-Preorder x)
-  is-prop-is-bottom-element-Preorder x =
-    is-prop-type-Prop (is-bottom-element-Preorder-Prop x)
+  is-prop-is-bottom-element-Preorder x = {!!}
 
   has-bottom-element-Preorder : UU (l1 ⊔ l2)
-  has-bottom-element-Preorder = Σ (type-Preorder X) is-bottom-element-Preorder
+  has-bottom-element-Preorder = {!!}
 ```

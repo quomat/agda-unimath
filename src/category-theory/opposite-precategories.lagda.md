@@ -39,20 +39,20 @@ module _
   where
 
   obj-opposite-Precategory : UU l1
-  obj-opposite-Precategory = obj-Precategory C
+  obj-opposite-Precategory = {!!}
 
   hom-set-opposite-Precategory : (x y : obj-opposite-Precategory) → Set l2
-  hom-set-opposite-Precategory x y = hom-set-Precategory C y x
+  hom-set-opposite-Precategory x y = {!!}
 
   hom-opposite-Precategory : (x y : obj-opposite-Precategory) → UU l2
-  hom-opposite-Precategory x y = type-Set (hom-set-opposite-Precategory x y)
+  hom-opposite-Precategory x y = {!!}
 
   comp-hom-opposite-Precategory :
     {x y z : obj-opposite-Precategory} →
     hom-opposite-Precategory y z →
     hom-opposite-Precategory x y →
     hom-opposite-Precategory x z
-  comp-hom-opposite-Precategory g f = comp-hom-Precategory C f g
+  comp-hom-opposite-Precategory g f = {!!}
 
   associative-comp-hom-opposite-Precategory :
     {x y z w : obj-opposite-Precategory}
@@ -61,13 +61,7 @@ module _
     (f : hom-opposite-Precategory x y) →
     ( comp-hom-opposite-Precategory (comp-hom-opposite-Precategory h g) f) ＝
     ( comp-hom-opposite-Precategory h (comp-hom-opposite-Precategory g f))
-  associative-comp-hom-opposite-Precategory h g f =
-    inv-witness-associative-composition-operation-binary-family-Set
-      ( hom-set-Precategory C)
-      ( associative-composition-operation-Precategory C)
-      ( f)
-      ( g)
-      ( h)
+  associative-comp-hom-opposite-Precategory h g f = {!!}
 
   inv-associative-comp-hom-opposite-Precategory :
     {x y z w : obj-opposite-Precategory}
@@ -76,44 +70,25 @@ module _
     (f : hom-opposite-Precategory x y) →
     ( comp-hom-opposite-Precategory h (comp-hom-opposite-Precategory g f)) ＝
     ( comp-hom-opposite-Precategory (comp-hom-opposite-Precategory h g) f)
-  inv-associative-comp-hom-opposite-Precategory h g f =
-    witness-associative-composition-operation-binary-family-Set
-      ( hom-set-Precategory C)
-      ( associative-composition-operation-Precategory C)
-      ( f)
-      ( g)
-      ( h)
+  inv-associative-comp-hom-opposite-Precategory h g f = {!!}
 
   id-hom-opposite-Precategory :
     {x : obj-opposite-Precategory} → hom-opposite-Precategory x x
-  id-hom-opposite-Precategory = id-hom-Precategory C
+  id-hom-opposite-Precategory = {!!}
 
   left-unit-law-comp-hom-opposite-Precategory :
     {x y : obj-opposite-Precategory}
     (f : hom-opposite-Precategory x y) →
     comp-hom-opposite-Precategory id-hom-opposite-Precategory f ＝ f
-  left-unit-law-comp-hom-opposite-Precategory =
-    right-unit-law-comp-hom-Precategory C
+  left-unit-law-comp-hom-opposite-Precategory = {!!}
 
   right-unit-law-comp-hom-opposite-Precategory :
     {x y : obj-opposite-Precategory} (f : hom-opposite-Precategory x y) →
     comp-hom-opposite-Precategory f id-hom-opposite-Precategory ＝ f
-  right-unit-law-comp-hom-opposite-Precategory =
-    left-unit-law-comp-hom-Precategory C
+  right-unit-law-comp-hom-opposite-Precategory = {!!}
 
   opposite-Precategory : Precategory l1 l2
-  pr1 opposite-Precategory = obj-opposite-Precategory
-  pr1 (pr2 opposite-Precategory) = hom-set-opposite-Precategory
-  pr1 (pr1 (pr2 (pr2 opposite-Precategory))) = comp-hom-opposite-Precategory
-  pr1 (pr2 (pr1 (pr2 (pr2 opposite-Precategory))) h g f) =
-    associative-comp-hom-opposite-Precategory h g f
-  pr2 (pr2 (pr1 (pr2 (pr2 opposite-Precategory))) h g f) =
-    inv-associative-comp-hom-opposite-Precategory h g f
-  pr1 (pr2 (pr2 (pr2 opposite-Precategory))) x = id-hom-opposite-Precategory {x}
-  pr1 (pr2 (pr2 (pr2 (pr2 opposite-Precategory)))) =
-    left-unit-law-comp-hom-opposite-Precategory
-  pr2 (pr2 (pr2 (pr2 (pr2 opposite-Precategory)))) =
-    right-unit-law-comp-hom-opposite-Precategory
+  pr1 opposite-Precategory = {!!}
 ```
 
 ## Properties
@@ -123,22 +98,20 @@ module _
 ```agda
 is-involution-opposite-Precategory :
   {l1 l2 : Level} → is-involution (opposite-Precategory {l1} {l2})
-is-involution-opposite-Precategory C = refl
+is-involution-opposite-Precategory C = {!!}
 
 involution-opposite-Precategory :
   (l1 l2 : Level) → involution (Precategory l1 l2)
-pr1 (involution-opposite-Precategory l1 l2) = opposite-Precategory
-pr2 (involution-opposite-Precategory l1 l2) = is-involution-opposite-Precategory
+pr1 (involution-opposite-Precategory l1 l2) = {!!}
+pr2 (involution-opposite-Precategory l1 l2) = {!!}
 
 is-equiv-opposite-Precategory :
   {l1 l2 : Level} → is-equiv (opposite-Precategory {l1} {l2})
-is-equiv-opposite-Precategory =
-  is-equiv-is-involution is-involution-opposite-Precategory
+is-equiv-opposite-Precategory = {!!}
 
 equiv-opposite-Precategory :
   (l1 l2 : Level) → Precategory l1 l2 ≃ Precategory l1 l2
-equiv-opposite-Precategory l1 l2 =
-  equiv-involution (involution-opposite-Precategory l1 l2)
+equiv-opposite-Precategory l1 l2 = {!!}
 ```
 
 ### Computing the isomorphism sets of the opposite precategory
@@ -150,41 +123,19 @@ module _
 
   map-compute-iso-opposite-Precategory :
     iso-Precategory C x y → iso-Precategory (opposite-Precategory C) y x
-  pr1 (map-compute-iso-opposite-Precategory f) =
-    hom-iso-Precategory C f
-  pr1 (pr2 (map-compute-iso-opposite-Precategory f)) =
-    hom-inv-iso-Precategory C f
-  pr1 (pr2 (pr2 (map-compute-iso-opposite-Precategory f))) =
-    is-retraction-hom-inv-iso-Precategory C f
-  pr2 (pr2 (pr2 (map-compute-iso-opposite-Precategory f))) =
-    is-section-hom-inv-iso-Precategory C f
+  pr1 (map-compute-iso-opposite-Precategory f) = {!!}
 
   map-inv-compute-iso-opposite-Precategory :
     iso-Precategory (opposite-Precategory C) y x → iso-Precategory C x y
-  pr1 (map-inv-compute-iso-opposite-Precategory f) =
-    hom-iso-Precategory (opposite-Precategory C) f
-  pr1 (pr2 (map-inv-compute-iso-opposite-Precategory f)) =
-    hom-inv-iso-Precategory (opposite-Precategory C) f
-  pr1 (pr2 (pr2 (map-inv-compute-iso-opposite-Precategory f))) =
-    is-retraction-hom-inv-iso-Precategory (opposite-Precategory C) f
-  pr2 (pr2 (pr2 (map-inv-compute-iso-opposite-Precategory f))) =
-    is-section-hom-inv-iso-Precategory (opposite-Precategory C) f
+  pr1 (map-inv-compute-iso-opposite-Precategory f) = {!!}
 
   is-equiv-map-compute-iso-opposite-Precategory :
     is-equiv (map-compute-iso-opposite-Precategory)
-  pr1 (pr1 is-equiv-map-compute-iso-opposite-Precategory) =
-    map-inv-compute-iso-opposite-Precategory
-  pr2 (pr1 is-equiv-map-compute-iso-opposite-Precategory) = refl-htpy
-  pr1 (pr2 is-equiv-map-compute-iso-opposite-Precategory) =
-    map-inv-compute-iso-opposite-Precategory
-  pr2 (pr2 is-equiv-map-compute-iso-opposite-Precategory) = refl-htpy
+  pr1 (pr1 is-equiv-map-compute-iso-opposite-Precategory) = {!!}
 
   compute-iso-opposite-Precategory :
     iso-Precategory C x y ≃ iso-Precategory (opposite-Precategory C) y x
-  pr1 compute-iso-opposite-Precategory =
-    map-compute-iso-opposite-Precategory
-  pr2 compute-iso-opposite-Precategory =
-    is-equiv-map-compute-iso-opposite-Precategory
+  pr1 compute-iso-opposite-Precategory = {!!}
 ```
 
 ## External links

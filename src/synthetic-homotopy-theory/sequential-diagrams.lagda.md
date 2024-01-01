@@ -37,18 +37,18 @@ sometimes called **cotowers**.
 
 ```agda
 sequential-diagram : (l : Level) → UU (lsuc l)
-sequential-diagram l = Σ (ℕ → UU l) (λ A → (n : ℕ) → A n → A (succ-ℕ n))
+sequential-diagram l = {!!}
 
 module _
   { l : Level} (A : sequential-diagram l)
   where
 
   family-sequential-diagram : ℕ → UU l
-  family-sequential-diagram = pr1 A
+  family-sequential-diagram = {!!}
 
   map-sequential-diagram :
     (n : ℕ) → family-sequential-diagram n → family-sequential-diagram (succ-ℕ n)
-  map-sequential-diagram = pr2 A
+  map-sequential-diagram = {!!}
 ```
 
 ```agda
@@ -57,8 +57,7 @@ module _
   where
 
   constant-sequential-diagram : sequential-diagram l
-  pr1 constant-sequential-diagram _ = X
-  pr2 constant-sequential-diagram _ x = x
+  pr1 constant-sequential-diagram _ = {!!}
 ```
 
 ## Properties
@@ -83,8 +82,7 @@ module _
   where
 
   postcomp-sequential-diagram : sequential-diagram (l1 ⊔ l2)
-  pr1 postcomp-sequential-diagram n = X → family-sequential-diagram A n
-  pr2 postcomp-sequential-diagram n g x = map-sequential-diagram A n (g x)
+  pr1 postcomp-sequential-diagram n = {!!}
 ```
 
 ## References

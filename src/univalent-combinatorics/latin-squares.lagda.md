@@ -28,48 +28,39 @@ defined in `main-classes-of-latin-squares`.
 
 ```agda
 Latin-Square : (l1 l2 l3 : Level) → UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-Latin-Square l1 l2 l3 =
-  Σ ( Inhabited-Type l1)
-    ( λ A →
-      Σ ( Inhabited-Type l2)
-        ( λ B →
-          Σ ( Inhabited-Type l3)
-            ( λ C →
-              Σ ( type-Inhabited-Type A → type-Inhabited-Type B →
-                  type-Inhabited-Type C)
-                ( is-binary-equiv))))
+Latin-Square l1 l2 l3 = {!!}
 
 module _
   {l1 l2 l3 : Level} (L : Latin-Square l1 l2 l3)
   where
 
   inhabited-type-row-Latin-Square : Inhabited-Type l1
-  inhabited-type-row-Latin-Square = pr1 L
+  inhabited-type-row-Latin-Square = {!!}
 
   row-Latin-Square : UU l1
-  row-Latin-Square = type-Inhabited-Type inhabited-type-row-Latin-Square
+  row-Latin-Square = {!!}
 
   inhabited-type-column-Latin-Square : Inhabited-Type l2
-  inhabited-type-column-Latin-Square = pr1 (pr2 L)
+  inhabited-type-column-Latin-Square = {!!}
 
   column-Latin-Square : UU l2
-  column-Latin-Square = type-Inhabited-Type inhabited-type-column-Latin-Square
+  column-Latin-Square = {!!}
 
   inhabited-type-symbol-Latin-Square : Inhabited-Type l3
-  inhabited-type-symbol-Latin-Square = pr1 (pr2 (pr2 L))
+  inhabited-type-symbol-Latin-Square = {!!}
 
   symbol-Latin-Square : UU l3
-  symbol-Latin-Square = type-Inhabited-Type inhabited-type-symbol-Latin-Square
+  symbol-Latin-Square = {!!}
 
   mul-Latin-Square :
     row-Latin-Square → column-Latin-Square → symbol-Latin-Square
-  mul-Latin-Square = pr1 (pr2 (pr2 (pr2 L)))
+  mul-Latin-Square = {!!}
 
   mul-Latin-Square' :
     column-Latin-Square → row-Latin-Square → symbol-Latin-Square
-  mul-Latin-Square' x y = mul-Latin-Square y x
+  mul-Latin-Square' x y = {!!}
 
   is-binary-equiv-mul-Latin-Square :
     is-binary-equiv mul-Latin-Square
-  is-binary-equiv-mul-Latin-Square = pr2 (pr2 (pr2 (pr2 L)))
+  is-binary-equiv-mul-Latin-Square = {!!}
 ```

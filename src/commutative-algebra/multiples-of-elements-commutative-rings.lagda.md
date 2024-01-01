@@ -40,8 +40,7 @@ module _
 
   multiple-Commutative-Ring :
     ℕ → type-Commutative-Ring A → type-Commutative-Ring A
-  multiple-Commutative-Ring =
-    multiple-Ring (ring-Commutative-Ring A)
+  multiple-Commutative-Ring = {!!}
 ```
 
 ## Properties
@@ -57,11 +56,10 @@ module _
     (n : ℕ) →
     multiple-Commutative-Ring A n (zero-Commutative-Ring A) ＝
     zero-Commutative-Ring A
-  multiple-zero-Commutative-Ring =
-    multiple-zero-Ring (ring-Commutative-Ring A)
+  multiple-zero-Commutative-Ring = {!!}
 ```
 
-### `(n + 1) · x = n · x + x`
+### `(n + 1) · x = {!!}
 
 ```agda
 module _
@@ -72,8 +70,7 @@ module _
     (n : ℕ) (x : type-Commutative-Ring A) →
     multiple-Commutative-Ring A (succ-ℕ n) x ＝
     add-Commutative-Ring A (multiple-Commutative-Ring A n x) x
-  multiple-succ-Commutative-Ring =
-    multiple-succ-Ring (ring-Commutative-Ring A)
+  multiple-succ-Commutative-Ring = {!!}
 ```
 
 ### `(n + 1) · x ＝ x + n · x`
@@ -87,8 +84,7 @@ module _
     (n : ℕ) (x : type-Commutative-Ring A) →
     multiple-Commutative-Ring A (succ-ℕ n) x ＝
     add-Commutative-Ring A x (multiple-Commutative-Ring A n x)
-  multiple-succ-Commutative-Ring' =
-    multiple-succ-Ring' (ring-Commutative-Ring A)
+  multiple-succ-Commutative-Ring' = {!!}
 ```
 
 ### Multiples by sums of natural numbers are products of multiples
@@ -104,8 +100,7 @@ module _
     add-Commutative-Ring A
       ( multiple-Commutative-Ring A m x)
       ( multiple-Commutative-Ring A n x)
-  right-distributive-multiple-add-Commutative-Ring =
-    right-distributive-multiple-add-Ring (ring-Commutative-Ring A)
+  right-distributive-multiple-add-Commutative-Ring = {!!}
 ```
 
 ### Multiples distribute over the sum of `x` and `y`
@@ -121,8 +116,7 @@ module _
     add-Commutative-Ring A
       ( multiple-Commutative-Ring A n x)
       ( multiple-Commutative-Ring A n y)
-  left-distributive-multiple-add-Commutative-Ring =
-    left-distributive-multiple-add-Ring (ring-Commutative-Ring A)
+  left-distributive-multiple-add-Commutative-Ring = {!!}
 ```
 
 ### Multiples by products of natural numbers are iterated multiples
@@ -136,6 +130,5 @@ module _
     (m n : ℕ) {x : type-Commutative-Ring A} →
     multiple-Commutative-Ring A (m *ℕ n) x ＝
     multiple-Commutative-Ring A n (multiple-Commutative-Ring A m x)
-  multiple-mul-Commutative-Ring =
-    multiple-mul-Ring (ring-Commutative-Ring A)
+  multiple-mul-Commutative-Ring = {!!}
 ```

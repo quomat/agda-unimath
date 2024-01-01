@@ -42,18 +42,13 @@ module _
   where
 
   is-embedding-prop-map-Precategory : Prop (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-embedding-prop-map-Precategory =
-    prod-Prop
-      ( is-functor-prop-map-Precategory C D F)
-      ( is-embedding-map-prop-map-Precategory C D F)
+  is-embedding-prop-map-Precategory = {!!}
 
   is-embedding-map-Precategory : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-embedding-map-Precategory =
-    type-Prop is-embedding-prop-map-Precategory
+  is-embedding-map-Precategory = {!!}
 
   is-prop-is-embedding-map-Precategory : is-prop is-embedding-map-Precategory
-  is-prop-is-embedding-map-Precategory =
-    is-prop-type-Prop is-embedding-prop-map-Precategory
+  is-prop-is-embedding-map-Precategory = {!!}
 ```
 
 ### The predicate of being an embedding on functors between precategories
@@ -67,17 +62,14 @@ module _
   where
 
   is-embedding-prop-functor-Precategory : Prop (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-embedding-prop-functor-Precategory =
-    is-embedding-map-prop-map-Precategory C D (map-functor-Precategory C D F)
+  is-embedding-prop-functor-Precategory = {!!}
 
   is-embedding-functor-Precategory : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-embedding-functor-Precategory =
-    type-Prop is-embedding-prop-functor-Precategory
+  is-embedding-functor-Precategory = {!!}
 
   is-prop-is-embedding-functor-Precategory :
     is-prop is-embedding-functor-Precategory
-  is-prop-is-embedding-functor-Precategory =
-    is-prop-type-Prop is-embedding-prop-functor-Precategory
+  is-prop-is-embedding-functor-Precategory = {!!}
 ```
 
 ### The type of embeddings between precategories
@@ -90,15 +82,14 @@ module _
   where
 
   embedding-Precategory : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  embedding-Precategory =
-    Σ (functor-Precategory C D) (is-embedding-functor-Precategory C D)
+  embedding-Precategory = {!!}
 
   functor-embedding-Precategory :
     embedding-Precategory → functor-Precategory C D
-  functor-embedding-Precategory = pr1
+  functor-embedding-Precategory = {!!}
 
   is-embedding-embedding-Precategory :
     (e : embedding-Precategory) →
     is-embedding-functor-Precategory C D (functor-embedding-Precategory e)
-  is-embedding-embedding-Precategory = pr2
+  is-embedding-embedding-Precategory = {!!}
 ```

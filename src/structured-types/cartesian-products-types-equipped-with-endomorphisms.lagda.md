@@ -32,20 +32,13 @@ module _
   where
 
   type-prod-Type-With-Endomorphism : UU (l1 ⊔ l2)
-  type-prod-Type-With-Endomorphism =
-    type-Type-With-Endomorphism A × type-Type-With-Endomorphism B
+  type-prod-Type-With-Endomorphism = {!!}
 
   endomorphism-prod-Type-With-Endomorphism :
     type-prod-Type-With-Endomorphism → type-prod-Type-With-Endomorphism
-  endomorphism-prod-Type-With-Endomorphism =
-    map-prod
-      ( endomorphism-Type-With-Endomorphism A)
-      ( endomorphism-Type-With-Endomorphism B)
+  endomorphism-prod-Type-With-Endomorphism = {!!}
 
   prod-Type-With-Endomorphism :
     Type-With-Endomorphism (l1 ⊔ l2)
-  pr1 prod-Type-With-Endomorphism =
-    type-prod-Type-With-Endomorphism
-  pr2 prod-Type-With-Endomorphism =
-    endomorphism-prod-Type-With-Endomorphism
+  pr1 prod-Type-With-Endomorphism = {!!}
 ```

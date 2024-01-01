@@ -39,7 +39,7 @@ module _
   where
 
   universal-property-equiv : UUω
-  universal-property-equiv = {l : Level} (X : UU l) → is-equiv (precomp f X)
+  universal-property-equiv = {!!}
 ```
 
 ## Properties
@@ -54,7 +54,7 @@ abstract
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
     dependent-universal-property-equiv f →
     universal-property-equiv f
-  is-equiv-precomp-is-equiv-precomp-Π f H C = H (λ _ → C)
+  is-equiv-precomp-is-equiv-precomp-Π f H C = {!!}
 ```
 
 #### If `f` is an equivalence, then precomposition by `f` is an equivalence
@@ -67,9 +67,7 @@ module _
   abstract
     is-equiv-precomp-is-equiv :
       is-equiv f → universal-property-equiv f
-    is-equiv-precomp-is-equiv H =
-      is-equiv-precomp-is-equiv-precomp-Π f
-        ( is-equiv-precomp-Π-is-equiv H)
+    is-equiv-precomp-is-equiv H = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (e : A ≃ B)
@@ -78,12 +76,10 @@ module _
   abstract
     is-equiv-precomp-equiv :
       universal-property-equiv (map-equiv e)
-    is-equiv-precomp-equiv =
-      is-equiv-precomp-is-equiv (map-equiv e) (is-equiv-map-equiv e)
+    is-equiv-precomp-equiv = {!!}
 
   equiv-precomp : {l3 : Level} (C : UU l3) → (B → C) ≃ (A → C)
-  pr1 (equiv-precomp C) = precomp (map-equiv e) C
-  pr2 (equiv-precomp C) = is-equiv-precomp-equiv C
+  pr1 (equiv-precomp C) = {!!}
 ```
 
 #### If precomposing by `f` is an equivalence, then `f` is an equivalence
@@ -96,14 +92,7 @@ module _
   abstract
     is-equiv-is-equiv-precomp :
       universal-property-equiv f → is-equiv f
-    is-equiv-is-equiv-precomp H =
-      is-equiv-is-equiv-precomp-structured-type
-        ( λ l → l1 ⊔ l2)
-        ( λ X → A → B)
-        ( A , f)
-        ( B , f)
-        ( f)
-        ( λ C → H (pr1 C))
+    is-equiv-is-equiv-precomp H = {!!}
 ```
 
 #### If dependent precomposition by `f` is an equivalence, then `f` is an equivalence
@@ -114,6 +103,5 @@ abstract
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
     dependent-universal-property-equiv f →
     is-equiv f
-  is-equiv-is-equiv-precomp-Π f H =
-    is-equiv-is-equiv-precomp f (is-equiv-precomp-is-equiv-precomp-Π f H)
+  is-equiv-is-equiv-precomp-Π f H = {!!}
 ```

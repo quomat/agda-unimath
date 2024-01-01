@@ -44,12 +44,10 @@ module _
   where
 
   is-left-inverse-element-Ring : (x y : type-Ring R) → UU l
-  is-left-inverse-element-Ring =
-    is-left-inverse-element-Monoid (multiplicative-monoid-Ring R)
+  is-left-inverse-element-Ring = {!!}
 
   is-left-invertible-element-Ring : type-Ring R → UU l
-  is-left-invertible-element-Ring =
-    is-left-invertible-element-Monoid (multiplicative-monoid-Ring R)
+  is-left-invertible-element-Ring = {!!}
 
 module _
   {l : Level} (R : Ring l) {x : type-Ring R}
@@ -57,17 +55,13 @@ module _
 
   retraction-is-left-invertible-element-Ring :
     is-left-invertible-element-Ring R x → type-Ring R
-  retraction-is-left-invertible-element-Ring =
-    retraction-is-left-invertible-element-Monoid
-      ( multiplicative-monoid-Ring R)
+  retraction-is-left-invertible-element-Ring = {!!}
 
   is-left-inverse-retraction-is-left-invertible-element-Ring :
     (H : is-left-invertible-element-Ring R x) →
     is-left-inverse-element-Ring R x
       ( retraction-is-left-invertible-element-Ring H)
-  is-left-inverse-retraction-is-left-invertible-element-Ring =
-    is-left-inverse-retraction-is-left-invertible-element-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-left-inverse-retraction-is-left-invertible-element-Ring = {!!}
 ```
 
 ### Right invertible elements of rings
@@ -78,12 +72,10 @@ module _
   where
 
   is-right-inverse-element-Ring : (x y : type-Ring R) → UU l
-  is-right-inverse-element-Ring =
-    is-right-inverse-element-Monoid (multiplicative-monoid-Ring R)
+  is-right-inverse-element-Ring = {!!}
 
   is-right-invertible-element-Ring : type-Ring R → UU l
-  is-right-invertible-element-Ring =
-    is-right-invertible-element-Monoid (multiplicative-monoid-Ring R)
+  is-right-invertible-element-Ring = {!!}
 
 module _
   {l : Level} (R : Ring l) {x : type-Ring R}
@@ -91,16 +83,13 @@ module _
 
   section-is-right-invertible-element-Ring :
     is-right-invertible-element-Ring R x → type-Ring R
-  section-is-right-invertible-element-Ring =
-    section-is-right-invertible-element-Monoid (multiplicative-monoid-Ring R)
+  section-is-right-invertible-element-Ring = {!!}
 
   is-right-inverse-section-is-right-invertible-element-Ring :
     (H : is-right-invertible-element-Ring R x) →
     is-right-inverse-element-Ring R x
       ( section-is-right-invertible-element-Ring H)
-  is-right-inverse-section-is-right-invertible-element-Ring =
-    is-right-inverse-section-is-right-invertible-element-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-right-inverse-section-is-right-invertible-element-Ring = {!!}
 ```
 
 ### Invertible elements of rings
@@ -111,12 +100,10 @@ module _
   where
 
   is-inverse-element-Ring : type-Ring R → UU l
-  is-inverse-element-Ring =
-    is-inverse-element-Monoid (multiplicative-monoid-Ring R) x
+  is-inverse-element-Ring = {!!}
 
   is-invertible-element-Ring : UU l
-  is-invertible-element-Ring =
-    is-invertible-element-Monoid (multiplicative-monoid-Ring R) x
+  is-invertible-element-Ring = {!!}
 
 module _
   {l : Level} (R : Ring l) {x : type-Ring R}
@@ -124,22 +111,17 @@ module _
 
   inv-is-invertible-element-Ring :
     is-invertible-element-Ring R x → type-Ring R
-  inv-is-invertible-element-Ring =
-    inv-is-invertible-element-Monoid (multiplicative-monoid-Ring R)
+  inv-is-invertible-element-Ring = {!!}
 
   is-right-inverse-inv-is-invertible-element-Ring :
     (H : is-invertible-element-Ring R x) →
     is-right-inverse-element-Ring R x (inv-is-invertible-element-Ring H)
-  is-right-inverse-inv-is-invertible-element-Ring =
-    is-right-inverse-inv-is-invertible-element-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-right-inverse-inv-is-invertible-element-Ring = {!!}
 
   is-left-inverse-inv-is-invertible-element-Ring :
     (H : is-invertible-element-Ring R x) →
     is-left-inverse-element-Ring R x (inv-is-invertible-element-Ring H)
-  is-left-inverse-inv-is-invertible-element-Ring =
-    is-left-inverse-inv-is-invertible-element-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-left-inverse-inv-is-invertible-element-Ring = {!!}
 ```
 
 ## Properties
@@ -153,14 +135,10 @@ module _
 
   is-prop-is-invertible-element-Ring :
     (x : type-Ring R) → is-prop (is-invertible-element-Ring R x)
-  is-prop-is-invertible-element-Ring =
-    is-prop-is-invertible-element-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-prop-is-invertible-element-Ring = {!!}
 
   is-invertible-element-prop-Ring : type-Ring R → Prop l
-  is-invertible-element-prop-Ring =
-    is-invertible-element-prop-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-invertible-element-prop-Ring = {!!}
 ```
 
 ### Inverses are left/right inverses
@@ -173,16 +151,12 @@ module _
   is-left-invertible-is-invertible-element-Ring :
     (x : type-Ring R) →
     is-invertible-element-Ring R x → is-left-invertible-element-Ring R x
-  is-left-invertible-is-invertible-element-Ring =
-    is-left-invertible-is-invertible-element-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-left-invertible-is-invertible-element-Ring = {!!}
 
   is-right-invertible-is-invertible-element-Ring :
     (x : type-Ring R) →
     is-invertible-element-Ring R x → is-right-invertible-element-Ring R x
-  is-right-invertible-is-invertible-element-Ring =
-    is-right-invertible-is-invertible-element-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-right-invertible-is-invertible-element-Ring = {!!}
 ```
 
 ### The inverse invertible element
@@ -196,25 +170,19 @@ module _
     (x : type-Ring R) (H : is-left-invertible-element-Ring R x) →
     is-right-invertible-element-Ring R
       ( retraction-is-left-invertible-element-Ring R H)
-  is-right-invertible-left-inverse-Ring =
-    is-right-invertible-left-inverse-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-right-invertible-left-inverse-Ring = {!!}
 
   is-left-invertible-right-inverse-Ring :
     (x : type-Ring R) (H : is-right-invertible-element-Ring R x) →
     is-left-invertible-element-Ring R
       ( section-is-right-invertible-element-Ring R H)
-  is-left-invertible-right-inverse-Ring =
-    is-left-invertible-right-inverse-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-left-invertible-right-inverse-Ring = {!!}
 
   is-invertible-element-inverse-Ring :
     (x : type-Ring R) (H : is-invertible-element-Ring R x) →
     is-invertible-element-Ring R
       ( inv-is-invertible-element-Ring R H)
-  is-invertible-element-inverse-Ring =
-    is-invertible-element-inverse-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-invertible-element-inverse-Ring = {!!}
 ```
 
 ### Any invertible element of a monoid has a contractible type of right inverses
@@ -227,9 +195,7 @@ module _
   is-contr-is-right-invertible-element-Ring :
     (x : type-Ring R) → is-invertible-element-Ring R x →
     is-contr (is-right-invertible-element-Ring R x)
-  is-contr-is-right-invertible-element-Ring =
-    is-contr-is-right-invertible-element-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-contr-is-right-invertible-element-Ring = {!!}
 ```
 
 ### Any invertible element of a monoid has a contractible type of left inverses
@@ -242,9 +208,7 @@ module _
   is-contr-is-left-invertible-Ring :
     (x : type-Ring R) → is-invertible-element-Ring R x →
     is-contr (is-left-invertible-element-Ring R x)
-  is-contr-is-left-invertible-Ring =
-    is-contr-is-left-invertible-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-contr-is-left-invertible-Ring = {!!}
 ```
 
 ### The unit of a monoid is invertible
@@ -256,21 +220,15 @@ module _
 
   is-left-invertible-element-one-Ring :
     is-left-invertible-element-Ring R (one-Ring R)
-  is-left-invertible-element-one-Ring =
-    is-left-invertible-element-unit-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-left-invertible-element-one-Ring = {!!}
 
   is-right-invertible-element-one-Ring :
     is-right-invertible-element-Ring R (one-Ring R)
-  is-right-invertible-element-one-Ring =
-    is-right-invertible-element-unit-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-right-invertible-element-one-Ring = {!!}
 
   is-invertible-element-one-Ring :
     is-invertible-element-Ring R (one-Ring R)
-  is-invertible-element-one-Ring =
-    is-invertible-element-unit-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-invertible-element-one-Ring = {!!}
 ```
 
 ### Invertible elements are closed under multiplication
@@ -285,27 +243,21 @@ module _
     is-left-invertible-element-Ring R x →
     is-left-invertible-element-Ring R y →
     is-left-invertible-element-Ring R (mul-Ring R x y)
-  is-left-invertible-element-mul-Ring =
-    is-left-invertible-element-mul-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-left-invertible-element-mul-Ring = {!!}
 
   is-right-invertible-element-mul-Ring :
     (x y : type-Ring R) →
     is-right-invertible-element-Ring R x →
     is-right-invertible-element-Ring R y →
     is-right-invertible-element-Ring R (mul-Ring R x y)
-  is-right-invertible-element-mul-Ring =
-    is-right-invertible-element-mul-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-right-invertible-element-mul-Ring = {!!}
 
   is-invertible-element-mul-Ring :
     (x y : type-Ring R) →
     is-invertible-element-Ring R x →
     is-invertible-element-Ring R y →
     is-invertible-element-Ring R (mul-Ring R x y)
-  is-invertible-element-mul-Ring =
-    is-invertible-element-mul-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-invertible-element-mul-Ring = {!!}
 ```
 
 ### The inverse of an invertible element is invertible
@@ -318,9 +270,7 @@ module _
   is-invertible-element-inv-is-invertible-element-Ring :
     {x : type-Ring R} (H : is-invertible-element-Ring R x) →
     is-invertible-element-Ring R (inv-is-invertible-element-Ring R H)
-  is-invertible-element-inv-is-invertible-element-Ring =
-    is-invertible-element-inv-is-invertible-element-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-invertible-element-inv-is-invertible-element-Ring = {!!}
 ```
 
 ### An element is invertible if and only if multiplying by it is an equivalence
@@ -334,57 +284,41 @@ module _
 
   inv-is-invertible-element-is-equiv-mul-Ring :
     is-equiv (mul-Ring R x) → type-Ring R
-  inv-is-invertible-element-is-equiv-mul-Ring =
-    inv-is-invertible-element-is-equiv-mul-Monoid
-      ( multiplicative-monoid-Ring R)
+  inv-is-invertible-element-is-equiv-mul-Ring = {!!}
 
   is-right-inverse-inv-is-invertible-element-is-equiv-mul-Ring :
     (H : is-equiv (mul-Ring R x)) →
     mul-Ring R x (inv-is-invertible-element-is-equiv-mul-Ring H) ＝
     one-Ring R
-  is-right-inverse-inv-is-invertible-element-is-equiv-mul-Ring =
-    is-right-inverse-inv-is-invertible-element-is-equiv-mul-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-right-inverse-inv-is-invertible-element-is-equiv-mul-Ring = {!!}
 
   is-left-inverse-inv-is-invertible-element-is-equiv-mul-Ring :
     (H : is-equiv (mul-Ring R x)) →
     mul-Ring R (inv-is-invertible-element-is-equiv-mul-Ring H) x ＝
     one-Ring R
-  is-left-inverse-inv-is-invertible-element-is-equiv-mul-Ring =
-    is-left-inverse-inv-is-invertible-element-is-equiv-mul-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-left-inverse-inv-is-invertible-element-is-equiv-mul-Ring = {!!}
 
   is-invertible-element-is-equiv-mul-Ring :
     is-equiv (mul-Ring R x) → is-invertible-element-Ring R x
-  is-invertible-element-is-equiv-mul-Ring =
-    is-invertible-element-is-equiv-mul-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-invertible-element-is-equiv-mul-Ring = {!!}
 
   left-div-is-invertible-element-Ring :
     is-invertible-element-Ring R x → type-Ring R → type-Ring R
-  left-div-is-invertible-element-Ring =
-    left-div-is-invertible-element-Monoid
-      ( multiplicative-monoid-Ring R)
+  left-div-is-invertible-element-Ring = {!!}
 
   is-section-left-div-is-invertible-element-Ring :
     (H : is-invertible-element-Ring R x) →
     mul-Ring R x ∘ left-div-is-invertible-element-Ring H ~ id
-  is-section-left-div-is-invertible-element-Ring =
-    is-section-left-div-is-invertible-element-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-section-left-div-is-invertible-element-Ring = {!!}
 
   is-retraction-left-div-is-invertible-element-Ring :
     (H : is-invertible-element-Ring R x) →
     left-div-is-invertible-element-Ring H ∘ mul-Ring R x ~ id
-  is-retraction-left-div-is-invertible-element-Ring =
-    is-retraction-left-div-is-invertible-element-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-retraction-left-div-is-invertible-element-Ring = {!!}
 
   is-equiv-mul-is-invertible-element-Ring :
     is-invertible-element-Ring R x → is-equiv (mul-Ring R x)
-  is-equiv-mul-is-invertible-element-Ring =
-    is-equiv-mul-is-invertible-element-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-equiv-mul-is-invertible-element-Ring = {!!}
 ```
 
 #### An element `x` is invertible if and only if `z ↦ zx` is an equivalence
@@ -396,57 +330,41 @@ module _
 
   inv-is-invertible-element-is-equiv-mul-Ring' :
     is-equiv (mul-Ring' R x) → type-Ring R
-  inv-is-invertible-element-is-equiv-mul-Ring' =
-    inv-is-invertible-element-is-equiv-mul-Monoid'
-      ( multiplicative-monoid-Ring R)
+  inv-is-invertible-element-is-equiv-mul-Ring' = {!!}
 
   is-left-inverse-inv-is-invertible-element-is-equiv-mul-Ring' :
     (H : is-equiv (mul-Ring' R x)) →
     mul-Ring R (inv-is-invertible-element-is-equiv-mul-Ring' H) x ＝
     one-Ring R
-  is-left-inverse-inv-is-invertible-element-is-equiv-mul-Ring' =
-    is-left-inverse-inv-is-invertible-element-is-equiv-mul-Monoid'
-      ( multiplicative-monoid-Ring R)
+  is-left-inverse-inv-is-invertible-element-is-equiv-mul-Ring' = {!!}
 
   is-right-inverse-inv-is-invertible-element-is-equiv-mul-Ring' :
     (H : is-equiv (mul-Ring' R x)) →
     mul-Ring R x (inv-is-invertible-element-is-equiv-mul-Ring' H) ＝
     one-Ring R
-  is-right-inverse-inv-is-invertible-element-is-equiv-mul-Ring' =
-    is-right-inverse-inv-is-invertible-element-is-equiv-mul-Monoid'
-      ( multiplicative-monoid-Ring R)
+  is-right-inverse-inv-is-invertible-element-is-equiv-mul-Ring' = {!!}
 
   is-invertible-element-is-equiv-mul-Ring' :
     is-equiv (mul-Ring' R x) → is-invertible-element-Ring R x
-  is-invertible-element-is-equiv-mul-Ring' =
-    is-invertible-element-is-equiv-mul-Monoid'
-      ( multiplicative-monoid-Ring R)
+  is-invertible-element-is-equiv-mul-Ring' = {!!}
 
   right-div-is-invertible-element-Ring :
     is-invertible-element-Ring R x → type-Ring R → type-Ring R
-  right-div-is-invertible-element-Ring =
-    right-div-is-invertible-element-Monoid
-      ( multiplicative-monoid-Ring R)
+  right-div-is-invertible-element-Ring = {!!}
 
   is-section-right-div-is-invertible-element-Ring :
     (H : is-invertible-element-Ring R x) →
     mul-Ring' R x ∘ right-div-is-invertible-element-Ring H ~ id
-  is-section-right-div-is-invertible-element-Ring =
-    is-section-right-div-is-invertible-element-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-section-right-div-is-invertible-element-Ring = {!!}
 
   is-retraction-right-div-is-invertible-element-Ring :
     (H : is-invertible-element-Ring R x) →
     right-div-is-invertible-element-Ring H ∘ mul-Ring' R x ~ id
-  is-retraction-right-div-is-invertible-element-Ring =
-    is-retraction-right-div-is-invertible-element-Monoid
-      ( multiplicative-monoid-Ring R)
+  is-retraction-right-div-is-invertible-element-Ring = {!!}
 
   is-equiv-mul-is-invertible-element-Ring' :
     is-invertible-element-Ring R x → is-equiv (mul-Ring' R x)
-  is-equiv-mul-is-invertible-element-Ring' =
-    is-equiv-mul-is-invertible-element-Monoid'
-      ( multiplicative-monoid-Ring R)
+  is-equiv-mul-is-invertible-element-Ring' = {!!}
 ```
 
 ## See also

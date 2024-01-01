@@ -50,23 +50,7 @@ module _
 
   product-dirichlet-series-species-subuniverse :
     UU (lsuc l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6)
-  product-dirichlet-series-species-subuniverse =
-    dirichlet-series-species-subuniverse
-      ( P)
-      ( subuniverse-global-subuniverse Q l3)
-      ( C1)
-      ( H)
-      ( C2)
-      ( S)
-      ( X) ×
-    dirichlet-series-species-subuniverse
-      ( P)
-      ( subuniverse-global-subuniverse Q l4)
-      ( C1)
-      ( H)
-      ( C2)
-      ( T)
-      ( X)
+  product-dirichlet-series-species-subuniverse = {!!}
 ```
 
 ## Properties
@@ -112,12 +96,7 @@ module _
                     ( inclusion-subuniverse
                       ( subuniverse-global-subuniverse Q l4)
                       ( T B))) × (X → H (pr1 F)))))
-    pr1 reassociate (F , ((A , B , e) , x) , y) = (A , B , (F , e) , x , y)
-    pr2 reassociate =
-      is-equiv-is-invertible
-        ( λ (A , B , (F , e) , x , y) → (F , ((A , B , e) , x) , y))
-        ( refl-htpy)
-        ( refl-htpy)
+    pr1 reassociate (F , ((A , B , e) , x) , y) = {!!}
 
     reassociate' :
       Σ ( type-subuniverse P)
@@ -132,14 +111,7 @@ module _
                   ( T B)) ×
               ( (X → H A) × (X → H B)))) ≃
       product-dirichlet-series-species-subuniverse P Q C1 H C2 S T X
-    pr1 reassociate' (A , B , (s , t) , (fs , ft)) =
-      ((A , (s , fs)) , (B , (t , ft)))
-    pr2 reassociate' =
-      is-equiv-is-invertible
-        ( λ ((A , (s , fs)) , (B , (t , ft))) →
-          (A , B , (s , t) , (fs , ft)))
-        ( refl-htpy)
-        ( refl-htpy)
+    pr1 reassociate' (A , B , (s , t) , (fs , ft)) = {!!}
 
   equiv-dirichlet-series-dirichlet-product-species-subuniverse :
     dirichlet-series-species-subuniverse
@@ -151,27 +123,5 @@ module _
       ( dirichlet-product-species-subuniverse P Q C3 S T)
       ( X) ≃
     product-dirichlet-series-species-subuniverse P Q C1 H C2 S T X
-  equiv-dirichlet-series-dirichlet-product-species-subuniverse =
-    ( reassociate') ∘e
-    ( ( equiv-tot
-        ( λ A →
-          equiv-tot
-            ( λ B →
-              ( equiv-prod
-                ( id-equiv)
-                ( equiv-up-product ∘e equiv-postcomp X (C2 A B))) ∘e
-              left-unit-law-Σ-is-contr
-                ( is-torsorial-equiv-subuniverse'
-                  ( P)
-                  ( inclusion-subuniverse P A ×
-                    inclusion-subuniverse P B ,
-                    C1
-                      ( is-in-subuniverse-inclusion-subuniverse P A)
-                      ( is-in-subuniverse-inclusion-subuniverse P B)))
-                ( ( inclusion-subuniverse P A × inclusion-subuniverse P B ,
-                    C1
-                      ( is-in-subuniverse-inclusion-subuniverse P A)
-                      ( is-in-subuniverse-inclusion-subuniverse P B)) ,
-                  id-equiv)))) ∘e
-      ( reassociate))
+  equiv-dirichlet-series-dirichlet-product-species-subuniverse = {!!}
 ```

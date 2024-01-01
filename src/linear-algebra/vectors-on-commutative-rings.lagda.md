@@ -40,20 +40,20 @@ module _
   where
 
   vec-Commutative-Ring : ℕ → UU l
-  vec-Commutative-Ring = vec-Ring (ring-Commutative-Ring R)
+  vec-Commutative-Ring = {!!}
 
   head-vec-Commutative-Ring :
     {n : ℕ} → vec-Commutative-Ring (succ-ℕ n) → type-Commutative-Ring R
-  head-vec-Commutative-Ring = head-vec-Ring (ring-Commutative-Ring R)
+  head-vec-Commutative-Ring = {!!}
 
   tail-vec-Commutative-Ring :
     {n : ℕ} → vec-Commutative-Ring (succ-ℕ n) → vec-Commutative-Ring n
-  tail-vec-Commutative-Ring = tail-vec-Ring (ring-Commutative-Ring R)
+  tail-vec-Commutative-Ring = {!!}
 
   snoc-vec-Commutative-Ring :
     {n : ℕ} → vec-Commutative-Ring n → type-Commutative-Ring R →
     vec-Commutative-Ring (succ-ℕ n)
-  snoc-vec-Commutative-Ring = snoc-vec-Ring (ring-Commutative-Ring R)
+  snoc-vec-Commutative-Ring = {!!}
 ```
 
 ### Functional vectors on commutative rings
@@ -64,33 +64,28 @@ module _
   where
 
   functional-vec-Commutative-Ring : ℕ → UU l
-  functional-vec-Commutative-Ring =
-    functional-vec-Ring (ring-Commutative-Ring R)
+  functional-vec-Commutative-Ring = {!!}
 
   head-functional-vec-Commutative-Ring :
     (n : ℕ) → functional-vec-Commutative-Ring (succ-ℕ n) →
     type-Commutative-Ring R
-  head-functional-vec-Commutative-Ring =
-    head-functional-vec-Ring (ring-Commutative-Ring R)
+  head-functional-vec-Commutative-Ring = {!!}
 
   tail-functional-vec-Commutative-Ring :
     (n : ℕ) → functional-vec-Commutative-Ring (succ-ℕ n) →
     functional-vec-Commutative-Ring n
-  tail-functional-vec-Commutative-Ring =
-    tail-functional-vec-Ring (ring-Commutative-Ring R)
+  tail-functional-vec-Commutative-Ring = {!!}
 
   cons-functional-vec-Commutative-Ring :
     (n : ℕ) → type-Commutative-Ring R →
     functional-vec-Commutative-Ring n →
     functional-vec-Commutative-Ring (succ-ℕ n)
-  cons-functional-vec-Commutative-Ring =
-    cons-functional-vec-Ring (ring-Commutative-Ring R)
+  cons-functional-vec-Commutative-Ring = {!!}
 
   snoc-functional-vec-Commutative-Ring :
     (n : ℕ) → functional-vec-Commutative-Ring n →
     type-Commutative-Ring R → functional-vec-Commutative-Ring (succ-ℕ n)
-  snoc-functional-vec-Commutative-Ring =
-    snoc-functional-vec-Ring (ring-Commutative-Ring R)
+  snoc-functional-vec-Commutative-Ring = {!!}
 ```
 
 ### Zero vector on a commutative ring
@@ -103,7 +98,7 @@ module _
   where
 
   zero-vec-Commutative-Ring : {n : ℕ} → vec-Commutative-Ring R n
-  zero-vec-Commutative-Ring = constant-vec (zero-Commutative-Ring R)
+  zero-vec-Commutative-Ring = {!!}
 ```
 
 #### The zero functional vector
@@ -115,7 +110,7 @@ module _
 
   zero-functional-vec-Commutative-Ring :
     (n : ℕ) → functional-vec-Commutative-Ring R n
-  zero-functional-vec-Commutative-Ring n i = zero-Commutative-Ring R
+  zero-functional-vec-Commutative-Ring n i = {!!}
 ```
 
 ### Pointwise addition of vectors on a commutative ring
@@ -130,45 +125,37 @@ module _
   add-vec-Commutative-Ring :
     {n : ℕ} → vec-Commutative-Ring R n → vec-Commutative-Ring R n →
     vec-Commutative-Ring R n
-  add-vec-Commutative-Ring =
-    add-vec-Ring (ring-Commutative-Ring R)
+  add-vec-Commutative-Ring = {!!}
 
   associative-add-vec-Commutative-Ring :
     {n : ℕ} (v1 v2 v3 : vec-Commutative-Ring R n) →
     add-vec-Commutative-Ring (add-vec-Commutative-Ring v1 v2) v3 ＝
     add-vec-Commutative-Ring v1 (add-vec-Commutative-Ring v2 v3)
-  associative-add-vec-Commutative-Ring =
-    associative-add-vec-Ring (ring-Commutative-Ring R)
+  associative-add-vec-Commutative-Ring = {!!}
 
   vec-Commutative-Ring-Semigroup : ℕ → Semigroup l
-  vec-Commutative-Ring-Semigroup =
-    vec-Ring-Semigroup (ring-Commutative-Ring R)
+  vec-Commutative-Ring-Semigroup = {!!}
 
   left-unit-law-add-vec-Commutative-Ring :
     {n : ℕ} (v : vec-Commutative-Ring R n) →
     add-vec-Commutative-Ring (zero-vec-Commutative-Ring R) v ＝ v
-  left-unit-law-add-vec-Commutative-Ring =
-    left-unit-law-add-vec-Ring (ring-Commutative-Ring R)
+  left-unit-law-add-vec-Commutative-Ring = {!!}
 
   right-unit-law-add-vec-Commutative-Ring :
     {n : ℕ} (v : vec-Commutative-Ring R n) →
     add-vec-Commutative-Ring v (zero-vec-Commutative-Ring R) ＝ v
-  right-unit-law-add-vec-Commutative-Ring =
-    right-unit-law-add-vec-Ring (ring-Commutative-Ring R)
+  right-unit-law-add-vec-Commutative-Ring = {!!}
 
   vec-Commutative-Ring-Monoid : ℕ → Monoid l
-  vec-Commutative-Ring-Monoid =
-    vec-Ring-Monoid (ring-Commutative-Ring R)
+  vec-Commutative-Ring-Monoid = {!!}
 
   commutative-add-vec-Commutative-Ring :
     {n : ℕ} (v w : vec-Commutative-Ring R n) →
     add-vec-Commutative-Ring v w ＝ add-vec-Commutative-Ring w v
-  commutative-add-vec-Commutative-Ring =
-    commutative-add-vec-Ring (ring-Commutative-Ring R)
+  commutative-add-vec-Commutative-Ring = {!!}
 
   vec-Commutative-Ring-Commutative-Monoid : ℕ → Commutative-Monoid l
-  vec-Commutative-Ring-Commutative-Monoid =
-    vec-Ring-Commutative-Monoid (ring-Commutative-Ring R)
+  vec-Commutative-Ring-Commutative-Monoid = {!!}
 ```
 
 #### Pointwise addition of functional vectors on a commutative ring
@@ -181,8 +168,7 @@ module _
   add-functional-vec-Commutative-Ring :
     (n : ℕ) (v w : functional-vec-Commutative-Ring R n) →
     functional-vec-Commutative-Ring R n
-  add-functional-vec-Commutative-Ring =
-    add-functional-vec-Ring (ring-Commutative-Ring R)
+  add-functional-vec-Commutative-Ring = {!!}
 
   associative-add-functional-vec-Commutative-Ring :
     (n : ℕ) (v1 v2 v3 : functional-vec-Commutative-Ring R n) →
@@ -190,39 +176,32 @@ module _
       ( add-functional-vec-Commutative-Ring n v1 v2) v3) ＝
     ( add-functional-vec-Commutative-Ring n v1
       ( add-functional-vec-Commutative-Ring n v2 v3))
-  associative-add-functional-vec-Commutative-Ring =
-    associative-add-functional-vec-Ring (ring-Commutative-Ring R)
+  associative-add-functional-vec-Commutative-Ring = {!!}
 
   functional-vec-Commutative-Ring-Semigroup : ℕ → Semigroup l
-  functional-vec-Commutative-Ring-Semigroup =
-    functional-vec-Ring-Semigroup (ring-Commutative-Ring R)
+  functional-vec-Commutative-Ring-Semigroup = {!!}
 
   left-unit-law-add-functional-vec-Commutative-Ring :
     (n : ℕ) (v : functional-vec-Commutative-Ring R n) →
     add-functional-vec-Commutative-Ring n
       ( zero-functional-vec-Commutative-Ring R n) v ＝ v
-  left-unit-law-add-functional-vec-Commutative-Ring =
-    left-unit-law-add-functional-vec-Ring (ring-Commutative-Ring R)
+  left-unit-law-add-functional-vec-Commutative-Ring = {!!}
 
   right-unit-law-add-functional-vec-Commutative-Ring :
     (n : ℕ) (v : functional-vec-Commutative-Ring R n) →
     add-functional-vec-Commutative-Ring n v
       ( zero-functional-vec-Commutative-Ring R n) ＝ v
-  right-unit-law-add-functional-vec-Commutative-Ring =
-    right-unit-law-add-functional-vec-Ring (ring-Commutative-Ring R)
+  right-unit-law-add-functional-vec-Commutative-Ring = {!!}
 
   functional-vec-Commutative-Ring-Monoid : ℕ → Monoid l
-  functional-vec-Commutative-Ring-Monoid =
-    functional-vec-Ring-Monoid (ring-Commutative-Ring R)
+  functional-vec-Commutative-Ring-Monoid = {!!}
 
   commutative-add-functional-vec-Commutative-Ring :
     (n : ℕ) (v w : functional-vec-Commutative-Ring R n) →
     add-functional-vec-Commutative-Ring n v w ＝
     add-functional-vec-Commutative-Ring n w v
-  commutative-add-functional-vec-Commutative-Ring =
-    commutative-add-functional-vec-Ring (ring-Commutative-Ring R)
+  commutative-add-functional-vec-Commutative-Ring = {!!}
 
   functional-vec-Commutative-Ring-Commutative-Monoid : ℕ → Commutative-Monoid l
-  functional-vec-Commutative-Ring-Commutative-Monoid =
-    functional-vec-Ring-Commutative-Monoid (ring-Commutative-Ring R)
+  functional-vec-Commutative-Ring-Commutative-Monoid = {!!}
 ```

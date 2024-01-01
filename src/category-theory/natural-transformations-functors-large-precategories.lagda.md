@@ -27,7 +27,7 @@ a **natural transformation** from a
 
 - a family of morphisms `γ : (x : C) → hom (F x) (G x)` such that the following
   identity holds:
-- `(G f) ∘ (γ x) = (γ y) ∘ (F f)`, for all `f : hom x y`.
+- `(G f) ∘ (γ x) = {!!}
 
 ## Definition
 
@@ -42,23 +42,11 @@ module _
   where
 
   family-of-morphisms-functor-Large-Precategory : UUω
-  family-of-morphisms-functor-Large-Precategory =
-    {l : Level} (X : obj-Large-Precategory C l) →
-    hom-Large-Precategory D
-      ( obj-functor-Large-Precategory F X)
-      ( obj-functor-Large-Precategory G X)
+  family-of-morphisms-functor-Large-Precategory = {!!}
 
   naturality-family-of-morphisms-functor-Large-Precategory :
     family-of-morphisms-functor-Large-Precategory → UUω
-  naturality-family-of-morphisms-functor-Large-Precategory τ =
-    {l1 l2 : Level} {X : obj-Large-Precategory C l1}
-    {Y : obj-Large-Precategory C l2}
-    (f : hom-Large-Precategory C X Y) →
-    coherence-square-hom-Large-Precategory D
-      ( hom-functor-Large-Precategory F f)
-      ( τ X)
-      ( τ Y)
-      ( hom-functor-Large-Precategory G f)
+  naturality-family-of-morphisms-functor-Large-Precategory τ = {!!}
 
   record natural-transformation-Large-Precategory : UUω
     where
@@ -90,27 +78,17 @@ module _
 
   hom-id-natural-transformation-Large-Precategory :
     family-of-morphisms-functor-Large-Precategory C D F F
-  hom-id-natural-transformation-Large-Precategory X =
-    id-hom-Large-Precategory D
+  hom-id-natural-transformation-Large-Precategory X = {!!}
 
   naturality-id-natural-transformation-Large-Precategory :
     naturality-family-of-morphisms-functor-Large-Precategory C D F F
       hom-id-natural-transformation-Large-Precategory
-  naturality-id-natural-transformation-Large-Precategory f =
-    ( right-unit-law-comp-hom-Large-Precategory D
-        ( hom-functor-Large-Precategory F f)) ∙
-    ( inv
-      ( left-unit-law-comp-hom-Large-Precategory D
-        ( hom-functor-Large-Precategory F f)))
+  naturality-id-natural-transformation-Large-Precategory f = {!!}
 
   id-natural-transformation-Large-Precategory :
     natural-transformation-Large-Precategory C D F F
   hom-natural-transformation-Large-Precategory
-    id-natural-transformation-Large-Precategory =
-    hom-id-natural-transformation-Large-Precategory
-  naturality-natural-transformation-Large-Precategory
-    id-natural-transformation-Large-Precategory =
-    naturality-id-natural-transformation-Large-Precategory
+    id-natural-transformation-Large-Precategory = {!!}
 ```
 
 ### Composition of natural transformations
@@ -130,46 +108,17 @@ module _
 
   hom-comp-natural-transformation-Large-Precategory :
     family-of-morphisms-functor-Large-Precategory C D F H
-  hom-comp-natural-transformation-Large-Precategory X =
-    comp-hom-Large-Precategory D
-      ( hom-natural-transformation-Large-Precategory τ X)
-      ( hom-natural-transformation-Large-Precategory σ X)
+  hom-comp-natural-transformation-Large-Precategory X = {!!}
 
   naturality-comp-natural-transformation-Large-Precategory :
     naturality-family-of-morphisms-functor-Large-Precategory C D F H
       hom-comp-natural-transformation-Large-Precategory
-  naturality-comp-natural-transformation-Large-Precategory {X = X} {Y} f =
-    inv
-      ( associative-comp-hom-Large-Precategory D
-        ( hom-functor-Large-Precategory H f)
-        ( hom-natural-transformation-Large-Precategory τ X)
-        ( hom-natural-transformation-Large-Precategory σ X)) ∙
-    ( ap
-      ( comp-hom-Large-Precategory' D
-        ( hom-natural-transformation-Large-Precategory σ X))
-      ( naturality-natural-transformation-Large-Precategory τ f)) ∙
-    ( associative-comp-hom-Large-Precategory D
-      ( hom-natural-transformation-Large-Precategory τ Y)
-      ( hom-functor-Large-Precategory G f)
-      ( hom-natural-transformation-Large-Precategory σ X)) ∙
-    ( ap
-      ( comp-hom-Large-Precategory D
-        ( hom-natural-transformation-Large-Precategory τ Y))
-      ( naturality-natural-transformation-Large-Precategory σ f)) ∙
-    ( inv
-      (associative-comp-hom-Large-Precategory D
-        ( hom-natural-transformation-Large-Precategory τ Y)
-        ( hom-natural-transformation-Large-Precategory σ Y)
-        ( hom-functor-Large-Precategory F f)))
+  naturality-comp-natural-transformation-Large-Precategory {X = X} {Y} f = {!!}
 
   comp-natural-transformation-Large-Precategory :
     natural-transformation-Large-Precategory C D F H
   hom-natural-transformation-Large-Precategory
-    comp-natural-transformation-Large-Precategory =
-    hom-comp-natural-transformation-Large-Precategory
-  naturality-natural-transformation-Large-Precategory
-    comp-natural-transformation-Large-Precategory =
-    naturality-comp-natural-transformation-Large-Precategory
+    comp-natural-transformation-Large-Precategory = {!!}
 ```
 
 ## See also

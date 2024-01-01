@@ -30,9 +30,6 @@ endomorphism.
 ```agda
 iterated-product-list-Type-With-Endomorphism :
   {l : Level} → list (Type-With-Endomorphism l) → Type-With-Endomorphism l
-iterated-product-list-Type-With-Endomorphism nil =
-  trivial-Type-With-Endomorphism
-iterated-product-list-Type-With-Endomorphism (cons A L) =
-  prod-Type-With-Endomorphism A
-    ( iterated-product-list-Type-With-Endomorphism L)
+iterated-product-list-Type-With-Endomorphism nil = {!!}
+iterated-product-list-Type-With-Endomorphism (cons A L) = {!!}
 ```

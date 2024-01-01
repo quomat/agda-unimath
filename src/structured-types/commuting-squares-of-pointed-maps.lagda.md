@@ -44,8 +44,7 @@ module _
   where
 
   coherence-square-pointed-maps : UU (l3 ⊔ l4)
-  coherence-square-pointed-maps =
-    bottom ∘∗ left ~∗ right ∘∗ top
+  coherence-square-pointed-maps = {!!}
 
   coherence-square-maps-coherence-square-pointed-maps :
     coherence-square-pointed-maps →
@@ -54,6 +53,5 @@ module _
       ( map-pointed-map left)
       ( map-pointed-map right)
       ( map-pointed-map bottom)
-  coherence-square-maps-coherence-square-pointed-maps =
-    htpy-pointed-htpy (bottom ∘∗ left) (right ∘∗ top)
+  coherence-square-maps-coherence-square-pointed-maps = {!!}
 ```

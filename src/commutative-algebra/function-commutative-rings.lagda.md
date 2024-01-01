@@ -35,94 +35,79 @@ module _
   where
 
   function-Commutative-Ring : Commutative-Ring (l1 ⊔ l2)
-  function-Commutative-Ring = Π-Commutative-Ring X (λ _ → A)
+  function-Commutative-Ring = {!!}
 
   ring-function-Commutative-Ring : Ring (l1 ⊔ l2)
-  ring-function-Commutative-Ring =
-    ring-Commutative-Ring function-Commutative-Ring
+  ring-function-Commutative-Ring = {!!}
 
   ab-function-Commutative-Ring : Ab (l1 ⊔ l2)
-  ab-function-Commutative-Ring =
-    ab-Commutative-Ring function-Commutative-Ring
+  ab-function-Commutative-Ring = {!!}
 
   multiplicative-commutative-monoid-function-Commutative-Ring :
     Commutative-Monoid (l1 ⊔ l2)
-  multiplicative-commutative-monoid-function-Commutative-Ring =
-    multiplicative-commutative-monoid-Commutative-Ring function-Commutative-Ring
+  multiplicative-commutative-monoid-function-Commutative-Ring = {!!}
 
   set-function-Commutative-Ring : Set (l1 ⊔ l2)
-  set-function-Commutative-Ring = set-Ring ring-function-Commutative-Ring
+  set-function-Commutative-Ring = {!!}
 
   type-function-Commutative-Ring : UU (l1 ⊔ l2)
-  type-function-Commutative-Ring = type-Ring ring-function-Commutative-Ring
+  type-function-Commutative-Ring = {!!}
 
   is-set-type-function-Commutative-Ring : is-set type-function-Commutative-Ring
-  is-set-type-function-Commutative-Ring =
-    is-set-type-Commutative-Ring function-Commutative-Ring
+  is-set-type-function-Commutative-Ring = {!!}
 
   add-function-Commutative-Ring :
     type-function-Commutative-Ring → type-function-Commutative-Ring →
     type-function-Commutative-Ring
-  add-function-Commutative-Ring =
-    add-Commutative-Ring function-Commutative-Ring
+  add-function-Commutative-Ring = {!!}
 
   zero-function-Commutative-Ring : type-function-Commutative-Ring
-  zero-function-Commutative-Ring =
-    zero-Commutative-Ring function-Commutative-Ring
+  zero-function-Commutative-Ring = {!!}
 
   associative-add-function-Commutative-Ring :
     (x y z : type-function-Commutative-Ring) →
     add-function-Commutative-Ring (add-function-Commutative-Ring x y) z ＝
     add-function-Commutative-Ring x (add-function-Commutative-Ring y z)
-  associative-add-function-Commutative-Ring =
-    associative-add-Commutative-Ring function-Commutative-Ring
+  associative-add-function-Commutative-Ring = {!!}
 
   left-unit-law-add-function-Commutative-Ring :
     (x : type-function-Commutative-Ring) →
     add-function-Commutative-Ring zero-function-Commutative-Ring x ＝ x
-  left-unit-law-add-function-Commutative-Ring =
-    left-unit-law-add-Commutative-Ring function-Commutative-Ring
+  left-unit-law-add-function-Commutative-Ring = {!!}
 
   right-unit-law-add-function-Commutative-Ring :
     (x : type-function-Commutative-Ring) →
     add-function-Commutative-Ring x zero-function-Commutative-Ring ＝ x
-  right-unit-law-add-function-Commutative-Ring =
-    right-unit-law-add-Commutative-Ring function-Commutative-Ring
+  right-unit-law-add-function-Commutative-Ring = {!!}
 
   commutative-add-function-Commutative-Ring :
     (x y : type-function-Commutative-Ring) →
     add-function-Commutative-Ring x y ＝ add-function-Commutative-Ring y x
-  commutative-add-function-Commutative-Ring =
-    commutative-add-Commutative-Ring function-Commutative-Ring
+  commutative-add-function-Commutative-Ring = {!!}
 
   mul-function-Commutative-Ring :
     type-function-Commutative-Ring → type-function-Commutative-Ring →
     type-function-Commutative-Ring
-  mul-function-Commutative-Ring =
-    mul-Commutative-Ring function-Commutative-Ring
+  mul-function-Commutative-Ring = {!!}
 
   one-function-Commutative-Ring : type-function-Commutative-Ring
-  one-function-Commutative-Ring =
-    one-Commutative-Ring function-Commutative-Ring
+  one-function-Commutative-Ring = {!!}
 
   associative-mul-function-Commutative-Ring :
     (x y z : type-function-Commutative-Ring) →
     mul-function-Commutative-Ring (mul-function-Commutative-Ring x y) z ＝
     mul-function-Commutative-Ring x (mul-function-Commutative-Ring y z)
-  associative-mul-function-Commutative-Ring =
-    associative-mul-Commutative-Ring function-Commutative-Ring
+  associative-mul-function-Commutative-Ring = {!!}
 
   left-unit-law-mul-function-Commutative-Ring :
     (x : type-function-Commutative-Ring) →
     mul-function-Commutative-Ring one-function-Commutative-Ring x ＝ x
-  left-unit-law-mul-function-Commutative-Ring =
-    left-unit-law-mul-Commutative-Ring function-Commutative-Ring
+  left-unit-law-mul-function-Commutative-Ring = {!!}
 
   right-unit-law-mul-function-Commutative-Ring :
     (x : type-function-Commutative-Ring) →
     mul-function-Commutative-Ring x one-function-Commutative-Ring ＝ x
-  right-unit-law-mul-function-Commutative-Ring =
-    right-unit-law-mul-Commutative-Ring function-Commutative-Ring
+  right-unit-law-mul-function-Commutative-Ring = {!!}
 
   left-distributive-mul-add-function-Commutative-Ring :
     (f g h : type-function-Commutative-Ring) →
@@ -130,8 +115,7 @@ module _
     add-function-Commutative-Ring
       ( mul-function-Commutative-Ring f g)
       ( mul-function-Commutative-Ring f h)
-  left-distributive-mul-add-function-Commutative-Ring =
-    left-distributive-mul-add-Commutative-Ring function-Commutative-Ring
+  left-distributive-mul-add-function-Commutative-Ring = {!!}
 
   right-distributive-mul-add-function-Commutative-Ring :
     (f g h : type-function-Commutative-Ring) →
@@ -139,26 +123,22 @@ module _
     add-function-Commutative-Ring
       ( mul-function-Commutative-Ring f h)
       ( mul-function-Commutative-Ring g h)
-  right-distributive-mul-add-function-Commutative-Ring =
-    right-distributive-mul-add-Commutative-Ring function-Commutative-Ring
+  right-distributive-mul-add-function-Commutative-Ring = {!!}
 
   left-zero-law-mul-function-Commutative-Ring :
     (f : type-function-Commutative-Ring) →
     mul-function-Commutative-Ring zero-function-Commutative-Ring f ＝
     zero-function-Commutative-Ring
-  left-zero-law-mul-function-Commutative-Ring =
-    left-zero-law-mul-Commutative-Ring function-Commutative-Ring
+  left-zero-law-mul-function-Commutative-Ring = {!!}
 
   right-zero-law-mul-function-Commutative-Ring :
     (f : type-function-Commutative-Ring) →
     mul-function-Commutative-Ring f zero-function-Commutative-Ring ＝
     zero-function-Commutative-Ring
-  right-zero-law-mul-function-Commutative-Ring =
-    right-zero-law-mul-Commutative-Ring function-Commutative-Ring
+  right-zero-law-mul-function-Commutative-Ring = {!!}
 
   commutative-mul-function-Commutative-Ring :
     (f g : type-function-Commutative-Ring) →
     mul-function-Commutative-Ring f g ＝ mul-function-Commutative-Ring g f
-  commutative-mul-function-Commutative-Ring =
-    commutative-mul-Commutative-Ring function-Commutative-Ring
+  commutative-mul-function-Commutative-Ring = {!!}
 ```

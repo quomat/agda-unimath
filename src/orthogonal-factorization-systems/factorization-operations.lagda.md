@@ -36,9 +36,8 @@ every map `f` in `A → B`.
 ```agda
 instance-factorization-operation :
   {l1 l2 : Level} (l3 : Level) (A : UU l1) (B : UU l2) → UU (l1 ⊔ l2 ⊔ lsuc l3)
-instance-factorization-operation l3 A B = (f : A → B) → factorization l3 f
+instance-factorization-operation l3 A B = {!!}
 
 factorization-operation : (l1 l2 l3 : Level) → UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-factorization-operation l1 l2 l3 =
-  {A : UU l1} {B : UU l2} → instance-factorization-operation l3 A B
+factorization-operation l1 l2 l3 = {!!}
 ```

@@ -25,15 +25,14 @@ module _
   where
 
   cone-empty : is-empty C → (C → B) → cone ex-falso g C
-  cone-empty p q = triple p q (λ c → ex-falso (p c))
+  cone-empty p q = {!!}
 
   abstract
     descent-empty : (c : cone ex-falso g C) → is-pullback ex-falso g c
-    descent-empty c =
-      is-pullback-is-fiberwise-equiv-map-fiber-cone _ g c ind-empty
+    descent-empty c = {!!}
 
   abstract
     descent-empty' :
       (p : C → empty) (q : C → B) → is-pullback ex-falso g (cone-empty p q)
-    descent-empty' p q = descent-empty (cone-empty p q)
+    descent-empty' p q = {!!}
 ```

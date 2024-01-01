@@ -47,10 +47,7 @@ module _
   preserves-order-map-Large-Poset :
     ({l : Level} → type-Large-Poset P l → type-Large-Poset Q (γ l)) →
     UUω
-  preserves-order-map-Large-Poset =
-    preserves-order-map-Large-Preorder
-      ( large-preorder-Large-Poset P)
-      ( large-preorder-Large-Poset Q)
+  preserves-order-map-Large-Poset = {!!}
 ```
 
 ### The type of order preserving maps between large posets
@@ -63,10 +60,7 @@ module _
   where
 
   hom-Large-Poset : UUω
-  hom-Large-Poset =
-    hom-Large-Preorder γ
-      ( large-preorder-Large-Poset P)
-      ( large-preorder-Large-Poset Q)
+  hom-Large-Poset = {!!}
 
 module _
   {αP αQ γ : Level → Level} {βP βQ : Level → Level → Level}
@@ -75,13 +69,11 @@ module _
 
   map-hom-Large-Poset :
     {l : Level} → type-Large-Poset P l → type-Large-Poset Q (γ l)
-  map-hom-Large-Poset =
-    map-hom-Large-Preorder f
+  map-hom-Large-Poset = {!!}
 
   preserves-order-hom-Large-Poset :
     preserves-order-map-Large-Poset P Q map-hom-Large-Poset
-  preserves-order-hom-Large-Poset =
-    preserves-order-hom-Large-Preorder f
+  preserves-order-hom-Large-Poset = {!!}
 ```
 
 ### The identity order preserving map on a large poset
@@ -92,7 +84,7 @@ module _
   where
 
   id-hom-Large-Poset : hom-Large-Poset (λ l → l) P P
-  id-hom-Large-Poset = id-hom-Large-Preorder (large-preorder-Large-Poset P)
+  id-hom-Large-Poset = {!!}
 ```
 
 ### Composition of order preserving maps between large posets
@@ -109,32 +101,14 @@ module _
 
   map-comp-hom-Large-Poset :
     {l1 : Level} → type-Large-Poset P l1 → type-Large-Poset R (γg (γf l1))
-  map-comp-hom-Large-Poset =
-    map-comp-hom-Large-Preorder
-      ( large-preorder-Large-Poset P)
-      ( large-preorder-Large-Poset Q)
-      ( large-preorder-Large-Poset R)
-      ( g)
-      ( f)
+  map-comp-hom-Large-Poset = {!!}
 
   preserves-order-comp-hom-Large-Poset :
     preserves-order-map-Large-Poset P R map-comp-hom-Large-Poset
-  preserves-order-comp-hom-Large-Poset =
-    preserves-order-comp-hom-Large-Preorder
-      ( large-preorder-Large-Poset P)
-      ( large-preorder-Large-Poset Q)
-      ( large-preorder-Large-Poset R)
-      ( g)
-      ( f)
+  preserves-order-comp-hom-Large-Poset = {!!}
 
   comp-hom-Large-Poset : hom-Large-Poset (λ l → γg (γf l)) P R
-  comp-hom-Large-Poset =
-    comp-hom-Large-Preorder
-      ( large-preorder-Large-Poset P)
-      ( large-preorder-Large-Poset Q)
-      ( large-preorder-Large-Poset R)
-      ( g)
-      ( f)
+  comp-hom-Large-Poset = {!!}
 ```
 
 ### Homotopies of order preserving maps between large posets
@@ -150,17 +124,11 @@ module _
   where
 
   htpy-hom-Large-Poset : (f g : hom-Large-Poset γ P Q) → UUω
-  htpy-hom-Large-Poset =
-    htpy-hom-Large-Preorder
-      ( large-preorder-Large-Poset P)
-      ( large-preorder-Large-Poset Q)
+  htpy-hom-Large-Poset = {!!}
 
   refl-htpy-hom-Large-Poset :
     (f : hom-Large-Poset γ P Q) → htpy-hom-Large-Poset f f
-  refl-htpy-hom-Large-Poset =
-    refl-htpy-hom-Large-Preorder
-      ( large-preorder-Large-Poset P)
-      ( large-preorder-Large-Poset Q)
+  refl-htpy-hom-Large-Poset = {!!}
 ```
 
 ## Properties
@@ -183,29 +151,13 @@ module _
     htpy-hom-Large-Poset P S
       ( comp-hom-Large-Poset P Q S (comp-hom-Large-Poset Q R S h g) f)
       ( comp-hom-Large-Poset P R S h (comp-hom-Large-Poset P Q R g f))
-  associative-comp-hom-Large-Poset =
-    associative-comp-hom-Large-Preorder
-      ( large-preorder-Large-Poset P)
-      ( large-preorder-Large-Poset Q)
-      ( large-preorder-Large-Poset R)
-      ( large-preorder-Large-Poset S)
-      ( h)
-      ( g)
-      ( f)
+  associative-comp-hom-Large-Poset = {!!}
 
   inv-associative-comp-hom-Large-Poset :
     htpy-hom-Large-Poset P S
       ( comp-hom-Large-Poset P R S h (comp-hom-Large-Poset P Q R g f))
       ( comp-hom-Large-Poset P Q S (comp-hom-Large-Poset Q R S h g) f)
-  inv-associative-comp-hom-Large-Poset =
-    inv-associative-comp-hom-Large-Preorder
-      ( large-preorder-Large-Poset P)
-      ( large-preorder-Large-Poset Q)
-      ( large-preorder-Large-Poset R)
-      ( large-preorder-Large-Poset S)
-      ( h)
-      ( g)
-      ( f)
+  inv-associative-comp-hom-Large-Poset = {!!}
 ```
 
 ### Composition of order preserving maps satisfies left and right unit laws
@@ -222,21 +174,13 @@ module _
     htpy-hom-Large-Poset P Q
       ( comp-hom-Large-Poset P Q Q (id-hom-Large-Poset Q) f)
       ( f)
-  left-unit-law-comp-hom-Large-Poset =
-    left-unit-law-comp-hom-Large-Preorder
-      ( large-preorder-Large-Poset P)
-      ( large-preorder-Large-Poset Q)
-      ( f)
+  left-unit-law-comp-hom-Large-Poset = {!!}
 
   right-unit-law-comp-hom-Large-Poset :
     htpy-hom-Large-Poset P Q
       ( comp-hom-Large-Poset P P Q f (id-hom-Large-Poset P))
       ( f)
-  right-unit-law-comp-hom-Large-Poset =
-    right-unit-law-comp-hom-Large-Preorder
-      ( large-preorder-Large-Poset P)
-      ( large-preorder-Large-Poset Q)
-      ( f)
+  right-unit-law-comp-hom-Large-Poset = {!!}
 ```
 
 ### Order preserving maps preserve similarity of elements
@@ -255,11 +199,7 @@ module _
     sim-Large-Poset Q
       ( map-hom-Large-Poset P Q f x)
       ( map-hom-Large-Poset P Q f y)
-  preserves-sim-hom-Large-Poset =
-    preserves-sim-hom-Large-Preorder
-      ( large-preorder-Large-Poset P)
-      ( large-preorder-Large-Poset Q)
-      ( f)
+  preserves-sim-hom-Large-Poset = {!!}
 ```
 
 ## See also

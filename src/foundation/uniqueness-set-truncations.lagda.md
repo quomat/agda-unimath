@@ -41,46 +41,17 @@ module _
   abstract
     is-equiv-is-set-truncation-is-set-truncation :
       is-set-truncation B f → is-set-truncation C g → is-equiv h
-    is-equiv-is-set-truncation-is-set-truncation Sf Sg =
-      is-equiv-is-set-quotient-is-set-quotient
-        ( mere-eq-equivalence-relation A)
-        ( B)
-        ( reflecting-map-mere-eq B f)
-        ( C)
-        ( reflecting-map-mere-eq C g)
-        ( H)
-        ( is-set-quotient-is-set-truncation B f Sf)
-        ( is-set-quotient-is-set-truncation C g Sg)
+    is-equiv-is-set-truncation-is-set-truncation Sf Sg = {!!}
 
   abstract
     is-set-truncation-is-equiv-is-set-truncation :
       is-set-truncation C g → is-equiv h → is-set-truncation B f
-    is-set-truncation-is-equiv-is-set-truncation Sg Eh =
-      is-set-truncation-is-set-quotient B f
-        ( is-set-quotient-is-equiv-is-set-quotient
-          ( mere-eq-equivalence-relation A)
-          ( B)
-          ( reflecting-map-mere-eq B f)
-          ( C)
-          ( reflecting-map-mere-eq C g)
-          ( H)
-          ( is-set-quotient-is-set-truncation C g Sg)
-          ( Eh))
+    is-set-truncation-is-equiv-is-set-truncation Sg Eh = {!!}
 
   abstract
     is-set-truncation-is-set-truncation-is-equiv :
       is-equiv h → is-set-truncation B f → is-set-truncation C g
-    is-set-truncation-is-set-truncation-is-equiv Eh Sf =
-      is-set-truncation-is-set-quotient C g
-        ( is-set-quotient-is-set-quotient-is-equiv
-          ( mere-eq-equivalence-relation A)
-          ( B)
-          ( reflecting-map-mere-eq B f)
-          ( C)
-          ( reflecting-map-mere-eq C g)
-          ( H)
-          ( Eh)
-          ( is-set-quotient-is-set-truncation B f Sf))
+    is-set-truncation-is-set-truncation-is-equiv Eh Sf = {!!}
 ```
 
 ### The uniquely uniqueness of set truncations
@@ -96,26 +67,15 @@ module _
   abstract
     uniqueness-set-truncation :
       is-contr (Σ (type-Set B ≃ type-Set C) (λ e → (map-equiv e ∘ f) ~ g))
-    uniqueness-set-truncation =
-      uniqueness-set-quotient
-        ( mere-eq-equivalence-relation A)
-        ( B)
-        ( reflecting-map-mere-eq B f)
-        ( is-set-quotient-is-set-truncation B f Sf)
-        ( C)
-        ( reflecting-map-mere-eq C g)
-        ( is-set-quotient-is-set-truncation C g Sg)
+    uniqueness-set-truncation = {!!}
 
   equiv-uniqueness-set-truncation : type-Set B ≃ type-Set C
-  equiv-uniqueness-set-truncation =
-    pr1 (center uniqueness-set-truncation)
+  equiv-uniqueness-set-truncation = {!!}
 
   map-equiv-uniqueness-set-truncation : type-Set B → type-Set C
-  map-equiv-uniqueness-set-truncation =
-    map-equiv equiv-uniqueness-set-truncation
+  map-equiv-uniqueness-set-truncation = {!!}
 
   triangle-uniqueness-set-truncation :
     (map-equiv-uniqueness-set-truncation ∘ f) ~ g
-  triangle-uniqueness-set-truncation =
-    pr2 (center uniqueness-set-truncation)
+  triangle-uniqueness-set-truncation = {!!}
 ```

@@ -32,12 +32,7 @@ module _
   where
 
   trivial-Subgroup : Subgroup l1 G
-  pr1 trivial-Subgroup x = is-unit-prop-Group' G x
-  pr1 (pr2 trivial-Subgroup) = refl
-  pr1 (pr2 (pr2 trivial-Subgroup)) refl refl =
-    inv (left-unit-law-mul-Group G (unit-Group G))
-  pr2 (pr2 (pr2 trivial-Subgroup)) refl =
-    inv (inv-unit-Group G)
+  pr1 trivial-Subgroup x = {!!}
 ```
 
 ### The predicate of being a trivial subgroup
@@ -48,5 +43,5 @@ module _
   where
 
   is-trivial-Subgroup : UU (l1 ⊔ l2)
-  is-trivial-Subgroup = leq-Subgroup G H (trivial-Subgroup G)
+  is-trivial-Subgroup = {!!}
 ```

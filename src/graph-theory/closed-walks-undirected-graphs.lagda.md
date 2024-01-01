@@ -35,8 +35,7 @@ module _
   where
 
   closed-walk-Undirected-Graph : UU (lsuc lzero ⊔ l1 ⊔ l2)
-  closed-walk-Undirected-Graph =
-    Σ (Polygon k) (λ H → hom-Undirected-Graph (undirected-graph-Polygon k H) G)
+  closed-walk-Undirected-Graph = {!!}
 ```
 
 ## External links

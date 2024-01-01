@@ -37,30 +37,15 @@ module _
   preserves-meets-sups :
     (type-Meet-Suplattice A → type-Meet-Suplattice B) →
     UU (l1 ⊔ lsuc l2 ⊔ l3)
-  preserves-meets-sups f =
-    preserves-meet
-      ( meet-semilattice-Meet-Suplattice A)
-      ( meet-semilattice-Meet-Suplattice B)
-      ( f) ×
-    preserves-sups
-      ( suplattice-Meet-Suplattice A)
-      ( suplattice-Meet-Suplattice B)
-      ( f)
+  preserves-meets-sups f = {!!}
 
   hom-Meet-Suplattice : UU (l1 ⊔ lsuc l2 ⊔ l3)
-  hom-Meet-Suplattice =
-    Σ ( type-Meet-Suplattice A → type-Meet-Suplattice B)
-      ( λ f →
-        preserves-order-Poset
-          ( poset-Meet-Suplattice A)
-          ( poset-Meet-Suplattice B)
-          ( f) ×
-        ( preserves-meets-sups f))
+  hom-Meet-Suplattice = {!!}
 
   map-hom-Meet-Suplattice :
     hom-Meet-Suplattice →
     type-Meet-Suplattice A → type-Meet-Suplattice B
-  map-hom-Meet-Suplattice = pr1
+  map-hom-Meet-Suplattice = {!!}
 
   preserves-order-Meet-Suplattice :
     (H : hom-Meet-Suplattice) →
@@ -68,12 +53,12 @@ module _
       ( poset-Meet-Suplattice A)
       ( poset-Meet-Suplattice B)
       ( map-hom-Meet-Suplattice H)
-  preserves-order-Meet-Suplattice = pr1 ∘ pr2
+  preserves-order-Meet-Suplattice = {!!}
 
   preserves-meets-sups-Meet-Suplattice :
     (H : hom-Meet-Suplattice) →
     preserves-meets-sups (map-hom-Meet-Suplattice H)
-  preserves-meets-sups-Meet-Suplattice = pr2 ∘ pr2
+  preserves-meets-sups-Meet-Suplattice = {!!}
 
   preserves-meets-Meet-Suplattice :
     (H : hom-Meet-Suplattice) →
@@ -81,7 +66,7 @@ module _
       ( meet-semilattice-Meet-Suplattice A)
       ( meet-semilattice-Meet-Suplattice B)
       ( map-hom-Meet-Suplattice H)
-  preserves-meets-Meet-Suplattice = pr1 ∘ preserves-meets-sups-Meet-Suplattice
+  preserves-meets-Meet-Suplattice = {!!}
 
   preserves-sups-Meet-Suplattice :
     (H : hom-Meet-Suplattice) →
@@ -89,5 +74,5 @@ module _
       ( suplattice-Meet-Suplattice A)
       ( suplattice-Meet-Suplattice B)
       ( map-hom-Meet-Suplattice H)
-  preserves-sups-Meet-Suplattice = pr2 ∘ preserves-meets-sups-Meet-Suplattice
+  preserves-sups-Meet-Suplattice = {!!}
 ```

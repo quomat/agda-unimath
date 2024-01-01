@@ -51,78 +51,55 @@ associated to `c`, satisfying the following conditions:
 
 ```agda
 hydrocarbon : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-hydrocarbon l1 l2 =
-  Σ ( Undirected-Graph-𝔽 l1 l2)
-    ( λ G →
-      Σ ( vertex-Undirected-Graph-𝔽 G → tetrahedron-in-3-space)
-        ( λ C →
-          ( ( c : vertex-Undirected-Graph-𝔽 G) →
-            Σ ( vertex-Undirected-Graph-𝔽 G)
-              ( λ c' →
-                edge-Undirected-Graph-𝔽 G (standard-unordered-pair c c')) ↪
-                type-UU-Fin 4 (pr1 (C c))) ×
-          ( ( (c : vertex-Undirected-Graph-𝔽 G) →
-              ¬ ( edge-Undirected-Graph-𝔽 G
-                  ( standard-unordered-pair c c))) ×
-            ( ( (c c' : vertex-Undirected-Graph-𝔽 G) →
-                leq-ℕ
-                  ( number-of-elements-is-finite
-                    ( is-finite-type-𝔽 (pr2 G (standard-unordered-pair c c'))))
-                  ( 3)) ×
-                is-connected-Undirected-Graph
-                  ( undirected-graph-Undirected-Graph-𝔽 G)))))
+hydrocarbon l1 l2 = {!!}
 
 module _
   {l1 l2 : Level} (H : hydrocarbon l1 l2)
   where
 
   finite-graph-hydrocarbon : Undirected-Graph-𝔽 l1 l2
-  finite-graph-hydrocarbon = pr1 H
+  finite-graph-hydrocarbon = {!!}
 
   vertex-hydrocarbon-𝔽 : 𝔽 l1
-  vertex-hydrocarbon-𝔽 = pr1 finite-graph-hydrocarbon
+  vertex-hydrocarbon-𝔽 = {!!}
 
   vertex-hydrocarbon : UU l1
-  vertex-hydrocarbon = vertex-Undirected-Graph-𝔽 finite-graph-hydrocarbon
+  vertex-hydrocarbon = {!!}
 
   is-finite-vertex-hydrocarbon : is-finite vertex-hydrocarbon
-  is-finite-vertex-hydrocarbon =
-    is-finite-vertex-Undirected-Graph-𝔽 finite-graph-hydrocarbon
+  is-finite-vertex-hydrocarbon = {!!}
 
   unordered-pair-vertices-hydrocarbon : UU (lsuc lzero ⊔ l1)
-  unordered-pair-vertices-hydrocarbon = unordered-pair vertex-hydrocarbon
+  unordered-pair-vertices-hydrocarbon = {!!}
 
   edge-hydrocarbon-𝔽 : unordered-pair-vertices-hydrocarbon → 𝔽 l2
-  edge-hydrocarbon-𝔽 = pr2 finite-graph-hydrocarbon
+  edge-hydrocarbon-𝔽 = {!!}
 
   edge-hydrocarbon : unordered-pair-vertices-hydrocarbon → UU l2
-  edge-hydrocarbon = edge-Undirected-Graph-𝔽 finite-graph-hydrocarbon
+  edge-hydrocarbon = {!!}
 
   is-finite-edge-hydrocarbon :
     (p : unordered-pair-vertices-hydrocarbon) → is-finite (edge-hydrocarbon p)
-  is-finite-edge-hydrocarbon =
-    is-finite-edge-Undirected-Graph-𝔽 finite-graph-hydrocarbon
+  is-finite-edge-hydrocarbon = {!!}
 
   carbon-atom-hydrocarbon :
     vertex-hydrocarbon → tetrahedron-in-3-space
-  carbon-atom-hydrocarbon = pr1 (pr2 H)
+  carbon-atom-hydrocarbon = {!!}
 
   electron-carbon-atom-hydrocarbon :
     (c : vertex-hydrocarbon) → UU lzero
-  electron-carbon-atom-hydrocarbon c =
-    vertex-tetrahedron-in-3-space (carbon-atom-hydrocarbon c)
+  electron-carbon-atom-hydrocarbon c = {!!}
 
   emb-bonding-hydrocarbon :
     (c : vertex-hydrocarbon) →
     Σ vertex-hydrocarbon
       ( λ c' → edge-hydrocarbon (standard-unordered-pair c c')) ↪
     electron-carbon-atom-hydrocarbon c
-  emb-bonding-hydrocarbon = pr1 (pr2 (pr2 H))
+  emb-bonding-hydrocarbon = {!!}
 
   bonding-hydrocarbon :
     {c c' : vertex-hydrocarbon} →
     edge-hydrocarbon (standard-unordered-pair c c') →
     electron-carbon-atom-hydrocarbon c
-  bonding-hydrocarbon {c} {c'} b =
-    map-emb (emb-bonding-hydrocarbon c) (pair c' b)
+  bonding-hydrocarbon {c} {c'} b = {!!}
 ```

@@ -60,52 +60,19 @@ module _
 
   abstract
     canonical-coequalizer : UU (l1 ⊔ l2)
-    canonical-coequalizer =
-      pushout
-        ( vertical-map-span-cocone-cofork f g)
-        ( horizontal-map-span-cocone-cofork f g)
+    canonical-coequalizer = {!!}
 
     cofork-canonical-coequalizer : cofork f g canonical-coequalizer
-    cofork-canonical-coequalizer =
-      cofork-cocone-codiagonal f g
-        ( cocone-pushout
-          ( vertical-map-span-cocone-cofork f g)
-          ( horizontal-map-span-cocone-cofork f g))
+    cofork-canonical-coequalizer = {!!}
 
     dup-canonical-coequalizer :
       { l : Level} →
       dependent-universal-property-coequalizer l f g
         ( cofork-canonical-coequalizer)
-    dup-canonical-coequalizer =
-      dependent-universal-property-coequalizer-dependent-universal-property-pushout
-        ( f)
-        ( g)
-        ( cofork-canonical-coequalizer)
-        ( λ P →
-          tr
-            ( λ c →
-              is-equiv
-                ( dependent-cocone-map
-                  ( vertical-map-span-cocone-cofork f g)
-                  ( horizontal-map-span-cocone-cofork f g)
-                  ( c)
-                  ( P)))
-            ( inv
-              ( is-retraction-map-inv-is-equiv
-                ( is-equiv-cofork-cocone-codiagonal f g)
-                ( cocone-pushout
-                  ( vertical-map-span-cocone-cofork f g)
-                  ( horizontal-map-span-cocone-cofork f g))))
-            ( dup-pushout
-              ( vertical-map-span-cocone-cofork f g)
-              ( horizontal-map-span-cocone-cofork f g)
-              ( P)))
+    dup-canonical-coequalizer = {!!}
 
     up-canonical-coequalizer :
       { l : Level} →
       universal-property-coequalizer l f g cofork-canonical-coequalizer
-    up-canonical-coequalizer =
-      universal-property-dependent-universal-property-coequalizer f g
-        ( cofork-canonical-coequalizer)
-        ( dup-canonical-coequalizer)
+    up-canonical-coequalizer = {!!}
 ```
