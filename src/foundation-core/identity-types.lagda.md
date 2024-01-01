@@ -63,7 +63,7 @@ module _
 
   infix 6 _＝_
   _＝_ : A → A → UU l
-  (a ＝ b) = {!!}
+  (a ＝ b) = Id a b
 
 {-# BUILTIN EQUALITY Id #-}
 ```

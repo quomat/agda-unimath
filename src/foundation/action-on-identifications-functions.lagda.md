@@ -109,7 +109,7 @@ will compute here the action on identifications of the map `_∙ refl`.
 
 ```agda
 inv-ap-refl-concat :
-  {l : LeveL} {A : UU l} {x y : A} {p q : x ＝ y} (r : p ＝ q) →
+  {l : Level} {A : UU l} {x y : A} {p q : x ＝ y} (r : p ＝ q) →
   (right-unit ∙ (r ∙ inv right-unit)) ＝ (ap (_∙ refl) r)
 inv-ap-refl-concat = {!!}
 
