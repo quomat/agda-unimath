@@ -31,7 +31,7 @@ record Σω (A : UUω) (B : A → UUω) : UUω where
 open Σω public
 
 infixr 3 _,ω_
-pattern _,ω_ a b = {!!}
+pattern _,ω_ a b = pairω a b
 ```
 
 ### Families on dependent pair types

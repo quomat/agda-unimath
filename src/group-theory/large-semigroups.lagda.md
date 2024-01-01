@@ -40,7 +40,27 @@ record Large-Semigroup (α : Level → Level) : UUω where
   field
     set-Large-Semigroup :
       (l : Level) → Set (α l)
-    set-Large-Semigroup = {!!}
+    mul-Large-Semigroup :
+      {l1 l2 : Level} →
+      type-Set (set-Large-Semigroup l1) →
+      type-Set (set-Large-Semigroup l2) →
+      type-Set (set-Large-Semigroup (l1 ⊔ l2))
+    associative-mul-Large-Semigroup :
+      {l1 l2 l3 : Level}
+      (x : type-Set (set-Large-Semigroup l1))
+      (y : type-Set (set-Large-Semigroup l2))
+      (z : type-Set (set-Large-Semigroup l3)) →
+      mul-Large-Semigroup (mul-Large-Semigroup x y) z ＝
+      mul-Large-Semigroup x (mul-Large-Semigroup y z)
+
+open Large-Semigroup public
+
+module _
+  {α : Level → Level} (G : Large-Semigroup α)
+  where
+
+  type-Large-Semigroup : (l : Level) → UU (α l)
+  type-Large-Semigroup l = {!!}
 
   is-set-type-Large-Semigroup :
     {l : Level} → is-set (type-Large-Semigroup l)

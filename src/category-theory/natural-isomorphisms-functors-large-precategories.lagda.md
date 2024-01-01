@@ -49,5 +49,23 @@ module _
     field
       iso-natural-isomorphism-Large-Precategory :
         iso-family-functor-Large-Precategory
-      iso-natural-isomorphism-Large-Precategory = {!!}
+      naturality-natural-isomorphism-Large-Precategory :
+        { l1 l2 : Level}
+        { X : obj-Large-Precategory C l1}
+        { Y : obj-Large-Precategory C l2}
+        ( f : hom-Large-Precategory C X Y) →
+        coherence-square-hom-Large-Precategory D
+          ( hom-functor-Large-Precategory F f)
+          ( hom-iso-Large-Precategory D
+            ( iso-natural-isomorphism-Large-Precategory X))
+          ( hom-iso-Large-Precategory D
+            ( iso-natural-isomorphism-Large-Precategory Y))
+          ( hom-functor-Large-Precategory G f)
+
+  open natural-isomorphism-Large-Precategory public
+
+  natural-transformation-natural-isomorphism-Large-Precategory :
+    natural-isomorphism-Large-Precategory →
+    natural-transformation-Large-Precategory C D F G
+  natural-transformation-natural-isomorphism-Large-Precategory = {!!}
 ```

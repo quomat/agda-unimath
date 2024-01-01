@@ -84,7 +84,18 @@ module _
     field
       equiv-is-adjoint-pair-Large-Precategory :
         family-of-equivalences-adjoint-pair-Large-Precategory
-      equiv-is-adjoint-pair-Large-Precategory = {!!}
+      naturality-equiv-is-adjoint-pair-Large-Precategory :
+        naturality-family-of-equivalences-adjoint-pair-Large-Precategory
+          equiv-is-adjoint-pair-Large-Precategory
+
+  open is-adjoint-pair-Large-Precategory public
+
+  map-equiv-is-adjoint-pair-Large-Precategory :
+    (H : is-adjoint-pair-Large-Precategory) {l1 l2 : Level}
+    (X : obj-Large-Precategory C l1) (Y : obj-Large-Precategory D l2) →
+    hom-Large-Precategory D (obj-functor-Large-Precategory F X) Y →
+    hom-Large-Precategory C X (obj-functor-Large-Precategory G Y)
+  map-equiv-is-adjoint-pair-Large-Precategory H X Y = {!!}
 
   inv-equiv-is-adjoint-pair-Large-Precategory :
     (H : is-adjoint-pair-Large-Precategory) {l1 l2 : Level}

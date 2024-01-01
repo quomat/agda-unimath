@@ -346,7 +346,121 @@ We state what it means for a morphism to preserve weakening structure.
           ( comp-hom-system
             ( weakening.type WB (section-system.type h X))
             ( h))
-      type = {!!}
+      slice :
+        (X : system.type A) →
+        preserves-weakening
+          ( weakening.slice WA X)
+          ( weakening.slice WB (section-system.type h X))
+          ( section-system.slice h X)
+```
+
+### Substitution structure on systems
+
+We introduce substitution structure on a system.
+
+```agda
+  record substitution {l1 l2 : Level} (A : system l1 l2) :
+    UU (lsuc l1 ⊔ lsuc l2)
+    where
+    coinductive
+    field
+      type :
+        {X : system.type A} (x : system.element A X) →
+        hom-system (system.slice A X) A
+      slice : (X : system.type A) → substitution (system.slice A X)
+```
+
+### Morphisms preserving substitution structure
+
+We state what it means for a morphism to preserve substitution structure.
+
+```agda
+  record preserves-substitution
+    {l1 l2 l3 l4 : Level} {A : system l1 l2} {B : system l3 l4}
+    (SA : substitution A) (SB : substitution B) (h : hom-system A B) :
+    UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
+    where
+    coinductive
+    field
+      type :
+        {X : system.type A} (x : system.element A X) →
+        htpy-hom-system
+          ( comp-hom-system
+            ( h)
+            ( substitution.type SA x))
+          ( comp-hom-system
+            ( substitution.type SB
+              ( section-system.element h x))
+            ( section-system.slice h X))
+      slice :
+        (X : system.type A) →
+        preserves-substitution
+          ( substitution.slice SA X)
+          ( substitution.slice SB (section-system.type h X))
+          ( section-system.slice h X)
+```
+
+### The structure of a generic element on a system equipped with weakening structure
+
+We introduce the structure of a generic element on a system equipped with
+weakening structure.
+
+```agda
+  record generic-element
+    {l1 l2 : Level} {A : system l1 l2} (W : weakening A) :
+    UU (l1 ⊔ l2)
+    where
+    coinductive
+    field
+      type :
+        (X : system.type A) →
+        system.element
+          ( system.slice A X)
+            ( section-system.type (weakening.type W X) X)
+      slice :
+        (X : system.type A) → generic-element (weakening.slice W X)
+
+  record preserves-generic-element
+    {l1 l2 l3 l4 : Level} {A : system l1 l2} {B : system l3 l4}
+    {WA : weakening A} (δA : generic-element WA)
+    {WB : weakening B} (δB : generic-element WB)
+    {h : hom-system A B} (Wh : preserves-weakening WA WB h) :
+    UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
+    where
+    coinductive
+    field
+      type :
+        (X : system.type A) →
+        Id ( tr
+              ( system.element (system.slice B (section-system.type h X)))
+              ( section-system.type
+                ( preserves-weakening.type Wh X)
+                ( X))
+              ( section-system.element
+                ( section-system.slice h X)
+                ( generic-element.type δA X)))
+            ( generic-element.type δB (section-system.type h X))
+      slice :
+        (X : system.type A) →
+        preserves-generic-element
+          ( generic-element.slice δA X)
+          ( generic-element.slice δB (section-system.type h X))
+          ( preserves-weakening.slice Wh X)
+```
+
+### Weakening and substitution morphisms preserve weakening, substitution, and generic elements
+
+In a dependent type theory, every weakening morphism and every substitution
+morphism preserve both the weakening and substitution structure, and they also
+preserve generic elements.
+
+For example, the rule that states that weakening preserves weakening (on types)
+can be displayed as follows:
+
+```text
+        Γ ⊢ A type          Γ,Δ ⊢ B type          Γ,Δ,Ε ⊢ C type
+  ------------------------------------------------------------------------
+  Γ,A,W(A,Δ),W(A,B),W(W(A,B),W(A,E)) ⊢ W(W(A,B),W(A,C))= {!!}
 ```
 
 Furthermore, there are laws that state that substitution by `a : A` cancels
@@ -365,7 +479,200 @@ We will now state these laws.
       type :
         (X : system.type A) →
         preserves-weakening W (weakening.slice W X) (weakening.type W X)
-      type = {!!}
+      slice :
+        (X : system.type A) →
+        weakening-preserves-weakening (weakening.slice W X)
+
+  record substitution-preserves-substitution
+    {l1 l2 : Level} {A : system l1 l2} (S : substitution A) : UU (l1 ⊔ l2)
+    where
+    coinductive
+    field
+      type :
+        {X : system.type A} (x : system.element A X) →
+        preserves-substitution
+          ( substitution.slice S X)
+          ( S)
+          ( substitution.type S x)
+      slice :
+        (X : system.type A) →
+        substitution-preserves-substitution (substitution.slice S X)
+
+  record weakening-preserves-substitution
+    {l1 l2 : Level} {A : system l1 l2} (S : substitution A) (W : weakening A) :
+    UU (l1 ⊔ l2)
+    where
+    coinductive
+    field
+      type :
+        (X : system.type A) →
+        preserves-substitution
+          ( S)
+          ( substitution.slice S X)
+          ( weakening.type W X)
+      slice :
+        (X : system.type A) →
+        weakening-preserves-substitution
+          ( substitution.slice S X)
+          ( weakening.slice W X)
+
+  record substitution-preserves-weakening
+    {l1 l2 : Level} {A : system l1 l2} (W : weakening A) (S : substitution A) :
+    UU (l1 ⊔ l2)
+    where
+    coinductive
+    field
+      type :
+        {X : system.type A} (x : system.element A X) →
+        preserves-weakening
+          ( weakening.slice W X)
+          ( W)
+          ( substitution.type S x)
+      slice :
+        (X : system.type A) →
+        substitution-preserves-weakening
+          ( weakening.slice W X)
+          ( substitution.slice S X)
+
+  record weakening-preserves-generic-element
+    {l1 l2 : Level} {A : system l1 l2} (W : weakening A)
+    (WW : weakening-preserves-weakening W) (δ : generic-element W) :
+    UU (l1 ⊔ l2)
+    where
+    coinductive
+    field
+      type :
+        (X : system.type A) →
+        preserves-generic-element
+          ( δ)
+          ( generic-element.slice δ X)
+          ( weakening-preserves-weakening.type WW X)
+      slice :
+        (X : system.type A) →
+        weakening-preserves-generic-element
+          ( weakening.slice W X)
+          ( weakening-preserves-weakening.slice WW X)
+          ( generic-element.slice δ X)
+
+  record substitution-preserves-generic-element
+    {l1 l2 : Level} {A : system l1 l2} (W : weakening A)
+    (δ : generic-element W) (S : substitution A)
+    (SW : substitution-preserves-weakening W S) :
+    UU (l1 ⊔ l2)
+    where
+    coinductive
+    field
+      type :
+        {X : system.type A} (x : system.element A X) →
+        preserves-generic-element
+          ( generic-element.slice δ X)
+          ( δ)
+          ( substitution-preserves-weakening.type SW x)
+      slice :
+        (X : system.type A) →
+        substitution-preserves-generic-element
+          ( weakening.slice W X)
+          ( generic-element.slice δ X)
+          ( substitution.slice S X)
+          ( substitution-preserves-weakening.slice SW X)
+
+  record substitution-cancels-weakening
+    {l1 l2 : Level} {A : system l1 l2} (W : weakening A) (S : substitution A) :
+    UU (l1 ⊔ l2)
+    where
+    coinductive
+    field
+      type :
+        {X : system.type A} (x : system.element A X) →
+        htpy-hom-system
+          ( comp-hom-system
+            ( substitution.type S x)
+            ( weakening.type W X))
+          ( id-hom-system A)
+      slice :
+        (X : system.type A) →
+        substitution-cancels-weakening
+          ( weakening.slice W X)
+          ( substitution.slice S X)
+
+  record generic-element-is-identity
+    {l1 l2 : Level} {A : system l1 l2} (W : weakening A) (S : substitution A)
+    (δ : generic-element W) (S!W : substitution-cancels-weakening W S) :
+    UU (l1 ⊔ l2)
+    where
+    coinductive
+    field
+      type :
+        {X : system.type A} (x : system.element A X) →
+        Id
+          ( tr
+            ( system.element A)
+            ( section-system.type
+              ( substitution-cancels-weakening.type S!W x) X)
+            ( section-system.element
+              ( substitution.type S x)
+              ( generic-element.type δ X)))
+          ( x)
+      slice :
+        (X : system.type A) →
+        generic-element-is-identity
+          ( weakening.slice W X)
+          ( substitution.slice S X)
+          ( generic-element.slice δ X)
+          ( substitution-cancels-weakening.slice S!W X)
+
+  record substitution-by-generic-element
+    {l1 l2 : Level} {A : system l1 l2} (W : weakening A) (S : substitution A)
+    (δ : generic-element W) :
+    UU (l1 ⊔ l2)
+    where
+    coinductive
+    field
+      type :
+        (X : system.type A) →
+        htpy-hom-system
+          ( comp-hom-system
+            ( substitution.type
+              ( substitution.slice S X)
+              ( generic-element.type δ X))
+            ( weakening.type
+              ( weakening.slice W X)
+              ( section-system.type (weakening.type W X) X)))
+          ( id-hom-system (system.slice A X))
+      slice :
+        (X : system.type A) →
+        substitution-by-generic-element
+          ( weakening.slice W X)
+          ( substitution.slice S X)
+          ( generic-element.slice δ X)
+```
+
+### Complete definition of a dependent type theory
+
+We complete the definition of a dependent type theory.
+
+```agda
+  record type-theory
+    (l1 l2 : Level) : UU (lsuc l1 ⊔ lsuc l2)
+    where
+    field
+      sys : system l1 l2
+      W : weakening sys
+      S : substitution sys
+      δ : generic-element W
+      WW : weakening-preserves-weakening W
+      SS : substitution-preserves-substitution S
+      WS : weakening-preserves-substitution S W
+      SW : substitution-preserves-weakening W S
+      Wδ : weakening-preserves-generic-element W WW δ
+      Sδ : substitution-preserves-generic-element W δ S SW
+      S!W : substitution-cancels-weakening W S
+      δid : generic-element-is-identity W S δ S!W
+      Sδ! : substitution-by-generic-element W S δ
+
+  closed-type-dtt :
+    {l1 l2 : Level} (A : type-theory l1 l2) → UU l1
+  closed-type-dtt A = {!!}
 
   global-element-dtt :
     {l1 l2 : Level} (A : type-theory l1 l2) → closed-type-dtt A → UU l2
@@ -415,7 +722,30 @@ We introduce the slice of a dependent type theory.
       sys :
         hom-system
           ( type-theory.sys A)
-      sys = {!!}
+      ( type-theory.sys B)
+      W :
+        preserves-weakening
+          ( type-theory.W A)
+          ( type-theory.W B)
+          ( sys)
+      S :
+        preserves-substitution
+          ( type-theory.S A)
+          ( type-theory.S B)
+          ( sys)
+      δ :
+        preserves-generic-element
+          ( type-theory.δ A)
+          ( type-theory.δ B)
+          ( W)
+
+  hom-slice-dtt :
+    {l1 l2 l3 l4 : Level} {A : type-theory l1 l2} {B : type-theory l3 l4}
+    (f : hom-dtt A B) (X : system.type (type-theory.sys A)) →
+    hom-dtt
+      ( slice-dtt A X)
+      ( slice-dtt B (section-system.type (hom-dtt.sys f) X))
+  hom-dtt.sys (hom-slice-dtt f X) = {!!}
   hom-dtt.W (hom-slice-dtt f X) = {!!}
   hom-dtt.S (hom-slice-dtt f X) = {!!}
   hom-dtt.δ (hom-slice-dtt f X) = {!!}
@@ -551,7 +881,82 @@ We introduce the slice of a dependent type theory.
         is-equiv
           ( section-system.type
             ( weakening.type (type-theory.W A) X))
-      type = {!!}
+      slice :
+        (X : system.type (type-theory.sys A)) →
+        is-simple-type-theory (slice-dtt A X)
+
+  record simple-type-theory (l1 l2 : Level) : UU (lsuc l1 ⊔ lsuc l2)
+    where
+    field
+      dtt : type-theory l1 l2
+      is-simple : is-simple-type-theory dtt
+```
+
+### The condition that the action on elements of a morphism of dependent type theories is an equivalence
+
+We introduce the condition that the action on elements of a morphism of
+dependent type theories is an equivalence.
+
+```agda
+  record is-equiv-on-elements-hom-system
+    {l1 l2 l3 l4 : Level} (A : system l1 l2) (B : system l3 l4)
+    (h : hom-system A B) : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
+    where
+    coinductive
+    field
+      type :
+        (X : system.type A) → is-equiv (section-system.element h {X})
+      slice :
+        (X : system.type A) →
+        is-equiv-on-elements-hom-system
+          ( system.slice A X)
+          ( system.slice B (section-system.type h X))
+          ( section-system.slice h X)
+```
+
+### Unary type theories
+
+```agda
+  record unary-type-theory
+    {l1 l2 : Level} (A : type-theory l1 l2) : UU (lsuc l1 ⊔ lsuc l2)
+    where
+    field
+      dtt : type-theory l1 l2
+      is-simple : is-simple-type-theory A
+      is-unary :
+        (X Y : system.type (type-theory.sys A)) →
+        is-equiv-on-elements-hom-system
+          ( system.slice (type-theory.sys A) Y)
+          ( system.slice
+            ( system.slice (type-theory.sys A) X)
+            ( section-system.type
+              ( weakening.type (type-theory.W A) X) Y))
+          ( section-system.slice
+            ( weakening.type (type-theory.W A) X)
+            ( Y))
+```
+
+### Proof irrelevant type theories
+
+```agda
+  record is-proof-irrelevant-type-theory
+    {l1 l2 : Level} (A : type-theory l1 l2) : UU (l1 ⊔ l2)
+    where
+    coinductive
+    field
+      type :
+        (X : system.type (type-theory.sys A)) →
+        is-prop (system.element (type-theory.sys A) X)
+      slice :
+        (X : system.type (type-theory.sys A)) →
+        is-proof-irrelevant-type-theory (slice-dtt A X)
+```
+
+---
+
+```agda
+  system-Slice : {l : Level} (X : UU l) → system (lsuc l) l
+  system.type (system-Slice {l} X) = {!!}
 
   {-
   hom-system-weakening-system-Slice :

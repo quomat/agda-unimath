@@ -277,7 +277,7 @@ if two of the three maps are equivalences, then so is the third.
 
 We also record special cases of the 3-for-2 property of equivalences, where we
 only assume maps `g : B → X` and `h : A → B`. In this special case, we set
-`f := {!!}
+`f := g ∘ h` and the triangle commutes by `refl-htpy`.
 
 [André Joyal](https://en.wikipedia.org/wiki/André_Joyal) proposed calling this
 property the 3-for-2 property, despite most mathematicians calling it the
