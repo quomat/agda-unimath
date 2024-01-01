@@ -44,7 +44,7 @@ is-flat-discrete {l} A = {!!}
 ```agda
 is-property-is-flat-discrete :
   {@♭ l : Level} (@♭ A : UU l) → is-prop (is-flat-discrete A)
-is-property-is-flat-discrete {l} A = {!!}
+is-property-is-flat-discrete = {!!}
 
 is-flat-discrete-Prop : {@♭ l : Level} (@♭ A : UU l) → Prop l
 is-flat-discrete-Prop {l} A = {!!}
@@ -58,14 +58,7 @@ map-is-flat-discrete-empty ()
 
 is-section-map-is-flat-discrete-empty :
   (counit-flat ∘ map-is-flat-discrete-empty) ~ id
-is-section-map-is-flat-discrete-empty ()
-
-is-retraction-map-is-flat-discrete-empty :
-  (map-is-flat-discrete-empty ∘ counit-flat) ~ id
-is-retraction-map-is-flat-discrete-empty (cons-flat ())
-
-is-flat-discrete-empty : is-flat-discrete empty
-is-flat-discrete-empty = {!!}
+is-section-map-is-flat-discrete-empty = {!!}
 ```
 
 ### The unit type is flat
@@ -76,11 +69,11 @@ map-is-flat-discrete-unit star = {!!}
 
 is-section-map-is-flat-discrete-unit :
   counit-flat ∘ map-is-flat-discrete-unit ~ id
-is-section-map-is-flat-discrete-unit _ = {!!}
+is-section-map-is-flat-discrete-unit = {!!}
 
 is-retraction-map-is-flat-discrete-unit :
   map-is-flat-discrete-unit ∘ counit-flat ~ id
-is-retraction-map-is-flat-discrete-unit (cons-flat _) = {!!}
+is-retraction-map-is-flat-discrete-unit = {!!}
 
 is-flat-discrete-unit : is-flat-discrete unit
 is-flat-discrete-unit = {!!}

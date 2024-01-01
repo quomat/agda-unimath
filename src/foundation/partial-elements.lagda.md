@@ -69,8 +69,7 @@ module _
 ```agda
 unit-partial-element :
   {l1 : Level} {X : UU l1} → X → partial-element lzero X
-pr1 (unit-partial-element x) = {!!}
-pr2 (unit-partial-element x) y = {!!}
+unit-partial-element = {!!}
 ```
 
 ## Properties

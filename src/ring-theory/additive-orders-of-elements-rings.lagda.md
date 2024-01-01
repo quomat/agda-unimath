@@ -91,7 +91,7 @@ module _
   div-additive-order-element-additive-order-one-Ring :
     (x : type-Ring R) →
     div-order-element-Group (group-Ring R) x (one-Ring R)
-  div-additive-order-element-additive-order-one-Ring x k H = {!!}
+  div-additive-order-element-additive-order-one-Ring = {!!}
 ```
 
 ### If there exists an integer `k` such that `k·x ＝ y` then the order of `y` divides the order of `x`
@@ -110,7 +110,7 @@ module _
   div-additive-order-element-is-integer-multiple-Ring :
     (x y : type-Ring R) → is-integer-multiple-of-element-Ring R x y →
     div-additive-order-element-Ring R y x
-  div-additive-order-element-is-integer-multiple-Ring x y H l p = {!!}
+  div-additive-order-element-is-integer-multiple-Ring = {!!}
 ```
 
 ### If there exists an integer `k` such that `k·x ＝ 1` then the order of `x` is the order of `1`
@@ -131,11 +131,11 @@ module _
       ( ℤ-Group)
       ( additive-order-element-Ring R x)
       ( additive-order-element-Ring R (one-Ring R))
-  pr1 (has-same-elements-additive-order-element-additive-order-one-Ring x H y) = {!!}
+  has-same-elements-additive-order-element-additive-order-one-Ring = {!!}
 
   eq-additive-order-element-additive-order-one-Ring :
     (x : type-Ring R) → is-integer-multiple-of-element-Ring R x (one-Ring R) →
     additive-order-element-Ring R x ＝
     additive-order-element-Ring R (one-Ring R)
-  eq-additive-order-element-additive-order-one-Ring x H = {!!}
+  eq-additive-order-element-additive-order-one-Ring = {!!}
 ```

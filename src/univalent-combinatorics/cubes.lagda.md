@@ -56,7 +56,7 @@ module _
 
   has-finite-cardinality-axis-cube :
     (d : dim-cube) → has-finite-cardinality (axis-cube d)
-  has-finite-cardinality-axis-cube d = {!!}
+  has-finite-cardinality-axis-cube = {!!}
 
   is-finite-axis-cube : (d : dim-cube) → is-finite (axis-cube d)
   is-finite-axis-cube d = {!!}
@@ -86,7 +86,7 @@ standard-cube k = {!!}
 {-
 mere-equiv-standard-cube :
   {k : ℕ} (X : cube k) → type-trunc-Prop (equiv-cube (standard-cube k) X)
-mere-equiv-standard-cube {k} (pair (pair X H) Y) = {!!}
+mere-equiv-standard-cube = {!!}
 -}
 ```
 
@@ -96,6 +96,5 @@ mere-equiv-standard-cube {k} (pair (pair X H) Y) = {!!}
 face-cube :
   (k : ℕ) (X : cube (succ-ℕ k)) (d : dim-cube (succ-ℕ k) X)
   (a : axis-cube (succ-ℕ k) X d) → cube k
-pr1 (face-cube k X d a) = {!!}
-pr2 (face-cube k X d a) d' = {!!}
+face-cube = {!!}
 ```

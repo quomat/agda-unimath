@@ -69,34 +69,34 @@ module _
 
   is-closed-under-addition-full-ideal-Ring :
     is-closed-under-addition-subset-Ring R subset-full-ideal-Ring
-  is-closed-under-addition-full-ideal-Ring H K = {!!}
+  is-closed-under-addition-full-ideal-Ring = {!!}
 
   is-closed-under-negatives-full-ideal-Ring :
     is-closed-under-negatives-subset-Ring R subset-full-ideal-Ring
-  is-closed-under-negatives-full-ideal-Ring H = {!!}
+  is-closed-under-negatives-full-ideal-Ring = {!!}
 
   is-additive-subgroup-full-ideal-Ring :
     is-additive-subgroup-subset-Ring R subset-full-ideal-Ring
-  pr1 is-additive-subgroup-full-ideal-Ring = {!!}
+  is-additive-subgroup-full-ideal-Ring = {!!}
 
   is-closed-under-left-multiplication-full-ideal-Ring :
     is-closed-under-left-multiplication-subset-Ring R subset-full-ideal-Ring
-  is-closed-under-left-multiplication-full-ideal-Ring x y H = {!!}
+  is-closed-under-left-multiplication-full-ideal-Ring = {!!}
 
   is-closed-under-right-multiplication-full-ideal-Ring :
     is-closed-under-right-multiplication-subset-Ring R subset-full-ideal-Ring
-  is-closed-under-right-multiplication-full-ideal-Ring x y H = {!!}
+  is-closed-under-right-multiplication-full-ideal-Ring = {!!}
 
   is-left-ideal-full-ideal-Ring :
     is-left-ideal-subset-Ring R subset-full-ideal-Ring
-  pr1 is-left-ideal-full-ideal-Ring = {!!}
+  is-left-ideal-full-ideal-Ring = {!!}
 
   full-left-ideal-Ring : left-ideal-Ring lzero R
   pr1 full-left-ideal-Ring = {!!}
 
   is-right-ideal-full-ideal-Ring :
     is-right-ideal-subset-Ring R subset-full-ideal-Ring
-  pr1 is-right-ideal-full-ideal-Ring = {!!}
+  is-right-ideal-full-ideal-Ring = {!!}
 
   full-right-ideal-Ring : right-ideal-Ring lzero R
   pr1 full-right-ideal-Ring = {!!}
@@ -122,11 +122,11 @@ module _
 
   is-full-contains-one-ideal-Ring :
     is-in-ideal-Ring R I (one-Ring R) → is-full-ideal-Ring R I
-  is-full-contains-one-ideal-Ring H x = {!!}
+  is-full-contains-one-ideal-Ring = {!!}
 
   contains-one-is-full-ideal-Ring :
     is-full-ideal-Ring R I → is-in-ideal-Ring R I (one-Ring R)
-  contains-one-is-full-ideal-Ring H = {!!}
+  contains-one-is-full-ideal-Ring = {!!}
 ```
 
 ### Any ideal is full if and only if it is a top element in the large poset of ideals
@@ -139,12 +139,12 @@ module _
   is-full-is-top-element-ideal-Ring :
     is-top-element-Large-Poset (ideal-Ring-Large-Poset R) I →
     is-full-ideal-Ring R I
-  is-full-is-top-element-ideal-Ring H x = {!!}
+  is-full-is-top-element-ideal-Ring = {!!}
 
   is-top-element-is-full-ideal-Ring :
     is-full-ideal-Ring R I →
     is-top-element-Large-Poset (ideal-Ring-Large-Poset R) I
-  is-top-element-is-full-ideal-Ring H I x K = {!!}
+  is-top-element-is-full-ideal-Ring = {!!}
 
 module _
   {l1 : Level} (R : Ring l1)
@@ -156,6 +156,5 @@ module _
 
   has-top-element-ideal-Ring :
     has-top-element-Large-Poset (ideal-Ring-Large-Poset R)
-  top-has-top-element-Large-Poset
-    has-top-element-ideal-Ring = {!!}
+  has-top-element-ideal-Ring = {!!}
 ```

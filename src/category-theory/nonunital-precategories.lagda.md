@@ -36,7 +36,7 @@ Such an object may also be called a **semiprecategory**.
 ```agda
 Nonunital-Precategory :
   (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Nonunital-Precategory l1 l2 = {!!}
+Nonunital-Precategory = {!!}
 
 module _
   {l1 l2 : Level} (C : Nonunital-Precategory l1 l2)
@@ -53,7 +53,7 @@ module _
 
   is-set-hom-Nonunital-Precategory :
     (x y : obj-Nonunital-Precategory) → is-set (hom-Nonunital-Precategory x y)
-  is-set-hom-Nonunital-Precategory x y = {!!}
+  is-set-hom-Nonunital-Precategory = {!!}
 
   associative-composition-operation-Nonunital-Precategory :
     associative-composition-operation-binary-family-Set
@@ -72,7 +72,7 @@ module _
     hom-Nonunital-Precategory x y →
     hom-Nonunital-Precategory y z →
     hom-Nonunital-Precategory x z
-  comp-hom-Nonunital-Precategory' f g = {!!}
+  comp-hom-Nonunital-Precategory' = {!!}
 
   associative-comp-hom-Nonunital-Precategory :
     {x y z w : obj-Nonunital-Precategory}
@@ -109,14 +109,13 @@ module _
 ```agda
 total-hom-Nonunital-Precategory :
   {l1 l2 : Level} (C : Nonunital-Precategory l1 l2) → UU (l1 ⊔ l2)
-total-hom-Nonunital-Precategory C = {!!}
+total-hom-Nonunital-Precategory = {!!}
 
 obj-total-hom-Nonunital-Precategory :
   {l1 l2 : Level} (C : Nonunital-Precategory l1 l2) →
   total-hom-Nonunital-Precategory C →
   obj-Nonunital-Precategory C × obj-Nonunital-Precategory C
-pr1 (obj-total-hom-Nonunital-Precategory C (x , y , f)) = {!!}
-pr2 (obj-total-hom-Nonunital-Precategory C (x , y , f)) = {!!}
+obj-total-hom-Nonunital-Precategory = {!!}
 ```
 
 ### Pre- and postcomposition by a morphism
@@ -131,7 +130,7 @@ module _
 
   precomp-hom-Nonunital-Precategory :
     hom-Nonunital-Precategory C y z → hom-Nonunital-Precategory C x z
-  precomp-hom-Nonunital-Precategory g = {!!}
+  precomp-hom-Nonunital-Precategory = {!!}
 
   postcomp-hom-Nonunital-Precategory :
     hom-Nonunital-Precategory C z x → hom-Nonunital-Precategory C z y

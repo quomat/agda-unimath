@@ -49,7 +49,7 @@ module _
 
   mul-dihedral-group-Ab :
     (x y : type-dihedral-group-Ab) → type-dihedral-group-Ab
-  mul-dihedral-group-Ab (inl x) (inl y) = {!!}
+  mul-dihedral-group-Ab = {!!}
 
   inv-dihedral-group-Ab : type-dihedral-group-Ab → type-dihedral-group-Ab
   inv-dihedral-group-Ab (inl x) = {!!}
@@ -58,29 +58,29 @@ module _
     (x y z : type-dihedral-group-Ab) →
     (mul-dihedral-group-Ab (mul-dihedral-group-Ab x y) z) ＝
     (mul-dihedral-group-Ab x (mul-dihedral-group-Ab y z))
-  associative-mul-dihedral-group-Ab (inl x) (inl y) (inl z) = {!!}
+  associative-mul-dihedral-group-Ab = {!!}
 
   left-unit-law-mul-dihedral-group-Ab :
     (x : type-dihedral-group-Ab) →
     (mul-dihedral-group-Ab unit-dihedral-group-Ab x) ＝ x
-  left-unit-law-mul-dihedral-group-Ab (inl x) = {!!}
+  left-unit-law-mul-dihedral-group-Ab = {!!}
 
   right-unit-law-mul-dihedral-group-Ab :
     (x : type-dihedral-group-Ab) →
     (mul-dihedral-group-Ab x unit-dihedral-group-Ab) ＝ x
-  right-unit-law-mul-dihedral-group-Ab (inl x) = {!!}
+  right-unit-law-mul-dihedral-group-Ab = {!!}
 
   left-inverse-law-mul-dihedral-group-Ab :
     (x : type-dihedral-group-Ab) →
     ( mul-dihedral-group-Ab (inv-dihedral-group-Ab x) x) ＝
     ( unit-dihedral-group-Ab)
-  left-inverse-law-mul-dihedral-group-Ab (inl x) = {!!}
+  left-inverse-law-mul-dihedral-group-Ab = {!!}
 
   right-inverse-law-mul-dihedral-group-Ab :
     (x : type-dihedral-group-Ab) →
     ( mul-dihedral-group-Ab x (inv-dihedral-group-Ab x)) ＝
     ( unit-dihedral-group-Ab)
-  right-inverse-law-mul-dihedral-group-Ab (inl x) = {!!}
+  right-inverse-law-mul-dihedral-group-Ab = {!!}
 
   semigroup-dihedral-group-Ab : Semigroup l
   pr1 semigroup-dihedral-group-Ab = {!!}

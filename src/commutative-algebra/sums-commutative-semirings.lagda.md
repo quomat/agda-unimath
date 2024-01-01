@@ -39,7 +39,7 @@ semiring `R` to any family of elements of `R` indexed by a standard finite type.
 sum-Commutative-Semiring :
   {l : Level} (A : Commutative-Semiring l) (n : ℕ) →
   (functional-vec-Commutative-Semiring A n) → type-Commutative-Semiring A
-sum-Commutative-Semiring A = {!!}
+sum-Commutative-Semiring = {!!}
 ```
 
 ## Properties
@@ -199,5 +199,5 @@ split-sum-Commutative-Semiring :
   add-Commutative-Semiring A
     ( sum-Commutative-Semiring A n (f ∘ inl-coprod-Fin n m))
     ( sum-Commutative-Semiring A m (f ∘ inr-coprod-Fin n m))
-split-sum-Commutative-Semiring A = {!!}
+split-sum-Commutative-Semiring = {!!}
 ```

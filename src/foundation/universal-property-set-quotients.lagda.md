@@ -72,12 +72,12 @@ module _
   precomp-Set-Quotient :
     {l : Level} (X : Set l) →
     (hom-Set B X) → reflecting-map-equivalence-relation R (type-Set X)
-  pr1 (precomp-Set-Quotient X g) = {!!}
+  precomp-Set-Quotient = {!!}
 
 is-set-quotient :
   {l1 l2 l3 : Level} {A : UU l1} (R : equivalence-relation l2 A)
   (B : Set l3) (f : reflecting-map-equivalence-relation R (type-Set B)) → UUω
-is-set-quotient R B f = {!!}
+is-set-quotient = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} (R : equivalence-relation l2 A) (B : Set l3)
@@ -112,13 +112,13 @@ module _
 
   universal-property-set-quotient-is-set-quotient :
     is-set-quotient R B f → universal-property-set-quotient R B f
-  universal-property-set-quotient-is-set-quotient Q X g = {!!}
+  universal-property-set-quotient-is-set-quotient = {!!}
 
   map-universal-property-set-quotient-is-set-quotient :
     {l4 : Level} (Uf : is-set-quotient R B f)
     (C : Set l4) (g : reflecting-map-equivalence-relation R (type-Set C)) →
     type-Set B → type-Set C
-  map-universal-property-set-quotient-is-set-quotient Uf C g = {!!}
+  map-universal-property-set-quotient-is-set-quotient = {!!}
 
   triangle-universal-property-set-quotient-is-set-quotient :
     {l4 : Level} (Uf : is-set-quotient R B f)
@@ -126,7 +126,7 @@ module _
     ( ( map-universal-property-set-quotient-is-set-quotient Uf C g) ∘
       ( map-reflecting-map-equivalence-relation R f)) ~
     ( map-reflecting-map-equivalence-relation R g)
-  triangle-universal-property-set-quotient-is-set-quotient Uf C g = {!!}
+  triangle-universal-property-set-quotient-is-set-quotient = {!!}
 ```
 
 ### If a reflecting map satisfies the universal property of the set quotient, then it is a set quotient
@@ -139,7 +139,7 @@ module _
 
   is-set-quotient-universal-property-set-quotient :
     universal-property-set-quotient R B f → is-set-quotient R B f
-  is-set-quotient-universal-property-set-quotient Uf X = {!!}
+  is-set-quotient-universal-property-set-quotient = {!!}
 ```
 
 ### A map out of a type equipped with an equivalence relation is effective if and only if it is an image factorization
@@ -155,61 +155,61 @@ module _
     (T : (prop-equivalence-relation R) ~ ((map-emb i) ∘ q)) →
     is-image (prop-equivalence-relation R) i (pair q T) →
     is-effective R q
-  is-effective-is-image i T H x y = {!!}
+  is-effective-is-image = {!!}
 
   is-surjective-and-effective-is-image :
     (i : type-Set B ↪ (A → Prop l2)) →
     (T : (prop-equivalence-relation R) ~ ((map-emb i) ∘ q)) →
     is-image (prop-equivalence-relation R) i (pair q T) →
     is-surjective-and-effective R q
-  pr1 (is-surjective-and-effective-is-image i T H) = {!!}
+  is-surjective-and-effective-is-image = {!!}
 
   is-locally-small-is-surjective-and-effective :
     is-surjective-and-effective R q → is-locally-small l2 (type-Set B)
-  is-locally-small-is-surjective-and-effective e x y = {!!}
+  is-locally-small-is-surjective-and-effective = {!!}
 
   large-map-emb-is-surjective-and-effective :
     is-surjective-and-effective R q → type-Set B → A → Prop l3
-  large-map-emb-is-surjective-and-effective H b a = {!!}
+  large-map-emb-is-surjective-and-effective = {!!}
 
   small-map-emb-is-surjective-and-effective :
     is-surjective-and-effective R q → type-Set B → A →
     Σ (Prop l3) (λ P → is-small l2 (type-Prop P))
-  pr1 (small-map-emb-is-surjective-and-effective H b a) = {!!}
+  small-map-emb-is-surjective-and-effective = {!!}
 
   map-emb-is-surjective-and-effective :
     is-surjective-and-effective R q → type-Set B → A → Prop l2
-  pr1 (map-emb-is-surjective-and-effective H b a) = {!!}
+  map-emb-is-surjective-and-effective = {!!}
 
   compute-map-emb-is-surjective-and-effective :
     (H : is-surjective-and-effective R q) (b : type-Set B) (a : A) →
     type-Prop (large-map-emb-is-surjective-and-effective H b a) ≃
     type-Prop (map-emb-is-surjective-and-effective H b a)
-  compute-map-emb-is-surjective-and-effective H b a = {!!}
+  compute-map-emb-is-surjective-and-effective = {!!}
 
   triangle-emb-is-surjective-and-effective :
     (H : is-surjective-and-effective R q) →
     prop-equivalence-relation R ~ (map-emb-is-surjective-and-effective H ∘ q)
-  triangle-emb-is-surjective-and-effective H a = {!!}
+  triangle-emb-is-surjective-and-effective = {!!}
 
   is-emb-map-emb-is-surjective-and-effective :
     (H : is-surjective-and-effective R q) →
     is-emb (map-emb-is-surjective-and-effective H)
-  is-emb-map-emb-is-surjective-and-effective H = {!!}
+  is-emb-map-emb-is-surjective-and-effective = {!!}
 
   emb-is-surjective-and-effective :
     (H : is-surjective-and-effective R q) →
     type-Set B ↪ (A → Prop l2)
-  pr1 (emb-is-surjective-and-effective H) = {!!}
+  emb-is-surjective-and-effective = {!!}
 
   is-emb-large-map-emb-is-surjective-and-effective :
     (e : is-surjective-and-effective R q) →
     is-emb (large-map-emb-is-surjective-and-effective e)
-  is-emb-large-map-emb-is-surjective-and-effective e = {!!}
+  is-emb-large-map-emb-is-surjective-and-effective = {!!}
 
   large-emb-is-surjective-and-effective :
     is-surjective-and-effective R q → type-Set B ↪ (A → Prop l3)
-  pr1 (large-emb-is-surjective-and-effective e) = {!!}
+  large-emb-is-surjective-and-effective = {!!}
 
   is-image-is-surjective-and-effective :
     ( H : is-surjective-and-effective R q) →
@@ -217,7 +217,7 @@ module _
       ( prop-equivalence-relation R)
       ( emb-is-surjective-and-effective H)
       ( pair q (triangle-emb-is-surjective-and-effective H))
-  is-image-is-surjective-and-effective H = {!!}
+  is-image-is-surjective-and-effective = {!!}
 ```
 
 ### Any set quotient `q : A → B` of an equivalence relation `R` on `A` is surjective
@@ -231,7 +231,7 @@ module _
     (q : reflecting-map-equivalence-relation R (type-Set B)) →
     is-set-quotient R B q →
     is-surjective (map-reflecting-map-equivalence-relation R q)
-  is-surjective-is-set-quotient q Q b = {!!}
+  is-surjective-is-set-quotient = {!!}
 ```
 
 ### Any set quotient `q : A → B` of an equivalence relation `R` on `A` is effective
@@ -245,7 +245,7 @@ module _
     (q : reflecting-map-equivalence-relation R (type-Set B)) →
     is-set-quotient R B q →
     is-effective R (map-reflecting-map-equivalence-relation R q)
-  is-effective-is-set-quotient q Q x y = {!!}
+  is-effective-is-set-quotient = {!!}
 
   apply-effectiveness-is-set-quotient :
     (q : reflecting-map-equivalence-relation R (type-Set B)) →
@@ -254,7 +254,7 @@ module _
     ( map-reflecting-map-equivalence-relation R q x ＝
       map-reflecting-map-equivalence-relation R q y) →
     sim-equivalence-relation R x y
-  apply-effectiveness-is-set-quotient q H {x} {y} = {!!}
+  apply-effectiveness-is-set-quotient = {!!}
 
   apply-effectiveness-is-set-quotient' :
     (q : reflecting-map-equivalence-relation R (type-Set B)) →
@@ -262,13 +262,13 @@ module _
     {x y : A} → sim-equivalence-relation R x y →
     map-reflecting-map-equivalence-relation R q x ＝
     map-reflecting-map-equivalence-relation R q y
-  apply-effectiveness-is-set-quotient' q H {x} {y} = {!!}
+  apply-effectiveness-is-set-quotient' = {!!}
 
   is-surjective-and-effective-is-set-quotient :
     (q : reflecting-map-equivalence-relation R (type-Set B)) →
     is-set-quotient R B q →
     is-surjective-and-effective R (map-reflecting-map-equivalence-relation R q)
-  pr1 (is-surjective-and-effective-is-set-quotient q Q) = {!!}
+  is-surjective-and-effective-is-set-quotient = {!!}
 ```
 
 ### Any surjective and effective map is a set quotient
@@ -297,7 +297,7 @@ module _
 
       all-elements-equal-total-P :
         (b : type-Set B) → all-elements-equal (Σ (type-Set X) (P b))
-      all-elements-equal-total-P b x y = {!!}
+      all-elements-equal-total-P = {!!}
 
       is-prop-total-P : (b : type-Set B) → is-prop (Σ (type-Set X) (P b))
       is-prop-total-P b = {!!}
@@ -316,14 +316,14 @@ module _
       is-surjective-and-effective R
         ( map-reflecting-map-equivalence-relation R q)) →
     is-set-quotient R B q
-  is-set-quotient-is-surjective-and-effective E X = {!!}
+  is-set-quotient-is-surjective-and-effective = {!!}
 
   universal-property-set-quotient-is-surjective-and-effective :
     ( E :
       is-surjective-and-effective R
         ( map-reflecting-map-equivalence-relation R q)) →
     universal-property-set-quotient R B q
-  universal-property-set-quotient-is-surjective-and-effective E = {!!}
+  universal-property-set-quotient-is-surjective-and-effective = {!!}
 ```
 
 ### The large set quotient satisfies the universal property of set quotients
@@ -349,7 +349,7 @@ module _
     {l4 : Level} (C : Set l4)
     (g : reflecting-map-equivalence-relation R (type-Set C)) →
     equivalence-class R → type-Set C
-  map-universal-property-equivalence-class C g = {!!}
+  map-universal-property-equivalence-class = {!!}
 
   triangle-universal-property-equivalence-class :
     {l4 : Level} (C : Set l4)
@@ -357,7 +357,7 @@ module _
     ( ( map-universal-property-equivalence-class C g) ∘
       ( class R)) ~
     ( map-reflecting-map-equivalence-relation R g)
-  triangle-universal-property-equivalence-class C g = {!!}
+  triangle-universal-property-equivalence-class = {!!}
 ```
 
 ### The induction property of set quotients
@@ -407,7 +407,7 @@ module _
           sim-equivalence-relation R x y) →
     is-emb
       ( map-universal-property-set-quotient-is-set-quotient R Q q U B f)
-  is-emb-map-universal-property-set-quotient-is-set-quotient B f H = {!!}
+  is-emb-map-universal-property-set-quotient-is-set-quotient = {!!}
 ```
 
 ### The type of extensions of maps into a set along a surjection is equivalent to the proposition that that map equalizes the values that the surjection equalizes
@@ -450,11 +450,11 @@ module _
 
   equalizes-equal-values-extension-along-surjection-Set :
     extension-along-surjection-Set f C g → equalizes-equal-values-surjection-Set
-  equalizes-equal-values-extension-along-surjection-Set (h , q) a a' p = {!!}
+  equalizes-equal-values-extension-along-surjection-Set = {!!}
 
   extension-equalizes-equal-values-surjection-Set :
     equalizes-equal-values-surjection-Set → extension-along-surjection-Set f C g
-  extension-equalizes-equal-values-surjection-Set H = {!!}
+  extension-equalizes-equal-values-surjection-Set = {!!}
 
       e : ((b : B) → P b) ≃
           Σ (B → type-Set C) (λ h → g ~ (h ∘ map-surjection f))
@@ -465,7 +465,7 @@ module _
 
   equiv-equalizes-equal-values-extension-along-surjection-Set :
     extension-along-surjection-Set f C g ≃ equalizes-equal-values-surjection-Set
-  pr1 equiv-equalizes-equal-values-extension-along-surjection-Set = {!!}
+  equiv-equalizes-equal-values-extension-along-surjection-Set = {!!}
 
   function-extension-equalizes-equal-values-surjection-Set :
     equalizes-equal-values-surjection-Set → B → type-Set C

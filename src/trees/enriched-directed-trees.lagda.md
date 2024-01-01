@@ -54,7 +54,7 @@ of children of `x`.
 Enriched-Directed-Tree :
   {l1 l2 : Level} (l3 l4 : Level) (A : UU l1) (B : A → UU l2) →
   UU (l1 ⊔ l2 ⊔ lsuc l3 ⊔ lsuc l4)
-Enriched-Directed-Tree l3 l4 A B = {!!}
+Enriched-Directed-Tree = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} (A : UU l1) (B : A → UU l2)
@@ -243,17 +243,17 @@ module _
     (x : node-Enriched-Directed-Tree) →
     B (shape-Enriched-Directed-Tree x) →
     direct-predecessor-Enriched-Directed-Tree x
-  map-enrichment-Enriched-Directed-Tree x = {!!}
+  map-enrichment-Enriched-Directed-Tree = {!!}
 
   node-enrichment-Enriched-Directed-Tree :
     (x : node-Enriched-Directed-Tree) (b : B (shape-Enriched-Directed-Tree x)) →
     node-Enriched-Directed-Tree
-  node-enrichment-Enriched-Directed-Tree x b = {!!}
+  node-enrichment-Enriched-Directed-Tree = {!!}
 
   edge-enrichment-Enriched-Directed-Tree :
     (x : node-Enriched-Directed-Tree) (b : B (shape-Enriched-Directed-Tree x)) →
     edge-Enriched-Directed-Tree (node-enrichment-Enriched-Directed-Tree x b) x
-  edge-enrichment-Enriched-Directed-Tree x b = {!!}
+  edge-enrichment-Enriched-Directed-Tree = {!!}
 
   coherence-square-map-enrichment-Enriched-Directed-Tree :
     {x y : node-Enriched-Directed-Tree} (p : x ＝ y) →
@@ -262,5 +262,5 @@ module _
       ( map-enrichment-Enriched-Directed-Tree x)
       ( map-enrichment-Enriched-Directed-Tree y)
       ( tot ( λ y → tr (edge-Enriched-Directed-Tree y) p))
-  coherence-square-map-enrichment-Enriched-Directed-Tree refl = {!!}
+  coherence-square-map-enrichment-Enriched-Directed-Tree = {!!}
 ```

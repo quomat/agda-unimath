@@ -39,9 +39,9 @@ module _
   structure-coalgebra-Enriched-Directed-Tree :
     Enriched-Directed-Tree l3 l3 A B →
     type-polynomial-endofunctor A B (Enriched-Directed-Tree l3 l3 A B)
-  pr1 (structure-coalgebra-Enriched-Directed-Tree T) = {!!}
+  structure-coalgebra-Enriched-Directed-Tree = {!!}
 
   coalgebra-Enriched-Directed-Tree :
     coalgebra-polynomial-endofunctor (l1 ⊔ l2 ⊔ lsuc l3) A B
-  pr1 coalgebra-Enriched-Directed-Tree = {!!}
+  coalgebra-Enriched-Directed-Tree = {!!}
 ```

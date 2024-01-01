@@ -33,7 +33,7 @@ satisfies the universal property of the quotient `A/R`.
 is-effective :
   {l1 l2 l3 : Level} {A : UU l1} (R : equivalence-relation l2 A) {B : UU l3}
   (f : A → B) → UU (l1 ⊔ l2 ⊔ l3)
-is-effective {A = A} R f = {!!}
+is-effective = {!!}
 ```
 
 ### Maps that are effective and surjective
@@ -45,5 +45,5 @@ module _
 
   is-surjective-and-effective :
     {l3 : Level} {B : UU l3} (f : A → B) → UU (l1 ⊔ l2 ⊔ l3)
-  is-surjective-and-effective f = {!!}
+  is-surjective-and-effective = {!!}
 ```

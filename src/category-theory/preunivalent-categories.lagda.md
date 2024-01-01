@@ -150,7 +150,7 @@ module _
   emb-iso-eq-Preunivalent-Category :
     {x y : obj-Preunivalent-Category} →
     (x ＝ y) ↪ (iso-Precategory precategory-Preunivalent-Category x y)
-  pr1 (emb-iso-eq-Preunivalent-Category {x} {y}) = {!!}
+  emb-iso-eq-Preunivalent-Category = {!!}
 ```
 
 ### The total hom-type of a preunivalent category
@@ -158,13 +158,13 @@ module _
 ```agda
 total-hom-Preunivalent-Category :
   {l1 l2 : Level} (C : Preunivalent-Category l1 l2) → UU (l1 ⊔ l2)
-total-hom-Preunivalent-Category C = {!!}
+total-hom-Preunivalent-Category = {!!}
 
 obj-total-hom-Preunivalent-Category :
   {l1 l2 : Level} (C : Preunivalent-Category l1 l2) →
   total-hom-Preunivalent-Category C →
   obj-Preunivalent-Category C × obj-Preunivalent-Category C
-obj-total-hom-Preunivalent-Category C = {!!}
+obj-total-hom-Preunivalent-Category = {!!}
 ```
 
 ### Equalities induce morphisms
@@ -196,7 +196,7 @@ precomp-hom-Preunivalent-Category :
   (z : obj-Preunivalent-Category C) →
   hom-Preunivalent-Category C y z →
   hom-Preunivalent-Category C x z
-precomp-hom-Preunivalent-Category C = {!!}
+precomp-hom-Preunivalent-Category = {!!}
 
 postcomp-hom-Preunivalent-Category :
   {l1 l2 : Level} (C : Preunivalent-Category l1 l2)
@@ -205,7 +205,7 @@ postcomp-hom-Preunivalent-Category :
   (z : obj-Preunivalent-Category C) →
   hom-Preunivalent-Category C z x →
   hom-Preunivalent-Category C z y
-postcomp-hom-Preunivalent-Category C = {!!}
+postcomp-hom-Preunivalent-Category = {!!}
 ```
 
 ## Properties

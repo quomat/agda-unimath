@@ -46,7 +46,7 @@ is-connected k A = {!!}
 
 is-prop-is-connected :
   {l : Level} (k : 𝕋) (A : UU l) → is-prop (is-connected k A)
-is-prop-is-connected k A = {!!}
+is-prop-is-connected = {!!}
 ```
 
 ## Properties
@@ -65,14 +65,14 @@ is-equiv-diagonal-is-connected :
   {l1 l2 : Level} {k : 𝕋} {A : UU l1} (B : Truncated-Type l2 k) →
   is-connected k A →
   is-equiv (const A (type-Truncated-Type B))
-is-equiv-diagonal-is-connected B H = {!!}
+is-equiv-diagonal-is-connected = {!!}
 
 is-connected-is-equiv-diagonal :
   {l1 : Level} {k : 𝕋} {A : UU l1} →
   ({l2 : Level} (B : Truncated-Type l2 k) →
   is-equiv (const A (type-Truncated-Type B))) →
   is-connected k A
-is-connected-is-equiv-diagonal {k = k} {A = A} H = {!!}
+is-connected-is-equiv-diagonal = {!!}
 ```
 
 ### A contractible type is `k`-connected for any `k`
@@ -92,7 +92,7 @@ module _
 is-connected-is-connected-succ-𝕋 :
   {l1 : Level} (k : 𝕋) {A : UU l1} →
   is-connected (succ-𝕋 k) A → is-connected k A
-is-connected-is-connected-succ-𝕋 k H = {!!}
+is-connected-is-connected-succ-𝕋 = {!!}
 ```
 
 ### The total space of a family of `k`-connected types over a `k`-connected type is `k`-connected
@@ -102,7 +102,7 @@ is-connected-Σ :
   {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : A → UU l2} →
   is-connected k A → ((x : A) → is-connected k (B x)) →
   is-connected k (Σ A B)
-is-connected-Σ k H K = {!!}
+is-connected-Σ = {!!}
 ```
 
 ### An inhabited type `A` is `k + 1`-connected if and only if its identity types are `k`-connected
@@ -115,18 +115,18 @@ module _
   abstract
     is-inhabited-is-connected :
       is-connected (succ-𝕋 k) A → is-inhabited A
-    is-inhabited-is-connected H = {!!}
+    is-inhabited-is-connected = {!!}
 
   abstract
     is-connected-eq-is-connected :
       is-connected (succ-𝕋 k) A → {x y : A} → is-connected k (x ＝ y)
-    is-connected-eq-is-connected H {x} {y} = {!!}
+    is-connected-eq-is-connected = {!!}
 
   abstract
     is-connected-succ-is-connected-eq :
       is-inhabited A → ((x y : A) → is-connected k (x ＝ y)) →
       is-connected (succ-𝕋 k) A
-    is-connected-succ-is-connected-eq H K = {!!}
+    is-connected-succ-is-connected-eq = {!!}
 ```
 
 ### Being connected is invariant under equivalence
@@ -138,11 +138,11 @@ module _
 
   is-connected-is-equiv :
     (f : A → B) → is-equiv f → is-connected k B → is-connected k A
-  is-connected-is-equiv f e = {!!}
+  is-connected-is-equiv = {!!}
 
   is-connected-equiv :
     A ≃ B → is-connected k B → is-connected k A
-  is-connected-equiv f = {!!}
+  is-connected-equiv = {!!}
 
 module _
   {l1 l2 : Level} {k : 𝕋} {A : UU l1} {B : UU l2}
@@ -150,11 +150,11 @@ module _
 
   is-connected-equiv' :
     A ≃ B → is-connected k A → is-connected k B
-  is-connected-equiv' f = {!!}
+  is-connected-equiv' = {!!}
 
   is-connected-is-equiv' :
     (f : A → B) → is-equiv f → is-connected k A → is-connected k B
-  is-connected-is-equiv' f e = {!!}
+  is-connected-is-equiv' = {!!}
 ```
 
 ### Retracts of `k`-connected types are `k`-connected
@@ -168,5 +168,5 @@ module _
     A retract-of B →
     is-connected k B →
     is-connected k A
-  is-connected-retract-of R c = {!!}
+  is-connected-retract-of = {!!}
 ```

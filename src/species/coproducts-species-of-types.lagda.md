@@ -33,7 +33,7 @@ The coproduct of two species of types `F` and `G` is the pointwise coproduct.
 coproduct-species-types :
   {l1 l2 l3 : Level} (F : species-types l1 l2) (G : species-types l1 l3) →
   species-types l1 (l2 ⊔ l3)
-coproduct-species-types F G X = {!!}
+coproduct-species-types = {!!}
 ```
 
 ## Universal properties
@@ -49,5 +49,5 @@ equiv-universal-property-coproduct-species-types :
   (H : species-types l1 l4) →
   hom-species-types (coproduct-species-types F G) H ≃
   ((hom-species-types F H) × (hom-species-types G H))
-equiv-universal-property-coproduct-species-types F G H = {!!}
+equiv-universal-property-coproduct-species-types = {!!}
 ```

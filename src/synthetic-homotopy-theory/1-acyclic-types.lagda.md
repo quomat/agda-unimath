@@ -116,12 +116,12 @@ module _
   is-contr-is-1-acyclic-is-set :
     {l : Level} (A : UU l) →
     is-set A → is-1-acyclic A → is-contr A
-  is-contr-is-1-acyclic-is-set A s ac = {!!}
+  is-contr-is-1-acyclic-is-set = {!!}
 
   is-0-connected-is-1-acyclic :
     {l : Level} (A : UU l) →
     is-1-acyclic A → is-0-connected A
-  is-0-connected-is-1-acyclic A ac = {!!}
+  is-0-connected-is-1-acyclic = {!!}
 ```
 
 ## References

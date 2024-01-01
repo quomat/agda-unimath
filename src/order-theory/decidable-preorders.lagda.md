@@ -71,7 +71,7 @@ module _
 
   leq-Decidable-Preorder-Decidable-Prop :
     (x y : type-Decidable-Preorder) → Decidable-Prop l2
-  pr1 (leq-Decidable-Preorder-Decidable-Prop x y) = {!!}
+  leq-Decidable-Preorder-Decidable-Prop = {!!}
 
   refl-leq-Decidable-Preorder : is-reflexive leq-Decidable-Preorder
   refl-leq-Decidable-Preorder = {!!}

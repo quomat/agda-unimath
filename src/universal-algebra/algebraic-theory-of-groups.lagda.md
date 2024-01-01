@@ -72,26 +72,18 @@ group-Algebra-Group :
   {l : Level} →
   Algebra group-signature group-Theory l →
   Group l
-pr1 (pr1 (group-Algebra-Group ((A-Set , models-A) , satisfies-A))) = {!!}
-pr1 (pr2 (pr1 (group-Algebra-Group ((A-Set , models-A) , satisfies-A)))) x y = {!!}
-pr2 (pr2 (pr1 (group-Algebra-Group ((A-Set , models-A) , satisfies-A)))) x y z = {!!}
-pr1 (pr1 (pr2 (group-Algebra-Group ((A-Set , models-A) , satisfies-A)))) = {!!}
-pr1 (pr2 (pr1 (pr2 (group-Algebra-Group (_ , satisfies-A))))) x = {!!}
-pr2 (pr2 (pr1 (pr2 (group-Algebra-Group (_ , satisfies-A))))) x = {!!}
-pr1 (pr2 (pr2 (group-Algebra-Group ((A-Set , models-A) , satisfies-A)))) x = {!!}
-pr1 (pr2 (pr2 (pr2 (group-Algebra-Group (_ , satisfies-A))))) x = {!!}
-pr2 (pr2 (pr2 (pr2 (group-Algebra-Group (_ , satisfies-A))))) x = {!!}
+group-Algebra-Group = {!!}
 
 Group-group-Algebra :
   {l : Level} →
   Group l →
   Algebra group-signature group-Theory l
-Group-group-Algebra G = {!!}
+Group-group-Algebra = {!!}
 
 abstract
   equiv-group-Algebra-Group :
     {l : Level} →
     Algebra group-signature group-Theory l ≃
     Group l
-  pr1 equiv-group-Algebra-Group = {!!}
+  equiv-group-Algebra-Group = {!!}
 ```

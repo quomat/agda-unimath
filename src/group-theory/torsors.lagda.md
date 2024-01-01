@@ -128,14 +128,14 @@ module _
 
   equiv-Torsor-Group :
     {l3 : Level} (Y : Torsor-Group G l3) → UU (l1 ⊔ l2 ⊔ l3)
-  equiv-Torsor-Group Y = {!!}
+  equiv-Torsor-Group = {!!}
 
   id-equiv-Torsor-Group : equiv-Torsor-Group X
   id-equiv-Torsor-Group = {!!}
 
   equiv-eq-Torsor-Group :
     (Y : Torsor-Group G l2) → X ＝ Y → equiv-Torsor-Group Y
-  equiv-eq-Torsor-Group .X refl = {!!}
+  equiv-eq-Torsor-Group = {!!}
 
   is-torsorial-equiv-Torsor-Group :
     is-torsorial equiv-Torsor-Group
@@ -148,11 +148,11 @@ module _
 
   eq-equiv-Torsor-Group :
     (Y : Torsor-Group G l2) → equiv-Torsor-Group Y → X ＝ Y
-  eq-equiv-Torsor-Group Y = {!!}
+  eq-equiv-Torsor-Group = {!!}
 
   extensionality-Torsor-Group :
     (Y : Torsor-Group G l2) → (X ＝ Y) ≃ equiv-Torsor-Group Y
-  pr1 (extensionality-Torsor-Group Y) = {!!}
+  extensionality-Torsor-Group = {!!}
 ```
 
 ### Characterization of the identity type of equivalences between `Torsor-Group`
@@ -176,7 +176,7 @@ module _
   htpy-eq-equiv-Torsor-Group :
     (f : equiv-Torsor-Group G X Y) →
     e ＝ f → htpy-equiv-Torsor-Group f
-  htpy-eq-equiv-Torsor-Group .e refl = {!!}
+  htpy-eq-equiv-Torsor-Group = {!!}
 
   is-torsorial-htpy-equiv-Torsor-Group :
     is-torsorial htpy-equiv-Torsor-Group
@@ -190,11 +190,11 @@ module _
   extensionality-equiv-Torsor-Group :
     (f : equiv-Torsor-Group G X Y) →
     (e ＝ f) ≃ htpy-equiv-Torsor-Group f
-  pr1 (extensionality-equiv-Torsor-Group f) = {!!}
+  extensionality-equiv-Torsor-Group = {!!}
 
   eq-htpy-equiv-Torsor-Group :
     (f : equiv-Torsor-Group G X Y) → htpy-equiv-Torsor-Group f → e ＝ f
-  eq-htpy-equiv-Torsor-Group f = {!!}
+  eq-htpy-equiv-Torsor-Group = {!!}
 ```
 
 ### Definition of the group `aut-principal-Torsor-Group` from a `Torsor-Group`
@@ -208,7 +208,7 @@ module _
 
   is-set-equiv-Torsor-Group :
     is-set (equiv-Torsor-Group G X Y)
-  is-set-equiv-Torsor-Group e f = {!!}
+  is-set-equiv-Torsor-Group = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} (G : Group l1)
@@ -227,7 +227,7 @@ module _
     equiv-Torsor-Group G X Y →
     equiv-Torsor-Group G Y Z →
     equiv-Torsor-Group G X Z
-  comp-equiv-Torsor-Group' e f = {!!}
+  comp-equiv-Torsor-Group' = {!!}
 
 module _
   {l1 l2 l3 : Level} (G : Group l1)
@@ -257,7 +257,7 @@ module _
       ( f)) ＝
     ( comp-equiv-Torsor-Group G X1 X3 X4 h
       ( comp-equiv-Torsor-Group G X1 X2 X3 g f))
-  associative-comp-equiv-Torsor-Group h g f = {!!}
+  associative-comp-equiv-Torsor-Group = {!!}
 
 module _
   {l1 l2 l3 : Level} (G : Group l1)
@@ -268,24 +268,24 @@ module _
   left-unit-law-comp-equiv-Torsor-Group :
     (f : equiv-Torsor-Group G X Y) →
     ( comp-equiv-Torsor-Group G X Y Y (id-equiv-Torsor-Group G Y) f) ＝ f
-  left-unit-law-comp-equiv-Torsor-Group f = {!!}
+  left-unit-law-comp-equiv-Torsor-Group = {!!}
 
   right-unit-law-comp-equiv-Torsor-Group :
     (f : equiv-Torsor-Group G X Y) →
     ( comp-equiv-Torsor-Group G X X Y f (id-equiv-Torsor-Group G X)) ＝ f
-  right-unit-law-comp-equiv-Torsor-Group f = {!!}
+  right-unit-law-comp-equiv-Torsor-Group = {!!}
 
   left-inverse-law-comp-equiv-Torsor-Group :
     (f : equiv-Torsor-Group G X Y) →
     ( comp-equiv-Torsor-Group G X Y X (inv-equiv-Torsor-Group G X Y f) f) ＝
     ( id-equiv-Torsor-Group G X)
-  left-inverse-law-comp-equiv-Torsor-Group f = {!!}
+  left-inverse-law-comp-equiv-Torsor-Group = {!!}
 
   right-inverse-law-comp-equiv-Torsor-Group :
     (f : equiv-Torsor-Group G X Y) →
     ( comp-equiv-Torsor-Group G Y X Y f (inv-equiv-Torsor-Group G X Y f)) ＝
     ( id-equiv-Torsor-Group G Y)
-  right-inverse-law-comp-equiv-Torsor-Group f = {!!}
+  right-inverse-law-comp-equiv-Torsor-Group = {!!}
 
 module _
   {l1 : Level} (G : Group l1)
@@ -298,7 +298,7 @@ module _
     ( comp-equiv-Torsor-Group G X Y Z
       ( equiv-eq-Torsor-Group G Y Z q)
       ( equiv-eq-Torsor-Group G X Y p))
-  preserves-mul-equiv-eq-Torsor-Group X .X Z refl q = {!!}
+  preserves-mul-equiv-eq-Torsor-Group = {!!}
 
 module _
   {l1 : Level} (G : Group l1)
@@ -317,7 +317,7 @@ module _
 
   mere-eq-Torsor-Group :
     (Y : Torsor-Group G l2) → mere-eq X Y
-  mere-eq-Torsor-Group Y = {!!}
+  mere-eq-Torsor-Group = {!!}
 
 module _
   {l1 : Level} (G : Group l1)
@@ -337,7 +337,7 @@ module _
 
   Eq-Torsor-Group :
     (X : Torsor-Group G l1) → UU l1
-  Eq-Torsor-Group X = {!!}
+  Eq-Torsor-Group = {!!}
 
   refl-Eq-Torsor-Group :
     Eq-Torsor-Group (principal-Torsor-Group G)
@@ -347,7 +347,7 @@ module _
     (X : Torsor-Group G l1) →
     equiv-Torsor-Group G (principal-Torsor-Group G) X →
     Eq-Torsor-Group X
-  Eq-equiv-Torsor-Group X (e , H) = {!!}
+  Eq-equiv-Torsor-Group = {!!}
 
   preserves-mul-Eq-equiv-Torsor-Group :
     ( e f :
@@ -369,37 +369,37 @@ module _
       ( Eq-equiv-Torsor-Group
         ( principal-Torsor-Group G)
         ( f)))
-  preserves-mul-Eq-equiv-Torsor-Group (e , H) (f , K) = {!!}
+  preserves-mul-Eq-equiv-Torsor-Group = {!!}
 
   equiv-Eq-Torsor-Group :
     Eq-Torsor-Group (principal-Torsor-Group G) →
     equiv-Torsor-Group G
       ( principal-Torsor-Group G)
       ( principal-Torsor-Group G)
-  pr1 (equiv-Eq-Torsor-Group u) = {!!}
+  equiv-Eq-Torsor-Group = {!!}
 
   is-section-equiv-Eq-Torsor-Group :
     ( Eq-equiv-Torsor-Group (principal-Torsor-Group G) ∘
       equiv-Eq-Torsor-Group) ~
     ( id)
-  is-section-equiv-Eq-Torsor-Group u = {!!}
+  is-section-equiv-Eq-Torsor-Group = {!!}
 
   is-retraction-equiv-Eq-Torsor-Group :
     is-retraction
       ( Eq-equiv-Torsor-Group (principal-Torsor-Group G))
       ( equiv-Eq-Torsor-Group)
-  is-retraction-equiv-Eq-Torsor-Group e = {!!}
+  is-retraction-equiv-Eq-Torsor-Group = {!!}
 
   abstract
     is-equiv-Eq-equiv-Torsor-Group :
       (X : Torsor-Group G l1) →
       is-equiv (Eq-equiv-Torsor-Group X)
-    is-equiv-Eq-equiv-Torsor-Group X = {!!}
+    is-equiv-Eq-equiv-Torsor-Group = {!!}
 
   equiv-Eq-equiv-Torsor-Group :
     (X : Torsor-Group G l1) →
     (principal-Torsor-Group G ＝ X) ≃ Eq-Torsor-Group X
-  equiv-Eq-equiv-Torsor-Group X = {!!}
+  equiv-Eq-equiv-Torsor-Group = {!!}
 
   preserves-mul-equiv-Eq-equiv-Torsor-Group :
     { p q : principal-Torsor-Group G ＝ principal-Torsor-Group G} →
@@ -414,7 +414,7 @@ module _
         ( map-equiv
           ( equiv-Eq-equiv-Torsor-Group (principal-Torsor-Group G))
           ( q)))
-  preserves-mul-equiv-Eq-equiv-Torsor-Group {p} {q} = {!!}
+  preserves-mul-equiv-Eq-equiv-Torsor-Group = {!!}
 ```
 
 ### From torsors to concrete group

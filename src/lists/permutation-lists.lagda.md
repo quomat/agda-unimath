@@ -58,13 +58,13 @@ module _
   permutation-is-permutation-list :
     (f : list A → list A) → is-permutation-list f →
     ((l : list A) → Permutation (length-list l))
-  permutation-is-permutation-list f P l = {!!}
+  permutation-is-permutation-list = {!!}
 
   eq-permute-list-permutation-is-permutation-list :
     (f : list A → list A) → (P : is-permutation-list f) →
     (l : list A) →
     (f l ＝ permute-list l (permutation-is-permutation-list f P l))
-  eq-permute-list-permutation-is-permutation-list f P l = {!!}
+  eq-permute-list-permutation-is-permutation-list = {!!}
 ```
 
 ## Properties
@@ -75,7 +75,7 @@ module _
   length-permute-list :
     (l : list A) (t : Permutation (length-list l)) →
     length-list (permute-list l t) ＝ (length-list l)
-  length-permute-list l t = {!!}
+  length-permute-list = {!!}
 ```
 
 ### Link between `permute-list` and `permute-vec`
@@ -88,7 +88,7 @@ module _
       ( vec A)
       ( _)
       ( vec-list ( permute-list l f))
-  eq-vec-list-permute-list l f = {!!}
+  eq-vec-list-permute-list = {!!}
 ```
 
 ### If a function `f` from `vec` to `vec` is a permutation of vectors then `list-vec ∘ f ∘ vec-list` is a permutation of lists
@@ -99,7 +99,7 @@ module _
     ((n : ℕ) → is-permutation-vec n (f n)) →
     is-permutation-list
       ( λ l → list-vec (length-list l) (f (length-list l) (vec-list l)))
-  pr1 (is-permutation-list-is-permutation-vec f T l) = {!!}
+  is-permutation-list-is-permutation-vec = {!!}
 ```
 
 ### If `x` is in `permute-list l t` then `x` is in `l`
@@ -108,12 +108,12 @@ module _
   is-in-list-is-in-permute-list :
     (l : list A) (t : Permutation (length-list l)) (x : A) →
     x ∈-list (permute-list l t) → x ∈-list l
-  is-in-list-is-in-permute-list l t x I = {!!}
+  is-in-list-is-in-permute-list = {!!}
 
   is-in-permute-list-is-in-list :
     (l : list A) (t : Permutation (length-list l)) (x : A) →
     x ∈-list l → x ∈-list (permute-list l t)
-  is-in-permute-list-is-in-list l t x I = {!!}
+  is-in-permute-list-is-in-list = {!!}
 ```
 
 ### If `μ : A → (B → B)` satisfies a commutativity property, then `fold-list b μ` is invariant under permutation for every `b : B`
@@ -129,12 +129,12 @@ module _
   invariant-fold-vec-tr :
     {n m : ℕ} (v : vec A n) (eq : n ＝ m) →
     fold-vec b μ (tr (vec A) eq v) ＝ fold-vec b μ v
-  invariant-fold-vec-tr v refl = {!!}
+  invariant-fold-vec-tr = {!!}
 
   invariant-permutation-fold-list :
     (l : list A) → (f : Permutation (length-list l)) →
     fold-list b μ l ＝ fold-list b μ (permute-list l f)
-  invariant-permutation-fold-list l f = {!!}
+  invariant-permutation-fold-list = {!!}
 ```
 
 ### `map-list` of the permutation of a list
@@ -154,13 +154,13 @@ compute-tr-permute-vec :
     ( m)
     ( tr (vec A) e v)
     ( t)
-compute-tr-permute-vec refl v t = {!!}
+compute-tr-permute-vec = {!!}
 
 compute-tr-map-vec :
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
   (f : A → B) {n m : ℕ} (p : n ＝ m) (v : vec A n) →
   tr (vec B) p (map-vec f v) ＝ map-vec f (tr (vec A) p v)
-compute-tr-map-vec f refl v = {!!}
+compute-tr-map-vec = {!!}
 
 helper-compute-list-vec-map-vec-permute-vec-vec-list :
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
@@ -170,7 +170,7 @@ helper-compute-list-vec-map-vec-permute-vec-vec-list :
     ( inv (length-permute-list p t))
     ( map-vec f (permute-vec (length-list p) (vec-list p) t)) ＝
   map-vec f (vec-list (permute-list p t))
-helper-compute-list-vec-map-vec-permute-vec-vec-list f p t = {!!}
+helper-compute-list-vec-map-vec-permute-vec-vec-list = {!!}
 
 compute-list-vec-map-vec-permute-vec-vec-list :
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
@@ -181,12 +181,12 @@ compute-list-vec-map-vec-permute-vec-vec-list :
   list-vec
     ( length-list (permute-list p t))
     ( map-vec f (vec-list (permute-list p t)))
-compute-list-vec-map-vec-permute-vec-vec-list f p t = {!!}
+compute-list-vec-map-vec-permute-vec-vec-list = {!!}
 
 eq-map-list-permute-list :
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
   (f : A → B) (p : list A) (t : Permutation (length-list p)) →
   permute-list (map-list f p) (tr Permutation (inv (length-map-list f p)) t) ＝
   map-list f (permute-list p t)
-eq-map-list-permute-list {B = B} f p t = {!!}
+eq-map-list-permute-list = {!!}
 ```

@@ -56,12 +56,12 @@ module _
 
   edge-Undirected-Graph-𝔽 :
     (p : unordered-pair-vertices-Undirected-Graph-𝔽) → UU l2
-  edge-Undirected-Graph-𝔽 p = {!!}
+  edge-Undirected-Graph-𝔽 = {!!}
 
   is-finite-edge-Undirected-Graph-𝔽 :
     (p : unordered-pair-vertices-Undirected-Graph-𝔽) →
     is-finite (edge-Undirected-Graph-𝔽 p)
-  is-finite-edge-Undirected-Graph-𝔽 p = {!!}
+  is-finite-edge-Undirected-Graph-𝔽 = {!!}
 
   total-edge-Undirected-Graph-𝔽 : UU (lsuc lzero ⊔ l1 ⊔ l2)
   total-edge-Undirected-Graph-𝔽 = {!!}
@@ -85,7 +85,7 @@ degree of x.
 incident-edges-vertex-Undirected-Graph-𝔽 :
   {l1 l2 : Level} (G : Undirected-Graph-𝔽 l1 l2)
   (x : vertex-Undirected-Graph-𝔽 G) → UU (lsuc lzero ⊔ l1)
-incident-edges-vertex-Undirected-Graph-𝔽 G x = {!!}
+incident-edges-vertex-Undirected-Graph-𝔽 = {!!}
 ```
 
 ## External links

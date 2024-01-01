@@ -41,7 +41,7 @@ This principle is [equivalent](foundation-core.equivalences.md) to
 ```agda
 instance-weak-function-extensionality :
   {l1 l2 : Level} (A : UU l1) (B : A → UU l2) → UU (l1 ⊔ l2)
-instance-weak-function-extensionality A B = {!!}
+instance-weak-function-extensionality = {!!}
 
 weak-function-extensionality-Level : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
 weak-function-extensionality-Level l1 l2 = {!!}
@@ -55,7 +55,7 @@ weak-function-extensionality = {!!}
 ```agda
 instance-weaker-function-extensionality :
   {l1 l2 : Level} (A : UU l1) (B : A → UU l2) → UU (l1 ⊔ l2)
-instance-weaker-function-extensionality A B = {!!}
+instance-weaker-function-extensionality = {!!}
 
 weaker-function-extensionality-Level : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
 weaker-function-extensionality-Level l1 l2 = {!!}
@@ -74,14 +74,14 @@ abstract
     {l1 l2 : Level} →
     function-extensionality-Level l1 l2 →
     weak-function-extensionality-Level l1 l2
-  pr1 (weak-funext-funext funext A B is-contr-B) x = {!!}
+  weak-funext-funext = {!!}
 
 abstract
   funext-weak-funext :
     {l1 l2 : Level} →
     weak-function-extensionality-Level l1 l2 →
     function-extensionality-Level l1 l2
-  funext-weak-funext weak-funext {A = A} {B} f = {!!}
+  funext-weak-funext = {!!}
 ```
 
 ### A partial converse to weak function extensionality
@@ -95,21 +95,21 @@ module _
 
   cases-function-converse-weak-funext :
     (i : I) (x : A i) (j : I) (e : is-decidable (i ＝ j)) → A j
-  cases-function-converse-weak-funext i x .i (inl refl) = {!!}
+  cases-function-converse-weak-funext = {!!}
 
   function-converse-weak-funext :
     (i : I) (x : A i) (j : I) → A j
-  function-converse-weak-funext i x j = {!!}
+  function-converse-weak-funext = {!!}
 
   cases-eq-function-converse-weak-funext :
     (i : I) (x : A i) (e : is-decidable (i ＝ i)) →
     cases-function-converse-weak-funext i x i e ＝ x
-  cases-eq-function-converse-weak-funext i x (inl p) = {!!}
+  cases-eq-function-converse-weak-funext = {!!}
 
   eq-function-converse-weak-funext :
     (i : I) (x : A i) →
     function-converse-weak-funext i x i ＝ x
-  eq-function-converse-weak-funext i x = {!!}
+  eq-function-converse-weak-funext = {!!}
 
   converse-weak-funext : (i : I) → is-contr (A i)
   pr1 (converse-weak-funext i) = {!!}
@@ -122,5 +122,5 @@ weak-funext-weaker-funext :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} →
   instance-weaker-function-extensionality A B →
   instance-weak-function-extensionality A B
-weak-funext-weaker-funext H C = {!!}
+weak-funext-weaker-funext = {!!}
 ```

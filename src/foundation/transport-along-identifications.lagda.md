@@ -60,10 +60,10 @@ module _
 ### Transporting along `refl` is the identity equivalence
 
 ```agda
-equiv-tr-refl :
-  {l1 l2 : Level} {A : UU l1} (B : A → UU l2) {x : A} →
-  equiv-tr B refl ＝ id-equiv {A = B x}
-equiv-tr-refl B = {!!}
+  equiv-tr-refl :
+   {l1 l2 : Level} {A : UU l1} (B : A → UU l2) {x : A} →
+   equiv-tr B refl ＝ id-equiv {A = B x}
+  equiv-tr-refl B = {!!}
 ```
 
 ### Computing transport of loops
@@ -72,5 +72,5 @@ equiv-tr-refl B = {!!}
 tr-loop :
   {l1 : Level} {A : UU l1} {a0 a1 : A} (p : a0 ＝ a1) (l : a0 ＝ a0) →
   (tr (λ y → y ＝ y) p l) ＝ ((inv p ∙ l) ∙ p)
-tr-loop refl l = {!!}
+tr-loop = {!!}
 ```

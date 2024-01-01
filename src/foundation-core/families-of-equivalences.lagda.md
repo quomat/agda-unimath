@@ -92,7 +92,7 @@ module _
 equiv-fiberwise-equiv-fam-equiv :
   {l1 l2 l3 : Level} {A : UU l1} (B : A → UU l2) (C : A → UU l3) →
   fam-equiv B C ≃ fiberwise-equiv B C
-equiv-fiberwise-equiv-fam-equiv B C = {!!}
+equiv-fiberwise-equiv-fam-equiv = {!!}
 ```
 
 ## See also

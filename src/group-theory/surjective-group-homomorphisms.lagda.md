@@ -55,10 +55,10 @@ module _
   is-surjective-is-full-subgroup-image-hom-Group :
     is-full-Subgroup H (image-hom-Group G H f) →
     is-surjective-hom-Group G H f
-  is-surjective-is-full-subgroup-image-hom-Group u = {!!}
+  is-surjective-is-full-subgroup-image-hom-Group = {!!}
 
   is-full-subgroup-image-is-surjective-hom-Group :
     is-surjective-hom-Group G H f →
     is-full-Subgroup H (image-hom-Group G H f)
-  is-full-subgroup-image-is-surjective-hom-Group u = {!!}
+  is-full-subgroup-image-is-surjective-hom-Group = {!!}
 ```

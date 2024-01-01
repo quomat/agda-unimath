@@ -30,7 +30,7 @@ product of the `A i`.
 ```agda
 multivariable-decidable-relation :
   {l1 : Level} (l2 : Level) (n : ℕ) (A : Fin n → UU l1) → UU (l1 ⊔ lsuc l2)
-multivariable-decidable-relation l2 n A = {!!}
+multivariable-decidable-relation = {!!}
 
 module _
   {l1 l2 : Level} {n : ℕ} {A : Fin n → UU l1}

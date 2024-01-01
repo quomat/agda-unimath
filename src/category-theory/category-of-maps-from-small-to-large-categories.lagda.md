@@ -66,7 +66,7 @@ module _
     ( natural-isomorphism-map-Precategory C (precategory-Large-Precategory D γ)
       ( F)
       ( G))
-  extensionality-map-is-category-Small-Large-Precategory F G = {!!}
+  extensionality-map-is-category-Small-Large-Precategory = {!!}
 ```
 
 ### When the codomain is a large category the map large precategory is a large category
@@ -100,18 +100,18 @@ module _
 
   map-large-category-Small-Large-Category :
     Large-Category (λ l → l1 ⊔ l2 ⊔ α l ⊔ β l l) (λ l l' → l1 ⊔ l2 ⊔ β l l')
-  large-precategory-Large-Category map-large-category-Small-Large-Category = {!!}
+  map-large-category-Small-Large-Category = {!!}
 
   extensionality-map-Small-Large-Category :
     {γ : Level} (F G : map-Small-Large-Category C D γ) →
     (F ＝ G) ≃
     natural-isomorphism-map-Category C (category-Large-Category D γ) F G
-  extensionality-map-Small-Large-Category {γ} = {!!}
+  extensionality-map-Small-Large-Category = {!!}
 
   eq-natural-isomorphism-map-Small-Large-Category :
     {γ : Level} (F G : map-Small-Large-Category C D γ) →
     natural-isomorphism-map-Category C (category-Large-Category D γ) F G → F ＝ G
-  eq-natural-isomorphism-map-Small-Large-Category F G = {!!}
+  eq-natural-isomorphism-map-Small-Large-Category = {!!}
 ```
 
 ### The small categories of maps and natural transformations from small to large categories

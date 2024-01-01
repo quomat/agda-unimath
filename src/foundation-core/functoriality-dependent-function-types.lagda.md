@@ -38,13 +38,13 @@ htpy-map-Π :
   {l1 l2 l3 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3}
   {f f' : (i : I) → A i → B i} (H : (i : I) → (f i) ~ (f' i)) →
   map-Π f ~ map-Π f'
-htpy-map-Π H h = {!!}
+htpy-map-Π = {!!}
 
 htpy-map-Π' :
   {l1 l2 l3 l4 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3}
   {J : UU l4} (α : J → I) {f f' : (i : I) → A i → B i} →
   ((i : I) → (f i) ~ (f' i)) → map-Π' α f ~ map-Π' α f'
-htpy-map-Π' α H = {!!}
+htpy-map-Π' = {!!}
 ```
 
 ### The fibers of `map-Π`
@@ -54,14 +54,14 @@ compute-fiber-map-Π :
   {l1 l2 l3 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3}
   (f : (i : I) → A i → B i) (h : (i : I) → B i) →
   ((i : I) → fiber (f i) (h i)) ≃ fiber (map-Π f) h
-compute-fiber-map-Π f h = {!!}
+compute-fiber-map-Π = {!!}
 
 compute-fiber-map-Π' :
   {l1 l2 l3 l4 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3}
   {J : UU l4} (α : J → I) (f : (i : I) → A i → B i)
   (h : (j : J) → B (α j)) →
   ((j : J) → fiber (f (α j)) (h j)) ≃ fiber (map-Π' α f) h
-compute-fiber-map-Π' α f = {!!}
+compute-fiber-map-Π' = {!!}
 ```
 
 ### Families of equivalences induce equivalences of dependent function types
@@ -72,13 +72,12 @@ abstract
     {l1 l2 l3 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3}
     {f : (i : I) → A i → B i} (is-equiv-f : is-fiberwise-equiv f) →
     is-equiv (map-Π f)
-  is-equiv-map-Π-is-fiberwise-equiv is-equiv-f = {!!}
+  is-equiv-map-Π-is-fiberwise-equiv = {!!}
 
 equiv-Π-equiv-family :
   {l1 l2 l3 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3}
   (e : (i : I) → (A i) ≃ (B i)) → ((i : I) → A i) ≃ ((i : I) → B i)
-pr1 (equiv-Π-equiv-family e) = {!!}
-pr2 (equiv-Π-equiv-family e) = {!!}
+equiv-Π-equiv-family = {!!}
 ```
 
 ### Families of equivalences induce equivalences of implicit dependent function types
@@ -87,7 +86,7 @@ pr2 (equiv-Π-equiv-family e) = {!!}
 equiv-implicit-Π-equiv-family :
   {l1 l2 l3 : Level} {I : UU l1} {A : I → UU l2} {B : I → UU l3}
   (e : (i : I) → (A i) ≃ (B i)) → ({i : I} → A i) ≃ ({i : I} → B i)
-equiv-implicit-Π-equiv-family e = {!!}
+equiv-implicit-Π-equiv-family = {!!}
 ```
 
 ##### Computing the inverse of `equiv-Π-equiv-family`
@@ -101,7 +100,7 @@ module _
     (e : (x : A) → B x ≃ C x) →
     ( map-inv-equiv (equiv-Π-equiv-family e)) ~
     ( map-equiv (equiv-Π-equiv-family λ x → (inv-equiv (e x))))
-  compute-inv-equiv-Π-equiv-family e f = {!!}
+  compute-inv-equiv-Π-equiv-family = {!!}
 ```
 
 ## See also

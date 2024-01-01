@@ -64,7 +64,7 @@ module _
       ( n : ℕ) →
       family-sequential-diagram A n → family-sequential-diagram B n) →
     UU (l1 ⊔ l2)
-  naturality-hom-sequential-diagram h = {!!}
+  naturality-hom-sequential-diagram = {!!}
 
   hom-sequential-diagram : UU (l1 ⊔ l2)
   hom-sequential-diagram = {!!}
@@ -122,7 +122,7 @@ module _
     hom-sequential-diagram B C →
     hom-sequential-diagram A B →
     hom-sequential-diagram A C
-  pr1 (comp-hom-sequential-diagram g f) n = {!!}
+  comp-hom-sequential-diagram = {!!}
 ```
 
 ### Homotopies between morphisms of sequential diagrams
@@ -152,7 +152,7 @@ module _
       ( map-hom-sequential-diagram B f n) ~
       ( map-hom-sequential-diagram B g n)) →
     UU (l1 ⊔ l2)
-  coherence-htpy-hom-sequential-diagram H = {!!}
+  coherence-htpy-hom-sequential-diagram = {!!}
 
   htpy-hom-sequential-diagram : UU (l1 ⊔ l2)
   htpy-hom-sequential-diagram = {!!}
@@ -192,31 +192,31 @@ module _
 
   reflexive-htpy-hom-sequential-diagram :
     ( f : hom-sequential-diagram A B) → htpy-hom-sequential-diagram B f f
-  pr1 (reflexive-htpy-hom-sequential-diagram f) = {!!}
+  reflexive-htpy-hom-sequential-diagram = {!!}
 
   htpy-eq-sequential-diagram :
     ( f f' : hom-sequential-diagram A B) →
     ( f ＝ f') → htpy-hom-sequential-diagram B f f'
-  htpy-eq-sequential-diagram f .f refl = {!!}
+  htpy-eq-sequential-diagram = {!!}
 
   abstract
     is-torsorial-htpy-sequential-diagram :
       ( f : hom-sequential-diagram A B) →
       is-torsorial (htpy-hom-sequential-diagram B f)
-    is-torsorial-htpy-sequential-diagram f = {!!}
+    is-torsorial-htpy-sequential-diagram = {!!}
 
     is-equiv-htpy-eq-sequential-diagram :
       ( f f' : hom-sequential-diagram A B) →
       is-equiv (htpy-eq-sequential-diagram f f')
-    is-equiv-htpy-eq-sequential-diagram f = {!!}
+    is-equiv-htpy-eq-sequential-diagram = {!!}
 
   extensionality-hom-sequential-diagram :
     ( f f' : hom-sequential-diagram A B) →
     ( f ＝ f') ≃ htpy-hom-sequential-diagram B f f'
-  pr1 (extensionality-hom-sequential-diagram f f') = {!!}
+  extensionality-hom-sequential-diagram = {!!}
 
   eq-htpy-sequential-diagram :
     ( f f' : hom-sequential-diagram A B) →
     htpy-hom-sequential-diagram B f f' → (f ＝ f')
-  eq-htpy-sequential-diagram f f' = {!!}
+  eq-htpy-sequential-diagram = {!!}
 ```

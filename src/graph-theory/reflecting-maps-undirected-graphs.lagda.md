@@ -40,7 +40,7 @@ In other words, it maps edges into the
 reflecting-map-Undirected-Graph :
   {l1 l2 l3 : Level} (G : Undirected-Graph l1 l2) (X : UU l3) →
   UU (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l3)
-reflecting-map-Undirected-Graph G X = {!!}
+reflecting-map-Undirected-Graph = {!!}
 
 module _
   {l1 l2 l3 : Level} (G : Undirected-Graph l1 l2) {X : UU l3}
@@ -67,9 +67,7 @@ module _
 terminal-reflecting-map-Undirected-Graph :
   {l1 l2 : Level} (G : Undirected-Graph l1 l2) →
   reflecting-map-Undirected-Graph G unit
-pr1 (terminal-reflecting-map-Undirected-Graph G) x = {!!}
-pr1 (pr2 (terminal-reflecting-map-Undirected-Graph G) p e) = {!!}
-pr2 (pr2 (terminal-reflecting-map-Undirected-Graph G) p e) x = {!!}
+terminal-reflecting-map-Undirected-Graph = {!!}
 ```
 
 ## External links

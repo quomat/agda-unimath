@@ -89,7 +89,7 @@ module _
 Replete-Subprecategory :
   {l1 l2 : Level} (l3 l4 : Level) (C : Precategory l1 l2) →
   UU (l1 ⊔ l2 ⊔ lsuc l3 ⊔ lsuc l4)
-Replete-Subprecategory l3 l4 C = {!!}
+Replete-Subprecategory = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}
@@ -132,11 +132,11 @@ module _
 
   is-unfixed-replete-is-replete-Subprecategory :
     is-replete-Subprecategory C P → is-unfixed-replete-Subprecategory
-  pr1 (is-unfixed-replete-is-replete-Subprecategory replete' (x , x₀) y f) = {!!}
+  is-unfixed-replete-is-replete-Subprecategory = {!!}
 
   is-replete-is-unfixed-replete-Subprecategory :
     is-unfixed-replete-Subprecategory → is-replete-Subprecategory C P
-  is-replete-is-unfixed-replete-Subprecategory is-unfixed-replete-P x y f = {!!}
+  is-replete-is-unfixed-replete-Subprecategory = {!!}
 ```
 
 ### Isomorphism-sets in replete subprecategories are equivalent to isomorphism-sets in the base precategory
@@ -153,7 +153,7 @@ module _
   is-iso-is-iso-base-is-replete-Subprecategory :
     is-iso-Precategory C (inclusion-hom-Subprecategory C P x y f) →
     is-iso-Subprecategory C P f
-  pr1 (pr1 (is-iso-is-iso-base-is-replete-Subprecategory is-iso-C-f)) = {!!}
+  is-iso-is-iso-base-is-replete-Subprecategory = {!!}
 
   is-equiv-is-iso-is-iso-base-is-replete-Subprecategory :
     is-equiv is-iso-is-iso-base-is-replete-Subprecategory
@@ -162,7 +162,7 @@ module _
   equiv-is-iso-is-iso-base-is-replete-Subprecategory :
     is-iso-Precategory C (inclusion-hom-Subprecategory C P x y f) ≃
     is-iso-Subprecategory C P f
-  pr1 equiv-is-iso-is-iso-base-is-replete-Subprecategory = {!!}
+  equiv-is-iso-is-iso-base-is-replete-Subprecategory = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}
@@ -202,11 +202,11 @@ module _
     {y : obj-Precategory C}
     (f : iso-Precategory C (inclusion-obj-Subprecategory C P x) y) →
     is-in-iso-Subprecategory C P f
-  is-unfixed-replete-subprecategory-is-category-Subprecategory {x} = {!!}
+  is-unfixed-replete-subprecategory-is-category-Subprecategory = {!!}
 
   is-replete-subprecategory-is-category-Subprecategory :
     is-replete-Subprecategory C P
-  is-replete-subprecategory-is-category-Subprecategory x y = {!!}
+  is-replete-subprecategory-is-category-Subprecategory = {!!}
 ```
 
 ### If a full subprecategory is closed under isomorphic objects then it is replete

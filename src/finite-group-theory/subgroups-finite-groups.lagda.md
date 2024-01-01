@@ -44,12 +44,12 @@ A finite subgroup of a finite group `G` is a decidable subgroup of `G`.
 ```agda
 decidable-subset-Group-𝔽 :
   (l : Level) {l1 : Level} (G : Group-𝔽 l1) → UU (lsuc l ⊔ l1)
-decidable-subset-Group-𝔽 l G = {!!}
+decidable-subset-Group-𝔽 = {!!}
 
 is-set-decidable-subset-Group-𝔽 :
   (l : Level) {l1 : Level} (G : Group-𝔽 l1) →
   is-set (decidable-subset-Group-𝔽 l G)
-is-set-decidable-subset-Group-𝔽 l G = {!!}
+is-set-decidable-subset-Group-𝔽 = {!!}
 
 module _
   {l1 l2 : Level} (G : Group-𝔽 l1) (P : decidable-subset-Group-𝔽 l2 G)
@@ -112,7 +112,7 @@ module _
 
 Subgroup-𝔽 :
   (l : Level) {l1 : Level} (G : Group-𝔽 l1) → UU (lsuc l ⊔ l1)
-Subgroup-𝔽 l G = {!!}
+Subgroup-𝔽 = {!!}
 
 module _
   {l1 l2 : Level} (G : Group-𝔽 l1) (H : Subgroup-𝔽 l2 G)
@@ -247,11 +247,11 @@ module _
 
 semigroup-Subgroup-𝔽 :
   {l1 l2 : Level} (G : Group-𝔽 l1) → Subgroup-𝔽 l2 G → Semigroup (l1 ⊔ l2)
-semigroup-Subgroup-𝔽 G H = {!!}
+semigroup-Subgroup-𝔽 = {!!}
 
 group-Subgroup-𝔽 :
   {l1 l2 : Level} (G : Group-𝔽 l1) → Subgroup-𝔽 l2 G → Group (l1 ⊔ l2)
-group-Subgroup-𝔽 G H = {!!}
+group-Subgroup-𝔽 = {!!}
 ```
 
 ### The inclusion homomorphism of the underlying finite group of a finite subgroup into the ambient group
@@ -266,7 +266,7 @@ module _
       ( group-Subgroup-𝔽 G H)
       ( group-Group-𝔽 G)
       ( inclusion-Subgroup-𝔽 G H)
-  preserves-mul-inclusion-group-Subgroup-𝔽 {x} {y} = {!!}
+  preserves-mul-inclusion-group-Subgroup-𝔽 = {!!}
 
   preserves-unit-inclusion-group-Subgroup-𝔽 :
     preserves-unit-Group
@@ -280,7 +280,7 @@ module _
       ( group-Subgroup-𝔽 G H)
       ( group-Group-𝔽 G)
       ( inclusion-Subgroup-𝔽 G H)
-  preserves-inverses-inclusion-group-Subgroup-𝔽 {x} = {!!}
+  preserves-inverses-inclusion-group-Subgroup-𝔽 = {!!}
 
   inclusion-group-Subgroup-𝔽 :
     hom-Group (group-Subgroup-𝔽 G H) (group-Group-𝔽 G)

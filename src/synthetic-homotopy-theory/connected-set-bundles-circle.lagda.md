@@ -48,14 +48,14 @@ be thought of as the categorification of the [poset](order-theory.posets.md) of
 ```agda
 is-connected-prop-set-bundle-𝕊¹ :
   {l : Level} → (𝕊¹ → Set l) → Prop l
-is-connected-prop-set-bundle-𝕊¹ X = {!!}
+is-connected-prop-set-bundle-𝕊¹ = {!!}
 
 is-connected-set-bundle-𝕊¹ : {l : Level} (X : 𝕊¹ → Set l) → UU l
 is-connected-set-bundle-𝕊¹ X = {!!}
 
 is-prop-is-connected-set-bundle-𝕊¹ :
   {l : Level} (X : 𝕊¹ → Set l) → is-prop (is-connected-set-bundle-𝕊¹ X)
-is-prop-is-connected-set-bundle-𝕊¹ X = {!!}
+is-prop-is-connected-set-bundle-𝕊¹ = {!!}
 ```
 
 ### Connected set bundles over the circle
@@ -94,7 +94,7 @@ module _
 
   transitive-action-connected-set-bundle-𝕊¹ :
     transitive-action-∞-Group l 𝕊¹-∞-Group
-  pr1 transitive-action-connected-set-bundle-𝕊¹ = {!!}
+  transitive-action-connected-set-bundle-𝕊¹ = {!!}
   pr2 transitive-action-connected-set-bundle-𝕊¹ = {!!}
 
   is-abstractly-transitive-action-connected-set-bundle-𝕊¹ :

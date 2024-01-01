@@ -32,11 +32,11 @@ reflexive,symmetric, and transitive.
 ```agda
 is-equivalence-relation :
   {l1 l2 : Level} {A : UU l1} (R : Relation-Prop l2 A) → UU (l1 ⊔ l2)
-is-equivalence-relation R = {!!}
+is-equivalence-relation = {!!}
 
 equivalence-relation :
   (l : Level) {l1 : Level} (A : UU l1) → UU ((lsuc l) ⊔ l1)
-equivalence-relation l A = {!!}
+equivalence-relation = {!!}
 
 prop-equivalence-relation :
   {l1 l2 : Level} {A : UU l1} → equivalence-relation l2 A → Relation-Prop l2 A
@@ -44,51 +44,49 @@ prop-equivalence-relation = {!!}
 
 sim-equivalence-relation :
   {l1 l2 : Level} {A : UU l1} → equivalence-relation l2 A → A → A → UU l2
-sim-equivalence-relation R = {!!}
+sim-equivalence-relation = {!!}
 
 abstract
   is-prop-sim-equivalence-relation :
     {l1 l2 : Level} {A : UU l1} (R : equivalence-relation l2 A) (x y : A) →
     is-prop (sim-equivalence-relation R x y)
-  is-prop-sim-equivalence-relation R = {!!}
+  is-prop-sim-equivalence-relation = {!!}
 
 is-prop-is-equivalence-relation :
   {l1 l2 : Level} {A : UU l1} (R : Relation-Prop l2 A) →
   is-prop (is-equivalence-relation R)
-is-prop-is-equivalence-relation R = {!!}
+is-prop-is-equivalence-relation = {!!}
 
 is-equivalence-relation-Prop :
   {l1 l2 : Level} {A : UU l1} → Relation-Prop l2 A → Prop (l1 ⊔ l2)
-pr1 (is-equivalence-relation-Prop R) = {!!}
-pr2 (is-equivalence-relation-Prop R) = {!!}
+is-equivalence-relation-Prop = {!!}
 
 is-equivalence-relation-prop-equivalence-relation :
   {l1 l2 : Level} {A : UU l1} (R : equivalence-relation l2 A) →
   is-equivalence-relation (prop-equivalence-relation R)
-is-equivalence-relation-prop-equivalence-relation R = {!!}
+is-equivalence-relation-prop-equivalence-relation = {!!}
 
 refl-equivalence-relation :
   {l1 l2 : Level} {A : UU l1}
   (R : equivalence-relation l2 A) →
   is-reflexive (sim-equivalence-relation R)
-refl-equivalence-relation R = {!!}
+refl-equivalence-relation = {!!}
 
 symmetric-equivalence-relation :
   {l1 l2 : Level} {A : UU l1}
   (R : equivalence-relation l2 A) →
   is-symmetric (sim-equivalence-relation R)
-symmetric-equivalence-relation R = {!!}
+symmetric-equivalence-relation = {!!}
 
 transitive-equivalence-relation :
   {l1 l2 : Level} {A : UU l1}
   (R : equivalence-relation l2 A) → is-transitive (sim-equivalence-relation R)
-transitive-equivalence-relation R = {!!}
+transitive-equivalence-relation = {!!}
 
 inhabited-subtype-equivalence-relation :
   {l1 l2 : Level} {A : UU l1} →
   equivalence-relation l2 A → A → inhabited-subtype l2 A
-pr1 (inhabited-subtype-equivalence-relation R x) = {!!}
-pr2 (inhabited-subtype-equivalence-relation R x) = {!!}
+inhabited-subtype-equivalence-relation = {!!}
 ```
 
 ## Properties
@@ -99,13 +97,12 @@ pr2 (inhabited-subtype-equivalence-relation R x) = {!!}
 iff-symmetric-equivalence-relation :
   {l1 l2 : Level} {A : UU l1} (R : equivalence-relation l2 A) {x y : A} →
   sim-equivalence-relation R x y ↔ sim-equivalence-relation R y x
-pr1 (iff-symmetric-equivalence-relation R) = {!!}
-pr2 (iff-symmetric-equivalence-relation R) = {!!}
+iff-symmetric-equivalence-relation = {!!}
 
 equiv-symmetric-equivalence-relation :
   {l1 l2 : Level} {A : UU l1} (R : equivalence-relation l2 A) {x y : A} →
   sim-equivalence-relation R x y ≃ sim-equivalence-relation R y x
-equiv-symmetric-equivalence-relation R = {!!}
+equiv-symmetric-equivalence-relation = {!!}
 ```
 
 ### Transitivity induces equivalences `R(y,z) ≃ R(x,z)`
@@ -116,15 +113,14 @@ iff-transitive-equivalence-relation :
   (R : equivalence-relation l2 A) {x y z : A} →
   sim-equivalence-relation R x y →
   (sim-equivalence-relation R y z ↔ sim-equivalence-relation R x z)
-pr1 (iff-transitive-equivalence-relation R r) s = {!!}
-pr2 (iff-transitive-equivalence-relation R r) s = {!!}
+iff-transitive-equivalence-relation = {!!}
 
 equiv-transitive-equivalence-relation :
   {l1 l2 : Level} {A : UU l1}
   (R : equivalence-relation l2 A) {x y z : A} →
   sim-equivalence-relation R x y →
   (sim-equivalence-relation R y z ≃ sim-equivalence-relation R x z)
-equiv-transitive-equivalence-relation R r = {!!}
+equiv-transitive-equivalence-relation = {!!}
 ```
 
 ### Transitivity induces equivalences `R(x,y) ≃ R(x,z)`
@@ -135,15 +131,14 @@ iff-transitive-equivalence-relation' :
   (R : equivalence-relation l2 A) {x y z : A} →
   sim-equivalence-relation R y z →
   (sim-equivalence-relation R x y ↔ sim-equivalence-relation R x z)
-pr1 (iff-transitive-equivalence-relation' R r) = {!!}
-pr2 (iff-transitive-equivalence-relation' R r) = {!!}
+iff-transitive-equivalence-relation' = {!!}
 
 equiv-transitive-equivalence-relation' :
   {l1 l2 : Level} {A : UU l1}
   (R : equivalence-relation l2 A) {x y z : A} →
   sim-equivalence-relation R y z →
   (sim-equivalence-relation R x y ≃ sim-equivalence-relation R x z)
-equiv-transitive-equivalence-relation' R r = {!!}
+equiv-transitive-equivalence-relation' = {!!}
 ```
 
 ## Examples
@@ -153,15 +148,9 @@ equiv-transitive-equivalence-relation' R r = {!!}
 ```agda
 indiscrete-equivalence-relation :
   {l1 : Level} (A : UU l1) → equivalence-relation lzero A
-pr1 (indiscrete-equivalence-relation A) x y = {!!}
-pr1 (pr2 (indiscrete-equivalence-relation A)) _ = {!!}
-pr1 (pr2 (pr2 (indiscrete-equivalence-relation A))) _ _ _ = {!!}
-pr2 (pr2 (pr2 (indiscrete-equivalence-relation A))) _ _ _ _ _ = {!!}
+indiscrete-equivalence-relation = {!!}
 
 raise-indiscrete-equivalence-relation :
   {l1 : Level} (l2 : Level) (A : UU l1) → equivalence-relation l2 A
-pr1 (raise-indiscrete-equivalence-relation l A) x y = {!!}
-pr1 (pr2 (raise-indiscrete-equivalence-relation l A)) _ = {!!}
-pr1 (pr2 (pr2 (raise-indiscrete-equivalence-relation l A))) _ _ _ = {!!}
-pr2 (pr2 (pr2 (raise-indiscrete-equivalence-relation l A))) _ _ _ _ _ = {!!}
+raise-indiscrete-equivalence-relation = {!!}
 ```

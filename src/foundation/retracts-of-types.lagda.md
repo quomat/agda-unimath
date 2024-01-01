@@ -85,7 +85,7 @@ module _
 
   retract-eq :
     (x ＝ y) retract-of (inclusion-retract R x ＝ inclusion-retract R y)
-  pr1 retract-eq = {!!}
+  retract-eq = {!!}
 ```
 
 ## See also

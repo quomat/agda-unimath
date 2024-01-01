@@ -67,7 +67,7 @@ module _
     (S : species-subuniverse P (subuniverse-global-subuniverse Q l3)) →
     (T : species-subuniverse P (subuniverse-global-subuniverse Q l4)) →
     type-subuniverse P → UU (lsuc l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  type-cauchy-composition-species-subuniverse {l3} {l4} S T X = {!!}
+  type-cauchy-composition-species-subuniverse = {!!}
 
   is-closed-under-cauchy-composition-species-subuniverse : UUω
   is-closed-under-cauchy-composition-species-subuniverse = {!!}
@@ -86,7 +86,7 @@ module _
     species-subuniverse
       ( P)
       ( subuniverse-global-subuniverse Q (lsuc l1 ⊔ l2 ⊔ l3 ⊔ l4))
-  cauchy-composition-species-subuniverse X = {!!}
+  cauchy-composition-species-subuniverse = {!!}
 ```
 
 ## Properties
@@ -119,7 +119,7 @@ module _
         ( subuniverse-global-subuniverse Q l4)
         ( T))
       ( X))
-  preserves-cauchy-composition-Σ-extension-species-subuniverse X = {!!}
+  preserves-cauchy-composition-Σ-extension-species-subuniverse = {!!}
 ```
 
 ### Unit laws for Cauchy composition of species-subuniverse
@@ -140,7 +140,7 @@ module _
       ( cauchy-composition-unit-species-subuniverse P Q C4)
       ( X) →
     unit-species-types X
-  map-equiv-Σ-extension-cauchy-composition-unit-subuniverse (p , H) = {!!}
+  map-equiv-Σ-extension-cauchy-composition-unit-subuniverse = {!!}
 
   map-inv-equiv-Σ-extension-cauchy-composition-unit-subuniverse :
     unit-species-types X →
@@ -148,7 +148,7 @@ module _
       ( subuniverse-global-subuniverse Q l1)
       ( cauchy-composition-unit-species-subuniverse P Q C4)
       ( X)
-  pr1 (map-inv-equiv-Σ-extension-cauchy-composition-unit-subuniverse H) = {!!}
+  map-inv-equiv-Σ-extension-cauchy-composition-unit-subuniverse = {!!}
 
   is-section-map-inv-equiv-Σ-extension-cauchy-composition-unit-subuniverse :
     ( map-equiv-Σ-extension-cauchy-composition-unit-subuniverse ∘
@@ -172,7 +172,7 @@ module _
       ( cauchy-composition-unit-species-subuniverse P Q C4)
       ( X) ≃
     unit-species-types X
-  pr1 equiv-Σ-extension-cauchy-composition-unit-subuniverse = {!!}
+  equiv-Σ-extension-cauchy-composition-unit-subuniverse = {!!}
 
 module _
   { l1 l2 l3 : Level}
@@ -196,7 +196,7 @@ module _
         ( S)
         ( X)) ≃
     inclusion-subuniverse (subuniverse-global-subuniverse Q l3) (S X)
-  equiv-left-unit-law-cauchy-composition-species-subuniverse X = {!!}
+  equiv-left-unit-law-cauchy-composition-species-subuniverse = {!!}
 
   equiv-right-unit-law-cauchy-composition-species-subuniverse :
     ( X : type-subuniverse P) →
@@ -206,7 +206,7 @@ module _
         ( cauchy-composition-unit-species-subuniverse P Q C4)
         ( X)) ≃
     inclusion-subuniverse (subuniverse-global-subuniverse Q l3) (S X)
-  equiv-right-unit-law-cauchy-composition-species-subuniverse X = {!!}
+  equiv-right-unit-law-cauchy-composition-species-subuniverse = {!!}
 ```
 
 ### Associativity of composition of species of types in subuniverse
@@ -236,5 +236,5 @@ module _
         ( cauchy-composition-species-subuniverse P Q C1 C2 S T)
         ( U)
         ( X))
-  equiv-associative-cauchy-composition-species-subuniverse X = {!!}
+  equiv-associative-cauchy-composition-species-subuniverse = {!!}
 ```

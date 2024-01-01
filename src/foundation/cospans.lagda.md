@@ -37,7 +37,7 @@ A **cospan** is a pair of functions with a common codomain.
 cospan :
   {l1 l2 : Level} (l : Level) (A : UU l1) (B : UU l2) →
   UU (l1 ⊔ l2 ⊔ lsuc l)
-cospan l A B = {!!}
+cospan = {!!}
 
 module _
   {l1 l2 : Level} {l : Level} {A : UU l1} {B : UU l2} (c : cospan l A B)
@@ -70,7 +70,7 @@ module _
   coherence-hom-codomain-cospan :
     (c d : cospan l A B) →
     (codomain-cospan c → codomain-cospan d) → UU (l1 ⊔ l2 ⊔ l)
-  coherence-hom-codomain-cospan c d h = {!!}
+  coherence-hom-codomain-cospan = {!!}
 
   hom-codomain-cospan : (c d : cospan l A B) → UU (l1 ⊔ l2 ⊔ l)
   hom-codomain-cospan c d = {!!}
@@ -96,15 +96,15 @@ module _
 
   is-torsorial-htpy-cospan :
     (c : cospan l A B) → is-torsorial (htpy-cospan c)
-  is-torsorial-htpy-cospan c = {!!}
+  is-torsorial-htpy-cospan = {!!}
 
   is-equiv-htpy-eq-cospan :
     (c d : cospan l A B) → is-equiv (htpy-eq-cospan c d)
-  is-equiv-htpy-eq-cospan c = {!!}
+  is-equiv-htpy-eq-cospan = {!!}
 
   extensionality-cospan :
     (c d : cospan l A B) → (c ＝ d) ≃ (htpy-cospan c d)
-  pr1 (extensionality-cospan c d) = {!!}
+  extensionality-cospan = {!!}
 
   eq-htpy-cospan : (c d : cospan l A B) → htpy-cospan c d → c ＝ d
   eq-htpy-cospan c d = {!!}

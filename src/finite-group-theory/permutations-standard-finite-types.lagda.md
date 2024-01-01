@@ -71,9 +71,7 @@ list-transpositions-permutation-Fin' :
       ( λ P →
         has-cardinality 2
           ( Σ (Fin (succ-ℕ n)) (type-Decidable-Prop ∘ P)))))
-list-transpositions-permutation-Fin' zero-ℕ f x p = {!!}
-list-transpositions-permutation-Fin' (succ-ℕ n) f (inl x) p = {!!}
-list-transpositions-permutation-Fin' (succ-ℕ n) f (inr star) p = {!!}
+list-transpositions-permutation-Fin' = {!!}
 
 list-transpositions-permutation-Fin :
   (n : ℕ) (f : Permutation n) →
@@ -81,8 +79,7 @@ list-transpositions-permutation-Fin :
     ( Σ
       ( Fin n → Decidable-Prop lzero)
       ( λ P → has-cardinality 2 (Σ (Fin n) (type-Decidable-Prop ∘ P)))))
-list-transpositions-permutation-Fin zero-ℕ f = {!!}
-list-transpositions-permutation-Fin (succ-ℕ n) f = {!!}
+list-transpositions-permutation-Fin = {!!}
 
 abstract
   retraction-permutation-list-transpositions-Fin' :
@@ -104,8 +101,7 @@ abstract
       ( permutation-list-transpositions
         ( list-transpositions-permutation-Fin n f))
       ( f)
-  retraction-permutation-list-transpositions-Fin zero-ℕ f ()
-  retraction-permutation-list-transpositions-Fin (succ-ℕ n) f y = {!!}
+  retraction-permutation-list-transpositions-Fin = {!!}
 ```
 
 ```agda
@@ -113,12 +109,12 @@ permutation-list-standard-transpositions-Fin :
   (n : ℕ) →
   list (Σ (Fin n × Fin n) (λ (i , j) → i ≠ j)) →
   Permutation n
-permutation-list-standard-transpositions-Fin n = {!!}
+permutation-list-standard-transpositions-Fin = {!!}
 
 list-standard-transpositions-permutation-Fin :
   (n : ℕ) (f : Permutation n) →
   list (Σ (Fin n × Fin n) (λ (i , j) → i ≠ j))
-list-standard-transpositions-permutation-Fin n f = {!!}
+list-standard-transpositions-permutation-Fin = {!!}
 
 private
   htpy-permutation-list :
@@ -135,7 +131,7 @@ private
             neq-elements-two-elements-transposition-Fin P)
           ( l)))
       ( permutation-list-transpositions l)
-  htpy-permutation-list n nil = {!!}
+  htpy-permutation-list = {!!}
 
 retraction-permutation-list-standard-transpositions-Fin :
   (n : ℕ) (f : Permutation n) →
@@ -144,6 +140,5 @@ retraction-permutation-list-standard-transpositions-Fin :
       ( n)
       ( list-standard-transpositions-permutation-Fin n f))
     ( f)
-retraction-permutation-list-standard-transpositions-Fin 0 f ()
-retraction-permutation-list-standard-transpositions-Fin (succ-ℕ n) f = {!!}
+retraction-permutation-list-standard-transpositions-Fin = {!!}
 ```

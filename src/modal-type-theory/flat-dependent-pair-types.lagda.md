@@ -53,11 +53,11 @@ module _
 
   is-section-distributive-flat-Σ :
     (map-inv-distributive-flat-Σ ∘ map-distributive-flat-Σ) ~ id
-  is-section-distributive-flat-Σ (cons-flat _) = {!!}
+  is-section-distributive-flat-Σ = {!!}
 
   is-retraction-distributive-flat-Σ :
     (map-distributive-flat-Σ ∘ map-inv-distributive-flat-Σ) ~ id
-  is-retraction-distributive-flat-Σ (cons-flat _ , cons-flat _) = {!!}
+  is-retraction-distributive-flat-Σ = {!!}
 
   section-distributive-flat-Σ : section map-distributive-flat-Σ
   pr1 section-distributive-flat-Σ = {!!}

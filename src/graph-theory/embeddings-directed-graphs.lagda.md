@@ -46,7 +46,7 @@ module _
 
   is-emb-hom-Directed-Graph-Prop :
     hom-Directed-Graph G H → Prop (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-emb-hom-Directed-Graph-Prop f = {!!}
+  is-emb-hom-Directed-Graph-Prop = {!!}
 
   is-emb-hom-Directed-Graph : hom-Directed-Graph G H → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
   is-emb-hom-Directed-Graph f = {!!}

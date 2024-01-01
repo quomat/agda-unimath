@@ -29,15 +29,12 @@ falling-factorial-ℕ (succ-ℕ n) (succ-ℕ m) = {!!}
 {-
 Fin-falling-factorial-ℕ :
   (n m : ℕ) → Fin (falling-factorial-ℕ n m) ≃ (Fin m ↪ Fin n)
-Fin-falling-factorial-ℕ n m = {!!}
+Fin-falling-factorial-ℕ = {!!}
 -}
 
 {-
 Fin-falling-factorial-ℕ :
   (n m : ℕ) → Fin (falling-factorial-ℕ n m) ≃ (Fin m ↪ Fin n)
-Fin-falling-factorial-ℕ zero-ℕ zero-ℕ = {!!}
-Fin-falling-factorial-ℕ zero-ℕ (succ-ℕ m) = {!!}
-Fin-falling-factorial-ℕ (succ-ℕ n) zero-ℕ = {!!}
-Fin-falling-factorial-ℕ (succ-ℕ n) (succ-ℕ m) = {!!}
+Fin-falling-factorial-ℕ = {!!}
 -}
 ```

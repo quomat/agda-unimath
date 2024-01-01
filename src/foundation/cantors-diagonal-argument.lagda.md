@@ -32,16 +32,16 @@ a type into the type of its subtypes.
 ```agda
 map-cantor :
   {l1 l2 : Level} (X : UU l1) (f : X → (X → Prop l2)) → (X → Prop l2)
-map-cantor X f x = {!!}
+map-cantor = {!!}
 
 abstract
   not-in-image-map-cantor :
     {l1 l2 : Level} (X : UU l1) (f : X → (X → Prop l2)) →
     ( t : fiber f (map-cantor X f)) → empty
-  not-in-image-map-cantor X f (pair x α) = {!!}
+  not-in-image-map-cantor = {!!}
 
 abstract
   cantor :
     {l1 l2 : Level} (X : UU l1) (f : X → X → Prop l2) → ¬ (is-surjective f)
-  cantor X f H = {!!}
+  cantor = {!!}
 ```

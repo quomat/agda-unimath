@@ -27,10 +27,9 @@ every element of `X` to the base point of `A`.
 ```agda
 const-Pointed-Type :
   {l1 l2 : Level} (X : UU l1) (A : Pointed-Type l2) → X → type-Pointed-Type A
-const-Pointed-Type X A x = {!!}
+const-Pointed-Type = {!!}
 
 pointed-const-Pointed-Type :
   {l1 l2 : Level} (A : Pointed-Type l1) (B : Pointed-Type l2) → A →∗ B
-pr1 (pointed-const-Pointed-Type A B) = {!!}
-pr2 (pointed-const-Pointed-Type A B) = {!!}
+pointed-const-Pointed-Type = {!!}
 ```

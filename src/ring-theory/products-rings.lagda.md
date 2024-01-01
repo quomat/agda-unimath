@@ -54,30 +54,30 @@ module _
 
   left-unit-law-add-prod-Ring :
     (x : type-prod-Ring) → Id (add-prod-Ring zero-prod-Ring x) x
-  left-unit-law-add-prod-Ring (pair x y) = {!!}
+  left-unit-law-add-prod-Ring = {!!}
 
   right-unit-law-add-prod-Ring :
     (x : type-prod-Ring) → Id (add-prod-Ring x zero-prod-Ring) x
-  right-unit-law-add-prod-Ring (pair x y) = {!!}
+  right-unit-law-add-prod-Ring = {!!}
 
   left-inverse-law-add-prod-Ring :
     (x : type-prod-Ring) → Id (add-prod-Ring (neg-prod-Ring x) x) zero-prod-Ring
-  left-inverse-law-add-prod-Ring (pair x y) = {!!}
+  left-inverse-law-add-prod-Ring = {!!}
 
   right-inverse-law-add-prod-Ring :
     (x : type-prod-Ring) → Id (add-prod-Ring x (neg-prod-Ring x)) zero-prod-Ring
-  right-inverse-law-add-prod-Ring (pair x y) = {!!}
+  right-inverse-law-add-prod-Ring = {!!}
 
   associative-add-prod-Ring :
     (x y z : type-prod-Ring) →
     Id
       ( add-prod-Ring (add-prod-Ring x y) z)
       ( add-prod-Ring x (add-prod-Ring y z))
-  associative-add-prod-Ring (pair x1 y1) (pair x2 y2) (pair x3 y3) = {!!}
+  associative-add-prod-Ring = {!!}
 
   commutative-add-prod-Ring :
     (x y : type-prod-Ring) → Id (add-prod-Ring x y) (add-prod-Ring y x)
-  commutative-add-prod-Ring (pair x1 y1) (pair x2 y2) = {!!}
+  commutative-add-prod-Ring = {!!}
 
   mul-prod-Ring : type-prod-Ring → type-prod-Ring → type-prod-Ring
   pr1 (mul-prod-Ring (pair x1 y1) (pair x2 y2)) = {!!}
@@ -90,29 +90,29 @@ module _
     Id
       ( mul-prod-Ring (mul-prod-Ring x y) z)
       ( mul-prod-Ring x (mul-prod-Ring y z))
-  associative-mul-prod-Ring (pair x1 y1) (pair x2 y2) (pair x3 y3) = {!!}
+  associative-mul-prod-Ring = {!!}
 
   left-unit-law-mul-prod-Ring :
     (x : type-prod-Ring) → Id (mul-prod-Ring one-prod-Ring x) x
-  left-unit-law-mul-prod-Ring (pair x y) = {!!}
+  left-unit-law-mul-prod-Ring = {!!}
 
   right-unit-law-mul-prod-Ring :
     (x : type-prod-Ring) → Id (mul-prod-Ring x one-prod-Ring) x
-  right-unit-law-mul-prod-Ring (pair x y) = {!!}
+  right-unit-law-mul-prod-Ring = {!!}
 
   left-distributive-mul-add-prod-Ring :
     (x y z : type-prod-Ring) →
     Id
       ( mul-prod-Ring x (add-prod-Ring y z))
       ( add-prod-Ring (mul-prod-Ring x y) (mul-prod-Ring x z))
-  left-distributive-mul-add-prod-Ring (pair x1 y1) (pair x2 y2) (pair x3 y3) = {!!}
+  left-distributive-mul-add-prod-Ring = {!!}
 
   right-distributive-mul-add-prod-Ring :
     (x y z : type-prod-Ring) →
     Id
       ( mul-prod-Ring (add-prod-Ring x y) z)
       ( add-prod-Ring (mul-prod-Ring x z) (mul-prod-Ring y z))
-  right-distributive-mul-add-prod-Ring (pair x1 y1) (pair x2 y2) (pair x3 y3) = {!!}
+  right-distributive-mul-add-prod-Ring = {!!}
 
   semigroup-prod-Ring : Semigroup (l1 ⊔ l2)
   pr1 semigroup-prod-Ring = {!!}

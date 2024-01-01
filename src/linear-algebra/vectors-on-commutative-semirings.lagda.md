@@ -110,7 +110,7 @@ module _
 
   zero-functional-vec-Commutative-Semiring :
     (n : ℕ) → functional-vec-Commutative-Semiring R n
-  zero-functional-vec-Commutative-Semiring n i = {!!}
+  zero-functional-vec-Commutative-Semiring = {!!}
 ```
 
 ### Pointwise addition of vectors on a commutative semiring

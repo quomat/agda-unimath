@@ -72,19 +72,19 @@ module _
 
   is-property-is-local-dependent-type :
     {l : Level} (A : X → UU l) → is-prop (is-local-dependent-type f A)
-  is-property-is-local-dependent-type A = {!!}
+  is-property-is-local-dependent-type = {!!}
 
   is-local-dependent-type-Prop :
     {l : Level} → (X → UU l) → Prop (l1 ⊔ l2 ⊔ l)
-  pr1 (is-local-dependent-type-Prop A) = {!!}
+  is-local-dependent-type-Prop = {!!}
 
   is-property-is-local :
     {l : Level} (A : UU l) → is-prop (is-local f A)
-  is-property-is-local A = {!!}
+  is-property-is-local = {!!}
 
   is-local-Prop :
     {l : Level} → UU l → Prop (l1 ⊔ l2 ⊔ l)
-  is-local-Prop A = {!!}
+  is-local-Prop = {!!}
 ```
 
 ### Being local distributes over Π-types
@@ -98,13 +98,13 @@ module _
     {l3 l4 : Level} {A : UU l3} (B : A → X → UU l4) →
     ((a : A) → is-local-dependent-type f (B a)) →
     is-local-dependent-type f (λ x → (a : A) → B a x)
-  map-distributive-Π-is-local-dependent-type B f-loc = {!!}
+  map-distributive-Π-is-local-dependent-type = {!!}
 
   map-distributive-Π-is-local :
     {l3 l4 : Level} {A : UU l3} (B : A → UU l4) →
     ((a : A) → is-local f (B a)) →
     is-local f ((a : A) → B a)
-  map-distributive-Π-is-local B = {!!}
+  map-distributive-Π-is-local = {!!}
 ```
 
 ### If every type is `f`-local, then `f` is an equivalence
@@ -148,12 +148,12 @@ module _
     ((x : X) → is-prop (A x)) →
     (((y : Y) → A (f y)) → ((x : X) → A x)) →
     is-local-dependent-type f A
-  is-local-dependent-type-is-prop A is-prop-A = {!!}
+  is-local-dependent-type-is-prop = {!!}
 
   is-local-is-prop :
     {l : Level} (A : UU l) →
     is-prop A → ((Y → A) → (X → A)) → is-local f A
-  is-local-is-prop A is-prop-A = {!!}
+  is-local-is-prop = {!!}
 ```
 
 ## Examples
@@ -167,11 +167,11 @@ module _
 
   is-local-dependent-type-is-equiv :
     is-equiv f → {l : Level} (A : X → UU l) → is-local-dependent-type f A
-  is-local-dependent-type-is-equiv is-equiv-f = {!!}
+  is-local-dependent-type-is-equiv = {!!}
 
   is-local-is-equiv :
     is-equiv f → {l : Level} (A : UU l) → is-local f A
-  is-local-is-equiv is-equiv-f = {!!}
+  is-local-is-equiv = {!!}
 ```
 
 ### Families of contractible types are local at any map
@@ -184,11 +184,11 @@ module _
   is-local-dependent-type-is-contr :
     {l : Level} (A : X → UU l) →
     ((x : X) → is-contr (A x)) → is-local-dependent-type f A
-  is-local-dependent-type-is-contr A is-contr-A = {!!}
+  is-local-dependent-type-is-contr = {!!}
 
   is-local-is-contr :
     {l : Level} (A : UU l) → is-contr A → is-local f A
-  is-local-is-contr A is-contr-A = {!!}
+  is-local-is-contr = {!!}
 ```
 
 ### A type that is local at the unique map `empty → unit` is contractible
@@ -196,7 +196,7 @@ module _
 ```agda
 is-contr-is-local :
   {l : Level} (A : UU l) → is-local (λ (_ : empty) → star) A → is-contr A
-is-contr-is-local A is-local-A = {!!}
+is-contr-is-local = {!!}
 ```
 
 ## See also

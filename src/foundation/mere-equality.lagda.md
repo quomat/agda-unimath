@@ -53,7 +53,7 @@ module _
 abstract
   refl-mere-eq :
     {l : Level} {A : UU l} → is-reflexive (mere-eq {l} {A})
-  refl-mere-eq _ = {!!}
+  refl-mere-eq = {!!}
 ```
 
 ### Symmetry
@@ -62,7 +62,7 @@ abstract
 abstract
   symmetric-mere-eq :
     {l : Level} {A : UU l} → is-symmetric (mere-eq {l} {A})
-  symmetric-mere-eq _ _ = {!!}
+  symmetric-mere-eq = {!!}
 ```
 
 ### Transitivity
@@ -71,7 +71,7 @@ abstract
 abstract
   transitive-mere-eq :
     {l : Level} {A : UU l} → is-transitive (mere-eq {l} {A})
-  transitive-mere-eq x y z p q = {!!}
+  transitive-mere-eq = {!!}
 ```
 
 ### Mere equality is an equivalence relation
@@ -79,10 +79,7 @@ abstract
 ```agda
 mere-eq-equivalence-relation :
   {l1 : Level} (A : UU l1) → equivalence-relation l1 A
-pr1 (mere-eq-equivalence-relation A) = {!!}
-pr1 (pr2 (mere-eq-equivalence-relation A)) = {!!}
-pr1 (pr2 (pr2 (mere-eq-equivalence-relation A))) = {!!}
-pr2 (pr2 (pr2 (mere-eq-equivalence-relation A))) = {!!}
+mere-eq-equivalence-relation = {!!}
 ```
 
 ### Any map into a set reflects mere equality
@@ -94,13 +91,13 @@ module _
 
   reflects-mere-eq :
     reflects-equivalence-relation (mere-eq-equivalence-relation A) f
-  reflects-mere-eq {x} {y} r = {!!}
+  reflects-mere-eq = {!!}
 
   reflecting-map-mere-eq :
     reflecting-map-equivalence-relation
       ( mere-eq-equivalence-relation A)
       ( type-Set X)
-  pr1 reflecting-map-mere-eq = {!!}
+  reflecting-map-mere-eq = {!!}
 ```
 
 ### If mere equality maps into the identity type of `A`, then `A` is a set

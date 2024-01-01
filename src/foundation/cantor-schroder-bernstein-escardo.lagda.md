@@ -58,19 +58,19 @@ module _
 
     map-Cantor-Schröder-Bernstein-Escardó' :
       (x : X) → is-decidable (is-perfect-image (map-emb f) (map-emb g) x) → Y
-    map-Cantor-Schröder-Bernstein-Escardó' x (inl y) = {!!}
+    map-Cantor-Schröder-Bernstein-Escardó' = {!!}
 
     map-Cantor-Schröder-Bernstein-Escardó :
       X → Y
-    map-Cantor-Schröder-Bernstein-Escardó x = {!!}
+    map-Cantor-Schröder-Bernstein-Escardó = {!!}
 
     is-injective-map-Cantor-Schröder-Bernstein-Escardó :
       is-injective map-Cantor-Schröder-Bernstein-Escardó
-    is-injective-map-Cantor-Schröder-Bernstein-Escardó {x} {x'} = {!!}
+    is-injective-map-Cantor-Schröder-Bernstein-Escardó = {!!}
 
     is-split-surjective-map-Cantor-Schröder-Bernstein-Escardó :
       is-split-surjective map-Cantor-Schröder-Bernstein-Escardó
-    is-split-surjective-map-Cantor-Schröder-Bernstein-Escardó y = {!!}
+    is-split-surjective-map-Cantor-Schröder-Bernstein-Escardó = {!!}
 
     is-equiv-map-Cantor-Schröder-Bernstein-Escardó :
       is-equiv map-Cantor-Schröder-Bernstein-Escardó
@@ -78,7 +78,7 @@ module _
 
   Cantor-Schröder-Bernstein-Escardó :
     type-Cantor-Schröder-Bernstein-Escardó l1 l2
-  pr1 (Cantor-Schröder-Bernstein-Escardó f g) = {!!}
+  Cantor-Schröder-Bernstein-Escardó = {!!}
 ```
 
 ## References

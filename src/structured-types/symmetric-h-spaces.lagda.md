@@ -32,7 +32,7 @@ on `A`.
 ```agda
 symmetric-H-Space :
   {l1 : Level} (A : Pointed-Type l1) → UU (lsuc lzero ⊔ l1)
-symmetric-H-Space A = {!!}
+symmetric-H-Space = {!!}
 ```
 
 ### The symmetric binary operation on a symmetric H-space
@@ -41,5 +41,5 @@ symmetric-H-Space A = {!!}
 symmetric-mul-symmetric-H-Space :
   {l1 : Level} (A : Pointed-Type l1) (μ : symmetric-H-Space A) →
   symmetric-operation (type-Pointed-Type A) (type-Pointed-Type A)
-symmetric-mul-symmetric-H-Space A μ (X , f) = {!!}
+symmetric-mul-symmetric-H-Space = {!!}
 ```

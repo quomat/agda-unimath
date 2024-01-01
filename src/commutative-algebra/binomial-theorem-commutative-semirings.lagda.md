@@ -48,7 +48,7 @@ binomial-sum-Commutative-Semiring :
   {l : Level} (A : Commutative-Semiring l)
   (n : ℕ) (f : functional-vec-Commutative-Semiring A (succ-ℕ n)) →
   type-Commutative-Semiring A
-binomial-sum-Commutative-Semiring A = {!!}
+binomial-sum-Commutative-Semiring = {!!}
 ```
 
 ## Properties
@@ -126,7 +126,7 @@ binomial-theorem-Commutative-Semiring :
       mul-Commutative-Semiring A
       ( power-Commutative-Semiring A (nat-Fin (succ-ℕ n) i) x)
       ( power-Commutative-Semiring A (dist-ℕ (nat-Fin (succ-ℕ n) i) n) y))
-binomial-theorem-Commutative-Semiring A n x y = {!!}
+binomial-theorem-Commutative-Semiring = {!!}
 ```
 
 ## Corollaries
@@ -162,5 +162,5 @@ is-linear-combination-power-add-Commutative-Semiring :
               ( power-Commutative-Semiring A
                 ( dist-ℕ (nat-Fin (succ-ℕ m) i) m)
                 ( y))))))
-is-linear-combination-power-add-Commutative-Semiring A n m x y = {!!}
+is-linear-combination-power-add-Commutative-Semiring = {!!}
 ```

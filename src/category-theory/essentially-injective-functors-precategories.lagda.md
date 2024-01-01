@@ -46,7 +46,7 @@ module _
 essentially-injective-functor-Precategory :
   {l1 l2 l3 l4 : Level} (C : Precategory l1 l2) (D : Precategory l3 l4) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-essentially-injective-functor-Precategory C D = {!!}
+essentially-injective-functor-Precategory = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}

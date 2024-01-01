@@ -68,14 +68,14 @@ module _
     Id
       ( sign-homomorphism-Fin-two (f ∘e g))
       ( add-Fin 2 (sign-homomorphism-Fin-two f) (sign-homomorphism-Fin-two g))
-  preserves-add-sign-homomorphism-Fin-two f g = {!!}
+  preserves-add-sign-homomorphism-Fin-two = {!!}
 
   eq-sign-homomorphism-Fin-two-transposition :
     ( Y : 2-Element-Decidable-Subtype l (type-UU-Fin n X)) →
     Id
       ( sign-homomorphism-Fin-two (transposition Y))
       ( inr star)
-  eq-sign-homomorphism-Fin-two-transposition Y = {!!}
+  eq-sign-homomorphism-Fin-two-transposition = {!!}
 
 module _
   {l l' : Level} (n : ℕ) (X : UU-Fin l n) (Y : UU-Fin l' n)
@@ -87,7 +87,7 @@ module _
     Id
       ( sign-homomorphism-Fin-two n Y (g ∘e (f ∘e inv-equiv g)))
       ( sign-homomorphism-Fin-two n X f)
-  preserves-conjugation-sign-homomorphism-Fin-two f g = {!!}
+  preserves-conjugation-sign-homomorphism-Fin-two = {!!}
 ```
 
 ### The sign homomorphism into the symmetric group S₂
@@ -102,13 +102,13 @@ module _
 
   preserves-comp-map-sign-homomorphism :
     preserves-mul _∘e_ _∘e_ map-sign-homomorphism
-  preserves-comp-map-sign-homomorphism {f} {g} = {!!}
+  preserves-comp-map-sign-homomorphism = {!!}
 
   sign-homomorphism :
     hom-Group
       ( symmetric-Group (set-UU-Fin n X))
       ( symmetric-Group (Fin-Set 2))
-  pr1 sign-homomorphism = {!!}
+  sign-homomorphism = {!!}
 
   eq-sign-homomorphism-transposition :
     ( Y : 2-Element-Decidable-Subtype l (type-UU-Fin n X)) →
@@ -119,5 +119,5 @@ module _
         ( sign-homomorphism)
         ( transposition Y))
       ( equiv-succ-Fin 2)
-  eq-sign-homomorphism-transposition Y = {!!}
+  eq-sign-homomorphism-transposition = {!!}
 ```

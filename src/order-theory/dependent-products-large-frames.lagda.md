@@ -148,7 +148,7 @@ module _
     {J : UU l3} (y : J → type-Π-Large-Frame l4) →
     meet-Π-Large-Frame x (sup-Π-Large-Frame y) ＝
     sup-Π-Large-Frame (λ j → meet-Π-Large-Frame x (y j))
-  distributive-meet-sup-Π-Large-Frame x y = {!!}
+  distributive-meet-sup-Π-Large-Frame = {!!}
 
   Π-Large-Frame : Large-Frame (λ l2 → α l2 ⊔ l1) (λ l2 l3 → β l2 l3 ⊔ l1) γ
   large-poset-Large-Frame Π-Large-Frame = {!!}

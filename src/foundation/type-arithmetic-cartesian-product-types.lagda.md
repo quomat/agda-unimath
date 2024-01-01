@@ -45,11 +45,11 @@ module _
 
   is-section-map-inv-commutative-prod :
     (map-commutative-prod ∘ map-inv-commutative-prod) ~ id
-  is-section-map-inv-commutative-prod (pair b a) = {!!}
+  is-section-map-inv-commutative-prod = {!!}
 
   is-retraction-map-inv-commutative-prod :
     (map-inv-commutative-prod ∘ map-commutative-prod) ~ id
-  is-retraction-map-inv-commutative-prod (pair a b) = {!!}
+  is-retraction-map-inv-commutative-prod = {!!}
 
   is-equiv-map-commutative-prod : is-equiv map-commutative-prod
   is-equiv-map-commutative-prod = {!!}
@@ -122,8 +122,7 @@ module _
 equiv-add-redundant-prop :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   is-prop B → (f : A → B) → A ≃ A × B
-pr1 (equiv-add-redundant-prop is-prop-B f) a = {!!}
-pr2 (equiv-add-redundant-prop is-prop-B f) = {!!}
+equiv-add-redundant-prop = {!!}
 ```
 
 ## See also

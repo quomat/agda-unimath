@@ -49,8 +49,7 @@ binomial-coefficient-Fin n x = {!!}
 ```agda
 is-zero-binomial-coefficient-ℕ :
   (n k : ℕ) → le-ℕ n k → is-zero-ℕ (binomial-coefficient-ℕ n k)
-is-zero-binomial-coefficient-ℕ zero-ℕ (succ-ℕ k) _ = {!!}
-is-zero-binomial-coefficient-ℕ (succ-ℕ n) (succ-ℕ k) H = {!!}
+is-zero-binomial-coefficient-ℕ = {!!}
 ```
 
 ### `binomial-coefficient-ℕ n n ＝ 1`
@@ -58,6 +57,5 @@ is-zero-binomial-coefficient-ℕ (succ-ℕ n) (succ-ℕ k) H = {!!}
 ```agda
 is-one-on-diagonal-binomial-coefficient-ℕ :
   (n : ℕ) → is-one-ℕ (binomial-coefficient-ℕ n n)
-is-one-on-diagonal-binomial-coefficient-ℕ zero-ℕ = {!!}
-is-one-on-diagonal-binomial-coefficient-ℕ (succ-ℕ n) = {!!}
+is-one-on-diagonal-binomial-coefficient-ℕ = {!!}
 ```

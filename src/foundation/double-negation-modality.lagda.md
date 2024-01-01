@@ -33,7 +33,7 @@ The [double negation](foundation.double-negation.md) operation `¬¬` is a
 ```agda
 operator-double-negation-modality :
   (l : Level) → operator-modality l l
-operator-double-negation-modality _ = {!!}
+operator-double-negation-modality = {!!}
 
 unit-double-negation-modality :
   {l : Level} → unit-modality (operator-double-negation-modality l)
@@ -48,7 +48,7 @@ unit-double-negation-modality = {!!}
 is-uniquely-eliminating-modality-double-negation-modality :
   {l : Level} →
   is-uniquely-eliminating-modality (unit-double-negation-modality {l})
-is-uniquely-eliminating-modality-double-negation-modality {l} {A} P = {!!}
+is-uniquely-eliminating-modality-double-negation-modality = {!!}
 ```
 
 This proof follows Example 1.9 in _Modalities in homotopy type theory_.

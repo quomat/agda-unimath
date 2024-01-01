@@ -39,12 +39,12 @@ module _
 
   tr-htpy :
     (f ~ g) → ((x : A) → C x (f x)) → ((x : A) → C x (g x))
-  tr-htpy H f' x = {!!}
+  tr-htpy = {!!}
 
   tr-htpy² :
     {H K : f ~ g} (L : H ~ K) (f' : (x : A) → C x (f x)) →
     tr-htpy H f' ~ tr-htpy K f'
-  tr-htpy² L f' x = {!!}
+  tr-htpy² = {!!}
 ```
 
 ## Properties
@@ -58,7 +58,7 @@ module _
 
   statement-compute-tr-htpy :
     {f g : (x : A) → B x} (H : f ~ g) → UU (l1 ⊔ l3)
-  statement-compute-tr-htpy H = {!!}
+  statement-compute-tr-htpy = {!!}
 
   base-case-compute-tr-htpy :
     {f : (x : A) → B x} → statement-compute-tr-htpy (refl-htpy' f)
@@ -67,10 +67,10 @@ module _
   abstract
     compute-tr-htpy :
       {f g : (x : A) → B x} (H : f ~ g) → statement-compute-tr-htpy H
-    compute-tr-htpy {f} {g} = {!!}
+    compute-tr-htpy = {!!}
 
     compute-tr-htpy-refl-htpy :
       {f : (x : A) → B x} →
       compute-tr-htpy (refl-htpy' f) ＝ base-case-compute-tr-htpy
-    compute-tr-htpy-refl-htpy {f} = {!!}
+    compute-tr-htpy-refl-htpy = {!!}
 ```

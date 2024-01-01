@@ -102,7 +102,7 @@ pseudomonic-functor-Precategory :
   {l1 l2 l3 l4 : Level}
   (C : Precategory l1 l2) (D : Precategory l3 l4) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-pseudomonic-functor-Precategory C D = {!!}
+pseudomonic-functor-Precategory = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}
@@ -163,7 +163,7 @@ module _
     iso-Precategory D
       ( obj-functor-Precategory C D F x)
       ( obj-functor-Precategory C D F y)
-  pr1 equiv-iso-is-pseudomonic-functor-Precategory = {!!}
+  equiv-iso-is-pseudomonic-functor-Precategory = {!!}
 
   inv-equiv-iso-is-pseudomonic-functor-Precategory :
     iso-Precategory D
@@ -228,7 +228,7 @@ module _
 
   is-conservative-is-pseudomonic-functor-Precategory :
     is-conservative-functor-Precategory C D F
-  is-conservative-is-pseudomonic-functor-Precategory f is-iso-Ff = {!!}
+  is-conservative-is-pseudomonic-functor-Precategory = {!!}
 ```
 
 ## See also

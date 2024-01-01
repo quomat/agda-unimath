@@ -44,17 +44,17 @@ module _
 
   action-stabilizer-action-Concrete-Group :
     type-action-Concrete-Group G X → action-Concrete-Group (l1 ⊔ l2) G
-  action-stabilizer-action-Concrete-Group x u = {!!}
+  action-stabilizer-action-Concrete-Group = {!!}
 
   is-transitive-action-stabilizer-action-Concrete-Group :
     (x : type-action-Concrete-Group G X) →
     is-transitive-action-Concrete-Group G
       ( action-stabilizer-action-Concrete-Group x)
-  is-transitive-action-stabilizer-action-Concrete-Group x = {!!}
+  is-transitive-action-stabilizer-action-Concrete-Group = {!!}
 
   subgroup-stabilizer-action-Concrete-Group :
     (x : type-action-Concrete-Group G X) → subgroup-Concrete-Group (l1 ⊔ l2) G
-  pr1 (pr1 (subgroup-stabilizer-action-Concrete-Group x)) = {!!}
+  subgroup-stabilizer-action-Concrete-Group = {!!}
 ```
 
 ## External links

@@ -48,7 +48,7 @@ module _
 
   iterative-multiplication-by-element-Group :
     type-Group G → ℤ → type-Group G → type-Group G
-  iterative-multiplication-by-element-Group g k = {!!}
+  iterative-multiplication-by-element-Group = {!!}
 ```
 
 ### Integer powers of group elements
@@ -75,16 +75,16 @@ module _
 
   is-integer-power-of-element-prop-Group :
     (x y : type-Group G) → Prop l
-  is-integer-power-of-element-prop-Group x y = {!!}
+  is-integer-power-of-element-prop-Group = {!!}
 
   is-integer-power-of-element-Group :
     (x y : type-Group G) → UU l
-  is-integer-power-of-element-Group x y = {!!}
+  is-integer-power-of-element-Group = {!!}
 
   is-prop-is-integer-power-of-element-Group :
     (x y : type-Group G) →
     is-prop (is-integer-power-of-element-Group x y)
-  is-prop-is-integer-power-of-element-Group x y = {!!}
+  is-prop-is-integer-power-of-element-Group = {!!}
 ```
 
 ## Properties
@@ -114,19 +114,19 @@ module _
   integer-power-int-Group :
     (n : ℕ) (g : type-Group G) →
     integer-power-Group G (int-ℕ n) g ＝ power-Group G n g
-  integer-power-int-Group zero-ℕ g = {!!}
+  integer-power-int-Group = {!!}
 
   integer-power-in-pos-Group :
     (n : ℕ) (g : type-Group G) →
     integer-power-Group G (in-pos n) g ＝
     power-Group G (succ-ℕ n) g
-  integer-power-in-pos-Group n g = {!!}
+  integer-power-in-pos-Group = {!!}
 
   integer-power-in-neg-Group :
     (n : ℕ) (g : type-Group G) →
     integer-power-Group G (in-neg n) g ＝
     inv-Group G (power-Group G (succ-ℕ n) g)
-  integer-power-in-neg-Group zero-ℕ g = {!!}
+  integer-power-in-neg-Group = {!!}
 ```
 
 ### The integer power `x⁰` is the unit of the group
@@ -178,7 +178,7 @@ module _
     mul-Group G
       ( integer-power-Group G x g)
       ( integer-power-Group G y g)
-  distributive-integer-power-add-Group x y = {!!}
+  distributive-integer-power-add-Group = {!!}
 ```
 
 ### The integer power `x⁻ᵏ` is the inverse of the integer power `xᵏ`
@@ -191,7 +191,7 @@ module _
   integer-power-neg-Group :
     (k : ℤ) (x : type-Group G) →
     integer-power-Group G (neg-ℤ k) x ＝ inv-Group G (integer-power-Group G k x)
-  integer-power-neg-Group (inl k) x = {!!}
+  integer-power-neg-Group = {!!}
 ```
 
 ### `xᵏ⁺¹ = {!!}
@@ -205,13 +205,13 @@ module _
     (k : ℤ) (x : type-Group G) →
     integer-power-Group G (succ-ℤ k) x ＝
     mul-Group G (integer-power-Group G k x) x
-  integer-power-succ-Group k x = {!!}
+  integer-power-succ-Group = {!!}
 
   integer-power-succ-Group' :
     (k : ℤ) (x : type-Group G) →
     integer-power-Group G (succ-ℤ k) x ＝
     mul-Group G x (integer-power-Group G k x)
-  integer-power-succ-Group' k x = {!!}
+  integer-power-succ-Group' = {!!}
 ```
 
 ### `xᵏ⁻¹ = {!!}
@@ -237,11 +237,11 @@ module _
 
   integer-power-pred-Group :
     (k : ℤ) (x : type-Group G) → x ^ (pred-ℤ k) ＝ x ^ k * x ⁻¹
-  integer-power-pred-Group k x = {!!}
+  integer-power-pred-Group = {!!}
 
   integer-power-pred-Group' :
     (k : ℤ) (x : type-Group G) → x ^ (pred-ℤ k) ＝ x ⁻¹ * x ^ k
-  integer-power-pred-Group' k x = {!!}
+  integer-power-pred-Group' = {!!}
 ```
 
 ### `1ᵏ ＝ 1`
@@ -253,7 +253,7 @@ module _
 
   integer-power-unit-Group :
     (k : ℤ) → integer-power-Group G k (unit-Group G) ＝ unit-Group G
-  integer-power-unit-Group (inl zero-ℕ) = {!!}
+  integer-power-unit-Group = {!!}
 ```
 
 ### If `x` commutes with `y` then so do their integer powers
@@ -280,12 +280,12 @@ module _
   commute-integer-powers-Group' :
     (k : ℤ) {x y : type-Group G} →
     commute-Group G x y → commute-Group G x (y ^ k)
-  commute-integer-powers-Group' (inl zero-ℕ) {x} {y} H = {!!}
+  commute-integer-powers-Group' = {!!}
 
   commute-integer-powers-Group :
     (k l : ℤ) {x y : type-Group G} →
     commute-Group G x y → commute-Group G (x ^ k) (y ^ l)
-  commute-integer-powers-Group (inl zero-ℕ) l {x} {y} H = {!!}
+  commute-integer-powers-Group = {!!}
 ```
 
 ### If `x` commutes with `y`, then integer powers distribute over the product of `x` and `y`
@@ -312,7 +312,7 @@ module _
   distributive-integer-power-mul-Group :
     (k : ℤ) (x y : type-Group G) →
     commute-Group G x y → (x * y) ^ k ＝ x ^ k * y ^ k
-  distributive-integer-power-mul-Group (inl zero-ℕ) x y H = {!!}
+  distributive-integer-power-mul-Group = {!!}
 ```
 
 ### Powers by products of integers are iterated integer powers
@@ -335,13 +335,13 @@ module _
 
   integer-power-mul-Group :
     (k l : ℤ) (x : type-Group G) → x ^ (k * l) ＝ (x ^ k) ^ l
-  integer-power-mul-Group k (inl zero-ℕ) x = {!!}
+  integer-power-mul-Group = {!!}
 
   swap-integer-power-Group :
     (k l : ℤ) (x : type-Group G) →
     integer-power-Group G k (integer-power-Group G l x) ＝
     integer-power-Group G l (integer-power-Group G k x)
-  swap-integer-power-Group k l x = {!!}
+  swap-integer-power-Group = {!!}
 ```
 
 ### Group homomorphisms preserve integer powers
@@ -355,7 +355,7 @@ module _
     (k : ℤ) (x : type-Group G) →
     map-hom-Group G H f (integer-power-Group G k x) ＝
     integer-power-Group H k (map-hom-Group G H f x)
-  preserves-integer-powers-hom-Group (inl zero-ℕ) x = {!!}
+  preserves-integer-powers-hom-Group = {!!}
 
 module _
   {l1 l2 : Level} (G : Group l1) (H : Group l2) (f : hom-Group G H)
@@ -366,5 +366,5 @@ module _
     ( map-hom-Group G H f x ＝ map-hom-Group G H g x) →
     ( map-hom-Group G H f (integer-power-Group G k x) ＝
       map-hom-Group G H g (integer-power-Group G k x))
-  eq-integer-power-hom-Group g k x p = {!!}
+  eq-integer-power-hom-Group = {!!}
 ```

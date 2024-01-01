@@ -84,34 +84,34 @@ module _
 
   htpy-hom-Type-With-Endomorphism :
     (f g : hom-Type-With-Endomorphism X Y) → UU (l1 ⊔ l2)
-  htpy-hom-Type-With-Endomorphism f g = {!!}
+  htpy-hom-Type-With-Endomorphism = {!!}
 
   refl-htpy-hom-Type-With-Endomorphism :
     (f : hom-Type-With-Endomorphism X Y) → htpy-hom-Type-With-Endomorphism f f
-  pr1 (refl-htpy-hom-Type-With-Endomorphism f) = {!!}
+  refl-htpy-hom-Type-With-Endomorphism = {!!}
 
   htpy-eq-hom-Type-With-Endomorphism :
     (f g : hom-Type-With-Endomorphism X Y) →
     f ＝ g → htpy-hom-Type-With-Endomorphism f g
-  htpy-eq-hom-Type-With-Endomorphism f .f refl = {!!}
+  htpy-eq-hom-Type-With-Endomorphism = {!!}
 
   is-torsorial-htpy-hom-Type-With-Endomorphism :
     (f : hom-Type-With-Endomorphism X Y) →
     is-torsorial (htpy-hom-Type-With-Endomorphism f)
-  is-torsorial-htpy-hom-Type-With-Endomorphism f = {!!}
+  is-torsorial-htpy-hom-Type-With-Endomorphism = {!!}
 
   is-equiv-htpy-eq-hom-Type-With-Endomorphism :
     (f g : hom-Type-With-Endomorphism X Y) →
     is-equiv (htpy-eq-hom-Type-With-Endomorphism f g)
-  is-equiv-htpy-eq-hom-Type-With-Endomorphism f = {!!}
+  is-equiv-htpy-eq-hom-Type-With-Endomorphism = {!!}
 
   extensionality-hom-Type-With-Endomorphism :
     (f g : hom-Type-With-Endomorphism X Y) →
     (f ＝ g) ≃ htpy-hom-Type-With-Endomorphism f g
-  pr1 (extensionality-hom-Type-With-Endomorphism f g) = {!!}
+  extensionality-hom-Type-With-Endomorphism = {!!}
 
   eq-htpy-hom-Type-With-Endomorphism :
     ( f g : hom-Type-With-Endomorphism X Y) →
     htpy-hom-Type-With-Endomorphism f g → f ＝ g
-  eq-htpy-hom-Type-With-Endomorphism f g = {!!}
+  eq-htpy-hom-Type-With-Endomorphism = {!!}
 ```

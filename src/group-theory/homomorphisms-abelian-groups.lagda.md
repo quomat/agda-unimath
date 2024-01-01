@@ -90,18 +90,18 @@ module _
 
   preserves-negatives-hom-Ab :
     (f : hom-Ab) → preserves-negatives-Ab A B (map-hom-Ab f)
-  preserves-negatives-hom-Ab f = {!!}
+  preserves-negatives-hom-Ab = {!!}
 
   hom-semigroup-hom-Ab :
     hom-Ab → hom-Semigroup (semigroup-Ab A) (semigroup-Ab B)
-  pr1 (hom-semigroup-hom-Ab f) = {!!}
+  hom-semigroup-hom-Ab = {!!}
 
   hom-commutative-monoid-hom-Ab :
     hom-Ab →
     hom-Commutative-Monoid
       ( commutative-monoid-Ab A)
       ( commutative-monoid-Ab B)
-  pr1 (hom-commutative-monoid-hom-Ab f) = {!!}
+  hom-commutative-monoid-hom-Ab = {!!}
 ```
 
 ### Characterization of the identity type of the abelian group homomorphisms
@@ -123,12 +123,12 @@ module _
   abstract
     is-torsorial-htpy-hom-Ab :
       (f : hom-Ab A B) → is-torsorial (htpy-hom-Ab f)
-    is-torsorial-htpy-hom-Ab f = {!!}
+    is-torsorial-htpy-hom-Ab = {!!}
 
   abstract
     is-equiv-htpy-eq-hom-Ab :
       (f g : hom-Ab A B) → is-equiv (htpy-eq-hom-Ab f g)
-    is-equiv-htpy-eq-hom-Ab f g = {!!}
+    is-equiv-htpy-eq-hom-Ab = {!!}
 
   eq-htpy-hom-Ab : {f g : hom-Ab A B} → htpy-hom-Ab f g → Id f g
   eq-htpy-hom-Ab = {!!}
@@ -153,7 +153,7 @@ id-hom-Ab A = {!!}
 comp-hom-Ab :
   { l1 l2 l3 : Level} (A : Ab l1) (B : Ab l2) (C : Ab l3) →
   ( hom-Ab B C) → (hom-Ab A B) → (hom-Ab A C)
-comp-hom-Ab A B C = {!!}
+comp-hom-Ab = {!!}
 ```
 
 ### Associativity of composition of morphisms of abelian groups
@@ -165,7 +165,7 @@ associative-comp-hom-Ab :
   (h : hom-Ab C D) (g : hom-Ab B C) (f : hom-Ab A B) →
   comp-hom-Ab A B D (comp-hom-Ab B C D h g) f ＝
   comp-hom-Ab A C D h (comp-hom-Ab A B C g f)
-associative-comp-hom-Ab A B C D = {!!}
+associative-comp-hom-Ab = {!!}
 
 inv-associative-comp-hom-Ab :
   {l1 l2 l3 l4 : Level}
@@ -173,7 +173,7 @@ inv-associative-comp-hom-Ab :
   (h : hom-Ab C D) (g : hom-Ab B C) (f : hom-Ab A B) →
   comp-hom-Ab A C D h (comp-hom-Ab A B C g f) ＝
   comp-hom-Ab A B D (comp-hom-Ab B C D h g) f
-inv-associative-comp-hom-Ab A B C D = {!!}
+inv-associative-comp-hom-Ab = {!!}
 ```
 
 ### The unit laws for composition of abelian groups
@@ -182,10 +182,10 @@ inv-associative-comp-hom-Ab A B C D = {!!}
 left-unit-law-comp-hom-Ab :
   { l1 l2 : Level} (A : Ab l1) (B : Ab l2)
   ( f : hom-Ab A B) → Id (comp-hom-Ab A B B (id-hom-Ab B) f) f
-left-unit-law-comp-hom-Ab A B = {!!}
+left-unit-law-comp-hom-Ab = {!!}
 
 right-unit-law-comp-hom-Ab :
   { l1 l2 : Level} (A : Ab l1) (B : Ab l2)
   ( f : hom-Ab A B) → Id (comp-hom-Ab A A B f (id-hom-Ab A)) f
-right-unit-law-comp-hom-Ab A B = {!!}
+right-unit-law-comp-hom-Ab = {!!}
 ```

@@ -45,21 +45,21 @@ module _
   leq-prop-right-ideal-Ring :
     {l2 l3 : Level} →
     right-ideal-Ring l2 R → right-ideal-Ring l3 R → Prop (l1 ⊔ l2 ⊔ l3)
-  leq-prop-right-ideal-Ring I J = {!!}
+  leq-prop-right-ideal-Ring = {!!}
 
   leq-right-ideal-Ring :
     {l2 l3 : Level} →
     right-ideal-Ring l2 R → right-ideal-Ring l3 R → UU (l1 ⊔ l2 ⊔ l3)
-  leq-right-ideal-Ring I J = {!!}
+  leq-right-ideal-Ring = {!!}
 
   is-prop-leq-right-ideal-Ring :
     {l2 l3 : Level} (I : right-ideal-Ring l2 R) (J : right-ideal-Ring l3 R) →
     is-prop (leq-right-ideal-Ring I J)
-  is-prop-leq-right-ideal-Ring I J = {!!}
+  is-prop-leq-right-ideal-Ring = {!!}
 
   refl-leq-right-ideal-Ring :
     {l2 : Level} → is-reflexive (leq-right-ideal-Ring {l2})
-  refl-leq-right-ideal-Ring I = {!!}
+  refl-leq-right-ideal-Ring = {!!}
 
   transitive-leq-right-ideal-Ring :
     {l2 l3 l4 : Level}
@@ -69,11 +69,11 @@ module _
     leq-right-ideal-Ring J K →
     leq-right-ideal-Ring I J →
     leq-right-ideal-Ring I K
-  transitive-leq-right-ideal-Ring I J K = {!!}
+  transitive-leq-right-ideal-Ring = {!!}
 
   antisymmetric-leq-right-ideal-Ring :
     {l2 : Level} → is-antisymmetric (leq-right-ideal-Ring {l2})
-  antisymmetric-leq-right-ideal-Ring I J U V = {!!}
+  antisymmetric-leq-right-ideal-Ring = {!!}
 ```
 
 ### The large poset of right ideals
@@ -85,11 +85,11 @@ module _
 
   right-ideal-Ring-Large-Preorder :
     Large-Preorder (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3)
-  type-Large-Preorder right-ideal-Ring-Large-Preorder l = {!!}
+  right-ideal-Ring-Large-Preorder = {!!}
 
   right-ideal-Ring-Large-Poset :
     Large-Poset (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3)
-  large-preorder-Large-Poset right-ideal-Ring-Large-Poset = {!!}
+  right-ideal-Ring-Large-Poset = {!!}
 ```
 
 ### The similarity relation on right ideals in a ring
@@ -133,12 +133,12 @@ module _
     {l1 l2 : Level} (I : right-ideal-Ring l1 R) (J : right-ideal-Ring l2 R) →
     leq-right-ideal-Ring R I J →
     subset-right-ideal-Ring R I ⊆ subset-right-ideal-Ring R J
-  preserves-order-subset-right-ideal-Ring I J H = {!!}
+  preserves-order-subset-right-ideal-Ring = {!!}
 
   subset-right-ideal-hom-large-poset-Ring :
     hom-Large-Poset
       ( λ l → l)
       ( right-ideal-Ring-Large-Poset R)
       ( powerset-Large-Poset (type-Ring R))
-  map-hom-Large-Preorder subset-right-ideal-hom-large-poset-Ring = {!!}
+  subset-right-ideal-hom-large-poset-Ring = {!!}
 ```

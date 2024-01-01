@@ -67,7 +67,7 @@ module _
 ```agda
 Precategory :
   (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Precategory l1 l2 = {!!}
+Precategory = {!!}
 
 module _
   {l1 l2 : Level} (C : Precategory l1 l2)
@@ -84,7 +84,7 @@ module _
 
   is-set-hom-Precategory :
     (x y : obj-Precategory) → is-set (hom-Precategory x y)
-  is-set-hom-Precategory x y = {!!}
+  is-set-hom-Precategory = {!!}
 
   associative-composition-operation-Precategory :
     associative-composition-operation-binary-family-Set hom-set-Precategory
@@ -102,7 +102,7 @@ module _
     hom-Precategory x y →
     hom-Precategory y z →
     hom-Precategory x z
-  comp-hom-Precategory' f g = {!!}
+  comp-hom-Precategory' = {!!}
 
   associative-comp-hom-Precategory :
     {x y z w : obj-Precategory}
@@ -169,12 +169,12 @@ module _
 ```agda
 total-hom-Precategory :
   {l1 l2 : Level} (C : Precategory l1 l2) → UU (l1 ⊔ l2)
-total-hom-Precategory C = {!!}
+total-hom-Precategory = {!!}
 
 obj-total-hom-Precategory :
   {l1 l2 : Level} (C : Precategory l1 l2) →
   total-hom-Precategory C → obj-Precategory C × obj-Precategory C
-obj-total-hom-Precategory C = {!!}
+obj-total-hom-Precategory = {!!}
 ```
 
 ### Equalities induce morphisms
@@ -186,11 +186,11 @@ module _
 
   hom-eq-Precategory :
     (x y : obj-Precategory C) → x ＝ y → hom-Precategory C x y
-  hom-eq-Precategory x .x refl = {!!}
+  hom-eq-Precategory = {!!}
 
   hom-inv-eq-Precategory :
     (x y : obj-Precategory C) → x ＝ y → hom-Precategory C y x
-  hom-inv-eq-Precategory x y = {!!}
+  hom-inv-eq-Precategory = {!!}
 ```
 
 ### Pre- and postcomposition by a morphism

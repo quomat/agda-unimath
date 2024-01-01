@@ -59,11 +59,11 @@ module _
 
   left-unit-law-mul-prod-Monoid :
     (x : type-prod-Monoid) → Id (mul-prod-Monoid unit-prod-Monoid x) x
-  left-unit-law-mul-prod-Monoid (pair x y) = {!!}
+  left-unit-law-mul-prod-Monoid = {!!}
 
   right-unit-law-mul-prod-Monoid :
     (x : type-prod-Monoid) → Id (mul-prod-Monoid x unit-prod-Monoid) x
-  right-unit-law-mul-prod-Monoid (pair x y) = {!!}
+  right-unit-law-mul-prod-Monoid = {!!}
 
   prod-Monoid : Monoid (l1 ⊔ l2)
   pr1 prod-Monoid = {!!}

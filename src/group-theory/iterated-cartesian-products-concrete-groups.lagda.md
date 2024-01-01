@@ -53,8 +53,7 @@ defined recursively on `Fin n`.
 iterated-product-Concrete-Group :
   {l : Level} (n : ℕ) (G : Fin n → Concrete-Group l) →
   Concrete-Group l
-iterated-product-Concrete-Group zero-ℕ G = {!!}
-iterated-product-Concrete-Group (succ-ℕ n) G = {!!}
+iterated-product-Concrete-Group = {!!}
 
 module _
   {l : Level} (n : ℕ) (G : Fin n → Concrete-Group l)
@@ -101,14 +100,14 @@ module _
   abstract
     is-1-type-classifying-type-iterated-product-Concrete-Group :
       is-trunc one-𝕋 classifying-type-iterated-product-Concrete-Group
-    is-1-type-classifying-type-iterated-product-Concrete-Group X Y = {!!}
+    is-1-type-classifying-type-iterated-product-Concrete-Group = {!!}
 
   classifying-1-type-iterated-product-Concrete-Group : Truncated-Type l one-𝕋
   classifying-1-type-iterated-product-Concrete-Group = {!!}
 
   Id-iterated-product-BG-Set :
     (X Y : classifying-type-iterated-product-Concrete-Group) → Set l
-  Id-iterated-product-BG-Set X Y = {!!}
+  Id-iterated-product-BG-Set = {!!}
 
   unit-iterated-product-Concrete-Group : type-iterated-product-Concrete-Group
   unit-iterated-product-Concrete-Group = {!!}
@@ -121,7 +120,7 @@ module _
   mul-iterated-product-Concrete-Group' :
     (x y : type-iterated-product-Concrete-Group) →
     type-iterated-product-Concrete-Group
-  mul-iterated-product-Concrete-Group' x y = {!!}
+  mul-iterated-product-Concrete-Group' = {!!}
 
   associative-mul-iterated-product-Concrete-Group :
     (x y z : type-iterated-product-Concrete-Group) →
@@ -196,6 +195,5 @@ equiv-type-Concrete-group-iterated-product-Concrete-Group :
   {l : Level} (n : ℕ) (G : Fin n → Concrete-Group l) →
   ( type-iterated-product-Concrete-Group n G) ≃
   ( iterated-product-Fin-recursive n (type-Concrete-Group ∘ G))
-equiv-type-Concrete-group-iterated-product-Concrete-Group zero-ℕ G = {!!}
-equiv-type-Concrete-group-iterated-product-Concrete-Group (succ-ℕ n) G = {!!}
+equiv-type-Concrete-group-iterated-product-Concrete-Group = {!!}
 ```

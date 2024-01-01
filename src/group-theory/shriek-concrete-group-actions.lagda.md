@@ -34,5 +34,5 @@ module _
   left-adjoint-subst-action-Concrete-Group :
     {l : Level} → (action-Concrete-Group l G) →
     (action-Concrete-Group (l1 ⊔ l2 ⊔ l) H)
-  left-adjoint-subst-action-Concrete-Group X y = {!!}
+  left-adjoint-subst-action-Concrete-Group = {!!}
 ```

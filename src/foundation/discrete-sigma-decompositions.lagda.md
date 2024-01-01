@@ -35,7 +35,7 @@ module _
 
   discrete-Σ-Decomposition :
     Σ-Decomposition l1 l2 A
-  pr1 discrete-Σ-Decomposition = {!!}
+  discrete-Σ-Decomposition = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1}
@@ -56,7 +56,7 @@ is-discrete-discrete-Σ-Decomposition = {!!}
 
 type-discrete-Σ-Decomposition :
   {l1 l2 l3 : Level} {A : UU l1} → UU (l1 ⊔ lsuc l2 ⊔ lsuc l3)
-type-discrete-Σ-Decomposition {l1} {l2} {l3} {A} = {!!}
+type-discrete-Σ-Decomposition = {!!}
 ```
 
 ## Propositions
@@ -70,11 +70,10 @@ module _
 
   equiv-discrete-is-discrete-Σ-Decomposition :
     equiv-Σ-Decomposition D (discrete-Σ-Decomposition l4 A)
-  pr1 equiv-discrete-is-discrete-Σ-Decomposition = {!!}
+  equiv-discrete-is-discrete-Σ-Decomposition = {!!}
 
 is-contr-type-discrete-Σ-Decomposition :
   {l1 l2 : Level} {A : UU l1} →
   is-contr (type-discrete-Σ-Decomposition {l1} {l1} {l2} {A})
-pr1 ( is-contr-type-discrete-Σ-Decomposition {l1} {l2} {A}) = {!!}
-pr2 ( is-contr-type-discrete-Σ-Decomposition {l1} {l2} {A}) = {!!}
+is-contr-type-discrete-Σ-Decomposition = {!!}
 ```

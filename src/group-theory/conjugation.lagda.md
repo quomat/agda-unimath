@@ -95,128 +95,128 @@ module _
 
   conjugation-unit-Group :
     (x : type-Group G) → conjugation-Group G x (unit-Group G) ＝ unit-Group G
-  conjugation-unit-Group x = {!!}
+  conjugation-unit-Group = {!!}
 
   compute-conjugation-unit-Group :
     conjugation-Group G (unit-Group G) ~ id
-  compute-conjugation-unit-Group x = {!!}
+  compute-conjugation-unit-Group = {!!}
 
   compute-conjugation-mul-Group :
     (x y : type-Group G) →
     conjugation-Group G (mul-Group G x y) ~
     (conjugation-Group G x ∘ conjugation-Group G y)
-  compute-conjugation-mul-Group x y z = {!!}
+  compute-conjugation-mul-Group = {!!}
 
   compute-conjugation-mul-Group' :
     (x y : type-Group G) →
     conjugation-Group' G (mul-Group G x y) ~
     ( conjugation-Group' G y ∘ conjugation-Group' G x)
-  compute-conjugation-mul-Group' x y z = {!!}
+  compute-conjugation-mul-Group' = {!!}
 
   htpy-conjugation-Group :
     (x : type-Group G) →
     conjugation-Group' G x ~ conjugation-Group G (inv-Group G x)
-  htpy-conjugation-Group x y = {!!}
+  htpy-conjugation-Group = {!!}
 
   htpy-conjugation-Group' :
     (x : type-Group G) →
     conjugation-Group G x ~ conjugation-Group' G (inv-Group G x)
-  htpy-conjugation-Group' x y = {!!}
+  htpy-conjugation-Group' = {!!}
 
   right-conjugation-law-mul-Group :
     (x y : type-Group G) →
     mul-Group G (inv-Group G x) (conjugation-Group G x y) ＝
     right-div-Group G y x
-  right-conjugation-law-mul-Group x y = {!!}
+  right-conjugation-law-mul-Group = {!!}
 
   right-conjugation-law-mul-Group' :
     (x y : type-Group G) →
     mul-Group G x (conjugation-Group' G x y) ＝
     mul-Group G y x
-  right-conjugation-law-mul-Group' x y = {!!}
+  right-conjugation-law-mul-Group' = {!!}
 
   left-conjugation-law-mul-Group :
     (x y : type-Group G) →
     mul-Group G (conjugation-Group G x y) x ＝ mul-Group G x y
-  left-conjugation-law-mul-Group x y = {!!}
+  left-conjugation-law-mul-Group = {!!}
 
   left-conjugation-law-mul-Group' :
     (x y : type-Group G) →
     mul-Group G (conjugation-Group' G x y) (inv-Group G x) ＝
     left-div-Group G x y
-  left-conjugation-law-mul-Group' x y = {!!}
+  left-conjugation-law-mul-Group' = {!!}
 
   distributive-conjugation-mul-Group :
     (x y z : type-Group G) →
     conjugation-Group G x (mul-Group G y z) ＝
     mul-Group G (conjugation-Group G x y) (conjugation-Group G x z)
-  distributive-conjugation-mul-Group x y z = {!!}
+  distributive-conjugation-mul-Group = {!!}
 
   conjugation-inv-Group :
     (x y : type-Group G) →
     conjugation-Group G x (inv-Group G y) ＝
     inv-Group G (conjugation-Group G x y)
-  conjugation-inv-Group x y = {!!}
+  conjugation-inv-Group = {!!}
 
   conjugation-inv-Group' :
     (x y : type-Group G) →
     conjugation-Group' G x (inv-Group G y) ＝
     inv-Group G (conjugation-Group' G x y)
-  conjugation-inv-Group' x y = {!!}
+  conjugation-inv-Group' = {!!}
 
   conjugation-left-div-Group :
     (x y : type-Group G) →
     conjugation-Group G x (left-div-Group G x y) ＝
     right-div-Group G y x
-  conjugation-left-div-Group x y = {!!}
+  conjugation-left-div-Group = {!!}
 
   conjugation-left-div-Group' :
     (x y : type-Group G) →
     conjugation-Group G y (left-div-Group G x y) ＝
     right-div-Group G y x
-  conjugation-left-div-Group' x y = {!!}
+  conjugation-left-div-Group' = {!!}
 
   conjugation-right-div-Group :
     (x y : type-Group G) →
     conjugation-Group' G y (right-div-Group G x y) ＝
     left-div-Group G y x
-  conjugation-right-div-Group x y = {!!}
+  conjugation-right-div-Group = {!!}
 
   conjugation-right-div-Group' :
     (x y : type-Group G) →
     conjugation-Group' G x (right-div-Group G x y) ＝
     left-div-Group G y x
-  conjugation-right-div-Group' x y = {!!}
+  conjugation-right-div-Group' = {!!}
 
   is-section-conjugation-inv-Group :
     (x : type-Group G) →
     ( conjugation-Group G x ∘ conjugation-Group G (inv-Group G x)) ~ id
-  is-section-conjugation-inv-Group x y = {!!}
+  is-section-conjugation-inv-Group = {!!}
 
   is-retraction-conjugation-inv-Group :
     (x : type-Group G) →
     ( conjugation-Group G (inv-Group G x) ∘ conjugation-Group G x) ~ id
-  is-retraction-conjugation-inv-Group x y = {!!}
+  is-retraction-conjugation-inv-Group = {!!}
 
   transpose-eq-conjugation-Group :
     {x y z : type-Group G} →
     y ＝ conjugation-Group G (inv-Group G x) z → conjugation-Group G x y ＝ z
-  transpose-eq-conjugation-Group {x} {y} {z} = {!!}
+  transpose-eq-conjugation-Group = {!!}
 
   transpose-eq-conjugation-Group' :
     {x y z : type-Group G} →
     conjugation-Group G (inv-Group G x) y ＝ z → y ＝ conjugation-Group G x z
-  transpose-eq-conjugation-Group' {x} {y} {z} = {!!}
+  transpose-eq-conjugation-Group' = {!!}
 
   transpose-eq-conjugation-inv-Group :
     {x y z : type-Group G} →
     y ＝ conjugation-Group G x z → conjugation-Group G (inv-Group G x) y ＝ z
-  transpose-eq-conjugation-inv-Group {x} {y} {z} = {!!}
+  transpose-eq-conjugation-inv-Group = {!!}
 
   transpose-eq-conjugation-inv-Group' :
     {x y z : type-Group G} →
     conjugation-Group G x y ＝ z → y ＝ conjugation-Group G (inv-Group G x) z
-  transpose-eq-conjugation-inv-Group' {x} {y} {z} = {!!}
+  transpose-eq-conjugation-inv-Group' = {!!}
 ```
 
 ### Conjugation by `x` is an automorphism of `G`
@@ -239,7 +239,7 @@ module _
     (k : ℤ) (g x : type-Group G) →
     conjugation-Group G g (integer-power-Group G k x) ＝
     integer-power-Group G k (conjugation-Group G g x)
-  preserves-integer-powers-conjugation-Group k g = {!!}
+  preserves-integer-powers-conjugation-Group = {!!}
 ```
 
 ### Any group homomorphism preserves conjugation

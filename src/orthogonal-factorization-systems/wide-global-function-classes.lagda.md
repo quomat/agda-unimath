@@ -50,12 +50,12 @@ open wide-global-function-class public
 function-class-wide-global-function-class :
   {β : Level → Level → Level} (P : wide-global-function-class β) →
   {l1 l2 : Level} → function-class l1 l2 (β l1 l2)
-function-class-wide-global-function-class P = {!!}
+function-class-wide-global-function-class = {!!}
 
 type-wide-global-function-class :
   {β : Level → Level → Level} (P : wide-global-function-class β)
   {l1 l2 : Level} (A : UU l1) (B : UU l2) → UU (β l1 l2 ⊔ l1 ⊔ l2)
-type-wide-global-function-class P = {!!}
+type-wide-global-function-class = {!!}
 
 module _
   {β : Level → Level → Level} (P : wide-global-function-class β)

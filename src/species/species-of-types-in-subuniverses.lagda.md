@@ -35,12 +35,12 @@ subuniverse `Q`.
 species-subuniverse :
   {l1 l2 l3 l4 : Level} → subuniverse l1 l2 → subuniverse l3 l4 →
   UU (lsuc l1 ⊔ l2 ⊔ lsuc l3 ⊔ l4)
-species-subuniverse P Q = {!!}
+species-subuniverse = {!!}
 
 species-subuniverse-domain :
   {l1 l2 : Level} (l3 : Level) → subuniverse l1 l2 →
   UU (lsuc l1 ⊔ l2 ⊔ lsuc l3)
-species-subuniverse-domain l3 P = {!!}
+species-subuniverse-domain = {!!}
 ```
 
 ### The predicate that a species preserves cartesian products
@@ -51,7 +51,7 @@ preserves-product-species-subuniverse-domain :
   (C : is-closed-under-products-subuniverse P)
   (S : species-subuniverse-domain l3 P) →
   UU (lsuc l1 ⊔ l2 ⊔ l3)
-preserves-product-species-subuniverse-domain P C S = {!!}
+preserves-product-species-subuniverse-domain = {!!}
 ```
 
 ### Transport along equivalences of in species of types in subuniverses
@@ -66,7 +66,7 @@ module _
     (X Y : type-subuniverse P) →
     inclusion-subuniverse P X ≃ inclusion-subuniverse P Y →
     inclusion-subuniverse Q (F X) → inclusion-subuniverse Q (F Y)
-  tr-species-subuniverse X Y e = {!!}
+  tr-species-subuniverse = {!!}
 ```
 
 ### Σ-extension to species of types in subuniverses
@@ -79,13 +79,13 @@ module _
 
   Σ-extension-species-subuniverse :
     species-types l1 (l2 ⊔ l3)
-  Σ-extension-species-subuniverse X = {!!}
+  Σ-extension-species-subuniverse = {!!}
 
   equiv-Σ-extension-species-subuniverse :
     ( X : type-subuniverse P) →
     inclusion-subuniverse Q (F X) ≃
     Σ-extension-species-subuniverse (inclusion-subuniverse P X)
-  equiv-Σ-extension-species-subuniverse X = {!!}
+  equiv-Σ-extension-species-subuniverse = {!!}
 ```
 
 ### Σ-extension to species with domain in a subuniverse
@@ -98,13 +98,13 @@ module _
 
   Σ-extension-species-subuniverse-domain :
     species-types l1 (l2 ⊔ l3)
-  Σ-extension-species-subuniverse-domain X = {!!}
+  Σ-extension-species-subuniverse-domain = {!!}
 
   equiv-Σ-extension-species-subuniverse-domain :
     ( X : type-subuniverse P) →
     F X ≃
     Σ-extension-species-subuniverse-domain (inclusion-subuniverse P X)
-  equiv-Σ-extension-species-subuniverse-domain X = {!!}
+  equiv-Σ-extension-species-subuniverse-domain = {!!}
 ```
 
 ### Π-extension to species of types in subuniverses
@@ -117,5 +117,5 @@ module _
 
   Π-extension-species-subuniverse :
     species-types l1 (l2 ⊔ l3)
-  Π-extension-species-subuniverse X = {!!}
+  Π-extension-species-subuniverse = {!!}
 ```

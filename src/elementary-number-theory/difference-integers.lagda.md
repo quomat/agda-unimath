@@ -49,7 +49,7 @@ is-zero-diff-ℤ' = {!!}
 
 is-zero-diff-ℤ :
   {x y : ℤ} → x ＝ y → is-zero-ℤ (x -ℤ y)
-is-zero-diff-ℤ {x} {.x} refl = {!!}
+is-zero-diff-ℤ = {!!}
 
 left-zero-law-diff-ℤ : (x : ℤ) → zero-ℤ -ℤ x ＝ neg-ℤ x
 left-zero-law-diff-ℤ x = {!!}
@@ -59,27 +59,27 @@ right-zero-law-diff-ℤ x = {!!}
 
 left-successor-law-diff-ℤ :
   (x y : ℤ) → (succ-ℤ x) -ℤ y ＝ succ-ℤ (x -ℤ y)
-left-successor-law-diff-ℤ x y = {!!}
+left-successor-law-diff-ℤ = {!!}
 
 right-successor-law-diff-ℤ :
   (x y : ℤ) → x -ℤ (succ-ℤ y) ＝ pred-ℤ (x -ℤ y)
-right-successor-law-diff-ℤ x y = {!!}
+right-successor-law-diff-ℤ = {!!}
 
 left-predecessor-law-diff-ℤ :
   (x y : ℤ) → (pred-ℤ x) -ℤ y ＝ pred-ℤ (x -ℤ y)
-left-predecessor-law-diff-ℤ x y = {!!}
+left-predecessor-law-diff-ℤ = {!!}
 
 right-predecessor-law-diff-ℤ :
   (x y : ℤ) → x -ℤ (pred-ℤ y) ＝ succ-ℤ (x -ℤ y)
-right-predecessor-law-diff-ℤ x y = {!!}
+right-predecessor-law-diff-ℤ = {!!}
 
 triangle-diff-ℤ :
   (x y z : ℤ) → (x -ℤ y) +ℤ (y -ℤ z) ＝ x -ℤ z
-triangle-diff-ℤ x y z = {!!}
+triangle-diff-ℤ = {!!}
 
 distributive-neg-diff-ℤ :
   (x y : ℤ) → neg-ℤ (x -ℤ y) ＝ y -ℤ x
-distributive-neg-diff-ℤ x y = {!!}
+distributive-neg-diff-ℤ = {!!}
 
 interchange-law-add-diff-ℤ : interchange-law add-ℤ diff-ℤ
 interchange-law-add-diff-ℤ x y u v = {!!}
@@ -89,11 +89,11 @@ interchange-law-diff-add-ℤ x y u v = {!!}
 
 left-translation-diff-ℤ :
   (x y z : ℤ) → (z +ℤ x) -ℤ (z +ℤ y) ＝ x -ℤ y
-left-translation-diff-ℤ x y z = {!!}
+left-translation-diff-ℤ = {!!}
 
 right-translation-diff-ℤ :
   (x y z : ℤ) → (x +ℤ z) -ℤ (y +ℤ z) ＝ x -ℤ y
-right-translation-diff-ℤ x y z = {!!}
+right-translation-diff-ℤ = {!!}
 ```
 
 ```agda

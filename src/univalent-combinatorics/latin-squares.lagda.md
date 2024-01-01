@@ -58,7 +58,7 @@ module _
 
   mul-Latin-Square' :
     column-Latin-Square → row-Latin-Square → symbol-Latin-Square
-  mul-Latin-Square' x y = {!!}
+  mul-Latin-Square' = {!!}
 
   is-binary-equiv-mul-Latin-Square :
     is-binary-equiv mul-Latin-Square

@@ -56,12 +56,12 @@ module _
 htpy-postcomp :
   {l1 l2 l3 : Level} {X : UU l1} {Y : UU l2} (A : UU l3) →
   {f g : X → Y} → (f ~ g) → postcomp A f ~ postcomp A g
-htpy-postcomp A H h = {!!}
+htpy-postcomp = {!!}
 
 compute-htpy-postcomp-refl-htpy :
   {l1 l2 l3 : Level} (A : UU l1) {B : UU l2} {C : UU l3} (f : B → C) →
   (htpy-postcomp A (refl-htpy' f)) ~ refl-htpy
-compute-htpy-postcomp-refl-htpy A f h = {!!}
+compute-htpy-postcomp-refl-htpy = {!!}
 ```
 
 ### The fibers of `postcomp`
@@ -71,7 +71,7 @@ compute-fiber-postcomp :
   {l1 l2 l3 : Level} {X : UU l1} {Y : UU l2} (A : UU l3) →
   (f : X → Y) (h : A → Y) →
   ((x : A) → fiber f (h x)) ≃ fiber (postcomp A f) h
-compute-fiber-postcomp A f h = {!!}
+compute-fiber-postcomp = {!!}
 ```
 
 ### Postcomposition and equivalences
@@ -115,18 +115,17 @@ abstract
   is-equiv-postcomp-is-equiv :
     {l1 l2 : Level} {X : UU l1} {Y : UU l2} (f : X → Y) → is-equiv f →
     {l3 : Level} (A : UU l3) → is-equiv (postcomp A f)
-  is-equiv-postcomp-is-equiv {X = X} {Y = Y} f is-equiv-f A = {!!}
+  is-equiv-postcomp-is-equiv = {!!}
 
   is-equiv-postcomp-equiv :
     {l1 l2 : Level} {X : UU l1} {Y : UU l2} (f : X ≃ Y) →
     {l3 : Level} (A : UU l3) → is-equiv (postcomp A (map-equiv f))
-  is-equiv-postcomp-equiv f = {!!}
+  is-equiv-postcomp-equiv = {!!}
 
 equiv-postcomp :
   {l1 l2 l3 : Level} {X : UU l1} {Y : UU l2} (A : UU l3) →
   (X ≃ Y) → (A → X) ≃ (A → Y)
-pr1 (equiv-postcomp A e) = {!!}
-pr2 (equiv-postcomp A e) = {!!}
+equiv-postcomp = {!!}
 ```
 
 ### Two maps being homotopic is equivalent to them being homotopic after pre- or postcomposition by an equivalence
@@ -138,5 +137,5 @@ module _
 
   equiv-htpy-postcomp-htpy :
     (e : B ≃ C) (f g : A → B) → (f ~ g) ≃ (map-equiv e ∘ f ~ map-equiv e ∘ g)
-  equiv-htpy-postcomp-htpy e f g = {!!}
+  equiv-htpy-postcomp-htpy = {!!}
 ```

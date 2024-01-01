@@ -38,31 +38,31 @@ module _
 
   binary-htpy :
     (f g : (x : A) (y : B x) → C x y) → UU (l1 ⊔ l2 ⊔ l3)
-  binary-htpy f g = {!!}
+  binary-htpy = {!!}
 
   refl-binary-htpy : (f : (x : A) (y : B x) → C x y) → binary-htpy f f
   refl-binary-htpy f x = {!!}
 
   binary-htpy-eq :
     (f g : (x : A) (y : B x) → C x y) → (f ＝ g) → binary-htpy f g
-  binary-htpy-eq f .f refl = {!!}
+  binary-htpy-eq = {!!}
 
   is-torsorial-binary-htpy :
     (f : (x : A) (y : B x) → C x y) →
     is-torsorial (binary-htpy f)
-  is-torsorial-binary-htpy f = {!!}
+  is-torsorial-binary-htpy = {!!}
 
   is-equiv-binary-htpy-eq :
     (f g : (x : A) (y : B x) → C x y) → is-equiv (binary-htpy-eq f g)
-  is-equiv-binary-htpy-eq f = {!!}
+  is-equiv-binary-htpy-eq = {!!}
 
   extensionality-binary-Π :
     (f g : (x : A) (y : B x) → C x y) → (f ＝ g) ≃ binary-htpy f g
-  pr1 (extensionality-binary-Π f g) = {!!}
+  extensionality-binary-Π = {!!}
 
   eq-binary-htpy :
     (f g : (x : A) (y : B x) → C x y) → binary-htpy f g → f ＝ g
-  eq-binary-htpy f g = {!!}
+  eq-binary-htpy = {!!}
 ```
 
 ## Properties
@@ -76,17 +76,17 @@ module _
 
   binary-htpy-htpy :
     (f g : (x : A) (y : B x) → C x y) → (f ~ g) → binary-htpy f g
-  binary-htpy-htpy f g = {!!}
+  binary-htpy-htpy = {!!}
 
   equiv-binary-htpy-htpy :
     (f g : (x : A) (y : B x) → C x y) → (f ~ g) ≃ binary-htpy f g
-  equiv-binary-htpy-htpy f g = {!!}
+  equiv-binary-htpy-htpy = {!!}
 
   htpy-binary-htpy :
     (f g : (x : A) (y : B x) → C x y) → binary-htpy f g → f ~ g
-  htpy-binary-htpy f g = {!!}
+  htpy-binary-htpy = {!!}
 
   equiv-htpy-binary-htpy :
     (f g : (x : A) (y : B x) → C x y) → binary-htpy f g ≃ (f ~ g)
-  equiv-htpy-binary-htpy f g = {!!}
+  equiv-htpy-binary-htpy = {!!}
 ```

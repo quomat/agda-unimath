@@ -41,11 +41,11 @@ module _
 
   is-section-map-inv-Σ-bool-coprod :
     ( map-Σ-bool-coprod ∘ map-inv-Σ-bool-coprod) ~ id
-  is-section-map-inv-Σ-bool-coprod (inl a) = {!!}
+  is-section-map-inv-Σ-bool-coprod = {!!}
 
   is-retraction-map-inv-Σ-bool-coprod :
     ( map-inv-Σ-bool-coprod ∘ map-Σ-bool-coprod) ~ id
-  is-retraction-map-inv-Σ-bool-coprod (pair true a) = {!!}
+  is-retraction-map-inv-Σ-bool-coprod = {!!}
 
   is-equiv-map-Σ-bool-coprod : is-equiv map-Σ-bool-coprod
   is-equiv-map-Σ-bool-coprod = {!!}

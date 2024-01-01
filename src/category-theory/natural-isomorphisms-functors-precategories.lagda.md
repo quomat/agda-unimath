@@ -190,7 +190,7 @@ module _
 
   id-natural-isomorphism-Precategory :
     (F : functor-Precategory C D) → natural-isomorphism-Precategory C D F F
-  id-natural-isomorphism-Precategory F = {!!}
+  id-natural-isomorphism-Precategory = {!!}
 ```
 
 ### Equalities induce natural isomorphisms
@@ -207,7 +207,7 @@ natural-isomorphism-eq-Precategory :
   (D : Precategory l3 l4)
   (F G : functor-Precategory C D) →
   F ＝ G → natural-isomorphism-Precategory C D F G
-natural-isomorphism-eq-Precategory C D F .F refl = {!!}
+natural-isomorphism-eq-Precategory = {!!}
 ```
 
 ## Propositions
@@ -257,7 +257,7 @@ module _
     ( natural-transformation-natural-isomorphism-Precategory C D F G f ＝
       natural-transformation-natural-isomorphism-Precategory C D F G g) →
     f ＝ g
-  eq-eq-natural-transformation-natural-isomorphism-Precategory f g = {!!}
+  eq-eq-natural-transformation-natural-isomorphism-Precategory = {!!}
 
   eq-htpy-hom-family-natural-isomorphism-Precategory :
         (f g : natural-isomorphism-Precategory C D F G) →
@@ -328,7 +328,7 @@ module _
     (is-iso-f : is-natural-isomorphism-Precategory C D F G f) →
     is-natural-isomorphism-Precategory C D G F
       ( natural-transformation-inv-is-natural-isomorphism-Precategory is-iso-f)
-  is-natural-isomorphism-inv-is-natural-isomorphism-Precategory is-iso-f = {!!}
+  is-natural-isomorphism-inv-is-natural-isomorphism-Precategory = {!!}
 ```
 
 ### Inverses of natural isomorphisms
@@ -367,7 +367,7 @@ module _
 
   inv-natural-isomorphism-Precategory :
     natural-isomorphism-Precategory C D G F
-  pr1 inv-natural-isomorphism-Precategory = {!!}
+  inv-natural-isomorphism-Precategory = {!!}
 ```
 
 ### Natural isomorphisms are closed under composition
@@ -549,5 +549,5 @@ module _
     comp-natural-isomorphism-Precategory C D F G H
       ( natural-isomorphism-eq-Precategory C D G H q)
       ( natural-isomorphism-eq-Precategory C D F G p)
-  preserves-concat-natural-isomorphism-eq-Precategory refl q = {!!}
+  preserves-concat-natural-isomorphism-eq-Precategory = {!!}
 ```

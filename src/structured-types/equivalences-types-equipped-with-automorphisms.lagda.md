@@ -111,7 +111,7 @@ comp-equiv-Type-With-Automorphism :
   equiv-Type-With-Automorphism Y Z →
   equiv-Type-With-Automorphism X Y →
   equiv-Type-With-Automorphism X Z
-comp-equiv-Type-With-Automorphism X Y Z = {!!}
+comp-equiv-Type-With-Automorphism = {!!}
 ```
 
 ### Inverses of equivalences of types equipped with automorphisms
@@ -122,7 +122,7 @@ inv-equiv-Type-With-Automorphism :
   (X : Type-With-Automorphism l1)
   (Y : Type-With-Automorphism l2) →
   equiv-Type-With-Automorphism X Y → equiv-Type-With-Automorphism Y X
-inv-equiv-Type-With-Automorphism X Y = {!!}
+inv-equiv-Type-With-Automorphism = {!!}
 ```
 
 ### Homotopies of equivalences of types equipped with automorphisms
@@ -205,7 +205,7 @@ module _
   equiv-eq-Type-With-Automorphism :
     ( Y : Type-With-Automorphism l1) →
     X ＝ Y → equiv-Type-With-Automorphism X Y
-  equiv-eq-Type-With-Automorphism .X refl = {!!}
+  equiv-eq-Type-With-Automorphism = {!!}
 
   is-torsorial-equiv-Type-With-Automorphism :
     is-torsorial (equiv-Type-With-Automorphism X)
@@ -219,11 +219,11 @@ module _
   extensionality-Type-With-Automorphism :
     (Y : Type-With-Automorphism l1) →
     (X ＝ Y) ≃ equiv-Type-With-Automorphism X Y
-  pr1 (extensionality-Type-With-Automorphism Y) = {!!}
+  extensionality-Type-With-Automorphism = {!!}
 
   eq-equiv-Type-With-Automorphism :
     (Y : Type-With-Automorphism l1) → equiv-Type-With-Automorphism X Y → X ＝ Y
-  eq-equiv-Type-With-Automorphism Y = {!!}
+  eq-equiv-Type-With-Automorphism = {!!}
 
 module _
   {l : Level}
@@ -238,5 +238,5 @@ module _
     ( comp-equiv-Type-With-Automorphism X Y Z
       ( equiv-eq-Type-With-Automorphism Y Z q)
       ( equiv-eq-Type-With-Automorphism X Y p))
-  preserves-concat-equiv-eq-Type-With-Automorphism refl q = {!!}
+  preserves-concat-equiv-eq-Type-With-Automorphism = {!!}
 ```

@@ -57,15 +57,11 @@ pr2 ℤ-Commutative-Ring = {!!}
 ```agda
 is-mul-integer-multiple-ℤ-Ring :
   (k l : ℤ) → integer-multiple-Ring ℤ-Ring k l ＝ mul-ℤ k l
-is-mul-integer-multiple-ℤ-Ring (inl zero-ℕ) l = {!!}
-is-mul-integer-multiple-ℤ-Ring (inl (succ-ℕ k)) l = {!!}
-is-mul-integer-multiple-ℤ-Ring (inr (inl _)) l = {!!}
-is-mul-integer-multiple-ℤ-Ring (inr (inr zero-ℕ)) l = {!!}
-is-mul-integer-multiple-ℤ-Ring (inr (inr (succ-ℕ k))) l = {!!}
+is-mul-integer-multiple-ℤ-Ring = {!!}
 
 is-integer-multiple-ℤ :
   (k : ℤ) → integer-multiple-Ring ℤ-Ring k one-ℤ ＝ k
-is-integer-multiple-ℤ k = {!!}
+is-integer-multiple-ℤ = {!!}
 ```
 
 ### The ring of integers is the initial ring
@@ -87,7 +83,7 @@ module _
     (k l : ℤ) →
     map-initial-hom-Ring (add-ℤ k l) ＝
     add-Ring R (map-initial-hom-Ring k) (map-initial-hom-Ring l)
-  preserves-add-initial-hom-Ring k l = {!!}
+  preserves-add-initial-hom-Ring = {!!}
 
   preserves-one-initial-hom-Ring : map-initial-hom-Ring one-ℤ ＝ one-Ring R
   preserves-one-initial-hom-Ring = {!!}
@@ -96,7 +92,7 @@ module _
     (k l : ℤ) →
     map-initial-hom-Ring (mul-ℤ k l) ＝
     mul-Ring R (map-initial-hom-Ring k) (map-initial-hom-Ring l)
-  preserves-mul-initial-hom-Ring k l = {!!}
+  preserves-mul-initial-hom-Ring = {!!}
 
   initial-hom-Ring : hom-Ring ℤ-Ring R
   pr1 initial-hom-Ring = {!!}
@@ -111,11 +107,11 @@ module _
 
   htpy-initial-hom-Ring :
     (f : hom-Ring ℤ-Ring R) → htpy-hom-Ring ℤ-Ring R (initial-hom-Ring R) f
-  htpy-initial-hom-Ring f k = {!!}
+  htpy-initial-hom-Ring = {!!}
 
   contraction-initial-hom-Ring :
     (f : hom-Ring ℤ-Ring R) → initial-hom-Ring R ＝ f
-  contraction-initial-hom-Ring f = {!!}
+  contraction-initial-hom-Ring = {!!}
 ```
 
 #### The ring of integers is the initial ring
@@ -131,13 +127,9 @@ pr2 (is-initial-ℤ-Ring S) f = {!!}
 ```agda
 integer-multiple-one-ℤ-Ring :
   (k : ℤ) → integer-multiple-Ring ℤ-Ring k one-ℤ ＝ k
-integer-multiple-one-ℤ-Ring (inl zero-ℕ) = {!!}
-integer-multiple-one-ℤ-Ring (inl (succ-ℕ n)) = {!!}
-integer-multiple-one-ℤ-Ring (inr (inl _)) = {!!}
-integer-multiple-one-ℤ-Ring (inr (inr zero-ℕ)) = {!!}
-integer-multiple-one-ℤ-Ring (inr (inr (succ-ℕ n))) = {!!}
+integer-multiple-one-ℤ-Ring = {!!}
 
 compute-integer-multiple-ℤ-Ring :
   (k l : ℤ) → integer-multiple-Ring ℤ-Ring k l ＝ mul-ℤ k l
-compute-integer-multiple-ℤ-Ring k l = {!!}
+compute-integer-multiple-ℤ-Ring = {!!}
 ```

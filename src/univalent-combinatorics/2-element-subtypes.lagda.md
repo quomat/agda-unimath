@@ -61,7 +61,7 @@ module _
 
   is-prop-type-prop-2-Element-Subtype :
     (x : X) → is-prop (type-prop-2-Element-Subtype x)
-  is-prop-type-prop-2-Element-Subtype x = {!!}
+  is-prop-type-prop-2-Element-Subtype = {!!}
 
   type-2-Element-Subtype : UU (l1 ⊔ l2)
   type-2-Element-Subtype = {!!}
@@ -99,7 +99,7 @@ module _
 
   is-prop-type-prop-standard-2-Element-Subtype :
     (z : type-Set X) → is-prop (type-prop-standard-2-Element-Subtype z)
-  is-prop-type-prop-standard-2-Element-Subtype z = {!!}
+  is-prop-type-prop-standard-2-Element-Subtype = {!!}
 
   subtype-standard-2-Element-Subtype : subtype l (type-Set X)
   pr1 (subtype-standard-2-Element-Subtype z) = {!!}
@@ -133,19 +133,19 @@ module _
 
   map-hom-2-Element-Subtype :
     hom-2-Element-Subtype → type-2-Element-Subtype P → type-2-Element-Subtype Q
-  map-hom-2-Element-Subtype f = {!!}
+  map-hom-2-Element-Subtype = {!!}
 
   is-emb-map-hom-2-Element-Subtype :
     (f : hom-2-Element-Subtype) → is-emb (map-hom-2-Element-Subtype f)
-  is-emb-map-hom-2-Element-Subtype f = {!!}
+  is-emb-map-hom-2-Element-Subtype = {!!}
 
   is-surjective-map-hom-2-Element-Subtype :
     (f : hom-2-Element-Subtype) → is-surjective (map-hom-2-Element-Subtype f)
-  is-surjective-map-hom-2-Element-Subtype f (pair x q) = {!!}
+  is-surjective-map-hom-2-Element-Subtype = {!!}
 
   is-equiv-map-hom-2-Element-Subtype :
     (f : hom-2-Element-Subtype) → is-equiv (map-hom-2-Element-Subtype f)
-  is-equiv-map-hom-2-Element-Subtype f = {!!}
+  is-equiv-map-hom-2-Element-Subtype = {!!}
 -}
 ```
 
@@ -175,8 +175,7 @@ module _
 precomp-equiv-2-Element-Subtype :
   {l1 l2 l3 : Level} {X : UU l1} {Y : UU l2} → X ≃ Y →
     2-Element-Subtype l3 X → 2-Element-Subtype l3 Y
-pr1 (precomp-equiv-2-Element-Subtype e (pair P H)) = {!!}
-pr2 (precomp-equiv-2-Element-Subtype e (pair P H)) = {!!}
+precomp-equiv-2-Element-Subtype = {!!}
 
 {-
 module _
@@ -185,13 +184,13 @@ module _
 
   is-injective-map-Fin-two-ℕ :
     (f : Fin 2 → A) → f zero-Fin ≠ f one-Fin → is-injective f
-  is-injective-map-Fin-two-ℕ f H {inl (inr star)} {inl (inr star)} p = {!!}
+  is-injective-map-Fin-two-ℕ = {!!}
 
   is-injective-element-unordered-pair :
     (p : unordered-pair A) →
     ¬ ( (x y : type-unordered-pair p) →
         Id (element-unordered-pair p x) (element-unordered-pair p y)) →
     is-injective (element-unordered-pair p)
-  is-injective-element-unordered-pair (pair X f) H {x} {y} p = {!!}
+  is-injective-element-unordered-pair = {!!}
 -}
 ```

@@ -61,8 +61,7 @@ Fin-mul-ℕ k l = {!!}
 ```agda
 count-prod :
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} → count X → count Y → count (X × Y)
-pr1 (count-prod (pair k e) (pair l f)) = {!!}
-pr2 (count-prod (pair k e) (pair l f)) = {!!}
+count-prod = {!!}
 
 abstract
   number-of-elements-count-prod :
@@ -73,20 +72,20 @@ abstract
         ( count-prod count-A count-B))
       ( ( number-of-elements-count count-A) *ℕ
         ( number-of-elements-count count-B))
-  number-of-elements-count-prod (pair k e) (pair l f) = {!!}
+  number-of-elements-count-prod = {!!}
 
 equiv-left-factor :
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} (y : Y) →
   (Σ (X × Y) (λ t → Id (pr2 t) y)) ≃ X
-equiv-left-factor {l1} {l2} {X} {Y} y = {!!}
+equiv-left-factor = {!!}
 
 count-left-factor :
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} → count (X × Y) → Y → count X
-count-left-factor e y = {!!}
+count-left-factor = {!!}
 
 count-right-factor :
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} → count (X × Y) → X → count Y
-count-right-factor e x = {!!}
+count-right-factor = {!!}
 ```
 
 ```agda
@@ -98,7 +97,7 @@ abstract
       ( ( number-of-elements-count (count-left-factor count-AB b)) *ℕ
         ( number-of-elements-count (count-right-factor count-AB a)))
       ( number-of-elements-count count-AB)
-  product-number-of-elements-prod count-AB a b = {!!}
+  product-number-of-elements-prod = {!!}
 ```
 
 ```agda
@@ -106,7 +105,7 @@ abstract
   is-finite-prod :
     {l1 l2 : Level} {X : UU l1} {Y : UU l2} →
     is-finite X → is-finite Y → is-finite (X × Y)
-  is-finite-prod {X = X} {Y} is-finite-X is-finite-Y = {!!}
+  is-finite-prod = {!!}
 
 prod-𝔽 : {l1 l2 : Level} → 𝔽 l1 → 𝔽 l2 → 𝔽 (l1 ⊔ l2)
 pr1 (prod-𝔽 X Y) = {!!}
@@ -116,17 +115,16 @@ abstract
   is-finite-left-factor :
     {l1 l2 : Level} {X : UU l1} {Y : UU l2} →
     is-finite (X × Y) → Y → is-finite X
-  is-finite-left-factor f y = {!!}
+  is-finite-left-factor = {!!}
 
 abstract
   is-finite-right-factor :
     {l1 l2 : Level} {X : UU l1} {Y : UU l2} →
     is-finite (X × Y) → X → is-finite Y
-  is-finite-right-factor f x = {!!}
+  is-finite-right-factor = {!!}
 
 prod-UU-Fin :
   {l1 l2 : Level} (k l : ℕ) → UU-Fin l1 k → UU-Fin l2 l →
   UU-Fin (l1 ⊔ l2) (k *ℕ l)
-pr1 (prod-UU-Fin k l (pair X H) (pair Y K)) = {!!}
-pr2 (prod-UU-Fin k l (pair X H) (pair Y K)) = {!!}
+prod-UU-Fin = {!!}
 ```

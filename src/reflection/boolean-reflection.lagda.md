@@ -41,11 +41,9 @@ booleanization (inr f) = {!!}
 
 inv-boolean-reflection :
   {l : Level} {A : UU l} (d : is-decidable A) → A → booleanization d ＝ true
-inv-boolean-reflection (inl a) x = {!!}
-inv-boolean-reflection (inr f) x = {!!}
+inv-boolean-reflection = {!!}
 
 boolean-reflection :
   {l : Level} {A : UU l} (d : is-decidable A) → booleanization d ＝ true → A
-boolean-reflection (inl a) p = {!!}
-boolean-reflection (inr f) p = {!!}
+boolean-reflection = {!!}
 ```

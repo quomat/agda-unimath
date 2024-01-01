@@ -40,17 +40,17 @@ module _
     ( map-fiber-cone (f i) h (c i) a) ~
     ( ( map-fiber-cone (ind-Σ f) h cone-descent-Σ (pair i a)) ∘
       ( map-inv-compute-fiber-tot (λ i → (pr1 (c i))) (pair i a)))
-  triangle-descent-Σ i .(pr1 (c i) a') (pair a' refl) = {!!}
+  triangle-descent-Σ = {!!}
 
   abstract
     descent-Σ :
       ((i : I) → is-pullback (f i) h (c i)) →
       is-pullback (ind-Σ f) h cone-descent-Σ
-    descent-Σ is-pb-c = {!!}
+    descent-Σ = {!!}
 
   abstract
     descent-Σ' :
       is-pullback (ind-Σ f) h cone-descent-Σ →
       ((i : I) → is-pullback (f i) h (c i))
-    descent-Σ' is-pb-dsq i = {!!}
+    descent-Σ' = {!!}
 ```

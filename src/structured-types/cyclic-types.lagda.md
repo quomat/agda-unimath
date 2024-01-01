@@ -69,7 +69,7 @@ module _
 ```agda
 Cyclic-Set :
   (l : Level) → UU (lsuc l)
-Cyclic-Set l = {!!}
+Cyclic-Set = {!!}
 
 module _
   {l : Level} (X : Cyclic-Set l)

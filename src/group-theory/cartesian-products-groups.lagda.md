@@ -76,12 +76,12 @@ module _
   left-inverse-law-prod-Group :
     (x : type-prod-Group) →
     Id (mul-prod-Group (inv-prod-Group x) x) unit-prod-Group
-  left-inverse-law-prod-Group (pair x y) = {!!}
+  left-inverse-law-prod-Group = {!!}
 
   right-inverse-law-prod-Group :
     (x : type-prod-Group) →
     Id (mul-prod-Group x (inv-prod-Group x)) unit-prod-Group
-  right-inverse-law-prod-Group (pair x y) = {!!}
+  right-inverse-law-prod-Group = {!!}
 
   prod-Group : Group (l1 ⊔ l2)
   pr1 prod-Group = {!!}

@@ -74,7 +74,7 @@ is-abelian-Group G = {!!}
 
 is-prop-is-abelian-Group :
   {l : Level} (G : Group l) → is-prop (is-abelian-Group G)
-is-prop-is-abelian-Group G = {!!}
+is-prop-is-abelian-Group = {!!}
 ```
 
 ### The type of abelian groups
@@ -110,7 +110,7 @@ module _
 
   ap-add-Ab :
     {x y x' y' : type-Ab} → x ＝ x' → y ＝ y' → add-Ab x y ＝ add-Ab x' y'
-  ap-add-Ab p q = {!!}
+  ap-add-Ab = {!!}
 
   associative-add-Ab :
     (x y z : type-Ab) → add-Ab (add-Ab x y) z ＝ add-Ab x (add-Ab y z)
@@ -170,16 +170,16 @@ module _
 
   right-swap-add-Ab :
     (a b c : type-Ab) → add-Ab (add-Ab a b) c ＝ add-Ab (add-Ab a c) b
-  right-swap-add-Ab a b c = {!!}
+  right-swap-add-Ab = {!!}
 
   left-swap-add-Ab :
     (a b c : type-Ab) → add-Ab a (add-Ab b c) ＝ add-Ab b (add-Ab a c)
-  left-swap-add-Ab a b c = {!!}
+  left-swap-add-Ab = {!!}
 
   distributive-neg-add-Ab :
     (x y : type-Ab) →
     neg-Ab (add-Ab x y) ＝ add-Ab (neg-Ab x) (neg-Ab y)
-  distributive-neg-add-Ab x y = {!!}
+  distributive-neg-add-Ab = {!!}
 
   neg-neg-Ab : (x : type-Ab) → neg-Ab (neg-Ab x) ＝ x
   neg-neg-Ab = {!!}
@@ -215,12 +215,11 @@ module _
 ```agda
 structure-abelian-group :
   {l1 : Level} → UU l1 → UU l1
-structure-abelian-group X = {!!}
+structure-abelian-group = {!!}
 
 compute-structure-abelian-group :
   {l1 : Level} → (X : UU l1) → structure-abelian-group X → Ab l1
-pr1 (compute-structure-abelian-group X (p , q)) = {!!}
-pr2 (compute-structure-abelian-group X (p , q)) = {!!}
+compute-structure-abelian-group = {!!}
 ```
 
 ### Conjugation in an abelian group
@@ -566,7 +565,7 @@ module _
 
   is-identity-conjugation-Ab :
     (x : type-Ab A) → conjugation-Ab A x ~ id
-  is-identity-conjugation-Ab x y = {!!}
+  is-identity-conjugation-Ab = {!!}
 ```
 
 ### Laws for conjugation and addition
@@ -711,22 +710,22 @@ module _
   is-abelian-is-unit-commutator-Group :
     ((x y : type-Group G) → is-unit-Group G (commutator-Group G x y)) →
     is-abelian-Group G
-  is-abelian-is-unit-commutator-Group H x y = {!!}
+  is-abelian-is-unit-commutator-Group = {!!}
 
   is-abelian-is-unit-commutator-Group' :
     ((x y : type-Group G) → is-unit-Group' G (commutator-Group G x y)) →
     is-abelian-Group G
-  is-abelian-is-unit-commutator-Group' H x y = {!!}
+  is-abelian-is-unit-commutator-Group' = {!!}
 
   is-unit-commutator-is-abelian-Group :
     is-abelian-Group G →
     (x y : type-Group G) → is-unit-Group G (commutator-Group G x y)
-  is-unit-commutator-is-abelian-Group H x y = {!!}
+  is-unit-commutator-is-abelian-Group = {!!}
 
   is-unit-commutator-is-abelian-Group' :
     is-abelian-Group G →
     (x y : type-Group G) → is-unit-Group' G (commutator-Group G x y)
-  is-unit-commutator-is-abelian-Group' H x y = {!!}
+  is-unit-commutator-is-abelian-Group' = {!!}
 
 module _
   {l : Level} (A : Ab l)
@@ -757,7 +756,7 @@ module _
   is-abelian-is-trivial-commutator-subgroup-Group :
     is-trivial-Subgroup G (commutator-subgroup-Group G) →
     is-abelian-Group G
-  is-abelian-is-trivial-commutator-subgroup-Group H = {!!}
+  is-abelian-is-trivial-commutator-subgroup-Group = {!!}
 
 module _
   {l : Level} (A : Ab l)
@@ -794,7 +793,7 @@ module _
       ( group-Ab A)
       ( f)
       ( commutator-normal-subgroup-Group G)
-  nullifies-commutator-normal-subgroup-hom-group-Ab f = {!!}
+  nullifies-commutator-normal-subgroup-hom-group-Ab = {!!}
 
   is-equiv-hom-nullifying-hom-group-Ab :
     is-equiv

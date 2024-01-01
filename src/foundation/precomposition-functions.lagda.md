@@ -57,12 +57,12 @@ htpy-precomp :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2}
   {f g : A → B} (H : f ~ g) (C : UU l3) →
   precomp f C ~ precomp g C
-htpy-precomp H C h = {!!}
+htpy-precomp = {!!}
 
 compute-htpy-precomp-refl-htpy :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} (f : A → B) (C : UU l3) →
   htpy-precomp (refl-htpy' f) C ~ refl-htpy
-compute-htpy-precomp-refl-htpy f C h = {!!}
+compute-htpy-precomp-refl-htpy = {!!}
 ```
 
 ### Precomposition preserves concatenation of homotopies
@@ -72,7 +72,7 @@ compute-concat-htpy-precomp :
   { l1 l2 l3 : Level} {A : UU l1} {B : UU l2}
   { f g h : A → B} (H : f ~ g) (K : g ~ h) (C : UU l3) →
   htpy-precomp (H ∙h K) C ~ htpy-precomp H C ∙h htpy-precomp K C
-compute-concat-htpy-precomp H K C k = {!!}
+compute-concat-htpy-precomp = {!!}
 ```
 
 ### If precomposition `- ∘ f : (Y → X) → (X → X)` has a section, then `f` has a retraction
@@ -95,7 +95,7 @@ module _
 
   equiv-htpy-precomp-htpy :
     (f g : B → C) (e : A ≃ B) → (f ~ g) ≃ (f ∘ map-equiv e ~ g ∘ map-equiv e)
-  equiv-htpy-precomp-htpy f g e = {!!}
+  equiv-htpy-precomp-htpy = {!!}
 ```
 
 ### The fibers of `precomp`
@@ -109,7 +109,7 @@ module _
     (g : B → X) →
     fiber (precomp f X) (g ∘ f) ≃
     Σ (B → X) (λ h → coherence-square-maps f f h g)
-  compute-fiber-precomp g = {!!}
+  compute-fiber-precomp = {!!}
 
   compute-total-fiber-precomp :
     Σ (B → X) (λ g → fiber (precomp f X) (g ∘ f)) ≃ cocone f f X

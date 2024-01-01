@@ -41,20 +41,20 @@ module _
   map-hom-action-Concrete-Group :
     hom-action-Concrete-Group →
     type-action-Concrete-Group G X → type-action-Concrete-Group G Y
-  map-hom-action-Concrete-Group f = {!!}
+  map-hom-action-Concrete-Group = {!!}
 
   preserves-tr-hom-action-Concrete-Group :
     (f : hom-action-Concrete-Group) {u v : classifying-type-Concrete-Group G}
     (p : u ＝ v) (x : type-Set (X u)) →
     f v (tr (type-Set ∘ X) p x) ＝ tr (type-Set ∘ Y) p (f u x)
-  preserves-tr-hom-action-Concrete-Group f refl x = {!!}
+  preserves-tr-hom-action-Concrete-Group = {!!}
 
   preserves-mul-hom-action-Concrete-Group :
     (f : hom-action-Concrete-Group) (g : type-Concrete-Group G)
     (x : type-action-Concrete-Group G X) →
     map-hom-action-Concrete-Group f (mul-action-Concrete-Group G X g x) ＝
     mul-action-Concrete-Group G Y g (map-hom-action-Concrete-Group f x)
-  preserves-mul-hom-action-Concrete-Group f = {!!}
+  preserves-mul-hom-action-Concrete-Group = {!!}
 ```
 
 ### Homotopies of morphisms of concrete group actions
@@ -67,7 +67,7 @@ module _
 
   htpy-hom-action-Concrete-Group :
     (g : hom-action-Concrete-Group G X Y) → UU (l2 ⊔ l3)
-  htpy-hom-action-Concrete-Group g = {!!}
+  htpy-hom-action-Concrete-Group = {!!}
 
   refl-htpy-hom-action-Concrete-Group : htpy-hom-action-Concrete-Group f
   refl-htpy-hom-action-Concrete-Group = {!!}
@@ -75,17 +75,17 @@ module _
   extensionality-hom-action-Concrete-Group :
     (g : hom-action-Concrete-Group G X Y) →
     (f ＝ g) ≃ htpy-hom-action-Concrete-Group g
-  extensionality-hom-action-Concrete-Group g = {!!}
+  extensionality-hom-action-Concrete-Group = {!!}
 
   htpy-eq-hom-action-Concrete-Group :
     (g : hom-action-Concrete-Group G X Y) →
     (f ＝ g) → htpy-hom-action-Concrete-Group g
-  htpy-eq-hom-action-Concrete-Group g = {!!}
+  htpy-eq-hom-action-Concrete-Group = {!!}
 
   eq-htpy-hom-action-Concrete-Group :
     (g : hom-action-Concrete-Group G X Y) →
     htpy-hom-action-Concrete-Group g → (f ＝ g)
-  eq-htpy-hom-action-Concrete-Group g = {!!}
+  eq-htpy-hom-action-Concrete-Group = {!!}
 ```
 
 ## Properties

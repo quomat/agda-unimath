@@ -31,11 +31,11 @@ relation on a type is its identity type.
 ```agda
 is-discrete-Reflexive-Relation-Prop :
   {l1 l2 : Level} {A : UU l1} (R : Reflexive-Relation l2 A) → Prop (l1 ⊔ l2)
-is-discrete-Reflexive-Relation-Prop {A = A} R = {!!}
+is-discrete-Reflexive-Relation-Prop = {!!}
 
 is-discrete-Reflexive-Relation :
   {l1 l2 : Level} {A : UU l1} (R : Reflexive-Relation l2 A) → UU (l1 ⊔ l2)
-is-discrete-Reflexive-Relation R = {!!}
+is-discrete-Reflexive-Relation = {!!}
 ```
 
 ### The standard discrete reflexive relation
@@ -43,6 +43,5 @@ is-discrete-Reflexive-Relation R = {!!}
 ```agda
 Δ-Reflexive-Relation :
   {l1 : Level} (A : UU l1) → Reflexive-Relation l1 A
-pr1 (Δ-Reflexive-Relation A) = {!!}
-pr2 (Δ-Reflexive-Relation A) x = {!!}
+Δ-Reflexive-Relation = {!!}
 ```

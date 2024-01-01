@@ -73,8 +73,7 @@ pr2 (neg-one-unit-Fin k) = {!!}
 is-unit-mul-Fin :
   {k : ℕ} {x y : Fin k} →
   is-unit-Fin k x → is-unit-Fin k y → is-unit-Fin k (mul-Fin k x y)
-pr1 (is-unit-mul-Fin {succ-ℕ k} {x} {y} (pair d p) (pair e q)) = {!!}
-pr2 (is-unit-mul-Fin {succ-ℕ k} {x} {y} (pair d p) (pair e q)) = {!!}
+is-unit-mul-Fin = {!!}
 
 mul-unit-Fin : (k : ℕ) → unit-Fin k → unit-Fin k → unit-Fin k
 pr1 (mul-unit-Fin k u v) = {!!}

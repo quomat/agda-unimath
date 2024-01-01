@@ -168,7 +168,7 @@ module _
     (x : type-Large-Meet-Subsemilattice l1)
     (y : type-Large-Meet-Subsemilattice l2) →
     type-Large-Meet-Subsemilattice (l1 ⊔ l2)
-  pr1 (meet-Large-Meet-Subsemilattice (x , p) (y , q)) = {!!}
+  meet-Large-Meet-Subsemilattice = {!!}
 
   is-greatest-binary-lower-bound-meet-Large-Meet-Subsemilattice :
     {l1 l2 : Level}
@@ -185,32 +185,28 @@ module _
   has-meets-Large-Meet-Subsemilattice :
     has-meets-Large-Poset
       ( large-poset-Large-Meet-Subsemilattice)
-  meet-has-meets-Large-Poset
-    has-meets-Large-Meet-Subsemilattice = {!!}
+  has-meets-Large-Meet-Subsemilattice = {!!}
 
   top-Large-Meet-Subsemilattice :
     type-Large-Meet-Subsemilattice lzero
-  pr1 top-Large-Meet-Subsemilattice = {!!}
+  top-Large-Meet-Subsemilattice = {!!}
 
   is-top-element-top-Large-Meet-Subsemilattice :
     {l1 : Level} (x : type-Large-Meet-Subsemilattice l1) →
     leq-Large-Meet-Subsemilattice x top-Large-Meet-Subsemilattice
-  is-top-element-top-Large-Meet-Subsemilattice (x , p) = {!!}
+  is-top-element-top-Large-Meet-Subsemilattice = {!!}
 
   has-top-element-Large-Meet-Subsemilattice :
     has-top-element-Large-Poset
       ( large-poset-Large-Meet-Subsemilattice)
-  top-has-top-element-Large-Poset
-    has-top-element-Large-Meet-Subsemilattice = {!!}
+  has-top-element-Large-Meet-Subsemilattice = {!!}
 
   is-large-meet-semilattice-Large-Meet-Subsemilattice :
     is-large-meet-semilattice-Large-Poset
       ( large-poset-Large-Meet-Subsemilattice)
-  has-meets-is-large-meet-semilattice-Large-Poset
-    is-large-meet-semilattice-Large-Meet-Subsemilattice = {!!}
+  is-large-meet-semilattice-Large-Meet-Subsemilattice = {!!}
 
   large-meet-semilattice-Large-Meet-Subsemilattice :
     Large-Meet-Semilattice (λ l → α l ⊔ γ l) β
-  large-poset-Large-Meet-Semilattice
-    large-meet-semilattice-Large-Meet-Subsemilattice = {!!}
+  large-meet-semilattice-Large-Meet-Subsemilattice = {!!}
 ```

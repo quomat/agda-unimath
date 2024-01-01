@@ -40,7 +40,7 @@ _+fraction-ℤ_ = {!!}
 ap-add-fraction-ℤ :
   {x y x' y' : fraction-ℤ} → x ＝ x' → y ＝ y' →
   x +fraction-ℤ y ＝ x' +fraction-ℤ y'
-ap-add-fraction-ℤ p q = {!!}
+ap-add-fraction-ℤ = {!!}
 ```
 
 ## Properties
@@ -64,12 +64,12 @@ sim-fraction-add-fraction-ℤ
 left-unit-law-add-fraction-ℤ :
   (k : fraction-ℤ) →
   sim-fraction-ℤ (zero-fraction-ℤ +fraction-ℤ k) k
-left-unit-law-add-fraction-ℤ (m , n , p) = {!!}
+left-unit-law-add-fraction-ℤ = {!!}
 
 right-unit-law-add-fraction-ℤ :
   (k : fraction-ℤ) →
   sim-fraction-ℤ (k +fraction-ℤ zero-fraction-ℤ) k
-right-unit-law-add-fraction-ℤ (m , n , p) = {!!}
+right-unit-law-add-fraction-ℤ = {!!}
 ```
 
 ### Addition is associative
@@ -80,7 +80,7 @@ associative-add-fraction-ℤ :
   sim-fraction-ℤ
     ((x +fraction-ℤ y) +fraction-ℤ z)
     (x +fraction-ℤ (y +fraction-ℤ z))
-associative-add-fraction-ℤ (nx , dx , dxp) (ny , dy , dyp) (nz , dz , dzp) = {!!}
+associative-add-fraction-ℤ = {!!}
 ```
 
 ### Addition is commutative
@@ -91,5 +91,5 @@ commutative-add-fraction-ℤ :
   sim-fraction-ℤ
     (x +fraction-ℤ y)
     (y +fraction-ℤ x)
-commutative-add-fraction-ℤ (nx , dx , dxp) (ny , dy , dyp) = {!!}
+commutative-add-fraction-ℤ = {!!}
 ```

@@ -51,13 +51,13 @@ module _
       ( node-hom-Directed-Tree S T f x)
       ( node-fiber-hom-Directed-Tree y)
       ( node-fiber-hom-Directed-Tree z)
-  edge-fiber-hom-Directed-Tree (y , v) (z , w) = {!!}
+  edge-fiber-hom-Directed-Tree = {!!}
 
   fiber-hom-Directed-Tree :
     hom-Directed-Tree
       ( fiber-Directed-Tree S x)
       ( fiber-Directed-Tree T (node-hom-Directed-Tree S T f x))
-  pr1 fiber-hom-Directed-Tree = {!!}
+  fiber-hom-Directed-Tree = {!!}
 ```
 
 ### The action on fibers of equivalences of directed trees
@@ -85,7 +85,7 @@ module _
       ( node-equiv-Directed-Tree S T f x)
       ( node-fiber-equiv-Directed-Tree y)
       ( node-fiber-equiv-Directed-Tree z)
-  equiv-edge-fiber-equiv-Directed-Tree (y , v) (z , w) = {!!}
+  equiv-edge-fiber-equiv-Directed-Tree = {!!}
 
   edge-fiber-equiv-Directed-Tree :
     (y z : node-fiber-Directed-Tree S x) →
@@ -94,11 +94,11 @@ module _
       ( node-equiv-Directed-Tree S T f x)
       ( node-fiber-equiv-Directed-Tree y)
       ( node-fiber-equiv-Directed-Tree z)
-  edge-fiber-equiv-Directed-Tree y z = {!!}
+  edge-fiber-equiv-Directed-Tree = {!!}
 
   fiber-equiv-Directed-Tree :
     equiv-Directed-Tree
       ( fiber-Directed-Tree S x)
       ( fiber-Directed-Tree T (node-equiv-Directed-Tree S T f x))
-  pr1 fiber-equiv-Directed-Tree = {!!}
+  fiber-equiv-Directed-Tree = {!!}
 ```

@@ -52,7 +52,7 @@ unordered-pair-vertices-standard-polygon-Undirected-Graph k = {!!}
 edge-standard-polygon-Undirected-Graph :
   (k : ℕ) →
   unordered-pair-vertices-standard-polygon-Undirected-Graph k → UU lzero
-edge-standard-polygon-Undirected-Graph k p = {!!}
+edge-standard-polygon-Undirected-Graph = {!!}
 
 standard-polygon-Undirected-Graph : ℕ → Undirected-Graph lzero lzero
 pr1 (standard-polygon-Undirected-Graph k) = {!!}
@@ -107,7 +107,7 @@ module _
 ```agda
 is-set-vertex-standard-polygon-Undirected-Graph :
   (k : ℕ) → is-set (vertex-standard-polygon-Undirected-Graph k)
-is-set-vertex-standard-polygon-Undirected-Graph k = {!!}
+is-set-vertex-standard-polygon-Undirected-Graph = {!!}
 ```
 
 ### Every edge is between distinct points

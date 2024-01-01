@@ -70,7 +70,7 @@ module _
     (front-right : (k ∘ hC) ~ (hD ∘ k'))
     (bottom : (h ∘ f) ~ (k ∘ g)) →
     UU (l4 ⊔ l1')
-  coherence-cube-maps top back-left back-right front-left front-right bottom = {!!}
+  coherence-cube-maps = {!!}
 ```
 
 ### Symmetries of commuting cubes
@@ -115,7 +115,7 @@ module _
       ( inv-htpy bottom)
       ( inv-htpy front-left)
       ( front-right)
-  coherence-cube-maps-rotate-120 a' = {!!}
+  coherence-cube-maps-rotate-120 = {!!}
 
   coherence-cube-maps-rotate-240 :
     coherence-cube-maps h' hB hD h g' hA hC g f' k' f k
@@ -125,7 +125,7 @@ module _
       ( inv-htpy front-right)
       ( bottom)
       ( inv-htpy front-left)
-  coherence-cube-maps-rotate-240 a' = {!!}
+  coherence-cube-maps-rotate-240 = {!!}
 
   coherence-cube-maps-mirror-A :
     coherence-cube-maps g f k h g' f' k' h' hA hC hB hD
@@ -135,7 +135,7 @@ module _
       ( front-right)
       ( front-left)
       ( inv-htpy bottom)
-  coherence-cube-maps-mirror-A a' = {!!}
+  coherence-cube-maps-mirror-A = {!!}
 
   coherence-cube-maps-mirror-B :
     coherence-cube-maps hB h' h hD hA g' g hC f' f k' k
@@ -145,7 +145,7 @@ module _
       ( bottom)
       ( inv-htpy front-right)
       ( front-left)
-  coherence-cube-maps-mirror-B a' = {!!}
+  coherence-cube-maps-mirror-B = {!!}
 
   coherence-cube-maps-mirror-C :
     coherence-cube-maps k' hC hD k f' hA hB f g' h' g h
@@ -155,7 +155,7 @@ module _
       ( inv-htpy front-left)
       ( inv-htpy bottom)
       ( inv-htpy front-right)
-  coherence-cube-maps-mirror-C a' = {!!}
+  coherence-cube-maps-mirror-C = {!!}
 ```
 
 ### Rectangles in commuting cubes
@@ -194,7 +194,7 @@ module _
       ( hA , k' ∘ g' , rectangle-right-cube)
       ( refl-htpy' hA)
       ( top)
-  coherence-htpy-parallel-cone-rectangle-left-rectangle-right-cube c = {!!}
+  coherence-htpy-parallel-cone-rectangle-left-rectangle-right-cube = {!!}
 
   rectangle-top-front-left-cube :
     ((h ∘ hB) ∘ f') ~ ((hD ∘ k') ∘ g')
@@ -268,7 +268,7 @@ module _
           top back-left back-right front-left front-right bottom))
       ( refl-htpy' f')
       ( back-right)
-  coherence-htpy-parallel-cone-coherence-cube-maps c = {!!}
+  coherence-htpy-parallel-cone-coherence-cube-maps = {!!}
 ```
 
 ### Any commuting cube of maps induces a commuting cube of function spaces
@@ -317,5 +317,5 @@ module _
       ( precomp-coherence-square-maps hA f' f hB (inv-htpy back-left) W)
       ( precomp-coherence-square-maps hA g' g hC (inv-htpy back-right) W)
       ( precomp-coherence-square-maps g' f' k' h' top W)
-  precomp-coherence-cube-maps c W = {!!}
+  precomp-coherence-cube-maps = {!!}
 ```

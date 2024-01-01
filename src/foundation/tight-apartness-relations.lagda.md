@@ -42,11 +42,11 @@ module _
 
 is-tight-Apartness-Relation :
   {l1 l2 : Level} {A : UU l1} (R : Apartness-Relation l2 A) → UU (l1 ⊔ l2)
-is-tight-Apartness-Relation R = {!!}
+is-tight-Apartness-Relation = {!!}
 
 Tight-Apartness-Relation :
   {l1 : Level} (l2 : Level) (A : UU l1) → UU (l1 ⊔ lsuc l2)
-Tight-Apartness-Relation l2 A = {!!}
+Tight-Apartness-Relation = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (R : Tight-Apartness-Relation l2 A)
@@ -100,11 +100,10 @@ is-tight-apartness-function-into-Type-With-Tight-Apartness :
   is-tight
     ( rel-apart-function-into-Type-With-Apartness X
       ( type-with-apartness-Type-With-Tight-Apartness Y))
-is-tight-apartness-function-into-Type-With-Tight-Apartness Y f g H = {!!}
+is-tight-apartness-function-into-Type-With-Tight-Apartness = {!!}
 
 exp-Type-With-Tight-Apartness :
   {l1 l2 l3 : Level} (X : UU l1) → Type-With-Tight-Apartness l2 l3 →
   Type-With-Tight-Apartness (l1 ⊔ l2) (l1 ⊔ l3)
-pr1 (exp-Type-With-Tight-Apartness X Y) = {!!}
-pr2 (exp-Type-With-Tight-Apartness X Y) = {!!}
+exp-Type-With-Tight-Apartness = {!!}
 ```

@@ -61,7 +61,7 @@ module _
 
   is-in-obj-Full-Large-Subprecategory :
     {l : Level} (X : obj-Large-Precategory C l) → UU (γ l)
-  is-in-obj-Full-Large-Subprecategory X = {!!}
+  is-in-obj-Full-Large-Subprecategory = {!!}
 
   is-prop-is-in-obj-Full-Large-Subprecategory :
     {l : Level} (X : obj-Large-Precategory C l) →
@@ -76,14 +76,14 @@ module _
     (X : obj-Full-Large-Subprecategory l1)
     (Y : obj-Full-Large-Subprecategory l2) →
     Set (β l1 l2)
-  hom-set-Full-Large-Subprecategory X Y = {!!}
+  hom-set-Full-Large-Subprecategory = {!!}
 
   hom-Full-Large-Subprecategory :
     {l1 l2 : Level}
     (X : obj-Full-Large-Subprecategory l1)
     (Y : obj-Full-Large-Subprecategory l2) →
     UU (β l1 l2)
-  hom-Full-Large-Subprecategory X Y = {!!}
+  hom-Full-Large-Subprecategory = {!!}
 
   comp-hom-Full-Large-Subprecategory :
     {l1 l2 l3 : Level}
@@ -92,12 +92,12 @@ module _
     (Z : obj-Full-Large-Subprecategory l3) →
     hom-Full-Large-Subprecategory Y Z → hom-Full-Large-Subprecategory X Y →
     hom-Full-Large-Subprecategory X Z
-  comp-hom-Full-Large-Subprecategory X Y Z = {!!}
+  comp-hom-Full-Large-Subprecategory = {!!}
 
   id-hom-Full-Large-Subprecategory :
     {l1 : Level} (X : obj-Full-Large-Subprecategory l1) →
     hom-Full-Large-Subprecategory X X
-  id-hom-Full-Large-Subprecategory X = {!!}
+  id-hom-Full-Large-Subprecategory = {!!}
 
   associative-comp-hom-Full-Large-Subprecategory :
     {l1 l2 l3 l4 : Level}
@@ -114,7 +114,7 @@ module _
     comp-hom-Full-Large-Subprecategory X Z W
       ( h)
       ( comp-hom-Full-Large-Subprecategory X Y Z g f)
-  associative-comp-hom-Full-Large-Subprecategory X Y Z W = {!!}
+  associative-comp-hom-Full-Large-Subprecategory = {!!}
 
   inv-associative-comp-hom-Full-Large-Subprecategory :
     {l1 l2 l3 l4 : Level}
@@ -131,7 +131,7 @@ module _
     comp-hom-Full-Large-Subprecategory X Y W
       ( comp-hom-Full-Large-Subprecategory Y Z W h g)
       ( f)
-  inv-associative-comp-hom-Full-Large-Subprecategory X Y Z W = {!!}
+  inv-associative-comp-hom-Full-Large-Subprecategory = {!!}
 
   left-unit-law-comp-hom-Full-Large-Subprecategory :
     {l1 l2 : Level}
@@ -142,7 +142,7 @@ module _
       ( id-hom-Full-Large-Subprecategory Y)
       ( f) ＝
     f
-  left-unit-law-comp-hom-Full-Large-Subprecategory X Y = {!!}
+  left-unit-law-comp-hom-Full-Large-Subprecategory = {!!}
 
   right-unit-law-comp-hom-Full-Large-Subprecategory :
     {l1 l2 : Level}
@@ -153,19 +153,18 @@ module _
       ( f)
       ( id-hom-Full-Large-Subprecategory X) ＝
     f
-  right-unit-law-comp-hom-Full-Large-Subprecategory X Y = {!!}
+  right-unit-law-comp-hom-Full-Large-Subprecategory = {!!}
 
   large-precategory-Full-Large-Subprecategory :
     Large-Precategory (λ l → α l ⊔ γ l) β
-  obj-Large-Precategory
-    large-precategory-Full-Large-Subprecategory = {!!}
+  large-precategory-Full-Large-Subprecategory = {!!}
 
   iso-Full-Large-Subprecategory :
     {l1 l2 : Level}
     (X : obj-Full-Large-Subprecategory l1)
     (Y : obj-Full-Large-Subprecategory l2) →
     UU (β l1 l1 ⊔ β l1 l2 ⊔ β l2 l1 ⊔ β l2 l2)
-  iso-Full-Large-Subprecategory X Y = {!!}
+  iso-Full-Large-Subprecategory = {!!}
 
   iso-eq-Full-Large-Subprecategory :
     {l1 : Level} (X Y : obj-Full-Large-Subprecategory l1) →
@@ -187,8 +186,7 @@ module _
       ( λ l → l)
       ( large-precategory-Full-Large-Subprecategory C P)
       ( C)
-  obj-functor-Large-Precategory
-    forgetful-functor-Full-Large-Subprecategory = {!!}
+  forgetful-functor-Full-Large-Subprecategory = {!!}
 ```
 
 ## Properties

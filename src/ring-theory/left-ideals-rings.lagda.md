@@ -40,15 +40,15 @@ module _
 
   is-left-ideal-subset-Ring :
     {l2 : Level} → subset-Ring l2 R → UU (l1 ⊔ l2)
-  is-left-ideal-subset-Ring S = {!!}
+  is-left-ideal-subset-Ring = {!!}
 
   is-prop-is-left-ideal-subset-Ring :
     {l2 : Level} (S : subset-Ring l2 R) → is-prop (is-left-ideal-subset-Ring S)
-  is-prop-is-left-ideal-subset-Ring S = {!!}
+  is-prop-is-left-ideal-subset-Ring = {!!}
 
 left-ideal-Ring :
   (l : Level) {l1 : Level} (R : Ring l1) → UU ((lsuc l) ⊔ l1)
-left-ideal-Ring l R = {!!}
+left-ideal-Ring = {!!}
 
 module _
   {l1 l2 : Level} (R : Ring l1) (I : left-ideal-Ring l2 R)
@@ -125,7 +125,7 @@ module _
 
   has-same-elements-left-ideal-Ring :
     (J : left-ideal-Ring l3 R) → UU (l1 ⊔ l2 ⊔ l3)
-  has-same-elements-left-ideal-Ring J = {!!}
+  has-same-elements-left-ideal-Ring = {!!}
 
 module _
   {l1 l2 : Level} (R : Ring l1) (I : left-ideal-Ring l2 R)
@@ -142,7 +142,7 @@ module _
   has-same-elements-eq-left-ideal-Ring :
     (J : left-ideal-Ring l2 R) →
     (I ＝ J) → has-same-elements-left-ideal-Ring R I J
-  has-same-elements-eq-left-ideal-Ring .I refl = {!!}
+  has-same-elements-eq-left-ideal-Ring = {!!}
 
   is-equiv-has-same-elements-eq-left-ideal-Ring :
     (J : left-ideal-Ring l2 R) →
@@ -152,11 +152,11 @@ module _
   extensionality-left-ideal-Ring :
     (J : left-ideal-Ring l2 R) →
     (I ＝ J) ≃ has-same-elements-left-ideal-Ring R I J
-  pr1 (extensionality-left-ideal-Ring J) = {!!}
+  extensionality-left-ideal-Ring = {!!}
   pr2 (extensionality-left-ideal-Ring J) = {!!}
 
   eq-has-same-elements-left-ideal-Ring :
     (J : left-ideal-Ring l2 R) →
     has-same-elements-left-ideal-Ring R I J → I ＝ J
-  eq-has-same-elements-left-ideal-Ring J = {!!}
+  eq-has-same-elements-left-ideal-Ring = {!!}
 ```

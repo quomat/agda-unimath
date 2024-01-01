@@ -38,14 +38,14 @@ module _
 
   map-standard-pullback :
     hom-cospan f' g' f g → standard-pullback f' g' → standard-pullback f g
-  pr1 (map-standard-pullback (hA , _) (a' , _)) = {!!}
+  map-standard-pullback = {!!}
 
   map-is-pullback :
     {l4 l4' : Level} {C : UU l4} {C' : UU l4'} →
     (c : cone f g C) (c' : cone f' g' C') →
     is-pullback f g c → is-pullback f' g' c' →
     hom-cospan f' g' f g → C' → C
-  map-is-pullback c c' is-pb-c is-pb-c' h x = {!!}
+  map-is-pullback = {!!}
 ```
 
 ## Table of files about pullbacks

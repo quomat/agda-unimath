@@ -89,7 +89,7 @@ module _
   ind-iso-Category :
     P A (id-iso-Category C) →
     {B : obj-Category C} (e : iso-Category C A B) → P B e
-  ind-iso-Category p {B} = {!!}
+  ind-iso-Category = {!!}
 
   compute-ind-iso-Category :
     (u : P A (id-iso-Category C)) → ind-iso-Category u (id-iso-Category C) ＝ u

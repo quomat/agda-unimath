@@ -130,15 +130,15 @@ module _
     (n : ℕ) (x : type-Ring R) →
     power-Ring R n (neg-Ring R x) ＝
     mul-Ring R (power-Ring R n (neg-one-Ring R)) (power-Ring R n x)
-  power-neg-Ring n x = {!!}
+  power-neg-Ring = {!!}
 
   even-power-neg-Ring :
     (n : ℕ) (x : type-Ring R) →
     is-even-ℕ n → power-Ring R n (neg-Ring R x) ＝ power-Ring R n x
-  even-power-neg-Ring zero-ℕ x H = {!!}
+  even-power-neg-Ring = {!!}
 
   odd-power-neg-Ring :
     (n : ℕ) (x : type-Ring R) →
     is-odd-ℕ n → power-Ring R n (neg-Ring R x) ＝ neg-Ring R (power-Ring R n x)
-  odd-power-neg-Ring zero-ℕ x H = {!!}
+  odd-power-neg-Ring = {!!}
 ```

@@ -37,7 +37,7 @@ family of elements of `R` indexed by a standard finite type.
 ```agda
 sum-Ring :
   {l : Level} (R : Ring l) (n : ℕ) → functional-vec-Ring R n → type-Ring R
-sum-Ring R = {!!}
+sum-Ring = {!!}
 ```
 
 ## Properties
@@ -190,5 +190,5 @@ split-sum-Ring :
   add-Ring R
     ( sum-Ring R n (f ∘ inl-coprod-Fin n m))
     ( sum-Ring R m (f ∘ inr-coprod-Fin n m))
-split-sum-Ring R = {!!}
+split-sum-Ring = {!!}
 ```

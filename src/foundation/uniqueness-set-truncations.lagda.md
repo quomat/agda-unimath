@@ -41,17 +41,17 @@ module _
   abstract
     is-equiv-is-set-truncation-is-set-truncation :
       is-set-truncation B f → is-set-truncation C g → is-equiv h
-    is-equiv-is-set-truncation-is-set-truncation Sf Sg = {!!}
+    is-equiv-is-set-truncation-is-set-truncation = {!!}
 
   abstract
     is-set-truncation-is-equiv-is-set-truncation :
       is-set-truncation C g → is-equiv h → is-set-truncation B f
-    is-set-truncation-is-equiv-is-set-truncation Sg Eh = {!!}
+    is-set-truncation-is-equiv-is-set-truncation = {!!}
 
   abstract
     is-set-truncation-is-set-truncation-is-equiv :
       is-equiv h → is-set-truncation B f → is-set-truncation C g
-    is-set-truncation-is-set-truncation-is-equiv Eh Sf = {!!}
+    is-set-truncation-is-set-truncation-is-equiv = {!!}
 ```
 
 ### The uniquely uniqueness of set truncations

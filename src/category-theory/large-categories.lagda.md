@@ -43,7 +43,7 @@ proposition.
 is-large-category-Large-Precategory :
   {α : Level → Level} {β : Level → Level → Level} →
   (C : Large-Precategory α β) → UUω
-is-large-category-Large-Precategory C = {!!}
+is-large-category-Large-Precategory = {!!}
 ```
 
 ### The large type of large categories
@@ -86,14 +86,14 @@ module _
     (X : obj-Large-Category l1)
     (Y : obj-Large-Category l2) →
     UU (β l1 l2)
-  hom-Large-Category X Y = {!!}
+  hom-Large-Category = {!!}
 
   is-set-hom-Large-Category :
     {l1 l2 : Level}
     (X : obj-Large-Category l1)
     (Y : obj-Large-Category l2) →
     is-set (hom-Large-Category X Y)
-  is-set-hom-Large-Category X Y = {!!}
+  is-set-hom-Large-Category = {!!}
 
   comp-hom-Large-Category :
     {l1 l2 l3 : Level}
@@ -160,7 +160,7 @@ module _
     {g g' : hom-Large-Category Y Z} (p : g ＝ g')
     {f f' : hom-Large-Category X Y} (q : f ＝ f') →
     comp-hom-Large-Category g f ＝ comp-hom-Large-Category g' f'
-  ap-comp-hom-Large-Category p q = {!!}
+  ap-comp-hom-Large-Category = {!!}
 
   comp-hom-Large-Category' :
     {l1 l2 l3 : Level}
@@ -170,7 +170,7 @@ module _
     hom-Large-Category X Y →
     hom-Large-Category Y Z →
     hom-Large-Category X Z
-  comp-hom-Large-Category' f g = {!!}
+  comp-hom-Large-Category' = {!!}
 ```
 
 ### Categories obtained from large categories
@@ -184,7 +184,7 @@ module _
 
   is-category-is-large-category-Large-Precategory :
     (l : Level) → is-category-Precategory (precategory-Large-Precategory C l)
-  is-category-is-large-category-Large-Precategory l X Y = {!!}
+  is-category-is-large-category-Large-Precategory = {!!}
 
 module _
   {α : Level → Level} {β : Level → Level → Level}
@@ -237,7 +237,7 @@ module _
     (f : hom-Large-Category C X Y) →
     (Z : obj-Large-Category C l3) →
     hom-Large-Category C Y Z → hom-Large-Category C X Z
-  precomp-hom-Large-Category f Z g = {!!}
+  precomp-hom-Large-Category = {!!}
 
   postcomp-hom-Large-Category :
     (X : obj-Large-Category C l1)
@@ -245,5 +245,5 @@ module _
     {Z : obj-Large-Category C l3}
     (f : hom-Large-Category C Y Z) →
     hom-Large-Category C X Y → hom-Large-Category C X Z
-  postcomp-hom-Large-Category X f g = {!!}
+  postcomp-hom-Large-Category = {!!}
 ```

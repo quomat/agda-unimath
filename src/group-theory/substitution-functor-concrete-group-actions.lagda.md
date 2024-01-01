@@ -29,5 +29,5 @@ module _
   subst-action-Concrete-Group :
     {l : Level} →
     action-Concrete-Group l H → action-Concrete-Group l G
-  subst-action-Concrete-Group Y x = {!!}
+  subst-action-Concrete-Group = {!!}
 ```

@@ -32,5 +32,5 @@ the **`n`-iterated suspension** of `X`.
 ```agda
 iterated-suspension-Pointed-Type :
   {l : Level} (n : ℕ) → Pointed-Type l → Pointed-Type l
-iterated-suspension-Pointed-Type n = {!!}
+iterated-suspension-Pointed-Type = {!!}
 ```

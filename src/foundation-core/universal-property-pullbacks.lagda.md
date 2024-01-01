@@ -46,13 +46,13 @@ module _
   map-universal-property-pullback :
     universal-property-pullback f g c →
     {C' : UU l5} (c' : cone f g C') → C' → C
-  map-universal-property-pullback up-c {C'} c' = {!!}
+  map-universal-property-pullback = {!!}
 
   compute-map-universal-property-pullback :
     (up-c : universal-property-pullback f g c) →
     {C' : UU l5} (c' : cone f g C') →
     cone-map f g c (map-universal-property-pullback up-c c') ＝ c'
-  compute-map-universal-property-pullback up-c {C'} c' = {!!}
+  compute-map-universal-property-pullback = {!!}
 ```
 
 ## Properties
@@ -70,33 +70,33 @@ module _
   inv-triangle-cone-cone :
     {l6 : Level} (D : UU l6) →
     cone-map f g c ∘ postcomp D h ~ cone-map f g c'
-  inv-triangle-cone-cone D k = {!!}
+  inv-triangle-cone-cone = {!!}
 
   triangle-cone-cone :
     {l6 : Level} (D : UU l6) →
     cone-map f g c' ~ cone-map f g c ∘ postcomp D h
-  triangle-cone-cone D k = {!!}
+  triangle-cone-cone = {!!}
 
   abstract
     is-equiv-up-pullback-up-pullback :
       universal-property-pullback f g c →
       universal-property-pullback f g c' →
       is-equiv h
-    is-equiv-up-pullback-up-pullback up up' = {!!}
+    is-equiv-up-pullback-up-pullback = {!!}
 
   abstract
     up-pullback-up-pullback-is-equiv :
       is-equiv h →
       universal-property-pullback f g c →
       universal-property-pullback f g c'
-    up-pullback-up-pullback-is-equiv is-equiv-h up D = {!!}
+    up-pullback-up-pullback-is-equiv = {!!}
 
   abstract
     up-pullback-is-equiv-up-pullback :
       universal-property-pullback f g c' →
       is-equiv h →
       universal-property-pullback f g c
-    up-pullback-is-equiv-up-pullback up' is-equiv-h D = {!!}
+    up-pullback-is-equiv-up-pullback = {!!}
 ```
 
 ### Uniqueness of maps obtained via the universal property of pullbacks
@@ -112,7 +112,7 @@ module _
       universal-property-pullback f g c →
       {l5 : Level} (C' : UU l5) (c' : cone f g C') →
       is-contr (Σ (C' → C) (λ h → htpy-cone f g (cone-map f g c h) c'))
-    uniqueness-universal-property-pullback up C' c' = {!!}
+    uniqueness-universal-property-pullback = {!!}
 ```
 
 ## Table of files about pullbacks

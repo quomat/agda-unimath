@@ -58,7 +58,7 @@ module _
   is-prop-is-least-binary-upper-bound-Poset :
     (x : type-Poset P) →
     is-prop (is-least-binary-upper-bound-Poset x)
-  is-prop-is-least-binary-upper-bound-Poset x = {!!}
+  is-prop-is-least-binary-upper-bound-Poset = {!!}
 
 module _
   {l1 l2 : Level} (P : Poset l1 l2) {a b : type-Poset P}
@@ -68,13 +68,13 @@ module _
     {x y : type-Poset P} →
     is-least-binary-upper-bound-Poset P a b x →
     is-binary-upper-bound-Poset P a b y → leq-Poset P x y
-  forward-implication-is-least-binary-upper-bound-Poset H = {!!}
+  forward-implication-is-least-binary-upper-bound-Poset = {!!}
 
   backward-implication-is-least-binary-upper-bound-Poset :
     {x y : type-Poset P} →
     is-least-binary-upper-bound-Poset P a b x →
     leq-Poset P x y → is-binary-upper-bound-Poset P a b y
-  backward-implication-is-least-binary-upper-bound-Poset {x} {y} H = {!!}
+  backward-implication-is-least-binary-upper-bound-Poset = {!!}
 
   prove-is-least-binary-upper-bound-Poset :
     {x : type-Poset P} →
@@ -82,25 +82,25 @@ module _
     ( (y : type-Poset P) →
       is-binary-upper-bound-Poset P a b y → leq-Poset P x y) →
     is-least-binary-upper-bound-Poset P a b x
-  pr1 (prove-is-least-binary-upper-bound-Poset H K y) L = {!!}
+  prove-is-least-binary-upper-bound-Poset = {!!}
 
   is-binary-upper-bound-is-least-binary-upper-bound-Poset :
     {x : type-Poset P} →
     is-least-binary-upper-bound-Poset P a b x →
     is-binary-upper-bound-Poset P a b x
-  is-binary-upper-bound-is-least-binary-upper-bound-Poset H = {!!}
+  is-binary-upper-bound-is-least-binary-upper-bound-Poset = {!!}
 
   leq-left-is-least-binary-upper-bound-Poset :
     {x : type-Poset P} →
     is-least-binary-upper-bound-Poset P a b x →
     leq-Poset P a x
-  leq-left-is-least-binary-upper-bound-Poset H = {!!}
+  leq-left-is-least-binary-upper-bound-Poset = {!!}
 
   leq-right-is-least-binary-upper-bound-Poset :
     {x : type-Poset P} →
     is-least-binary-upper-bound-Poset P a b x →
     leq-Poset P b x
-  leq-right-is-least-binary-upper-bound-Poset H = {!!}
+  leq-right-is-least-binary-upper-bound-Poset = {!!}
 ```
 
 ### The proposition that two elements have a least upper bound
@@ -134,7 +134,7 @@ module _
     is-least-binary-upper-bound-Poset P a b x →
     is-least-binary-upper-bound-Poset P a b y →
     x ＝ y
-  eq-is-least-binary-upper-bound-Poset {x} {y} H K = {!!}
+  eq-is-least-binary-upper-bound-Poset = {!!}
 ```
 
 ### Least upper bounds of families of elements
@@ -146,16 +146,16 @@ module _
 
   is-least-upper-bound-family-of-elements-Poset-Prop :
     type-Poset P → Prop (l1 ⊔ l2 ⊔ l3)
-  is-least-upper-bound-family-of-elements-Poset-Prop x = {!!}
+  is-least-upper-bound-family-of-elements-Poset-Prop = {!!}
 
   is-least-upper-bound-family-of-elements-Poset :
     type-Poset P → UU (l1 ⊔ l2 ⊔ l3)
-  is-least-upper-bound-family-of-elements-Poset z = {!!}
+  is-least-upper-bound-family-of-elements-Poset = {!!}
 
   is-prop-is-least-upper-bound-family-of-elements-Poset :
     (z : type-Poset P) →
     is-prop (is-least-upper-bound-family-of-elements-Poset z)
-  is-prop-is-least-upper-bound-family-of-elements-Poset z = {!!}
+  is-prop-is-least-upper-bound-family-of-elements-Poset = {!!}
 
 module _
   {l1 l2 l3 : Level} (P : Poset l1 l2) {I : UU l3} {a : I → type-Poset P}
@@ -165,19 +165,19 @@ module _
     {x y : type-Poset P} →
     is-least-upper-bound-family-of-elements-Poset P a x →
     is-upper-bound-family-of-elements-Poset P a y → leq-Poset P x y
-  forward-implication-is-least-upper-bound-family-of-elements-Poset H = {!!}
+  forward-implication-is-least-upper-bound-family-of-elements-Poset = {!!}
 
   backward-implication-is-least-upper-bound-family-of-elements-Poset :
     {x y : type-Poset P} →
     is-least-upper-bound-family-of-elements-Poset P a x →
     leq-Poset P x y → is-upper-bound-family-of-elements-Poset P a y
-  backward-implication-is-least-upper-bound-family-of-elements-Poset H = {!!}
+  backward-implication-is-least-upper-bound-family-of-elements-Poset = {!!}
 
   is-upper-bound-is-least-upper-bound-family-of-elements-Poset :
     {x : type-Poset P} →
     is-least-upper-bound-family-of-elements-Poset P a x →
     is-upper-bound-family-of-elements-Poset P a x
-  is-upper-bound-is-least-upper-bound-family-of-elements-Poset H = {!!}
+  is-upper-bound-is-least-upper-bound-family-of-elements-Poset = {!!}
 ```
 
 ### The proposition that a family of elements has a least upper bound
@@ -211,5 +211,5 @@ module _
     is-least-upper-bound-family-of-elements-Poset P a x →
     is-least-upper-bound-family-of-elements-Poset P a y →
     x ＝ y
-  eq-is-least-upper-bound-family-of-elements-Poset H K = {!!}
+  eq-is-least-upper-bound-family-of-elements-Poset = {!!}
 ```

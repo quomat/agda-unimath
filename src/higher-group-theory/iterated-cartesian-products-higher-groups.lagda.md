@@ -47,8 +47,7 @@ recursively on `Fin n`.
 ```agda
 iterated-product-∞-Group :
   {l : Level} (n : ℕ) (G : Fin n → (∞-Group l)) → ∞-Group l
-iterated-product-∞-Group zero-ℕ G = {!!}
-iterated-product-∞-Group (succ-ℕ n) G = {!!}
+iterated-product-∞-Group = {!!}
 
 module _
   {l : Level} (n : ℕ) (G : Fin n → ∞-Group l)
@@ -163,6 +162,5 @@ equiv-type-∞-Group-iterated-product-∞-Group :
   {l : Level} (n : ℕ) (G : Fin n → ∞-Group l) →
   ( type-iterated-product-∞-Group n G) ≃
   ( iterated-product-Fin-recursive n (type-∞-Group ∘ G))
-equiv-type-∞-Group-iterated-product-∞-Group zero-ℕ G = {!!}
-equiv-type-∞-Group-iterated-product-∞-Group (succ-ℕ n) G = {!!}
+equiv-type-∞-Group-iterated-product-∞-Group = {!!}
 ```

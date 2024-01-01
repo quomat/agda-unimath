@@ -54,12 +54,12 @@ module _
     {l : Level} (P : (B : obj-Precategory C) → (iso-Precategory C A B) → UU l) →
     ((B : obj-Precategory C) (e : iso-Precategory C A B) → P B e) →
     P A (id-iso-Precategory C)
-  ev-id-iso-Precategory P f = {!!}
+  ev-id-iso-Precategory = {!!}
 
   induction-principle-iso-Precategory :
     {l : Level} (P : (B : obj-Precategory C) → iso-Precategory C A B → UU l) →
     UU (l1 ⊔ l2 ⊔ l)
-  induction-principle-iso-Precategory P = {!!}
+  induction-principle-iso-Precategory = {!!}
 
   triangle-ev-id-iso-Precategory :
     {l : Level}
@@ -68,7 +68,7 @@ module _
       ( ev-point (A , id-iso-Precategory C))
       ( ev-id-iso-Precategory P)
       ( ev-pair)
-  triangle-ev-id-iso-Precategory P f = {!!}
+  triangle-ev-id-iso-Precategory = {!!}
 ```
 
 ## Properties

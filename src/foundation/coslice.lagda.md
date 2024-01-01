@@ -79,20 +79,20 @@ module _
   coherence-htpy-hom-coslice :
     (h k : hom-coslice f g) →
     map-hom-coslice h ~ map-hom-coslice k → UU (l1 ⊔ l3)
-  coherence-htpy-hom-coslice h k H = {!!}
+  coherence-htpy-hom-coslice = {!!}
 
   htpy-hom-coslice :
     (h k : hom-coslice f g) → UU (l1 ⊔ l2 ⊔ l3)
-  htpy-hom-coslice h k = {!!}
+  htpy-hom-coslice = {!!}
 
   extensionality-hom-coslice :
     (h k : hom-coslice f g) → (h ＝ k) ≃ htpy-hom-coslice h k
-  extensionality-hom-coslice (h , H) = {!!}
+  extensionality-hom-coslice = {!!}
 
   eq-htpy-hom-coslice :
     ( h k : hom-coslice f g)
     ( H : map-hom-coslice h ~ map-hom-coslice k)
     ( K : coherence-htpy-hom-coslice h k H) →
     h ＝ k
-  eq-htpy-hom-coslice h k H K = {!!}
+  eq-htpy-hom-coslice = {!!}
 ```

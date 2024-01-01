@@ -57,9 +57,9 @@ module _
 ```agda
 subset-Group :
   (l : Level) {l1 : Level} (G : Group l1) → UU ((lsuc l) ⊔ l1)
-subset-Group l G = {!!}
+subset-Group = {!!}
 
 is-set-subset-Group :
   {l1 l2 : Level} (G : Group l1) → is-set (subset-Group l2 G)
-is-set-subset-Group G = {!!}
+is-set-subset-Group = {!!}
 ```

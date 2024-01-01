@@ -47,7 +47,7 @@ objects form a set.
 ```agda
 Set-Magmoid :
   (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Set-Magmoid l1 l2 = {!!}
+Set-Magmoid = {!!}
 
 module _
   {l1 l2 : Level} (M : Set-Magmoid l1 l2)
@@ -64,7 +64,7 @@ module _
 
   is-set-hom-Set-Magmoid :
     (x y : obj-Set-Magmoid) → is-set (hom-Set-Magmoid x y)
-  is-set-hom-Set-Magmoid x y = {!!}
+  is-set-hom-Set-Magmoid = {!!}
 
   comp-hom-Set-Magmoid :
     {x y z : obj-Set-Magmoid} →
@@ -78,7 +78,7 @@ module _
     hom-Set-Magmoid x y →
     hom-Set-Magmoid y z →
     hom-Set-Magmoid x z
-  comp-hom-Set-Magmoid' f g = {!!}
+  comp-hom-Set-Magmoid' = {!!}
 ```
 
 ### The total hom-type of a set-magmoid
@@ -86,13 +86,12 @@ module _
 ```agda
 total-hom-Set-Magmoid :
   {l1 l2 : Level} (M : Set-Magmoid l1 l2) → UU (l1 ⊔ l2)
-total-hom-Set-Magmoid M = {!!}
+total-hom-Set-Magmoid = {!!}
 
 obj-total-hom-Set-Magmoid :
   {l1 l2 : Level} (M : Set-Magmoid l1 l2) →
   total-hom-Set-Magmoid M → obj-Set-Magmoid M × obj-Set-Magmoid M
-pr1 (obj-total-hom-Set-Magmoid M (x , y , f)) = {!!}
-pr2 (obj-total-hom-Set-Magmoid M (x , y , f)) = {!!}
+obj-total-hom-Set-Magmoid = {!!}
 ```
 
 ### Pre- and postcomposition by a morphism
@@ -174,12 +173,12 @@ module _
   is-trunc-total-hom-is-trunc-obj-Set-Magmoid :
     is-trunc (succ-𝕋 (succ-𝕋 k)) (obj-Set-Magmoid M) →
     is-trunc (succ-𝕋 (succ-𝕋 k)) (total-hom-Set-Magmoid M)
-  is-trunc-total-hom-is-trunc-obj-Set-Magmoid is-trunc-obj-M = {!!}
+  is-trunc-total-hom-is-trunc-obj-Set-Magmoid = {!!}
 
   total-hom-truncated-type-is-trunc-obj-Set-Magmoid :
     is-trunc (succ-𝕋 (succ-𝕋 k)) (obj-Set-Magmoid M) →
     Truncated-Type (l1 ⊔ l2) (succ-𝕋 (succ-𝕋 k))
-  pr1 (total-hom-truncated-type-is-trunc-obj-Set-Magmoid is-trunc-obj-M) = {!!}
+  total-hom-truncated-type-is-trunc-obj-Set-Magmoid = {!!}
 ```
 
 ## See also

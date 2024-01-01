@@ -67,7 +67,7 @@ module _
     {l1 : Level}
     {x y : type-Large-Preorder X l1} →
     (x ＝ y) → leq-Large-Preorder x y
-  leq-eq-Large-Preorder {x = x} refl = {!!}
+  leq-eq-Large-Preorder = {!!}
 ```
 
 ### The predicate on large precategories to be a large preorder
@@ -83,8 +83,7 @@ module _
 
   large-preorder-Large-Precategory :
     is-large-preorder-Large-Precategory → Large-Preorder α β
-  type-Large-Preorder
-    ( large-preorder-Large-Precategory H) = {!!}
+  large-preorder-Large-Precategory = {!!}
   pr1 (leq-prop-Large-Preorder (large-preorder-Large-Precategory H) X Y) = {!!}
   pr2 (leq-prop-Large-Preorder (large-preorder-Large-Precategory H) X Y) = {!!}
   refl-leq-Large-Preorder

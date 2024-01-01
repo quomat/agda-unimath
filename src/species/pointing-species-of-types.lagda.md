@@ -25,5 +25,5 @@ A pointing of a species of types `F` is the species of types `F*` given by
 ```agda
 pointing-species-types :
   {l1 l2 : Level} → species-types l1 l2 → species-types l1 (l1 ⊔ l2)
-pointing-species-types F X = {!!}
+pointing-species-types = {!!}
 ```

@@ -37,5 +37,5 @@ module _
 
   prod-Precategory :
     Precategory (l1 ⊔ l3) (l2 ⊔ l4)
-  pr1 prod-Precategory = {!!}
+  prod-Precategory = {!!}
 ```

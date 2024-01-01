@@ -40,7 +40,7 @@ preidempotent-map A = {!!}
 ```agda
 is-prop-is-preidempotent-is-set :
   {l : Level} {A : UU l} → is-set A → (f : A → A) → is-prop (is-preidempotent f)
-is-prop-is-preidempotent-is-set is-set-A f = {!!}
+is-prop-is-preidempotent-is-set = {!!}
 ```
 
 ## References

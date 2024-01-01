@@ -47,15 +47,15 @@ module _
       (X : UU l1) →
       is-contr
         ( Σ ((Y : UU l1) → X ≃ Y → f X ＝ f Y) (λ h → h X id-equiv ＝ refl))
-    unique-action-equiv-function X = {!!}
+    unique-action-equiv-function = {!!}
 
   action-equiv-function :
     {X Y : UU l1} → X ≃ Y → f X ＝ f Y
-  action-equiv-function {X} {Y} e = {!!}
+  action-equiv-function = {!!}
 
   compute-action-equiv-function-id-equiv :
     (X : UU l1) → action-equiv-function id-equiv ＝ refl
-  compute-action-equiv-function-id-equiv X = {!!}
+  compute-action-equiv-function-id-equiv = {!!}
 ```
 
 ## Properties
@@ -66,7 +66,7 @@ module _
 compute-action-equiv-function-const :
   {l1 l2 : Level} {B : UU l2} (b : B) {X Y : UU l1}
   (e : X ≃ Y) → (action-equiv-function (const (UU l1) B b) e) ＝ refl
-compute-action-equiv-function-const b {X} {Y} e = {!!}
+compute-action-equiv-function-const = {!!}
 ```
 
 ### The action on equivalences of any map preserves composition of equivalences
@@ -77,7 +77,7 @@ distributive-action-equiv-function-comp-equiv :
   (e : X ≃ Y) (e' : Y ≃ Z) →
   action-equiv-function f (e' ∘e e) ＝
   action-equiv-function f e ∙ action-equiv-function f e'
-distributive-action-equiv-function-comp-equiv f {X} {Y} {Z} e e' = {!!}
+distributive-action-equiv-function-comp-equiv = {!!}
 ```
 
 ### The action on equivalences of any map preserves inverses
@@ -87,5 +87,5 @@ compute-action-equiv-function-inv-equiv :
   {l1 l2 : Level} {B : UU l2} (f : UU l1 → B) {X Y : UU l1}
   (e : X ≃ Y) →
   action-equiv-function f (inv-equiv e) ＝ inv (action-equiv-function f e)
-compute-action-equiv-function-inv-equiv f {X} {Y} e = {!!}
+compute-action-equiv-function-inv-equiv = {!!}
 ```

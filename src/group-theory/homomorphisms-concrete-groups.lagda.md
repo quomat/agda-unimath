@@ -81,7 +81,7 @@ module _
     hom-Group
       ( group-Concrete-Group G)
       ( group-Concrete-Group H)
-  hom-group-hom-Concrete-Group f = {!!}
+  hom-group-hom-Concrete-Group = {!!}
 ```
 
 ### Homotopies of morphisms of concrete groups
@@ -102,19 +102,19 @@ module _
 
   eq-htpy-hom-Concrete-Group :
     (g : hom-Concrete-Group G H) → (htpy-hom-Concrete-Group g) → Id f g
-  eq-htpy-hom-Concrete-Group g = {!!}
+  eq-htpy-hom-Concrete-Group = {!!}
 ```
 
 ```agda
 id-hom-Concrete-Group :
   {l : Level} (G : Concrete-Group l) → hom-Concrete-Group G G
-id-hom-Concrete-Group G = {!!}
+id-hom-Concrete-Group = {!!}
 
 comp-hom-Concrete-Group :
   {l1 l2 l3 : Level}
   (G : Concrete-Group l1) (H : Concrete-Group l2) (K : Concrete-Group l3) →
   hom-Concrete-Group H K → hom-Concrete-Group G H → hom-Concrete-Group G K
-comp-hom-Concrete-Group G H K = {!!}
+comp-hom-Concrete-Group = {!!}
 
 associative-comp-hom-Concrete-Group :
   {l1 l2 l3 l4 : Level}
@@ -125,7 +125,7 @@ associative-comp-hom-Concrete-Group :
   htpy-hom-Concrete-Group G L
     ( comp-hom-Concrete-Group G H L (comp-hom-Concrete-Group H K L h g) f)
     ( comp-hom-Concrete-Group G K L h (comp-hom-Concrete-Group G H K g f))
-associative-comp-hom-Concrete-Group G H K L = {!!}
+associative-comp-hom-Concrete-Group = {!!}
 
 inv-associative-comp-hom-Concrete-Group :
   {l1 l2 l3 l4 : Level}
@@ -136,7 +136,7 @@ inv-associative-comp-hom-Concrete-Group :
   htpy-hom-Concrete-Group G L
     ( comp-hom-Concrete-Group G K L h (comp-hom-Concrete-Group G H K g f))
     ( comp-hom-Concrete-Group G H L (comp-hom-Concrete-Group H K L h g) f)
-inv-associative-comp-hom-Concrete-Group G H K L = {!!}
+inv-associative-comp-hom-Concrete-Group = {!!}
 
 module _
   {l1 l2 : Level} (G : Concrete-Group l1) (H : Concrete-Group l2)

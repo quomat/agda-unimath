@@ -28,10 +28,9 @@ Every finite type is small.
 ```agda
 is-small-Fin :
   (l : Level) → (k : ℕ) → is-small l (Fin k)
-pr1 (is-small-Fin l k) = {!!}
-pr2 (is-small-Fin l k) = {!!}
+is-small-Fin = {!!}
 
 is-small-is-finite :
   {l1 : Level} (l2 : Level) → (A : 𝔽 l1) → is-small l2 (type-𝔽 A)
-is-small-is-finite l2 A = {!!}
+is-small-is-finite = {!!}
 ```

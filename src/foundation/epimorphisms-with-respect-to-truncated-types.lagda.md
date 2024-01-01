@@ -59,7 +59,7 @@ is an embedding for every `k`-truncated type `X`.
 is-epimorphism-Truncated-Type :
   {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : UU l2} →
   (A → B) → UUω
-is-epimorphism-Truncated-Type k f = {!!}
+is-epimorphism-Truncated-Type = {!!}
 ```
 
 ## Properties
@@ -71,7 +71,7 @@ is-epimorphism-is-epimorphism-succ-Truncated-Type :
   {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : UU l2} (f : A → B) →
   is-epimorphism-Truncated-Type (succ-𝕋 k) f →
   is-epimorphism-Truncated-Type k f
-is-epimorphism-is-epimorphism-succ-Truncated-Type k f H X = {!!}
+is-epimorphism-is-epimorphism-succ-Truncated-Type = {!!}
 ```
 
 ### Every map is a `-1`-epimorphism
@@ -80,7 +80,7 @@ is-epimorphism-is-epimorphism-succ-Truncated-Type k f H X = {!!}
 is-neg-one-epimorphism :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
   is-epimorphism-Truncated-Type neg-one-𝕋 f
-is-neg-one-epimorphism f P = {!!}
+is-neg-one-epimorphism = {!!}
 ```
 
 ### Every `k`-equivalence is a `k`-epimorphism
@@ -90,7 +90,7 @@ is-epimorphism-is-truncation-equivalence-Truncated-Type :
   {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : UU l2} (f : A → B) →
   is-truncation-equivalence k f →
   is-epimorphism-Truncated-Type k f
-is-epimorphism-is-truncation-equivalence-Truncated-Type k f H X = {!!}
+is-epimorphism-is-truncation-equivalence-Truncated-Type = {!!}
 ```
 
 ### A map is a `k`-epimorphism if and only if its `k`-truncation is a `k`-epimorphism
@@ -103,12 +103,12 @@ module _
   is-epimorphism-is-epimorphism-map-trunc-Truncated-Type :
     is-epimorphism-Truncated-Type k (map-trunc k f) →
     is-epimorphism-Truncated-Type k f
-  is-epimorphism-is-epimorphism-map-trunc-Truncated-Type H X = {!!}
+  is-epimorphism-is-epimorphism-map-trunc-Truncated-Type = {!!}
 
   is-epimorphism-map-trunc-is-epimorphism-Truncated-Type :
     is-epimorphism-Truncated-Type k f →
     is-epimorphism-Truncated-Type k (map-trunc k f)
-  is-epimorphism-map-trunc-is-epimorphism-Truncated-Type H X = {!!}
+  is-epimorphism-map-trunc-is-epimorphism-Truncated-Type = {!!}
 ```
 
 ### The class of `k`-epimorphisms is closed under composition and has the right cancellation property
@@ -123,13 +123,13 @@ module _
     is-epimorphism-Truncated-Type k g →
     is-epimorphism-Truncated-Type k f →
     is-epimorphism-Truncated-Type k (g ∘ f)
-  is-epimorphism-comp-Truncated-Type eg ef X = {!!}
+  is-epimorphism-comp-Truncated-Type = {!!}
 
   is-epimorphism-left-factor-Truncated-Type :
     is-epimorphism-Truncated-Type k (g ∘ f) →
     is-epimorphism-Truncated-Type k f →
     is-epimorphism-Truncated-Type k g
-  is-epimorphism-left-factor-Truncated-Type ec ef X = {!!}
+  is-epimorphism-left-factor-Truncated-Type = {!!}
 ```
 
 ### A map `f` is a `k`-epimorphism if and only if the horizontal/vertical projections from `cocone {X} f f` are equivalences for all `k`-types `X`
@@ -143,13 +143,13 @@ module _
     is-epimorphism-Truncated-Type k f →
     {l : Level} (X : Truncated-Type l k) →
     is-equiv (diagonal-into-fibers-precomp f (type-Truncated-Type X))
-  is-equiv-diagonal-into-fibers-precomp-is-epimorphism-Truncated-Type e X = {!!}
+  is-equiv-diagonal-into-fibers-precomp-is-epimorphism-Truncated-Type = {!!}
 
   is-equiv-diagonal-into-cocone-is-epimorphism-Truncated-Type :
     is-epimorphism-Truncated-Type k f →
     {l : Level} (X : Truncated-Type l k) →
     is-equiv (diagonal-into-cocone f (type-Truncated-Type X))
-  is-equiv-diagonal-into-cocone-is-epimorphism-Truncated-Type e X = {!!}
+  is-equiv-diagonal-into-cocone-is-epimorphism-Truncated-Type = {!!}
 
   is-equiv-horizontal-map-cocone-is-epimorphism-Truncated-Type :
     is-epimorphism-Truncated-Type k f →
@@ -201,7 +201,7 @@ module _
   is-truncation-equivalence-codiagonal-map-is-epimorphism-Truncated-Type :
     is-epimorphism-Truncated-Type k f →
     is-truncation-equivalence k (codiagonal-map f)
-  is-truncation-equivalence-codiagonal-map-is-epimorphism-Truncated-Type e = {!!}
+  is-truncation-equivalence-codiagonal-map-is-epimorphism-Truncated-Type = {!!}
 ```
 
 ### A map is a `k`-epimorphism if its codiagonal is a `k`-equivalence
@@ -222,7 +222,7 @@ module _
   is-epimorphism-is-truncation-equivalence-codiagonal-map-Truncated-Type :
     is-truncation-equivalence k (codiagonal-map f) →
     is-epimorphism-Truncated-Type k f
-  is-epimorphism-is-truncation-equivalence-codiagonal-map-Truncated-Type e X = {!!}
+  is-epimorphism-is-truncation-equivalence-codiagonal-map-Truncated-Type = {!!}
 ```
 
 ### A map is a `k`-epimorphism if and only if its codiagonal is `k`-connected
@@ -236,11 +236,11 @@ module _
 
   is-epimorphism-is-connected-codiagonal-map-Truncated-Type :
     is-connected-map k (codiagonal-map f) → is-epimorphism-Truncated-Type k f
-  is-epimorphism-is-connected-codiagonal-map-Truncated-Type c = {!!}
+  is-epimorphism-is-connected-codiagonal-map-Truncated-Type = {!!}
 
   is-connected-codiagonal-map-is-epimorphism-Truncated-Type :
     is-epimorphism-Truncated-Type k f → is-connected-map k (codiagonal-map f)
-  is-connected-codiagonal-map-is-epimorphism-Truncated-Type e = {!!}
+  is-connected-codiagonal-map-is-epimorphism-Truncated-Type = {!!}
 ```
 
 ## See also

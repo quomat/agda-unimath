@@ -62,7 +62,7 @@ module _
   is-epimorphism-is-dependent-epimorphism-Truncated-Type :
     is-dependent-epimorphism-Truncated-Type k f →
     is-epimorphism-Truncated-Type k f
-  is-epimorphism-is-dependent-epimorphism-Truncated-Type e X = {!!}
+  is-epimorphism-is-dependent-epimorphism-Truncated-Type = {!!}
 ```
 
 The converse of the above, that every `k`-epimorphism is a dependent

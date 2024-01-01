@@ -95,7 +95,7 @@ module _
   commutative-add-Cyclic-Group :
     (x y : type-Cyclic-Group) →
     add-Cyclic-Group x y ＝ add-Cyclic-Group y x
-  commutative-add-Cyclic-Group x y = {!!}
+  commutative-add-Cyclic-Group = {!!}
 
   ab-Cyclic-Group : Ab l
   pr1 ab-Cyclic-Group = {!!}
@@ -127,7 +127,7 @@ module _
   is-cyclic-has-generating-element-Group :
     is-cyclic-Group G →
     {l : Level} → ∃ (type-Group G) (λ g → is-emb-ev-element-hom-Group' G g l)
-  is-cyclic-has-generating-element-Group H = {!!}
+  is-cyclic-has-generating-element-Group = {!!}
 ```
 
 ## See also

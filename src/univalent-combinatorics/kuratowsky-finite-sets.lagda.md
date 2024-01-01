@@ -71,11 +71,11 @@ is-finite-has-decidable-equality-type-𝔽-Kuratowsky :
   {l : Level} (X : 𝔽-Kuratowsky l) →
   has-decidable-equality (type-𝔽-Kuratowsky X) →
   is-finite (type-𝔽-Kuratowsky X)
-is-finite-has-decidable-equality-type-𝔽-Kuratowsky X H = {!!}
+is-finite-has-decidable-equality-type-𝔽-Kuratowsky = {!!}
 
 has-decidable-equality-is-finite-type-𝔽-Kuratowsky :
   {l : Level} (X : 𝔽-Kuratowsky l) →
   is-finite (type-𝔽-Kuratowsky X) →
   has-decidable-equality (type-𝔽-Kuratowsky X)
-has-decidable-equality-is-finite-type-𝔽-Kuratowsky X H = {!!}
+has-decidable-equality-is-finite-type-𝔽-Kuratowsky = {!!}
 ```

@@ -42,7 +42,7 @@ module _
 
   is-equiv-functor-Precategory :
     functor-Precategory C D → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-equiv-functor-Precategory F = {!!}
+  is-equiv-functor-Precategory = {!!}
 ```
 
 ### The type of equivalences of precategories

@@ -37,7 +37,7 @@ module _
 
   is-binary-lower-bound-Large-Poset :
     {l3 : Level} → type-Large-Poset P l3 → UU (β l3 l1 ⊔ β l3 l2)
-  is-binary-lower-bound-Large-Poset x = {!!}
+  is-binary-lower-bound-Large-Poset = {!!}
 ```
 
 ## Properties
@@ -55,19 +55,19 @@ module _
     {l3 : Level} (z : type-Π-Large-Poset P l3) →
     ((i : I) → is-binary-lower-bound-Large-Poset (P i) (x i) (y i) (z i)) →
     is-binary-lower-bound-Large-Poset (Π-Large-Poset P) x y z
-  pr1 (is-binary-lower-bound-Π-Large-Poset z H) i = {!!}
+  is-binary-lower-bound-Π-Large-Poset = {!!}
 
   is-binary-lower-bound-is-binary-lower-bound-Π-Large-Poset :
     {l3 : Level} (z : type-Π-Large-Poset P l3) →
     is-binary-lower-bound-Large-Poset (Π-Large-Poset P) x y z →
     (i : I) → is-binary-lower-bound-Large-Poset (P i) (x i) (y i) (z i)
-  pr1 (is-binary-lower-bound-is-binary-lower-bound-Π-Large-Poset z H i) = {!!}
+  is-binary-lower-bound-is-binary-lower-bound-Π-Large-Poset = {!!}
   pr2 (is-binary-lower-bound-is-binary-lower-bound-Π-Large-Poset z H i) = {!!}
 
   logical-equivalence-is-binary-lower-bound-Π-Large-Poset :
     {l3 : Level} (z : type-Π-Large-Poset P l3) →
     ((i : I) → is-binary-lower-bound-Large-Poset (P i) (x i) (y i) (z i)) ↔
     is-binary-lower-bound-Large-Poset (Π-Large-Poset P) x y z
-  pr1 (logical-equivalence-is-binary-lower-bound-Π-Large-Poset z) = {!!}
+  logical-equivalence-is-binary-lower-bound-Π-Large-Poset = {!!}
   pr2 (logical-equivalence-is-binary-lower-bound-Π-Large-Poset z) = {!!}
 ```

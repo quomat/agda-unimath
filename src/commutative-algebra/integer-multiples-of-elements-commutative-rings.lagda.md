@@ -317,5 +317,5 @@ module _
     ( map-hom-Commutative-Ring A B f x ＝ map-hom-Commutative-Ring A B g x) →
     map-hom-Commutative-Ring A B f (integer-multiple-Commutative-Ring A k x) ＝
     map-hom-Commutative-Ring A B g (integer-multiple-Commutative-Ring A k x)
-  eq-integer-multiple-hom-Commutative-Ring g = {!!}
+  eq-integer-multiple-hom-Commutative-Ring = {!!}
 ```

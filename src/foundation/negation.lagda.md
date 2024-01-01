@@ -55,7 +55,7 @@ reductio-ad-absurdum p np = {!!}
 equiv-neg :
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} →
   (X ≃ Y) → (¬ X ≃ ¬ Y)
-equiv-neg {l1} {l2} {X} {Y} e = {!!}
+equiv-neg = {!!}
 ```
 
 ### Negation has no fixed points
@@ -63,12 +63,12 @@ equiv-neg {l1} {l2} {X} {Y} e = {!!}
 ```agda
 no-fixed-points-neg :
   {l : Level} (A : UU l) → ¬ (A ↔ (¬ A))
-no-fixed-points-neg A (pair f g) = {!!}
+no-fixed-points-neg = {!!}
 ```
 
 ```agda
 abstract
   no-fixed-points-neg-Prop :
     {l1 : Level} (P : Prop l1) → ¬ (P ⇔ neg-Prop P)
-  no-fixed-points-neg-Prop P = {!!}
+  no-fixed-points-neg-Prop = {!!}
 ```

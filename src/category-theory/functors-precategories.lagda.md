@@ -112,7 +112,7 @@ module _
     hom-Precategory D
       ( obj-functor-Precategory F x)
       ( obj-functor-Precategory F y)
-  hom-functor-Precategory F = {!!}
+  hom-functor-Precategory = {!!}
 
   map-functor-Precategory : functor-Precategory → map-Precategory C D
   pr1 (map-functor-Precategory F) = {!!}
@@ -129,13 +129,13 @@ module _
     ( comp-hom-Precategory D
       ( hom-functor-Precategory F g)
       ( hom-functor-Precategory F f))
-  preserves-comp-functor-Precategory F = {!!}
+  preserves-comp-functor-Precategory = {!!}
 
   preserves-id-functor-Precategory :
     (F : functor-Precategory) (x : obj-Precategory C) →
     ( hom-functor-Precategory F (id-hom-Precategory C {x})) ＝
     ( id-hom-Precategory D {obj-functor-Precategory F x})
-  preserves-id-functor-Precategory F = {!!}
+  preserves-id-functor-Precategory = {!!}
 ```
 
 ## Examples
@@ -147,10 +147,7 @@ There is an identity functor on any precategory.
 ```agda
 id-functor-Precategory :
   {l1 l2 : Level} (C : Precategory l1 l2) → functor-Precategory C C
-pr1 (id-functor-Precategory C) = {!!}
-pr1 (pr2 (id-functor-Precategory C)) = {!!}
-pr1 (pr2 (pr2 (id-functor-Precategory C))) g f = {!!}
-pr2 (pr2 (pr2 (id-functor-Precategory C))) x = {!!}
+id-functor-Precategory = {!!}
 ```
 
 ### Composition of functors
@@ -180,11 +177,11 @@ module _
 
   preserves-comp-comp-functor-Precategory :
     preserves-comp-hom-map-Precategory A C map-comp-functor-Precategory
-  preserves-comp-comp-functor-Precategory g f = {!!}
+  preserves-comp-comp-functor-Precategory = {!!}
 
   preserves-id-comp-functor-Precategory :
     preserves-id-hom-map-Precategory A C map-comp-functor-Precategory
-  preserves-id-comp-functor-Precategory x = {!!}
+  preserves-id-comp-functor-Precategory = {!!}
 
   comp-functor-Precategory : functor-Precategory A C
   pr1 comp-functor-Precategory = {!!}
@@ -273,7 +270,7 @@ module _
     hom-Precategory D
       ( obj-functor-Precategory C D F y)
       ( obj-functor-Precategory C D F x)
-  hom-inv-preserves-is-iso-functor-Precategory f is-iso-f = {!!}
+  hom-inv-preserves-is-iso-functor-Precategory = {!!}
 
   is-right-inv-preserves-is-iso-functor-Precategory :
     (f : hom-Precategory C x y) →
@@ -282,7 +279,7 @@ module _
       ( hom-functor-Precategory C D F f)
       ( hom-functor-Precategory C D F (hom-inv-is-iso-Precategory C is-iso-f)) ＝
     id-hom-Precategory D
-  is-right-inv-preserves-is-iso-functor-Precategory f is-iso-f = {!!}
+  is-right-inv-preserves-is-iso-functor-Precategory = {!!}
 
   is-left-inv-preserves-is-iso-functor-Precategory :
     (f : hom-Precategory C x y) →
@@ -291,20 +288,20 @@ module _
       ( hom-functor-Precategory C D F (hom-inv-is-iso-Precategory C is-iso-f))
       ( hom-functor-Precategory C D F f) ＝
     id-hom-Precategory D
-  is-left-inv-preserves-is-iso-functor-Precategory f is-iso-f = {!!}
+  is-left-inv-preserves-is-iso-functor-Precategory = {!!}
 
   preserves-is-iso-functor-Precategory :
     (f : hom-Precategory C x y) →
     is-iso-Precategory C f →
     is-iso-Precategory D (hom-functor-Precategory C D F f)
-  pr1 (preserves-is-iso-functor-Precategory f is-iso-f) = {!!}
+  preserves-is-iso-functor-Precategory = {!!}
 
   preserves-iso-functor-Precategory :
     iso-Precategory C x y →
     iso-Precategory D
       ( obj-functor-Precategory C D F x)
       ( obj-functor-Precategory C D F y)
-  pr1 (preserves-iso-functor-Precategory f) = {!!}
+  preserves-iso-functor-Precategory = {!!}
 ```
 
 ### Categorical laws for functor composition

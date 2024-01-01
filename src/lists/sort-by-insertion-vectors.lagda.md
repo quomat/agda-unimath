@@ -55,13 +55,13 @@ module _
     (l : vec (type-Decidable-Total-Order X) n) →
     leq-or-strict-greater-Decidable-Poset X x y →
     vec (type-Decidable-Total-Order X) (succ-ℕ (succ-ℕ (n)))
-  helper-insertion-sort-vec x y l (inl p) = {!!}
+  helper-insertion-sort-vec = {!!}
 
   insertion-sort-vec :
     {n : ℕ} →
     vec (type-Decidable-Total-Order X) n →
     vec (type-Decidable-Total-Order X) n
-  insertion-sort-vec {zero-ℕ} empty-vec = {!!}
+  insertion-sort-vec = {!!}
 ```
 
 ## Properties
@@ -75,13 +75,13 @@ module _
     (l : vec (type-Decidable-Total-Order X) n) →
     leq-or-strict-greater-Decidable-Poset X x y →
     Permutation (succ-ℕ (succ-ℕ (n)))
-  helper-permutation-insertion-sort-vec x y l (inl _) = {!!}
+  helper-permutation-insertion-sort-vec = {!!}
 
   permutation-insertion-sort-vec :
     {n : ℕ}
     (v : vec (type-Decidable-Total-Order X) n) →
     Permutation n
-  permutation-insertion-sort-vec {zero-ℕ} empty-vec = {!!}
+  permutation-insertion-sort-vec = {!!}
 
   helper-eq-permute-vec-permutation-insertion-sort-vec :
     {n : ℕ}
@@ -93,13 +93,13 @@ module _
       ( succ-ℕ (succ-ℕ n))
       ( x ∷ y ∷ v)
       ( helper-permutation-insertion-sort-vec x y v p)
-  helper-eq-permute-vec-permutation-insertion-sort-vec x y v (inl _) = {!!}
+  helper-eq-permute-vec-permutation-insertion-sort-vec = {!!}
 
   eq-permute-vec-permutation-insertion-sort-vec :
     {n : ℕ}
     (v : vec (type-Decidable-Total-Order X) n) →
     insertion-sort-vec v ＝ permute-vec n v (permutation-insertion-sort-vec v)
-  eq-permute-vec-permutation-insertion-sort-vec {0} empty-vec = {!!}
+  eq-permute-vec-permutation-insertion-sort-vec = {!!}
 ```
 
 ### Sort by insertion is sorting vectors
@@ -112,13 +112,13 @@ module _
     (p : leq-or-strict-greater-Decidable-Poset X x y) →
     is-sorted-vec X (y ∷ v) →
     is-sorted-vec X (helper-insertion-sort-vec x y v p)
-  helper-is-sorting-insertion-sort-vec {0} x y empty-vec (inl p) _ = {!!}
+  helper-is-sorting-insertion-sort-vec = {!!}
 
   is-sorting-insertion-sort-vec :
     {n : ℕ}
     (v : vec (type-Decidable-Total-Order X) n) →
     is-sorted-vec X (insertion-sort-vec v)
-  is-sorting-insertion-sort-vec {0} v = {!!}
+  is-sorting-insertion-sort-vec = {!!}
 ```
 
 ### Sort by insertion is a sort
@@ -126,5 +126,5 @@ module _
 ```agda
   is-sort-insertion-sort-vec :
     is-sort-vec X (insertion-sort-vec)
-  pr1 (pr1 (is-sort-insertion-sort-vec n) v) = {!!}
+  is-sort-insertion-sort-vec = {!!}
 ```

@@ -30,7 +30,7 @@ module sections-dtt where
     {A : system l1 l2} {B : system l3 l4}
     (C : fibered-system l5 l6 B) (f : hom-system A B) →
     fibered-system l5 l6 A
-  fibered-system.type (precomp-fibered-system C f) X = {!!}
+  precomp-fibered-system = {!!}
 
   precomp-section-system :
     {l1 l2 l3 l4 l5 l6 : Level}
@@ -38,7 +38,7 @@ module sections-dtt where
     {C : fibered-system l5 l6 B}
     (g : section-system C) (f : hom-system A B) →
     section-system (precomp-fibered-system C f)
-  section-system.type (precomp-section-system g f) X = {!!}
+  precomp-section-system = {!!}
 
   transpose-bifibered-system :
     {l1 l2 l3 l4 l5 l6 l7 l8 : Level}
@@ -46,7 +46,7 @@ module sections-dtt where
     {B : fibered-system l3 l4 A} {C : fibered-system l5 l6 A}
     (D : bifibered-system l7 l8 B C) →
     bifibered-system l7 l8 C B
-  bifibered-system.type (transpose-bifibered-system D) Z Y = {!!}
+  transpose-bifibered-system = {!!}
 
   postcomp-section-system :
     {l1 l2 l3 l4 l5 l6 l7 l8 : Level}
@@ -54,7 +54,7 @@ module sections-dtt where
     {C : system l5 l6} {D : fibered-system l7 l8 C}
     {f : hom-system A C} (g : hom-fibered-system f B D)
     (h : section-system B) → section-system (precomp-fibered-system D f)
-  section-system.type (postcomp-section-system g h) X = {!!}
+  postcomp-section-system = {!!}
 
   record preserves-weakening-section-system
     {l1 l2 l3 l4 : Level} {A : system l1 l2} {B : fibered-system l3 l4 A}

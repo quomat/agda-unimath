@@ -37,20 +37,20 @@ module _
 
   contains-zero-intersection-ideal-Semiring :
     contains-zero-subset-Semiring R subset-intersection-ideal-Semiring
-  pr1 contains-zero-intersection-ideal-Semiring = {!!}
+  contains-zero-intersection-ideal-Semiring = {!!}
 
   is-closed-under-addition-intersection-ideal-Semiring :
     is-closed-under-addition-subset-Semiring R
       subset-intersection-ideal-Semiring
-  pr1 (is-closed-under-addition-intersection-ideal-Semiring x y H K) = {!!}
+  is-closed-under-addition-intersection-ideal-Semiring = {!!}
 
   is-closed-under-left-multiplication-intersection-ideal-Semiring :
     is-closed-under-left-multiplication-subset-Semiring R
       subset-intersection-ideal-Semiring
-  pr1 (is-closed-under-left-multiplication-intersection-ideal-Semiring x y H) = {!!}
+  is-closed-under-left-multiplication-intersection-ideal-Semiring = {!!}
 
   is-closed-under-right-multiplication-intersection-ideal-Semiring :
     is-closed-under-right-multiplication-subset-Semiring R
       subset-intersection-ideal-Semiring
-  pr1 (is-closed-under-right-multiplication-intersection-ideal-Semiring x y H) = {!!}
+  is-closed-under-right-multiplication-intersection-ideal-Semiring = {!!}
 ```

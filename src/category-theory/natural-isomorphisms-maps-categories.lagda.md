@@ -206,7 +206,7 @@ natural-isomorphism-map-eq-Category :
   (D : Category l3 l4)
   (F G : map-Category C D) →
   F ＝ G → natural-isomorphism-map-Category C D F G
-natural-isomorphism-map-eq-Category C D F .F refl = {!!}
+natural-isomorphism-map-eq-Category = {!!}
 ```
 
 ## Propositions
@@ -256,7 +256,7 @@ module _
     ( natural-transformation-map-natural-isomorphism-map-Category C D F G f ＝
       natural-transformation-map-natural-isomorphism-map-Category C D F G g) →
     f ＝ g
-  eq-eq-natural-transformation-map-natural-isomorphism-map-Category f g = {!!}
+  eq-eq-natural-transformation-map-natural-isomorphism-map-Category = {!!}
 
   eq-htpy-hom-family-natural-isomorphism-map-Category :
         (f g : natural-isomorphism-map-Category C D F G) →
@@ -329,7 +329,7 @@ module _
     is-natural-isomorphism-map-Category C D G F
       ( natural-transformation-map-inv-is-natural-isomorphism-map-Category
         ( is-iso-f))
-  is-natural-isomorphism-map-inv-is-natural-isomorphism-map-Category is-iso-f = {!!}
+  is-natural-isomorphism-map-inv-is-natural-isomorphism-map-Category = {!!}
 ```
 
 ### Inverses of natural isomorphisms
@@ -369,7 +369,7 @@ module _
 
   inv-natural-isomorphism-map-Category :
     natural-isomorphism-map-Category C D G F
-  pr1 inv-natural-isomorphism-map-Category = {!!}
+  inv-natural-isomorphism-map-Category = {!!}
 ```
 
 ### Natural isomorphisms are closed under composition
@@ -416,7 +416,7 @@ module _
 
   comp-natural-isomorphism-map-Category :
     natural-isomorphism-map-Category C D F H
-  pr1 comp-natural-isomorphism-map-Category = {!!}
+  comp-natural-isomorphism-map-Category = {!!}
 
   natural-transformation-map-inv-comp-natural-isomorphism-map-Category :
     natural-transformation-map-Category C D H F
@@ -552,5 +552,5 @@ module _
     comp-natural-isomorphism-map-Category C D F G H
       ( natural-isomorphism-map-eq-Category C D G H q)
       ( natural-isomorphism-map-eq-Category C D F G p)
-  preserves-concat-natural-isomorphism-map-eq-Category refl q = {!!}
+  preserves-concat-natural-isomorphism-map-eq-Category = {!!}
 ```

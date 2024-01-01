@@ -109,5 +109,5 @@ module _
 
   equiv-fiber-codiagonal-map-suspension-fiber :
     suspension (fiber f b) ≃ fiber (codiagonal-map f) b
-  pr1 equiv-fiber-codiagonal-map-suspension-fiber = {!!}
+  equiv-fiber-codiagonal-map-suspension-fiber = {!!}
 ```

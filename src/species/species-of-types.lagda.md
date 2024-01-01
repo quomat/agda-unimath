@@ -36,7 +36,7 @@ preserves-product-species-types :
   {l1 l2 : Level}
   (S : species-types l1 l2) →
   UU (lsuc l1 ⊔ l2)
-preserves-product-species-types {l1} S = {!!}
+preserves-product-species-types = {!!}
 ```
 
 ### Transport in species
@@ -45,5 +45,5 @@ preserves-product-species-types {l1} S = {!!}
 tr-species-types :
   {l1 l2 : Level} (F : species-types l1 l2) (X Y : UU l1) →
   X ≃ Y → F X → F Y
-tr-species-types F X Y e = {!!}
+tr-species-types = {!!}
 ```

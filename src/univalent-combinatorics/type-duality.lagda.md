@@ -44,7 +44,7 @@ equiv-surjection-𝔽-family-finite-inhabited-type :
   ( (type-𝔽 A ↠ type-𝔽 B) ≃
     ( Σ ( (type-𝔽 B) → Inhabited-𝔽 l)
         ( λ Y → (type-𝔽 A) ≃ Σ (type-𝔽 B) (λ b → type-Inhabited-𝔽 (Y b)))))
-equiv-surjection-𝔽-family-finite-inhabited-type {l} A B = {!!}
+equiv-surjection-𝔽-family-finite-inhabited-type = {!!}
 
 Slice-Surjection-𝔽 : (l : Level) {l1 : Level} (A : 𝔽 l1) → UU (lsuc l ⊔ l1)
 Slice-Surjection-𝔽 l A = {!!}
@@ -52,5 +52,5 @@ Slice-Surjection-𝔽 l A = {!!}
 equiv-Fiber-trunc-Prop-𝔽 :
   (l : Level) {l1 : Level} (A : 𝔽 l1) →
   Slice-Surjection-𝔽 (l1 ⊔ l) A ≃ (type-𝔽 A → Inhabited-𝔽 (l1 ⊔ l))
-equiv-Fiber-trunc-Prop-𝔽 l {l1} A = {!!}
+equiv-Fiber-trunc-Prop-𝔽 = {!!}
 ```

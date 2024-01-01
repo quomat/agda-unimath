@@ -90,7 +90,7 @@ module _
 
   is-of-natural-height-is-empty-𝕍 :
     (n : ℕ) (X : 𝕍 l) → is-empty-𝕍 X → is-of-natural-height-𝕍 n X
-  is-of-natural-height-is-empty-𝕍 zero-ℕ X H = {!!}
+  is-of-natural-height-is-empty-𝕍 = {!!}
 ```
 
 ### A multiset of natural height `n` is a multiset of natural height `n + 1`
@@ -103,5 +103,5 @@ module _
   is-of-natural-height-succ-𝕍 :
     (n : ℕ) (X : 𝕍 l) →
     is-of-natural-height-𝕍 n X → is-of-natural-height-𝕍 (succ-ℕ n) X
-  is-of-natural-height-succ-𝕍 zero-ℕ X H = {!!}
+  is-of-natural-height-succ-𝕍 = {!!}
 ```

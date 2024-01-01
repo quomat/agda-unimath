@@ -42,7 +42,7 @@ leq-Fin (succ-ℕ k) (inr x) (inl y) = {!!}
 abstract
   is-prop-leq-Fin :
     (k : ℕ) (x y : Fin k) → is-prop (leq-Fin k x y)
-  is-prop-leq-Fin (succ-ℕ k) (inl x) (inl y) = {!!}
+  is-prop-leq-Fin = {!!}
 
 leq-Fin-Prop : (k : ℕ) → Fin k → Fin k → Prop lzero
 pr1 (leq-Fin-Prop k x y) = {!!}
@@ -50,7 +50,7 @@ pr2 (leq-Fin-Prop k x y) = {!!}
 
 leq-neg-one-Fin :
   (k : ℕ) (x : Fin (succ-ℕ k)) → leq-Fin (succ-ℕ k) x (neg-one-Fin k)
-leq-neg-one-Fin k x = {!!}
+leq-neg-one-Fin = {!!}
 
 refl-leq-Fin : (k : ℕ) → is-reflexive (leq-Fin k)
 refl-leq-Fin (succ-ℕ k) (inl x) = {!!}
@@ -58,39 +58,29 @@ refl-leq-Fin (succ-ℕ k) (inr star) = {!!}
 
 antisymmetric-leq-Fin :
   (k : ℕ) (x y : Fin k) → leq-Fin k x y → leq-Fin k y x → x ＝ y
-antisymmetric-leq-Fin (succ-ℕ k) (inl x) (inl y) H K = {!!}
-antisymmetric-leq-Fin (succ-ℕ k) (inr star) (inr star) H K = {!!}
+antisymmetric-leq-Fin = {!!}
 
 transitive-leq-Fin :
   (k : ℕ) → is-transitive (leq-Fin k)
-transitive-leq-Fin (succ-ℕ k) (inl x) (inl y) (inl z) H K = {!!}
-transitive-leq-Fin (succ-ℕ k) (inl x) (inl y) (inr star) H K = {!!}
-transitive-leq-Fin (succ-ℕ k) (inl x) (inr star) (inr star) H K = {!!}
-transitive-leq-Fin (succ-ℕ k) (inr star) (inr star) (inr star) H K = {!!}
+transitive-leq-Fin = {!!}
 
 concatenate-eq-leq-eq-Fin :
   (k : ℕ) {x1 x2 x3 x4 : Fin k} →
   x1 ＝ x2 → leq-Fin k x2 x3 → x3 ＝ x4 → leq-Fin k x1 x4
-concatenate-eq-leq-eq-Fin k refl H refl = {!!}
+concatenate-eq-leq-eq-Fin = {!!}
 
 leq-succ-Fin :
   (k : ℕ) (x : Fin k) →
   leq-Fin (succ-ℕ k) (inl-Fin k x) (succ-Fin (succ-ℕ k) (inl-Fin k x))
-leq-succ-Fin (succ-ℕ k) (inl x) = {!!}
-leq-succ-Fin (succ-ℕ k) (inr star) = {!!}
+leq-succ-Fin = {!!}
 
 preserves-leq-nat-Fin :
   (k : ℕ) {x y : Fin k} → leq-Fin k x y → leq-ℕ (nat-Fin k x) (nat-Fin k y)
-preserves-leq-nat-Fin (succ-ℕ k) {inl x} {inl y} H = {!!}
-preserves-leq-nat-Fin (succ-ℕ k) {inl x} {inr star} H = {!!}
-preserves-leq-nat-Fin (succ-ℕ k) {inr star} {inr star} H = {!!}
+preserves-leq-nat-Fin = {!!}
 
 reflects-leq-nat-Fin :
   (k : ℕ) {x y : Fin k} → leq-ℕ (nat-Fin k x) (nat-Fin k y) → leq-Fin k x y
-reflects-leq-nat-Fin (succ-ℕ k) {inl x} {inl y} H = {!!}
-reflects-leq-nat-Fin (succ-ℕ k) {inr star} {inl y} H = {!!}
-reflects-leq-nat-Fin (succ-ℕ k) {inl x} {inr star} H = {!!}
-reflects-leq-nat-Fin (succ-ℕ k) {inr star} {inr star} H = {!!}
+reflects-leq-nat-Fin = {!!}
 ```
 
 ### The partial order on the standard finite types

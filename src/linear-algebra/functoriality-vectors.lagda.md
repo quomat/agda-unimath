@@ -53,7 +53,7 @@ module _
 
   binary-map-vec :
     {n : ℕ} → (A → B → C) → vec A n → vec B n → vec C n
-  binary-map-vec f empty-vec empty-vec = {!!}
+  binary-map-vec = {!!}
 ```
 
 ### Functoriality of the type of functional vectors
@@ -65,12 +65,12 @@ module _
 
   map-functional-vec :
     (n : ℕ) → (A → B) → functional-vec A n → functional-vec B n
-  map-functional-vec n f v = {!!}
+  map-functional-vec = {!!}
 
   htpy-functional-vec :
     (n : ℕ) {f g : A → B} → (f ~ g) →
     map-functional-vec n f ~ map-functional-vec n g
-  htpy-functional-vec n H v = {!!}
+  htpy-functional-vec = {!!}
 ```
 
 ### Binary functoriality of the type of functional vectors
@@ -83,7 +83,7 @@ module _
   binary-map-functional-vec :
     (n : ℕ) → (A → B → C) →
     functional-vec A n → functional-vec B n → functional-vec C n
-  binary-map-functional-vec n f v w i = {!!}
+  binary-map-functional-vec = {!!}
 ```
 
 ### Link between functoriality of the type of vectors and of the type of functional vectors
@@ -100,5 +100,5 @@ module _
       ( n)
       ( map-functional-vec n f (functional-vec-vec n v)) ＝
     map-vec f v
-  map-vec-map-functional-vec zero-ℕ empty-vec = {!!}
+  map-vec-map-functional-vec = {!!}
 ```

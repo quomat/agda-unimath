@@ -40,7 +40,7 @@ module _
 
   is-intersection-ideal-Ring :
     {l4 : Level} (K : ideal-Ring l4 A) → UUω
-  is-intersection-ideal-Ring K = {!!}
+  is-intersection-ideal-Ring = {!!}
 ```
 
 ### Intersections of ideals in rings
@@ -55,40 +55,40 @@ module _
 
   contains-zero-intersection-ideal-Ring :
     contains-zero-subset-Ring R subset-intersection-ideal-Ring
-  pr1 contains-zero-intersection-ideal-Ring = {!!}
+  contains-zero-intersection-ideal-Ring = {!!}
 
   is-closed-under-addition-intersection-ideal-Ring :
     is-closed-under-addition-subset-Ring R
       subset-intersection-ideal-Ring
-  pr1 (is-closed-under-addition-intersection-ideal-Ring H K) = {!!}
+  is-closed-under-addition-intersection-ideal-Ring = {!!}
 
   is-closed-under-negatives-intersection-ideal-Ring :
     is-closed-under-negatives-subset-Ring R
       subset-intersection-ideal-Ring
-  pr1 (is-closed-under-negatives-intersection-ideal-Ring H) = {!!}
+  is-closed-under-negatives-intersection-ideal-Ring = {!!}
 
   is-closed-under-left-multiplication-intersection-ideal-Ring :
     is-closed-under-left-multiplication-subset-Ring R
       subset-intersection-ideal-Ring
-  pr1 (is-closed-under-left-multiplication-intersection-ideal-Ring x y H) = {!!}
+  is-closed-under-left-multiplication-intersection-ideal-Ring = {!!}
 
   is-closed-under-right-multiplication-intersection-ideal-Ring :
     is-closed-under-right-multiplication-subset-Ring R
       subset-intersection-ideal-Ring
-  pr1 (is-closed-under-right-multiplication-intersection-ideal-Ring x y H) = {!!}
+  is-closed-under-right-multiplication-intersection-ideal-Ring = {!!}
 
   is-additive-subgroup-intersection-ideal-Ring :
     is-additive-subgroup-subset-Ring R subset-intersection-ideal-Ring
-  pr1 is-additive-subgroup-intersection-ideal-Ring = {!!}
+  is-additive-subgroup-intersection-ideal-Ring = {!!}
 
   is-ideal-intersection-ideal-Ring :
     is-ideal-subset-Ring R subset-intersection-ideal-Ring
-  pr1 is-ideal-intersection-ideal-Ring = {!!}
+  is-ideal-intersection-ideal-Ring = {!!}
 
   intersection-ideal-Ring : ideal-Ring (l2 ⊔ l3) R
   pr1 intersection-ideal-Ring = {!!}
 
   is-intersection-intersection-ideal-Ring :
     is-intersection-ideal-Ring R I J intersection-ideal-Ring
-  is-intersection-intersection-ideal-Ring K = {!!}
+  is-intersection-intersection-ideal-Ring = {!!}
 ```

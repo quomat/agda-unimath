@@ -60,5 +60,5 @@ module _
   interchange-law-commutative-and-associative :
     ((x y : X) → μ x y ＝ μ y x) → ((x y z : X) → μ (μ x y) z ＝ μ x (μ y z)) →
     interchange-law μ
-  interchange-law-commutative-and-associative C A x y u v = {!!}
+  interchange-law-commutative-and-associative = {!!}
 ```

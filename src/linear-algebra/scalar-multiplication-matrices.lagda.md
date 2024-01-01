@@ -21,5 +21,5 @@ open import linear-algebra.scalar-multiplication-vectors
 scalar-mul-matrix :
   {l1 l2 : Level} {B : UU l1} {A : UU l2} {m n : ℕ} →
   (B → A → A) → B → matrix A m n → matrix A m n
-scalar-mul-matrix μ = {!!}
+scalar-mul-matrix = {!!}
 ```

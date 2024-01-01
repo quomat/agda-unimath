@@ -89,7 +89,7 @@ cone-family :
   {f : A → X} {g : B → X} →
   (f' : (a : A) → PA a → PX (f a)) (g' : (b : B) → PB b → PX (g b)) →
   cone f g C → (C → UU l8) → UU (l4 ⊔ l5 ⊔ l6 ⊔ l7 ⊔ l8)
-cone-family {C = C} PX {f = f} {g} f' g' c PC = {!!}
+cone-family = {!!}
 ```
 
 ### Identifications of cones over cospans
@@ -104,7 +104,7 @@ module _
     (c c' : cone f g C)
     (K : vertical-map-cone f g c ~ vertical-map-cone f g c')
     (L : horizontal-map-cone f g c ~ horizontal-map-cone f g c') → UU (l4 ⊔ l3)
-  coherence-htpy-cone c c' K L = {!!}
+  coherence-htpy-cone = {!!}
 
   htpy-cone : cone f g C → cone f g C → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
   htpy-cone c c' = {!!}
@@ -117,7 +117,7 @@ module _
 
   is-torsorial-htpy-cone :
     (c : cone f g C) → is-torsorial (htpy-cone c)
-  is-torsorial-htpy-cone c = {!!}
+  is-torsorial-htpy-cone = {!!}
 
   is-equiv-htpy-eq-cone : (c c' : cone f g C) → is-equiv (htpy-eq-cone c c')
   is-equiv-htpy-eq-cone c = {!!}
@@ -139,7 +139,7 @@ module _
 
   cone-map :
     {C : UU l4} → cone f g C → {C' : UU l5} → (C' → C) → cone f g C'
-  pr1 (cone-map c h) = {!!}
+  cone-map = {!!}
 ```
 
 ### Pasting cones horizontally
@@ -153,7 +153,7 @@ module _
 
   pasting-horizontal-cone :
     (c : cone j h B) → cone i (vertical-map-cone j h c) A → cone (j ∘ i) h A
-  pr1 (pasting-horizontal-cone c (f , p , H)) = {!!}
+  pasting-horizontal-cone = {!!}
 ```
 
 ### Vertical composition of cones
@@ -167,7 +167,7 @@ module _
 
   pasting-vertical-cone :
     (c : cone f g B) → cone (horizontal-map-cone f g c) h A → cone f (g ∘ h) A
-  pr1 (pasting-vertical-cone c (p' , q' , H')) = {!!}
+  pasting-vertical-cone = {!!}
 ```
 
 ### The swapping function on cones over cospans
@@ -177,9 +177,7 @@ swap-cone :
   {l1 l2 l3 l4 : Level}
   {A : UU l1} {B : UU l2} {X : UU l3} {C : UU l4}
   (f : A → X) (g : B → X) → cone f g C → cone g f C
-pr1 (swap-cone f g c) = {!!}
-pr1 (pr2 (swap-cone f g c)) = {!!}
-pr2 (pr2 (swap-cone f g c)) = {!!}
+swap-cone = {!!}
 ```
 
 ### Parallel cones over cospans
@@ -195,17 +193,17 @@ module _
     (Hp : vertical-map-cone f g c ~ vertical-map-cone f' g' c')
     (Hq : horizontal-map-cone f g c ~ horizontal-map-cone f' g' c') →
     UU (l3 ⊔ l4)
-  coherence-htpy-parallel-cone c c' Hp Hq = {!!}
+  coherence-htpy-parallel-cone = {!!}
 
   fam-htpy-parallel-cone :
     {l4 : Level} {C : UU l4} (c : cone f g C) → (c' : cone f' g' C) →
     (vertical-map-cone f g c ~ vertical-map-cone f' g' c') → UU (l2 ⊔ l3 ⊔ l4)
-  fam-htpy-parallel-cone c c' Hp = {!!}
+  fam-htpy-parallel-cone = {!!}
 
   htpy-parallel-cone :
     {l4 : Level} {C : UU l4} →
     cone f g C → cone f' g' C → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  htpy-parallel-cone c c' = {!!}
+  htpy-parallel-cone = {!!}
 ```
 
 ## Table of files about pullbacks

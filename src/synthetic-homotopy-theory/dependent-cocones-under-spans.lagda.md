@@ -92,9 +92,7 @@ dependent-cocone-map :
   { l1 l2 l3 l4 l5 : Level} {S : UU l1} {A : UU l2} {B : UU l3} {X : UU l4}
   ( f : S → A) (g : S → B) (c : cocone f g X) (P : X → UU l5) →
   ( (x : X) → P x) → dependent-cocone f g c P
-pr1 (dependent-cocone-map f g c P h) a = {!!}
-pr1 (pr2 (dependent-cocone-map f g c P h)) b = {!!}
-pr2 (pr2 (dependent-cocone-map f g c P h)) s = {!!}
+dependent-cocone-map = {!!}
 ```
 
 ## Properties
@@ -118,19 +116,19 @@ module _
       vertical-map-dependent-cocone f g c P d ~
       vertical-map-dependent-cocone f g c P d') →
     UU (l1 ⊔ l5)
-  coherence-htpy-dependent-cocone d' K L = {!!}
+  coherence-htpy-dependent-cocone = {!!}
 
   htpy-dependent-cocone :
     (d' : dependent-cocone f g c P) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l5)
-  htpy-dependent-cocone d' = {!!}
+  htpy-dependent-cocone = {!!}
 
   refl-htpy-dependent-cocone :
     htpy-dependent-cocone d
-  pr1 refl-htpy-dependent-cocone = {!!}
+  refl-htpy-dependent-cocone = {!!}
 
   htpy-eq-dependent-cocone :
     (d' : dependent-cocone f g c P) → d ＝ d' → htpy-dependent-cocone d'
-  htpy-eq-dependent-cocone .d refl = {!!}
+  htpy-eq-dependent-cocone = {!!}
 
   module _
     (d' : dependent-cocone f g c P)
@@ -165,15 +163,15 @@ module _
 
     eq-htpy-dependent-cocone :
       (d' : dependent-cocone f g c P) → htpy-dependent-cocone d' → d ＝ d'
-    eq-htpy-dependent-cocone d' = {!!}
+    eq-htpy-dependent-cocone = {!!}
 
     is-section-eq-htpy-dependent-cocone :
       (d' : dependent-cocone f g c P) →
       ( htpy-eq-dependent-cocone d' ∘ eq-htpy-dependent-cocone d') ~ id
-    is-section-eq-htpy-dependent-cocone d' = {!!}
+    is-section-eq-htpy-dependent-cocone = {!!}
 
     is-retraction-eq-htpy-dependent-cocone :
       (d' : dependent-cocone f g c P) →
       ( eq-htpy-dependent-cocone d' ∘ htpy-eq-dependent-cocone d') ~ id
-    is-retraction-eq-htpy-dependent-cocone d' = {!!}
+    is-retraction-eq-htpy-dependent-cocone = {!!}
 ```

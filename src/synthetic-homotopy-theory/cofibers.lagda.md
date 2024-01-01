@@ -42,7 +42,7 @@ module _
 
   cocone-cofiber :
     (f : A → B) → cocone f (const A unit star) (cofiber f)
-  cocone-cofiber f = {!!}
+  cocone-cofiber = {!!}
 
   inl-cofiber : (f : A → B) → B → cofiber f
   inl-cofiber f = {!!}
@@ -59,7 +59,7 @@ module _
   universal-property-cofiber :
     (f : A → B) {l : Level} →
     universal-property-pushout l f (const A unit star) (cocone-cofiber f)
-  universal-property-cofiber f = {!!}
+  universal-property-cofiber = {!!}
 ```
 
 ## Properties
@@ -76,7 +76,7 @@ definition contractible. Examples of noncontractible acyclic types include
 is-contr-cofiber-is-equiv :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
   is-equiv f → is-contr (cofiber f)
-is-contr-cofiber-is-equiv {A = A} f is-equiv-f = {!!}
+is-contr-cofiber-is-equiv = {!!}
 ```
 
 ### The cofiber of the point inclusion of `X` is equivalent to `X`
@@ -84,5 +84,5 @@ is-contr-cofiber-is-equiv {A = A} f is-equiv-f = {!!}
 ```agda
 is-equiv-inl-cofiber-point :
   {l : Level} {B : UU l} (b : B) → is-equiv (inl-cofiber (point b))
-is-equiv-inl-cofiber-point {B = B} b = {!!}
+is-equiv-inl-cofiber-point = {!!}
 ```

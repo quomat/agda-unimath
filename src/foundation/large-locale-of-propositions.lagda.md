@@ -58,9 +58,7 @@ antisymmetric-leq-Large-Poset Prop-Large-Poset P Q = {!!}
 ```agda
 has-meets-Prop-Large-Locale :
   has-meets-Large-Poset Prop-Large-Poset
-meet-has-meets-Large-Poset has-meets-Prop-Large-Locale = {!!}
-is-greatest-binary-lower-bound-meet-has-meets-Large-Poset
-  has-meets-Prop-Large-Locale = {!!}
+has-meets-Prop-Large-Locale = {!!}
 ```
 
 ### The largest element in the large poset of propositions
@@ -68,10 +66,7 @@ is-greatest-binary-lower-bound-meet-has-meets-Large-Poset
 ```agda
 has-top-element-Prop-Large-Locale :
   has-top-element-Large-Poset Prop-Large-Poset
-top-has-top-element-Large-Poset
-  has-top-element-Prop-Large-Locale = {!!}
-is-top-element-top-has-top-element-Large-Poset
-  has-top-element-Prop-Large-Locale P p = {!!}
+has-top-element-Prop-Large-Locale = {!!}
 ```
 
 ### The large poset of propositions is a large meet-semilattice
@@ -79,10 +74,7 @@ is-top-element-top-has-top-element-Large-Poset
 ```agda
 is-large-meet-semilattice-Prop-Large-Locale :
   is-large-meet-semilattice-Large-Poset Prop-Large-Poset
-has-meets-is-large-meet-semilattice-Large-Poset
-  is-large-meet-semilattice-Prop-Large-Locale = {!!}
-has-top-element-is-large-meet-semilattice-Large-Poset
-  is-large-meet-semilattice-Prop-Large-Locale = {!!}
+is-large-meet-semilattice-Prop-Large-Locale = {!!}
 ```
 
 ### Suprema in the large poset of propositions
@@ -90,10 +82,7 @@ has-top-element-is-large-meet-semilattice-Large-Poset
 ```agda
 is-large-suplattice-Prop-Large-Locale :
   is-large-suplattice-Large-Poset lzero Prop-Large-Poset
-sup-has-least-upper-bound-family-of-elements-Large-Poset
-  ( is-large-suplattice-Prop-Large-Locale {I = I} P) = {!!}
-is-least-upper-bound-sup-has-least-upper-bound-family-of-elements-Large-Poset
-  ( is-large-suplattice-Prop-Large-Locale {I = I} P) = {!!}
+is-large-suplattice-Prop-Large-Locale = {!!}
 ```
 
 ### The large frame of propositions

@@ -40,7 +40,7 @@ module _
   preserves-operations-Algebra :
     (type-Algebra Sg Th Alg1 → type-Algebra Sg Th Alg2) →
     UU (l1 ⊔ l3 ⊔ l4)
-  preserves-operations-Algebra f = {!!}
+  preserves-operations-Algebra = {!!}
 
   hom-Algebra : UU (l1 ⊔ l3 ⊔ l4)
   hom-Algebra = {!!}

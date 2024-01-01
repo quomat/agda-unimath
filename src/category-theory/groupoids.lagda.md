@@ -41,11 +41,11 @@ morphism is an [isomorphism](category-theory.isomorphisms-in-categories.md).
 ```agda
 is-groupoid-prop-Category :
   {l1 l2 : Level} (C : Category l1 l2) → Prop (l1 ⊔ l2)
-is-groupoid-prop-Category C = {!!}
+is-groupoid-prop-Category = {!!}
 
 is-groupoid-Category :
   {l1 l2 : Level} (C : Category l1 l2) → UU (l1 ⊔ l2)
-is-groupoid-Category C = {!!}
+is-groupoid-Category = {!!}
 
 Groupoid : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
 Groupoid l1 l2 = {!!}
@@ -128,11 +128,11 @@ module _
 
   is-category-groupoid-1-Type :
     is-category-Precategory precategory-Groupoid-1-Type
-  is-category-groupoid-1-Type x = {!!}
+  is-category-groupoid-1-Type = {!!}
 
   is-groupoid-groupoid-1-Type :
     is-pregroupoid-Precategory precategory-Groupoid-1-Type
-  pr1 (is-groupoid-groupoid-1-Type x y p) = {!!}
+  is-groupoid-groupoid-1-Type = {!!}
 
   groupoid-1-Type : Groupoid l l
   pr1 (pr1 groupoid-1-Type) = {!!}
@@ -160,7 +160,7 @@ module _
     functor-Category
       ( category-Groupoid (groupoid-1-Type (1-type-Groupoid G)))
       ( category-Groupoid G)
-  pr1 functor-equiv-groupoid-1-type-Groupoid = {!!}
+  functor-equiv-groupoid-1-type-Groupoid = {!!}
 ```
 
 #### The 1-type obtained from the groupoid induced by a 1-type `X` is `X` itself

@@ -40,9 +40,7 @@ LEM l = {!!}
 ```agda
 decidable-prop-Prop :
   {l : Level} → LEM l → Prop l → Decidable-Prop l
-pr1 (decidable-prop-Prop lem P) = {!!}
-pr1 (pr2 (decidable-prop-Prop lem P)) = {!!}
-pr2 (pr2 (decidable-prop-Prop lem P)) = {!!}
+decidable-prop-Prop = {!!}
 ```
 
 ### The unrestricted law of excluded middle does not hold
@@ -51,5 +49,5 @@ pr2 (pr2 (decidable-prop-Prop lem P)) = {!!}
 abstract
   no-global-decidability :
     {l : Level} → ¬ ((X : UU l) → is-decidable X)
-  no-global-decidability {l} d = {!!}
+  no-global-decidability = {!!}
 ```

@@ -41,9 +41,9 @@ module _
 
   coherence-triangle-identifications :
     (left : x ＝ z) (right : y ＝ z) (top : x ＝ y) → UU l
-  coherence-triangle-identifications left right top = {!!}
+  coherence-triangle-identifications = {!!}
 
   coherence-triangle-identifications' :
     (left : x ＝ z) (right : y ＝ z) (top : x ＝ y) → UU l
-  coherence-triangle-identifications' left right top = {!!}
+  coherence-triangle-identifications' = {!!}
 ```

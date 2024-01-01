@@ -49,19 +49,19 @@ module _
 
   is-permutation-vec-is-sort-vec :
     is-sort-vec → (n : ℕ) → is-permutation-vec n f
-  is-permutation-vec-is-sort-vec S n = {!!}
+  is-permutation-vec-is-sort-vec = {!!}
 
   permutation-vec-is-sort-vec :
     is-sort-vec → (n : ℕ) → vec (type-Decidable-Total-Order X) n → Permutation n
-  permutation-vec-is-sort-vec S n v = {!!}
+  permutation-vec-is-sort-vec = {!!}
 
   eq-permute-vec-permutation-is-sort-vec :
     (S : is-sort-vec) (n : ℕ) (v : vec (type-Decidable-Total-Order X) n) →
     f v ＝ permute-vec n v (permutation-vec-is-sort-vec S n v)
-  eq-permute-vec-permutation-is-sort-vec S n v = {!!}
+  eq-permute-vec-permutation-is-sort-vec = {!!}
 
   is-sorting-vec-is-sort-vec :
     is-sort-vec → (n : ℕ) →
     (v : vec (type-Decidable-Total-Order X) n) → is-sorted-vec X (f v)
-  is-sorting-vec-is-sort-vec S n = {!!}
+  is-sorting-vec-is-sort-vec = {!!}
 ```

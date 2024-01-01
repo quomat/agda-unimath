@@ -38,7 +38,7 @@ defined as the Cauchy series of `S` applied to the Cauchy series of `T` at `X`
 composition-cauchy-series-species-types :
   {l1 l2 l3 l4 : Level} → species-types l1 l2 → species-types l1 l3 →
   UU l4 → UU (lsuc l1 ⊔ l2 ⊔ l3 ⊔ l4)
-composition-cauchy-series-species-types S T X = {!!}
+composition-cauchy-series-species-types = {!!}
 ```
 
 ## Property
@@ -62,7 +62,7 @@ module _
             ( λ V →
               Σ ( Σ ( UU l1) (λ F → F ≃ Σ U V))
                 ( λ F → (S U) × (((y : U) → T (V y)) × (pr1 F → X)))))
-    pr1 reassociate (F , ((U , V , e) , s , fs) , ft) = {!!}
+    reassociate = {!!}
 
   equiv-cauchy-series-composition-species-types :
     cauchy-series-species-types

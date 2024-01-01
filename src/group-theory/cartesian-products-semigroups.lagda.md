@@ -41,14 +41,14 @@ module _
 
   mul-prod-Semigroup :
     type-prod-Semigroup → type-prod-Semigroup → type-prod-Semigroup
-  pr1 (mul-prod-Semigroup (pair x1 y1) (pair x2 y2)) = {!!}
+  mul-prod-Semigroup = {!!}
 
   associative-mul-prod-Semigroup :
     (x y z : type-prod-Semigroup) →
     Id
       ( mul-prod-Semigroup (mul-prod-Semigroup x y) z)
       ( mul-prod-Semigroup x (mul-prod-Semigroup y z))
-  associative-mul-prod-Semigroup (pair x1 y1) (pair x2 y2) (pair x3 y3) = {!!}
+  associative-mul-prod-Semigroup = {!!}
 
   prod-Semigroup : Semigroup (l1 ⊔ l2)
   pr1 prod-Semigroup = {!!}

@@ -58,7 +58,7 @@ module _
   abstract
     is-coherently-invertible-is-path-split :
       is-path-split f → is-coherently-invertible f
-    pr1 (is-coherently-invertible-is-path-split ((g , G) , s)) = {!!}
+    is-coherently-invertible-is-path-split = {!!}
 
   abstract
     is-equiv-is-path-split : is-path-split f → is-equiv f

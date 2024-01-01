@@ -63,33 +63,33 @@ module _
 
   Eq-pair-of-distinct-elements :
     (p q : pair-of-distinct-elements A) → UU l
-  Eq-pair-of-distinct-elements p q = {!!}
+  Eq-pair-of-distinct-elements = {!!}
 
   refl-Eq-pair-of-distinct-elements :
     (p : pair-of-distinct-elements A) → Eq-pair-of-distinct-elements p p
-  pr1 (refl-Eq-pair-of-distinct-elements p) = {!!}
+  refl-Eq-pair-of-distinct-elements = {!!}
 
   Eq-eq-pair-of-distinct-elements :
     (p q : pair-of-distinct-elements A) →
     p ＝ q → Eq-pair-of-distinct-elements p q
-  Eq-eq-pair-of-distinct-elements p .p refl = {!!}
+  Eq-eq-pair-of-distinct-elements = {!!}
 
   is-torsorial-Eq-pair-of-distinct-elements :
     (p : pair-of-distinct-elements A) →
     is-torsorial (Eq-pair-of-distinct-elements p)
-  is-torsorial-Eq-pair-of-distinct-elements p = {!!}
+  is-torsorial-Eq-pair-of-distinct-elements = {!!}
 
   is-equiv-Eq-eq-pair-of-distinct-elements :
     (p q : pair-of-distinct-elements A) →
     is-equiv (Eq-eq-pair-of-distinct-elements p q)
-  is-equiv-Eq-eq-pair-of-distinct-elements p = {!!}
+  is-equiv-Eq-eq-pair-of-distinct-elements = {!!}
 
   eq-Eq-pair-of-distinct-elements :
     {p q : pair-of-distinct-elements A} →
     first-pair-of-distinct-elements p ＝ first-pair-of-distinct-elements q →
     second-pair-of-distinct-elements p ＝ second-pair-of-distinct-elements q →
     p ＝ q
-  eq-Eq-pair-of-distinct-elements {p} {q} α β = {!!}
+  eq-Eq-pair-of-distinct-elements = {!!}
 ```
 
 ### Equivalences map pairs of distinct elements to pairs of distinct elements
@@ -101,25 +101,25 @@ module _
 
   map-equiv-pair-of-distinct-elements :
     pair-of-distinct-elements A → pair-of-distinct-elements B
-  pr1 (map-equiv-pair-of-distinct-elements p) = {!!}
+  map-equiv-pair-of-distinct-elements = {!!}
 
   map-inv-equiv-pair-of-distinct-elements :
     pair-of-distinct-elements B → pair-of-distinct-elements A
-  pr1 (map-inv-equiv-pair-of-distinct-elements q) = {!!}
+  map-inv-equiv-pair-of-distinct-elements = {!!}
 
   is-section-map-inv-equiv-pair-of-distinct-elements :
     (q : pair-of-distinct-elements B) →
     ( map-equiv-pair-of-distinct-elements
       ( map-inv-equiv-pair-of-distinct-elements q)) ＝
     ( q)
-  is-section-map-inv-equiv-pair-of-distinct-elements q = {!!}
+  is-section-map-inv-equiv-pair-of-distinct-elements = {!!}
 
   is-retraction-map-inv-equiv-pair-of-distinct-elements :
     (p : pair-of-distinct-elements A) →
     ( map-inv-equiv-pair-of-distinct-elements
       ( map-equiv-pair-of-distinct-elements p)) ＝
     ( p)
-  is-retraction-map-inv-equiv-pair-of-distinct-elements p = {!!}
+  is-retraction-map-inv-equiv-pair-of-distinct-elements = {!!}
 
   is-equiv-map-equiv-pair-of-distinct-elements :
     is-equiv map-equiv-pair-of-distinct-elements
@@ -127,7 +127,7 @@ module _
 
   equiv-pair-of-distinct-elements :
     pair-of-distinct-elements A ≃ pair-of-distinct-elements B
-  pr1 equiv-pair-of-distinct-elements = {!!}
+  equiv-pair-of-distinct-elements = {!!}
 ```
 
 ### Embeddings map pairs of distinct elements to pairs of distinct elements

@@ -52,13 +52,11 @@ annihilation-law-exp-ℕ (succ-ℕ n) = {!!}
 
 left-distributive-exp-add-ℕ :
   (x y z : ℕ) → x ^ℕ (y +ℕ z) ＝ (x ^ℕ y) *ℕ (x ^ℕ z)
-left-distributive-exp-add-ℕ x y zero-ℕ = {!!}
-left-distributive-exp-add-ℕ x y (succ-ℕ z) = {!!}
+left-distributive-exp-add-ℕ = {!!}
 
 right-distributive-exp-mul-ℕ :
   (x y z : ℕ) → (x *ℕ y) ^ℕ z ＝ (x ^ℕ z) *ℕ (y ^ℕ z)
-right-distributive-exp-mul-ℕ x y zero-ℕ = {!!}
-right-distributive-exp-mul-ℕ x y (succ-ℕ z) = {!!}
+right-distributive-exp-mul-ℕ = {!!}
 
 exp-mul-ℕ : (x y z : ℕ) → x ^ℕ (y *ℕ z) ＝ (x ^ℕ y) ^ℕ z
 exp-mul-ℕ x zero-ℕ z = {!!}
@@ -70,6 +68,5 @@ exp-mul-ℕ x (succ-ℕ y) z = {!!}
 ```agda
 is-nonzero-exp-ℕ :
   (m n : ℕ) → is-nonzero-ℕ m → is-nonzero-ℕ (m ^ℕ n)
-is-nonzero-exp-ℕ m zero-ℕ p = {!!}
-is-nonzero-exp-ℕ m (succ-ℕ n) p = {!!}
+is-nonzero-exp-ℕ = {!!}
 ```

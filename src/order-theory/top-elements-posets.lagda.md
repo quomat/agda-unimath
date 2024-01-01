@@ -45,7 +45,7 @@ module _
 
   all-elements-equal-has-top-element-Poset :
     all-elements-equal has-top-element-Poset
-  all-elements-equal-has-top-element-Poset (pair x H) (pair y K) = {!!}
+  all-elements-equal-has-top-element-Poset = {!!}
 
   is-prop-has-top-element-Poset : is-prop has-top-element-Poset
   is-prop-has-top-element-Poset = {!!}

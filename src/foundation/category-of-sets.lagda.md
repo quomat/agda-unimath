@@ -56,7 +56,7 @@ right-unit-law-comp-hom-Large-Precategory Set-Large-Precategory f = {!!}
 id-iso-Set :
   {l : Level} {X : obj-Large-Precategory Set-Large-Precategory l} →
   iso-Large-Precategory Set-Large-Precategory X X
-id-iso-Set {l} {X} = {!!}
+id-iso-Set = {!!}
 
 iso-eq-Set :
   {l : Level} (X Y : obj-Large-Precategory Set-Large-Precategory l) →
@@ -65,7 +65,7 @@ iso-eq-Set = {!!}
 
 is-large-category-Set-Large-Precategory :
   is-large-category-Large-Precategory Set-Large-Precategory
-is-large-category-Set-Large-Precategory {l} X = {!!}
+is-large-category-Set-Large-Precategory = {!!}
 
 Set-Large-Category : Large-Category lsuc (_⊔_)
 large-precategory-Large-Category Set-Large-Category = {!!}
@@ -89,7 +89,7 @@ Set-Category = {!!}
 
 is-category-Set-Precategory :
   (l : Level) → is-category-Precategory (Set-Precategory l)
-is-category-Set-Precategory l = {!!}
+is-category-Set-Precategory = {!!}
 ```
 
 ## Comments

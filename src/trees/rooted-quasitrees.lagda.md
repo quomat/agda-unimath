@@ -29,7 +29,7 @@ unique trail from `r` to `x`.
 is-rooted-quasitree-Undirected-Graph :
   {l1 l2 : Level} (G : Undirected-Graph l1 l2) →
   vertex-Undirected-Graph G → UU (lsuc lzero ⊔ l1 ⊔ l2)
-is-rooted-quasitree-Undirected-Graph G r = {!!}
+is-rooted-quasitree-Undirected-Graph = {!!}
 
 Rooted-Quasitree : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
 Rooted-Quasitree l1 l2 = {!!}

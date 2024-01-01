@@ -63,7 +63,7 @@ module _
 
   copresheaf-large-category-Precategory :
     Large-Category (λ l → l1 ⊔ l2 ⊔ lsuc l) (λ l l' → l1 ⊔ l2 ⊔ l ⊔ l')
-  large-precategory-Large-Category copresheaf-large-category-Precategory = {!!}
+  copresheaf-large-category-Precategory = {!!}
 
   copresheaf-Precategory :
     (l : Level) → UU (l1 ⊔ l2 ⊔ lsuc l)
@@ -83,7 +83,7 @@ module _
       {X Y : obj-Precategory C} →
       hom-Precategory C X Y →
       element-copresheaf-Precategory X → element-copresheaf-Precategory Y
-    action-copresheaf-Precategory f = {!!}
+    action-copresheaf-Precategory = {!!}
 
     preserves-id-action-copresheaf-Precategory :
       {X : obj-Precategory C} →
@@ -95,7 +95,7 @@ module _
       (g : hom-Precategory C Y Z) (f : hom-Precategory C X Y) →
       action-copresheaf-Precategory (comp-hom-Precategory C g f) ~
       action-copresheaf-Precategory g ∘ action-copresheaf-Precategory f
-    preserves-comp-action-copresheaf-Precategory g f = {!!}
+    preserves-comp-action-copresheaf-Precategory = {!!}
 
   hom-set-copresheaf-Precategory :
     {l3 l4 : Level}
@@ -127,7 +127,7 @@ module _
         ( map-hom-copresheaf-Precategory X)
         ( map-hom-copresheaf-Precategory Y)
         ( action-copresheaf-Precategory Q f)
-    naturality-hom-copresheaf-Precategory f = {!!}
+    naturality-hom-copresheaf-Precategory = {!!}
 
   comp-hom-copresheaf-Precategory :
     {l3 l4 l5 : Level}
@@ -137,12 +137,12 @@ module _
     hom-copresheaf-Precategory Y Z →
     hom-copresheaf-Precategory X Y →
     hom-copresheaf-Precategory X Z
-  comp-hom-copresheaf-Precategory X Y Z = {!!}
+  comp-hom-copresheaf-Precategory = {!!}
 
   id-hom-copresheaf-Precategory :
     {l3 : Level} (X : copresheaf-Precategory l3) →
     hom-copresheaf-Precategory X X
-  id-hom-copresheaf-Precategory X = {!!}
+  id-hom-copresheaf-Precategory = {!!}
 
   associative-comp-hom-copresheaf-Precategory :
     {l3 l4 l5 l6 : Level}
@@ -159,7 +159,7 @@ module _
     comp-hom-copresheaf-Precategory X Z W
       ( h)
       ( comp-hom-copresheaf-Precategory X Y Z g f)
-  associative-comp-hom-copresheaf-Precategory X Y Z W = {!!}
+  associative-comp-hom-copresheaf-Precategory = {!!}
 
   inv-associative-comp-hom-copresheaf-Precategory :
     {l3 l4 l5 l6 : Level}
@@ -176,7 +176,7 @@ module _
     comp-hom-copresheaf-Precategory X Y W
       ( comp-hom-copresheaf-Precategory Y Z W h g)
       ( f)
-  inv-associative-comp-hom-copresheaf-Precategory X Y Z W = {!!}
+  inv-associative-comp-hom-copresheaf-Precategory = {!!}
 
   left-unit-law-comp-hom-copresheaf-Precategory :
     {l3 l4 : Level}
@@ -187,7 +187,7 @@ module _
       ( id-hom-copresheaf-Precategory Y)
       ( f) ＝
     f
-  left-unit-law-comp-hom-copresheaf-Precategory X Y = {!!}
+  left-unit-law-comp-hom-copresheaf-Precategory = {!!}
 
   right-unit-law-comp-hom-copresheaf-Precategory :
     {l3 l4 : Level}
@@ -198,7 +198,7 @@ module _
       ( f)
       ( id-hom-copresheaf-Precategory X) ＝
     f
-  right-unit-law-comp-hom-copresheaf-Precategory X Y = {!!}
+  right-unit-law-comp-hom-copresheaf-Precategory = {!!}
 ```
 
 ### The category of small copresheaves on a precategory

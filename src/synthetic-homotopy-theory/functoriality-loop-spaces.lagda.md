@@ -50,11 +50,11 @@ module _
 
   preserves-mul-map-Ω :
     {x y : type-Ω A} → map-Ω (mul-Ω A x y) ＝ mul-Ω B (map-Ω x) (map-Ω y)
-  preserves-mul-map-Ω {x} {y} = {!!}
+  preserves-mul-map-Ω = {!!}
 
   preserves-inv-map-Ω :
     (x : type-Ω A) → map-Ω (inv-Ω A x) ＝ inv-Ω B (map-Ω x)
-  preserves-inv-map-Ω x = {!!}
+  preserves-inv-map-Ω = {!!}
 ```
 
 ### Faithful pointed maps induce embeddings on loop spaces
@@ -66,11 +66,11 @@ module _
 
   is-emb-map-Ω :
     (f : A →∗ B) → is-faithful (map-pointed-map f) → is-emb (map-Ω f)
-  is-emb-map-Ω f H = {!!}
+  is-emb-map-Ω = {!!}
 
   emb-Ω :
     faithful-pointed-map A B → type-Ω A ↪ type-Ω B
-  pr1 (emb-Ω f) = {!!}
+  emb-Ω = {!!}
 ```
 
 ### Pointed embeddings induce pointed equivalences on loop spaces
@@ -114,5 +114,5 @@ module _
 
   pointed-equiv-Ω-pointed-equiv :
     Ω A ≃∗ Ω B
-  pr1 pointed-equiv-Ω-pointed-equiv = {!!}
+  pointed-equiv-Ω-pointed-equiv = {!!}
 ```

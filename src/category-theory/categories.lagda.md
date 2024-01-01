@@ -154,7 +154,7 @@ module _
 
   is-preunivalent-category-Category :
     is-preunivalent-Precategory (precategory-Category C)
-  is-preunivalent-category-Category x y = {!!}
+  is-preunivalent-category-Category = {!!}
 
   preunivalent-category-Category : Preunivalent-Category l1 l2
   pr1 preunivalent-category-Category = {!!}
@@ -165,13 +165,13 @@ module _
 ```agda
 total-hom-Category :
   {l1 l2 : Level} (C : Category l1 l2) → UU (l1 ⊔ l2)
-total-hom-Category C = {!!}
+total-hom-Category = {!!}
 
 obj-total-hom-Category :
   {l1 l2 : Level} (C : Category l1 l2) →
   total-hom-Category C →
   obj-Category C × obj-Category C
-obj-total-hom-Category C = {!!}
+obj-total-hom-Category = {!!}
 ```
 
 ### Equalities induce morphisms
@@ -195,13 +195,13 @@ precomp-hom-Category :
   {l1 l2 : Level} (C : Category l1 l2) {x y : obj-Category C}
   (f : hom-Category C x y) (z : obj-Category C) →
   hom-Category C y z → hom-Category C x z
-precomp-hom-Category C = {!!}
+precomp-hom-Category = {!!}
 
 postcomp-hom-Category :
   {l1 l2 : Level} (C : Category l1 l2) {x y : obj-Category C}
   (f : hom-Category C x y) (z : obj-Category C) →
   hom-Category C z x → hom-Category C z y
-postcomp-hom-Category C = {!!}
+postcomp-hom-Category = {!!}
 ```
 
 ## Properties
@@ -285,10 +285,10 @@ module _
   equiv-is-category-is-surjective-iso-eq-Preunivalent-Category :
     is-surjective-iso-eq-Precategory (precategory-Preunivalent-Category C) ≃
     is-category-Precategory (precategory-Preunivalent-Category C)
-  pr1 equiv-is-category-is-surjective-iso-eq-Preunivalent-Category = {!!}
+  equiv-is-category-is-surjective-iso-eq-Preunivalent-Category = {!!}
 
   equiv-is-surjective-iso-eq-is-category-Preunivalent-Category :
     is-category-Precategory (precategory-Preunivalent-Category C) ≃
     is-surjective-iso-eq-Precategory (precategory-Preunivalent-Category C)
-  pr1 equiv-is-surjective-iso-eq-is-category-Preunivalent-Category = {!!}
+  equiv-is-surjective-iso-eq-is-category-Preunivalent-Category = {!!}
 ```

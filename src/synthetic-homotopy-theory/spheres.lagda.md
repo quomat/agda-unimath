@@ -50,5 +50,5 @@ south-sphere (succ-ℕ n) = {!!}
 
 meridian-sphere :
   (n : ℕ) → sphere n → north-sphere (succ-ℕ n) ＝ south-sphere (succ-ℕ n)
-meridian-sphere n = {!!}
+meridian-sphere = {!!}
 ```

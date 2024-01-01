@@ -146,14 +146,14 @@ module _
     (α : natural-transformation-Category C D F G) →
     comp-natural-transformation-Category C D F F G α
       ( id-natural-transformation-Category C D F) ＝ α
-  right-unit-law-comp-natural-transformation-Category {F} {G} = {!!}
+  right-unit-law-comp-natural-transformation-Category = {!!}
 
   left-unit-law-comp-natural-transformation-Category :
     {F G : functor-Category C D}
     (α : natural-transformation-Category C D F G) →
     comp-natural-transformation-Category C D F G G
       ( id-natural-transformation-Category C D G) α ＝ α
-  left-unit-law-comp-natural-transformation-Category {F} {G} = {!!}
+  left-unit-law-comp-natural-transformation-Category = {!!}
 
   associative-comp-natural-transformation-Category :
     (F G H I : functor-Category C D)

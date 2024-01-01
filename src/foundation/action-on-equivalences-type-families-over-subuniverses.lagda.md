@@ -46,16 +46,16 @@ module _
       (X : type-subuniverse P) →
       is-contr
         ( fiber (ev-id-equiv-subuniverse P X {λ Y e → B X ≃ B Y}) id-equiv)
-    unique-action-equiv-family-over-subuniverse X = {!!}
+    unique-action-equiv-family-over-subuniverse = {!!}
 
   action-equiv-family-over-subuniverse :
     (X Y : type-subuniverse P) → pr1 X ≃ pr1 Y → B X ≃ B Y
-  action-equiv-family-over-subuniverse X Y = {!!}
+  action-equiv-family-over-subuniverse = {!!}
 
   compute-id-equiv-action-equiv-family-over-subuniverse :
     (X : type-subuniverse P) →
     action-equiv-family-over-subuniverse X X id-equiv ＝ id-equiv
-  compute-id-equiv-action-equiv-family-over-subuniverse X = {!!}
+  compute-id-equiv-action-equiv-family-over-subuniverse = {!!}
 ```
 
 ## Properties

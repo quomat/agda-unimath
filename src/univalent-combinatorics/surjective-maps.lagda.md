@@ -39,7 +39,7 @@ open import univalent-combinatorics.standard-finite-types
 ```agda
 Surjection-𝔽 :
   {l1 : Level} (l2 : Level) → 𝔽 l1 → UU (l1 ⊔ lsuc l2)
-Surjection-𝔽 l2 A = {!!}
+Surjection-𝔽 = {!!}
 ```
 
 ## Properties
@@ -48,7 +48,7 @@ Surjection-𝔽 l2 A = {!!}
 is-decidable-is-surjective-is-finite :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
   is-finite A → is-finite B → is-decidable (is-surjective f)
-is-decidable-is-surjective-is-finite f HA HB = {!!}
+is-decidable-is-surjective-is-finite = {!!}
 ```
 
 ### If `X` has decidable equality and there exist a surjection `Fin-n ↠ X` then `X` has a counting
@@ -61,7 +61,7 @@ module _
   count-surjection-has-decidable-equality :
     (n : ℕ) → (has-decidable-equality X) → (Fin n ↠ X) →
     count (X)
-  count-surjection-has-decidable-equality n dec-X f = {!!}
+  count-surjection-has-decidable-equality = {!!}
 ```
 
 ### A type `X` is finite if and only if it has decidable equality and there exists a surjection from a finite type to `X`
@@ -70,12 +70,12 @@ module _
   is-finite-if-∃-surjection-has-decidable-equality :
     is-finite X →
     ( has-decidable-equality X × type-trunc-Prop (Σ ℕ (λ n → Fin n ↠ X)))
-  is-finite-if-∃-surjection-has-decidable-equality fin-X = {!!}
+  is-finite-if-∃-surjection-has-decidable-equality = {!!}
 
   ∃-surjection-has-decidable-equality-if-is-finite :
     ( has-decidable-equality X × type-trunc-Prop (Σ ℕ (λ n → Fin n ↠ X))) →
     is-finite X
-  ∃-surjection-has-decidable-equality-if-is-finite dec-X-surj = {!!}
+  ∃-surjection-has-decidable-equality-if-is-finite = {!!}
 
   is-finite-iff-∃-surjection-has-decidable-equality :
     is-finite X ≃

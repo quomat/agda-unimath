@@ -79,7 +79,7 @@ module _
       ( prod-equivalence-relation R S)
       ( type-Set X) →
     hom-Set prod-set-quotient-Set X
-  inv-precomp-set-quotient-prod-set-quotient X (f , H) (qa , qb) = {!!}
+  inv-precomp-set-quotient-prod-set-quotient = {!!}
 
   is-section-inv-precomp-set-quotient-prod-set-quotient :
     { l : Level}
@@ -91,7 +91,7 @@ module _
       ( X) ∘
       ( inv-precomp-set-quotient-prod-set-quotient X)) ~
     ( id)
-  is-section-inv-precomp-set-quotient-prod-set-quotient X (f , H) = {!!}
+  is-section-inv-precomp-set-quotient-prod-set-quotient = {!!}
 
   is-retraction-inv-precomp-set-quotient-prod-set-quotient :
     { l : Level}
@@ -103,14 +103,14 @@ module _
         ( reflecting-map-prod-quotient-map)
         ( X))) ~
     ( id)
-  is-retraction-inv-precomp-set-quotient-prod-set-quotient X f = {!!}
+  is-retraction-inv-precomp-set-quotient-prod-set-quotient = {!!}
 
   is-set-quotient-prod-set-quotient :
     is-set-quotient
       ( prod-equivalence-relation R S)
       ( prod-set-quotient-Set)
       ( reflecting-map-prod-quotient-map)
-  pr1 (pr1 (is-set-quotient-prod-set-quotient X)) = {!!}
+  is-set-quotient-prod-set-quotient = {!!}
 
   quotient-prod : Set (l1 ⊔ l2 ⊔ l3 ⊔ l4)
   quotient-prod = {!!}

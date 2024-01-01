@@ -121,7 +121,7 @@ module _
 
   extensionality-hom-Group :
     (f g : hom-Group G H) → Id f g ≃ htpy-hom-Group f g
-  pr1 (extensionality-hom-Group f g) = {!!}
+  extensionality-hom-Group = {!!}
 
   eq-htpy-hom-Group : {f g : hom-Group G H} → htpy-hom-Group f g → Id f g
   eq-htpy-hom-Group = {!!}
@@ -160,12 +160,12 @@ module _
 left-unit-law-comp-hom-Group :
   {l1 l2 : Level} (G : Group l1) (H : Group l2) (f : hom-Group G H) →
   Id (comp-hom-Group G H H (id-hom-Group H) f) f
-left-unit-law-comp-hom-Group G H = {!!}
+left-unit-law-comp-hom-Group = {!!}
 
 right-unit-law-comp-hom-Group :
   {l1 l2 : Level} (G : Group l1) (H : Group l2) (f : hom-Group G H) →
   Id (comp-hom-Group G G H f (id-hom-Group G)) f
-right-unit-law-comp-hom-Group G H = {!!}
+right-unit-law-comp-hom-Group = {!!}
 ```
 
 ### Group homomorphisms preserve the unit element
@@ -181,7 +181,7 @@ module _
   abstract
     preserves-unit-hom-Group :
       ( f : hom-Group G H) → preserves-unit-Group (map-hom-Group G H f)
-    preserves-unit-hom-Group f = {!!}
+    preserves-unit-hom-Group = {!!}
 ```
 
 ### Group homomorphisms preserve inverses
@@ -193,12 +193,12 @@ module _
 
   preserves-inverses-Group :
     (type-Group G → type-Group H) → UU (l1 ⊔ l2)
-  preserves-inverses-Group f = {!!}
+  preserves-inverses-Group = {!!}
 
   abstract
     preserves-inv-hom-Group :
       (f : hom-Group G H) → preserves-inverses-Group (map-hom-Group G H f)
-    preserves-inv-hom-Group f {x} = {!!}
+    preserves-inv-hom-Group = {!!}
 ```
 
 ### Group homomorphisms preserve all group structure
@@ -213,7 +213,7 @@ module _
 
   preserves-group-structure-hom-Group :
     hom-Group G H → hom-Group'
-  pr1 (preserves-group-structure-hom-Group f) = {!!}
+  preserves-group-structure-hom-Group = {!!}
 ```
 
 ### Group homomorphisms induce monoid homomorphisms between the underlying monoids

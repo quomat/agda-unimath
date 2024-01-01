@@ -177,7 +177,7 @@ module _
   abstract
     is-preunivalent-Strict-Category :
       is-preunivalent-Precategory (precategory-Strict-Category C)
-    is-preunivalent-Strict-Category x y = {!!}
+    is-preunivalent-Strict-Category = {!!}
 
   preunivalent-category-Strict-Category : Preunivalent-Category l1 l2
   pr1 preunivalent-category-Strict-Category = {!!}
@@ -228,13 +228,13 @@ precomp-hom-Strict-Category :
   {l1 l2 : Level} (C : Strict-Category l1 l2) {x y : obj-Strict-Category C}
   (f : hom-Strict-Category C x y) (z : obj-Strict-Category C) →
   hom-Strict-Category C y z → hom-Strict-Category C x z
-precomp-hom-Strict-Category C = {!!}
+precomp-hom-Strict-Category = {!!}
 
 postcomp-hom-Strict-Category :
   {l1 l2 : Level} (C : Strict-Category l1 l2) {x y : obj-Strict-Category C}
   (f : hom-Strict-Category C x y) (z : obj-Strict-Category C) →
   hom-Strict-Category C z x → hom-Strict-Category C z y
-postcomp-hom-Strict-Category C = {!!}
+postcomp-hom-Strict-Category = {!!}
 ```
 
 ## See also

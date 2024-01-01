@@ -252,7 +252,7 @@ module _
     (k : ℤ) (x y : type-Ab A) →
     integer-multiple-Ab A k (add-Ab A x y) ＝
     add-Ab A (integer-multiple-Ab A k x) (integer-multiple-Ab A k y)
-  left-distributive-integer-multiple-add-Ab k x y = {!!}
+  left-distributive-integer-multiple-add-Ab = {!!}
 ```
 
 ### For each integer `k`, the operation of taking `k`-multiples is a group homomorphism
@@ -277,13 +277,13 @@ module _
     (k l : ℤ) (x : type-Ab A) →
     integer-multiple-Ab A (k *ℤ l) x ＝
     integer-multiple-Ab A k (integer-multiple-Ab A l x)
-  integer-multiple-mul-Ab k l x = {!!}
+  integer-multiple-mul-Ab = {!!}
 
   swap-integer-multiple-Ab :
     (k l : ℤ) (x : type-Ab A) →
     integer-multiple-Ab A k (integer-multiple-Ab A l x) ＝
     integer-multiple-Ab A l (integer-multiple-Ab A k x)
-  swap-integer-multiple-Ab k l x = {!!}
+  swap-integer-multiple-Ab = {!!}
 ```
 
 ### Abelian group homomorphisms preserve integer multiples

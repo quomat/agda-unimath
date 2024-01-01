@@ -81,7 +81,7 @@ module _
   id-natural-transformation-Small-Large-Precategory :
     {γF : Level} (F : functor-Small-Large-Precategory C D γF) →
     natural-transformation-Small-Large-Precategory C D F F
-  id-natural-transformation-Small-Large-Precategory F = {!!}
+  id-natural-transformation-Small-Large-Precategory = {!!}
 
   comp-natural-transformation-Small-Large-Precategory :
     {γF γG γH : Level}
@@ -91,7 +91,7 @@ module _
     natural-transformation-Small-Large-Precategory C D G H →
     natural-transformation-Small-Large-Precategory C D F G →
     natural-transformation-Small-Large-Precategory C D F H
-  comp-natural-transformation-Small-Large-Precategory F G H = {!!}
+  comp-natural-transformation-Small-Large-Precategory = {!!}
 ```
 
 ## Properties
@@ -180,7 +180,7 @@ module _
     (a : natural-transformation-Small-Large-Precategory C D F G) →
     comp-natural-transformation-Small-Large-Precategory C D F F G a
       ( id-natural-transformation-Small-Large-Precategory C D F) ＝ a
-  right-unit-law-comp-natural-transformation-Small-Large-Precategory F G = {!!}
+  right-unit-law-comp-natural-transformation-Small-Large-Precategory = {!!}
 
   left-unit-law-comp-natural-transformation-Small-Large-Precategory :
     {γF γG : Level}
@@ -189,7 +189,7 @@ module _
     (a : natural-transformation-Small-Large-Precategory C D F G) →
     comp-natural-transformation-Small-Large-Precategory C D F G G
       ( id-natural-transformation-Small-Large-Precategory C D G) a ＝ a
-  left-unit-law-comp-natural-transformation-Small-Large-Precategory F G = {!!}
+  left-unit-law-comp-natural-transformation-Small-Large-Precategory = {!!}
 
   associative-comp-natural-transformation-Small-Large-Precategory :
     {γF γG γH γI : Level}
@@ -204,7 +204,7 @@ module _
       ( comp-natural-transformation-Small-Large-Precategory C D G H I c b) a ＝
     comp-natural-transformation-Small-Large-Precategory C D F H I c
       ( comp-natural-transformation-Small-Large-Precategory C D F G H b a)
-  associative-comp-natural-transformation-Small-Large-Precategory F G H I = {!!}
+  associative-comp-natural-transformation-Small-Large-Precategory = {!!}
 
   inv-associative-comp-natural-transformation-Small-Large-Precategory :
     {γF γG γH γI : Level}
@@ -219,5 +219,5 @@ module _
       ( comp-natural-transformation-Small-Large-Precategory C D F G H b a) ＝
     comp-natural-transformation-Small-Large-Precategory C D F G I
       ( comp-natural-transformation-Small-Large-Precategory C D G H I c b) a
-  inv-associative-comp-natural-transformation-Small-Large-Precategory F G H I = {!!}
+  inv-associative-comp-natural-transformation-Small-Large-Precategory = {!!}
 ```

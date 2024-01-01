@@ -45,7 +45,7 @@ every set `C` the precomposition function `(B → C) → (A → C)` is an embedd
 is-epimorphism-Set :
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
   (f : A → B) → UUω
-is-epimorphism-Set f = {!!}
+is-epimorphism-Set = {!!}
 ```
 
 ## Properties
@@ -57,7 +57,7 @@ abstract
   is-epimorphism-is-surjective-Set :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} →
     is-surjective f → is-epimorphism-Set f
-  is-epimorphism-is-surjective-Set H C = {!!}
+  is-epimorphism-is-surjective-Set = {!!}
 ```
 
 ### Maps that are epimorphisms with respect to maps into sets are surjective
@@ -67,7 +67,7 @@ abstract
   is-surjective-is-epimorphism-Set :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} →
     is-epimorphism-Set f → is-surjective f
-  is-surjective-is-epimorphism-Set {l1} {l2} {A} {B} {f} H b = {!!}
+  is-surjective-is-epimorphism-Set = {!!}
 ```
 
 ### There is at most one extension of a map into a set along a surjection

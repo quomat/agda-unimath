@@ -36,16 +36,16 @@ number `n` such that `x^n = {!!}
 ```agda
 is-nilpotent-element-semiring-Prop :
   {l : Level} (R : Semiring l) → type-Semiring R → Prop l
-is-nilpotent-element-semiring-Prop R x = {!!}
+is-nilpotent-element-semiring-Prop = {!!}
 
 is-nilpotent-element-Semiring :
   {l : Level} (R : Semiring l) → type-Semiring R → UU l
-is-nilpotent-element-Semiring R x = {!!}
+is-nilpotent-element-Semiring = {!!}
 
 is-prop-is-nilpotent-element-Semiring :
   {l : Level} (R : Semiring l) (x : type-Semiring R) →
   is-prop (is-nilpotent-element-Semiring R x)
-is-prop-is-nilpotent-element-Semiring R x = {!!}
+is-prop-is-nilpotent-element-Semiring = {!!}
 ```
 
 ## Properties
@@ -56,7 +56,7 @@ is-prop-is-nilpotent-element-Semiring R x = {!!}
 is-nilpotent-zero-Semiring :
   {l : Level} (R : Semiring l) →
   is-nilpotent-element-Semiring R (zero-Semiring R)
-is-nilpotent-zero-Semiring R = {!!}
+is-nilpotent-zero-Semiring = {!!}
 ```
 
 ### If `x` and `y` commute and are both nilpotent, then `x + y` is nilpotent
@@ -67,7 +67,7 @@ is-nilpotent-add-Semiring :
   (x y : type-Semiring R) → (mul-Semiring R x y ＝ mul-Semiring R y x) →
   is-nilpotent-element-Semiring R x → is-nilpotent-element-Semiring R y →
   is-nilpotent-element-Semiring R (add-Semiring R x y)
-is-nilpotent-add-Semiring R x y H f h = {!!}
+is-nilpotent-add-Semiring = {!!}
 ```
 
 ### If `x` is nilpotent and `y` commutes with `x`, then `xy` is also nilpotent
@@ -82,12 +82,12 @@ module _
     mul-Semiring R x y ＝ mul-Semiring R y x →
     is-nilpotent-element-Semiring R x →
     is-nilpotent-element-Semiring R (mul-Semiring R x y)
-  is-nilpotent-element-mul-Semiring x y H f = {!!}
+  is-nilpotent-element-mul-Semiring = {!!}
 
   is-nilpotent-element-mul-Semiring' :
     (x y : type-Semiring R) →
     mul-Semiring R x y ＝ mul-Semiring R y x →
     is-nilpotent-element-Semiring R x →
     is-nilpotent-element-Semiring R (mul-Semiring R y x)
-  is-nilpotent-element-mul-Semiring' x y H f = {!!}
+  is-nilpotent-element-mul-Semiring' = {!!}
 ```

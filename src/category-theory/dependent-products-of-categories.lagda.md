@@ -45,7 +45,7 @@ module _
   abstract
     is-category-Π-Category :
       is-category-Precategory precategory-Π-Category
-    is-category-Π-Category x y = {!!}
+    is-category-Π-Category = {!!}
 
   Π-Category : Category (l1 ⊔ l2) (l1 ⊔ l3)
   pr1 Π-Category = {!!}

@@ -79,19 +79,19 @@ module _
   restrict-conjugation-Subgroup :
     (x : type-Group G) → is-in-normalizer-Subgroup x →
     type-Subgroup G H → type-Subgroup G H
-  pr1 (restrict-conjugation-Subgroup x u (y , h)) = {!!}
+  restrict-conjugation-Subgroup = {!!}
 
   contains-unit-normalizer-Subgroup :
     contains-unit-subset-Group G subset-normalizer-Subgroup
-  pr1 contains-unit-normalizer-Subgroup u = {!!}
+  contains-unit-normalizer-Subgroup = {!!}
 
   is-closed-under-multiplication-normalizer-Subgroup :
     is-closed-under-multiplication-subset-Group G subset-normalizer-Subgroup
-  pr1 (is-closed-under-multiplication-normalizer-Subgroup {x} {y} u v) w = {!!}
+  is-closed-under-multiplication-normalizer-Subgroup = {!!}
 
   is-closed-under-inverses-normalizer-Subgroup :
     is-closed-under-inverses-subset-Group G subset-normalizer-Subgroup
-  pr1 (is-closed-under-inverses-normalizer-Subgroup {x} u {y}) h = {!!}
+  is-closed-under-inverses-normalizer-Subgroup = {!!}
 
   normalizer-Subgroup : Subgroup (l1 ⊔ l2) G
   pr1 normalizer-Subgroup = {!!}
@@ -102,18 +102,18 @@ module _
       is-in-Subgroup G H y →
       is-in-Subgroup G H (conjugation-Group G x y)) →
     leq-Subgroup G K normalizer-Subgroup
-  pr1 (forward-implication-is-normalizer-normalizer-Subgroup K u x k {y}) h = {!!}
+  forward-implication-is-normalizer-normalizer-Subgroup = {!!}
 
   backward-implication-is-normalizer-normalizer-Subgroup :
     {l : Level} (K : Subgroup l G) → leq-Subgroup G K normalizer-Subgroup →
     {x y : type-Group G} → is-in-Subgroup G K x →
     is-in-Subgroup G H y →
     is-in-Subgroup G H (conjugation-Group G x y)
-  backward-implication-is-normalizer-normalizer-Subgroup K u {x} {y} k h = {!!}
+  backward-implication-is-normalizer-normalizer-Subgroup = {!!}
 
   is-normalizer-normalizer-Subgroup :
     is-normalizer-Subgroup G H normalizer-Subgroup
-  pr1 (is-normalizer-normalizer-Subgroup K) = {!!}
+  is-normalizer-normalizer-Subgroup = {!!}
 ```
 
 ### The inclusion of `H` into its normalizer `Nᴳ(H)`
@@ -133,7 +133,7 @@ module _
 
   hom-inclusion-is-normalizer-Subgroup :
     hom-Group (group-Subgroup G H) (group-Subgroup G N)
-  pr1 hom-inclusion-is-normalizer-Subgroup = {!!}
+  hom-inclusion-is-normalizer-Subgroup = {!!}
 ```
 
 ## See also

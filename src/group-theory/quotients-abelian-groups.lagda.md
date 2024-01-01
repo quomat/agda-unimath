@@ -54,24 +54,24 @@ module _
 
   nullifies-subgroup-prop-hom-Ab :
     hom-Ab A B → Subgroup-Ab l3 A → Prop (l1 ⊔ l2 ⊔ l3)
-  nullifies-subgroup-prop-hom-Ab f H = {!!}
+  nullifies-subgroup-prop-hom-Ab = {!!}
 
   nullifies-normal-subgroup-hom-Ab :
     hom-Ab A B → Subgroup-Ab l3 A → UU (l1 ⊔ l2 ⊔ l3)
-  nullifies-normal-subgroup-hom-Ab f H = {!!}
+  nullifies-normal-subgroup-hom-Ab = {!!}
 
   nullifying-hom-Ab : Subgroup-Ab l3 A → UU (l1 ⊔ l2 ⊔ l3)
   nullifying-hom-Ab H = {!!}
 
   hom-nullifying-hom-Ab :
     (H : Subgroup-Ab l3 A) → nullifying-hom-Ab H → hom-Ab A B
-  hom-nullifying-hom-Ab H = {!!}
+  hom-nullifying-hom-Ab = {!!}
 
   nullifies-subgroup-nullifying-hom-Ab :
     (H : Subgroup-Ab l3 A) (f : nullifying-hom-Ab H) →
     nullifies-normal-subgroup-hom-Ab
       ( hom-nullifying-hom-Ab H f) H
-  nullifies-subgroup-nullifying-hom-Ab H = {!!}
+  nullifies-subgroup-nullifying-hom-Ab = {!!}
 ```
 
 ### The universal property of quotient groups
@@ -81,13 +81,13 @@ precomp-nullifying-hom-Ab :
   {l1 l2 l3 l4 : Level} (A : Ab l1) (H : Subgroup-Ab l2 A)
   (B : Ab l3) (f : nullifying-hom-Ab A B H)
   (C : Ab l4) → hom-Ab B C → nullifying-hom-Ab A C H
-precomp-nullifying-hom-Ab A H B f C = {!!}
+precomp-nullifying-hom-Ab = {!!}
 
 universal-property-quotient-Ab :
   {l1 l2 l3 : Level} (l : Level) (A : Ab l1)
   (H : Subgroup-Ab l2 A) (B : Ab l3)
   (q : nullifying-hom-Ab A B H) → UU (l1 ⊔ l2 ⊔ l3 ⊔ lsuc l)
-universal-property-quotient-Ab l A H B q = {!!}
+universal-property-quotient-Ab = {!!}
 ```
 
 ### The quotient group

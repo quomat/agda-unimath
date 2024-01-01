@@ -68,7 +68,7 @@ right-unit-law-comp-hom-Large-Precategory
 abstract
   is-large-category-Cyclic-Ring-Large-Category :
     is-large-category-Large-Precategory Cyclic-Ring-Large-Precategory
-  is-large-category-Cyclic-Ring-Large-Category R = {!!}
+  is-large-category-Cyclic-Ring-Large-Category = {!!}
 
 Cyclic-Ring-Large-Category : Large-Category lsuc _⊔_
 large-precategory-Large-Category

@@ -42,21 +42,21 @@ module _
       is-image f i q →
       is-image f i' q' →
       is-equiv (map-hom-slice (map-emb i) (map-emb i') h)
-    is-equiv-is-image-is-image up-i up-i' = {!!}
+    is-equiv-is-image-is-image = {!!}
 
   abstract
     is-image-is-image-is-equiv :
       is-equiv (map-hom-slice (map-emb i) (map-emb i') h) →
       is-image f i q →
       is-image f i' q'
-    is-image-is-image-is-equiv is-equiv-h up-i {l} = {!!}
+    is-image-is-image-is-equiv = {!!}
 
   abstract
     is-image-is-equiv-is-image :
       is-image f i' q' →
       is-equiv (map-hom-slice (map-emb i) (map-emb i') h) →
       is-image f i q
-    is-image-is-equiv-is-image up-i' is-equiv-h {l} = {!!}
+    is-image-is-equiv-is-image = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {X : UU l1} {A : UU l2} (f : A → X)

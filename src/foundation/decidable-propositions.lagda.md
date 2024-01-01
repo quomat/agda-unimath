@@ -74,20 +74,20 @@ module _
   map-equiv-bool-Decidable-Prop' :
     (Σ (Prop l) type-Prop) + (Σ (Prop l) (λ Q → ¬ (type-Prop Q))) →
     bool
-  map-equiv-bool-Decidable-Prop' (inl x) = {!!}
+  map-equiv-bool-Decidable-Prop' = {!!}
 
   map-inv-equiv-bool-Decidable-Prop' :
     bool →
     (Σ (Prop l) type-Prop) + (Σ (Prop l) (λ Q → ¬ (type-Prop Q)))
-  map-inv-equiv-bool-Decidable-Prop' true = {!!}
+  map-inv-equiv-bool-Decidable-Prop' = {!!}
 
   is-section-map-inv-equiv-bool-Decidable-Prop' :
     (map-equiv-bool-Decidable-Prop' ∘ map-inv-equiv-bool-Decidable-Prop') ~ id
-  is-section-map-inv-equiv-bool-Decidable-Prop' true = {!!}
+  is-section-map-inv-equiv-bool-Decidable-Prop' = {!!}
 
   is-retraction-map-inv-equiv-bool-Decidable-Prop' :
     (map-inv-equiv-bool-Decidable-Prop' ∘ map-equiv-bool-Decidable-Prop') ~ id
-  is-retraction-map-inv-equiv-bool-Decidable-Prop' (inl x) = {!!}
+  is-retraction-map-inv-equiv-bool-Decidable-Prop' = {!!}
 
   is-equiv-map-equiv-bool-Decidable-Prop' :
     is-equiv map-equiv-bool-Decidable-Prop'
@@ -96,7 +96,7 @@ module _
   equiv-bool-Decidable-Prop' :
     ((Σ (Prop l) type-Prop) + (Σ (Prop l) (λ Q → ¬ (type-Prop Q)))) ≃
     bool
-  pr1 equiv-bool-Decidable-Prop' = {!!}
+  equiv-bool-Decidable-Prop' = {!!}
 
   equiv-bool-Decidable-Prop : Decidable-Prop l ≃ bool
   equiv-bool-Decidable-Prop = {!!}
@@ -105,7 +105,7 @@ module _
     compute-equiv-bool-Decidable-Prop :
       (P : Decidable-Prop l) →
       type-Decidable-Prop P ≃ (map-equiv equiv-bool-Decidable-Prop P ＝ true)
-    compute-equiv-bool-Decidable-Prop (pair P (pair H (inl p))) = {!!}
+    compute-equiv-bool-Decidable-Prop = {!!}
 ```
 
 ### Types of decidable propositions of any universe level are equivalent
@@ -113,14 +113,13 @@ module _
 ```agda
 equiv-universes-Decidable-Prop :
   (l l' : Level) → Decidable-Prop l ≃ Decidable-Prop l'
-equiv-universes-Decidable-Prop l l' = {!!}
+equiv-universes-Decidable-Prop = {!!}
 
 iff-universes-Decidable-Prop :
   (l l' : Level) (P : Decidable-Prop l) →
   ( prop-Decidable-Prop P ⇔
     prop-Decidable-Prop (map-equiv (equiv-universes-Decidable-Prop l l') P))
-pr1 (iff-universes-Decidable-Prop l l' P) p = {!!}
-pr2 (iff-universes-Decidable-Prop l l' P) p = {!!}
+iff-universes-Decidable-Prop = {!!}
 ```
 
 ### The type of decidable propositions in any universe is a set
@@ -152,7 +151,7 @@ module _
   eq-iff-Decidable-Prop :
     (type-Decidable-Prop P → type-Decidable-Prop Q) →
     (type-Decidable-Prop Q → type-Decidable-Prop P) → P ＝ Q
-  eq-iff-Decidable-Prop f g = {!!}
+  eq-iff-Decidable-Prop = {!!}
 ```
 
 ### The type of decidable propositions in any universe is small
@@ -161,7 +160,7 @@ module _
 abstract
   is-small-Decidable-Prop :
     (l1 l2 : Level) → is-small l2 (Decidable-Prop l1)
-  pr1 (is-small-Decidable-Prop l1 l2) = {!!}
+  is-small-Decidable-Prop = {!!}
 ```
 
 ### Decidable propositions have a count
@@ -170,8 +169,7 @@ abstract
 count-is-decidable-Prop :
     {l : Level} (P : Prop l) →
     is-decidable (type-Prop P) → count (type-Prop P)
-count-is-decidable-Prop P (inl x) = {!!}
-count-is-decidable-Prop P (inr x) = {!!}
+count-is-decidable-Prop = {!!}
 ```
 
 ### Decidable propositions are finite
@@ -181,11 +179,11 @@ abstract
   is-finite-is-decidable-Prop :
     {l : Level} (P : Prop l) →
     is-decidable (type-Prop P) → is-finite (type-Prop P)
-  is-finite-is-decidable-Prop P x = {!!}
+  is-finite-is-decidable-Prop = {!!}
 
 is-finite-type-Decidable-Prop :
   {l : Level} (P : Decidable-Prop l) → is-finite (type-Decidable-Prop P)
-is-finite-type-Decidable-Prop P = {!!}
+is-finite-type-Decidable-Prop = {!!}
 ```
 
 ### The type of decidable propositions of any universe level is finite
@@ -204,7 +202,5 @@ pr2 (decidable-Prop-𝔽 l) = {!!}
 ```agda
 neg-Decidable-Prop :
   {l : Level} → Decidable-Prop l → Decidable-Prop l
-pr1 (neg-Decidable-Prop P) = {!!}
-pr1 (pr2 (neg-Decidable-Prop P)) = {!!}
-pr2 (pr2 (neg-Decidable-Prop P)) = {!!}
+neg-Decidable-Prop = {!!}
 ```

@@ -50,7 +50,7 @@ equiv-Σ-Decomposition-Inhabited-𝔽-Σ-Decomposition-𝔽 :
   Σ-Decomposition-Subuniverse
     ( is-finite-and-inhabited-Prop)
     ( map-compute-Inhabited-𝔽' X)
-equiv-Σ-Decomposition-Inhabited-𝔽-Σ-Decomposition-𝔽 X = {!!}
+equiv-Σ-Decomposition-Inhabited-𝔽-Σ-Decomposition-𝔽 = {!!}
 
 is-finite-Σ-Decomposition-Subuniverse-Inhabited-𝔽 :
   {l : Level} (X : Inhabited-𝔽 l) →
@@ -58,12 +58,11 @@ is-finite-Σ-Decomposition-Subuniverse-Inhabited-𝔽 :
     ( Σ-Decomposition-Subuniverse
       ( is-finite-and-inhabited-Prop {l})
       ( map-compute-Inhabited-𝔽' X))
-is-finite-Σ-Decomposition-Subuniverse-Inhabited-𝔽 X = {!!}
+is-finite-Σ-Decomposition-Subuniverse-Inhabited-𝔽 = {!!}
 
 finite-Σ-Decomposition-Subuniverse-Inhabited-𝔽 :
   {l : Level} (X : Inhabited-𝔽 l) → 𝔽 (lsuc l)
-pr1 (finite-Σ-Decomposition-Subuniverse-Inhabited-𝔽 {l} X) = {!!}
-pr2 (finite-Σ-Decomposition-Subuniverse-Inhabited-𝔽 X) = {!!}
+finite-Σ-Decomposition-Subuniverse-Inhabited-𝔽 = {!!}
 
 module _
   {l1 l2 : Level}
@@ -72,7 +71,7 @@ module _
   finite-small-cauchy-composition-species-subuniverse :
     ( S T : species-Inhabited-𝔽 l1 (l1 ⊔ l2)) (X : Inhabited-𝔽 l1) →
     𝔽 (lsuc l1 ⊔ l2)
-  finite-small-cauchy-composition-species-subuniverse S T X = {!!}
+  finite-small-cauchy-composition-species-subuniverse = {!!}
 
   private
     C1 :
@@ -84,13 +83,13 @@ module _
           is-finite-and-inhabited-Prop
           is-finite-Prop
           S T X)
-    C1 S T X = {!!}
+    C1 = {!!}
 
     C2 :
       ( S T : species-Inhabited-𝔽 l1 (l1 ⊔ l2)) →
       (X : type-subuniverse is-finite-and-inhabited-Prop) →
       is-finite (type-is-small (C1 S T X))
-    C2 S T X = {!!}
+    C2 = {!!}
 
     C3 : is-closed-under-Σ-subuniverse (is-finite-and-inhabited-Prop {l1})
     C3 X Y = {!!}
@@ -106,7 +105,7 @@ module _
       ( is-finite
         ( type-is-small
             ( C5 ( inclusion-subuniverse is-finite-and-inhabited-Prop X))))
-    C6 X = {!!}
+    C6 = {!!}
 
   small-cauchy-composition-species-Inhabited-𝔽 :
     species-Inhabited-𝔽 l1 (l1 ⊔ l2) →

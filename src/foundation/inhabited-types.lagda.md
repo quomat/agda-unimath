@@ -68,7 +68,7 @@ module _
 ```agda
 Fam-Inhabited-Types :
   {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-Fam-Inhabited-Types l2 X = {!!}
+Fam-Inhabited-Types = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} (Y : Fam-Inhabited-Types l2 X)
@@ -79,7 +79,7 @@ module _
 
   is-inhabited-type-Fam-Inhabited-Types :
     (x : X) → type-trunc-Prop (type-Fam-Inhabited-Types x)
-  is-inhabited-type-Fam-Inhabited-Types x = {!!}
+  is-inhabited-type-Fam-Inhabited-Types = {!!}
 
   total-Fam-Inhabited-Types : UU (l1 ⊔ l2)
   total-Fam-Inhabited-Types = {!!}
@@ -92,7 +92,7 @@ module _
 ```agda
 equiv-Inhabited-Type :
   {l1 l2 : Level} → Inhabited-Type l1 → Inhabited-Type l2 → UU (l1 ⊔ l2)
-equiv-Inhabited-Type X Y = {!!}
+equiv-Inhabited-Type = {!!}
 
 module _
   {l : Level} (X : Inhabited-Type l)
@@ -104,7 +104,7 @@ module _
 
   equiv-eq-Inhabited-Type :
     (Y : Inhabited-Type l) → (X ＝ Y) → equiv-Inhabited-Type X Y
-  equiv-eq-Inhabited-Type .X refl = {!!}
+  equiv-eq-Inhabited-Type = {!!}
 
   is-equiv-equiv-eq-Inhabited-Type :
     (Y : Inhabited-Type l) → is-equiv (equiv-eq-Inhabited-Type Y)
@@ -112,11 +112,11 @@ module _
 
   extensionality-Inhabited-Type :
     (Y : Inhabited-Type l) → (X ＝ Y) ≃ equiv-Inhabited-Type X Y
-  pr1 (extensionality-Inhabited-Type Y) = {!!}
+  extensionality-Inhabited-Type = {!!}
 
   eq-equiv-Inhabited-Type :
     (Y : Inhabited-Type l) → equiv-Inhabited-Type X Y → (X ＝ Y)
-  eq-equiv-Inhabited-Type Y = {!!}
+  eq-equiv-Inhabited-Type = {!!}
 ```
 
 ### Characterization of equality of families of inhabited types
@@ -125,7 +125,7 @@ module _
 equiv-Fam-Inhabited-Types :
   {l1 l2 l3 : Level} {X : UU l1} →
   Fam-Inhabited-Types l2 X → Fam-Inhabited-Types l3 X → UU (l1 ⊔ l2 ⊔ l3)
-equiv-Fam-Inhabited-Types {X = X} Y Z = {!!}
+equiv-Fam-Inhabited-Types = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} (Y : Fam-Inhabited-Types l2 X)
@@ -140,7 +140,7 @@ module _
 
   equiv-eq-Fam-Inhabited-Types :
     (Z : Fam-Inhabited-Types l2 X) → (Y ＝ Z) → equiv-Fam-Inhabited-Types Y Z
-  equiv-eq-Fam-Inhabited-Types .Y refl = {!!}
+  equiv-eq-Fam-Inhabited-Types = {!!}
 
   is-equiv-equiv-eq-Fam-Inhabited-Types :
     (Z : Fam-Inhabited-Types l2 X) → is-equiv (equiv-eq-Fam-Inhabited-Types Z)
@@ -153,13 +153,12 @@ module _
 is-inhabited-Σ :
   {l1 l2 : Level} {X : UU l1} {Y : X → UU l2} →
   is-inhabited X → ((x : X) → is-inhabited (Y x)) → is-inhabited (Σ X Y)
-is-inhabited-Σ {l1} {l2} {X} {Y} H K = {!!}
+is-inhabited-Σ = {!!}
 
 Σ-Inhabited-Type :
   {l1 l2 : Level} (X : Inhabited-Type l1)
   (Y : type-Inhabited-Type X → Inhabited-Type l2) → Inhabited-Type (l1 ⊔ l2)
-pr1 (Σ-Inhabited-Type X Y) = {!!}
-pr2 (Σ-Inhabited-Type X Y) = {!!}
+Σ-Inhabited-Type = {!!}
 ```
 
 ### Inhabited types are closed under maps
@@ -168,7 +167,7 @@ pr2 (Σ-Inhabited-Type X Y) = {!!}
 map-is-inhabited :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   (f : (A → B)) → is-inhabited A → is-inhabited B
-map-is-inhabited f = {!!}
+map-is-inhabited = {!!}
 ```
 
 ### Contractible types are inhabited
@@ -176,7 +175,7 @@ map-is-inhabited f = {!!}
 ```agda
 is-inhabited-is-contr :
   {l1 : Level} {A : UU l1} → is-contr A → is-inhabited A
-is-inhabited-is-contr p = {!!}
+is-inhabited-is-contr = {!!}
 ```
 
 ### Inhabited propositions are contractible
@@ -184,7 +183,7 @@ is-inhabited-is-contr p = {!!}
 ```agda
 is-contr-is-inhabited-is-prop :
   {l1 : Level} {A : UU l1} → is-prop A → is-inhabited A → is-contr A
-is-contr-is-inhabited-is-prop {A = A} p h = {!!}
+is-contr-is-inhabited-is-prop = {!!}
 ```
 
 ## See also

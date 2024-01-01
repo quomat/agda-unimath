@@ -59,7 +59,7 @@ subtype-hom-Category :
   {l1 l2 l3 : Level} (l4 : Level)
   (C : Category l1 l2)
   (P₀ : subtype l3 (obj-Category C)) → UU (l1 ⊔ l2 ⊔ l3 ⊔ lsuc l4)
-subtype-hom-Category l4 C = {!!}
+subtype-hom-Category = {!!}
 ```
 
 ### Categorical predicates on sub-hom-families of categories
@@ -130,7 +130,7 @@ Subcategory :
   {l1 l2 : Level} (l3 l4 : Level)
   (C : Category l1 l2) →
   UU (l1 ⊔ l2 ⊔ lsuc l3 ⊔ lsuc l4)
-Subcategory l3 l4 C = {!!}
+Subcategory = {!!}
 ```
 
 #### Objects in subcategories
@@ -194,7 +194,7 @@ module _
     hom-Category C
       ( inclusion-obj-Subcategory C P x)
       ( inclusion-obj-Subcategory C P y)
-  inclusion-hom-Subcategory x y = {!!}
+  inclusion-hom-Subcategory = {!!}
 ```
 
 The predicate on a morphism between subobjects of being contained in the
@@ -207,7 +207,7 @@ subcategory:
       ( inclusion-obj-Subcategory C P x)
       ( inclusion-obj-Subcategory C P y) →
     UU l4
-  is-in-hom-obj-subcategory-Subcategory x y = {!!}
+  is-in-hom-obj-subcategory-Subcategory = {!!}
 
   is-prop-is-in-hom-obj-subcategory-Subcategory :
     ( x y : obj-Subcategory C P)
@@ -216,7 +216,7 @@ subcategory:
         ( inclusion-obj-Subcategory C P x)
         ( inclusion-obj-Subcategory C P y)) →
     is-prop (is-in-hom-obj-subcategory-Subcategory x y f)
-  is-prop-is-in-hom-obj-subcategory-Subcategory x y = {!!}
+  is-prop-is-in-hom-obj-subcategory-Subcategory = {!!}
 ```
 
 The predicate on a morphism between any objects of being contained in the
@@ -284,7 +284,7 @@ module _
 
   is-set-hom-Subcategory :
     (x y : obj-Subcategory C P) → is-set (hom-Subcategory C P x y)
-  is-set-hom-Subcategory x y = {!!}
+  is-set-hom-Subcategory = {!!}
 
   id-hom-Subcategory :
     {x : obj-Subcategory C P} → hom-Subcategory C P x x
@@ -394,7 +394,7 @@ module _
       ( inclusion-obj-Subcategory C P x)
       ( inclusion-obj-Subcategory C P y) ≃
     iso-Subprecategory (precategory-Category C) P x y
-  compute-iso-Subcategory {x} {y} = {!!}
+  compute-iso-Subcategory = {!!}
 
   inv-compute-iso-Subcategory :
     {x y : obj-Subcategory C P} →
@@ -402,7 +402,7 @@ module _
     iso-Category C
       ( inclusion-obj-Subcategory C P x)
       ( inclusion-obj-Subcategory C P y)
-  inv-compute-iso-Subcategory {x} {y} = {!!}
+  inv-compute-iso-Subcategory = {!!}
 ```
 
 ### Subcategories are categories
@@ -416,7 +416,7 @@ module _
 
   is-category-Subcategory :
     is-category-Precategory (precategory-Subcategory C P)
-  is-category-Subcategory x = {!!}
+  is-category-Subcategory = {!!}
 
   category-Subcategory : Category (l1 ⊔ l3) (l2 ⊔ l4)
   pr1 category-Subcategory = {!!}

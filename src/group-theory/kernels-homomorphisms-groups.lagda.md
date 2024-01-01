@@ -53,11 +53,11 @@ module _
 
   is-closed-under-multiplication-subset-kernel-hom-Group :
     is-closed-under-multiplication-subset-Group G subset-kernel-hom-Group
-  is-closed-under-multiplication-subset-kernel-hom-Group p q = {!!}
+  is-closed-under-multiplication-subset-kernel-hom-Group = {!!}
 
   is-closed-under-inverses-subset-kernel-hom-Group :
     is-closed-under-inverses-subset-Group G subset-kernel-hom-Group
-  is-closed-under-inverses-subset-kernel-hom-Group p = {!!}
+  is-closed-under-inverses-subset-kernel-hom-Group = {!!}
 
   subgroup-kernel-hom-Group : Subgroup k G
   pr1 subgroup-kernel-hom-Group = {!!}
@@ -96,7 +96,7 @@ module _
 
   is-normal-kernel-hom-Group :
     is-normal-Subgroup G (subgroup-kernel-hom-Group G H f)
-  is-normal-kernel-hom-Group g h = {!!}
+  is-normal-kernel-hom-Group = {!!}
 
   kernel-hom-Group : Normal-Subgroup l2 G
   pr1 kernel-hom-Group = {!!}

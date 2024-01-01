@@ -97,11 +97,11 @@ module _
 
   structure-equiv-Spectrum :
     (n : ℕ) → type-Spectrum n ≃ type-Ω (pointed-type-Spectrum (succ-ℕ n))
-  pr1 (structure-equiv-Spectrum n) = {!!}
+  structure-equiv-Spectrum = {!!}
 
   pointed-structure-equiv-Spectrum :
     (n : ℕ) → pointed-type-Spectrum n ≃∗ Ω (pointed-type-Spectrum (succ-ℕ n))
-  pr1 (pointed-structure-equiv-Spectrum n) = {!!}
+  pointed-structure-equiv-Spectrum = {!!}
 ```
 
 ### The structure maps of a spectrum

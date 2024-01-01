@@ -113,15 +113,15 @@ module _
 
   leq-Join-Semilattice-Prop :
     (x y : type-Join-Semilattice) → Prop l
-  leq-Join-Semilattice-Prop x y = {!!}
+  leq-Join-Semilattice-Prop = {!!}
 
   leq-Join-Semilattice :
     (x y : type-Join-Semilattice) → UU l
-  leq-Join-Semilattice x y = {!!}
+  leq-Join-Semilattice = {!!}
 
   is-prop-leq-Join-Semilattice :
     (x y : type-Join-Semilattice) → is-prop (leq-Join-Semilattice x y)
-  is-prop-leq-Join-Semilattice x y = {!!}
+  is-prop-leq-Join-Semilattice = {!!}
 
   private
     _≤_ = {!!}
@@ -148,7 +148,7 @@ module _
       ( x)
       ( y)
       ( join-Join-Semilattice x y)
-  pr1 (is-binary-upper-bound-join-Join-Semilattice x y) = {!!}
+  is-binary-upper-bound-join-Join-Semilattice = {!!}
 
   is-least-binary-upper-bound-join-Join-Semilattice :
     (x y : type-Join-Semilattice) →
@@ -157,7 +157,7 @@ module _
       ( x)
       ( y)
       ( join-Join-Semilattice x y)
-  is-least-binary-upper-bound-join-Join-Semilattice x y = {!!}
+  is-least-binary-upper-bound-join-Join-Semilattice = {!!}
 ```
 
 ### The predicate on posets of being a join-semilattice
@@ -183,13 +183,13 @@ module _
 
     join-is-join-semilattice-Poset :
       type-Poset P → type-Poset P → type-Poset P
-    join-is-join-semilattice-Poset x y = {!!}
+    join-is-join-semilattice-Poset = {!!}
 
     is-least-binary-upper-bound-join-is-join-semilattice-Poset :
       (x y : type-Poset P) →
       is-least-binary-upper-bound-Poset P x y
         ( join-is-join-semilattice-Poset x y)
-    is-least-binary-upper-bound-join-is-join-semilattice-Poset x y = {!!}
+    is-least-binary-upper-bound-join-is-join-semilattice-Poset = {!!}
 ```
 
 ### The order-theoretic definition of join semilattices
@@ -238,7 +238,7 @@ module _
     leq-Order-Theoretic-Join-Semilattice x y →
     leq-Order-Theoretic-Join-Semilattice y x →
     x ＝ y
-  antisymmetric-leq-Order-Theoretic-Join-Semilattice {x} {y} = {!!}
+  antisymmetric-leq-Order-Theoretic-Join-Semilattice = {!!}
 
   transitive-leq-Order-Theoretic-Join-Semilattice :
     (x y z : type-Order-Theoretic-Join-Semilattice) →
@@ -275,24 +275,24 @@ module _
       ( x)
       ( y)
       ( x ∨ y)
-  is-binary-upper-bound-join-Order-Theoretic-Join-Semilattice x y = {!!}
+  is-binary-upper-bound-join-Order-Theoretic-Join-Semilattice = {!!}
 
   leq-left-join-Order-Theoretic-Join-Semilattice :
     (x y : type-Order-Theoretic-Join-Semilattice) →
     leq-Order-Theoretic-Join-Semilattice x (x ∨ y)
-  leq-left-join-Order-Theoretic-Join-Semilattice x y = {!!}
+  leq-left-join-Order-Theoretic-Join-Semilattice = {!!}
 
   leq-right-join-Order-Theoretic-Join-Semilattice :
     (x y : type-Order-Theoretic-Join-Semilattice) →
     leq-Order-Theoretic-Join-Semilattice y (x ∨ y)
-  leq-right-join-Order-Theoretic-Join-Semilattice x y = {!!}
+  leq-right-join-Order-Theoretic-Join-Semilattice = {!!}
 
   leq-join-Order-Theoretic-Join-Semilattice :
     {x y z : type-Order-Theoretic-Join-Semilattice} →
     leq-Order-Theoretic-Join-Semilattice x z →
     leq-Order-Theoretic-Join-Semilattice y z →
     leq-Order-Theoretic-Join-Semilattice (x ∨ y) z
-  leq-join-Order-Theoretic-Join-Semilattice {x} {y} {z} H K = {!!}
+  leq-join-Order-Theoretic-Join-Semilattice = {!!}
 ```
 
 ## Properties
@@ -397,5 +397,5 @@ module _
 
   join-semilattice-Order-Theoretic-Join-Semilattice :
     Join-Semilattice l1
-  pr1 join-semilattice-Order-Theoretic-Join-Semilattice = {!!}
+  join-semilattice-Order-Theoretic-Join-Semilattice = {!!}
 ```

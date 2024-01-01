@@ -45,7 +45,7 @@ module _
 
   all-elements-equal-has-bottom-element-Poset :
     all-elements-equal has-bottom-element-Poset
-  all-elements-equal-has-bottom-element-Poset (pair x H) (pair y K) = {!!}
+  all-elements-equal-has-bottom-element-Poset = {!!}
 
   is-prop-has-bottom-element-Poset : is-prop has-bottom-element-Poset
   is-prop-has-bottom-element-Poset = {!!}

@@ -113,15 +113,15 @@ module _
 
   leq-Meet-Semilattice-Prop :
     (x y : type-Meet-Semilattice) → Prop l
-  leq-Meet-Semilattice-Prop x y = {!!}
+  leq-Meet-Semilattice-Prop = {!!}
 
   leq-Meet-Semilattice :
     (x y : type-Meet-Semilattice) → UU l
-  leq-Meet-Semilattice x y = {!!}
+  leq-Meet-Semilattice = {!!}
 
   is-prop-leq-Meet-Semilattice :
     (x y : type-Meet-Semilattice) → is-prop (leq-Meet-Semilattice x y)
-  is-prop-leq-Meet-Semilattice x y = {!!}
+  is-prop-leq-Meet-Semilattice = {!!}
 
   private
     _≤_ = {!!}
@@ -148,7 +148,7 @@ module _
       ( x)
       ( y)
       ( meet-Meet-Semilattice x y)
-  pr1 (is-binary-lower-bound-meet-Meet-Semilattice x y) = {!!}
+  is-binary-lower-bound-meet-Meet-Semilattice = {!!}
 
   is-greatest-binary-lower-bound-meet-Meet-Semilattice :
     (x y : type-Meet-Semilattice) →
@@ -157,12 +157,12 @@ module _
       ( x)
       ( y)
       ( meet-Meet-Semilattice x y)
-  is-greatest-binary-lower-bound-meet-Meet-Semilattice x y = {!!}
+  is-greatest-binary-lower-bound-meet-Meet-Semilattice = {!!}
 
   has-greatest-binary-lower-bound-Meet-Semilattice :
     (x y : type-Meet-Semilattice) →
     has-greatest-binary-lower-bound-Poset (poset-Meet-Semilattice) x y
-  pr1 (has-greatest-binary-lower-bound-Meet-Semilattice x y) = {!!}
+  has-greatest-binary-lower-bound-Meet-Semilattice = {!!}
 ```
 
 ### The predicate on posets of being a meet-semilattice
@@ -188,13 +188,13 @@ module _
 
     meet-is-meet-semilattice-Poset :
       type-Poset P → type-Poset P → type-Poset P
-    meet-is-meet-semilattice-Poset x y = {!!}
+    meet-is-meet-semilattice-Poset = {!!}
 
     is-greatest-binary-lower-bound-meet-is-meet-semilattice-Poset :
       (x y : type-Poset P) →
       is-greatest-binary-lower-bound-Poset P x y
         ( meet-is-meet-semilattice-Poset x y)
-    is-greatest-binary-lower-bound-meet-is-meet-semilattice-Poset x y = {!!}
+    is-greatest-binary-lower-bound-meet-is-meet-semilattice-Poset = {!!}
 ```
 
 ### The order-theoretic definition of meet semilattices
@@ -243,7 +243,7 @@ module _
     leq-Order-Theoretic-Meet-Semilattice x y →
     leq-Order-Theoretic-Meet-Semilattice y x →
     x ＝ y
-  antisymmetric-leq-Order-Theoretic-Meet-Semilattice {x} {y} = {!!}
+  antisymmetric-leq-Order-Theoretic-Meet-Semilattice = {!!}
 
   transitive-leq-Order-Theoretic-Meet-Semilattice :
     (x y z : type-Order-Theoretic-Meet-Semilattice) →
@@ -280,24 +280,24 @@ module _
       ( x)
       ( y)
       ( x ∧ y)
-  is-binary-lower-bound-meet-Order-Theoretic-Meet-Semilattice x y = {!!}
+  is-binary-lower-bound-meet-Order-Theoretic-Meet-Semilattice = {!!}
 
   leq-left-meet-Order-Theoretic-Meet-Semilattice :
     (x y : type-Order-Theoretic-Meet-Semilattice) →
     leq-Order-Theoretic-Meet-Semilattice (x ∧ y) x
-  leq-left-meet-Order-Theoretic-Meet-Semilattice x y = {!!}
+  leq-left-meet-Order-Theoretic-Meet-Semilattice = {!!}
 
   leq-right-meet-Order-Theoretic-Meet-Semilattice :
     (x y : type-Order-Theoretic-Meet-Semilattice) →
     leq-Order-Theoretic-Meet-Semilattice (x ∧ y) y
-  leq-right-meet-Order-Theoretic-Meet-Semilattice x y = {!!}
+  leq-right-meet-Order-Theoretic-Meet-Semilattice = {!!}
 
   leq-meet-Order-Theoretic-Meet-Semilattice :
     {x y z : type-Order-Theoretic-Meet-Semilattice} →
     leq-Order-Theoretic-Meet-Semilattice z x →
     leq-Order-Theoretic-Meet-Semilattice z y →
     leq-Order-Theoretic-Meet-Semilattice z (x ∧ y)
-  leq-meet-Order-Theoretic-Meet-Semilattice {x} {y} {z} H K = {!!}
+  leq-meet-Order-Theoretic-Meet-Semilattice = {!!}
 ```
 
 ## Properties
@@ -402,7 +402,7 @@ module _
 
   meet-semilattice-Order-Theoretic-Meet-Semilattice :
     Meet-Semilattice l1
-  pr1 meet-semilattice-Order-Theoretic-Meet-Semilattice = {!!}
+  meet-semilattice-Order-Theoretic-Meet-Semilattice = {!!}
 ```
 
 ### Any meet-semilattice `A` is isomorphic to the meet-semilattice obtained from the order theoretic meet-semilattice obtained from `A`
@@ -414,7 +414,7 @@ module _
 
   order-theoretic-meet-semilattice-Meet-Semilattice :
     Order-Theoretic-Meet-Semilattice l1 l1
-  pr1 order-theoretic-meet-semilattice-Meet-Semilattice = {!!}
+  order-theoretic-meet-semilattice-Meet-Semilattice = {!!}
 
   compute-meet-order-theoretic-meet-semilattice-Meet-Semilattice :
     (x y : type-Meet-Semilattice A) →
@@ -423,7 +423,7 @@ module _
       ( order-theoretic-meet-semilattice-Meet-Semilattice)
       ( x)
       ( y)
-  compute-meet-order-theoretic-meet-semilattice-Meet-Semilattice x y = {!!}
+  compute-meet-order-theoretic-meet-semilattice-Meet-Semilattice = {!!}
 
   compute-order-theoretic-meet-semilattice-Meet-Semilattice :
     iso-Semigroup

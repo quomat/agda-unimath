@@ -28,7 +28,7 @@ which each directed family of elements has a least upper bound.
 ```agda
 is-directed-complete-Poset-Prop :
   {l1 l2 : Level} (l3 : Level) (P : Poset l1 l2) → Prop (l1 ⊔ l2 ⊔ lsuc l3)
-is-directed-complete-Poset-Prop l3 P = {!!}
+is-directed-complete-Poset-Prop = {!!}
 
 DCPO : (l1 l2 l3 : Level) → UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
 DCPO l1 l2 l3 = {!!}

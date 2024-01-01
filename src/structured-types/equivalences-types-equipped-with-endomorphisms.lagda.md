@@ -44,7 +44,7 @@ module _
 
   is-equiv-hom-Type-With-Endomorphism :
     hom-Type-With-Endomorphism X Y → UU (l1 ⊔ l2)
-  is-equiv-hom-Type-With-Endomorphism h = {!!}
+  is-equiv-hom-Type-With-Endomorphism = {!!}
 ```
 
 ### Equivalences of types equipped with endomorphisms
@@ -69,12 +69,12 @@ module _
   equiv-equiv-Type-With-Endomorphism :
     equiv-Type-With-Endomorphism →
     type-Type-With-Endomorphism X ≃ type-Type-With-Endomorphism Y
-  equiv-equiv-Type-With-Endomorphism e = {!!}
+  equiv-equiv-Type-With-Endomorphism = {!!}
 
   map-equiv-Type-With-Endomorphism :
     equiv-Type-With-Endomorphism →
     type-Type-With-Endomorphism X → type-Type-With-Endomorphism Y
-  map-equiv-Type-With-Endomorphism e = {!!}
+  map-equiv-Type-With-Endomorphism = {!!}
 
   coherence-square-equiv-Type-With-Endomorphism :
     (e : equiv-Type-With-Endomorphism) →
@@ -83,16 +83,16 @@ module _
       ( endomorphism-Type-With-Endomorphism X)
       ( endomorphism-Type-With-Endomorphism Y)
       ( map-equiv-Type-With-Endomorphism e)
-  coherence-square-equiv-Type-With-Endomorphism e = {!!}
+  coherence-square-equiv-Type-With-Endomorphism = {!!}
 
   hom-equiv-Type-With-Endomorphism :
     equiv-Type-With-Endomorphism → hom-Type-With-Endomorphism X Y
-  pr1 (hom-equiv-Type-With-Endomorphism e) = {!!}
+  hom-equiv-Type-With-Endomorphism = {!!}
 
   is-equiv-equiv-Type-With-Endomorphism :
     (e : equiv-Type-With-Endomorphism) →
     is-equiv-hom-Type-With-Endomorphism X Y (hom-equiv-Type-With-Endomorphism e)
-  is-equiv-equiv-Type-With-Endomorphism e = {!!}
+  is-equiv-equiv-Type-With-Endomorphism = {!!}
 ```
 
 ### The identity equivalence
@@ -117,8 +117,7 @@ comp-equiv-Type-With-Endomorphism :
   equiv-Type-With-Endomorphism Y Z →
   equiv-Type-With-Endomorphism X Y →
   equiv-Type-With-Endomorphism X Z
-pr1 (comp-equiv-Type-With-Endomorphism X Y Z f e) = {!!}
-pr2 (comp-equiv-Type-With-Endomorphism X Y Z f e) = {!!}
+comp-equiv-Type-With-Endomorphism = {!!}
 ```
 
 ### Inverses of equivalences of types equipped with endomorphisms
@@ -129,8 +128,7 @@ inv-equiv-Type-With-Endomorphism :
   (X : Type-With-Endomorphism l1)
   (Y : Type-With-Endomorphism l2) →
   equiv-Type-With-Endomorphism X Y → equiv-Type-With-Endomorphism Y X
-pr1 (inv-equiv-Type-With-Endomorphism X Y e) = {!!}
-pr2 (inv-equiv-Type-With-Endomorphism X Y e) = {!!}
+inv-equiv-Type-With-Endomorphism = {!!}
 ```
 
 ### Homotopies of equivalences of types equipped with endomorphisms
@@ -144,37 +142,37 @@ module _
 
   htpy-equiv-Type-With-Endomorphism :
     (e f : equiv-Type-With-Endomorphism X Y) → UU (l1 ⊔ l2)
-  htpy-equiv-Type-With-Endomorphism e f = {!!}
+  htpy-equiv-Type-With-Endomorphism = {!!}
 
   refl-htpy-equiv-Type-With-Endomorphism :
     ( e : equiv-Type-With-Endomorphism X Y) →
     htpy-equiv-Type-With-Endomorphism e e
-  refl-htpy-equiv-Type-With-Endomorphism e = {!!}
+  refl-htpy-equiv-Type-With-Endomorphism = {!!}
 
   htpy-eq-equiv-Type-With-Endomorphism :
     (e f : equiv-Type-With-Endomorphism X Y) →
     e ＝ f → htpy-equiv-Type-With-Endomorphism e f
-  htpy-eq-equiv-Type-With-Endomorphism e .e refl = {!!}
+  htpy-eq-equiv-Type-With-Endomorphism = {!!}
 
   is-torsorial-htpy-equiv-Type-With-Endomorphism :
     (e : equiv-Type-With-Endomorphism X Y) →
     is-torsorial (htpy-equiv-Type-With-Endomorphism e)
-  is-torsorial-htpy-equiv-Type-With-Endomorphism e = {!!}
+  is-torsorial-htpy-equiv-Type-With-Endomorphism = {!!}
 
   is-equiv-htpy-eq-equiv-Type-With-Endomorphism :
     (e f : equiv-Type-With-Endomorphism X Y) →
     is-equiv (htpy-eq-equiv-Type-With-Endomorphism e f)
-  is-equiv-htpy-eq-equiv-Type-With-Endomorphism e = {!!}
+  is-equiv-htpy-eq-equiv-Type-With-Endomorphism = {!!}
 
   extensionality-equiv-Type-With-Endomorphism :
     (e f : equiv-Type-With-Endomorphism X Y) →
     (e ＝ f) ≃ htpy-equiv-Type-With-Endomorphism e f
-  pr1 (extensionality-equiv-Type-With-Endomorphism e f) = {!!}
+  extensionality-equiv-Type-With-Endomorphism = {!!}
 
   eq-htpy-equiv-Type-With-Endomorphism :
     (e f : equiv-Type-With-Endomorphism X Y) →
     htpy-equiv-Type-With-Endomorphism e f → e ＝ f
-  eq-htpy-equiv-Type-With-Endomorphism e f = {!!}
+  eq-htpy-equiv-Type-With-Endomorphism = {!!}
 ```
 
 ## Properties
@@ -193,14 +191,14 @@ module _
     comp-equiv-Type-With-Endomorphism X Y Y
       ( id-equiv-Type-With-Endomorphism Y) e ＝
     e
-  left-unit-law-comp-equiv-Type-With-Endomorphism e = {!!}
+  left-unit-law-comp-equiv-Type-With-Endomorphism = {!!}
 
   right-unit-law-comp-equiv-Type-With-Endomorphism :
     (e : equiv-Type-With-Endomorphism X Y) →
     comp-equiv-Type-With-Endomorphism X X Y e
       ( id-equiv-Type-With-Endomorphism X) ＝
     e
-  right-unit-law-comp-equiv-Type-With-Endomorphism e = {!!}
+  right-unit-law-comp-equiv-Type-With-Endomorphism = {!!}
 ```
 
 ### Extensionality of types equipped with endomorphisms
@@ -213,7 +211,7 @@ module _
   equiv-eq-Type-With-Endomorphism :
     ( Y : Type-With-Endomorphism l1) →
     X ＝ Y → equiv-Type-With-Endomorphism X Y
-  equiv-eq-Type-With-Endomorphism .X refl = {!!}
+  equiv-eq-Type-With-Endomorphism = {!!}
 
   is-torsorial-equiv-Type-With-Endomorphism :
     is-torsorial (equiv-Type-With-Endomorphism X)
@@ -227,11 +225,11 @@ module _
   extensionality-Type-With-Endomorphism :
     (Y : Type-With-Endomorphism l1) →
     (X ＝ Y) ≃ equiv-Type-With-Endomorphism X Y
-  pr1 (extensionality-Type-With-Endomorphism Y) = {!!}
+  extensionality-Type-With-Endomorphism = {!!}
 
   eq-equiv-Type-With-Endomorphism :
     (Y : Type-With-Endomorphism l1) → equiv-Type-With-Endomorphism X Y → X ＝ Y
-  eq-equiv-Type-With-Endomorphism Y = {!!}
+  eq-equiv-Type-With-Endomorphism = {!!}
 
 module _
   {l : Level}
@@ -246,5 +244,5 @@ module _
     ( comp-equiv-Type-With-Endomorphism X Y Z
       ( equiv-eq-Type-With-Endomorphism Y Z q)
       ( equiv-eq-Type-With-Endomorphism X Y p))
-  preserves-concat-equiv-eq-Type-With-Endomorphism refl q = {!!}
+  preserves-concat-equiv-eq-Type-With-Endomorphism = {!!}
 ```

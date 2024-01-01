@@ -55,7 +55,7 @@ module _
 
   is-category-is-category-Wide-Subprecategory :
     is-category-Precategory (precategory-Wide-Subprecategory C P)
-  is-category-is-category-Wide-Subprecategory x = {!!}
+  is-category-is-category-Wide-Subprecategory = {!!}
 ```
 
 ## Definitions
@@ -119,7 +119,7 @@ module _
 
   is-closed-under-composition-prop-subtype-hom-wide-Category :
     Prop (l1 ⊔ l2 ⊔ l3)
-  pr1 is-closed-under-composition-prop-subtype-hom-wide-Category = {!!}
+  is-closed-under-composition-prop-subtype-hom-wide-Category = {!!}
 ```
 
 ### The predicate on a subtype of the hom-sets of being a wide subcategory
@@ -157,7 +157,7 @@ Wide-Subcategory :
   {l1 l2 : Level} (l3 : Level)
   (C : Category l1 l2) →
   UU (l1 ⊔ l2 ⊔ lsuc l3)
-Wide-Subcategory l3 C = {!!}
+Wide-Subcategory = {!!}
 ```
 
 #### Objects in wide subcategories
@@ -201,7 +201,7 @@ module _
     hom-Category C
       ( inclusion-obj-Wide-Subcategory C P x)
       ( inclusion-obj-Wide-Subcategory C P y)
-  inclusion-hom-Wide-Subcategory x y = {!!}
+  inclusion-hom-Wide-Subcategory = {!!}
 ```
 
 The predicate on a morphism between any objects of being contained in the wide
@@ -210,12 +210,12 @@ subcategory:
 ```agda
   is-in-hom-Wide-Subcategory :
     (x y : obj-Category C) (f : hom-Category C x y) → UU l3
-  is-in-hom-Wide-Subcategory x y = {!!}
+  is-in-hom-Wide-Subcategory = {!!}
 
   is-prop-is-in-hom-Wide-Subcategory :
     (x y : obj-Category C) (f : hom-Category C x y) →
     is-prop (is-in-hom-Wide-Subcategory x y f)
-  is-prop-is-in-hom-Wide-Subcategory x y = {!!}
+  is-prop-is-in-hom-Wide-Subcategory = {!!}
 
   is-in-hom-inclusion-hom-Wide-Subcategory :
     (x y : obj-Wide-Subcategory C P)
@@ -224,7 +224,7 @@ subcategory:
       ( inclusion-obj-Wide-Subcategory C P x)
       ( inclusion-obj-Wide-Subcategory C P y)
       ( inclusion-hom-Wide-Subcategory x y f)
-  is-in-hom-inclusion-hom-Wide-Subcategory x y = {!!}
+  is-in-hom-inclusion-hom-Wide-Subcategory = {!!}
 ```
 
 Wide subcategories are wide subcategories:

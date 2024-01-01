@@ -34,9 +34,7 @@ open import foundation-core.truncation-levels
 diagonal-map :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
   A → standard-pullback f f
-pr1 (diagonal-map f x) = {!!}
-pr1 (pr2 (diagonal-map f x)) = {!!}
-pr2 (pr2 (diagonal-map f x)) = {!!}
+diagonal-map = {!!}
 ```
 
 ## Properties
@@ -48,36 +46,34 @@ fiber-ap-fiber-diagonal-map :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B)
   (t : standard-pullback f f) →
   (fiber (diagonal-map f) t) → (fiber (ap f) (pr2 (pr2 t)))
-pr1 (fiber-ap-fiber-diagonal-map f .(diagonal-map f z) (z , refl)) = {!!}
-pr2 (fiber-ap-fiber-diagonal-map f .(diagonal-map f z) (z , refl)) = {!!}
+fiber-ap-fiber-diagonal-map = {!!}
 
 fiber-diagonal-map-fiber-ap :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B)
   (t : standard-pullback f f) →
   (fiber (ap f) (pr2 (pr2 t))) → (fiber (diagonal-map f) t)
-pr1 (fiber-diagonal-map-fiber-ap f (x , .x , .(ap f refl)) (refl , refl)) = {!!}
-pr2 (fiber-diagonal-map-fiber-ap f (x , .x , .(ap f refl)) (refl , refl)) = {!!}
+fiber-diagonal-map-fiber-ap = {!!}
 
 abstract
   is-section-fiber-diagonal-map-fiber-ap :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B)
     (t : standard-pullback f f) →
     ((fiber-ap-fiber-diagonal-map f t) ∘ (fiber-diagonal-map-fiber-ap f t)) ~ id
-  is-section-fiber-diagonal-map-fiber-ap f (x , .x , .refl) (refl , refl) = {!!}
+  is-section-fiber-diagonal-map-fiber-ap = {!!}
 
 abstract
   is-retraction-fiber-diagonal-map-fiber-ap :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B)
     (t : standard-pullback f f) →
     ((fiber-diagonal-map-fiber-ap f t) ∘ (fiber-ap-fiber-diagonal-map f t)) ~ id
-  is-retraction-fiber-diagonal-map-fiber-ap f .(x , x , refl) (x , refl) = {!!}
+  is-retraction-fiber-diagonal-map-fiber-ap = {!!}
 
 abstract
   is-equiv-fiber-ap-fiber-diagonal-map :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B)
     (t : standard-pullback f f) →
     is-equiv (fiber-ap-fiber-diagonal-map f t)
-  is-equiv-fiber-ap-fiber-diagonal-map f t = {!!}
+  is-equiv-fiber-ap-fiber-diagonal-map = {!!}
 ```
 
 ### A map is `k+1`-truncated if and only if its diagonal is `k`-truncated
@@ -87,23 +83,23 @@ abstract
   is-trunc-diagonal-map-is-trunc-map :
     {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : UU l2} (f : A → B) →
     is-trunc-map (succ-𝕋 k) f → is-trunc-map k (diagonal-map f)
-  is-trunc-diagonal-map-is-trunc-map k f is-trunc-f (x , y , p) = {!!}
+  is-trunc-diagonal-map-is-trunc-map = {!!}
 
 abstract
   is-trunc-map-is-trunc-diagonal-map :
     {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : UU l2} (f : A → B) →
     is-trunc-map k (diagonal-map f) → is-trunc-map (succ-𝕋 k) f
-  is-trunc-map-is-trunc-diagonal-map k f is-trunc-δ b (x , p) (x' , p') = {!!}
+  is-trunc-map-is-trunc-diagonal-map = {!!}
 
 abstract
   is-equiv-diagonal-map-is-emb :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
     is-emb f → is-equiv (diagonal-map f)
-  is-equiv-diagonal-map-is-emb f is-emb-f = {!!}
+  is-equiv-diagonal-map-is-emb = {!!}
 
 abstract
   is-emb-is-equiv-diagonal-map :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
     is-equiv (diagonal-map f) → is-emb f
-  is-emb-is-equiv-diagonal-map f is-equiv-δ = {!!}
+  is-emb-is-equiv-diagonal-map = {!!}
 ```

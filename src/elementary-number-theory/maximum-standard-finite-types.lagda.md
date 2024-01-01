@@ -48,32 +48,18 @@ max-Fin-Fin (succ-ℕ n) k f = {!!}
 leq-max-Fin :
   (k : ℕ) (l m n : Fin k) →
   leq-Fin k m l → leq-Fin k n l → leq-Fin k (max-Fin k m n) l
-leq-max-Fin (succ-ℕ k) (inl x) (inl y) (inl z) p q = {!!}
-leq-max-Fin (succ-ℕ k) (inr x) (inl y) (inl z) p q = {!!}
-leq-max-Fin (succ-ℕ k) (inr x) (inl y) (inr z) p q = {!!}
-leq-max-Fin (succ-ℕ k) (inr x) (inr y) (inl z) p q = {!!}
-leq-max-Fin (succ-ℕ k) (inr x) (inr y) (inr z) p q = {!!}
+leq-max-Fin = {!!}
 
 leq-left-leq-max-Fin :
   (k : ℕ) (l m n : Fin k) → leq-Fin k (max-Fin k m n) l → leq-Fin k m l
-leq-left-leq-max-Fin (succ-ℕ k) (inl x) (inl y) (inl z) p = {!!}
-leq-left-leq-max-Fin (succ-ℕ k) (inr x) (inl y) (inl z) p = {!!}
-leq-left-leq-max-Fin (succ-ℕ k) (inr x) (inl y) (inr z) p = {!!}
-leq-left-leq-max-Fin (succ-ℕ k) (inr x) (inr y) (inl z) p = {!!}
-leq-left-leq-max-Fin (succ-ℕ k) (inr x) (inr y) (inr z) p = {!!}
-leq-left-leq-max-Fin (succ-ℕ k) (inl x) (inr y) (inr z) p = {!!}
+leq-left-leq-max-Fin = {!!}
 
 leq-right-leq-max-Fin :
   (k : ℕ) (l m n : Fin k) → leq-Fin k (max-Fin k m n) l → leq-Fin k n l
-leq-right-leq-max-Fin (succ-ℕ k) (inl x) (inl y) (inl z) p = {!!}
-leq-right-leq-max-Fin (succ-ℕ k) (inr x) (inl y) (inl z) p = {!!}
-leq-right-leq-max-Fin (succ-ℕ k) (inr x) (inl y) (inr z) p = {!!}
-leq-right-leq-max-Fin (succ-ℕ k) (inr x) (inr y) (inl z) p = {!!}
-leq-right-leq-max-Fin (succ-ℕ k) (inr x) (inr y) (inr z) p = {!!}
-leq-right-leq-max-Fin (succ-ℕ k) (inl x) (inl y) (inr z) p = {!!}
+leq-right-leq-max-Fin = {!!}
 
 is-least-upper-bound-max-Fin :
   (k : ℕ) (m n : Fin k) →
   is-least-binary-upper-bound-Poset (Fin-Poset k) m n (max-Fin k m n)
-is-least-upper-bound-max-Fin k m n = {!!}
+is-least-upper-bound-max-Fin = {!!}
 ```

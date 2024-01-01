@@ -31,16 +31,16 @@ an element `k : I` such that both `x i ≤ x k` and `x j ≤ x k` hold.
 is-directed-family-Poset-Prop :
   {l1 l2 l3 : Level} (P : Poset l1 l2) (I : Inhabited-Type l3)
   (x : type-Inhabited-Type I → type-Poset P) → Prop (l2 ⊔ l3)
-is-directed-family-Poset-Prop P I x = {!!}
+is-directed-family-Poset-Prop = {!!}
 
 is-directed-family-Poset :
   {l1 l2 l3 : Level} (P : Poset l1 l2) (I : Inhabited-Type l3)
   (α : type-Inhabited-Type I → type-Poset P) → UU (l2 ⊔ l3)
-is-directed-family-Poset P I x = {!!}
+is-directed-family-Poset = {!!}
 
 directed-family-Poset :
   {l1 l2 : Level} (l3 : Level) → Poset l1 l2 → UU (l1 ⊔ l2 ⊔ lsuc l3)
-directed-family-Poset l3 P = {!!}
+directed-family-Poset = {!!}
 
 module _
   {l1 l2 l3 : Level} (P : Poset l1 l2) (x : directed-family-Poset l3 P)

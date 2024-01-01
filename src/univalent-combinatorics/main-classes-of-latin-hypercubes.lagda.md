@@ -50,7 +50,7 @@ Main-Class-Latin-Hypercube-of-Order n m = {!!}
 ```agda
 is-π-finite-Main-Class-Latin-Hypercube-of-Order :
   (k n m : ℕ) → is-π-finite k (Main-Class-Latin-Hypercube-of-Order n m)
-is-π-finite-Main-Class-Latin-Hypercube-of-Order k n m = {!!}
+is-π-finite-Main-Class-Latin-Hypercube-of-Order = {!!}
 ```
 
 ### The sequence of main classes of Latin hypercubes of fixed finite order
@@ -65,5 +65,5 @@ mere-equiv-number-of-main-classes-of-Latin-hypercubes-of-order :
     ( Fin (number-of-main-classes-of-Latin-hypercubes-of-order n m))
     ( type-trunc-Set
       ( Main-Class-Latin-Hypercube-of-Order n m))
-mere-equiv-number-of-main-classes-of-Latin-hypercubes-of-order n m = {!!}
+mere-equiv-number-of-main-classes-of-Latin-hypercubes-of-order = {!!}
 ```

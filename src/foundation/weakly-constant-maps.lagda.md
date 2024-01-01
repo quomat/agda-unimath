@@ -27,7 +27,7 @@ mapped to identical elements in `B`.
 ```agda
 is-weakly-constant-map :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → (A → B) → UU (l1 ⊔ l2)
-is-weakly-constant-map {A = A} f = {!!}
+is-weakly-constant-map = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (B : Set l2) (f : A → type-Set B)

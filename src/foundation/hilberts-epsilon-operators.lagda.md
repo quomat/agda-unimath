@@ -37,10 +37,10 @@ to Hilbert, we will not assume that such an operator exists for each type `A`.
 ε-operator-equiv :
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} (e : X ≃ Y) →
   ε-operator-Hilbert X → ε-operator-Hilbert Y
-ε-operator-equiv e f = {!!}
+ε-operator-equiv = {!!}
 
 ε-operator-equiv' :
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} (e : X ≃ Y) →
   ε-operator-Hilbert Y → ε-operator-Hilbert X
-ε-operator-equiv' e f = {!!}
+ε-operator-equiv' = {!!}
 ```

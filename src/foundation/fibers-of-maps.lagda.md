@@ -105,7 +105,7 @@ module _
   compute-tr-fiber :
     {y y' : B} (p : y ＝ y') (u : fiber f y) →
     tot (λ x → concat' _ p) u ＝ tr (fiber f) p u
-  compute-tr-fiber refl u = {!!}
+  compute-tr-fiber = {!!}
 ```
 
 ## Table of files about fibers of maps

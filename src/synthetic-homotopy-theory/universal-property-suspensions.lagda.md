@@ -47,7 +47,7 @@ module _
 
   ev-suspension :
     {l3 : Level} (Z : UU l3) → (Y → Z) → suspension-structure X Z
-  pr1 (ev-suspension Z h) = {!!}
+  ev-suspension = {!!}
 
   universal-property-suspension : UUω
   universal-property-suspension = {!!}
@@ -59,7 +59,7 @@ module _
 universal-property-pushout-suspension :
   (l : Level) {l1 l2 : Level} (X : UU l1) (Y : UU l2)
   (s : suspension-structure X Y) → UU (lsuc l ⊔ l1 ⊔ l2)
-universal-property-pushout-suspension l X Y s = {!!}
+universal-property-pushout-suspension = {!!}
 ```
 
 ## Properties
@@ -75,12 +75,12 @@ triangle-ev-suspension :
       ( const X unit star)
       ( suspension-cocone-suspension-structure s))) ~
   ( ev-suspension s Z)
-triangle-ev-suspension (N , S , merid) Z h = {!!}
+triangle-ev-suspension = {!!}
 
 is-equiv-ev-suspension :
   { l1 l2 l3 : Level} {X : UU l1} {Y : UU l2} →
   ( s : suspension-structure X Y) →
   ( up-Y : universal-property-pushout-suspension l3 X Y s) →
   ( Z : UU l3) → is-equiv (ev-suspension s Z)
-is-equiv-ev-suspension {X = X} s up-Y Z = {!!}
+is-equiv-ev-suspension = {!!}
 ```

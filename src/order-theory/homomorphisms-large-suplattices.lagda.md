@@ -39,7 +39,7 @@ module _
       ( large-poset-Large-Suplattice K)
       ( large-poset-Large-Suplattice L) →
     UUω
-  preserves-sup-hom-Large-Poset f = {!!}
+  preserves-sup-hom-Large-Poset = {!!}
 
   record
     hom-Large-Suplattice : UUω

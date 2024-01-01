@@ -96,7 +96,7 @@ module _
                     ( inclusion-subuniverse
                       ( subuniverse-global-subuniverse Q l4)
                       ( T B))) × (X → H (pr1 F)))))
-    pr1 reassociate (F , ((A , B , e) , x) , y) = {!!}
+    reassociate = {!!}
 
     reassociate' :
       Σ ( type-subuniverse P)
@@ -111,7 +111,7 @@ module _
                   ( T B)) ×
               ( (X → H A) × (X → H B)))) ≃
       product-dirichlet-series-species-subuniverse P Q C1 H C2 S T X
-    pr1 reassociate' (A , B , (s , t) , (fs , ft)) = {!!}
+    reassociate' = {!!}
 
   equiv-dirichlet-series-dirichlet-product-species-subuniverse :
     dirichlet-series-species-subuniverse

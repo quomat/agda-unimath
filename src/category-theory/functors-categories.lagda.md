@@ -115,7 +115,7 @@ There is an identity functor on any category.
 ```agda
 id-functor-Category :
   {l1 l2 : Level} (C : Category l1 l2) → functor-Category C C
-id-functor-Category C = {!!}
+id-functor-Category = {!!}
 ```
 
 ### Composition of functors
@@ -127,7 +127,7 @@ comp-functor-Category :
   {l1 l2 l3 l4 l5 l6 : Level}
   (C : Category l1 l2) (D : Category l3 l4) (E : Category l5 l6) →
   functor-Category D E → functor-Category C D → functor-Category C E
-comp-functor-Category C D E = {!!}
+comp-functor-Category = {!!}
 ```
 
 ## Properties

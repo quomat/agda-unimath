@@ -41,9 +41,7 @@ int-is-square-ℤ-Mod :
   is-decidable (is-zero-ℤ-Mod p k) →
   is-decidable (is-square-ℤ-Mod p k) →
   ℤ
-int-is-square-ℤ-Mod (inl _) _ = {!!}
-int-is-square-ℤ-Mod (inr _) (inl _) = {!!}
-int-is-square-ℤ-Mod (inr _) (inr _) = {!!}
+int-is-square-ℤ-Mod = {!!}
 
 legendre-symbol-ℤ-Mod : (p : Prime-ℕ) → ℤ-Mod (nat-Prime-ℕ p) → ℤ
 legendre-symbol-ℤ-Mod (p , _) k = {!!}
@@ -55,5 +53,5 @@ is-periodic-legendre-symbol :
   (p : Prime-ℕ) (a b : ℤ) →
   mod-ℤ (nat-Prime-ℕ p) a ＝ mod-ℤ (nat-Prime-ℕ p) b →
   legendre-symbol p a ＝ legendre-symbol p b
-is-periodic-legendre-symbol p _ _ H = {!!}
+is-periodic-legendre-symbol = {!!}
 ```

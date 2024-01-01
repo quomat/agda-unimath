@@ -29,7 +29,7 @@ A subset of a monoid `M` is a subset of the underlying type of `M`.
 ```agda
 subset-Monoid :
   {l1 : Level} (l2 : Level) (M : Monoid l1) → UU (l1 ⊔ lsuc l2)
-subset-Monoid l2 M = {!!}
+subset-Monoid = {!!}
 
 module _
   {l1 l2 : Level} (M : Monoid l1) (P : subset-Monoid l2 M)

@@ -58,7 +58,7 @@ module _
 
   is-closed-under-equiv-subuniverses-Prop :
     Prop (α l1 ⊔ α l2 ⊔ lsuc l1 ⊔ lsuc l2)
-  pr1 is-closed-under-equiv-subuniverses-Prop = {!!}
+  is-closed-under-equiv-subuniverses-Prop = {!!}
 ```
 
 ### The global type of global subuniverses
@@ -87,7 +87,7 @@ module _
 
   inclusion-global-subuniverse :
     {l : Level} → type-global-subuniverse l → UU l
-  inclusion-global-subuniverse {l} = {!!}
+  inclusion-global-subuniverse = {!!}
 ```
 
 ### Maps in a subuniverse
@@ -191,7 +191,7 @@ module _
 fam-global-subuniverse :
   {α : Level → Level} (P : global-subuniverse α)
   {l1 : Level} (l2 : Level) (X : UU l1) → UU (α l2 ⊔ l1 ⊔ lsuc l2)
-fam-global-subuniverse P l2 X = {!!}
+fam-global-subuniverse = {!!}
 
 module _
   {α : Level → Level} (P : global-subuniverse α)

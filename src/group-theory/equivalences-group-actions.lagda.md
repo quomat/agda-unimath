@@ -70,11 +70,11 @@ module _
 
   map-equiv-action-Group :
     equiv-action-Group → type-action-Group G X → type-action-Group G Y
-  map-equiv-action-Group e = {!!}
+  map-equiv-action-Group = {!!}
 
   is-equiv-map-equiv-action-Group :
     (e : equiv-action-Group) → is-equiv (map-equiv-action-Group e)
-  is-equiv-map-equiv-action-Group e = {!!}
+  is-equiv-map-equiv-action-Group = {!!}
 
   coherence-square-equiv-action-Group :
     (e : equiv-action-Group) (g : type-Group G) →
@@ -87,7 +87,7 @@ module _
 
   hom-equiv-action-Group :
     equiv-action-Group → hom-action-Group G X Y
-  pr1 (hom-equiv-action-Group e) = {!!}
+  hom-equiv-action-Group = {!!}
 
   is-equiv-hom-equiv-action-Group :
     (e : equiv-action-Group) →
@@ -97,7 +97,7 @@ module _
   equiv-is-equiv-hom-action-Group :
     (f : hom-action-Group G X Y) → is-equiv-hom-action-Group G X Y f →
     equiv-action-Group
-  pr1 (pr1 (equiv-is-equiv-hom-action-Group f is-equiv-f)) = {!!}
+  equiv-is-equiv-hom-action-Group = {!!}
 ```
 
 ### Equality of equivalences of group actions
@@ -117,7 +117,7 @@ module _
 
   htpy-eq-equiv-action-Group :
     (f : equiv-action-Group G X Y) → e ＝ f → htpy-equiv-action-Group f
-  htpy-eq-equiv-action-Group .e refl = {!!}
+  htpy-eq-equiv-action-Group = {!!}
 
   is-torsorial-htpy-equiv-action-Group : is-torsorial htpy-equiv-action-Group
   is-torsorial-htpy-equiv-action-Group = {!!}
@@ -128,11 +128,11 @@ module _
 
   extensionality-equiv-action-Group :
     (f : equiv-action-Group G X Y) → (e ＝ f) ≃ htpy-equiv-action-Group f
-  pr1 (extensionality-equiv-action-Group f) = {!!}
+  extensionality-equiv-action-Group = {!!}
 
   eq-htpy-equiv-action-Group :
     (f : equiv-action-Group G X Y) → htpy-equiv-action-Group f → e ＝ f
-  eq-htpy-equiv-action-Group f = {!!}
+  eq-htpy-equiv-action-Group = {!!}
 ```
 
 ### The inverse equivalence of group actions
@@ -145,20 +145,20 @@ module _
 
   map-inv-equiv-action-Group :
     equiv-action-Group G X Y → type-action-Group G Y → type-action-Group G X
-  map-inv-equiv-action-Group e = {!!}
+  map-inv-equiv-action-Group = {!!}
 
   preserves-action-map-inv-equiv-action-Group :
     (e : equiv-action-Group G X Y) →
     preserves-action-Group G Y X (map-inv-equiv-action-Group e)
-  preserves-action-map-inv-equiv-action-Group (e , H) g = {!!}
+  preserves-action-map-inv-equiv-action-Group = {!!}
 
   inv-equiv-action-Group :
     equiv-action-Group G X Y → equiv-action-Group G Y X
-  pr1 (inv-equiv-action-Group (e , H)) = {!!}
+  inv-equiv-action-Group = {!!}
 
   hom-inv-equiv-action-Group :
     equiv-action-Group G X Y → hom-action-Group G Y X
-  hom-inv-equiv-action-Group e = {!!}
+  hom-inv-equiv-action-Group = {!!}
 
 module _
   {l1 l2 l3 : Level} (G : Group l1)
@@ -189,7 +189,7 @@ module _
   comp-equiv-action-Group :
     equiv-action-Group G Y Z → equiv-action-Group G X Y →
     equiv-action-Group G X Z
-  pr1 (comp-equiv-action-Group (f , K) (e , H)) = {!!}
+  comp-equiv-action-Group = {!!}
 ```
 
 ### The identity equivalence on group actions
@@ -214,7 +214,7 @@ module _
 
   equiv-eq-action-Group :
     (Y : action-Group G l2) → X ＝ Y → equiv-action-Group G X Y
-  equiv-eq-action-Group .X refl = {!!}
+  equiv-eq-action-Group = {!!}
 
   abstract
     is-torsorial-equiv-action-Group :
@@ -228,11 +228,11 @@ module _
 
   eq-equiv-action-Group :
     (Y : action-Group G l2) → equiv-action-Group G X Y → X ＝ Y
-  eq-equiv-action-Group Y = {!!}
+  eq-equiv-action-Group = {!!}
 
   extensionality-action-Group :
     (Y : action-Group G l2) → (X ＝ Y) ≃ equiv-action-Group G X Y
-  pr1 (extensionality-action-Group Y) = {!!}
+  extensionality-action-Group = {!!}
 ```
 
 ### Composition of equivalences of group actions is associative
@@ -253,7 +253,7 @@ module _
       ( f) ＝
     comp-equiv-action-Group G X1 X3 X4 h
       ( comp-equiv-action-Group G X1 X2 X3 g f)
-  associative-comp-equiv-action-Group h g f = {!!}
+  associative-comp-equiv-action-Group = {!!}
 ```
 
 ### The identity equivalence on group actions is a unit of composition
@@ -267,24 +267,24 @@ module _
   left-unit-law-comp-equiv-action-Group :
     (f : equiv-action-Group G X Y) →
     comp-equiv-action-Group G X Y Y (id-equiv-action-Group G Y) f ＝ f
-  left-unit-law-comp-equiv-action-Group f = {!!}
+  left-unit-law-comp-equiv-action-Group = {!!}
 
   right-unit-law-comp-equiv-action-Group :
     (f : equiv-action-Group G X Y) →
     comp-equiv-action-Group G X X Y f (id-equiv-action-Group G X) ＝ f
-  right-unit-law-comp-equiv-action-Group f = {!!}
+  right-unit-law-comp-equiv-action-Group = {!!}
 
   left-inverse-law-comp-equiv-action-Group :
     (f : equiv-action-Group G X Y) →
     comp-equiv-action-Group G X Y X (inv-equiv-action-Group G X Y f) f ＝
     id-equiv-action-Group G X
-  left-inverse-law-comp-equiv-action-Group f = {!!}
+  left-inverse-law-comp-equiv-action-Group = {!!}
 
   right-inverse-law-comp-equiv-action-Group :
     (f : equiv-action-Group G X Y) →
     comp-equiv-action-Group G Y X Y f (inv-equiv-action-Group G X Y f) ＝
     id-equiv-action-Group G Y
-  right-inverse-law-comp-equiv-action-Group f = {!!}
+  right-inverse-law-comp-equiv-action-Group = {!!}
 ```
 
 ## See also

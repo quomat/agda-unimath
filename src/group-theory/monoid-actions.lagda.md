@@ -65,18 +65,18 @@ module _
   ap-mul-action-Monoid :
     {m : type-Monoid M} {x y : type-action-Monoid} →
     x ＝ y → mul-action-Monoid m x ＝ mul-action-Monoid m y
-  ap-mul-action-Monoid {m} = {!!}
+  ap-mul-action-Monoid = {!!}
 
   ap-mul-action-Monoid' :
     {m n : type-Monoid M} (p : m ＝ n) {x : type-action-Monoid} →
     mul-action-Monoid m x ＝ mul-action-Monoid n x
-  ap-mul-action-Monoid' p {x} = {!!}
+  ap-mul-action-Monoid' = {!!}
 
   associative-mul-action-Monoid :
     (x y : type-Monoid M) (z : type-action-Monoid) →
     mul-action-Monoid (mul-Monoid M x y) z ＝
     mul-action-Monoid x (mul-action-Monoid y z)
-  associative-mul-action-Monoid x y = {!!}
+  associative-mul-action-Monoid = {!!}
 
   unit-law-mul-action-Monoid :
     (x : type-action-Monoid) → mul-action-Monoid (unit-Monoid M) x ＝ x

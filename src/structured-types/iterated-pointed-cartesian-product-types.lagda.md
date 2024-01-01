@@ -29,6 +29,5 @@ cartesian product of `l`.
 ```agda
 iterated-product-Pointed-Type :
   {l : Level} → (L : list (Pointed-Type l)) → Pointed-Type l
-iterated-product-Pointed-Type nil = {!!}
-iterated-product-Pointed-Type (cons x L) = {!!}
+iterated-product-Pointed-Type = {!!}
 ```

@@ -42,7 +42,7 @@ module _
   abstract
     is-trunc-is-trunc-map-diagonal :
       (k : 𝕋) → is-trunc-map k (diagonal A) → is-trunc (succ-𝕋 k) A
-    is-trunc-is-trunc-map-diagonal k is-trunc-d x y = {!!}
+    is-trunc-is-trunc-map-diagonal = {!!}
 
   abstract
     is-prop-is-contr-map-diagonal : is-contr-map (diagonal A) → is-prop A
@@ -67,7 +67,7 @@ module _
   abstract
     is-trunc-map-diagonal-is-trunc :
       (k : 𝕋) → is-trunc (succ-𝕋 k) A → is-trunc-map k (diagonal A)
-    is-trunc-map-diagonal-is-trunc k is-trunc-A t = {!!}
+    is-trunc-map-diagonal-is-trunc = {!!}
 
   abstract
     is-contr-map-diagonal-is-prop : is-prop A → is-contr-map (diagonal A)
@@ -91,12 +91,10 @@ module _
 
 diagonal-emb :
   {l : Level} (A : Set l) → (type-Set A) ↪ ((type-Set A) × (type-Set A))
-pr1 (diagonal-emb A) = {!!}
-pr2 (diagonal-emb A) = {!!}
+diagonal-emb = {!!}
 
 diagonal-faithful-map :
   {l : Level} (A : 1-Type l) →
   faithful-map (type-1-Type A) (type-1-Type A × type-1-Type A)
-pr1 (diagonal-faithful-map A) = {!!}
-pr2 (diagonal-faithful-map A) = {!!}
+diagonal-faithful-map = {!!}
 ```

@@ -45,16 +45,16 @@ module _
 
   preserves-unit-prop-hom-Semigroup :
     hom-Semigroup (semigroup-Monoid M1) (semigroup-Monoid M2) → Prop l2
-  preserves-unit-prop-hom-Semigroup f = {!!}
+  preserves-unit-prop-hom-Semigroup = {!!}
 
   preserves-unit-hom-Semigroup :
     hom-Semigroup (semigroup-Monoid M1) (semigroup-Monoid M2) → UU l2
-  preserves-unit-hom-Semigroup f = {!!}
+  preserves-unit-hom-Semigroup = {!!}
 
   is-prop-preserves-unit-hom-Semigroup :
     (f : hom-Semigroup (semigroup-Monoid M1) (semigroup-Monoid M2)) →
     is-prop (preserves-unit-hom-Semigroup f)
-  is-prop-preserves-unit-hom-Semigroup f = {!!}
+  is-prop-preserves-unit-hom-Semigroup = {!!}
 
   hom-set-Monoid : Set (l1 ⊔ l2)
   hom-set-Monoid = {!!}
@@ -91,12 +91,11 @@ module _
 preserves-unit-id-hom-Monoid :
   { l : Level} (M : Monoid l) →
   preserves-unit-hom-Semigroup M M (id-hom-Semigroup (semigroup-Monoid M))
-preserves-unit-id-hom-Monoid M = {!!}
+preserves-unit-id-hom-Monoid = {!!}
 
 id-hom-Monoid :
   {l : Level} (M : Monoid l) → hom-Monoid M M
-pr1 (id-hom-Monoid M) = {!!}
-pr2 (id-hom-Monoid M) = {!!}
+id-hom-Monoid = {!!}
 ```
 
 ### Composition of homomorphisms of monoids
@@ -115,11 +114,11 @@ module _
         ( semigroup-Monoid M)
         ( hom-semigroup-hom-Monoid L M g)
         ( hom-semigroup-hom-Monoid K L f))
-  preserves-unit-comp-hom-Monoid g f = {!!}
+  preserves-unit-comp-hom-Monoid = {!!}
 
   comp-hom-Monoid :
     hom-Monoid L M → hom-Monoid K L → hom-Monoid K M
-  pr1 (comp-hom-Monoid g f) = {!!}
+  comp-hom-Monoid = {!!}
 ```
 
 ### Homotopies of homomorphisms of monoids
@@ -151,7 +150,7 @@ module _
 
   htpy-eq-hom-Monoid :
     (g : hom-Monoid M N) → f ＝ g → htpy-hom-Monoid M N f g
-  htpy-eq-hom-Monoid .f refl = {!!}
+  htpy-eq-hom-Monoid = {!!}
 
   is-equiv-htpy-eq-hom-Monoid :
     (g : hom-Monoid M N) → is-equiv (htpy-eq-hom-Monoid g)
@@ -159,11 +158,11 @@ module _
 
   extensionality-hom-Monoid :
     (g : hom-Monoid M N) → (f ＝ g) ≃ htpy-hom-Monoid M N f g
-  pr1 (extensionality-hom-Monoid g) = {!!}
+  extensionality-hom-Monoid = {!!}
 
   eq-htpy-hom-Monoid :
     (g : hom-Monoid M N) → htpy-hom-Monoid M N f g → f ＝ g
-  eq-htpy-hom-Monoid g = {!!}
+  eq-htpy-hom-Monoid = {!!}
 ```
 
 ### Associativity of composition of homomorphisms of monoids
@@ -178,13 +177,13 @@ module _
     (h : hom-Monoid M N) (g : hom-Monoid L M) (f : hom-Monoid K L) →
     comp-hom-Monoid K L N (comp-hom-Monoid L M N h g) f ＝
     comp-hom-Monoid K M N h (comp-hom-Monoid K L M g f)
-  associative-comp-hom-Monoid h g f = {!!}
+  associative-comp-hom-Monoid = {!!}
 
   inv-associative-comp-hom-Monoid :
     (h : hom-Monoid M N) (g : hom-Monoid L M) (f : hom-Monoid K L) →
     comp-hom-Monoid K M N h (comp-hom-Monoid K L M g f) ＝
     comp-hom-Monoid K L N (comp-hom-Monoid L M N h g) f
-  inv-associative-comp-hom-Monoid h g f = {!!}
+  inv-associative-comp-hom-Monoid = {!!}
 ```
 
 ### Unit laws for composition of homomorphisms of monoids
@@ -197,12 +196,12 @@ module _
   left-unit-law-comp-hom-Monoid :
     (f : hom-Monoid M N) →
     comp-hom-Monoid M N N (id-hom-Monoid N) f ＝ f
-  left-unit-law-comp-hom-Monoid f = {!!}
+  left-unit-law-comp-hom-Monoid = {!!}
 
   right-unit-law-comp-hom-Monoid :
     (f : hom-Monoid M N) →
     comp-hom-Monoid M M N f (id-hom-Monoid M) ＝ f
-  right-unit-law-comp-hom-Monoid f = {!!}
+  right-unit-law-comp-hom-Monoid = {!!}
 ```
 
 ### Any homomorphism of monoids sends invertible elements to invertible elements
@@ -217,5 +216,5 @@ module _
     {x : type-Monoid M} →
     is-invertible-element-Monoid M x →
     is-invertible-element-Monoid N (map-hom-Monoid M N f x)
-  pr1 (preserves-invertible-elements-hom-Monoid (y , p , q)) = {!!}
+  preserves-invertible-elements-hom-Monoid = {!!}
 ```

@@ -44,7 +44,7 @@ module _
   abstract
     is-large-category-Π-Large-Category :
       is-large-category-Large-Precategory large-precategory-Π-Large-Category
-    is-large-category-Π-Large-Category x y = {!!}
+    is-large-category-Π-Large-Category = {!!}
 
   Π-Large-Category : Large-Category (λ l2 → l1 ⊔ α l2) (λ l2 l3 → l1 ⊔ β l2 l3)
   large-precategory-Large-Category

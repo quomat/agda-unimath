@@ -47,7 +47,7 @@ compute-raise-empty l = {!!}
 raise-ex-falso :
   (l1 : Level) {l2 : Level} {A : UU l2} →
   raise-empty l1 → A
-raise-ex-falso l = {!!}
+raise-ex-falso = {!!}
 ```
 
 ### The predicate that a subuniverse contains the empty type
@@ -55,7 +55,7 @@ raise-ex-falso l = {!!}
 ```agda
 contains-empty-subuniverse :
   {l1 l2 : Level} (P : subuniverse l1 l2) → UU l2
-contains-empty-subuniverse {l1} P = {!!}
+contains-empty-subuniverse = {!!}
 ```
 
 ### The predicate that a subuniverse contains any empty type
@@ -63,7 +63,7 @@ contains-empty-subuniverse {l1} P = {!!}
 ```agda
 contains-empty-types-subuniverse :
   {l1 l2 : Level} (P : subuniverse l1 l2) → UU (lsuc l1 ⊔ l2)
-contains-empty-types-subuniverse {l1} P = {!!}
+contains-empty-types-subuniverse = {!!}
 ```
 
 ### The predicate that a subuniverse is closed under the `is-empty` predicate
@@ -72,7 +72,7 @@ contains-empty-types-subuniverse {l1} P = {!!}
 is-closed-under-is-empty-subuniverses :
   {l1 l2 l3 : Level} (P : subuniverse l1 l2) (Q : subuniverse l1 l3) →
   UU (lsuc l1 ⊔ l2 ⊔ l3)
-is-closed-under-is-empty-subuniverses P Q = {!!}
+is-closed-under-is-empty-subuniverses = {!!}
 ```
 
 ## Properties
@@ -83,7 +83,7 @@ is-closed-under-is-empty-subuniverses P Q = {!!}
 raise-ex-falso-emb :
   (l1 : Level) {l2 : Level} {A : UU l2} →
   raise-empty l1 ↪ A
-raise-ex-falso-emb l = {!!}
+raise-ex-falso-emb = {!!}
 ```
 
 ### Being empty is a proposition
@@ -105,12 +105,12 @@ pr2 (is-nonempty-Prop A) = {!!}
 abstract
   is-empty-type-trunc-Prop :
     {l1 : Level} {X : UU l1} → is-empty X → is-empty (type-trunc-Prop X)
-  is-empty-type-trunc-Prop f = {!!}
+  is-empty-type-trunc-Prop = {!!}
 
 abstract
   is-empty-type-trunc-Prop' :
     {l1 : Level} {X : UU l1} → is-empty (type-trunc-Prop X) → is-empty X
-  is-empty-type-trunc-Prop' f = {!!}
+  is-empty-type-trunc-Prop' = {!!}
 ```
 
 ### Any inhabited type is nonempty
@@ -119,24 +119,23 @@ abstract
 abstract
   is-nonempty-is-inhabited :
     {l : Level} {X : UU l} → type-trunc-Prop X → is-nonempty X
-  is-nonempty-is-inhabited {l} {X} = {!!}
+  is-nonempty-is-inhabited = {!!}
 ```
 
 ```agda
 abstract
   is-prop-raise-empty :
     {l1 : Level} → is-prop (raise-empty l1)
-  is-prop-raise-empty {l1} = {!!}
+  is-prop-raise-empty = {!!}
 
 raise-empty-Prop :
   (l1 : Level) → Prop l1
-pr1 (raise-empty-Prop l1) = {!!}
-pr2 (raise-empty-Prop l1) = {!!}
+raise-empty-Prop = {!!}
 
 abstract
   is-empty-raise-empty :
     {l1 : Level} → is-empty (raise-empty l1)
-  is-empty-raise-empty {l1} = {!!}
+  is-empty-raise-empty = {!!}
 ```
 
 ### The type of all empty types of a given universe is contractible
@@ -145,6 +144,5 @@ abstract
 is-contr-type-is-empty :
   (l : Level) →
   is-contr (type-subuniverse is-empty-Prop)
-pr1 (is-contr-type-is-empty l) = {!!}
-pr2 (is-contr-type-is-empty l) x = {!!}
+is-contr-type-is-empty = {!!}
 ```

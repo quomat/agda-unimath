@@ -41,7 +41,7 @@ module _
 
   is-repetition-of-values :
     (f : A → B) (p : pair-of-distinct-elements A) → UU l2
-  is-repetition-of-values f p = {!!}
+  is-repetition-of-values = {!!}
 
   repetition-of-values : (A → B) → UU (l1 ⊔ l2)
   repetition-of-values f = {!!}
@@ -75,7 +75,7 @@ module _
 ```agda
 is-repeated-value :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) (a : A) → UU (l1 ⊔ l2)
-is-repeated-value {l1} {l2} {A} {B} f a = {!!}
+is-repeated-value = {!!}
 ```
 
 ## Properties
@@ -86,17 +86,17 @@ is-repeated-value {l1} {l2} {A} {B} f a = {!!}
 repetition-of-values-comp :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : UU l3} (g : B → C)
   {f : A → B} → repetition-of-values f → repetition-of-values (g ∘ f)
-repetition-of-values-comp g ((x , y , s) , t) = {!!}
+repetition-of-values-comp = {!!}
 
 repetition-of-values-left-factor :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : UU l3} {g : B → C}
   {f : A → B} → is-emb f → repetition-of-values (g ∘ f) → repetition-of-values g
-repetition-of-values-left-factor {g = g} {f} H ((a , b , K) , p) = {!!}
+repetition-of-values-left-factor = {!!}
 
 repetition-of-values-right-factor :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : UU l3} {g : B → C}
   {f : A → B} → is-emb g → repetition-of-values (g ∘ f) → repetition-of-values f
-repetition-of-values-right-factor {g = g} {f} H ((a , b , K) , p) = {!!}
+repetition-of-values-right-factor = {!!}
 ```
 
 ### The type of repetitions of values is invariant under equivalences

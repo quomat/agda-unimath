@@ -59,13 +59,13 @@ module _
     (F G : map-Precategory C D) →
     ( htpy-map-Precategory C D F G) ≃
     ( natural-isomorphism-map-Precategory C D F G)
-  equiv-natural-isomorphism-htpy-map-is-category-Precategory F G = {!!}
+  equiv-natural-isomorphism-htpy-map-is-category-Precategory = {!!}
 
   extensionality-map-is-category-Precategory :
     (F G : map-Precategory C D) →
     ( F ＝ G) ≃
     ( natural-isomorphism-map-Precategory C D F G)
-  extensionality-map-is-category-Precategory F G = {!!}
+  extensionality-map-is-category-Precategory = {!!}
 ```
 
 ### When the codomain is a category the map precategory is a category
@@ -81,7 +81,7 @@ module _
   abstract
     is-category-map-precategory-is-category-Precategory :
       is-category-Precategory (map-precategory-Precategory C D)
-    is-category-map-precategory-is-category-Precategory F G = {!!}
+    is-category-map-precategory-is-category-Precategory = {!!}
 ```
 
 ## Definitions
@@ -96,15 +96,15 @@ module _
 
   map-category-Category :
     Category (l1 ⊔ l2 ⊔ l3 ⊔ l4) (l1 ⊔ l2 ⊔ l4)
-  pr1 map-category-Category = {!!}
+  map-category-Category = {!!}
 
   extensionality-map-Category :
     (F G : map-Category C D) →
     (F ＝ G) ≃ natural-isomorphism-map-Category C D F G
-  extensionality-map-Category F G = {!!}
+  extensionality-map-Category = {!!}
 
   eq-natural-isomorphism-map-Category :
     (F G : map-Category C D) →
     natural-isomorphism-map-Category C D F G → F ＝ G
-  eq-natural-isomorphism-map-Category F G = {!!}
+  eq-natural-isomorphism-map-Category = {!!}
 ```

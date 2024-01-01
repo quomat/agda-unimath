@@ -114,7 +114,7 @@ module _
 
   nonequal-reflexive-relation :
     (R : Relation l2 A) → is-reflexive R → (a b : A) → ¬ (R a b) → a ≠ b
-  nonequal-reflexive-relation R is-refl-R a .a r refl = {!!}
+  nonequal-reflexive-relation = {!!}
 ```
 
 ### If there is any family on `A` that is inhabited over one term but not the other, then they are nonequal

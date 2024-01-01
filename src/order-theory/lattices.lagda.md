@@ -35,14 +35,14 @@ called [distributive lattices](order-theory.distributive-lattices.md).
 ```agda
 is-lattice-Poset-Prop :
   {l1 l2 : Level} (P : Poset l1 l2) → Prop (l1 ⊔ l2)
-is-lattice-Poset-Prop P = {!!}
+is-lattice-Poset-Prop = {!!}
 
 is-lattice-Poset : {l1 l2 : Level} → Poset l1 l2 → UU (l1 ⊔ l2)
 is-lattice-Poset P = {!!}
 
 is-prop-is-lattice-Poset :
   {l1 l2 : Level} (P : Poset l1 l2) → is-prop (is-lattice-Poset P)
-is-prop-is-lattice-Poset P = {!!}
+is-prop-is-lattice-Poset = {!!}
 
 Lattice : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
 Lattice l1 l2 = {!!}

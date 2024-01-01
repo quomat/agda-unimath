@@ -65,7 +65,7 @@ abstract
   is-trunc-map-succ-is-trunc-map :
     {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : UU l2}
     {f : A → B} → is-trunc-map k f → is-trunc-map (succ-𝕋 k) f
-  is-trunc-map-succ-is-trunc-map k is-trunc-f b = {!!}
+  is-trunc-map-succ-is-trunc-map = {!!}
 ```
 
 ### Any contractible map is `k`-truncated
@@ -74,8 +74,7 @@ abstract
 is-trunc-map-is-contr-map :
   {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : UU l2} {f : A → B} →
   is-contr-map f → is-trunc-map k f
-is-trunc-map-is-contr-map neg-two-𝕋 H = {!!}
-is-trunc-map-is-contr-map (succ-𝕋 k) H = {!!}
+is-trunc-map-is-contr-map = {!!}
 ```
 
 ### Any equivalence is `k`-truncated
@@ -87,11 +86,11 @@ module _
 
   is-trunc-map-is-equiv :
     {f : A → B} → is-equiv f → is-trunc-map k f
-  is-trunc-map-is-equiv H = {!!}
+  is-trunc-map-is-equiv = {!!}
 
   is-trunc-map-equiv :
     (e : A ≃ B) → is-trunc-map k (map-equiv e)
-  is-trunc-map-equiv e = {!!}
+  is-trunc-map-equiv = {!!}
 ```
 
 ### A map is `k+1`-truncated if and only if its action on identifications is `k`-truncated
@@ -104,12 +103,12 @@ module _
   abstract
     is-trunc-map-is-trunc-map-ap :
       ((x y : A) → is-trunc-map k (ap f {x} {y})) → is-trunc-map (succ-𝕋 k) f
-    is-trunc-map-is-trunc-map-ap is-trunc-map-ap-f b (pair x p) (pair x' p') = {!!}
+    is-trunc-map-is-trunc-map-ap = {!!}
 
   abstract
     is-trunc-map-ap-is-trunc-map :
       is-trunc-map (succ-𝕋 k) f → (x y : A) → is-trunc-map k (ap f {x} {y})
-    is-trunc-map-ap-is-trunc-map is-trunc-map-f x y p = {!!}
+    is-trunc-map-ap-is-trunc-map = {!!}
 ```
 
 ### The domain of any `k`-truncated map into a `k+1`-truncated type is `k+1`-truncated
@@ -119,7 +118,7 @@ is-trunc-is-trunc-map-into-is-trunc :
   {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : UU l2} (f : A → B) →
   is-trunc (succ-𝕋 k) B → is-trunc-map k f →
   is-trunc (succ-𝕋 k) A
-is-trunc-is-trunc-map-into-is-trunc neg-two-𝕋 f is-trunc-B is-trunc-map-f = {!!}
+is-trunc-is-trunc-map-into-is-trunc = {!!}
 is-trunc-is-trunc-map-into-is-trunc
   (succ-𝕋 k) f is-trunc-B is-trunc-map-f a a' = {!!}
 ```
@@ -135,17 +134,17 @@ module _
     is-trunc-map-pr1 :
       {B : A → UU l2} → ((x : A) → is-trunc k (B x)) →
       is-trunc-map k (pr1 {l1} {l2} {A} {B})
-    is-trunc-map-pr1 {B} H x = {!!}
+    is-trunc-map-pr1 = {!!}
 
   pr1-trunc-map :
     (B : A → Truncated-Type l2 k) → trunc-map k (Σ A (λ x → pr1 (B x))) A
-  pr1 (pr1-trunc-map B) = {!!}
+  pr1-trunc-map = {!!}
 
   abstract
     is-trunc-is-trunc-map-pr1 :
       (B : A → UU l2) → is-trunc-map k (pr1 {l1} {l2} {A} {B}) →
       (x : A) → is-trunc k (B x)
-    is-trunc-is-trunc-map-pr1 B is-trunc-map-pr1 x = {!!}
+    is-trunc-is-trunc-map-pr1 = {!!}
 ```
 
 ### Any map between `k`-truncated types is `k`-truncated
@@ -155,7 +154,7 @@ abstract
   is-trunc-map-is-trunc-domain-codomain :
     {l1 l2 : Level} (k : 𝕋) {A : UU l1}
     {B : UU l2} {f : A → B} → is-trunc k A → is-trunc k B → is-trunc-map k f
-  is-trunc-map-is-trunc-domain-codomain k {f = f} is-trunc-A is-trunc-B b = {!!}
+  is-trunc-map-is-trunc-domain-codomain = {!!}
 ```
 
 ### A type family over a `k`-truncated type A is a family of `k`-truncated types if its total space is `k`-truncated
@@ -165,7 +164,7 @@ abstract
   is-trunc-fam-is-trunc-Σ :
     {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : A → UU l2} →
     is-trunc k A → is-trunc k (Σ A B) → (x : A) → is-trunc k (B x)
-  is-trunc-fam-is-trunc-Σ k {B = B} is-trunc-A is-trunc-ΣAB x = {!!}
+  is-trunc-fam-is-trunc-Σ = {!!}
 ```
 
 ### Truncated maps are closed under homotopies
@@ -175,7 +174,7 @@ abstract
   is-trunc-map-htpy :
     {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : UU l2}
     {f g : A → B} → f ~ g → is-trunc-map k g → is-trunc-map k f
-  is-trunc-map-htpy k {A} {B} {f} {g} H is-trunc-g b = {!!}
+  is-trunc-map-htpy = {!!}
 ```
 
 ### Truncated maps are closed under composition
@@ -186,14 +185,13 @@ abstract
     {l1 l2 l3 : Level} (k : 𝕋) {A : UU l1} {B : UU l2}
     {X : UU l3} (g : B → X) (h : A → B) →
     is-trunc-map k g → is-trunc-map k h → is-trunc-map k (g ∘ h)
-  is-trunc-map-comp k g h is-trunc-g is-trunc-h x = {!!}
+  is-trunc-map-comp = {!!}
 
 comp-trunc-map :
   {l1 l2 l3 : Level} (k : 𝕋) {A : UU l1} {B : UU l2}
   {X : UU l3} (g : trunc-map k B X) (h : trunc-map k A B) →
   trunc-map k A X
-pr1 (comp-trunc-map k g h) = {!!}
-pr2 (comp-trunc-map k g h) = {!!}
+comp-trunc-map = {!!}
 ```
 
 ### In a commuting triangle `f ~ g ∘ h`, if `g` and `h` are truncated maps, then `f` is a truncated map
@@ -204,7 +202,7 @@ abstract
     {l1 l2 l3 : Level} (k : 𝕋) {A : UU l1} {B : UU l2}
     {X : UU l3} (f : A → X) (g : B → X) (h : A → B) (H : f ~ (g ∘ h)) →
     is-trunc-map k g → is-trunc-map k h → is-trunc-map k f
-  is-trunc-map-left-map-triangle k f g h H is-trunc-g is-trunc-h = {!!}
+  is-trunc-map-left-map-triangle = {!!}
 ```
 
 ### In a commuting triangle `f ~ g ∘ h`, if `f` and `g` are truncated maps, then `h` is a truncated map
@@ -215,7 +213,7 @@ abstract
     {l1 l2 l3 : Level} (k : 𝕋) {A : UU l1} {B : UU l2} {X : UU l3}
     (f : A → X) (g : B → X) (h : A → B) (H : f ~ (g ∘ h)) →
     is-trunc-map k g → is-trunc-map k f → is-trunc-map k h
-  is-trunc-map-top-map-triangle k {A} f g h H is-trunc-g is-trunc-f b = {!!}
+  is-trunc-map-top-map-triangle = {!!}
 ```
 
 ### If a composite `g ∘ h` and its left factor `g` are truncated maps, then its right factor `h` is a truncated map
@@ -225,7 +223,7 @@ is-trunc-map-right-factor :
   {l1 l2 l3 : Level} (k : 𝕋) {A : UU l1} {B : UU l2} {X : UU l3}
   (g : B → X) (h : A → B) →
   is-trunc-map k g → is-trunc-map k (g ∘ h) → is-trunc-map k h
-is-trunc-map-right-factor k {A} g h = {!!}
+is-trunc-map-right-factor = {!!}
 ```
 
 ### In a commuting square with the left and right maps equivalences, the top map is truncated if and only if the bottom map is truncated
@@ -239,5 +237,5 @@ module _
 
   is-trunc-map-top-is-trunc-map-bottom-is-equiv :
     is-equiv g → is-equiv h → is-trunc-map k i → is-trunc-map k f
-  is-trunc-map-top-is-trunc-map-bottom-is-equiv K L M = {!!}
+  is-trunc-map-top-is-trunc-map-bottom-is-equiv = {!!}
 ```

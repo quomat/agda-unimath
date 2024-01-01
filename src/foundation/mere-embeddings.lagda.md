@@ -32,7 +32,7 @@ mere-emb X Y = {!!}
 
 is-prop-mere-emb :
   {l1 l2 : Level} (X : UU l1) (Y : UU l2) → is-prop (mere-emb X Y)
-is-prop-mere-emb X Y = {!!}
+is-prop-mere-emb = {!!}
 ```
 
 ## Properties
@@ -46,7 +46,7 @@ refl-mere-emb X = {!!}
 transitive-mere-emb :
   {l1 l2 l3 : Level} {X : UU l1} {Y : UU l2} {Z : UU l3} →
   mere-emb Y Z → mere-emb X Y → mere-emb X Z
-transitive-mere-emb g f = {!!}
+transitive-mere-emb = {!!}
 
 mere-emb-Large-Preorder : Large-Preorder lsuc _⊔_
 type-Large-Preorder mere-emb-Large-Preorder l = {!!}
@@ -61,5 +61,5 @@ transitive-leq-Large-Preorder mere-emb-Large-Preorder X Y Z = {!!}
 antisymmetric-mere-emb :
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} →
   (LEM (l1 ⊔ l2)) → mere-emb X Y → mere-emb Y X → mere-equiv X Y
-antisymmetric-mere-emb lem f g = {!!}
+antisymmetric-mere-emb = {!!}
 ```

@@ -46,9 +46,9 @@ module _
 
   inclusion-point-Pointed-Type :
     unit-Pointed-Type →∗ X
-  pr1 inclusion-point-Pointed-Type = {!!}
+  inclusion-point-Pointed-Type = {!!}
 
   is-initial-unit-Pointed-Type :
     ( f : unit-Pointed-Type →∗ X) → f ~∗ inclusion-point-Pointed-Type
-  pr1 (is-initial-unit-Pointed-Type f) _ = {!!}
+  is-initial-unit-Pointed-Type = {!!}
 ```

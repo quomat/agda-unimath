@@ -58,6 +58,5 @@ transitive-div-ℤ-Mod {succ-ℕ k} = {!!}
 ```agda
 is-decidable-div-ℤ-Mod :
   (k : ℕ) (x y : ℤ-Mod k) → is-decidable (div-ℤ-Mod k x y)
-is-decidable-div-ℤ-Mod zero-ℕ x y = {!!}
-is-decidable-div-ℤ-Mod (succ-ℕ k) x y = {!!}
+is-decidable-div-ℤ-Mod = {!!}
 ```

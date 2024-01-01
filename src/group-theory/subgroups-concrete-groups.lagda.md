@@ -46,11 +46,11 @@ A subgroup of a concrete group `G` is a pointed transitive `G`-set.
 subgroup-action-Concrete-Group :
   {l1 : Level} (l2 : Level) (G : Concrete-Group l1) →
   classifying-type-Concrete-Group G → UU (l1 ⊔ lsuc l2)
-subgroup-action-Concrete-Group l2 G u = {!!}
+subgroup-action-Concrete-Group = {!!}
 
 subgroup-Concrete-Group :
   {l1 : Level} (l2 : Level) (G : Concrete-Group l1) → UU (l1 ⊔ lsuc l2)
-subgroup-Concrete-Group l2 G = {!!}
+subgroup-Concrete-Group = {!!}
 
 module _
   {l1 l2 : Level} (G : Concrete-Group l1) (H : subgroup-Concrete-Group l2 G)
@@ -113,7 +113,7 @@ module _
   classifying-pointed-inclusion-subgroup-Concrete-Group :
     classifying-pointed-type-subgroup-Concrete-Group →∗
     classifying-pointed-type-Concrete-Group G
-  pr1 classifying-pointed-inclusion-subgroup-Concrete-Group = {!!}
+  classifying-pointed-inclusion-subgroup-Concrete-Group = {!!}
 
   is-0-map-classifying-inclusion-subgroup-Concrete-Group :
     is-0-map classifying-inclusion-subgroup-Concrete-Group
@@ -132,7 +132,7 @@ module _
 
   hom-inclusion-subgroup-Concrete-Group :
     hom-Concrete-Group concrete-group-subgroup-Concrete-Group G
-  pr1 hom-inclusion-subgroup-Concrete-Group = {!!}
+  hom-inclusion-subgroup-Concrete-Group = {!!}
 ```
 
 ## Properties
@@ -147,20 +147,20 @@ subtype-preserves-unit-coset-equiv-action-Concrete-Group :
     ( equiv-action-Concrete-Group G
       ( action-subgroup-Concrete-Group G X)
       ( action-subgroup-Concrete-Group G Y))
-subtype-preserves-unit-coset-equiv-action-Concrete-Group G X Y e = {!!}
+subtype-preserves-unit-coset-equiv-action-Concrete-Group = {!!}
 
 equiv-subgroup-Concrete-Group :
   {l1 l2 l3 : Level} (G : Concrete-Group l1) → subgroup-Concrete-Group l2 G →
   subgroup-Concrete-Group l3 G → UU (l1 ⊔ l2 ⊔ l3)
-equiv-subgroup-Concrete-Group G X Y = {!!}
+equiv-subgroup-Concrete-Group = {!!}
 
 extensionality-subgroup-Concrete-Group :
   {l1 l2 : Level} (G : Concrete-Group l1) (X Y : subgroup-Concrete-Group l2 G) →
   (X ＝ Y) ≃ equiv-subgroup-Concrete-Group G X Y
-extensionality-subgroup-Concrete-Group G X = {!!}
+extensionality-subgroup-Concrete-Group = {!!}
 
 is-set-subgroup-Concrete-Group :
   {l1 l2 : Level} (G : Concrete-Group l1) →
   is-set (subgroup-Concrete-Group l2 G)
-is-set-subgroup-Concrete-Group G X Y = {!!}
+is-set-subgroup-Concrete-Group = {!!}
 ```

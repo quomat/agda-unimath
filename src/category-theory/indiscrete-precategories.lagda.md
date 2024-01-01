@@ -64,11 +64,11 @@ module _
 
   hom-set-indiscrete-Precategory :
     obj-indiscrete-Precategory → obj-indiscrete-Precategory → Set lzero
-  hom-set-indiscrete-Precategory _ _ = {!!}
+  hom-set-indiscrete-Precategory = {!!}
 
   hom-indiscrete-Precategory :
     obj-indiscrete-Precategory → obj-indiscrete-Precategory → UU lzero
-  hom-indiscrete-Precategory x y = {!!}
+  hom-indiscrete-Precategory = {!!}
 ```
 
 #### The precategory structure of the indiscrete precategory associated to a type
@@ -83,7 +83,7 @@ module _
     hom-indiscrete-Precategory X y z →
     hom-indiscrete-Precategory X x y →
     hom-indiscrete-Precategory X x z
-  comp-hom-indiscrete-Precategory _ _ = {!!}
+  comp-hom-indiscrete-Precategory = {!!}
 
   associative-comp-hom-indiscrete-Precategory :
     {x y z w : obj-indiscrete-Precategory X} →
@@ -96,7 +96,7 @@ module _
     comp-hom-indiscrete-Precategory {x} {z} {w}
       ( h)
       ( comp-hom-indiscrete-Precategory {x} {y} {z} g f)
-  associative-comp-hom-indiscrete-Precategory h g f = {!!}
+  associative-comp-hom-indiscrete-Precategory = {!!}
 
   inv-associative-comp-hom-indiscrete-Precategory :
     {x y z w : obj-indiscrete-Precategory X} →
@@ -109,12 +109,12 @@ module _
     comp-hom-indiscrete-Precategory {x} {y} {w}
       ( comp-hom-indiscrete-Precategory {y} {z} {w} h g)
       ( f)
-  inv-associative-comp-hom-indiscrete-Precategory h g f = {!!}
+  inv-associative-comp-hom-indiscrete-Precategory = {!!}
 
   associative-composition-operation-indiscrete-Precategory :
     associative-composition-operation-binary-family-Set
       ( hom-set-indiscrete-Precategory X)
-  pr1 associative-composition-operation-indiscrete-Precategory {x} {y} {z} = {!!}
+  associative-composition-operation-indiscrete-Precategory = {!!}
 
   id-hom-indiscrete-Precategory :
     {x : obj-indiscrete-Precategory X} → hom-indiscrete-Precategory X x x
@@ -127,7 +127,7 @@ module _
       ( id-hom-indiscrete-Precategory {y})
       ( f) ＝
     f
-  left-unit-law-comp-hom-indiscrete-Precategory f = {!!}
+  left-unit-law-comp-hom-indiscrete-Precategory = {!!}
 
   right-unit-law-comp-hom-indiscrete-Precategory :
     {x y : obj-indiscrete-Precategory X} →
@@ -136,13 +136,13 @@ module _
       ( f)
       ( id-hom-indiscrete-Precategory {x}) ＝
     f
-  right-unit-law-comp-hom-indiscrete-Precategory f = {!!}
+  right-unit-law-comp-hom-indiscrete-Precategory = {!!}
 
   is-unital-composition-operation-indiscrete-Precategory :
     is-unital-composition-operation-binary-family-Set
       ( hom-set-indiscrete-Precategory X)
       ( λ {x} {y} {z} → comp-hom-indiscrete-Precategory {x} {y} {z})
-  pr1 is-unital-composition-operation-indiscrete-Precategory x = {!!}
+  is-unital-composition-operation-indiscrete-Precategory = {!!}
 
   indiscrete-Precategory : Precategory l lzero
   pr1 indiscrete-Precategory = {!!}
@@ -159,16 +159,16 @@ module _
     {x y : obj-indiscrete-Precategory X}
     (f : hom-indiscrete-Precategory X x y) →
     is-iso-Precategory (indiscrete-Precategory X) {x} {y} f
-  pr1 (is-iso-hom-indiscrete-Precategory _) = {!!}
+  is-iso-hom-indiscrete-Precategory = {!!}
 
   iso-obj-indiscrete-Precategory :
     (x y : obj-indiscrete-Precategory X) →
     iso-Precategory (indiscrete-Precategory X) x y
-  pr1 (iso-obj-indiscrete-Precategory x y) = {!!}
+  iso-obj-indiscrete-Precategory = {!!}
 
   is-pregroupoid-indiscrete-Precategory :
     is-pregroupoid-Precategory (indiscrete-Precategory X)
-  is-pregroupoid-indiscrete-Precategory x y = {!!}
+  is-pregroupoid-indiscrete-Precategory = {!!}
 
   indiscrete-Pregroupoid : Pregroupoid l lzero
   pr1 indiscrete-Pregroupoid = {!!}
@@ -203,7 +203,7 @@ module _
 
   is-indiscrete-indiscrete-Precategory :
     is-indiscrete-Precategory (indiscrete-Precategory X)
-  is-indiscrete-indiscrete-Precategory x y = {!!}
+  is-indiscrete-indiscrete-Precategory = {!!}
 ```
 
 ## Properties
@@ -222,7 +222,7 @@ module _
   is-strict-category-is-preunivalent-indiscrete-Precategory :
     is-preunivalent-Precategory (indiscrete-Precategory X) →
     is-strict-category-Precategory (indiscrete-Precategory X)
-  is-strict-category-is-preunivalent-indiscrete-Precategory H x y = {!!}
+  is-strict-category-is-preunivalent-indiscrete-Precategory = {!!}
 ```
 
 ### The construction of `indiscrete-Precategory` is a section of `obj-Precategory`
@@ -230,7 +230,7 @@ module _
 ```agda
 is-section-indiscrete-Precategory :
   {l : Level} → obj-Precategory ∘ indiscrete-Precategory {l} ~ id
-is-section-indiscrete-Precategory X = {!!}
+is-section-indiscrete-Precategory = {!!}
 ```
 
 ### Indiscrete precategories are subterminal
@@ -242,7 +242,7 @@ module _
 
   is-subterminal-indiscrete-Precategory :
     is-subterminal-Precategory (indiscrete-Precategory X)
-  is-subterminal-indiscrete-Precategory x y = {!!}
+  is-subterminal-indiscrete-Precategory = {!!}
 ```
 
 ## External links

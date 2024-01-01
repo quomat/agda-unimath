@@ -58,19 +58,19 @@ module _
       edge-Directed-Graph H
         ( vertex-hom-Directed-Graph x)
         ( vertex-hom-Directed-Graph y)
-    edge-hom-Directed-Graph {x} {y} e = {!!}
+    edge-hom-Directed-Graph = {!!}
 
     direct-predecessor-hom-Directed-Graph :
       (x : vertex-Directed-Graph G) →
       direct-predecessor-Directed-Graph G x →
       direct-predecessor-Directed-Graph H (vertex-hom-Directed-Graph x)
-    direct-predecessor-hom-Directed-Graph x = {!!}
+    direct-predecessor-hom-Directed-Graph = {!!}
 
     direct-successor-hom-Directed-Graph :
       (x : vertex-Directed-Graph G) →
       direct-successor-Directed-Graph G x →
       direct-successor-Directed-Graph H (vertex-hom-Directed-Graph x)
-    direct-successor-hom-Directed-Graph x = {!!}
+    direct-successor-hom-Directed-Graph = {!!}
 ```
 
 ### Composition of morphisms graphs
@@ -85,7 +85,7 @@ module _
   vertex-comp-hom-Directed-Graph :
     hom-Directed-Graph H K → hom-Directed-Graph G H →
     vertex-Directed-Graph G → vertex-Directed-Graph K
-  vertex-comp-hom-Directed-Graph g f = {!!}
+  vertex-comp-hom-Directed-Graph = {!!}
 
   edge-comp-hom-Directed-Graph :
     (g : hom-Directed-Graph H K) (f : hom-Directed-Graph G H)
@@ -94,12 +94,12 @@ module _
     edge-Directed-Graph K
       ( vertex-comp-hom-Directed-Graph g f x)
       ( vertex-comp-hom-Directed-Graph g f y)
-  edge-comp-hom-Directed-Graph g f x y e = {!!}
+  edge-comp-hom-Directed-Graph = {!!}
 
   comp-hom-Directed-Graph :
     hom-Directed-Graph H K → hom-Directed-Graph G H →
     hom-Directed-Graph G K
-  pr1 (comp-hom-Directed-Graph g f) = {!!}
+  comp-hom-Directed-Graph = {!!}
 ```
 
 ### Identity morphisms graphs
@@ -124,7 +124,7 @@ module _
 
   htpy-hom-Directed-Graph :
     (f g : hom-Directed-Graph G H) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  htpy-hom-Directed-Graph f g = {!!}
+  htpy-hom-Directed-Graph = {!!}
 
   module _
     (f g : hom-Directed-Graph G H) (α : htpy-hom-Directed-Graph f g)
@@ -146,28 +146,28 @@ module _
 
   refl-htpy-hom-Directed-Graph :
     (f : hom-Directed-Graph G H) → htpy-hom-Directed-Graph f f
-  pr1 (refl-htpy-hom-Directed-Graph f) = {!!}
+  refl-htpy-hom-Directed-Graph = {!!}
 
   htpy-eq-hom-Directed-Graph :
     (f g : hom-Directed-Graph G H) → f ＝ g → htpy-hom-Directed-Graph f g
-  htpy-eq-hom-Directed-Graph f .f refl = {!!}
+  htpy-eq-hom-Directed-Graph = {!!}
 
   is-torsorial-htpy-hom-Directed-Graph :
     (f : hom-Directed-Graph G H) →
     is-torsorial (htpy-hom-Directed-Graph f)
-  is-torsorial-htpy-hom-Directed-Graph f = {!!}
+  is-torsorial-htpy-hom-Directed-Graph = {!!}
 
   is-equiv-htpy-eq-hom-Directed-Graph :
     (f g : hom-Directed-Graph G H) → is-equiv (htpy-eq-hom-Directed-Graph f g)
-  is-equiv-htpy-eq-hom-Directed-Graph f = {!!}
+  is-equiv-htpy-eq-hom-Directed-Graph = {!!}
 
   extensionality-hom-Directed-Graph :
     (f g : hom-Directed-Graph G H) → (f ＝ g) ≃ htpy-hom-Directed-Graph f g
-  pr1 (extensionality-hom-Directed-Graph f g) = {!!}
+  extensionality-hom-Directed-Graph = {!!}
 
   eq-htpy-hom-Directed-Graph :
     (f g : hom-Directed-Graph G H) → htpy-hom-Directed-Graph f g → (f ＝ g)
-  eq-htpy-hom-Directed-Graph f g = {!!}
+  eq-htpy-hom-Directed-Graph = {!!}
 ```
 
 ## External links

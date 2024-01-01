@@ -44,5 +44,5 @@ Global-Choice l = {!!}
 abstract
   no-global-choice :
     {l : Level} → ¬ (Global-Choice l)
-  no-global-choice f = {!!}
+  no-global-choice = {!!}
 ```

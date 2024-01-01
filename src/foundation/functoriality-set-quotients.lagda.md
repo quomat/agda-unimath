@@ -61,7 +61,7 @@ module _
 
   is-prop-preserves-sim-equivalence-relation :
     (f : A → B) → is-prop (preserves-sim-equivalence-relation f)
-  is-prop-preserves-sim-equivalence-relation f = {!!}
+  is-prop-preserves-sim-equivalence-relation = {!!}
 
   hom-equivalence-relation : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
   hom-equivalence-relation = {!!}
@@ -82,8 +82,7 @@ id-hom-equivalence-relation :
   {l1 l2 : Level} {A : UU l1}
   (R : equivalence-relation l2 A) →
   hom-equivalence-relation R R
-pr1 (id-hom-equivalence-relation R) = {!!}
-pr2 (id-hom-equivalence-relation R) = {!!}
+id-hom-equivalence-relation = {!!}
 ```
 
 ### Equivalences preserving equivalence relations
@@ -110,7 +109,7 @@ module _
   is-equiv-map-equiv-equivalence-relation :
     (e : equiv-equivalence-relation) →
     is-equiv (map-equiv-equivalence-relation e)
-  is-equiv-map-equiv-equivalence-relation e = {!!}
+  is-equiv-map-equiv-equivalence-relation = {!!}
 
   equiv-sim-equiv-equivalence-relation :
     (e : equiv-equivalence-relation) {x y : A} →
@@ -128,18 +127,16 @@ module _
       ( S)
       ( map-equiv-equivalence-relation e x)
       ( map-equiv-equivalence-relation e y)
-  preserves-sim-equiv-equivalence-relation e = {!!}
+  preserves-sim-equiv-equivalence-relation = {!!}
 
   hom-equiv-equivalence-relation :
     equiv-equivalence-relation → hom-equivalence-relation R S
-  pr1 (hom-equiv-equivalence-relation e) = {!!}
+  hom-equiv-equivalence-relation = {!!}
 
 id-equiv-equivalence-relation :
   {l1 l2 : Level} {A : UU l1} (R : equivalence-relation l2 A) →
   equiv-equivalence-relation R R
-pr1 (id-equiv-equivalence-relation R) = {!!}
-pr1 (pr2 (id-equiv-equivalence-relation R)) = {!!}
-pr2 (pr2 (id-equiv-equivalence-relation R)) = {!!}
+id-equiv-equivalence-relation = {!!}
 ```
 
 ### Maps between types satisfying the universal property of set quotients
@@ -162,13 +159,13 @@ module _
             ( map-hom-equivalence-relation R S h)
             ( map-reflecting-map-equivalence-relation R f)
             ( map-reflecting-map-equivalence-relation S g)))
-  unique-map-is-set-quotient Uf Ug h = {!!}
+  unique-map-is-set-quotient = {!!}
 
   map-is-set-quotient :
     is-set-quotient R QR f → is-set-quotient S QS g →
     (h : hom-equivalence-relation R S) →
     type-Set QR → type-Set QS
-  map-is-set-quotient Uf Ug h = {!!}
+  map-is-set-quotient = {!!}
 
   coherence-square-map-is-set-quotient :
     (Uf : is-set-quotient R QR f) →
@@ -179,7 +176,7 @@ module _
       ( map-reflecting-map-equivalence-relation R f)
       ( map-reflecting-map-equivalence-relation S g)
       ( map-is-set-quotient Uf Ug h)
-  coherence-square-map-is-set-quotient Uf Ug h = {!!}
+  coherence-square-map-is-set-quotient = {!!}
 ```
 
 ### Functoriality of the set quotient
@@ -230,7 +227,7 @@ module _
   comp-reflecting-map-equivalence-relation :
     reflecting-map-equivalence-relation S C → hom-equivalence-relation R S →
     reflecting-map-equivalence-relation R C
-  pr1 (comp-reflecting-map-equivalence-relation g f) = {!!}
+  comp-reflecting-map-equivalence-relation = {!!}
 ```
 
 ### Characterizing equality of `hom-equivalence-relation`
@@ -244,36 +241,36 @@ module _
 
   htpy-hom-equivalence-relation :
     (f g : hom-equivalence-relation R S) → UU (l1 ⊔ l3)
-  htpy-hom-equivalence-relation f g = {!!}
+  htpy-hom-equivalence-relation = {!!}
 
   refl-htpy-hom-equivalence-relation :
     (f : hom-equivalence-relation R S) → htpy-hom-equivalence-relation f f
-  refl-htpy-hom-equivalence-relation f = {!!}
+  refl-htpy-hom-equivalence-relation = {!!}
 
   htpy-eq-hom-equivalence-relation :
     (f g : hom-equivalence-relation R S) →
     (f ＝ g) → htpy-hom-equivalence-relation f g
-  htpy-eq-hom-equivalence-relation f .f refl = {!!}
+  htpy-eq-hom-equivalence-relation = {!!}
 
   is-torsorial-htpy-hom-equivalence-relation :
     (f : hom-equivalence-relation R S) →
     is-torsorial (htpy-hom-equivalence-relation f)
-  is-torsorial-htpy-hom-equivalence-relation f = {!!}
+  is-torsorial-htpy-hom-equivalence-relation = {!!}
 
   is-equiv-htpy-eq-hom-equivalence-relation :
     (f g : hom-equivalence-relation R S) →
     is-equiv (htpy-eq-hom-equivalence-relation f g)
-  is-equiv-htpy-eq-hom-equivalence-relation f = {!!}
+  is-equiv-htpy-eq-hom-equivalence-relation = {!!}
 
   extensionality-hom-equivalence-relation :
     (f g : hom-equivalence-relation R S) →
     (f ＝ g) ≃ htpy-hom-equivalence-relation f g
-  pr1 (extensionality-hom-equivalence-relation f g) = {!!}
+  extensionality-hom-equivalence-relation = {!!}
 
   eq-htpy-hom-equivalence-relation :
     (f g : hom-equivalence-relation R S) →
     htpy-hom-equivalence-relation f g → (f ＝ g)
-  eq-htpy-hom-equivalence-relation f g = {!!}
+  eq-htpy-hom-equivalence-relation = {!!}
 ```
 
 ### Functoriality of set quotients preserves equivalences
@@ -298,13 +295,13 @@ module _
               ( map-reflecting-map-equivalence-relation R f)
               ( map-reflecting-map-equivalence-relation S g)
               ( map-equiv h')))
-  unique-equiv-is-set-quotient Uf Ug h = {!!}
+  unique-equiv-is-set-quotient = {!!}
 
   equiv-is-set-quotient :
     is-set-quotient R QR f →
     is-set-quotient S QS g →
     (h : equiv-equivalence-relation R S) → type-Set QR ≃ type-Set QS
-  equiv-is-set-quotient Uf Ug h = {!!}
+  equiv-is-set-quotient = {!!}
 
   coherence-square-equiv-is-set-quotient :
     (Uf : is-set-quotient R QR f) →
@@ -314,7 +311,7 @@ module _
       ( map-reflecting-map-equivalence-relation R f)
       ( map-reflecting-map-equivalence-relation S g)
       ( map-equiv (equiv-is-set-quotient Uf Ug h))
-  coherence-square-equiv-is-set-quotient Uf Ug h = {!!}
+  coherence-square-equiv-is-set-quotient = {!!}
 ```
 
 ### Functoriality of set quotients preserves identity maps
@@ -329,7 +326,7 @@ module _
   id-map-is-set-quotient :
     (Uf : is-set-quotient R QR f) →
     map-is-set-quotient R QR f R QR f Uf Uf (id-hom-equivalence-relation R) ~ id
-  id-map-is-set-quotient Uf x = {!!}
+  id-map-is-set-quotient = {!!}
 
   id-equiv-is-set-quotient :
     (Uf : is-set-quotient R QR f) →
@@ -337,5 +334,5 @@ module _
       ( equiv-is-set-quotient R QR f R QR f Uf Uf
         ( id-equiv-equivalence-relation R))
       ( id-equiv)
-  id-equiv-is-set-quotient Uf x = {!!}
+  id-equiv-is-set-quotient = {!!}
 ```

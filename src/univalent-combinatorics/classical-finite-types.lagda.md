@@ -60,8 +60,7 @@ eq-succ-classical-Fin k x .x refl = {!!}
 
 eq-Eq-classical-Fin :
   (k : ℕ) (x y : classical-Fin k) → Eq-classical-Fin k x y → Id x y
-eq-Eq-classical-Fin (succ-ℕ k) (pair zero-ℕ _) (pair zero-ℕ _) e = {!!}
-eq-Eq-classical-Fin (succ-ℕ k) (pair (succ-ℕ x) p) (pair (succ-ℕ y) q) e = {!!}
+eq-Eq-classical-Fin = {!!}
 ```
 
 ### The classical finite types are equivalent to the standard finite types
@@ -74,8 +73,7 @@ standard-classical-Fin (succ-ℕ k) (pair x H) = {!!}
 
 classical-standard-Fin :
   (k : ℕ) → Fin k → classical-Fin k
-pr1 (classical-standard-Fin k x) = {!!}
-pr2 (classical-standard-Fin k x) = {!!}
+classical-standard-Fin = {!!}
 ```
 
 #### We show that these maps are mutual inverses
@@ -84,10 +82,10 @@ pr2 (classical-standard-Fin k x) = {!!}
 is-section-classical-standard-Fin :
   {k : ℕ} (x : Fin k) →
   Id (standard-classical-Fin k (classical-standard-Fin k x)) x
-is-section-classical-standard-Fin {succ-ℕ k} x = {!!}
+is-section-classical-standard-Fin = {!!}
 
 is-retraction-classical-standard-Fin :
   {k : ℕ} (x : classical-Fin k) →
   Id (classical-standard-Fin k (standard-classical-Fin k x)) x
-is-retraction-classical-standard-Fin {succ-ℕ k} (pair x p) = {!!}
+is-retraction-classical-standard-Fin = {!!}
 ```

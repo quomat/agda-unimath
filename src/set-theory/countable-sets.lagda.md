@@ -68,7 +68,7 @@ module _
 
   is-surjective-map-enumeration :
     (E : enumeration) → is-surjective (map-enumeration E)
-  is-surjective-map-enumeration E = {!!}
+  is-surjective-map-enumeration = {!!}
 
   is-countable-Prop : Prop l
   is-countable-Prop = {!!}
@@ -114,7 +114,7 @@ is-directly-countable X = {!!}
 
 is-prop-is-directly-countable :
   {l : Level} (X : Set l) → is-prop (is-directly-countable X)
-is-prop-is-directly-countable X = {!!}
+is-prop-is-directly-countable = {!!}
 
 module _
   {l : Level} (X : Set l) (a : type-Set X)
@@ -122,7 +122,7 @@ module _
 
   is-directly-countable-is-countable :
     is-countable X → is-directly-countable X
-  is-directly-countable-is-countable H = {!!}
+  is-directly-countable-is-countable = {!!}
 
     is-surjective-f : is-surjective f
     is-surjective-f x = {!!}
@@ -130,7 +130,7 @@ module _
   abstract
     is-countable-is-directly-countable :
       is-directly-countable X → is-countable X
-    is-countable-is-directly-countable H = {!!}
+    is-countable-is-directly-countable = {!!}
 ```
 
 ## Properties
@@ -146,7 +146,7 @@ module _
 
   decidable-subprojection-ℕ-enumeration :
     enumeration X → decidable-subprojection-ℕ X
-  pr1 (pr1 (decidable-subprojection-ℕ-enumeration (f , H)) n) = {!!}
+  decidable-subprojection-ℕ-enumeration = {!!}
   pr1 (pr2 (pr1 (decidable-subprojection-ℕ-enumeration (f , H)) n)) = {!!}
   pr2 (pr2 (pr1 (decidable-subprojection-ℕ-enumeration (f , H)) n)) = {!!}
   pr1 (pr2 (decidable-subprojection-ℕ-enumeration (f , H))) (n , p) = {!!}
@@ -154,7 +154,7 @@ module _
 
   is-countable'-is-countable :
     is-countable X → is-countable' X
-  is-countable'-is-countable H = {!!}
+  is-countable'-is-countable = {!!}
 ```
 
 Second, we will prove `is-countable' X → is-countable X`.
@@ -165,8 +165,7 @@ cases-map-decidable-subtype-ℕ :
   ( P : decidable-subtype l ℕ) →
   ( f : type-decidable-subtype P → type-Set X) →
   ( (n : ℕ) → is-decidable (pr1 (P n)) -> Maybe (type-Set X))
-cases-map-decidable-subtype-ℕ X P f n (inl x) = {!!}
-cases-map-decidable-subtype-ℕ X P f n (inr x) = {!!}
+cases-map-decidable-subtype-ℕ = {!!}
 
 module _
   {l : Level} (X : Set l)
@@ -180,8 +179,7 @@ module _
 
   map-shift-decidable-subtype-ℕ :
     type-decidable-subtype shift-decidable-subtype-ℕ → type-Set X
-  map-shift-decidable-subtype-ℕ (zero-ℕ , map-raise ())
-  map-shift-decidable-subtype-ℕ (succ-ℕ n , p) = {!!}
+  map-shift-decidable-subtype-ℕ = {!!}
 
   map-enumeration-decidable-subprojection-ℕ : ℕ → Maybe (type-Set X)
   map-enumeration-decidable-subprojection-ℕ n = {!!}
@@ -190,7 +188,7 @@ module _
     is-surjective-map-enumeration-decidable-subprojection-ℕ :
       ( is-surjective f) →
       ( is-surjective map-enumeration-decidable-subprojection-ℕ)
-    is-surjective-map-enumeration-decidable-subprojection-ℕ H (inl x) = {!!}
+    is-surjective-map-enumeration-decidable-subprojection-ℕ = {!!}
     is-surjective-map-enumeration-decidable-subprojection-ℕ H (inr star) = {!!}
 
 module _
@@ -199,11 +197,11 @@ module _
 
   enumeration-decidable-subprojection-ℕ :
     decidable-subprojection-ℕ X → enumeration X
-  enumeration-decidable-subprojection-ℕ (P , (f , H)) = {!!}
+  enumeration-decidable-subprojection-ℕ = {!!}
 
   is-countable-is-countable' :
     is-countable' X → is-countable X
-  is-countable-is-countable' H = {!!}
+  is-countable-is-countable' = {!!}
 ```
 
 ## Useful Lemmas
@@ -273,7 +271,7 @@ module _
 
   is-countable-coprod :
     is-countable X → is-countable Y → is-countable (coprod-Set X Y)
-  is-countable-coprod H H' = {!!}
+  is-countable-coprod = {!!}
 ```
 
 If `X` and `Y` are countable sets, then so is their coproduct `X × Y`.
@@ -285,7 +283,7 @@ module _
 
   is-countable-prod :
     is-countable X → is-countable Y → is-countable (prod-Set X Y)
-  is-countable-prod H H' = {!!}
+  is-countable-prod = {!!}
 ```
 
 In particular, the sets ℕ + ℕ, ℕ × ℕ, and ℤ are countable.

@@ -41,14 +41,14 @@ abstract
     {l1 l2 : Level} (C : Precategory l1 l2) →
     is-preunivalent-Precategory C →
     is-preunivalent-Precategory (opposite-Precategory C)
-  is-preunivalent-opposite-is-preunivalent-Precategory C is-preunivalent-C x y = {!!}
+  is-preunivalent-opposite-is-preunivalent-Precategory = {!!}
 
 abstract
   is-preunivalent-is-preunivalent-opposite-Precategory :
     {l1 l2 : Level} (C : Precategory l1 l2) →
     is-preunivalent-Precategory (opposite-Precategory C) →
     is-preunivalent-Precategory C
-  is-preunivalent-is-preunivalent-opposite-Precategory C = {!!}
+  is-preunivalent-is-preunivalent-opposite-Precategory = {!!}
 ```
 
 ## Definitions
@@ -140,12 +140,11 @@ module _
 ```agda
 is-involution-opposite-Preunivalent-Category :
   {l1 l2 : Level} → is-involution (opposite-Preunivalent-Category {l1} {l2})
-is-involution-opposite-Preunivalent-Category C = {!!}
+is-involution-opposite-Preunivalent-Category = {!!}
 
 involution-opposite-Preunivalent-Category :
   (l1 l2 : Level) → involution (Preunivalent-Category l1 l2)
-pr1 (involution-opposite-Preunivalent-Category l1 l2) = {!!}
-pr2 (involution-opposite-Preunivalent-Category l1 l2) = {!!}
+involution-opposite-Preunivalent-Category = {!!}
 
 is-equiv-opposite-Preunivalent-Category :
   {l1 l2 : Level} → is-equiv (opposite-Preunivalent-Category {l1} {l2})
@@ -153,7 +152,7 @@ is-equiv-opposite-Preunivalent-Category = {!!}
 
 equiv-opposite-Preunivalent-Category :
   (l1 l2 : Level) → Preunivalent-Category l1 l2 ≃ Preunivalent-Category l1 l2
-equiv-opposite-Preunivalent-Category l1 l2 = {!!}
+equiv-opposite-Preunivalent-Category = {!!}
 ```
 
 ## External links

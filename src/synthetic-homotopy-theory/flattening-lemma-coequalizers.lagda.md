@@ -77,7 +77,7 @@ module _
       ( bottom-map-cofork-flattening-lemma-coequalizer)
       ( top-map-cofork-flattening-lemma-coequalizer)
       ( Σ X P)
-  pr1 cofork-flattening-lemma-coequalizer = {!!}
+  cofork-flattening-lemma-coequalizer = {!!}
 
   flattening-lemma-coequalizer-statement : UUω
   flattening-lemma-coequalizer-statement = {!!}
@@ -110,5 +110,5 @@ module _
   abstract
     flattening-lemma-coequalizer :
       flattening-lemma-coequalizer-statement f g P e
-    flattening-lemma-coequalizer dup-coequalizer = {!!}
+    flattening-lemma-coequalizer = {!!}
 ```

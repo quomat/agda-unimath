@@ -64,7 +64,7 @@ module _
 
   small-cauchy-composition-species-subuniverse' :
     type-subuniverse P → UU (lsuc l1 ⊔ l2 ⊔ l3)
-  small-cauchy-composition-species-subuniverse' X = {!!}
+  small-cauchy-composition-species-subuniverse' = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}
@@ -83,7 +83,7 @@ module _
     species-subuniverse P Q →
     species-subuniverse P Q →
     species-subuniverse P Q
-  small-cauchy-composition-species-subuniverse S T X = {!!}
+  small-cauchy-composition-species-subuniverse = {!!}
 ```
 
 ## Properties
@@ -102,7 +102,7 @@ module _
       ( Σ-extension-species-subuniverse P Q S)
       ( Σ-extension-species-subuniverse P Q T)
       ( X))
-  equiv-small-cauchy-composition-Σ-extension-species-subuniverse S T X = {!!}
+  equiv-small-cauchy-composition-Σ-extension-species-subuniverse = {!!}
 ```
 
 ### Unit laws for Cauchy composition of species-subuniverse
@@ -122,7 +122,7 @@ module _
 
     small-cauchy-composition-unit-species-subuniverse :
       species-subuniverse P Q
-    small-cauchy-composition-unit-species-subuniverse X = {!!}
+    small-cauchy-composition-unit-species-subuniverse = {!!}
 
     equiv-Σ-extension-small-cauchy-composition-unit-subuniverse :
       (X : UU l1) →
@@ -132,7 +132,7 @@ module _
         ( small-cauchy-composition-unit-species-subuniverse)
         ( X) ≃
       unit-species-types X
-    pr1 (equiv-Σ-extension-small-cauchy-composition-unit-subuniverse X) S = {!!}
+    equiv-Σ-extension-small-cauchy-composition-unit-subuniverse = {!!}
 
     htpy-left-unit-law-small-cauchy-composition-species-subuniverse :
       ( S : species-subuniverse P Q)
@@ -143,14 +143,14 @@ module _
           ( small-cauchy-composition-unit-species-subuniverse)
           ( S) X) ≃
       inclusion-subuniverse Q (S X)
-    htpy-left-unit-law-small-cauchy-composition-species-subuniverse S X = {!!}
+    htpy-left-unit-law-small-cauchy-composition-species-subuniverse = {!!}
 
     left-unit-law-small-cauchy-composition-species-subuniverse :
       ( S : species-subuniverse P Q) →
       small-cauchy-composition-species-subuniverse
         small-cauchy-composition-unit-species-subuniverse
         S ＝ S
-    left-unit-law-small-cauchy-composition-species-subuniverse S = {!!}
+    left-unit-law-small-cauchy-composition-species-subuniverse = {!!}
 
     htpy-right-unit-law-small-cauchy-composition-species-subuniverse :
       ( S : species-subuniverse P Q)
@@ -161,14 +161,14 @@ module _
           ( S)
           ( small-cauchy-composition-unit-species-subuniverse) X) ≃
       inclusion-subuniverse Q (S X)
-    htpy-right-unit-law-small-cauchy-composition-species-subuniverse S X = {!!}
+    htpy-right-unit-law-small-cauchy-composition-species-subuniverse = {!!}
 
     right-unit-law-small-cauchy-composition-species-subuniverse :
       ( S : species-subuniverse P Q) →
       small-cauchy-composition-species-subuniverse
         S
         small-cauchy-composition-unit-species-subuniverse ＝ S
-    right-unit-law-small-cauchy-composition-species-subuniverse S = {!!}
+    right-unit-law-small-cauchy-composition-species-subuniverse = {!!}
 ```
 
 ### Associativity of composition of species of types in subuniverse
@@ -191,7 +191,7 @@ module _
         ( small-cauchy-composition-species-subuniverse S T)
         ( U)
         ( X))
-  htpy-associative-small-cauchy-composition-species-subuniverse S T U X = {!!}
+  htpy-associative-small-cauchy-composition-species-subuniverse = {!!}
 
   associative-small-cauchy-composition-species-subuniverse :
     (S : species-subuniverse P Q)
@@ -203,5 +203,5 @@ module _
     small-cauchy-composition-species-subuniverse
       ( small-cauchy-composition-species-subuniverse S T)
       ( U)
-  associative-small-cauchy-composition-species-subuniverse S T U = {!!}
+  associative-small-cauchy-composition-species-subuniverse = {!!}
 ```

@@ -53,8 +53,7 @@ is-decidable-is-nonnegative-square-ℤ :
   (a : ℤ) →
   (is-nonnegative-ℤ a) + (is-nonnegative-ℤ (neg-ℤ a)) →
   is-nonnegative-ℤ (square-ℤ a)
-is-decidable-is-nonnegative-square-ℤ _ (inl x) = {!!}
-is-decidable-is-nonnegative-square-ℤ a (inr x) = {!!}
+is-decidable-is-nonnegative-square-ℤ = {!!}
 
 is-nonnegative-square-ℤ : (a : ℤ) → is-nonnegative-ℤ (square-ℤ a)
 is-nonnegative-square-ℤ a = {!!}
@@ -71,14 +70,11 @@ is-square-nat-is-square-int (root , pf-square) = {!!}
 
 iff-is-square-int-is-square-nat :
   (n : ℕ) → is-square-ℕ n ↔ is-square-ℤ (int-ℕ n)
-pr1 (iff-is-square-int-is-square-nat n) = {!!}
-pr2 (iff-is-square-int-is-square-nat n) H = {!!}
+iff-is-square-int-is-square-nat = {!!}
 
 iff-is-nonneg-square-nat-is-square-int :
   (a : ℤ) → is-square-ℤ a ↔ is-nonnegative-ℤ a × is-square-ℕ (abs-ℤ a)
-pr1 (iff-is-nonneg-square-nat-is-square-int a) (root , pf-square) = {!!}
-pr2
-  ( iff-is-nonneg-square-nat-is-square-int a) (pf-nonneg , (root , pf-square)) = {!!}
+iff-is-nonneg-square-nat-is-square-int = {!!}
 ```
 
 ### Squareness in ℤ is decidable

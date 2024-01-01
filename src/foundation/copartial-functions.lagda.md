@@ -86,7 +86,7 @@ experimental.
 copartial-dependent-function :
   {l1 l2 : Level} (l3 : Level) (A : UU l1) → (A → UU l2) →
   UU (l1 ⊔ l2 ⊔ lsuc l3)
-copartial-dependent-function l3 A B = {!!}
+copartial-dependent-function = {!!}
 ```
 
 ### Copartial functions
@@ -94,7 +94,7 @@ copartial-dependent-function l3 A B = {!!}
 ```agda
 copartial-function :
   {l1 l2 : Level} (l3 : Level) → UU l1 → UU l2 → UU (l1 ⊔ l2 ⊔ lsuc l3)
-copartial-function l3 A B = {!!}
+copartial-function = {!!}
 ```
 
 ### Erased values of copartial dependent functions
@@ -136,7 +136,7 @@ module _
 
   copartial-dependent-function-dependent-function :
     copartial-dependent-function lzero A B
-  copartial-dependent-function-dependent-function a = {!!}
+  copartial-dependent-function-dependent-function = {!!}
 ```
 
 ### Copartial functions obtained from functions

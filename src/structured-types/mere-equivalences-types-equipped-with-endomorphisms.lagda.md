@@ -79,13 +79,13 @@ module _
     (T : Component-Type-With-Endomorphism) →
     type-Component-Type-With-Endomorphism T →
     type-Component-Type-With-Endomorphism T
-  endomorphism-Component-Type-With-Endomorphism T = {!!}
+  endomorphism-Component-Type-With-Endomorphism = {!!}
 
   mere-equiv-Component-Type-With-Endomorphism :
     (T : Component-Type-With-Endomorphism) →
     mere-equiv-Type-With-Endomorphism X
       ( endo-Component-Type-With-Endomorphism T)
-  mere-equiv-Component-Type-With-Endomorphism T = {!!}
+  mere-equiv-Component-Type-With-Endomorphism = {!!}
 
   canonical-Component-Type-With-Endomorphism : Component-Type-With-Endomorphism
   pr1 canonical-Component-Type-With-Endomorphism = {!!}
@@ -100,17 +100,17 @@ module _
 
   equiv-Component-Type-With-Endomorphism :
     (T S : Component-Type-With-Endomorphism X) → UU l1
-  equiv-Component-Type-With-Endomorphism T S = {!!}
+  equiv-Component-Type-With-Endomorphism = {!!}
 
   id-equiv-Component-Type-With-Endomorphism :
     ( T : Component-Type-With-Endomorphism X) →
     equiv-Component-Type-With-Endomorphism T T
-  id-equiv-Component-Type-With-Endomorphism T = {!!}
+  id-equiv-Component-Type-With-Endomorphism = {!!}
 
   equiv-eq-Component-Type-With-Endomorphism :
     (T S : Component-Type-With-Endomorphism X) →
     T ＝ S → equiv-Component-Type-With-Endomorphism T S
-  equiv-eq-Component-Type-With-Endomorphism T .T refl = {!!}
+  equiv-eq-Component-Type-With-Endomorphism = {!!}
 
   is-torsorial-equiv-Component-Type-With-Endomorphism :
     is-torsorial

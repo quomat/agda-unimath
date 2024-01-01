@@ -31,5 +31,5 @@ A ring R is said to satisfy the invariant basis property if `R^m ≅ R^n` implie
 ```agda
 invariant-basis-property-Ring :
   {l1 : Level} → Ring l1 → UU l1
-invariant-basis-property-Ring R = {!!}
+invariant-basis-property-Ring = {!!}
 ```

@@ -49,12 +49,12 @@ abstract
   count-decidable-subtype' :
     {l1 l2 : Level} {X : UU l1} (P : decidable-subtype l2 X) →
     (k : ℕ) (e : Fin k ≃ X) → count (type-decidable-subtype P)
-  count-decidable-subtype' P zero-ℕ e = {!!}
+  count-decidable-subtype' = {!!}
 
 count-decidable-subtype :
   {l1 l2 : Level} {X : UU l1} (P : decidable-subtype l2 X) →
   (count X) → count (type-decidable-subtype P)
-count-decidable-subtype P e = {!!}
+count-decidable-subtype = {!!}
 ```
 
 ### The elements in the domain of a decidable embedding can be counted if the elements of the codomain can be counted
@@ -62,7 +62,7 @@ count-decidable-subtype P e = {!!}
 ```agda
 count-decidable-emb :
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} (f : X ↪ᵈ Y) → count Y → count X
-count-decidable-emb f e = {!!}
+count-decidable-emb = {!!}
 ```
 
 ### If the elements of a subtype of a type equipped with a counting can be counted, then the subtype is decidable
@@ -71,7 +71,7 @@ count-decidable-emb f e = {!!}
 is-decidable-count-subtype :
   {l1 l2 : Level} {X : UU l1} (P : subtype l2 X) → count X →
   count (type-subtype P) → (x : X) → is-decidable (type-Prop (P x))
-is-decidable-count-subtype P e f x = {!!}
+is-decidable-count-subtype = {!!}
 ```
 
 ### If a subtype of a type equipped with a counting is finite, then its elements can be counted
@@ -80,7 +80,7 @@ is-decidable-count-subtype P e f x = {!!}
 count-type-subtype-is-finite-type-subtype :
   {l1 l2 : Level} {A : UU l1} (e : count A) (P : subtype l2 A) →
   is-finite (type-subtype P) → count (type-subtype P)
-count-type-subtype-is-finite-type-subtype {l1} {l2} {A} e P f = {!!}
+count-type-subtype-is-finite-type-subtype = {!!}
 ```
 
 ### For any embedding `B ↪ A` into a type `A` equipped with a counting, if `B` is finite then its elements can be counted
@@ -89,5 +89,5 @@ count-type-subtype-is-finite-type-subtype {l1} {l2} {A} e P f = {!!}
 count-domain-emb-is-finite-domain-emb :
   {l1 l2 : Level} {A : UU l1} (e : count A) {B : UU l2} (f : B ↪ A) →
   is-finite B → count B
-count-domain-emb-is-finite-domain-emb e f H = {!!}
+count-domain-emb-is-finite-domain-emb = {!!}
 ```

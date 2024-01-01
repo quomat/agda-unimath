@@ -44,5 +44,5 @@ universal-multiset-𝕍 l = {!!}
 is-small-universal-multiset-𝕍 :
   (l : Level) {l1 : Level} →
   is-small-universe l l1 → is-small-𝕍 l (universal-multiset-𝕍 l1)
-is-small-universal-multiset-𝕍 l {l1} (pair (pair U e) H) = {!!}
+is-small-universal-multiset-𝕍 = {!!}
 ```

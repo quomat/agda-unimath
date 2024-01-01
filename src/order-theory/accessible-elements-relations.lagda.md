@@ -71,7 +71,7 @@ module _
   is-accessible-element-is-related-to-accessible-element-Relation :
     {x : X} → is-accessible-element-Relation _<_ x →
     {y : X} → y < x → is-accessible-element-Relation _<_ y
-  is-accessible-element-is-related-to-accessible-element-Relation (access f) = {!!}
+  is-accessible-element-is-related-to-accessible-element-Relation = {!!}
 ```
 
 ### An induction principle for accessible elements
@@ -85,7 +85,7 @@ module _
     ( {x : X} → is-accessible-element-Relation _<_ x →
       ({y : X} → y < x → P y) → P x) →
     {x : X} → is-accessible-element-Relation _<_ x → P x
-  ind-accessible-element-Relation IH (access f) = {!!}
+  ind-accessible-element-Relation = {!!}
 ```
 
 ### Accessibility is a property
@@ -115,11 +115,11 @@ module _ {l1 l2} {X : UU l1} (_<_ : Relation l2 X) where
 
   all-elements-equal-is-accessible-element-Relation :
     (x : X) → all-elements-equal (is-accessible-element-Relation _<_ x)
-  all-elements-equal-is-accessible-element-Relation x (access f) (access f') = {!!}
+  all-elements-equal-is-accessible-element-Relation = {!!}
 
   is-prop-is-accessible-element-Relation :
     (x : X) → is-prop (is-accessible-element-Relation _<_ x)
-  is-prop-is-accessible-element-Relation x = {!!}
+  is-prop-is-accessible-element-Relation = {!!}
 
   is-accessible-element-prop-Relation : (x : X) → Prop (l1 ⊔ l2)
   pr1 (is-accessible-element-prop-Relation x) = {!!}
@@ -135,7 +135,7 @@ module _
   is-asymmetric-is-accessible-element-Relation :
     {x : X} → is-accessible-element-Relation _<_ x →
     {y : X} → x < y → ¬ (y < x)
-  is-asymmetric-is-accessible-element-Relation (access f) H K = {!!}
+  is-asymmetric-is-accessible-element-Relation = {!!}
 ```
 
 ### If `x` is an `<`-accessible element, then `<` is irreflexive at `x`
@@ -147,5 +147,5 @@ module _
 
   is-irreflexive-is-accessible-element-Relation :
     {x : X} → is-accessible-element-Relation _<_ x → ¬ (x < x)
-  is-irreflexive-is-accessible-element-Relation a H = {!!}
+  is-irreflexive-is-accessible-element-Relation = {!!}
 ```

@@ -27,7 +27,7 @@ open import group-theory.precategory-of-groups
 ```agda
 is-large-category-Group :
   is-large-category-Large-Precategory Group-Large-Precategory
-is-large-category-Group G = {!!}
+is-large-category-Group = {!!}
 
 eq-iso-Group : {l : Level} (G H : Group l) → iso-Group G H → Id G H
 eq-iso-Group G H = {!!}

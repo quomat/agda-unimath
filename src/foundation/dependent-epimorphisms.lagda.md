@@ -58,7 +58,7 @@ module _
 
   is-epimorphism-is-dependent-epimorphism :
     is-dependent-epimorphism f → is-epimorphism f
-  is-epimorphism-is-dependent-epimorphism e X = {!!}
+  is-epimorphism-is-dependent-epimorphism = {!!}
 ```
 
 The converse of the above, that every epimorphism is a dependent epimorphism,

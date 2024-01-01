@@ -57,13 +57,13 @@ pointed-structure-map-suspension-Prespectrum :
   {l : Level} (A : Pointed-Type l) (n : ℕ) →
   suspension-Pointed-Type (iterated-suspension-Pointed-Type n A) →∗
   iterated-suspension-Pointed-Type (succ-ℕ n) A
-pointed-structure-map-suspension-Prespectrum A n = {!!}
+pointed-structure-map-suspension-Prespectrum = {!!}
 
 pointed-adjoint-structure-map-suspension-Prespectrum :
   {l : Level} (A : Pointed-Type l) (n : ℕ) →
   iterated-suspension-Pointed-Type n A →∗
   Ω (iterated-suspension-Pointed-Type (succ-ℕ n) A)
-pointed-adjoint-structure-map-suspension-Prespectrum A n = {!!}
+pointed-adjoint-structure-map-suspension-Prespectrum = {!!}
 
 suspension-Prespectrum : {l : Level} → Pointed-Type l → Prespectrum l
 pr1 (suspension-Prespectrum A) n = {!!}

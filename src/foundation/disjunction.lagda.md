@@ -41,7 +41,7 @@ abstract
   is-prop-type-disjunction-Prop :
     {l1 l2 : Level} (P : Prop l1) (Q : Prop l2) →
     is-prop (type-disjunction-Prop P Q)
-  is-prop-type-disjunction-Prop P Q = {!!}
+  is-prop-type-disjunction-Prop = {!!}
 
 infixr 10 _∨_
 _∨_ = {!!}
@@ -55,9 +55,7 @@ not the [latin small letter v](https://codepoints.net/U+0076) `v`.
 disjunction-Decidable-Prop :
   {l1 l2 : Level} →
   Decidable-Prop l1 → Decidable-Prop l2 → Decidable-Prop (l1 ⊔ l2)
-pr1 (disjunction-Decidable-Prop P Q) = {!!}
-pr1 (pr2 (disjunction-Decidable-Prop P Q)) = {!!}
-pr2 (pr2 (disjunction-Decidable-Prop P Q)) = {!!}
+disjunction-Decidable-Prop = {!!}
 ```
 
 ## Properties
@@ -68,12 +66,12 @@ pr2 (pr2 (disjunction-Decidable-Prop P Q)) = {!!}
 inl-disjunction-Prop :
   {l1 l2 : Level} (P : Prop l1) (Q : Prop l2) →
   type-hom-Prop P (disjunction-Prop P Q)
-inl-disjunction-Prop P Q = {!!}
+inl-disjunction-Prop = {!!}
 
 inr-disjunction-Prop :
   {l1 l2 : Level} (P : Prop l1) (Q : Prop l2) →
   type-hom-Prop Q (disjunction-Prop P Q)
-inr-disjunction-Prop P Q = {!!}
+inr-disjunction-Prop = {!!}
 ```
 
 ### The elimination rule and universal property of disjunction
@@ -84,21 +82,20 @@ ev-disjunction-Prop :
   type-hom-Prop
     ( hom-Prop (disjunction-Prop P Q) R)
     ( conjunction-Prop (hom-Prop P R) (hom-Prop Q R))
-pr1 (ev-disjunction-Prop P Q R h) = {!!}
-pr2 (ev-disjunction-Prop P Q R h) = {!!}
+ev-disjunction-Prop = {!!}
 
 elim-disjunction-Prop :
   {l1 l2 l3 : Level} (P : Prop l1) (Q : Prop l2) (R : Prop l3) →
   type-hom-Prop
     ( conjunction-Prop (hom-Prop P R) (hom-Prop Q R))
     ( hom-Prop (disjunction-Prop P Q) R)
-elim-disjunction-Prop P Q R (pair f g) = {!!}
+elim-disjunction-Prop = {!!}
 
 abstract
   is-equiv-ev-disjunction-Prop :
     {l1 l2 l3 : Level} (P : Prop l1) (Q : Prop l2) (R : Prop l3) →
     is-equiv (ev-disjunction-Prop P Q R)
-  is-equiv-ev-disjunction-Prop P Q R = {!!}
+  is-equiv-ev-disjunction-Prop = {!!}
 ```
 
 ### The unit laws for disjunction
@@ -110,9 +107,9 @@ module _
 
   map-left-unit-law-disjunction-is-empty-Prop :
     is-empty (type-Prop P) → type-disjunction-Prop P Q → type-Prop Q
-  map-left-unit-law-disjunction-is-empty-Prop f = {!!}
+  map-left-unit-law-disjunction-is-empty-Prop = {!!}
 
   map-right-unit-law-disjunction-is-empty-Prop :
     is-empty (type-Prop Q) → type-disjunction-Prop P Q → type-Prop P
-  map-right-unit-law-disjunction-is-empty-Prop f = {!!}
+  map-right-unit-law-disjunction-is-empty-Prop = {!!}
 ```

@@ -79,7 +79,7 @@ is-modal-type-is-small :
   {l1 l2 l3 : Level}
   {○ : operator-modality l1 l2} (unit-○ : unit-modality ○)
   (X : UU l3) (is-small-X : is-small l1 X) → UU (l1 ⊔ l2)
-is-modal-type-is-small unit-○ X is-small-X = {!!}
+is-modal-type-is-small = {!!}
 
 module _
   {l1 l2 l3 : Level}
@@ -95,7 +95,7 @@ module _
   equiv-unit-is-modal-type-is-small :
     is-modal-type-is-small unit-○ X is-small-X →
     X ≃ ○ (type-is-small is-small-X)
-  pr1 (equiv-unit-is-modal-type-is-small m) = {!!}
+  equiv-unit-is-modal-type-is-small = {!!}
 
   map-inv-unit-is-modal-type-is-small :
     is-modal-type-is-small unit-○ X is-small-X →

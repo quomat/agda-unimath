@@ -29,7 +29,7 @@ upper bounds.
 ```agda
 is-upper-bound-ℕ :
   {l : Level} (P : ℕ → UU l) (n : ℕ) → UU l
-is-upper-bound-ℕ P n = {!!}
+is-upper-bound-ℕ = {!!}
 ```
 
 ### Strict upper bounds
@@ -37,7 +37,7 @@ is-upper-bound-ℕ P n = {!!}
 ```agda
 is-strict-upper-bound-ℕ :
   {l : Level} (P : ℕ → UU l) (n : ℕ) → UU l
-is-strict-upper-bound-ℕ P n = {!!}
+is-strict-upper-bound-ℕ = {!!}
 ```
 
 ## Properties
@@ -48,5 +48,5 @@ is-strict-upper-bound-ℕ P n = {!!}
 is-upper-bound-is-strict-upper-bound-ℕ :
   {l : Level} (P : ℕ → UU l) (n : ℕ) →
   is-strict-upper-bound-ℕ P n → is-upper-bound-ℕ P n
-is-upper-bound-is-strict-upper-bound-ℕ P n H x p = {!!}
+is-upper-bound-is-strict-upper-bound-ℕ = {!!}
 ```

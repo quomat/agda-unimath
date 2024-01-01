@@ -43,5 +43,5 @@ module _
     ( Th : Theory l2) →
     ( index-Theory Th) →
     Abstract-Equation Sg
-  index-Abstract-Equation-Theory Th e = {!!}
+  index-Abstract-Equation-Theory = {!!}
 ```

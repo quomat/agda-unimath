@@ -46,12 +46,12 @@ pair-expansion n = {!!}
 is-nonzero-pair-expansion :
   (u v : ℕ) →
   is-nonzero-ℕ ((exp-ℕ 2 u) *ℕ (succ-ℕ (v *ℕ 2)))
-is-nonzero-pair-expansion u v = {!!}
+is-nonzero-pair-expansion = {!!}
 
 abstract
   has-pair-expansion-is-even-or-odd :
     (n : ℕ) → is-even-ℕ n + is-odd-ℕ n → pair-expansion n
-  has-pair-expansion-is-even-or-odd n = {!!}
+  has-pair-expansion-is-even-or-odd = {!!}
 
                 t : (pr1 e) ≤-ℕ k
                 t = {!!}
@@ -72,10 +72,7 @@ is-pair-expansion-unique :
   ((exp-ℕ 2 u) *ℕ (succ-ℕ (v *ℕ 2))) ＝
     ((exp-ℕ 2 u') *ℕ (succ-ℕ (v' *ℕ 2))) →
   (u ＝ u') × (v ＝ v')
-is-pair-expansion-unique zero-ℕ zero-ℕ v v' p = {!!}
-is-pair-expansion-unique zero-ℕ (succ-ℕ u') v v' p = {!!}
-is-pair-expansion-unique (succ-ℕ u) zero-ℕ v v' p = {!!}
-is-pair-expansion-unique (succ-ℕ u) (succ-ℕ u') v v' p = {!!}
+is-pair-expansion-unique = {!!}
 ```
 
 A pairing function is a bijection between `ℕ × ℕ` and `ℕ`.

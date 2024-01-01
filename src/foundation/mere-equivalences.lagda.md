@@ -35,16 +35,16 @@ equivalence.
 ```agda
 mere-equiv-Prop :
   {l1 l2 : Level} → UU l1 → UU l2 → Prop (l1 ⊔ l2)
-mere-equiv-Prop X Y = {!!}
+mere-equiv-Prop = {!!}
 
 mere-equiv :
   {l1 l2 : Level} → UU l1 → UU l2 → UU (l1 ⊔ l2)
-mere-equiv X Y = {!!}
+mere-equiv = {!!}
 
 abstract
   is-prop-mere-equiv :
     {l1 l2 : Level} (X : UU l1) (Y : UU l2) → is-prop (mere-equiv X Y)
-  is-prop-mere-equiv X Y = {!!}
+  is-prop-mere-equiv = {!!}
 ```
 
 ## Properties
@@ -63,7 +63,7 @@ abstract
 abstract
   symmetric-mere-equiv :
     {l1 l2 : Level} (X : UU l1) (Y : UU l2) → mere-equiv X Y → mere-equiv Y X
-  symmetric-mere-equiv X Y = {!!}
+  symmetric-mere-equiv = {!!}
 ```
 
 ### Mere equivalence is transitive
@@ -73,7 +73,7 @@ abstract
   transitive-mere-equiv :
     {l1 l2 l3 : Level} (X : UU l1) (Y : UU l2) (Z : UU l3) →
     mere-equiv Y Z → mere-equiv X Y → mere-equiv X Z
-  transitive-mere-equiv X Y Z f e = {!!}
+  transitive-mere-equiv = {!!}
 ```
 
 ### Truncated types are closed under mere equivalence
@@ -113,11 +113,11 @@ module _
 
   has-decidable-equality-mere-equiv :
     mere-equiv X Y → has-decidable-equality Y → has-decidable-equality X
-  has-decidable-equality-mere-equiv e d = {!!}
+  has-decidable-equality-mere-equiv = {!!}
 
   has-decidable-equality-mere-equiv' :
     mere-equiv X Y → has-decidable-equality X → has-decidable-equality Y
-  has-decidable-equality-mere-equiv' e d = {!!}
+  has-decidable-equality-mere-equiv' = {!!}
 ```
 
 ### Mere equivalence implies mere equality
@@ -126,5 +126,5 @@ module _
 abstract
   mere-eq-mere-equiv :
     {l : Level} {A B : UU l} → mere-equiv A B → mere-eq A B
-  mere-eq-mere-equiv {l} {A} {B} = {!!}
+  mere-eq-mere-equiv = {!!}
 ```

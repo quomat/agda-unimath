@@ -80,7 +80,7 @@ module _
           ( transposition Y))
         ( orientation-aut-count
           (n +ℕ 2 , compute-raise l (Fin (n +ℕ 2))) star (transposition Y))))
-  not-even-difference-action-equiv-family-on-subuniverse n = {!!}
+  not-even-difference-action-equiv-family-on-subuniverse = {!!}
 
   cartier-delooping-sign :
     (n : ℕ) → hom-Concrete-Group (UU-Fin-Group l n) (UU-Fin-Group (lsuc l) 2)

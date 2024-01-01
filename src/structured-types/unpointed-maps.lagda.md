@@ -25,6 +25,5 @@ the constant function.
 ```agda
 unpointed-map-Pointed-Type :
   {l1 l2 : Level} → Pointed-Type l1 → Pointed-Type l2 → Pointed-Type (l1 ⊔ l2)
-pr1 (unpointed-map-Pointed-Type A B) = {!!}
-pr2 (unpointed-map-Pointed-Type A B) x = {!!}
+unpointed-map-Pointed-Type = {!!}
 ```

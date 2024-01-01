@@ -47,5 +47,5 @@ module _
 
 is-inhabited-finite-total-order-Poset-Prop :
   {l1 l2 : Level} (P : Poset l1 l2) → Prop (l1 ⊔ l2)
-is-inhabited-finite-total-order-Poset-Prop P = {!!}
+is-inhabited-finite-total-order-Poset-Prop = {!!}
 ```

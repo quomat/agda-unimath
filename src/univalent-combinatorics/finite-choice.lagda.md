@@ -49,32 +49,32 @@ abstract
   finite-choice-Fin :
     {l1 : Level} (k : ℕ) {Y : Fin k → UU l1} →
     ((x : Fin k) → type-trunc-Prop (Y x)) → type-trunc-Prop ((x : Fin k) → Y x)
-  finite-choice-Fin {l1} zero-ℕ {Y} H = {!!}
+  finite-choice-Fin = {!!}
 
 abstract
   finite-choice-count :
     {l1 l2 : Level} {X : UU l1} {Y : X → UU l2} → count X →
     ((x : X) → type-trunc-Prop (Y x)) → type-trunc-Prop ((x : X) → Y x)
-  finite-choice-count {l1} {l2} {X} {Y} (pair k e) H = {!!}
+  finite-choice-count = {!!}
 
 abstract
   finite-choice :
     {l1 l2 : Level} {X : UU l1} {Y : X → UU l2} → is-finite X →
     ((x : X) → type-trunc-Prop (Y x)) → type-trunc-Prop ((x : X) → Y x)
-  finite-choice {l1} {l2} {X} {Y} is-finite-X H = {!!}
+  finite-choice = {!!}
 ```
 
 ```agda
 abstract
   ε-operator-count :
     {l : Level} {A : UU l} → count A → ε-operator-Hilbert A
-  ε-operator-count (pair zero-ℕ e) t = {!!}
+  ε-operator-count = {!!}
 
 abstract
   ε-operator-decidable-subtype-count :
     {l1 l2 : Level} {A : UU l1} (e : count A) (P : decidable-subtype l2 A) →
     ε-operator-Hilbert (type-decidable-subtype P)
-  ε-operator-decidable-subtype-count e P = {!!}
+  ε-operator-decidable-subtype-count = {!!}
 ```
 
 ```agda
@@ -82,7 +82,7 @@ abstract
   ε-operator-emb-count :
     {l1 l2 : Level} {A : UU l1} (e : count A) {B : UU l2} →
     (f : B ↪ᵈ A) → ε-operator-Hilbert B
-  ε-operator-emb-count e f t = {!!}
+  ε-operator-emb-count = {!!}
 ```
 
 ```agda
@@ -91,12 +91,12 @@ abstract
     {l1 l2 : Level} {A : UU l1} {B : A → UU l2} →
     is-set A → count (Σ A B) → ((x : A) → is-finite (B x)) →
     ((x : A) → type-trunc-Prop (B x)) → (x : A) → B x
-  choice-count-Σ-is-finite-fiber {l1} {l2} {A} {B} K e g H x = {!!}
+  choice-count-Σ-is-finite-fiber = {!!}
 
 abstract
   choice-is-finite-Σ-is-finite-fiber :
     {l1 l2 : Level} {A : UU l1} {B : A → UU l2} →
     is-set A → is-finite (Σ A B) → ((x : A) → is-finite (B x)) →
     ((x : A) → type-trunc-Prop (B x)) → type-trunc-Prop ((x : A) → B x)
-  choice-is-finite-Σ-is-finite-fiber {l1} {l2} {A} {B} K f g H = {!!}
+  choice-is-finite-Σ-is-finite-fiber = {!!}
 ```

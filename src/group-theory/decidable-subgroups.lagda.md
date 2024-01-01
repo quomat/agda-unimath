@@ -42,11 +42,11 @@ predicate on the type of elements of `G`.
 ```agda
 decidable-subset-Group :
   (l : Level) {l1 : Level} (G : Group l1) → UU ((lsuc l) ⊔ l1)
-decidable-subset-Group l G = {!!}
+decidable-subset-Group = {!!}
 
 is-set-decidable-subset-Group :
   (l : Level) {l1 : Level} (G : Group l1) → is-set (decidable-subset-Group l G)
-is-set-decidable-subset-Group l G = {!!}
+is-set-decidable-subset-Group = {!!}
 
 module _
   {l1 l2 : Level} (G : Group l1) (P : decidable-subset-Group l2 G)
@@ -105,7 +105,7 @@ module _
 
 Decidable-Subgroup :
   (l : Level) {l1 : Level} (G : Group l1) → UU ((lsuc l) ⊔ l1)
-Decidable-Subgroup l G = {!!}
+Decidable-Subgroup = {!!}
 
 module _
   {l1 l2 : Level} (G : Group l1) (H : Decidable-Subgroup l2 G)
@@ -257,7 +257,7 @@ module _
       ( group-Decidable-Subgroup G H)
       ( G)
       ( map-inclusion-Decidable-Subgroup G H)
-  preserves-mul-inclusion-Decidable-Subgroup {x} {y} = {!!}
+  preserves-mul-inclusion-Decidable-Subgroup = {!!}
 
   preserves-unit-inclusion-Decidable-Subgroup :
     preserves-unit-Group
@@ -271,7 +271,7 @@ module _
       ( group-Decidable-Subgroup G H)
       ( G)
       ( map-inclusion-Decidable-Subgroup G H)
-  preserves-inverses-inclusion-Decidable-Subgroup {x} = {!!}
+  preserves-inverses-inclusion-Decidable-Subgroup = {!!}
 
   hom-inclusion-Decidable-Subgroup :
     hom-Group (group-Decidable-Subgroup G H) G
@@ -289,7 +289,7 @@ module _
 
   has-same-elements-Decidable-Subgroup :
     {l3 : Level} → Decidable-Subgroup l3 G → UU (l1 ⊔ l2 ⊔ l3)
-  has-same-elements-Decidable-Subgroup K = {!!}
+  has-same-elements-Decidable-Subgroup = {!!}
 
   extensionality-Decidable-Subgroup :
     (K : Decidable-Subgroup l2 G) →

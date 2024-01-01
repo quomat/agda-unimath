@@ -45,7 +45,7 @@ module _
 
   contains-unit-intersection-Subgroup :
     is-in-intersection-Subgroup (unit-Group G)
-  pr1 contains-unit-intersection-Subgroup = {!!}
+  contains-unit-intersection-Subgroup = {!!}
 
   is-closed-under-multiplication-intersection-Subgroup :
     {x y : type-Group G} →
@@ -60,11 +60,11 @@ module _
   is-closed-under-inverses-intersection-Subgroup :
     {x : type-Group G} →
     is-in-intersection-Subgroup x → is-in-intersection-Subgroup (inv-Group G x)
-  pr1 (is-closed-under-inverses-intersection-Subgroup (pH , pK)) = {!!}
+  is-closed-under-inverses-intersection-Subgroup = {!!}
 
   is-subgroup-intersection-Subgroup :
     is-subgroup-subset-Group G subset-intersection-Subgroup
-  pr1 is-subgroup-intersection-Subgroup = {!!}
+  is-subgroup-intersection-Subgroup = {!!}
 
   intersection-Subgroup : Subgroup (l2 ⊔ l3) G
   pr1 intersection-Subgroup = {!!}
@@ -85,21 +85,21 @@ module _
 
   contains-unit-intersection-family-of-subgroups-Group :
     contains-unit-subset-Group G subset-intersection-family-of-subgroups-Group
-  contains-unit-intersection-family-of-subgroups-Group i = {!!}
+  contains-unit-intersection-family-of-subgroups-Group = {!!}
 
   is-closed-under-multiplication-intersection-family-of-subgroups-Group :
     is-closed-under-multiplication-subset-Group G
       subset-intersection-family-of-subgroups-Group
-  is-closed-under-multiplication-intersection-family-of-subgroups-Group p q i = {!!}
+  is-closed-under-multiplication-intersection-family-of-subgroups-Group = {!!}
 
   is-closed-under-inverses-intersection-family-of-subgroups-Group :
     is-closed-under-inverses-subset-Group G
       subset-intersection-family-of-subgroups-Group
-  is-closed-under-inverses-intersection-family-of-subgroups-Group p i = {!!}
+  is-closed-under-inverses-intersection-family-of-subgroups-Group = {!!}
 
   is-subgroup-intersection-family-of-subgroups-Group :
     is-subgroup-subset-Group G subset-intersection-family-of-subgroups-Group
-  pr1 is-subgroup-intersection-family-of-subgroups-Group = {!!}
+  is-subgroup-intersection-family-of-subgroups-Group = {!!}
 
   intersection-family-of-subgroups-Group : Subgroup (l2 ⊔ l3) G
   pr1 intersection-family-of-subgroups-Group = {!!}
@@ -120,5 +120,5 @@ module _
       ( H)
       ( K)
       ( intersection-Subgroup G H K)
-  is-greatest-binary-lower-bound-intersection-Subgroup L = {!!}
+  is-greatest-binary-lower-bound-intersection-Subgroup = {!!}
 ```

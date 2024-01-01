@@ -68,7 +68,7 @@ module _
 
   is-prop-is-lower-bound-family-of-elements-Poset :
     (z : type-Poset P) → is-prop (is-lower-bound-family-of-elements-Poset z)
-  is-prop-is-lower-bound-family-of-elements-Poset z = {!!}
+  is-prop-is-lower-bound-family-of-elements-Poset = {!!}
 ```
 
 ## Properties
@@ -84,7 +84,7 @@ module _
   is-binary-lower-bound-leq-Poset :
     {y : type-Poset P} →
     leq-Poset P y x → is-binary-lower-bound-Poset P a b y
-  pr1 (is-binary-lower-bound-leq-Poset K) = {!!}
+  is-binary-lower-bound-leq-Poset = {!!}
 ```
 
 ### Any element less than a lower bound of a family of elements `a` is a lower bound of `a`
@@ -98,5 +98,5 @@ module _
   is-lower-bound-family-of-elements-leq-Poset :
     {y : type-Poset P} → leq-Poset P y x →
     is-lower-bound-family-of-elements-Poset P a y
-  is-lower-bound-family-of-elements-leq-Poset K i = {!!}
+  is-lower-bound-family-of-elements-leq-Poset = {!!}
 ```

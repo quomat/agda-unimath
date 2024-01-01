@@ -121,7 +121,7 @@ module _
 
 composition-closed-function-class :
   (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-composition-closed-function-class l1 l2 = {!!}
+composition-closed-function-class = {!!}
 
 module _
   {l1 l2 : Level} (P : composition-closed-function-class l1 l2)
@@ -159,7 +159,7 @@ module _
 
 pullback-stable-function-class :
   (l1 l2 l3 : Level) → UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-pullback-stable-function-class l1 l2 l3 = {!!}
+pullback-stable-function-class = {!!}
 ```
 
 ## Properties
@@ -175,21 +175,21 @@ module _
 
   has-identity-maps-has-equivalences-function-class :
     has-equivalences-function-class P → has-identity-maps-function-class P
-  has-identity-maps-has-equivalences-function-class has-equivs-P = {!!}
+  has-identity-maps-has-equivalences-function-class = {!!}
 
   htpy-has-identity-maps-function-class :
     has-identity-maps-function-class P →
     {X Y : UU l1} (p : X ＝ Y) → is-in-function-class P (map-eq p)
-  htpy-has-identity-maps-function-class has-ids-P {X} refl = {!!}
+  htpy-has-identity-maps-function-class = {!!}
 
   has-equivalence-has-identity-maps-function-class :
     has-identity-maps-function-class P →
     {X Y : UU l1} (e : X ≃ Y) → is-in-function-class P (map-equiv e)
-  has-equivalence-has-identity-maps-function-class has-ids-P {X} {Y} e = {!!}
+  has-equivalence-has-identity-maps-function-class = {!!}
 
   has-equivalences-has-identity-maps-function-class :
     has-identity-maps-function-class P → has-equivalences-function-class P
-  has-equivalences-has-identity-maps-function-class has-ids-P f is-equiv-f = {!!}
+  has-equivalences-has-identity-maps-function-class = {!!}
 
   is-equiv-has-identity-maps-has-equivalences-function-class :
     is-equiv has-identity-maps-has-equivalences-function-class
@@ -197,7 +197,7 @@ module _
 
   equiv-has-identity-maps-has-equivalences-function-class :
     has-equivalences-function-class P ≃ has-identity-maps-function-class P
-  pr1 equiv-has-identity-maps-has-equivalences-function-class = {!!}
+  equiv-has-identity-maps-has-equivalences-function-class = {!!}
 
   is-equiv-has-equivalences-has-identity-maps-function-class :
     is-equiv has-equivalences-has-identity-maps-function-class
@@ -205,7 +205,7 @@ module _
 
   equiv-has-equivalences-has-identity-maps-function-class :
     has-identity-maps-function-class P ≃ has-equivalences-function-class P
-  pr1 equiv-has-equivalences-has-identity-maps-function-class = {!!}
+  equiv-has-equivalences-has-identity-maps-function-class = {!!}
 ```
 
 ### Function classes are closed under composition with equivalences
@@ -220,10 +220,10 @@ module _
   is-closed-under-precomp-equiv-function-class :
     {C : UU l1} (e : A ≃ C) →
     (f : A → B) → is-in-subtype P f → is-in-subtype P (f ∘ map-inv-equiv e)
-  is-closed-under-precomp-equiv-function-class e f x = {!!}
+  is-closed-under-precomp-equiv-function-class = {!!}
 
   is-closed-under-postcomp-equiv-function-class :
     {D : UU l2} (e : B ≃ D) →
     (f : A → B) → is-in-subtype P f → is-in-subtype P (map-equiv e ∘ f)
-  is-closed-under-postcomp-equiv-function-class e f x = {!!}
+  is-closed-under-postcomp-equiv-function-class = {!!}
 ```

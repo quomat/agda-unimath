@@ -63,7 +63,7 @@ module _
     mul-Semigroup G
       ( inclusion-center-Semigroup x)
       ( inclusion-center-Semigroup y)
-  preserves-mul-inclusion-center-Semigroup {x} {y} = {!!}
+  preserves-mul-inclusion-center-Semigroup = {!!}
 
   hom-inclusion-center-Semigroup :
     hom-Semigroup semigroup-center-Semigroup G

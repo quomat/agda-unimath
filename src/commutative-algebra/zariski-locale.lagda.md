@@ -42,8 +42,7 @@ module _
 
   zariski-frame-Commutative-Ring :
     Large-Frame (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3) l1
-  large-poset-Large-Frame
-    zariski-frame-Commutative-Ring = {!!}
+  zariski-frame-Commutative-Ring = {!!}
 ```
 
 ### The Zariski locale

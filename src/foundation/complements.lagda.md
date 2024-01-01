@@ -24,5 +24,5 @@ in `A` at which `B x` is [empty](foundation-core.empty-types.md).
 ```agda
 complement :
   {l1 l2 : Level} {A : UU l1} (B : A → UU l2) → UU (l1 ⊔ l2)
-complement {l1} {l2} {A} B = {!!}
+complement = {!!}
 ```

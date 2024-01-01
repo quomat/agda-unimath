@@ -45,27 +45,7 @@ consists of
 data
   dependent-telescope :
     {l : Level} (k : Level) → {n : ℕ} → telescope l n → UUω
-  where
-  base-dependent-telescope :
-    {l1 k1 : Level} {A : UU l1} → (A → UU k1) →
-    dependent-telescope k1 (base-telescope A)
-  cons-dependent-telescope :
-    {l1 l2 k1 k2 : Level} {n : ℕ} {X : UU l1} {A : X → telescope l2 n}
-    {Y : X → UU k1} (B : (x : X) → Y x → dependent-telescope k2 (A x)) →
-    dependent-telescope (k1 ⊔ k2) (cons-telescope A)
-```
-
-### Expansion of telescopes
-
-An **expansion** of a telescope `A` by a dependent telescope `B` over it is a
-new telescope of the same length as `A`, constructed by taking
-[dependent pairs](foundation.dependent-pair-types.md) componentwise.
-
-```agda
-expand-telescope :
-  {l1 l2 : Level} {n : ℕ} {A : telescope l1 n} →
-  dependent-telescope l2 A → telescope (l1 ⊔ l2) n
-expand-telescope (base-dependent-telescope Y) = {!!}
+  dependent-telescope = {!!}
 expand-telescope (cons-dependent-telescope B) = {!!}
 ```
 
@@ -78,8 +58,7 @@ can define the **interleaved telescope** whose length is `2n`.
 interleave-telescope :
   {l1 l2 : Level} {n : ℕ} {A : telescope l1 n} →
   dependent-telescope l2 A → telescope (l1 ⊔ l2) (succ-ℕ (n *ℕ 2))
-interleave-telescope (base-dependent-telescope A) = {!!}
-interleave-telescope (cons-dependent-telescope B) = {!!}
+interleave-telescope = {!!}
 ```
 
 ### Mapping telescopes
@@ -91,6 +70,5 @@ Given a telescope `A` and a dependent telescope `B` over it, we can define the
 telescope-Π :
   {l1 l2 : Level} {n : ℕ} {A : telescope l1 n} →
   dependent-telescope l2 A → telescope (l1 ⊔ l2) n
-telescope-Π (base-dependent-telescope Y) = {!!}
-telescope-Π (cons-dependent-telescope B) = {!!}
+telescope-Π = {!!}
 ```

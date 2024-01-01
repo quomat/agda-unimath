@@ -78,7 +78,7 @@ module _
     (n : ℕ) →
     power-Commutative-Monoid M n (unit-Commutative-Monoid M) ＝
     unit-Commutative-Monoid M
-  power-unit-Commutative-Monoid zero-ℕ = {!!}
+  power-unit-Commutative-Monoid = {!!}
 ```
 
 ### `xⁿ⁺¹ = {!!}

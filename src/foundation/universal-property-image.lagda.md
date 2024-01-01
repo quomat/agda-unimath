@@ -55,7 +55,7 @@ module _
   precomp-emb :
     {l4 : Level} {C : UU l4} (j : C ↪ X) →
     hom-slice (map-emb i) (map-emb j) → hom-slice f (map-emb j)
-  pr1 (precomp-emb j r) = {!!}
+  precomp-emb = {!!}
 
   is-image : UUω
   is-image = {!!}
@@ -95,7 +95,7 @@ abstract
     {l1 l2 l3 : Level} {X : UU l1} {A : UU l2} (f : A → X) →
     { B : UU l3} (i : B ↪ X) (q : hom-slice f (map-emb i)) →
     is-image' f i q → is-image f i q
-  is-image-is-image' f i q up' C j = {!!}
+  is-image-is-image' = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {X : UU l1} {A : UU l2} (f : A → X)
@@ -167,12 +167,12 @@ module _
   forward-implication-is-image-subtype-subtype-im :
     {l : Level} (B : subtype l X) →
     subtype-im f ⊆ B → (a : A) → is-in-subtype B (f a)
-  forward-implication-is-image-subtype-subtype-im B H a = {!!}
+  forward-implication-is-image-subtype-subtype-im = {!!}
 
   backward-implication-is-image-subtype-subtype-im :
     {l : Level} (B : subtype l X) →
     ((a : A) → is-in-subtype B (f a)) → subtype-im f ⊆ B
-  backward-implication-is-image-subtype-subtype-im B H x K = {!!}
+  backward-implication-is-image-subtype-subtype-im = {!!}
 
   is-image-subtype-subtype-im : is-image-subtype f (subtype-im f)
   pr1 (is-image-subtype-subtype-im B) = {!!}
@@ -185,7 +185,7 @@ abstract
   is-image-has-section :
     (l : Level) {l1 l2 : Level} {X : UU l1} {A : UU l2} (f : A → X) →
     section f → is-image f id-emb (f , refl-htpy)
-  is-image-has-section l f (g , H) = {!!}
+  is-image-has-section = {!!}
 ```
 
 ### Any embedding is its own image inclusion
@@ -195,7 +195,7 @@ abstract
   is-image-is-emb :
     (l : Level) {l1 l2 : Level} {X : UU l1} {A : UU l2} (f : A → X) →
     (H : is-emb f) → is-image f (f , H) (id , refl-htpy)
-  is-image-is-emb l f H = {!!}
+  is-image-is-emb = {!!}
 ```
 
 ### The image of `f` is the image of `f`
@@ -208,14 +208,14 @@ module _
 
   fiberwise-map-is-image-im :
     (x : X) → type-trunc-Prop (fiber f x) → fiber (map-emb m) x
-  fiberwise-map-is-image-im x = {!!}
+  fiberwise-map-is-image-im = {!!}
 
   map-is-image-im : im f → B
   map-is-image-im (x , t) = {!!}
 
   inv-triangle-is-image-im :
     map-emb m ∘ map-is-image-im ~ inclusion-im f
-  inv-triangle-is-image-im (x , t) = {!!}
+  inv-triangle-is-image-im = {!!}
 
   triangle-is-image-im :
     inclusion-im f ~ map-emb m ∘ map-is-image-im
@@ -225,7 +225,7 @@ abstract
   is-image-im :
     {l1 l2 : Level} {X : UU l1} {A : UU l2} (f : A → X) →
     is-image f (emb-im f) (unit-im f)
-  is-image-im f = {!!}
+  is-image-im = {!!}
 ```
 
 ### A factorization of a map through an embedding is the image factorization if and only if the right factor is surjective
@@ -238,15 +238,15 @@ module _
 
   is-surjective-is-image :
     is-image f i q → is-surjective (map-hom-slice f (map-emb i) q)
-  is-surjective-is-image up-i b = {!!}
+  is-surjective-is-image = {!!}
 
   is-image-is-surjective' :
     is-surjective (map-hom-slice f (map-emb i) q) →
     is-image' f i q
-  is-image-is-surjective' H B' m = {!!}
+  is-image-is-surjective' = {!!}
 
   is-image-is-surjective :
     is-surjective (map-hom-slice f (map-emb i) q) →
     is-image f i q
-  is-image-is-surjective H = {!!}
+  is-image-is-surjective = {!!}
 ```

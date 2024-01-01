@@ -51,11 +51,11 @@ decomposition of `n`.
 ```agda
 concrete-group-cycle-prime-decomposition-ℕ :
   (n : ℕ) → leq-ℕ 1 n → Concrete-Group (lsuc lzero)
-concrete-group-cycle-prime-decomposition-ℕ n H = {!!}
+concrete-group-cycle-prime-decomposition-ℕ = {!!}
 
 cycle-prime-decomposition-ℕ :
   (n : ℕ) → leq-ℕ 1 n → UU (lsuc lzero)
-cycle-prime-decomposition-ℕ n H = {!!}
+cycle-prime-decomposition-ℕ = {!!}
 ```
 
 ## Properties
@@ -70,5 +70,5 @@ equiv-product-cycle-prime-decomposition-ℕ :
   (n m : ℕ) → (H : leq-ℕ 1 n) → (I : leq-ℕ 1 m) →
   ( cycle-prime-decomposition-ℕ n H × cycle-prime-decomposition-ℕ m I) ≃
   cycle-prime-decomposition-ℕ (n *ℕ m) (preserves-leq-mul-ℕ 1 n 1 m H I)
-equiv-product-cycle-prime-decomposition-ℕ n m H I = {!!}
+equiv-product-cycle-prime-decomposition-ℕ = {!!}
 ```

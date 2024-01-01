@@ -39,7 +39,7 @@ is-element-of-coalgebra-polynomial-endofunctor :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2}
   (X : coalgebra-polynomial-endofunctor l3 A B)
   (x y : type-coalgebra-polynomial-endofunctor X) → UU (l2 ⊔ l3)
-is-element-of-coalgebra-polynomial-endofunctor X x y = {!!}
+is-element-of-coalgebra-polynomial-endofunctor = {!!}
 
 syntax
   is-element-of-coalgebra-polynomial-endofunctor X x y = {!!}
@@ -55,7 +55,7 @@ module _
 
   graph-coalgebra-polynomial-endofunctor :
     Directed-Graph l3 (l2 ⊔ l3)
-  pr1 graph-coalgebra-polynomial-endofunctor = {!!}
+  graph-coalgebra-polynomial-endofunctor = {!!}
 
   walk-coalgebra-polynomial-endofunctor :
     (x y : type-coalgebra-polynomial-endofunctor X) → UU (l2 ⊔ l3)

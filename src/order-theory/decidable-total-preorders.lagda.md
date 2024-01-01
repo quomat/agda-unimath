@@ -99,17 +99,17 @@ module _
 
   leq-or-strict-greater-Decidable-Preorder :
     (x y : type-Decidable-Total-Preorder) → UU (l1 ⊔ l2)
-  leq-or-strict-greater-Decidable-Preorder x y = {!!}
+  leq-or-strict-greater-Decidable-Preorder = {!!}
 
   abstract
     helper-is-leq-or-strict-greater-Decidable-Total-Preorder :
       (x y : type-Decidable-Total-Preorder) →
       is-decidable (leq-Decidable-Total-Preorder x y) →
       leq-or-strict-greater-Decidable-Preorder x y
-    helper-is-leq-or-strict-greater-Decidable-Total-Preorder x y (inl p) = {!!}
+    helper-is-leq-or-strict-greater-Decidable-Total-Preorder = {!!}
 
   is-leq-or-strict-greater-Decidable-Total-Preorder :
     (x y : type-Decidable-Total-Preorder) →
     leq-or-strict-greater-Decidable-Preorder x y
-  is-leq-or-strict-greater-Decidable-Total-Preorder x y = {!!}
+  is-leq-or-strict-greater-Decidable-Total-Preorder = {!!}
 ```

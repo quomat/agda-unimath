@@ -36,11 +36,11 @@ module _
 
   ev-Maybe :
     ((x : Maybe A) → B x) → ((x : A) → B (unit-Maybe x)) × B exception-Maybe
-  pr1 (ev-Maybe h) x = {!!}
+  ev-Maybe = {!!}
 
   ind-Maybe :
     ((x : A) → B (unit-Maybe x)) × (B exception-Maybe) → (x : Maybe A) → B x
-  ind-Maybe (pair h b) (inl x) = {!!}
+  ind-Maybe = {!!}
 
   abstract
     is-section-ind-Maybe : (ev-Maybe ∘ ind-Maybe) ~ id
@@ -48,7 +48,7 @@ module _
 
     is-retraction-ind-Maybe' :
       (h : (x : Maybe A) → B x) → (ind-Maybe (ev-Maybe h)) ~ h
-    is-retraction-ind-Maybe' h (inl x) = {!!}
+    is-retraction-ind-Maybe' = {!!}
 
     is-retraction-ind-Maybe : (ind-Maybe ∘ ev-Maybe) ~ id
     is-retraction-ind-Maybe h = {!!}
@@ -60,10 +60,9 @@ module _
 equiv-dependent-universal-property-Maybe :
   {l1 l2 : Level} {A : UU l1} (B : Maybe A → UU l2) →
   ((x : Maybe A) → B x) ≃ (((x : A) → B (unit-Maybe x)) × B exception-Maybe)
-pr1 (equiv-dependent-universal-property-Maybe B) = {!!}
-pr2 (equiv-dependent-universal-property-Maybe B) = {!!}
+equiv-dependent-universal-property-Maybe = {!!}
 
 equiv-universal-property-Maybe :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → (Maybe A → B) ≃ ((A → B) × B)
-equiv-universal-property-Maybe {l1} {l2} {A} {B} = {!!}
+equiv-universal-property-Maybe = {!!}
 ```

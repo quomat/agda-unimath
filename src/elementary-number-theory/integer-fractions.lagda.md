@@ -59,7 +59,7 @@ denominator-fraction-ℤ x = {!!}
 
 is-positive-denominator-fraction-ℤ :
   (x : fraction-ℤ) → is-positive-ℤ (denominator-fraction-ℤ x)
-is-positive-denominator-fraction-ℤ x = {!!}
+is-positive-denominator-fraction-ℤ = {!!}
 ```
 
 ### Inclusion of the integers
@@ -102,7 +102,7 @@ is-one-fraction-ℤ x = {!!}
 ```agda
 is-nonzero-denominator-fraction-ℤ :
   (x : fraction-ℤ) → is-nonzero-ℤ (denominator-fraction-ℤ x)
-is-nonzero-denominator-fraction-ℤ x = {!!}
+is-nonzero-denominator-fraction-ℤ = {!!}
 ```
 
 ### The type of fractions is a set
@@ -144,10 +144,10 @@ pr2 (pr2 (pr2 equivalence-relation-sim-fraction-ℤ)) = {!!}
 is-positive-gcd-numerator-denominator-fraction-ℤ :
   (x : fraction-ℤ) →
   is-positive-ℤ (gcd-ℤ (numerator-fraction-ℤ x) (denominator-fraction-ℤ x))
-is-positive-gcd-numerator-denominator-fraction-ℤ x = {!!}
+is-positive-gcd-numerator-denominator-fraction-ℤ = {!!}
 
 is-nonzero-gcd-numerator-denominator-fraction-ℤ :
   (x : fraction-ℤ) →
   is-nonzero-ℤ (gcd-ℤ (numerator-fraction-ℤ x) (denominator-fraction-ℤ x))
-is-nonzero-gcd-numerator-denominator-fraction-ℤ x = {!!}
+is-nonzero-gcd-numerator-denominator-fraction-ℤ = {!!}
 ```

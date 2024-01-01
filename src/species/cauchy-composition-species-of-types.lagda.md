@@ -54,7 +54,7 @@ compose species, which is called the **Cauchy composition** of species.
 cauchy-composition-species-types :
   {l1 l2 l3 : Level} → species-types l1 l2 → species-types l1 l3 →
   species-types l1 (lsuc l1 ⊔ l2 ⊔ l3)
-cauchy-composition-species-types {l1} {l2} {l3} S T X = {!!}
+cauchy-composition-species-types = {!!}
 ```
 
 ## Properties
@@ -66,13 +66,13 @@ left-unit-law-cauchy-composition-species-types :
   {l1 l2 : Level}
   (F : species-types l1 l2) → (A : UU l1) →
   cauchy-composition-species-types unit-species-types F A ≃ F A
-left-unit-law-cauchy-composition-species-types {l1} F A = {!!}
+left-unit-law-cauchy-composition-species-types = {!!}
 
 right-unit-law-cauchy-composition-species-types :
   {l1 l2 : Level}
   (F : species-types l1 l2) → (A : UU l1) →
   cauchy-composition-species-types F unit-species-types A ≃ F A
-right-unit-law-cauchy-composition-species-types {l1} F A = {!!}
+right-unit-law-cauchy-composition-species-types = {!!}
 ```
 
 ### Associativity of composition of species
@@ -94,14 +94,14 @@ module _
       ( cauchy-composition-species-types S T)
       ( U)
       ( A)
-  equiv-associative-cauchy-composition-species-types A = {!!}
+  equiv-associative-cauchy-composition-species-types = {!!}
 
   htpy-associative-cauchy-composition-species-types :
     cauchy-composition-species-types
       ( S)
       ( cauchy-composition-species-types T U) ~
     cauchy-composition-species-types (cauchy-composition-species-types S T) U
-  htpy-associative-cauchy-composition-species-types A = {!!}
+  htpy-associative-cauchy-composition-species-types = {!!}
 
   associative-cauchy-composition-species-types :
     ( cauchy-composition-species-types

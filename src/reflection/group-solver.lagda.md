@@ -157,56 +157,56 @@ module _ {n : ℕ} where
     GroupEquality
       ( gMul (unquoteSimpleNonEmpty b w) u)
       ( unquoteSimple b)
-  elim-inverses-remove-valid nil w u eq = {!!}
+  elim-inverses-remove-valid = {!!}
 
   elim-inverses-valid :
     (x : SimpleElem n) (b : Simple n) →
     GroupEquality
       ( gMul (unquoteSimple b) (unquoteSimpleElem x))
       ( unquoteSimple (elim-inverses x b))
-  elim-inverses-valid x nil = {!!}
+  elim-inverses-valid = {!!}
 
   concat-simplify-nonempty-valid :
     (x : SimpleElem n) (a : list (SimpleElem n)) (b : Simple n) →
     GroupEquality
       ( gMul (unquoteSimple b) (unquoteSimple (cons x a)))
       ( unquoteSimple (concat-simplify (cons x a) b))
-  concat-simplify-nonempty-valid x nil b = {!!}
+  concat-simplify-nonempty-valid = {!!}
 
   concat-simplify-valid :
     ∀ (u w : Simple n) →
     GroupEquality
       ( gMul (unquoteSimple w) (unquoteSimple u))
       ( unquoteSimple (concat-simplify u w))
-  concat-simplify-valid nil b = {!!}
+  concat-simplify-valid = {!!}
 
   inv-single-valid :
     ∀ w →
     GroupEquality
       ( gInv (unquoteSimpleElem w))
       ( unquoteSimpleElem (inv-SE' w))
-  inv-single-valid (inv-SE x) = {!!}
+  inv-single-valid = {!!}
 
   gMul-concat-nonempty :
     (w : GroupSyntax n) (as b : Simple n) →
     GroupEquality
       ( gMul (unquoteSimple b) (unquoteSimpleNonEmpty as w))
       ( unquoteSimpleNonEmpty (concat-list as b) w)
-  gMul-concat-nonempty w nil nil = {!!}
+  gMul-concat-nonempty = {!!}
 
   gMul-concat' :
     (xs : Simple n) (ys : Simple n) →
     GroupEquality
       ( gMul (unquoteSimple ys) (unquoteSimple xs))
       ( unquoteSimple (concat-list xs ys))
-  gMul-concat' nil bs = {!!}
+  gMul-concat' = {!!}
 
   gMul-concat-1 :
     (xs : Simple n) (x : SimpleElem n) →
     GroupEquality
       ( gMul (unquoteSimpleElem x) (unquoteSimple xs))
       ( unquoteSimple (concat-list xs (cons x nil)))
-  gMul-concat-1 xs a = {!!}
+  gMul-concat-1 = {!!}
 
   -- inv-simplify-valid'-nonempty : ∀ (x : SimpleElem n) (xs : list (SimpleElem n)) →
   --                               GroupEquality (gInv (unquoteSimple (cons x xs)))
@@ -238,12 +238,12 @@ module _ {n : ℕ} where
     useGroupEqualityElem :
       {x y : GroupSyntax n} (env : Env n (type-Group G)) →
       GroupEqualityElem x y → unQuoteGS x env ＝ unQuoteGS y env
-    useGroupEqualityElem env (xsym-GE ge) = {!!}
+    useGroupEqualityElem = {!!}
 
     useGroupEquality :
       {x y : GroupSyntax n} (env : Env n (type-Group G)) →
       GroupEquality x y → unQuoteGS x env ＝ unQuoteGS y env
-    useGroupEquality env refl-GE = {!!}
+    useGroupEquality = {!!}
 
     -- simplifyExpression :
     --   ∀ (g : GroupSyntax n) (env : Env n (type-Group G)) →

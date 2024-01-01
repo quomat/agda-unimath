@@ -43,16 +43,13 @@ such that
 based-ind-ℕ :
   {l : Level} (k : ℕ) (P : ℕ → UU l) →
   P k → ((n : ℕ) → k ≤-ℕ n → P n → P (succ-ℕ n)) → (n : ℕ) → k ≤-ℕ n → P n
-based-ind-ℕ zero-ℕ P p0 pS zero-ℕ H = {!!}
-based-ind-ℕ zero-ℕ P p0 pS (succ-ℕ n) H = {!!}
-based-ind-ℕ (succ-ℕ k) P p0 pS (succ-ℕ n) = {!!}
+based-ind-ℕ = {!!}
 
 compute-base-based-ind-ℕ :
   {l : Level} (k : ℕ) (P : ℕ → UU l) (p0 : P k) →
   (pS : (n : ℕ) → k ≤-ℕ n → P n → P (succ-ℕ n)) → (H : k ≤-ℕ k) →
   based-ind-ℕ k P p0 pS k H ＝ p0
-compute-base-based-ind-ℕ zero-ℕ P p0 pS _ = {!!}
-compute-base-based-ind-ℕ (succ-ℕ k) P p0 pS = {!!}
+compute-base-based-ind-ℕ = {!!}
 
 compute-succ-based-ind-ℕ :
   {l : Level} (k : ℕ) (P : ℕ → UU l) (p0 : P k) →
@@ -60,9 +57,7 @@ compute-succ-based-ind-ℕ :
   (n : ℕ) (N : k ≤-ℕ n) (N' : k ≤-ℕ succ-ℕ n) →
   based-ind-ℕ k P p0 pS (succ-ℕ n) N' ＝
   pS n N (based-ind-ℕ k P p0 pS n N)
-compute-succ-based-ind-ℕ zero-ℕ P p0 pS zero-ℕ _ _ = {!!}
-compute-succ-based-ind-ℕ zero-ℕ P p0 pS (succ-ℕ n) _ _ = {!!}
-compute-succ-based-ind-ℕ (succ-ℕ k) P p0 pS (succ-ℕ n) = {!!}
+compute-succ-based-ind-ℕ = {!!}
 ```
 
 ## See also

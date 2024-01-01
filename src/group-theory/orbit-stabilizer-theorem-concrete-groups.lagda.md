@@ -50,15 +50,15 @@ module _
 
   classifying-type-quotient-stabilizer-action-Concrete-Group :
     type-action-Concrete-Group G X → UU (lsuc l1 ⊔ lsuc l2)
-  classifying-type-quotient-stabilizer-action-Concrete-Group x = {!!}
+  classifying-type-quotient-stabilizer-action-Concrete-Group = {!!}
 
   point-classifying-type-quotient-stabilizer-action-Concrete-Group :
     (x : type-action-Concrete-Group G X) →
     classifying-type-quotient-stabilizer-action-Concrete-Group x
-  pr1 (point-classifying-type-quotient-stabilizer-action-Concrete-Group x) = {!!}
+  point-classifying-type-quotient-stabilizer-action-Concrete-Group = {!!}
 
   classifying-pointed-type-stabilizer-action-Concrete-Group :
     (x : type-action-Concrete-Group G X) →
     Pointed-Type (lsuc l1 ⊔ lsuc l2)
-  pr1 (classifying-pointed-type-stabilizer-action-Concrete-Group x) = {!!}
+  classifying-pointed-type-stabilizer-action-Concrete-Group = {!!}
 ```

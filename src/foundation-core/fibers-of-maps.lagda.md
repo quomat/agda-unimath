@@ -76,15 +76,15 @@ module _
 
   eq-Eq-fiber :
     {s t : fiber f b} (α : pr1 s ＝ pr1 t) → ap f α ∙ pr2 t ＝ pr2 s → s ＝ t
-  eq-Eq-fiber α β = {!!}
+  eq-Eq-fiber = {!!}
 
   is-section-eq-Eq-fiber :
     {s t : fiber f b} → Eq-eq-fiber {s} {t} ∘ eq-Eq-fiber-uncurry {s} {t} ~ id
-  is-section-eq-Eq-fiber (refl , refl) = {!!}
+  is-section-eq-Eq-fiber = {!!}
 
   is-retraction-eq-Eq-fiber :
     {s t : fiber f b} → eq-Eq-fiber-uncurry {s} {t} ∘ Eq-eq-fiber {s} {t} ~ id
-  is-retraction-eq-Eq-fiber refl = {!!}
+  is-retraction-eq-Eq-fiber = {!!}
 
   abstract
     is-equiv-Eq-eq-fiber : {s t : fiber f b} → is-equiv (Eq-eq-fiber {s} {t})
@@ -104,7 +104,7 @@ module _
   compute-ap-inclusion-fiber-eq-Eq-fiber :
     {s t : fiber f b} (α : pr1 s ＝ pr1 t) (β : ap f α ∙ pr2 t ＝ pr2 s) →
     ap (inclusion-fiber f) (eq-Eq-fiber α β) ＝ α
-  compute-ap-inclusion-fiber-eq-Eq-fiber refl refl = {!!}
+  compute-ap-inclusion-fiber-eq-Eq-fiber = {!!}
 ```
 
 #### The case of `fiber'`
@@ -128,17 +128,17 @@ module _
 
   eq-Eq-fiber' :
     {s t : fiber' f b} (α : pr1 s ＝ pr1 t) → pr2 t ＝ pr2 s ∙ ap f α → s ＝ t
-  eq-Eq-fiber' α β = {!!}
+  eq-Eq-fiber' = {!!}
 
   is-section-eq-Eq-fiber' :
     {s t : fiber' f b} →
     Eq-eq-fiber' {s} {t} ∘ eq-Eq-fiber-uncurry' {s} {t} ~ id
-  is-section-eq-Eq-fiber' {x , refl} (refl , refl) = {!!}
+  is-section-eq-Eq-fiber' = {!!}
 
   is-retraction-eq-Eq-fiber' :
     {s t : fiber' f b} →
     eq-Eq-fiber-uncurry' {s} {t} ∘ Eq-eq-fiber' {s} {t} ~ id
-  is-retraction-eq-Eq-fiber' {x , refl} refl = {!!}
+  is-retraction-eq-Eq-fiber' = {!!}
 
   abstract
     is-equiv-Eq-eq-fiber' :
@@ -235,11 +235,11 @@ module _
 
   is-retraction-map-inv-equiv-total-fiber :
     (map-inv-equiv-total-fiber ∘ map-equiv-total-fiber) ~ id
-  is-retraction-map-inv-equiv-total-fiber (.(f x) , x , refl) = {!!}
+  is-retraction-map-inv-equiv-total-fiber = {!!}
 
   is-section-map-inv-equiv-total-fiber :
     (map-equiv-total-fiber ∘ map-inv-equiv-total-fiber) ~ id
-  is-section-map-inv-equiv-total-fiber x = {!!}
+  is-section-map-inv-equiv-total-fiber = {!!}
 
   abstract
     is-equiv-map-equiv-total-fiber : is-equiv map-equiv-total-fiber
@@ -265,19 +265,19 @@ module _
 
   map-compute-fiber-comp :
     fiber (g ∘ h) x → Σ (fiber g x) (λ t → fiber h (pr1 t))
-  pr1 (pr1 (map-compute-fiber-comp (a , p))) = {!!}
+  map-compute-fiber-comp = {!!}
 
   inv-map-compute-fiber-comp :
     Σ (fiber g x) (λ t → fiber h (pr1 t)) → fiber (g ∘ h) x
-  pr1 (inv-map-compute-fiber-comp t) = {!!}
+  inv-map-compute-fiber-comp = {!!}
 
   is-section-inv-map-compute-fiber-comp :
     (map-compute-fiber-comp ∘ inv-map-compute-fiber-comp) ~ id
-  is-section-inv-map-compute-fiber-comp ((.(h a) , refl) , (a , refl)) = {!!}
+  is-section-inv-map-compute-fiber-comp = {!!}
 
   is-retraction-inv-map-compute-fiber-comp :
     (inv-map-compute-fiber-comp ∘ map-compute-fiber-comp) ~ id
-  is-retraction-inv-map-compute-fiber-comp (a , refl) = {!!}
+  is-retraction-inv-map-compute-fiber-comp = {!!}
 
   abstract
     is-equiv-map-compute-fiber-comp :
@@ -286,7 +286,7 @@ module _
 
   compute-fiber-comp :
     fiber (g ∘ h) x ≃ Σ (fiber g x) (λ t → fiber h (pr1 t))
-  pr1 compute-fiber-comp = {!!}
+  compute-fiber-comp = {!!}
 
   abstract
     is-equiv-inv-map-compute-fiber-comp :
@@ -295,7 +295,7 @@ module _
 
   inv-compute-fiber-comp :
     Σ (fiber g x) (λ t → fiber h (pr1 t)) ≃ fiber (g ∘ h) x
-  pr1 inv-compute-fiber-comp = {!!}
+  inv-compute-fiber-comp = {!!}
 ```
 
 ## Table of files about fibers of maps

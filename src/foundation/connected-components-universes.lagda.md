@@ -44,17 +44,17 @@ define the component of a universe `UU l1` of types
 ```agda
 component-UU-Level :
   (l1 : Level) {l2 : Level} (A : UU l2) → UU (lsuc l1 ⊔ l2)
-component-UU-Level l1 A = {!!}
+component-UU-Level = {!!}
 
 type-component-UU-Level :
   {l1 l2 : Level} {A : UU l2} → component-UU-Level l1 A → UU l1
-type-component-UU-Level X = {!!}
+type-component-UU-Level = {!!}
 
 abstract
   mere-equiv-component-UU-Level :
     {l1 l2 : Level} {A : UU l2} (X : component-UU-Level l1 A) →
     mere-equiv A (type-component-UU-Level X)
-  mere-equiv-component-UU-Level X = {!!}
+  mere-equiv-component-UU-Level = {!!}
 ```
 
 ### The connected component of a universe
@@ -62,7 +62,7 @@ abstract
 ```agda
 component-UU :
   {l1 : Level} (A : UU l1) → UU (lsuc l1)
-component-UU {l1} A = {!!}
+component-UU = {!!}
 
 type-component-UU : {l1 : Level} {A : UU l1} (X : component-UU A) → UU l1
 type-component-UU X = {!!}
@@ -71,7 +71,7 @@ abstract
   mere-equiv-component-UU :
     {l1 : Level} {A : UU l1} (X : component-UU A) →
     mere-equiv A (type-component-UU X)
-  mere-equiv-component-UU X = {!!}
+  mere-equiv-component-UU = {!!}
 ```
 
 ## Properties
@@ -81,23 +81,23 @@ abstract
 ```agda
 equiv-component-UU-Level :
   {l1 l2 : Level} {A : UU l2} (X Y : component-UU-Level l1 A) → UU l1
-equiv-component-UU-Level X Y = {!!}
+equiv-component-UU-Level = {!!}
 
 id-equiv-component-UU-Level :
   {l1 l2 : Level} {A : UU l2} (X : component-UU-Level l1 A) →
   equiv-component-UU-Level X X
-id-equiv-component-UU-Level X = {!!}
+id-equiv-component-UU-Level = {!!}
 
 equiv-eq-component-UU-Level :
   {l1 l2 : Level} {A : UU l2} {X Y : component-UU-Level l1 A} →
   X ＝ Y → equiv-component-UU-Level X Y
-equiv-eq-component-UU-Level {X = X} refl = {!!}
+equiv-eq-component-UU-Level = {!!}
 
 abstract
   is-torsorial-equiv-component-UU-Level :
     {l1 l2 : Level} {A : UU l2} (X : component-UU-Level l1 A) →
     is-torsorial (equiv-component-UU-Level X)
-  is-torsorial-equiv-component-UU-Level X = {!!}
+  is-torsorial-equiv-component-UU-Level = {!!}
 
 abstract
   is-equiv-equiv-eq-component-UU-Level :
@@ -108,26 +108,26 @@ abstract
 eq-equiv-component-UU-Level :
   {l1 l2 : Level} {A : UU l2} (X Y : component-UU-Level l1 A) →
   equiv-component-UU-Level X Y → X ＝ Y
-eq-equiv-component-UU-Level X Y = {!!}
+eq-equiv-component-UU-Level = {!!}
 
 equiv-component-UU :
   {l1 : Level} {A : UU l1} (X Y : component-UU A) → UU l1
-equiv-component-UU X Y = {!!}
+equiv-component-UU = {!!}
 
 id-equiv-component-UU :
   {l1 : Level} {A : UU l1} (X : component-UU A) → equiv-component-UU X X
-id-equiv-component-UU X = {!!}
+id-equiv-component-UU = {!!}
 
 equiv-eq-component-UU :
   {l1 : Level} {A : UU l1} {X Y : component-UU A} →
   X ＝ Y → equiv-component-UU X Y
-equiv-eq-component-UU p = {!!}
+equiv-eq-component-UU = {!!}
 
 abstract
   is-torsorial-equiv-component-UU :
     {l1 : Level} {A : UU l1} (X : component-UU A) →
     is-torsorial (equiv-component-UU X)
-  is-torsorial-equiv-component-UU X = {!!}
+  is-torsorial-equiv-component-UU = {!!}
 
 abstract
   is-equiv-equiv-eq-component-UU :
@@ -138,14 +138,14 @@ abstract
 eq-equiv-component-UU :
   {l1 : Level} {A : UU l1} (X Y : component-UU A) →
   equiv-component-UU X Y → X ＝ Y
-eq-equiv-component-UU X Y = {!!}
+eq-equiv-component-UU = {!!}
 ```
 
 ```agda
 abstract
   is-contr-component-UU-Level-empty :
     (l : Level) → is-contr (component-UU-Level l empty)
-  pr1 (pr1 (is-contr-component-UU-Level-empty l)) = {!!}
+  is-contr-component-UU-Level-empty = {!!}
 
 abstract
   is-contr-component-UU-empty : is-contr (component-UU empty)
@@ -158,5 +158,5 @@ abstract
 abstract
   is-0-connected-component-UU :
     {l : Level} (X : UU l) → is-0-connected (component-UU X)
-  is-0-connected-component-UU X = {!!}
+  is-0-connected-component-UU = {!!}
 ```

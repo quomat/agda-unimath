@@ -49,35 +49,35 @@ module _
 
   hom-set-Slice-Precategory :
     obj-Slice-Precategory → obj-Slice-Precategory → Set l2
-  hom-set-Slice-Precategory (A , f) (B , g) = {!!}
+  hom-set-Slice-Precategory = {!!}
 
   hom-Slice-Precategory :
     obj-Slice-Precategory → obj-Slice-Precategory → UU l2
-  hom-Slice-Precategory A B = {!!}
+  hom-Slice-Precategory = {!!}
 
   is-set-hom-Slice-Precategory :
     (A B : obj-Slice-Precategory) → is-set (hom-Slice-Precategory A B)
-  is-set-hom-Slice-Precategory A B = {!!}
+  is-set-hom-Slice-Precategory = {!!}
 
   Eq-hom-Slice-Precategory :
     {A B : obj-Slice-Precategory}
     (f g : hom-Slice-Precategory A B) → UU l2
-  Eq-hom-Slice-Precategory f g = {!!}
+  Eq-hom-Slice-Precategory = {!!}
 
   refl-Eq-hom-Slice-Precategory :
     {A B : obj-Slice-Precategory} (f : hom-Slice-Precategory A B) →
     Eq-hom-Slice-Precategory f f
-  refl-Eq-hom-Slice-Precategory f = {!!}
+  refl-Eq-hom-Slice-Precategory = {!!}
 
   extensionality-hom-Slice-Precategory :
     {A B : obj-Slice-Precategory} (f g : hom-Slice-Precategory A B) →
     (f ＝ g) ≃ Eq-hom-Slice-Precategory f g
-  extensionality-hom-Slice-Precategory {A} {B} = {!!}
+  extensionality-hom-Slice-Precategory = {!!}
 
   eq-hom-Slice-Precategory :
     {A B : obj-Slice-Precategory} (f g : hom-Slice-Precategory A B) →
     Eq-hom-Slice-Precategory f g → f ＝ g
-  eq-hom-Slice-Precategory f g = {!!}
+  eq-hom-Slice-Precategory = {!!}
 ```
 
 ### Identity morphisms in the slice category
@@ -85,7 +85,7 @@ module _
 ```agda
   id-hom-Slice-Precategory :
     (A : obj-Slice-Precategory) → hom-Slice-Precategory A A
-  pr1 (id-hom-Slice-Precategory A) = {!!}
+  id-hom-Slice-Precategory = {!!}
 ```
 
 ### Composition of morphisms in the slice category
@@ -95,7 +95,7 @@ module _
     {A1 A2 A3 : obj-Slice-Precategory} →
     hom-Slice-Precategory A2 A3 → hom-Slice-Precategory A1 A2 →
     hom-Slice-Precategory A1 A3
-  pr1 (comp-hom-Slice-Precategory g f) = {!!}
+  comp-hom-Slice-Precategory = {!!}
 ```
 
 ### Associativity of composition of morphisms in the slice category
@@ -108,7 +108,7 @@ module _
     (f : hom-Slice-Precategory A1 A2) →
     comp-hom-Slice-Precategory (comp-hom-Slice-Precategory h g) f ＝
     comp-hom-Slice-Precategory h (comp-hom-Slice-Precategory g f)
-  associative-comp-hom-Slice-Precategory h g f = {!!}
+  associative-comp-hom-Slice-Precategory = {!!}
 
   inv-associative-comp-hom-Slice-Precategory :
     {A1 A2 A3 A4 : obj-Slice-Precategory} →
@@ -117,7 +117,7 @@ module _
     (f : hom-Slice-Precategory A1 A2) →
     comp-hom-Slice-Precategory h (comp-hom-Slice-Precategory g f) ＝
     comp-hom-Slice-Precategory (comp-hom-Slice-Precategory h g) f
-  inv-associative-comp-hom-Slice-Precategory h g f = {!!}
+  inv-associative-comp-hom-Slice-Precategory = {!!}
 ```
 
 ### The left unit law for composition of morphisms in the slice category
@@ -126,7 +126,7 @@ module _
   left-unit-law-comp-hom-Slice-Precategory :
     {A B : obj-Slice-Precategory} (f : hom-Slice-Precategory A B) →
     comp-hom-Slice-Precategory (id-hom-Slice-Precategory B) f ＝ f
-  left-unit-law-comp-hom-Slice-Precategory f = {!!}
+  left-unit-law-comp-hom-Slice-Precategory = {!!}
 ```
 
 ### The right unit law for composition of morphisms in the slice category
@@ -135,7 +135,7 @@ module _
   right-unit-law-comp-hom-Slice-Precategory :
     {A B : obj-Slice-Precategory} (f : hom-Slice-Precategory A B) →
     comp-hom-Slice-Precategory f (id-hom-Slice-Precategory A) ＝ f
-  right-unit-law-comp-hom-Slice-Precategory f = {!!}
+  right-unit-law-comp-hom-Slice-Precategory = {!!}
 ```
 
 ### The slice precategory
@@ -159,7 +159,7 @@ module _
 
   terminal-obj-Precategory-Slice-Precategory :
     terminal-obj-Precategory (Slice-Precategory C X)
-  pr1 terminal-obj-Precategory-Slice-Precategory = {!!}
+  terminal-obj-Precategory-Slice-Precategory = {!!}
 ```
 
 ### Products in slice precategories are pullbacks in the original category
@@ -191,7 +191,7 @@ module _
           ( h₁ , refl)) ×
         ( ( comp-hom-Precategory (Slice-Precategory C A) (p₂ , α₂) c) ＝
           ( h₂ , β₂))
-      pr1 d = {!!}
+      d = {!!}
 
       q :
         ∀ k →
@@ -200,7 +200,7 @@ module _
               (Slice-Precategory C A) (p₁ , α₁) k ＝ (h₁ , refl)) ×
             ( comp-hom-Precategory
               (Slice-Precategory C A) (p₂ , α₂) k ＝ (h₂ , β₂)))
-      q k = {!!}
+      q = {!!}
 
       σ :
         ∀ k →
@@ -215,25 +215,25 @@ module _
             ( k)) ＝
           ( h₂ , β₂)) →
         c ＝ k
-      σ (k , γ) (γ₁ , γ₂) = {!!}
+      σ = {!!}
 
     map-inv-is-pullback-is-product-Slice-Precategory :
       is-product-Precategory
         (Slice-Precategory C A) (X , f) (Y , g) (W , p) (p₁ , α₁) (p₂ , α₂) →
       is-pullback-Precategory C A X Y f g W p₁ p₂ α
-    map-inv-is-pullback-is-product-Slice-Precategory ψ W' p₁' p₂' α' = {!!}
+    map-inv-is-pullback-is-product-Slice-Precategory = {!!}
 
       γ :
         (comp-hom-Precategory C p₁ k ＝ p₁') ×
         (comp-hom-Precategory C p₂ k ＝ p₂')
-      pr1 γ = {!!}
+      γ = {!!}
 
       q :
         ∀ k' →
         is-prop
           (( comp-hom-Precategory C p₁ k' ＝ p₁') ×
           ( comp-hom-Precategory C p₂ k' ＝ p₂'))
-      q k' = {!!}
+      q = {!!}
 
       σ :
         ( k' : hom-Precategory C W' W) →
@@ -241,7 +241,7 @@ module _
           ( comp-hom-Precategory C p₁ k' ＝ p₁') ×
           ( comp-hom-Precategory C p₂ k' ＝ p₂')) →
           k ＝ k'
-      σ k' (γ₁ , γ₂) = {!!}
+      σ = {!!}
 
     equiv-is-pullback-is-product-Slice-Precategory :
       is-pullback-Precategory C A X Y f g W p₁ p₂ α ≃
@@ -252,7 +252,7 @@ module _
   map-pullback-product-Slice-Precategory :
     pullback-Precategory C A X Y f g →
     product-Precategory (Slice-Precategory C A) (X , f) (Y , g)
-  pr1 (map-pullback-product-Slice-Precategory (W , p₁ , p₂ , α , q)) = {!!}
+  map-pullback-product-Slice-Precategory = {!!}
 
   map-inv-pullback-product-Slice-Precategory :
     product-Precategory (Slice-Precategory C A) (X , f) (Y , g) →
@@ -275,5 +275,5 @@ module _
   equiv-pullback-product-Slice-Precategory :
     pullback-Precategory C A X Y f g ≃
     product-Precategory (Slice-Precategory C A) (X , f) (Y , g)
-  pr1 equiv-pullback-product-Slice-Precategory = {!!}
+  equiv-pullback-product-Slice-Precategory = {!!}
 ```

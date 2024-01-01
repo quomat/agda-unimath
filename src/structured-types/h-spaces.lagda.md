@@ -44,11 +44,11 @@ point is a unit, with a coherence law between the left and the right unit laws.
 coherent-unit-laws-mul-Pointed-Type :
   {l : Level} (A : Pointed-Type l)
   (μ : (x y : type-Pointed-Type A) → type-Pointed-Type A) → UU l
-coherent-unit-laws-mul-Pointed-Type A μ = {!!}
+coherent-unit-laws-mul-Pointed-Type = {!!}
 
 coherent-unital-mul-Pointed-Type :
   {l : Level} → Pointed-Type l → UU l
-coherent-unital-mul-Pointed-Type A = {!!}
+coherent-unital-mul-Pointed-Type = {!!}
 ```
 
 ### H-spaces
@@ -80,12 +80,12 @@ module _
 
   mul-H-Space' :
     type-H-Space → type-H-Space → type-H-Space
-  mul-H-Space' x y = {!!}
+  mul-H-Space' = {!!}
 
   ap-mul-H-Space :
     {a b c d : type-H-Space} → Id a b → Id c d →
     Id (mul-H-Space a c) (mul-H-Space b d)
-  ap-mul-H-Space p q = {!!}
+  ap-mul-H-Space = {!!}
 
   magma-H-Space : Magma l
   pr1 magma-H-Space = {!!}
@@ -112,14 +112,14 @@ module _
 
   unit-laws-mul-H-Space :
     unit-laws mul-H-Space unit-H-Space
-  pr1 unit-laws-mul-H-Space = {!!}
+  unit-laws-mul-H-Space = {!!}
 
   is-unital-mul-H-Space : is-unital mul-H-Space
   pr1 is-unital-mul-H-Space = {!!}
 
   is-coherently-unital-mul-H-Space :
     is-coherently-unital mul-H-Space
-  pr1 is-coherently-unital-mul-H-Space = {!!}
+  is-coherently-unital-mul-H-Space = {!!}
 ```
 
 ## Properties
@@ -129,9 +129,7 @@ module _
 ```agda
 h-space-Noncoherent-H-Space :
   {l : Level} → Noncoherent-H-Space l → H-Space l
-pr1 (h-space-Noncoherent-H-Space A) = {!!}
-pr1 (pr2 (h-space-Noncoherent-H-Space A)) = {!!}
-pr2 (pr2 (h-space-Noncoherent-H-Space A)) = {!!}
+h-space-Noncoherent-H-Space = {!!}
 ```
 
 ### The type of H-space structures on `A` is equivalent to the type of sections of `ev-point : (A → A) →∗ A`
@@ -147,5 +145,5 @@ module _
 compute-pointed-section-ev-point-Pointed-Type :
   {l : Level} (A : Pointed-Type l) →
   pointed-section-ev-point-Pointed-Type A ≃ coherent-unital-mul-Pointed-Type A
-compute-pointed-section-ev-point-Pointed-Type (pair A a) = {!!}
+compute-pointed-section-ev-point-Pointed-Type = {!!}
 ```

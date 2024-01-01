@@ -68,14 +68,13 @@ precomp-nullifying-hom-Group :
   {l1 l2 l3 l4 : Level} (G : Group l1) (N : Normal-Subgroup l2 G)
   (H : Group l3) (f : nullifying-hom-Group G H N)
   (K : Group l4) → hom-Group H K → nullifying-hom-Group G K N
-pr1 (precomp-nullifying-hom-Group G N H f K g) = {!!}
-pr2 (precomp-nullifying-hom-Group G N H f K g) h p = {!!}
+precomp-nullifying-hom-Group = {!!}
 
 universal-property-quotient-Group :
   {l1 l2 l3 : Level} (G : Group l1)
   (N : Normal-Subgroup l2 G) (Q : Group l3)
   (q : nullifying-hom-Group G Q N) → UUω
-universal-property-quotient-Group G N Q q = {!!}
+universal-property-quotient-Group = {!!}
 ```
 
 ### The quotient group
@@ -180,7 +179,7 @@ module _
       ( equivalence-relation-congruence-Normal-Subgroup G N)
       ( equivalence-relation-congruence-Normal-Subgroup G N)
       ( equivalence-relation-congruence-Normal-Subgroup G N)
-  pr1 binary-hom-mul-quotient-Group = {!!}
+  binary-hom-mul-quotient-Group = {!!}
 
   mul-quotient-Group :
     (x y : type-quotient-Group G N) → type-quotient-Group G N
@@ -188,7 +187,7 @@ module _
 
   mul-quotient-Group' :
     (x y : type-quotient-Group G N) → type-quotient-Group G N
-  mul-quotient-Group' x y = {!!}
+  mul-quotient-Group' = {!!}
 
   abstract
     compute-mul-quotient-Group :
@@ -203,7 +202,7 @@ module _
     hom-equivalence-relation
       ( equivalence-relation-congruence-Normal-Subgroup G N)
       ( equivalence-relation-congruence-Normal-Subgroup G N)
-  pr1 hom-inv-quotient-Group = {!!}
+  hom-inv-quotient-Group = {!!}
 
   inv-quotient-Group : type-quotient-Group G N → type-quotient-Group G N
   inv-quotient-Group = {!!}
@@ -282,7 +281,7 @@ module _
       (x : type-Group G) →
       map-quotient-hom-Group G N (inv-Group G x) ＝
       inv-quotient-Group G N (map-quotient-hom-Group G N x)
-    preserves-inv-quotient-hom-Group x = {!!}
+    preserves-inv-quotient-hom-Group = {!!}
 
   quotient-hom-Group : hom-Group G (quotient-Group G N)
   pr1 quotient-hom-Group = {!!}
@@ -292,7 +291,7 @@ module _
       ( quotient-Group G N)
       ( quotient-hom-Group)
       ( N)
-  nullifies-normal-subgroup-quotient-hom-Group x n = {!!}
+  nullifies-normal-subgroup-quotient-hom-Group = {!!}
 
   nullifying-quotient-hom-Group : nullifying-hom-Group G (quotient-Group G N) N
   pr1 nullifying-quotient-hom-Group = {!!}
@@ -401,7 +400,7 @@ module _
         ( equivalence-relation-congruence-Normal-Subgroup G N)
         ( type-Group H))
       ( λ f → preserves-mul-Group G H (pr1 f))
-  top-triangle-is-quotient-group-quotient-Group H = {!!}
+  top-triangle-is-quotient-group-quotient-Group = {!!}
 
   triangle-is-quotient-group-quotient-Group :
     {l : Level} (H : Group l) →
@@ -412,20 +411,20 @@ module _
         ( H))
       ( map-equiv (compute-nullifying-hom-Group G H N))
       ( top-triangle-is-quotient-group-quotient-Group H)
-  triangle-is-quotient-group-quotient-Group H x = {!!}
+  triangle-is-quotient-group-quotient-Group = {!!}
 
   abstract
     is-equiv-top-triangle-is-quotient-group-quotient-Group :
       {l : Level} (H : Group l) →
       is-equiv (top-triangle-is-quotient-group-quotient-Group H)
-    is-equiv-top-triangle-is-quotient-group-quotient-Group H = {!!}
+    is-equiv-top-triangle-is-quotient-group-quotient-Group = {!!}
 
   abstract
     is-quotient-group-quotient-Group :
       universal-property-quotient-Group G N
         ( quotient-Group G N)
         ( nullifying-quotient-hom-Group G N)
-    is-quotient-group-quotient-Group H = {!!}
+    is-quotient-group-quotient-Group = {!!}
 ```
 
 ### The unique mapping property of the quotient group
@@ -467,14 +466,14 @@ module _
                     ( H)
                     ( g)))
                 ( hom-nullifying-hom-Group G H N f)))
-    unique-mapping-property-quotient-Group f = {!!}
+    unique-mapping-property-quotient-Group = {!!}
 
   abstract
     hom-universal-property-quotient-Group :
       (f : hom-Group G H)
       (n : nullifies-normal-subgroup-hom-Group G H f N) →
       hom-Group (quotient-Group G N) H
-    hom-universal-property-quotient-Group f n = {!!}
+    hom-universal-property-quotient-Group = {!!}
 
     compute-hom-universal-property-quotient-Group :
       (f : hom-Group G H)
@@ -487,7 +486,7 @@ module _
             ( H)
             ( hom-universal-property-quotient-Group f n)))
         ( hom-nullifying-hom-Group G H N (f , n))
-    compute-hom-universal-property-quotient-Group f n = {!!}
+    compute-hom-universal-property-quotient-Group = {!!}
 ```
 
 ## Properties
@@ -510,5 +509,5 @@ module _
       {x : type-Group G} →
       is-in-kernel-hom-Group G (quotient-Group G N) (quotient-hom-Group G N) x →
       is-in-Normal-Subgroup G N x
-    is-in-normal-subgroup-is-in-kernel-quotient-hom-Group {x} H = {!!}
+    is-in-normal-subgroup-is-in-kernel-quotient-hom-Group = {!!}
 ```

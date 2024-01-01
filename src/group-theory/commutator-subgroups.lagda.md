@@ -48,7 +48,7 @@ module _
 
   family-of-commutators-Group :
     type-Group G × type-Group G → type-Group G
-  family-of-commutators-Group x = {!!}
+  family-of-commutators-Group = {!!}
 
   commutator-subgroup-Group : Subgroup l G
   commutator-subgroup-Group = {!!}
@@ -89,7 +89,7 @@ module _
   contains-commutator-commutator-subgroup-Group :
     (x y : type-Group G) →
     is-in-commutator-subgroup-Group (commutator-Group G x y)
-  contains-commutator-commutator-subgroup-Group x y = {!!}
+  contains-commutator-commutator-subgroup-Group = {!!}
 
   is-subgroup-generated-by-family-of-commutators-commutator-subgroup-Group :
     is-subgroup-generated-by-family-of-elements-Group G

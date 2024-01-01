@@ -29,7 +29,7 @@ nilpotent elements.
 ```agda
 subset-nilradical-Commutative-Semiring :
   {l : Level} (A : Commutative-Semiring l) → subset-Commutative-Semiring l A
-subset-nilradical-Commutative-Semiring A = {!!}
+subset-nilradical-Commutative-Semiring = {!!}
 ```
 
 ## Properties
@@ -41,7 +41,7 @@ contains-zero-nilradical-Commutative-Semiring :
   {l : Level} (A : Commutative-Semiring l) →
   contains-zero-subset-Commutative-Semiring A
     ( subset-nilradical-Commutative-Semiring A)
-contains-zero-nilradical-Commutative-Semiring A = {!!}
+contains-zero-nilradical-Commutative-Semiring = {!!}
 ```
 
 ### The nilradical is closed under addition
@@ -51,7 +51,7 @@ is-closed-under-add-nilradical-Commutative-Semiring :
   {l : Level} (A : Commutative-Semiring l) →
   is-closed-under-addition-subset-Commutative-Semiring A
     ( subset-nilradical-Commutative-Semiring A)
-is-closed-under-add-nilradical-Commutative-Semiring A x y = {!!}
+is-closed-under-add-nilradical-Commutative-Semiring = {!!}
 ```
 
 ### The nilradical is closed under multiplication with ring elements
@@ -64,10 +64,10 @@ module _
   is-closed-under-right-multiplication-nilradical-Commutative-Semiring :
     is-closed-under-right-multiplication-subset-Commutative-Semiring A
       ( subset-nilradical-Commutative-Semiring A)
-  is-closed-under-right-multiplication-nilradical-Commutative-Semiring x y = {!!}
+  is-closed-under-right-multiplication-nilradical-Commutative-Semiring = {!!}
 
   is-closed-under-left-multiplication-nilradical-Commutative-Semiring :
     is-closed-under-left-multiplication-subset-Commutative-Semiring A
       ( subset-nilradical-Commutative-Semiring A)
-  is-closed-under-left-multiplication-nilradical-Commutative-Semiring x y = {!!}
+  is-closed-under-left-multiplication-nilradical-Commutative-Semiring = {!!}
 ```

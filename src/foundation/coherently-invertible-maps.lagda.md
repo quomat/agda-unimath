@@ -39,7 +39,7 @@ abstract
   is-prop-is-coherently-invertible :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
     is-prop (is-coherently-invertible f)
-  is-prop-is-coherently-invertible {A = A} {B} f = {!!}
+  is-prop-is-coherently-invertible = {!!}
 
 abstract
   is-equiv-is-coherently-invertible-is-equiv :

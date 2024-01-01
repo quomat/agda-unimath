@@ -71,7 +71,7 @@ unit-trunc-Set = {!!}
 
 is-set-truncation-trunc-Set :
   {l1 : Level} (A : UU l1) → is-set-truncation (trunc-Set A) unit-trunc-Set
-is-set-truncation-trunc-Set A = {!!}
+is-set-truncation-trunc-Set = {!!}
 ```
 
 ## Properties
@@ -117,7 +117,7 @@ module _
 universal-property-trunc-Set :
   {l1 : Level} (A : UU l1) →
   universal-property-set-truncation (trunc-Set A) (unit-trunc-Set)
-universal-property-trunc-Set A = {!!}
+universal-property-trunc-Set = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (B : Set l2)
@@ -129,7 +129,7 @@ module _
 
   apply-universal-property-trunc-Set :
     (t : type-trunc-Set A) → (A → type-Set B) → type-Set B
-  apply-universal-property-trunc-Set t f = {!!}
+  apply-universal-property-trunc-Set = {!!}
 
   map-universal-property-trunc-Set :
     (A → type-Set B) → hom-Set (trunc-Set A) B
@@ -143,7 +143,7 @@ module _
 apply-universal-property-trunc-Set' :
   {l1 l2 : Level} {A : UU l1} (t : type-trunc-Set A) (B : Set l2) →
   (A → type-Set B) → type-Set B
-apply-universal-property-trunc-Set' t B f = {!!}
+apply-universal-property-trunc-Set' = {!!}
 ```
 
 ### The set truncation of `X` is the set quotient by the mere equality relation
@@ -154,7 +154,7 @@ reflecting-map-mere-eq-unit-trunc-Set :
   reflecting-map-equivalence-relation
     ( mere-eq-equivalence-relation A)
     ( type-trunc-Set A)
-reflecting-map-mere-eq-unit-trunc-Set A = {!!}
+reflecting-map-mere-eq-unit-trunc-Set = {!!}
 
 abstract
   is-set-quotient-trunc-Set :
@@ -163,7 +163,7 @@ abstract
       ( mere-eq-equivalence-relation A)
       ( trunc-Set A)
       ( reflecting-map-mere-eq-unit-trunc-Set A)
-  is-set-quotient-trunc-Set A = {!!}
+  is-set-quotient-trunc-Set = {!!}
 
 module _
   {l : Level}
@@ -175,7 +175,7 @@ module _
       is-surjective-and-effective
         ( mere-eq-equivalence-relation A)
         ( unit-trunc-Set)
-    is-surjective-and-effective-unit-trunc-Set A = {!!}
+    is-surjective-and-effective-unit-trunc-Set = {!!}
 
   abstract
     is-surjective-unit-trunc-Set :
@@ -191,12 +191,12 @@ module _
   abstract
     apply-effectiveness-unit-trunc-Set :
       {A : UU l} {x y : A} → unit-trunc-Set x ＝ unit-trunc-Set y → mere-eq x y
-    apply-effectiveness-unit-trunc-Set {A = A} {x} {y} = {!!}
+    apply-effectiveness-unit-trunc-Set = {!!}
 
   abstract
     apply-effectiveness-unit-trunc-Set' :
       {A : UU l} {x y : A} → mere-eq x y → unit-trunc-Set x ＝ unit-trunc-Set y
-    apply-effectiveness-unit-trunc-Set' {A = A} {x} {y} = {!!}
+    apply-effectiveness-unit-trunc-Set' = {!!}
 
   emb-trunc-Set : (A : UU l) → type-trunc-Set A ↪ (A → Prop l)
   emb-trunc-Set A = {!!}
@@ -230,7 +230,7 @@ module _
   abstract
     is-set-truncation-is-equiv' :
       is-equiv h → is-set-truncation B f
-    is-set-truncation-is-equiv' Eh = {!!}
+    is-set-truncation-is-equiv' = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (B : Set l2) (f : A → type-Set B)
@@ -244,7 +244,7 @@ module _
   abstract
     is-set-truncation-is-equiv :
       is-equiv h → is-set-truncation B f
-    is-set-truncation-is-equiv Eh = {!!}
+    is-set-truncation-is-equiv = {!!}
 
 is-equiv-unit-trunc-Set :
   {l : Level} (A : Set l) → is-equiv (unit-trunc-Set {A = type-Set A})
@@ -260,12 +260,12 @@ equiv-unit-trunc-empty-Set = {!!}
 abstract
   is-empty-trunc-Set :
     {l : Level} {A : UU l} → is-empty A → is-empty (type-trunc-Set A)
-  is-empty-trunc-Set f x = {!!}
+  is-empty-trunc-Set = {!!}
 
 abstract
   is-empty-is-empty-trunc-Set :
     {l : Level} {A : UU l} → is-empty (type-trunc-Set A) → is-empty A
-  is-empty-is-empty-trunc-Set f = {!!}
+  is-empty-is-empty-trunc-Set = {!!}
 
 equiv-unit-trunc-unit-Set : unit ≃ type-trunc-Set unit
 equiv-unit-trunc-unit-Set = {!!}
@@ -273,7 +273,7 @@ equiv-unit-trunc-unit-Set = {!!}
 abstract
   is-contr-trunc-Set :
     {l : Level} {A : UU l} → is-contr A → is-contr (type-trunc-Set A)
-  is-contr-trunc-Set {l} {A} H = {!!}
+  is-contr-trunc-Set = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (B : Set l2) (f : A → type-Set B)

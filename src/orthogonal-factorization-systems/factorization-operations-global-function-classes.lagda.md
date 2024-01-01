@@ -47,7 +47,7 @@ module _
 
   factorization-operation-global-function-class-Level :
     (l1 l2 l3 : Level) → UU (βL l1 l3 ⊔ βR l3 l2 ⊔ lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  factorization-operation-global-function-class-Level l1 l2 l3 = {!!}
+  factorization-operation-global-function-class-Level = {!!}
 
   factorization-operation-global-function-class : UUω
   factorization-operation-global-function-class = {!!}
@@ -64,7 +64,7 @@ module _
 
   unique-factorization-operation-global-function-class-Level :
     (l1 l2 l3 : Level) → UU (βL l1 l3 ⊔ βR l3 l2 ⊔ lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  unique-factorization-operation-global-function-class-Level l1 l2 l3 = {!!}
+  unique-factorization-operation-global-function-class-Level = {!!}
 
   is-prop-unique-factorization-operation-global-function-class-Level :
     {l1 l2 l3 : Level} →
@@ -75,7 +75,7 @@ module _
   unique-factorization-operation-global-function-class-Level-Prop :
     (l1 l2 l3 : Level) →
     Prop (βL l1 l3 ⊔ βR l3 l2 ⊔ lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  unique-factorization-operation-global-function-class-Level-Prop l1 l2 l3 = {!!}
+  unique-factorization-operation-global-function-class-Level-Prop = {!!}
 
   unique-factorization-operation-global-function-class : UUω
   unique-factorization-operation-global-function-class = {!!}
@@ -92,7 +92,7 @@ module _
 
   mere-factorization-property-global-function-class-Level :
     (l1 l2 l3 : Level) → UU (βL l1 l3 ⊔ βR l3 l2 ⊔ lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  mere-factorization-property-global-function-class-Level l1 l2 l3 = {!!}
+  mere-factorization-property-global-function-class-Level = {!!}
 
   is-prop-mere-factorization-property-global-function-class-Level :
     {l1 l2 l3 : Level} →
@@ -102,7 +102,7 @@ module _
   mere-factorization-property-global-function-class-Prop :
     (l1 l2 l3 : Level) →
     Prop (βL l1 l3 ⊔ βR l3 l2 ⊔ lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  mere-factorization-property-global-function-class-Prop l1 l2 l3 = {!!}
+  mere-factorization-property-global-function-class-Prop = {!!}
 
   mere-factorization-property-global-function-class : UUω
   mere-factorization-property-global-function-class = {!!}

@@ -67,19 +67,19 @@ abstract
   cocone-standard-sequential-colimit :
     { l : Level} (A : sequential-diagram l) →
     cocone-sequential-diagram A (standard-sequential-colimit A)
-  cocone-standard-sequential-colimit A = {!!}
+  cocone-standard-sequential-colimit = {!!}
 
   dup-standard-sequential-colimit :
     { l : Level} {A : sequential-diagram l} →
     dependent-universal-property-sequential-colimit A
       ( cocone-standard-sequential-colimit A)
-  dup-standard-sequential-colimit {A = A} = {!!}
+  dup-standard-sequential-colimit = {!!}
 
   up-standard-sequential-colimit :
     { l : Level} {A : sequential-diagram l} →
     universal-property-sequential-colimit A
       (cocone-standard-sequential-colimit A)
-  up-standard-sequential-colimit {A = A} = {!!}
+  up-standard-sequential-colimit = {!!}
 
 module _
   { l : Level} {A : sequential-diagram l}
@@ -108,7 +108,7 @@ module _
   equiv-up-standard-sequential-colimit :
     { X : UU l2} →
     (standard-sequential-colimit A → X) ≃ (cocone-sequential-diagram A X)
-  pr1 equiv-up-standard-sequential-colimit = {!!}
+  equiv-up-standard-sequential-colimit = {!!}
 
   cogap-standard-sequential-colimit :
     { X : UU l2} →
@@ -121,7 +121,7 @@ module _
     ( dependent-cocone-sequential-diagram A
       ( cocone-standard-sequential-colimit A)
       ( P))
-  pr1 equiv-dup-standard-sequential-colimit = {!!}
+  equiv-dup-standard-sequential-colimit = {!!}
 
   dependent-cogap-standard-sequential-colimit :
     { P : standard-sequential-colimit A → UU l2} →

@@ -43,7 +43,7 @@ module _
 
   coherence-is-coherently-invertible :
     (f : A → B) (g : B → A) (G : (f ∘ g) ~ id) (H : (g ∘ f) ~ id) → UU (l1 ⊔ l2)
-  coherence-is-coherently-invertible f g G H = {!!}
+  coherence-is-coherently-invertible = {!!}
 
   is-coherently-invertible : (A → B) → UU (l1 ⊔ l2)
   is-coherently-invertible f = {!!}
@@ -91,7 +91,7 @@ module _
 coh-is-coherently-invertible-id :
   {l : Level} {A : UU l} {f : A → A} (H : f ~ (λ x → x)) →
   (x : A) → H (f x) ＝ ap f (H x)
-coh-is-coherently-invertible-id {_} {A} {f} H x = {!!}
+coh-is-coherently-invertible-id = {!!}
 ```
 
 #### The proof that invertible maps are coherently invertible
@@ -104,7 +104,7 @@ module _
   abstract
     is-section-map-inv-is-invertible :
       (H : is-invertible f) → (f ∘ map-inv-is-invertible H) ~ id
-    is-section-map-inv-is-invertible H y = {!!}
+    is-section-map-inv-is-invertible = {!!}
 
     is-retraction-map-inv-is-invertible :
       (H : is-invertible f) → (map-inv-is-invertible H ∘ f) ~ id
@@ -114,12 +114,12 @@ module _
       ( H : is-invertible f) →
       ( is-section-map-inv-is-invertible H ·r f) ~
       ( f ·l is-retraction-map-inv-is-invertible H)
-    coherence-map-inv-is-invertible H x = {!!}
+    coherence-map-inv-is-invertible = {!!}
 
   abstract
     is-coherently-invertible-is-invertible :
       (H : is-invertible f) → is-coherently-invertible f
-    pr1 (is-coherently-invertible-is-invertible H) = {!!}
+    is-coherently-invertible-is-invertible = {!!}
 ```
 
 ## See also

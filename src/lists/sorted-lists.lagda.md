@@ -47,7 +47,7 @@ module _
 
   is-prop-is-sorted-list :
     (l : list (type-Decidable-Total-Order X)) → is-prop (is-sorted-list l)
-  is-prop-is-sorted-list l = {!!}
+  is-prop-is-sorted-list = {!!}
 ```
 
 ### The proposition that an element is less or equal than every element in a list
@@ -56,12 +56,12 @@ module _
   is-least-element-list-Prop :
     type-Decidable-Total-Order X →
     list (type-Decidable-Total-Order X) → Prop l2
-  is-least-element-list-Prop x nil = {!!}
+  is-least-element-list-Prop = {!!}
 
   is-least-element-list :
     type-Decidable-Total-Order X →
     list (type-Decidable-Total-Order X) → UU l2
-  is-least-element-list x l = {!!}
+  is-least-element-list = {!!}
 ```
 
 ## Properties
@@ -72,7 +72,7 @@ module _
   is-sorted-tail-is-sorted-list :
     (l : list (type-Decidable-Total-Order X)) →
     is-sorted-list l → is-sorted-list (tail-list l)
-  is-sorted-tail-is-sorted-list nil _ = {!!}
+  is-sorted-tail-is-sorted-list = {!!}
 ```
 
 ### If a list is sorted then its head is less or equal than every element in the list
@@ -85,7 +85,7 @@ module _
     z ∈-list (cons y l) →
     leq-Decidable-Total-Order X x y →
     leq-Decidable-Total-Order X x z
-  leq-element-in-list-leq-head-is-sorted-list x .z z l s (is-head .z l) q = {!!}
+  leq-element-in-list-leq-head-is-sorted-list = {!!}
 ```
 
 ### An equivalent definition of being sorted
@@ -93,16 +93,16 @@ module _
 ```agda
   is-sorted-least-element-list-Prop :
     list (type-Decidable-Total-Order X) → Prop l2
-  is-sorted-least-element-list-Prop nil = {!!}
+  is-sorted-least-element-list-Prop = {!!}
 
   is-sorted-least-element-list :
     list (type-Decidable-Total-Order X) → UU l2
-  is-sorted-least-element-list l = {!!}
+  is-sorted-least-element-list = {!!}
 
   is-sorted-list-is-sorted-least-element-list :
     (l : list (type-Decidable-Total-Order X)) →
     is-sorted-least-element-list l → is-sorted-list l
-  is-sorted-list-is-sorted-least-element-list nil _ = {!!}
+  is-sorted-list-is-sorted-least-element-list = {!!}
 ```
 
 ### If a vector `v` of length `n` is sorted, then the list `list-vec n v` is also sorted
@@ -112,5 +112,5 @@ module _
     (n : ℕ) (v : vec (type-Decidable-Total-Order X) n) →
     is-sorted-vec X v →
     is-sorted-list (list-vec n v)
-  is-sorted-list-is-sorted-vec 0 v S = {!!}
+  is-sorted-list-is-sorted-vec = {!!}
 ```

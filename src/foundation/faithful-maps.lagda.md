@@ -60,7 +60,7 @@ module _
   emb-ap-faithful-map :
     (f : faithful-map A B) {x y : A} →
     (x ＝ y) ↪ (map-faithful-map f x ＝ map-faithful-map f y)
-  pr1 (emb-ap-faithful-map f {x} {y}) = {!!}
+  emb-ap-faithful-map = {!!}
 
   is-faithful-is-emb : {f : A → B} → is-emb f → is-faithful f
   is-faithful-is-emb {f} H x y = {!!}
@@ -124,7 +124,7 @@ module _
 
   pr1-faithful-map :
     (B : A → Set l2) → faithful-map (Σ A (λ x → type-Set (B x))) A
-  pr1 (pr1-faithful-map B) = {!!}
+  pr1-faithful-map = {!!}
 ```
 
 ### Faithful maps are closed under homotopies
@@ -150,13 +150,13 @@ module _
     is-faithful-comp :
       (g : B → X) (h : A → B) →
       is-faithful g → is-faithful h → is-faithful (g ∘ h)
-    is-faithful-comp g h is-faithful-g is-faithful-h = {!!}
+    is-faithful-comp = {!!}
 
   abstract
     is-faithful-left-map-triangle :
       (f : A → X) (g : B → X) (h : A → B) (H : f ~ (g ∘ h)) →
       is-faithful g → is-faithful h → is-faithful f
-    is-faithful-left-map-triangle f g h H is-faithful-g is-faithful-h = {!!}
+    is-faithful-left-map-triangle = {!!}
 ```
 
 ### If a composite is faithful, then its right factor is faithful
@@ -169,12 +169,12 @@ module _
   is-faithful-right-factor :
     (g : B → X) (h : A → B) →
     is-faithful g → is-faithful (g ∘ h) → is-faithful h
-  is-faithful-right-factor g h is-faithful-g is-faithful-gh = {!!}
+  is-faithful-right-factor = {!!}
 
   is-faithful-top-map-triangle :
     (f : A → X) (g : B → X) (h : A → B) (H : f ~ (g ∘ h)) →
     is-faithful g → is-faithful f → is-faithful h
-  is-faithful-top-map-triangle f g h H is-faithful-g is-faithful-f = {!!}
+  is-faithful-top-map-triangle = {!!}
 ```
 
 ### The map on total spaces induced by a family of truncated maps is truncated
@@ -194,7 +194,7 @@ module _
 
   tot-faithful-map :
     ((x : A) → faithful-map (B x) (C x)) → faithful-map (Σ A B) (Σ A C)
-  pr1 (tot-faithful-map f) = {!!}
+  tot-faithful-map = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2}
@@ -207,12 +207,12 @@ module _
     abstract
       is-faithful-map-Σ-map-base :
         is-faithful f → is-faithful (map-Σ-map-base f C)
-      is-faithful-map-Σ-map-base H = {!!}
+      is-faithful-map-Σ-map-base = {!!}
 
   faithful-map-Σ-faithful-map-base :
     (f : faithful-map A B) (C : B → UU l3) →
     faithful-map (Σ A (λ a → C (map-faithful-map f a))) (Σ B C)
-  pr1 (faithful-map-Σ-faithful-map-base f C) = {!!}
+  faithful-map-Σ-faithful-map-base = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {C : A → UU l3}
@@ -221,5 +221,5 @@ module _
 
   is-faithful-map-Σ :
     is-faithful f → ((x : A) → is-faithful (g x)) → is-faithful (map-Σ D f g)
-  is-faithful-map-Σ H K = {!!}
+  is-faithful-map-Σ = {!!}
 ```

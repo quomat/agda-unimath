@@ -50,11 +50,11 @@ module _
 
   nullifies-normal-subgroup-prop-hom-Group :
     hom-Group G K → Normal-Subgroup l3 G → Prop (l1 ⊔ l2 ⊔ l3)
-  nullifies-normal-subgroup-prop-hom-Group f H = {!!}
+  nullifies-normal-subgroup-prop-hom-Group = {!!}
 
   nullifies-normal-subgroup-hom-Group :
     hom-Group G K → Normal-Subgroup l3 G → UU (l1 ⊔ l2 ⊔ l3)
-  nullifies-normal-subgroup-hom-Group f H = {!!}
+  nullifies-normal-subgroup-hom-Group = {!!}
 ```
 
 ### Group homomorphisms that nullify a normal subgroup, i.e., that contain a normal subgroup in their kernel
@@ -94,7 +94,7 @@ module _
     reflects-equivalence-relation
       ( equivalence-relation-congruence-Normal-Subgroup G H)
       ( map-hom-Group G K f)
-  reflects-equivalence-relation-nullifies-normal-subgroup-hom-Group f p α = {!!}
+  reflects-equivalence-relation-nullifies-normal-subgroup-hom-Group = {!!}
 
   nullifies-normal-subgroup-reflects-equivalence-relation-hom-Group :
     (f : hom-Group G K) →
@@ -102,7 +102,7 @@ module _
       ( equivalence-relation-congruence-Normal-Subgroup G H)
       ( map-hom-Group G K f) →
     nullifies-normal-subgroup-hom-Group G K f H
-  nullifies-normal-subgroup-reflects-equivalence-relation-hom-Group f p x q = {!!}
+  nullifies-normal-subgroup-reflects-equivalence-relation-hom-Group = {!!}
 
   compute-nullifying-hom-Group :
     Σ ( reflecting-map-equivalence-relation
@@ -126,7 +126,7 @@ module _
     nullifying-hom-Group H K M →
     reflecting-hom-Group G H N M →
     hom-Group G K
-  hom-comp-nullifying-hom-reflecting-hom-Group g f = {!!}
+  hom-comp-nullifying-hom-reflecting-hom-Group = {!!}
 
   nullifies-normal-subgroup-comp-nullifying-hom-reflecting-hom-Group :
     ( g : nullifying-hom-Group H K M)
@@ -134,13 +134,13 @@ module _
     nullifies-normal-subgroup-hom-Group G K
       ( hom-comp-nullifying-hom-reflecting-hom-Group g f)
       ( N)
-  nullifies-normal-subgroup-comp-nullifying-hom-reflecting-hom-Group g f x n = {!!}
+  nullifies-normal-subgroup-comp-nullifying-hom-reflecting-hom-Group = {!!}
 
   comp-nullifying-hom-reflecting-hom-Group :
     nullifying-hom-Group H K M →
     reflecting-hom-Group G H N M →
     nullifying-hom-Group G K N
-  pr1 (comp-nullifying-hom-reflecting-hom-Group g f) = {!!}
+  comp-nullifying-hom-reflecting-hom-Group = {!!}
 ```
 
 ## See also

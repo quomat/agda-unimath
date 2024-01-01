@@ -29,11 +29,11 @@ module _
 
   is-downwards-closed-subtype-Preorder :
     {l3 : Level} (S : subtype l3 (type-Preorder P)) → UU (l1 ⊔ l2 ⊔ l3)
-  is-downwards-closed-subtype-Preorder S = {!!}
+  is-downwards-closed-subtype-Preorder = {!!}
 
 lower-type-Preorder :
   {l1 l2 : Level} (l3 : Level) → Preorder l1 l2 → UU (l1 ⊔ l2 ⊔ lsuc l3)
-lower-type-Preorder l3 P = {!!}
+lower-type-Preorder = {!!}
 
 module _
   {l1 l2 l3 : Level} (P : Preorder l1 l2) (L : lower-type-Preorder l3 P)

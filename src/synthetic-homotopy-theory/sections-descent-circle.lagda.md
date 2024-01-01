@@ -50,7 +50,7 @@ A fixpoint of `(X, e)` is a fixpoint of `e`.
 fixpoint-descent-data-circle :
   { l1 : Level}
   ( P : descent-data-circle l1) → UU l1
-fixpoint-descent-data-circle P = {!!}
+fixpoint-descent-data-circle = {!!}
 ```
 
 ## Properties
@@ -70,12 +70,12 @@ module _
       ( loop-free-loop l)
       ( map-equiv-family-with-descent-data-circle A x)
       ( map-equiv-family-with-descent-data-circle A y)
-  map-compute-dependent-identification-loop-circle x y q = {!!}
+  map-compute-dependent-identification-loop-circle = {!!}
 
   is-equiv-map-compute-dependent-identification-loop-circle :
     ( x y : type-family-with-descent-data-circle A) →
     is-equiv (map-compute-dependent-identification-loop-circle x y)
-  is-equiv-map-compute-dependent-identification-loop-circle x y = {!!}
+  is-equiv-map-compute-dependent-identification-loop-circle = {!!}
 
   compute-dependent-identification-loop-circle :
     ( x y : type-family-with-descent-data-circle A) →
@@ -85,7 +85,7 @@ module _
       ( loop-free-loop l)
       ( map-equiv-family-with-descent-data-circle A x)
       ( map-equiv-family-with-descent-data-circle A y))
-  pr1 (compute-dependent-identification-loop-circle x y) = {!!}
+  compute-dependent-identification-loop-circle = {!!}
 ```
 
 ```agda
@@ -98,7 +98,7 @@ module _
     ( (x : S) → family-family-with-descent-data-circle A x) →
     ( fixpoint-descent-data-circle
       ( descent-data-family-with-descent-data-circle A))
-  pr1 (ev-fixpoint-descent-data-circle s) = {!!}
+  ev-fixpoint-descent-data-circle = {!!}
 
   equiv-fixpoint-descent-data-circle-free-dependent-loop :
     ( fixpoint-descent-data-circle
@@ -117,7 +117,7 @@ module _
       ( ev-free-loop-Π l (family-family-with-descent-data-circle A))
       ( comparison-fixpoint-descent-data-circle)
       ( ev-fixpoint-descent-data-circle)
-  triangle-comparison-fixpoint-descent-data-circle s = {!!}
+  triangle-comparison-fixpoint-descent-data-circle = {!!}
 
   is-equiv-comparison-fixpoint-descent-data-circle :
     is-equiv comparison-fixpoint-descent-data-circle
@@ -126,14 +126,14 @@ module _
   is-equiv-ev-fixpoint-descent-data-circle :
     ( dependent-universal-property-circle l2 l) →
     is-equiv ev-fixpoint-descent-data-circle
-  is-equiv-ev-fixpoint-descent-data-circle dup-circle = {!!}
+  is-equiv-ev-fixpoint-descent-data-circle = {!!}
 
   equiv-ev-fixpoint-descent-data-circle :
     ( dependent-universal-property-circle l2 l) →
     ( (x : S) → (family-family-with-descent-data-circle A) x) ≃
     ( fixpoint-descent-data-circle
       ( descent-data-family-with-descent-data-circle A))
-  pr1 (equiv-ev-fixpoint-descent-data-circle dup-circle) = {!!}
+  equiv-ev-fixpoint-descent-data-circle = {!!}
 
   compute-ev-fixpoint-descent-data-circle :
     coherence-square-maps

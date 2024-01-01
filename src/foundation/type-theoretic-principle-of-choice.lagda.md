@@ -48,17 +48,17 @@ module _
 
   htpy-universally-structured-Π :
     (t t' : universally-structured-Π C) → UU (l1 ⊔ l2 ⊔ l3)
-  htpy-universally-structured-Π t t' = {!!}
+  htpy-universally-structured-Π = {!!}
 
   extensionality-universally-structured-Π :
     (t t' : universally-structured-Π C) →
     (t ＝ t') ≃ htpy-universally-structured-Π t t'
-  extensionality-universally-structured-Π (f , g) = {!!}
+  extensionality-universally-structured-Π = {!!}
 
   eq-htpy-universally-structured-Π :
     {t t' : universally-structured-Π C} →
     htpy-universally-structured-Π t t' → t ＝ t'
-  eq-htpy-universally-structured-Π {t} {t'} = {!!}
+  eq-htpy-universally-structured-Π = {!!}
 ```
 
 ### Characterizing the identity type of `universally-structured-implicit-Π`
@@ -70,17 +70,17 @@ module _
 
   htpy-universally-structured-implicit-Π :
     (t t' : universally-structured-implicit-Π C) → UU (l1 ⊔ l2 ⊔ l3)
-  htpy-universally-structured-implicit-Π t t' = {!!}
+  htpy-universally-structured-implicit-Π = {!!}
 
   extensionality-universally-structured-implicit-Π :
     (t t' : universally-structured-implicit-Π C) →
     (t ＝ t') ≃ htpy-universally-structured-implicit-Π t t'
-  extensionality-universally-structured-implicit-Π (f , g) = {!!}
+  extensionality-universally-structured-implicit-Π = {!!}
 
   eq-htpy-universally-structured-implicit-Π :
     {t t' : universally-structured-implicit-Π C} →
     htpy-universally-structured-implicit-Π t t' → t ＝ t'
-  eq-htpy-universally-structured-implicit-Π {t} {t'} = {!!}
+  eq-htpy-universally-structured-implicit-Π = {!!}
 ```
 
 ## Corollaries

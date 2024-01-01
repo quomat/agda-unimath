@@ -84,7 +84,7 @@ module _
 
   ind-Well-Founded-Relation :
     ({x : X} → ({y : X} → y ϵ x → P y) → P x) → (x : X) → P x
-  ind-Well-Founded-Relation IH x = {!!}
+  ind-Well-Founded-Relation = {!!}
 ```
 
 ### A well-founded relation is asymmetric (and thus irreflexive)
@@ -96,7 +96,7 @@ module _
 
   is-asymmetric-Well-Founded-Relation :
     is-asymmetric _ϵ_
-  is-asymmetric-Well-Founded-Relation x y = {!!}
+  is-asymmetric-Well-Founded-Relation = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} (ϵ : Well-Founded-Relation l2 X)

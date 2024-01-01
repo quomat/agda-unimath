@@ -63,17 +63,17 @@ in each variable.
 outer-eckmann-hilton-interchange-connection-Ω² :
   {l : Level} {A : UU l} {a : A} (α δ : type-Ω² a) →
   Id (horizontal-concat-Ω² α δ) (vertical-concat-Ω² α δ)
-outer-eckmann-hilton-interchange-connection-Ω² α δ = {!!}
+outer-eckmann-hilton-interchange-connection-Ω² = {!!}
 
 inner-eckmann-hilton-interchange-connection-Ω² :
   {l : Level} {A : UU l} {a : A} (β γ : type-Ω² a) →
   Id ( horizontal-concat-Ω² β γ) (vertical-concat-Ω² γ β)
-inner-eckmann-hilton-interchange-connection-Ω² β γ = {!!}
+inner-eckmann-hilton-interchange-connection-Ω² = {!!}
 
 eckmann-hilton-interchange-Ω² :
   {l : Level} {A : UU l} {a : A} (α β : type-Ω² a) →
   Id (α ∙ β) (β ∙ α)
-eckmann-hilton-interchange-Ω² α β = {!!}
+eckmann-hilton-interchange-Ω² = {!!}
 
 interchange-concat-Ω² :
   {l : Level} {A : UU l} {a : A} (α β γ δ : type-Ω² a) →
@@ -154,7 +154,7 @@ module _
 
   eckmann-hilton-Ω² :
     (α β : type-Ω² (point-Pointed-Type A)) → α ∙ β ＝ β ∙ α
-  eckmann-hilton-Ω² α β = {!!}
+  eckmann-hilton-Ω² = {!!}
 ```
 
 #### Using right whiskering
@@ -179,7 +179,7 @@ module _
 
   eckmann-hilton-inverse-Ω² :
     (α β : type-Ω² (point-Pointed-Type A)) → α ∙ β ＝ β ∙ α
-  eckmann-hilton-inverse-Ω² α β = {!!}
+  eckmann-hilton-inverse-Ω² = {!!}
 ```
 
 We now prove that this Eckmann-Hilton identification "undoes" the previously
@@ -205,7 +205,7 @@ module _
   eckmann-hilton-inverse-Ω²-undoes-eckmann-hilton-Ω² :
     (α β : type-Ω² (point-Pointed-Type A)) →
     inv (eckmann-hilton-inverse-Ω² β α) ＝ (eckmann-hilton-Ω² α β)
-  eckmann-hilton-inverse-Ω²-undoes-eckmann-hilton-Ω² α β = {!!}
+  eckmann-hilton-inverse-Ω²-undoes-eckmann-hilton-Ω² = {!!}
 ```
 
 ## Properties

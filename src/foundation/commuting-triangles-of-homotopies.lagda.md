@@ -43,11 +43,11 @@ module _
 
   coherence-triangle-homotopies :
     (left : f ~ h) (right : g ~ h) (top : f ~ g) → UU (l1 ⊔ l2)
-  coherence-triangle-homotopies left right top = {!!}
+  coherence-triangle-homotopies = {!!}
 
   coherence-triangle-homotopies' :
     (left : f ~ h) (right : g ~ h) (top : f ~ g) → UU (l1 ⊔ l2)
-  coherence-triangle-homotopies' left right top = {!!}
+  coherence-triangle-homotopies' = {!!}
 ```
 
 ## Properties
@@ -65,7 +65,7 @@ module _
   distributivity-left-whisk :
     coherence-triangle-homotopies left right top →
     (i ·l left) ~ ((i ·l top) ∙h (i ·l right))
-  distributivity-left-whisk T x = {!!}
+  distributivity-left-whisk = {!!}
 ```
 
 ### Left whiskering triangles of homotopies

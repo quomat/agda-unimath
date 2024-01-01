@@ -82,7 +82,7 @@ module _
     orientation-Complete-Undirected-Graph →
     orientation-Complete-Undirected-Graph →
     2-Element-Decidable-Subtype l (type-UU-Fin n X) → Decidable-Prop l
-  pr1 (2-Element-Decidable-Subtype-subtype-pointwise-difference d d' Y) = {!!}
+  2-Element-Decidable-Subtype-subtype-pointwise-difference = {!!}
 module _
   {l : Level} (n : ℕ)
   where
@@ -91,7 +91,7 @@ module _
     (type-UU-Fin n X ≃ type-UU-Fin n X') →
     orientation-Complete-Undirected-Graph n X →
     orientation-Complete-Undirected-Graph n X'
-  pr1 (map-orientation-complete-undirected-graph-equiv X X' e d Y) = {!!}
+  map-orientation-complete-undirected-graph-equiv = {!!}
 ```
 
 </details>
@@ -128,7 +128,7 @@ module _
     orientation-Complete-Undirected-Graph
       ( number-of-elements-count eX)
       ( pair X (unit-trunc-Prop (equiv-count eX)))
-  orientation-aut-count e Y = {!!}
+  orientation-aut-count = {!!}
 
   cases-orientation-two-elements-count :
     ( i j : X)
@@ -155,7 +155,7 @@ module _
     orientation-Complete-Undirected-Graph
       ( number-of-elements-count eX)
       ( pair X (unit-trunc-Prop (equiv-count eX)))
-  orientation-two-elements-count i j np Y = {!!}
+  orientation-two-elements-count = {!!}
 
   first-element-count : X
   first-element-count = {!!}
@@ -166,7 +166,7 @@ module _
   abstract
     distinct-two-elements-count :
       first-element-count ≠ second-element-count
-    distinct-two-elements-count p = {!!}
+    distinct-two-elements-count = {!!}
 
   canonical-2-Element-Decidable-Subtype-count :
     2-Element-Decidable-Subtype l X
@@ -208,7 +208,7 @@ module _
       Id
         ( pr1 (orientation-two-elements-count i j np Y))
         ( x)
-    inward-edge-left-two-elements-orientation-count i j np Y x p1 p2 nq nr = {!!}
+    inward-edge-left-two-elements-orientation-count = {!!}
 
     cases-inward-edge-left-transposition-orientation-count :
       (i j : X) (np : i ≠ j)
@@ -249,7 +249,7 @@ module _
                 ( np)))
             ( Y)))
         ( x)
-    inward-edge-left-transposition-orientation-count i j np Y x p1 p2 nq nr = {!!}
+    inward-edge-left-transposition-orientation-count = {!!}
 
     cases-inward-edge-right-two-elements-orientation-count :
       (i j : X) (np : i ≠ j)
@@ -274,7 +274,7 @@ module _
       Id
         ( pr1 (orientation-two-elements-count i j np Y))
         ( x)
-    inward-edge-right-two-elements-orientation-count i j np Y x p1 p2 nq nr = {!!}
+    inward-edge-right-two-elements-orientation-count = {!!}
 
     cases-inward-edge-right-transposition-orientation-count :
       (i j : X) (np : i ≠ j)
@@ -311,7 +311,7 @@ module _
                 ( np)))
             ( Y)))
         ( x)
-    inward-edge-right-transposition-orientation-count i j np Y x p1 p2 nq nr = {!!}
+    inward-edge-right-transposition-orientation-count = {!!}
 
     cases-eq-orientation-two-elements-count :
       ( i j : X)
@@ -354,7 +354,7 @@ module _
               ( has-decidable-equality-count eX)
               ( np))))
         ( j)
-    eq-orientation-two-elements-count i j np = {!!}
+    eq-orientation-two-elements-count = {!!}
 
   cases-eq-orientation-aut-orientation-two-elements-count-left :
     ( i j : X) (np : i ≠ j) →
@@ -464,7 +464,7 @@ module _
             ( has-decidable-equality-count eX)
             ( np))))
       ( orientation-two-elements-count j i (np ∘ inv)))
-  cases-eq-orientation-aut-orientation-two-elements-count i j np (inl q) = {!!}
+  cases-eq-orientation-aut-orientation-two-elements-count = {!!}
 
   eq-orientation-aut-orientation-two-elements-count :
     ( i j : X) (np : i ≠ j) →
@@ -482,7 +482,7 @@ module _
             ( has-decidable-equality-count eX)
             ( np))))
       ( orientation-two-elements-count j i (np ∘ inv)))
-  eq-orientation-aut-orientation-two-elements-count i j np = {!!}
+  eq-orientation-aut-orientation-two-elements-count = {!!}
 
   cases-eq-map-orientation-transposition-orientation-two-elements-count :
     ( i j : X) (np : i ≠ j)
@@ -531,7 +531,7 @@ module _
             ( np)))
         ( orientation-two-elements-count i j np))
       ( orientation-two-elements-count j i (np ∘ inv))
-  eq-map-orientation-transposition-orientation-two-elements-count i j np = {!!}
+  eq-map-orientation-transposition-orientation-two-elements-count = {!!}
 
   equiv-fin-1-difference-orientation-two-elements-count :
     ( i j : X) (np : i ≠ j) →
@@ -544,7 +544,7 @@ module _
           ( orientation-two-elements-count i j np)
           ( orientation-two-elements-count j i (np ∘ inv))
           ( Y)))
-  pr1 (pr1 (equiv-fin-1-difference-orientation-two-elements-count i j np) x) = {!!}
+  equiv-fin-1-difference-orientation-two-elements-count = {!!}
 
   eq-orientation-pointwise-difference-two-elements-count :
     (i j : X) (np : i ≠ j) →
@@ -556,7 +556,7 @@ module _
           ( pair X (unit-trunc-Prop (equiv-count eX)))
           ( orientation-two-elements-count i j np)
           ( orientation-two-elements-count j i (np ∘ inv))))
-  eq-orientation-pointwise-difference-two-elements-count i j np = {!!}
+  eq-orientation-pointwise-difference-two-elements-count = {!!}
 
   cases-not-even-difference-orientation-aut-transposition-count :
     ( i j : X) (np : i ≠ j) →
@@ -611,7 +611,7 @@ module _
         ( pair X (unit-trunc-Prop (equiv-count eX)))
         ( transposition Y)
         ( orientation-aut-count (transposition Y))))
-  not-even-difference-orientation-aut-transposition-count Y = {!!}
+  not-even-difference-orientation-aut-transposition-count = {!!}
 
   inv-orientation :
     ( T :
@@ -626,14 +626,14 @@ module _
         ( T)
         ( canonical-orientation-count)) →
     Fin 2
-  inv-orientation T (inl P) = {!!}
+  inv-orientation = {!!}
 
   equiv-fin-2-quotient-sign-count :
     Fin 2 ≃
     ( quotient-sign
       ( number-of-elements-count eX)
       ( pair X (unit-trunc-Prop (equiv-count eX))))
-  pr1 equiv-fin-2-quotient-sign-count (inl (inr star)) = {!!}
+  equiv-fin-2-quotient-sign-count = {!!}
 
 module _
   {l : Level} (n : ℕ) (X : UU-Fin l n) (ineq : leq-ℕ 2 n)
@@ -641,5 +641,5 @@ module _
 
   equiv-fin-2-quotient-sign-equiv-Fin :
     (h : Fin n ≃ type-UU-Fin n X) → Fin 2 ≃ quotient-sign n X
-  equiv-fin-2-quotient-sign-equiv-Fin h = {!!}
+  equiv-fin-2-quotient-sign-equiv-Fin = {!!}
 ```

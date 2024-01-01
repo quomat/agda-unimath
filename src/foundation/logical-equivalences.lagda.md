@@ -96,8 +96,7 @@ pr2 ((g1 , g2) ∘iff (f1 , f2)) = {!!}
 ```agda
 inv-iff :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → (A ↔ B) → (B ↔ A)
-pr1 (inv-iff (f , g)) = {!!}
-pr2 (inv-iff (f , g)) = {!!}
+inv-iff = {!!}
 ```
 
 ## Properties
@@ -138,7 +137,7 @@ module _
   equiv-iff :
     (type-Prop P → type-Prop Q) → (type-Prop Q → type-Prop P) →
     type-Prop P ≃ type-Prop Q
-  equiv-iff f g = {!!}
+  equiv-iff = {!!}
 ```
 
 ### Equivalences are logical equivalences
@@ -155,7 +154,7 @@ is-injective-iff-equiv p = {!!}
 compute-fiber-iff-equiv :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} ((f , g) : A ↔ B) →
   fiber (iff-equiv) (f , g) ≃ Σ (is-equiv f) (λ f' → map-inv-is-equiv f' ~ g)
-compute-fiber-iff-equiv {A = A} {B} (f , g) = {!!}
+compute-fiber-iff-equiv = {!!}
 ```
 
 ### Two equal propositions are logically equivalent
@@ -163,8 +162,7 @@ compute-fiber-iff-equiv {A = A} {B} (f , g) = {!!}
 ```agda
 iff-eq :
   {l1 : Level} {P Q : Prop l1} → P ＝ Q → P ⇔ Q
-pr1 (iff-eq refl) = {!!}
-pr2 (iff-eq refl) = {!!}
+iff-eq = {!!}
 ```
 
 ### Logical equivalence of propositions is equivalent to equivalence of propositions
@@ -174,13 +172,12 @@ abstract
   is-equiv-equiv-iff :
     {l1 l2 : Level} (P : Prop l1) (Q : Prop l2) →
     is-equiv (equiv-iff' P Q)
-  is-equiv-equiv-iff P Q = {!!}
+  is-equiv-equiv-iff = {!!}
 
 equiv-equiv-iff :
   {l1 l2 : Level} (P : Prop l1) (Q : Prop l2) →
   (P ⇔ Q) ≃ (type-Prop P ≃ type-Prop Q)
-pr1 (equiv-equiv-iff P Q) = {!!}
-pr2 (equiv-equiv-iff P Q) = {!!}
+equiv-equiv-iff = {!!}
 ```
 
 ## Logical equivalences between dependent function types
@@ -218,7 +215,7 @@ pr2 (logical-equivalence-reasoning X) = {!!}
 step-logical-equivalence-reasoning :
   {l1 l2 l3 : Level} {X : UU l1} {Y : UU l2} →
   (X ↔ Y) → (Z : UU l3) → (Y ↔ Z) → (X ↔ Z)
-step-logical-equivalence-reasoning e Z f = {!!}
+step-logical-equivalence-reasoning = {!!}
 
 syntax step-logical-equivalence-reasoning e Z f = {!!}
 ```

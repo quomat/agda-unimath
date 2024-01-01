@@ -52,7 +52,7 @@ module _
 
   is-central-element-zero-Semiring :
     is-central-element-Semiring R (zero-Semiring R)
-  is-central-element-zero-Semiring x = {!!}
+  is-central-element-zero-Semiring = {!!}
 ```
 
 ### The unit element is central
@@ -78,7 +78,7 @@ module _
     (x y : type-Semiring R) → is-central-element-Semiring R x →
     is-central-element-Semiring R y →
     is-central-element-Semiring R (add-Semiring R x y)
-  is-central-element-add-Semiring x y H K z = {!!}
+  is-central-element-add-Semiring = {!!}
 ```
 
 ### The product of two central elements is central

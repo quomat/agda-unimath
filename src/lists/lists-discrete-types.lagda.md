@@ -37,15 +37,12 @@ In this file we study lists of elements in discrete types.
 has-decidable-equality-list :
   {l1 : Level} {A : UU l1} →
   has-decidable-equality A → has-decidable-equality (list A)
-has-decidable-equality-list d nil nil = {!!}
-has-decidable-equality-list d nil (cons x l) = {!!}
-has-decidable-equality-list d (cons x l) nil = {!!}
-has-decidable-equality-list d (cons x l) (cons x' l') = {!!}
+has-decidable-equality-list = {!!}
 
 has-decidable-equality-has-decidable-equality-list :
   {l1 : Level} {A : UU l1} →
   has-decidable-equality (list A) → has-decidable-equality A
-has-decidable-equality-has-decidable-equality-list d x y = {!!}
+has-decidable-equality-has-decidable-equality-list = {!!}
 ```
 
 ### Testing whether an element of a discrete type is in a list
@@ -55,9 +52,7 @@ elem-list :
   {l1 : Level} {A : UU l1} →
   has-decidable-equality A →
   A → list A → bool
-elem-list d x nil = {!!}
-elem-list d x (cons x' l) with (d x x')
-... | inl _ = {!!}
+elem-list = {!!}
 ... | inr _ = {!!}
 ```
 
@@ -68,9 +63,7 @@ union-list :
   {l1 : Level} {A : UU l1} →
   has-decidable-equality A →
   list A → list A → list A
-union-list d nil l' = {!!}
-union-list d (cons x l) l' with (elem-list d x l')
-... | true = {!!}
+union-list = {!!}
 ... | false = {!!}
 ```
 
@@ -86,20 +79,7 @@ is-nonnil-elem-list :
   (l : list A) →
   elem-list d a l ＝ true →
   is-nonnil-list l
-is-nonnil-elem-list d a nil ()
-is-nonnil-elem-list d a (cons x l) p ()
-```
-
-### If the union of two lists is empty, then these two lists are empty
-
-```agda
-is-nil-union-is-nil-list :
-  {l : Level} {A : UU l} →
-  (d : has-decidable-equality A) →
-  (l l' : list A) →
-  union-list d l l' ＝ nil →
-  is-nil-list l × is-nil-list l'
-is-nil-union-is-nil-list d nil l' p = {!!}
+is-nonnil-elem-list = {!!}
 is-nil-union-is-nil-list d (cons x l) l' p with (elem-list d x l') in q
 ... | true = {!!}
 ... | false = {!!}

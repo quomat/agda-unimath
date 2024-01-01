@@ -30,7 +30,7 @@ with the restricted ordering of `P`.
 ```agda
 Decidable-Subposet :
   {l1 l2 : Level} (l3 : Level) → Poset l1 l2 → UU (l1 ⊔ lsuc l3)
-Decidable-Subposet l3 P = {!!}
+Decidable-Subposet = {!!}
 
 module _
   {l1 l2 l3 : Level} (P : Poset l1 l2) (S : Decidable-Subposet l3 P)

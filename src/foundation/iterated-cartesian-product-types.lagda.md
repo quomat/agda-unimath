@@ -62,8 +62,7 @@ We show that :
 iterated-product-Fin-recursive :
   {l : Level} (n : ℕ) →
   ((Fin n) → UU l) → UU l
-iterated-product-Fin-recursive {l} zero-ℕ A = {!!}
-iterated-product-Fin-recursive (succ-ℕ n) A = {!!}
+iterated-product-Fin-recursive = {!!}
 ```
 
 #### Using `Π`-types
@@ -72,7 +71,7 @@ iterated-product-Fin-recursive (succ-ℕ n) A = {!!}
 iterated-product-Fin-Π :
   {l : Level} (n : ℕ) →
   ((Fin n) → UU l) → UU l
-iterated-product-Fin-Π n A = {!!}
+iterated-product-Fin-Π = {!!}
 ```
 
 ### Via lists
@@ -80,8 +79,7 @@ iterated-product-Fin-Π n A = {!!}
 ```agda
 iterated-product-lists :
   {l : Level} → list (UU l) → UU l
-iterated-product-lists {l} nil = {!!}
-iterated-product-lists (cons A p) = {!!}
+iterated-product-lists = {!!}
 ```
 
 ## Properties
@@ -93,8 +91,7 @@ equiv-iterated-product-Fin-recursive-Π :
   {l : Level} (n : ℕ) (A : (Fin n → UU l)) →
   iterated-product-Fin-recursive n A ≃
   iterated-product-Fin-Π n A
-equiv-iterated-product-Fin-recursive-Π zero-ℕ A = {!!}
-equiv-iterated-product-Fin-recursive-Π (succ-ℕ n) A = {!!}
+equiv-iterated-product-Fin-recursive-Π = {!!}
 ```
 
 ### The definitions using recursion and lists are equivalent
@@ -106,8 +103,7 @@ equiv-iterated-product-Fin-recursive-lists :
     ( length-array (array-list l))
     ( functional-vec-array (array-list l)) ≃
   iterated-product-lists l
-equiv-iterated-product-Fin-recursive-lists nil = {!!}
-equiv-iterated-product-Fin-recursive-lists (cons x l) = {!!}
+equiv-iterated-product-Fin-recursive-lists = {!!}
 ```
 
 ### The cartesian product of two iterated cartesian products (via list) is the iterated cartesian product of the concatenation of the corresponding lists
@@ -117,8 +113,7 @@ equiv-product-iterated-product-lists :
   {l : Level} (p q : list (UU l)) →
   (iterated-product-lists p × iterated-product-lists q) ≃
   iterated-product-lists (concat-list p q)
-equiv-product-iterated-product-lists nil q = {!!}
-equiv-product-iterated-product-lists (cons x p) q = {!!}
+equiv-product-iterated-product-lists = {!!}
 ```
 
 ### Iterated cartesian product is closed under permutations
@@ -126,47 +121,47 @@ equiv-product-iterated-product-lists (cons x p) q = {!!}
 ```agda
 permutation-iterated-product-Fin-Π :
   {l : Level} (n : ℕ) (A : (Fin n → UU l)) (t : Permutation n) → UU l
-permutation-iterated-product-Fin-Π n A t = {!!}
+permutation-iterated-product-Fin-Π = {!!}
 
 equiv-permutation-iterated-product-Fin-Π :
   {l : Level} (n : ℕ) (A : (Fin n → UU l)) (t : Permutation n) →
   permutation-iterated-product-Fin-Π n A t ≃ iterated-product-Fin-Π n A
-equiv-permutation-iterated-product-Fin-Π n A t = {!!}
+equiv-permutation-iterated-product-Fin-Π = {!!}
 
 eq-permutation-iterated-product-Fin-Π :
   {l : Level} (n : ℕ) (A : (Fin n → UU l)) (t : Permutation n) →
   permutation-iterated-product-Fin-Π n A t ＝ iterated-product-Fin-Π n A
-eq-permutation-iterated-product-Fin-Π n A t = {!!}
+eq-permutation-iterated-product-Fin-Π = {!!}
 
 permutation-iterated-product-Fin-recursive :
   {l : Level} (n : ℕ) (A : (Fin n → UU l)) (t : Permutation n) → UU l
-permutation-iterated-product-Fin-recursive n A t = {!!}
+permutation-iterated-product-Fin-recursive = {!!}
 
 equiv-permutation-iterated-product-Fin-recursive :
   {l : Level} (n : ℕ) (A : (Fin n → UU l)) (t : Permutation n) →
   permutation-iterated-product-Fin-recursive n A t ≃
   iterated-product-Fin-recursive n A
-equiv-permutation-iterated-product-Fin-recursive n A t = {!!}
+equiv-permutation-iterated-product-Fin-recursive = {!!}
 
 eq-permutation-iterated-product-Fin-recursive :
   {l : Level} (n : ℕ) (A : (Fin n → UU l)) (t : Permutation n) →
   permutation-iterated-product-Fin-recursive n A t ＝
   iterated-product-Fin-recursive n A
-eq-permutation-iterated-product-Fin-recursive n A t = {!!}
+eq-permutation-iterated-product-Fin-recursive = {!!}
 
 permutation-iterated-product-lists :
   {l : Level} (L : list (UU l)) (t : Permutation (length-list L)) → UU l
-permutation-iterated-product-lists L t = {!!}
+permutation-iterated-product-lists = {!!}
 
 equiv-permutation-iterated-product-lists :
   {l : Level} (L : list (UU l)) (t : Permutation (length-list L)) →
   permutation-iterated-product-lists L t ≃
   iterated-product-lists L
-equiv-permutation-iterated-product-lists L t = {!!}
+equiv-permutation-iterated-product-lists = {!!}
 
 eq-permutation-iterated-product-lists :
   {l : Level} (L : list (UU l)) (t : Permutation (length-list L)) →
   permutation-iterated-product-lists L t ＝
   iterated-product-lists L
-eq-permutation-iterated-product-lists L t = {!!}
+eq-permutation-iterated-product-lists = {!!}
 ```

@@ -90,7 +90,7 @@ module _
 ```agda
 Type-With-Apartness :
   (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Type-With-Apartness l1 l2 = {!!}
+Type-With-Apartness = {!!}
 
 module _
   {l1 l2 : Level} (A : Type-With-Apartness l1 l2)
@@ -136,16 +136,16 @@ module _
 
   rel-apart-function-into-Type-With-Apartness :
     Relation-Prop (l1 ⊔ l3) (X → type-Type-With-Apartness Y)
-  rel-apart-function-into-Type-With-Apartness f g = {!!}
+  rel-apart-function-into-Type-With-Apartness = {!!}
 
   apart-function-into-Type-With-Apartness :
     Relation (l1 ⊔ l3) (X → type-Type-With-Apartness Y)
-  apart-function-into-Type-With-Apartness f g = {!!}
+  apart-function-into-Type-With-Apartness = {!!}
 
   is-prop-apart-function-into-Type-With-Apartness :
     (f g : X → type-Type-With-Apartness Y) →
     is-prop (apart-function-into-Type-With-Apartness f g)
-  is-prop-apart-function-into-Type-With-Apartness f g = {!!}
+  is-prop-apart-function-into-Type-With-Apartness = {!!}
 ```
 
 ## Properties
@@ -157,16 +157,16 @@ module _
 
   is-antireflexive-apart-function-into-Type-With-Apartness :
     is-antireflexive (rel-apart-function-into-Type-With-Apartness X Y)
-  is-antireflexive-apart-function-into-Type-With-Apartness f H = {!!}
+  is-antireflexive-apart-function-into-Type-With-Apartness = {!!}
 
   is-symmetric-apart-function-into-Type-With-Apartness :
     is-symmetric (apart-function-into-Type-With-Apartness X Y)
-  is-symmetric-apart-function-into-Type-With-Apartness f g H = {!!}
+  is-symmetric-apart-function-into-Type-With-Apartness = {!!}
 
   abstract
     is-cotransitive-apart-function-into-Type-With-Apartness :
       is-cotransitive (rel-apart-function-into-Type-With-Apartness X Y)
-    is-cotransitive-apart-function-into-Type-With-Apartness f g h H = {!!}
+    is-cotransitive-apart-function-into-Type-With-Apartness = {!!}
 
   exp-Type-With-Apartness : Type-With-Apartness (l1 ⊔ l2) (l1 ⊔ l3)
   pr1 exp-Type-With-Apartness = {!!}

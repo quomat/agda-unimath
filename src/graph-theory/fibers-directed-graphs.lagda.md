@@ -94,16 +94,16 @@ module _
   walk-to-root-fiber-walk-Directed-Graph :
     (y : vertex-Directed-Graph G) (w : walk-Directed-Graph G y x) →
     walk-fiber-Directed-Graph (y , w) root-fiber-Directed-Graph
-  walk-to-root-fiber-walk-Directed-Graph y refl-walk-Directed-Graph = {!!}
+  walk-to-root-fiber-walk-Directed-Graph = {!!}
 
   walk-to-root-fiber-Directed-Graph :
     (y : node-fiber-Directed-Graph) →
     walk-fiber-Directed-Graph y root-fiber-Directed-Graph
-  walk-to-root-fiber-Directed-Graph (y , w) = {!!}
+  walk-to-root-fiber-Directed-Graph = {!!}
 
   inclusion-fiber-Directed-Graph :
     hom-Directed-Graph graph-fiber-Directed-Graph G
-  pr1 inclusion-fiber-Directed-Graph = {!!}
+  inclusion-fiber-Directed-Graph = {!!}
 ```
 
 ### The fiber of `G` at `x` as a directed tree
@@ -122,13 +122,13 @@ module _
       ( is-root-fiber-Directed-Graph y) +
       ( Σ ( node-fiber-Directed-Graph) (edge-fiber-Directed-Graph y))) →
     center-unique-direct-successor-fiber-Directed-Graph y ＝ p
-  contraction-unique-direct-successor-fiber-Directed-Graph ._ (inl refl) = {!!}
+  contraction-unique-direct-successor-fiber-Directed-Graph = {!!}
 
   unique-direct-successor-fiber-Directed-Graph :
     unique-direct-successor-Directed-Graph
       ( graph-fiber-Directed-Graph)
       ( root-fiber-Directed-Graph)
-  pr1 (unique-direct-successor-fiber-Directed-Graph y) = {!!}
+  unique-direct-successor-fiber-Directed-Graph = {!!}
 
   is-tree-fiber-Directed-Graph :
     is-tree-Directed-Graph graph-fiber-Directed-Graph
@@ -161,36 +161,36 @@ module _
     direct-predecessor-fiber-Directed-Graph y ≃
     direct-predecessor-Directed-Graph G
       ( node-inclusion-fiber-Directed-Graph G x y)
-  compute-direct-predecessor-fiber-Directed-Graph y = {!!}
+  compute-direct-predecessor-fiber-Directed-Graph = {!!}
 
   map-compute-direct-predecessor-fiber-Directed-Graph :
     (y : node-fiber-Directed-Graph G x) →
     direct-predecessor-fiber-Directed-Graph y →
     direct-predecessor-Directed-Graph G
       ( node-inclusion-fiber-Directed-Graph G x y)
-  map-compute-direct-predecessor-fiber-Directed-Graph y = {!!}
+  map-compute-direct-predecessor-fiber-Directed-Graph = {!!}
 
   htpy-compute-direct-predecessor-fiber-Directed-Graph :
     (y : node-fiber-Directed-Graph G x) →
     direct-predecessor-inclusion-fiber-Directed-Graph y ~
     map-compute-direct-predecessor-fiber-Directed-Graph y
-  htpy-compute-direct-predecessor-fiber-Directed-Graph y t = {!!}
+  htpy-compute-direct-predecessor-fiber-Directed-Graph = {!!}
 
   inv-compute-direct-predecessor-fiber-Directed-Graph :
     (y : node-fiber-Directed-Graph G x) →
     direct-predecessor-Directed-Graph G
       ( node-inclusion-fiber-Directed-Graph G x y) ≃
     direct-predecessor-fiber-Directed-Graph y
-  inv-compute-direct-predecessor-fiber-Directed-Graph y = {!!}
+  inv-compute-direct-predecessor-fiber-Directed-Graph = {!!}
 
   Eq-direct-predecessor-fiber-Directed-Graph :
     (y : node-fiber-Directed-Graph G x) →
     (u v : direct-predecessor-fiber-Directed-Graph y) → UU (l1 ⊔ l2)
-  Eq-direct-predecessor-fiber-Directed-Graph y u v = {!!}
+  Eq-direct-predecessor-fiber-Directed-Graph = {!!}
 
   eq-Eq-direct-predecessor-fiber-Directed-Graph :
     (y : node-fiber-Directed-Graph G x) →
     ( u v : direct-predecessor-fiber-Directed-Graph y) →
     Eq-direct-predecessor-fiber-Directed-Graph y u v → u ＝ v
-  eq-Eq-direct-predecessor-fiber-Directed-Graph y u v p = {!!}
+  eq-Eq-direct-predecessor-fiber-Directed-Graph = {!!}
 ```

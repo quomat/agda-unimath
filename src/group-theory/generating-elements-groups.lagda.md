@@ -211,7 +211,7 @@ module _
   ev-element-hom-Group-With-Generating-Element :
     (H : Group l) →
     hom-Group group-Group-With-Generating-Element H → type-Group H
-  ev-element-hom-Group-With-Generating-Element H = {!!}
+  ev-element-hom-Group-With-Generating-Element = {!!}
 ```
 
 ## Properties
@@ -228,7 +228,7 @@ module _
   is-generating-element-is-subgroup-generated-by-element-full-Subgroup :
     is-subgroup-generated-by-element-full-Subgroup G g →
     is-generating-element-Group G g
-  is-generating-element-is-subgroup-generated-by-element-full-Subgroup H x = {!!}
+  is-generating-element-is-subgroup-generated-by-element-full-Subgroup = {!!}
 
   is-subgroup-generated-by-element-full-subgroup-is-generating-element-Group :
     is-generating-element-Group G g →
@@ -245,7 +245,7 @@ is-subgroup-generated-by-element-full-subgroup-Group-With-Generating-Element :
   is-subgroup-generated-by-element-full-Subgroup
     ( group-Group-With-Generating-Element G)
     ( element-Group-With-Generating-Element G)
-is-subgroup-generated-by-element-full-subgroup-Group-With-Generating-Element G = {!!}
+is-subgroup-generated-by-element-full-subgroup-Group-With-Generating-Element = {!!}
 ```
 
 #### An element `g` is generating if and only if the unique map `g̃ : ℤ → G` is surjective
@@ -258,22 +258,22 @@ module _
   is-generating-element-is-surjective-hom-element-Group' :
     (x : type-Group G) (k : ℤ) (p : map-hom-element-Group G g k ＝ x) →
     is-in-subgroup-element-Group G g x
-  is-generating-element-is-surjective-hom-element-Group' ._ k refl = {!!}
+  is-generating-element-is-surjective-hom-element-Group' = {!!}
 
   is-generating-element-is-surjective-hom-element-Group :
     is-surjective-hom-element-Group G g → is-generating-element-Group G g
-  is-generating-element-is-surjective-hom-element-Group H x = {!!}
+  is-generating-element-is-surjective-hom-element-Group = {!!}
 
   is-surjective-hom-element-is-generating-element-Group :
     is-generating-element-Group G g → is-surjective-hom-element-Group G g
-  is-surjective-hom-element-is-generating-element-Group H x = {!!}
+  is-surjective-hom-element-is-generating-element-Group = {!!}
 
 is-surjective-hom-element-Group-With-Generating-Element :
   {l : Level} (G : Group-With-Generating-Element l) →
   is-surjective-hom-element-Group
     ( group-Group-With-Generating-Element G)
     ( element-Group-With-Generating-Element G)
-is-surjective-hom-element-Group-With-Generating-Element G = {!!}
+is-surjective-hom-element-Group-With-Generating-Element = {!!}
 ```
 
 #### If the evaluation map `hom(G,H) → H` at `g` is an embedding for every group `H`, then `g̃ : ℤ → G` is surjective
@@ -290,16 +290,16 @@ module _
 
   commute-is-emb-ev-element-hom-Group :
     (x : type-Group G) → mul-Group G g x ＝ mul-Group G x g
-  commute-is-emb-ev-element-hom-Group x = {!!}
+  commute-is-emb-ev-element-hom-Group = {!!}
 
   compute-conjugation-is-emb-ev-element-hom-Group' :
     (x : type-Group G) → conjugation-Group G x g ＝ g
-  compute-conjugation-is-emb-ev-element-hom-Group' x = {!!}
+  compute-conjugation-is-emb-ev-element-hom-Group' = {!!}
 
   abstract
     is-normal-image-hom-element-is-emb-ev-element-hom-Group :
       is-normal-Subgroup G (image-hom-element-Group G g)
-    is-normal-image-hom-element-is-emb-ev-element-hom-Group x (y , p) = {!!}
+    is-normal-image-hom-element-is-emb-ev-element-hom-Group = {!!}
 
   private
     N : Normal-Subgroup l G
@@ -318,7 +318,7 @@ module _
 
   is-surjective-hom-element-is-emb-ev-element-hom-Group :
     is-surjective-hom-element-Group G g
-  is-surjective-hom-element-is-emb-ev-element-hom-Group x = {!!}
+  is-surjective-hom-element-is-emb-ev-element-hom-Group = {!!}
 ```
 
 #### A group element `g : G` is generating if and only if for every group `H` the evaluation map `hom(G,H) → H` at `g` is an embedding
@@ -331,22 +331,22 @@ module _
   abstract
     is-prop-map-ev-element-is-generating-element-Group :
       is-generating-element-Group G g → is-prop-map-ev-element-hom-Group G g
-    is-prop-map-ev-element-is-generating-element-Group U H y = {!!}
+    is-prop-map-ev-element-is-generating-element-Group = {!!}
 
   is-emb-ev-element-is-generating-element-Group :
     is-generating-element-Group G g → is-emb-ev-element-hom-Group G g
-  is-emb-ev-element-is-generating-element-Group U H = {!!}
+  is-emb-ev-element-is-generating-element-Group = {!!}
 
   is-generating-element-is-emb-ev-element-hom-Group :
     is-emb-ev-element-hom-Group G g → is-generating-element-Group G g
-  is-generating-element-is-emb-ev-element-hom-Group U = {!!}
+  is-generating-element-is-emb-ev-element-hom-Group = {!!}
 
 is-emb-ev-element-Group-With-Generating-Element :
   {l : Level} (G : Group-With-Generating-Element l) →
   is-emb-ev-element-hom-Group
     ( group-Group-With-Generating-Element G)
     ( element-Group-With-Generating-Element G)
-is-emb-ev-element-Group-With-Generating-Element G = {!!}
+is-emb-ev-element-Group-With-Generating-Element = {!!}
 ```
 
 ### If `g` is a generating element of `G`, then `G` is abelian
@@ -360,12 +360,12 @@ module _
     commutative-mul-is-surjective-hom-element-Group :
       (U : is-surjective-hom-element-Group G g) →
       (x y : type-Group G) → commute-Group G x y
-    commutative-mul-is-surjective-hom-element-Group U x y = {!!}
+    commutative-mul-is-surjective-hom-element-Group = {!!}
 
   commutative-mul-is-generating-element-Group :
     (U : is-generating-element-Group G g) →
     (x y : type-Group G) → commute-Group G x y
-  commutative-mul-is-generating-element-Group U = {!!}
+  commutative-mul-is-generating-element-Group = {!!}
 
 module _
   {l : Level} (G : Group-With-Generating-Element l)
@@ -432,7 +432,7 @@ module _
       is-surjective
         ( ev-element-hom-Group-With-Generating-Element G
           ( group-Group-With-Generating-Element G))
-    is-surjective-ev-element-Group-With-Generating-Element x = {!!}
+    is-surjective-ev-element-Group-With-Generating-Element = {!!}
 
   is-equiv-ev-element-Group-With-Generating-Element :
     is-equiv
@@ -458,7 +458,7 @@ module _
         ( abelian-group-Group-With-Generating-Element G)
         ( abelian-group-Group-With-Generating-Element G))
       ( abelian-group-Group-With-Generating-Element G)
-  pr1 iso-ev-element-Group-With-Generating-Element = {!!}
+  iso-ev-element-Group-With-Generating-Element = {!!}
 ```
 
 ### Groups equipped with generating elements are commutative rings
@@ -489,7 +489,7 @@ module _
       (x y : type-Group-With-Generating-Element G) →
       mul-Group-With-Generating-Element x y ＝
       mul-Group-With-Generating-Element y x
-    commutative-mul-Group-With-Generating-Element x y = {!!}
+    commutative-mul-Group-With-Generating-Element = {!!}
 
   commutative-ring-Group-With-Generating-Element : Commutative-Ring l
   pr1 commutative-ring-Group-With-Generating-Element = {!!}

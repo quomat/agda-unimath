@@ -53,13 +53,13 @@ module _
     is-join-family-of-left-ideals-Ring J →
     (K : left-ideal-Ring l5 R) → ((α : U) → leq-left-ideal-Ring R (I α) K) →
     leq-left-ideal-Ring R J K
-  inclusion-is-join-family-of-left-ideals-Ring J H K = {!!}
+  inclusion-is-join-family-of-left-ideals-Ring = {!!}
 
   contains-left-ideal-is-join-family-of-left-ideals-Ring :
     {l4 : Level} (J : left-ideal-Ring l4 R) →
     is-join-family-of-left-ideals-Ring J →
     {α : U} → leq-left-ideal-Ring R (I α) J
-  contains-left-ideal-is-join-family-of-left-ideals-Ring J H {α} = {!!}
+  contains-left-ideal-is-join-family-of-left-ideals-Ring = {!!}
 ```
 
 ### The join of a family of left ideals
@@ -81,17 +81,17 @@ module _
     {l4 : Level} (K : left-ideal-Ring l4 R) →
     ((α : U) → leq-left-ideal-Ring R (I α) K) →
     leq-left-ideal-Ring R join-family-of-left-ideals-Ring K
-  forward-inclusion-is-join-join-family-of-left-ideals-Ring K H = {!!}
+  forward-inclusion-is-join-join-family-of-left-ideals-Ring = {!!}
 
   backward-inclusion-is-join-join-family-of-left-ideals-Ring :
     {l4 : Level} (K : left-ideal-Ring l4 R) →
     leq-left-ideal-Ring R join-family-of-left-ideals-Ring K →
     (α : U) → leq-left-ideal-Ring R (I α) K
-  backward-inclusion-is-join-join-family-of-left-ideals-Ring K H _ x p = {!!}
+  backward-inclusion-is-join-join-family-of-left-ideals-Ring = {!!}
 
   is-join-join-family-of-left-ideals-Ring :
     is-join-family-of-left-ideals-Ring R I join-family-of-left-ideals-Ring
-  pr1 (is-join-join-family-of-left-ideals-Ring K) = {!!}
+  is-join-join-family-of-left-ideals-Ring = {!!}
 
   inclusion-join-family-of-left-ideals-Ring :
     {l4 : Level} (J : left-ideal-Ring l4 R) →
@@ -113,13 +113,11 @@ module _
 
   is-large-suplattice-left-ideal-Ring-Large-Poset :
     is-large-suplattice-Large-Poset l1 (left-ideal-Ring-Large-Poset R)
-  sup-has-least-upper-bound-family-of-elements-Large-Poset
-    ( is-large-suplattice-left-ideal-Ring-Large-Poset I) = {!!}
+  is-large-suplattice-left-ideal-Ring-Large-Poset = {!!}
 
   left-ideal-Ring-Large-Suplattice :
     Large-Suplattice (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3) l1
-  large-poset-Large-Suplattice
-    left-ideal-Ring-Large-Suplattice = {!!}
+  left-ideal-Ring-Large-Suplattice = {!!}
 ```
 
 ## Properties

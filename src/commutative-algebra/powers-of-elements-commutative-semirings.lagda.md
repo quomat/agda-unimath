@@ -31,7 +31,7 @@ is defined by iteratively multiplying `x` with itself `n` times.
 power-Commutative-Semiring :
   {l : Level} (A : Commutative-Semiring l) →
   ℕ → type-Commutative-Semiring A → type-Commutative-Semiring A
-power-Commutative-Semiring A = {!!}
+power-Commutative-Semiring = {!!}
 ```
 
 ## Properties
@@ -79,5 +79,5 @@ module _
     mul-Commutative-Semiring A
       ( power-Commutative-Semiring A n x)
       ( power-Commutative-Semiring A n y)
-  distributive-power-mul-Commutative-Semiring n x y = {!!}
+  distributive-power-mul-Commutative-Semiring = {!!}
 ```

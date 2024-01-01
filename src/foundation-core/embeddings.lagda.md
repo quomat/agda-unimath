@@ -42,11 +42,11 @@ module _
 
   equiv-ap-is-emb :
     {f : A → B} (e : is-emb f) {x y : A} → (x ＝ y) ≃ (f x ＝ f y)
-  pr1 (equiv-ap-is-emb {f} e) = {!!}
+  equiv-ap-is-emb = {!!}
 
   inv-equiv-ap-is-emb :
     {f : A → B} (e : is-emb f) {x y : A} → (f x ＝ f y) ≃ (x ＝ y)
-  inv-equiv-ap-is-emb e = {!!}
+  inv-equiv-ap-is-emb = {!!}
 
 infix 5 _↪_
 _↪_ :
@@ -65,11 +65,11 @@ module _
 
   equiv-ap-emb :
     (e : A ↪ B) {x y : A} → (x ＝ y) ≃ (map-emb e x ＝ map-emb e y)
-  equiv-ap-emb e = {!!}
+  equiv-ap-emb = {!!}
 
   inv-equiv-ap-emb :
     (e : A ↪ B) {x y : A} → (map-emb e x ＝ map-emb e y) ≃ (x ＝ y)
-  inv-equiv-ap-emb e = {!!}
+  inv-equiv-ap-emb = {!!}
 ```
 
 ## Examples

@@ -76,21 +76,21 @@ module _
               ( ( ev-formal-combination-subset-Group G S (unit-list (s , x))) ,
                 ( unit-trunc-Prop (unit-list (s , x) , refl)))))
         ( l))
-  distributivity-hom-group-ev-formal-combination f nil = {!!}
+  distributivity-hom-group-ev-formal-combination = {!!}
 
   map-restriction-generating-subset-Subgroup :
     hom-Group (group-Subgroup G (subgroup-subset-Group G S)) G' →
     type-subtype S → type-Group G'
-  map-restriction-generating-subset-Subgroup f x = {!!}
+  map-restriction-generating-subset-Subgroup = {!!}
 
   is-emb-map-restriction-generating-subset-Subgroup :
     is-emb (map-restriction-generating-subset-Subgroup)
-  is-emb-map-restriction-generating-subset-Subgroup f g = {!!}
+  is-emb-map-restriction-generating-subset-Subgroup = {!!}
 
   restriction-generating-subset-Subgroup :
     hom-Group (group-Subgroup G (subgroup-subset-Group G S)) G' ↪
       ( type-subtype S → type-Group G')
-  pr1 restriction-generating-subset-Subgroup = {!!}
+  restriction-generating-subset-Subgroup = {!!}
 
 module _
   {l1 l2 l3 : Level}
@@ -107,5 +107,5 @@ module _
     Id
       ( map-emb restriction-generating-subset-Group f x)
       ( map-hom-Group G G' f (pr1 x))
-  eq-map-restriction-generating-subset-Group f x = {!!}
+  eq-map-restriction-generating-subset-Group = {!!}
 ```

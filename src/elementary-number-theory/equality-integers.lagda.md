@@ -72,15 +72,15 @@ has-decidable-equality-ℤ = {!!}
 
 is-decidable-is-zero-ℤ :
   (x : ℤ) → is-decidable (is-zero-ℤ x)
-is-decidable-is-zero-ℤ x = {!!}
+is-decidable-is-zero-ℤ = {!!}
 
 is-decidable-is-one-ℤ :
   (x : ℤ) → is-decidable (is-one-ℤ x)
-is-decidable-is-one-ℤ x = {!!}
+is-decidable-is-one-ℤ = {!!}
 
 is-decidable-is-neg-one-ℤ :
   (x : ℤ) → is-decidable (is-neg-one-ℤ x)
-is-decidable-is-neg-one-ℤ x = {!!}
+is-decidable-is-neg-one-ℤ = {!!}
 
 ℤ-Discrete-Type : Discrete-Type lzero
 pr1 ℤ-Discrete-Type = {!!}
@@ -99,29 +99,21 @@ equiv-unit-trunc-ℤ-Set = {!!}
 ```agda
 is-prop-Eq-ℤ :
   (x y : ℤ) → is-prop (Eq-ℤ x y)
-is-prop-Eq-ℤ (inl x) (inl y) = {!!}
-is-prop-Eq-ℤ (inl x) (inr y) = {!!}
-is-prop-Eq-ℤ (inr x) (inl x₁) = {!!}
-is-prop-Eq-ℤ (inr (inl x)) (inr (inl y)) = {!!}
-is-prop-Eq-ℤ (inr (inl x)) (inr (inr y)) = {!!}
-is-prop-Eq-ℤ (inr (inr x)) (inr (inl y)) = {!!}
-is-prop-Eq-ℤ (inr (inr x)) (inr (inr y)) = {!!}
+is-prop-Eq-ℤ = {!!}
 
 Eq-ℤ-eq :
   {x y : ℤ} → x ＝ y → Eq-ℤ x y
-Eq-ℤ-eq {x} {.x} refl = {!!}
+Eq-ℤ-eq = {!!}
 
 contraction-total-Eq-ℤ :
   (x : ℤ) (y : Σ ℤ (Eq-ℤ x)) → pair x (refl-Eq-ℤ x) ＝ y
-contraction-total-Eq-ℤ (inl x) (pair (inl y) e) = {!!}
-contraction-total-Eq-ℤ (inr (inl star)) (pair (inr (inl star)) e) = {!!}
-contraction-total-Eq-ℤ (inr (inr x)) (pair (inr (inr y)) e) = {!!}
+contraction-total-Eq-ℤ = {!!}
 
 is-torsorial-Eq-ℤ :
   (x : ℤ) → is-torsorial (Eq-ℤ x)
-is-torsorial-Eq-ℤ x = {!!}
+is-torsorial-Eq-ℤ = {!!}
 
 is-equiv-Eq-ℤ-eq :
   (x y : ℤ) → is-equiv (Eq-ℤ-eq {x} {y})
-is-equiv-Eq-ℤ-eq x = {!!}
+is-equiv-Eq-ℤ-eq = {!!}
 ```

@@ -36,7 +36,7 @@ module _
     orientation-Undirected-Graph →
     (p : unordered-pair-vertices-Undirected-Graph G) →
     edge-Undirected-Graph G p → vertex-Undirected-Graph G
-  source-edge-orientation-Undirected-Graph d (pair X p) e = {!!}
+  source-edge-orientation-Undirected-Graph = {!!}
 ```
 
 ## External links

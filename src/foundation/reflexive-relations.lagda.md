@@ -24,7 +24,7 @@ A reflexive relation on a type `A` is a type-valued binary relation
 ```agda
 Reflexive-Relation :
   {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-Reflexive-Relation l2 A = {!!}
+Reflexive-Relation = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (R : Reflexive-Relation l2 A)

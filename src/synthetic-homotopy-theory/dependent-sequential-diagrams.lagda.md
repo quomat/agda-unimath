@@ -58,7 +58,7 @@ one for each `x : Aₙ`, or as a sequence fibered over `(A, a)`, visualised as
 dependent-sequential-diagram :
   { l1 : Level} → (A : sequential-diagram l1) →
   ( l2 : Level) → UU (l1 ⊔ lsuc l2)
-dependent-sequential-diagram A l2 = {!!}
+dependent-sequential-diagram = {!!}
 ```
 
 ### Components of a dependent sequential diagram
@@ -126,7 +126,7 @@ module _
       ( n : ℕ) (x : family-sequential-diagram A n) →
       family-dependent-sequential-diagram A B n x) →
     UU (l1 ⊔ l2)
-  naturality-section-dependent-sequential-diagram s = {!!}
+  naturality-section-dependent-sequential-diagram = {!!}
 
   section-dependent-sequential-diagram : UU (l1 ⊔ l2)
   section-dependent-sequential-diagram = {!!}

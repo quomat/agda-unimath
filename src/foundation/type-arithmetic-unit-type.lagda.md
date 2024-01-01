@@ -42,11 +42,11 @@ module _
 
   is-section-map-inv-left-unit-law-Σ :
     ( map-left-unit-law-Σ ∘ map-inv-left-unit-law-Σ) ~ id
-  is-section-map-inv-left-unit-law-Σ a = {!!}
+  is-section-map-inv-left-unit-law-Σ = {!!}
 
   is-retraction-map-inv-left-unit-law-Σ :
     ( map-inv-left-unit-law-Σ ∘ map-left-unit-law-Σ) ~ id
-  is-retraction-map-inv-left-unit-law-Σ (pair star a) = {!!}
+  is-retraction-map-inv-left-unit-law-Σ = {!!}
 
   is-equiv-map-left-unit-law-Σ : is-equiv map-left-unit-law-Σ
   is-equiv-map-left-unit-law-Σ = {!!}
@@ -80,7 +80,7 @@ module _
 
   is-retraction-map-inv-left-unit-law-prod :
     ( map-inv-left-unit-law-prod ∘ map-left-unit-law-prod) ~ id
-  is-retraction-map-inv-left-unit-law-prod (pair star a) = {!!}
+  is-retraction-map-inv-left-unit-law-prod = {!!}
 
   is-equiv-map-left-unit-law-prod : is-equiv map-left-unit-law-prod
   is-equiv-map-left-unit-law-prod = {!!}
@@ -106,11 +106,11 @@ module _
 
   is-section-map-inv-right-unit-law-prod :
     (map-right-unit-law-prod ∘ map-inv-right-unit-law-prod) ~ id
-  is-section-map-inv-right-unit-law-prod a = {!!}
+  is-section-map-inv-right-unit-law-prod = {!!}
 
   is-retraction-map-inv-right-unit-law-prod :
     (map-inv-right-unit-law-prod ∘ map-right-unit-law-prod) ~ id
-  is-retraction-map-inv-right-unit-law-prod (pair a star) = {!!}
+  is-retraction-map-inv-right-unit-law-prod = {!!}
 
   is-equiv-map-right-unit-law-prod : is-equiv map-right-unit-law-prod
   is-equiv-map-right-unit-law-prod = {!!}
@@ -134,11 +134,11 @@ module _
 
   is-section-map-inv-left-unit-law-Π :
     ( map-left-unit-law-Π ∘ map-inv-left-unit-law-Π) ~ id
-  is-section-map-inv-left-unit-law-Π a = {!!}
+  is-section-map-inv-left-unit-law-Π = {!!}
 
   is-retraction-map-inv-left-unit-law-Π :
     ( map-inv-left-unit-law-Π ∘ map-left-unit-law-Π) ~ id
-  is-retraction-map-inv-left-unit-law-Π f = {!!}
+  is-retraction-map-inv-left-unit-law-Π = {!!}
 
   is-equiv-map-left-unit-law-Π : is-equiv map-left-unit-law-Π
   is-equiv-map-left-unit-law-Π = {!!}

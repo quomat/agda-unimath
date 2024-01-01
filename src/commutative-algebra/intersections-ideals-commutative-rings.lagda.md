@@ -42,7 +42,7 @@ module _
 
   is-intersection-ideal-Commutative-Ring :
     {l4 : Level} (K : ideal-Commutative-Ring l4 A) → UUω
-  is-intersection-ideal-Commutative-Ring K = {!!}
+  is-intersection-ideal-Commutative-Ring = {!!}
 ```
 
 ### Intersections of ideals in commutative rings
@@ -63,7 +63,7 @@ module _
 
   contains-zero-intersection-ideal-Commutative-Ring :
     is-in-intersection-ideal-Commutative-Ring (zero-Commutative-Ring R)
-  pr1 contains-zero-intersection-ideal-Commutative-Ring = {!!}
+  contains-zero-intersection-ideal-Commutative-Ring = {!!}
 
   is-closed-under-addition-intersection-ideal-Commutative-Ring :
     is-closed-under-addition-subset-Commutative-Ring R
@@ -83,7 +83,7 @@ module _
   is-additive-subgroup-intersection-ideal-Commutative-Ring :
     is-additive-subgroup-subset-Commutative-Ring R
       ( subset-intersection-ideal-Commutative-Ring)
-  pr1 is-additive-subgroup-intersection-ideal-Commutative-Ring = {!!}
+  is-additive-subgroup-intersection-ideal-Commutative-Ring = {!!}
 
   is-closed-under-left-multiplication-intersection-ideal-Commutative-Ring :
     is-closed-under-left-multiplication-subset-Commutative-Ring R

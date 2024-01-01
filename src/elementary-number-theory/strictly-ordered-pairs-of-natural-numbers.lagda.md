@@ -57,7 +57,7 @@ module _
 ```agda
 pair-of-distinct-elements-strictly-ordered-pair-ℕ :
   strictly-ordered-pair-ℕ → pair-of-distinct-elements ℕ
-pair-of-distinct-elements-strictly-ordered-pair-ℕ (a , b , H) = {!!}
+pair-of-distinct-elements-strictly-ordered-pair-ℕ = {!!}
 ```
 
 ### Any pair of distinct elements of natural numbers can be strictly ordered
@@ -65,12 +65,9 @@ pair-of-distinct-elements-strictly-ordered-pair-ℕ (a , b , H) = {!!}
 ```agda
 strictly-ordered-pair-pair-of-distinct-elements-ℕ' :
   (a b : ℕ) → a ≠ b → strictly-ordered-pair-ℕ
-strictly-ordered-pair-pair-of-distinct-elements-ℕ' zero-ℕ zero-ℕ H = {!!}
-strictly-ordered-pair-pair-of-distinct-elements-ℕ' zero-ℕ (succ-ℕ b) H = {!!}
-strictly-ordered-pair-pair-of-distinct-elements-ℕ' (succ-ℕ a) zero-ℕ H = {!!}
-strictly-ordered-pair-pair-of-distinct-elements-ℕ' (succ-ℕ a) (succ-ℕ b) H = {!!}
+strictly-ordered-pair-pair-of-distinct-elements-ℕ' = {!!}
 
 strictly-ordered-pair-pair-of-distinct-elements-ℕ :
   pair-of-distinct-elements ℕ → strictly-ordered-pair-ℕ
-strictly-ordered-pair-pair-of-distinct-elements-ℕ (a , b , H) = {!!}
+strictly-ordered-pair-pair-of-distinct-elements-ℕ = {!!}
 ```

@@ -64,7 +64,7 @@ module _
 
   is-associative-composition-operation-binary-family-Set :
     composition-operation-binary-family-Set hom-set → UU (l1 ⊔ l2)
-  is-associative-composition-operation-binary-family-Set comp-hom = {!!}
+  is-associative-composition-operation-binary-family-Set = {!!}
 
   associative-composition-operation-binary-family-Set : UU (l1 ⊔ l2)
   associative-composition-operation-binary-family-Set = {!!}
@@ -87,7 +87,7 @@ module _
       ( comp-hom-associative-composition-operation-binary-family-Set h g) (f)) ＝
     ( comp-hom-associative-composition-operation-binary-family-Set
       ( h) (comp-hom-associative-composition-operation-binary-family-Set g f))
-  witness-associative-composition-operation-binary-family-Set h g f = {!!}
+  witness-associative-composition-operation-binary-family-Set = {!!}
 
   inv-witness-associative-composition-operation-binary-family-Set :
     {x y z w : A}
@@ -98,7 +98,7 @@ module _
       ( h) (comp-hom-associative-composition-operation-binary-family-Set g f)) ＝
     ( comp-hom-associative-composition-operation-binary-family-Set
       ( comp-hom-associative-composition-operation-binary-family-Set h g) (f))
-  inv-witness-associative-composition-operation-binary-family-Set h g f = {!!}
+  inv-witness-associative-composition-operation-binary-family-Set = {!!}
 ```
 
 ```agda
@@ -140,7 +140,7 @@ module _
 
   is-unital-composition-operation-binary-family-Set :
     composition-operation-binary-family-Set hom-set → UU (l1 ⊔ l2)
-  is-unital-composition-operation-binary-family-Set comp-hom = {!!}
+  is-unital-composition-operation-binary-family-Set = {!!}
 ```
 
 ## Properties

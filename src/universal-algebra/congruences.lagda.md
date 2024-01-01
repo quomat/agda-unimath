@@ -46,18 +46,18 @@ module _
     ( v : vec (type-Algebra Sg Th Alg) n) →
     ( v' : vec (type-Algebra Sg Th Alg) n) →
     UU l4
-  relation-holds-all-vec {l4} R {.zero-ℕ} empty-vec empty-vec = {!!}
+  relation-holds-all-vec = {!!}
 
   preserves-operations :
     { l4 : Level} →
     ( R : equivalence-relation l4 (type-Algebra Sg Th Alg)) →
     UU (l1 ⊔ l3 ⊔ l4)
-  preserves-operations R = {!!}
+  preserves-operations = {!!}
 
   congruence-Algebra :
     ( l4 : Level) →
     UU (l1 ⊔ l3 ⊔ lsuc l4)
-  congruence-Algebra l4 = {!!}
+  congruence-Algebra = {!!}
 
   equivalence-relation-congruence-Algebra :
     { l4 : Level} →

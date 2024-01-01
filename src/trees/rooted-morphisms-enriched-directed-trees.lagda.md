@@ -40,16 +40,16 @@ module _
 
   preserves-root-hom-enriched-directed-tree-Prop :
     hom-Enriched-Directed-Tree A B S T → Prop l5
-  preserves-root-hom-enriched-directed-tree-Prop f = {!!}
+  preserves-root-hom-enriched-directed-tree-Prop = {!!}
 
   preserves-root-hom-Enriched-Directed-Tree :
     hom-Enriched-Directed-Tree A B S T → UU l5
-  preserves-root-hom-Enriched-Directed-Tree f = {!!}
+  preserves-root-hom-Enriched-Directed-Tree = {!!}
 
   is-prop-preserves-root-hom-Enriched-Directed-Tree :
     (f : hom-Enriched-Directed-Tree A B S T) →
     is-prop (preserves-root-hom-Enriched-Directed-Tree f)
-  is-prop-preserves-root-hom-Enriched-Directed-Tree f = {!!}
+  is-prop-preserves-root-hom-Enriched-Directed-Tree = {!!}
 
   rooted-hom-Enriched-Directed-Tree : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5 ⊔ l6)
   rooted-hom-Enriched-Directed-Tree = {!!}
@@ -111,6 +111,5 @@ id-rooted-hom-Enriched-Directed-Tree :
   {l1 l2 l3 l4 : Level} (A : UU l1) (B : A → UU l2)
   (T : Enriched-Directed-Tree l1 l2 A B) →
   rooted-hom-Enriched-Directed-Tree A B T T
-pr1 (id-rooted-hom-Enriched-Directed-Tree A B T) = {!!}
-pr2 (id-rooted-hom-Enriched-Directed-Tree A B T) = {!!}
+id-rooted-hom-Enriched-Directed-Tree = {!!}
 ```

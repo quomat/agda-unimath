@@ -39,7 +39,7 @@ module _
   is-natural-numbers-object-Precategory :
     (n : obj-Precategory C) →
     hom-Precategory C t n → hom-Precategory C n n → UU (l1 ⊔ l2)
-  is-natural-numbers-object-Precategory n z s = {!!}
+  is-natural-numbers-object-Precategory = {!!}
 
   natural-numbers-object-Precategory : UU (l1 ⊔ l2)
   natural-numbers-object-Precategory = {!!}
@@ -93,5 +93,5 @@ module _
       comp-hom-Precategory C u' succ-natural-numbers-object-Precategory ＝
       comp-hom-Precategory C f u' →
       morphism-natural-numbers-object-Precategory ＝ u'
-    is-unique-morphism-natural-numbers-object-Precategory u' α β = {!!}
+    is-unique-morphism-natural-numbers-object-Precategory = {!!}
 ```

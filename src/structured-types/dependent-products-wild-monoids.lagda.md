@@ -63,11 +63,11 @@ module _
 
   associator-Π-Wild-Monoid :
     associator-H-Space h-space-Π-Wild-Monoid
-  associator-Π-Wild-Monoid f g h = {!!}
+  associator-Π-Wild-Monoid = {!!}
 
   unital-associator-Π-Wild-Monoid :
     unital-associator h-space-Π-Wild-Monoid
-  pr1 unital-associator-Π-Wild-Monoid = {!!}
+  unital-associator-Π-Wild-Monoid = {!!}
 
   Π-Wild-Monoid : Wild-Monoid (l1 ⊔ l2)
   pr1 Π-Wild-Monoid = {!!}

@@ -32,17 +32,17 @@ structure {l1} P = {!!}
 
 fam-structure :
   {l1 l2 l3 : Level} (P : UU l1 → UU l2) (A : UU l3) → UU (lsuc l1 ⊔ l2 ⊔ l3)
-fam-structure P A = {!!}
+fam-structure = {!!}
 
 structure-map :
   {l1 l2 l3 : Level} (P : UU (l1 ⊔ l2) → UU l3) {A : UU l1} {B : UU l2}
   (f : A → B) → UU (l2 ⊔ l3)
-structure-map P {A} {B} f = {!!}
+structure-map = {!!}
 
 hom-structure :
   {l1 l2 l3 : Level} (P : UU (l1 ⊔ l2) → UU l3) →
   UU l1 → UU l2 → UU (l1 ⊔ l2 ⊔ l3)
-hom-structure P A B = {!!}
+hom-structure = {!!}
 ```
 
 ## Properties
@@ -52,9 +52,9 @@ hom-structure P A B = {!!}
 ```agda
 has-structure-equiv :
   {l1 l2 : Level} (P : UU l1 → UU l2) {X Y : UU l1} → X ≃ Y → P X → P Y
-has-structure-equiv P e = {!!}
+has-structure-equiv = {!!}
 
 has-structure-equiv' :
   {l1 l2 : Level} (P : UU l1 → UU l2) {X Y : UU l1} → X ≃ Y → P Y → P X
-has-structure-equiv' P e = {!!}
+has-structure-equiv' = {!!}
 ```

@@ -54,7 +54,7 @@ module _
     natural-transformation-Small-Large-Precategory C D G H →
     natural-transformation-Small-Large-Precategory C D F G →
     natural-transformation-Small-Large-Precategory C D F H
-  comp-hom-functor-large-precategory-Small-Large-Precategory {F = F} {G} {H} = {!!}
+  comp-hom-functor-large-precategory-Small-Large-Precategory = {!!}
 
   associative-comp-hom-functor-large-precategory-Small-Large-Precategory :
     {γF γG γH γI : Level}
@@ -95,7 +95,7 @@ module _
   id-hom-functor-large-precategory-Small-Large-Precategory :
     {γF : Level} {F : functor-Small-Large-Precategory C D γF} →
     natural-transformation-Small-Large-Precategory C D F F
-  id-hom-functor-large-precategory-Small-Large-Precategory {F = F} = {!!}
+  id-hom-functor-large-precategory-Small-Large-Precategory = {!!}
 
   left-unit-law-comp-hom-functor-large-precategory-Small-Large-Precategory :
     {γF γG : Level}
@@ -121,7 +121,7 @@ module _
 
   functor-large-precategory-Small-Large-Precategory :
     Large-Precategory (λ l → l1 ⊔ l2 ⊔ α l ⊔ β l l) (λ l l' → l1 ⊔ l2 ⊔ β l l')
-  obj-Large-Precategory functor-large-precategory-Small-Large-Precategory = {!!}
+  functor-large-precategory-Small-Large-Precategory = {!!}
 ```
 
 ### The small precategories of functors and natural transformations from a small to a large precategory

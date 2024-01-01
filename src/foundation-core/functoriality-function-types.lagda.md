@@ -45,7 +45,7 @@ module _
       ( precomp left W)
       ( precomp top W)
       ( precomp right W)
-  precomp-coherence-triangle-maps H W = {!!}
+  precomp-coherence-triangle-maps = {!!}
 
   precomp-coherence-triangle-maps' :
     coherence-triangle-maps' left right top →
@@ -54,7 +54,7 @@ module _
       ( precomp left W)
       ( precomp top W)
       ( precomp right W)
-  precomp-coherence-triangle-maps' H W = {!!}
+  precomp-coherence-triangle-maps' = {!!}
 ```
 
 ## See also

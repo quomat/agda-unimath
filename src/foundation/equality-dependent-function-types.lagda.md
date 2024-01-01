@@ -55,18 +55,18 @@ module _
   map-extensionality-Π :
     ( (x : A) (y : B x) → (f x ＝ y) ≃ Eq-B x y) →
     ( g : (x : A) → B x) → f ＝ g → ((x : A) → Eq-B x (g x))
-  map-extensionality-Π e .f refl x = {!!}
+  map-extensionality-Π = {!!}
 
   abstract
     is-equiv-map-extensionality-Π :
       (e : (x : A) (y : B x) → (f x ＝ y) ≃ Eq-B x y) →
       (g : (x : A) → B x) → is-equiv (map-extensionality-Π e g)
-    is-equiv-map-extensionality-Π e = {!!}
+    is-equiv-map-extensionality-Π = {!!}
 
   extensionality-Π :
     ( (x : A) (y : B x) → (f x ＝ y) ≃ Eq-B x y) →
     ( g : (x : A) → B x) → (f ＝ g) ≃ ((x : A) → Eq-B x (g x))
-  pr1 (extensionality-Π e g) = {!!}
+  extensionality-Π = {!!}
 ```
 
 ## See also

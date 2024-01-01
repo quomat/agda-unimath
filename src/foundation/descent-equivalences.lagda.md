@@ -51,8 +51,7 @@ module _
     is-equiv i → is-equiv (horizontal-map-cone i (vertical-map-cone j h c) d) →
     is-pullback (j ∘ i) h (pasting-horizontal-cone i j h c d) →
     is-pullback j h c
-  descent-is-equiv i j h c d
-    is-equiv-i is-equiv-k is-pb-rectangle = {!!}
+  descent-is-equiv = {!!}
 
   descent-equiv :
     (i : X ≃ Y) (j : Y → Z) (h : C → Z)
@@ -63,5 +62,5 @@ module _
       ( h)
       ( pasting-horizontal-cone (map-equiv i) j h c d) →
     is-pullback j h c
-  descent-equiv i j h c d = {!!}
+  descent-equiv = {!!}
 ```

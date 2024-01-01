@@ -74,7 +74,7 @@ We call this type of structure `suspension-structure`.
 ```agda
 suspension-cocone :
   {l1 l2 : Level} (X : UU l1) (Y : UU l2) → UU (l1 ⊔ l2)
-suspension-cocone X Y = {!!}
+suspension-cocone = {!!}
 ```
 
 ### Suspension structures on a type
@@ -100,7 +100,7 @@ module _
   meridian-suspension-structure :
     (c : suspension-structure X Y) →
     X → north-suspension-structure c ＝ south-suspension-structure c
-  meridian-suspension-structure c = {!!}
+  meridian-suspension-structure = {!!}
 ```
 
 ## Properties
@@ -114,11 +114,11 @@ module _
 
   suspension-cocone-suspension-structure :
     suspension-structure X Y → suspension-cocone X Y
-  pr1 (suspension-cocone-suspension-structure (N , S , merid)) = {!!}
+  suspension-cocone-suspension-structure = {!!}
 
   suspension-structure-suspension-cocone :
     suspension-cocone X Y → suspension-structure X Y
-  pr1 (suspension-structure-suspension-cocone (N , S , merid)) = {!!}
+  suspension-structure-suspension-cocone = {!!}
 
   is-equiv-suspension-cocone-suspension-structure :
     is-equiv suspension-cocone-suspension-structure
@@ -130,11 +130,11 @@ module _
 
   equiv-suspension-structure-suspension-cocone :
     suspension-structure X Y ≃ suspension-cocone X Y
-  pr1 equiv-suspension-structure-suspension-cocone = {!!}
+  equiv-suspension-structure-suspension-cocone = {!!}
 
   equiv-suspension-cocone-suspension-structure :
     suspension-cocone X Y ≃ suspension-structure X Y
-  pr1 equiv-suspension-cocone-suspension-structure = {!!}
+  equiv-suspension-cocone-suspension-structure = {!!}
 ```
 
 #### Characterization of equalities in `suspension-structure`
@@ -146,7 +146,7 @@ module _
 
   htpy-suspension-structure :
     (c c' : suspension-structure X Z) → UU (l1 ⊔ l2)
-  htpy-suspension-structure c c' = {!!}
+  htpy-suspension-structure = {!!}
 
   north-htpy-suspension-structure :
     {c c' : suspension-structure X Z} →
@@ -174,7 +174,7 @@ module _
   extensionality-suspension-structure :
     (c c' : suspension-structure X Z) →
     (c ＝ c') ≃ (htpy-suspension-structure c c')
-  extensionality-suspension-structure (N , S , merid) = {!!}
+  extensionality-suspension-structure = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} {Z : UU l2} {c c' : suspension-structure X Z}
@@ -213,7 +213,7 @@ module _
     ( c' : suspension-structure X Z)
     ( H : htpy-suspension-structure c c') →
     P c' H
-  ind-htpy-suspension-structure P = {!!}
+  ind-htpy-suspension-structure = {!!}
 ```
 
 #### The action of paths of the projections have the expected effect
@@ -245,12 +245,12 @@ module _
   htpy-in-htpy-suspension-structure :
     htpy-suspension-structure c c' →
     htpy-suspension-structure c c' → UU (l1 ⊔ l2)
-  htpy-in-htpy-suspension-structure (n , s , h) (n' , s' , h') = {!!}
+  htpy-in-htpy-suspension-structure = {!!}
 
   extensionality-htpy-suspension-structure :
     (h h' : htpy-suspension-structure c c') →
       (h ＝ h') ≃ htpy-in-htpy-suspension-structure h h'
-  extensionality-htpy-suspension-structure (n , s , h) = {!!}
+  extensionality-htpy-suspension-structure = {!!}
 
   north-htpy-in-htpy-suspension-structure :
     {h h' : htpy-suspension-structure c c'} →

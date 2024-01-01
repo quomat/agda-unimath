@@ -130,7 +130,7 @@ module _
 
   is-property-is-sequential-limit :
     (c : cone-tower A X) → is-prop (is-sequential-limit c)
-  is-property-is-sequential-limit c = {!!}
+  is-property-is-sequential-limit = {!!}
 
   is-sequential-limit-Prop : (c : cone-tower A X) → Prop (l1 ⊔ l2)
   pr1 (is-sequential-limit-Prop c) = {!!}
@@ -150,32 +150,32 @@ module _
 
   refl-Eq-standard-sequential-limit :
     (s : standard-sequential-limit A) → Eq-standard-sequential-limit s s
-  pr1 (refl-Eq-standard-sequential-limit s) = {!!}
+  refl-Eq-standard-sequential-limit = {!!}
 
   Eq-eq-standard-sequential-limit :
     (s t : standard-sequential-limit A) →
     s ＝ t → Eq-standard-sequential-limit s t
-  Eq-eq-standard-sequential-limit s .s refl = {!!}
+  Eq-eq-standard-sequential-limit = {!!}
 
   is-torsorial-Eq-standard-sequential-limit :
     (s : standard-sequential-limit A) →
     is-torsorial (Eq-standard-sequential-limit s)
-  is-torsorial-Eq-standard-sequential-limit s = {!!}
+  is-torsorial-Eq-standard-sequential-limit = {!!}
 
   is-equiv-Eq-eq-standard-sequential-limit :
     (s t : standard-sequential-limit A) →
     is-equiv (Eq-eq-standard-sequential-limit s t)
-  is-equiv-Eq-eq-standard-sequential-limit s = {!!}
+  is-equiv-Eq-eq-standard-sequential-limit = {!!}
 
   extensionality-standard-sequential-limit :
     (s t : standard-sequential-limit A) →
     (s ＝ t) ≃ Eq-standard-sequential-limit s t
-  pr1 (extensionality-standard-sequential-limit s t) = {!!}
+  extensionality-standard-sequential-limit = {!!}
 
   eq-Eq-standard-sequential-limit :
     (s t : standard-sequential-limit A) →
     Eq-standard-sequential-limit s t → s ＝ t
-  eq-Eq-standard-sequential-limit s t = {!!}
+  eq-Eq-standard-sequential-limit = {!!}
 ```
 
 ### The standard sequential limit satisfies the universal property of a sequential limit
@@ -187,7 +187,7 @@ module _
 
   cone-map-standard-sequential-limit :
     {l : Level} {Y : UU l} → (Y → standard-sequential-limit A) → cone-tower A Y
-  cone-map-standard-sequential-limit {Y = Y} = {!!}
+  cone-map-standard-sequential-limit = {!!}
 
   is-retraction-gap-tower :
     {l : Level} {Y : UU l} →
@@ -201,7 +201,7 @@ module _
 
   universal-property-standard-sequential-limit :
     universal-property-sequential-limit A (cone-standard-sequential-limit A)
-  pr1 (pr1 (universal-property-standard-sequential-limit X)) = {!!}
+  universal-property-standard-sequential-limit = {!!}
 ```
 
 ### A cone over a tower is equal to the value of `cone-map-tower` at its own gap map
@@ -216,7 +216,7 @@ module _
     htpy-cone-tower A
       ( cone-map-tower A (cone-standard-sequential-limit A) (gap-tower A c))
       ( c)
-  pr1 (htpy-cone-up-pullback-standard-sequential-limit c) n = {!!}
+  htpy-cone-up-pullback-standard-sequential-limit = {!!}
 ```
 
 ### A cone satisfies the universal property of the limit if and only if the gap map is an equivalence
@@ -230,12 +230,12 @@ module _
     (c : cone-tower A X) →
     universal-property-sequential-limit A c →
     is-sequential-limit A c
-  is-sequential-limit-universal-property-sequential-limit c = {!!}
+  is-sequential-limit-universal-property-sequential-limit = {!!}
 
   universal-property-is-sequential-limit :
     (c : cone-tower A X) → is-sequential-limit A c →
     universal-property-sequential-limit A c
-  universal-property-is-sequential-limit c is-lim-c = {!!}
+  universal-property-is-sequential-limit = {!!}
 ```
 
 ## Table of files about sequential limits

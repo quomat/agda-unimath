@@ -39,14 +39,14 @@ abstract
     {l1 l2 : Level} (C : Precategory l1 l2) →
     is-category-Precategory C →
     is-category-Precategory (opposite-Precategory C)
-  is-category-opposite-is-category-Precategory C is-category-C x y = {!!}
+  is-category-opposite-is-category-Precategory = {!!}
 
 abstract
   is-category-is-category-opposite-Precategory :
     {l1 l2 : Level} (C : Precategory l1 l2) →
     is-category-Precategory (opposite-Precategory C) →
     is-category-Precategory C
-  is-category-is-category-opposite-Precategory C = {!!}
+  is-category-is-category-opposite-Precategory = {!!}
 ```
 
 ## Definitions
@@ -121,12 +121,11 @@ module _
 ```agda
 is-involution-opposite-Category :
   {l1 l2 : Level} → is-involution (opposite-Category {l1} {l2})
-is-involution-opposite-Category C = {!!}
+is-involution-opposite-Category = {!!}
 
 involution-opposite-Category :
   (l1 l2 : Level) → involution (Category l1 l2)
-pr1 (involution-opposite-Category l1 l2) = {!!}
-pr2 (involution-opposite-Category l1 l2) = {!!}
+involution-opposite-Category = {!!}
 
 is-equiv-opposite-Category :
   {l1 l2 : Level} → is-equiv (opposite-Category {l1} {l2})
@@ -134,7 +133,7 @@ is-equiv-opposite-Category = {!!}
 
 equiv-opposite-Category :
   (l1 l2 : Level) → Category l1 l2 ≃ Category l1 l2
-equiv-opposite-Category l1 l2 = {!!}
+equiv-opposite-Category = {!!}
 ```
 
 ## External links

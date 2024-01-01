@@ -36,5 +36,5 @@ dependent-sequence B = {!!}
 map-dependent-sequence :
   {l1 l2 : Level} {A : ℕ → UU l1} {B : ℕ → UU l2} →
   ((n : ℕ) → A n → B n) → dependent-sequence A → dependent-sequence B
-map-dependent-sequence f a = {!!}
+map-dependent-sequence = {!!}
 ```

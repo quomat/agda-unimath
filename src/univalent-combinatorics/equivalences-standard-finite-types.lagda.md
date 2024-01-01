@@ -35,8 +35,7 @@ We construct **equivalences** between (types built out of)
 ```agda
 function-Fin :
   (k l : ℕ) → (Fin k → Fin l) ≃ Fin (exp-ℕ l k)
-function-Fin zero-ℕ l = {!!}
-function-Fin (succ-ℕ k) l = {!!}
+function-Fin = {!!}
 
 Fin-exp-ℕ : (k l : ℕ) → Fin (exp-ℕ l k) ≃ (Fin k → Fin l)
 Fin-exp-ℕ k l = {!!}

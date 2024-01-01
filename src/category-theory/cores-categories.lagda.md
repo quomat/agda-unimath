@@ -61,7 +61,7 @@ module _
 ```agda
 core-precategory-Category :
   {l1 l2 : Level} (C : Category l1 l2) → Precategory l1 l2
-core-precategory-Category C = {!!}
+core-precategory-Category = {!!}
 ```
 
 ### The core category
@@ -69,8 +69,7 @@ core-precategory-Category C = {!!}
 ```agda
 core-category-Category :
   {l1 l2 : Level} (C : Category l1 l2) → Category l1 l2
-pr1 (core-category-Category C) = {!!}
-pr2 (core-category-Category C) = {!!}
+core-category-Category = {!!}
 ```
 
 ### The core pregroupoid

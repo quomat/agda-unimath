@@ -37,7 +37,7 @@ to the [wild monoid](structured-types.wild-monoids.md) of
 ```agda
 wild-representation-type-Monoid :
   (l1 : Level) {l2 : Level} (M : Monoid l2) → UU (lsuc l1 ⊔ l2)
-wild-representation-type-Monoid l1 M = {!!}
+wild-representation-type-Monoid = {!!}
 
 module _
   {l1 l2 : Level} (M : Monoid l1)

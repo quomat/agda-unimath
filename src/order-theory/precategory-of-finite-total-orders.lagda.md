@@ -38,7 +38,7 @@ parametric-Total-Order-𝔽-Full-Large-Subprecategory :
   Full-Large-Subprecategory
     ( λ l → α l ⊔ β l)
     ( parametric-Poset-Large-Precategory α β)
-parametric-Total-Order-𝔽-Full-Large-Subprecategory α β = {!!}
+parametric-Total-Order-𝔽-Full-Large-Subprecategory = {!!}
 
 Total-Order-𝔽-Large-Precategory : Large-Precategory lsuc (_⊔_)
 Total-Order-𝔽-Large-Precategory = {!!}

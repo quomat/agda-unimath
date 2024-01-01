@@ -47,7 +47,7 @@ module _
   preserves-order-map-Large-Preorder :
     ({l : Level} → type-Large-Preorder P l → type-Large-Preorder Q (γ l)) →
     UUω
-  preserves-order-map-Large-Preorder f = {!!}
+  preserves-order-map-Large-Preorder = {!!}
 ```
 
 ### The type of order preserving maps between large preorders
@@ -101,7 +101,7 @@ module _
 
   preserves-order-comp-hom-Large-Preorder :
     preserves-order-map-Large-Preorder P R map-comp-hom-Large-Preorder
-  preserves-order-comp-hom-Large-Preorder x y = {!!}
+  preserves-order-comp-hom-Large-Preorder = {!!}
 
   comp-hom-Large-Preorder : hom-Large-Preorder (λ l → γg (γf l)) P R
   map-hom-Large-Preorder comp-hom-Large-Preorder = {!!}
@@ -124,7 +124,7 @@ module _
 
   refl-htpy-hom-Large-Preorder :
     (f : hom-Large-Preorder γ P Q) → htpy-hom-Large-Preorder f f
-  refl-htpy-hom-Large-Preorder f = {!!}
+  refl-htpy-hom-Large-Preorder = {!!}
 ```
 
 ## Properties
@@ -196,7 +196,7 @@ module _
     sim-Large-Preorder Q
       ( map-hom-Large-Preorder f x)
       ( map-hom-Large-Preorder f y)
-  pr1 (preserves-sim-hom-Large-Preorder x y (s , t)) = {!!}
+  preserves-sim-hom-Large-Preorder = {!!}
 ```
 
 ## See also

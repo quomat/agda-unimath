@@ -83,7 +83,7 @@ type-standard-pullback-hom :
   {A : UU l1} {B : UU l2} {X : UU l3} {Y : UU l4}
   (f : A → B) (g : X → Y) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-type-standard-pullback-hom {A = A} {Y = Y} f g = {!!}
+type-standard-pullback-hom = {!!}
 ```
 
 #### The standard pullback-hom type is equivalent to the type of fibered maps
@@ -135,7 +135,7 @@ fibered maps.
   gap-pullback-hom :
     {l : Level} {C : UU l} →
     cone (precomp f Y) (postcomp A g) C → C → fibered-map f g
-  gap-pullback-hom c x = {!!}
+  gap-pullback-hom = {!!}
 
   is-pullback-fibered-map :
     is-pullback (precomp f Y) (postcomp A g) (cone-pullback-hom)

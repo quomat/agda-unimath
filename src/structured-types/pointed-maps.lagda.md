@@ -55,7 +55,7 @@ the [asterisk](https://codepoints.net/U+002A) `*`.
 
   pointed-map-Pointed-Type :
     Pointed-Type l1 → Pointed-Type l2 → Pointed-Type (l1 ⊔ l2)
-  pr1 (pointed-map-Pointed-Type A B) = {!!}
+  pointed-map-Pointed-Type = {!!}
 
 module _
   {l1 l2 : Level} {A : Pointed-Type l1} {B : Pointed-Type l2}
@@ -95,12 +95,12 @@ module _
 
   map-comp-pointed-map :
     B →∗ C → A →∗ B → type-Pointed-Type A → type-Pointed-Type C
-  map-comp-pointed-map g f = {!!}
+  map-comp-pointed-map = {!!}
 
   preserves-point-comp-pointed-map :
     (g : B →∗ C) (f : A →∗ B) →
     (map-comp-pointed-map g f (point-Pointed-Type A)) ＝ point-Pointed-Type C
-  preserves-point-comp-pointed-map g f = {!!}
+  preserves-point-comp-pointed-map = {!!}
 
   comp-pointed-map : B →∗ C → A →∗ B → A →∗ C
   pr1 (comp-pointed-map g f) = {!!}
@@ -109,14 +109,14 @@ precomp-pointed-map :
   {l1 l2 l3 : Level}
   {A : Pointed-Type l1} {B : Pointed-Type l2} (C : Pointed-Type l3) →
   A →∗ B → B →∗ C → A →∗ C
-precomp-pointed-map C f g = {!!}
+precomp-pointed-map = {!!}
 
 infixr 15 _∘∗_
 _∘∗_ :
   {l1 l2 l3 : Level}
   {A : Pointed-Type l1} {B : Pointed-Type l2} {C : Pointed-Type l3} →
   B →∗ C → A →∗ B → A →∗ C
-_∘∗_ {A = A} {B} {C} = {!!}
+_∘∗_ = {!!}
 ```
 
 ### The identity pointed map

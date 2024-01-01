@@ -63,18 +63,18 @@ module _
 
   hom-set-one-object-precategory-Monoid :
     unit → unit → Set l
-  hom-set-one-object-precategory-Monoid star star = {!!}
+  hom-set-one-object-precategory-Monoid = {!!}
 
   hom-one-object-precategory-Monoid :
     unit → unit → UU l
-  hom-one-object-precategory-Monoid x y = {!!}
+  hom-one-object-precategory-Monoid = {!!}
 
   comp-hom-one-object-precategory-Monoid :
     {x y z : unit} →
     hom-one-object-precategory-Monoid y z →
     hom-one-object-precategory-Monoid x y →
     hom-one-object-precategory-Monoid x z
-  comp-hom-one-object-precategory-Monoid {star} {star} {star} = {!!}
+  comp-hom-one-object-precategory-Monoid = {!!}
 
   associative-comp-hom-one-object-precategory-Monoid :
     {x y z w : unit} →
@@ -93,11 +93,11 @@ module _
   associative-composition-operation-one-object-precategory-Monoid :
     associative-composition-operation-binary-family-Set
       hom-set-one-object-precategory-Monoid
-  pr1 associative-composition-operation-one-object-precategory-Monoid = {!!}
+  associative-composition-operation-one-object-precategory-Monoid = {!!}
 
   id-hom-one-object-precategory-Monoid :
     (x : unit) → hom-one-object-precategory-Monoid x x
-  id-hom-one-object-precategory-Monoid star = {!!}
+  id-hom-one-object-precategory-Monoid = {!!}
 
   left-unit-law-comp-hom-one-object-precategory-Monoid :
     {x y : unit} (f : hom-one-object-precategory-Monoid x y) →
@@ -105,7 +105,7 @@ module _
       ( id-hom-one-object-precategory-Monoid y)
       ( f) ＝
     f
-  left-unit-law-comp-hom-one-object-precategory-Monoid {star} {star} = {!!}
+  left-unit-law-comp-hom-one-object-precategory-Monoid = {!!}
 
   right-unit-law-comp-hom-one-object-precategory-Monoid :
     {x y : unit} (f : hom-one-object-precategory-Monoid x y) →
@@ -113,13 +113,13 @@ module _
       ( f)
       ( id-hom-one-object-precategory-Monoid x) ＝
     f
-  right-unit-law-comp-hom-one-object-precategory-Monoid {star} {star} = {!!}
+  right-unit-law-comp-hom-one-object-precategory-Monoid = {!!}
 
   is-unital-composition-operation-one-object-precategory-Monoid :
     is-unital-composition-operation-binary-family-Set
       hom-set-one-object-precategory-Monoid
       comp-hom-one-object-precategory-Monoid
-  pr1 is-unital-composition-operation-one-object-precategory-Monoid = {!!}
+  is-unital-composition-operation-one-object-precategory-Monoid = {!!}
 
   precategory-one-object-precategory-Monoid : Precategory lzero l
   pr1 precategory-one-object-precategory-Monoid = {!!}
@@ -133,5 +133,5 @@ module _
 ```agda
 monoid-One-Object-Precategory :
   {l1 l2 : Level} → One-Object-Precategory l1 l2 → Monoid l2
-monoid-One-Object-Precategory P = {!!}
+monoid-One-Object-Precategory = {!!}
 ```

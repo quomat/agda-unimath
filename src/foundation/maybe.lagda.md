@@ -70,12 +70,12 @@ is-value-Maybe {l} {X} x = {!!}
 
 value-is-value-Maybe :
   {l : Level} {X : UU l} (x : Maybe X) → is-value-Maybe x → X
-value-is-value-Maybe x = {!!}
+value-is-value-Maybe = {!!}
 
 eq-is-value-Maybe :
   {l : Level} {X : UU l} (x : Maybe X) (H : is-value-Maybe x) →
   inl (value-is-value-Maybe x H) ＝ x
-eq-is-value-Maybe x H = {!!}
+eq-is-value-Maybe = {!!}
 ```
 
 ### Maybe structure on a type
@@ -109,12 +109,11 @@ abstract
 ```agda
 is-decidable-is-exception-Maybe :
   {l : Level} {X : UU l} (x : Maybe X) → is-decidable (is-exception-Maybe x)
-is-decidable-is-exception-Maybe {l} {X} (inl x) = {!!}
-is-decidable-is-exception-Maybe (inr star) = {!!}
+is-decidable-is-exception-Maybe = {!!}
 
 is-decidable-is-not-exception-Maybe :
   {l : Level} {X : UU l} (x : Maybe X) → is-decidable (is-not-exception-Maybe x)
-is-decidable-is-not-exception-Maybe x = {!!}
+is-decidable-is-not-exception-Maybe = {!!}
 ```
 
 ### The values of the unit of the Maybe modality are not exceptions
@@ -123,15 +122,7 @@ is-decidable-is-not-exception-Maybe x = {!!}
 abstract
   is-not-exception-unit-Maybe :
     {l : Level} {X : UU l} (x : X) → is-not-exception-Maybe (unit-Maybe x)
-  is-not-exception-unit-Maybe {l} {X} x ()
-```
-
-### For any element of type `Maybe X` we can decide whether it is a value or an exception
-
-```agda
-decide-Maybe :
-  {l : Level} {X : UU l} (x : Maybe X) → is-value-Maybe x + is-exception-Maybe x
-decide-Maybe (inl x) = {!!}
+  is-not-exception-unit-Maybe = {!!}
 decide-Maybe (inr star) = {!!}
 ```
 
@@ -142,7 +133,7 @@ abstract
   is-not-exception-is-value-Maybe :
     {l1 : Level} {X : UU l1} (x : Maybe X) →
     is-value-Maybe x → is-not-exception-Maybe x
-  is-not-exception-is-value-Maybe {l1} {X} .(inl x) (pair x refl) = {!!}
+  is-not-exception-is-value-Maybe = {!!}
 ```
 
 ### If a point is not an exception, then it is a value
@@ -151,16 +142,16 @@ abstract
 is-value-is-not-exception-Maybe :
   {l1 : Level} {X : UU l1} (x : Maybe X) →
   is-not-exception-Maybe x → is-value-Maybe x
-is-value-is-not-exception-Maybe x H = {!!}
+is-value-is-not-exception-Maybe = {!!}
 
 value-is-not-exception-Maybe :
   {l1 : Level} {X : UU l1} (x : Maybe X) → is-not-exception-Maybe x → X
-value-is-not-exception-Maybe x H = {!!}
+value-is-not-exception-Maybe = {!!}
 
 eq-is-not-exception-Maybe :
   {l1 : Level} {X : UU l1} (x : Maybe X) (H : is-not-exception-Maybe x) →
   inl (value-is-not-exception-Maybe x H) ＝ x
-eq-is-not-exception-Maybe x H = {!!}
+eq-is-not-exception-Maybe = {!!}
 ```
 
 ### The two definitions of `Maybe` are equal
@@ -168,8 +159,7 @@ eq-is-not-exception-Maybe x H = {!!}
 ```agda
 equiv-Maybe-Maybe' :
   {l1 l2 : Level} {X : UU l1} → Maybe X ≃ Maybe' X
-pr1 equiv-Maybe-Maybe' (inl x) = {!!}
-pr1 equiv-Maybe-Maybe' (inr star) = {!!}
+equiv-Maybe-Maybe' = {!!}
 pr1 (pr1 (pr2 equiv-Maybe-Maybe')) (unit-Maybe' x) = {!!}
 pr1 (pr1 (pr2 equiv-Maybe-Maybe')) exception-Maybe' = {!!}
 pr2 (pr1 (pr2 equiv-Maybe-Maybe')) (unit-Maybe' x) = {!!}

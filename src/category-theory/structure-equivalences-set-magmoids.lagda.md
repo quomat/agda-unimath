@@ -55,7 +55,7 @@ module _
 
   is-equiv-prop-functor-Set-Magmoid :
     Prop (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  pr1 is-equiv-prop-functor-Set-Magmoid = {!!}
+  is-equiv-prop-functor-Set-Magmoid = {!!}
 ```
 
 ### The type of structure equivalences between set-magmoids
@@ -79,7 +79,7 @@ module _
 
   is-equiv-id-Set-Magmoid :
     is-structure-equiv-functor-Set-Magmoid A A (id-functor-Set-Magmoid A)
-  pr1 is-equiv-id-Set-Magmoid = {!!}
+  is-equiv-id-Set-Magmoid = {!!}
 
   id-structure-equiv-Set-Magmoid : structure-equiv-Set-Magmoid A A
   pr1 id-structure-equiv-Set-Magmoid = {!!}
@@ -112,7 +112,7 @@ module _
   structure-equiv-eq-Set-Magmoid :
     (A B : Set-Magmoid l1 l2) →
     A ＝ B → structure-equiv-Set-Magmoid A B
-  structure-equiv-eq-Set-Magmoid A .A refl = {!!}
+  structure-equiv-eq-Set-Magmoid = {!!}
 ```
 
 The rest remains to be figured out. We need the fact that binary families of
@@ -121,5 +121,5 @@ equivalences of sets are torsorial.
 ```text
   is-torsorial-structure-equiv-Set-Magmoid :
     (A : Set-Magmoid l1 l2) → is-torsorial (structure-equiv-Set-Magmoid A)
-  is-torsorial-structure-equiv-Set-Magmoid A = {!!}
+  is-torsorial-structure-equiv-Set-Magmoid = {!!}
 ```

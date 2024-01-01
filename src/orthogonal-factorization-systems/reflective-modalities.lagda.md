@@ -30,7 +30,7 @@ types is
 ```agda
 is-reflective-modality :
   {l : Level} {○ : operator-modality l l} → unit-modality ○ → UU (lsuc l)
-is-reflective-modality unit-○ = {!!}
+is-reflective-modality = {!!}
 
 reflective-modality : (l : Level) → UU (lsuc l)
 reflective-modality l = {!!}

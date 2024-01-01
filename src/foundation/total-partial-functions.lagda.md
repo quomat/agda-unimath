@@ -45,5 +45,5 @@ module _
 ```agda
 total-partial-function :
   {l1 l2 : Level} (l3 : Level) → UU l1 → UU l2 → UU (l1 ⊔ l2 ⊔ lsuc l3)
-total-partial-function l3 A B = {!!}
+total-partial-function = {!!}
 ```

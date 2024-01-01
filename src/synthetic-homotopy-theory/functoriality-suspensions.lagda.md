@@ -78,7 +78,7 @@ module _
 
   htpy-function-out-of-suspension-id-map-suspension :
     htpy-function-out-of-suspension A (map-suspension id) id
-  pr1 htpy-function-out-of-suspension-id-map-suspension = {!!}
+  htpy-function-out-of-suspension-id-map-suspension = {!!}
 
   id-map-suspension : map-suspension (id {A = A}) ~ id
   id-map-suspension = {!!}
@@ -109,13 +109,13 @@ module _
       ( ap (map-suspension g ∘ map-suspension f) (meridian-suspension a))
       ( ap (map-suspension (g ∘ f)) (meridian-suspension a))
       ( preserves-comp-map-suspension-south)
-  coherence-square-identifications-comp-map-suspension a = {!!}
+  coherence-square-identifications-comp-map-suspension = {!!}
 
   htpy-function-out-of-suspension-comp-map-suspension :
     htpy-function-out-of-suspension A
       ( map-suspension g ∘ map-suspension f)
       ( map-suspension (g ∘ f))
-  pr1 htpy-function-out-of-suspension-comp-map-suspension = {!!}
+  htpy-function-out-of-suspension-comp-map-suspension = {!!}
 
   inv-preserves-comp-map-suspension :
     map-suspension g ∘ map-suspension f ~ map-suspension (g ∘ f)
@@ -135,15 +135,15 @@ module _
 
   section-map-suspension-section :
     (f : A → B) → section f → section (map-suspension f)
-  pr1 (section-map-suspension-section f S) = {!!}
+  section-map-suspension-section = {!!}
 
   retraction-map-suspension-retraction :
     (f : A → B) → retraction f → retraction (map-suspension f)
-  pr1 (retraction-map-suspension-retraction f S) = {!!}
+  retraction-map-suspension-retraction = {!!}
 
   retract-of-suspension-retract-of :
     A retract-of B → (suspension A) retract-of (suspension B)
-  pr1 (retract-of-suspension-retract-of R) = {!!}
+  retract-of-suspension-retract-of = {!!}
 ```
 
 ### Equivalent types have equivalent suspensions
@@ -155,7 +155,7 @@ module _
 
   is-equiv-map-suspension-is-equiv :
     (f : A → B) → is-equiv f → is-equiv (map-suspension f)
-  pr1 (is-equiv-map-suspension-is-equiv f e) = {!!}
+  is-equiv-map-suspension-is-equiv = {!!}
 
   equiv-suspension : A ≃ B → suspension A ≃ suspension B
   pr1 (equiv-suspension e) = {!!}

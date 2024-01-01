@@ -90,7 +90,7 @@ module _
   abstract
     is-torsorial-Eq-im :
       (x : im f) → is-torsorial (Eq-im x)
-    is-torsorial-Eq-im x = {!!}
+    is-torsorial-Eq-im = {!!}
 
   abstract
     is-equiv-Eq-eq-im : (x y : im f) → is-equiv (Eq-eq-im x y)
@@ -110,12 +110,11 @@ abstract
   is-emb-inclusion-im :
     {l1 l2 : Level} {X : UU l1} {A : UU l2} (f : A → X) →
     is-emb (inclusion-im f)
-  is-emb-inclusion-im f = {!!}
+  is-emb-inclusion-im = {!!}
 
 emb-im :
   {l1 l2 : Level} {X : UU l1} {A : UU l2} (f : A → X) → im f ↪ X
-pr1 (emb-im f) = {!!}
-pr2 (emb-im f) = {!!}
+emb-im = {!!}
 ```
 
 ### The image inclusion is injective
@@ -125,7 +124,7 @@ abstract
   is-injective-inclusion-im :
     {l1 l2 : Level} {X : UU l1} {A : UU l2} (f : A → X) →
     is-injective (inclusion-im f)
-  is-injective-inclusion-im f = {!!}
+  is-injective-inclusion-im = {!!}
 ```
 
 ### The unit map of the image is surjective
@@ -135,7 +134,7 @@ abstract
   is-surjective-map-unit-im :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
     is-surjective (map-unit-im f)
-  is-surjective-map-unit-im f (y , z) = {!!}
+  is-surjective-map-unit-im = {!!}
 ```
 
 ### The image of a map into a truncated type is truncated
@@ -145,13 +144,12 @@ abstract
   is-trunc-im :
     {l1 l2 : Level} (k : 𝕋) {X : UU l1} {A : UU l2} (f : A → X) →
     is-trunc (succ-𝕋 k) X → is-trunc (succ-𝕋 k) (im f)
-  is-trunc-im k f = {!!}
+  is-trunc-im = {!!}
 
 im-Truncated-Type :
   {l1 l2 : Level} (k : 𝕋) (X : Truncated-Type l1 (succ-𝕋 k)) {A : UU l2}
   (f : A → type-Truncated-Type X) → Truncated-Type (l1 ⊔ l2) (succ-𝕋 k)
-pr1 (im-Truncated-Type k X f) = {!!}
-pr2 (im-Truncated-Type k X f) = {!!}
+im-Truncated-Type = {!!}
 ```
 
 ### The image of a map into a proposition is a proposition
@@ -166,7 +164,7 @@ abstract
 im-Prop :
     {l1 l2 : Level} (X : Prop l1) {A : UU l2}
     (f : A → type-Prop X) → Prop (l1 ⊔ l2)
-im-Prop X f = {!!}
+im-Prop = {!!}
 ```
 
 ### The image of a map into a set is a set
@@ -181,7 +179,7 @@ abstract
 im-Set :
   {l1 l2 : Level} (X : Set l1) {A : UU l2}
   (f : A → type-Set X) → Set (l1 ⊔ l2)
-im-Set X f = {!!}
+im-Set = {!!}
 ```
 
 ### The image of a map into a 1-type is a 1-type
@@ -196,5 +194,5 @@ abstract
 im-1-Type :
   {l1 l2 : Level} (X : 1-Type l1) {A : UU l2}
   (f : A → type-1-Type X) → 1-Type (l1 ⊔ l2)
-im-1-Type X f = {!!}
+im-1-Type = {!!}
 ```

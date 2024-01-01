@@ -44,7 +44,7 @@ of morphisms from `X` to `Y` in the subcategory is
 ```agda
 Full-Subcategory :
   {l1 l2 : Level} (l3 : Level) (C : Category l1 l2) → UU (l1 ⊔ lsuc l3)
-Full-Subcategory l3 C = {!!}
+Full-Subcategory = {!!}
 
 module _
   {l1 l2 l3 : Level}
@@ -96,14 +96,14 @@ module _
 
   id-hom-Full-Subcategory :
     {x : obj-Full-Subcategory C P} → hom-Full-Subcategory x x
-  id-hom-Full-Subcategory {x} = {!!}
+  id-hom-Full-Subcategory = {!!}
 
   comp-hom-Full-Subcategory :
     {x y z : obj-Full-Subcategory C P} →
     hom-Full-Subcategory y z →
     hom-Full-Subcategory x y →
     hom-Full-Subcategory x z
-  comp-hom-Full-Subcategory {x} {y} {z} = {!!}
+  comp-hom-Full-Subcategory = {!!}
 
   associative-comp-hom-Full-Subcategory :
     {x y z w : obj-Full-Subcategory C P}
@@ -116,7 +116,7 @@ module _
     comp-hom-Full-Subcategory {x} {z} {w}
       ( h)
       ( comp-hom-Full-Subcategory {x} {y} {z} g f)
-  associative-comp-hom-Full-Subcategory {x} {y} {z} {w} = {!!}
+  associative-comp-hom-Full-Subcategory = {!!}
 
   inv-associative-comp-hom-Full-Subcategory :
     {x y z w : obj-Full-Subcategory C P}
@@ -129,7 +129,7 @@ module _
     comp-hom-Full-Subcategory {x} {y} {w}
       ( comp-hom-Full-Subcategory {y} {z} {w} h g)
       ( f)
-  inv-associative-comp-hom-Full-Subcategory {x} {y} {z} {w} = {!!}
+  inv-associative-comp-hom-Full-Subcategory = {!!}
 
   left-unit-law-comp-hom-Full-Subcategory :
     {x y : obj-Full-Subcategory C P}
@@ -138,7 +138,7 @@ module _
       ( id-hom-Full-Subcategory {y})
       ( f) ＝
     f
-  left-unit-law-comp-hom-Full-Subcategory {x} {y} = {!!}
+  left-unit-law-comp-hom-Full-Subcategory = {!!}
 
   right-unit-law-comp-hom-Full-Subcategory :
     {x y : obj-Full-Subcategory C P}
@@ -147,7 +147,7 @@ module _
       ( f)
       ( id-hom-Full-Subcategory {x}) ＝
     f
-  right-unit-law-comp-hom-Full-Subcategory {x} {y} = {!!}
+  right-unit-law-comp-hom-Full-Subcategory = {!!}
 
   associative-composition-operation-Full-Subcategory :
     associative-composition-operation-binary-family-Set hom-set-Full-Subcategory

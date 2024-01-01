@@ -181,15 +181,15 @@ module _
 
   is-least-≼-constant-𝕎 :
     {x : A} (h : is-empty (B x)) (w : 𝕎 A B) → constant-𝕎 x h ≼-𝕎 w
-  is-least-≼-constant-𝕎 h (tree-𝕎 y β) x = {!!}
+  is-least-≼-constant-𝕎 = {!!}
 
   is-least-≼-is-constant-𝕎 :
     {x : 𝕎 A B} → is-constant-𝕎 x → (y : 𝕎 A B) → x ≼-𝕎 y
-  is-least-≼-is-constant-𝕎 {tree-𝕎 x α} H (tree-𝕎 y β) z = {!!}
+  is-least-≼-is-constant-𝕎 = {!!}
 
   is-constant-is-least-≼-𝕎 :
     {x : 𝕎 A B} → ((y : 𝕎 A B) → x ≼-𝕎 y) → is-constant-𝕎 x
-  is-constant-is-least-≼-𝕎 {tree-𝕎 x α} H b = {!!}
+  is-constant-is-least-≼-𝕎 = {!!}
 ```
 
 ### If the rank of `x` is strictly below the rank of `y`, then the rank of `x` is at most the rank of `y`

@@ -57,13 +57,13 @@ module _
     hom-Group
       ( group-Concrete-Group (UU-Fin-Group l n))
       ( loop-group-Set (raise-Set l (Fin-Set n)))
-  pr1 hom-loop-group-fin-UU-Fin-Group p = {!!}
+  hom-loop-group-fin-UU-Fin-Group = {!!}
 
   hom-inv-loop-group-fin-UU-Fin-Group :
     hom-Group
       ( loop-group-Set (raise-Set l (Fin-Set n)))
       ( group-Concrete-Group (UU-Fin-Group l n))
-  pr1 hom-inv-loop-group-fin-UU-Fin-Group p = {!!}
+  hom-inv-loop-group-fin-UU-Fin-Group = {!!}
 
   is-section-hom-inv-loop-group-fin-UU-Fin-Group :
     Id
@@ -91,5 +91,5 @@ module _
     iso-Group
       ( group-Concrete-Group (UU-Fin-Group l n))
       ( loop-group-Set (raise-Set l (Fin-Set n)))
-  pr1 iso-loop-group-fin-UU-Fin-Group = {!!}
+  iso-loop-group-fin-UU-Fin-Group = {!!}
 ```

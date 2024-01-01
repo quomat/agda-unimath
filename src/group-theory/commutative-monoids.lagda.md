@@ -33,7 +33,7 @@ A commutative monoid is a monoid `M` in which `xy = {!!}
 ```agda
 is-commutative-Monoid :
   {l : Level} (M : Monoid l) → UU l
-is-commutative-Monoid M = {!!}
+is-commutative-Monoid = {!!}
 
 Commutative-Monoid : (l : Level) → UU (lsuc l)
 Commutative-Monoid l = {!!}
@@ -104,13 +104,13 @@ module _
     (x y z : type-Commutative-Monoid) →
     mul-Commutative-Monoid (mul-Commutative-Monoid x y) z ＝
     mul-Commutative-Monoid (mul-Commutative-Monoid x z) y
-  right-swap-mul-Commutative-Monoid x y z = {!!}
+  right-swap-mul-Commutative-Monoid = {!!}
 
   left-swap-mul-Commutative-Monoid :
     (x y z : type-Commutative-Monoid) →
     mul-Commutative-Monoid x (mul-Commutative-Monoid y z) ＝
     mul-Commutative-Monoid y (mul-Commutative-Monoid x z)
-  left-swap-mul-Commutative-Monoid x y z = {!!}
+  left-swap-mul-Commutative-Monoid = {!!}
 ```
 
 ### The unit element of a commutative monoid

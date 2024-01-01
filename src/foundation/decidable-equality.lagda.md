@@ -51,7 +51,7 @@ has-decidable-equality A = {!!}
 abstract
   has-decidable-equality-is-prop :
     {l1 : Level} {A : UU l1} → is-prop A → has-decidable-equality A
-  has-decidable-equality-is-prop H x y = {!!}
+  has-decidable-equality-is-prop = {!!}
 ```
 
 ### The empty type has decidable equality
@@ -66,7 +66,7 @@ has-decidable-equality-empty ()
 ```agda
 has-decidable-equality-unit :
   has-decidable-equality unit
-has-decidable-equality-unit star star = {!!}
+has-decidable-equality-unit = {!!}
 ```
 
 ## Properties
@@ -78,9 +78,7 @@ has-decidable-equality-prod' :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   (f : B → has-decidable-equality A) (g : A → has-decidable-equality B) →
   has-decidable-equality (A × B)
-has-decidable-equality-prod' f g (pair x y) (pair x' y') with
-  f y x x' | g x y y'
-... | inl refl | inl refl = {!!}
+has-decidable-equality-prod' = {!!}
 ... | inl refl | inr nq = {!!}
 ... | inr np | inl refl = {!!}
 ... | inr np | inr nq = {!!}
@@ -89,7 +87,7 @@ has-decidable-equality-prod :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   has-decidable-equality A → has-decidable-equality B →
   has-decidable-equality (A × B)
-has-decidable-equality-prod d e = {!!}
+has-decidable-equality-prod = {!!}
 ```
 
 ### Decidability of equality of the factors of a cartesian product
@@ -101,15 +99,13 @@ equality; and vice versa.
 has-decidable-equality-left-factor :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   has-decidable-equality (A × B) → B → has-decidable-equality A
-has-decidable-equality-left-factor d b x y with d (pair x b) (pair y b)
-... | inl p = {!!}
+has-decidable-equality-left-factor = {!!}
 ... | inr np = {!!}
 
 has-decidable-equality-right-factor :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   has-decidable-equality (A × B) → A → has-decidable-equality B
-has-decidable-equality-right-factor d a x y with d (pair a x) (pair a y)
-... | inl p = {!!}
+has-decidable-equality-right-factor = {!!}
 ... | inr np = {!!}
 ```
 
@@ -120,7 +116,7 @@ abstract
   has-decidable-equality-retract-of :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} →
     A retract-of B → has-decidable-equality B → has-decidable-equality A
-  has-decidable-equality-retract-of (pair i (pair r H)) d x y = {!!}
+  has-decidable-equality-retract-of = {!!}
 ```
 
 ### Types with decidable equality are closed under equivalences
@@ -130,13 +126,13 @@ abstract
   has-decidable-equality-equiv :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (e : A ≃ B) →
     has-decidable-equality B → has-decidable-equality A
-  has-decidable-equality-equiv e dB x y = {!!}
+  has-decidable-equality-equiv = {!!}
 
 abstract
   has-decidable-equality-equiv' :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (e : A ≃ B) →
     has-decidable-equality A → has-decidable-equality B
-  has-decidable-equality-equiv' e = {!!}
+  has-decidable-equality-equiv' = {!!}
 ```
 
 ### Hedberg's theorem
@@ -151,48 +147,47 @@ module _
 
   Eq-has-decidable-equality' :
     (x y : A) → is-decidable (x ＝ y) → UU lzero
-  Eq-has-decidable-equality' x y (inl p) = {!!}
+  Eq-has-decidable-equality' = {!!}
 
   Eq-has-decidable-equality :
     (d : has-decidable-equality A) → A → A → UU lzero
-  Eq-has-decidable-equality d x y = {!!}
+  Eq-has-decidable-equality = {!!}
 
   abstract
     is-prop-Eq-has-decidable-equality' :
       (x y : A) (t : is-decidable (x ＝ y)) →
       is-prop (Eq-has-decidable-equality' x y t)
-    is-prop-Eq-has-decidable-equality' x y (inl p) = {!!}
+    is-prop-Eq-has-decidable-equality' = {!!}
 
   abstract
     is-prop-Eq-has-decidable-equality :
       (d : has-decidable-equality A)
       {x y : A} → is-prop (Eq-has-decidable-equality d x y)
-    is-prop-Eq-has-decidable-equality d {x} {y} = {!!}
+    is-prop-Eq-has-decidable-equality = {!!}
 
   abstract
     refl-Eq-has-decidable-equality :
       (d : has-decidable-equality A) (x : A) →
       Eq-has-decidable-equality d x x
-    refl-Eq-has-decidable-equality d x with d x x
-    ... | inl α = {!!}
+    refl-Eq-has-decidable-equality = {!!}
 
   abstract
     Eq-has-decidable-equality-eq :
       (d : has-decidable-equality A) {x y : A} →
       x ＝ y → Eq-has-decidable-equality d x y
-    Eq-has-decidable-equality-eq d {x} {.x} refl = {!!}
+    Eq-has-decidable-equality-eq = {!!}
 
   abstract
     eq-Eq-has-decidable-equality' :
       (x y : A) (t : is-decidable (x ＝ y)) →
       Eq-has-decidable-equality' x y t → x ＝ y
-    eq-Eq-has-decidable-equality' x y (inl p) t = {!!}
+    eq-Eq-has-decidable-equality' = {!!}
 
   abstract
     eq-Eq-has-decidable-equality :
       (d : has-decidable-equality A) {x y : A} →
       Eq-has-decidable-equality d x y → x ＝ y
-    eq-Eq-has-decidable-equality d {x} {y} = {!!}
+    eq-Eq-has-decidable-equality = {!!}
 
   abstract
     is-set-has-decidable-equality : has-decidable-equality A → is-set A
@@ -205,12 +200,11 @@ module _
 abstract
   is-prop-has-decidable-equality :
     {l1 : Level} {X : UU l1} → is-prop (has-decidable-equality X)
-  is-prop-has-decidable-equality {l1} {X} = {!!}
+  is-prop-has-decidable-equality = {!!}
 
 has-decidable-equality-Prop :
   {l1 : Level} (X : UU l1) → Prop l1
-pr1 (has-decidable-equality-Prop X) = {!!}
-pr2 (has-decidable-equality-Prop X) = {!!}
+has-decidable-equality-Prop = {!!}
 ```
 
 ### Types with decidable equality are closed under dependent pair types
@@ -221,8 +215,7 @@ abstract
     {l1 l2 : Level} {A : UU l1} {B : A → UU l2} →
     has-decidable-equality A → ((x : A) → has-decidable-equality (B x)) →
     has-decidable-equality (Σ A B)
-  has-decidable-equality-Σ dA dB (pair x y) (pair x' y') with dA x x'
-  ... | inr np = {!!}
+  has-decidable-equality-Σ = {!!}
 ```
 
 ### A family of types over a type with decidable equality and decidable total space is a family of types with decidable equality
@@ -233,7 +226,7 @@ abstract
     {l1 l2 : Level} {A : UU l1} {B : A → UU l2} →
     has-decidable-equality A → has-decidable-equality (Σ A B) →
     (x : A) → has-decidable-equality (B x)
-  has-decidable-equality-fiber-has-decidable-equality-Σ {B = B} dA dΣ x = {!!}
+  has-decidable-equality-fiber-has-decidable-equality-Σ = {!!}
 ```
 
 ### If `B` is a family of types with decidable equality, the total space has decidable equality, and `B` has a section, then the base type has decidable equality
@@ -244,7 +237,7 @@ abstract
     {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (b : (x : A) → B x) →
     has-decidable-equality (Σ A B) → ((x : A) → has-decidable-equality (B x)) →
     has-decidable-equality A
-  has-decidable-equality-base-has-decidable-equality-Σ b dΣ dB = {!!}
+  has-decidable-equality-base-has-decidable-equality-Σ = {!!}
 ```
 
 ### If `A` and `B` have decidable equality, then so does their coproduct
@@ -257,13 +250,13 @@ module _
   has-decidable-equality-coprod :
     has-decidable-equality A → has-decidable-equality B →
     has-decidable-equality (A + B)
-  has-decidable-equality-coprod d e (inl x) (inl y) = {!!}
+  has-decidable-equality-coprod = {!!}
 
   has-decidable-equality-left-summand :
     has-decidable-equality (A + B) → has-decidable-equality A
-  has-decidable-equality-left-summand d x y = {!!}
+  has-decidable-equality-left-summand = {!!}
 
   has-decidable-equality-right-summand :
     has-decidable-equality (A + B) → has-decidable-equality B
-  has-decidable-equality-right-summand d x y = {!!}
+  has-decidable-equality-right-summand = {!!}
 ```

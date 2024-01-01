@@ -67,7 +67,7 @@ module _
 ```agda
 initial-obj-Precategory :
   {l1 l2 : Level} (C : Precategory l1 l2) → UU (l1 ⊔ l2)
-initial-obj-Precategory C = {!!}
+initial-obj-Precategory = {!!}
 
 module _
   {l1 l2 : Level}

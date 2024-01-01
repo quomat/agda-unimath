@@ -36,7 +36,7 @@ The **nilradical** of a
 ```agda
 subset-nilradical-Commutative-Ring :
   {l : Level} (A : Commutative-Ring l) → subset-Commutative-Ring l A
-subset-nilradical-Commutative-Ring A = {!!}
+subset-nilradical-Commutative-Ring = {!!}
 ```
 
 ## Properties
@@ -48,7 +48,7 @@ contains-zero-nilradical-Commutative-Ring :
   {l : Level} (A : Commutative-Ring l) →
   contains-zero-subset-Commutative-Ring A
     ( subset-nilradical-Commutative-Ring A)
-contains-zero-nilradical-Commutative-Ring A = {!!}
+contains-zero-nilradical-Commutative-Ring = {!!}
 ```
 
 ### The nilradical is closed under addition
@@ -58,7 +58,7 @@ is-closed-under-addition-nilradical-Commutative-Ring :
   {l : Level} (A : Commutative-Ring l) →
   is-closed-under-addition-subset-Commutative-Ring A
     ( subset-nilradical-Commutative-Ring A)
-is-closed-under-addition-nilradical-Commutative-Ring A {x} {y} = {!!}
+is-closed-under-addition-nilradical-Commutative-Ring = {!!}
 ```
 
 ### The nilradical is closed under negatives
@@ -68,7 +68,7 @@ is-closed-under-negatives-nilradical-Commutative-Ring :
   {l : Level} (A : Commutative-Ring l) →
   is-closed-under-negatives-subset-Commutative-Ring A
     ( subset-nilradical-Commutative-Ring A)
-is-closed-under-negatives-nilradical-Commutative-Ring A x = {!!}
+is-closed-under-negatives-nilradical-Commutative-Ring = {!!}
 ```
 
 ### The nilradical is closed under multiplication with ring elements
@@ -81,12 +81,12 @@ module _
   is-closed-under-right-multiplication-nilradical-Commutative-Ring :
     is-closed-under-right-multiplication-subset-Commutative-Ring A
       ( subset-nilradical-Commutative-Ring A)
-  is-closed-under-right-multiplication-nilradical-Commutative-Ring x y = {!!}
+  is-closed-under-right-multiplication-nilradical-Commutative-Ring = {!!}
 
   is-closed-under-left-multiplication-nilradical-Commutative-Ring :
     is-closed-under-left-multiplication-subset-Commutative-Ring A
       ( subset-nilradical-Commutative-Ring A)
-  is-closed-under-left-multiplication-nilradical-Commutative-Ring x y = {!!}
+  is-closed-under-left-multiplication-nilradical-Commutative-Ring = {!!}
 ```
 
 ### The nilradical ideal
@@ -94,7 +94,7 @@ module _
 ```agda
 nilradical-Commutative-Ring :
   {l : Level} (A : Commutative-Ring l) → ideal-Commutative-Ring l A
-nilradical-Commutative-Ring A = {!!}
+nilradical-Commutative-Ring = {!!}
 ```
 
 ### The nilradical is contained in every radical ideal
@@ -102,14 +102,14 @@ nilradical-Commutative-Ring A = {!!}
 ```agda
 is-in-nilradical-Commutative-Ring :
   {l : Level} (R : Commutative-Ring l) → type-Commutative-Ring R → UU l
-is-in-nilradical-Commutative-Ring R = {!!}
+is-in-nilradical-Commutative-Ring = {!!}
 
 is-contained-in-radical-ideal-nilradical-Commutative-Ring :
   {l : Level} (R : Commutative-Ring l)
   (I : radical-ideal-Commutative-Ring l R) (x : type-Commutative-Ring R) →
   is-in-nilradical-Commutative-Ring R x →
   is-in-radical-ideal-Commutative-Ring R I x
-is-contained-in-radical-ideal-nilradical-Commutative-Ring R I x p = {!!}
+is-contained-in-radical-ideal-nilradical-Commutative-Ring = {!!}
 ```
 
 ### The nilradical is contained in every prime ideal
@@ -120,5 +120,5 @@ is-contained-in-prime-ideal-nilradical-Commutative-Ring :
   (P : prime-ideal-Commutative-Ring l R) (x : type-Commutative-Ring R) →
   is-in-nilradical-Commutative-Ring R x →
   is-in-prime-ideal-Commutative-Ring R P x
-is-contained-in-prime-ideal-nilradical-Commutative-Ring R P x p = {!!}
+is-contained-in-prime-ideal-nilradical-Commutative-Ring = {!!}
 ```

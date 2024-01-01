@@ -41,7 +41,7 @@ module _
   obj-map-Small-Large-Precategory :
     {γ : Level} → map-Small-Large-Precategory γ →
     obj-Precategory C → obj-Large-Precategory D γ
-  obj-map-Small-Large-Precategory {γ} = {!!}
+  obj-map-Small-Large-Precategory = {!!}
 
   hom-map-Small-Large-Precategory :
     {γ : Level} →
@@ -51,7 +51,7 @@ module _
     hom-Large-Precategory D
       ( obj-map-Small-Large-Precategory F X)
       ( obj-map-Small-Large-Precategory F Y)
-  hom-map-Small-Large-Precategory {γ} = {!!}
+  hom-map-Small-Large-Precategory = {!!}
 ```
 
 ## Properties

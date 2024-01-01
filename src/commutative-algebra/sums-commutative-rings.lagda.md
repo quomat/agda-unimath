@@ -43,7 +43,7 @@ ring `A` to any family of elements of `A` indexed by a standard finite type.
 sum-Commutative-Ring :
   {l : Level} (A : Commutative-Ring l) (n : ℕ) →
   (functional-vec-Commutative-Ring A n) → type-Commutative-Ring A
-sum-Commutative-Ring A = {!!}
+sum-Commutative-Ring = {!!}
 ```
 
 ## Properties
@@ -187,8 +187,7 @@ split-sum-Commutative-Ring :
   add-Commutative-Ring A
     ( sum-Commutative-Ring A n (f ∘ inl-coprod-Fin n m))
     ( sum-Commutative-Ring A m (f ∘ inr-coprod-Fin n m))
-split-sum-Commutative-Ring A n zero-ℕ f = {!!}
-split-sum-Commutative-Ring A n (succ-ℕ m) f = {!!}
+split-sum-Commutative-Ring = {!!}
 ```
 
 ### A sum of zeroes is zero

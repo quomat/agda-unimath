@@ -98,17 +98,17 @@ module _
 
   map-inv-equiv-htpy-postcomp-is-emb :
     (pr1 f ∘ g) ~ (pr1 f ∘ h) → g ~ h
-  map-inv-equiv-htpy-postcomp-is-emb H x = {!!}
+  map-inv-equiv-htpy-postcomp-is-emb = {!!}
 
   is-section-map-inv-equiv-htpy-postcomp-is-emb :
     (pr1 f ·l_) ∘ map-inv-equiv-htpy-postcomp-is-emb ~ id
-  is-section-map-inv-equiv-htpy-postcomp-is-emb H = {!!}
+  is-section-map-inv-equiv-htpy-postcomp-is-emb = {!!}
 
   is-retraction-map-inv-equiv-htpy-postcomp-is-emb :
     map-inv-equiv-htpy-postcomp-is-emb ∘ (pr1 f ·l_) ~ id
-  is-retraction-map-inv-equiv-htpy-postcomp-is-emb H = {!!}
+  is-retraction-map-inv-equiv-htpy-postcomp-is-emb = {!!}
 
   equiv-htpy-postcomp-is-emb :
     (g ~ h) ≃ ((pr1 f ∘ g) ~ (pr1 f ∘ h))
-  pr1 equiv-htpy-postcomp-is-emb = {!!}
+  equiv-htpy-postcomp-is-emb = {!!}
 ```

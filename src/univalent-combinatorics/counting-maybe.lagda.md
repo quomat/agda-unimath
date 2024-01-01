@@ -34,16 +34,14 @@ abstract
   is-nonzero-number-of-elements-count-Maybe :
     {l : Level} {X : UU l} (e : count (Maybe X)) →
     is-nonzero-ℕ (number-of-elements-count e)
-  is-nonzero-number-of-elements-count-Maybe e p = {!!}
+  is-nonzero-number-of-elements-count-Maybe = {!!}
 
 is-successor-number-of-elements-count-Maybe :
   {l : Level} {X : UU l} (e : count (Maybe X)) →
   is-successor-ℕ (number-of-elements-count e)
-is-successor-number-of-elements-count-Maybe e = {!!}
+is-successor-number-of-elements-count-Maybe = {!!}
 
 count-count-Maybe :
   {l : Level} {X : UU l} → count (Maybe X) → count X
-count-count-Maybe (pair k e) with
-  is-successor-number-of-elements-count-Maybe (pair k e)
-... | pair l refl = {!!}
+count-count-Maybe = {!!}
 ```

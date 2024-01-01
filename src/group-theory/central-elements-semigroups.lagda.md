@@ -38,7 +38,7 @@ module _
 
   is-prop-is-central-element-Semigroup :
     (x : type-Semigroup G) → is-prop (is-central-element-Semigroup x)
-  is-prop-is-central-element-Semigroup x = {!!}
+  is-prop-is-central-element-Semigroup = {!!}
 ```
 
 ## Properties
@@ -54,5 +54,5 @@ module _
     (x y : type-Semigroup G) →
     is-central-element-Semigroup G x → is-central-element-Semigroup G y →
     is-central-element-Semigroup G (mul-Semigroup G x y)
-  is-central-element-mul-Semigroup x y H K z = {!!}
+  is-central-element-mul-Semigroup = {!!}
 ```

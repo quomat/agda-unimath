@@ -90,12 +90,12 @@ module _
   abstract
     is-torsorial-Eq-free-loop :
       (α : free-loop X) → is-torsorial (Eq-free-loop α)
-    is-torsorial-Eq-free-loop (pair x α) = {!!}
+    is-torsorial-Eq-free-loop = {!!}
 
   abstract
     is-equiv-Eq-eq-free-loop :
       (α α' : free-loop X) → is-equiv (Eq-eq-free-loop α α')
-    is-equiv-Eq-eq-free-loop α = {!!}
+    is-equiv-Eq-eq-free-loop = {!!}
 ```
 
 ### Characterization of the identity type of free dependent loops
@@ -110,27 +110,27 @@ module _
 
   refl-Eq-free-dependent-loop :
     (p : free-dependent-loop α P) → Eq-free-dependent-loop p p
-  pr1 (refl-Eq-free-dependent-loop (pair y p)) = {!!}
+  refl-Eq-free-dependent-loop = {!!}
 
   Eq-free-dependent-loop-eq :
     ( p p' : free-dependent-loop α P) → Id p p' → Eq-free-dependent-loop p p'
-  Eq-free-dependent-loop-eq p .p refl = {!!}
+  Eq-free-dependent-loop-eq = {!!}
 
   abstract
     is-torsorial-Eq-free-dependent-loop :
       ( p : free-dependent-loop α P) → is-torsorial (Eq-free-dependent-loop p)
-    is-torsorial-Eq-free-dependent-loop (pair y p) = {!!}
+    is-torsorial-Eq-free-dependent-loop = {!!}
 
   abstract
     is-equiv-Eq-free-dependent-loop-eq :
       (p p' : free-dependent-loop α P) →
       is-equiv (Eq-free-dependent-loop-eq p p')
-    is-equiv-Eq-free-dependent-loop-eq p = {!!}
+    is-equiv-Eq-free-dependent-loop-eq = {!!}
 
   eq-Eq-free-dependent-loop :
     (p p' : free-dependent-loop α P) →
     Eq-free-dependent-loop p p' → Id p p'
-  eq-Eq-free-dependent-loop p p' = {!!}
+  eq-Eq-free-dependent-loop = {!!}
 ```
 
 ### The type of free dependent loops in a constant family of types is equivalent to the type of ordinary free loops

@@ -28,7 +28,7 @@ the underlying map is faithful.
 ```agda
 faithful-pointed-map :
   {l1 l2 : Level} (A : Pointed-Type l1) (B : Pointed-Type l2) → UU (l1 ⊔ l2)
-faithful-pointed-map A B = {!!}
+faithful-pointed-map = {!!}
 
 module _
   {l1 l2 : Level} {A : Pointed-Type l1} {B : Pointed-Type l2}

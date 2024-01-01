@@ -74,7 +74,7 @@ module _
 ```agda
 singleton-subtype :
   {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-singleton-subtype l2 X = {!!}
+singleton-subtype = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} (P : singleton-subtype l2 X)
@@ -110,7 +110,7 @@ module _
 
   inhabited-subtype-standard-singleton-subtype :
     inhabited-subtype l (type-Set X)
-  pr1 inhabited-subtype-standard-singleton-subtype = {!!}
+  inhabited-subtype-standard-singleton-subtype = {!!}
 ```
 
 ## Properties
@@ -124,7 +124,7 @@ module _
 
   is-least-subtype-containing-element-is-singleton-subtype :
     is-singleton-subtype P → is-least-subtype-containing-element x P
-  pr1 (is-least-subtype-containing-element-is-singleton-subtype H Q) L = {!!}
+  is-least-subtype-containing-element-is-singleton-subtype = {!!}
 ```
 
 ### If the identity type `y ↦ x ＝ y` is a subtype, then a subtype containing `x` is a singleton subtype if and only if it is the least subtype containing `x`
@@ -153,13 +153,13 @@ module _
   is-singleton-subtype-is-least-subtype-containing-element :
     (H : (y : X) → is-prop (x ＝ y)) →
     is-least-subtype-containing-element x P → is-singleton-subtype P
-  pr1 (is-singleton-subtype-is-least-subtype-containing-element H L) = {!!}
+  is-singleton-subtype-is-least-subtype-containing-element = {!!}
 
 is-singleton-subtype-is-least-subtype-containing-element-Set :
   {l1 l2 : Level} (X : Set l1) {x : type-Set X} (P : subtype l2 (type-Set X))
   (p : is-in-subtype P x) →
   is-least-subtype-containing-element x P → is-singleton-subtype P
-is-singleton-subtype-is-least-subtype-containing-element-Set X P p = {!!}
+is-singleton-subtype-is-least-subtype-containing-element-Set = {!!}
 ```
 
 ### Any two singleton subtypes containing a given element `x` have the same elements
@@ -172,7 +172,7 @@ module _
 
   inclusion-is-singleton-subtype :
     is-singleton-subtype P → P ⊆ Q
-  inclusion-is-singleton-subtype s = {!!}
+  inclusion-is-singleton-subtype = {!!}
 
 module _
   {l1 l2 l3 : Level} {X : UU l1} {x : X} (P : subtype l2 X) (Q : subtype l3 X)
@@ -182,7 +182,7 @@ module _
   has-same-elements-is-singleton-subtype :
     is-singleton-subtype P → is-singleton-subtype Q →
     has-same-elements-subtype P Q
-  pr1 (has-same-elements-is-singleton-subtype s t y) = {!!}
+  has-same-elements-is-singleton-subtype = {!!}
 ```
 
 ### The standard singleton subtype `{x}` of a set is the least subtype containing `x`
@@ -195,7 +195,7 @@ module _
   is-least-subtype-containing-element-Set :
     is-least-subtype-containing-element x
       ( subtype-standard-singleton-subtype X x)
-  pr1 (is-least-subtype-containing-element-Set A) H = {!!}
+  is-least-subtype-containing-element-Set = {!!}
 ```
 
 ### The image of the standard singleton subtype `{x}` under a map `f : X → Y` is the standard singleton subtype `{f(x)}`

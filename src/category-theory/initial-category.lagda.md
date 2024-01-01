@@ -41,11 +41,11 @@ obj-initial-Category = {!!}
 
 hom-set-initial-Category :
   obj-initial-Category → obj-initial-Category → Set lzero
-hom-set-initial-Category _ _ = {!!}
+hom-set-initial-Category = {!!}
 
 hom-initial-Category :
   obj-initial-Category → obj-initial-Category → UU lzero
-hom-initial-Category x y = {!!}
+hom-initial-Category = {!!}
 ```
 
 ### The underlying precategory of the initial category
@@ -74,10 +74,7 @@ initial-Precategory = {!!}
 ```agda
 is-category-initial-Category :
   is-category-Precategory initial-Precategory
-is-category-initial-Category ()
-
-initial-Category : Category lzero lzero
-pr1 initial-Category = {!!}
+is-category-initial-Category = {!!}
 pr2 initial-Category = {!!}
 ```
 
@@ -86,10 +83,7 @@ pr2 initial-Category = {!!}
 ```agda
 is-preunivalent-initial-Category :
   is-preunivalent-Precategory initial-Precategory
-is-preunivalent-initial-Category ()
-
-initial-Preunivalent-Category : Preunivalent-Category lzero lzero
-initial-Preunivalent-Category = {!!}
+is-preunivalent-initial-Category = {!!}
 ```
 
 ### The initial strict category
@@ -97,10 +91,7 @@ initial-Preunivalent-Category = {!!}
 ```agda
 is-strict-category-initial-Category :
   is-strict-category-Precategory initial-Precategory
-is-strict-category-initial-Category ()
-
-initial-Strict-Category : Strict-Category lzero lzero
-pr1 initial-Strict-Category = {!!}
+is-strict-category-initial-Category = {!!}
 pr2 initial-Strict-Category = {!!}
 ```
 
@@ -134,12 +125,12 @@ module _
     uniqueness-initial-functor-Precategory :
       (F : functor-Precategory initial-Precategory C) →
       initial-functor-Precategory ＝ F
-    uniqueness-initial-functor-Precategory F = {!!}
+    uniqueness-initial-functor-Precategory = {!!}
 
   abstract
     is-contr-functor-initial-Precategory :
       is-contr (functor-Precategory initial-Precategory C)
-    pr1 is-contr-functor-initial-Precategory = {!!}
+    is-contr-functor-initial-Precategory = {!!}
 ```
 
 ## See also

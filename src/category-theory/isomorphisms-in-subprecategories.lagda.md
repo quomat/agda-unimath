@@ -85,7 +85,7 @@ module _
 
   is-iso-is-in-is-iso-Subprecategory :
     is-in-is-iso-Subprecategory → is-iso-Subprecategory C P f
-  pr1 (pr1 (is-iso-is-in-is-iso-Subprecategory is-in-is-iso-f)) = {!!}
+  is-iso-is-in-is-iso-Subprecategory = {!!}
 ```
 
 #### The predicate on an isomorphism between objects in the subprecategory of being contained in the subprecategory
@@ -115,11 +115,11 @@ module _
   is-iso-is-in-iso-obj-subprecategory-Subprecategory :
     ((f₀ , f₁) : is-in-iso-obj-subprecategory-Subprecategory) →
     is-iso-Subprecategory C P (hom-iso-Precategory C f , f₀)
-  is-iso-is-in-iso-obj-subprecategory-Subprecategory (f₀ , f₁) = {!!}
+  is-iso-is-in-iso-obj-subprecategory-Subprecategory = {!!}
 
   iso-is-in-iso-obj-subprecategory-Subprecategory :
     is-in-iso-obj-subprecategory-Subprecategory → iso-Subprecategory C P x y
-  pr1 (pr1 (iso-is-in-iso-obj-subprecategory-Subprecategory is-in-iso-f)) = {!!}
+  iso-is-in-iso-obj-subprecategory-Subprecategory = {!!}
 ```
 
 #### The predicate on an isomorphism between any objects of being contained in the subprecategory
@@ -145,13 +145,13 @@ module _
   iso-is-in-iso-Subprecategory :
     (is-in-iso-f : is-in-iso-Subprecategory) →
     iso-Subprecategory C P (x , pr1 is-in-iso-f) (y , pr1 (pr2 is-in-iso-f))
-  iso-is-in-iso-Subprecategory is-in-iso-f = {!!}
+  iso-is-in-iso-Subprecategory = {!!}
 
   is-iso-is-in-iso-Subprecategory :
     ( is-in-iso-f : is-in-iso-Subprecategory) →
     is-iso-Subprecategory C P
       ( pr1 f , pr2 (pr1 (iso-is-in-iso-Subprecategory is-in-iso-f)))
-  is-iso-is-in-iso-Subprecategory is-in-iso-f = {!!}
+  is-iso-is-in-iso-Subprecategory = {!!}
 ```
 
 ### If a subprecategory contains an object, it contains its identity ismorphism
@@ -175,11 +175,11 @@ module _
 
   is-in-iso-id-obj-subprecategory-Subprecategory :
     is-in-iso-obj-subprecategory-Subprecategory C P (id-iso-Precategory C)
-  pr1 is-in-iso-id-obj-subprecategory-Subprecategory = {!!}
+  is-in-iso-id-obj-subprecategory-Subprecategory = {!!}
 
   is-in-iso-id-Subprecategory :
     is-in-iso-Subprecategory C P (id-iso-Precategory C)
-  pr1 is-in-iso-id-Subprecategory = {!!}
+  is-in-iso-id-Subprecategory = {!!}
 ```
 
 ## Properties
@@ -198,5 +198,5 @@ module _
     {f : hom-Subprecategory C P x y} →
     is-iso-Subprecategory C P f →
     is-iso-Precategory C (inclusion-hom-Subprecategory C P x y f)
-  pr1 (is-iso-base-is-iso-Subprecategory is-iso-f) = {!!}
+  is-iso-base-is-iso-Subprecategory = {!!}
 ```

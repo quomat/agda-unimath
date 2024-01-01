@@ -52,7 +52,7 @@ module _
   hom-representable-functor-Precategory :
     {x y : obj-Precategory C} (f : hom-Precategory C x y) →
     hom-Precategory C c x → hom-Precategory C c y
-  hom-representable-functor-Precategory f = {!!}
+  hom-representable-functor-Precategory = {!!}
 
   representable-map-Precategory : map-Precategory C (Set-Precategory l2)
   pr1 representable-map-Precategory = {!!}
@@ -62,14 +62,14 @@ module _
       ( C)
       ( Set-Precategory l2)
       ( representable-map-Precategory)
-  preserves-comp-representable-functor-Precategory g f = {!!}
+  preserves-comp-representable-functor-Precategory = {!!}
 
   preserves-id-representable-functor-Precategory :
     preserves-id-hom-map-Precategory
       ( C)
       ( Set-Precategory l2)
       ( representable-map-Precategory)
-  preserves-id-representable-functor-Precategory x = {!!}
+  preserves-id-representable-functor-Precategory = {!!}
 
   representable-functor-Precategory : functor-Precategory C (Set-Precategory l2)
   pr1 representable-functor-Precategory = {!!}
@@ -103,7 +103,7 @@ module _
       ( representable-functor-Precategory C c)
       ( representable-functor-Precategory C b)
       ( hom-family-representable-natural-transformation-Precategory)
-  is-natural-transformation-representable-natural-transformation-Precategory h = {!!}
+  is-natural-transformation-representable-natural-transformation-Precategory = {!!}
 
   representable-natural-transformation-Precategory :
     natural-transformation-Precategory
@@ -127,7 +127,7 @@ module _
     map-Precategory
       ( opposite-Precategory C)
       ( copresheaf-precategory-Precategory C l2)
-  pr1 map-representable-functor-copresheaf-Precategory = {!!}
+  map-representable-functor-copresheaf-Precategory = {!!}
 ```
 
 It remains to show that this map is functorial.

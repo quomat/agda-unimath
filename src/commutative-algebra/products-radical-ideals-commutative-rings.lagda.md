@@ -51,12 +51,12 @@ module _
   contains-product-radical-ideal-Commutative-Ring :
     {l4 : Level} (K : radical-ideal-Commutative-Ring l4 A) →
     UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  contains-product-radical-ideal-Commutative-Ring K = {!!}
+  contains-product-radical-ideal-Commutative-Ring = {!!}
 
   is-product-radical-ideal-Commutative-Ring :
     {l4 : Level} (K : radical-ideal-Commutative-Ring l4 A) →
     contains-product-radical-ideal-Commutative-Ring K → UUω
-  is-product-radical-ideal-Commutative-Ring K H = {!!}
+  is-product-radical-ideal-Commutative-Ring = {!!}
 ```
 
 ### The product of two radical ideals in a commutative ring
@@ -87,13 +87,13 @@ module _
   contains-product-product-radical-ideal-Commutative-Ring :
     contains-product-radical-ideal-Commutative-Ring A I J
       product-radical-ideal-Commutative-Ring
-  contains-product-product-radical-ideal-Commutative-Ring x y H K = {!!}
+  contains-product-product-radical-ideal-Commutative-Ring = {!!}
 
   is-product-product-radical-ideal-Commutative-Ring :
     is-product-radical-ideal-Commutative-Ring A I J
       product-radical-ideal-Commutative-Ring
       contains-product-product-radical-ideal-Commutative-Ring
-  is-product-product-radical-ideal-Commutative-Ring K H = {!!}
+  is-product-product-radical-ideal-Commutative-Ring = {!!}
 ```
 
 ## Properties

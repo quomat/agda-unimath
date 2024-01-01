@@ -43,7 +43,7 @@ underlying directed graphs.
 hom-Directed-Tree :
   {l1 l2 l3 l4 : Level} (S : Directed-Tree l1 l2) (T : Directed-Tree l3 l4) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-hom-Directed-Tree S T = {!!}
+hom-Directed-Tree = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} (S : Directed-Tree l1 l2) (T : Directed-Tree l3 l4)
@@ -64,7 +64,7 @@ module _
     Σ ( node-Directed-Tree S) (λ y → edge-Directed-Tree S y x) →
     Σ ( node-Directed-Tree T)
       ( λ y → edge-Directed-Tree T y (node-hom-Directed-Tree x))
-  direct-predecessor-hom-Directed-Tree x = {!!}
+  direct-predecessor-hom-Directed-Tree = {!!}
 
   walk-hom-Directed-Tree :
     {x y : node-Directed-Tree S} →
@@ -78,7 +78,7 @@ module _
 ```agda
 id-hom-Directed-Tree :
   {l1 l2 : Level} (T : Directed-Tree l1 l2) → hom-Directed-Tree T T
-id-hom-Directed-Tree T = {!!}
+id-hom-Directed-Tree = {!!}
 ```
 
 ### Composition of morphisms of directed trees
@@ -143,7 +143,7 @@ module _
             ( node-htpy-hom-Directed-Tree α x))) ∘
       ( direct-predecessor-hom-Directed-Tree S T f x)) ~
     ( direct-predecessor-hom-Directed-Tree S T g x)
-  direct-predecessor-htpy-hom-Directed-Tree α x (y , e) = {!!}
+  direct-predecessor-htpy-hom-Directed-Tree = {!!}
 ```
 
 ### The reflexivity homotopy of morphisms of directed trees
@@ -152,7 +152,7 @@ module _
 refl-htpy-hom-Directed-Tree :
   {l1 l2 l3 l4 : Level} (S : Directed-Tree l1 l2) (T : Directed-Tree l3 l4) →
   (f : hom-Directed-Tree S T) → htpy-hom-Directed-Tree S T f f
-refl-htpy-hom-Directed-Tree S T f = {!!}
+refl-htpy-hom-Directed-Tree = {!!}
 ```
 
 ## Properties
@@ -198,13 +198,13 @@ module _
     (x : node-Directed-Tree S) →
     is-root-Directed-Tree T (node-hom-Directed-Tree S T f x) →
     is-root-Directed-Tree S x
-  is-root-is-root-node-hom-Directed-Tree x H = {!!}
+  is-root-is-root-node-hom-Directed-Tree = {!!}
 
   is-not-root-node-hom-is-not-root-Directed-Tree :
     (x : node-Directed-Tree S) →
     ¬ (is-root-Directed-Tree S x) →
     ¬ (is-root-Directed-Tree T (node-hom-Directed-Tree S T f x))
-  is-not-root-node-hom-is-not-root-Directed-Tree x = {!!}
+  is-not-root-node-hom-is-not-root-Directed-Tree = {!!}
 ```
 
 ## See also

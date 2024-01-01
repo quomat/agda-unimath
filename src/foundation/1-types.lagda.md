@@ -31,7 +31,7 @@ open import foundation-core.truncation-levels
 abstract
   is-prop-is-1-type :
     {l : Level} (A : UU l) → is-prop (is-1-type A)
-  is-prop-is-1-type A = {!!}
+  is-prop-is-1-type = {!!}
 
 is-1-type-Prop :
   {l : Level} → UU l → Prop l
@@ -59,27 +59,26 @@ abstract
 
 type-Π-1-Type' :
   {l1 l2 : Level} (A : UU l1) (B : A → 1-Type l2) → UU (l1 ⊔ l2)
-type-Π-1-Type' A B = {!!}
+type-Π-1-Type' = {!!}
 
 is-1-type-type-Π-1-Type' :
   {l1 l2 : Level} (A : UU l1) (B : A → 1-Type l2) →
   is-1-type (type-Π-1-Type' A B)
-is-1-type-type-Π-1-Type' A B = {!!}
+is-1-type-type-Π-1-Type' = {!!}
 
 Π-1-Type' :
   {l1 l2 : Level} (A : UU l1) (B : A → 1-Type l2) → 1-Type (l1 ⊔ l2)
-pr1 (Π-1-Type' A B) = {!!}
-pr2 (Π-1-Type' A B) = {!!}
+Π-1-Type' = {!!}
 
 type-Π-1-Type :
   {l1 l2 : Level} (A : 1-Type l1) (B : type-1-Type A → 1-Type l2) →
   UU (l1 ⊔ l2)
-type-Π-1-Type A = {!!}
+type-Π-1-Type = {!!}
 
 is-1-type-type-Π-1-Type :
   {l1 l2 : Level} (A : 1-Type l1) (B : type-1-Type A → 1-Type l2) →
   is-1-type (type-Π-1-Type A B)
-is-1-type-type-Π-1-Type A = {!!}
+is-1-type-type-Π-1-Type = {!!}
 
 Π-1-Type :
   {l1 l2 : Level} (A : 1-Type l1) (B : type-1-Type A → 1-Type l2) →
@@ -98,12 +97,12 @@ abstract
 
 type-hom-1-Type :
   {l1 l2 : Level} (A : 1-Type l1) (B : 1-Type l2) → UU (l1 ⊔ l2)
-type-hom-1-Type A B = {!!}
+type-hom-1-Type = {!!}
 
 is-1-type-type-hom-1-Type :
   {l1 l2 : Level} (A : 1-Type l1) (B : 1-Type l2) →
   is-1-type (type-hom-1-Type A B)
-is-1-type-type-hom-1-Type A B = {!!}
+is-1-type-type-hom-1-Type = {!!}
 
 hom-1-Type :
   {l1 l2 : Level} (A : 1-Type l1) (B : 1-Type l2) → 1-Type (l1 ⊔ l2)
@@ -135,7 +134,7 @@ abstract
 
 prod-1-Type :
   {l1 l2 : Level} (A : 1-Type l1) (B : 1-Type l2) → 1-Type (l1 ⊔ l2)
-prod-1-Type A B = {!!}
+prod-1-Type = {!!}
 ```
 
 ### Subtypes of 1-types are 1-types
@@ -172,7 +171,7 @@ module _
 
   extensionality-1-Type :
     (Y : 1-Type l) → (X ＝ Y) ≃ type-equiv-1-Type Y
-  pr1 (extensionality-1-Type Y) = {!!}
+  extensionality-1-Type = {!!}
 
   eq-equiv-1-Type : (Y : 1-Type l) → type-equiv-1-Type Y → X ＝ Y
   eq-equiv-1-Type Y = {!!}

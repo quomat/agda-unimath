@@ -54,12 +54,12 @@ coherence-map-Prespectrum :
   ( (n : ℕ) →
     pointed-type-Prespectrum A n →∗ pointed-type-Prespectrum B n) →
   UU (l1 ⊔ l2)
-coherence-map-Prespectrum n A B f = {!!}
+coherence-map-Prespectrum = {!!}
 
 map-Prespectrum :
   {l1 l2 : Level} (A : Prespectrum l1) (B : Prespectrum l2) →
   UU (l1 ⊔ l2)
-map-Prespectrum A B = {!!}
+map-Prespectrum = {!!}
 ```
 
 ## References

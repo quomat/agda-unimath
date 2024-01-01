@@ -32,22 +32,22 @@ the underlying monoid of `M`.
 is-congruence-prop-Commutative-Monoid :
   {l1 l2 : Level} (M : Commutative-Monoid l1) →
   equivalence-relation l2 (type-Commutative-Monoid M) → Prop (l1 ⊔ l2)
-is-congruence-prop-Commutative-Monoid M = {!!}
+is-congruence-prop-Commutative-Monoid = {!!}
 
 is-congruence-Commutative-Monoid :
   {l1 l2 : Level} (M : Commutative-Monoid l1) →
   equivalence-relation l2 (type-Commutative-Monoid M) → UU (l1 ⊔ l2)
-is-congruence-Commutative-Monoid M = {!!}
+is-congruence-Commutative-Monoid = {!!}
 
 is-prop-is-congruence-Commutative-Monoid :
   {l1 l2 : Level} (M : Commutative-Monoid l1)
   (R : equivalence-relation l2 (type-Commutative-Monoid M)) →
   is-prop (is-congruence-Commutative-Monoid M R)
-is-prop-is-congruence-Commutative-Monoid M = {!!}
+is-prop-is-congruence-Commutative-Monoid = {!!}
 
 congruence-Commutative-Monoid :
   {l : Level} (l2 : Level) (M : Commutative-Monoid l) → UU (l ⊔ lsuc l2)
-congruence-Commutative-Monoid l2 M = {!!}
+congruence-Commutative-Monoid = {!!}
 
 module _
   {l1 l2 : Level} (M : Commutative-Monoid l1)
@@ -121,41 +121,41 @@ relate-same-elements-congruence-Commutative-Monoid :
   {l1 l2 l3 : Level} (M : Commutative-Monoid l1)
   (R : congruence-Commutative-Monoid l2 M)
   (S : congruence-Commutative-Monoid l3 M) → UU (l1 ⊔ l2 ⊔ l3)
-relate-same-elements-congruence-Commutative-Monoid M = {!!}
+relate-same-elements-congruence-Commutative-Monoid = {!!}
 
 refl-relate-same-elements-congruence-Commutative-Monoid :
   {l1 l2 : Level} (M : Commutative-Monoid l1)
   (R : congruence-Commutative-Monoid l2 M) →
   relate-same-elements-congruence-Commutative-Monoid M R R
-refl-relate-same-elements-congruence-Commutative-Monoid M = {!!}
+refl-relate-same-elements-congruence-Commutative-Monoid = {!!}
 
 is-torsorial-relate-same-elements-congruence-Commutative-Monoid :
   {l1 l2 : Level} (M : Commutative-Monoid l1)
   (R : congruence-Commutative-Monoid l2 M) →
   is-torsorial (relate-same-elements-congruence-Commutative-Monoid M R)
-is-torsorial-relate-same-elements-congruence-Commutative-Monoid M = {!!}
+is-torsorial-relate-same-elements-congruence-Commutative-Monoid = {!!}
 
 relate-same-elements-eq-congruence-Commutative-Monoid :
   {l1 l2 : Level} (M : Commutative-Monoid l1)
   (R S : congruence-Commutative-Monoid l2 M) →
   R ＝ S → relate-same-elements-congruence-Commutative-Monoid M R S
-relate-same-elements-eq-congruence-Commutative-Monoid M = {!!}
+relate-same-elements-eq-congruence-Commutative-Monoid = {!!}
 
 is-equiv-relate-same-elements-eq-congruence-Commutative-Monoid :
   {l1 l2 : Level} (M : Commutative-Monoid l1)
   (R S : congruence-Commutative-Monoid l2 M) →
   is-equiv (relate-same-elements-eq-congruence-Commutative-Monoid M R S)
-is-equiv-relate-same-elements-eq-congruence-Commutative-Monoid M = {!!}
+is-equiv-relate-same-elements-eq-congruence-Commutative-Monoid = {!!}
 
 extensionality-congruence-Commutative-Monoid :
   {l1 l2 : Level} (M : Commutative-Monoid l1)
   (R S : congruence-Commutative-Monoid l2 M) →
   (R ＝ S) ≃ relate-same-elements-congruence-Commutative-Monoid M R S
-extensionality-congruence-Commutative-Monoid M = {!!}
+extensionality-congruence-Commutative-Monoid = {!!}
 
 eq-relate-same-elements-congruence-Commutative-Monoid :
   {l1 l2 : Level} (M : Commutative-Monoid l1)
   (R S : congruence-Commutative-Monoid l2 M) →
   relate-same-elements-congruence-Commutative-Monoid M R S → R ＝ S
-eq-relate-same-elements-congruence-Commutative-Monoid M = {!!}
+eq-relate-same-elements-congruence-Commutative-Monoid = {!!}
 ```

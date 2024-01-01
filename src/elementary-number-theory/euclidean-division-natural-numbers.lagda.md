@@ -74,23 +74,18 @@ quotient-euclidean-division-ℕ' (succ-ℕ k) n = {!!}
 ```agda
 euclidean-division-ℕ :
   (k x : ℕ) → Σ ℕ (λ r → (cong-ℕ k x r) × (is-nonzero-ℕ k → le-ℕ r k))
-pr1 (euclidean-division-ℕ zero-ℕ x) = {!!}
-pr1 (pr2 (euclidean-division-ℕ zero-ℕ x)) = {!!}
-pr2 (pr2 (euclidean-division-ℕ zero-ℕ x)) f = {!!}
-pr1 (euclidean-division-ℕ (succ-ℕ k) x) = {!!}
-pr1 (pr2 (euclidean-division-ℕ (succ-ℕ k) x)) = {!!}
-pr2 (pr2 (euclidean-division-ℕ (succ-ℕ k) x)) f = {!!}
+euclidean-division-ℕ = {!!}
 
 remainder-euclidean-division-ℕ : ℕ → ℕ → ℕ
 remainder-euclidean-division-ℕ k x = {!!}
 
 cong-euclidean-division-ℕ :
   (k x : ℕ) → cong-ℕ k x (remainder-euclidean-division-ℕ k x)
-cong-euclidean-division-ℕ k x = {!!}
+cong-euclidean-division-ℕ = {!!}
 
 strict-upper-bound-remainder-euclidean-division-ℕ :
   (k x : ℕ) → is-nonzero-ℕ k → le-ℕ (remainder-euclidean-division-ℕ k x) k
-strict-upper-bound-remainder-euclidean-division-ℕ k x = {!!}
+strict-upper-bound-remainder-euclidean-division-ℕ = {!!}
 
 quotient-euclidean-division-ℕ : ℕ → ℕ → ℕ
 quotient-euclidean-division-ℕ k x = {!!}
@@ -99,7 +94,7 @@ eq-quotient-euclidean-division-ℕ :
   (k x : ℕ) →
   ( (quotient-euclidean-division-ℕ k x) *ℕ k) ＝
   ( dist-ℕ x (remainder-euclidean-division-ℕ k x))
-eq-quotient-euclidean-division-ℕ k x = {!!}
+eq-quotient-euclidean-division-ℕ = {!!}
 
 eq-euclidean-division-ℕ :
   (k x : ℕ) →
@@ -107,8 +102,7 @@ eq-euclidean-division-ℕ :
     ( (quotient-euclidean-division-ℕ k x) *ℕ k)
     ( remainder-euclidean-division-ℕ k x)) ＝
   ( x)
-eq-euclidean-division-ℕ zero-ℕ x = {!!}
-eq-euclidean-division-ℕ (succ-ℕ k) x = {!!}
+eq-euclidean-division-ℕ = {!!}
 ```
 
 ```agda

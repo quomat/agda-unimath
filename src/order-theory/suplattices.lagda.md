@@ -48,13 +48,13 @@ module _
 
   sup-is-suplattice-Poset :
     {I : UU l3} → (I → type-Poset P) → type-Poset P
-  sup-is-suplattice-Poset {I} x = {!!}
+  sup-is-suplattice-Poset = {!!}
 
   is-least-upper-bound-sup-is-suplattice-Poset :
     {I : UU l3} (x : I → type-Poset P) →
     is-least-upper-bound-family-of-elements-Poset P x
       ( sup-is-suplattice-Poset x)
-  is-least-upper-bound-sup-is-suplattice-Poset {I} x = {!!}
+  is-least-upper-bound-sup-is-suplattice-Poset = {!!}
 ```
 
 ### `l`-Suplattices

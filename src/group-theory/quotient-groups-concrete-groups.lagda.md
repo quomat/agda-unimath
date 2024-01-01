@@ -65,11 +65,11 @@ module _
 
   shape-quotient-Concrete-Group :
     classifying-type-quotient-Concrete-Group
-  pr1 shape-quotient-Concrete-Group = {!!}
+  shape-quotient-Concrete-Group = {!!}
 
   classifying-pointed-type-quotient-Concrete-Group :
     Pointed-Type (l1 ⊔ lsuc l2)
-  pr1 classifying-pointed-type-quotient-Concrete-Group = {!!}
+  classifying-pointed-type-quotient-Concrete-Group = {!!}
 
   type-quotient-Concrete-Group : UU (l1 ⊔ lsuc l2)
   type-quotient-Concrete-Group = {!!}
@@ -77,7 +77,7 @@ module _
   extensionality-classifying-type-quotient-Concrete-Group :
     (u v : classifying-type-quotient-Concrete-Group) →
     (u ＝ v) ≃ equiv-transitive-action-Concrete-Group G (pr1 u) (pr1 v)
-  extensionality-classifying-type-quotient-Concrete-Group u = {!!}
+  extensionality-classifying-type-quotient-Concrete-Group = {!!}
 
   is-0-connected-classifying-type-quotient-Concrete-Group :
     is-0-connected classifying-type-quotient-Concrete-Group
@@ -96,7 +96,7 @@ module _
 
   concrete-group-quotient-Concrete-Group :
     Concrete-Group (l1 ⊔ lsuc l2)
-  pr1 concrete-group-quotient-Concrete-Group = {!!}
+  concrete-group-quotient-Concrete-Group = {!!}
 ```
 
 ### The 0-image construction of `G/N`
@@ -116,7 +116,7 @@ module _
 
   classifying-pointed-type-0-image-quotient-Concrete-Group :
     Pointed-Type (l1 ⊔ lsuc l2)
-  pr1 classifying-pointed-type-0-image-quotient-Concrete-Group = {!!}
+  classifying-pointed-type-0-image-quotient-Concrete-Group = {!!}
 
   type-0-image-quotient-Concrete-Group : UU (l1 ⊔ lsuc l2)
   type-0-image-quotient-Concrete-Group = {!!}

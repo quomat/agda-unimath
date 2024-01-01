@@ -78,11 +78,11 @@ module _
 
   is-closed-under-inverses-pullback-Subgroup :
     is-closed-under-inverses-subset-Group G subset-pullback-Subgroup
-  is-closed-under-inverses-pullback-Subgroup p = {!!}
+  is-closed-under-inverses-pullback-Subgroup = {!!}
 
   is-subgroup-pullback-Subgroup :
     is-subgroup-subset-Group G subset-pullback-Subgroup
-  pr1 is-subgroup-pullback-Subgroup = {!!}
+  is-subgroup-pullback-Subgroup = {!!}
 
   pullback-Subgroup : Subgroup l3 G
   pr1 pullback-Subgroup = {!!}
@@ -99,11 +99,11 @@ module _
     {l3 l4 : Level} (S : Subgroup l3 H) (T : Subgroup l4 H) →
     leq-Subgroup H S T →
     leq-Subgroup G (pullback-Subgroup G H f S) (pullback-Subgroup G H f T)
-  preserves-order-pullback-Subgroup S T = {!!}
+  preserves-order-pullback-Subgroup = {!!}
 
   pullback-subgroup-hom-large-poset-hom-Group :
     hom-Large-Poset (λ l → l) (Subgroup-Large-Poset H) (Subgroup-Large-Poset G)
-  map-hom-Large-Preorder pullback-subgroup-hom-large-poset-hom-Group = {!!}
+  pullback-subgroup-hom-large-poset-hom-Group = {!!}
 ```
 
 ## Properties
@@ -158,7 +158,7 @@ module _
 
   is-normal-pullback-Normal-Subgroup :
     is-normal-Subgroup G subgroup-pullback-Normal-Subgroup
-  is-normal-pullback-Normal-Subgroup x (y , n) = {!!}
+  is-normal-pullback-Normal-Subgroup = {!!}
 
   pullback-Normal-Subgroup : Normal-Subgroup l3 G
   pr1 pullback-Normal-Subgroup = {!!}

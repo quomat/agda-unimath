@@ -43,7 +43,7 @@ module _
 
 maximal-chain-Poset :
   {l1 l2 : Level} (l3 : Level) (X : Poset l1 l2) → UU (l1 ⊔ l2 ⊔ lsuc l3)
-maximal-chain-Poset l3 X = {!!}
+maximal-chain-Poset = {!!}
 
 module _
   {l1 l2 l3 : Level} (X : Poset l1 l2) (C : maximal-chain-Poset l3 X)

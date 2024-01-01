@@ -54,7 +54,7 @@ module _
     (x : node-Rooted-Undirected-Tree) →
     trail-Undirected-Graph undirected-graph-Rooted-Undirected-Tree x
       root-Rooted-Undirected-Tree
-  trail-to-root-Rooted-Undirected-Tree x = {!!}
+  trail-to-root-Rooted-Undirected-Tree = {!!}
 
   height-node-Rooted-Undirected-Tree : node-Rooted-Undirected-Tree → ℕ
   height-node-Rooted-Undirected-Tree x = {!!}
@@ -70,7 +70,7 @@ module _
 ```agda
 Forest-Rooted-Undirected-Trees :
   (l1 l2 l3 : Level) → UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-Forest-Rooted-Undirected-Trees l1 l2 l3 = {!!}
+Forest-Rooted-Undirected-Trees = {!!}
 
 module _
   {l1 l2 l3 : Level} (F : Forest-Rooted-Undirected-Trees l1 l2 l3)

@@ -142,7 +142,7 @@ equiv-binary-coproduct-Decomposition-subuniverse :
   (X : binary-coproduct-Decomposition-subuniverse P A)
   (Y : binary-coproduct-Decomposition-subuniverse P A) →
   UU (l1)
-equiv-binary-coproduct-Decomposition-subuniverse P A X Y = {!!}
+equiv-binary-coproduct-Decomposition-subuniverse = {!!}
 
 module _
   {l1 l2 : Level} (P : subuniverse l1 l2) (A : type-subuniverse P)
@@ -178,7 +178,7 @@ module _
 
   id-equiv-binary-coproduct-Decomposition-subuniverse :
     equiv-binary-coproduct-Decomposition-subuniverse P A X X
-  pr1 id-equiv-binary-coproduct-Decomposition-subuniverse = {!!}
+  id-equiv-binary-coproduct-Decomposition-subuniverse = {!!}
 
   is-torsorial-equiv-binary-coproduct-Decomposition-subuniverse :
     is-torsorial (equiv-binary-coproduct-Decomposition-subuniverse P A X)
@@ -187,7 +187,7 @@ module _
   equiv-eq-binary-coproduct-Decomposition-subuniverse :
     (Y : binary-coproduct-Decomposition-subuniverse P A) → (X ＝ Y) →
     equiv-binary-coproduct-Decomposition-subuniverse P A X Y
-  equiv-eq-binary-coproduct-Decomposition-subuniverse .X refl = {!!}
+  equiv-eq-binary-coproduct-Decomposition-subuniverse = {!!}
 
   is-equiv-equiv-eq-binary-coproduct-Decomposition-subuniverse :
     (Y : binary-coproduct-Decomposition-subuniverse P A) →
@@ -197,12 +197,12 @@ module _
   extensionality-binary-coproduct-Decomposition-subuniverse :
     (Y : binary-coproduct-Decomposition-subuniverse P A) →
     (X ＝ Y) ≃ equiv-binary-coproduct-Decomposition-subuniverse P A X Y
-  pr1 (extensionality-binary-coproduct-Decomposition-subuniverse Y) = {!!}
+  extensionality-binary-coproduct-Decomposition-subuniverse = {!!}
 
   eq-equiv-binary-coproduct-Decomposition-subuniverse :
     (Y : binary-coproduct-Decomposition-subuniverse P A) →
     equiv-binary-coproduct-Decomposition-subuniverse P A X Y → (X ＝ Y)
-  eq-equiv-binary-coproduct-Decomposition-subuniverse Y = {!!}
+  eq-equiv-binary-coproduct-Decomposition-subuniverse = {!!}
 ```
 
 ### Equivalence between binary coproduct Decomposition-subuniverse induce by commutativiy of coproduct
@@ -272,7 +272,7 @@ module _
               inclusion-subuniverse P X ≃
               ( inclusion-subuniverse P (pr1 A) +
                 inclusion-subuniverse P (pr1 x))))
-    pr1 equiv-reassociate-left-iterated-coproduct-Decomposition-subuniverse = {!!}
+    equiv-reassociate-left-iterated-coproduct-Decomposition-subuniverse = {!!}
 
   equiv-ternary-left-iterated-coproduct-Decomposition-subuniverse :
     left-iterated-binary-coproduct-Decomposition-subuniverse P X ≃
@@ -325,7 +325,7 @@ module _
               ( inclusion-subuniverse P X) ≃
               ( inclusion-subuniverse P (pr1 x) +
                 inclusion-subuniverse P (pr1 B))))
-    pr1 equiv-reassociate-right-iterated-coproduct-Decomposition-subuniverse = {!!}
+    equiv-reassociate-right-iterated-coproduct-Decomposition-subuniverse = {!!}
 
   equiv-ternary-right-iterated-coproduct-Decomposition-subuniverse :
     right-iterated-binary-coproduct-Decomposition-subuniverse P X ≃

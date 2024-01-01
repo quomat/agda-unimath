@@ -32,12 +32,12 @@ open import foundation-core.type-theoretic-principle-of-choice
 Slice-structure :
   {l1 l2 : Level} (l : Level) (P : UU (l1 ⊔ l) → UU l2) (B : UU l1) →
   UU (l1 ⊔ l2 ⊔ lsuc l)
-Slice-structure l P B = {!!}
+Slice-structure = {!!}
 
 equiv-Fiber-structure :
   {l1 l2 : Level} (l : Level) (P : UU (l1 ⊔ l) → UU l2) (B : UU l1) →
   Slice-structure (l1 ⊔ l) P B ≃ fam-structure P B
-equiv-Fiber-structure {l1} {l3} l P B = {!!}
+equiv-Fiber-structure = {!!}
 ```
 
 ```agda
@@ -45,5 +45,5 @@ equiv-fixed-Slice-structure :
   {l : Level} (P : UU l → UU l) (X : UU l) (A : UU l) →
   ( hom-structure P X A) ≃
   ( Σ (A → Σ (UU l) (λ Z → P (Z))) ( λ Y → X ≃ (Σ A (pr1 ∘ Y))))
-equiv-fixed-Slice-structure {l} P X A = {!!}
+equiv-fixed-Slice-structure = {!!}
 ```

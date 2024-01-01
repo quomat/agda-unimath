@@ -38,7 +38,7 @@ follow from the [univalence axiom](foundation.univalence.md) that the
 ```agda
 unlabeled-structure-species-types :
   {l1 l2 : Level} (F : species-types l1 l2) → ℕ → UU (lsuc l1 ⊔ l2)
-unlabeled-structure-species-types {l1} {l2} F n = {!!}
+unlabeled-structure-species-types = {!!}
 
 module _
   {l1 l2 : Level} (F : species-types l1 l2) {k : ℕ}

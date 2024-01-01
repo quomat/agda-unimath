@@ -42,12 +42,12 @@ module _
 
   type-unordered-pair-vertices-Undirected-Graph :
     unordered-pair-vertices-Undirected-Graph → UU lzero
-  type-unordered-pair-vertices-Undirected-Graph p = {!!}
+  type-unordered-pair-vertices-Undirected-Graph = {!!}
 
   element-unordered-pair-vertices-Undirected-Graph :
     (p : unordered-pair-vertices-Undirected-Graph) →
     type-unordered-pair-vertices-Undirected-Graph p → vertex-Undirected-Graph
-  element-unordered-pair-vertices-Undirected-Graph p = {!!}
+  element-unordered-pair-vertices-Undirected-Graph = {!!}
 
   edge-Undirected-Graph : unordered-pair-vertices-Undirected-Graph → UU l2
   edge-Undirected-Graph = {!!}
@@ -88,13 +88,13 @@ module _
     (p q : unordered-pair-vertices-Undirected-Graph G)
     (α : Eq-unordered-pair p q) →
     edge-Undirected-Graph G p ≃ edge-Undirected-Graph G q
-  equiv-tr-edge-Undirected-Graph p q α = {!!}
+  equiv-tr-edge-Undirected-Graph = {!!}
 
   tr-edge-Undirected-Graph :
     (p q : unordered-pair-vertices-Undirected-Graph G)
     (α : Eq-unordered-pair p q) →
     edge-Undirected-Graph G p → edge-Undirected-Graph G q
-  tr-edge-Undirected-Graph p q α = {!!}
+  tr-edge-Undirected-Graph = {!!}
 ```
 
 ## External links

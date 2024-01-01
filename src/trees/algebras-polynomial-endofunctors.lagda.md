@@ -28,17 +28,17 @@ a type `X` and a map `P A B X → X`.
 algebra-polynomial-endofunctor :
   (l : Level) {l1 l2 : Level} (A : UU l1) (B : A → UU l2) →
   UU (lsuc l ⊔ l1 ⊔ l2)
-algebra-polynomial-endofunctor l A B = {!!}
+algebra-polynomial-endofunctor = {!!}
 
 type-algebra-polynomial-endofunctor :
   {l l1 l2 : Level} {A : UU l1} {B : A → UU l2} →
   algebra-polynomial-endofunctor l A B → UU l
-type-algebra-polynomial-endofunctor X = {!!}
+type-algebra-polynomial-endofunctor = {!!}
 
 structure-algebra-polynomial-endofunctor :
   {l l1 l2 : Level} {A : UU l1} {B : A → UU l2}
   (X : algebra-polynomial-endofunctor l A B) →
   type-polynomial-endofunctor A B (type-algebra-polynomial-endofunctor X) →
   type-algebra-polynomial-endofunctor X
-structure-algebra-polynomial-endofunctor X = {!!}
+structure-algebra-polynomial-endofunctor = {!!}
 ```

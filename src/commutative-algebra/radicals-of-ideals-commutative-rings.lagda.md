@@ -85,7 +85,7 @@ module _
     (f : type-Commutative-Ring A) →
     is-in-ideal-Commutative-Ring A I f →
     is-in-radical-of-ideal-Commutative-Ring f
-  contains-ideal-radical-of-ideal-Commutative-Ring f H = {!!}
+  contains-ideal-radical-of-ideal-Commutative-Ring = {!!}
 
   contains-zero-radical-of-ideal-Commutative-Ring :
     is-in-radical-of-ideal-Commutative-Ring (zero-Commutative-Ring A)
@@ -94,39 +94,39 @@ module _
   is-closed-under-addition-radical-of-ideal-Commutative-Ring :
     is-closed-under-addition-subset-Commutative-Ring A
       ( subset-radical-of-ideal-Commutative-Ring)
-  is-closed-under-addition-radical-of-ideal-Commutative-Ring {x} {y} H K = {!!}
+  is-closed-under-addition-radical-of-ideal-Commutative-Ring = {!!}
 
   is-closed-under-negatives-radical-of-ideal-Commutative-Ring :
     is-closed-under-negatives-subset-Commutative-Ring A
       ( subset-radical-of-ideal-Commutative-Ring)
-  is-closed-under-negatives-radical-of-ideal-Commutative-Ring {x} H = {!!}
+  is-closed-under-negatives-radical-of-ideal-Commutative-Ring = {!!}
 
   is-closed-under-right-multiplication-radical-of-ideal-Commutative-Ring :
     is-closed-under-right-multiplication-subset-Commutative-Ring A
       ( subset-radical-of-ideal-Commutative-Ring)
-  is-closed-under-right-multiplication-radical-of-ideal-Commutative-Ring x y H = {!!}
+  is-closed-under-right-multiplication-radical-of-ideal-Commutative-Ring = {!!}
 
   is-closed-under-left-multiplication-radical-of-ideal-Commutative-Ring :
     is-closed-under-left-multiplication-subset-Commutative-Ring A
       ( subset-radical-of-ideal-Commutative-Ring)
-  is-closed-under-left-multiplication-radical-of-ideal-Commutative-Ring x y H = {!!}
+  is-closed-under-left-multiplication-radical-of-ideal-Commutative-Ring = {!!}
 
   ideal-radical-of-ideal-Commutative-Ring : ideal-Commutative-Ring l2 A
   ideal-radical-of-ideal-Commutative-Ring = {!!}
 
   is-radical-radical-of-ideal-Commutative-Ring :
     is-radical-ideal-Commutative-Ring A ideal-radical-of-ideal-Commutative-Ring
-  is-radical-radical-of-ideal-Commutative-Ring x n H = {!!}
+  is-radical-radical-of-ideal-Commutative-Ring = {!!}
 
   radical-of-ideal-Commutative-Ring :
     radical-ideal-Commutative-Ring l2 A
-  pr1 radical-of-ideal-Commutative-Ring = {!!}
+  radical-of-ideal-Commutative-Ring = {!!}
 
   is-radical-of-ideal-radical-of-ideal-Commutative-Ring :
     is-radical-of-ideal-Commutative-Ring A I
       ( radical-of-ideal-Commutative-Ring)
       ( contains-ideal-radical-of-ideal-Commutative-Ring)
-  is-radical-of-ideal-radical-of-ideal-Commutative-Ring J H x K = {!!}
+  is-radical-of-ideal-radical-of-ideal-Commutative-Ring = {!!}
 ```
 
 #### The operation `I ↦ √ I` as an order preserving map
@@ -143,15 +143,14 @@ module _
     leq-radical-ideal-Commutative-Ring A
       ( radical-of-ideal-Commutative-Ring A I)
       ( radical-of-ideal-Commutative-Ring A J)
-  preserves-order-radical-of-ideal-Commutative-Ring I J H = {!!}
+  preserves-order-radical-of-ideal-Commutative-Ring = {!!}
 
   radical-of-ideal-hom-large-poset-Commutative-Ring :
     hom-Large-Poset
       ( λ l → l)
       ( ideal-Commutative-Ring-Large-Poset A)
       ( radical-ideal-Commutative-Ring-Large-Poset A)
-  map-hom-Large-Preorder
-    radical-of-ideal-hom-large-poset-Commutative-Ring = {!!}
+  radical-of-ideal-hom-large-poset-Commutative-Ring = {!!}
 ```
 
 #### The radical Galois connection
@@ -171,14 +170,13 @@ module _
     leq-ideal-Commutative-Ring A
       ( I)
       ( ideal-radical-ideal-Commutative-Ring A J)
-  pr1 (adjoint-relation-radical-of-ideal-Commutative-Ring I J) H = {!!}
+  adjoint-relation-radical-of-ideal-Commutative-Ring = {!!}
 
   radical-of-ideal-galois-connection-Commutative-Ring :
     galois-connection-Large-Poset (λ l → l) (λ l → l)
       ( ideal-Commutative-Ring-Large-Poset A)
       ( radical-ideal-Commutative-Ring-Large-Poset A)
-  lower-adjoint-galois-connection-Large-Poset
-    radical-of-ideal-galois-connection-Commutative-Ring = {!!}
+  radical-of-ideal-galois-connection-Commutative-Ring = {!!}
 ```
 
 #### The radical reflective Galois connection
@@ -193,12 +191,11 @@ module _
       ( ideal-Commutative-Ring-Large-Poset A)
       ( radical-ideal-Commutative-Ring-Large-Poset A)
       ( radical-of-ideal-galois-connection-Commutative-Ring A)
-  pr1 (is-reflective-radical-of-ideal-Commutative-Ring I) = {!!}
+  is-reflective-radical-of-ideal-Commutative-Ring = {!!}
 
   radical-of-ideal-reflective-galois-connection-Commutative-Ring :
     reflective-galois-connection-Large-Poset
       ( ideal-Commutative-Ring-Large-Poset A)
       ( radical-ideal-Commutative-Ring-Large-Poset A)
-  galois-connection-reflective-galois-connection-Large-Poset
-    radical-of-ideal-reflective-galois-connection-Commutative-Ring = {!!}
+  radical-of-ideal-reflective-galois-connection-Commutative-Ring = {!!}
 ```

@@ -46,7 +46,7 @@ in-sieve-of-eratosthenes-ℕ n a = {!!}
 
 le-in-sieve-of-eratosthenes-ℕ :
   (n a : ℕ) → in-sieve-of-eratosthenes-ℕ n a → le-ℕ n a
-le-in-sieve-of-eratosthenes-ℕ n a = {!!}
+le-in-sieve-of-eratosthenes-ℕ = {!!}
 ```
 
 ## Properties
@@ -56,7 +56,7 @@ le-in-sieve-of-eratosthenes-ℕ n a = {!!}
 ```agda
 is-decidable-in-sieve-of-eratosthenes-ℕ :
   (n a : ℕ) → is-decidable (in-sieve-of-eratosthenes-ℕ n a)
-is-decidable-in-sieve-of-eratosthenes-ℕ n a = {!!}
+is-decidable-in-sieve-of-eratosthenes-ℕ = {!!}
 ```
 
 ### The successor of the `n`-th factorial is in the `n`-th sieve
@@ -64,11 +64,6 @@ is-decidable-in-sieve-of-eratosthenes-ℕ n a = {!!}
 ```agda
 in-sieve-of-eratosthenes-succ-factorial-ℕ :
   (n : ℕ) → in-sieve-of-eratosthenes-ℕ n (succ-ℕ (factorial-ℕ n))
-pr1 (in-sieve-of-eratosthenes-succ-factorial-ℕ zero-ℕ) = {!!}
-pr2 (in-sieve-of-eratosthenes-succ-factorial-ℕ zero-ℕ) x l d = {!!}
-pr1 (in-sieve-of-eratosthenes-succ-factorial-ℕ (succ-ℕ n)) = {!!}
-pr2 (in-sieve-of-eratosthenes-succ-factorial-ℕ (succ-ℕ n)) x l (pair y p) with
-  is-decidable-is-zero-ℕ x
-... | inl refl = {!!}
+in-sieve-of-eratosthenes-succ-factorial-ℕ = {!!}
 ... | inr f = {!!}
 ```

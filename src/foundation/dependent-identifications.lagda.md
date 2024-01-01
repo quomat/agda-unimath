@@ -44,7 +44,7 @@ module _
     (p' : dependent-identification B p x' y')
     (q' : dependent-identification B q x' y') →
     p' ＝ ((tr² B α _) ∙ q') → dependent-identification² B α p' q'
-  map-compute-dependent-identification² refl ._ refl refl = {!!}
+  map-compute-dependent-identification² = {!!}
 
   map-inv-compute-dependent-identification² :
     {x y : A} {p q : x ＝ y} (α : p ＝ q)
@@ -52,7 +52,7 @@ module _
     (p' : dependent-identification B p x' y')
     (q' : dependent-identification B q x' y') →
     dependent-identification² B α p' q' → p' ＝ ((tr² B α _) ∙ q')
-  map-inv-compute-dependent-identification² refl refl ._ refl = {!!}
+  map-inv-compute-dependent-identification² = {!!}
 
   is-section-map-inv-compute-dependent-identification² :
     {x y : A} {p q : x ＝ y} (α : p ＝ q)
@@ -61,7 +61,7 @@ module _
     (q' : dependent-identification B q x' y') →
     ( map-compute-dependent-identification² α p' q' ∘
       map-inv-compute-dependent-identification² α p' q') ~ id
-  is-section-map-inv-compute-dependent-identification² refl refl ._ refl = {!!}
+  is-section-map-inv-compute-dependent-identification² = {!!}
 
   is-retraction-map-inv-compute-dependent-identification² :
     {x y : A} {p q : x ＝ y} (α : p ＝ q)
@@ -70,7 +70,7 @@ module _
     (q' : dependent-identification B q x' y') →
     ( map-inv-compute-dependent-identification² α p' q' ∘
       map-compute-dependent-identification² α p' q') ~ id
-  is-retraction-map-inv-compute-dependent-identification² refl ._ refl refl = {!!}
+  is-retraction-map-inv-compute-dependent-identification² = {!!}
 
   is-equiv-map-compute-dependent-identification² :
     {x y : A} {p q : x ＝ y} (α : p ＝ q)
@@ -78,7 +78,7 @@ module _
     (p' : dependent-identification B p x' y')
     (q' : dependent-identification B q x' y') →
     is-equiv (map-compute-dependent-identification² α p' q')
-  is-equiv-map-compute-dependent-identification² α p' q' = {!!}
+  is-equiv-map-compute-dependent-identification² = {!!}
 
   compute-dependent-identification² :
     {x y : A} {p q : x ＝ y} (α : p ＝ q)
@@ -86,7 +86,7 @@ module _
     (p' : dependent-identification B p x' y')
     (q' : dependent-identification B q x' y') →
     (p' ＝ ((tr² B α _) ∙ q')) ≃ dependent-identification² B α p' q'
-  pr1 (compute-dependent-identification² α p' q') = {!!}
+  compute-dependent-identification² = {!!}
 ```
 
 ### The groupoidal structure of dependent identifications
@@ -107,14 +107,14 @@ module _
     dependent-identification B p x' y' →
     dependent-identification B q y' z' →
     dependent-identification B (p ∙ q) x' z'
-  concat-dependent-identification refl q refl q' = {!!}
+  concat-dependent-identification = {!!}
 
   compute-concat-dependent-identification-refl :
     { y z : A} (q : y ＝ z) →
     { x' y' : B y} {z' : B z} (p' : x' ＝ y') →
     ( q' : dependent-identification B q y' z') →
     ( concat-dependent-identification refl q p' q') ＝ ap (tr B q) p' ∙ q'
-  compute-concat-dependent-identification-refl refl refl q' = {!!}
+  compute-concat-dependent-identification-refl = {!!}
 ```
 
 #### Inverses of dependent identifications
@@ -128,7 +128,7 @@ module _
     {x y : A} (p : x ＝ y) {x' : B x} {y' : B y} →
     dependent-identification B p x' y' →
     dependent-identification B (inv p) y' x'
-  inv-dependent-identification refl refl = {!!}
+  inv-dependent-identification = {!!}
 ```
 
 #### Associativity of concatenation of dependent identifications
@@ -156,7 +156,7 @@ module _
         ( q ∙ r)
         ( p')
         ( concat-dependent-identification B q r q' r'))
-  assoc-dependent-identification refl q r refl q' r' = {!!}
+  assoc-dependent-identification = {!!}
 ```
 
 ### Unit laws for concatenation of dependent identifications
@@ -207,7 +207,7 @@ module _
         ( q)
         ( inv-dependent-identification B p q))
       ( refl-dependent-identification B)
-  right-inv-dependent-identification refl refl = {!!}
+  right-inv-dependent-identification = {!!}
 
   left-inv-dependent-identification :
     {x y : A} (p : x ＝ y) {x' : B x} {y' : B y}
@@ -221,7 +221,7 @@ module _
         ( inv-dependent-identification B p q)
         ( q))
       ( refl-dependent-identification B)
-  left-inv-dependent-identification refl refl = {!!}
+  left-inv-dependent-identification = {!!}
 ```
 
 ### The inverse of dependent identifications is involutive
@@ -240,7 +240,7 @@ module _
         ( inv p)
         ( inv-dependent-identification B p q))
       ( q)
-  inv-inv-dependent-identification refl refl = {!!}
+  inv-inv-dependent-identification = {!!}
 ```
 
 ### The inverse distributes over concatenation of dependent identifications
@@ -264,5 +264,5 @@ module _
         ( inv p)
         ( inv-dependent-identification B q q')
         ( inv-dependent-identification B p p'))
-  distributive-inv-concat-dependent-identification refl refl refl refl = {!!}
+  distributive-inv-concat-dependent-identification = {!!}
 ```

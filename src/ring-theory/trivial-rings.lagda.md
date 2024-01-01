@@ -36,7 +36,7 @@ is-trivial-Ring R = {!!}
 
 is-prop-is-trivial-Ring :
   {l : Level} (R : Ring l) → is-prop (is-trivial-Ring R)
-is-prop-is-trivial-Ring R = {!!}
+is-prop-is-trivial-Ring = {!!}
 
 is-nontrivial-ring-Prop : {l : Level} → Ring l → Prop l
 is-nontrivial-ring-Prop R = {!!}
@@ -46,7 +46,7 @@ is-nontrivial-Ring R = {!!}
 
 is-prop-is-nontrivial-Ring :
   {l : Level} (R : Ring l) → is-prop (is-nontrivial-Ring R)
-is-prop-is-nontrivial-Ring R = {!!}
+is-prop-is-nontrivial-Ring = {!!}
 ```
 
 ## Properties
@@ -58,6 +58,5 @@ is-contr-is-trivial-Ring :
   {l : Level} (R : Ring l) →
   is-trivial-Ring R →
   is-contr (type-Ring R)
-pr1 (is-contr-is-trivial-Ring R p) = {!!}
-pr2 (is-contr-is-trivial-Ring R p) x = {!!}
+is-contr-is-trivial-Ring = {!!}
 ```

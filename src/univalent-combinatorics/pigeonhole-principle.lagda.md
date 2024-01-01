@@ -52,14 +52,11 @@ injective.
 ```agda
 leq-emb-Fin :
   (k l : ℕ) → Fin k ↪ Fin l → k ≤-ℕ l
-leq-emb-Fin zero-ℕ zero-ℕ f = {!!}
-leq-emb-Fin (succ-ℕ k) zero-ℕ f = {!!}
-leq-emb-Fin zero-ℕ (succ-ℕ l) f = {!!}
-leq-emb-Fin (succ-ℕ k) (succ-ℕ l) f = {!!}
+leq-emb-Fin = {!!}
 
 leq-is-emb-Fin :
   (k l : ℕ) {f : Fin k → Fin l} → is-emb f → k ≤-ℕ l
-leq-is-emb-Fin k l {f = f} H = {!!}
+leq-is-emb-Fin = {!!}
 ```
 
 #### Given an injective map `Fin k → Fin l`, it follows that `k ≤ l`
@@ -67,7 +64,7 @@ leq-is-emb-Fin k l {f = f} H = {!!}
 ```agda
 leq-is-injective-Fin :
   (k l : ℕ) {f : Fin k → Fin l} → is-injective f → k ≤-ℕ l
-leq-is-injective-Fin k l H = {!!}
+leq-is-injective-Fin = {!!}
 ```
 
 #### If `l < k`, then any map `f : Fin k → Fin l` is not an embedding
@@ -75,7 +72,7 @@ leq-is-injective-Fin k l H = {!!}
 ```agda
 is-not-emb-le-Fin :
   (k l : ℕ) (f : Fin k → Fin l) → le-ℕ l k → ¬ (is-emb f)
-is-not-emb-le-Fin k l f p = {!!}
+is-not-emb-le-Fin = {!!}
 ```
 
 #### If `l < k`, then any map `f : Fin k → Fin l` is not injective
@@ -83,7 +80,7 @@ is-not-emb-le-Fin k l f p = {!!}
 ```agda
 is-not-injective-le-Fin :
   (k l : ℕ) (f : Fin k → Fin l) → le-ℕ l k → is-not-injective f
-is-not-injective-le-Fin k l f p = {!!}
+is-not-injective-le-Fin = {!!}
 ```
 
 #### There is no injective map `Fin (k + 1) → Fin k`
@@ -91,7 +88,7 @@ is-not-injective-le-Fin k l f p = {!!}
 ```agda
 is-not-injective-map-Fin-succ-Fin :
   (k : ℕ) (f : Fin (succ-ℕ k) → Fin k) → is-not-injective f
-is-not-injective-map-Fin-succ-Fin k f = {!!}
+is-not-injective-map-Fin-succ-Fin = {!!}
 ```
 
 #### There is no embedding `ℕ ↪ Fin k`
@@ -99,7 +96,7 @@ is-not-injective-map-Fin-succ-Fin k f = {!!}
 ```agda
 no-embedding-ℕ-Fin :
   (k : ℕ) → ¬ (ℕ ↪ Fin k)
-no-embedding-ℕ-Fin k e = {!!}
+no-embedding-ℕ-Fin = {!!}
 ```
 
 #### For any `f : Fin k → Fin l`, where `l < k`, we construct a pair of distinct elements of `Fin k` on which `f` assumes the same value
@@ -133,7 +130,7 @@ module _
 
 repetition-of-values-Fin-succ-to-Fin :
   (k : ℕ) (f : Fin (succ-ℕ k) → Fin k) → repetition-of-values f
-repetition-of-values-Fin-succ-to-Fin k f = {!!}
+repetition-of-values-Fin-succ-to-Fin = {!!}
 ```
 
 ### The pigeonhole principle for types equipped with a counting
@@ -149,12 +146,12 @@ module _
 ```agda
   leq-emb-count :
     (A ↪ B) → (number-of-elements-count eA) ≤-ℕ (number-of-elements-count eB)
-  leq-emb-count f = {!!}
+  leq-emb-count = {!!}
 
   leq-is-emb-count :
     {f : A → B} → is-emb f →
     (number-of-elements-count eA) ≤-ℕ (number-of-elements-count eB)
-  leq-is-emb-count {f} H = {!!}
+  leq-is-emb-count = {!!}
 ```
 
 #### If `f : A → B` is an injective map between types equipped with a counting, then the number of elements of `A` is less than the number of elements of `B`
@@ -163,7 +160,7 @@ module _
   leq-is-injective-count :
     {f : A → B} → is-injective f →
     (number-of-elements-count eA) ≤-ℕ (number-of-elements-count eB)
-  leq-is-injective-count H = {!!}
+  leq-is-injective-count = {!!}
 ```
 
 #### There is no embedding `A ↪ B` between types equipped with a counting if the number of elements of `B` is strictly less than the number of elements of `A`
@@ -173,7 +170,7 @@ module _
     (f : A → B) →
     le-ℕ (number-of-elements-count eB) (number-of-elements-count eA) →
     ¬ (is-emb f)
-  is-not-emb-le-count f p H = {!!}
+  is-not-emb-le-count = {!!}
 ```
 
 #### There is no injective map `A → B` between types equipped with a counting if the number of elements of `B` is strictly less than the number of elements of `A`
@@ -183,7 +180,7 @@ module _
     (f : A → B) →
     le-ℕ (number-of-elements-count eB) (number-of-elements-count eA) →
     is-not-injective f
-  is-not-injective-le-count f p H = {!!}
+  is-not-injective-le-count = {!!}
 ```
 
 #### There is no embedding `ℕ ↪ A` into a type equipped with a counting
@@ -191,7 +188,7 @@ module _
 ```agda
 no-embedding-ℕ-count :
   {l : Level} {A : UU l} (e : count A) → ¬ (ℕ ↪ A)
-no-embedding-ℕ-count e f = {!!}
+no-embedding-ℕ-count = {!!}
 ```
 
 #### For any map `f : A → B` between types equipped with a counting, if `|A| < |B|` then we construct a pair of distinct elements of `A` on which `f` assumes the same value
@@ -240,12 +237,12 @@ module _
   leq-emb-is-finite :
     (A ↪ B) →
     (number-of-elements-is-finite H) ≤-ℕ (number-of-elements-is-finite K)
-  leq-emb-is-finite f = {!!}
+  leq-emb-is-finite = {!!}
 
   leq-is-emb-is-finite :
     {f : A → B} → is-emb f →
     (number-of-elements-is-finite H) ≤-ℕ (number-of-elements-is-finite K)
-  leq-is-emb-is-finite {f} H = {!!}
+  leq-is-emb-is-finite = {!!}
 ```
 
 #### If `A → B` is an injective map between finite types, then `|A| ≤ |B|`
@@ -254,7 +251,7 @@ module _
   leq-is-injective-is-finite :
     {f : A → B} → is-injective f →
     (number-of-elements-is-finite H) ≤-ℕ (number-of-elements-is-finite K)
-  leq-is-injective-is-finite I = {!!}
+  leq-is-injective-is-finite = {!!}
 ```
 
 #### There are no embeddings between finite types `A` and `B` such that `|B| < |A|
@@ -264,7 +261,7 @@ module _
     (f : A → B) →
     le-ℕ (number-of-elements-is-finite K) (number-of-elements-is-finite H) →
     ¬ (is-emb f)
-  is-not-emb-le-is-finite f p E = {!!}
+  is-not-emb-le-is-finite = {!!}
 ```
 
 #### There are no injective maps between finite types `A` and `B` such that `|B| < |A|
@@ -274,7 +271,7 @@ module _
     (f : A → B) →
     le-ℕ (number-of-elements-is-finite K) (number-of-elements-is-finite H) →
     is-not-injective f
-  is-not-injective-le-is-finite f p I = {!!}
+  is-not-injective-le-is-finite = {!!}
 ```
 
 #### There are no embeddings `ℕ ↪ A` into a finite type `A`
@@ -282,5 +279,5 @@ module _
 ```agda
 no-embedding-ℕ-is-finite :
   {l : Level} {A : UU l} (H : is-finite A) → ¬ (ℕ ↪ A)
-no-embedding-ℕ-is-finite H f = {!!}
+no-embedding-ℕ-is-finite = {!!}
 ```

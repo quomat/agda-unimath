@@ -61,5 +61,5 @@ equal to `1/n`.
 dirichlet-series-species-Inhabited-𝔽 :
   {l1 l2 l3 : Level} → species-Inhabited-𝔽 l1 l2 → UU l3 →
   UU (lsuc l1 ⊔ l2 ⊔ l3)
-dirichlet-series-species-Inhabited-𝔽 {l1} T S = {!!}
+dirichlet-series-species-Inhabited-𝔽 = {!!}
 ```

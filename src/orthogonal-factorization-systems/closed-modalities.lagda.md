@@ -39,16 +39,15 @@ call these the **closed modalities**.
 ```agda
 operator-closed-modality :
   {l lQ : Level} (Q : Prop lQ) → operator-modality l (l ⊔ lQ)
-operator-closed-modality Q A = {!!}
+operator-closed-modality = {!!}
 
 unit-closed-modality :
   {l lQ : Level} (Q : Prop lQ) → unit-modality (operator-closed-modality {l} Q)
-unit-closed-modality Q = {!!}
+unit-closed-modality = {!!}
 
 is-closed-modal :
   {l lQ : Level} (Q : Prop lQ) → UU l → Prop (l ⊔ lQ)
-pr1 (is-closed-modal Q B) = {!!}
-pr2 (is-closed-modal Q B) = {!!}
+is-closed-modal = {!!}
 ```
 
 ## Properties
@@ -62,20 +61,20 @@ module _
 
   is-reflective-subuniverse-closed-modality :
     is-reflective-subuniverse {l ⊔ lQ} (is-closed-modal Q)
-  pr1 is-reflective-subuniverse-closed-modality = {!!}
+  is-reflective-subuniverse-closed-modality = {!!}
 
   reflective-subuniverse-closed-modality :
     reflective-subuniverse (l ⊔ lQ) (l ⊔ lQ)
-  pr1 reflective-subuniverse-closed-modality = {!!}
+  reflective-subuniverse-closed-modality = {!!}
 
   is-closed-under-Σ-reflective-subuniverse-closed-modality :
     is-closed-under-Σ-reflective-subuniverse
       ( reflective-subuniverse-closed-modality)
-  is-closed-under-Σ-reflective-subuniverse-closed-modality A B q = {!!}
+  is-closed-under-Σ-reflective-subuniverse-closed-modality = {!!}
 
   closed-under-Σ-reflective-subuniverse-closed-modality :
     closed-under-Σ-reflective-subuniverse (l ⊔ lQ) (l ⊔ lQ)
-  pr1 closed-under-Σ-reflective-subuniverse-closed-modality = {!!}
+  closed-under-Σ-reflective-subuniverse-closed-modality = {!!}
 ```
 
 ## References

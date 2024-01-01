@@ -33,20 +33,20 @@ module _
 
   is-chain-Subpreorder-Prop :
     {l3 : Level} (S : type-Preorder X → Prop l3) → Prop (l1 ⊔ l2 ⊔ l3)
-  is-chain-Subpreorder-Prop S = {!!}
+  is-chain-Subpreorder-Prop = {!!}
 
   is-chain-Subpreorder :
     {l3 : Level} (S : type-Preorder X → Prop l3) → UU (l1 ⊔ l2 ⊔ l3)
-  is-chain-Subpreorder S = {!!}
+  is-chain-Subpreorder = {!!}
 
   is-prop-is-chain-Subpreorder :
     {l3 : Level} (S : type-Preorder X → Prop l3) →
     is-prop (is-chain-Subpreorder S)
-  is-prop-is-chain-Subpreorder S = {!!}
+  is-prop-is-chain-Subpreorder = {!!}
 
 chain-Preorder :
   {l1 l2 : Level} (l : Level) (X : Preorder l1 l2) → UU (l1 ⊔ l2 ⊔ lsuc l)
-chain-Preorder l X = {!!}
+chain-Preorder = {!!}
 
 module _
   {l1 l2 l3 : Level} (X : Preorder l1 l2) (C : chain-Preorder l3 X)
@@ -65,15 +65,15 @@ module _
   inclusion-chain-Preorder-Prop :
     {l3 l4 : Level} → chain-Preorder l3 X → chain-Preorder l4 X →
     Prop (l1 ⊔ l3 ⊔ l4)
-  inclusion-chain-Preorder-Prop C D = {!!}
+  inclusion-chain-Preorder-Prop = {!!}
 
   inclusion-chain-Preorder :
     {l3 l4 : Level} → chain-Preorder l3 X → chain-Preorder l4 X →
     UU (l1 ⊔ l3 ⊔ l4)
-  inclusion-chain-Preorder C D = {!!}
+  inclusion-chain-Preorder = {!!}
 
   is-prop-inclusion-chain-Preorder :
     {l3 l4 : Level} (C : chain-Preorder l3 X) (D : chain-Preorder l4 X) →
     is-prop (inclusion-chain-Preorder C D)
-  is-prop-inclusion-chain-Preorder C D = {!!}
+  is-prop-inclusion-chain-Preorder = {!!}
 ```

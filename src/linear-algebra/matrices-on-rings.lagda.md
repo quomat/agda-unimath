@@ -73,7 +73,7 @@ module _
     Id
       ( add-matrix-Ring R (add-matrix-Ring R A B) C)
       ( add-matrix-Ring R A (add-matrix-Ring R B C))
-  associative-add-matrix-Ring empty-vec empty-vec empty-vec = {!!}
+  associative-add-matrix-Ring = {!!}
 ```
 
 ### Addition of matrices is commutative
@@ -86,7 +86,7 @@ module _
   commutative-add-matrix-Ring :
     {m n : ℕ} (A B : matrix-Ring R m n) →
     Id (add-matrix-Ring R A B) (add-matrix-Ring R B A)
-  commutative-add-matrix-Ring empty-vec empty-vec = {!!}
+  commutative-add-matrix-Ring = {!!}
 ```
 
 ### Left unit law for addition of matrices
@@ -99,7 +99,7 @@ module _
   left-unit-law-add-matrix-Ring :
     {m n : ℕ} (A : matrix-Ring R m n) →
     Id (add-matrix-Ring R (zero-matrix-Ring R) A) A
-  left-unit-law-add-matrix-Ring empty-vec = {!!}
+  left-unit-law-add-matrix-Ring = {!!}
 ```
 
 ### Right unit law for addition of matrices
@@ -112,5 +112,5 @@ module _
   right-unit-law-add-matrix-Ring :
     {m n : ℕ} (A : matrix-Ring R m n) →
     Id (add-matrix-Ring R A (zero-matrix-Ring R)) A
-  right-unit-law-add-matrix-Ring empty-vec = {!!}
+  right-unit-law-add-matrix-Ring = {!!}
 ```

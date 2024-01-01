@@ -100,7 +100,7 @@ module _
 ```agda
 transitive-action-Concrete-Group :
   {l1 : Level} (l2 : Level) (G : Concrete-Group l1) → UU (l1 ⊔ lsuc l2)
-transitive-action-Concrete-Group l2 G = {!!}
+transitive-action-Concrete-Group = {!!}
 
 module _
   {l1 l2 : Level} (G : Concrete-Group l1)
@@ -118,7 +118,7 @@ module _
 
   transitive-action-∞-group-transitive-action-Concrete-Group :
     transitive-action-∞-Group l2 (∞-group-Concrete-Group G)
-  pr1 transitive-action-∞-group-transitive-action-Concrete-Group = {!!}
+  transitive-action-∞-group-transitive-action-Concrete-Group = {!!}
 
   set-transitive-action-Concrete-Group : Set l2
   set-transitive-action-Concrete-Group = {!!}
@@ -166,14 +166,14 @@ module _
 
   equiv-transitive-action-Concrete-Group :
     {l3 : Level} (Y : transitive-action-Concrete-Group l3 G) → UU (l1 ⊔ l2 ⊔ l3)
-  equiv-transitive-action-Concrete-Group Y = {!!}
+  equiv-transitive-action-Concrete-Group = {!!}
 
   map-equiv-transitive-action-Concrete-Group :
     {l3 : Level} (Y : transitive-action-Concrete-Group l3 G) →
     equiv-transitive-action-Concrete-Group Y →
     type-transitive-action-Concrete-Group G X →
     type-transitive-action-Concrete-Group G Y
-  map-equiv-transitive-action-Concrete-Group Y = {!!}
+  map-equiv-transitive-action-Concrete-Group = {!!}
 
   preserves-mul-equiv-transitive-action-Concrete-Group :
     {l3 : Level} (Y : transitive-action-Concrete-Group l3 G) →
@@ -183,7 +183,7 @@ module _
       ( mul-transitive-action-Concrete-Group G X g x)) ＝
     ( mul-transitive-action-Concrete-Group G Y g
       ( map-equiv-transitive-action-Concrete-Group Y e x))
-  preserves-mul-equiv-transitive-action-Concrete-Group Y = {!!}
+  preserves-mul-equiv-transitive-action-Concrete-Group = {!!}
 
   id-equiv-transitive-action-Concrete-Group :
     equiv-transitive-action-Concrete-Group X
@@ -192,7 +192,7 @@ module _
   extensionality-transitive-action-Concrete-Group :
     (Y : transitive-action-Concrete-Group l2 G) →
     (X ＝ Y) ≃ equiv-transitive-action-Concrete-Group Y
-  extensionality-transitive-action-Concrete-Group Y = {!!}
+  extensionality-transitive-action-Concrete-Group = {!!}
 ```
 
 ### Two equivalences of transitive concrete group actions are homotopic if there exists a point on which they have the same value
@@ -217,7 +217,7 @@ module _
         map-equiv-transitive-action-Concrete-Group G X Y e x ＝
         map-equiv-transitive-action-Concrete-Group G X Y f x) →
     htpy-equiv-transitive-action-Concrete-Group
-  htpy-exists-equiv-transitive-action-Concrete-Group H = {!!}
+  htpy-exists-equiv-transitive-action-Concrete-Group = {!!}
 ```
 
 ### The type of transitive concrete group actions is a 1-type

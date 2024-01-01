@@ -103,7 +103,7 @@ module _
   commute-add-Ring :
     {x y z : type-Ring R} → commute-Ring R x y → commute-Ring R x z →
     commute-Ring R x (add-Ring R y z)
-  commute-add-Ring H K = {!!}
+  commute-add-Ring = {!!}
 ```
 
 ### If `x` commutes with `y`, then `x` commutes with `-y`
@@ -115,7 +115,7 @@ module _
 
   commute-neg-Ring :
     {x y : type-Ring R} → commute-Ring R x y → commute-Ring R x (neg-Ring R y)
-  commute-neg-Ring H = {!!}
+  commute-neg-Ring = {!!}
 ```
 
 ### If `x` commutes with `y`, then `-x` commutes with `-y`
@@ -128,7 +128,7 @@ module _
   commute-neg-neg-Ring :
     {x y : type-Ring R} → commute-Ring R x y →
     commute-Ring R (neg-Ring R x) (neg-Ring R y)
-  commute-neg-neg-Ring H = {!!}
+  commute-neg-neg-Ring = {!!}
 ```
 
 ### If `x` commutes with `y` and `z`, then `x` commutes with `-y + z` and with `y - z`
@@ -141,12 +141,12 @@ module _
   commute-left-subtraction-Ring :
     {x y z : type-Ring R} → commute-Ring R x y → commute-Ring R x z →
     commute-Ring R x (left-subtraction-Ring R y z)
-  commute-left-subtraction-Ring H K = {!!}
+  commute-left-subtraction-Ring = {!!}
 
   commute-right-subtraction-Ring :
     {x y z : type-Ring R} → commute-Ring R x y → commute-Ring R x z →
     commute-Ring R x (right-subtraction-Ring R y z)
-  commute-right-subtraction-Ring H K = {!!}
+  commute-right-subtraction-Ring = {!!}
 ```
 
 ### If `x` commutes with `y`, then `x * (y * z) ＝ y * (x * z)` for any element `z`

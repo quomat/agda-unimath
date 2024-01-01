@@ -49,11 +49,11 @@ module _
 
   is-closed-under-equiv-precomp-function-classes :
     (l1 l2 l3 : Level) → UU (β l1 l2 ⊔ β l3 l2 ⊔ lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  is-closed-under-equiv-precomp-function-classes l1 l2 l3 = {!!}
+  is-closed-under-equiv-precomp-function-classes = {!!}
 
   is-closed-under-equiv-postcomp-function-classes :
     (l1 l2 l3 : Level) → UU (β l1 l2 ⊔ β l3 l2 ⊔ lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  is-closed-under-equiv-postcomp-function-classes l1 l2 l3 = {!!}
+  is-closed-under-equiv-postcomp-function-classes = {!!}
 ```
 
 ### The large type of global function classes
@@ -81,7 +81,7 @@ open global-function-class public
 type-global-function-class :
   {β : Level → Level → Level} (P : global-function-class β)
   {l1 l2 : Level} (A : UU l1) (B : UU l2) → UU (β l1 l2 ⊔ l1 ⊔ l2)
-type-global-function-class P = {!!}
+type-global-function-class = {!!}
 
 module _
   {β : Level → Level → Level} (P : global-function-class β)
@@ -115,7 +115,7 @@ module _
 
   has-identity-maps-global-function-class-Level :
     (l : Level) → UU (β l l ⊔ lsuc l)
-  has-identity-maps-global-function-class-Level l = {!!}
+  has-identity-maps-global-function-class-Level = {!!}
 
   has-identity-maps-global-function-class : UUω
   has-identity-maps-global-function-class = {!!}
@@ -130,7 +130,7 @@ module _
 
   has-equivalences-global-function-class-Level :
     (l1 l2 : Level) → UU (β l1 l2 ⊔ lsuc l1 ⊔ lsuc l2)
-  has-equivalences-global-function-class-Level l1 l2 = {!!}
+  has-equivalences-global-function-class-Level = {!!}
 
   has-equivalences-global-function-class : UUω
   has-equivalences-global-function-class = {!!}
@@ -152,7 +152,7 @@ module _
   is-closed-under-composition-global-function-class-Level :
     (l1 l2 l3 : Level) →
     UU (β l1 l2 ⊔ β l1 l3 ⊔ β l2 l3 ⊔ lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  is-closed-under-composition-global-function-class-Level l1 l2 l3 = {!!}
+  is-closed-under-composition-global-function-class-Level = {!!}
 
   is-closed-under-composition-global-function-class : UUω
   is-closed-under-composition-global-function-class = {!!}
@@ -171,7 +171,7 @@ module _
   is-pullback-stable-global-function-class-Level :
     (l1 l2 l3 l4 : Level) →
     UU (β l1 l3 ⊔ β l4 l2 ⊔ lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3 ⊔ lsuc l4)
-  is-pullback-stable-global-function-class-Level l1 l2 l3 l4 = {!!}
+  is-pullback-stable-global-function-class-Level = {!!}
 
   is-pullback-stable-global-function-class : UUω
   is-pullback-stable-global-function-class = {!!}
@@ -203,5 +203,5 @@ module _
   has-identity-maps-has-equivalences-global-function-class :
     has-equivalences-global-function-class P →
     has-identity-maps-global-function-class P
-  has-identity-maps-has-equivalences-global-function-class has-equiv-P A = {!!}
+  has-identity-maps-has-equivalences-global-function-class = {!!}
 ```

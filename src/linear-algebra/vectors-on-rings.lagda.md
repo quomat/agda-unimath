@@ -69,7 +69,7 @@ module _
 
   head-functional-vec-Ring :
     (n : ℕ) → functional-vec-Ring (succ-ℕ n) → type-Ring R
-  head-functional-vec-Ring n v = {!!}
+  head-functional-vec-Ring = {!!}
 
   tail-functional-vec-Ring :
     (n : ℕ) → functional-vec-Ring (succ-ℕ n) → functional-vec-Ring n
@@ -127,25 +127,25 @@ module _
     Id
       ( add-vec-Ring (add-vec-Ring v1 v2) v3)
       ( add-vec-Ring v1 (add-vec-Ring v2 v3))
-  associative-add-vec-Ring empty-vec empty-vec empty-vec = {!!}
+  associative-add-vec-Ring = {!!}
 
   vec-Ring-Semigroup : ℕ → Semigroup l
   pr1 (vec-Ring-Semigroup n) = {!!}
 
   left-unit-law-add-vec-Ring :
     {n : ℕ} (v : vec-Ring R n) → Id (add-vec-Ring (zero-vec-Ring R) v) v
-  left-unit-law-add-vec-Ring empty-vec = {!!}
+  left-unit-law-add-vec-Ring = {!!}
 
   right-unit-law-add-vec-Ring :
     {n : ℕ} (v : vec-Ring R n) → Id (add-vec-Ring v (zero-vec-Ring R)) v
-  right-unit-law-add-vec-Ring empty-vec = {!!}
+  right-unit-law-add-vec-Ring = {!!}
 
   vec-Ring-Monoid : ℕ → Monoid l
   pr1 (vec-Ring-Monoid n) = {!!}
 
   commutative-add-vec-Ring :
     {n : ℕ} (v w : vec-Ring R n) → Id (add-vec-Ring v w) (add-vec-Ring w v)
-  commutative-add-vec-Ring empty-vec empty-vec = {!!}
+  commutative-add-vec-Ring = {!!}
 
   vec-Ring-Commutative-Monoid : ℕ → Commutative-Monoid l
   pr1 (vec-Ring-Commutative-Monoid n) = {!!}
@@ -160,13 +160,13 @@ module _
 
   add-functional-vec-Ring :
     (n : ℕ) (v w : functional-vec-Ring R n) → functional-vec-Ring R n
-  add-functional-vec-Ring n = {!!}
+  add-functional-vec-Ring = {!!}
 
   associative-add-functional-vec-Ring :
     (n : ℕ) (v1 v2 v3 : functional-vec-Ring R n) →
     ( add-functional-vec-Ring n (add-functional-vec-Ring n v1 v2) v3) ＝
     ( add-functional-vec-Ring n v1 (add-functional-vec-Ring n v2 v3))
-  associative-add-functional-vec-Ring n v1 v2 v3 = {!!}
+  associative-add-functional-vec-Ring = {!!}
 
   functional-vec-Ring-Semigroup : ℕ → Semigroup l
   pr1 (functional-vec-Ring-Semigroup n) = {!!}
@@ -174,12 +174,12 @@ module _
   left-unit-law-add-functional-vec-Ring :
     (n : ℕ) (v : functional-vec-Ring R n) →
     add-functional-vec-Ring n (zero-functional-vec-Ring R n) v ＝ v
-  left-unit-law-add-functional-vec-Ring n v = {!!}
+  left-unit-law-add-functional-vec-Ring = {!!}
 
   right-unit-law-add-functional-vec-Ring :
     (n : ℕ) (v : functional-vec-Ring R n) →
     add-functional-vec-Ring n v (zero-functional-vec-Ring R n) ＝ v
-  right-unit-law-add-functional-vec-Ring n v = {!!}
+  right-unit-law-add-functional-vec-Ring = {!!}
 
   functional-vec-Ring-Monoid : ℕ → Monoid l
   pr1 (functional-vec-Ring-Monoid n) = {!!}
@@ -187,7 +187,7 @@ module _
   commutative-add-functional-vec-Ring :
     (n : ℕ) (v w : functional-vec-Ring R n) →
     add-functional-vec-Ring n v w ＝ add-functional-vec-Ring n w v
-  commutative-add-functional-vec-Ring n v w = {!!}
+  commutative-add-functional-vec-Ring = {!!}
 
   functional-vec-Ring-Commutative-Monoid : ℕ → Commutative-Monoid l
   pr1 (functional-vec-Ring-Commutative-Monoid n) = {!!}
@@ -206,12 +206,12 @@ module _
   left-inverse-law-add-vec-Ring :
     {n : ℕ} (v : vec-Ring R n) →
     Id (add-vec-Ring R (neg-vec-Ring v) v) (zero-vec-Ring R)
-  left-inverse-law-add-vec-Ring empty-vec = {!!}
+  left-inverse-law-add-vec-Ring = {!!}
 
   right-inverse-law-add-vec-Ring :
     {n : ℕ} (v : vec-Ring R n) →
     Id (add-vec-Ring R v (neg-vec-Ring v)) (zero-vec-Ring R)
-  right-inverse-law-add-vec-Ring empty-vec = {!!}
+  right-inverse-law-add-vec-Ring = {!!}
 
   is-unital-vec-Ring : (n : ℕ) → is-unital (add-vec-Ring R {n})
   pr1 (is-unital-vec-Ring n) = {!!}

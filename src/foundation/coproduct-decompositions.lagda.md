@@ -81,8 +81,7 @@ equiv-coproduct-Decomposition-full-subuniverse :
   {l1 : Level} → (X : UU l1) →
   binary-coproduct-Decomposition l1 l1 X ≃
   binary-coproduct-Decomposition-subuniverse (λ _ → unit-Prop) (X , star)
-pr1 (equiv-coproduct-Decomposition-full-subuniverse X) d = {!!}
-pr2 (equiv-coproduct-Decomposition-full-subuniverse X) = {!!}
+equiv-coproduct-Decomposition-full-subuniverse = {!!}
 ```
 
 ### Characterization of equality of binary coproduct Decomposition
@@ -93,7 +92,7 @@ equiv-binary-coproduct-Decomposition :
   (X : binary-coproduct-Decomposition l2 l3 A)
   (Y : binary-coproduct-Decomposition l4 l5 A) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5)
-equiv-binary-coproduct-Decomposition X Y = {!!}
+equiv-binary-coproduct-Decomposition = {!!}
 
 module _
   {l1 l2 l3 l4 l5 : Level} {A : UU l1}
@@ -128,7 +127,7 @@ module _
 
   id-equiv-binary-coproduct-Decomposition :
     equiv-binary-coproduct-Decomposition X X
-  pr1 id-equiv-binary-coproduct-Decomposition = {!!}
+  id-equiv-binary-coproduct-Decomposition = {!!}
 
   is-torsorial-equiv-binary-coproduct-Decomposition :
     is-torsorial (equiv-binary-coproduct-Decomposition X)
@@ -137,7 +136,7 @@ module _
   equiv-eq-binary-coproduct-Decomposition :
     (Y : binary-coproduct-Decomposition l2 l3 A) → (X ＝ Y) →
     equiv-binary-coproduct-Decomposition X Y
-  equiv-eq-binary-coproduct-Decomposition .X refl = {!!}
+  equiv-eq-binary-coproduct-Decomposition = {!!}
 
   is-equiv-equiv-eq-binary-coproduct-Decomposition :
     (Y : binary-coproduct-Decomposition l2 l3 A) →
@@ -147,13 +146,13 @@ module _
   extensionality-binary-coproduct-Decomposition :
     (Y : binary-coproduct-Decomposition l2 l3 A) →
     (X ＝ Y) ≃ equiv-binary-coproduct-Decomposition X Y
-  pr1 (extensionality-binary-coproduct-Decomposition Y) = {!!}
+  extensionality-binary-coproduct-Decomposition = {!!}
   pr2 (extensionality-binary-coproduct-Decomposition Y) = {!!}
 
   eq-equiv-binary-coproduct-Decomposition :
     (Y : binary-coproduct-Decomposition l2 l3 A) →
     equiv-binary-coproduct-Decomposition X Y → (X ＝ Y)
-  eq-equiv-binary-coproduct-Decomposition Y = {!!}
+  eq-equiv-binary-coproduct-Decomposition = {!!}
 ```
 
 ### Equivalence between `X → Fin 2` and `binary-coproduct-Decomposition l1 l1 X`
@@ -235,7 +234,7 @@ module _
   map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ :
     (d : binary-coproduct-Decomposition l1 l1 X) →
     X → Fin 2
-  map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ d x = {!!}
+  map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ = {!!}
 
   compute-left-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ-helper :
     (d : binary-coproduct-Decomposition l1 l1 X) →
@@ -378,14 +377,14 @@ module _
 
   value-map-into-Fin-Two-ℕ-eq-zero-or-one-helper :
     (y : Fin 2) → (inl (inr star) ＝ y) + (inr star ＝ y)
-  value-map-into-Fin-Two-ℕ-eq-zero-or-one-helper (inl x) = {!!}
+  value-map-into-Fin-Two-ℕ-eq-zero-or-one-helper = {!!}
   value-map-into-Fin-Two-ℕ-eq-zero-or-one-helper (inr x) = {!!}
 
   value-map-into-Fin-Two-ℕ-eq-zero-or-one :
     (f : X → Fin 2) →
     (x : X) →
     (inl (inr star) ＝ f x) + (inr star ＝ f x)
-  value-map-into-Fin-Two-ℕ-eq-zero-or-one f x = {!!}
+  value-map-into-Fin-Two-ℕ-eq-zero-or-one = {!!}
 
   matching-correspondence-htpy-is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ :
     ( d : binary-coproduct-Decomposition l1 l1 X) →
@@ -408,7 +407,7 @@ module _
     ( map-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ ∘
       map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ) ~
     id
-  is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ d = {!!}
+  is-section-map-inv-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ = {!!}
 
   is-equiv-map-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ :
     is-equiv map-equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ
@@ -416,6 +415,6 @@ module _
 
   equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ :
     (X → Fin 2) ≃ binary-coproduct-Decomposition l1 l1 X
-  pr1 equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ = {!!}
+  equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ = {!!}
   pr2 equiv-binary-coproduct-Decomposition-map-into-Fin-Two-ℕ = {!!}
 ```

@@ -34,13 +34,11 @@ has-associative-mul-𝔽 X = {!!}
 
 Semigroup-𝔽 :
   (l : Level) → UU (lsuc l)
-Semigroup-𝔽 l = {!!}
+Semigroup-𝔽 = {!!}
 
 compute-semigroup-𝔽 :
   {l : Level} → (G : Semigroup l) → is-finite (type-Semigroup G) → Semigroup-𝔽 l
-pr1 (pr1 (compute-semigroup-𝔽 G f)) = {!!}
-pr2 (pr1 (compute-semigroup-𝔽 G f)) = {!!}
-pr2 (compute-semigroup-𝔽 G f) = {!!}
+compute-semigroup-𝔽 = {!!}
 
 module _
   {l : Level} (G : Semigroup-𝔽 l)
@@ -97,5 +95,5 @@ structure-semigroup-𝔽 = {!!}
 
 is-finite-structure-semigroup-𝔽 :
   {l : Level} → (X : 𝔽 l) → is-finite (structure-semigroup-𝔽 X)
-is-finite-structure-semigroup-𝔽 X = {!!}
+is-finite-structure-semigroup-𝔽 = {!!}
 ```

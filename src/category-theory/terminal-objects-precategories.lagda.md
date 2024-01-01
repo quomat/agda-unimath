@@ -32,7 +32,7 @@ object.
 ```agda
 is-terminal-obj-Precategory :
   {l1 l2 : Level} (C : Precategory l1 l2) → obj-Precategory C → UU (l1 ⊔ l2)
-is-terminal-obj-Precategory C x = {!!}
+is-terminal-obj-Precategory = {!!}
 
 module _
   {l1 l2 : Level} (C : Precategory l1 l2)
@@ -57,7 +57,7 @@ module _
 ```agda
 terminal-obj-Precategory :
   {l1 l2 : Level} (C : Precategory l1 l2) → UU (l1 ⊔ l2)
-terminal-obj-Precategory C = {!!}
+terminal-obj-Precategory = {!!}
 
 module _
   {l1 l2 : Level}

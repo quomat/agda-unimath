@@ -44,7 +44,7 @@ unordered-tuple-types l n = {!!}
 equiv-unordered-tuple-types :
   {l1 l2 : Level} (n : ℕ) →
   unordered-tuple-types l1 n → unordered-tuple-types l2 n → UU (l1 ⊔ l2)
-equiv-unordered-tuple-types n A B = {!!}
+equiv-unordered-tuple-types = {!!}
 
 module _
   {l1 l2 : Level} (n : ℕ)
@@ -82,7 +82,7 @@ module _
 
   equiv-eq-unordered-tuple-types :
     (B : unordered-tuple-types l n) → A ＝ B → equiv-unordered-tuple-types n A B
-  equiv-eq-unordered-tuple-types .A refl = {!!}
+  equiv-eq-unordered-tuple-types = {!!}
 
   is-torsorial-equiv-unordered-tuple-types :
     is-torsorial (equiv-unordered-tuple-types n A)
@@ -96,5 +96,5 @@ module _
   extensionality-unordered-tuple-types :
     (B : unordered-tuple-types l n) →
     (A ＝ B) ≃ equiv-unordered-tuple-types n A B
-  pr1 (extensionality-unordered-tuple-types B) = {!!}
+  extensionality-unordered-tuple-types = {!!}
 ```

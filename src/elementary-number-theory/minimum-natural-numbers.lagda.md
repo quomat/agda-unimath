@@ -53,31 +53,19 @@ min-Fin-ℕ (succ-ℕ n) f = {!!}
 ```agda
 leq-min-ℕ :
   (k m n : ℕ) → k ≤-ℕ m → k ≤-ℕ n → k ≤-ℕ (min-ℕ m n)
-leq-min-ℕ zero-ℕ zero-ℕ zero-ℕ H K = {!!}
-leq-min-ℕ zero-ℕ zero-ℕ (succ-ℕ n) H K = {!!}
-leq-min-ℕ zero-ℕ (succ-ℕ m) zero-ℕ H K = {!!}
-leq-min-ℕ zero-ℕ (succ-ℕ m) (succ-ℕ n) H K = {!!}
-leq-min-ℕ (succ-ℕ k) (succ-ℕ m) (succ-ℕ n) H K = {!!}
+leq-min-ℕ = {!!}
 
 leq-left-leq-min-ℕ :
   (k m n : ℕ) → k ≤-ℕ (min-ℕ m n) → k ≤-ℕ m
-leq-left-leq-min-ℕ zero-ℕ zero-ℕ zero-ℕ H = {!!}
-leq-left-leq-min-ℕ zero-ℕ zero-ℕ (succ-ℕ n) H = {!!}
-leq-left-leq-min-ℕ zero-ℕ (succ-ℕ m) zero-ℕ H = {!!}
-leq-left-leq-min-ℕ zero-ℕ (succ-ℕ m) (succ-ℕ n) H = {!!}
-leq-left-leq-min-ℕ (succ-ℕ k) (succ-ℕ m) (succ-ℕ n) H = {!!}
+leq-left-leq-min-ℕ = {!!}
 
 leq-right-leq-min-ℕ :
   (k m n : ℕ) → k ≤-ℕ (min-ℕ m n) → k ≤-ℕ n
-leq-right-leq-min-ℕ zero-ℕ zero-ℕ zero-ℕ H = {!!}
-leq-right-leq-min-ℕ zero-ℕ zero-ℕ (succ-ℕ n) H = {!!}
-leq-right-leq-min-ℕ zero-ℕ (succ-ℕ m) zero-ℕ H = {!!}
-leq-right-leq-min-ℕ zero-ℕ (succ-ℕ m) (succ-ℕ n) H = {!!}
-leq-right-leq-min-ℕ (succ-ℕ k) (succ-ℕ m) (succ-ℕ n) H = {!!}
+leq-right-leq-min-ℕ = {!!}
 
 is-greatest-lower-bound-min-ℕ :
   (l m : ℕ) → is-greatest-binary-lower-bound-Poset ℕ-Poset l m (min-ℕ l m)
-is-greatest-lower-bound-min-ℕ l m = {!!}
+is-greatest-lower-bound-min-ℕ = {!!}
 ```
 
 ### Associativity of `min-ℕ`
@@ -85,11 +73,7 @@ is-greatest-lower-bound-min-ℕ l m = {!!}
 ```agda
 associative-min-ℕ :
   (x y z : ℕ) → min-ℕ (min-ℕ x y) z ＝ min-ℕ x (min-ℕ y z)
-associative-min-ℕ zero-ℕ y z = {!!}
-associative-min-ℕ (succ-ℕ x) zero-ℕ zero-ℕ = {!!}
-associative-min-ℕ (succ-ℕ x) zero-ℕ (succ-ℕ z) = {!!}
-associative-min-ℕ (succ-ℕ x) (succ-ℕ y) zero-ℕ = {!!}
-associative-min-ℕ (succ-ℕ x) (succ-ℕ y) (succ-ℕ z) = {!!}
+associative-min-ℕ = {!!}
 ```
 
 ### Zero laws for `min-ℕ`
@@ -126,10 +110,9 @@ idempotent-min-ℕ (succ-ℕ x) = {!!}
 ```agda
 left-distributive-add-min-ℕ :
   (x y z : ℕ) → x +ℕ (min-ℕ y z) ＝ min-ℕ (x +ℕ y) (x +ℕ z)
-left-distributive-add-min-ℕ zero-ℕ y z = {!!}
-left-distributive-add-min-ℕ (succ-ℕ x) y z = {!!}
+left-distributive-add-min-ℕ = {!!}
 
 right-distributive-add-min-ℕ :
   (x y z : ℕ) → (min-ℕ x y) +ℕ z ＝ min-ℕ (x +ℕ z) (y +ℕ z)
-right-distributive-add-min-ℕ x y z = {!!}
+right-distributive-add-min-ℕ = {!!}
 ```

@@ -46,7 +46,7 @@ The **Dirichlet exponential** of a species of types `S` is defined as follows:
 ```agda
 dirichlet-exponential-species-types :
   {l1 l2 : Level} → species-types l1 l2 → species-types l1 (lsuc l1 ⊔ l2)
-dirichlet-exponential-species-types {l1} {l2} S X = {!!}
+dirichlet-exponential-species-types = {!!}
 ```
 
 ## Properties
@@ -78,7 +78,7 @@ module _
         ( dirichlet-exponential-species-types S)
         ( dirichlet-exponential-species-types T)
         ( X)
-    pr1 (reassociate X) ((d , dl , dr) , s , t) = {!!}
+    reassociate = {!!}
 
   equiv-dirichlet-exponential-sum-species-types :
     equiv-species-types
@@ -86,5 +86,5 @@ module _
       ( dirichlet-product-species-types
         ( dirichlet-exponential-species-types S)
         ( dirichlet-exponential-species-types T))
-  equiv-dirichlet-exponential-sum-species-types X = {!!}
+  equiv-dirichlet-exponential-sum-species-types = {!!}
 ```

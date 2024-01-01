@@ -45,5 +45,5 @@ module _
 ```agda
 irreflexive-∈-𝕎 :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (x : 𝕎 A B) → x ∉-𝕎 x
-irreflexive-∈-𝕎 {A = A} {B = B} (tree-𝕎 x α) (pair y p) = {!!}
+irreflexive-∈-𝕎 = {!!}
 ```

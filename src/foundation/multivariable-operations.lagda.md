@@ -42,14 +42,13 @@ multivariable-input :
   (n : ℕ)
   (A : functional-vec (UU l) n) →
   UU l
-multivariable-input zero-ℕ A = {!!}
-multivariable-input (succ-ℕ n) A = {!!}
+multivariable-input = {!!}
 
 empty-multivariable-input :
   {l : Level}
   (A : functional-vec (UU l) 0) →
   multivariable-input 0 A
-empty-multivariable-input A = {!!}
+empty-multivariable-input = {!!}
 
 head-multivariable-input :
   {l : Level}
@@ -57,7 +56,7 @@ head-multivariable-input :
   (A : functional-vec (UU l) (succ-ℕ n)) →
   multivariable-input (succ-ℕ n) A →
   head-functional-vec n A
-head-multivariable-input n A (a0 , a) = {!!}
+head-multivariable-input = {!!}
 
 tail-multivariable-input :
   {l : Level}
@@ -65,7 +64,7 @@ tail-multivariable-input :
   (A : functional-vec (UU l) (succ-ℕ n)) →
   multivariable-input (succ-ℕ n) A →
   multivariable-input n (tail-functional-vec n A)
-tail-multivariable-input n A (a0 , a) = {!!}
+tail-multivariable-input = {!!}
 
 cons-multivariable-input :
   {l : Level}
@@ -75,8 +74,7 @@ cons-multivariable-input :
   A0 →
   multivariable-input n A →
   multivariable-input (succ-ℕ n) (cons-functional-vec n A0 A)
-pr1 (cons-multivariable-input n A a0 a) = {!!}
-pr2 (cons-multivariable-input n A a0 a) = {!!}
+cons-multivariable-input = {!!}
 
 multivariable-operation :
   { l : Level}
@@ -84,7 +82,7 @@ multivariable-operation :
   ( A : functional-vec (UU l) n)
   ( X : UU l) →
   UU l
-multivariable-operation n A X = {!!}
+multivariable-operation = {!!}
 ```
 
 ## Properties
@@ -98,8 +96,7 @@ vector-multivariable-input :
   (A : UU l) →
   multivariable-input n (λ _ → A) →
   vec A n
-vector-multivariable-input zero-ℕ A _ = {!!}
-vector-multivariable-input (succ-ℕ n) A (a0 , a) = {!!}
+vector-multivariable-input = {!!}
 
 multivariable-input-vector :
   {l : Level}
@@ -107,8 +104,7 @@ multivariable-input-vector :
   (A : UU l) →
   vec A n →
   multivariable-input n (λ _ → A)
-multivariable-input-vector zero-ℕ A _ = {!!}
-multivariable-input-vector (succ-ℕ n) A (a0 ∷ a) = {!!}
+multivariable-input-vector = {!!}
 
 is-section-multivariable-input-vector :
   {l : Level}
@@ -116,8 +112,7 @@ is-section-multivariable-input-vector :
   (A : UU l) →
   ( vector-multivariable-input n A ∘
     multivariable-input-vector n A) ~ id
-is-section-multivariable-input-vector zero-ℕ A empty-vec = {!!}
-is-section-multivariable-input-vector (succ-ℕ n) A (a0 ∷ a) = {!!}
+is-section-multivariable-input-vector = {!!}
 
 is-retraction-multivariable-input-vector :
   {l : Level}
@@ -125,21 +120,19 @@ is-retraction-multivariable-input-vector :
   (A : UU l) →
   ( multivariable-input-vector n A ∘
     vector-multivariable-input n A) ~ id
-is-retraction-multivariable-input-vector zero-ℕ A (map-raise star) = {!!}
-is-retraction-multivariable-input-vector (succ-ℕ n) A (a0 , a) = {!!}
+is-retraction-multivariable-input-vector = {!!}
 
 is-equiv-vector-multivariable-input :
   {l : Level}
   (n : ℕ)
   (A : UU l) →
   is-equiv (vector-multivariable-input n A)
-is-equiv-vector-multivariable-input n A = {!!}
+is-equiv-vector-multivariable-input = {!!}
 
 compute-vector-multivariable-input :
   {l : Level}
   (n : ℕ)
   (A : UU l) →
   multivariable-input n (λ _ → A) ≃ vec A n
-pr1 (compute-vector-multivariable-input n A) = {!!}
-pr2 (compute-vector-multivariable-input n A) = {!!}
+compute-vector-multivariable-input = {!!}
 ```

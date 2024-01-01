@@ -45,7 +45,7 @@ property is also known as the **type theoretic Yoneda lemma**.
 ev-refl :
   {l1 l2 : Level} {A : UU l1} (a : A) {B : (x : A) → a ＝ x → UU l2} →
   ((x : A) (p : a ＝ x) → B x p) → B a refl
-ev-refl a f = {!!}
+ev-refl = {!!}
 
 abstract
   is-equiv-ev-refl :
@@ -56,13 +56,12 @@ abstract
 equiv-ev-refl :
   {l1 l2 : Level} {A : UU l1} (a : A) {B : (x : A) → a ＝ x → UU l2} →
   ((x : A) (p : a ＝ x) → B x p) ≃ (B a refl)
-pr1 (equiv-ev-refl a) = {!!}
-pr2 (equiv-ev-refl a) = {!!}
+equiv-ev-refl = {!!}
 
 equiv-ev-refl' :
   {l1 l2 : Level} {A : UU l1} (a : A) {B : (x : A) → x ＝ a → UU l2} →
   ((x : A) (p : x ＝ a) → B x p) ≃ B a refl
-equiv-ev-refl' a {B} = {!!}
+equiv-ev-refl' = {!!}
 ```
 
 ### `Id : A → (A → 𝒰)` is an embedding
@@ -110,7 +109,7 @@ module _
 
   emb-fiber-Id-preunivalent-Id :
     (a : A) → fiber' Id (Id a) ↪ Σ A (Id a)
-  emb-fiber-Id-preunivalent-Id a = {!!}
+  emb-fiber-Id-preunivalent-Id = {!!}
 
   is-emb-Id-preunivalent-Id : is-emb (Id {A = A})
   is-emb-Id-preunivalent-Id a = {!!}
@@ -143,7 +142,7 @@ module _
 
   is-proof-irrelevant-total-family-of-equivalences-Id :
     is-proof-irrelevant (Σ A (λ a → (x : A) → (a ＝ x) ≃ B x))
-  is-proof-irrelevant-total-family-of-equivalences-Id (a , e) = {!!}
+  is-proof-irrelevant-total-family-of-equivalences-Id = {!!}
 
   is-prop-total-family-of-equivalences-Id :
     is-prop (Σ A (λ a → (x : A) → (a ＝ x) ≃ B x))

@@ -47,13 +47,12 @@ where every vertical map is an [equivalence](foundation-core.equivalences.md).
 ```agda
 equiv-tower :
   {l1 l2 : Level} (A : tower l1) (B : tower l2) → UU (l1 ⊔ l2)
-equiv-tower A B = {!!}
+equiv-tower = {!!}
 
 hom-equiv-tower :
   {l1 l2 : Level} (A : tower l1) (B : tower l2) →
   equiv-tower A B → hom-tower A B
-pr1 (hom-equiv-tower A B e) n = {!!}
-pr2 (hom-equiv-tower A B e) = {!!}
+hom-equiv-tower = {!!}
 ```
 
 ## Properties
@@ -63,24 +62,23 @@ pr2 (hom-equiv-tower A B e) = {!!}
 ```agda
 id-equiv-tower :
   {l : Level} (A : tower l) → equiv-tower A A
-pr1 (id-equiv-tower A) n = {!!}
-pr2 (id-equiv-tower A) n = {!!}
+id-equiv-tower = {!!}
 
 equiv-eq-tower :
   {l : Level} (A B : tower l) → A ＝ B → equiv-tower A B
-equiv-eq-tower A .A refl = {!!}
+equiv-eq-tower = {!!}
 
 is-torsorial-equiv-tower :
   {l : Level} (A : tower l) → is-torsorial (equiv-tower A)
-is-torsorial-equiv-tower A = {!!}
+is-torsorial-equiv-tower = {!!}
 
 is-equiv-equiv-eq-tower :
   {l : Level} (A B : tower l) → is-equiv (equiv-eq-tower A B)
-is-equiv-equiv-eq-tower A = {!!}
+is-equiv-equiv-eq-tower = {!!}
 
 eq-equiv-tower :
   {l : Level} {A B : tower l} → equiv-tower A B → A ＝ B
-eq-equiv-tower {A = A} {B} = {!!}
+eq-equiv-tower = {!!}
 ```
 
 ## Table of files about sequential limits

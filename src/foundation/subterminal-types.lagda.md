@@ -49,7 +49,7 @@ module _
   abstract
     is-subterminal-is-proof-irrelevant :
       is-proof-irrelevant A → is-subterminal A
-    is-subterminal-is-proof-irrelevant H = {!!}
+    is-subterminal-is-proof-irrelevant = {!!}
 
   abstract
     is-subterminal-all-elements-equal : all-elements-equal A → is-subterminal A
@@ -70,5 +70,5 @@ module _
   abstract
     is-proof-irrelevant-is-subterminal :
       is-subterminal A → is-proof-irrelevant A
-    is-proof-irrelevant-is-subterminal H = {!!}
+    is-proof-irrelevant-is-subterminal = {!!}
 ```

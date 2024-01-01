@@ -53,7 +53,7 @@ module _
 ```agda
 is-nilpotent-zero-Ring :
   {l : Level} (R : Ring l) → is-nilpotent-element-Ring R (zero-Ring R)
-is-nilpotent-zero-Ring R = {!!}
+is-nilpotent-zero-Ring = {!!}
 ```
 
 ### If `x` and `y` commute and are both nilpotent, then `x + y` is nilpotent
@@ -64,7 +64,7 @@ is-nilpotent-add-Ring :
   (x y : type-Ring R) → (mul-Ring R x y ＝ mul-Ring R y x) →
   is-nilpotent-element-Ring R x → is-nilpotent-element-Ring R y →
   is-nilpotent-element-Ring R (add-Ring R x y)
-is-nilpotent-add-Ring R = {!!}
+is-nilpotent-add-Ring = {!!}
 ```
 
 ### If `x` is nilpotent, then so is `-x`
@@ -73,7 +73,7 @@ is-nilpotent-add-Ring R = {!!}
 is-nilpotent-element-neg-Ring :
   {l : Level} (R : Ring l) →
   is-closed-under-negatives-subset-Ring R (is-nilpotent-element-ring-Prop R)
-is-nilpotent-element-neg-Ring R {x} H = {!!}
+is-nilpotent-element-neg-Ring = {!!}
 ```
 
 ### If `x` is nilpotent and `y` commutes with `x`, then `xy` is also nilpotent

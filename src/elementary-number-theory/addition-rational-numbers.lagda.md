@@ -41,7 +41,7 @@ _+ℚ_ = {!!}
 
 ap-add-ℚ :
   {x y x' y' : ℚ} → x ＝ x' → y ＝ y' → x +ℚ y ＝ x' +ℚ y'
-ap-add-ℚ p q = {!!}
+ap-add-ℚ = {!!}
 ```
 
 ## Properties
@@ -62,7 +62,7 @@ right-unit-law-add-ℚ (x , p) = {!!}
 associative-add-ℚ :
   (x y z : ℚ) →
   (x +ℚ y) +ℚ z ＝ x +ℚ (y +ℚ z)
-associative-add-ℚ (x , px) (y , py) (z , pz) = {!!}
+associative-add-ℚ = {!!}
 ```
 
 ### Addition is commutative
@@ -71,5 +71,5 @@ associative-add-ℚ (x , px) (y , py) (z , pz) = {!!}
 commutative-add-ℚ :
   (x y : ℚ) →
   x +ℚ y ＝ y +ℚ x
-commutative-add-ℚ (x , px) (y , py) = {!!}
+commutative-add-ℚ = {!!}
 ```

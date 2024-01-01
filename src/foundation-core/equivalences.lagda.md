@@ -173,11 +173,11 @@ module _
 
   is-equiv-is-invertible :
     (g : B → A) (H : (f ∘ g) ~ id) (K : (g ∘ f) ~ id) → is-equiv f
-  is-equiv-is-invertible g H K = {!!}
+  is-equiv-is-invertible = {!!}
 
   is-retraction-map-section-is-equiv :
     (H : is-equiv f) → is-retraction f (map-section-is-equiv H)
-  is-retraction-map-section-is-equiv H = {!!}
+  is-retraction-map-section-is-equiv = {!!}
 
   is-invertible-is-equiv : is-equiv f → is-invertible f
   pr1 (is-invertible-is-equiv H) = {!!}
@@ -197,7 +197,7 @@ module _
   abstract
     is-equiv-is-coherently-invertible :
       is-coherently-invertible f → is-equiv f
-    is-equiv-is-coherently-invertible H = {!!}
+    is-equiv-is-coherently-invertible = {!!}
 ```
 
 ### Structure obtained from being coherently invertible
@@ -325,11 +325,11 @@ module _
 
   section-is-equiv-top-map-triangle :
     is-equiv g → is-equiv f → section h
-  section-is-equiv-top-map-triangle G F = {!!}
+  section-is-equiv-top-map-triangle = {!!}
 
   map-section-is-equiv-top-map-triangle :
     is-equiv g → is-equiv f → B → A
-  map-section-is-equiv-top-map-triangle G F = {!!}
+  map-section-is-equiv-top-map-triangle = {!!}
 
   abstract
     is-equiv-top-map-triangle :
@@ -349,7 +349,7 @@ module _
   abstract
     is-equiv-comp :
       (g : B → X) (h : A → B) → is-equiv h → is-equiv g → is-equiv (g ∘ h)
-    pr1 (is-equiv-comp g h (sh , rh) (sg , rg)) = {!!}
+    is-equiv-comp = {!!}
 
   equiv-comp : (B ≃ X) → (A ≃ B) → (A ≃ X)
   pr1 (equiv-comp g h) = {!!}
@@ -369,7 +369,7 @@ module _
   is-equiv-left-factor :
     (g : B → X) (h : A → B) →
     is-equiv (g ∘ h) → is-equiv h → is-equiv g
-  is-equiv-left-factor g h is-equiv-gh is-equiv-h = {!!}
+  is-equiv-left-factor = {!!}
 ```
 
 #### If a composite and its left factor are equivalences, then so is its right factor
@@ -382,7 +382,7 @@ module _
   is-equiv-right-factor :
     (g : B → X) (h : A → B) →
     is-equiv g → is-equiv (g ∘ h) → is-equiv h
-  is-equiv-right-factor g h is-equiv-g is-equiv-gh = {!!}
+  is-equiv-right-factor = {!!}
 ```
 
 ### Equivalences are closed under homotopies
@@ -399,7 +399,7 @@ module _
   abstract
     is-equiv-htpy :
       {f : A → B} (g : A → B) → f ~ g → is-equiv g → is-equiv f
-    pr1 (pr1 (is-equiv-htpy g G ((h , H) , (k , K)))) = {!!}
+    is-equiv-htpy = {!!}
 
   is-equiv-htpy-equiv : {f : A → B} (e : A ≃ B) → f ~ map-equiv e → is-equiv f
   is-equiv-htpy-equiv e H = {!!}
@@ -414,7 +414,7 @@ module _
   htpy-map-inv-is-equiv :
     {f g : A → B} (G : f ~ g) (H : is-equiv f) (K : is-equiv g) →
     map-inv-is-equiv H ~ map-inv-is-equiv K
-  htpy-map-inv-is-equiv G H K b = {!!}
+  htpy-map-inv-is-equiv = {!!}
 ```
 
 ### Any retraction of an equivalence is an equivalence
@@ -424,7 +424,7 @@ abstract
   is-equiv-is-retraction :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} {g : B → A} →
     is-equiv f → (g ∘ f) ~ id → is-equiv g
-  is-equiv-is-retraction {A = A} {f = f} {g = g} is-equiv-f H = {!!}
+  is-equiv-is-retraction = {!!}
 ```
 
 ### Any section of an equivalence is an equivalence
@@ -434,7 +434,7 @@ abstract
   is-equiv-is-section :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} {g : B → A} →
     is-equiv f → f ∘ g ~ id → is-equiv g
-  is-equiv-is-section {B = B} {f = f} {g = g} is-equiv-f H = {!!}
+  is-equiv-is-section = {!!}
 ```
 
 ### If a section of `f` is an equivalence, then `f` is an equivalence
@@ -447,7 +447,7 @@ module _
   abstract
     is-equiv-section-is-equiv :
       ( section-f : section f) → is-equiv (pr1 section-f) → is-equiv f
-    is-equiv-section-is-equiv (g , is-section-g) is-equiv-section-f = {!!}
+    is-equiv-section-is-equiv = {!!}
 ```
 
 ### Any section of an equivalence is homotopic to its inverse
@@ -459,7 +459,7 @@ module _
 
   htpy-map-inv-equiv-section :
     (f : section (map-equiv e)) → map-inv-equiv e ~ map-section (map-equiv e) f
-  htpy-map-inv-equiv-section (f , H) = {!!}
+  htpy-map-inv-equiv-section = {!!}
 ```
 
 ### Any retraction of an equivalence is homotopic to its inverse
@@ -472,7 +472,7 @@ module _
   htpy-map-inv-equiv-retraction :
     (f : retraction (map-equiv e)) →
     map-inv-equiv e ~ map-retraction (map-equiv e) f
-  htpy-map-inv-equiv-retraction (f , H) = {!!}
+  htpy-map-inv-equiv-retraction = {!!}
 ```
 
 ### Equivalences in commuting squares
@@ -482,13 +482,13 @@ is-equiv-equiv :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} {Y : UU l4}
   {f : A → B} {g : X → Y} (i : A ≃ X) (j : B ≃ Y)
   (H : (map-equiv j ∘ f) ~ (g ∘ map-equiv i)) → is-equiv g → is-equiv f
-is-equiv-equiv {f = f} {g} i j H K = {!!}
+is-equiv-equiv = {!!}
 
 is-equiv-equiv' :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} {Y : UU l4}
   {f : A → B} {g : X → Y} (i : A ≃ X) (j : B ≃ Y)
   (H : (map-equiv j ∘ f) ~ (g ∘ map-equiv i)) → is-equiv f → is-equiv g
-is-equiv-equiv' {f = f} {g} i j H K = {!!}
+is-equiv-equiv' = {!!}
 ```
 
 We will assume a commuting square
@@ -512,27 +512,27 @@ module _
   abstract
     is-equiv-top-is-equiv-left-square :
       is-equiv i → is-equiv f → is-equiv g → is-equiv h
-    is-equiv-top-is-equiv-left-square Ei Ef Eg = {!!}
+    is-equiv-top-is-equiv-left-square = {!!}
 
   abstract
     is-equiv-top-is-equiv-bottom-square :
       is-equiv f → is-equiv g → is-equiv i → is-equiv h
-    is-equiv-top-is-equiv-bottom-square Ef Eg Ei = {!!}
+    is-equiv-top-is-equiv-bottom-square = {!!}
 
   abstract
     is-equiv-bottom-is-equiv-top-square :
       is-equiv f → is-equiv g → is-equiv h → is-equiv i
-    is-equiv-bottom-is-equiv-top-square Ef Eg Eh = {!!}
+    is-equiv-bottom-is-equiv-top-square = {!!}
 
   abstract
     is-equiv-left-is-equiv-right-square :
       is-equiv h → is-equiv i → is-equiv g → is-equiv f
-    is-equiv-left-is-equiv-right-square Eh Ei Eg = {!!}
+    is-equiv-left-is-equiv-right-square = {!!}
 
   abstract
     is-equiv-right-is-equiv-left-square :
       is-equiv h → is-equiv i → is-equiv f → is-equiv g
-    is-equiv-right-is-equiv-left-square Eh Ei Ef = {!!}
+    is-equiv-right-is-equiv-left-square = {!!}
 ```
 
 ### Equivalences are embeddings
@@ -545,15 +545,15 @@ module _
   abstract
     is-emb-is-equiv :
       {f : A → B} → is-equiv f → (x y : A) → is-equiv (ap f {x} {y})
-    is-emb-is-equiv {f} H x y = {!!}
+    is-emb-is-equiv = {!!}
 
   equiv-ap :
     (e : A ≃ B) (x y : A) → (x ＝ y) ≃ (map-equiv e x ＝ map-equiv e y)
-  pr1 (equiv-ap e x y) = {!!}
+  equiv-ap = {!!}
 
   map-inv-equiv-ap :
     (e : A ≃ B) (x y : A) → (map-equiv e x ＝ map-equiv e y) → (x ＝ y)
-  map-inv-equiv-ap e x y = {!!}
+  map-inv-equiv-ap = {!!}
 ```
 
 ## Equivalence reasoning
@@ -581,7 +581,7 @@ equivalence-reasoning X = {!!}
 step-equivalence-reasoning :
   {l1 l2 l3 : Level} {X : UU l1} {Y : UU l2} →
   (X ≃ Y) → (Z : UU l3) → (Y ≃ Z) → (X ≃ Z)
-step-equivalence-reasoning e Z f = {!!}
+step-equivalence-reasoning = {!!}
 
 syntax step-equivalence-reasoning e Z f = {!!}
 ```

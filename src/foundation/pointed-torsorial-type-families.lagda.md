@@ -87,7 +87,7 @@ module _
 ```agda
 pointed-torsorial-family-of-types :
   {l1 : Level} (l2 : Level) (B : Pointed-Type l1) → UU (l1 ⊔ lsuc l2)
-pointed-torsorial-family-of-types l2 B = {!!}
+pointed-torsorial-family-of-types = {!!}
 ```
 
 ## Properties
@@ -98,7 +98,7 @@ pointed-torsorial-family-of-types l2 B = {!!}
 is-sorial-is-pointed-torsorial-family-of-types :
   {l1 l2 : Level} (B : Pointed-Type l1) {E : type-Pointed-Type B → UU l2} →
   is-pointed-torsorial-family-of-types B E → is-sorial-family-of-types B E
-is-sorial-is-pointed-torsorial-family-of-types B {E} H x y = {!!}
+is-sorial-is-pointed-torsorial-family-of-types = {!!}
 ```
 
 ### Being pointed torsorial is equivalent to being pointed and having contractible total space
@@ -111,9 +111,7 @@ module _
   point-and-contractible-total-space-is-pointed-torsorial-family-of-types :
     is-pointed-torsorial-family-of-types B E →
     E (point-Pointed-Type B) × is-contr (Σ (type-Pointed-Type B) E)
-  pr1
-    ( point-and-contractible-total-space-is-pointed-torsorial-family-of-types H)
-    = {!!}
+  point-and-contractible-total-space-is-pointed-torsorial-family-of-types = {!!}
 ```
 
 ### Pointed connected types equipped with a pointed torsorial family of types of universe level `l` are locally `l`-small
@@ -128,7 +126,7 @@ module _
     is-locally-small-is-pointed-torsorial-family-of-types :
       is-0-connected (type-Pointed-Type B) →
       is-locally-small l2 (type-Pointed-Type B)
-    is-locally-small-is-pointed-torsorial-family-of-types H x y = {!!}
+    is-locally-small-is-pointed-torsorial-family-of-types = {!!}
 ```
 
 ### The type of pointed torsorial type families of universe level `l` over a pointed connected type is equivalent to the proposition that `B` is locally `l`-small
@@ -142,12 +140,12 @@ module _
     is-0-connected (type-Pointed-Type B) →
     pointed-torsorial-family-of-types l2 B →
     is-locally-small l2 (type-Pointed-Type B)
-  is-locally-small-pointed-torsorial-family-of-types H (E , T) = {!!}
+  is-locally-small-pointed-torsorial-family-of-types = {!!}
 
   pointed-torsorial-family-of-types-is-locally-small :
     is-locally-small l2 (type-Pointed-Type B) →
     pointed-torsorial-family-of-types l2 B
-  pr1 (pointed-torsorial-family-of-types-is-locally-small H) x = {!!}
+  pointed-torsorial-family-of-types-is-locally-small = {!!}
 
   is-prop-pointed-torsorial-family-of-types :
     is-prop (pointed-torsorial-family-of-types l2 B)
@@ -157,10 +155,10 @@ module _
     is-0-connected (type-Pointed-Type B) →
     is-locally-small l2 (type-Pointed-Type B) ≃
     pointed-torsorial-family-of-types l2 B
-  compute-pointed-torsorial-family-of-types-is-0-connected H = {!!}
+  compute-pointed-torsorial-family-of-types-is-0-connected = {!!}
 
   is-contr-pointed-torsorial-family-of-types :
     is-locally-small l2 (type-Pointed-Type B) →
     is-contr (pointed-torsorial-family-of-types l2 B)
-  is-contr-pointed-torsorial-family-of-types H = {!!}
+  is-contr-pointed-torsorial-family-of-types = {!!}
 ```

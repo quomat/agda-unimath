@@ -72,16 +72,16 @@ abstract
   is-equiv-is-empty :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
     is-empty B → is-equiv f
-  is-equiv-is-empty f H = {!!}
+  is-equiv-is-empty = {!!}
 
 abstract
   is-equiv-is-empty' :
     {l : Level} {A : UU l} (f : is-empty A) → is-equiv f
-  is-equiv-is-empty' f = {!!}
+  is-equiv-is-empty' = {!!}
 
 equiv-is-empty :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → is-empty A → is-empty B → A ≃ B
-equiv-is-empty f g = {!!}
+equiv-is-empty = {!!}
 ```
 
 ### The empty type is a proposition
@@ -124,5 +124,5 @@ pr2 (empty-Truncated-Type k) = {!!}
 abstract
   is-trunc-is-empty :
     {l : Level} (k : 𝕋) {A : UU l} → is-empty A → is-trunc (succ-𝕋 k) A
-  is-trunc-is-empty k f x = {!!}
+  is-trunc-is-empty = {!!}
 ```

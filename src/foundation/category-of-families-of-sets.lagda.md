@@ -35,7 +35,7 @@ The **[large category](category-theory.large-categories.md) of families of
 Family-Of-Sets-Large-Precategory :
   {l : Level} → UU l →
   Large-Precategory (λ l1 → l ⊔ lsuc l1) (λ l1 l2 → l ⊔ l1 ⊔ l2)
-Family-Of-Sets-Large-Precategory A = {!!}
+Family-Of-Sets-Large-Precategory = {!!}
 ```
 
 ### The small precategory of families of sets over a type
@@ -43,7 +43,7 @@ Family-Of-Sets-Large-Precategory A = {!!}
 ```agda
 Family-Of-Sets-Precategory :
   {l1 : Level} (l2 : Level) → UU l1 → Precategory (l1 ⊔ lsuc l2) (l1 ⊔ l2)
-Family-Of-Sets-Precategory l2 A = {!!}
+Family-Of-Sets-Precategory = {!!}
 ```
 
 ### The large category of families of sets over a type

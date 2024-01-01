@@ -48,11 +48,11 @@ one generator.
 ev-element-hom-Group :
   {l1 l2 : Level} (G : Group l1) (H : Group l2) (g : type-Group G) →
   hom-Group G H → type-Group H
-ev-element-hom-Group G H g f = {!!}
+ev-element-hom-Group = {!!}
 
 is-free-group-with-one-generator :
   {l1 : Level} (F : Group l1) (x : type-Group F) → UUω
-is-free-group-with-one-generator F x = {!!}
+is-free-group-with-one-generator = {!!}
 ```
 
 ## Properties
@@ -83,7 +83,7 @@ module _
   htpy-hom-element-Group :
     (h : hom-Group ℤ-Group G) → map-hom-Group ℤ-Group G h one-ℤ ＝ g →
     htpy-hom-Group ℤ-Group G hom-element-Group h
-  htpy-hom-element-Group h p = {!!}
+  htpy-hom-element-Group = {!!}
 
   is-torsorial-hom-element-Group :
     is-torsorial (λ h → map-hom-Group ℤ-Group G h one-ℤ ＝ g)
@@ -92,5 +92,5 @@ module _
 abstract
   is-free-group-with-one-generator-ℤ :
     is-free-group-with-one-generator ℤ-Group one-ℤ
-  is-free-group-with-one-generator-ℤ G = {!!}
+  is-free-group-with-one-generator-ℤ = {!!}
 ```

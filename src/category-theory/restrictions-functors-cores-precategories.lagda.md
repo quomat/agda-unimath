@@ -76,34 +76,34 @@ module _
     map-Precategory
       ( core-precategory-Precategory C)
       ( core-precategory-Precategory D)
-  pr1 map-functor-core-Precategory = {!!}
+  map-functor-core-Precategory = {!!}
 
   preserves-id-functor-core-Precategory :
     preserves-id-hom-map-Precategory
       ( core-precategory-Precategory C)
       ( core-precategory-Precategory D)
       ( map-functor-core-Precategory)
-  preserves-id-functor-core-Precategory x = {!!}
+  preserves-id-functor-core-Precategory = {!!}
 
   preserves-comp-functor-core-Precategory :
     preserves-comp-hom-map-Precategory
       ( core-precategory-Precategory C)
       ( core-precategory-Precategory D)
       ( map-functor-core-Precategory)
-  preserves-comp-functor-core-Precategory g f = {!!}
+  preserves-comp-functor-core-Precategory = {!!}
 
   is-functor-functor-core-Precategory :
     is-functor-map-Precategory
       ( core-precategory-Precategory C)
       ( core-precategory-Precategory D)
       map-functor-core-Precategory
-  pr1 is-functor-functor-core-Precategory = {!!}
+  is-functor-functor-core-Precategory = {!!}
 
   functor-core-Precategory :
     functor-Precategory
       ( core-precategory-Precategory C)
       ( core-precategory-Precategory D)
-  pr1 functor-core-Precategory = {!!}
+  functor-core-Precategory = {!!}
 ```
 
 ## Properties
@@ -141,7 +141,7 @@ module _
       ( core-precategory-Precategory C)
       ( core-precategory-Precategory D)
       ( functor-core-Precategory C D F)
-  is-fully-faithful-functor-core-is-pseudomonic-functor-Precategory x y = {!!}
+  is-fully-faithful-functor-core-is-pseudomonic-functor-Precategory = {!!}
 ```
 
 ### Fully faithful functors restrict to fully faithful functors on the core

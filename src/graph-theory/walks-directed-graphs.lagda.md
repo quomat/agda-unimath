@@ -65,13 +65,13 @@ module _
   unit-walk-Directed-Graph :
     {x y : vertex-Directed-Graph G} (e : edge-Directed-Graph G x y) →
     walk-Directed-Graph x y
-  unit-walk-Directed-Graph e = {!!}
+  unit-walk-Directed-Graph = {!!}
 
   snoc-walk-Directed-Graph :
     {x y z : vertex-Directed-Graph G} →
     walk-Directed-Graph x y →
     edge-Directed-Graph G y z → walk-Directed-Graph x z
-  snoc-walk-Directed-Graph refl-walk-Directed-Graph e = {!!}
+  snoc-walk-Directed-Graph = {!!}
   snoc-walk-Directed-Graph (cons-walk-Directed-Graph f w) e = {!!}
 ```
 
@@ -95,13 +95,13 @@ module _
   unit-walk-Directed-Graph' :
     {x y : vertex-Directed-Graph G} →
     edge-Directed-Graph G x y → walk-Directed-Graph' x y
-  unit-walk-Directed-Graph' e = {!!}
+  unit-walk-Directed-Graph' = {!!}
 
   cons-walk-Directed-Graph' :
     {x y z : vertex-Directed-Graph G} →
     edge-Directed-Graph G x y → walk-Directed-Graph' y z →
     walk-Directed-Graph' x z
-  cons-walk-Directed-Graph' e refl-walk-Directed-Graph' = {!!}
+  cons-walk-Directed-Graph' = {!!}
   cons-walk-Directed-Graph' e (snoc-walk-Directed-Graph' w f) = {!!}
 ```
 
@@ -115,7 +115,7 @@ module _
   length-walk-Directed-Graph :
     {x y : vertex-Directed-Graph G} →
     walk-Directed-Graph G x y → ℕ
-  length-walk-Directed-Graph refl-walk-Directed-Graph = {!!}
+  length-walk-Directed-Graph = {!!}
 ```
 
 ### The type of walks of length `n` from `x` to `y` in `G`
@@ -127,7 +127,7 @@ module _
 
   walk-of-length-Directed-Graph :
     ℕ → (x y : vertex-Directed-Graph G) → UU (l1 ⊔ l2)
-  walk-of-length-Directed-Graph zero-ℕ x y = {!!}
+  walk-of-length-Directed-Graph = {!!}
 
   map-compute-total-walk-of-length-Directed-Graph :
     (x y : vertex-Directed-Graph G) →
@@ -163,12 +163,12 @@ module _
   is-equiv-map-compute-total-walk-of-length-Directed-Graph :
     (x y : vertex-Directed-Graph G) →
     is-equiv (map-compute-total-walk-of-length-Directed-Graph x y)
-  is-equiv-map-compute-total-walk-of-length-Directed-Graph x y = {!!}
+  is-equiv-map-compute-total-walk-of-length-Directed-Graph = {!!}
 
   compute-total-walk-of-length-Directed-Graph :
     (x y : vertex-Directed-Graph G) →
     Σ ℕ (λ n → walk-of-length-Directed-Graph n x y) ≃ walk-Directed-Graph G x y
-  pr1 (compute-total-walk-of-length-Directed-Graph x y) = {!!}
+  compute-total-walk-of-length-Directed-Graph = {!!}
   pr2 (compute-total-walk-of-length-Directed-Graph x y) = {!!}
 ```
 
@@ -183,7 +183,7 @@ module _
     {x y z : vertex-Directed-Graph G} →
     walk-Directed-Graph G x y → walk-Directed-Graph G y z →
     walk-Directed-Graph G x z
-  concat-walk-Directed-Graph refl-walk-Directed-Graph v = {!!}
+  concat-walk-Directed-Graph = {!!}
 ```
 
 ## Properties
@@ -198,7 +198,7 @@ module _
   map-compute-walk-Directed-Graph :
     {x y : vertex-Directed-Graph G} →
     walk-Directed-Graph G x y → walk-Directed-Graph' G x y
-  map-compute-walk-Directed-Graph refl-walk-Directed-Graph = {!!}
+  map-compute-walk-Directed-Graph = {!!}
   map-compute-walk-Directed-Graph (cons-walk-Directed-Graph e w) = {!!}
 
   compute-snoc-map-compute-walk-Directed-Graph :
@@ -206,7 +206,7 @@ module _
     (w : walk-Directed-Graph G x y) (e : edge-Directed-Graph G y z) →
     map-compute-walk-Directed-Graph (snoc-walk-Directed-Graph G w e) ＝
     snoc-walk-Directed-Graph' (map-compute-walk-Directed-Graph w) e
-  compute-snoc-map-compute-walk-Directed-Graph refl-walk-Directed-Graph e = {!!}
+  compute-snoc-map-compute-walk-Directed-Graph = {!!}
   compute-snoc-map-compute-walk-Directed-Graph
     ( cons-walk-Directed-Graph f w)
     ( e) = {!!}
@@ -214,7 +214,7 @@ module _
   map-inv-compute-walk-Directed-Graph :
     {x y : vertex-Directed-Graph G} →
     walk-Directed-Graph' G x y → walk-Directed-Graph G x y
-  map-inv-compute-walk-Directed-Graph refl-walk-Directed-Graph' = {!!}
+  map-inv-compute-walk-Directed-Graph = {!!}
   map-inv-compute-walk-Directed-Graph (snoc-walk-Directed-Graph' w e) = {!!}
 
   compute-cons-map-inv-compute-walk-Directed-Graph :
@@ -222,7 +222,7 @@ module _
     (e : edge-Directed-Graph G x y) (w : walk-Directed-Graph' G y z) →
     map-inv-compute-walk-Directed-Graph (cons-walk-Directed-Graph' G e w) ＝
     cons-walk-Directed-Graph e (map-inv-compute-walk-Directed-Graph w)
-  compute-cons-map-inv-compute-walk-Directed-Graph e refl-walk-Directed-Graph' = {!!}
+  compute-cons-map-inv-compute-walk-Directed-Graph = {!!}
   compute-cons-map-inv-compute-walk-Directed-Graph e
     ( snoc-walk-Directed-Graph' w f) = {!!}
 
@@ -230,7 +230,7 @@ module _
     {x y : vertex-Directed-Graph G} →
     ( map-compute-walk-Directed-Graph {x} {y} ∘
       map-inv-compute-walk-Directed-Graph {x} {y}) ~ id
-  is-section-map-inv-compute-walk-Directed-Graph refl-walk-Directed-Graph' = {!!}
+  is-section-map-inv-compute-walk-Directed-Graph = {!!}
   is-section-map-inv-compute-walk-Directed-Graph
     ( snoc-walk-Directed-Graph' w e) = {!!}
 
@@ -238,7 +238,7 @@ module _
     {x y : vertex-Directed-Graph G} →
     ( map-inv-compute-walk-Directed-Graph {x} {y} ∘
       map-compute-walk-Directed-Graph {x} {y}) ~ id
-  is-retraction-map-inv-compute-walk-Directed-Graph refl-walk-Directed-Graph = {!!}
+  is-retraction-map-inv-compute-walk-Directed-Graph = {!!}
   is-retraction-map-inv-compute-walk-Directed-Graph
     ( cons-walk-Directed-Graph e w) = {!!}
 
@@ -250,7 +250,7 @@ module _
   compute-walk-Directed-Graph :
     (x y : vertex-Directed-Graph G) →
     walk-Directed-Graph G x y ≃ walk-Directed-Graph' G x y
-  pr1 (compute-walk-Directed-Graph x y) = {!!}
+  compute-walk-Directed-Graph = {!!}
 ```
 
 ### The type of walks from `x` to `y` is a coproduct
@@ -266,21 +266,21 @@ module _
   map-compute-coproduct-walk-Directed-Graph :
     (x y : vertex-Directed-Graph G) →
     walk-Directed-Graph G x y → coproduct-walk-Directed-Graph x y
-  map-compute-coproduct-walk-Directed-Graph x .x refl-walk-Directed-Graph = {!!}
+  map-compute-coproduct-walk-Directed-Graph = {!!}
   map-compute-coproduct-walk-Directed-Graph x y
     ( cons-walk-Directed-Graph {a} {b} {c} e w) = {!!}
 
   map-inv-compute-coproduct-walk-Directed-Graph :
     (x y : vertex-Directed-Graph G) →
     coproduct-walk-Directed-Graph x y → walk-Directed-Graph G x y
-  map-inv-compute-coproduct-walk-Directed-Graph x .x (inl refl) = {!!}
+  map-inv-compute-coproduct-walk-Directed-Graph = {!!}
   map-inv-compute-coproduct-walk-Directed-Graph x y (inr (z , e , w)) = {!!}
 
   is-section-map-inv-compute-coproduct-walk-Directed-Graph :
     (x y : vertex-Directed-Graph G) →
     ( map-compute-coproduct-walk-Directed-Graph x y ∘
       map-inv-compute-coproduct-walk-Directed-Graph x y) ~ id
-  is-section-map-inv-compute-coproduct-walk-Directed-Graph x .x (inl refl) = {!!}
+  is-section-map-inv-compute-coproduct-walk-Directed-Graph = {!!}
   is-section-map-inv-compute-coproduct-walk-Directed-Graph x y
     ( inr (z , e , w)) = {!!}
 
@@ -288,20 +288,19 @@ module _
     (x y : vertex-Directed-Graph G) →
     ( map-inv-compute-coproduct-walk-Directed-Graph x y ∘
       map-compute-coproduct-walk-Directed-Graph x y) ~ id
-  is-retraction-map-inv-compute-coproduct-walk-Directed-Graph x .x
-    refl-walk-Directed-Graph = {!!}
+  is-retraction-map-inv-compute-coproduct-walk-Directed-Graph = {!!}
   is-retraction-map-inv-compute-coproduct-walk-Directed-Graph x y
     ( cons-walk-Directed-Graph e w) = {!!}
 
   is-equiv-map-compute-coproduct-walk-Directed-Graph :
     (x y : vertex-Directed-Graph G) →
     is-equiv (map-compute-coproduct-walk-Directed-Graph x y)
-  is-equiv-map-compute-coproduct-walk-Directed-Graph x y = {!!}
+  is-equiv-map-compute-coproduct-walk-Directed-Graph = {!!}
 
   compute-coproduct-walk-Directed-Graph :
     (x y : vertex-Directed-Graph G) →
     walk-Directed-Graph G x y ≃ coproduct-walk-Directed-Graph x y
-  pr1 (compute-coproduct-walk-Directed-Graph x y) = {!!}
+  compute-coproduct-walk-Directed-Graph = {!!}
   pr2 (compute-coproduct-walk-Directed-Graph x y) = {!!}
 ```
 
@@ -328,23 +327,7 @@ module _
     (y : vertex-Directed-Graph G) (e : edge-Directed-Graph G x y) →
     (w : walk-Directed-Graph G y x) →
     cons-walk-Directed-Graph e w ≠ refl-walk-Directed-Graph
-  neq-cons-refl-walk-Directed-Graph y e w ()
-```
-
-### If `cons-walk e w ＝ cons-walk e' w'`, then `(y , e) ＝ (y' , e')`
-
-```agda
-module _
-  {l1 l2 : Level} (G : Directed-Graph l1 l2) (x : vertex-Directed-Graph G)
-  where
-
-  eq-direct-successor-eq-cons-walk-Directed-Graph :
-    {y y' z : vertex-Directed-Graph G}
-    (e : edge-Directed-Graph G x y) (e' : edge-Directed-Graph G x y')
-    (w : walk-Directed-Graph G y z) (w' : walk-Directed-Graph G y' z) →
-    cons-walk-Directed-Graph e w ＝ cons-walk-Directed-Graph e' w' →
-    (y , e) ＝ (y' , e')
-  eq-direct-successor-eq-cons-walk-Directed-Graph {y} {.y} {z} e .e w .w refl = {!!}
+  neq-cons-refl-walk-Directed-Graph = {!!}
 ```
 
 ### Vertices on a walk
@@ -357,16 +340,16 @@ module _
   is-vertex-on-walk-Directed-Graph :
     {x y : vertex-Directed-Graph G}
     (w : walk-Directed-Graph G x y) (v : vertex-Directed-Graph G) → UU l1
-  is-vertex-on-walk-Directed-Graph {x} refl-walk-Directed-Graph v = {!!}
+  is-vertex-on-walk-Directed-Graph = {!!}
 
   vertex-on-walk-Directed-Graph :
     {x y : vertex-Directed-Graph G} (w : walk-Directed-Graph G x y) → UU l1
-  vertex-on-walk-Directed-Graph w = {!!}
+  vertex-on-walk-Directed-Graph = {!!}
 
   vertex-vertex-on-walk-Directed-Graph :
     {x y : vertex-Directed-Graph G} (w : walk-Directed-Graph G x y) →
     vertex-on-walk-Directed-Graph w → vertex-Directed-Graph G
-  vertex-vertex-on-walk-Directed-Graph w = {!!}
+  vertex-vertex-on-walk-Directed-Graph = {!!}
 ```
 
 ### Edges on a walk
@@ -394,7 +377,7 @@ module _
   edge-on-walk-Directed-Graph :
     {x y : vertex-Directed-Graph G}
     (w : walk-Directed-Graph G x y) → UU (l1 ⊔ l2)
-  edge-on-walk-Directed-Graph w = {!!}
+  edge-on-walk-Directed-Graph = {!!}
 
   module _
     {x y : vertex-Directed-Graph G}
@@ -432,8 +415,7 @@ walk-hom-Directed-Graph :
   walk-Directed-Graph H
     ( vertex-hom-Directed-Graph G H f x)
     ( vertex-hom-Directed-Graph G H f y)
-walk-hom-Directed-Graph G H f refl-walk-Directed-Graph = {!!}
-walk-hom-Directed-Graph G H f (cons-walk-Directed-Graph e w) = {!!}
+walk-hom-Directed-Graph = {!!}
 ```
 
 ### The action on walks of length `n` of graph homomorphisms
@@ -450,7 +432,7 @@ module _
     walk-of-length-Directed-Graph H n
     ( vertex-hom-Directed-Graph G H f x)
     ( vertex-hom-Directed-Graph G H f y)
-  walk-of-length-hom-Directed-Graph zero-ℕ {x} {y} (map-raise p) = {!!}
+  walk-of-length-hom-Directed-Graph = {!!}
   walk-of-length-hom-Directed-Graph (succ-ℕ n) = {!!}
 
   square-compute-total-walk-of-length-hom-Directed-Graph :
@@ -476,8 +458,7 @@ equiv-walk-of-length-equiv-Directed-Graph :
   walk-of-length-Directed-Graph H n
     ( vertex-equiv-Directed-Graph G H f x)
     ( vertex-equiv-Directed-Graph G H f y)
-equiv-walk-of-length-equiv-Directed-Graph G H f zero-ℕ = {!!}
-equiv-walk-of-length-equiv-Directed-Graph G H f (succ-ℕ n) = {!!}
+equiv-walk-of-length-equiv-Directed-Graph = {!!}
 ```
 
 ### The action of equivalences on walks
@@ -514,7 +495,7 @@ module _
   is-equiv-walk-equiv-Directed-Graph :
     {x y : vertex-Directed-Graph G} →
     is-equiv (walk-equiv-Directed-Graph {x} {y})
-  is-equiv-walk-equiv-Directed-Graph {x} {y} = {!!}
+  is-equiv-walk-equiv-Directed-Graph = {!!}
 
   equiv-walk-equiv-Directed-Graph :
     {x y : vertex-Directed-Graph G} →
@@ -522,7 +503,7 @@ module _
     walk-Directed-Graph H
       ( vertex-equiv-Directed-Graph G H e x)
       ( vertex-equiv-Directed-Graph G H e y)
-  pr1 (equiv-walk-equiv-Directed-Graph {x} {y}) = {!!}
+  equiv-walk-equiv-Directed-Graph = {!!}
   pr2 (equiv-walk-equiv-Directed-Graph {x} {y}) = {!!}
 ```
 
@@ -574,7 +555,7 @@ module _
   is-injective-unit-walk-Directed-Graph :
     {x y : vertex-Directed-Graph G} →
     is-injective (unit-walk-Directed-Graph G {x} {y})
-  is-injective-unit-walk-Directed-Graph refl = {!!}
+  is-injective-unit-walk-Directed-Graph = {!!}
 ```
 
 ### The last edge on a walk
@@ -588,24 +569,24 @@ module _
     {x y z : vertex-Directed-Graph G} (e : edge-Directed-Graph G x y) →
     walk-Directed-Graph G y z →
     Σ (vertex-Directed-Graph G) (λ u → edge-Directed-Graph G u z)
-  last-stage-walk-Directed-Graph e refl-walk-Directed-Graph = {!!}
+  last-stage-walk-Directed-Graph = {!!}
 
   vertex-last-stage-walk-Directed-Graph :
     {x y z : vertex-Directed-Graph G} (e : edge-Directed-Graph G x y) →
     walk-Directed-Graph G y z → vertex-Directed-Graph G
-  vertex-last-stage-walk-Directed-Graph e w = {!!}
+  vertex-last-stage-walk-Directed-Graph = {!!}
 
   edge-last-stage-walk-Directed-Graph :
     {x y z : vertex-Directed-Graph G} (e : edge-Directed-Graph G x y) →
     (w : walk-Directed-Graph G y z) →
     edge-Directed-Graph G (vertex-last-stage-walk-Directed-Graph e w) z
-  edge-last-stage-walk-Directed-Graph e w = {!!}
+  edge-last-stage-walk-Directed-Graph = {!!}
 
   walk-last-stage-walk-Directed-Graph :
     {x y z : vertex-Directed-Graph G} (e : edge-Directed-Graph G x y) →
     (w : walk-Directed-Graph G y z) →
     walk-Directed-Graph G x (vertex-last-stage-walk-Directed-Graph e w)
-  walk-last-stage-walk-Directed-Graph e refl-walk-Directed-Graph = {!!}
+  walk-last-stage-walk-Directed-Graph = {!!}
   walk-last-stage-walk-Directed-Graph e (cons-walk-Directed-Graph f w) = {!!}
 ```
 

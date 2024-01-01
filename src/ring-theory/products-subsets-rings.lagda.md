@@ -52,13 +52,13 @@ module _
     forward-inclusion-distributive-product-union-family-of-subsets-Ring :
       product-subset-Ring A S (union-family-of-subtypes T) ⊆
       union-family-of-subtypes (λ i → product-subset-Ring A S (T i))
-    forward-inclusion-distributive-product-union-family-of-subsets-Ring x p = {!!}
+    forward-inclusion-distributive-product-union-family-of-subsets-Ring = {!!}
 
   abstract
     backward-inclusion-distributive-product-union-family-of-subsets-Ring :
       union-family-of-subtypes (λ i → product-subset-Ring A S (T i)) ⊆
       product-subset-Ring A S (union-family-of-subtypes T)
-    backward-inclusion-distributive-product-union-family-of-subsets-Ring x p = {!!}
+    backward-inclusion-distributive-product-union-family-of-subsets-Ring = {!!}
 
   distributive-product-union-family-of-subsets-Ring :
     product-subset-Ring A S (union-family-of-subtypes T) ＝
@@ -84,7 +84,7 @@ module _
       ( product-subset-Ring A
         ( R)
         ( product-subset-Ring A S T))
-    forward-inclusion-associative-product-subset-Ring x H = {!!}
+    forward-inclusion-associative-product-subset-Ring = {!!}
 
   abstract
     backward-inclusion-associative-product-subset-Ring :
@@ -94,7 +94,7 @@ module _
       ( product-subset-Ring A
         ( product-subset-Ring A R S)
         ( T))
-    backward-inclusion-associative-product-subset-Ring x H = {!!}
+    backward-inclusion-associative-product-subset-Ring = {!!}
 
   associative-product-subset-Ring :
     product-subset-Ring A

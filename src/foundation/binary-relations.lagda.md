@@ -45,7 +45,7 @@ Relation l A = {!!}
 
 total-space-Relation :
   {l1 l : Level} {A : UU l1} → Relation l A → UU (l1 ⊔ l)
-total-space-Relation {A = A} R = {!!}
+total-space-Relation = {!!}
 ```
 
 ### Relations valued in propositions
@@ -53,20 +53,20 @@ total-space-Relation {A = A} R = {!!}
 ```agda
 Relation-Prop :
   (l : Level) {l1 : Level} (A : UU l1) → UU ((lsuc l) ⊔ l1)
-Relation-Prop l A = {!!}
+Relation-Prop = {!!}
 
 type-Relation-Prop :
   {l1 l2 : Level} {A : UU l1} → Relation-Prop l2 A → Relation l2 A
-type-Relation-Prop R x y = {!!}
+type-Relation-Prop = {!!}
 
 is-prop-type-Relation-Prop :
   {l1 l2 : Level} {A : UU l1} (R : Relation-Prop l2 A) →
   (x y : A) → is-prop (type-Relation-Prop R x y)
-is-prop-type-Relation-Prop R x y = {!!}
+is-prop-type-Relation-Prop = {!!}
 
 total-space-Relation-Prop :
   {l : Level} {l1 : Level} {A : UU l1} → Relation-Prop l A → UU (l ⊔ l1)
-total-space-Relation-Prop {A = A} R = {!!}
+total-space-Relation-Prop = {!!}
 ```
 
 ### The predicate of being a reflexive relation
@@ -226,7 +226,7 @@ module _
 equiv-Relation :
   {l1 l2 l3 : Level} {A : UU l1} →
   Relation l2 A → Relation l3 A → UU (l1 ⊔ l2 ⊔ l3)
-equiv-Relation {A = A} R S = {!!}
+equiv-Relation = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (R : Relation l2 A)
@@ -260,7 +260,7 @@ relates-same-elements-Relation-Prop :
   {l1 l2 l3 : Level} {A : UU l1}
   (R : Relation-Prop l2 A) (S : Relation-Prop l3 A) →
   UU (l1 ⊔ l2 ⊔ l3)
-relates-same-elements-Relation-Prop {A = A} R S = {!!}
+relates-same-elements-Relation-Prop = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (R : Relation-Prop l2 A)
@@ -268,7 +268,7 @@ module _
 
   refl-relates-same-elements-Relation-Prop :
     relates-same-elements-Relation-Prop R R
-  refl-relates-same-elements-Relation-Prop x = {!!}
+  refl-relates-same-elements-Relation-Prop = {!!}
 
   is-torsorial-relates-same-elements-Relation-Prop :
     is-torsorial (relates-same-elements-Relation-Prop R)
@@ -277,7 +277,7 @@ module _
   relates-same-elements-eq-Relation-Prop :
     (S : Relation-Prop l2 A) →
     (R ＝ S) → relates-same-elements-Relation-Prop R S
-  relates-same-elements-eq-Relation-Prop .R refl = {!!}
+  relates-same-elements-eq-Relation-Prop = {!!}
 
   is-equiv-relates-same-elements-eq-Relation-Prop :
     (S : Relation-Prop l2 A) →
@@ -287,12 +287,12 @@ module _
   extensionality-Relation-Prop :
     (S : Relation-Prop l2 A) →
     (R ＝ S) ≃ relates-same-elements-Relation-Prop R S
-  pr1 (extensionality-Relation-Prop S) = {!!}
+  extensionality-Relation-Prop = {!!}
 
   eq-relates-same-elements-Relation-Prop :
     (S : Relation-Prop l2 A) →
     relates-same-elements-Relation-Prop R S → (R ＝ S)
-  eq-relates-same-elements-Relation-Prop S = {!!}
+  eq-relates-same-elements-Relation-Prop = {!!}
 ```
 
 ### Asymmetric relations are irreflexive

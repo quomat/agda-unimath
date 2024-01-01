@@ -69,7 +69,7 @@ module _
     (x y : A) →
     ( unit-trunc-im (succ-𝕋 k) f x ＝ unit-trunc-im (succ-𝕋 k) f y) ≃
     ( Eq-unit-trunc-im x y)
-  extensionality-trunc-im x y = {!!}
+  extensionality-trunc-im = {!!}
 ```
 
 ### The map projection-trunc-im k is k-truncated

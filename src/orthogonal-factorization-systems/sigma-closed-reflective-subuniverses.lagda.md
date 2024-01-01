@@ -28,11 +28,11 @@ is **Σ-closed** if it is closed under the formation of
 ```agda
 is-closed-under-Σ-reflective-subuniverse :
   {l lP : Level} → reflective-subuniverse l lP → UU (lsuc l ⊔ lP)
-is-closed-under-Σ-reflective-subuniverse (P , _) = {!!}
+is-closed-under-Σ-reflective-subuniverse = {!!}
 
 closed-under-Σ-reflective-subuniverse :
   (l lP : Level) → UU (lsuc l ⊔ lsuc lP)
-closed-under-Σ-reflective-subuniverse l lP = {!!}
+closed-under-Σ-reflective-subuniverse = {!!}
 ```
 
 ## See also

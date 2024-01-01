@@ -41,7 +41,7 @@ not required to be preserved.
 ```agda
 Pointed-Type-With-Aut :
   (l : Level) → UU (lsuc l)
-Pointed-Type-With-Aut l = {!!}
+Pointed-Type-With-Aut = {!!}
 
 module _
   {l : Level} (X : Pointed-Type-With-Aut l)
@@ -82,7 +82,7 @@ module _
 hom-Pointed-Type-With-Aut :
   {l1 l2 : Level} →
   Pointed-Type-With-Aut l1 → Pointed-Type-With-Aut l2 → UU (l1 ⊔ l2)
-hom-Pointed-Type-With-Aut {l1} {l2} X Y = {!!}
+hom-Pointed-Type-With-Aut = {!!}
 
 module _
   {l1 l2 : Level} (X : Pointed-Type-With-Aut l1) (Y : Pointed-Type-With-Aut l2)
@@ -113,35 +113,35 @@ htpy-hom-Pointed-Type-With-Aut :
   {l1 l2 : Level} (X : Pointed-Type-With-Aut l1)
   (Y : Pointed-Type-With-Aut l2) (h1 h2 : hom-Pointed-Type-With-Aut X Y) →
   UU (l1 ⊔ l2)
-htpy-hom-Pointed-Type-With-Aut X Y h1 h2 = {!!}
+htpy-hom-Pointed-Type-With-Aut = {!!}
 
 refl-htpy-hom-Pointed-Type-With-Aut :
   {l1 l2 : Level} (X : Pointed-Type-With-Aut l1)
   (Y : Pointed-Type-With-Aut l2) (h : hom-Pointed-Type-With-Aut X Y) →
   htpy-hom-Pointed-Type-With-Aut X Y h h
-refl-htpy-hom-Pointed-Type-With-Aut X Y h = {!!}
+refl-htpy-hom-Pointed-Type-With-Aut = {!!}
 
 htpy-hom-Pointed-Type-With-Aut-eq :
   {l1 l2 : Level} (X : Pointed-Type-With-Aut l1)
   (Y : Pointed-Type-With-Aut l2) (h1 h2 : hom-Pointed-Type-With-Aut X Y) →
   h1 ＝ h2 → htpy-hom-Pointed-Type-With-Aut X Y h1 h2
-htpy-hom-Pointed-Type-With-Aut-eq X Y h1 .h1 refl = {!!}
+htpy-hom-Pointed-Type-With-Aut-eq = {!!}
 
 is-torsorial-htpy-hom-Pointed-Type-With-Aut :
   {l1 l2 : Level} (X : Pointed-Type-With-Aut l1)
   (Y : Pointed-Type-With-Aut l2) (h1 : hom-Pointed-Type-With-Aut X Y) →
   is-torsorial (htpy-hom-Pointed-Type-With-Aut X Y h1)
-is-torsorial-htpy-hom-Pointed-Type-With-Aut X Y h1 = {!!}
+is-torsorial-htpy-hom-Pointed-Type-With-Aut = {!!}
 
 is-equiv-htpy-hom-Pointed-Type-With-Aut :
   {l1 l2 : Level} (X : Pointed-Type-With-Aut l1)
   (Y : Pointed-Type-With-Aut l2) (h1 h2 : hom-Pointed-Type-With-Aut X Y) →
   is-equiv (htpy-hom-Pointed-Type-With-Aut-eq X Y h1 h2)
-is-equiv-htpy-hom-Pointed-Type-With-Aut X Y h1 = {!!}
+is-equiv-htpy-hom-Pointed-Type-With-Aut = {!!}
 
 eq-htpy-hom-Pointed-Type-With-Aut :
   {l1 l2 : Level} (X : Pointed-Type-With-Aut l1)
   (Y : Pointed-Type-With-Aut l2) (h1 h2 : hom-Pointed-Type-With-Aut X Y) →
   htpy-hom-Pointed-Type-With-Aut X Y h1 h2 → h1 ＝ h2
-eq-htpy-hom-Pointed-Type-With-Aut X Y h1 h2 = {!!}
+eq-htpy-hom-Pointed-Type-With-Aut = {!!}
 ```

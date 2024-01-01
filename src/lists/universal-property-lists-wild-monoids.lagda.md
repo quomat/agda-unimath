@@ -38,7 +38,7 @@ map from `X` into it.
 ```agda
 list-H-Space :
   {l : Level} (X : UU l) → H-Space l
-list-H-Space X = {!!}
+list-H-Space = {!!}
 ```
 
 ### The wild monoid of lists of elements of `X`
@@ -50,7 +50,7 @@ unit-law-011-associative-concat-list :
     ( ( associative-concat-list nil y z) ∙
       ( left-unit-law-concat-list (concat-list y z)))
     ( ap (λ t → concat-list t z) (left-unit-law-concat-list y))
-unit-law-011-associative-concat-list y z = {!!}
+unit-law-011-associative-concat-list = {!!}
 
 concat-list' : {l : Level} {A : UU l} → list A → list A → list A
 concat-list' x y = {!!}
@@ -61,8 +61,7 @@ unit-law-101-associative-concat-list :
     ( ( associative-concat-list x nil z) ∙
       ( ap (concat-list x) (left-unit-law-concat-list z)))
     ( ap (λ t → concat-list t z) (right-unit-law-concat-list x))
-unit-law-101-associative-concat-list nil z = {!!}
-unit-law-101-associative-concat-list (cons x l) z = {!!}
+unit-law-101-associative-concat-list = {!!}
 
 unit-law-110-associative-concat-list :
   {l1 : Level} {X : UU l1} (x y : list X) →
@@ -70,8 +69,7 @@ unit-law-110-associative-concat-list :
     ( ( associative-concat-list x y nil) ∙
       ( ap (concat-list x) (right-unit-law-concat-list y)))
     ( right-unit-law-concat-list (concat-list x y))
-unit-law-110-associative-concat-list nil y = {!!}
-unit-law-110-associative-concat-list (cons a x) y = {!!}
+unit-law-110-associative-concat-list = {!!}
 
 list-Wild-Monoid : {l : Level} → UU l → Wild-Monoid l
 list-Wild-Monoid X = {!!}
@@ -88,7 +86,7 @@ module _
 
   map-elim-list-Wild-Monoid :
     list X → type-Wild-Monoid M
-  map-elim-list-Wild-Monoid nil = {!!}
+  map-elim-list-Wild-Monoid = {!!}
 
   preserves-unit-map-elim-list-Wild-Monoid :
     Id (map-elim-list-Wild-Monoid nil) (unit-Wild-Monoid M)
@@ -99,7 +97,7 @@ module _
       ( concat-list)
       ( mul-Wild-Monoid M)
       ( map-elim-list-Wild-Monoid)
-  preserves-mul-map-elim-list-Wild-Monoid nil y = {!!}
+  preserves-mul-map-elim-list-Wild-Monoid = {!!}
 
   preserves-left-unit-law-map-elim-list-Wild-Monoid :
     preserves-left-unit-law-mul
@@ -111,7 +109,7 @@ module _
       ( map-elim-list-Wild-Monoid)
       ( preserves-unit-map-elim-list-Wild-Monoid)
       ( λ {x} {y} → preserves-mul-map-elim-list-Wild-Monoid x y)
-  preserves-left-unit-law-map-elim-list-Wild-Monoid x = {!!}
+  preserves-left-unit-law-map-elim-list-Wild-Monoid = {!!}
 
   preserves-right-unit-law-map-elim-list-Wild-Monoid :
     preserves-right-unit-law-mul
@@ -123,7 +121,7 @@ module _
       ( map-elim-list-Wild-Monoid)
       ( preserves-unit-map-elim-list-Wild-Monoid)
       ( λ {x} {y} → preserves-mul-map-elim-list-Wild-Monoid x y)
-  preserves-right-unit-law-map-elim-list-Wild-Monoid nil = {!!}
+  preserves-right-unit-law-map-elim-list-Wild-Monoid = {!!}
 
 preserves-coh-unit-laws-map-elim-list-Wild-Monoid :
   {l1 l2 : Level} {X : UU l1} (M : Wild-Monoid l2)
@@ -142,7 +140,7 @@ elim-list-Wild-Monoid :
   {l1 l2 : Level} {X : UU l1} (M : Wild-Monoid l2)
   (f : X → type-Wild-Monoid M) →
   hom-Wild-Monoid (list-Wild-Monoid X) M
-elim-list-Wild-Monoid M f = {!!}
+elim-list-Wild-Monoid = {!!}
 ```
 
 ### Contractibility of the type `hom (list X) M` of morphisms of wild monoids
@@ -157,5 +155,5 @@ htpy-elim-list-Wild-Monoid :
   ( H : ( map-hom-Wild-Monoid (list-Wild-Monoid X) M g ∘ unit-list) ~
         ( map-hom-Wild-Monoid (list-Wild-Monoid X) M h ∘ unit-list)) →
   htpy-hom-Wild-Monoid (list-Wild-Monoid X) M g h
-htpy-elim-list-Wild-Monoid {X = X} M g h H = {!!}
+htpy-elim-list-Wild-Monoid = {!!}
 ```

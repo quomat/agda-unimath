@@ -26,5 +26,5 @@ space of `X`.
 ```agda
 orbit-action-∞-Group :
   {l1 l2 : Level} (G : ∞-Group l1) (X : action-∞-Group l2 G) → UU (l1 ⊔ l2)
-orbit-action-∞-Group G X = {!!}
+orbit-action-∞-Group = {!!}
 ```

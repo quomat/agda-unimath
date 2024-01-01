@@ -52,7 +52,7 @@ module _
     hom-opposite-Precategory y z →
     hom-opposite-Precategory x y →
     hom-opposite-Precategory x z
-  comp-hom-opposite-Precategory g f = {!!}
+  comp-hom-opposite-Precategory = {!!}
 
   associative-comp-hom-opposite-Precategory :
     {x y z w : obj-opposite-Precategory}
@@ -61,7 +61,7 @@ module _
     (f : hom-opposite-Precategory x y) →
     ( comp-hom-opposite-Precategory (comp-hom-opposite-Precategory h g) f) ＝
     ( comp-hom-opposite-Precategory h (comp-hom-opposite-Precategory g f))
-  associative-comp-hom-opposite-Precategory h g f = {!!}
+  associative-comp-hom-opposite-Precategory = {!!}
 
   inv-associative-comp-hom-opposite-Precategory :
     {x y z w : obj-opposite-Precategory}
@@ -70,7 +70,7 @@ module _
     (f : hom-opposite-Precategory x y) →
     ( comp-hom-opposite-Precategory h (comp-hom-opposite-Precategory g f)) ＝
     ( comp-hom-opposite-Precategory (comp-hom-opposite-Precategory h g) f)
-  inv-associative-comp-hom-opposite-Precategory h g f = {!!}
+  inv-associative-comp-hom-opposite-Precategory = {!!}
 
   id-hom-opposite-Precategory :
     {x : obj-opposite-Precategory} → hom-opposite-Precategory x x
@@ -98,12 +98,11 @@ module _
 ```agda
 is-involution-opposite-Precategory :
   {l1 l2 : Level} → is-involution (opposite-Precategory {l1} {l2})
-is-involution-opposite-Precategory C = {!!}
+is-involution-opposite-Precategory = {!!}
 
 involution-opposite-Precategory :
   (l1 l2 : Level) → involution (Precategory l1 l2)
-pr1 (involution-opposite-Precategory l1 l2) = {!!}
-pr2 (involution-opposite-Precategory l1 l2) = {!!}
+involution-opposite-Precategory = {!!}
 
 is-equiv-opposite-Precategory :
   {l1 l2 : Level} → is-equiv (opposite-Precategory {l1} {l2})
@@ -111,7 +110,7 @@ is-equiv-opposite-Precategory = {!!}
 
 equiv-opposite-Precategory :
   (l1 l2 : Level) → Precategory l1 l2 ≃ Precategory l1 l2
-equiv-opposite-Precategory l1 l2 = {!!}
+equiv-opposite-Precategory = {!!}
 ```
 
 ### Computing the isomorphism sets of the opposite precategory
@@ -123,11 +122,11 @@ module _
 
   map-compute-iso-opposite-Precategory :
     iso-Precategory C x y → iso-Precategory (opposite-Precategory C) y x
-  pr1 (map-compute-iso-opposite-Precategory f) = {!!}
+  map-compute-iso-opposite-Precategory = {!!}
 
   map-inv-compute-iso-opposite-Precategory :
     iso-Precategory (opposite-Precategory C) y x → iso-Precategory C x y
-  pr1 (map-inv-compute-iso-opposite-Precategory f) = {!!}
+  map-inv-compute-iso-opposite-Precategory = {!!}
 
   is-equiv-map-compute-iso-opposite-Precategory :
     is-equiv (map-compute-iso-opposite-Precategory)
@@ -135,7 +134,7 @@ module _
 
   compute-iso-opposite-Precategory :
     iso-Precategory C x y ≃ iso-Precategory (opposite-Precategory C) y x
-  pr1 compute-iso-opposite-Precategory = {!!}
+  compute-iso-opposite-Precategory = {!!}
 ```
 
 ## External links

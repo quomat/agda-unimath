@@ -68,7 +68,7 @@ module _
 ```agda
 orthogonal-factorization-system :
   (l lL lR : Level) → UU (lsuc l ⊔ lsuc lL ⊔ lsuc lR)
-orthogonal-factorization-system l lL lR = {!!}
+orthogonal-factorization-system = {!!}
 ```
 
 ### Components of an orthogonal factorization system
@@ -111,7 +111,7 @@ module _
 
   factorization-operation-is-orthogonal-factorization-system :
     factorization-operation-function-class L R
-  factorization-operation-is-orthogonal-factorization-system f = {!!}
+  factorization-operation-is-orthogonal-factorization-system = {!!}
 
 module _
   {l lL lR : Level}

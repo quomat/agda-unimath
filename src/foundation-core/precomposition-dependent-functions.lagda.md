@@ -52,5 +52,5 @@ module _
 
   htpy-precomp-Π :
     dependent-homotopy (λ _ → C) H (precomp-Π f C h) (precomp-Π g C h)
-  htpy-precomp-Π x = {!!}
+  htpy-precomp-Π = {!!}
 ```

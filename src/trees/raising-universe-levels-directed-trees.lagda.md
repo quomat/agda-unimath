@@ -94,11 +94,11 @@ module _
   unique-walk-to-root-raise-Directed-Tree :
     (x : node-raise-Directed-Tree) →
     is-contr (walk-raise-Directed-Tree x root-raise-Directed-Tree)
-  unique-walk-to-root-raise-Directed-Tree (map-raise x) = {!!}
+  unique-walk-to-root-raise-Directed-Tree = {!!}
 
   is-tree-raise-Directed-Tree :
     is-tree-Directed-Graph graph-raise-Directed-Tree
-  pr1 is-tree-raise-Directed-Tree = {!!}
+  is-tree-raise-Directed-Tree = {!!}
 
   raise-Directed-Tree : Directed-Tree (l1 ⊔ l3) (l2 ⊔ l4)
   pr1 raise-Directed-Tree = {!!}

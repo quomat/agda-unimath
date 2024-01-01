@@ -47,33 +47,33 @@ module _
 
   η-□-∈-𝕎 :
     (P : 𝕎 A B → UU l3) → ((x : 𝕎 A B) → P x) → ((x : 𝕎 A B) → □-∈-𝕎 P x)
-  η-□-∈-𝕎 P f x y e = {!!}
+  η-□-∈-𝕎 = {!!}
 
   ε-□-∈-𝕎 :
     (P : 𝕎 A B → UU l3) (h : (y : 𝕎 A B) → □-∈-𝕎 P y → P y) →
     ((x : 𝕎 A B) → □-∈-𝕎 P x) → (x : 𝕎 A B) → P x
-  ε-□-∈-𝕎 P h f x = {!!}
+  ε-□-∈-𝕎 = {!!}
 
   ind-□-∈-𝕎 :
     (P : 𝕎 A B → UU l3) (h : (y : 𝕎 A B) → □-∈-𝕎 P y → P y) →
     (x : 𝕎 A B) → □-∈-𝕎 P x
-  ind-□-∈-𝕎 P h (tree-𝕎 x α) .(α b) (pair b refl) = {!!}
+  ind-□-∈-𝕎 = {!!}
 
   compute-□-∈-𝕎 :
     (P : 𝕎 A B → UU l3) (h : (y : 𝕎 A B) → □-∈-𝕎 P y → P y) →
     (x y : 𝕎 A B) (e : y ∈-𝕎 x) →
     ind-□-∈-𝕎 P h x y e ＝ h y (ind-□-∈-𝕎 P h y)
-  compute-□-∈-𝕎 P h (tree-𝕎 x α) .(α b) (pair b refl) = {!!}
+  compute-□-∈-𝕎 = {!!}
 
   ind-∈-𝕎 :
     (P : 𝕎 A B → UU l3) (h : (y : 𝕎 A B) → □-∈-𝕎 P y → P y) →
     (x : 𝕎 A B) → P x
-  ind-∈-𝕎 P h = {!!}
+  ind-∈-𝕎 = {!!}
 
   compute-∈-𝕎 :
     (P : 𝕎 A B → UU l3) (h : (y : 𝕎 A B) → □-∈-𝕎 P y → P y) →
     (x : 𝕎 A B) → ind-∈-𝕎 P h x ＝ h x (λ y e → ind-∈-𝕎 P h y)
-  compute-∈-𝕎 P h x = {!!}
+  compute-∈-𝕎 = {!!}
 ```
 
 ### Strong induction for W-types
@@ -110,7 +110,7 @@ module _
   reflect-□-𝕎 :
     ((x : 𝕎 A B) → □-𝕎 P x → P x) →
     ((x : 𝕎 A B) → □-𝕎 P x) → ((x : 𝕎 A B) → P x)
-  reflect-□-𝕎 h f x = {!!}
+  reflect-□-𝕎 = {!!}
 ```
 
 #### The strong induction principle for W-types
@@ -121,13 +121,13 @@ we obtain sections of □-𝕎 P.
 ```agda
   □-strong-ind-𝕎 :
     ((x : 𝕎 A B) → □-𝕎 P x → P x) → (x : 𝕎 A B) → □-𝕎 P x
-  □-strong-ind-𝕎 h (tree-𝕎 x α) .(α b) (le-∈-𝕎 (pair b refl)) = {!!}
+  □-strong-ind-𝕎 = {!!}
 
   □-strong-compute-𝕎 :
     (h : (x : 𝕎 A B) → □-𝕎 P x → P x)
     (x : 𝕎 A B) (y : 𝕎 A B) (p : y <-𝕎 x) →
     □-strong-ind-𝕎 h x y p ＝ h y (□-strong-ind-𝕎 h y)
-  □-strong-compute-𝕎 h (tree-𝕎 x α) .(α b) (le-∈-𝕎 (pair b refl)) = {!!}
+  □-strong-compute-𝕎 = {!!}
 ```
 
 Now we prove the actual induction principle with computation rule, where we
@@ -137,13 +137,13 @@ obtain sections of P.
 strong-ind-𝕎 :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} (P : 𝕎 A B → UU l3) →
   ((x : 𝕎 A B) → □-𝕎 P x → P x) → (x : 𝕎 A B) → P x
-strong-ind-𝕎 P h = {!!}
+strong-ind-𝕎 = {!!}
 
 strong-compute-𝕎 :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2} (P : 𝕎 A B → UU l3) →
   (h : (x : 𝕎 A B) → □-𝕎 P x → P x) (x : 𝕎 A B) →
   strong-ind-𝕎 P h x ＝ h x (unit-□-𝕎 (strong-ind-𝕎 P h) x)
-strong-compute-𝕎 P h x = {!!}
+strong-compute-𝕎 = {!!}
 ```
 
 ### There are no infinitely descending sequences in a W-types
@@ -152,5 +152,5 @@ strong-compute-𝕎 P h x = {!!}
 no-infinite-descent-𝕎 :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} →
   (f : ℕ → 𝕎 A B) → ¬ ((n : ℕ) → (f (succ-ℕ n) <-𝕎 (f n)))
-no-infinite-descent-𝕎 {A = A} {B} f = {!!}
+no-infinite-descent-𝕎 = {!!}
 ```

@@ -29,7 +29,7 @@ The [truncation](foundation.truncations.md) operations are
 ```agda
 operator-trunc-modality :
   (l : Level) (k : 𝕋) → operator-modality l l
-operator-trunc-modality _ = {!!}
+operator-trunc-modality = {!!}
 
 unit-trunc-modality :
   {l : Level} {k : 𝕋} → unit-modality (operator-trunc-modality l k)
@@ -44,5 +44,5 @@ unit-trunc-modality = {!!}
 is-uniquely-eliminating-modality-trunc-modality :
   {l : Level} {k : 𝕋} →
   is-uniquely-eliminating-modality (unit-trunc-modality {l} {k})
-is-uniquely-eliminating-modality-trunc-modality {k = k} P = {!!}
+is-uniquely-eliminating-modality-trunc-modality = {!!}
 ```

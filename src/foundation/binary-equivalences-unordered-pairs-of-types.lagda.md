@@ -30,5 +30,5 @@ equivalence.
 is-binary-equiv-unordered-pair-types :
   {l1 l2 : Level} (A : unordered-pair (UU l1)) {B : UU l2}
   (f : binary-operation-unordered-pair-types A B) → UU (l1 ⊔ l2)
-is-binary-equiv-unordered-pair-types A f = {!!}
+is-binary-equiv-unordered-pair-types = {!!}
 ```

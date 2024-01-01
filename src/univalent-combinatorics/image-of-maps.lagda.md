@@ -33,11 +33,11 @@ module _
   abstract
     is-finite-codomain :
       is-surjective f → has-decidable-equality B → is-finite B
-    is-finite-codomain H d = {!!}
+    is-finite-codomain = {!!}
 
 abstract
   is-finite-im :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} (K : is-finite A) →
     has-decidable-equality B → is-finite (im f)
-  is-finite-im {f = f} K d = {!!}
+  is-finite-im = {!!}
 ```

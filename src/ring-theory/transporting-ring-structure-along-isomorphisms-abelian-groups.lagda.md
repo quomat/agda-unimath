@@ -54,22 +54,22 @@ module _
 
   mul-transport-ring-structure-iso-Ab :
     (x y : type-Ab A) → type-Ab A
-  mul-transport-ring-structure-iso-Ab x y = {!!}
+  mul-transport-ring-structure-iso-Ab = {!!}
 
   private
     one = {!!}
 
   associative-mul-transport-ring-structure-iso-Ab :
     (x y z : type-Ab A) → mul (mul x y) z ＝ mul x (mul y z)
-  associative-mul-transport-ring-structure-iso-Ab x y z = {!!}
+  associative-mul-transport-ring-structure-iso-Ab = {!!}
 
   left-unit-law-mul-transport-ring-structure-iso-Ab :
     (x : type-Ab A) → mul one x ＝ x
-  left-unit-law-mul-transport-ring-structure-iso-Ab x = {!!}
+  left-unit-law-mul-transport-ring-structure-iso-Ab = {!!}
 
   right-unit-law-mul-transport-ring-structure-iso-Ab :
     (x : type-Ab A) → mul x one ＝ x
-  right-unit-law-mul-transport-ring-structure-iso-Ab x = {!!}
+  right-unit-law-mul-transport-ring-structure-iso-Ab = {!!}
 
   left-distributive-mul-add-transport-ring-structure-iso-Ab :
     (x y z : type-Ab A) → mul x (add-Ab A y z) ＝ add-Ab A (mul x y) (mul x z)
@@ -83,11 +83,11 @@ module _
 
   has-associative-mul-transport-ring-structure-iso-Ab :
     has-associative-mul-Set (set-Ab A)
-  pr1 has-associative-mul-transport-ring-structure-iso-Ab = {!!}
+  has-associative-mul-transport-ring-structure-iso-Ab = {!!}
 
   is-unital-transport-ring-structure-iso-Ab :
     is-unital mul
-  pr1 is-unital-transport-ring-structure-iso-Ab = {!!}
+  is-unital-transport-ring-structure-iso-Ab = {!!}
 
   transport-ring-structure-iso-Ab : Ring l2
   pr1 transport-ring-structure-iso-Ab = {!!}
@@ -97,11 +97,11 @@ module _
       ( R)
       ( transport-ring-structure-iso-Ab)
       ( hom-iso-Ab (ab-Ring R) A f)
-  preserves-mul-transport-ring-structure-iso-Ab {x} {y} = {!!}
+  preserves-mul-transport-ring-structure-iso-Ab = {!!}
 
   hom-iso-transport-ring-structure-iso-Ab :
     hom-Ring R transport-ring-structure-iso-Ab
-  pr1 hom-iso-transport-ring-structure-iso-Ab = {!!}
+  hom-iso-transport-ring-structure-iso-Ab = {!!}
 
   is-iso-iso-transport-ring-structure-iso-Ab :
     is-iso-Ring

@@ -44,8 +44,7 @@ mul-transpose :
   Id
     (transpose (mul-Mat mulK addK zero a b))
     (mul-Mat mulK addK zero (transpose b) (transpose a))
-mul-transpose mulK-comm empty-vec b = {!!}
-mul-transpose mulK-comm (a ∷ as) b = {!!}
+mul-transpose = {!!}
 -}
 ```
 
@@ -112,11 +111,6 @@ module _
 
   TODO: associativity
   associative-mul-matrices :
-  {l : Level} {K : UU l} {n m p q : ℕ} →
-  {addK : K → K → K} {mulK : K → K → K} {zero : K} →
-  (x : Mat K m n) → (y : Mat K n p) → (z : Mat K p q) →
-  Id (mul-Mat mulK addK zero x (mul-Mat mulK addK zero y z))
-  (mul-Mat mulK addK zero (mul-Mat mulK addK zero x y) z)
-  associative-mul-matrices x y z = {!!}
+  associative-mul-matrices = {!!}
 -}
 ```

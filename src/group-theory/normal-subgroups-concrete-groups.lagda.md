@@ -27,7 +27,7 @@ of all subgroups
 ```agda
 normal-subgroup-Concrete-Group :
   {l1 : Level} (l2 : Level) (G : Concrete-Group l1) → UU (l1 ⊔ lsuc l2)
-normal-subgroup-Concrete-Group l2 G = {!!}
+normal-subgroup-Concrete-Group = {!!}
 
 module _
   {l1 l2 : Level} (G : Concrete-Group l1)

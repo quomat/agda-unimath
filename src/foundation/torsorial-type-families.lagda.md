@@ -40,11 +40,11 @@ it follows that a type family `E` is torsorial if and only if it is in the
 ```agda
 is-torsorial-Prop :
   {l1 l2 : Level} {B : UU l1} → (B → UU l2) → Prop (l1 ⊔ l2)
-is-torsorial-Prop E = {!!}
+is-torsorial-Prop = {!!}
 
 is-prop-is-torsorial :
   {l1 l2 : Level} {B : UU l1} (E : B → UU l2) → is-prop (is-torsorial E)
-is-prop-is-torsorial E = {!!}
+is-prop-is-torsorial = {!!}
 ```
 
 ### The type of torsorial type families over `B`
@@ -52,7 +52,7 @@ is-prop-is-torsorial E = {!!}
 ```agda
 torsorial-family-of-types :
   {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-torsorial-family-of-types l2 B = {!!}
+torsorial-family-of-types = {!!}
 
 module _
   {l1 l2 : Level} {B : UU l1} (T : torsorial-family-of-types l2 B)
@@ -86,11 +86,11 @@ module _
 
   is-torsorial-fiber-Id :
     {a : A} → ((x : A) → (a ＝ x) ≃ B x) → is-torsorial B
-  is-torsorial-fiber-Id H = {!!}
+  is-torsorial-fiber-Id = {!!}
 
   fiber-Id-is-torsorial :
     is-torsorial B → Σ A (λ a → (x : A) → (a ＝ x) ≃ B x)
-  pr1 (fiber-Id-is-torsorial ((a , b) , H)) = {!!}
+  fiber-Id-is-torsorial = {!!}
 
   compute-fiber-Id :
     (Σ A (λ a → (x : A) → (a ＝ x) ≃ B x)) ≃ is-torsorial B

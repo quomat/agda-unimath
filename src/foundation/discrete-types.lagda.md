@@ -57,18 +57,18 @@ module _
 
   is-tight-apart-Discrete-Type :
     is-tight rel-apart-Discrete-Type
-  is-tight-apart-Discrete-Type x y = {!!}
+  is-tight-apart-Discrete-Type = {!!}
 
   apartness-relation-Discrete-Type :
     Apartness-Relation l (type-Discrete-Type X)
-  pr1 apartness-relation-Discrete-Type = {!!}
+  apartness-relation-Discrete-Type = {!!}
 
   type-with-apartness-Discrete-Type : Type-With-Apartness l l
   pr1 type-with-apartness-Discrete-Type = {!!}
 
   tight-apartness-relation-Discrete-Type :
     Tight-Apartness-Relation l (type-Discrete-Type X)
-  pr1 tight-apartness-relation-Discrete-Type = {!!}
+  tight-apartness-relation-Discrete-Type = {!!}
 
   type-with-tight-apartness-Discrete-Type : Type-With-Tight-Apartness l l
   pr1 type-with-tight-apartness-Discrete-Type = {!!}

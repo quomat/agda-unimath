@@ -64,7 +64,7 @@ module _
     mul-Monoid M
       ( inclusion-center-Monoid x)
       ( inclusion-center-Monoid y)
-  preserves-mul-inclusion-center-Monoid {x} {y} = {!!}
+  preserves-mul-inclusion-center-Monoid = {!!}
 
   hom-inclusion-center-Monoid :
     hom-Monoid monoid-center-Monoid M

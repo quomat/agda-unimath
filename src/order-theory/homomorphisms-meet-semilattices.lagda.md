@@ -78,11 +78,11 @@ module _
         ( poset-Meet-Semilattice A)
         ( poset-Meet-Semilattice B)
         ( map-hom-Meet-Semilattice)
-    preserves-order-hom-Meet-Semilattice x y H = {!!}
+    preserves-order-hom-Meet-Semilattice = {!!}
 
     hom-poset-hom-Meet-Semilattice :
       hom-Poset (poset-Meet-Semilattice A) (poset-Meet-Semilattice B)
-    pr1 hom-poset-hom-Meet-Semilattice = {!!}
+    hom-poset-hom-Meet-Semilattice = {!!}
 ```
 
 ### Homomorphisms of order-theoretic meet-semilattices
@@ -98,13 +98,13 @@ module _
     hom-Poset
       ( poset-Order-Theoretic-Meet-Semilattice A)
       ( poset-Order-Theoretic-Meet-Semilattice B) → Prop (l1 ⊔ l3 ⊔ l4)
-  preserves-meet-hom-Poset-Prop (f , H) = {!!}
+  preserves-meet-hom-Poset-Prop = {!!}
 
   preserves-meet-hom-Poset :
     hom-Poset
       ( poset-Order-Theoretic-Meet-Semilattice A)
       ( poset-Order-Theoretic-Meet-Semilattice B) → UU (l1 ⊔ l3 ⊔ l4)
-  preserves-meet-hom-Poset f = {!!}
+  preserves-meet-hom-Poset = {!!}
 
   is-prop-preserves-meet-hom-Prop :
     ( f :
@@ -112,7 +112,7 @@ module _
         ( poset-Order-Theoretic-Meet-Semilattice A)
         ( poset-Order-Theoretic-Meet-Semilattice B)) →
     is-prop (preserves-meet-hom-Poset f)
-  is-prop-preserves-meet-hom-Prop f = {!!}
+  is-prop-preserves-meet-hom-Prop = {!!}
 
   hom-set-Order-Theoretic-Meet-Semilattice : Set (l1 ⊔ l2 ⊔ l3 ⊔ l4)
   hom-set-Order-Theoretic-Meet-Semilattice = {!!}

@@ -81,12 +81,12 @@ module _
 
   sign-comp-equivalence-relation :
     equivalence-relation lzero (Fin n ≃ type-UU-Fin n X)
-  pr1 sign-comp-equivalence-relation f g = {!!}
+  sign-comp-equivalence-relation = {!!}
 
   is-decidable-sign-comp-equivalence-relation :
     (f g : Fin n ≃ type-UU-Fin n X) →
     is-decidable (sim-equivalence-relation sign-comp-equivalence-relation f g)
-  is-decidable-sign-comp-equivalence-relation f g = {!!}
+  is-decidable-sign-comp-equivalence-relation = {!!}
 
   quotient-sign-comp : UU (lsuc lzero ⊔ l)
   quotient-sign-comp = {!!}
@@ -121,7 +121,7 @@ module _
         ( X , unit-trunc-Prop (equiv-count eX)))
       ( transposition Y ∘e equiv-count eX)
       ( transposition Y ∘e (transposition Y ∘e equiv-count eX)))
-  not-sign-comp-transposition-count Y P = {!!}
+  not-sign-comp-transposition-count = {!!}
 
   inv-Fin-2-quotient-sign-comp-count :
     ( T : quotient-sign-comp
@@ -135,14 +135,14 @@ module _
         ( T)
         ( equiv-count eX)) →
     Fin 2
-  inv-Fin-2-quotient-sign-comp-count T (inl P) = {!!}
+  inv-Fin-2-quotient-sign-comp-count = {!!}
 
   equiv-Fin-2-quotient-sign-comp-count :
     Fin 2 ≃
     quotient-sign-comp
       ( number-of-elements-count eX)
       ( X , unit-trunc-Prop (equiv-count eX))
-  pr1 equiv-Fin-2-quotient-sign-comp-count (inl (inr star)) = {!!}
+  equiv-Fin-2-quotient-sign-comp-count = {!!}
 
 module _
   {l : Level} (n : ℕ) (X : UU-Fin l n) (ineq : leq-ℕ 2 n)
@@ -150,7 +150,7 @@ module _
 
   equiv-fin-2-quotient-sign-comp-equiv-Fin :
     (Fin n ≃ type-UU-Fin n X) → (Fin 2 ≃ quotient-sign-comp n X)
-  equiv-fin-2-quotient-sign-comp-equiv-Fin h = {!!}
+  equiv-fin-2-quotient-sign-comp-equiv-Fin = {!!}
 ```
 
 ```agda
@@ -162,18 +162,18 @@ module _
     (X X' : UU-Fin l n) →
     (type-UU-Fin n X ≃ type-UU-Fin n X') →
     (Fin n ≃ type-UU-Fin n X) → (Fin n ≃ type-UU-Fin n X')
-  map-simpson-comp-equiv X X' e f = {!!}
+  map-simpson-comp-equiv = {!!}
 
   simpson-comp-equiv :
     (X X' : UU-Fin l n) →
     (type-UU-Fin n X ≃ type-UU-Fin n X') →
     (Fin n ≃ type-UU-Fin n X) ≃ (Fin n ≃ type-UU-Fin n X')
-  pr1 (simpson-comp-equiv X X' e) = {!!}
+  simpson-comp-equiv = {!!}
 
   abstract
     preserves-id-equiv-simpson-comp-equiv :
       (X : UU-Fin l n) → Id (simpson-comp-equiv X X id-equiv) id-equiv
-    preserves-id-equiv-simpson-comp-equiv X = {!!}
+    preserves-id-equiv-simpson-comp-equiv = {!!}
 
     preserves-comp-simpson-comp-equiv :
       ( X Y Z : UU-Fin l n)
@@ -182,7 +182,7 @@ module _
       Id
         ( simpson-comp-equiv X Z (f ∘e e))
         ( simpson-comp-equiv Y Z f ∘e simpson-comp-equiv X Y e)
-    preserves-comp-simpson-comp-equiv X Y Z e f = {!!}
+    preserves-comp-simpson-comp-equiv = {!!}
 
   private
     lemma-sign-comp :
@@ -194,7 +194,7 @@ module _
         ( sign-homomorphism-Fin-two n (Fin-UU-Fin' n)
           ( inv-equiv ( map-simpson-comp-equiv X X' e f) ∘e
             map-simpson-comp-equiv X X' e f'))
-    lemma-sign-comp X X' e f f' = {!!}
+    lemma-sign-comp = {!!}
 
   preserves-sign-comp-simpson-comp-equiv :
     ( X X' : UU-Fin l n)
@@ -205,7 +205,7 @@ module _
         ( sign-comp-equivalence-relation n X')
         ( map-simpson-comp-equiv X X' e f)
         ( map-simpson-comp-equiv X X' e f'))
-  pr1 (preserves-sign-comp-simpson-comp-equiv X X' e f f') = {!!}
+  preserves-sign-comp-simpson-comp-equiv = {!!}
 ```
 
 ```agda
@@ -217,7 +217,7 @@ module _
     (n : ℕ) →
     type-Group (symmetric-Group (raise-Fin-Set l (n +ℕ 2))) →
     Fin (n +ℕ 2) ≃ raise l (Fin (n +ℕ 2))
-  sign-comp-aut-succ-succ-Fin n = {!!}
+  sign-comp-aut-succ-succ-Fin = {!!}
 
   not-action-equiv-family-on-subuniverse-transposition :
     ( n : ℕ) →
@@ -238,7 +238,7 @@ module _
             unit-trunc-Prop (compute-raise-Fin l (n +ℕ 2)))
           ( transposition Y))
         ( sign-comp-aut-succ-succ-Fin n (transposition Y))))
-  not-action-equiv-family-on-subuniverse-transposition n = {!!}
+  not-action-equiv-family-on-subuniverse-transposition = {!!}
 
   simpson-delooping-sign :
     (n : ℕ) →

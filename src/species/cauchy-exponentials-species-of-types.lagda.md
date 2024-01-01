@@ -51,7 +51,7 @@ species of types :
 ```agda
 cauchy-exponential-species-types :
   {l1 l2 : Level} → species-types l1 l2 → species-types l1 (lsuc l1 ⊔ l2)
-cauchy-exponential-species-types {l1} {l2} S X = {!!}
+cauchy-exponential-species-types = {!!}
 ```
 
 ## Propositions
@@ -98,7 +98,7 @@ module _
         ( cauchy-exponential-species-types S)
         ( cauchy-exponential-species-types T)
         ( X)
-    pr1 (reassociate X) ((d , dl , dr) , s , t) = {!!}
+    reassociate = {!!}
 
   equiv-cauchy-exponential-sum-species-types :
     equiv-species-types
@@ -106,5 +106,5 @@ module _
       ( cauchy-product-species-types
         ( cauchy-exponential-species-types S)
         ( cauchy-exponential-species-types T))
-  equiv-cauchy-exponential-sum-species-types X = {!!}
+  equiv-cauchy-exponential-sum-species-types = {!!}
 ```

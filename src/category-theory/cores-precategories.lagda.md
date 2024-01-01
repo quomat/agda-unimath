@@ -68,7 +68,7 @@ module _
 ```agda
 core-precategory-Precategory :
   {l1 l2 : Level} (C : Precategory l1 l2) → Precategory l1 l2
-core-precategory-Precategory C = {!!}
+core-precategory-Precategory = {!!}
 ```
 
 ### The core pregroupoid
@@ -80,7 +80,7 @@ module _
 
   is-pregroupoid-core-Precategory :
     is-pregroupoid-Precategory (core-precategory-Precategory C)
-  pr1 (pr1 (is-pregroupoid-core-Precategory x y (f , f' , l , r))) = {!!}
+  is-pregroupoid-core-Precategory = {!!}
 
   core-pregroupoid-Precategory : Pregroupoid l1 l2
   pr1 core-pregroupoid-Precategory = {!!}
@@ -113,7 +113,7 @@ module _
 
   is-replete-core-Precategory :
     is-replete-Subprecategory C (core-subprecategory-Precategory C)
-  pr1 (is-replete-core-Precategory x y (f , is-iso-f)) = {!!}
+  is-replete-core-Precategory = {!!}
 ```
 
 ### The base precategory is a category if and only if the core is
@@ -127,23 +127,23 @@ module _
     is-category-Precategory C →
     (x : obj-Precategory C) →
     is-torsorial (iso-Precategory (core-precategory-Precategory C) x)
-  is-torsorial-iso-core-is-category-Precategory is-category-C x = {!!}
+  is-torsorial-iso-core-is-category-Precategory = {!!}
 
   is-category-core-is-category-Precategory :
     is-category-Precategory C →
     is-category-Precategory (core-precategory-Precategory C)
-  is-category-core-is-category-Precategory is-category-C x = {!!}
+  is-category-core-is-category-Precategory = {!!}
 
   is-torsorial-iso-is-category-core-Precategory :
     is-category-Precategory (core-precategory-Precategory C) →
     (x : obj-Precategory C) →
     is-torsorial (iso-Precategory C x)
-  is-torsorial-iso-is-category-core-Precategory is-category-core-C x = {!!}
+  is-torsorial-iso-is-category-core-Precategory = {!!}
 
   is-category-is-category-core-Precategory :
     is-category-Precategory (core-precategory-Precategory C) →
     is-category-Precategory C
-  is-category-is-category-core-Precategory is-category-core-C x = {!!}
+  is-category-is-category-core-Precategory = {!!}
 ```
 
 ### The construction of the core is idempotent

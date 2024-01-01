@@ -81,7 +81,7 @@ module _
 ```agda
 free-action-Concrete-Group :
   {l1 : Level} (l2 : Level) → Concrete-Group l1 → UU (l1 ⊔ lsuc l2)
-free-action-Concrete-Group l2 G = {!!}
+free-action-Concrete-Group = {!!}
 ```
 
 ## Properties

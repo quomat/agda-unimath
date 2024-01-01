@@ -109,11 +109,11 @@ module _
       map-cocone-sequential-diagram A c n ~
       map-cocone-sequential-diagram A c' n) →
     UU (l1 ⊔ l2)
-  coherence-htpy-cocone-sequential-diagram c c' K = {!!}
+  coherence-htpy-cocone-sequential-diagram = {!!}
 
   htpy-cocone-sequential-diagram :
     ( c c' : cocone-sequential-diagram A X) → UU (l1 ⊔ l2)
-  htpy-cocone-sequential-diagram c c' = {!!}
+  htpy-cocone-sequential-diagram = {!!}
 ```
 
 ### Components of a homotopy of cocones under a sequential diagram
@@ -151,7 +151,7 @@ module _
   cocone-map-sequential-diagram :
     { l : Level} {Y : UU l} →
     ( X → Y) → cocone-sequential-diagram A Y
-  pr1 (cocone-map-sequential-diagram f) n = {!!}
+  cocone-map-sequential-diagram = {!!}
 ```
 
 ### Postcomposition cocones under postcomposition sequential diagrams
@@ -164,7 +164,7 @@ module _
 
   cocone-postcomp-sequential-diagram :
     cocone-sequential-diagram (postcomp-sequential-diagram X A) (X → Y)
-  pr1 cocone-postcomp-sequential-diagram n g x = {!!}
+  cocone-postcomp-sequential-diagram = {!!}
 ```
 
 ## Properties
@@ -181,34 +181,34 @@ module _
 
   reflexive-htpy-cocone-sequential-diagram :
     ( c : cocone-sequential-diagram A X) → htpy-cocone-sequential-diagram A c c
-  pr1 (reflexive-htpy-cocone-sequential-diagram c) n = {!!}
+  reflexive-htpy-cocone-sequential-diagram = {!!}
 
   htpy-eq-cocone-sequential-diagram :
     ( c c' : cocone-sequential-diagram A X) → ( c ＝ c') →
     htpy-cocone-sequential-diagram A c c'
-  htpy-eq-cocone-sequential-diagram c .c refl = {!!}
+  htpy-eq-cocone-sequential-diagram = {!!}
 
   abstract
     is-torsorial-htpy-cocone-sequential-diagram :
       ( c : cocone-sequential-diagram A X) →
       is-torsorial (htpy-cocone-sequential-diagram A c)
-    is-torsorial-htpy-cocone-sequential-diagram c = {!!}
+    is-torsorial-htpy-cocone-sequential-diagram = {!!}
 
     is-equiv-htpy-eq-cocone-sequential-diagram :
       ( c c' : cocone-sequential-diagram A X) →
       is-equiv (htpy-eq-cocone-sequential-diagram c c')
-    is-equiv-htpy-eq-cocone-sequential-diagram c = {!!}
+    is-equiv-htpy-eq-cocone-sequential-diagram = {!!}
 
   extensionality-cocone-sequential-diagram :
     ( c c' : cocone-sequential-diagram A X) →
     (c ＝ c') ≃ htpy-cocone-sequential-diagram A c c'
-  pr1 (extensionality-cocone-sequential-diagram c c') = {!!}
+  extensionality-cocone-sequential-diagram = {!!}
 
   eq-htpy-cocone-sequential-diagram :
     ( c c' : cocone-sequential-diagram A X) →
     htpy-cocone-sequential-diagram A c c' →
     c ＝ c'
-  eq-htpy-cocone-sequential-diagram c c' = {!!}
+  eq-htpy-cocone-sequential-diagram = {!!}
 ```
 
 ### Postcomposing a cocone under a sequential diagram by identity is the identity
@@ -240,7 +240,7 @@ module _
     ( h : X → Y) (k : Y → Z) →
     cocone-map-sequential-diagram A c (k ∘ h) ＝
     cocone-map-sequential-diagram A (cocone-map-sequential-diagram A c h) k
-  cocone-map-comp-sequential-diagram h k = {!!}
+  cocone-map-comp-sequential-diagram = {!!}
 ```
 
 ### Cocones under sequential diagrams are a special case of coequalizers
@@ -299,7 +299,7 @@ module _
         ( top-map-cofork-cocone-sequential-diagram)
         ( X) →
       cocone-sequential-diagram A X
-    pr1 (cocone-sequential-diagram-cofork e) = {!!}
+    cocone-sequential-diagram-cofork = {!!}
 
     cofork-cocone-sequential-diagram :
       cocone-sequential-diagram A X →
@@ -307,16 +307,16 @@ module _
         ( bottom-map-cofork-cocone-sequential-diagram)
         ( top-map-cofork-cocone-sequential-diagram)
         ( X)
-    pr1 (cofork-cocone-sequential-diagram c) = {!!}
+    cofork-cocone-sequential-diagram = {!!}
 
     abstract
       is-section-cocone-sequential-diagram-cofork :
         cofork-cocone-sequential-diagram ∘ cocone-sequential-diagram-cofork ~ id
-      is-section-cocone-sequential-diagram-cofork e = {!!}
+      is-section-cocone-sequential-diagram-cofork = {!!}
 
       is-retraction-cocone-sequential-diagram-cofork :
         cocone-sequential-diagram-cofork ∘ cofork-cocone-sequential-diagram ~ id
-      is-retraction-cocone-sequential-diagram-cofork c = {!!}
+      is-retraction-cocone-sequential-diagram-cofork = {!!}
 
     is-equiv-cocone-sequential-diagram-cofork :
       is-equiv cocone-sequential-diagram-cofork
@@ -328,7 +328,7 @@ module _
         ( top-map-cofork-cocone-sequential-diagram)
         ( X) ≃
       cocone-sequential-diagram A X
-    pr1 equiv-cocone-sequential-diagram-cofork = {!!}
+    equiv-cocone-sequential-diagram-cofork = {!!}
 
   triangle-cocone-sequential-diagram-cofork :
     { l2 l3 : Level} {X : UU l2} {Y : UU l3} →

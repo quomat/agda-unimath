@@ -89,23 +89,23 @@ module _
 
   is-inhabited-subtype-set-quotient :
     (x : set-quotient) → is-inhabited-subtype (subtype-set-quotient x)
-  is-inhabited-subtype-set-quotient x = {!!}
+  is-inhabited-subtype-set-quotient = {!!}
 
   inhabited-subtype-set-quotient : set-quotient → inhabited-subtype l2 A
   inhabited-subtype-set-quotient = {!!}
 
   is-in-equivalence-class-set-quotient :
     (x : set-quotient) → A → UU l2
-  is-in-equivalence-class-set-quotient x = {!!}
+  is-in-equivalence-class-set-quotient = {!!}
 
   is-prop-is-in-equivalence-class-set-quotient :
     (x : set-quotient) (a : A) →
     is-prop (is-in-equivalence-class-set-quotient x a)
-  is-prop-is-in-equivalence-class-set-quotient x = {!!}
+  is-prop-is-in-equivalence-class-set-quotient = {!!}
 
   is-in-equivalence-class-set-quotient-Prop :
     (x : set-quotient) → (A → Prop l2)
-  is-in-equivalence-class-set-quotient-Prop x = {!!}
+  is-in-equivalence-class-set-quotient-Prop = {!!}
 
   is-set-set-quotient : is-set set-quotient
   is-set-set-quotient = {!!}
@@ -115,7 +115,7 @@ module _
 
   unit-im-set-quotient :
     hom-slice (prop-equivalence-relation R) subtype-set-quotient
-  pr1 unit-im-set-quotient = {!!}
+  unit-im-set-quotient = {!!}
 
   is-image-set-quotient :
     is-image
@@ -138,20 +138,20 @@ module _
   apply-effectiveness-quotient-map :
     {x y : A} → quotient-map R x ＝ quotient-map R y →
     sim-equivalence-relation R x y
-  apply-effectiveness-quotient-map {x} {y} = {!!}
+  apply-effectiveness-quotient-map = {!!}
 
   apply-effectiveness-quotient-map' :
     {x y : A} → sim-equivalence-relation R x y →
     quotient-map R x ＝ quotient-map R y
-  apply-effectiveness-quotient-map' {x} {y} = {!!}
+  apply-effectiveness-quotient-map' = {!!}
 
   is-surjective-and-effective-quotient-map :
     is-surjective-and-effective R (quotient-map R)
-  pr1 is-surjective-and-effective-quotient-map = {!!}
+  is-surjective-and-effective-quotient-map = {!!}
 
   reflecting-map-quotient-map :
     reflecting-map-equivalence-relation R (set-quotient R)
-  pr1 reflecting-map-quotient-map = {!!}
+  reflecting-map-quotient-map = {!!}
 ```
 
 ### The set quotient of `R` is a set quotient of `R`
@@ -169,7 +169,7 @@ module _
     {l : Level} (X : Set l) →
     reflecting-map-equivalence-relation R (type-Set X) →
     hom-Set (quotient-Set R) X
-  inv-precomp-set-quotient X = {!!}
+  inv-precomp-set-quotient = {!!}
 
   is-section-inv-precomp-set-quotient :
     {l : Level} (X : Set l) →
@@ -177,7 +177,7 @@ module _
     (a : A) →
     inv-precomp-set-quotient X f (quotient-map R a) ＝
       map-reflecting-map-equivalence-relation R f a
-  is-section-inv-precomp-set-quotient X f = {!!}
+  is-section-inv-precomp-set-quotient = {!!}
 
   is-retraction-inv-precomp-set-quotient :
     {l : Level} (X : Set l) (f : hom-Set (quotient-Set R) X) →
@@ -188,7 +188,7 @@ module _
         ( X)
         ( f)) ＝
     f
-  is-retraction-inv-precomp-set-quotient X f = {!!}
+  is-retraction-inv-precomp-set-quotient = {!!}
 ```
 
 ### Induction into propositions on the set quotient
@@ -208,7 +208,7 @@ module _
     {l : Level} (P : set-quotient R → Prop l) →
     ((x : A) → type-Prop (P (quotient-map R x))) →
     ((y : set-quotient R) → type-Prop (P y))
-  induction-set-quotient P = {!!}
+  induction-set-quotient = {!!}
 ```
 
 ### Double induction for set quotients

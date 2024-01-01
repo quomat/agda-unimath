@@ -45,7 +45,7 @@ module _
 
   is-prop-is-0-acyclic-map :
     (f : A → B) → is-prop (is-0-acyclic-map f)
-  is-prop-is-0-acyclic-map f = {!!}
+  is-prop-is-0-acyclic-map = {!!}
 ```
 
 ## Properties
@@ -59,11 +59,11 @@ module _
 
   is-surjective-is-0-acyclic-map :
     is-0-acyclic-map f → is-surjective f
-  is-surjective-is-0-acyclic-map ac = {!!}
+  is-surjective-is-0-acyclic-map = {!!}
 
   is-0-acyclic-map-is-surjective :
     is-surjective f → is-0-acyclic-map f
-  is-0-acyclic-map-is-surjective s = {!!}
+  is-0-acyclic-map-is-surjective = {!!}
 ```
 
 ## See also

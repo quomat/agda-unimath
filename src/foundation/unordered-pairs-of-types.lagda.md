@@ -42,7 +42,7 @@ unordered-pair-types l = {!!}
 equiv-unordered-pair-types :
   {l1 l2 : Level} →
   unordered-pair-types l1 → unordered-pair-types l2 → UU (l1 ⊔ l2)
-equiv-unordered-pair-types A B = {!!}
+equiv-unordered-pair-types = {!!}
 
 module _
   {l1 l2 : Level} (A : unordered-pair-types l1) (B : unordered-pair-types l2)
@@ -78,7 +78,7 @@ module _
 
   equiv-eq-unordered-pair-types :
     (B : unordered-pair-types l) → A ＝ B → equiv-unordered-pair-types A B
-  equiv-eq-unordered-pair-types .A refl = {!!}
+  equiv-eq-unordered-pair-types = {!!}
 
   is-torsorial-equiv-unordered-pair-types :
     is-torsorial (equiv-unordered-pair-types A)
@@ -90,5 +90,5 @@ module _
 
   extensionality-unordered-pair-types :
     (B : unordered-pair-types l) → (A ＝ B) ≃ equiv-unordered-pair-types A B
-  pr1 (extensionality-unordered-pair-types B) = {!!}
+  extensionality-unordered-pair-types = {!!}
 ```

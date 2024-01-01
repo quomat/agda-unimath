@@ -74,12 +74,12 @@ module _
     (g : type-Group G) (h : type-Group G) (x : type-action-Group) →
     mul-action-Group (mul-Group G g h) x ＝
     mul-action-Group g (mul-action-Group h x)
-  preserves-mul-action-Group g h = {!!}
+  preserves-mul-action-Group = {!!}
 
   transpose-eq-mul-action-Group :
     (g : type-Group G) (x y : type-action-Group) →
     mul-action-Group g x ＝ y → x ＝ mul-action-Group (inv-Group G g) y
-  transpose-eq-mul-action-Group g x ._ refl = {!!}
+  transpose-eq-mul-action-Group = {!!}
 ```
 
 ## Examples

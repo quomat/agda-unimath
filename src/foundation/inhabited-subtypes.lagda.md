@@ -30,15 +30,15 @@ underlying type of `P` is inhabited.
 ```agda
 is-inhabited-subtype-Prop :
   {l1 l2 : Level} {A : UU l1} → subtype l2 A → Prop (l1 ⊔ l2)
-is-inhabited-subtype-Prop P = {!!}
+is-inhabited-subtype-Prop = {!!}
 
 is-inhabited-subtype :
   {l1 l2 : Level} {A : UU l1} → subtype l2 A → UU (l1 ⊔ l2)
-is-inhabited-subtype P = {!!}
+is-inhabited-subtype = {!!}
 
 inhabited-subtype :
   {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-inhabited-subtype l2 A = {!!}
+inhabited-subtype = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (P : inhabited-subtype l2 A)
@@ -86,18 +86,18 @@ module _
 has-same-elements-inhabited-subtype-Prop :
   {l1 l2 l3 : Level} {A : UU l1} →
   inhabited-subtype l2 A → inhabited-subtype l3 A → Prop (l1 ⊔ l2 ⊔ l3)
-has-same-elements-inhabited-subtype-Prop P Q = {!!}
+has-same-elements-inhabited-subtype-Prop = {!!}
 
 has-same-elements-inhabited-subtype :
   {l1 l2 l3 : Level} {A : UU l1} →
   inhabited-subtype l2 A → inhabited-subtype l3 A → UU (l1 ⊔ l2 ⊔ l3)
-has-same-elements-inhabited-subtype P Q = {!!}
+has-same-elements-inhabited-subtype = {!!}
 
 is-prop-has-same-elements-inhabited-subtype :
   {l1 l2 l3 : Level} {A : UU l1} →
   (P : inhabited-subtype l2 A) (Q : inhabited-subtype l3 A) →
   is-prop (has-same-elements-inhabited-subtype P Q)
-is-prop-has-same-elements-inhabited-subtype P Q = {!!}
+is-prop-has-same-elements-inhabited-subtype = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (P : inhabited-subtype l2 A)
@@ -114,17 +114,17 @@ module _
   extensionality-inhabited-subtype :
     (Q : inhabited-subtype l2 A) → (P ＝ Q) ≃
     has-same-elements-inhabited-subtype P Q
-  extensionality-inhabited-subtype Q = {!!}
+  extensionality-inhabited-subtype = {!!}
 
   has-same-elements-eq-inhabited-subtype :
     (Q : inhabited-subtype l2 A) →
     (P ＝ Q) → has-same-elements-inhabited-subtype P Q
-  has-same-elements-eq-inhabited-subtype Q = {!!}
+  has-same-elements-eq-inhabited-subtype = {!!}
 
   eq-has-same-elements-inhabited-subtype :
     (Q : inhabited-subtype l2 A) →
     has-same-elements-inhabited-subtype P Q → P ＝ Q
-  eq-has-same-elements-inhabited-subtype Q = {!!}
+  eq-has-same-elements-inhabited-subtype = {!!}
 
   refl-extensionality-inhabited-subtype :
     map-equiv (extensionality-inhabited-subtype P) refl ＝

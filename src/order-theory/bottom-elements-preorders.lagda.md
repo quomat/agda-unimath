@@ -36,7 +36,7 @@ module _
 
   is-prop-is-bottom-element-Preorder :
     (x : type-Preorder X) → is-prop (is-bottom-element-Preorder x)
-  is-prop-is-bottom-element-Preorder x = {!!}
+  is-prop-is-bottom-element-Preorder = {!!}
 
   has-bottom-element-Preorder : UU (l1 ⊔ l2)
   has-bottom-element-Preorder = {!!}

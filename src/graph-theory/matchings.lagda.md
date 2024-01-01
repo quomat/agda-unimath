@@ -40,7 +40,7 @@ module _
     ( (p : unordered-pair-vertices-Undirected-Graph G) →
       edge-Undirected-Graph G p → Fin 2) →
     vertex-Undirected-Graph G → UU (l1 ⊔ l2)
-  selected-edges-vertex-Undirected-Graph G c x = {!!}
+  selected-edges-vertex-Undirected-Graph = {!!}
 
   matching : Undirected-Graph l1 l2 → UU (lsuc lzero ⊔ l1 ⊔ l2)
   matching G = {!!}

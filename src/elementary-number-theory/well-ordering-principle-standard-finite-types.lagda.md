@@ -58,79 +58,68 @@ numbers.
 exists-not-not-forall-Fin :
   {l : Level} (k : ℕ) {P : Fin k → UU l} → (is-decidable-fam P) →
   ¬ ((x : Fin k) → P x) → Σ (Fin k) (λ x → ¬ (P x))
-exists-not-not-forall-Fin {l} zero-ℕ d H = {!!}
-exists-not-not-forall-Fin {l} (succ-ℕ k) {P} d H with d (inr star)
-... | inl p = {!!}
+exists-not-not-forall-Fin = {!!}
 ... | inr f = {!!}
 
 exists-not-not-forall-count :
   {l1 l2 : Level} {X : UU l1} (P : X → UU l2) →
   (is-decidable-fam P) → count X →
   ¬ ((x : X) → P x) → Σ X (λ x → ¬ (P x))
-exists-not-not-forall-count {l1} {l2} {X} P p e = {!!}
+exists-not-not-forall-count = {!!}
 ```
 
 ```agda
 is-lower-bound-Fin :
   {l : Level} (k : ℕ) (P : Fin k → UU l) → Fin k → UU l
-is-lower-bound-Fin k P x = {!!}
+is-lower-bound-Fin = {!!}
 
 abstract
   is-prop-is-lower-bound-Fin :
     {l : Level} (k : ℕ) {P : Fin k → UU l} (x : Fin k) →
     is-prop (is-lower-bound-Fin k P x)
-  is-prop-is-lower-bound-Fin k x = {!!}
+  is-prop-is-lower-bound-Fin = {!!}
 
   is-lower-bound-fin-Prop :
     {l : Level} (k : ℕ) (P : Fin k → UU l) (x : Fin k) → Prop l
-  pr1 (is-lower-bound-fin-Prop k P x) = {!!}
+  is-lower-bound-fin-Prop = {!!}
 
 minimal-element-Fin :
   {l : Level} (k : ℕ) (P : Fin k → UU l) → UU l
-minimal-element-Fin k P = {!!}
+minimal-element-Fin = {!!}
 
 abstract
   all-elements-equal-minimal-element-Fin :
     {l : Level} (k : ℕ) (P : subtype l (Fin k)) →
     all-elements-equal (minimal-element-Fin k (is-in-subtype P))
-  all-elements-equal-minimal-element-Fin k P
-    (pair x (pair p l)) (pair y (pair q m)) = {!!}
+  all-elements-equal-minimal-element-Fin = {!!}
 
 abstract
   is-prop-minimal-element-Fin :
     {l : Level} (k : ℕ) (P : subtype l (Fin k)) →
     is-prop (minimal-element-Fin k (is-in-subtype P))
-  is-prop-minimal-element-Fin k P = {!!}
+  is-prop-minimal-element-Fin = {!!}
 
 minimal-element-Fin-Prop :
   {l : Level} (k : ℕ) (P : subtype l (Fin k)) → Prop l
-pr1 (minimal-element-Fin-Prop k P) = {!!}
-pr2 (minimal-element-Fin-Prop k P) = {!!}
+minimal-element-Fin-Prop = {!!}
 
 is-lower-bound-inl-Fin :
   {l : Level} (k : ℕ) {P : Fin (succ-ℕ k) → UU l} {x : Fin k} →
   is-lower-bound-Fin k (P ∘ inl) x →
   is-lower-bound-Fin (succ-ℕ k) P (inl-Fin k x)
-is-lower-bound-inl-Fin k H (inl y) p = {!!}
-is-lower-bound-inl-Fin k {P} {x} H (inr star) p = {!!}
+is-lower-bound-inl-Fin = {!!}
 
 well-ordering-principle-Σ-Fin :
   {l : Level} (k : ℕ) {P : Fin k → UU l} → ((x : Fin k) → is-decidable (P x)) →
   Σ (Fin k) P → minimal-element-Fin k P
-pr1 (well-ordering-principle-Σ-Fin (succ-ℕ k) d (pair (inl x) p)) = {!!}
-pr1 (pr2 (well-ordering-principle-Σ-Fin (succ-ℕ k) d (pair (inl x) p))) = {!!}
-pr2 (pr2 (well-ordering-principle-Σ-Fin (succ-ℕ k) d (pair (inl x) p))) = {!!}
-well-ordering-principle-Σ-Fin (succ-ℕ k) {P} d (pair (inr star) p)
-  with
-  is-decidable-Σ-Fin k (λ t → d (inl t))
-... | inl t = {!!}
+well-ordering-principle-Σ-Fin = {!!}
 ... | inr f = {!!}
 
 well-ordering-principle-∃-Fin :
   {l : Level} (k : ℕ) (P : decidable-subtype l (Fin k)) →
   ∃ (Fin k) (is-in-decidable-subtype P) →
   minimal-element-Fin k (is-in-decidable-subtype P)
-well-ordering-principle-∃-Fin k P H = {!!}
+well-ordering-principle-∃-Fin = {!!}
 ```
 
 ### Hilbert's `ε`-operator for decidable subtypes of standard finite types
@@ -139,8 +128,7 @@ well-ordering-principle-∃-Fin k P H = {!!}
 ε-operator-decidable-subtype-Fin :
   {l : Level} (k : ℕ) (P : decidable-subtype l (Fin k)) →
   ε-operator-Hilbert (type-decidable-subtype P)
-ε-operator-decidable-subtype-Fin {l} zero-ℕ P t = {!!}
-ε-operator-decidable-subtype-Fin {l} (succ-ℕ k) P t = {!!}
+ε-operator-decidable-subtype-Fin = {!!}
 ```
 
 ```agda
@@ -149,5 +137,5 @@ abstract
     {l1 : Level} {k : ℕ} {B : Fin k → UU l1} →
     ((x : Fin k) → is-decidable (B x)) →
     type-trunc-Prop (Σ (Fin k) B) → Σ (Fin k) B
-  elim-trunc-decidable-fam-Fin {l1} {zero-ℕ} {B} d y = {!!}
+  elim-trunc-decidable-fam-Fin = {!!}
 ```

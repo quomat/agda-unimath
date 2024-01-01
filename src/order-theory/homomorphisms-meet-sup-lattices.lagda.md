@@ -37,7 +37,7 @@ module _
   preserves-meets-sups :
     (type-Meet-Suplattice A → type-Meet-Suplattice B) →
     UU (l1 ⊔ lsuc l2 ⊔ l3)
-  preserves-meets-sups f = {!!}
+  preserves-meets-sups = {!!}
 
   hom-Meet-Suplattice : UU (l1 ⊔ lsuc l2 ⊔ l3)
   hom-Meet-Suplattice = {!!}

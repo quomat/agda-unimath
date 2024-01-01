@@ -59,5 +59,5 @@ module _
 
   is-epi-iso-Large-Precategory :
     is-epi-Large-Precategory C l3 X Y (hom-iso-Large-Precategory C f)
-  is-epi-iso-Large-Precategory Z = {!!}
+  is-epi-iso-Large-Precategory = {!!}
 ```

@@ -38,19 +38,19 @@ module _
   tr-function-type :
     (p : x ＝ y) (f : B x → C x) →
     tr (λ a → B a → C a) p f ＝ (tr C p ∘ (f ∘ tr B (inv p)))
-  tr-function-type refl f = {!!}
+  tr-function-type = {!!}
 
   compute-dependent-identification-function-type :
     (p : x ＝ y) (f : B x → C x) (g : B y → C y) →
     ((b : B x) → tr C p (f b) ＝ g (tr B p b)) ≃
     (tr (λ a → B a → C a) p f ＝ g)
-  compute-dependent-identification-function-type refl f g = {!!}
+  compute-dependent-identification-function-type = {!!}
 
   map-compute-dependent-identification-function-type :
     (p : x ＝ y) (f : B x → C x) (g : B y → C y) →
     ((b : B x) → tr C p (f b) ＝ g (tr B p b)) →
     (tr (λ a → B a → C a) p f ＝ g)
-  map-compute-dependent-identification-function-type p f g = {!!}
+  map-compute-dependent-identification-function-type = {!!}
 ```
 
 ### Relation between `compute-dependent-identification-function-type` and `preserves-tr`
@@ -67,7 +67,7 @@ module _
       ( compute-dependent-identification-function-type A B p (f i0) (f i1))
       ( apd f p) a ＝
     inv-htpy (preserves-tr f p) a
-  preserves-tr-apd-function refl = {!!}
+  preserves-tr-apd-function = {!!}
 ```
 
 ### Computation of dependent identifications of functions over homotopies
@@ -116,7 +116,7 @@ module _
 
   dependent-comp :
     ((a : A) → C a → D a) → ((a : A) → B a → C a) → (a : A) → B a → D a
-  dependent-comp g f a b = {!!}
+  dependent-comp = {!!}
 ```
 
 ## See also

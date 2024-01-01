@@ -48,7 +48,7 @@ binomial-sum-Commutative-Ring :
   {l : Level} (A : Commutative-Ring l)
   (n : ℕ) (f : functional-vec-Commutative-Ring A (succ-ℕ n)) →
   type-Commutative-Ring A
-binomial-sum-Commutative-Ring A = {!!}
+binomial-sum-Commutative-Ring = {!!}
 ```
 
 ## Properties
@@ -123,7 +123,7 @@ binomial-theorem-Commutative-Ring :
       mul-Commutative-Ring A
       ( power-Commutative-Ring A (nat-Fin (succ-ℕ n) i) x)
       ( power-Commutative-Ring A (dist-ℕ (nat-Fin (succ-ℕ n) i) n) y))
-binomial-theorem-Commutative-Ring A n x y = {!!}
+binomial-theorem-Commutative-Ring = {!!}
 ```
 
 ## Corollaries
@@ -159,5 +159,5 @@ is-linear-combination-power-add-Commutative-Ring :
               ( power-Commutative-Ring A
                 ( dist-ℕ (nat-Fin (succ-ℕ m) i) m)
                 ( y))))))
-is-linear-combination-power-add-Commutative-Ring A = {!!}
+is-linear-combination-power-add-Commutative-Ring = {!!}
 ```

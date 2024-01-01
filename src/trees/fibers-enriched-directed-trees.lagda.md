@@ -72,13 +72,13 @@ module _
 
   shape-fiber-Enriched-Directed-Tree :
     node-fiber-Enriched-Directed-Tree → A
-  shape-fiber-Enriched-Directed-Tree y = {!!}
+  shape-fiber-Enriched-Directed-Tree = {!!}
 
   enrichment-fiber-Enriched-Directed-Tree :
     (y : node-fiber-Enriched-Directed-Tree) →
     B (shape-fiber-Enriched-Directed-Tree y) ≃
     direct-predecessor-fiber-Enriched-Directed-Tree y
-  enrichment-fiber-Enriched-Directed-Tree (y , w) = {!!}
+  enrichment-fiber-Enriched-Directed-Tree = {!!}
 
   fiber-Enriched-Directed-Tree : Enriched-Directed-Tree (l3 ⊔ l4) (l3 ⊔ l4) A B
   pr1 fiber-Enriched-Directed-Tree = {!!}
@@ -127,7 +127,7 @@ module _
         ( edge-enrichment-fiber-Enriched-Directed-Tree y b)) ,
       ( p)) ＝
     map-enrichment-fiber-Enriched-Directed-Tree y b
-  eq-map-enrichment-fiber-Enriched-Directed-Tree y b w p = {!!}
+  eq-map-enrichment-fiber-Enriched-Directed-Tree = {!!}
 ```
 
 ### Computing the direct predecessors of a node in a fiber

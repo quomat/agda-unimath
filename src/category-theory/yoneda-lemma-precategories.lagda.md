@@ -65,7 +65,7 @@ module _
   map-yoneda-Precategory :
     hom-copresheaf-Precategory C (representable-functor-Precategory C c) F →
     element-copresheaf-Precategory C F c
-  map-yoneda-Precategory σ = {!!}
+  map-yoneda-Precategory = {!!}
 ```
 
 The inverse to the Yoneda map:
@@ -75,19 +75,19 @@ The inverse to the Yoneda map:
     (u : element-copresheaf-Precategory C F c) →
     hom-family-functor-Small-Large-Precategory
       C Set-Large-Precategory (representable-functor-Precategory C c) F
-  hom-family-extension-yoneda-Precategory u x f = {!!}
+  hom-family-extension-yoneda-Precategory = {!!}
 
   naturality-extension-yoneda-Precategory :
     (u : element-copresheaf-Precategory C F c) →
     is-natural-transformation-Small-Large-Precategory
       C Set-Large-Precategory (representable-functor-Precategory C c) F
       ( hom-family-extension-yoneda-Precategory u)
-  naturality-extension-yoneda-Precategory u g = {!!}
+  naturality-extension-yoneda-Precategory = {!!}
 
   extension-yoneda-Precategory :
     element-copresheaf-Precategory C F c →
     hom-copresheaf-Precategory C (representable-functor-Precategory C c) F
-  pr1 (extension-yoneda-Precategory u) = {!!}
+  extension-yoneda-Precategory = {!!}
 ```
 
 The inverse is an inverse:
@@ -103,7 +103,7 @@ The inverse is an inverse:
     ( extension-yoneda-Precategory ∘
       map-yoneda-Precategory) ~
     id
-  is-retraction-extension-yoneda-Precategory σ = {!!}
+  is-retraction-extension-yoneda-Precategory = {!!}
 
   lemma-yoneda-Precategory : is-equiv map-yoneda-Precategory
   lemma-yoneda-Precategory = {!!}
@@ -111,7 +111,7 @@ The inverse is an inverse:
   equiv-lemma-yoneda-Precategory :
     hom-copresheaf-Precategory C (representable-functor-Precategory C c) F ≃
     element-copresheaf-Precategory C F c
-  pr1 equiv-lemma-yoneda-Precategory = {!!}
+  equiv-lemma-yoneda-Precategory = {!!}
 ```
 
 ## Corollaries

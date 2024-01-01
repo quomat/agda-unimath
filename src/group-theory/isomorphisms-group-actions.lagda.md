@@ -87,7 +87,7 @@ module _
   map-iso-action-Group :
     iso-action-Group →
     type-action-Group G X → type-action-Group G Y
-  map-iso-action-Group f = {!!}
+  map-iso-action-Group = {!!}
 
   preserves-action-iso-action-Group :
     (f : iso-action-Group) (g : type-Group G) →
@@ -96,7 +96,7 @@ module _
       ( mul-action-Group G X g)
       ( mul-action-Group G Y g)
       ( map-iso-action-Group f)
-  preserves-action-iso-action-Group f = {!!}
+  preserves-action-iso-action-Group = {!!}
 
   hom-inv-iso-action-Group :
     iso-action-Group → hom-action-Group G Y X
@@ -105,7 +105,7 @@ module _
   map-hom-inv-iso-action-Group :
     iso-action-Group →
     type-action-Group G Y → type-action-Group G X
-  map-hom-inv-iso-action-Group f = {!!}
+  map-hom-inv-iso-action-Group = {!!}
 
   is-section-hom-inv-iso-action-Group :
     (f : iso-action-Group) →
@@ -141,11 +141,11 @@ module _
 
   is-equiv-hom-is-iso-action-Group :
     is-iso-action-Group G X Y f → is-equiv-hom-action-Group G X Y f
-  is-equiv-hom-is-iso-action-Group is-iso-f = {!!}
+  is-equiv-hom-is-iso-action-Group = {!!}
 
   is-iso-is-equiv-hom-action-Group :
     is-equiv-hom-action-Group G X Y f → is-iso-action-Group G X Y f
-  pr1 (pr1 (is-iso-is-equiv-hom-action-Group is-equiv-f)) = {!!}
+  is-iso-is-equiv-hom-action-Group = {!!}
 
   is-equiv-is-equiv-hom-is-iso-action-Group :
     is-equiv is-equiv-hom-is-iso-action-Group
@@ -157,11 +157,11 @@ module _
 
   equiv-is-equiv-hom-is-iso-action-Group :
     is-iso-action-Group G X Y f ≃ is-equiv-hom-action-Group G X Y f
-  pr1 equiv-is-equiv-hom-is-iso-action-Group = {!!}
+  equiv-is-equiv-hom-is-iso-action-Group = {!!}
 
   equiv-is-iso-is-equiv-hom-action-Group :
     is-equiv-hom-action-Group G X Y f ≃ is-iso-action-Group G X Y f
-  pr1 equiv-is-iso-is-equiv-hom-action-Group = {!!}
+  equiv-is-iso-is-equiv-hom-action-Group = {!!}
 
 module _
   {l1 l2 l3 : Level} (G : Group l1)

@@ -47,7 +47,7 @@ is-multiple-of-cofibonacci m x = {!!}
 
 is-decidable-is-multiple-of-cofibonacci :
   (m x : ℕ) → is-decidable (is-multiple-of-cofibonacci m x)
-is-decidable-is-multiple-of-cofibonacci m x = {!!}
+is-decidable-is-multiple-of-cofibonacci = {!!}
 
 cofibonacci-multiple : (m : ℕ) → Σ ℕ (is-multiple-of-cofibonacci m)
 cofibonacci-multiple zero-ℕ = {!!}
@@ -59,19 +59,19 @@ cofibonacci-multiple (succ-ℕ m) = {!!}
 ```agda
 least-multiple-of-cofibonacci :
   (m : ℕ) → minimal-element-ℕ (is-multiple-of-cofibonacci m)
-least-multiple-of-cofibonacci m = {!!}
+least-multiple-of-cofibonacci = {!!}
 
 cofibonacci : ℕ → ℕ
 cofibonacci m = {!!}
 
 is-multiple-of-cofibonacci-cofibonacci :
   (m : ℕ) → is-multiple-of-cofibonacci m (cofibonacci m)
-is-multiple-of-cofibonacci-cofibonacci m = {!!}
+is-multiple-of-cofibonacci-cofibonacci = {!!}
 
 is-lower-bound-cofibonacci :
   (m x : ℕ) → is-multiple-of-cofibonacci m x →
   cofibonacci m ≤-ℕ x
-is-lower-bound-cofibonacci m = {!!}
+is-lower-bound-cofibonacci = {!!}
 ```
 
 ## Properties
@@ -88,18 +88,16 @@ is-zero-cofibonacci-zero-ℕ = {!!}
 ```agda
 forward-is-left-adjoint-cofibonacci :
   (m n : ℕ) → div-ℕ (cofibonacci m) n → div-ℕ m (Fibonacci-ℕ n)
-forward-is-left-adjoint-cofibonacci zero-ℕ n H = {!!}
-forward-is-left-adjoint-cofibonacci (succ-ℕ m) zero-ℕ H = {!!}
-forward-is-left-adjoint-cofibonacci (succ-ℕ m) (succ-ℕ n) H = {!!}
+forward-is-left-adjoint-cofibonacci = {!!}
 
 {-
 converse-is-left-adjoint-cofibonacci :
   (m n : ℕ) → div-ℕ m (Fibonacci-ℕ n) → div-ℕ (cofibonacci m) n
-converse-is-left-adjoint-cofibonacci m n H = {!!}
+converse-is-left-adjoint-cofibonacci = {!!}
 
 is-left-adjoint-cofibonacci :
   (m n : ℕ) → div-ℕ (cofibonacci m) n ↔ div-ℕ m (Fibonacci-ℕ n)
-is-left-adjoint-cofibonacci m n = {!!}
+is-left-adjoint-cofibonacci = {!!}
 -}
 ```
 

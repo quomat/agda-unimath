@@ -51,7 +51,7 @@ module _
 
 saturated-congruence-Monoid :
   {l1 : Level} (l2 : Level) (M : Monoid l1) → UU (l1 ⊔ lsuc l2)
-saturated-congruence-Monoid l2 M = {!!}
+saturated-congruence-Monoid = {!!}
 
 module _
   {l1 l2 : Level} (M : Monoid l1) (R : saturated-congruence-Monoid l2 M)
@@ -127,38 +127,37 @@ relate-same-elements-saturated-congruence-Monoid :
   {l1 l2 l3 : Level} (M : Monoid l1)
   (R : saturated-congruence-Monoid l2 M)
   (S : saturated-congruence-Monoid l3 M) → UU (l1 ⊔ l2 ⊔ l3)
-relate-same-elements-saturated-congruence-Monoid M R S = {!!}
+relate-same-elements-saturated-congruence-Monoid = {!!}
 
 refl-relate-same-elements-saturated-congruence-Monoid :
   {l1 l2 : Level} (M : Monoid l1) (R : saturated-congruence-Monoid l2 M) →
   relate-same-elements-saturated-congruence-Monoid M R R
-refl-relate-same-elements-saturated-congruence-Monoid M R = {!!}
+refl-relate-same-elements-saturated-congruence-Monoid = {!!}
 
 is-torsorial-relate-same-elements-saturated-congruence-Monoid :
   {l1 l2 : Level} (M : Monoid l1) (R : saturated-congruence-Monoid l2 M) →
   is-torsorial (relate-same-elements-saturated-congruence-Monoid M R)
-is-torsorial-relate-same-elements-saturated-congruence-Monoid M R = {!!}
+is-torsorial-relate-same-elements-saturated-congruence-Monoid = {!!}
 
 relate-same-elements-eq-saturated-congruence-Monoid :
   {l1 l2 : Level} (M : Monoid l1) (R S : saturated-congruence-Monoid l2 M) →
   R ＝ S → relate-same-elements-saturated-congruence-Monoid M R S
-relate-same-elements-eq-saturated-congruence-Monoid M R .R refl = {!!}
+relate-same-elements-eq-saturated-congruence-Monoid = {!!}
 
 is-equiv-relate-same-elements-eq-saturated-congruence-Monoid :
   {l1 l2 : Level} (M : Monoid l1) (R S : saturated-congruence-Monoid l2 M) →
   is-equiv (relate-same-elements-eq-saturated-congruence-Monoid M R S)
-is-equiv-relate-same-elements-eq-saturated-congruence-Monoid M R = {!!}
+is-equiv-relate-same-elements-eq-saturated-congruence-Monoid = {!!}
 
 extensionality-saturated-congruence-Monoid :
   {l1 l2 : Level} (M : Monoid l1) (R S : saturated-congruence-Monoid l2 M) →
   (R ＝ S) ≃ relate-same-elements-saturated-congruence-Monoid M R S
-pr1 (extensionality-saturated-congruence-Monoid M R S) = {!!}
-pr2 (extensionality-saturated-congruence-Monoid M R S) = {!!}
+extensionality-saturated-congruence-Monoid = {!!}
 
 eq-relate-same-elements-saturated-congruence-Monoid :
   {l1 l2 : Level} (M : Monoid l1) (R S : saturated-congruence-Monoid l2 M) →
   relate-same-elements-saturated-congruence-Monoid M R S → R ＝ S
-eq-relate-same-elements-saturated-congruence-Monoid M R S = {!!}
+eq-relate-same-elements-saturated-congruence-Monoid = {!!}
 ```
 
 ## See also

@@ -34,5 +34,5 @@ module _
 
   iterate-involution :
     (n : ℕ) (x : X) → iterate n f x ＝ iterate (nat-Fin 2 (mod-two-ℕ n)) f x
-  iterate-involution zero-ℕ x = {!!}
+  iterate-involution = {!!}
 ```

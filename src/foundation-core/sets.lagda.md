@@ -70,8 +70,7 @@ module _
   abstract
     is-set-axiom-K' :
       instance-axiom-K A → (x y : A) → all-elements-equal (x ＝ y)
-    is-set-axiom-K' K x .x refl q with K x q
-    ... | refl = {!!}
+    is-set-axiom-K' = {!!}
 
   abstract
     is-set-axiom-K : instance-axiom-K A → is-set A
@@ -110,7 +109,7 @@ abstract
 
 set-Prop :
   {l : Level} → Prop l → Set l
-set-Prop P = {!!}
+set-Prop = {!!}
 ```
 
 ### Sets are closed under equivalences

@@ -68,13 +68,13 @@ module _
 
   value-connected-component :
     connected-component → A
-  value-connected-component X = {!!}
+  value-connected-component = {!!}
 
   abstract
     mere-equality-connected-component :
       (X : connected-component) →
       type-trunc-Prop (value-connected-component X ＝ a)
-    mere-equality-connected-component X = {!!}
+    mere-equality-connected-component = {!!}
 ```
 
 ## Properties
@@ -86,12 +86,11 @@ abstract
   is-0-connected-connected-component :
     {l : Level} (A : UU l) (a : A) →
     is-0-connected (connected-component A a)
-  is-0-connected-connected-component A a = {!!}
+  is-0-connected-connected-component = {!!}
 
 connected-component-∞-Group :
   {l : Level} (A : UU l) (a : A) → ∞-Group l
-pr1 (connected-component-∞-Group A a) = {!!}
-pr2 (connected-component-∞-Group A a) = {!!}
+connected-component-∞-Group = {!!}
 ```
 
 ### If `A` is `k+1`-truncated, then the connected component of `a` in `A` is `k+1`-truncated
@@ -100,5 +99,5 @@ pr2 (connected-component-∞-Group A a) = {!!}
 is-trunc-connected-component :
   {l : Level} {k : 𝕋} (A : UU l) (a : A) →
   is-trunc (succ-𝕋 k) A → is-trunc (succ-𝕋 k) (connected-component A a)
-is-trunc-connected-component {l} {k} A a H = {!!}
+is-trunc-connected-component = {!!}
 ```

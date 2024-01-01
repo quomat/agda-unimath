@@ -39,16 +39,16 @@ open import foundation-core.transport-along-identifications
 ```agda
 is-subuniverse :
   {l1 l2 : Level} (P : UU l1 → UU l2) → UU ((lsuc l1) ⊔ l2)
-is-subuniverse P = {!!}
+is-subuniverse = {!!}
 
 subuniverse :
   (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-subuniverse l1 l2 = {!!}
+subuniverse = {!!}
 
 is-subtype-subuniverse :
   {l1 l2 : Level} (P : subuniverse l1 l2) (X : UU l1) →
   is-prop (is-in-subtype P X)
-is-subtype-subuniverse P X = {!!}
+is-subtype-subuniverse = {!!}
 
 module _
   {l1 l2 : Level} (P : subuniverse l1 l2)
@@ -83,7 +83,7 @@ module _
 is-in-subuniverse-map :
   {l1 l2 l3 : Level} (P : subuniverse (l1 ⊔ l2) l3) {A : UU l1} {B : UU l2} →
   (A → B) → UU (l2 ⊔ l3)
-is-in-subuniverse-map P {A} {B} f = {!!}
+is-in-subuniverse-map = {!!}
 ```
 
 ### The predicate of essentially being in a subuniverse
@@ -95,15 +95,15 @@ module _
 
   is-essentially-in-subuniverse :
     {l3 : Level} (X : UU l3) → UU (lsuc l1 ⊔ l2 ⊔ l3)
-  is-essentially-in-subuniverse X = {!!}
+  is-essentially-in-subuniverse = {!!}
 
   is-prop-is-essentially-in-subuniverse :
     {l3 : Level} (X : UU l3) → is-prop (is-essentially-in-subuniverse X)
-  is-prop-is-essentially-in-subuniverse X = {!!}
+  is-prop-is-essentially-in-subuniverse = {!!}
 
   is-essentially-in-subuniverse-Prop :
     {l3 : Level} (X : UU l3) → Prop (lsuc l1 ⊔ l2 ⊔ l3)
-  pr1 (is-essentially-in-subuniverse-Prop X) = {!!}
+  is-essentially-in-subuniverse-Prop = {!!}
 ```
 
 ## Properties
@@ -117,11 +117,11 @@ module _
 
   is-in-subuniverse-equiv :
     X ≃ Y → is-in-subuniverse P X → is-in-subuniverse P Y
-  is-in-subuniverse-equiv e = {!!}
+  is-in-subuniverse-equiv = {!!}
 
   is-in-subuniverse-equiv' :
     X ≃ Y → is-in-subuniverse P Y → is-in-subuniverse P X
-  is-in-subuniverse-equiv' e = {!!}
+  is-in-subuniverse-equiv' = {!!}
 ```
 
 ### Characterization of the identity type of subuniverses
@@ -136,31 +136,31 @@ module _
 
   equiv-eq-subuniverse :
     (X Y : type-subuniverse P) → X ＝ Y → equiv-subuniverse X Y
-  equiv-eq-subuniverse X .X refl = {!!}
+  equiv-eq-subuniverse = {!!}
 
   abstract
     is-torsorial-equiv-subuniverse :
       (X : type-subuniverse P) →
       is-torsorial (λ Y → equiv-subuniverse X Y)
-    is-torsorial-equiv-subuniverse (X , p) = {!!}
+    is-torsorial-equiv-subuniverse = {!!}
 
     is-torsorial-equiv-subuniverse' :
       (X : type-subuniverse P) →
       is-torsorial (λ Y → equiv-subuniverse Y X)
-    is-torsorial-equiv-subuniverse' (X , p) = {!!}
+    is-torsorial-equiv-subuniverse' = {!!}
 
   abstract
     is-equiv-equiv-eq-subuniverse :
       (X Y : type-subuniverse P) → is-equiv (equiv-eq-subuniverse X Y)
-    is-equiv-equiv-eq-subuniverse X = {!!}
+    is-equiv-equiv-eq-subuniverse = {!!}
 
   extensionality-subuniverse :
     (X Y : type-subuniverse P) → (X ＝ Y) ≃ equiv-subuniverse X Y
-  pr1 (extensionality-subuniverse X Y) = {!!}
+  extensionality-subuniverse = {!!}
 
   eq-equiv-subuniverse :
     {X Y : type-subuniverse P} → equiv-subuniverse X Y → X ＝ Y
-  eq-equiv-subuniverse {X} {Y} = {!!}
+  eq-equiv-subuniverse = {!!}
 
   compute-eq-equiv-id-equiv-subuniverse :
     {X : type-subuniverse P} →
@@ -174,7 +174,7 @@ module _
 fam-subuniverse :
   {l1 l2 l3 : Level} (P : subuniverse l1 l2) (X : UU l3) →
   UU (lsuc l1 ⊔ l2 ⊔ l3)
-fam-subuniverse P X = {!!}
+fam-subuniverse = {!!}
 
 module _
   {l1 l2 l3 : Level} (P : subuniverse l1 l2) {X : UU l3}
@@ -182,32 +182,32 @@ module _
 
   equiv-fam-subuniverse :
     (Y Z : fam-subuniverse P X) → UU (l1 ⊔ l3)
-  equiv-fam-subuniverse Y Z = {!!}
+  equiv-fam-subuniverse = {!!}
 
   id-equiv-fam-subuniverse :
     (Y : fam-subuniverse P X) → equiv-fam-subuniverse Y Y
-  id-equiv-fam-subuniverse Y x = {!!}
+  id-equiv-fam-subuniverse = {!!}
 
   is-torsorial-equiv-fam-subuniverse :
     (Y : fam-subuniverse P X) →
     is-torsorial (equiv-fam-subuniverse Y)
-  is-torsorial-equiv-fam-subuniverse Y = {!!}
+  is-torsorial-equiv-fam-subuniverse = {!!}
 
   equiv-eq-fam-subuniverse :
     (Y Z : fam-subuniverse P X) → Y ＝ Z → equiv-fam-subuniverse Y Z
-  equiv-eq-fam-subuniverse Y .Y refl = {!!}
+  equiv-eq-fam-subuniverse = {!!}
 
   is-equiv-equiv-eq-fam-subuniverse :
     (Y Z : fam-subuniverse P X) → is-equiv (equiv-eq-fam-subuniverse Y Z)
-  is-equiv-equiv-eq-fam-subuniverse Y = {!!}
+  is-equiv-equiv-eq-fam-subuniverse = {!!}
 
   extensionality-fam-subuniverse :
     (Y Z : fam-subuniverse P X) → (Y ＝ Z) ≃ equiv-fam-subuniverse Y Z
-  pr1 (extensionality-fam-subuniverse Y Z) = {!!}
+  extensionality-fam-subuniverse = {!!}
 
   eq-equiv-fam-subuniverse :
     (Y Z : fam-subuniverse P X) → equiv-fam-subuniverse Y Z → (Y ＝ Z)
-  eq-equiv-fam-subuniverse Y Z = {!!}
+  eq-equiv-fam-subuniverse = {!!}
 ```
 
 ## See also

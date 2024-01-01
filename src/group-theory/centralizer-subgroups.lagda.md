@@ -52,16 +52,16 @@ module _
 
   contains-unit-centralizer-subset-Group :
     contains-unit-subset-Group G subset-centralizer-subset-Group
-  contains-unit-centralizer-subset-Group y s = {!!}
+  contains-unit-centralizer-subset-Group = {!!}
 
   is-closed-under-multiplication-centralizer-subset-Group :
     is-closed-under-multiplication-subset-Group G
       subset-centralizer-subset-Group
-  is-closed-under-multiplication-centralizer-subset-Group {x} {y} u v z s = {!!}
+  is-closed-under-multiplication-centralizer-subset-Group = {!!}
 
   is-closed-under-inverses-centralizer-subset-Group :
     is-closed-under-inverses-subset-Group G subset-centralizer-subset-Group
-  is-closed-under-inverses-centralizer-subset-Group {x} u y s = {!!}
+  is-closed-under-inverses-centralizer-subset-Group = {!!}
 
   centralizer-subset-Group : Subgroup (l1 ⊔ l2) G
   pr1 centralizer-subset-Group = {!!}

@@ -61,21 +61,21 @@ Russell l = {!!}
 ```agda
 is-small-Russell :
   {l1 l2 : Level} → is-small-universe l2 l1 → is-small-𝕍 l2 (Russell l1)
-is-small-Russell {l1} {l2} H = {!!}
+is-small-Russell = {!!}
 
 resize-Russell :
   {l1 l2 : Level} → is-small-universe l2 l1 → 𝕍 l2
-resize-Russell {l1} {l2} H = {!!}
+resize-Russell = {!!}
 
 is-small-resize-Russell :
   {l1 l2 : Level} (H : is-small-universe l2 l1) →
   is-small-𝕍 (lsuc l1) (resize-Russell H)
-is-small-resize-Russell {l1} {l2} H = {!!}
+is-small-resize-Russell = {!!}
 
 equiv-Russell-in-Russell :
   {l1 l2 : Level} (H : is-small-universe l2 l1) →
   (Russell l1 ∈-𝕍 Russell l1) ≃ (resize-Russell H ∈-𝕍 resize-Russell H)
-equiv-Russell-in-Russell H = {!!}
+equiv-Russell-in-Russell = {!!}
 ```
 
 ### Russell's paradox obtained from the assumption that `U` is `U`-small
@@ -116,5 +116,5 @@ paradox-Russell {l} H = {!!}
 ```agda
 no-surjection-onto-universe :
   {l : Level} {A : UU l} (f : A → UU l) → ¬ (is-surjective f)
-no-surjection-onto-universe f H = {!!}
+no-surjection-onto-universe = {!!}
 ```

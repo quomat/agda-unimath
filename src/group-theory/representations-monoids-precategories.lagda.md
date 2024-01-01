@@ -40,7 +40,7 @@ we can encode this as a functor of categories `M → C`.
 ```agda
 representation-precategory-Monoid :
   {l1 l2 l3 : Level} (M : Monoid l1) (C : Precategory l2 l3) → UU (l1 ⊔ l2 ⊔ l3)
-representation-precategory-Monoid M C = {!!}
+representation-precategory-Monoid = {!!}
 
 module _
   {l1 l2 l3 : Level} (M : Monoid l1) (C : Precategory l2 l3)
@@ -75,7 +75,7 @@ module _
 ```agda
 Representation-Precategory-Monoid :
   {l1 : Level} (M : Monoid l1) (l2 l3 : Level) → UU (l1 ⊔ lsuc l2 ⊔ lsuc l3)
-Representation-Precategory-Monoid M l2 l3 = {!!}
+Representation-Precategory-Monoid = {!!}
 
 module _
   {l1 l2 l3 : Level} (M : Monoid l1)

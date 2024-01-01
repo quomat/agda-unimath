@@ -74,7 +74,7 @@ module _
 
   equiv-trivial-is-trivial-Relaxed-Σ-Decomposition :
     equiv-Relaxed-Σ-Decomposition D (trivial-Relaxed-Σ-Decomposition l4 A)
-  pr1 equiv-trivial-is-trivial-Relaxed-Σ-Decomposition = {!!}
+  equiv-trivial-is-trivial-Relaxed-Σ-Decomposition = {!!}
 ```
 
 ### The type of all trivial relaxed Σ-decompositions is contractible
@@ -84,6 +84,5 @@ is-contr-type-trivial-Relaxed-Σ-Decomposition :
   {l1 l2 : Level} {A : UU l1} →
   is-contr
     ( type-subtype (is-trivial-relaxed-Σ-decomposition-Prop {l1} {l2} {l1} {A}))
-pr1 ( is-contr-type-trivial-Relaxed-Σ-Decomposition {l1} {l2} {A}) = {!!}
-pr2 ( is-contr-type-trivial-Relaxed-Σ-Decomposition {l1} {l2} {A}) D = {!!}
+is-contr-type-trivial-Relaxed-Σ-Decomposition = {!!}
 ```

@@ -60,7 +60,7 @@ module _
   type-dirichlet-exponential-species-subuniverse :
     (S : species-subuniverse P (subuniverse-global-subuniverse Q l3))
     (X : type-subuniverse P) → UU (lsuc l1 ⊔ l2 ⊔ l3)
-  type-dirichlet-exponential-species-subuniverse S X = {!!}
+  type-dirichlet-exponential-species-subuniverse = {!!}
 ```
 
 ### Subuniverses closed under the Dirichlet exponential of a species in a subuniverse
@@ -69,7 +69,7 @@ module _
 is-closed-under-dirichlet-exponential-species-subuniverse :
   {l1 l2 : Level} (P : subuniverse l1 l2) (Q : global-subuniverse (λ l → l)) →
   UUω
-is-closed-under-dirichlet-exponential-species-subuniverse {l1} {l2} P Q = {!!}
+is-closed-under-dirichlet-exponential-species-subuniverse = {!!}
 ```
 
 ### The Dirichlet exponential of a species of types in a subuniverse
@@ -83,7 +83,7 @@ module _
   dirichlet-exponential-species-subuniverse :
     species-subuniverse P (subuniverse-global-subuniverse Q l3) →
     species-subuniverse P (subuniverse-global-subuniverse Q (lsuc l1 ⊔ l2 ⊔ l3))
-  pr1 (dirichlet-exponential-species-subuniverse S X) = {!!}
+  dirichlet-exponential-species-subuniverse = {!!}
 ```
 
 ## Propositions
@@ -115,7 +115,7 @@ module _
           Σ ( ( is-in-subuniverse P U × ((u : U) → is-in-subuniverse P (V u))) ×
               is-in-subuniverse P (inclusion-subuniverse P X))
             ( λ p → (u : U) → pr1 (S (V u , (pr2 (pr1 p)) u))))
-    pr1 reassociate (pX , ((U , pU) , V , e) , s) = {!!}
+    reassociate = {!!}
 
     reassociate' :
       Σ ( Π-Decomposition l1 l1 (inclusion-subuniverse P X))
@@ -134,7 +134,7 @@ module _
               ( subuniverse-global-subuniverse Q l3)
               ( S))
         ( inclusion-subuniverse P X)
-    pr1 reassociate' (d , pV , s) = {!!}
+    reassociate' = {!!}
 
   equiv-dirichlet-exponential-Σ-extension-species-subuniverse :
     Σ-extension-species-subuniverse

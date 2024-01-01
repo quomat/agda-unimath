@@ -37,11 +37,11 @@ module _
   is-trail-walk-Undirected-Graph :
     {x y : vertex-Undirected-Graph G} → walk-Undirected-Graph G x y →
     UU (lsuc lzero ⊔ l1 ⊔ l2)
-  is-trail-walk-Undirected-Graph w = {!!}
+  is-trail-walk-Undirected-Graph = {!!}
 
   trail-Undirected-Graph :
     (x y : vertex-Undirected-Graph G) → UU (lsuc lzero ⊔ l1 ⊔ l2)
-  trail-Undirected-Graph x y = {!!}
+  trail-Undirected-Graph = {!!}
 
   walk-trail-Undirected-Graph :
     {x y : vertex-Undirected-Graph G} →
@@ -56,51 +56,51 @@ module _
   is-vertex-on-trail-Undirected-Graph :
     {x y : vertex-Undirected-Graph G} →
     trail-Undirected-Graph x y → vertex-Undirected-Graph G → UU l1
-  is-vertex-on-trail-Undirected-Graph t = {!!}
+  is-vertex-on-trail-Undirected-Graph = {!!}
 
   vertex-on-trail-Undirected-Graph :
     {x y : vertex-Undirected-Graph G} → trail-Undirected-Graph x y → UU l1
-  vertex-on-trail-Undirected-Graph t = {!!}
+  vertex-on-trail-Undirected-Graph = {!!}
 
   vertex-vertex-on-trail-Undirected-Graph :
     {x y : vertex-Undirected-Graph G} (t : trail-Undirected-Graph x y) →
     vertex-on-trail-Undirected-Graph t → vertex-Undirected-Graph G
-  vertex-vertex-on-trail-Undirected-Graph t = {!!}
+  vertex-vertex-on-trail-Undirected-Graph = {!!}
 
   is-edge-on-trail-Undirected-Graph :
     {x y : vertex-Undirected-Graph G} →
     (t : trail-Undirected-Graph x y)
     (p : unordered-pair-vertices-Undirected-Graph G)
     (e : edge-Undirected-Graph G p) → UU (lsuc lzero ⊔ l1 ⊔ l2)
-  is-edge-on-trail-Undirected-Graph t = {!!}
+  is-edge-on-trail-Undirected-Graph = {!!}
 
   edge-on-trail-Undirected-Graph :
     {x y : vertex-Undirected-Graph G} (t : trail-Undirected-Graph x y) →
     UU (lsuc lzero ⊔ l1 ⊔ l2)
-  edge-on-trail-Undirected-Graph t = {!!}
+  edge-on-trail-Undirected-Graph = {!!}
 
   edge-edge-on-trail-Undirected-Graph :
     {x y : vertex-Undirected-Graph G} (t : trail-Undirected-Graph x y) →
     edge-on-trail-Undirected-Graph t → total-edge-Undirected-Graph G
-  edge-edge-on-trail-Undirected-Graph t = {!!}
+  edge-edge-on-trail-Undirected-Graph = {!!}
 
   length-trail-Undirected-Graph :
     {x y : vertex-Undirected-Graph G} → trail-Undirected-Graph x y → ℕ
-  length-trail-Undirected-Graph t = {!!}
+  length-trail-Undirected-Graph = {!!}
 
   is-constant-trail-Undirected-Graph-Prop :
     {x y : vertex-Undirected-Graph G} →
     trail-Undirected-Graph x y → Prop lzero
-  is-constant-trail-Undirected-Graph-Prop t = {!!}
+  is-constant-trail-Undirected-Graph-Prop = {!!}
 
   is-constant-trail-Undirected-Graph :
     {x y : vertex-Undirected-Graph G} → trail-Undirected-Graph x y → UU lzero
-  is-constant-trail-Undirected-Graph t = {!!}
+  is-constant-trail-Undirected-Graph = {!!}
 
   is-decidable-is-constant-trail-Undirected-Graph :
     {x y : vertex-Undirected-Graph G} (t : trail-Undirected-Graph x y) →
     is-decidable (is-constant-trail-Undirected-Graph t)
-  is-decidable-is-constant-trail-Undirected-Graph t = {!!}
+  is-decidable-is-constant-trail-Undirected-Graph = {!!}
 ```
 
 ## Properties
@@ -129,7 +129,7 @@ module _
     (v : vertex-on-trail-Undirected-Graph G t) →
     walk-Undirected-Graph G x
       ( vertex-vertex-on-trail-Undirected-Graph G t v)
-  first-segment-trail-Undirected-Graph t = {!!}
+  first-segment-trail-Undirected-Graph = {!!}
 
   second-segment-trail-Undirected-Graph :
     {y : vertex-Undirected-Graph G} (t : trail-Undirected-Graph G x y)
@@ -137,7 +137,7 @@ module _
     walk-Undirected-Graph G
       ( vertex-vertex-on-trail-Undirected-Graph G t v)
       ( y)
-  second-segment-trail-Undirected-Graph t = {!!}
+  second-segment-trail-Undirected-Graph = {!!}
 ```
 
 ## External links

@@ -43,7 +43,7 @@ b
 repetition-of-values-is-not-injective-Fin :
   (k l : ℕ) (f : Fin k → Fin l) →
   is-not-injective f → repetition-of-values f
-repetition-of-values-is-not-injective-Fin k l f N = {!!}
+repetition-of-values-is-not-injective-Fin = {!!}
 ```
 
 ### On the standard finite sets, `is-repetition-of-values f x` is decidable
@@ -93,10 +93,7 @@ This remains to be defined.
 ```agda
 is-injective-map-Fin-zero-Fin :
   {k : ℕ} (f : Fin zero-ℕ → Fin k) → is-injective f
-is-injective-map-Fin-zero-Fin f {()} {y}
-
--- is-injective-map-Fin-one-Fin : {k : ℕ} (f : Fin 1 → Fin k) → is-injective f
--- is-injective-map-Fin-one-Fin f {inr star} {inr star} p = {!!}
+is-injective-map-Fin-zero-Fin = {!!}
 
 -- has-repetition-of-values-is-not-injective-Fin :
 --   (k l : ℕ) (f : Fin l → Fin k) →

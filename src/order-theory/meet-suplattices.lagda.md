@@ -107,5 +107,5 @@ module _
   sup-Meet-Suplattice :
     {I : UU l2} → (I → type-Meet-Suplattice) →
     type-Meet-Suplattice
-  sup-Meet-Suplattice {I} f = {!!}
+  sup-Meet-Suplattice = {!!}
 ```

@@ -97,7 +97,7 @@ split-essentially-surjective-functor-Precategory :
   {l1 l2 l3 l4 : Level}
   (C : Precategory l1 l2) (D : Precategory l3 l4) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-split-essentially-surjective-functor-Precategory C D = {!!}
+split-essentially-surjective-functor-Precategory = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}

@@ -70,12 +70,12 @@ module _
 structure-𝕎-Alg :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} →
   type-polynomial-endofunctor A B (𝕎 A B) → 𝕎 A B
-structure-𝕎-Alg (pair x α) = {!!}
+structure-𝕎-Alg = {!!}
 
 𝕎-Alg :
   {l1 l2 : Level} (A : UU l1) (B : A → UU l2) →
   algebra-polynomial-endofunctor (l1 ⊔ l2) A B
-𝕎-Alg A B = {!!}
+𝕎-Alg = {!!}
 ```
 
 ### W-types as coalgebras for a polynomial endofunctor
@@ -84,9 +84,7 @@ structure-𝕎-Alg (pair x α) = {!!}
 𝕎-Coalg :
   {l1 l2 : Level} (A : UU l1) (B : A → UU l2) →
   coalgebra-polynomial-endofunctor (l1 ⊔ l2) A B
-pr1 (𝕎-Coalg A B) = {!!}
-pr1 (pr2 (𝕎-Coalg A B) x) = {!!}
-pr2 (pr2 (𝕎-Coalg A B) x) = {!!}
+𝕎-Coalg = {!!}
 ```
 
 ## Properties
@@ -136,7 +134,7 @@ module _
     (x : A) (α : B x → 𝕎 A B) →
     Σ (B x → 𝕎 A B) (λ β → (y : B x) → Eq-𝕎 (α y) (β y)) →
     Σ (𝕎 A B) (Eq-𝕎 (tree-𝕎 x α))
-  aux-total-Eq-𝕎 x α (pair β e) = {!!}
+  aux-total-Eq-𝕎 = {!!}
 
   contraction-total-Eq-𝕎 :
     (w : 𝕎 A B) (t : Σ (𝕎 A B) (Eq-𝕎 w)) → center-total-Eq-𝕎 w ＝ t
@@ -171,7 +169,7 @@ module _
 map-inv-structure-𝕎-Alg :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} →
   𝕎 A B → type-polynomial-endofunctor A B (𝕎 A B)
-map-inv-structure-𝕎-Alg (tree-𝕎 x α) = {!!}
+map-inv-structure-𝕎-Alg = {!!}
 
 is-section-map-inv-structure-𝕎-Alg :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} →
@@ -211,7 +209,7 @@ map-hom-𝕎-Alg :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2}
   (X : algebra-polynomial-endofunctor l3 A B) →
   𝕎 A B → type-algebra-polynomial-endofunctor X
-map-hom-𝕎-Alg X (tree-𝕎 x α) = {!!}
+map-hom-𝕎-Alg = {!!}
 
 structure-hom-𝕎-Alg :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2}
@@ -219,13 +217,13 @@ structure-hom-𝕎-Alg :
   ( (map-hom-𝕎-Alg X) ∘ structure-𝕎-Alg) ~
   ( ( structure-algebra-polynomial-endofunctor X) ∘
     ( map-polynomial-endofunctor A B (map-hom-𝕎-Alg X)))
-structure-hom-𝕎-Alg X (pair x α) = {!!}
+structure-hom-𝕎-Alg = {!!}
 
 hom-𝕎-Alg :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2}
   (X : algebra-polynomial-endofunctor l3 A B) →
   hom-algebra-polynomial-endofunctor (𝕎-Alg A B) X
-hom-𝕎-Alg X = {!!}
+hom-𝕎-Alg = {!!}
 
 htpy-htpy-hom-𝕎-Alg :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2}
@@ -233,7 +231,7 @@ htpy-htpy-hom-𝕎-Alg :
   (f : hom-algebra-polynomial-endofunctor (𝕎-Alg A B) X) →
   map-hom-𝕎-Alg X ~
   map-hom-algebra-polynomial-endofunctor (𝕎-Alg A B) X f
-htpy-htpy-hom-𝕎-Alg {A = A} {B} X f (tree-𝕎 x α) = {!!}
+htpy-htpy-hom-𝕎-Alg = {!!}
 
 compute-structure-htpy-hom-𝕎-Alg :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2}
@@ -246,7 +244,7 @@ compute-structure-htpy-hom-𝕎-Alg :
   ( ap
     ( λ t → structure-algebra-polynomial-endofunctor X (pair x t))
     ( eq-htpy (H ·r α)))
-compute-structure-htpy-hom-𝕎-Alg {A = A} {B} X x α = {!!}
+compute-structure-htpy-hom-𝕎-Alg = {!!}
 
 structure-htpy-hom-𝕎-Alg :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2}
@@ -264,11 +262,11 @@ htpy-hom-𝕎-Alg :
   (X : algebra-polynomial-endofunctor l3 A B) →
   (f : hom-algebra-polynomial-endofunctor (𝕎-Alg A B) X) →
   htpy-hom-algebra-polynomial-endofunctor (𝕎-Alg A B) X (hom-𝕎-Alg X) f
-htpy-hom-𝕎-Alg X f = {!!}
+htpy-hom-𝕎-Alg = {!!}
 
 is-initial-𝕎-Alg :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2}
   (X : algebra-polynomial-endofunctor l3 A B) →
   is-contr (hom-algebra-polynomial-endofunctor (𝕎-Alg A B) X)
-is-initial-𝕎-Alg {A = A} {B} X = {!!}
+is-initial-𝕎-Alg = {!!}
 ```

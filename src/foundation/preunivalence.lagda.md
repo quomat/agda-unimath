@@ -45,12 +45,11 @@ preunivalence-axiom = {!!}
 
 emb-preunivalence :
   preunivalence-axiom → {l : Level} (X Y : UU l) → (X ＝ Y) ↪ (X ≃ Y)
-pr1 (emb-preunivalence L X Y) = {!!}
-pr2 (emb-preunivalence L X Y) = {!!}
+emb-preunivalence = {!!}
 
 emb-map-preunivalence :
   preunivalence-axiom → {l : Level} (X Y : UU l) → (X ＝ Y) ↪ (X → Y)
-emb-map-preunivalence L X Y = {!!}
+emb-map-preunivalence = {!!}
 ```
 
 ## Properties
@@ -68,7 +67,7 @@ module _
   instance-preunivalence-instance-axiom-K :
     instance-axiom-K (UU l) → instance-axiom-K A → instance-axiom-K B →
     instance-preunivalence A B
-  instance-preunivalence-instance-axiom-K K-Type K-A K-B = {!!}
+  instance-preunivalence-instance-axiom-K = {!!}
 
 preunivalence-axiom-axiom-K : axiom-K → preunivalence-axiom
 preunivalence-axiom-axiom-K K {l} X Y = {!!}

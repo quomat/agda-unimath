@@ -38,14 +38,14 @@ module _
     ( (p : unordered-pair-vertices-Undirected-Graph G) →
       edge-Undirected-Graph G p → C) →
     (x : vertex-Undirected-Graph G) → neighbor-Undirected-Graph G x → C
-  neighbor-edge-colouring-Undirected-Graph f x (pair y e) = {!!}
+  neighbor-edge-colouring-Undirected-Graph = {!!}
 
   edge-colouring-Undirected-Graph : UU (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l3)
   edge-colouring-Undirected-Graph = {!!}
 
 Edge-Coloured-Undirected-Graph :
   {l : Level} (l1 l2 : Level) (C : UU l) → UU (l ⊔ lsuc l1 ⊔ lsuc l2)
-Edge-Coloured-Undirected-Graph l1 l2 C = {!!}
+Edge-Coloured-Undirected-Graph = {!!}
 
 module _
   {l1 l2 l3 : Level} {C : UU l1} (G : Edge-Coloured-Undirected-Graph l2 l3 C)

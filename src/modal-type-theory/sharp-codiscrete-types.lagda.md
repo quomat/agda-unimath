@@ -51,7 +51,7 @@ is-sharp-codiscrete {l} A = {!!}
 
 is-sharp-codiscrete-family :
   {l1 l2 : Level} {A : UU l1} (B : A → UU l2) → UU (l1 ⊔ l2)
-is-sharp-codiscrete-family {A = A} B = {!!}
+is-sharp-codiscrete-family = {!!}
 
 Sharp-Codiscrete : (l : Level) → UU (lsuc l)
 Sharp-Codiscrete l = {!!}
@@ -69,7 +69,7 @@ postulate
 is-sharp-codiscrete-Id :
   {l1 : Level} {A : UU l1} (x y : A) →
   is-sharp-codiscrete A → is-sharp-codiscrete (x ＝ y)
-is-sharp-codiscrete-Id x y is-sharp-codiscrete-A = {!!}
+is-sharp-codiscrete-Id = {!!}
 ```
 
 ### A `Π`-type is codiscrete if its codomain is
@@ -126,7 +126,7 @@ module _
 
   is-higher-modality-sharp :
     is-higher-modality (sharp-locally-small-operator-modality l) (unit-sharp)
-  pr1 is-higher-modality-sharp = {!!}
+  is-higher-modality-sharp = {!!}
 
   sharp-higher-modality : higher-modality l l
   pr1 sharp-higher-modality = {!!}

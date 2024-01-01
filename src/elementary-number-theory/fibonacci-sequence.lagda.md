@@ -84,8 +84,7 @@ Fibonacci-add-ℕ :
   Fibonacci-ℕ (m +ℕ (succ-ℕ n)) ＝
   ( (Fibonacci-ℕ (succ-ℕ m)) *ℕ (Fibonacci-ℕ (succ-ℕ n))) +ℕ
   ( (Fibonacci-ℕ m) *ℕ (Fibonacci-ℕ n))
-Fibonacci-add-ℕ m zero-ℕ = {!!}
-Fibonacci-add-ℕ m (succ-ℕ n) = {!!}
+Fibonacci-add-ℕ = {!!}
 ```
 
 ### Consecutive Fibonacci numbers are relatively prime
@@ -94,12 +93,11 @@ Fibonacci-add-ℕ m (succ-ℕ n) = {!!}
 is-one-div-fibonacci-succ-div-fibonacci-ℕ :
   (d n : ℕ) → div-ℕ d (Fibonacci-ℕ n) → div-ℕ d (Fibonacci-ℕ (succ-ℕ n)) →
   is-one-ℕ d
-is-one-div-fibonacci-succ-div-fibonacci-ℕ d zero-ℕ H K = {!!}
-is-one-div-fibonacci-succ-div-fibonacci-ℕ d (succ-ℕ n) H K = {!!}
+is-one-div-fibonacci-succ-div-fibonacci-ℕ = {!!}
 
 relatively-prime-fibonacci-fibonacci-succ-ℕ :
   (n : ℕ) → is-relatively-prime-ℕ (Fibonacci-ℕ n) (Fibonacci-ℕ (succ-ℕ n))
-relatively-prime-fibonacci-fibonacci-succ-ℕ n = {!!}
+relatively-prime-fibonacci-fibonacci-succ-ℕ = {!!}
 ```
 
 ### A 3-for-2 property of divisibility of Fibonacci numbers
@@ -115,8 +113,7 @@ third:
 div-Fibonacci-add-ℕ :
   (d m n : ℕ) → div-ℕ d (Fibonacci-ℕ m) → div-ℕ d (Fibonacci-ℕ n) →
   div-ℕ d (Fibonacci-ℕ (m +ℕ n))
-div-Fibonacci-add-ℕ d m zero-ℕ H1 H2 = {!!}
-div-Fibonacci-add-ℕ d m (succ-ℕ n) H1 H2 = {!!}
+div-Fibonacci-add-ℕ = {!!}
 ```
 
 ### If `m | n`, then `d | F(m)` implies `d | F(n)`
@@ -124,9 +121,7 @@ div-Fibonacci-add-ℕ d m (succ-ℕ n) H1 H2 = {!!}
 ```agda
 div-Fibonacci-div-ℕ :
   (d m n : ℕ) → div-ℕ m n → div-ℕ d (Fibonacci-ℕ m) → div-ℕ d (Fibonacci-ℕ n)
-div-Fibonacci-div-ℕ d m .zero-ℕ (zero-ℕ , refl) H = {!!}
-div-Fibonacci-div-ℕ d zero-ℕ .(k *ℕ zero-ℕ) (succ-ℕ k , refl) H = {!!}
-div-Fibonacci-div-ℕ d (succ-ℕ m) ._ (succ-ℕ k , refl) H = {!!}
+div-Fibonacci-div-ℕ = {!!}
 ```
 
 ### Fibonacci-ℕ is an order preserving map on ℕ ordered by divisibility
@@ -134,5 +129,5 @@ div-Fibonacci-div-ℕ d (succ-ℕ m) ._ (succ-ℕ k , refl) H = {!!}
 ```agda
 preserves-div-Fibonacci-ℕ :
   (m n : ℕ) → div-ℕ m n → div-ℕ (Fibonacci-ℕ m) (Fibonacci-ℕ n)
-preserves-div-Fibonacci-ℕ m n H = {!!}
+preserves-div-Fibonacci-ℕ = {!!}
 ```

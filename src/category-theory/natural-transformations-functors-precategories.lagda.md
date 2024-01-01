@@ -75,14 +75,14 @@ module _
 
   id-natural-transformation-Precategory :
     (F : functor-Precategory C D) → natural-transformation-Precategory C D F F
-  id-natural-transformation-Precategory F = {!!}
+  id-natural-transformation-Precategory = {!!}
 
   comp-natural-transformation-Precategory :
     (F G H : functor-Precategory C D) →
     natural-transformation-Precategory C D G H →
     natural-transformation-Precategory C D F G →
     natural-transformation-Precategory C D F H
-  comp-natural-transformation-Precategory F G H = {!!}
+  comp-natural-transformation-Precategory = {!!}
 ```
 
 ## Properties
@@ -164,14 +164,14 @@ module _
     (α : natural-transformation-Precategory C D F G) →
     comp-natural-transformation-Precategory C D F F G α
       ( id-natural-transformation-Precategory C D F) ＝ α
-  right-unit-law-comp-natural-transformation-Precategory F G = {!!}
+  right-unit-law-comp-natural-transformation-Precategory = {!!}
 
   left-unit-law-comp-natural-transformation-Precategory :
     (F G : functor-Precategory C D)
     (α : natural-transformation-Precategory C D F G) →
     comp-natural-transformation-Precategory C D F G G
       ( id-natural-transformation-Precategory C D G) α ＝ α
-  left-unit-law-comp-natural-transformation-Precategory F G = {!!}
+  left-unit-law-comp-natural-transformation-Precategory = {!!}
 
   associative-comp-natural-transformation-Precategory :
     (F G H I : functor-Precategory C D)
@@ -182,7 +182,7 @@ module _
       ( comp-natural-transformation-Precategory C D G H I γ β) α ＝
     comp-natural-transformation-Precategory C D F H I γ
       ( comp-natural-transformation-Precategory C D F G H β α)
-  associative-comp-natural-transformation-Precategory F G H I = {!!}
+  associative-comp-natural-transformation-Precategory = {!!}
 
   inv-associative-comp-natural-transformation-Precategory :
     (F G H I : functor-Precategory C D)
@@ -193,5 +193,5 @@ module _
       ( comp-natural-transformation-Precategory C D F G H β α) ＝
     comp-natural-transformation-Precategory C D F G I
       ( comp-natural-transformation-Precategory C D G H I γ β) α
-  inv-associative-comp-natural-transformation-Precategory F G H I = {!!}
+  inv-associative-comp-natural-transformation-Precategory = {!!}
 ```

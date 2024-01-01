@@ -94,7 +94,7 @@ is-one-ℚ x = {!!}
 eq-ℚ-sim-fractions-ℤ :
   (x y : fraction-ℤ) → (H : sim-fraction-ℤ x y) →
   in-fraction-ℤ x ＝ in-fraction-ℤ y
-eq-ℚ-sim-fractions-ℤ x y H = {!!}
+eq-ℚ-sim-fractions-ℤ = {!!}
 ```
 
 ### The type of rationals is a set
@@ -116,6 +116,5 @@ in-fraction-fraction-ℚ (pair (pair m (pair n n-pos)) p) = {!!}
 ```agda
 reflecting-map-sim-fraction :
   reflecting-map-equivalence-relation equivalence-relation-sim-fraction-ℤ ℚ
-pr1 reflecting-map-sim-fraction = {!!}
-pr2 reflecting-map-sim-fraction {x} {y} H = {!!}
+reflecting-map-sim-fraction = {!!}
 ```

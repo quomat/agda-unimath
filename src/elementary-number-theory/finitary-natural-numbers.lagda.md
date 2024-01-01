@@ -66,7 +66,7 @@ is-empty-based-zero-ℕ (unary-op-based-ℕ .zero-ℕ () n)
 cong-unary-op-ℕ :
   (k : ℕ) (x : Fin k) (n : ℕ) →
   cong-ℕ k (unary-op-ℕ k x n) (nat-Fin k x)
-cong-unary-op-ℕ (succ-ℕ k) x n = {!!}
+cong-unary-op-ℕ = {!!}
 ```
 
 ### Any natural number of the form `constant-ℕ k x` is strictly less than any natural number of the form `unary-op-ℕ k y m`
@@ -74,7 +74,7 @@ cong-unary-op-ℕ (succ-ℕ k) x n = {!!}
 ```agda
 le-constant-unary-op-ℕ :
   (k : ℕ) (x y : Fin k) (m : ℕ) → le-ℕ (constant-ℕ k x) (unary-op-ℕ k y m)
-le-constant-unary-op-ℕ k x y m = {!!}
+le-constant-unary-op-ℕ = {!!}
 
 is-injective-convert-based-ℕ :
   (k : ℕ) → is-injective (convert-based-ℕ k)
@@ -144,7 +144,7 @@ inv-convert-based-ℕ k (succ-ℕ n) = {!!}
 convert-based-succ-based-ℕ :
   (k : ℕ) (x : based-ℕ k) →
   convert-based-ℕ k (succ-based-ℕ k x) ＝ succ-ℕ (convert-based-ℕ k x)
-convert-based-succ-based-ℕ (succ-ℕ k) (constant-based-ℕ .(succ-ℕ k) (inl x)) = {!!}
+convert-based-succ-based-ℕ = {!!}
 convert-based-succ-based-ℕ
   ( succ-ℕ k) (constant-based-ℕ .(succ-ℕ k) (inr _)) = {!!}
 convert-based-succ-based-ℕ (succ-ℕ k) (unary-op-based-ℕ .(succ-ℕ k) (inl x) n) = {!!}
@@ -153,11 +153,10 @@ convert-based-succ-based-ℕ
 
 is-section-inv-convert-based-ℕ :
   (k n : ℕ) → convert-based-ℕ (succ-ℕ k) (inv-convert-based-ℕ k n) ＝ n
-is-section-inv-convert-based-ℕ k zero-ℕ = {!!}
-is-section-inv-convert-based-ℕ k (succ-ℕ n) = {!!}
+is-section-inv-convert-based-ℕ = {!!}
 
 is-retraction-inv-convert-based-ℕ :
   (k : ℕ) (x : based-ℕ (succ-ℕ k)) →
   inv-convert-based-ℕ k (convert-based-ℕ (succ-ℕ k) x) ＝ x
-is-retraction-inv-convert-based-ℕ k x = {!!}
+is-retraction-inv-convert-based-ℕ = {!!}
 ```

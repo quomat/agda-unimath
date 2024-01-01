@@ -38,7 +38,7 @@ parametric-Poset-𝔽-Full-Large-Subprecategory :
   Full-Large-Subprecategory
     ( λ l → α l ⊔ β l)
     ( parametric-Poset-Large-Precategory α β)
-parametric-Poset-𝔽-Full-Large-Subprecategory α β = {!!}
+parametric-Poset-𝔽-Full-Large-Subprecategory = {!!}
 
 Poset-𝔽-Large-Precategory :
   Large-Precategory lsuc (_⊔_)

@@ -49,7 +49,7 @@ module _
 inv-inverts-element-hom-Ring :
   {l1 l2 : Level} (R : Ring l1) (S : Ring l2) (x : type-Ring R)
   (f : hom-Ring R S) → inverts-element-hom-Ring R S x f → type-Ring S
-inv-inverts-element-hom-Ring R S x f H = {!!}
+inv-inverts-element-hom-Ring = {!!}
 
 is-left-inverse-inv-inverts-element-hom-Ring :
   {l1 l2 : Level} (R : Ring l1) (S : Ring l2) (x : type-Ring R)
@@ -59,7 +59,7 @@ is-left-inverse-inv-inverts-element-hom-Ring :
       ( inv-inverts-element-hom-Ring R S x f H)
       ( map-hom-Ring R S f x))
     ( one-Ring S)
-is-left-inverse-inv-inverts-element-hom-Ring R S x f H = {!!}
+is-left-inverse-inv-inverts-element-hom-Ring = {!!}
 
 is-right-inverse-inv-inverts-element-hom-Ring :
   {l1 l2 : Level} (R : Ring l1) (S : Ring l2) (x : type-Ring R)
@@ -69,7 +69,7 @@ is-right-inverse-inv-inverts-element-hom-Ring :
       ( map-hom-Ring R S f x)
       ( inv-inverts-element-hom-Ring R S x f H))
     ( one-Ring S)
-is-right-inverse-inv-inverts-element-hom-Ring R S x f H = {!!}
+is-right-inverse-inv-inverts-element-hom-Ring = {!!}
 ```
 
 ```agda
@@ -78,7 +78,7 @@ inverts-element-comp-hom-Ring :
   (x : type-Ring R) (g : hom-Ring S T) (f : hom-Ring R S) →
   inverts-element-hom-Ring R S x f →
   inverts-element-hom-Ring R T x (comp-hom-Ring R S T g f)
-inverts-element-comp-hom-Ring R S T x g f H = {!!}
+inverts-element-comp-hom-Ring = {!!}
 ```
 
 ### The universal property of the localization of a ring at a single element
@@ -88,14 +88,13 @@ precomp-universal-property-localization-Ring :
   {l1 l2 l3 : Level} (R : Ring l1) (S : Ring l2) (T : Ring l3) (x : type-Ring R)
   (f : hom-Ring R S) (H : inverts-element-hom-Ring R S x f) →
   hom-Ring S T → Σ (hom-Ring R T) (inverts-element-hom-Ring R T x)
-pr1 (precomp-universal-property-localization-Ring R S T x f H g) = {!!}
-pr2 (precomp-universal-property-localization-Ring R S T x f H g) = {!!}
+precomp-universal-property-localization-Ring = {!!}
 
 universal-property-localization-Ring :
   (l : Level) {l1 l2 : Level} (R : Ring l1) (S : Ring l2) (x : type-Ring R)
   (f : hom-Ring R S) → inverts-element-hom-Ring R S x f →
   UU (lsuc l ⊔ l1 ⊔ l2)
-universal-property-localization-Ring l R S x f H = {!!}
+universal-property-localization-Ring = {!!}
 
 unique-extension-universal-property-localization-Ring :
   {l1 l2 l3 : Level} (R : Ring l1) (S : Ring l2) (T : Ring l3) (x : type-Ring R)
@@ -105,7 +104,7 @@ unique-extension-universal-property-localization-Ring :
   is-contr
     ( Σ ( hom-Ring S T)
         ( λ g → htpy-hom-Ring R T (comp-hom-Ring R S T g f) h))
-unique-extension-universal-property-localization-Ring R S T x f H up-f h K = {!!}
+unique-extension-universal-property-localization-Ring = {!!}
 
 center-unique-extension-universal-property-localization-Ring :
   {l1 l2 l3 : Level} (R : Ring l1) (S : Ring l2) (T : Ring l3) (x : type-Ring R)
@@ -122,7 +121,7 @@ map-universal-property-localization-Ring :
   universal-property-localization-Ring l3 R S x f H →
   (h : hom-Ring R T) (K : inverts-element-hom-Ring R T x h) →
   hom-Ring S T
-map-universal-property-localization-Ring R S T x f H up-f h K = {!!}
+map-universal-property-localization-Ring = {!!}
 
 htpy-universal-property-localization-Ring :
   {l1 l2 l3 : Level} (R : Ring l1) (S : Ring l2) (T : Ring l3) (x : type-Ring R)
@@ -139,7 +138,7 @@ htpy-universal-property-localization-Ring :
       ( map-universal-property-localization-Ring R S T x f H up-f h K)
       ( f))
     ( h)
-htpy-universal-property-localization-Ring R S T x f H up-f h K = {!!}
+htpy-universal-property-localization-Ring = {!!}
 ```
 
 ### The type of localizations of a ring $R$ at an element $x$ is contractible
@@ -165,18 +164,18 @@ is-equiv-up-localization-up-localization-Ring
 inverts-subset-hom-Ring :
   {l1 l2 l3 : Level} (R : Ring l1) (S : Ring l2) (P : subset-Ring l3 R) →
   (f : hom-Ring R S) → UU (l1 ⊔ l2 ⊔ l3)
-inverts-subset-hom-Ring R S P f = {!!}
+inverts-subset-hom-Ring = {!!}
 
 is-prop-inverts-subset-hom-Ring :
   {l1 l2 l3 : Level} (R : Ring l1) (S : Ring l2) (P : subset-Ring l3 R) →
   (f : hom-Ring R S) → is-prop (inverts-subset-hom-Ring R S P f)
-is-prop-inverts-subset-hom-Ring R S P f = {!!}
+is-prop-inverts-subset-hom-Ring = {!!}
 
 inv-inverts-subset-hom-Ring :
   {l1 l2 l3 : Level} (R : Ring l1) (S : Ring l2) (P : subset-Ring l3 R)
   (f : hom-Ring R S) (H : inverts-subset-hom-Ring R S P f)
   (x : type-Ring R) (p : type-Prop (P x)) → type-Ring S
-inv-inverts-subset-hom-Ring R S P f H x p = {!!}
+inv-inverts-subset-hom-Ring = {!!}
 
 is-left-inverse-inv-inverts-subset-hom-Ring :
   {l1 l2 l3 : Level} (R : Ring l1) (S : Ring l2) (P : subset-Ring l3 R)
@@ -187,7 +186,7 @@ is-left-inverse-inv-inverts-subset-hom-Ring :
       ( inv-inverts-subset-hom-Ring R S P f H x p)
       ( map-hom-Ring R S f x))
     ( one-Ring S)
-is-left-inverse-inv-inverts-subset-hom-Ring R S P f H x p = {!!}
+is-left-inverse-inv-inverts-subset-hom-Ring = {!!}
 
 is-right-inverse-inv-inverts-subset-hom-Ring :
   {l1 l2 l3 : Level} (R : Ring l1) (S : Ring l2) (P : subset-Ring l3 R)
@@ -198,14 +197,14 @@ is-right-inverse-inv-inverts-subset-hom-Ring :
       ( map-hom-Ring R S f x)
       ( inv-inverts-subset-hom-Ring R S P f H x p))
     ( one-Ring S)
-is-right-inverse-inv-inverts-subset-hom-Ring R S P f H x p = {!!}
+is-right-inverse-inv-inverts-subset-hom-Ring = {!!}
 
 inverts-subset-comp-hom-Ring :
   {l1 l2 l3 l4 : Level} (R : Ring l1) (S : Ring l2) (T : Ring l3)
   (P : subset-Ring l4 R) (g : hom-Ring S T) (f : hom-Ring R S) →
   inverts-subset-hom-Ring R S P f →
   inverts-subset-hom-Ring R T P (comp-hom-Ring R S T g f)
-inverts-subset-comp-hom-Ring R S T P g f H x p = {!!}
+inverts-subset-comp-hom-Ring = {!!}
 ```
 
 ### The universal property of the localization of a ring at a subset
@@ -216,12 +215,11 @@ precomp-universal-property-localization-subset-Ring :
   (P : subset-Ring l4 R) →
   (f : hom-Ring R S) (H : inverts-subset-hom-Ring R S P f) →
   hom-Ring S T → Σ (hom-Ring R T) (inverts-subset-hom-Ring R T P)
-pr1 (precomp-universal-property-localization-subset-Ring R S T P f H g) = {!!}
-pr2 (precomp-universal-property-localization-subset-Ring R S T P f H g) = {!!}
+precomp-universal-property-localization-subset-Ring = {!!}
 
 universal-property-localization-subset-Ring :
   (l : Level) {l1 l2 l3 : Level} (R : Ring l1) (S : Ring l2)
   (P : subset-Ring l3 R) (f : hom-Ring R S) →
   inverts-subset-hom-Ring R S P f → UU (lsuc l ⊔ l1 ⊔ l2 ⊔ l3)
-universal-property-localization-subset-Ring l R S P f H = {!!}
+universal-property-localization-subset-Ring = {!!}
 ```

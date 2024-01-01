@@ -47,13 +47,13 @@ module _
 
 loop-space-1-type-Set :
   {l : Level} (A : 1-Type l) (a : type-1-Type A) → Set l
-loop-space-1-type-Set A a = {!!}
+loop-space-1-type-Set = {!!}
 
 loop-space-1-type-Semigroup :
   {l : Level} (A : 1-Type l) (a : type-1-Type A) → Semigroup l
-loop-space-1-type-Semigroup A a = {!!}
+loop-space-1-type-Semigroup = {!!}
 
 loop-space-1-type-Group :
   {l : Level} (A : 1-Type l) (a : type-1-Type A) → Group l
-loop-space-1-type-Group A a = {!!}
+loop-space-1-type-Group = {!!}
 ```

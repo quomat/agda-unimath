@@ -50,5 +50,5 @@ module _
   mul-action-Concrete-Group :
     type-Concrete-Group G →
     type-action-Concrete-Group → type-action-Concrete-Group
-  mul-action-Concrete-Group g x = {!!}
+  mul-action-Concrete-Group = {!!}
 ```

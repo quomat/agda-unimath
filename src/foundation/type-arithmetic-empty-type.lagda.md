@@ -163,7 +163,7 @@ module _
 
 is-empty-right-factor-is-empty-prod :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → is-empty (A × B) → A → is-empty B
-is-empty-right-factor-is-empty-prod f a b = {!!}
+is-empty-right-factor-is-empty-prod = {!!}
 ```
 
 ### Left absorption law for cartesian products
@@ -184,7 +184,7 @@ module _
 
 is-empty-left-factor-is-empty-prod :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → is-empty (A × B) → B → is-empty A
-is-empty-left-factor-is-empty-prod f b a = {!!}
+is-empty-left-factor-is-empty-prod = {!!}
 ```
 
 ### Left unit law for coproducts
@@ -208,7 +208,7 @@ module _
   is-retraction-map-inv-left-unit-law-coprod-is-empty :
     ( map-inv-left-unit-law-coprod-is-empty ∘
       map-left-unit-law-coprod-is-empty) ~ id
-  is-retraction-map-inv-left-unit-law-coprod-is-empty (inl a) = {!!}
+  is-retraction-map-inv-left-unit-law-coprod-is-empty = {!!}
 
   is-equiv-map-left-unit-law-coprod-is-empty :
     is-equiv map-left-unit-law-coprod-is-empty
@@ -285,12 +285,12 @@ module _
   is-section-map-inv-right-unit-law-coprod-is-empty :
     ( map-right-unit-law-coprod-is-empty ∘
       map-inv-right-unit-law-coprod-is-empty) ~ id
-  is-section-map-inv-right-unit-law-coprod-is-empty a = {!!}
+  is-section-map-inv-right-unit-law-coprod-is-empty = {!!}
 
   is-retraction-map-inv-right-unit-law-coprod-is-empty :
     ( map-inv-right-unit-law-coprod-is-empty ∘
       map-right-unit-law-coprod-is-empty) ~ id
-  is-retraction-map-inv-right-unit-law-coprod-is-empty (inl a) = {!!}
+  is-retraction-map-inv-right-unit-law-coprod-is-empty = {!!}
 
   is-equiv-map-right-unit-law-coprod-is-empty :
     is-equiv map-right-unit-law-coprod-is-empty
@@ -314,7 +314,7 @@ module _
 
   is-left-coprod-is-empty :
     (x : A + B) → Σ A (λ a → inl a ＝ x)
-  is-left-coprod-is-empty x = {!!}
+  is-left-coprod-is-empty = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2}

@@ -39,7 +39,7 @@ hom-cospan :
   {A : UU l1} {B : UU l2} {X : UU l3} (f : A → X) (g : B → X)
   {A' : UU l1'} {B' : UU l2'} {X' : UU l3'} (f' : A' → X') (g' : B' → X') →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l1' ⊔ l2' ⊔ l3')
-hom-cospan {A = A} {B} {X} f g {A'} {B'} {X'} f' g' = {!!}
+hom-cospan = {!!}
 ```
 
 ### Identity morphisms of cospans
@@ -49,11 +49,7 @@ id-hom-cospan :
   {l1 l2 l3 l1' l2' l3' : Level}
   {A : UU l1} {B : UU l2} {X : UU l3} (f : A → X) (g : B → X) →
   hom-cospan f g f g
-pr1 (id-hom-cospan f g) = {!!}
-pr1 (pr2 (id-hom-cospan f g)) = {!!}
-pr1 (pr2 (pr2 (id-hom-cospan f g))) = {!!}
-pr1 (pr2 (pr2 (pr2 (id-hom-cospan f g)))) = {!!}
-pr2 (pr2 (pr2 (pr2 (id-hom-cospan f g)))) = {!!}
+id-hom-cospan = {!!}
 ```
 
 ### Rotating cospans of cospans
@@ -67,35 +63,7 @@ cospan-hom-cospan-rotate :
   (f'' : A'' → X'') (g'' : B'' → X'')
   (h : hom-cospan f' g' f g) (h' : hom-cospan f'' g'' f g) →
   hom-cospan (pr1 h) (pr1 h') (pr1 (pr2 (pr2 h))) (pr1 (pr2 (pr2 h')))
-pr1
-  ( cospan-hom-cospan-rotate f g f' g' f'' g''
-    ( hA , hB , hX , HA , HB)
-    ( hA' , hB' , hX' , HA' , HB')) = {!!}
-pr1
-  ( pr2
-    ( cospan-hom-cospan-rotate f g f' g' f'' g''
-      ( hA , hB , hX , HA , HB)
-      ( hA' , hB' , hX' , HA' , HB'))) = {!!}
-pr1
-  ( pr2
-    ( pr2
-      ( cospan-hom-cospan-rotate f g f' g' f'' g''
-        ( hA , hB , hX , HA , HB)
-        ( hA' , hB' , hX' , HA' , HB')))) = {!!}
-pr1
-  ( pr2
-    ( pr2
-      ( pr2
-        ( cospan-hom-cospan-rotate f g f' g' f'' g''
-          ( hA , hB , hX , HA , HB)
-          ( hA' , hB' , hX' , HA' , HB'))))) = {!!}
-pr2
-  ( pr2
-    ( pr2
-      ( pr2
-        ( cospan-hom-cospan-rotate f g f' g' f'' g''
-          ( hA , hB , hX , HA , HB)
-          ( hA' , hB' , hX' , HA' , HB'))))) = {!!}
+cospan-hom-cospan-rotate = {!!}
 
 cospan-hom-cospan-rotate' :
   {l1 l2 l3 l1' l2' l3' l1'' l2'' l3'' : Level}
@@ -106,33 +74,5 @@ cospan-hom-cospan-rotate' :
   (h : hom-cospan f' g' f g) (h' : hom-cospan f'' g'' f g) →
   hom-cospan
     (pr1 (pr2 h)) (pr1 (pr2 h')) (pr1 (pr2 (pr2 h))) (pr1 (pr2 (pr2 h')))
-pr1
-  ( cospan-hom-cospan-rotate' f g f' g' f'' g''
-    ( hA , hB , hX , HA , HB)
-    ( hA' , hB' , hX' , HA' , HB')) = {!!}
-pr1
-  ( pr2
-    ( cospan-hom-cospan-rotate' f g f' g' f'' g''
-      ( hA , hB , hX , HA , HB)
-      ( hA' , hB' , hX' , HA' , HB'))) = {!!}
-pr1
-  ( pr2
-    ( pr2
-      ( cospan-hom-cospan-rotate' f g f' g' f'' g''
-        ( hA , hB , hX , HA , HB)
-        ( hA' , hB' , hX' , HA' , HB')))) = {!!}
-pr1
-  ( pr2
-    ( pr2
-      ( pr2
-        ( cospan-hom-cospan-rotate' f g f' g' f'' g''
-          ( hA , hB , hX , HA , HB)
-          ( hA' , hB' , hX' , HA' , HB'))))) = {!!}
-pr2
-  ( pr2
-    ( pr2
-      ( pr2
-        ( cospan-hom-cospan-rotate' f g f' g' f'' g''
-          ( hA , hB , hX , HA , HB)
-          ( hA' , hB' , hX' , HA' , HB'))))) = {!!}
+cospan-hom-cospan-rotate' = {!!}
 ```

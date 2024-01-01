@@ -27,13 +27,13 @@ module _
 
   for-all-list-Prop :
     (l : list X) → Prop l2
-  for-all-list-Prop nil = {!!}
+  for-all-list-Prop = {!!}
 
   for-all-list :
     (l : list X) → UU l2
-  for-all-list l = {!!}
+  for-all-list = {!!}
 
   is-prop-for-all-list :
     (l : list X) → is-prop (for-all-list l)
-  is-prop-for-all-list l = {!!}
+  is-prop-for-all-list = {!!}
 ```

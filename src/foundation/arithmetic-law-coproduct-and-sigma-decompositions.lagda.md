@@ -64,7 +64,7 @@ module _
               ( λ B →
                 Σ ( Σ ( UU l) λ U → ( U ≃ (A + B)))
                   ( λ U → Σ (pr1 U → UU l) (λ Y → X ≃ Σ (pr1 U) Y))))
-    pr1 reassociate ((U , V , f) , A , B , e) = {!!}
+    reassociate = {!!}
 
     reassociate' :
       Σ ( UU l)
@@ -83,7 +83,7 @@ module _
           ( left-summand-binary-coproduct-Decomposition d) ×
         Relaxed-Σ-Decomposition l l
           ( right-summand-binary-coproduct-Decomposition d))
-    pr1 reassociate' (A , B , (YA , YB) , (A' , eA) , (B' , eB) , e) = {!!}
+    reassociate' = {!!}
 
   equiv-binary-coproduct-Decomposition-Σ-Decomposition :
     Σ ( Relaxed-Σ-Decomposition l l X)
@@ -141,7 +141,7 @@ module _
         ( map-inv-equiv
           ( matching-correspondence-binary-coproduct-Decomposition (pr2 D))
           ( inl a))
-    compute-left-equiv-binary-coproduct-Decomposition-Σ-Decomposition a = {!!}
+    compute-left-equiv-binary-coproduct-Decomposition-Σ-Decomposition = {!!}
 
     compute-right-equiv-binary-coproduct-Decomposition-Σ-Decomposition :
       ( b : right-summand-binary-coproduct-Decomposition (pr2 D)) →
@@ -155,5 +155,5 @@ module _
         ( map-inv-equiv
           ( matching-correspondence-binary-coproduct-Decomposition (pr2 D))
           ( inr b))
-    compute-right-equiv-binary-coproduct-Decomposition-Σ-Decomposition b = {!!}
+    compute-right-equiv-binary-coproduct-Decomposition-Σ-Decomposition = {!!}
 ```

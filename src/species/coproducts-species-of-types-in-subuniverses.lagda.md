@@ -43,7 +43,7 @@ module _
     (S : species-subuniverse P (subuniverse-global-subuniverse Q l3))
     (T : species-subuniverse P (subuniverse-global-subuniverse Q l4))
     (X : type-subuniverse P) → UU (l3 ⊔ l4)
-  type-coproduct-species-subuniverse S T X = {!!}
+  type-coproduct-species-subuniverse = {!!}
 ```
 
 ### Subuniverses closed under the coproduct of two species of types in a subuniverse
@@ -52,7 +52,7 @@ module _
 is-closed-under-coproduct-species-subuniverse :
   {l1 l2 : Level} (P : subuniverse l1 l2) (Q : global-subuniverse (λ l → l)) →
   UUω
-is-closed-under-coproduct-species-subuniverse P Q = {!!}
+is-closed-under-coproduct-species-subuniverse = {!!}
 ```
 
 ### The coproduct of two species of types in a subuniverse
@@ -68,7 +68,7 @@ module _
     species-subuniverse P (subuniverse-global-subuniverse Q l3) →
     species-subuniverse P (subuniverse-global-subuniverse Q l4) →
     species-subuniverse P (subuniverse-global-subuniverse Q (l3 ⊔ l4))
-  pr1 (coproduct-species-subuniverse S T X) = {!!}
+  coproduct-species-subuniverse = {!!}
   pr2 (coproduct-species-subuniverse S T X) = {!!}
 ```
 
@@ -102,7 +102,7 @@ module _
           ( subuniverse-global-subuniverse Q l4)
           ( T))
       ( X)
-  map-coproduct-Σ-extension-species-subuniverse (p , inl x) = {!!}
+  map-coproduct-Σ-extension-species-subuniverse = {!!}
 
   map-inv-coproduct-Σ-extension-species-subuniverse :
     coproduct-species-types
@@ -120,20 +120,20 @@ module _
       ( subuniverse-global-subuniverse Q (l3 ⊔ l4))
       ( coproduct-species-subuniverse P Q C1 S T)
       ( X)
-  map-inv-coproduct-Σ-extension-species-subuniverse (inl x) = {!!}
+  map-inv-coproduct-Σ-extension-species-subuniverse = {!!}
   map-inv-coproduct-Σ-extension-species-subuniverse (inr x) = {!!}
 
   is-section-map-inv-coproduct-Σ-extension-species-subuniverse :
     ( map-coproduct-Σ-extension-species-subuniverse ∘
       map-inv-coproduct-Σ-extension-species-subuniverse) ~ id
-  is-section-map-inv-coproduct-Σ-extension-species-subuniverse (inl (p , x)) = {!!}
+  is-section-map-inv-coproduct-Σ-extension-species-subuniverse = {!!}
   is-section-map-inv-coproduct-Σ-extension-species-subuniverse (inr (p , x)) = {!!}
 
   is-retraction-map-inv-coproduct-Σ-extension-species-subuniverse :
     ( map-inv-coproduct-Σ-extension-species-subuniverse ∘
       map-coproduct-Σ-extension-species-subuniverse) ~
     id
-  is-retraction-map-inv-coproduct-Σ-extension-species-subuniverse (p , inl x) = {!!}
+  is-retraction-map-inv-coproduct-Σ-extension-species-subuniverse = {!!}
   is-retraction-map-inv-coproduct-Σ-extension-species-subuniverse (p , inr x) = {!!}
 
   equiv-coproduct-Σ-extension-species-subuniverse :
@@ -152,6 +152,6 @@ module _
           ( subuniverse-global-subuniverse Q l4)
           ( T))
       ( X)
-  pr1 equiv-coproduct-Σ-extension-species-subuniverse = {!!}
+  equiv-coproduct-Σ-extension-species-subuniverse = {!!}
   pr2 equiv-coproduct-Σ-extension-species-subuniverse = {!!}
 ```

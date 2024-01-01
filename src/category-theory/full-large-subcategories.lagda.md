@@ -172,8 +172,7 @@ module _
 
   large-category-Full-Large-Subcategory :
     Large-Category (λ l → α l ⊔ γ l) β
-  large-precategory-Large-Category
-    large-category-Full-Large-Subcategory = {!!}
+  large-category-Full-Large-Subcategory = {!!}
 ```
 
 ### The forgetful functor from a full large subcategory to the ambient large category

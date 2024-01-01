@@ -47,14 +47,14 @@ Hardy-Ramanujan-ℕ = {!!}
 ```agda
 first-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ :
   sum-of-cubes-decomposition-ℕ Hardy-Ramanujan-ℕ
-pr1 first-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ = {!!}
+first-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ = {!!}
 pr1 (pr2 first-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ) = {!!}
 pr1 (pr2 (pr2 first-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ)) = {!!}
 pr2 (pr2 (pr2 first-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ)) = {!!}
 
 second-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ :
   sum-of-cubes-decomposition-ℕ Hardy-Ramanujan-ℕ
-pr1 second-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ = {!!}
+second-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ = {!!}
 pr1 (pr2 second-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ) = {!!}
 pr1 (pr2 (pr2 second-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ)) = {!!}
 pr2 (pr2 (pr2 second-sum-of-cubes-decomposition-Hardy-Ramanujan-ℕ)) = {!!}

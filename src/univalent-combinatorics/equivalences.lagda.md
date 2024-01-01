@@ -28,5 +28,5 @@ open import univalent-combinatorics.surjective-maps
 is-decidable-is-equiv-is-finite :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
   is-finite A → is-finite B → is-decidable (is-equiv f)
-is-decidable-is-equiv-is-finite f HA HB = {!!}
+is-decidable-is-equiv-is-finite = {!!}
 ```

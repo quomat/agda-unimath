@@ -28,7 +28,7 @@ A `n`-ary relation on a type `A` is a subtype of `Fin n → A`.
 ```agda
 multivariable-relation :
   {l1 : Level} (l2 : Level) (n : ℕ) (A : Fin n → UU l1) → UU (l1 ⊔ lsuc l2)
-multivariable-relation l2 n A = {!!}
+multivariable-relation = {!!}
 
 module _
   {l1 l2 : Level} {n : ℕ} {A : Fin n → UU l1}

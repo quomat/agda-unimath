@@ -48,7 +48,7 @@ Main-Class-Latin-Square-of-Order m = {!!}
 ```agda
 is-π-finite-Main-Class-Latin-Square-of-Order :
   (k m : ℕ) → is-π-finite k (Main-Class-Latin-Square-of-Order m)
-is-π-finite-Main-Class-Latin-Square-of-Order k m = {!!}
+is-π-finite-Main-Class-Latin-Square-of-Order = {!!}
 ```
 
 ### The sequence of the number of main classes of latin squares of finite order

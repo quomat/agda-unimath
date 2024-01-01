@@ -34,7 +34,7 @@ recorded in
 ```agda
 tr :
   {l1 l2 : Level} {A : UU l1} (B : A → UU l2) {x y : A} (p : x ＝ y) → B x → B y
-tr B refl b = {!!}
+tr = {!!}
 ```
 
 ## Properties
@@ -49,7 +49,7 @@ module _
   tr-concat :
     {x y z : A} (p : x ＝ y) (q : y ＝ z) (b : B x) →
     tr B (p ∙ q) b ＝ tr B q (tr B p b)
-  tr-concat refl q b = {!!}
+  tr-concat = {!!}
 ```
 
 ### Transposing transport along the inverse of an identification
@@ -62,12 +62,12 @@ module _
   eq-transpose-tr :
     {x y : A} (p : x ＝ y) {u : B x} {v : B y} →
     v ＝ tr B p u → tr B (inv p) v ＝ u
-  eq-transpose-tr refl q = {!!}
+  eq-transpose-tr = {!!}
 
   eq-transpose-tr' :
     {x y : A} (p : x ＝ y) {u : B x} {v : B y} →
     tr B p u ＝ v → u ＝ tr B (inv p) v
-  eq-transpose-tr' refl q = {!!}
+  eq-transpose-tr' = {!!}
 ```
 
 ### Every family of maps preserves transport
@@ -78,7 +78,7 @@ preserves-tr :
   (f : (i : I) → A i → B i)
   {i j : I} (p : i ＝ j) (x : A i) →
   f j (tr A p x) ＝ tr B p (f i x)
-preserves-tr f refl x = {!!}
+preserves-tr = {!!}
 ```
 
 ### Transporting along the action on identifications of a function
@@ -89,7 +89,7 @@ tr-ap :
   (f : A → C) (g : (x : A) → B x → D (f x))
   {x y : A} (p : x ＝ y) (z : B x) →
   tr D (ap f p) (g x z) ＝ g y (tr B p z)
-tr-ap f g refl z = {!!}
+tr-ap = {!!}
 ```
 
 ### Computing maps out of identity types as transports
@@ -102,7 +102,7 @@ module _
 
   compute-map-out-of-identity-type :
     (x : A) (p : a ＝ x) → f x p ＝ tr B p (f a refl)
-  compute-map-out-of-identity-type x refl = {!!}
+  compute-map-out-of-identity-type = {!!}
 ```
 
 ### Computing transport in the type family of identifications with a fixed target
@@ -111,7 +111,7 @@ module _
 tr-Id-left :
   {l : Level} {A : UU l} {a b c : A} (q : b ＝ c) (p : b ＝ a) →
   tr (_＝ a) q p ＝ ((inv q) ∙ p)
-tr-Id-left refl p = {!!}
+tr-Id-left = {!!}
 ```
 
 ### Computing transport in the type family of identifications with a fixed source
@@ -120,7 +120,7 @@ tr-Id-left refl p = {!!}
 tr-Id-right :
   {l : Level} {A : UU l} {a b c : A} (q : b ＝ c) (p : a ＝ b) →
   tr (a ＝_) q p ＝ (p ∙ q)
-tr-Id-right refl refl = {!!}
+tr-Id-right = {!!}
 ```
 
 ### Substitution law for transport
@@ -130,5 +130,5 @@ substitution-law-tr :
   {l1 l2 l3 : Level} {X : UU l1} {A : UU l2} (B : A → UU l3) (f : X → A)
   {x y : X} (p : x ＝ y) {x' : B (f x)} →
   tr B (ap f p) x' ＝ tr (B ∘ f) p x'
-substitution-law-tr B f refl = {!!}
+substitution-law-tr = {!!}
 ```

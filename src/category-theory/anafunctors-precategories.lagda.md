@@ -33,7 +33,7 @@ is only defined up to
 anafunctor-Precategory :
   {l1 l2 l3 l4 : Level} (l : Level) →
   Precategory l1 l2 → Precategory l3 l4 → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ lsuc l)
-anafunctor-Precategory l C D = {!!}
+anafunctor-Precategory = {!!}
 
 module _
   {l1 l2 l3 l4 l5 : Level} (C : Precategory l1 l2) (D : Precategory l3 l4)
@@ -62,5 +62,5 @@ module _
 
   anafunctor-functor-Precategory :
     functor-Precategory C D → anafunctor-Precategory l4 C D
-  pr1 (anafunctor-functor-Precategory F) X Y = {!!}
+  anafunctor-functor-Precategory = {!!}
 ```

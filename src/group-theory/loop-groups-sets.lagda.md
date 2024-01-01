@@ -60,11 +60,11 @@ module _
 
   is-unital-Semigroup-loop-semigroup-Set :
     is-unital-Semigroup loop-semigroup-Set
-  pr1 is-unital-Semigroup-loop-semigroup-Set = {!!}
+  is-unital-Semigroup-loop-semigroup-Set = {!!}
 
   is-group-loop-semigroup-Set' :
     is-group' loop-semigroup-Set is-unital-Semigroup-loop-semigroup-Set
-  pr1 is-group-loop-semigroup-Set' = {!!}
+  is-group-loop-semigroup-Set' = {!!}
 
   loop-group-Set : Group (lsuc l)
   pr1 loop-group-Set = {!!}
@@ -82,12 +82,12 @@ module _
   map-hom-symmetric-group-loop-group-Set :
     (X Y : Set l) →
     Id (type-Set X) (type-Set Y) → (type-Set Y) ≃ (type-Set X)
-  map-hom-symmetric-group-loop-group-Set X Y p = {!!}
+  map-hom-symmetric-group-loop-group-Set = {!!}
 
   map-hom-inv-symmetric-group-loop-group-Set :
     (X Y : Set l) →
     (type-Set X) ≃ (type-Set Y) → Id (type-Set Y) (type-Set X)
-  map-hom-inv-symmetric-group-loop-group-Set X Y f = {!!}
+  map-hom-inv-symmetric-group-loop-group-Set = {!!}
 
   commutative-inv-map-hom-symmetric-group-loop-group-Set :
     (X Y : UU l) (p : Id X Y) (sX : is-set X) (sY : is-set Y) →
@@ -95,7 +95,7 @@ module _
       ( map-hom-symmetric-group-loop-group-Set (Y , sY) (X , sX) (inv p))
       ( inv-equiv
         ( map-hom-symmetric-group-loop-group-Set (X , sX) (Y , sY) p))
-  commutative-inv-map-hom-symmetric-group-loop-group-Set X .X refl sX sY = {!!}
+  commutative-inv-map-hom-symmetric-group-loop-group-Set = {!!}
 
 module _
   {l : Level} (X : Set l)
@@ -103,11 +103,11 @@ module _
 
   hom-symmetric-group-loop-group-Set :
     hom-Group (loop-group-Set X) (symmetric-Group X)
-  pr1 hom-symmetric-group-loop-group-Set = {!!}
+  hom-symmetric-group-loop-group-Set = {!!}
 
   hom-inv-symmetric-group-loop-group-Set :
     hom-Group (symmetric-Group X) (loop-group-Set X)
-  pr1 hom-inv-symmetric-group-loop-group-Set = {!!}
+  hom-inv-symmetric-group-loop-group-Set = {!!}
 
   is-section-hom-inv-symmetric-group-loop-group-Set :
     Id
@@ -133,7 +133,7 @@ module _
 
   iso-symmetric-group-loop-group-Set :
     iso-Group (loop-group-Set X) (symmetric-Group X)
-  pr1 iso-symmetric-group-loop-group-Set = {!!}
+  iso-symmetric-group-loop-group-Set = {!!}
 ```
 
 ### The abstacted automorphism group and the loop group of a set are isomorphic
@@ -148,14 +148,14 @@ module _
       ( loop-group-Set X)
       ( group-Concrete-Group
         ( Automorphism-Group (Set-1-Type l) X))
-  pr1 hom-abstract-automorphism-group-loop-group-Set p = {!!}
+  hom-abstract-automorphism-group-loop-group-Set = {!!}
 
   hom-inv-abstract-automorphism-group-loop-group-Set :
     hom-Group
       ( group-Concrete-Group
         ( Automorphism-Group (Set-1-Type l) X))
       ( loop-group-Set X)
-  pr1 hom-inv-abstract-automorphism-group-loop-group-Set p = {!!}
+  hom-inv-abstract-automorphism-group-loop-group-Set = {!!}
 
   is-section-hom-inv-abstract-automorphism-group-loop-group-Set :
     Id
@@ -188,7 +188,7 @@ module _
       ( loop-group-Set X)
       ( group-Concrete-Group
         ( Automorphism-Group (Set-1-Type l) X))
-  pr1 iso-abstract-automorphism-group-loop-group-Set = {!!}
+  iso-abstract-automorphism-group-loop-group-Set = {!!}
 ```
 
 ### The loop groups of two equivalent sets are isomorphic

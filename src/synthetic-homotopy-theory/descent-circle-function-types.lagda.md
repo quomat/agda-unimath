@@ -78,11 +78,11 @@ module _
       ( descent-data-family-circle
         ( l)
         ( family-descent-data-circle-function-type l A B))
-  pr1 eq-descent-data-circle-function-type = {!!}
+  eq-descent-data-circle-function-type = {!!}
 
   family-with-descent-data-circle-function-type :
     family-with-descent-data-circle l (l2 ⊔ l3)
-  pr1 family-with-descent-data-circle-function-type = {!!}
+  family-with-descent-data-circle-function-type = {!!}
 ```
 
 ### Maps between families over the circle are equivalent to homomorphisms between the families' descent data
@@ -107,5 +107,5 @@ module _
     hom-descent-data-circle
       ( descent-data-family-with-descent-data-circle A)
       ( descent-data-family-with-descent-data-circle B)
-  equiv-descent-data-family-circle-function-type-hom dup-circle = {!!}
+  equiv-descent-data-family-circle-function-type-hom = {!!}
 ```

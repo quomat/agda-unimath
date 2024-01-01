@@ -64,9 +64,9 @@ module _
       ( descent-data-circle-dependent-pair-type l A B)
       ( descent-data-family-circle l
         ( family-descent-data-circle-dependent-pair-type l A B))
-  pr1 eq-descent-data-circle-dependent-pair-type = {!!}
+  eq-descent-data-circle-dependent-pair-type = {!!}
 
   family-with-descent-data-circle-dependent-pair-type :
     family-with-descent-data-circle l (l2 ⊔ l3)
-  pr1 family-with-descent-data-circle-dependent-pair-type = {!!}
+  family-with-descent-data-circle-dependent-pair-type = {!!}
 ```

@@ -94,7 +94,7 @@ module _
       (g : hom-Precategory C Y Z) (f : hom-Precategory C X Y) →
       action-presheaf-Precategory (comp-hom-Precategory C g f) ~
       action-presheaf-Precategory f ∘ action-presheaf-Precategory g
-    preserves-comp-action-presheaf-Precategory g f = {!!}
+    preserves-comp-action-presheaf-Precategory = {!!}
 
   hom-set-presheaf-Precategory :
     {l3 l4 : Level}
@@ -126,7 +126,7 @@ module _
         ( map-hom-presheaf-Precategory Y)
         ( map-hom-presheaf-Precategory X)
         ( action-presheaf-Precategory Q f)
-    naturality-hom-presheaf-Precategory f = {!!}
+    naturality-hom-presheaf-Precategory = {!!}
 
   comp-hom-presheaf-Precategory :
     {l3 l4 l5 : Level}
@@ -135,12 +135,12 @@ module _
     (Z : presheaf-Precategory l5) →
     hom-presheaf-Precategory Y Z → hom-presheaf-Precategory X Y →
     hom-presheaf-Precategory X Z
-  comp-hom-presheaf-Precategory X Y Z = {!!}
+  comp-hom-presheaf-Precategory = {!!}
 
   id-hom-presheaf-Precategory :
     {l3 : Level} (X : presheaf-Precategory l3) →
     hom-presheaf-Precategory X X
-  id-hom-presheaf-Precategory {l3} X = {!!}
+  id-hom-presheaf-Precategory = {!!}
 
   associative-comp-hom-presheaf-Precategory :
     {l3 l4 l5 l6 : Level}
@@ -156,7 +156,7 @@ module _
       ( f) ＝
     comp-hom-presheaf-Precategory X Z W h
       ( comp-hom-presheaf-Precategory X Y Z g f)
-  associative-comp-hom-presheaf-Precategory X Y Z W = {!!}
+  associative-comp-hom-presheaf-Precategory = {!!}
 
   inv-associative-comp-hom-presheaf-Precategory :
     {l3 l4 l5 l6 : Level}
@@ -173,7 +173,7 @@ module _
     comp-hom-presheaf-Precategory X Y W
       ( comp-hom-presheaf-Precategory Y Z W h g)
       ( f)
-  inv-associative-comp-hom-presheaf-Precategory X Y Z W = {!!}
+  inv-associative-comp-hom-presheaf-Precategory = {!!}
 
   left-unit-law-comp-hom-presheaf-Precategory :
     {l3 l4 : Level}
@@ -184,7 +184,7 @@ module _
       ( id-hom-presheaf-Precategory Y)
       ( f) ＝
     f
-  left-unit-law-comp-hom-presheaf-Precategory X Y = {!!}
+  left-unit-law-comp-hom-presheaf-Precategory = {!!}
 
   right-unit-law-comp-hom-presheaf-Precategory :
     {l3 l4 : Level}
@@ -194,7 +194,7 @@ module _
     comp-hom-presheaf-Precategory X X Y f
       ( id-hom-presheaf-Precategory X) ＝
     f
-  right-unit-law-comp-hom-presheaf-Precategory X Y = {!!}
+  right-unit-law-comp-hom-presheaf-Precategory = {!!}
 ```
 
 ### The category of small presheaves on a precategory

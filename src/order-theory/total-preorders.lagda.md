@@ -42,7 +42,7 @@ module _
 
   is-prop-incident-Preorder :
     (x y : type-Preorder X) → is-prop (incident-Preorder x y)
-  is-prop-incident-Preorder x y = {!!}
+  is-prop-incident-Preorder = {!!}
 
   is-total-Preorder-Prop : Prop (l1 ⊔ l2)
   is-total-Preorder-Prop = {!!}

@@ -97,7 +97,7 @@ module _
 
   is-prop-htpy-hom-Poset :
     (f g : hom-Poset P Q) → is-prop (htpy-hom-Poset f g)
-  is-prop-htpy-hom-Poset f g = {!!}
+  is-prop-htpy-hom-Poset = {!!}
 ```
 
 ### The identity order preserving map

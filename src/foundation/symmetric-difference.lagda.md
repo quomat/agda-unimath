@@ -41,12 +41,12 @@ module _
 
   symmetric-difference-subtype :
     subtype l1 X → subtype l2 X → subtype (l1 ⊔ l2) X
-  symmetric-difference-subtype P Q x = {!!}
+  symmetric-difference-subtype = {!!}
 
   symmetric-difference-decidable-subtype :
     decidable-subtype l1 X → decidable-subtype l2 X →
     decidable-subtype (l1 ⊔ l2) X
-  symmetric-difference-decidable-subtype P Q x = {!!}
+  symmetric-difference-decidable-subtype = {!!}
 ```
 
 ## Properties
@@ -68,7 +68,7 @@ module _
       ( symmetric-difference-decidable-subtype P Q)) +
     ( ( type-decidable-subtype (intersection-decidable-subtype P Q)) +
       ( type-decidable-subtype (intersection-decidable-subtype P Q)))
-  left-cases-equiv-symmetric-difference P Q x p (inl q) = {!!}
+  left-cases-equiv-symmetric-difference = {!!}
 
   right-cases-equiv-symmetric-difference :
     ( P : decidable-subtype l1 X) (Q : decidable-subtype l2 X) →
@@ -78,7 +78,7 @@ module _
       ( symmetric-difference-decidable-subtype P Q)) +
     ( ( type-decidable-subtype (intersection-decidable-subtype P Q)) +
       ( type-decidable-subtype (intersection-decidable-subtype P Q)))
-  right-cases-equiv-symmetric-difference P Q x q (inl p) = {!!}
+  right-cases-equiv-symmetric-difference = {!!}
 
   equiv-symmetric-difference :
     (P : decidable-subtype l1 X) (Q : decidable-subtype l2 X) →
@@ -86,7 +86,7 @@ module _
       ( ( type-decidable-subtype (symmetric-difference-decidable-subtype P Q)) +
         ( ( type-decidable-subtype (intersection-decidable-subtype P Q)) +
           ( type-decidable-subtype (intersection-decidable-subtype P Q)))))
-  pr1 (equiv-symmetric-difference P Q) (inl (pair x p)) = {!!}
+  equiv-symmetric-difference = {!!}
 ```
 
 ## See also

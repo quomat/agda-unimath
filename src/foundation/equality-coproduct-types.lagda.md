@@ -73,7 +73,7 @@ module _
 
   is-torsorial-Eq-coprod :
     (x : A + B) → is-torsorial (Eq-coprod x)
-  pr1 (pr1 (is-torsorial-Eq-coprod (inl x))) = {!!}
+  is-torsorial-Eq-coprod = {!!}
 
   is-equiv-Eq-eq-coprod : (x y : A + B) → is-equiv (Eq-eq-coprod x y)
   is-equiv-Eq-eq-coprod x = {!!}
@@ -99,11 +99,11 @@ module _
 
     is-section-Eq-eq-coprod-inl :
       (map-compute-Eq-coprod-inl-inl ∘ Eq-eq-coprod-inl) ~ id
-    is-section-Eq-eq-coprod-inl p = {!!}
+    is-section-Eq-eq-coprod-inl = {!!}
 
     is-retraction-Eq-eq-coprod-inl :
       (Eq-eq-coprod-inl ∘ map-compute-Eq-coprod-inl-inl) ~ id
-    is-retraction-Eq-eq-coprod-inl (Eq-eq-coprod-inl p) = {!!}
+    is-retraction-Eq-eq-coprod-inl = {!!}
 
     is-equiv-map-compute-Eq-coprod-inl-inl :
       is-equiv map-compute-Eq-coprod-inl-inl
@@ -167,11 +167,11 @@ module _
 
     is-section-Eq-eq-coprod-inr :
       (map-compute-Eq-coprod-inr-inr ∘ Eq-eq-coprod-inr) ~ id
-    is-section-Eq-eq-coprod-inr p = {!!}
+    is-section-Eq-eq-coprod-inr = {!!}
 
     is-retraction-Eq-eq-coprod-inr :
       (Eq-eq-coprod-inr ∘ map-compute-Eq-coprod-inr-inr) ~ id
-    is-retraction-Eq-eq-coprod-inr (Eq-eq-coprod-inr p) = {!!}
+    is-retraction-Eq-eq-coprod-inr = {!!}
 
     is-equiv-map-compute-Eq-coprod-inr-inr :
       is-equiv map-compute-Eq-coprod-inr-inr
@@ -219,7 +219,7 @@ module _
   is-emb-coprod :
     is-emb f → is-emb g → ((a : A) (b : B) → f a ≠ g b) →
     is-emb (ind-coprod (λ x → C) f g)
-  is-emb-coprod H K L (inl a) (inl a') = {!!}
+  is-emb-coprod = {!!}
 ```
 
 ### Coproducts of (k+2)-truncated types are (k+2)-truncated
@@ -233,7 +233,7 @@ module _
     is-trunc-coprod :
       is-trunc (succ-𝕋 (succ-𝕋 k)) A → is-trunc (succ-𝕋 (succ-𝕋 k)) B →
       is-trunc (succ-𝕋 (succ-𝕋 k)) (A + B)
-    is-trunc-coprod is-trunc-A is-trunc-B (inl x) (inl y) = {!!}
+    is-trunc-coprod = {!!}
 ```
 
 ### Coproducts of sets are sets
@@ -247,8 +247,7 @@ abstract
 
 coprod-Set :
   {l1 l2 : Level} (A : Set l1) (B : Set l2) → Set (l1 ⊔ l2)
-pr1 (coprod-Set (pair A is-set-A) (pair B is-set-B)) = {!!}
-pr2 (coprod-Set (pair A is-set-A) (pair B is-set-B)) = {!!}
+coprod-Set = {!!}
 ```
 
 ## See also

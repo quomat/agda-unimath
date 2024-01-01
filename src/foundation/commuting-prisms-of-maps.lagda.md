@@ -79,7 +79,7 @@ module _
         ( left-top)
         ( left-bottom))
       ( bottom)
-  pasting-vertical-coherence-prism-maps prism-top prism-bottom = {!!}
+  pasting-vertical-coherence-prism-maps = {!!}
 ```
 
 ## Properties

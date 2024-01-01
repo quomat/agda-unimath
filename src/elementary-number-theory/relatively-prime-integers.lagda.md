@@ -46,12 +46,12 @@ is-prop-is-relative-prime-ℤ x y = {!!}
 is-relatively-prime-abs-is-relatively-prime-ℤ :
   {a b : ℤ} → is-relative-prime-ℤ a b →
   is-relatively-prime-ℕ (abs-ℤ a) (abs-ℤ b)
-is-relatively-prime-abs-is-relatively-prime-ℤ {a} {b} H = {!!}
+is-relatively-prime-abs-is-relatively-prime-ℤ = {!!}
 
 is-relatively-prime-is-relatively-prime-abs-ℤ :
   {a b : ℤ} → is-relatively-prime-ℕ (abs-ℤ a) (abs-ℤ b) →
   is-relative-prime-ℤ a b
-is-relatively-prime-is-relatively-prime-abs-ℤ {a} {b} H = {!!}
+is-relatively-prime-is-relatively-prime-abs-ℤ = {!!}
 ```
 
 ### For any two integers `a` and `b` that are not both `0`, the integers `a/gcd(a,b)` and `b/gcd(a,b)` are relatively prime
@@ -63,6 +63,6 @@ relatively-prime-quotient-div-ℤ :
   is-relative-prime-ℤ
     ( quotient-div-ℤ (gcd-ℤ a b) a (div-left-gcd-ℤ a b))
     ( quotient-div-ℤ (gcd-ℤ a b) b (div-right-gcd-ℤ a b))
-relatively-prime-quotient-div-ℤ H = {!!}
+relatively-prime-quotient-div-ℤ = {!!}
 -}
 ```

@@ -174,7 +174,7 @@ module _
       ( cocone-map-sequential-diagram A c')
       ( cocone-map-sequential-diagram A c)
       ( precomp h Z)
-  inv-triangle-cocone-map-precomp-sequential-diagram Z k = {!!}
+  inv-triangle-cocone-map-precomp-sequential-diagram = {!!}
 
   triangle-cocone-map-precomp-sequential-diagram :
     { l4 : Level} (Z : UU l4) →
@@ -182,7 +182,7 @@ module _
       ( cocone-map-sequential-diagram A c')
       ( cocone-map-sequential-diagram A c)
       ( precomp h Z)
-  triangle-cocone-map-precomp-sequential-diagram Z = {!!}
+  triangle-cocone-map-precomp-sequential-diagram = {!!}
 
   abstract
     is-equiv-universal-property-sequential-colimit-universal-property-sequential-colimit :

@@ -38,18 +38,17 @@ We describe conditions under which dependent products are decidable.
 is-decidable-Π-Fin :
   {l1 : Level} (k : ℕ) {B : Fin k → UU l1} →
   ((x : Fin k) → is-decidable (B x)) → is-decidable ((x : Fin k) → B x)
-is-decidable-Π-Fin zero-ℕ {B} d = {!!}
-is-decidable-Π-Fin (succ-ℕ k) {B} d = {!!}
+is-decidable-Π-Fin = {!!}
 ```
 
 ```agda
 is-decidable-Π-count :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} →
   count A → ((x : A) → is-decidable (B x)) → is-decidable ((x : A) → B x)
-is-decidable-Π-count e d = {!!}
+is-decidable-Π-count = {!!}
 
 is-decidable-Π-is-finite :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} → is-finite A →
   ((x : A) → is-decidable (B x)) → is-decidable ((x : A) → B x)
-is-decidable-Π-is-finite {l1} {l2} {A} {B} H d = {!!}
+is-decidable-Π-is-finite = {!!}
 ```

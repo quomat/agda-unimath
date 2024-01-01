@@ -46,7 +46,7 @@ have
 binomial-sum-Ring :
   {l : Level} (R : Ring l)
   (n : ℕ) (f : functional-vec-Ring R (succ-ℕ n)) → type-Ring R
-binomial-sum-Ring R = {!!}
+binomial-sum-Ring = {!!}
 ```
 
 ## Properties
@@ -116,7 +116,7 @@ binomial-theorem-Ring :
       mul-Ring R
       ( power-Ring R (nat-Fin (succ-ℕ n) i) x)
       ( power-Ring R (dist-ℕ (nat-Fin (succ-ℕ n) i) n) y))
-binomial-theorem-Ring R = {!!}
+binomial-theorem-Ring = {!!}
 ```
 
 ## Corollaries
@@ -150,5 +150,5 @@ is-linear-combination-power-add-Ring :
             ( mul-Ring R
               ( power-Ring R (nat-Fin (succ-ℕ m) i) x)
               ( power-Ring R (dist-ℕ (nat-Fin (succ-ℕ m) i) m) y)))))
-is-linear-combination-power-add-Ring R = {!!}
+is-linear-combination-power-add-Ring = {!!}
 ```

@@ -75,7 +75,7 @@ module _
 ```agda
 id-hom-Commutative-Monoid :
   {l : Level} (M : Commutative-Monoid l) → hom-Commutative-Monoid M M
-id-hom-Commutative-Monoid M = {!!}
+id-hom-Commutative-Monoid = {!!}
 ```
 
 ### Composition of homomorphisms of commutative monoids

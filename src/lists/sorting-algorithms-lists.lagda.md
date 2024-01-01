@@ -52,22 +52,22 @@ module _
 
   is-permutation-list-is-sort-list :
     is-sort-list → is-permutation-list f
-  is-permutation-list-is-sort-list S = {!!}
+  is-permutation-list-is-sort-list = {!!}
 
   permutation-list-is-sort-list :
     is-sort-list → (l : list (type-Decidable-Total-Order X)) →
     Permutation (length-list l)
-  permutation-list-is-sort-list S l = {!!}
+  permutation-list-is-sort-list = {!!}
 
   eq-permute-list-permutation-is-sort-list :
     (S : is-sort-list) (l : list (type-Decidable-Total-Order X)) →
     f l ＝ permute-list l (permutation-list-is-sort-list S l)
-  eq-permute-list-permutation-is-sort-list S l = {!!}
+  eq-permute-list-permutation-is-sort-list = {!!}
 
   is-sorting-list-is-sort-list :
     is-sort-list →
     (l : list (type-Decidable-Total-Order X)) → is-sorted-list X (f l)
-  is-sorting-list-is-sort-list S = {!!}
+  is-sorting-list-is-sort-list = {!!}
 ```
 
 ## Properties
@@ -87,5 +87,5 @@ module _
       vec (type-Decidable-Total-Order X) n) →
     is-sort-vec X f →
     is-sort-list X (λ l → list-vec (length-list l) (f (vec-list l)))
-  pr1 (is-sort-list-is-sort-vec f S) = {!!}
+  is-sort-list-is-sort-vec = {!!}
 ```

@@ -55,22 +55,21 @@ module _
 ```agda
 subset-full-Subsemigroup :
   {l1 : Level} (l2 : Level) (G : Semigroup l1) → subset-Semigroup l2 G
-subset-full-Subsemigroup l2 G = {!!}
+subset-full-Subsemigroup = {!!}
 
 type-full-Subsemigroup :
   {l1 : Level} (l2 : Level) (G : Semigroup l1) → UU (l1 ⊔ l2)
-type-full-Subsemigroup l2 G = {!!}
+type-full-Subsemigroup = {!!}
 
 is-closed-under-multiplication-full-Subsemigroup :
   {l1 l2 : Level} (G : Semigroup l1) →
   is-closed-under-multiplication-subset-Semigroup G
     ( subset-full-Subsemigroup l2 G)
-is-closed-under-multiplication-full-Subsemigroup G {x} {y} _ _ = {!!}
+is-closed-under-multiplication-full-Subsemigroup = {!!}
 
 full-Subsemigroup :
   {l1 : Level} (l2 : Level) (G : Semigroup l1) → Subsemigroup l2 G
-pr1 (full-Subsemigroup l2 G) = {!!}
-pr2 (full-Subsemigroup l2 G) {x} {y} = {!!}
+full-Subsemigroup = {!!}
 
 module _
   {l1 l2 : Level} (G : Semigroup l1)
@@ -84,7 +83,7 @@ module _
 
   equiv-inclusion-full-Subsemigroup :
     type-full-Subsemigroup l2 G ≃ type-Semigroup G
-  pr1 equiv-inclusion-full-Subsemigroup = {!!}
+  equiv-inclusion-full-Subsemigroup = {!!}
 
   semigroup-full-Subsemigroup : Semigroup (l1 ⊔ l2)
   semigroup-full-Subsemigroup = {!!}
@@ -97,11 +96,11 @@ module _
       ( semigroup-full-Subsemigroup)
       ( G)
       ( inclusion-full-Subsemigroup)
-  preserves-mul-inclusion-full-Subsemigroup {x} {y} = {!!}
+  preserves-mul-inclusion-full-Subsemigroup = {!!}
 
   equiv-semigroup-inclusion-full-Subsemigroup :
     equiv-Semigroup semigroup-full-Subsemigroup G
-  pr1 equiv-semigroup-inclusion-full-Subsemigroup = {!!}
+  equiv-semigroup-inclusion-full-Subsemigroup = {!!}
 
   iso-full-Subsemigroup : iso-Semigroup semigroup-full-Subsemigroup G
   iso-full-Subsemigroup = {!!}
@@ -126,11 +125,11 @@ module _
       ( semigroup-Subsemigroup G H)
       ( G)
       ( hom-inclusion-Subsemigroup G H)
-  is-iso-inclusion-is-full-Subsemigroup K = {!!}
+  is-iso-inclusion-is-full-Subsemigroup = {!!}
 
   iso-inclusion-is-full-Subsemigroup :
     is-full-Subsemigroup G H → iso-Semigroup (semigroup-Subsemigroup G H) G
-  pr1 (iso-inclusion-is-full-Subsemigroup K) = {!!}
+  iso-inclusion-is-full-Subsemigroup = {!!}
 
   is-full-is-iso-inclusion-Subsemigroup :
     is-iso-Semigroup
@@ -138,5 +137,5 @@ module _
       ( G)
       ( hom-inclusion-Subsemigroup G H) →
     is-full-Subsemigroup G H
-  is-full-is-iso-inclusion-Subsemigroup K = {!!}
+  is-full-is-iso-inclusion-Subsemigroup = {!!}
 ```

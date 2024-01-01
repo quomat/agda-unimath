@@ -34,13 +34,13 @@ commutative version of the cartesian product operation on types.
 ```agda
 product-unordered-tuple-types :
   {l : Level} (n : ℕ) → unordered-tuple n (UU l) → (UU l)
-product-unordered-tuple-types n p = {!!}
+product-unordered-tuple-types = {!!}
 
 pr-product-unordered-tuple-types :
   {l : Level} (n : ℕ) (A : unordered-tuple-types l n)
   (i : type-unordered-tuple n A) →
   product-unordered-tuple-types n A → element-unordered-tuple n A i
-pr-product-unordered-tuple-types n A i f = {!!}
+pr-product-unordered-tuple-types = {!!}
 
 equiv-pr-product-unordered-tuple-types :
   {l : Level} (n : ℕ) (A : unordered-tuple-types l (succ-ℕ n))
@@ -49,7 +49,7 @@ equiv-pr-product-unordered-tuple-types :
       ( unordered-tuple-complement-point-type-unordered-tuple n A i)) ×
     ( element-unordered-tuple (succ-ℕ n) A i)) ≃
   product-unordered-tuple-types (succ-ℕ n) A
-equiv-pr-product-unordered-tuple-types n A i = {!!}
+equiv-pr-product-unordered-tuple-types = {!!}
 
 map-equiv-pr-product-unordered-tuple-types :
   {l : Level} (n : ℕ) (A : unordered-tuple-types l (succ-ℕ n))
@@ -58,7 +58,7 @@ map-equiv-pr-product-unordered-tuple-types :
     ( unordered-tuple-complement-point-type-unordered-tuple n A i) →
   element-unordered-tuple (succ-ℕ n) A i →
   product-unordered-tuple-types (succ-ℕ n) A
-map-equiv-pr-product-unordered-tuple-types n A i f a = {!!}
+map-equiv-pr-product-unordered-tuple-types = {!!}
 ```
 
 ### Equivalences of products of unordered pairs of types
@@ -72,5 +72,5 @@ module _
   equiv-product-unordered-tuple-types :
     equiv-unordered-tuple-types n A B →
     product-unordered-tuple-types n A ≃ product-unordered-tuple-types n B
-  equiv-product-unordered-tuple-types e = {!!}
+  equiv-product-unordered-tuple-types = {!!}
 ```

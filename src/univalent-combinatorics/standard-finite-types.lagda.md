@@ -63,7 +63,7 @@ is-set-Fin n = {!!}
 
 inl-Fin :
   (k : ℕ) → Fin k → Fin (succ-ℕ k)
-inl-Fin k = {!!}
+inl-Fin = {!!}
 
 emb-inl-Fin : (k : ℕ) → Fin k ↪ Fin (succ-ℕ k)
 pr1 (emb-inl-Fin k) = {!!}
@@ -85,8 +85,7 @@ is-inl-Fin k x = {!!}
 is-neg-one-is-not-inl-Fin :
   (k : ℕ) (x : Fin (succ-ℕ k)) →
   ¬ (is-inl-Fin k x) → is-neg-one-Fin (succ-ℕ k) x
-is-neg-one-is-not-inl-Fin k (inl x) H = {!!}
-is-neg-one-is-not-inl-Fin k (inr star) H = {!!}
+is-neg-one-is-not-inl-Fin = {!!}
 
 inr-Fin : (k : ℕ) → Fin k → Fin (succ-ℕ k)
 inr-Fin (succ-ℕ k) (inl x) = {!!}
@@ -94,13 +93,11 @@ inr-Fin (succ-ℕ k) (inr star) = {!!}
 
 neq-inl-Fin-inr-Fin :
   (n : ℕ) → (k : Fin n) → inl-Fin n k ≠ inr-Fin n k
-neq-inl-Fin-inr-Fin (succ-ℕ n) (inl k) = {!!}
-neq-inl-Fin-inr-Fin (succ-ℕ n) (inr star) = {!!}
+neq-inl-Fin-inr-Fin = {!!}
 
 neq-inr-Fin-inl-Fin :
   (n : ℕ) → (k : Fin n) → inr-Fin n k ≠ inl-Fin n k
-neq-inr-Fin-inl-Fin (succ-ℕ n) (inl k) = {!!}
-neq-inr-Fin-inl-Fin (succ-ℕ n) (inr k) = {!!}
+neq-inr-Fin-inl-Fin = {!!}
 ```
 
 ### The standard finite types in an arbitrary universe
@@ -126,8 +123,7 @@ raise-Fin-Set l k = {!!}
 ```agda
 is-decidable-is-inl-Fin :
   (k : ℕ) (x : Fin (succ-ℕ k)) → is-decidable (is-inl-Fin k x)
-is-decidable-is-inl-Fin k (inl x) = {!!}
-is-decidable-is-inl-Fin k (inr star) = {!!}
+is-decidable-is-inl-Fin = {!!}
 ```
 
 ### `Fin 1` is contractible
@@ -141,11 +137,11 @@ inv-map-equiv-Fin-one-ℕ star = {!!}
 
 is-section-inv-map-equiv-Fin-one-ℕ :
   ( map-equiv-Fin-one-ℕ ∘ inv-map-equiv-Fin-one-ℕ) ~ id
-is-section-inv-map-equiv-Fin-one-ℕ star = {!!}
+is-section-inv-map-equiv-Fin-one-ℕ = {!!}
 
 is-retraction-inv-map-equiv-Fin-one-ℕ :
   ( inv-map-equiv-Fin-one-ℕ ∘ map-equiv-Fin-one-ℕ) ~ id
-is-retraction-inv-map-equiv-Fin-one-ℕ (inr star) = {!!}
+is-retraction-inv-map-equiv-Fin-one-ℕ = {!!}
 
 is-equiv-map-equiv-Fin-one-ℕ : is-equiv map-equiv-Fin-one-ℕ
 is-equiv-map-equiv-Fin-one-ℕ = {!!}
@@ -159,9 +155,7 @@ is-contr-Fin-one-ℕ = {!!}
 
 is-not-contractible-Fin :
   (k : ℕ) → is-not-one-ℕ k → is-not-contractible (Fin k)
-is-not-contractible-Fin zero-ℕ f = {!!}
-is-not-contractible-Fin (succ-ℕ zero-ℕ) f C = {!!}
-is-not-contractible-Fin (succ-ℕ (succ-ℕ k)) f C = {!!}
+is-not-contractible-Fin = {!!}
 ```
 
 ### The inclusion of `Fin k` into `ℕ`
@@ -181,13 +175,11 @@ strict-upper-bound-nat-Fin (succ-ℕ k) (inr star) = {!!}
 
 upper-bound-nat-Fin :
   (k : ℕ) (x : Fin (succ-ℕ k)) → leq-ℕ (nat-Fin (succ-ℕ k) x) k
-upper-bound-nat-Fin zero-ℕ (inr star) = {!!}
-upper-bound-nat-Fin (succ-ℕ k) (inl x) = {!!}
-upper-bound-nat-Fin (succ-ℕ k) (inr star) = {!!}
+upper-bound-nat-Fin = {!!}
 
 upper-bound-nat-Fin' :
   (k : ℕ) (x : Fin k) → leq-ℕ (nat-Fin k x) k
-upper-bound-nat-Fin' k x = {!!}
+upper-bound-nat-Fin' = {!!}
 
 is-injective-nat-Fin : (k : ℕ) → is-injective (nat-Fin k)
 is-injective-nat-Fin (succ-ℕ k) {inl x} {inl y} p = {!!}
@@ -244,18 +236,16 @@ is-zero-nat-zero-Fin {succ-ℕ k} = {!!}
 nat-skip-zero-Fin :
   (k : ℕ) (x : Fin k) →
   nat-Fin (succ-ℕ k) (skip-zero-Fin k x) ＝ succ-ℕ (nat-Fin k x)
-nat-skip-zero-Fin (succ-ℕ k) (inl x) = {!!}
-nat-skip-zero-Fin (succ-ℕ k) (inr star) = {!!}
+nat-skip-zero-Fin = {!!}
 
 nat-succ-Fin :
   (k : ℕ) (x : Fin k) →
   nat-Fin (succ-ℕ k) (succ-Fin (succ-ℕ k) (inl x)) ＝ succ-ℕ (nat-Fin k x)
-nat-succ-Fin k x = {!!}
+nat-succ-Fin = {!!}
 
 nat-inr-Fin :
   (k : ℕ) (x : Fin k) → nat-Fin (succ-ℕ k) (inr-Fin k x) ＝ succ-ℕ (nat-Fin k x)
-nat-inr-Fin (succ-ℕ k) (inl x) = {!!}
-nat-inr-Fin (succ-ℕ k) (inr star) = {!!}
+nat-inr-Fin = {!!}
 ```
 
 ```agda
@@ -267,13 +257,11 @@ is-one-Fin (succ-ℕ k) x = {!!}
 
 is-zero-or-one-Fin-two-ℕ :
   (x : Fin 2) → (is-zero-Fin 2 x) + (is-one-Fin 2 x)
-is-zero-or-one-Fin-two-ℕ (inl (inr star)) = {!!}
-is-zero-or-one-Fin-two-ℕ (inr star) = {!!}
+is-zero-or-one-Fin-two-ℕ = {!!}
 
 is-one-nat-one-Fin :
   (k : ℕ) → is-one-ℕ (nat-Fin (succ-ℕ (succ-ℕ k)) (one-Fin (succ-ℕ k)))
-is-one-nat-one-Fin zero-ℕ = {!!}
-is-one-nat-one-Fin (succ-ℕ k) = {!!}
+is-one-nat-one-Fin = {!!}
 ```
 
 ```agda
@@ -287,20 +275,12 @@ is-injective-inl-Fin k refl = {!!}
 neq-zero-skip-zero-Fin :
   {k : ℕ} {x : Fin k} →
   is-nonzero-Fin (succ-ℕ k) (skip-zero-Fin k x)
-neq-zero-skip-zero-Fin {succ-ℕ k} {inl x} p = {!!}
+neq-zero-skip-zero-Fin = {!!}
 
 neq-zero-succ-Fin :
   {k : ℕ} {x : Fin k} →
   is-nonzero-Fin (succ-ℕ k) (succ-Fin (succ-ℕ k) (inl-Fin k x))
-neq-zero-succ-Fin {succ-ℕ k} {inl x} p = {!!}
-neq-zero-succ-Fin {succ-ℕ k} {inr star} ()
-```
-
-### Exercise 7.5 (d)
-
-```agda
-is-injective-skip-zero-Fin : (k : ℕ) → is-injective (skip-zero-Fin k)
-is-injective-skip-zero-Fin (succ-ℕ k) {inl x} {inl y} p = {!!}
+neq-zero-succ-Fin = {!!}
 is-injective-skip-zero-Fin (succ-ℕ k) {inl x} {inr star} ()
 is-injective-skip-zero-Fin (succ-ℕ k) {inr star} {inl y} ()
 is-injective-skip-zero-Fin (succ-ℕ k) {inr star} {inr star} p = {!!}
@@ -317,8 +297,7 @@ We define a function `skip-neg-two-Fin` in order to define `pred-Fin`.
 ```agda
 skip-neg-two-Fin :
   (k : ℕ) → Fin k → Fin (succ-ℕ k)
-skip-neg-two-Fin (succ-ℕ k) (inl x) = {!!}
-skip-neg-two-Fin (succ-ℕ k) (inr x) = {!!}
+skip-neg-two-Fin = {!!}
 ```
 
 We define the predecessor function on `Fin k`.
@@ -334,29 +313,21 @@ We now turn to the exercise.
 ```agda
 pred-zero-Fin :
   (k : ℕ) → is-neg-one-Fin (succ-ℕ k) (pred-Fin (succ-ℕ k) (zero-Fin k))
-pred-zero-Fin (zero-ℕ) = {!!}
-pred-zero-Fin (succ-ℕ k) = {!!}
+pred-zero-Fin = {!!}
 
 succ-skip-neg-two-Fin :
   (k : ℕ) (x : Fin (succ-ℕ k)) →
   succ-Fin (succ-ℕ (succ-ℕ k)) (skip-neg-two-Fin (succ-ℕ k) x) ＝
   inl (succ-Fin (succ-ℕ k) x)
-succ-skip-neg-two-Fin zero-ℕ (inr star) = {!!}
-succ-skip-neg-two-Fin (succ-ℕ k) (inl x) = {!!}
-succ-skip-neg-two-Fin (succ-ℕ k) (inr star) = {!!}
+succ-skip-neg-two-Fin = {!!}
 
 is-section-pred-Fin :
   (k : ℕ) (x : Fin k) → succ-Fin k (pred-Fin k x) ＝ x
-is-section-pred-Fin (succ-ℕ zero-ℕ) (inr star) = {!!}
-is-section-pred-Fin (succ-ℕ (succ-ℕ k)) (inl x) = {!!}
-is-section-pred-Fin (succ-ℕ (succ-ℕ k)) (inr star) = {!!}
+is-section-pred-Fin = {!!}
 
 is-retraction-pred-Fin :
   (k : ℕ) (x : Fin k) → pred-Fin k (succ-Fin k x) ＝ x
-is-retraction-pred-Fin (succ-ℕ zero-ℕ) (inr star) = {!!}
-is-retraction-pred-Fin (succ-ℕ (succ-ℕ k)) (inl (inl x)) = {!!}
-is-retraction-pred-Fin (succ-ℕ (succ-ℕ k)) (inl (inr star)) = {!!}
-is-retraction-pred-Fin (succ-ℕ (succ-ℕ k)) (inr star) = {!!}
+is-retraction-pred-Fin = {!!}
 
 is-equiv-succ-Fin : (k : ℕ) → is-equiv (succ-Fin k)
 pr1 (pr1 (is-equiv-succ-Fin k)) = {!!}
@@ -382,8 +353,7 @@ pr2 (equiv-pred-Fin k) = {!!}
 ```agda
 leq-nat-succ-Fin :
   (k : ℕ) (x : Fin k) → leq-ℕ (nat-Fin k (succ-Fin k x)) (succ-ℕ (nat-Fin k x))
-leq-nat-succ-Fin (succ-ℕ k) (inl x) = {!!}
-leq-nat-succ-Fin (succ-ℕ k) (inr star) = {!!}
+leq-nat-succ-Fin = {!!}
 ```
 
 ### Fin is injective

@@ -115,25 +115,15 @@ refl-Eq-bool false = {!!}
 
 Eq-eq-bool :
   {x y : bool} → x ＝ y → Eq-bool x y
-Eq-eq-bool {x = x} refl = {!!}
+Eq-eq-bool = {!!}
 
 eq-Eq-bool :
   {x y : bool} → Eq-bool x y → x ＝ y
-eq-Eq-bool {true} {true} star = {!!}
-eq-Eq-bool {false} {false} star = {!!}
+eq-Eq-bool = {!!}
 
 neq-false-true-bool :
   false ≠ true
-neq-false-true-bool ()
-```
-
-## Structure
-
-### The boolean operators
-
-```agda
-neg-bool : bool → bool
-neg-bool true = {!!}
+neq-false-true-bool = {!!}
 neg-bool false = {!!}
 
 conjunction-bool : bool → bool → bool
@@ -242,7 +232,7 @@ pr2 equiv-neg-bool = {!!}
 abstract
   not-equiv-const :
     (b : bool) → ¬ (is-equiv (const bool bool b))
-  not-equiv-const true (pair (pair g G) (pair h H)) = {!!}
+  not-equiv-const = {!!}
 ```
 
 ### The constant function `const bool bool b` is injective

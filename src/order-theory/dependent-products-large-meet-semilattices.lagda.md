@@ -39,7 +39,7 @@ module _
   has-meets-Π-Large-Poset :
     ((i : I) → has-meets-Large-Poset (P i)) →
     has-meets-Large-Poset (Π-Large-Poset P)
-  meet-has-meets-Large-Poset (has-meets-Π-Large-Poset H) x y i = {!!}
+  has-meets-Π-Large-Poset = {!!}
 ```
 
 ### Large meet-semilattices
@@ -65,12 +65,11 @@ module _
   is-large-meet-semilattice-Π-Large-Meet-Semilattice :
     is-large-meet-semilattice-Large-Poset
       large-poset-Π-Large-Meet-Semilattice
-  has-meets-is-large-meet-semilattice-Large-Poset
-    is-large-meet-semilattice-Π-Large-Meet-Semilattice = {!!}
+  is-large-meet-semilattice-Π-Large-Meet-Semilattice = {!!}
 
   Π-Large-Meet-Semilattice :
     Large-Meet-Semilattice (λ l1 → α l1 ⊔ l) (λ l1 l2 → β l1 l2 ⊔ l)
-  large-poset-Large-Meet-Semilattice Π-Large-Meet-Semilattice = {!!}
+  Π-Large-Meet-Semilattice = {!!}
 
   type-Π-Large-Meet-Semilattice : (l1 : Level) → UU (α l1 ⊔ l)
   type-Π-Large-Meet-Semilattice = {!!}

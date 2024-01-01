@@ -57,7 +57,7 @@ module _
 
   subtype-descent-data-circle-subtype :
     subtype l3 (type-family-with-descent-data-circle A)
-  pr1 (subtype-descent-data-circle-subtype x) = {!!}
+  subtype-descent-data-circle-subtype = {!!}
 
   equiv-fixpoint-descent-data-circle-subtype-fixpoint-in-subtype :
     fixpoint-descent-data-circle
@@ -74,5 +74,5 @@ module _
     ( Σ ( fixpoint-descent-data-circle
           ( descent-data-family-with-descent-data-circle A))
         ( λ x → is-in-subtype subtype-descent-data-circle-subtype (pr1 x)))
-  equiv-section-descent-data-circle-subtype-fixpoint-in-subtype dup-circle = {!!}
+  equiv-section-descent-data-circle-subtype-fixpoint-in-subtype = {!!}
 ```

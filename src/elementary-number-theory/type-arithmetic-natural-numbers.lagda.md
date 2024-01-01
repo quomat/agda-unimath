@@ -60,13 +60,11 @@ map-inv-equiv-ℕ (inr n) = {!!}
 
 is-retraction-map-inv-equiv-ℕ :
   ( map-inv-equiv-ℕ ∘ map-equiv-ℕ) ~ id
-is-retraction-map-inv-equiv-ℕ zero-ℕ = {!!}
-is-retraction-map-inv-equiv-ℕ (succ-ℕ n) = {!!}
+is-retraction-map-inv-equiv-ℕ = {!!}
 
 is-section-map-inv-equiv-ℕ :
   ( map-equiv-ℕ ∘ map-inv-equiv-ℕ) ~ id
-is-section-map-inv-equiv-ℕ (inl star) = {!!}
-is-section-map-inv-equiv-ℕ (inr n) = {!!}
+is-section-map-inv-equiv-ℕ = {!!}
 
 equiv-ℕ : ℕ ≃ (unit + ℕ)
 pr1 equiv-ℕ = {!!}
@@ -87,8 +85,7 @@ action-map-ℕ+ℕ-to-ℕ-on-succ-ℕ+ℕ :
   (x : ℕ + ℕ) →
     (map-ℕ+ℕ-to-ℕ (succ-ℕ+ℕ x)) ＝
       (succ-ℕ (succ-ℕ (map-ℕ+ℕ-to-ℕ x)))
-action-map-ℕ+ℕ-to-ℕ-on-succ-ℕ+ℕ (inl x) = {!!}
-action-map-ℕ+ℕ-to-ℕ-on-succ-ℕ+ℕ (inr x) = {!!}
+action-map-ℕ+ℕ-to-ℕ-on-succ-ℕ+ℕ = {!!}
 
 is-split-surjective-map-ℕ+ℕ-to-ℕ : is-split-surjective map-ℕ+ℕ-to-ℕ
 is-split-surjective-map-ℕ+ℕ-to-ℕ zero-ℕ = {!!}
@@ -125,8 +122,7 @@ is-equiv-map-ℕ-to-ℕ+ℕ = {!!}
 ```agda
 equiv-iterated-coproduct-ℕ :
   (n : ℕ) → (iterate n (_+_ ℕ) ℕ) ≃ ℕ
-equiv-iterated-coproduct-ℕ zero-ℕ = {!!}
-equiv-iterated-coproduct-ℕ (succ-ℕ n) = {!!}
+equiv-iterated-coproduct-ℕ = {!!}
 ```
 
 ### The product `ℕ × ℕ` is equivalent to `ℕ`
@@ -147,8 +143,7 @@ is-equiv-map-ℕ-to-ℕ×ℕ = {!!}
 ```agda
 equiv-iterated-product-ℕ :
   (n : ℕ) → (iterate n (_×_ ℕ) ℕ) ≃ ℕ
-equiv-iterated-product-ℕ zero-ℕ = {!!}
-equiv-iterated-product-ℕ (succ-ℕ n) = {!!}
+equiv-iterated-product-ℕ = {!!}
 ```
 
 ### The coproduct `(Fin n) + ℕ` is equivalent to `N` for any standard finite `Fin n`

@@ -52,14 +52,14 @@ module _
     (p₂ : hom-Precategory C w z) →
     comp-hom-Precategory C f p₁ ＝ comp-hom-Precategory C g p₂ →
     UU (l1 ⊔ l2)
-  is-pullback-Precategory x y z f g w p₁ p₂ _ = {!!}
+  is-pullback-Precategory = {!!}
 
   pullback-Precategory :
     (x y z : obj-Precategory C) →
     hom-Precategory C y x →
     hom-Precategory C z x →
     UU (l1 ⊔ l2)
-  pullback-Precategory x y z f g = {!!}
+  pullback-Precategory = {!!}
 
   has-all-pullback-Precategory : UU (l1 ⊔ l2)
   has-all-pullback-Precategory = {!!}
@@ -118,7 +118,7 @@ module _
       comp-hom-Precategory C pr1-pullback-Precategory h' ＝ p₁' →
       comp-hom-Precategory C pr2-pullback-Precategory h' ＝ p₂' →
       morphism-into-pullback-Precategory ＝ h'
-    is-unique-morphism-into-pullback-Precategory h' α₁ α₂ = {!!}
+    is-unique-morphism-into-pullback-Precategory = {!!}
 
 module _
   {l1 l2 : Level} (C : Precategory l1 l2)

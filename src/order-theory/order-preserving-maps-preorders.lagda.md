@@ -40,16 +40,16 @@ module _
 
   preserves-order-Preorder-Prop :
     (type-Preorder P → type-Preorder Q) → Prop (l1 ⊔ l2 ⊔ l4)
-  preserves-order-Preorder-Prop f = {!!}
+  preserves-order-Preorder-Prop = {!!}
 
   preserves-order-Preorder :
     (type-Preorder P → type-Preorder Q) → UU (l1 ⊔ l2 ⊔ l4)
-  preserves-order-Preorder f = {!!}
+  preserves-order-Preorder = {!!}
 
   is-prop-preserves-order-Preorder :
     (f : type-Preorder P → type-Preorder Q) →
     is-prop (preserves-order-Preorder f)
-  is-prop-preserves-order-Preorder f = {!!}
+  is-prop-preserves-order-Preorder = {!!}
 
   hom-Preorder : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
   hom-Preorder = {!!}
@@ -77,23 +77,23 @@ module _
 
   htpy-eq-hom-Preorder :
     (f g : hom-Preorder P Q) → Id f g → htpy-hom-Preorder f g
-  htpy-eq-hom-Preorder f .f refl = {!!}
+  htpy-eq-hom-Preorder = {!!}
 
   is-torsorial-htpy-hom-Preorder :
     (f : hom-Preorder P Q) → is-torsorial (htpy-hom-Preorder f)
-  is-torsorial-htpy-hom-Preorder f = {!!}
+  is-torsorial-htpy-hom-Preorder = {!!}
 
   is-equiv-htpy-eq-hom-Preorder :
     (f g : hom-Preorder P Q) → is-equiv (htpy-eq-hom-Preorder f g)
-  is-equiv-htpy-eq-hom-Preorder f = {!!}
+  is-equiv-htpy-eq-hom-Preorder = {!!}
 
   extensionality-hom-Preorder :
     (f g : hom-Preorder P Q) → Id f g ≃ htpy-hom-Preorder f g
-  pr1 (extensionality-hom-Preorder f g) = {!!}
+  extensionality-hom-Preorder = {!!}
 
   eq-htpy-hom-Preorder :
     (f g : hom-Preorder P Q) → htpy-hom-Preorder f g → Id f g
-  eq-htpy-hom-Preorder f g = {!!}
+  eq-htpy-hom-Preorder = {!!}
 ```
 
 ### The identity order preserving map
@@ -123,12 +123,12 @@ module _
     (g : hom-Preorder Q R) (f : hom-Preorder P Q) →
     preserves-order-Preorder P R
       ( map-hom-Preorder Q R g ∘ map-hom-Preorder P Q f)
-  preserves-order-comp-Preorder g f x y H = {!!}
+  preserves-order-comp-Preorder = {!!}
 
   comp-hom-Preorder :
     (g : hom-Preorder Q R) (f : hom-Preorder P Q) →
     hom-Preorder P R
-  pr1 (comp-hom-Preorder g f) = {!!}
+  comp-hom-Preorder = {!!}
 ```
 
 ### Unit laws for composition of order preserving maps
@@ -141,12 +141,12 @@ module _
   left-unit-law-comp-hom-Preorder :
     (f : hom-Preorder P Q) →
     Id ( comp-hom-Preorder P Q Q (id-hom-Preorder Q) f) f
-  left-unit-law-comp-hom-Preorder f = {!!}
+  left-unit-law-comp-hom-Preorder = {!!}
 
   right-unit-law-comp-hom-Preorder :
     (f : hom-Preorder P Q) →
     Id (comp-hom-Preorder P P Q f (id-hom-Preorder P)) f
-  right-unit-law-comp-hom-Preorder f = {!!}
+  right-unit-law-comp-hom-Preorder = {!!}
 ```
 
 ### Associativity of composition of order preserving maps

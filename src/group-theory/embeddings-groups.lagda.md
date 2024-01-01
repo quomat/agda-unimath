@@ -53,12 +53,10 @@ module _
 ```agda
 emb-Group-Slice :
   (l : Level) {l1 : Level} (G : Group l1) → UU ((lsuc l) ⊔ l1)
-emb-Group-Slice l G = {!!}
+emb-Group-Slice = {!!}
 
 emb-group-slice-Subgroup :
   { l1 l2 : Level} (G : Group l1) →
   Subgroup l2 G → emb-Group-Slice (l1 ⊔ l2) G
-pr1 (emb-group-slice-Subgroup G P) = {!!}
-pr1 (pr2 (emb-group-slice-Subgroup G P)) = {!!}
-pr2 (pr2 (emb-group-slice-Subgroup G P)) = {!!}
+emb-group-slice-Subgroup = {!!}
 ```

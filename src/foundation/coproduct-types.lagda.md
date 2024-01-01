@@ -68,11 +68,11 @@ using a single subuniverse
 is-closed-under-coproducts-subuniverses :
   {l1 l2 l3 l4 l5 : Level} (P : subuniverse l1 l2) (Q : subuniverse l3 l4) →
   subuniverse (l1 ⊔ l3) l5 → UU (lsuc l1 ⊔ l2 ⊔ lsuc l3 ⊔ l4 ⊔ l5)
-is-closed-under-coproducts-subuniverses {l1} {l2} {l3} P Q R = {!!}
+is-closed-under-coproducts-subuniverses = {!!}
 
 is-closed-under-coproducts-subuniverse :
   {l1 l2 : Level} (P : subuniverse l1 l2) → UU (lsuc l1 ⊔ l2)
-is-closed-under-coproducts-subuniverse P = {!!}
+is-closed-under-coproducts-subuniverse = {!!}
 ```
 
 ## Properties
@@ -112,11 +112,11 @@ module _
 
   is-section-map-inv-equiv-left-summand :
     (map-equiv-left-summand ∘ map-inv-equiv-left-summand) ~ id
-  is-section-map-inv-equiv-left-summand x = {!!}
+  is-section-map-inv-equiv-left-summand = {!!}
 
   is-retraction-map-inv-equiv-left-summand :
     (map-inv-equiv-left-summand ∘ map-equiv-left-summand) ~ id
-  is-retraction-map-inv-equiv-left-summand (pair (inl x) star) = {!!}
+  is-retraction-map-inv-equiv-left-summand = {!!}
 
   equiv-left-summand : (Σ (X + Y) is-left) ≃ X
   pr1 equiv-left-summand = {!!}
@@ -138,12 +138,11 @@ module _
 
   is-section-map-inv-equiv-right-summand :
     (map-equiv-right-summand ∘ map-inv-equiv-right-summand) ~ id
-  is-section-map-inv-equiv-right-summand y = {!!}
+  is-section-map-inv-equiv-right-summand = {!!}
 
   is-retraction-map-inv-equiv-right-summand :
     (map-inv-equiv-right-summand ∘ map-equiv-right-summand) ~ id
-  is-retraction-map-inv-equiv-right-summand (pair (inl x) ())
-  is-retraction-map-inv-equiv-right-summand (pair (inr x) star) = {!!}
+  is-retraction-map-inv-equiv-right-summand = {!!}
 
   equiv-right-summand : (Σ (X + Y) is-right) ≃ Y
   pr1 equiv-right-summand = {!!}
@@ -159,7 +158,7 @@ module _
   abstract
     is-not-contractible-coprod-is-contr :
       is-contr A → is-contr B → is-not-contractible (A + B)
-    is-not-contractible-coprod-is-contr HA HB HAB = {!!}
+    is-not-contractible-coprod-is-contr = {!!}
 ```
 
 ### Coproducts of mutually exclusive propositions are propositions
@@ -173,7 +172,7 @@ module _
     all-elements-equal-coprod :
       (P → ¬ Q) → all-elements-equal P → all-elements-equal Q →
       all-elements-equal (P + Q)
-    all-elements-equal-coprod f is-prop-P is-prop-Q (inl p) (inl p') = {!!}
+    all-elements-equal-coprod = {!!}
 
   abstract
     is-prop-coprod : (P → ¬ Q) → is-prop P → is-prop Q → is-prop (P + Q)
@@ -182,6 +181,5 @@ module _
 coprod-Prop :
   {l1 l2 : Level} (P : Prop l1) (Q : Prop l2) →
   (type-Prop P → ¬ (type-Prop Q)) → Prop (l1 ⊔ l2)
-pr1 (coprod-Prop P Q H) = {!!}
-pr2 (coprod-Prop P Q H) = {!!}
+coprod-Prop = {!!}
 ```

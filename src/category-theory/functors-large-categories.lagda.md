@@ -87,7 +87,7 @@ id-functor-Large-Category :
   {αC : Level → Level} {βC : Level → Level → Level} →
   (C : Large-Category αC βC) →
   functor-Large-Category (λ l → l) C C
-id-functor-Large-Category C = {!!}
+id-functor-Large-Category = {!!}
 ```
 
 ### Composition of functors
@@ -104,5 +104,5 @@ comp-functor-Large-Category :
   functor-Large-Category γG D E →
   functor-Large-Category γF C D →
   functor-Large-Category (λ l → γG (γF l)) C E
-comp-functor-Large-Category C D E = {!!}
+comp-functor-Large-Category = {!!}
 ```

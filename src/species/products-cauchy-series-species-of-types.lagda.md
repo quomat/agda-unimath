@@ -36,7 +36,7 @@ The product of two Cauchy series is just the pointwise product.
 product-cauchy-series-species-types :
   {l1 l2 l3 l4 : Level} → species-types l1 l2 → species-types l1 l3 →
   UU l4 → UU (lsuc l1 ⊔ l2 ⊔ l3 ⊔ l4)
-product-cauchy-series-species-types S T X = {!!}
+product-cauchy-series-species-types = {!!}
 ```
 
 ## Properties
@@ -60,13 +60,13 @@ module _
             ( λ B →
               Σ ( Σ ( UU l1) (λ F → F ≃ (A + B)))
                 ( λ F → ((S A) × (T B)) × (pr1 F → X))))
-    pr1 reassociate (F , ((A , B , e) , x) , y) = {!!}
+    reassociate = {!!}
 
     reassociate' :
       Σ ( UU l1)
         ( λ A → Σ (UU l1) (λ B → (S A × T B) × ((A → X) × (B → X)))) ≃
       product-cauchy-series-species-types S T X
-    pr1 reassociate' (A , B , (s , t) , (fs , ft)) = {!!}
+    reassociate' = {!!}
 
   equiv-cauchy-series-cauchy-product-species-types :
     cauchy-series-species-types (cauchy-product-species-types S T) X ≃

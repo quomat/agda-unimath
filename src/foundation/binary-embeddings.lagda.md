@@ -32,7 +32,7 @@ functions `λ x → f x b` and `λ y → f a y` are embeddings for each `a : A` 
 is-binary-emb :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : UU l3} →
   (A → B → C) → UU (l1 ⊔ l2 ⊔ l3)
-is-binary-emb {A = A} {B = B} f = {!!}
+is-binary-emb = {!!}
 ```
 
 ## Properties
@@ -43,15 +43,15 @@ is-binary-emb {A = A} {B = B} f = {!!}
 is-emb-fix-left-is-binary-equiv :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : UU l3} (f : A → B → C) →
   is-binary-equiv f → {a : A} → is-emb (fix-left f a)
-is-emb-fix-left-is-binary-equiv f H {a} = {!!}
+is-emb-fix-left-is-binary-equiv = {!!}
 
 is-emb-fix-right-is-binary-equiv :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : UU l3} (f : A → B → C) →
   is-binary-equiv f → {b : B} → is-emb (fix-right f b)
-is-emb-fix-right-is-binary-equiv f H {b} = {!!}
+is-emb-fix-right-is-binary-equiv = {!!}
 
 is-binary-emb-is-binary-equiv :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : UU l3} {f : A → B → C} →
   is-binary-equiv f → is-binary-emb f
-is-binary-emb-is-binary-equiv {f = f} H {x} {x'} {y} {y'} = {!!}
+is-binary-emb-is-binary-equiv = {!!}
 ```

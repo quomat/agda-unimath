@@ -124,12 +124,12 @@ module _
   is-injective-hom-is-faithful-map-Precategory :
     is-faithful-map-Precategory C D F →
     is-injective-hom-map-Precategory C D F
-  is-injective-hom-is-faithful-map-Precategory is-faithful-F x y = {!!}
+  is-injective-hom-is-faithful-map-Precategory = {!!}
 
   is-faithful-is-injective-hom-map-Precategory :
     is-injective-hom-map-Precategory C D F →
     is-faithful-map-Precategory C D F
-  is-faithful-is-injective-hom-map-Precategory is-injective-hom-F x y = {!!}
+  is-faithful-is-injective-hom-map-Precategory = {!!}
 
   is-equiv-is-injective-hom-is-faithful-map-Precategory :
     is-equiv is-injective-hom-is-faithful-map-Precategory
@@ -142,12 +142,12 @@ module _
   equiv-is-injective-hom-is-faithful-map-Precategory :
     is-faithful-map-Precategory C D F ≃
     is-injective-hom-map-Precategory C D F
-  pr1 equiv-is-injective-hom-is-faithful-map-Precategory = {!!}
+  equiv-is-injective-hom-is-faithful-map-Precategory = {!!}
 
   equiv-is-faithful-is-injective-hom-map-Precategory :
     is-injective-hom-map-Precategory C D F ≃
     is-faithful-map-Precategory C D F
-  pr1 equiv-is-faithful-is-injective-hom-map-Precategory = {!!}
+  equiv-is-faithful-is-injective-hom-map-Precategory = {!!}
 ```
 
 ## See also

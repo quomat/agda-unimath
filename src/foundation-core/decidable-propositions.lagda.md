@@ -41,21 +41,19 @@ is-decidable-prop A = {!!}
 
 is-prop-is-decidable :
   {l : Level} {A : UU l} → is-prop A → is-prop (is-decidable A)
-is-prop-is-decidable is-prop-A = {!!}
+is-prop-is-decidable = {!!}
 
 is-decidable-Prop :
   {l : Level} → Prop l → Prop l
-pr1 (is-decidable-Prop P) = {!!}
-pr2 (is-decidable-Prop P) = {!!}
+is-decidable-Prop = {!!}
 
 is-prop-is-decidable-prop :
   {l : Level} (X : UU l) → is-prop (is-decidable-prop X)
-is-prop-is-decidable-prop X = {!!}
+is-prop-is-decidable-prop = {!!}
 
 is-decidable-prop-Prop :
   {l : Level} (A : UU l) → Prop l
-pr1 (is-decidable-prop-Prop A) = {!!}
-pr2 (is-decidable-prop-Prop A) = {!!}
+is-decidable-prop-Prop = {!!}
 ```
 
 ### Decidable propositions
@@ -63,7 +61,7 @@ pr2 (is-decidable-prop-Prop A) = {!!}
 ```agda
 Decidable-Prop :
   (l : Level) → UU (lsuc l)
-Decidable-Prop l = {!!}
+Decidable-Prop = {!!}
 
 module _
   {l : Level} (P : Decidable-Prop l)
@@ -119,7 +117,7 @@ pr2 unit-Decidable-Prop = {!!}
 abstract
   is-prop-is-decidable-trunc-Prop :
     {l : Level} (A : UU l) → is-prop (is-decidable (type-trunc-Prop A))
-  is-prop-is-decidable-trunc-Prop A = {!!}
+  is-prop-is-decidable-trunc-Prop = {!!}
 
 is-decidable-trunc-Prop : {l : Level} → UU l → Prop l
 pr1 (is-decidable-trunc-Prop A) = {!!}
@@ -128,11 +126,10 @@ pr2 (is-decidable-trunc-Prop A) = {!!}
 is-decidable-trunc-Prop-is-merely-decidable :
   {l : Level} (A : UU l) →
   is-merely-decidable A → is-decidable (type-trunc-Prop A)
-is-decidable-trunc-Prop-is-merely-decidable A = {!!}
+is-decidable-trunc-Prop-is-merely-decidable = {!!}
 
 is-merely-decidable-is-decidable-trunc-Prop :
   {l : Level} (A : UU l) →
   is-decidable (type-trunc-Prop A) → is-merely-decidable A
-is-merely-decidable-is-decidable-trunc-Prop A (inl x) = {!!}
-is-merely-decidable-is-decidable-trunc-Prop A (inr f) = {!!}
+is-merely-decidable-is-decidable-trunc-Prop = {!!}
 ```

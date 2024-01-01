@@ -41,7 +41,7 @@ module _
   obj-map-Small-Large-Category :
     {γ : Level} → map-Small-Large-Category γ →
     obj-Category C → obj-Large-Category D γ
-  obj-map-Small-Large-Category {γ} = {!!}
+  obj-map-Small-Large-Category = {!!}
 
   hom-map-Small-Large-Category :
     {γ : Level} →
@@ -51,7 +51,7 @@ module _
     hom-Large-Category D
       ( obj-map-Small-Large-Category F X)
       ( obj-map-Small-Large-Category F Y)
-  hom-map-Small-Large-Category {γ} = {!!}
+  hom-map-Small-Large-Category = {!!}
 ```
 
 ## Properties

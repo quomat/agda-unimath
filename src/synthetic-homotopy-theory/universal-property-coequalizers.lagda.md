@@ -105,7 +105,7 @@ module _
         ( cocone-codiagonal-cofork f g e)) →
     ( {l : Level} →
       universal-property-coequalizer l f g e)
-  universal-property-coequalizer-universal-property-pushout up-pushout Y = {!!}
+  universal-property-coequalizer-universal-property-pushout = {!!}
 
   universal-property-pushout-universal-property-coequalizer :
     ( {l : Level} →
@@ -115,5 +115,5 @@ module _
         ( vertical-map-span-cocone-cofork f g)
         ( horizontal-map-span-cocone-cofork f g)
         ( cocone-codiagonal-cofork f g e))
-  universal-property-pushout-universal-property-coequalizer up-coequalizer Y = {!!}
+  universal-property-pushout-universal-property-coequalizer = {!!}
 ```

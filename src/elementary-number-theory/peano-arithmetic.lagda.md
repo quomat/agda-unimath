@@ -119,7 +119,7 @@ The zero natural number may not be identified with any successor natural number.
 ```agda
 peano-axiom-8 :
   {l : Level} (N : UU l) → peano-axiom-1 N → peano-axiom-6 N → UU l
-peano-axiom-8 N zero succ = {!!}
+peano-axiom-8 = {!!}
 
 peano-8-ℕ : peano-axiom-8 ℕ peano-1-ℕ peano-6-ℕ
 peano-8-ℕ = {!!}
@@ -143,7 +143,7 @@ then `P x` holds for all natural numbers `x`.
 ```agda
 peano-axiom-9 :
   {l : Level} (N : UU l) → peano-axiom-1 N → peano-axiom-6 N → UUω
-peano-axiom-9 N zero succ = {!!}
+peano-axiom-9 = {!!}
 
 peano-9-ℕ : peano-axiom-9 ℕ peano-1-ℕ peano-6-ℕ
 peano-9-ℕ P = {!!}

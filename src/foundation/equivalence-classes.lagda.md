@@ -62,7 +62,7 @@ module _
 
   is-prop-is-equivalence-class :
     (P : subtype l2 A) → is-prop (is-equivalence-class P)
-  is-prop-is-equivalence-class P = {!!}
+  is-prop-is-equivalence-class = {!!}
 ```
 
 ### The condition on inhabited subtypes of `A` of being an equivalence class
@@ -70,7 +70,7 @@ module _
 ```agda
   is-equivalence-class-inhabited-subtype-equivalence-relation :
     subtype (l1 ⊔ l2) (inhabited-subtype l2 A)
-  is-equivalence-class-inhabited-subtype-equivalence-relation Q = {!!}
+  is-equivalence-class-inhabited-subtype-equivalence-relation = {!!}
 ```
 
 ### The type of equivalence classes
@@ -94,11 +94,11 @@ module _
 
   is-inhabited-subtype-equivalence-class :
     (C : equivalence-class) → is-inhabited-subtype (subtype-equivalence-class C)
-  is-inhabited-subtype-equivalence-class (Q , H) = {!!}
+  is-inhabited-subtype-equivalence-class = {!!}
 
   inhabited-subtype-equivalence-class :
     (C : equivalence-class) → inhabited-subtype l2 A
-  pr1 (inhabited-subtype-equivalence-class C) = {!!}
+  inhabited-subtype-equivalence-class = {!!}
 
   is-in-equivalence-class : equivalence-class → (A → UU l2)
   is-in-equivalence-class P x = {!!}
@@ -107,7 +107,7 @@ module _
     is-prop-is-in-equivalence-class :
       (x : equivalence-class) (a : A) →
       is-prop (is-in-equivalence-class x a)
-    is-prop-is-in-equivalence-class P x = {!!}
+    is-prop-is-in-equivalence-class = {!!}
 
   is-in-equivalence-class-Prop : equivalence-class → (A → Prop l2)
   pr1 (is-in-equivalence-class-Prop P x) = {!!}
@@ -121,7 +121,7 @@ module _
 
   unit-im-equivalence-class :
     hom-slice (prop-equivalence-relation R) subtype-equivalence-class
-  pr1 unit-im-equivalence-class = {!!}
+  unit-im-equivalence-class = {!!}
 
   is-surjective-class : is-surjective class
   is-surjective-class C = {!!}
@@ -147,36 +147,36 @@ module _
 
   has-same-elements-equivalence-class :
     (C D : equivalence-class R) → UU (l1 ⊔ l2)
-  has-same-elements-equivalence-class C D = {!!}
+  has-same-elements-equivalence-class = {!!}
 
   refl-has-same-elements-equivalence-class :
     (C : equivalence-class R) → has-same-elements-equivalence-class C C
-  refl-has-same-elements-equivalence-class C = {!!}
+  refl-has-same-elements-equivalence-class = {!!}
 
   is-torsorial-has-same-elements-equivalence-class :
     (C : equivalence-class R) →
     is-torsorial (has-same-elements-equivalence-class C)
-  is-torsorial-has-same-elements-equivalence-class C = {!!}
+  is-torsorial-has-same-elements-equivalence-class = {!!}
 
   has-same-elements-eq-equivalence-class :
     (C D : equivalence-class R) → (C ＝ D) →
     has-same-elements-equivalence-class C D
-  has-same-elements-eq-equivalence-class C .C refl = {!!}
+  has-same-elements-eq-equivalence-class = {!!}
 
   is-equiv-has-same-elements-eq-equivalence-class :
     (C D : equivalence-class R) →
     is-equiv (has-same-elements-eq-equivalence-class C D)
-  is-equiv-has-same-elements-eq-equivalence-class C = {!!}
+  is-equiv-has-same-elements-eq-equivalence-class = {!!}
 
   extensionality-equivalence-class :
     (C D : equivalence-class R) →
     (C ＝ D) ≃ has-same-elements-equivalence-class C D
-  pr1 (extensionality-equivalence-class C D) = {!!}
+  extensionality-equivalence-class = {!!}
 
   eq-has-same-elements-equivalence-class :
     (C D : equivalence-class R) →
     has-same-elements-equivalence-class C D → C ＝ D
-  eq-has-same-elements-equivalence-class C D = {!!}
+  eq-has-same-elements-equivalence-class = {!!}
 ```
 
 #### Equivalence classes are equal if there exists an element contained in both
@@ -188,22 +188,22 @@ module _
 
   share-common-element-equivalence-class-Prop :
     (C D : equivalence-class R) → Prop (l1 ⊔ l2)
-  share-common-element-equivalence-class-Prop C D = {!!}
+  share-common-element-equivalence-class-Prop = {!!}
 
   share-common-element-equivalence-class :
     (C D : equivalence-class R) → UU (l1 ⊔ l2)
-  share-common-element-equivalence-class C D = {!!}
+  share-common-element-equivalence-class = {!!}
 
   abstract
     eq-share-common-element-equivalence-class :
       (C D : equivalence-class R) →
       share-common-element-equivalence-class C D → C ＝ D
-    eq-share-common-element-equivalence-class C D H = {!!}
+    eq-share-common-element-equivalence-class = {!!}
 
   eq-class-equivalence-class :
     (C : equivalence-class R) {a : A} →
     is-in-equivalence-class R C a → class R a ＝ C
-  eq-class-equivalence-class C {a} H = {!!}
+  eq-class-equivalence-class = {!!}
 ```
 
 ### The type of equivalence classes containing a fixed element `a : A` is contractible
@@ -215,23 +215,23 @@ module _
 
   center-total-is-in-equivalence-class :
     Σ (equivalence-class R) (λ P → is-in-equivalence-class R P a)
-  pr1 center-total-is-in-equivalence-class = {!!}
+  center-total-is-in-equivalence-class = {!!}
 
   contraction-total-is-in-equivalence-class :
     ( t :
       Σ ( equivalence-class R)
         ( λ C → is-in-equivalence-class R C a)) →
     center-total-is-in-equivalence-class ＝ t
-  contraction-total-is-in-equivalence-class (C , H) = {!!}
+  contraction-total-is-in-equivalence-class = {!!}
 
   is-torsorial-is-in-equivalence-class :
     is-torsorial (λ P → is-in-equivalence-class R P a)
-  pr1 is-torsorial-is-in-equivalence-class = {!!}
+  is-torsorial-is-in-equivalence-class = {!!}
 
   is-in-equivalence-class-eq-equivalence-class :
     (q : equivalence-class R) → class R a ＝ q →
     is-in-equivalence-class R q a
-  is-in-equivalence-class-eq-equivalence-class .(class R a) refl = {!!}
+  is-in-equivalence-class-eq-equivalence-class = {!!}
 
   abstract
     is-equiv-is-in-equivalence-class-eq-equivalence-class :
@@ -252,28 +252,28 @@ module _
       (a : A) (q : equivalence-class R) →
       ( class R a ＝ q) ≃
       ( is-in-equivalence-class R q a)
-    pr1 (effective-quotient' a q) = {!!}
+    effective-quotient' = {!!}
 
   abstract
     eq-effective-quotient' :
       (a : A) (q : equivalence-class R) → is-in-equivalence-class R q a →
       class R a ＝ q
-    eq-effective-quotient' a q = {!!}
+    eq-effective-quotient' = {!!}
 
   abstract
     is-effective-class :
       is-effective R (class R)
-    is-effective-class x y = {!!}
+    is-effective-class = {!!}
 
   abstract
     apply-effectiveness-class :
       {x y : A} → class R x ＝ class R y → sim-equivalence-relation R x y
-    apply-effectiveness-class {x} {y} = {!!}
+    apply-effectiveness-class = {!!}
 
   abstract
     apply-effectiveness-class' :
       {x y : A} → sim-equivalence-relation R x y → class R x ＝ class R y
-    apply-effectiveness-class' {x} {y} = {!!}
+    apply-effectiveness-class' = {!!}
 ```
 
 ### The map `class` into the type of equivalence classes is surjective and effective
@@ -285,7 +285,7 @@ module _
 
   is-surjective-and-effective-class :
     is-surjective-and-effective R (class R)
-  pr1 is-surjective-and-effective-class = {!!}
+  is-surjective-and-effective-class = {!!}
 ```
 
 ### The map `class` into the type of equivalence classes is a reflecting map
@@ -297,7 +297,7 @@ module _
 
   quotient-reflecting-map-equivalence-class :
     reflecting-map-equivalence-relation R (equivalence-class R)
-  pr1 quotient-reflecting-map-equivalence-class = {!!}
+  quotient-reflecting-map-equivalence-class = {!!}
 ```
 
 ```agda
@@ -309,7 +309,7 @@ module _
     (P : equivalence-class R) (a b : A) →
     is-in-equivalence-class R P a → sim-equivalence-relation R a b →
     is-in-equivalence-class R P b
-  transitive-is-in-equivalence-class P a b p r = {!!}
+  transitive-is-in-equivalence-class = {!!}
 ```
 
 ### The type of equivalence classes is locally small
@@ -321,7 +321,7 @@ module _
 
   is-locally-small-equivalence-class :
     is-locally-small (l1 ⊔ l2) (equivalence-class R)
-  is-locally-small-equivalence-class C D = {!!}
+  is-locally-small-equivalence-class = {!!}
 ```
 
 ### The type of equivalence classes is small

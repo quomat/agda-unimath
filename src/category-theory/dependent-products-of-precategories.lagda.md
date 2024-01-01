@@ -51,7 +51,7 @@ module _
     hom-Π-Precategory y z →
     hom-Π-Precategory x y →
     hom-Π-Precategory x z
-  comp-hom-Π-Precategory f g i = {!!}
+  comp-hom-Π-Precategory = {!!}
 
   associative-comp-hom-Π-Precategory :
     {x y z w : obj-Π-Precategory}
@@ -60,7 +60,7 @@ module _
     (f : hom-Π-Precategory x y) →
     ( comp-hom-Π-Precategory (comp-hom-Π-Precategory h g) f) ＝
     ( comp-hom-Π-Precategory h (comp-hom-Π-Precategory g f))
-  associative-comp-hom-Π-Precategory h g f = {!!}
+  associative-comp-hom-Π-Precategory = {!!}
 
   inv-associative-comp-hom-Π-Precategory :
     {x y z w : obj-Π-Precategory}
@@ -69,11 +69,11 @@ module _
     (f : hom-Π-Precategory x y) →
     ( comp-hom-Π-Precategory h (comp-hom-Π-Precategory g f)) ＝
     ( comp-hom-Π-Precategory (comp-hom-Π-Precategory h g) f)
-  inv-associative-comp-hom-Π-Precategory h g f = {!!}
+  inv-associative-comp-hom-Π-Precategory = {!!}
 
   associative-composition-operation-Π-Precategory :
     associative-composition-operation-binary-family-Set hom-set-Π-Precategory
-  pr1 associative-composition-operation-Π-Precategory = {!!}
+  associative-composition-operation-Π-Precategory = {!!}
 
   id-hom-Π-Precategory : {x : obj-Π-Precategory} → hom-Π-Precategory x x
   id-hom-Π-Precategory i = {!!}
@@ -82,18 +82,18 @@ module _
     {x y : obj-Π-Precategory}
     (f : hom-Π-Precategory x y) →
     comp-hom-Π-Precategory id-hom-Π-Precategory f ＝ f
-  left-unit-law-comp-hom-Π-Precategory f = {!!}
+  left-unit-law-comp-hom-Π-Precategory = {!!}
 
   right-unit-law-comp-hom-Π-Precategory :
     {x y : obj-Π-Precategory} (f : hom-Π-Precategory x y) →
     comp-hom-Π-Precategory f id-hom-Π-Precategory ＝ f
-  right-unit-law-comp-hom-Π-Precategory f = {!!}
+  right-unit-law-comp-hom-Π-Precategory = {!!}
 
   is-unital-Π-Precategory :
     is-unital-composition-operation-binary-family-Set
       hom-set-Π-Precategory
       comp-hom-Π-Precategory
-  pr1 is-unital-Π-Precategory x = {!!}
+  is-unital-Π-Precategory = {!!}
 
   Π-Precategory : Precategory (l1 ⊔ l2) (l1 ⊔ l3)
   pr1 Π-Precategory = {!!}
@@ -113,45 +113,45 @@ module _
     (f : hom-Π-Precategory I C x y) →
     is-iso-Precategory (Π-Precategory I C) f →
     (i : I) → is-iso-Precategory (C i) (f i)
-  pr1 (is-fiberwise-iso-is-iso-Π-Precategory f is-iso-f i) = {!!}
+  is-fiberwise-iso-is-iso-Π-Precategory = {!!}
 
   fiberwise-iso-iso-Π-Precategory :
     iso-Precategory (Π-Precategory I C) x y →
     (i : I) → iso-Precategory (C i) (x i) (y i)
-  pr1 (fiberwise-iso-iso-Π-Precategory e i) = {!!}
+  fiberwise-iso-iso-Π-Precategory = {!!}
 
   is-iso-is-fiberwise-iso-Π-Precategory :
     (f : hom-Π-Precategory I C x y) →
     ((i : I) → is-iso-Precategory (C i) (f i)) →
     is-iso-Precategory (Π-Precategory I C) f
-  pr1 (is-iso-is-fiberwise-iso-Π-Precategory f is-fiberwise-iso-f) i = {!!}
+  is-iso-is-fiberwise-iso-Π-Precategory = {!!}
 
   iso-fiberwise-iso-Π-Precategory :
     ((i : I) → iso-Precategory (C i) (x i) (y i)) →
     iso-Precategory (Π-Precategory I C) x y
-  pr1 (iso-fiberwise-iso-Π-Precategory e) i = {!!}
+  iso-fiberwise-iso-Π-Precategory = {!!}
 
   is-equiv-is-fiberwise-iso-is-iso-Π-Precategory :
     (f : hom-Π-Precategory I C x y) →
     is-equiv (is-fiberwise-iso-is-iso-Π-Precategory f)
-  is-equiv-is-fiberwise-iso-is-iso-Π-Precategory f = {!!}
+  is-equiv-is-fiberwise-iso-is-iso-Π-Precategory = {!!}
 
   equiv-is-fiberwise-iso-is-iso-Π-Precategory :
     (f : hom-Π-Precategory I C x y) →
     ( is-iso-Precategory (Π-Precategory I C) f) ≃
     ( (i : I) → is-iso-Precategory (C i) (f i))
-  pr1 (equiv-is-fiberwise-iso-is-iso-Π-Precategory f) = {!!}
+  equiv-is-fiberwise-iso-is-iso-Π-Precategory = {!!}
 
   is-equiv-is-iso-is-fiberwise-iso-Π-Precategory :
     (f : hom-Π-Precategory I C x y) →
     is-equiv (is-iso-is-fiberwise-iso-Π-Precategory f)
-  is-equiv-is-iso-is-fiberwise-iso-Π-Precategory f = {!!}
+  is-equiv-is-iso-is-fiberwise-iso-Π-Precategory = {!!}
 
   equiv-is-iso-is-fiberwise-iso-Π-Precategory :
     ( f : hom-Π-Precategory I C x y) →
     ( (i : I) → is-iso-Precategory (C i) (f i)) ≃
     ( is-iso-Precategory (Π-Precategory I C) f)
-  pr1 (equiv-is-iso-is-fiberwise-iso-Π-Precategory f) = {!!}
+  equiv-is-iso-is-fiberwise-iso-Π-Precategory = {!!}
 
   is-equiv-fiberwise-iso-iso-Π-Precategory :
     is-equiv fiberwise-iso-iso-Π-Precategory
@@ -160,7 +160,7 @@ module _
   equiv-fiberwise-iso-iso-Π-Precategory :
     ( iso-Precategory (Π-Precategory I C) x y) ≃
     ( (i : I) → iso-Precategory (C i) (x i) (y i))
-  pr1 equiv-fiberwise-iso-iso-Π-Precategory = {!!}
+  equiv-fiberwise-iso-iso-Π-Precategory = {!!}
 
   is-equiv-iso-fiberwise-iso-Π-Precategory :
     is-equiv iso-fiberwise-iso-Π-Precategory
@@ -169,5 +169,5 @@ module _
   equiv-iso-fiberwise-iso-Π-Precategory :
     ( (i : I) → iso-Precategory (C i) (x i) (y i)) ≃
     ( iso-Precategory (Π-Precategory I C) x y)
-  pr1 equiv-iso-fiberwise-iso-Π-Precategory = {!!}
+  equiv-iso-fiberwise-iso-Π-Precategory = {!!}
 ```

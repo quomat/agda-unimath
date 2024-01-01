@@ -39,11 +39,11 @@ merely equivalent to an iterated cartesian product of finite fields.
 is-semisimple-Commutative-Ring-𝔽 :
   {l1 : Level} (l2 : Level) → Commutative-Ring-𝔽 l1 →
   UU (l1 ⊔ lsuc l2)
-is-semisimple-Commutative-Ring-𝔽 l2 R = {!!}
+is-semisimple-Commutative-Ring-𝔽 = {!!}
 
 Semisimple-Commutative-Ring-𝔽 :
   (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Semisimple-Commutative-Ring-𝔽 l1 l2 = {!!}
+Semisimple-Commutative-Ring-𝔽 = {!!}
 
 module _
   {l1 l2 : Level} (A : Semisimple-Commutative-Ring-𝔽 l1 l2)
@@ -72,7 +72,7 @@ module _
   compute-structure-semisimple-commutative-ring-𝔽 :
     structure-semisimple-commutative-ring-𝔽 →
     Semisimple-Commutative-Ring-𝔽 l1 l2
-  pr1 (compute-structure-semisimple-commutative-ring-𝔽 (p , s)) = {!!}
+  compute-structure-semisimple-commutative-ring-𝔽 = {!!}
 
 --   is-finite-structure-semisimple-commutative-ring-𝔽 :
 --     is-finite structure-semisimple-commutative-ring-𝔽

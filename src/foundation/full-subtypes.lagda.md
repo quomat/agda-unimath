@@ -50,7 +50,7 @@ module _
 ```agda
 is-full-decidable-subtype :
   {l1 l2 : Level} {A : UU l1} → decidable-subtype l2 A → UU (l1 ⊔ l2)
-is-full-decidable-subtype P = {!!}
+is-full-decidable-subtype = {!!}
 ```
 
 ### The full subtype at a universe level
@@ -87,13 +87,13 @@ module _
 
   is-equiv-inclusion-is-full-subtype :
     is-full-subtype P → is-equiv (inclusion-subtype P)
-  is-equiv-inclusion-is-full-subtype H = {!!}
+  is-equiv-inclusion-is-full-subtype = {!!}
 
   equiv-inclusion-is-full-subtype :
     is-full-subtype P → type-subtype P ≃ A
-  pr1 (equiv-inclusion-is-full-subtype H) = {!!}
+  equiv-inclusion-is-full-subtype = {!!}
 
   is-full-is-equiv-inclusion-subtype :
     is-equiv (inclusion-subtype P) → is-full-subtype P
-  is-full-is-equiv-inclusion-subtype H x = {!!}
+  is-full-is-equiv-inclusion-subtype = {!!}
 ```

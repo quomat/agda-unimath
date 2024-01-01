@@ -37,7 +37,7 @@ arity-operation-signature :
   { l : Level} →
   ( Sg : signature l) →
   ( operation-signature Sg → ℕ)
-arity-operation-signature Sg = {!!}
+arity-operation-signature = {!!}
 ```
 
 ### Extension of signatures
@@ -46,7 +46,7 @@ arity-operation-signature Sg = {!!}
 is-extension-signature :
   { l1 l2 : Level} →
   signature l1 → signature l2 → UU (l1 ⊔ l2)
-is-extension-signature Sg1 Sg2 = {!!}
+is-extension-signature = {!!}
 
 emb-extension-signature :
   { l1 l2 : Level} →
@@ -54,7 +54,7 @@ emb-extension-signature :
   ( Sg2 : signature l2) →
   is-extension-signature Sg1 Sg2 →
   ( operation-signature Sg2 → operation-signature Sg1)
-emb-extension-signature Sg1 Sg2 ext = {!!}
+emb-extension-signature = {!!}
 
 is-emb-extension-signature :
   { l1 l2 : Level} →
@@ -62,7 +62,7 @@ is-emb-extension-signature :
   ( Sg2 : signature l2) →
   ( ext : is-extension-signature Sg1 Sg2) →
   is-emb (emb-extension-signature Sg1 Sg2 ext)
-is-emb-extension-signature Sg1 Sg2 ext = {!!}
+is-emb-extension-signature = {!!}
 
 arity-preserved-extension-signature :
   { l1 l2 : Level} →
@@ -73,5 +73,5 @@ arity-preserved-extension-signature :
   arity-operation-signature Sg2 op ＝
     arity-operation-signature Sg1
       ( emb-extension-signature Sg1 Sg2 ext op)
-arity-preserved-extension-signature Sg1 Sg2 ext = {!!}
+arity-preserved-extension-signature = {!!}
 ```

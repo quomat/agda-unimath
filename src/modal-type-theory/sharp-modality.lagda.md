@@ -69,8 +69,7 @@ postulate
 ```agda
 sharp-locally-small-operator-modality :
   (l : Level) → locally-small-operator-modality l l l
-pr1 (sharp-locally-small-operator-modality l) = {!!}
-pr2 (sharp-locally-small-operator-modality l) A = {!!}
+sharp-locally-small-operator-modality = {!!}
 ```
 
 ### The sharp induction principle
@@ -78,8 +77,7 @@ pr2 (sharp-locally-small-operator-modality l) A = {!!}
 ```agda
 induction-principle-sharp :
   {l : Level} → induction-principle-modality {l} unit-sharp
-pr1 (induction-principle-sharp P) = {!!}
-pr2 (induction-principle-sharp P) = {!!}
+induction-principle-sharp = {!!}
 
 strong-induction-principle-subuniverse-sharp :
   {l : Level} → strong-induction-principle-subuniverse-modality {l} unit-sharp
@@ -116,13 +114,13 @@ compute-ind-subuniverse-sharp = {!!}
 rec-sharp :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   (A → ♯ B) → (♯ A → ♯ B)
-rec-sharp {B = B} = {!!}
+rec-sharp = {!!}
 
 compute-rec-sharp :
   {l1 l2 : Level} {A : UU l1} {B : UU l2}
   (f : A → ♯ B) →
   (rec-sharp f ∘ unit-sharp) ~ f
-compute-rec-sharp {B = B} = {!!}
+compute-rec-sharp = {!!}
 
 recursion-principle-sharp :
   {l : Level} → recursion-principle-modality {l} unit-sharp

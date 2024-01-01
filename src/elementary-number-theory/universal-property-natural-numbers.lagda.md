@@ -42,38 +42,38 @@ module _
 
   htpy-structure-preserving-map-ℕ :
     (h k : structure-preserving-map-ℕ) → UU l
-  htpy-structure-preserving-map-ℕ h k = {!!}
+  htpy-structure-preserving-map-ℕ = {!!}
 
   refl-htpy-structure-preserving-map-ℕ :
     (h : structure-preserving-map-ℕ) → htpy-structure-preserving-map-ℕ h h
-  refl-htpy-structure-preserving-map-ℕ h = {!!}
+  refl-htpy-structure-preserving-map-ℕ = {!!}
 
   htpy-eq-structure-preserving-map-ℕ :
     {h k : structure-preserving-map-ℕ} → h ＝ k →
     htpy-structure-preserving-map-ℕ h k
-  htpy-eq-structure-preserving-map-ℕ {h} refl = {!!}
+  htpy-eq-structure-preserving-map-ℕ = {!!}
 
   is-torsorial-htpy-structure-preserving-map-ℕ :
     (h : structure-preserving-map-ℕ) →
     is-torsorial (htpy-structure-preserving-map-ℕ h)
-  is-torsorial-htpy-structure-preserving-map-ℕ h = {!!}
+  is-torsorial-htpy-structure-preserving-map-ℕ = {!!}
 
   is-equiv-htpy-eq-structure-preserving-map-ℕ :
     (h k : structure-preserving-map-ℕ) →
     is-equiv (htpy-eq-structure-preserving-map-ℕ {h} {k})
-  is-equiv-htpy-eq-structure-preserving-map-ℕ h = {!!}
+  is-equiv-htpy-eq-structure-preserving-map-ℕ = {!!}
 
   eq-htpy-structure-preserving-map-ℕ :
     {h k : structure-preserving-map-ℕ} →
     htpy-structure-preserving-map-ℕ h k → h ＝ k
-  eq-htpy-structure-preserving-map-ℕ {h} {k} = {!!}
+  eq-htpy-structure-preserving-map-ℕ = {!!}
 
   center-structure-preserving-map-ℕ : structure-preserving-map-ℕ
   pr1 center-structure-preserving-map-ℕ = {!!}
 
   contraction-structure-preserving-map-ℕ :
     (h : structure-preserving-map-ℕ) → center-structure-preserving-map-ℕ ＝ h
-  contraction-structure-preserving-map-ℕ h = {!!}
+  contraction-structure-preserving-map-ℕ = {!!}
 
   is-contr-structure-preserving-map-ℕ : is-contr structure-preserving-map-ℕ
   pr1 is-contr-structure-preserving-map-ℕ = {!!}

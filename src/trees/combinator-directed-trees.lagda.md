@@ -78,7 +78,7 @@ module _
     hom-Directed-Graph
       ( graph-Directed-Tree (T i))
       ( graph-combinator-Directed-Tree)
-  pr1 (inclusion-combinator-Directed-Tree i) = {!!}
+  inclusion-combinator-Directed-Tree = {!!}
   pr2 (inclusion-combinator-Directed-Tree i) = {!!}
 
   walk-combinator-Directed-Tree :
@@ -91,22 +91,22 @@ module _
     walk-combinator-Directed-Tree
       ( node-inclusion-combinator-Directed-Tree i x)
       ( node-inclusion-combinator-Directed-Tree i y)
-  walk-inclusion-combinator-Directed-Tree a x y = {!!}
+  walk-inclusion-combinator-Directed-Tree = {!!}
 
   walk-to-root-combinator-Directed-Tree :
     ( x : node-combinator-Directed-Tree) →
     walk-combinator-Directed-Tree x root-combinator-Directed-Tree
-  walk-to-root-combinator-Directed-Tree root-combinator-Directed-Tree = {!!}
+  walk-to-root-combinator-Directed-Tree = {!!}
   walk-to-root-combinator-Directed-Tree
     ( node-inclusion-combinator-Directed-Tree i x) = {!!}
 
   is-root-combinator-Directed-Tree :
     node-combinator-Directed-Tree → UU (l1 ⊔ l2)
-  is-root-combinator-Directed-Tree x = {!!}
+  is-root-combinator-Directed-Tree = {!!}
 
   is-isolated-root-combinator-Directed-Tree :
     is-isolated root-combinator-Directed-Tree
-  is-isolated-root-combinator-Directed-Tree root-combinator-Directed-Tree = {!!}
+  is-isolated-root-combinator-Directed-Tree = {!!}
   is-isolated-root-combinator-Directed-Tree
     ( node-inclusion-combinator-Directed-Tree i x) = {!!}
 
@@ -116,8 +116,7 @@ module _
     Σ ( node-combinator-Directed-Tree)
       ( edge-combinator-Directed-Tree
         ( node-inclusion-combinator-Directed-Tree i x))
-  cases-center-unique-direct-successor-combinator-Directed-Tree' a ._
-    ( inl refl) = {!!}
+  cases-center-unique-direct-successor-combinator-Directed-Tree' = {!!}
   cases-center-unique-direct-successor-combinator-Directed-Tree' i x (inr f) = {!!}
 
   center-unique-direct-successor-combinator-Directed-Tree' :
@@ -133,8 +132,7 @@ module _
     Σ ( node-combinator-Directed-Tree)
       ( edge-combinator-Directed-Tree
         ( node-inclusion-combinator-Directed-Tree i x))
-  cases-center-unique-direct-successor-combinator-Directed-Tree i ._
-    ( inl refl) = {!!}
+  cases-center-unique-direct-successor-combinator-Directed-Tree = {!!}
   cases-center-unique-direct-successor-combinator-Directed-Tree i x (inr f) = {!!}
 
   center-unique-direct-successor-combinator-Directed-Tree :
@@ -154,9 +152,7 @@ module _
         ( edge-combinator-Directed-Tree
           ( node-inclusion-combinator-Directed-Tree i x))) →
     cases-center-unique-direct-successor-combinator-Directed-Tree i x d ＝ p
-  cases-contraction-unique-direct-successor-combinator-Directed-Tree i ._
-    ( inl r)
-    ( ._ , edge-to-root-combinator-Directed-Tree .i) = {!!}
+  cases-contraction-unique-direct-successor-combinator-Directed-Tree = {!!}
   cases-contraction-unique-direct-successor-combinator-Directed-Tree i ._
     ( inr f)
     ( ._ , edge-to-root-combinator-Directed-Tree .i) = {!!}
@@ -173,7 +169,7 @@ module _
       is-root-combinator-Directed-Tree x +
       Σ node-combinator-Directed-Tree (edge-combinator-Directed-Tree x)) →
     center-unique-direct-successor-combinator-Directed-Tree x ＝ p
-  contraction-unique-direct-successor-combinator-Directed-Tree ._ (inl refl) = {!!}
+  contraction-unique-direct-successor-combinator-Directed-Tree = {!!}
   contraction-unique-direct-successor-combinator-Directed-Tree
     ( node-inclusion-combinator-Directed-Tree i x)
     ( inr (y , e)) = {!!}
@@ -182,7 +178,7 @@ module _
     unique-direct-successor-Directed-Graph
       ( graph-combinator-Directed-Tree)
       ( root-combinator-Directed-Tree)
-  pr1 (unique-direct-successor-combinator-Directed-Tree x) = {!!}
+  unique-direct-successor-combinator-Directed-Tree = {!!}
   pr2 (unique-direct-successor-combinator-Directed-Tree x) = {!!}
 
   is-tree-combinator-Directed-Tree :
@@ -206,26 +202,12 @@ module _
     {i : I} {x : node-Directed-Tree (T i)} →
     is-proper-node-combinator-Directed-Tree
       ( node-inclusion-combinator-Directed-Tree i x)
-  is-proper-node-inclusion-combinator-Directed-Tree {i} {x} ()
-```
-
-## Properties
-
-### The type of direct predecessors of `x : T i` is equivalent to the type of direct predecessors of the inclusion of `x` in `combinator T`
-
-```agda
-module _
-  {l1 l2 l3 : Level} {I : UU l1} (T : I → Directed-Tree l2 l3)
-  (i : I) (x : node-Directed-Tree (T i))
-  where
-
-  direct-predecessor-combinator-Directed-Tree : UU (l1 ⊔ l2 ⊔ l3)
-  direct-predecessor-combinator-Directed-Tree = {!!}
+  is-proper-node-inclusion-combinator-Directed-Tree = {!!}
 
   map-compute-direct-predecessor-combinator-Directed-Tree :
     direct-predecessor-Directed-Tree (T i) x →
     direct-predecessor-combinator-Directed-Tree
-  pr1 (map-compute-direct-predecessor-combinator-Directed-Tree (y , e)) = {!!}
+  map-compute-direct-predecessor-combinator-Directed-Tree = {!!}
   pr2 (map-compute-direct-predecessor-combinator-Directed-Tree (y , e)) = {!!}
 
   map-inv-compute-direct-predecessor-combinator-Directed-Tree :
@@ -253,7 +235,7 @@ module _
   compute-direct-predecessor-combinator-Directed-Tree :
     direct-predecessor-Directed-Tree (T i) x ≃
     direct-predecessor-combinator-Directed-Tree
-  pr1 compute-direct-predecessor-combinator-Directed-Tree = {!!}
+  compute-direct-predecessor-combinator-Directed-Tree = {!!}
   pr2 compute-direct-predecessor-combinator-Directed-Tree = {!!}
 ```
 
@@ -268,8 +250,7 @@ eq-index-edge-combinator-Directed-Tree :
     ( node-inclusion-combinator-Directed-Tree i x)
     ( node-inclusion-combinator-Directed-Tree j y) →
   i ＝ j
-eq-index-edge-combinator-Directed-Tree T x y
-  ( edge-inclusion-combinator-Directed-Tree _ .x .y e) = {!!}
+eq-index-edge-combinator-Directed-Tree = {!!}
 ```
 
 ### The base of the combinator tree of a family `T` of directed tree indexed by `I` is equivalent to `I`
@@ -281,18 +262,18 @@ module _
 
   node-base-index-combinator-Directed-Tree :
     I → node-combinator-Directed-Tree T
-  node-base-index-combinator-Directed-Tree i = {!!}
+  node-base-index-combinator-Directed-Tree = {!!}
 
   edge-base-index-combinator-Directed-Tree :
     (i : I) →
     edge-combinator-Directed-Tree T
       ( node-base-index-combinator-Directed-Tree i)
       ( root-combinator-Directed-Tree)
-  edge-base-index-combinator-Directed-Tree i = {!!}
+  edge-base-index-combinator-Directed-Tree = {!!}
 
   base-index-combinator-Directed-Tree :
     I → base-combinator-Directed-Tree T
-  pr1 (base-index-combinator-Directed-Tree i) = {!!}
+  base-index-combinator-Directed-Tree = {!!}
   pr2 (base-index-combinator-Directed-Tree i) = {!!}
 
   index-base-combinator-Directed-Tree :
@@ -309,7 +290,7 @@ module _
   is-retraction-index-base-combinator-Directed-Tree :
     ( index-base-combinator-Directed-Tree ∘
       base-index-combinator-Directed-Tree) ~ id
-  is-retraction-index-base-combinator-Directed-Tree i = {!!}
+  is-retraction-index-base-combinator-Directed-Tree = {!!}
 
   is-equiv-base-index-combinator-Directed-Tree :
     is-equiv base-index-combinator-Directed-Tree
@@ -317,7 +298,7 @@ module _
 
   equiv-base-index-combinator-Directed-Tree :
     I ≃ base-combinator-Directed-Tree T
-  pr1 equiv-base-index-combinator-Directed-Tree = {!!}
+  equiv-base-index-combinator-Directed-Tree = {!!}
   pr2 equiv-base-index-combinator-Directed-Tree = {!!}
 ```
 
@@ -331,13 +312,13 @@ module _
   map-compute-node-combinator-Directed-Tree :
     Maybe (Σ I (node-Directed-Tree ∘ T)) →
     node-combinator-Directed-Tree T
-  map-compute-node-combinator-Directed-Tree (inl (i , x)) = {!!}
+  map-compute-node-combinator-Directed-Tree = {!!}
   map-compute-node-combinator-Directed-Tree (inr _) = {!!}
 
   map-inv-compute-node-combinator-Directed-Tree :
     node-combinator-Directed-Tree T →
     Maybe (Σ I (node-Directed-Tree ∘ T))
-  map-inv-compute-node-combinator-Directed-Tree root-combinator-Directed-Tree = {!!}
+  map-inv-compute-node-combinator-Directed-Tree = {!!}
   map-inv-compute-node-combinator-Directed-Tree
     ( node-inclusion-combinator-Directed-Tree i x) = {!!}
 
@@ -352,7 +333,7 @@ module _
   is-retraction-map-inv-compute-node-combinator-Directed-Tree :
     ( map-inv-compute-node-combinator-Directed-Tree ∘
       map-compute-node-combinator-Directed-Tree) ~ id
-  is-retraction-map-inv-compute-node-combinator-Directed-Tree (inl (i , x)) = {!!}
+  is-retraction-map-inv-compute-node-combinator-Directed-Tree = {!!}
   is-retraction-map-inv-compute-node-combinator-Directed-Tree (inr _) = {!!}
 
   is-equiv-map-compute-node-combinator-Directed-Tree :
@@ -361,7 +342,7 @@ module _
 
   compute-node-combinator-Directed-Tree :
     Maybe (Σ I (node-Directed-Tree ∘ T)) ≃ node-combinator-Directed-Tree T
-  pr1 compute-node-combinator-Directed-Tree = {!!}
+  compute-node-combinator-Directed-Tree = {!!}
   pr2 compute-node-combinator-Directed-Tree = {!!}
 ```
 
@@ -375,7 +356,7 @@ module _
   map-compute-proper-node-combinator-Directed-Tree :
     Σ I (node-Directed-Tree ∘ T) →
     proper-node-combinator-Directed-Tree T
-  map-compute-proper-node-combinator-Directed-Tree (i , x) = {!!}
+  map-compute-proper-node-combinator-Directed-Tree = {!!}
 
   map-inv-compute-proper-node-combinator-Directed-Tree :
     proper-node-combinator-Directed-Tree T →
@@ -396,7 +377,7 @@ module _
   is-retraction-map-inv-compute-proper-node-combinator-Directed-Tree :
     ( map-inv-compute-proper-node-combinator-Directed-Tree ∘
       map-compute-proper-node-combinator-Directed-Tree) ~ id
-  is-retraction-map-inv-compute-proper-node-combinator-Directed-Tree (i , x) = {!!}
+  is-retraction-map-inv-compute-proper-node-combinator-Directed-Tree = {!!}
 
   is-equiv-map-compute-proper-node-combinator-Directed-Tree :
     is-equiv map-compute-proper-node-combinator-Directed-Tree
@@ -404,7 +385,7 @@ module _
 
   compute-proper-node-combinator-Directed-Tree :
     Σ I (node-Directed-Tree ∘ T) ≃ proper-node-combinator-Directed-Tree T
-  pr1 compute-proper-node-combinator-Directed-Tree = {!!}
+  compute-proper-node-combinator-Directed-Tree = {!!}
   pr2 compute-proper-node-combinator-Directed-Tree = {!!}
 ```
 
@@ -421,7 +402,7 @@ module _
     node-fiber-Directed-Tree
       ( combinator-Directed-Tree T)
       ( node-base-index-combinator-Directed-Tree T i)
-  pr1 (node-fiber-combinator-Directed-Tree i x) = {!!}
+  node-fiber-combinator-Directed-Tree = {!!}
   pr2 (node-fiber-combinator-Directed-Tree i x) = {!!}
 
   compute-map-Σ-node-fiber-combinator-Directed-Tree :
@@ -436,7 +417,7 @@ module _
     map-equiv
       ( ( compute-proper-node-Directed-Tree (combinator-Directed-Tree T)) ∘e
         ( compute-proper-node-combinator-Directed-Tree T))
-  compute-map-Σ-node-fiber-combinator-Directed-Tree (i , x) = {!!}
+  compute-map-Σ-node-fiber-combinator-Directed-Tree = {!!}
 
   is-equiv-map-Σ-node-fiber-combinator-Directed-Tree :
     is-equiv
@@ -462,7 +443,7 @@ module _
       ( node-base-index-combinator-Directed-Tree T i)
       ( node-fiber-combinator-Directed-Tree i x)
       ( node-fiber-combinator-Directed-Tree i y)
-  pr1 (edge-fiber-combinator-Directed-Tree i x y e) = {!!}
+  edge-fiber-combinator-Directed-Tree = {!!}
   pr2 (edge-fiber-combinator-Directed-Tree i x y e) = {!!}
 
   hom-fiber-combinator-Directed-Tree :
@@ -472,7 +453,7 @@ module _
       ( fiber-Directed-Tree
         ( combinator-Directed-Tree T)
         ( node-base-index-combinator-Directed-Tree T i))
-  pr1 (hom-fiber-combinator-Directed-Tree i) = {!!}
+  hom-fiber-combinator-Directed-Tree = {!!}
   pr2 (hom-fiber-combinator-Directed-Tree i) = {!!}
 
   is-equiv-hom-fiber-combinator-Directed-Tree :
@@ -483,7 +464,7 @@ module _
         ( combinator-Directed-Tree T)
         ( node-base-index-combinator-Directed-Tree T i))
       ( hom-fiber-combinator-Directed-Tree i)
-  is-equiv-hom-fiber-combinator-Directed-Tree i = {!!}
+  is-equiv-hom-fiber-combinator-Directed-Tree = {!!}
 
   fiber-combinator-Directed-Tree :
     (i : I) →
@@ -492,7 +473,7 @@ module _
       ( fiber-Directed-Tree
         ( combinator-Directed-Tree T)
         ( node-base-index-combinator-Directed-Tree T i))
-  fiber-combinator-Directed-Tree i = {!!}
+  fiber-combinator-Directed-Tree = {!!}
 ```
 
 ### Any tree is the combinator tree of the fibers at the nodes equipped with edges to the root
@@ -505,7 +486,7 @@ module _
   node-combinator-fiber-base-Directed-Tree :
     node-combinator-Directed-Tree (fiber-base-Directed-Tree T) →
     node-Directed-Tree T
-  node-combinator-fiber-base-Directed-Tree root-combinator-Directed-Tree = {!!}
+  node-combinator-fiber-base-Directed-Tree = {!!}
   node-combinator-fiber-base-Directed-Tree
     ( node-inclusion-combinator-Directed-Tree b (x , w)) = {!!}
 
@@ -515,13 +496,13 @@ module _
     Σ ( base-Directed-Tree T)
       ( walk-Directed-Tree T x ∘ node-base-Directed-Tree T) →
     node-combinator-Directed-Tree (fiber-base-Directed-Tree T)
-  cases-map-inv-node-combinator-fiber-base-Directed-Tree ._ (inl refl) = {!!}
+  cases-map-inv-node-combinator-fiber-base-Directed-Tree = {!!}
   cases-map-inv-node-combinator-fiber-base-Directed-Tree x (inr (b , w)) = {!!}
 
   map-inv-node-combinator-fiber-base-Directed-Tree :
     node-Directed-Tree T →
     node-combinator-Directed-Tree (fiber-base-Directed-Tree T)
-  map-inv-node-combinator-fiber-base-Directed-Tree x = {!!}
+  map-inv-node-combinator-fiber-base-Directed-Tree = {!!}
 
   cases-is-section-map-inv-node-combinator-fiber-base-Directed-Tree :
     (x : node-Directed-Tree T) →
@@ -531,15 +512,14 @@ module _
         ( walk-Directed-Tree T x ∘ node-base-Directed-Tree T)) →
     node-combinator-fiber-base-Directed-Tree
       ( cases-map-inv-node-combinator-fiber-base-Directed-Tree x H) ＝ x
-  cases-is-section-map-inv-node-combinator-fiber-base-Directed-Tree ._
-    ( inl refl) = {!!}
+  cases-is-section-map-inv-node-combinator-fiber-base-Directed-Tree = {!!}
   cases-is-section-map-inv-node-combinator-fiber-base-Directed-Tree x
     ( inr (b , w)) = {!!}
 
   is-section-map-inv-node-combinator-fiber-base-Directed-Tree :
     ( node-combinator-fiber-base-Directed-Tree ∘
       map-inv-node-combinator-fiber-base-Directed-Tree) ~ id
-  is-section-map-inv-node-combinator-fiber-base-Directed-Tree x = {!!}
+  is-section-map-inv-node-combinator-fiber-base-Directed-Tree = {!!}
 
   is-retraction-map-inv-node-combinator-fiber-base-Directed-Tree :
     ( map-inv-node-combinator-fiber-base-Directed-Tree ∘
@@ -556,7 +536,7 @@ module _
   equiv-node-combinator-fiber-base-Directed-Tree :
     node-combinator-Directed-Tree (fiber-base-Directed-Tree T) ≃
     node-Directed-Tree T
-  pr1 equiv-node-combinator-fiber-base-Directed-Tree = {!!}
+  equiv-node-combinator-fiber-base-Directed-Tree = {!!}
   pr2 equiv-node-combinator-fiber-base-Directed-Tree = {!!}
 
   edge-combinator-fiber-base-Directed-Tree :
@@ -565,14 +545,13 @@ module _
     edge-Directed-Tree T
       ( node-combinator-fiber-base-Directed-Tree x)
       ( node-combinator-fiber-base-Directed-Tree y)
-  edge-combinator-fiber-base-Directed-Tree ._ ._
-    ( edge-to-root-combinator-Directed-Tree (b , e)) = {!!}
+  edge-combinator-fiber-base-Directed-Tree = {!!}
 
   hom-combinator-fiber-base-Directed-Tree :
     hom-Directed-Tree
       ( combinator-Directed-Tree (fiber-base-Directed-Tree T))
       ( T)
-  pr1 hom-combinator-fiber-base-Directed-Tree = {!!}
+  hom-combinator-fiber-base-Directed-Tree = {!!}
   pr2 hom-combinator-fiber-base-Directed-Tree = {!!}
 
   is-equiv-combinator-fiber-base-Directed-Tree :

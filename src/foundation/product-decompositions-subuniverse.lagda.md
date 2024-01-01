@@ -189,7 +189,7 @@ module _
               inclusion-subuniverse P X ≃
               ( inclusion-subuniverse P (pr1 A) ×
                 inclusion-subuniverse P (pr1 x))))
-    pr1 equiv-reassociate-left-iterated-product-Decomposition-Subuniverse = {!!}
+    equiv-reassociate-left-iterated-product-Decomposition-Subuniverse = {!!}
 
   equiv-ternary-left-iterated-product-Decomposition-Subuniverse :
     left-iterated-binary-product-Decomposition-Subuniverse P X ≃
@@ -242,7 +242,7 @@ module _
               inclusion-subuniverse P X ≃
               ( inclusion-subuniverse P (pr1 x) ×
                 inclusion-subuniverse P (pr1 B))))
-    pr1 equiv-reassociate-right-iterated-product-Decomposition-Subuniverse = {!!}
+    equiv-reassociate-right-iterated-product-Decomposition-Subuniverse = {!!}
 
   equiv-ternary-right-iterated-product-Decomposition-Subuniverse :
     right-iterated-binary-product-Decomposition-Subuniverse P X ≃

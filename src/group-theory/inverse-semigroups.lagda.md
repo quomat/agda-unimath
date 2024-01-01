@@ -30,7 +30,7 @@ each `x` there is a unique `y` such that `xyx = {!!}
 ```agda
 is-inverse-Semigroup :
   {l : Level} (S : Semigroup l) → UU l
-is-inverse-Semigroup S = {!!}
+is-inverse-Semigroup = {!!}
 
 Inverse-Semigroup : (l : Level) → UU (lsuc l)
 Inverse-Semigroup l = {!!}
@@ -80,7 +80,7 @@ module _
         ( mul-Inverse-Semigroup x (inv-Inverse-Semigroup x))
         ( x))
       ( x)
-  inner-inverse-law-mul-Inverse-Semigroup x = {!!}
+  inner-inverse-law-mul-Inverse-Semigroup = {!!}
 
   outer-inverse-law-mul-Inverse-Semigroup :
     (x : type-Inverse-Semigroup) →
@@ -89,5 +89,5 @@ module _
         ( mul-Inverse-Semigroup (inv-Inverse-Semigroup x) x)
         ( inv-Inverse-Semigroup x))
       ( inv-Inverse-Semigroup x)
-  outer-inverse-law-mul-Inverse-Semigroup x = {!!}
+  outer-inverse-law-mul-Inverse-Semigroup = {!!}
 ```

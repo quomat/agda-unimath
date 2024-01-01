@@ -46,7 +46,7 @@ module _
   union-decidable-subtype :
     decidable-subtype l1 X → decidable-subtype l2 X →
     decidable-subtype (l1 ⊔ l2) X
-  union-decidable-subtype P Q x = {!!}
+  union-decidable-subtype = {!!}
 ```
 
 ### Unions of families of subtypes
@@ -82,5 +82,5 @@ module _
   preserves-order-union-family-of-subtypes :
     ((i : I) → A i ⊆ B i) →
     union-family-of-subtypes A ⊆ union-family-of-subtypes B
-  preserves-order-union-family-of-subtypes H x p = {!!}
+  preserves-order-union-family-of-subtypes = {!!}
 ```

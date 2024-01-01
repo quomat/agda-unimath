@@ -114,11 +114,11 @@ module _
     is-antisymmetric-Large-Relation
       ( obj-Large-Category C)
       ( hom-Large-Category C)
-  is-antisymmetric-is-large-poset-Large-Category H X Y f g = {!!}
+  is-antisymmetric-is-large-poset-Large-Category = {!!}
 
   large-poset-Large-Category :
     is-large-poset-Large-Category → Large-Poset α β
-  large-preorder-Large-Poset (large-poset-Large-Category H) = {!!}
+  large-poset-Large-Category = {!!}
 ```
 
 ### Small posets from large posets
@@ -158,7 +158,7 @@ module _
 
   is-large-category-Large-Poset :
     is-large-category-Large-Precategory large-precategory-Large-Poset
-  is-large-category-Large-Poset {l} x y = {!!}
+  is-large-category-Large-Poset = {!!}
 
   large-category-Large-Poset : Large-Category α β
   large-precategory-Large-Category large-category-Large-Poset = {!!}

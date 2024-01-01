@@ -47,7 +47,7 @@ module _
     natural-transformation-map-Small-Large-Precategory C D G H →
     natural-transformation-map-Small-Large-Precategory C D F G →
     natural-transformation-map-Small-Large-Precategory C D F H
-  comp-hom-map-large-precategory-Small-Large-Precategory {F = F} {G} {H} = {!!}
+  comp-hom-map-large-precategory-Small-Large-Precategory = {!!}
 
   associative-comp-hom-map-large-precategory-Small-Large-Precategory :
     {γF γG γH γI : Level}
@@ -88,7 +88,7 @@ module _
   id-hom-map-large-precategory-Small-Large-Precategory :
     {γF : Level} {F : map-Small-Large-Precategory C D γF} →
     natural-transformation-map-Small-Large-Precategory C D F F
-  id-hom-map-large-precategory-Small-Large-Precategory {F = F} = {!!}
+  id-hom-map-large-precategory-Small-Large-Precategory = {!!}
 
   left-unit-law-comp-hom-map-large-precategory-Small-Large-Precategory :
     {γF γG : Level}
@@ -114,7 +114,7 @@ module _
 
   map-large-precategory-Small-Large-Precategory :
     Large-Precategory (λ l → l1 ⊔ l2 ⊔ α l ⊔ β l l) (λ l l' → l1 ⊔ l2 ⊔ β l l')
-  obj-Large-Precategory map-large-precategory-Small-Large-Precategory = {!!}
+  map-large-precategory-Small-Large-Precategory = {!!}
 ```
 
 ### The small precategories of maps and natural transformations from a small to a large precategory

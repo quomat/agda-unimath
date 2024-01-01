@@ -34,13 +34,12 @@ precomp-reflecting-map-Undirected-Graph :
   {l1 l2 l3 l4 : Level} (G : Undirected-Graph l1 l2) {X : UU l3} (Y : UU l4) →
   reflecting-map-Undirected-Graph G X →
   (X → Y) → reflecting-map-Undirected-Graph G Y
-pr1 (precomp-reflecting-map-Undirected-Graph G Y f h) = {!!}
-pr2 (precomp-reflecting-map-Undirected-Graph G Y f h) v e = {!!}
+precomp-reflecting-map-Undirected-Graph = {!!}
 
 is-geometric-realization-reflecting-map-Undirected-Graph :
   {l1 l2 l3 : Level} (l : Level) (G : Undirected-Graph l1 l2) {X : UU l3}
   (f : reflecting-map-Undirected-Graph G X) → UU (l1 ⊔ l2 ⊔ l3 ⊔ lsuc l)
-is-geometric-realization-reflecting-map-Undirected-Graph l G f = {!!}
+is-geometric-realization-reflecting-map-Undirected-Graph = {!!}
 ```
 
 ## External links

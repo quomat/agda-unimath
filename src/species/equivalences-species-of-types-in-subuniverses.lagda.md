@@ -28,7 +28,7 @@ equiv-species-subuniverse :
   {l1 l2 l3 : Level} (P : subuniverse l1 l2) (Q : subuniverse l1 l3) →
   species-subuniverse P Q → species-subuniverse P Q →
   UU (lsuc l1 ⊔ l2)
-equiv-species-subuniverse {l1} P Q S T = {!!}
+equiv-species-subuniverse = {!!}
 ```
 
 ## Properties
@@ -40,5 +40,5 @@ extensionality-species-subuniverse :
   {l1 l2 l3 : Level} (P : subuniverse l1 l2) (Q : subuniverse l1 l3) →
   (S : species-subuniverse P Q) → (T : species-subuniverse P Q) →
   (Id S T) ≃ (equiv-species-subuniverse P Q S T)
-extensionality-species-subuniverse P Q S T = {!!}
+extensionality-species-subuniverse = {!!}
 ```

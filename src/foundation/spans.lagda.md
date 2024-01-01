@@ -44,7 +44,7 @@ A **span** is a pair of functions with a common domain.
 span :
   {l1 l2 : Level} (l : Level) (A : UU l1) (B : UU l2) →
   UU (l1 ⊔ l2 ⊔ lsuc l)
-span l A B = {!!}
+span = {!!}
 
 module _
   {l1 l2 : Level} {l : Level} {A : UU l1} {B : UU l2} (c : span l A B)
@@ -76,7 +76,7 @@ module _
 
   coherence-hom-domain-span :
     (c d : span l A B) → (domain-span c → domain-span d) → UU (l1 ⊔ l2 ⊔ l)
-  coherence-hom-domain-span c d h = {!!}
+  coherence-hom-domain-span = {!!}
 
   hom-domain-span : (c d : span l A B) → UU (l1 ⊔ l2 ⊔ l)
   hom-domain-span c d = {!!}
@@ -100,15 +100,15 @@ module _
 
   is-torsorial-htpy-span :
     (c : span l A B) → is-torsorial (htpy-span c)
-  is-torsorial-htpy-span c = {!!}
+  is-torsorial-htpy-span = {!!}
 
   is-equiv-htpy-eq-span :
     (c d : span l A B) → is-equiv (htpy-eq-span c d)
-  is-equiv-htpy-eq-span c = {!!}
+  is-equiv-htpy-eq-span = {!!}
 
   extensionality-span :
     (c d : span l A B) → (c ＝ d) ≃ (htpy-span c d)
-  pr1 (extensionality-span c d) = {!!}
+  extensionality-span = {!!}
 
   eq-htpy-span : (c d : span l A B) → htpy-span c d → c ＝ d
   eq-htpy-span c d = {!!}
@@ -133,7 +133,7 @@ module _
 
   span-binary-relation :
     ( A → B → UU (l1 ⊔ l2 ⊔ l)) → span (l1 ⊔ l2 ⊔ l) A B
-  pr1 (span-binary-relation R) = {!!}
+  span-binary-relation = {!!}
 
   compute-span-binary-relation :
     map-equiv equiv-span-binary-relation ~ span-binary-relation
@@ -141,11 +141,11 @@ module _
 
   binary-relation-span :
     span (l1 ⊔ l2 ⊔ l) A B → (A → B → UU (l1 ⊔ l2 ⊔ l))
-  binary-relation-span S a b = {!!}
+  binary-relation-span = {!!}
 
   compute-binary-relation-span :
     map-inv-equiv equiv-span-binary-relation ~ binary-relation-span
-  compute-binary-relation-span S = {!!}
+  compute-binary-relation-span = {!!}
 ```
 
 ## See also

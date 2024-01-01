@@ -39,21 +39,21 @@ module _
       ( prod-Relation-Prop
         ( prop-equivalence-relation R)
         ( prop-equivalence-relation S))
-  pr1 (reflexive-prod-Relation-Prop x) = {!!}
+  reflexive-prod-Relation-Prop = {!!}
 
   symmetric-prod-Relation-Prop :
     is-symmetric-Relation-Prop
       ( prod-Relation-Prop
         ( prop-equivalence-relation R)
         ( prop-equivalence-relation S))
-  pr1 (symmetric-prod-Relation-Prop x y (p , q)) = {!!}
+  symmetric-prod-Relation-Prop = {!!}
 
   transitive-prod-Relation-Prop :
     is-transitive-Relation-Prop
       ( prod-Relation-Prop
         ( prop-equivalence-relation R)
         ( prop-equivalence-relation S))
-  pr1 (transitive-prod-Relation-Prop x y z (p , q) (p' , q')) = {!!}
+  transitive-prod-Relation-Prop = {!!}
 
   prod-equivalence-relation : equivalence-relation (l2 ⊔ l4) (A × B)
   pr1 prod-equivalence-relation = {!!}

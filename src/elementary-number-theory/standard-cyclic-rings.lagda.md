@@ -67,7 +67,7 @@ pr2 (ℤ-Mod-Commutative-Ring n) = {!!}
 ```agda
 integer-multiple-ℤ-Mod :
   (n : ℕ) → ℤ → ℤ-Mod n → ℤ-Mod n
-integer-multiple-ℤ-Mod n k x = {!!}
+integer-multiple-ℤ-Mod = {!!}
 ```
 
 ## Properties
@@ -77,8 +77,7 @@ integer-multiple-ℤ-Mod n k x = {!!}
 ```agda
 is-neg-one-neg-one-ℤ-Mod :
   ( n : ℕ) → neg-one-Ring (ℤ-Mod-Ring n) ＝ neg-one-ℤ-Mod n
-is-neg-one-neg-one-ℤ-Mod zero-ℕ = {!!}
-is-neg-one-neg-one-ℤ-Mod (succ-ℕ n) = {!!}
+is-neg-one-neg-one-ℤ-Mod = {!!}
 ```
 
 ### The integer multiple `k · 1` is equal to `[k] : ℤ-Mod n`
@@ -88,22 +87,17 @@ integer-multiplication-by-one-preserves-succ-ℤ :
   (n : ℕ) (x : ℤ) →
   integer-multiple-ℤ-Mod n (succ-ℤ x) (one-ℤ-Mod n) ＝
   succ-ℤ-Mod n (integer-multiple-ℤ-Mod n x (one-ℤ-Mod n))
-integer-multiplication-by-one-preserves-succ-ℤ n x = {!!}
+integer-multiplication-by-one-preserves-succ-ℤ = {!!}
 
 integer-multiplication-by-one-preserves-pred-ℤ :
   (n : ℕ) (x : ℤ) →
   integer-multiple-ℤ-Mod n (pred-ℤ x) (one-ℤ-Mod n) ＝
   pred-ℤ-Mod n (integer-multiple-ℤ-Mod n x (one-ℤ-Mod n))
-integer-multiplication-by-one-preserves-pred-ℤ n x = {!!}
+integer-multiplication-by-one-preserves-pred-ℤ = {!!}
 
 compute-integer-multiple-one-ℤ-Mod :
   ( n : ℕ) → (λ k → integer-multiple-ℤ-Mod n k (one-ℤ-Mod n)) ~ mod-ℤ n
-compute-integer-multiple-one-ℤ-Mod zero-ℕ x = {!!}
-compute-integer-multiple-one-ℤ-Mod (succ-ℕ n) (inl zero-ℕ) = {!!}
-compute-integer-multiple-one-ℤ-Mod (succ-ℕ n) (inl (succ-ℕ x)) = {!!}
-compute-integer-multiple-one-ℤ-Mod (succ-ℕ n) (inr (inl _)) = {!!}
-compute-integer-multiple-one-ℤ-Mod (succ-ℕ n) (inr (inr zero-ℕ)) = {!!}
-compute-integer-multiple-one-ℤ-Mod (succ-ℕ n) (inr (inr (succ-ℕ x))) = {!!}
+compute-integer-multiple-one-ℤ-Mod = {!!}
 ```
 
 ### The standard cyclic rings are cyclic
@@ -111,15 +105,15 @@ compute-integer-multiple-one-ℤ-Mod (succ-ℕ n) (inr (inr (succ-ℕ x))) = {!!
 ```agda
 is-surjective-hom-element-one-ℤ-Mod :
   ( n : ℕ) → is-surjective-hom-element-Group (ℤ-Mod-Group n) (one-ℤ-Mod n)
-is-surjective-hom-element-one-ℤ-Mod n = {!!}
+is-surjective-hom-element-one-ℤ-Mod = {!!}
 
 is-generating-element-one-ℤ-Mod :
   ( n : ℕ) → is-generating-element-Group (ℤ-Mod-Group n) (one-ℤ-Mod n)
-is-generating-element-one-ℤ-Mod n = {!!}
+is-generating-element-one-ℤ-Mod = {!!}
 
 is-cyclic-ℤ-Mod-Group :
   ( n : ℕ) → is-cyclic-Group (ℤ-Mod-Group n)
-is-cyclic-ℤ-Mod-Group n = {!!}
+is-cyclic-ℤ-Mod-Group = {!!}
 
 is-cyclic-ℤ-Mod-Ring :
   ( n : ℕ) → is-cyclic-Ring (ℤ-Mod-Ring n)

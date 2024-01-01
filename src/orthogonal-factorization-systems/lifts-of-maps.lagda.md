@@ -119,7 +119,7 @@ module _
 
   is-lift-comp-horizontal :
     is-lift j i g → is-lift i h f → is-lift j h (g ∘ f)
-  is-lift-comp-horizontal J I x = {!!}
+  is-lift-comp-horizontal = {!!}
 ```
 
 ## Left whiskering of lifts of maps
@@ -176,7 +176,7 @@ module _
 
   coherence-htpy-lift :
     (l l' : lift i f) → map-lift i l ~ map-lift i l' → UU (l2 ⊔ l3)
-  coherence-htpy-lift l l' K = {!!}
+  coherence-htpy-lift = {!!}
 
   htpy-lift : (l l' : lift i f) → UU (l1 ⊔ l2 ⊔ l3)
   htpy-lift l l' = {!!}
@@ -189,15 +189,15 @@ module _
 
   is-torsorial-htpy-lift :
     (l : lift i f) → is-torsorial (htpy-lift l)
-  is-torsorial-htpy-lift l = {!!}
+  is-torsorial-htpy-lift = {!!}
 
   is-equiv-htpy-eq-lift :
     (l l' : lift i f) → is-equiv (htpy-eq-lift l l')
-  is-equiv-htpy-eq-lift l = {!!}
+  is-equiv-htpy-eq-lift = {!!}
 
   extensionality-lift :
     (l l' : lift i f) → (l ＝ l') ≃ (htpy-lift l l')
-  pr1 (extensionality-lift l l') = {!!}
+  extensionality-lift = {!!}
 
   eq-htpy-lift : (l l' : lift i f) → htpy-lift l l' → l ＝ l'
   eq-htpy-lift l l' = {!!}
@@ -230,16 +230,16 @@ module _
   is-trunc-is-lift :
     {X : UU l3} (f : X → B) →
     is-trunc (succ-𝕋 k) B → (g : X → A) → is-trunc k (is-lift i f g)
-  is-trunc-is-lift f is-trunc-B g = {!!}
+  is-trunc-is-lift = {!!}
 
   is-trunc-lift :
     {X : UU l3} (f : X → B) →
     is-trunc k A → is-trunc (succ-𝕋 k) B → is-trunc k (lift i f)
-  is-trunc-lift f is-trunc-A is-trunc-B = {!!}
+  is-trunc-lift = {!!}
 
   is-trunc-total-lift :
     (X : UU l3) → is-trunc k A → is-trunc k (total-lift i X)
-  is-trunc-total-lift X is-trunc-A = {!!}
+  is-trunc-total-lift = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} (i : A → B)
@@ -248,12 +248,12 @@ module _
   is-contr-is-lift :
     {X : UU l3} (f : X → B) →
     is-prop B → (g : X → A) → is-contr (is-lift i f g)
-  is-contr-is-lift f is-prop-B g = {!!}
+  is-contr-is-lift = {!!}
 
   is-prop-is-lift :
     {X : UU l3} (f : X → B) →
     is-set B → (g : X → A) → is-prop (is-lift i f g)
-  is-prop-is-lift f is-set-B g = {!!}
+  is-prop-is-lift = {!!}
 ```
 
 ## See also

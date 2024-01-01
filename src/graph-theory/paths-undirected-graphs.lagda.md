@@ -42,21 +42,21 @@ module _
 
   is-path-walk-Undirected-Graph :
     {x y : vertex-Undirected-Graph G} → walk-Undirected-Graph G x y → UU l1
-  is-path-walk-Undirected-Graph w = {!!}
+  is-path-walk-Undirected-Graph = {!!}
 
   path-Undirected-Graph :
     (x y : vertex-Undirected-Graph G) → UU (lsuc lzero ⊔ l1 ⊔ l2)
-  path-Undirected-Graph x y = {!!}
+  path-Undirected-Graph = {!!}
 
   walk-path-Undirected-Graph :
     {x y : vertex-Undirected-Graph G} →
     path-Undirected-Graph x y → walk-Undirected-Graph G x y
-  walk-path-Undirected-Graph p = {!!}
+  walk-path-Undirected-Graph = {!!}
 
   length-path-Undirected-Graph :
     {x y : vertex-Undirected-Graph G} →
     path-Undirected-Graph x y → ℕ
-  length-path-Undirected-Graph p = {!!}
+  length-path-Undirected-Graph = {!!}
 ```
 
 ## Properties

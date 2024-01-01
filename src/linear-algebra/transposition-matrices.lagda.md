@@ -31,8 +31,7 @@ columns into rows.
 ```agda
 transpose-matrix :
   {l : Level} → {A : UU l} → {m n : ℕ} → matrix A m n → matrix A n m
-transpose-matrix {n = zero-ℕ} x = {!!}
-transpose-matrix {n = succ-ℕ n} x = {!!}
+transpose-matrix = {!!}
 ```
 
 ## Properties
@@ -41,11 +40,10 @@ transpose-matrix {n = succ-ℕ n} x = {!!}
 is-involution-transpose-matrix :
   {l : Level} → {A : UU l} → {m n : ℕ} →
   (x : matrix A m n) → Id x (transpose-matrix (transpose-matrix x))
-is-involution-transpose-matrix {m = zero-ℕ} empty-vec = {!!}
-is-involution-transpose-matrix {m = succ-ℕ m} (r ∷ rs) = {!!}
+is-involution-transpose-matrix = {!!}
 
   lemma-rest :
     {l : Level} → {A : UU l} → {m n : ℕ} → (x : vec A n) → (xs : matrix A m n) →
     Id (transpose-matrix xs) (map-vec tail-vec (transpose-matrix (x ∷ xs)))
-  lemma-rest {n = zero-ℕ} empty-vec xs = {!!}
+  lemma-rest = {!!}
 ```

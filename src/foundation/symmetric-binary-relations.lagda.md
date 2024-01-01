@@ -52,7 +52,7 @@ universe `𝒰`.
 ```agda
 Symmetric-Relation :
   {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-Symmetric-Relation l2 A = {!!}
+Symmetric-Relation = {!!}
 ```
 
 ### Action on symmetries of symmetric binary relations
@@ -65,53 +65,53 @@ module _
   abstract
     equiv-tr-Symmetric-Relation :
       (p q : unordered-pair A) → Eq-unordered-pair p q → R p ≃ R q
-    equiv-tr-Symmetric-Relation p = {!!}
+    equiv-tr-Symmetric-Relation = {!!}
 
     compute-refl-equiv-tr-Symmetric-Relation :
       (p : unordered-pair A) →
       equiv-tr-Symmetric-Relation p p (refl-Eq-unordered-pair p) ＝
       id-equiv
-    compute-refl-equiv-tr-Symmetric-Relation p = {!!}
+    compute-refl-equiv-tr-Symmetric-Relation = {!!}
 
     htpy-compute-refl-equiv-tr-Symmetric-Relation :
       (p : unordered-pair A) →
       htpy-equiv
         ( equiv-tr-Symmetric-Relation p p (refl-Eq-unordered-pair p))
         ( id-equiv)
-    htpy-compute-refl-equiv-tr-Symmetric-Relation p = {!!}
+    htpy-compute-refl-equiv-tr-Symmetric-Relation = {!!}
 
   abstract
     tr-Symmetric-Relation :
       (p q : unordered-pair A) → Eq-unordered-pair p q → R p → R q
-    tr-Symmetric-Relation p q e = {!!}
+    tr-Symmetric-Relation = {!!}
 
     tr-inv-Symmetric-Relation :
       (p q : unordered-pair A) → Eq-unordered-pair p q → R q → R p
-    tr-inv-Symmetric-Relation p q e = {!!}
+    tr-inv-Symmetric-Relation = {!!}
 
     is-section-tr-inv-Symmetric-Relation :
       (p q : unordered-pair A) (e : Eq-unordered-pair p q) →
       tr-Symmetric-Relation p q e ∘
       tr-inv-Symmetric-Relation p q e ~
       id
-    is-section-tr-inv-Symmetric-Relation p q e = {!!}
+    is-section-tr-inv-Symmetric-Relation = {!!}
 
     is-retraction-tr-inv-Symmetric-Relation :
       (p q : unordered-pair A) (e : Eq-unordered-pair p q) →
       tr-inv-Symmetric-Relation p q e ∘
       tr-Symmetric-Relation p q e ~
       id
-    is-retraction-tr-inv-Symmetric-Relation p q e = {!!}
+    is-retraction-tr-inv-Symmetric-Relation = {!!}
 
     compute-refl-tr-Symmetric-Relation :
       (p : unordered-pair A) →
       tr-Symmetric-Relation p p (refl-Eq-unordered-pair p) ＝ id
-    compute-refl-tr-Symmetric-Relation p = {!!}
+    compute-refl-tr-Symmetric-Relation = {!!}
 
     htpy-compute-refl-tr-Symmetric-Relation :
       (p : unordered-pair A) →
       tr-Symmetric-Relation p p (refl-Eq-unordered-pair p) ~ id
-    htpy-compute-refl-tr-Symmetric-Relation p = {!!}
+    htpy-compute-refl-tr-Symmetric-Relation = {!!}
 ```
 
 ### The underlying binary relation of a symmetric binary relation
@@ -128,7 +128,7 @@ module _
     {x y : A} →
     relation-Symmetric-Relation x y ≃
     relation-Symmetric-Relation y x
-  equiv-symmetric-relation-Symmetric-Relation {x} {y} = {!!}
+  equiv-symmetric-relation-Symmetric-Relation = {!!}
 
   symmetric-relation-Symmetric-Relation :
     {x y : A} →
@@ -150,7 +150,7 @@ module _
   unit-symmetric-relation-Relation :
     (x y : A) → R x y →
     relation-Symmetric-Relation symmetric-relation-Relation x y
-  pr1 (unit-symmetric-relation-Relation x y r) = {!!}
+  unit-symmetric-relation-Relation = {!!}
 ```
 
 ### Morphisms of symmetric binary relations
@@ -163,7 +163,7 @@ module _
   hom-Symmetric-Relation :
     Symmetric-Relation l2 A → Symmetric-Relation l3 A →
     UU (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l3)
-  hom-Symmetric-Relation R S = {!!}
+  hom-Symmetric-Relation = {!!}
 
   hom-relation-hom-Symmetric-Relation :
     (R : Symmetric-Relation l2 A) (S : Symmetric-Relation l3 A) →
@@ -171,5 +171,5 @@ module _
     hom-Relation
       ( relation-Symmetric-Relation R)
       ( relation-Symmetric-Relation S)
-  hom-relation-hom-Symmetric-Relation R S f x y = {!!}
+  hom-relation-hom-Symmetric-Relation = {!!}
 ```

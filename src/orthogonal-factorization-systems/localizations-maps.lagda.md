@@ -35,7 +35,7 @@ is-localization :
   {A : UU l1} {B : UU l2} (f : A → B)
   (X : UU l3) (Y : UU l4) (η : X → Y) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ lsuc l5)
-is-localization l5 f X Y η = {!!}
+is-localization = {!!}
 ```
 
 ```agda
@@ -57,7 +57,7 @@ localization :
   {l1 l2 l3 : Level} (l4 l5 : Level)
   {A : UU l1} {B : UU l2} (f : A → B)
   (X : UU l3) → UU (l1 ⊔ l2 ⊔ l3 ⊔ lsuc l4 ⊔ lsuc l5)
-localization l4 l5 f X = {!!}
+localization = {!!}
 ```
 
 ## Properties
@@ -74,7 +74,7 @@ module _
   is-subuniverse-localization-is-localization :
     is-localization l4 f X Y η →
     is-subuniverse-localization (is-local-Prop f) X Y
-  pr1 (is-subuniverse-localization-is-localization is-localization-Y) = {!!}
+  is-subuniverse-localization-is-localization = {!!}
 ```
 
 It remains to construct a converse.

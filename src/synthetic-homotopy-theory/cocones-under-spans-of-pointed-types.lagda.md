@@ -46,11 +46,11 @@ module _
 
   type-cocone-Pointed-Type :
     {l4 : Level} → Pointed-Type l4 → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  type-cocone-Pointed-Type X = {!!}
+  type-cocone-Pointed-Type = {!!}
 
   cocone-Pointed-Type :
     {l4 : Level} → Pointed-Type l4 → Pointed-Type (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  pr1 (cocone-Pointed-Type X) = {!!}
+  cocone-Pointed-Type = {!!}
 ```
 
 ### Components of a cocone of pointed types

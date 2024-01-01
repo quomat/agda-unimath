@@ -43,11 +43,11 @@ module _
 
   is-congruence-equivalence-relation-Ring :
     {l2 : Level} (S : equivalence-relation l2 (type-Ring R)) → UU (l1 ⊔ l2)
-  is-congruence-equivalence-relation-Ring S = {!!}
+  is-congruence-equivalence-relation-Ring = {!!}
 
 congruence-Ring :
   {l1 : Level} (l2 : Level) (R : Ring l1) → UU (l1 ⊔ lsuc l2)
-congruence-Ring l2 R = {!!}
+congruence-Ring = {!!}
 
 module _
   {l1 l2 : Level} (R : Ring l1) (S : congruence-Ring l2 R)
@@ -72,18 +72,18 @@ module _
   concatenate-eq-sim-congruence-Ring :
     {x1 x2 y : type-Ring R} →
     x1 ＝ x2 → sim-congruence-Ring x2 y → sim-congruence-Ring x1 y
-  concatenate-eq-sim-congruence-Ring refl H = {!!}
+  concatenate-eq-sim-congruence-Ring = {!!}
 
   concatenate-sim-eq-congruence-Ring :
     {x y1 y2 : type-Ring R} →
     sim-congruence-Ring x y1 → y1 ＝ y2 → sim-congruence-Ring x y2
-  concatenate-sim-eq-congruence-Ring H refl = {!!}
+  concatenate-sim-eq-congruence-Ring = {!!}
 
   concatenate-sim-eq-sim-congruence-Ring :
     {x1 x2 y1 y2 : type-Ring R} →
     x1 ＝ x2 → sim-congruence-Ring x2 y1 →
     y1 ＝ y2 → sim-congruence-Ring x1 y2
-  concatenate-sim-eq-sim-congruence-Ring refl H refl = {!!}
+  concatenate-sim-eq-sim-congruence-Ring = {!!}
 
   refl-congruence-Ring :
     is-reflexive-Relation-Prop prop-congruence-Ring
@@ -159,13 +159,13 @@ module _
     (x : type-Ring R) {y z : type-Ring R} →
     sim-congruence-Ring y z →
     sim-congruence-Ring (mul-Ring R x y) (mul-Ring R x z)
-  left-mul-congruence-Ring x H = {!!}
+  left-mul-congruence-Ring = {!!}
 
   right-mul-congruence-Ring :
     {x y : type-Ring R} → sim-congruence-Ring x y →
     (z : type-Ring R) →
     sim-congruence-Ring (mul-Ring R x z) (mul-Ring R y z)
-  right-mul-congruence-Ring H z = {!!}
+  right-mul-congruence-Ring = {!!}
 
 construct-congruence-Ring :
   {l1 l2 : Level} (R : Ring l1) →
@@ -173,9 +173,7 @@ construct-congruence-Ring :
   is-congruence-Ab (ab-Ring R) S →
   is-congruence-Monoid (multiplicative-monoid-Ring R) S →
   congruence-Ring l2 R
-pr1 (pr1 (construct-congruence-Ring R S H K)) = {!!}
-pr2 (pr1 (construct-congruence-Ring R S H K)) = {!!}
-pr2 (construct-congruence-Ring R S H K) = {!!}
+construct-congruence-Ring = {!!}
 ```
 
 ## Properties
@@ -186,35 +184,35 @@ pr2 (construct-congruence-Ring R S H K) = {!!}
 relate-same-elements-congruence-Ring :
   {l1 l2 l3 : Level} (R : Ring l1) →
   congruence-Ring l2 R → congruence-Ring l3 R → UU (l1 ⊔ l2 ⊔ l3)
-relate-same-elements-congruence-Ring R = {!!}
+relate-same-elements-congruence-Ring = {!!}
 
 refl-relate-same-elements-congruence-Ring :
   {l1 l2 : Level} (R : Ring l1) (S : congruence-Ring l2 R) →
   relate-same-elements-congruence-Ring R S S
-refl-relate-same-elements-congruence-Ring R = {!!}
+refl-relate-same-elements-congruence-Ring = {!!}
 
 is-torsorial-relate-same-elements-congruence-Ring :
   {l1 l2 : Level} (R : Ring l1) (S : congruence-Ring l2 R) →
   is-torsorial (relate-same-elements-congruence-Ring R S)
-is-torsorial-relate-same-elements-congruence-Ring R = {!!}
+is-torsorial-relate-same-elements-congruence-Ring = {!!}
 
 relate-same-elements-eq-congruence-Ring :
   {l1 l2 : Level} (R : Ring l1) (S T : congruence-Ring l2 R) →
   S ＝ T → relate-same-elements-congruence-Ring R S T
-relate-same-elements-eq-congruence-Ring R = {!!}
+relate-same-elements-eq-congruence-Ring = {!!}
 
 is-equiv-relate-same-elements-eq-congruence-Ring :
   {l1 l2 : Level} (R : Ring l1) (S T : congruence-Ring l2 R) →
   is-equiv (relate-same-elements-eq-congruence-Ring R S T)
-is-equiv-relate-same-elements-eq-congruence-Ring R = {!!}
+is-equiv-relate-same-elements-eq-congruence-Ring = {!!}
 
 extensionality-congruence-Ring :
   {l1 l2 : Level} (R : Ring l1) (S T : congruence-Ring l2 R) →
   (S ＝ T) ≃ relate-same-elements-congruence-Ring R S T
-extensionality-congruence-Ring R = {!!}
+extensionality-congruence-Ring = {!!}
 
 eq-relate-same-elements-congruence-Ring :
   {l1 l2 : Level} (R : Ring l1) (S T : congruence-Ring l2 R) →
   relate-same-elements-congruence-Ring R S T → S ＝ T
-eq-relate-same-elements-congruence-Ring R = {!!}
+eq-relate-same-elements-congruence-Ring = {!!}
 ```

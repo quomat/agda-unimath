@@ -68,7 +68,7 @@ module _
 
   map-cocone-hom-sequential-diagram :
     cocone-sequential-diagram B X → cocone-sequential-diagram A X
-  map-cocone-hom-sequential-diagram c = {!!}
+  map-cocone-hom-sequential-diagram = {!!}
 ```
 
 ### A morphism of sequential diagrams induces a map of standard sequential colimits
@@ -173,7 +173,7 @@ module _
         ( htpy-htpy-cocone-map-hom-standard-sequential-colimit (succ-ℕ n)))
       ( naturality-map-hom-sequential-diagram B f n)
       ( coherence-triangle-cocone-standard-sequential-colimit n)
-  prism-htpy-cocone-map-hom-standard-sequential-colimit n = {!!}
+  prism-htpy-cocone-map-hom-standard-sequential-colimit = {!!}
 ```
 
 ### Homotopies between morphisms of sequential diagrams induce homotopies of maps of standard sequential colimits
@@ -204,7 +204,7 @@ module _
       ( map-hom-standard-sequential-colimit A
         ( id-hom-sequential-diagram A))
       ( id)
-  pr1 htpy-preserves-id-map-hom-standard-sequential-colimit = {!!}
+  htpy-preserves-id-map-hom-standard-sequential-colimit = {!!}
 
   preserves-id-map-hom-standard-sequential-colimit :
     map-hom-standard-sequential-colimit A
@@ -230,7 +230,7 @@ module _
         ( comp-hom-sequential-diagram A B C g f))
       ( ( map-hom-standard-sequential-colimit C g) ∘
         ( map-hom-standard-sequential-colimit B f))
-  pr1 htpy-preserves-comp-map-hom-standard-sequential-colimit n = {!!}
+  htpy-preserves-comp-map-hom-standard-sequential-colimit = {!!}
 
   preserves-comp-map-hom-standard-sequential-colimit :
     ( map-hom-standard-sequential-colimit C
@@ -279,7 +279,7 @@ module _
 
   equiv-equiv-standard-sequential-colimit :
     standard-sequential-colimit A ≃ standard-sequential-colimit B
-  pr1 equiv-equiv-standard-sequential-colimit = {!!}
+  equiv-equiv-standard-sequential-colimit = {!!}
 ```
 
 ### A retract of sequential diagrams induces a retract of standard sequential colimits
@@ -312,11 +312,11 @@ module _
     retraction
       ( map-hom-standard-sequential-colimit B
         ( inclusion-retract-sequential-diagram A B R))
-  pr1 retraction-retract-standard-sequential-colimit = {!!}
+  retraction-retract-standard-sequential-colimit = {!!}
 
   retract-retract-standard-sequential-colimit :
     (standard-sequential-colimit A) retract-of (standard-sequential-colimit B)
-  pr1 retract-retract-standard-sequential-colimit = {!!}
+  retract-retract-standard-sequential-colimit = {!!}
 ```
 
 ## References

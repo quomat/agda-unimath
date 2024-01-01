@@ -52,7 +52,7 @@ module _
 ```agda
 Pregroupoid :
   (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
-Pregroupoid l1 l2 = {!!}
+Pregroupoid = {!!}
 
 module _
   {l1 l2 : Level} (G : Pregroupoid l1 l2)
@@ -122,7 +122,7 @@ module _
 
   inv-compute-iso-Pregroupoid :
     {x y : obj-Pregroupoid G} → iso-Pregroupoid G x y ≃ hom-Pregroupoid G x y
-  inv-compute-iso-Pregroupoid {x} {y} = {!!}
+  inv-compute-iso-Pregroupoid = {!!}
 
   compute-iso-Pregroupoid :
     {x y : obj-Pregroupoid G} → hom-Pregroupoid G x y ≃ iso-Pregroupoid G x y

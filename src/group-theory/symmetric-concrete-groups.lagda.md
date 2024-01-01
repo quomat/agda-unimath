@@ -55,7 +55,7 @@ module _
 
   equiv-classifying-type-symmetric-Concrete-Group :
     (X Y : classifying-type-symmetric-Concrete-Group A) → UU l
-  equiv-classifying-type-symmetric-Concrete-Group X Y = {!!}
+  equiv-classifying-type-symmetric-Concrete-Group = {!!}
 
   type-symmetric-Concrete-Group : UU l
   type-symmetric-Concrete-Group = {!!}
@@ -63,17 +63,17 @@ module _
   extensionality-classifying-type-symmetric-Concrete-Group :
     (X Y : classifying-type-symmetric-Concrete-Group A) →
     (X ＝ Y) ≃ equiv-classifying-type-symmetric-Concrete-Group X Y
-  extensionality-classifying-type-symmetric-Concrete-Group X = {!!}
+  extensionality-classifying-type-symmetric-Concrete-Group = {!!}
 
   equiv-eq-classifying-type-symmetric-Concrete-Group :
     (X Y : classifying-type-symmetric-Concrete-Group A) →
     (X ＝ Y) → equiv-classifying-type-symmetric-Concrete-Group X Y
-  equiv-eq-classifying-type-symmetric-Concrete-Group X Y = {!!}
+  equiv-eq-classifying-type-symmetric-Concrete-Group = {!!}
 
   refl-equiv-eq-classifying-type-symmetric-Concrete-Group :
     (X : classifying-type-symmetric-Concrete-Group A) →
     equiv-eq-classifying-type-symmetric-Concrete-Group X X refl ＝ id-equiv
-  refl-equiv-eq-classifying-type-symmetric-Concrete-Group X = {!!}
+  refl-equiv-eq-classifying-type-symmetric-Concrete-Group = {!!}
 
   preserves-mul-equiv-eq-classifying-type-symmetric-Concrete-Group :
     (X Y Z : classifying-type-symmetric-Concrete-Group A)

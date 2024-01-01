@@ -31,7 +31,7 @@ reflective** if it is
 is-closed-under-Σ-reflective-modality :
   {l : Level} {○ : operator-modality l l} →
   (unit-○ : unit-modality ○) → UU (lsuc l)
-is-closed-under-Σ-reflective-modality unit-○ = {!!}
+is-closed-under-Σ-reflective-modality = {!!}
 
 closed-under-Σ-reflective-modality : (l : Level) → UU (lsuc l)
 closed-under-Σ-reflective-modality l = {!!}

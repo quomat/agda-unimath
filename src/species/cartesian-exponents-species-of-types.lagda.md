@@ -31,5 +31,5 @@ exponents, such as
 function-species-types :
   {l1 l2 l3 : Level} →
   species-types l1 l2 → species-types l1 l3 → species-types l1 (l2 ⊔ l3)
-function-species-types F G X = {!!}
+function-species-types = {!!}
 ```

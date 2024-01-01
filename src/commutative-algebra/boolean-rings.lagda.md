@@ -26,7 +26,7 @@ A **boolean ring** is a commutative ring in wich every element is idempotent.
 ```agda
 is-boolean-Commutative-Ring :
   {l : Level} (A : Commutative-Ring l) → UU l
-is-boolean-Commutative-Ring A = {!!}
+is-boolean-Commutative-Ring = {!!}
 
 Boolean-Ring : (l : Level) → UU (lsuc l)
 Boolean-Ring l = {!!}

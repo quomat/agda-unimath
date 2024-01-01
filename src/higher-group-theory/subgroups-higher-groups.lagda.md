@@ -32,11 +32,11 @@ with connected total space.
 subgroup-action-∞-Group :
   {l1 : Level} (l2 : Level) (G : ∞-Group l1) →
   classifying-type-∞-Group G → UU (l1 ⊔ lsuc l2)
-subgroup-action-∞-Group l2 G u = {!!}
+subgroup-action-∞-Group = {!!}
 
 subgroup-∞-Group :
   {l1 : Level} (l2 : Level) (G : ∞-Group l1) → UU (l1 ⊔ lsuc l2)
-subgroup-∞-Group l2 G = {!!}
+subgroup-∞-Group = {!!}
 
 module _
   {l1 l2 : Level} (G : ∞-Group l1) (H : subgroup-∞-Group l2 G)

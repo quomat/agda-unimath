@@ -60,7 +60,7 @@ module _
     hom-Precategory D
       ( obj-map-Precategory C D F x)
       ( obj-map-Precategory C D F y)
-  pr1 (equiv-hom-is-fully-faithful-map-Precategory is-ff-F) = {!!}
+  equiv-hom-is-fully-faithful-map-Precategory = {!!}
 
   inv-equiv-hom-is-fully-faithful-map-Precategory :
     is-fully-faithful-map-Precategory → {x y : obj-Precategory C} →
@@ -68,7 +68,7 @@ module _
       ( obj-map-Precategory C D F x)
       ( obj-map-Precategory C D F y) ≃
     hom-Precategory C x y
-  inv-equiv-hom-is-fully-faithful-map-Precategory is-ff-F = {!!}
+  inv-equiv-hom-is-fully-faithful-map-Precategory = {!!}
 
   map-inv-hom-is-fully-faithful-map-Precategory :
     is-fully-faithful-map-Precategory → {x y : obj-Precategory C} →
@@ -76,7 +76,7 @@ module _
       ( obj-map-Precategory C D F x)
       ( obj-map-Precategory C D F y) →
     hom-Precategory C x y
-  map-inv-hom-is-fully-faithful-map-Precategory is-ff-F = {!!}
+  map-inv-hom-is-fully-faithful-map-Precategory = {!!}
 ```
 
 ### The type of fully faithful maps between two precategories
@@ -118,7 +118,7 @@ module _
     hom-Precategory D
       ( obj-fully-faithful-map-Precategory F x)
       ( obj-fully-faithful-map-Precategory F y)
-  equiv-hom-fully-faithful-map-Precategory F = {!!}
+  equiv-hom-fully-faithful-map-Precategory = {!!}
 
   inv-equiv-hom-fully-faithful-map-Precategory :
     (F : fully-faithful-map-Precategory) {x y : obj-Precategory C} →
@@ -126,7 +126,7 @@ module _
       ( obj-fully-faithful-map-Precategory F x)
       ( obj-fully-faithful-map-Precategory F y) ≃
     hom-Precategory C x y
-  inv-equiv-hom-fully-faithful-map-Precategory F = {!!}
+  inv-equiv-hom-fully-faithful-map-Precategory = {!!}
 
   map-inv-hom-fully-faithful-map-Precategory :
     (F : fully-faithful-map-Precategory) {x y : obj-Precategory C} →
@@ -134,7 +134,7 @@ module _
       ( obj-fully-faithful-map-Precategory F x)
       ( obj-fully-faithful-map-Precategory F y) →
     hom-Precategory C x y
-  map-inv-hom-fully-faithful-map-Precategory F = {!!}
+  map-inv-hom-fully-faithful-map-Precategory = {!!}
 ```
 
 ## Properties
@@ -151,19 +151,19 @@ module _
 
   is-full-is-fully-faithful-map-Precategory :
     is-fully-faithful-map-Precategory C D F → is-full-map-Precategory C D F
-  is-full-is-fully-faithful-map-Precategory is-ff-F x y = {!!}
+  is-full-is-fully-faithful-map-Precategory = {!!}
 
   full-map-is-fully-faithful-map-Precategory :
     is-fully-faithful-map-Precategory C D F → full-map-Precategory C D
-  pr1 (full-map-is-fully-faithful-map-Precategory is-ff-F) = {!!}
+  full-map-is-fully-faithful-map-Precategory = {!!}
 
   is-faithful-is-fully-faithful-map-Precategory :
     is-fully-faithful-map-Precategory C D F → is-faithful-map-Precategory C D F
-  is-faithful-is-fully-faithful-map-Precategory is-ff-F x y = {!!}
+  is-faithful-is-fully-faithful-map-Precategory = {!!}
 
   faithful-map-is-fully-faithful-map-Precategory :
     is-fully-faithful-map-Precategory C D F → faithful-map-Precategory C D
-  pr1 (faithful-map-is-fully-faithful-map-Precategory is-ff-F) = {!!}
+  faithful-map-is-fully-faithful-map-Precategory = {!!}
 
   is-fully-faithful-is-full-is-faithful-map-Precategory :
     is-full-map-Precategory C D F →

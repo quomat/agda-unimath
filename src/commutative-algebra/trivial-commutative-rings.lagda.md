@@ -29,29 +29,29 @@ open import ring-theory.trivial-rings
 ```agda
 is-trivial-commutative-ring-Prop :
   {l : Level} → Commutative-Ring l → Prop l
-is-trivial-commutative-ring-Prop A = {!!}
+is-trivial-commutative-ring-Prop = {!!}
 
 is-trivial-Commutative-Ring :
   {l : Level} → Commutative-Ring l → UU l
-is-trivial-Commutative-Ring A = {!!}
+is-trivial-Commutative-Ring = {!!}
 
 is-prop-is-trivial-Commutative-Ring :
   {l : Level} (A : Commutative-Ring l) →
   is-prop (is-trivial-Commutative-Ring A)
-is-prop-is-trivial-Commutative-Ring A = {!!}
+is-prop-is-trivial-Commutative-Ring = {!!}
 
 is-nontrivial-commutative-ring-Prop :
   {l : Level} → Commutative-Ring l → Prop l
-is-nontrivial-commutative-ring-Prop A = {!!}
+is-nontrivial-commutative-ring-Prop = {!!}
 
 is-nontrivial-Commutative-Ring :
   {l : Level} → Commutative-Ring l → UU l
-is-nontrivial-Commutative-Ring A = {!!}
+is-nontrivial-Commutative-Ring = {!!}
 
 is-prop-is-nontrivial-Commutative-Ring :
   {l : Level} (A : Commutative-Ring l) →
   is-prop (is-nontrivial-Commutative-Ring A)
-is-prop-is-nontrivial-Commutative-Ring A = {!!}
+is-prop-is-nontrivial-Commutative-Ring = {!!}
 ```
 
 ## Properties
@@ -63,5 +63,5 @@ is-contr-is-trivial-Commutative-Ring :
   {l : Level} (A : Commutative-Ring l) →
   is-trivial-Commutative-Ring A →
   is-contr (type-Commutative-Ring A)
-is-contr-is-trivial-Commutative-Ring A p = {!!}
+is-contr-is-trivial-Commutative-Ring = {!!}
 ```

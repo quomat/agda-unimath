@@ -33,7 +33,7 @@ set of vertices that includes at least one extremity of each edge of the graph.
 ```agda
 vertex-cover :
   {l1 l2 : Level} → Undirected-Graph l1 l2 → UU (lsuc lzero ⊔ l1 ⊔ l2)
-vertex-cover G = {!!}
+vertex-cover = {!!}
 ```
 
 ## External links

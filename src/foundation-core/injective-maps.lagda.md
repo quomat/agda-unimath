@@ -71,12 +71,12 @@ module _
   is-injective-right-factor :
     (g : B → C) (h : A → B) →
     is-injective (g ∘ h) → is-injective h
-  is-injective-right-factor g h is-inj-gh p = {!!}
+  is-injective-right-factor = {!!}
 
   is-injective-top-map-triangle :
     (f : A → C) (g : B → C) (h : A → B) (H : f ~ (g ∘ h)) →
     is-injective f → is-injective h
-  is-injective-top-map-triangle f g h H is-inj-f {x} {x'} p = {!!}
+  is-injective-top-map-triangle = {!!}
 ```
 
 ### Injective maps are closed under composition
@@ -89,12 +89,12 @@ module _
   is-injective-comp :
     {g : B → C} {h : A → B} →
     is-injective h → is-injective g → is-injective (g ∘ h)
-  is-injective-comp is-inj-h is-inj-g = {!!}
+  is-injective-comp = {!!}
 
   is-injective-left-map-triangle :
     (f : A → C) (g : B → C) (h : A → B) → f ~ (g ∘ h) →
     is-injective h → is-injective g → is-injective f
-  is-injective-left-map-triangle f g h H is-inj-h is-inj-g {x} {x'} p = {!!}
+  is-injective-left-map-triangle = {!!}
 ```
 
 ### Equivalences are injective
@@ -146,22 +146,22 @@ abstract
     {l1 l2 : Level} {A : UU l1} (is-set-A : is-set A)
     {B : UU l2} (is-set-B : is-set B) (f : A → B) →
     is-injective f → is-emb f
-  is-emb-is-injective' is-set-A is-set-B f is-injective-f x y = {!!}
+  is-emb-is-injective' = {!!}
 
   is-set-is-injective :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} →
     is-set B → is-injective f → is-set A
-  is-set-is-injective {f = f} H I = {!!}
+  is-set-is-injective = {!!}
 
   is-emb-is-injective :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} →
     is-set B → is-injective f → is-emb f
-  is-emb-is-injective {f = f} H I = {!!}
+  is-emb-is-injective = {!!}
 
   is-prop-map-is-injective :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → B} →
     is-set B → is-injective f → is-prop-map f
-  is-prop-map-is-injective {f = f} H I = {!!}
+  is-prop-map-is-injective = {!!}
 ```
 
 ### For a map between sets, being injective is a property
@@ -173,7 +173,7 @@ module _
 
   is-prop-is-injective :
     is-set A → (f : A → B) → is-prop (is-injective f)
-  is-prop-is-injective H f = {!!}
+  is-prop-is-injective = {!!}
 
   is-injective-Prop : is-set A → (A → B) → Prop (l1 ⊔ l2)
   pr1 (is-injective-Prop H f) = {!!}
@@ -185,5 +185,5 @@ module _
 is-injective-is-contr :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
   is-contr A → is-injective f
-is-injective-is-contr f H p = {!!}
+is-injective-is-contr = {!!}
 ```

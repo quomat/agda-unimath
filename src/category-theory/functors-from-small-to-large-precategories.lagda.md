@@ -76,7 +76,7 @@ module _
 
   functor-Small-Large-Precategory :
     (γ : Level) → UU (l1 ⊔ l2 ⊔ α γ ⊔ β γ γ)
-  functor-Small-Large-Precategory γ = {!!}
+  functor-Small-Large-Precategory = {!!}
 
 module _
   {l1 l2 : Level} {α : Level → Level} {β : Level → Level → Level}

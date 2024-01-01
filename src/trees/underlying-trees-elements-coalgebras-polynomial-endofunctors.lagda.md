@@ -63,47 +63,13 @@ module _
   data
     node-element-coalgebra :
       type-coalgebra-polynomial-endofunctor X → UU (l2 ⊔ l3)
-    where
-    root-coalgebra :
-      (w : type-coalgebra-polynomial-endofunctor X) →
-      node-element-coalgebra w
-    node-inclusion-element-coalgebra :
-      {u v : type-coalgebra-polynomial-endofunctor X} →
-      (u ∈ v in-coalgebra X) →
-      node-element-coalgebra u →
-      node-element-coalgebra v
-
-  data
-    edge-element-coalgebra :
-      (w : type-coalgebra-polynomial-endofunctor X)
-      (x y : node-element-coalgebra w) → UU (l2 ⊔ l3)
-    where
-    edge-to-root-element-coalgebra :
-      {u v : type-coalgebra-polynomial-endofunctor X}
-      (H : u ∈ v in-coalgebra X) →
-      edge-element-coalgebra v
-        ( node-inclusion-element-coalgebra H
-          ( root-coalgebra u))
-        ( root-coalgebra v)
-    edge-inclusion-element-coalgebra :
-      {u v : type-coalgebra-polynomial-endofunctor X}
-      (H : u ∈ v in-coalgebra X) →
-      {x y : node-element-coalgebra u}
-      (e : edge-element-coalgebra u x y) →
-      edge-element-coalgebra v
-        ( node-inclusion-element-coalgebra H x)
-        ( node-inclusion-element-coalgebra H y)
-
-  graph-element-coalgebra :
-    type-coalgebra-polynomial-endofunctor X →
-    Directed-Graph (l2 ⊔ l3) (l2 ⊔ l3)
-  pr1 (graph-element-coalgebra w) = {!!}
+    node-element-coalgebra = {!!}
   pr2 (graph-element-coalgebra w) = {!!}
 
   walk-element-coalgebra :
     (w : type-coalgebra-polynomial-endofunctor X)
     (x y : node-element-coalgebra w) → UU (l2 ⊔ l3)
-  walk-element-coalgebra w = {!!}
+  walk-element-coalgebra = {!!}
 ```
 
 ### The external graph of an element of a W-type
@@ -111,7 +77,7 @@ module _
 ```agda
   node-external-graph-element-coalgebra :
     type-coalgebra-polynomial-endofunctor X → UU (l2 ⊔ l3)
-  node-external-graph-element-coalgebra w = {!!}
+  node-external-graph-element-coalgebra = {!!}
 
   edge-external-graph-element-coalgebra :
     (w : type-coalgebra-polynomial-endofunctor X)
@@ -122,7 +88,7 @@ module _
 
   external-graph-element-coalgebra :
     type-coalgebra-polynomial-endofunctor X → Directed-Graph (l2 ⊔ l3) (l2 ⊔ l3)
-  pr1 (external-graph-element-coalgebra w) = {!!}
+  external-graph-element-coalgebra = {!!}
   pr2 (external-graph-element-coalgebra w) = {!!}
 ```
 
@@ -139,7 +105,7 @@ module _
   is-root-element-coalgebra :
     (w : type-coalgebra-polynomial-endofunctor X) →
     node-element-coalgebra X w → UU (l2 ⊔ l3)
-  is-root-element-coalgebra w x = {!!}
+  is-root-element-coalgebra = {!!}
 
   is-isolated-root-element-coalgebra :
     (w : type-coalgebra-polynomial-endofunctor X) →
@@ -154,7 +120,7 @@ module _
     is-contr
       ( root-coalgebra w ＝
         root-coalgebra w)
-  is-contr-loop-space-root-element-coalgebra w = {!!}
+  is-contr-loop-space-root-element-coalgebra = {!!}
 ```
 
 ### Characterization of equality of the type of nodes of the underlying graph of an element of `coalgebra A B`
@@ -197,7 +163,7 @@ module _
     (x : node-element-coalgebra X w) →
     Σ ( node-element-coalgebra X w)
       ( Eq-node-element-coalgebra w x)
-  pr1 (center-total-Eq-node-element-coalgebra x) = {!!}
+  center-total-Eq-node-element-coalgebra = {!!}
 
   contraction-total-Eq-node-element-coalgebra :
     {w : type-coalgebra-polynomial-endofunctor X}
@@ -206,8 +172,7 @@ module _
       Σ ( node-element-coalgebra X w)
         ( Eq-node-element-coalgebra w x)) →
     center-total-Eq-node-element-coalgebra x ＝ u
-  contraction-total-Eq-node-element-coalgebra ._
-    (._ , root-refl-Eq-node-element-coalgebra) = {!!}
+  contraction-total-Eq-node-element-coalgebra = {!!}
   contraction-total-Eq-node-element-coalgebra ._
     ( .(node-inclusion-element-coalgebra H _) ,
       node-inclusion-Eq-node-element-coalgebra H e) = {!!}
@@ -216,33 +181,33 @@ module _
     (w : type-coalgebra-polynomial-endofunctor X)
     (x : node-element-coalgebra X w) →
     is-torsorial (Eq-node-element-coalgebra w x)
-  pr1 (is-torsorial-Eq-node-element-coalgebra w x) = {!!}
+  is-torsorial-Eq-node-element-coalgebra = {!!}
   pr2 (is-torsorial-Eq-node-element-coalgebra w x) = {!!}
 
   Eq-eq-node-element-coalgebra :
     (w : type-coalgebra-polynomial-endofunctor X)
     {x y : node-element-coalgebra X w} →
     x ＝ y → Eq-node-element-coalgebra w x y
-  Eq-eq-node-element-coalgebra w refl = {!!}
+  Eq-eq-node-element-coalgebra = {!!}
 
   is-equiv-Eq-eq-node-element-coalgebra :
     (w : type-coalgebra-polynomial-endofunctor X)
     (x y : node-element-coalgebra X w) →
     is-equiv (Eq-eq-node-element-coalgebra w {x} {y})
-  is-equiv-Eq-eq-node-element-coalgebra w x = {!!}
+  is-equiv-Eq-eq-node-element-coalgebra = {!!}
 
   extensionality-node-element-coalgebra :
     (w : type-coalgebra-polynomial-endofunctor X)
     (x y : node-element-coalgebra X w) →
     (x ＝ y) ≃ Eq-node-element-coalgebra w x y
-  pr1 (extensionality-node-element-coalgebra w x y) = {!!}
+  extensionality-node-element-coalgebra = {!!}
   pr2 (extensionality-node-element-coalgebra w x y) = {!!}
 
   eq-Eq-node-element-coalgebra :
     (w : type-coalgebra-polynomial-endofunctor X)
     (x y : node-element-coalgebra X w) →
     Eq-node-element-coalgebra w x y → x ＝ y
-  eq-Eq-node-element-coalgebra w x y = {!!}
+  eq-Eq-node-element-coalgebra = {!!}
 ```
 
 Note that we don't expect that `node-inclusion-element-coalgebra'` is an
@@ -270,7 +235,7 @@ module _
     hom-Directed-Graph
       ( graph-element-coalgebra X u)
       ( graph-element-coalgebra X v)
-  pr1 (inclusion-element-coalgebra {u} {v} H) = {!!}
+  inclusion-element-coalgebra = {!!}
   pr2
     ( inclusion-element-coalgebra {u} {v} H)
     x y e = {!!}
@@ -283,7 +248,7 @@ module _
     walk-element-coalgebra X v
       ( node-inclusion-element-coalgebra H x)
       ( node-inclusion-element-coalgebra H y)
-  walk-inclusion-element-coalgebra {u} {v} H = {!!}
+  walk-inclusion-element-coalgebra = {!!}
 ```
 
 ### The type of edges from the root of `u ∈-coalgebra v` to the root of `v` is contractible
@@ -302,7 +267,7 @@ module _
         ( node-inclusion-element-coalgebra H
           ( root-coalgebra u))
         ( root-coalgebra v))
-  pr1 (is-contr-edge-to-root-element-coalgebra H) = {!!}
+  is-contr-edge-to-root-element-coalgebra = {!!}
   pr2
     ( is-contr-edge-to-root-element-coalgebra H)
     ( edge-to-root-element-coalgebra .H) = {!!}
@@ -322,8 +287,7 @@ module _
     is-proof-irrelevant
       ( edge-element-coalgebra X w x
         ( root-coalgebra w))
-  is-proof-irrelevant-edge-to-root-element-coalgebra w ._
-    ( edge-to-root-element-coalgebra H) = {!!}
+  is-proof-irrelevant-edge-to-root-element-coalgebra = {!!}
 
   is-prop-edge-to-root-element-coalgebra :
     (w : type-coalgebra-polynomial-endofunctor X)
@@ -331,7 +295,7 @@ module _
     is-prop
       ( edge-element-coalgebra X w x
         ( root-coalgebra w))
-  is-prop-edge-to-root-element-coalgebra w x = {!!}
+  is-prop-edge-to-root-element-coalgebra = {!!}
 ```
 
 ### The underlying graph of any element of a W-type is a directed tree
@@ -348,28 +312,7 @@ module _
       ( Σ ( node-element-coalgebra X w)
           ( edge-element-coalgebra X w
             ( root-coalgebra w)))
-  no-edge-from-root-element-coalgebra w (x , ())
-
-  is-empty-eq-root-node-inclusion-element-coalgebra :
-    {v w : type-coalgebra-polynomial-endofunctor X}
-    (H : v ∈ w in-coalgebra X)
-    (x : node-element-coalgebra X v) →
-    root-coalgebra w ≠ node-inclusion-element-coalgebra H x
-  is-empty-eq-root-node-inclusion-element-coalgebra
-    H x ()
-
-  has-unique-predecessor-node-inclusion-element-coalgebra :
-    {v w : type-coalgebra-polynomial-endofunctor X}
-    (H : v ∈ w in-coalgebra X)
-    (x : node-element-coalgebra X v) →
-    is-contr
-      ( Σ ( node-element-coalgebra X w)
-          ( edge-element-coalgebra X w
-            ( node-inclusion-element-coalgebra H x)))
-  pr1
-    ( pr1
-      ( has-unique-predecessor-node-inclusion-element-coalgebra H
-        ( root-coalgebra w))) = {!!}
+  no-edge-from-root-element-coalgebra = {!!}
   pr2
     ( pr1
       ( has-unique-predecessor-node-inclusion-element-coalgebra H
@@ -394,8 +337,7 @@ module _
       ( ( root-coalgebra w ＝ x) +
         ( Σ ( node-element-coalgebra X w)
             ( edge-element-coalgebra X w x)))
-  has-unique-predecessor-element-coalgebra w
-    ( root-coalgebra w) = {!!}
+  has-unique-predecessor-element-coalgebra = {!!}
   has-unique-predecessor-element-coalgebra w
     ( node-inclusion-element-coalgebra H x) = {!!}
 
@@ -403,8 +345,7 @@ module _
     (w : type-coalgebra-polynomial-endofunctor X)
     (x : node-element-coalgebra X w) →
     walk-element-coalgebra X w x (root-coalgebra w)
-  walk-to-root-element-coalgebra w
-    ( root-coalgebra w) = {!!}
+  walk-to-root-element-coalgebra = {!!}
   walk-to-root-element-coalgebra w
     ( node-inclusion-element-coalgebra {v} H x) = {!!}
 
@@ -413,11 +354,11 @@ module _
     is-tree-Directed-Graph'
       ( graph-element-coalgebra X w)
       ( root-coalgebra w)
-  unique-walk-to-root-element-coalgebra w = {!!}
+  unique-walk-to-root-element-coalgebra = {!!}
 
   directed-tree-element-coalgebra :
     type-coalgebra-polynomial-endofunctor X → Directed-Tree (l2 ⊔ l3) (l2 ⊔ l3)
-  pr1 (directed-tree-element-coalgebra w) = {!!}
+  directed-tree-element-coalgebra = {!!}
   pr1 (pr2 (directed-tree-element-coalgebra w)) = {!!}
   pr2 (pr2 (directed-tree-element-coalgebra w)) = {!!}
 ```
@@ -433,8 +374,7 @@ module _
   shape-element-coalgebra :
     (w : type-coalgebra-polynomial-endofunctor X) →
     node-element-coalgebra X w → A
-  shape-element-coalgebra w
-    ( root-coalgebra w) = {!!}
+  shape-element-coalgebra = {!!}
   shape-element-coalgebra w
     ( node-inclusion-element-coalgebra {u} H y) = {!!}
 
@@ -444,9 +384,7 @@ module _
     B (shape-element-coalgebra w x) →
     Σ ( node-element-coalgebra X w)
       ( λ y → edge-element-coalgebra X w y x)
-  pr1
-    ( map-enrichment-element-coalgebra w
-      ( root-coalgebra w) b) = {!!}
+  map-enrichment-element-coalgebra = {!!}
   pr2
     ( map-enrichment-element-coalgebra w
       ( root-coalgebra w)
@@ -460,8 +398,7 @@ module _
     Σ ( node-element-coalgebra X w)
       ( λ y → edge-element-coalgebra X w y x) →
     B (shape-element-coalgebra w x)
-  map-inv-enrichment-directed-tree-element-coalgebra w ._
-    ( ._ , edge-to-root-element-coalgebra H) = {!!}
+  map-inv-enrichment-directed-tree-element-coalgebra = {!!}
   map-inv-enrichment-directed-tree-element-coalgebra w ._
     ( ._ ,
       edge-inclusion-element-coalgebra {u} H {x} {y} e) = {!!}
@@ -473,8 +410,7 @@ module _
         w x) ∘
       ( map-inv-enrichment-directed-tree-element-coalgebra
       w x)) ~ id
-  is-section-map-inv-enrichment-directed-tree-element-coalgebra w ._
-    ( ._ , edge-to-root-element-coalgebra (b , refl)) = {!!}
+  is-section-map-inv-enrichment-directed-tree-element-coalgebra = {!!}
   is-section-map-inv-enrichment-directed-tree-element-coalgebra w ._
     ( ._ ,
       edge-inclusion-element-coalgebra {u} H {x} {y} e) = {!!}
@@ -484,8 +420,7 @@ module _
     (x : node-element-coalgebra X w) →
     ( map-inv-enrichment-directed-tree-element-coalgebra w x ∘
       map-enrichment-element-coalgebra w x) ~ id
-  is-retraction-map-inv-enrichment-directed-tree-element-coalgebra w
-    ( root-coalgebra w) b = {!!}
+  is-retraction-map-inv-enrichment-directed-tree-element-coalgebra = {!!}
   is-retraction-map-inv-enrichment-directed-tree-element-coalgebra w
     ( node-inclusion-element-coalgebra {u} H y) b = {!!}
 
@@ -493,7 +428,7 @@ module _
     (w : type-coalgebra-polynomial-endofunctor X)
     (x : node-element-coalgebra X w) →
     is-equiv (map-enrichment-element-coalgebra w x)
-  is-equiv-map-enrichment-element-coalgebra w x = {!!}
+  is-equiv-map-enrichment-element-coalgebra = {!!}
 
   enrichment-directed-tree-element-coalgebra :
     (w : type-coalgebra-polynomial-endofunctor X)
@@ -501,13 +436,13 @@ module _
     B (shape-element-coalgebra w x) ≃
     Σ ( node-element-coalgebra X w)
       ( λ y → edge-element-coalgebra X w y x)
-  pr1 (enrichment-directed-tree-element-coalgebra w x) = {!!}
+  enrichment-directed-tree-element-coalgebra = {!!}
   pr2 (enrichment-directed-tree-element-coalgebra w x) = {!!}
 
   enriched-directed-tree-element-coalgebra :
     type-coalgebra-polynomial-endofunctor X →
     Enriched-Directed-Tree (l2 ⊔ l3) (l2 ⊔ l3) A B
-  pr1 (enriched-directed-tree-element-coalgebra w) = {!!}
+  enriched-directed-tree-element-coalgebra = {!!}
   pr1
     ( pr2 (enriched-directed-tree-element-coalgebra w)) = {!!}
   pr2
@@ -570,7 +505,7 @@ module _
       ( λ b →
         directed-tree-element-coalgebra X
           ( component-coalgebra-polynomial-endofunctor X w b))
-  pr1 equiv-node-compute-directed-tree-element-coalgebra = {!!}
+  equiv-node-compute-directed-tree-element-coalgebra = {!!}
   pr2 equiv-node-compute-directed-tree-element-coalgebra = {!!}
 
   edge-compute-directed-tree-element-coalgebra :
@@ -582,8 +517,7 @@ module _
           ( component-coalgebra-polynomial-endofunctor X w b))
       ( node-compute-directed-tree-element-coalgebra x)
       ( node-compute-directed-tree-element-coalgebra y)
-  edge-compute-directed-tree-element-coalgebra ._ ._
-    ( edge-to-root-element-coalgebra (b , refl)) = {!!}
+  edge-compute-directed-tree-element-coalgebra = {!!}
   edge-compute-directed-tree-element-coalgebra ._ ._
     ( edge-inclusion-element-coalgebra (b , refl) e) = {!!}
 
@@ -601,8 +535,7 @@ module _
     edge-element-coalgebra X w
       ( map-inv-node-compute-directed-tree-element-coalgebra x)
       ( map-inv-node-compute-directed-tree-element-coalgebra y)
-  map-inv-edge-compute-directed-tree-element-coalgebra' ._ ._
-    ( edge-to-root-combinator-Directed-Tree b) = {!!}
+  map-inv-edge-compute-directed-tree-element-coalgebra' = {!!}
   map-inv-edge-compute-directed-tree-element-coalgebra' ._ ._
     ( edge-inclusion-combinator-Directed-Tree b x y e) = {!!}
 
@@ -615,7 +548,7 @@ module _
       ( node-compute-directed-tree-element-coalgebra x)
       ( node-compute-directed-tree-element-coalgebra y) →
     edge-element-coalgebra X w x y
-  map-inv-edge-compute-directed-tree-element-coalgebra x y = {!!}
+  map-inv-edge-compute-directed-tree-element-coalgebra = {!!}
 
   is-section-map-inv-edge-compute-directed-tree-element-coalgebra' :
     ( x y :
@@ -640,8 +573,7 @@ module _
         ( map-inv-node-compute-directed-tree-element-coalgebra x)
         ( map-inv-node-compute-directed-tree-element-coalgebra y)
         ( map-inv-edge-compute-directed-tree-element-coalgebra' x y e)) ＝ e
-  is-section-map-inv-edge-compute-directed-tree-element-coalgebra' ._ ._
-    ( edge-to-root-combinator-Directed-Tree i) = {!!}
+  is-section-map-inv-edge-compute-directed-tree-element-coalgebra' = {!!}
   is-section-map-inv-edge-compute-directed-tree-element-coalgebra' ._ ._
     ( edge-inclusion-combinator-Directed-Tree i x y e) = {!!}
 
@@ -669,13 +601,12 @@ module _
     (x y : node-element-coalgebra X w) (e : edge-element-coalgebra X w x y) →
     map-inv-edge-compute-directed-tree-element-coalgebra x y
       ( edge-compute-directed-tree-element-coalgebra x y e) ＝ e
-  is-retraction-map-inv-edge-compute-directed-tree-element-coalgebra ._ ._
-    ( edge-to-root-element-coalgebra (b , refl)) = {!!}
+  is-retraction-map-inv-edge-compute-directed-tree-element-coalgebra = {!!}
 
   is-equiv-edge-compute-directed-tree-element-coalgebra :
     (x y : node-element-coalgebra X w) →
     is-equiv (edge-compute-directed-tree-element-coalgebra x y)
-  is-equiv-edge-compute-directed-tree-element-coalgebra x y = {!!}
+  is-equiv-edge-compute-directed-tree-element-coalgebra = {!!}
 
   equiv-edge-compute-directed-tree-element-coalgebra :
     (x y : node-element-coalgebra X w) →
@@ -686,7 +617,7 @@ module _
           ( component-coalgebra-polynomial-endofunctor X w b))
       ( node-compute-directed-tree-element-coalgebra x)
       ( node-compute-directed-tree-element-coalgebra y)
-  pr1 (equiv-edge-compute-directed-tree-element-coalgebra x y) = {!!}
+  equiv-edge-compute-directed-tree-element-coalgebra = {!!}
   pr2 (equiv-edge-compute-directed-tree-element-coalgebra x y) = {!!}
 
   compute-directed-tree-element-coalgebra :
@@ -696,7 +627,7 @@ module _
         ( λ b →
           directed-tree-element-coalgebra X
             ( component-coalgebra-polynomial-endofunctor X w b)))
-  pr1 compute-directed-tree-element-coalgebra = {!!}
+  compute-directed-tree-element-coalgebra = {!!}
   pr2 compute-directed-tree-element-coalgebra = {!!}
 
   shape-compute-enriched-directed-tree-element-coalgebra :
@@ -706,7 +637,7 @@ module _
           enriched-directed-tree-element-coalgebra X
             ( component-coalgebra-polynomial-endofunctor X w b))) ∘
       ( node-compute-directed-tree-element-coalgebra))
-  shape-compute-enriched-directed-tree-element-coalgebra (root-coalgebra _) = {!!}
+  shape-compute-enriched-directed-tree-element-coalgebra = {!!}
   shape-compute-enriched-directed-tree-element-coalgebra
     ( node-inclusion-element-coalgebra (b , refl) x) = {!!}
 
@@ -740,7 +671,7 @@ module _
         ( λ b →
           enriched-directed-tree-element-coalgebra X
             ( component-coalgebra-polynomial-endofunctor X w b)))
-  pr1 compute-enriched-directed-tree-element-coalgebra = {!!}
+  compute-enriched-directed-tree-element-coalgebra = {!!}
   pr1 (pr2 compute-enriched-directed-tree-element-coalgebra) = {!!}
   pr2 (pr2 compute-enriched-directed-tree-element-coalgebra) = {!!}
 ```

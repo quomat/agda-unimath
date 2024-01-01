@@ -91,11 +91,11 @@ record
   preserves-comp-Ty :
     {Δ Δ' Γ : Ctx} (A : Ty Γ) (γ : Sub Δ' Γ) (δ : Sub Δ Δ') →
     A · comp-hom-Precategory ctx-category γ δ ＝ (A · γ) · δ
-  preserves-comp-Ty A γ δ = {!!}
+  preserves-comp-Ty = {!!}
 
   preserves-id-Ty :
     {Γ : Ctx} (A : Ty Γ) → A · id-hom-Precategory ctx-category ＝ A
-  preserves-id-Ty {Γ} = {!!}
+  preserves-id-Ty = {!!}
 
   field
     tm-presheaf : presheaf-Precategory ∫Ty l4
@@ -105,7 +105,7 @@ record
 
   _[_] :
     {Δ Γ : Ctx} {A : Ty Γ} (M : Tm Γ A) (γ : Sub Δ Γ) → Tm Δ (A · γ)
-  _[_] {Δ} {Γ} {A} M γ = {!!}
+  _[_] = {!!}
 
   field
     ext-functor : functor-Precategory ∫Ty ctx-category
@@ -120,7 +120,7 @@ record
 
   ext-sub :
     {Δ Γ : Ctx} (A : Ty Γ) (γ : Sub Δ Γ) → Tm Δ (A · γ) → Sub Δ (ext Γ A)
-  ext-sub {Δ} {Γ} A γ M = {!!}
+  ext-sub = {!!}
 
   wk : {Γ : Ctx} (A : Ty Γ) → Sub (ext Γ A) Γ
   wk {Γ} A = {!!}
@@ -130,5 +130,5 @@ record
 
   ⟨_,_⟩ :
     {Δ Γ : Ctx} (γ : Sub Δ Γ) (A : Ty Γ) → Sub (ext Δ (A · γ)) (ext Γ A)
-  ⟨_,_⟩ {Δ} {Γ} γ A = {!!}
+  ⟨_,_⟩ = {!!}
 ```

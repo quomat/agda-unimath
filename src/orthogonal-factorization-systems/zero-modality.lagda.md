@@ -28,11 +28,11 @@ every type to the [unit type](foundation.unit-type.md).
 ```agda
 operator-zero-modality :
   (l1 l2 : Level) → operator-modality l1 l2
-operator-zero-modality l1 l2 _ = {!!}
+operator-zero-modality = {!!}
 
 unit-zero-modality :
   {l1 l2 : Level} → unit-modality (operator-zero-modality l1 l2)
-unit-zero-modality _ = {!!}
+unit-zero-modality = {!!}
 ```
 
 ## Properties
@@ -43,7 +43,7 @@ unit-zero-modality _ = {!!}
 is-uniquely-eliminating-modality-zero-modality :
   {l1 l2 : Level} →
   is-uniquely-eliminating-modality (unit-zero-modality {l1} {l2})
-is-uniquely-eliminating-modality-zero-modality {l2 = l2} P = {!!}
+is-uniquely-eliminating-modality-zero-modality = {!!}
 ```
 
 ### The zero modality is equivalent to `-2`-truncation

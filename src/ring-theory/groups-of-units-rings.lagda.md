@@ -123,7 +123,7 @@ module _
     mul-Ring R
       ( inclusion-group-of-units-Ring x)
       ( inclusion-group-of-units-Ring y)
-  preserves-mul-inclusion-group-of-units-Ring {x} {y} = {!!}
+  preserves-mul-inclusion-group-of-units-Ring = {!!}
 
   hom-inclusion-group-of-units-Ring :
     hom-Monoid monoid-group-of-units-Ring (multiplicative-monoid-Ring R)
@@ -194,7 +194,7 @@ module _
       ( group-of-units-Ring T)
       ( hom-group-of-units-hom-Ring S T g)
       ( hom-group-of-units-hom-Ring R S f)
-  preserves-comp-hom-group-of-units-hom-Ring g f = {!!}
+  preserves-comp-hom-group-of-units-hom-Ring = {!!}
 ```
 
 #### The functor `group-of-units-Ring`
@@ -205,12 +205,5 @@ group-of-units-ring-functor-Large-Precategory :
     ( λ l → l)
     ( Ring-Large-Precategory)
     ( Group-Large-Precategory)
-obj-functor-Large-Precategory
-  group-of-units-ring-functor-Large-Precategory = {!!}
-hom-functor-Large-Precategory
-  group-of-units-ring-functor-Large-Precategory {X = R} {Y = S} = {!!}
-preserves-comp-functor-Large-Precategory
-  group-of-units-ring-functor-Large-Precategory {X = R} {Y = S} {Z = T} = {!!}
-preserves-id-functor-Large-Precategory
-  group-of-units-ring-functor-Large-Precategory {X = R} = {!!}
+group-of-units-ring-functor-Large-Precategory = {!!}
 ```

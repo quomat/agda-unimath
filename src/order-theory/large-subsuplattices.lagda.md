@@ -33,7 +33,7 @@ module _
 
   is-closed-under-sup-Large-Subposet :
     Large-Subposet γ (large-poset-Large-Suplattice L) → UUω
-  is-closed-under-sup-Large-Subposet S = {!!}
+  is-closed-under-sup-Large-Subposet = {!!}
 
 record
   Large-Subsuplattice

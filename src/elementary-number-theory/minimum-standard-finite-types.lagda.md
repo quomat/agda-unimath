@@ -53,34 +53,18 @@ By reflexivity of `≤`, we compute that `min(m,n) ≤ m` (and correspondingly f
 leq-min-Fin :
   (k : ℕ) (l m n : Fin k) →
   leq-Fin k l m → leq-Fin k l n → leq-Fin k l (min-Fin k m n)
-leq-min-Fin (succ-ℕ k) (inl x) (inl y) (inl z) p q = {!!}
-leq-min-Fin (succ-ℕ k) (inl x) (inl y) (inr z) p q = {!!}
-leq-min-Fin (succ-ℕ k) (inl x) (inr y) (inl z) p q = {!!}
-leq-min-Fin (succ-ℕ k) (inl x) (inr y) (inr z) p q = {!!}
-leq-min-Fin (succ-ℕ k) (inr x) (inr y) (inr z) p q = {!!}
+leq-min-Fin = {!!}
 
 leq-left-leq-min-Fin :
   (k : ℕ) (l m n : Fin k) → leq-Fin k l (min-Fin k m n) → leq-Fin k l m
-leq-left-leq-min-Fin (succ-ℕ k) (inl x) (inl y) (inl z) p = {!!}
-leq-left-leq-min-Fin (succ-ℕ k) (inl x) (inl y) (inr _) p = {!!}
-leq-left-leq-min-Fin (succ-ℕ k) (inl x) (inr _) (inl _) p = {!!}
-leq-left-leq-min-Fin (succ-ℕ k) (inl x) (inr _) (inr _) p = {!!}
-leq-left-leq-min-Fin (succ-ℕ k) (inr _) (inl y) (inr _) p = {!!}
-leq-left-leq-min-Fin (succ-ℕ k) (inr _) (inr _) (inl _) p = {!!}
-leq-left-leq-min-Fin (succ-ℕ k) (inr _) (inr _) (inr _) p = {!!}
+leq-left-leq-min-Fin = {!!}
 
 leq-right-leq-min-Fin :
   (k : ℕ) (l m n : Fin k) → leq-Fin k l (min-Fin k m n) → leq-Fin k l n
-leq-right-leq-min-Fin (succ-ℕ k) (inl x) (inl x₁) (inl x₂) p = {!!}
-leq-right-leq-min-Fin (succ-ℕ k) (inl x) (inl x₁) (inr x₂) p = {!!}
-leq-right-leq-min-Fin (succ-ℕ k) (inl x) (inr x₁) (inl x₂) p = {!!}
-leq-right-leq-min-Fin (succ-ℕ k) (inl x) (inr x₁) (inr x₂) p = {!!}
-leq-right-leq-min-Fin (succ-ℕ k) (inr x) (inr x₁) (inr x₂) p = {!!}
-leq-right-leq-min-Fin (succ-ℕ k) (inr x) (inl x₁) (inl x₂) p = {!!}
-leq-right-leq-min-Fin (succ-ℕ k) (inr x) (inr x₁) (inl x₂) p = {!!}
+leq-right-leq-min-Fin = {!!}
 
 is-greatest-lower-bound-min-Fin :
   (k : ℕ) (l m : Fin k) →
   is-greatest-binary-lower-bound-Poset (Fin-Poset k) l m (min-Fin k l m)
-is-greatest-lower-bound-min-Fin k l m = {!!}
+is-greatest-lower-bound-min-Fin = {!!}
 ```

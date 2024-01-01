@@ -41,35 +41,31 @@ flatten-list = {!!}
 flatten-unit-list :
   {l1 : Level} {A : UU l1} (x : list A) →
   Id (flatten-list (unit-list x)) x
-flatten-unit-list x = {!!}
+flatten-unit-list = {!!}
 
 length-flatten-list :
   {l1 : Level} {A : UU l1} (x : list (list A)) →
   Id
     ( length-list (flatten-list x))
     ( sum-list-ℕ (map-list length-list x))
-length-flatten-list nil = {!!}
-length-flatten-list (cons a x) = {!!}
+length-flatten-list = {!!}
 
 flatten-concat-list :
   {l1 : Level} {A : UU l1} (x y : list (list A)) →
   Id
     ( flatten-list (concat-list x y))
     ( concat-list (flatten-list x) (flatten-list y))
-flatten-concat-list nil y = {!!}
-flatten-concat-list (cons a x) y = {!!}
+flatten-concat-list = {!!}
 
 flatten-flatten-list :
   {l1 : Level} {A : UU l1} (x : list (list (list A))) →
   Id
     ( flatten-list (flatten-list x))
     ( flatten-list (map-list flatten-list x))
-flatten-flatten-list nil = {!!}
-flatten-flatten-list (cons a x) = {!!}
+flatten-flatten-list = {!!}
 
 flatten-snoc-list :
   {l1 : Level} {A : UU l1} (x : list (list A)) (a : list A) →
   flatten-list (snoc x a) ＝ concat-list (flatten-list x) a
-flatten-snoc-list nil a = {!!}
-flatten-snoc-list (cons b x) a = {!!}
+flatten-snoc-list = {!!}
 ```

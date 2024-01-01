@@ -80,7 +80,7 @@ module _
   coherence-htpy-cone-tower :
     (c c' : cone-tower A X) →
     ((n : ℕ) → map-cone-tower A c n ~ map-cone-tower A c' n) → UU (l1 ⊔ l2)
-  coherence-htpy-cone-tower c c' H = {!!}
+  coherence-htpy-cone-tower = {!!}
 
   htpy-cone-tower : cone-tower A X → cone-tower A X → UU (l1 ⊔ l2)
   htpy-cone-tower c c' = {!!}
@@ -93,15 +93,15 @@ module _
 
   is-torsorial-htpy-cone-tower :
     (c : cone-tower A X) → is-torsorial (htpy-cone-tower c)
-  is-torsorial-htpy-cone-tower c = {!!}
+  is-torsorial-htpy-cone-tower = {!!}
 
   is-equiv-htpy-eq-cone-tower :
     (c c' : cone-tower A X) → is-equiv (htpy-eq-cone-tower c c')
-  is-equiv-htpy-eq-cone-tower c = {!!}
+  is-equiv-htpy-eq-cone-tower = {!!}
 
   extensionality-cone-tower :
     (c c' : cone-tower A X) → (c ＝ c') ≃ htpy-cone-tower c c'
-  pr1 (extensionality-cone-tower c c') = {!!}
+  extensionality-cone-tower = {!!}
 
   eq-htpy-cone-tower : (c c' : cone-tower A X) → htpy-cone-tower c c' → c ＝ c'
   eq-htpy-cone-tower c c' = {!!}
@@ -127,7 +127,7 @@ module _
 
   cone-postcomp-tower :
     cone-tower (postcomp-tower X A) (X → Y)
-  pr1 cone-postcomp-tower n g x = {!!}
+  cone-postcomp-tower = {!!}
 ```
 
 ## Table of files about sequential limits

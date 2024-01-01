@@ -58,14 +58,14 @@ module _
     hom-Nonunital-Precategory D
       ( obj-functor-Nonunital-Precategory F x)
       ( obj-functor-Nonunital-Precategory F y)
-  hom-functor-Nonunital-Precategory F = {!!}
+  hom-functor-Nonunital-Precategory = {!!}
 
   map-functor-Nonunital-Precategory :
     functor-Nonunital-Precategory →
     map-Set-Magmoid
       ( set-magmoid-Nonunital-Precategory C)
       ( set-magmoid-Nonunital-Precategory D)
-  pr1 (map-functor-Nonunital-Precategory F) = {!!}
+  map-functor-Nonunital-Precategory = {!!}
 
   preserves-comp-functor-Nonunital-Precategory :
     (F : functor-Nonunital-Precategory)
@@ -90,7 +90,7 @@ There is an identity functor on any nonunital precategory.
 id-functor-Nonunital-Precategory :
   {l1 l2 : Level} (C : Nonunital-Precategory l1 l2) →
   functor-Nonunital-Precategory C C
-id-functor-Nonunital-Precategory C = {!!}
+id-functor-Nonunital-Precategory = {!!}
 ```
 
 ### Composition of nonunital functors
@@ -124,7 +124,7 @@ module _
     map-Set-Magmoid
       ( set-magmoid-Nonunital-Precategory A)
       ( set-magmoid-Nonunital-Precategory C)
-  pr1 map-comp-functor-Nonunital-Precategory = {!!}
+  map-comp-functor-Nonunital-Precategory = {!!}
 
   preserves-comp-comp-functor-Nonunital-Precategory = {!!}
 

@@ -52,11 +52,11 @@ module _
 
   concatenate-eq-leq-Preorder :
     {x y z : type-Preorder} → x ＝ y → leq-Preorder y z → leq-Preorder x z
-  concatenate-eq-leq-Preorder refl = {!!}
+  concatenate-eq-leq-Preorder = {!!}
 
   concatenate-leq-eq-Preorder :
     {x y z : type-Preorder} → leq-Preorder x y → y ＝ z → leq-Preorder x z
-  concatenate-leq-eq-Preorder H refl = {!!}
+  concatenate-leq-eq-Preorder = {!!}
 
   le-Preorder-Prop : Relation-Prop (l1 ⊔ l2) type-Preorder
   le-Preorder-Prop x y = {!!}
@@ -114,7 +114,7 @@ step-calculate-in-Preorder :
   {l1 l2 : Level} (X : Preorder l1 l2)
   {x y : type-Preorder X} → leq-Preorder X x y →
   (z : type-Preorder X) → leq-Preorder X y z → leq-Preorder X x z
-step-calculate-in-Preorder X {x} {y} u z v = {!!}
+step-calculate-in-Preorder = {!!}
 
 syntax step-calculate-in-Preorder X u z v = {!!}
 ```

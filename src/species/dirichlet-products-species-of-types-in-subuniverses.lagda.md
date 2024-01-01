@@ -58,7 +58,7 @@ module _
     (S : species-subuniverse P ( subuniverse-global-subuniverse Q l3))
     (T : species-subuniverse P ( subuniverse-global-subuniverse Q l4))
     (X : type-subuniverse P) → UU (lsuc l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  type-dirichlet-product-species-subuniverse S T X = {!!}
+  type-dirichlet-product-species-subuniverse = {!!}
 ```
 
 ### Subuniverses closed under the Dirichlet product of species in a subuniverse
@@ -67,7 +67,7 @@ module _
 is-closed-under-dirichlet-product-species-subuniverse :
   {l1 l2 : Level} (P : subuniverse l1 l2) (Q : global-subuniverse (λ l → l)) →
   UUω
-is-closed-under-dirichlet-product-species-subuniverse {l1} {l2} P Q = {!!}
+is-closed-under-dirichlet-product-species-subuniverse = {!!}
 ```
 
 ### The Dirichlet product of species of types in a subuniverse
@@ -84,7 +84,7 @@ module _
     species-subuniverse P ( subuniverse-global-subuniverse Q l4) →
     species-subuniverse P
       ( subuniverse-global-subuniverse Q (lsuc l1 ⊔ l2 ⊔ l3 ⊔ l4))
-  pr1 (dirichlet-product-species-subuniverse S T X) = {!!}
+  dirichlet-product-species-subuniverse = {!!}
 ```
 
 ## Properties
@@ -209,7 +209,7 @@ module _
     (X : type-subuniverse P) →
     type-dirichlet-product-species-subuniverse P Q S T X ≃
     type-dirichlet-product-species-subuniverse P Q T S X
-  equiv-commutative-dirichlet-product-species-subuniverse X = {!!}
+  equiv-commutative-dirichlet-product-species-subuniverse = {!!}
 
   commutative-dirichlet-product-species-subuniverse :
     dirichlet-product-species-subuniverse P Q C1 S T ＝
@@ -226,7 +226,7 @@ unit-dirichlet-product-species-subuniverse :
   ( (X : type-subuniverse P) →
     is-in-subuniverse Q ( is-contr (inclusion-subuniverse P X))) →
   species-subuniverse P Q
-unit-dirichlet-product-species-subuniverse P Q C X = {!!}
+unit-dirichlet-product-species-subuniverse = {!!}
 
 module _
   {l1 l2 l3 : Level} (P : subuniverse l1 l2) (Q : global-subuniverse (λ l → l))
@@ -250,7 +250,7 @@ module _
         ( C3))
       ( X) ≃
     inclusion-subuniverse (subuniverse-global-subuniverse Q l3) (S X)
-  equiv-right-unit-law-dirichlet-product-species-subuniverse X = {!!}
+  equiv-right-unit-law-dirichlet-product-species-subuniverse = {!!}
 
   equiv-left-unit-law-dirichlet-product-species-subuniverse :
     (X : type-subuniverse P) →
@@ -262,7 +262,7 @@ module _
       ( S)
       ( X) ≃
     inclusion-subuniverse (subuniverse-global-subuniverse Q l3) (S X)
-  equiv-left-unit-law-dirichlet-product-species-subuniverse X = {!!}
+  equiv-left-unit-law-dirichlet-product-species-subuniverse = {!!}
 ```
 
 ### Equivalent form with species of types
@@ -296,7 +296,7 @@ module _
               inclusion-subuniverse
                 ( subuniverse-global-subuniverse Q l4)
                 ( T (B , pB))))
-    pr1 reassociate (pX , ((A , pA) , (B , pB) , e) , s , t) = {!!}
+    reassociate = {!!}
 
     reassociate' :
       Σ ( binary-product-Decomposition l1 l1 X)
@@ -310,7 +310,7 @@ module _
         ( Σ-extension-species-subuniverse P
           ( subuniverse-global-subuniverse Q l4) T)
         ( X)
-    pr1 reassociate' (d , (pA , pB) , s , t) = {!!}
+    reassociate' = {!!}
 
   equiv-dirichlet-product-Σ-extension-species-subuniverse :
     Σ-extension-species-subuniverse

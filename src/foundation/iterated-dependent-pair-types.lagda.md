@@ -73,9 +73,7 @@ data
 iterated-pair :
   {l : Level} {n : ℕ} {A : telescope l n} →
   iterated-element A → iterated-Σ A
-iterated-pair (base-iterated-element x) = {!!}
-pr1 (iterated-pair (cons-iterated-element y a)) = {!!}
-pr2 (iterated-pair (cons-iterated-element y a)) = {!!}
+iterated-pair = {!!}
 ```
 
 ## Properties
@@ -88,10 +86,7 @@ is-contr-Σ-telescope (base-telescope A) = {!!}
 is-contr-Σ-telescope (cons-telescope {X = X} A) = {!!}
 
 is-contr-iterated-Σ :
-  {l : Level} (n : ℕ) {{A : telescope l n}} →
-  is-contr-Σ-telescope A → is-contr (iterated-Σ A)
-is-contr-iterated-Σ .0 {{base-telescope A}} is-contr-A = {!!}
-is-contr-iterated-Σ ._ {{cons-telescope A}} (is-contr-X , x , H) = {!!}
+is-contr-iterated-Σ = {!!}
 ```
 
 ### Contractiblity of iterated Σ-types without choice of contracting center
@@ -102,10 +97,7 @@ is-contr-Σ-telescope' (base-telescope A) = {!!}
 is-contr-Σ-telescope' (cons-telescope {X = X} A) = {!!}
 
 is-contr-iterated-Σ' :
-  {l : Level} (n : ℕ) {{A : telescope l n}} →
-  is-contr-Σ-telescope' A → is-contr (iterated-Σ A)
-is-contr-iterated-Σ' .0 {{base-telescope A}} is-contr-A = {!!}
-is-contr-iterated-Σ' ._ {{cons-telescope A}} (is-contr-X , H) = {!!}
+is-contr-iterated-Σ' = {!!}
 ```
 
 ## See also

@@ -48,16 +48,16 @@ obj-simplex-Category = {!!}
 
 hom-set-simplex-Category :
   obj-simplex-Category → obj-simplex-Category → Set lzero
-hom-set-simplex-Category n m = {!!}
+hom-set-simplex-Category = {!!}
 
 hom-simplex-Category :
   obj-simplex-Category → obj-simplex-Category → UU lzero
-hom-simplex-Category n m = {!!}
+hom-simplex-Category = {!!}
 
 comp-hom-simplex-Category :
   {n m r : obj-simplex-Category} →
   hom-simplex-Category m r → hom-simplex-Category n m → hom-simplex-Category n r
-comp-hom-simplex-Category {n} {m} {r} = {!!}
+comp-hom-simplex-Category = {!!}
 
 associative-comp-hom-simplex-Category :
   {n m r s : obj-simplex-Category}
@@ -70,7 +70,7 @@ associative-comp-hom-simplex-Category :
   comp-hom-simplex-Category {n} {r} {s}
     ( h)
     ( comp-hom-simplex-Category {n} {m} {r} g f)
-associative-comp-hom-simplex-Category {n} {m} {r} {s} = {!!}
+associative-comp-hom-simplex-Category = {!!}
 
 inv-associative-comp-hom-simplex-Category :
   {n m r s : obj-simplex-Category}
@@ -83,12 +83,11 @@ inv-associative-comp-hom-simplex-Category :
   comp-hom-simplex-Category {n} {m} {s}
     ( comp-hom-simplex-Category {m} {r} {s} h g)
     ( f)
-inv-associative-comp-hom-simplex-Category {n} {m} {r} {s} = {!!}
+inv-associative-comp-hom-simplex-Category = {!!}
 
 associative-composition-operation-simplex-Category :
   associative-composition-operation-binary-family-Set hom-set-simplex-Category
-pr1 associative-composition-operation-simplex-Category {n} {m} {r} = {!!}
-pr2 associative-composition-operation-simplex-Category {n} {m} {r} {s} = {!!}
+associative-composition-operation-simplex-Category = {!!}
 
 id-hom-simplex-Category : (n : obj-simplex-Category) → hom-simplex-Category n n
 id-hom-simplex-Category n = {!!}
@@ -96,18 +95,18 @@ id-hom-simplex-Category n = {!!}
 left-unit-law-comp-hom-simplex-Category :
   {n m : obj-simplex-Category} (f : hom-simplex-Category n m) →
   comp-hom-simplex-Category {n} {m} {m} (id-hom-simplex-Category m) f ＝ f
-left-unit-law-comp-hom-simplex-Category {n} {m} = {!!}
+left-unit-law-comp-hom-simplex-Category = {!!}
 
 right-unit-law-comp-hom-simplex-Category :
   {n m : obj-simplex-Category} (f : hom-simplex-Category n m) →
   comp-hom-simplex-Category {n} {n} {m} f (id-hom-simplex-Category n) ＝ f
-right-unit-law-comp-hom-simplex-Category {n} {m} = {!!}
+right-unit-law-comp-hom-simplex-Category = {!!}
 
 is-unital-composition-operation-simplex-Category :
   is-unital-composition-operation-binary-family-Set
     ( hom-set-simplex-Category)
     ( comp-hom-simplex-Category)
-pr1 is-unital-composition-operation-simplex-Category = {!!}
+is-unital-composition-operation-simplex-Category = {!!}
 pr1 (pr2 is-unital-composition-operation-simplex-Category) {n} {m} = {!!}
 pr2 (pr2 is-unital-composition-operation-simplex-Category) {n} {m} = {!!}
 

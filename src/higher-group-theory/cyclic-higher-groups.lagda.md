@@ -52,7 +52,7 @@ an embedding.
 ev-element-∞-Group :
   {l1 l2 : Level} (G : ∞-Group l1) (H : ∞-Group l2) (g : type-∞-Group G) →
   hom-∞-Group G H → type-∞-Group H
-ev-element-∞-Group G H g f = {!!}
+ev-element-∞-Group = {!!}
 
 module _
   {l1 : Level} (l2 : Level) (G : ∞-Group l1)

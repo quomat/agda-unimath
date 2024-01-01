@@ -48,7 +48,7 @@ module _
             ( ind-coprod _ HA HB))
           ( inl x)) ∘
       ( fiber-map-coprod-inl-fiber f g x))
-  triangle-descent-square-fiber-map-coprod-inl-fiber x (pair a' p) = {!!}
+  triangle-descent-square-fiber-map-coprod-inl-fiber = {!!}
 
   triangle-descent-square-fiber-map-coprod-inr-fiber :
     (y : B) →
@@ -60,7 +60,7 @@ module _
             ( ind-coprod _ HA HB))
           ( inr y)) ∘
       ( fiber-map-coprod-inr-fiber f g y))
-  triangle-descent-square-fiber-map-coprod-inr-fiber y ( pair b' p) = {!!}
+  triangle-descent-square-fiber-map-coprod-inr-fiber = {!!}
 
 module _
   {l1 l2 l3 l1' l2' l3' : Level}
@@ -71,7 +71,7 @@ module _
   cone-descent-coprod :
     (cone-A' : cone f i A') (cone-B' : cone g i B') →
     cone (ind-coprod _ f g) i (A' + B')
-  pr1 (cone-descent-coprod (pair h (pair f' H)) (pair k (pair g' K))) = {!!}
+  cone-descent-coprod = {!!}
 
   abstract
     descent-coprod :
@@ -79,20 +79,19 @@ module _
       is-pullback f i cone-A' →
       is-pullback g i cone-B' →
       is-pullback (ind-coprod _ f g) i (cone-descent-coprod cone-A' cone-B')
-    descent-coprod (pair h (pair f' H)) (pair k (pair g' K))
-      is-pb-cone-A' is-pb-cone-B' = {!!}
+    descent-coprod = {!!}
 
   abstract
     descent-coprod-inl :
       (cone-A' : cone f i A') (cone-B' : cone g i B') →
       is-pullback (ind-coprod _ f g) i (cone-descent-coprod cone-A' cone-B') →
       is-pullback f i cone-A'
-    descent-coprod-inl (pair h (pair f' H)) (pair k (pair g' K)) is-pb-dsq = {!!}
+    descent-coprod-inl = {!!}
 
   abstract
     descent-coprod-inr :
       (cone-A' : cone f i A') (cone-B' : cone g i B') →
       is-pullback (ind-coprod _ f g) i (cone-descent-coprod cone-A' cone-B') →
       is-pullback g i cone-B'
-    descent-coprod-inr (pair h (pair f' H)) (pair k (pair g' K)) is-pb-dsq = {!!}
+    descent-coprod-inr = {!!}
 ```

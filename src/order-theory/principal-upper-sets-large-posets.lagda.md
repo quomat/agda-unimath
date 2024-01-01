@@ -60,12 +60,12 @@ module _
 
   large-subpreorder-principal-upper-set-element-Large-Poset :
     Large-Subpreorder (λ l → β l1 l) (large-preorder-Large-Poset P)
-  large-subpreorder-principal-upper-set-element-Large-Poset y = {!!}
+  large-subpreorder-principal-upper-set-element-Large-Poset = {!!}
 
   is-closed-under-sim-principal-upper-set-element-Large-Poset :
     is-closed-under-sim-Large-Subpreorder P
       ( large-subpreorder-principal-upper-set-element-Large-Poset)
-  is-closed-under-sim-principal-upper-set-element-Large-Poset y z p q l = {!!}
+  is-closed-under-sim-principal-upper-set-element-Large-Poset = {!!}
 
   principal-upper-set-element-Large-Poset : Large-Subposet (λ l → β l1 l) P
   large-subpreorder-Large-Subposet principal-upper-set-element-Large-Poset = {!!}
@@ -86,16 +86,14 @@ module _
       ( principal-upper-set-element-Large-Poset P x)
       ( principal-upper-set-element-Large-Poset P y) →
     sim-Large-Poset P x y
-  pr1 (sim-has-same-elements-principal-upper-set-element-Large-Poset H) = {!!}
+  sim-has-same-elements-principal-upper-set-element-Large-Poset = {!!}
 
   has-same-elements-principal-upper-set-element-sim-Large-Poset :
     sim-Large-Poset P x y →
     has-same-elements-Large-Subposet P
       ( principal-upper-set-element-Large-Poset P x)
       ( principal-upper-set-element-Large-Poset P y)
-  pr1
-    ( has-same-elements-principal-upper-set-element-sim-Large-Poset (H , K) z)
-    ( p) = {!!}
+  has-same-elements-principal-upper-set-element-sim-Large-Poset = {!!}
 ```
 
 ### For two elements `x` and `y` of a large poset of the same universe level, if the principal upper sets `↑{x}` and `↑{y}` have the same elements, then `x` and `y` are equal
@@ -111,5 +109,5 @@ module _
       ( principal-upper-set-element-Large-Poset P x)
       ( principal-upper-set-element-Large-Poset P y) →
     x ＝ y
-  eq-has-same-elements-principal-upper-set-element-Large-Poset H = {!!}
+  eq-has-same-elements-principal-upper-set-element-Large-Poset = {!!}
 ```

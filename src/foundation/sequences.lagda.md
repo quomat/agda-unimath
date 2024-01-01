@@ -33,5 +33,5 @@ sequence A = {!!}
 ```agda
 map-sequence :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → (A → B) → sequence A → sequence B
-map-sequence f a = {!!}
+map-sequence = {!!}
 ```

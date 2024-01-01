@@ -62,7 +62,7 @@ module _
 
   has-same-elements-subtype-Prop :
     {l3 : Level} → subtype l3 A → Prop (l1 ⊔ l2 ⊔ l3)
-  has-same-elements-subtype-Prop Q = {!!}
+  has-same-elements-subtype-Prop = {!!}
 
   has-same-elements-subtype : {l3 : Level} → subtype l3 A → UU (l1 ⊔ l2 ⊔ l3)
   has-same-elements-subtype Q = {!!}
@@ -70,7 +70,7 @@ module _
   is-prop-has-same-elements-subtype :
     {l3 : Level} (Q : subtype l3 A) →
     is-prop (has-same-elements-subtype Q)
-  is-prop-has-same-elements-subtype Q = {!!}
+  is-prop-has-same-elements-subtype = {!!}
 
   refl-has-same-elements-subtype : has-same-elements-subtype P
   pr1 (refl-has-same-elements-subtype x) = {!!}
@@ -81,7 +81,7 @@ module _
 
   has-same-elements-eq-subtype :
     (Q : subtype l2 A) → (P ＝ Q) → has-same-elements-subtype Q
-  has-same-elements-eq-subtype .P refl = {!!}
+  has-same-elements-eq-subtype = {!!}
 
   is-equiv-has-same-elements-eq-subtype :
     (Q : subtype l2 A) → is-equiv (has-same-elements-eq-subtype Q)
@@ -89,11 +89,11 @@ module _
 
   extensionality-subtype :
     (Q : subtype l2 A) → (P ＝ Q) ≃ has-same-elements-subtype Q
-  pr1 (extensionality-subtype Q) = {!!}
+  extensionality-subtype = {!!}
 
   eq-has-same-elements-subtype :
     (Q : subtype l2 A) → has-same-elements-subtype Q → P ＝ Q
-  eq-has-same-elements-subtype Q = {!!}
+  eq-has-same-elements-subtype = {!!}
 ```
 
 ### Similarity of subtypes
@@ -105,17 +105,17 @@ module _
 
   sim-subtype :
     {l2 l3 : Level} → subtype l2 A → subtype l3 A → UU (l1 ⊔ l2 ⊔ l3)
-  sim-subtype P Q = {!!}
+  sim-subtype = {!!}
 
   has-same-elements-sim-subtype :
     {l2 l3 : Level} (P : subtype l2 A) (Q : subtype l3 A) →
     sim-subtype P Q → has-same-elements-subtype P Q
-  pr1 (has-same-elements-sim-subtype P Q s x) = {!!}
+  has-same-elements-sim-subtype = {!!}
 
   sim-has-same-elements-subtype :
     {l2 l3 : Level} (P : subtype l2 A) (Q : subtype l3 A) →
     has-same-elements-subtype P Q → sim-subtype P Q
-  pr1 (sim-has-same-elements-subtype P Q s) x = {!!}
+  sim-has-same-elements-subtype = {!!}
 ```
 
 ### The containment relation is antisymmetric
@@ -128,11 +128,11 @@ module _
   equiv-antisymmetric-leq-subtype :
     {l2 l3 : Level} (P : subtype l2 A) (Q : subtype l3 A) → P ⊆ Q → Q ⊆ P →
     (x : A) → is-in-subtype P x ≃ is-in-subtype Q x
-  equiv-antisymmetric-leq-subtype P Q H K x = {!!}
+  equiv-antisymmetric-leq-subtype = {!!}
 
   antisymmetric-leq-subtype :
     {l2 : Level} (P Q : subtype l2 A) → P ⊆ Q → Q ⊆ P → P ＝ Q
-  antisymmetric-leq-subtype P Q H K = {!!}
+  antisymmetric-leq-subtype = {!!}
 ```
 
 ### The type of all subtypes of a type is a set
@@ -140,7 +140,7 @@ module _
 ```agda
 is-set-subtype :
   {l1 l2 : Level} {A : UU l1} → is-set (subtype l2 A)
-is-set-subtype P Q = {!!}
+is-set-subtype = {!!}
 
 subtype-Set : {l1 : Level} (l2 : Level) → UU l1 → Set (l1 ⊔ lsuc l2)
 pr1 (subtype-Set l2 A) = {!!}
@@ -157,20 +157,20 @@ module _
   inv-emb-into-subtype :
     (g : X ↪ type-subtype B) →
     Σ (X ↪ A) (λ f → (x : X) → is-in-subtype B (map-emb f x))
-  pr1 (pr1 (inv-emb-into-subtype g)) = {!!}
+  inv-emb-into-subtype = {!!}
 
   issec-map-inv-emb-into-subtype :
     ( ind-Σ (emb-into-subtype B) ∘ inv-emb-into-subtype) ~ id
-  issec-map-inv-emb-into-subtype g = {!!}
+  issec-map-inv-emb-into-subtype = {!!}
 
   isretr-map-inv-emb-into-subtype :
     ( inv-emb-into-subtype ∘ ind-Σ (emb-into-subtype B)) ~ id
-  isretr-map-inv-emb-into-subtype (f , b) = {!!}
+  isretr-map-inv-emb-into-subtype = {!!}
 
   equiv-emb-into-subtype :
     Σ (X ↪ A) (λ f →
       (x : X) → is-in-subtype B (map-emb f x)) ≃ (X ↪ type-subtype B)
-  pr1 equiv-emb-into-subtype = {!!}
+  equiv-emb-into-subtype = {!!}
 ```
 
 ## See also

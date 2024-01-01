@@ -42,13 +42,11 @@ obj-representing-arrow-Category = {!!}
 
 hom-set-representing-arrow-Category :
   obj-representing-arrow-Category → obj-representing-arrow-Category → Set lzero
-hom-set-representing-arrow-Category true true = {!!}
-hom-set-representing-arrow-Category true false = {!!}
-hom-set-representing-arrow-Category false _ = {!!}
+hom-set-representing-arrow-Category = {!!}
 
 hom-representing-arrow-Category :
   obj-representing-arrow-Category → obj-representing-arrow-Category → UU lzero
-hom-representing-arrow-Category x y = {!!}
+hom-representing-arrow-Category = {!!}
 ```
 
 ### The underlying precategory of the representing arrow
@@ -59,8 +57,7 @@ comp-hom-representing-arrow-Category :
   hom-representing-arrow-Category y z →
   hom-representing-arrow-Category x y →
   hom-representing-arrow-Category x z
-comp-hom-representing-arrow-Category {true} {true} {true} _ _ = {!!}
-comp-hom-representing-arrow-Category {false} _ _ = {!!}
+comp-hom-representing-arrow-Category = {!!}
 
 associative-comp-hom-representing-arrow-Category :
   {x y z w : obj-representing-arrow-Category} →
@@ -91,14 +88,11 @@ inv-associative-comp-hom-representing-arrow-Category {false} h g f = {!!}
 associative-composition-operation-representing-arrow-Category :
   associative-composition-operation-binary-family-Set
     ( hom-set-representing-arrow-Category)
-pr1 associative-composition-operation-representing-arrow-Category {x} = {!!}
-pr1 (pr2 associative-composition-operation-representing-arrow-Category h g f) = {!!}
-pr2 (pr2 associative-composition-operation-representing-arrow-Category h g f) = {!!}
+associative-composition-operation-representing-arrow-Category = {!!}
 
 id-hom-representing-arrow-Category :
   {x : obj-representing-arrow-Category} → hom-representing-arrow-Category x x
-id-hom-representing-arrow-Category {true} = {!!}
-id-hom-representing-arrow-Category {false} = {!!}
+id-hom-representing-arrow-Category = {!!}
 
 left-unit-law-comp-hom-representing-arrow-Category :
   {x y : obj-representing-arrow-Category} →
@@ -106,8 +100,7 @@ left-unit-law-comp-hom-representing-arrow-Category :
   comp-hom-representing-arrow-Category
     { x} (id-hom-representing-arrow-Category {y}) f ＝
   f
-left-unit-law-comp-hom-representing-arrow-Category {true} {true} f = {!!}
-left-unit-law-comp-hom-representing-arrow-Category {false} f = {!!}
+left-unit-law-comp-hom-representing-arrow-Category = {!!}
 
 right-unit-law-comp-hom-representing-arrow-Category :
   {x y : obj-representing-arrow-Category} →
@@ -115,14 +108,13 @@ right-unit-law-comp-hom-representing-arrow-Category :
   comp-hom-representing-arrow-Category
     { x} f (id-hom-representing-arrow-Category {x}) ＝
   f
-right-unit-law-comp-hom-representing-arrow-Category {true} {true} f = {!!}
-right-unit-law-comp-hom-representing-arrow-Category {false} f = {!!}
+right-unit-law-comp-hom-representing-arrow-Category = {!!}
 
 is-unital-composition-operation-representing-arrow-Category :
   is-unital-composition-operation-binary-family-Set
     ( hom-set-representing-arrow-Category)
     ( λ {x} {y} {z} → comp-hom-representing-arrow-Category {x} {y} {z})
-pr1 is-unital-composition-operation-representing-arrow-Category x = {!!}
+is-unital-composition-operation-representing-arrow-Category = {!!}
 pr1 (pr2 is-unital-composition-operation-representing-arrow-Category) = {!!}
 pr2 (pr2 is-unital-composition-operation-representing-arrow-Category) = {!!}
 
@@ -138,10 +130,7 @@ pr2 (pr2 (pr2 representing-arrow-Precategory)) = {!!}
 ```agda
 is-category-representing-arrow-Category :
   is-category-Precategory representing-arrow-Precategory
-is-category-representing-arrow-Category true true = {!!}
-is-category-representing-arrow-Category true false = {!!}
-is-category-representing-arrow-Category false true = {!!}
-is-category-representing-arrow-Category false false = {!!}
+is-category-representing-arrow-Category = {!!}
 
 representing-arrow-Category : Category lzero lzero
 pr1 representing-arrow-Category = {!!}

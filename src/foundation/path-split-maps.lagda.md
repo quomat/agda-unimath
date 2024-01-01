@@ -36,7 +36,7 @@ module _
   abstract
     is-equiv-is-path-split-is-equiv :
       (f : A → B) → is-equiv (is-path-split-is-equiv f)
-    is-equiv-is-path-split-is-equiv f = {!!}
+    is-equiv-is-path-split-is-equiv = {!!}
 
   equiv-is-path-split-is-equiv : (f : A → B) → is-equiv f ≃ is-path-split f
   equiv-is-path-split-is-equiv f = {!!}
@@ -44,7 +44,7 @@ module _
   abstract
     is-equiv-is-equiv-is-path-split :
       (f : A → B) → is-equiv (is-equiv-is-path-split f)
-    is-equiv-is-equiv-is-path-split f = {!!}
+    is-equiv-is-equiv-is-path-split = {!!}
 
   equiv-is-equiv-is-path-split : (f : A → B) → is-path-split f ≃ is-equiv f
   equiv-is-equiv-is-path-split f = {!!}

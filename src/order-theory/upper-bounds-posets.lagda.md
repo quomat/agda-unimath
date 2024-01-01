@@ -34,15 +34,15 @@ module _
 
   is-binary-upper-bound-Poset-Prop :
     (x y z : type-Poset P) → Prop l2
-  is-binary-upper-bound-Poset-Prop x y z = {!!}
+  is-binary-upper-bound-Poset-Prop = {!!}
 
   is-binary-upper-bound-Poset :
     (x y z : type-Poset P) → UU l2
-  is-binary-upper-bound-Poset x y z = {!!}
+  is-binary-upper-bound-Poset = {!!}
 
   is-prop-is-binary-upper-bound-Poset :
     (x y z : type-Poset P) → is-prop (is-binary-upper-bound-Poset x y z)
-  is-prop-is-binary-upper-bound-Poset x y z = {!!}
+  is-prop-is-binary-upper-bound-Poset = {!!}
 
 module _
   {l1 l2 : Level} (P : Poset l1 l2) {a b x : type-Poset P}
@@ -66,17 +66,17 @@ module _
   is-upper-bound-family-of-elements-Poset-Prop :
     {l : Level} {I : UU l} → (I → type-Poset P) → type-Poset P →
     Prop (l2 ⊔ l)
-  is-upper-bound-family-of-elements-Poset-Prop {l} {I} f z = {!!}
+  is-upper-bound-family-of-elements-Poset-Prop = {!!}
 
   is-upper-bound-family-of-elements-Poset :
     {l : Level} {I : UU l} → (I → type-Poset P) → type-Poset P →
     UU (l2 ⊔ l)
-  is-upper-bound-family-of-elements-Poset f z = {!!}
+  is-upper-bound-family-of-elements-Poset = {!!}
 
   is-prop-is-upper-bound-family-of-elements-Poset :
     {l : Level} {I : UU l} (f : I → type-Poset P) (z : type-Poset P) →
     is-prop (is-upper-bound-family-of-elements-Poset f z)
-  is-prop-is-upper-bound-family-of-elements-Poset f z = {!!}
+  is-prop-is-upper-bound-family-of-elements-Poset = {!!}
 ```
 
 ## Properties
@@ -92,7 +92,7 @@ module _
   is-binary-upper-bound-leq-Poset :
     {y : type-Poset P} →
     leq-Poset P x y → is-binary-upper-bound-Poset P a b y
-  pr1 (is-binary-upper-bound-leq-Poset K) = {!!}
+  is-binary-upper-bound-leq-Poset = {!!}
 ```
 
 ### Any element greater than an upper bound of a family of elements `a` is an upper bound of `a`
@@ -106,5 +106,5 @@ module _
   is-upper-bound-family-of-elements-leq-Poset :
     {y : type-Poset P} → leq-Poset P x y →
     is-upper-bound-family-of-elements-Poset P a y
-  is-upper-bound-family-of-elements-leq-Poset K i = {!!}
+  is-upper-bound-family-of-elements-leq-Poset = {!!}
 ```

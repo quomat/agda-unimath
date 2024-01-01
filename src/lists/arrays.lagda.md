@@ -85,8 +85,7 @@ module _
 fold-vec :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (b : B) (μ : A → (B → B)) →
   {n : ℕ} → vec A n → B
-fold-vec b μ {0} _ = {!!}
-fold-vec b μ (a ∷ l) = {!!}
+fold-vec = {!!}
 ```
 
 ## Properties
@@ -112,7 +111,7 @@ module _
       ( length-list (list-vec (pr1 x) (pr2 x)) ,
         vec-list (list-vec (pr1 x) (pr2 x)))) ~
     id
-  is-retraction-vec-list (zero-ℕ , empty-vec) = {!!}
+  is-retraction-vec-list = {!!}
 
   list-array : array A → list A
   list-array (n , t) = {!!}
@@ -139,11 +138,11 @@ module _
   compute-length-list-list-vec :
     (n : ℕ) (v : vec A n) →
     length-list (list-vec n v) ＝ n
-  compute-length-list-list-vec zero-ℕ v = {!!}
+  compute-length-list-list-vec = {!!}
 
   compute-length-list-list-array :
     (t : array A) → length-list (list-array t) ＝ length-array t
-  compute-length-list-list-array t = {!!}
+  compute-length-list-list-array = {!!}
 ```
 
 ### An element `x` is in a vector `v` iff it is in `list-vec n v`
@@ -152,12 +151,12 @@ module _
   is-in-list-is-in-vec-list :
     (l : list A) (x : A) →
     x ∈-vec (vec-list l) → x ∈-list l
-  is-in-list-is-in-vec-list (cons y l) .y (is-head .y .(vec-list l)) = {!!}
+  is-in-list-is-in-vec-list = {!!}
 
   is-in-vec-list-is-in-list :
     (l : list A) (x : A) →
     x ∈-list l → x ∈-vec (vec-list l)
-  is-in-vec-list-is-in-list (cons x l) x (is-head .x l) = {!!}
+  is-in-vec-list-is-in-list = {!!}
 ```
 
 ### Link between `fold-list` and `fold-vec`
@@ -171,5 +170,5 @@ module _
   htpy-fold-list-fold-vec :
     (l : list A) →
     fold-vec b μ (vec-list l) ＝ fold-list b μ l
-  htpy-fold-list-fold-vec nil = {!!}
+  htpy-fold-list-fold-vec = {!!}
 ```

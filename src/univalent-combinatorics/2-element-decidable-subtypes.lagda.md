@@ -62,7 +62,7 @@ which the underlying type has 2 elements.
 ```agda
 2-Element-Decidable-Subtype :
   {l1 : Level} (l2 : Level) → UU l1 → UU (l1 ⊔ lsuc l2)
-2-Element-Decidable-Subtype l2 X = {!!}
+2-Element-Decidable-Subtype = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} (P : 2-Element-Decidable-Subtype l2 X)
@@ -87,7 +87,7 @@ module _
 
   eq-is-in-2-Element-Decidable-Subtype :
     {x : X} {y z : is-in-2-Element-Decidable-Subtype x} → Id y z
-  eq-is-in-2-Element-Decidable-Subtype {x} = {!!}
+  eq-is-in-2-Element-Decidable-Subtype = {!!}
 
   type-2-Element-Decidable-Subtype : UU (l1 ⊔ l2)
   type-2-Element-Decidable-Subtype = {!!}
@@ -132,14 +132,14 @@ module _
 
   is-decidable-type-prop-standard-2-Element-Decidable-Subtype :
     (z : X) → is-decidable (type-prop-standard-2-Element-Decidable-Subtype z)
-  is-decidable-type-prop-standard-2-Element-Decidable-Subtype z = {!!}
+  is-decidable-type-prop-standard-2-Element-Decidable-Subtype = {!!}
 
   subtype-standard-2-Element-Decidable-Subtype : subtype l X
   subtype-standard-2-Element-Decidable-Subtype = {!!}
 
   decidable-subtype-standard-2-Element-Decidable-Subtype :
     decidable-subtype l X
-  pr1 (decidable-subtype-standard-2-Element-Decidable-Subtype z) = {!!}
+  decidable-subtype-standard-2-Element-Decidable-Subtype = {!!}
 
   type-standard-2-Element-Decidable-Subtype : UU l
   type-standard-2-Element-Decidable-Subtype = {!!}
@@ -215,8 +215,7 @@ module _
 precomp-equiv-2-Element-Decidable-Subtype :
   {l1 l2 l3 : Level} {X : UU l1} {Y : UU l2} → X ≃ Y →
     2-Element-Decidable-Subtype l3 Y → 2-Element-Decidable-Subtype l3 X
-pr1 (precomp-equiv-2-Element-Decidable-Subtype e (pair P H)) = {!!}
-pr2 (precomp-equiv-2-Element-Decidable-Subtype e (pair P H)) = {!!}
+precomp-equiv-2-Element-Decidable-Subtype = {!!}
 
 preserves-comp-precomp-equiv-2-Element-Decidable-Subtype :
   { l1 l2 l3 l4 : Level} {X : UU l1} {Y : UU l2} {Z : UU l3} (e : X ≃ Y) →
@@ -266,7 +265,7 @@ module _
       ¬ ( Id
           ( element-2-element-decidable-subtype-Fin)
           ( other-element-2-element-decidable-subtype-Fin))
-    unequal-elements-2-element-decidable-subtype-Fin p = {!!}
+    unequal-elements-2-element-decidable-subtype-Fin = {!!}
 ```
 
 ### Types of decidable subtypes of any universe level are equivalent
@@ -279,5 +278,5 @@ module _
   equiv-universes-2-Element-Decidable-Subtype :
     (l l' : Level) →
     2-Element-Decidable-Subtype l X ≃ 2-Element-Decidable-Subtype l' X
-  equiv-universes-2-Element-Decidable-Subtype l l' = {!!}
+  equiv-universes-2-Element-Decidable-Subtype = {!!}
 ```

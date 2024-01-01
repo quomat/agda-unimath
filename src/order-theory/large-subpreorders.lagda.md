@@ -48,38 +48,37 @@ module _
 
   is-in-Large-Subpreorder :
     {l1 : Level} → type-Large-Preorder P l1 → UU (γ l1)
-  is-in-Large-Subpreorder {l1} = {!!}
+  is-in-Large-Subpreorder = {!!}
 
   is-prop-is-in-Large-Subpreorder :
     {l1 : Level} (x : type-Large-Preorder P l1) →
     is-prop (is-in-Large-Subpreorder x)
-  is-prop-is-in-Large-Subpreorder {l1} = {!!}
+  is-prop-is-in-Large-Subpreorder = {!!}
 
   type-Large-Subpreorder : (l1 : Level) → UU (α l1 ⊔ γ l1)
   type-Large-Subpreorder l1 = {!!}
 
   leq-prop-Large-Subpreorder :
     Large-Relation-Prop (λ l → α l ⊔ γ l) β type-Large-Subpreorder
-  leq-prop-Large-Subpreorder x y = {!!}
+  leq-prop-Large-Subpreorder = {!!}
 
   leq-Large-Subpreorder :
     Large-Relation (λ l → α l ⊔ γ l) β type-Large-Subpreorder
-  leq-Large-Subpreorder x y = {!!}
+  leq-Large-Subpreorder = {!!}
 
   is-prop-leq-Large-Subpreorder :
     is-prop-Large-Relation type-Large-Subpreorder leq-Large-Subpreorder
-  is-prop-leq-Large-Subpreorder x y = {!!}
+  is-prop-leq-Large-Subpreorder = {!!}
 
   refl-leq-Large-Subpreorder :
     is-reflexive-Large-Relation type-Large-Subpreorder leq-Large-Subpreorder
-  refl-leq-Large-Subpreorder (x , p) = {!!}
+  refl-leq-Large-Subpreorder = {!!}
 
   transitive-leq-Large-Subpreorder :
     is-transitive-Large-Relation type-Large-Subpreorder leq-Large-Subpreorder
-  transitive-leq-Large-Subpreorder (x , p) (y , q) (z , r) = {!!}
+  transitive-leq-Large-Subpreorder = {!!}
 
   large-preorder-Large-Subpreorder :
     Large-Preorder (λ l → α l ⊔ γ l) (λ l1 l2 → β l1 l2)
-  type-Large-Preorder
-    large-preorder-Large-Subpreorder = {!!}
+  large-preorder-Large-Subpreorder = {!!}
 ```

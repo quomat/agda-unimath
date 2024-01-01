@@ -82,23 +82,22 @@ module _
 
   map-inv-is-equiv-precomp-Π-is-equiv :
     {l3 : Level} (C : B → UU l3) → ((a : A) → C (f a)) → ((b : B) → C b)
-  map-inv-is-equiv-precomp-Π-is-equiv C = {!!}
+  map-inv-is-equiv-precomp-Π-is-equiv = {!!}
 
   is-section-map-inv-is-equiv-precomp-Π-is-equiv :
     {l3 : Level} (C : B → UU l3) →
     (h : (a : A) → C (f a)) →
     precomp-Π f C (map-inv-is-equiv-precomp-Π-is-equiv C h) ~ h
-  is-section-map-inv-is-equiv-precomp-Π-is-equiv C h = {!!}
+  is-section-map-inv-is-equiv-precomp-Π-is-equiv = {!!}
 
   is-retraction-map-inv-is-equiv-precomp-Π-is-equiv :
     {l3 : Level} (C : B → UU l3) →
     (g : (b : B) → C b) →
     map-inv-is-equiv-precomp-Π-is-equiv C (precomp-Π f C g) ~ g
-  is-retraction-map-inv-is-equiv-precomp-Π-is-equiv C g = {!!}
+  is-retraction-map-inv-is-equiv-precomp-Π-is-equiv = {!!}
 
 equiv-precomp-Π :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} (e : A ≃ B) →
   (C : B → UU l3) → ((b : B) → C b) ≃ ((a : A) → C (map-equiv e a))
-pr1 (equiv-precomp-Π e C) = {!!}
-pr2 (equiv-precomp-Π e C) = {!!}
+equiv-precomp-Π = {!!}
 ```

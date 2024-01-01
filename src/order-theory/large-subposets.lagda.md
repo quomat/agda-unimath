@@ -104,7 +104,7 @@ module _
 
   antisymmetric-leq-Large-Subposet :
     is-antisymmetric-Large-Relation type-Large-Subposet leq-Large-Subposet
-  antisymmetric-leq-Large-Subposet {l1} (x , p) (y , q) H K = {!!}
+  antisymmetric-leq-Large-Subposet = {!!}
 
   large-poset-Large-Subposet : Large-Poset (λ l → α l ⊔ γ l) β
   large-preorder-Large-Poset

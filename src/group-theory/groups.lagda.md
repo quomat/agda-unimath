@@ -58,11 +58,11 @@ an inverse operation `x ↦ x⁻¹` satisfying the group laws
 ```agda
 is-group' :
   {l : Level} (G : Semigroup l) → is-unital-Semigroup G → UU l
-is-group' G is-unital-Semigroup-G = {!!}
+is-group' = {!!}
 
 is-group :
   {l : Level} (G : Semigroup l) → UU l
-is-group G = {!!}
+is-group = {!!}
 ```
 
 ### The type of groups
@@ -70,7 +70,7 @@ is-group G = {!!}
 ```agda
 Group :
   (l : Level) → UU (lsuc l)
-Group l = {!!}
+Group = {!!}
 
 module _
   {l : Level} (G : Group l)
@@ -97,7 +97,7 @@ module _
   ap-mul-Group :
     {x x' y y' : type-Group} (p : Id x x') (q : Id y y') →
     Id (mul-Group x y) (mul-Group x' y')
-  ap-mul-Group p q = {!!}
+  ap-mul-Group = {!!}
 
   mul-Group' : type-Group → type-Group → type-Group
   mul-Group' x y = {!!}
@@ -164,7 +164,7 @@ module _
 
   is-invertible-element-Group :
     (x : type-Group) → is-invertible-element-Monoid monoid-Group x
-  pr1 (is-invertible-element-Group x) = {!!}
+  is-invertible-element-Group = {!!}
 
   inv-unit-Group :
     Id (inv-Group unit-Group) unit-Group
@@ -194,12 +194,11 @@ module _
 ```agda
 structure-group :
   {l1 : Level} → UU l1 → UU l1
-structure-group X = {!!}
+structure-group = {!!}
 
 compute-structure-group :
   {l1 : Level} → (X : UU l1) → structure-group X → Group l1
-pr1 (compute-structure-group X (p , q)) = {!!}
-pr2 (compute-structure-group X (p , q)) = {!!}
+compute-structure-group = {!!}
 ```
 
 ## Properties
@@ -217,15 +216,15 @@ module _
   ap-left-div-Group :
     {x x' y y' : type-Group G} → x ＝ x' → y ＝ y' →
     left-div-Group x y ＝ left-div-Group x' y'
-  ap-left-div-Group p q = {!!}
+  ap-left-div-Group = {!!}
 
   is-section-left-div-Group :
     (x : type-Group G) → (mul-Group G x ∘ left-div-Group x) ~ id
-  is-section-left-div-Group x = {!!}
+  is-section-left-div-Group = {!!}
 
   is-retraction-left-div-Group :
     (x : type-Group G) → (left-div-Group x ∘ mul-Group G x) ~ id
-  is-retraction-left-div-Group x = {!!}
+  is-retraction-left-div-Group = {!!}
 
   is-equiv-mul-Group : (x : type-Group G) → is-equiv (mul-Group G x)
   is-equiv-mul-Group x = {!!}
@@ -249,15 +248,15 @@ module _
   ap-right-div-Group :
     {x x' y y' : type-Group G} → x ＝ x' → y ＝ y' →
     right-div-Group x y ＝ right-div-Group x' y'
-  ap-right-div-Group p q = {!!}
+  ap-right-div-Group = {!!}
 
   is-section-right-div-Group :
     (x : type-Group G) → (mul-Group' G x ∘ (λ y → right-div-Group y x)) ~ id
-  is-section-right-div-Group x = {!!}
+  is-section-right-div-Group = {!!}
 
   is-retraction-right-div-Group :
     (x : type-Group G) → ((λ y → right-div-Group y x) ∘ mul-Group' G x) ~ id
-  is-retraction-right-div-Group x = {!!}
+  is-retraction-right-div-Group = {!!}
 
   is-equiv-mul-Group' : (x : type-Group G) → is-equiv (mul-Group' G x)
   is-equiv-mul-Group' x = {!!}
@@ -267,11 +266,11 @@ module _
 
   is-equiv-right-div-Group :
     (x : type-Group G) → is-equiv (λ y → right-div-Group y x)
-  is-equiv-right-div-Group x = {!!}
+  is-equiv-right-div-Group = {!!}
 
   equiv-right-div-Group :
     (x : type-Group G) → type-Group G ≃ type-Group G
-  pr1 (equiv-right-div-Group x) y = {!!}
+  equiv-right-div-Group = {!!}
 ```
 
 ### Multiplication is a binary equivalence and a binary embedding
@@ -301,31 +300,31 @@ module _
 ```agda
   transpose-eq-mul-Group :
     {x y z : type-Group G} → mul-Group G x y ＝ z → x ＝ right-div-Group z y
-  transpose-eq-mul-Group {x} {y} {z} refl = {!!}
+  transpose-eq-mul-Group = {!!}
 
   inv-transpose-eq-mul-Group :
     {x y z : type-Group G} → x ＝ right-div-Group z y → mul-Group G x y ＝ z
-  inv-transpose-eq-mul-Group {._} {y} {z} refl = {!!}
+  inv-transpose-eq-mul-Group = {!!}
 
   transpose-eq-mul-Group' :
     {x y z : type-Group G} → mul-Group G x y ＝ z → y ＝ left-div-Group x z
-  transpose-eq-mul-Group' {x} {y} {z} refl = {!!}
+  transpose-eq-mul-Group' = {!!}
 
   inv-transpose-eq-mul-Group' :
     {x y z : type-Group G} → y ＝ left-div-Group x z → mul-Group G x y ＝ z
-  inv-transpose-eq-mul-Group' {x} {y} {._} refl = {!!}
+  inv-transpose-eq-mul-Group' = {!!}
 
   double-transpose-eq-mul-Group :
     {x y z w : type-Group G} →
     mul-Group G y w ＝ mul-Group G x z →
     left-div-Group x y ＝ right-div-Group z w
-  double-transpose-eq-mul-Group p = {!!}
+  double-transpose-eq-mul-Group = {!!}
 
   double-transpose-eq-mul-Group' :
     {x y z w : type-Group G} →
     mul-Group G z x ＝ mul-Group G w y →
     right-div-Group x y ＝ left-div-Group z w
-  double-transpose-eq-mul-Group' p = {!!}
+  double-transpose-eq-mul-Group' = {!!}
 ```
 
 ### Distributivity of inverses over multiplication
@@ -335,12 +334,12 @@ module _
     {x y : type-Group G} →
     inv-Group G (mul-Group G x y) ＝
     mul-Group G (inv-Group G y) (inv-Group G x)
-  distributive-inv-mul-Group {x} {y} = {!!}
+  distributive-inv-mul-Group = {!!}
 
   distributive-inv-mul-Group' :
     (x y : type-Group G) → mul-Group G x y ＝ mul-Group G y x →
     inv-Group G (mul-Group G x y) ＝ mul-Group G (inv-Group G x) (inv-Group G y)
-  distributive-inv-mul-Group' x y H = {!!}
+  distributive-inv-mul-Group' = {!!}
 ```
 
 ### Inverting elements of a group is an involution
@@ -348,17 +347,17 @@ module _
 ```agda
   inv-inv-Group :
     (x : type-Group G) → Id (inv-Group G (inv-Group G x)) x
-  inv-inv-Group x = {!!}
+  inv-inv-Group = {!!}
 
   transpose-eq-inv-Group :
     {x y : type-Group G} →
     inv-Group G x ＝ y → x ＝ inv-Group G y
-  transpose-eq-inv-Group refl = {!!}
+  transpose-eq-inv-Group = {!!}
 
   transpose-eq-inv-Group' :
     {x y : type-Group G} →
     x ＝ inv-Group G y → inv-Group G x ＝ y
-  transpose-eq-inv-Group' refl = {!!}
+  transpose-eq-inv-Group' = {!!}
 ```
 
 ### Inverting elements of a group is an equivalence
@@ -376,11 +375,11 @@ module _
 ```agda
   eq-is-unit-left-div-Group :
     {x y : type-Group G} → is-unit-Group G (left-div-Group x y) → x ＝ y
-  eq-is-unit-left-div-Group {x} {y} H = {!!}
+  eq-is-unit-left-div-Group = {!!}
 
   is-unit-left-div-eq-Group :
     {x y : type-Group G} → x ＝ y → is-unit-Group G (left-div-Group x y)
-  is-unit-left-div-eq-Group refl = {!!}
+  is-unit-left-div-eq-Group = {!!}
 ```
 
 ### Two elements `x` and `y` are equal iff `xy⁻¹= {!!}
@@ -388,11 +387,11 @@ module _
 ```agda
   eq-is-unit-right-div-Group :
     {x y : type-Group G} → is-unit-Group G (right-div-Group x y) → x ＝ y
-  eq-is-unit-right-div-Group H = {!!}
+  eq-is-unit-right-div-Group = {!!}
 
   is-unit-right-div-eq-Group :
     {x y : type-Group G} → x ＝ y → is-unit-Group G (right-div-Group x y)
-  is-unit-right-div-eq-Group refl = {!!}
+  is-unit-right-div-eq-Group = {!!}
 ```
 
 ### The inverse of `x⁻¹y` is `y⁻¹x`
@@ -401,7 +400,7 @@ module _
   inv-left-div-Group :
     (x y : type-Group G) →
     inv-Group G (left-div-Group x y) ＝ left-div-Group y x
-  inv-left-div-Group x y = {!!}
+  inv-left-div-Group = {!!}
 ```
 
 ### The inverse of `xy⁻¹` is `yx⁻¹`
@@ -410,7 +409,7 @@ module _
   inv-right-div-Group :
     (x y : type-Group G) →
     inv-Group G (right-div-Group x y) ＝ right-div-Group y x
-  inv-right-div-Group x y = {!!}
+  inv-right-div-Group = {!!}
 ```
 
 ### The product of `x⁻¹y` and `y⁻¹z` is `x⁻¹z`
@@ -419,7 +418,7 @@ module _
   mul-left-div-Group :
     (x y z : type-Group G) →
     mul-Group G (left-div-Group x y) (left-div-Group y z) ＝ left-div-Group x z
-  mul-left-div-Group x y z = {!!}
+  mul-left-div-Group = {!!}
 ```
 
 ### The product of `xy⁻¹` and `yz⁻¹` is `xz⁻¹`
@@ -429,7 +428,7 @@ module _
     (x y z : type-Group G) →
     mul-Group G (right-div-Group x y) (right-div-Group y z) ＝
     right-div-Group x z
-  mul-right-div-Group x y z = {!!}
+  mul-right-div-Group = {!!}
 ```
 
 ### For any semigroup, being a group is a property
@@ -448,7 +447,7 @@ abstract
 abstract
   is-prop-is-group :
     {l : Level} (G : Semigroup l) → is-prop (is-group G)
-  is-prop-is-group G = {!!}
+  is-prop-is-group = {!!}
 
 is-group-prop-Semigroup : {l : Level} (G : Semigroup l) → Prop l
 pr1 (is-group-prop-Semigroup G) = {!!}
@@ -467,7 +466,7 @@ module _
 
   is-unit-is-idempotent-Group :
     {x : type-Group G} → is-idempotent-Group x → is-unit-Group G x
-  is-unit-is-idempotent-Group {x} p = {!!}
+  is-unit-is-idempotent-Group = {!!}
 ```
 
 ### Multiplication of a list of elements in a group

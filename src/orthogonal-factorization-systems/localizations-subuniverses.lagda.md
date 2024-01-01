@@ -39,7 +39,7 @@ is an [equivalence](foundation-core.equivalences.md).
 is-subuniverse-localization :
   {l1 l2 lP : Level} (P : subuniverse l1 lP) →
   UU l2 → UU l1 → UU (lsuc l1 ⊔ l2 ⊔ lP)
-is-subuniverse-localization {l1} {l2} P X Y = {!!}
+is-subuniverse-localization = {!!}
 ```
 
 ```agda
@@ -65,7 +65,7 @@ module _
 ```agda
 subuniverse-localization :
   {l1 l2 lP : Level} (P : subuniverse l1 lP) → UU l2 → UU (lsuc l1 ⊔ l2 ⊔ lP)
-subuniverse-localization {l1} P X = {!!}
+subuniverse-localization = {!!}
 ```
 
 ```agda

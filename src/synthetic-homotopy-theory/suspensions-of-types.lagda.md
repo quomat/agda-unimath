@@ -68,15 +68,15 @@ they star in the freudenthal suspension theorem and give us a definition of
 ```agda
 suspension :
   {l : Level} → UU l → UU l
-suspension X = {!!}
+suspension = {!!}
 
 north-suspension :
   {l : Level} {X : UU l} → suspension X
-north-suspension {X = X} = {!!}
+north-suspension = {!!}
 
 south-suspension :
   {l : Level} {X : UU l} → suspension X
-south-suspension {X = X} = {!!}
+south-suspension = {!!}
 
 meridian-suspension :
   {l : Level} {X : UU l} → X →
@@ -85,19 +85,17 @@ meridian-suspension {X = X} = {!!}
 
 suspension-structure-suspension :
   {l : Level} (X : UU l) → suspension-structure X (suspension X)
-pr1 (suspension-structure-suspension X) = {!!}
-pr1 (pr2 (suspension-structure-suspension X)) = {!!}
-pr2 (pr2 (suspension-structure-suspension X)) = {!!}
+suspension-structure-suspension = {!!}
 
 cocone-suspension :
   {l : Level} (X : UU l) →
   cocone terminal-map terminal-map (pushout terminal-map terminal-map)
-cocone-suspension X = {!!}
+cocone-suspension = {!!}
 
 cogap-suspension' :
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} →
   cocone terminal-map terminal-map Y → pushout terminal-map terminal-map → Y
-cogap-suspension' {X = X} = {!!}
+cogap-suspension' = {!!}
 ```
 
 ### The cogap map of a suspension structure
@@ -124,7 +122,7 @@ large proposition.
 is-suspension :
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} →
   suspension-structure X Y → UU (l1 ⊔ l2)
-is-suspension s = {!!}
+is-suspension = {!!}
 ```
 
 ## Properties
@@ -151,7 +149,7 @@ module _
 up-suspension :
   {l1 : Level} {X : UU l1} →
   universal-property-suspension (suspension-structure-suspension X)
-up-suspension Z = {!!}
+up-suspension = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} {Z : UU l2}
@@ -159,19 +157,19 @@ module _
 
   equiv-up-suspension :
     (suspension X → Z) ≃ (suspension-structure X Z)
-  pr1 equiv-up-suspension = {!!}
+  equiv-up-suspension = {!!}
 
   compute-north-cogap-suspension :
     (c : suspension-structure X Z) →
     ( cogap-suspension c north-suspension) ＝
     ( north-suspension-structure c)
-  compute-north-cogap-suspension c = {!!}
+  compute-north-cogap-suspension = {!!}
 
   compute-south-cogap-suspension :
     (c : suspension-structure X Z) →
     ( cogap-suspension c south-suspension) ＝
     ( south-suspension-structure c)
-  compute-south-cogap-suspension c = {!!}
+  compute-south-cogap-suspension = {!!}
 
   compute-meridian-cogap-suspension :
     (c : suspension-structure X Z) (x : X) →
@@ -179,7 +177,7 @@ module _
       ( compute-south-cogap-suspension c)) ＝
     ( ( compute-north-cogap-suspension c) ∙
       ( meridian-suspension-structure c x))
-  compute-meridian-cogap-suspension c = {!!}
+  compute-meridian-cogap-suspension = {!!}
 
   ev-suspension-up-suspension :
     (c : suspension-structure X Z) →
@@ -187,7 +185,7 @@ module _
       ( suspension-structure-suspension X)
       ( Z)
       ( cogap-suspension c)) ＝ c
-  ev-suspension-up-suspension c = {!!}
+  ev-suspension-up-suspension = {!!}
 ```
 
 ### The suspension of `X` has the dependent universal property of suspensions
@@ -196,14 +194,13 @@ module _
 dup-suspension :
   {l1 : Level} {X : UU l1} →
   dependent-universal-property-suspension (suspension-structure-suspension X)
-dup-suspension {X = X} B = {!!}
+dup-suspension = {!!}
 
 equiv-dup-suspension :
   {l1 l2 : Level} {X : UU l1} (B : suspension X → UU l2) →
   ( (x : suspension X) → B x) ≃
   ( dependent-suspension-structure B (suspension-structure-suspension X))
-pr1 (equiv-dup-suspension {X = X} B) = {!!}
-pr2 (equiv-dup-suspension B) = {!!}
+equiv-dup-suspension = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} (B : suspension X → UU l2)
@@ -231,7 +228,7 @@ module _
         ( suspension-structure-suspension X)) →
     ( dependent-cogap-suspension d north-suspension) ＝
     ( north-dependent-suspension-structure d)
-  dup-suspension-north-suspension d = {!!}
+  dup-suspension-north-suspension = {!!}
 
   dup-suspension-south-suspension :
     (d :
@@ -240,7 +237,7 @@ module _
         ( suspension-structure-suspension X)) →
     ( dependent-cogap-suspension d south-suspension) ＝
     ( south-dependent-suspension-structure d)
-  dup-suspension-south-suspension d = {!!}
+  dup-suspension-south-suspension = {!!}
 
   dup-suspension-meridian-suspension :
     (d :
@@ -257,7 +254,7 @@ module _
         ( meridian-suspension x))
       ( meridian-dependent-suspension-structure d x)
       ( dup-suspension-south-suspension d)
-  dup-suspension-meridian-suspension d = {!!}
+  dup-suspension-meridian-suspension = {!!}
 ```
 
 ### Characterization of homotopies between functions with domain a suspension
@@ -332,25 +329,25 @@ module _
     htpy-equiv
       ( inv-equiv equiv-htpy-function-out-of-suspension-htpy)
       ( equiv-htpy-htpy-function-out-of-suspension)
-  compute-inv-equiv-htpy-function-out-of-suspension-htpy c = {!!}
+  compute-inv-equiv-htpy-function-out-of-suspension-htpy = {!!}
 
   is-section-htpy-htpy-function-out-of-suspension :
     ( ( htpy-function-out-of-suspension-htpy) ∘
       ( htpy-htpy-function-out-of-suspension)) ~
     ( id)
-  is-section-htpy-htpy-function-out-of-suspension c = {!!}
+  is-section-htpy-htpy-function-out-of-suspension = {!!}
 
   equiv-htpy-function-out-of-suspension-htpy-north-suspension :
     (c : htpy-function-out-of-suspension) →
     ( htpy-htpy-function-out-of-suspension c north-suspension) ＝
     ( north-htpy-function-out-of-suspension c)
-  equiv-htpy-function-out-of-suspension-htpy-north-suspension c = {!!}
+  equiv-htpy-function-out-of-suspension-htpy-north-suspension = {!!}
 
   equiv-htpy-function-out-of-suspension-htpy-south-suspension :
     (c : htpy-function-out-of-suspension) →
     ( htpy-htpy-function-out-of-suspension c south-suspension) ＝
     ( south-htpy-function-out-of-suspension c)
-  equiv-htpy-function-out-of-suspension-htpy-south-suspension c = {!!}
+  equiv-htpy-function-out-of-suspension-htpy-south-suspension = {!!}
 ```
 
 ### The suspension of a contractible type is contractible
@@ -358,7 +355,7 @@ module _
 ```agda
 is-contr-suspension-is-contr :
   {l : Level} {X : UU l} → is-contr X → is-contr (suspension X)
-is-contr-suspension-is-contr {l} {X} is-contr-X = {!!}
+is-contr-suspension-is-contr = {!!}
 ```
 
 ### Suspensions increase connectedness
@@ -399,9 +396,9 @@ module _
         ( ev-suspension
           ( suspension-structure-suspension X)
           ( type-Truncated-Type Y)))
-  is-equiv-north-suspension-ev-suspension-is-connected-Truncated-Type c Y = {!!}
+  is-equiv-north-suspension-ev-suspension-is-connected-Truncated-Type = {!!}
 
   is-connected-succ-suspension-is-connected :
     is-connected k X → is-connected (succ-𝕋 k) (suspension X)
-  is-connected-succ-suspension-is-connected c = {!!}
+  is-connected-succ-suspension-is-connected = {!!}
 ```

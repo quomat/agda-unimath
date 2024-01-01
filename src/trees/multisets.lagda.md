@@ -58,5 +58,5 @@ X ∉-𝕍 Y = {!!}
 ```agda
 comprehension-𝕍 :
   {l : Level} (X : 𝕍 l) (P : shape-𝕎 X → UU l) → 𝕍 l
-comprehension-𝕍 X P = {!!}
+comprehension-𝕍 = {!!}
 ```

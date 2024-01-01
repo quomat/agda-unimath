@@ -71,7 +71,7 @@ module _
   is-retraction-hom-inv-is-iso-Ab :
     (H : is-iso-Ab) →
     comp-hom-Ab A B A (hom-inv-is-iso-Ab H) f ＝ id-hom-Ab A
-  is-retraction-hom-inv-is-iso-Ab H = {!!}
+  is-retraction-hom-inv-is-iso-Ab = {!!}
 
   is-retraction-map-inv-is-iso-Ab :
     (H : is-iso-Ab) →
@@ -162,25 +162,25 @@ id-iso-Ab A = {!!}
 ```agda
 iso-eq-Ab :
   {l : Level} (A B : Ab l) → Id A B → iso-Ab A B
-iso-eq-Ab A B p = {!!}
+iso-eq-Ab = {!!}
 
 abstract
   equiv-iso-eq-Ab' :
     {l : Level} (A B : Ab l) → Id A B ≃ iso-Ab A B
-  equiv-iso-eq-Ab' A B = {!!}
+  equiv-iso-eq-Ab' = {!!}
 
 abstract
   is-torsorial-iso-Ab :
     {l : Level} (A : Ab l) → is-torsorial (λ (B : Ab l) → iso-Ab A B)
-  is-torsorial-iso-Ab {l} A = {!!}
+  is-torsorial-iso-Ab = {!!}
 
 is-equiv-iso-eq-Ab :
   {l : Level} (A B : Ab l) → is-equiv (iso-eq-Ab A B)
-is-equiv-iso-eq-Ab A = {!!}
+is-equiv-iso-eq-Ab = {!!}
 
 eq-iso-Ab :
   {l : Level} (A B : Ab l) → iso-Ab A B → Id A B
-eq-iso-Ab A B = {!!}
+eq-iso-Ab = {!!}
 ```
 
 ### A homomorphism of abelian groups is an isomorphism if and only if its underlying map is an equivalence

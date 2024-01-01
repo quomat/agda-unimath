@@ -76,13 +76,13 @@ bounded-sum-ℕ (succ-ℕ u) f = {!!}
 abstract
   htpy-sum-Fin-ℕ :
     (k : ℕ) {f g : Fin k → ℕ} (H : f ~ g) → sum-Fin-ℕ k f ＝ sum-Fin-ℕ k g
-  htpy-sum-Fin-ℕ zero-ℕ H = {!!}
+  htpy-sum-Fin-ℕ = {!!}
 
 abstract
   htpy-sum-count-ℕ :
     {l : Level} {A : UU l} (e : count A) {f g : A → ℕ} (H : f ~ g) →
     sum-count-ℕ e f ＝ sum-count-ℕ e g
-  htpy-sum-count-ℕ (pair k e) H = {!!}
+  htpy-sum-count-ℕ = {!!}
 ```
 
 ### Summing up the same value `m` times is multiplication by `m`
@@ -91,13 +91,13 @@ abstract
 abstract
   constant-sum-Fin-ℕ :
     (m n : ℕ) → sum-Fin-ℕ m (const (Fin m) ℕ n) ＝ m *ℕ n
-  constant-sum-Fin-ℕ zero-ℕ n = {!!}
+  constant-sum-Fin-ℕ = {!!}
 
 abstract
   constant-sum-count-ℕ :
     {l : Level} {A : UU l} (e : count A) (n : ℕ) →
     sum-count-ℕ e (const A ℕ n) ＝ (number-of-elements-count e) *ℕ n
-  constant-sum-count-ℕ (pair m e) n = {!!}
+  constant-sum-count-ℕ = {!!}
 ```
 
 ### Each of the summands is less than or equal to the total sum

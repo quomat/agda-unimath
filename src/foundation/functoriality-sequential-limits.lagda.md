@@ -39,14 +39,14 @@ module _
 
   map-hom-standard-sequential-limit :
     hom-tower A' A → standard-sequential-limit A' → standard-sequential-limit A
-  pr1 (map-hom-standard-sequential-limit (f , F) (x , H)) n = {!!}
+  map-hom-standard-sequential-limit = {!!}
 
   map-hom-is-sequential-limit :
     {l4 l4' : Level} {C : UU l4} {C' : UU l4'} →
     (c : cone-tower A C) (c' : cone-tower A' C') →
     is-sequential-limit A c → is-sequential-limit A' c' →
     hom-tower A' A → C' → C
-  map-hom-is-sequential-limit c c' is-lim-c is-lim-c' h x = {!!}
+  map-hom-is-sequential-limit = {!!}
 ```
 
 ## Table of files about sequential limits

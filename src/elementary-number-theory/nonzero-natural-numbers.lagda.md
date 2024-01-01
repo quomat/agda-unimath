@@ -74,6 +74,5 @@ pr2 (succ-nonzero-ℕ' n) = {!!}
 ```agda
 quotient-div-nonzero-ℕ :
   (d : ℕ) (x : nonzero-ℕ) (H : div-ℕ d (pr1 x)) → nonzero-ℕ
-pr1 (quotient-div-nonzero-ℕ d (pair x K) H) = {!!}
-pr2 (quotient-div-nonzero-ℕ d (pair x K) H) = {!!}
+quotient-div-nonzero-ℕ = {!!}
 ```

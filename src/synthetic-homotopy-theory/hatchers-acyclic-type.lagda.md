@@ -77,7 +77,7 @@ hom-algebra-Hatcher-Acyclic-Type
 is-initial-algebra-Hatcher-Acyclic-Type :
   {l1 : Level} (l : Level)
   (A : algebra-Hatcher-Acyclic-Type l1) → UU (l1 ⊔ lsuc l)
-is-initial-algebra-Hatcher-Acyclic-Type l A = {!!}
+is-initial-algebra-Hatcher-Acyclic-Type = {!!}
 ```
 
 ## Properties
@@ -91,11 +91,11 @@ module _
 
   Eq-structure-Hatcher-Acyclic-Type :
     structure-Hatcher-Acyclic-Type A → UU l
-  Eq-structure-Hatcher-Acyclic-Type t = {!!}
+  Eq-structure-Hatcher-Acyclic-Type = {!!}
 
   refl-Eq-structure-Hatcher-Acyclic-Type :
     Eq-structure-Hatcher-Acyclic-Type s
-  pr1 refl-Eq-structure-Hatcher-Acyclic-Type = {!!}
+  refl-Eq-structure-Hatcher-Acyclic-Type = {!!}
 
   is-torsorial-Eq-structure-Hatcher-Acyclic-Type :
     is-torsorial Eq-structure-Hatcher-Acyclic-Type
@@ -104,7 +104,7 @@ module _
   Eq-eq-structure-Hatcher-Acyclic-Type :
     (t : structure-Hatcher-Acyclic-Type A) →
     (s ＝ t) → Eq-structure-Hatcher-Acyclic-Type t
-  Eq-eq-structure-Hatcher-Acyclic-Type .s refl = {!!}
+  Eq-eq-structure-Hatcher-Acyclic-Type = {!!}
 
   is-equiv-Eq-eq-structure-Hatcher-Acyclic-Type :
     (t : structure-Hatcher-Acyclic-Type A) →
@@ -114,12 +114,12 @@ module _
   extensionality-structure-Hatcher-Acyclic-Type :
     (t : structure-Hatcher-Acyclic-Type A) →
     (s ＝ t) ≃ Eq-structure-Hatcher-Acyclic-Type t
-  pr1 (extensionality-structure-Hatcher-Acyclic-Type t) = {!!}
+  extensionality-structure-Hatcher-Acyclic-Type = {!!}
 
   eq-Eq-structure-Hatcher-Acyclic-Type :
     (t : structure-Hatcher-Acyclic-Type A) →
     Eq-structure-Hatcher-Acyclic-Type t → s ＝ t
-  eq-Eq-structure-Hatcher-Acyclic-Type t = {!!}
+  eq-Eq-structure-Hatcher-Acyclic-Type = {!!}
 ```
 
 ### Loop spaces uniquely have the structure of a Hatcher acyclic type

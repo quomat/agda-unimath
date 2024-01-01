@@ -49,15 +49,15 @@ module _
 
   is-emb-hom-undirected-graph-Prop :
     hom-Undirected-Graph G H → Prop (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-emb-hom-undirected-graph-Prop f = {!!}
+  is-emb-hom-undirected-graph-Prop = {!!}
 
   is-emb-hom-Undirected-Graph :
     hom-Undirected-Graph G H → UU (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-emb-hom-Undirected-Graph f = {!!}
+  is-emb-hom-Undirected-Graph = {!!}
 
   is-prop-is-emb-hom-Undirected-Graph :
     (f : hom-Undirected-Graph G H) → is-prop (is-emb-hom-Undirected-Graph f)
-  is-prop-is-emb-hom-Undirected-Graph f = {!!}
+  is-prop-is-emb-hom-Undirected-Graph = {!!}
 
   emb-Undirected-Graph : UU (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l3 ⊔ l4)
   emb-Undirected-Graph = {!!}
@@ -85,7 +85,7 @@ module _
 
   emb-vertex-emb-Undirected-Graph :
     vertex-Undirected-Graph G ↪ vertex-Undirected-Graph H
-  pr1 emb-vertex-emb-Undirected-Graph = {!!}
+  emb-vertex-emb-Undirected-Graph = {!!}
 
   unordered-pair-vertices-emb-Undirected-Graph :
     unordered-pair-vertices-Undirected-Graph G →
@@ -107,7 +107,7 @@ module _
     (p : unordered-pair-vertices-Undirected-Graph G) →
     edge-Undirected-Graph G p ↪
     edge-Undirected-Graph H (unordered-pair-vertices-emb-Undirected-Graph p)
-  pr1 (emb-edge-emb-Undirected-Graph p) = {!!}
+  emb-edge-emb-Undirected-Graph = {!!}
 ```
 
 ## See also

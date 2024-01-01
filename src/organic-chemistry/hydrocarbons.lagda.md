@@ -88,7 +88,7 @@ module _
 
   electron-carbon-atom-hydrocarbon :
     (c : vertex-hydrocarbon) → UU lzero
-  electron-carbon-atom-hydrocarbon c = {!!}
+  electron-carbon-atom-hydrocarbon = {!!}
 
   emb-bonding-hydrocarbon :
     (c : vertex-hydrocarbon) →
@@ -101,5 +101,5 @@ module _
     {c c' : vertex-hydrocarbon} →
     edge-hydrocarbon (standard-unordered-pair c c') →
     electron-carbon-atom-hydrocarbon c
-  bonding-hydrocarbon {c} {c'} b = {!!}
+  bonding-hydrocarbon = {!!}
 ```

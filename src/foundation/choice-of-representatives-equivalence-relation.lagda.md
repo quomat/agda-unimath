@@ -41,37 +41,37 @@ module _
 
   is-choice-of-representatives :
     (A → UU l3) → UU (l1 ⊔ l2 ⊔ l3)
-  is-choice-of-representatives P = {!!}
+  is-choice-of-representatives = {!!}
 
   representatives :
     {P : A → UU l3} → is-choice-of-representatives P → UU (l1 ⊔ l3)
-  representatives {P} H = {!!}
+  representatives = {!!}
 
   class-representatives :
     {P : A → UU l3} (H : is-choice-of-representatives P) →
     representatives H → equivalence-class R
-  class-representatives H a = {!!}
+  class-representatives = {!!}
 
   abstract
     is-surjective-class-representatives :
       {P : A → UU l3} (H : is-choice-of-representatives P) →
       is-surjective (class-representatives H)
-    is-surjective-class-representatives H (pair Q K) = {!!}
+    is-surjective-class-representatives = {!!}
 
   abstract
     is-emb-class-representatives :
       {P : A → UU l3} (H : is-choice-of-representatives P) →
       is-emb (class-representatives H)
-    is-emb-class-representatives {P} H (pair a p) = {!!}
+    is-emb-class-representatives = {!!}
 
   abstract
     is-equiv-class-representatives :
       {P : A → UU l3} (H : is-choice-of-representatives P) →
       is-equiv (class-representatives H)
-    is-equiv-class-representatives H = {!!}
+    is-equiv-class-representatives = {!!}
 
   equiv-equivalence-class-representatives :
     {P : A → UU l3} (H : is-choice-of-representatives P) →
     representatives H ≃ equivalence-class R
-  pr1 (equiv-equivalence-class-representatives H) = {!!}
+  equiv-equivalence-class-representatives = {!!}
 ```

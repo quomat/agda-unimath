@@ -36,5 +36,5 @@ notion of 'torsor-like', or indeed 'torsorial' type families.
 ```agda
 is-torsorial :
   {l1 l2 : Level} {B : UU l1} → (B → UU l2) → UU (l1 ⊔ l2)
-is-torsorial E = {!!}
+is-torsorial = {!!}
 ```

@@ -55,7 +55,7 @@ Monoid-of-Order l n = {!!}
 is-finite-is-unital-Semigroup :
   {l : Level} (n : ℕ) (X : Semigroup-of-Order l n) →
   is-finite (is-unital-Semigroup (pr1 X))
-is-finite-is-unital-Semigroup {l} n X = {!!}
+is-finite-is-unital-Semigroup = {!!}
 ```
 
 ### The type of monoids of order `n` is π-finite
@@ -63,7 +63,7 @@ is-finite-is-unital-Semigroup {l} n X = {!!}
 ```agda
 is-π-finite-Monoid-of-Order :
   {l : Level} (k n : ℕ) → is-π-finite k (Monoid-of-Order l n)
-is-π-finite-Monoid-of-Order {l} k n = {!!}
+is-π-finite-Monoid-of-Order = {!!}
 ```
 
 ### The function that returns for any n the number of monoids of order n up to isomorphism
@@ -77,5 +77,5 @@ mere-equiv-number-of-monoids-of-order :
   mere-equiv
     ( Fin (number-of-monoids-of-order n))
     ( type-trunc-Set (Monoid-of-Order lzero n))
-mere-equiv-number-of-monoids-of-order n = {!!}
+mere-equiv-number-of-monoids-of-order = {!!}
 ```

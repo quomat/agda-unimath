@@ -88,7 +88,7 @@ uniqueness-dependent-universal-property-𝕊¹ :
         ( λ h →
           Eq-free-dependent-loop free-loop-𝕊¹ P
             ( ev-free-loop-Π free-loop-𝕊¹ P h) k))
-uniqueness-dependent-universal-property-𝕊¹ {l} {P} = {!!}
+uniqueness-dependent-universal-property-𝕊¹ = {!!}
 
 module _
   {l : Level} (P : 𝕊¹ → UU l) (p0 : P base-𝕊¹) (α : Id (tr P loop-𝕊¹ p0) p0)
@@ -127,7 +127,7 @@ uniqueness-universal-property-𝕊¹ :
   is-contr
     ( Σ ( 𝕊¹ → X)
         ( λ h → Eq-free-loop (ev-free-loop free-loop-𝕊¹ X h) α))
-uniqueness-universal-property-𝕊¹ {l} {X} = {!!}
+uniqueness-universal-property-𝕊¹ = {!!}
 
 module _
   {l : Level} {X : UU l} (x : X) (α : Id x x)
@@ -219,7 +219,7 @@ map-sphere-0-eq-base-𝕊¹ (inr n) = {!!}
 
 suspension-structure-sphere-0-𝕊¹ :
   suspension-structure (sphere 0) 𝕊¹
-pr1 suspension-structure-sphere-0-𝕊¹ = {!!}
+suspension-structure-sphere-0-𝕊¹ = {!!}
 pr1 (pr2 suspension-structure-sphere-0-𝕊¹) = {!!}
 pr2 (pr2 suspension-structure-sphere-0-𝕊¹) = {!!}
 
@@ -282,14 +282,13 @@ map-sphere-1-circle-sphere-1-meridian :
       ( n))
     ( sphere-1-circle-sphere-1-north-sphere-1)
     ( sphere-1-circle-sphere-1-south-sphere-1))
-map-sphere-1-circle-sphere-1-meridian (inl (inr n)) = {!!}
-map-sphere-1-circle-sphere-1-meridian (inr n) = {!!}
+map-sphere-1-circle-sphere-1-meridian = {!!}
 
 dependent-suspension-structure-sphere-1-circle-sphere-1 :
   dependent-suspension-structure
     ( λ x → (sphere-1-circle (circle-sphere-1 x)) ＝ x)
     ( suspension-structure-suspension (Fin 2))
-pr1 dependent-suspension-structure-sphere-1-circle-sphere-1 = {!!}
+dependent-suspension-structure-sphere-1-circle-sphere-1 = {!!}
 pr1 (pr2 dependent-suspension-structure-sphere-1-circle-sphere-1) = {!!}
 pr2 (pr2 dependent-suspension-structure-sphere-1-circle-sphere-1) = {!!}
 

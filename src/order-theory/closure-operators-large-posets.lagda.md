@@ -47,25 +47,7 @@ module _
     field
       hom-closure-operator-Large-Poset :
         hom-Large-Poset (λ l → l) P P
-      is-inflationary-closure-operator-Large-Poset :
-        {l1 : Level} (x : type-Large-Poset P l1) →
-        leq-Large-Poset P x
-          ( map-hom-Large-Poset P P hom-closure-operator-Large-Poset x)
-      is-idempotent-closure-operator-Large-Poset :
-        {l1 : Level} (x : type-Large-Poset P l1) →
-        map-hom-Large-Poset P P hom-closure-operator-Large-Poset
-          ( map-hom-Large-Poset P P hom-closure-operator-Large-Poset x) ＝
-        map-hom-Large-Poset P P hom-closure-operator-Large-Poset x
-
-  open closure-operator-Large-Poset public
-
-  module _
-    (cl : closure-operator-Large-Poset)
-    where
-
-    map-closure-operator-Large-Poset :
-      {l1 : Level} → type-Large-Poset P l1 → type-Large-Poset P l1
-    map-closure-operator-Large-Poset = {!!}
+      hom-closure-operator-Large-Poset = {!!}
 
     preserves-order-closure-operator-Large-Poset :
       {l1 l2 : Level}
@@ -87,7 +69,7 @@ module _
 
   large-subpreorder-closure-operator-Large-Poset :
     Large-Subpreorder α (large-preorder-Large-Poset P)
-  large-subpreorder-closure-operator-Large-Poset {l1} x = {!!}
+  large-subpreorder-closure-operator-Large-Poset = {!!}
 
   is-closed-element-closure-operator-Large-Poset :
     {l1 : Level} → type-Large-Poset P l1 → UU (α l1)
@@ -102,7 +84,7 @@ module _
     {l1 : Level} (x : type-Large-Poset P l1) →
     leq-Large-Poset P (map-closure-operator-Large-Poset P cl x) x →
     is-closed-element-closure-operator-Large-Poset x
-  is-closed-element-leq-closure-operator-Large-Poset x H = {!!}
+  is-closed-element-leq-closure-operator-Large-Poset = {!!}
 
   closed-element-closure-operator-Large-Poset :
     (l1 : Level) → UU (α l1)
@@ -115,12 +97,11 @@ module _
     leq-Large-Poset P x y → leq-Large-Poset P y x →
     is-closed-element-closure-operator-Large-Poset x →
     is-closed-element-closure-operator-Large-Poset y
-  is-closed-under-sim-closure-operator-Large-Poset x y H K c = {!!}
+  is-closed-under-sim-closure-operator-Large-Poset = {!!}
 
   large-subposet-closure-operator-Large-Poset :
     Large-Subposet α P
-  large-subpreorder-Large-Subposet
-    large-subposet-closure-operator-Large-Poset = {!!}
+  large-subposet-closure-operator-Large-Poset = {!!}
 
   large-poset-closure-operator-Large-Poset :
     Large-Poset α β

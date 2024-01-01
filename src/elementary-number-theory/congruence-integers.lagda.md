@@ -77,23 +77,23 @@ pr2 (transitive-cong-ℤ k x y z (pair e q) (pair d p)) = {!!}
 
 concatenate-eq-cong-ℤ :
   (k x x' y : ℤ) → x ＝ x' → cong-ℤ k x' y → cong-ℤ k x y
-concatenate-eq-cong-ℤ k x .x y refl = {!!}
+concatenate-eq-cong-ℤ = {!!}
 
 concatenate-cong-eq-ℤ :
   (k x y y' : ℤ) → cong-ℤ k x y → y ＝ y' → cong-ℤ k x y'
-concatenate-cong-eq-ℤ k x y .y H refl = {!!}
+concatenate-cong-eq-ℤ = {!!}
 
 concatenate-eq-cong-eq-ℤ :
   (k x x' y' y : ℤ) → x ＝ x' → cong-ℤ k x' y' → y' ＝ y → cong-ℤ k x y
-concatenate-eq-cong-eq-ℤ k x .x y .y refl H refl = {!!}
+concatenate-eq-cong-eq-ℤ = {!!}
 
 concatenate-cong-eq-cong-ℤ :
   (k x y y' z : ℤ) → cong-ℤ k x y → y ＝ y' → cong-ℤ k y' z → cong-ℤ k x z
-concatenate-cong-eq-cong-ℤ k x y .y z H refl K = {!!}
+concatenate-cong-eq-cong-ℤ = {!!}
 
 concatenate-cong-cong-cong-ℤ :
   (k x y z w : ℤ) → cong-ℤ k x y → cong-ℤ k y z → cong-ℤ k z w → cong-ℤ k x w
-concatenate-cong-cong-cong-ℤ k x y z w H K L = {!!}
+concatenate-cong-cong-cong-ℤ = {!!}
 
 cong-cong-neg-ℤ : (k x y : ℤ) → cong-ℤ k (neg-ℤ x) (neg-ℤ y) → cong-ℤ k x y
 pr1 (cong-cong-neg-ℤ k x y (pair d p)) = {!!}
@@ -107,9 +107,9 @@ pr2 (cong-neg-cong-ℤ k x y (pair d p)) = {!!}
 ```agda
 cong-int-cong-ℕ :
   (k x y : ℕ) → cong-ℕ k x y → cong-ℤ (int-ℕ k) (int-ℕ x) (int-ℕ y)
-cong-int-cong-ℕ k x y H = {!!}
+cong-int-cong-ℕ = {!!}
 
 cong-cong-int-ℕ :
   (k x y : ℕ) → cong-ℤ (int-ℕ k) (int-ℕ x) (int-ℕ y) → cong-ℕ k x y
-cong-cong-int-ℕ k x y H = {!!}
+cong-cong-int-ℕ = {!!}
 ```

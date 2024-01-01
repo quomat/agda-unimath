@@ -141,17 +141,16 @@ pr2 unit-Set = {!!}
 abstract
   is-contr-raise-unit :
     {l1 : Level} → is-contr (raise-unit l1)
-  is-contr-raise-unit {l1} = {!!}
+  is-contr-raise-unit = {!!}
 
 abstract
   is-prop-raise-unit :
     {l1 : Level} → is-prop (raise-unit l1)
-  is-prop-raise-unit {l1} = {!!}
+  is-prop-raise-unit = {!!}
 
 raise-unit-Prop :
   (l1 : Level) → Prop l1
-pr1 (raise-unit-Prop l1) = {!!}
-pr2 (raise-unit-Prop l1) = {!!}
+raise-unit-Prop = {!!}
 
 abstract
   is-set-raise-unit :

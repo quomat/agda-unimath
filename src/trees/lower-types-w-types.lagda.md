@@ -40,5 +40,5 @@ module _
 
   upper-bound-rank-inclusion-lower-𝕎 :
     {x : 𝕎 A B} (y : lower-𝕎 x) → inclusion-lower-𝕎 y ≼-𝕎 x
-  upper-bound-rank-inclusion-lower-𝕎 (lower-tree-𝕎 g) y = {!!}
+  upper-bound-rank-inclusion-lower-𝕎 = {!!}
 ```

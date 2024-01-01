@@ -73,12 +73,12 @@ module _
   is-closed-under-addition-full-ideal-Commutative-Ring :
     is-closed-under-addition-subset-Commutative-Ring A
       subset-full-ideal-Commutative-Ring
-  is-closed-under-addition-full-ideal-Commutative-Ring {x} {y} = {!!}
+  is-closed-under-addition-full-ideal-Commutative-Ring = {!!}
 
   is-closed-under-negatives-full-ideal-Commutative-Ring :
     is-closed-under-negatives-subset-Commutative-Ring A
       subset-full-ideal-Commutative-Ring
-  is-closed-under-negatives-full-ideal-Commutative-Ring {x} = {!!}
+  is-closed-under-negatives-full-ideal-Commutative-Ring = {!!}
 
   is-additive-subgroup-full-ideal-Commutative-Ring :
     is-additive-subgroup-subset-Commutative-Ring A
@@ -182,7 +182,7 @@ module _
 
   is-radical-full-ideal-Commutative-Ring :
     is-radical-ideal-Commutative-Ring A (full-ideal-Commutative-Ring A)
-  is-radical-full-ideal-Commutative-Ring x n H = {!!}
+  is-radical-full-ideal-Commutative-Ring = {!!}
 
   full-radical-ideal-Commutative-Ring : radical-ideal-Commutative-Ring lzero A
   pr1 full-radical-ideal-Commutative-Ring = {!!}
@@ -191,11 +191,10 @@ module _
     is-top-element-Large-Poset
       ( radical-ideal-Commutative-Ring-Large-Poset A)
       ( full-radical-ideal-Commutative-Ring)
-  is-top-element-full-radical-ideal-Commutative-Ring I = {!!}
+  is-top-element-full-radical-ideal-Commutative-Ring = {!!}
 
   has-top-element-radical-ideal-Commutative-Ring :
     has-top-element-Large-Poset
       ( radical-ideal-Commutative-Ring-Large-Poset A)
-  top-has-top-element-Large-Poset
-    has-top-element-radical-ideal-Commutative-Ring = {!!}
+  has-top-element-radical-ideal-Commutative-Ring = {!!}
 ```

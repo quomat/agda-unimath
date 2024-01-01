@@ -100,23 +100,23 @@ module _
   abstract
     is-closed-under-multiplication-image-hom-Group :
       is-closed-under-multiplication-subset-Group H subset-image-hom-Group
-    is-closed-under-multiplication-image-hom-Group {x} {y} K L = {!!}
+    is-closed-under-multiplication-image-hom-Group = {!!}
 
   abstract
     is-closed-under-inverses-image-hom-Group :
       is-closed-under-inverses-subset-Group H subset-image-hom-Group
-    is-closed-under-inverses-image-hom-Group {x} K = {!!}
+    is-closed-under-inverses-image-hom-Group = {!!}
 
   is-subgroup-image-hom-Group :
     is-subgroup-subset-Group H subset-image-hom-Group
-  pr1 is-subgroup-image-hom-Group = {!!}
+  is-subgroup-image-hom-Group = {!!}
 
   image-hom-Group : Subgroup (l1 ⊔ l2) H
   pr1 image-hom-Group = {!!}
 
   is-image-image-hom-Group :
     is-image-hom-Group G H f image-hom-Group
-  is-image-image-hom-Group K = {!!}
+  is-image-image-hom-Group = {!!}
 
   contains-values-image-hom-Group :
     (g : type-Group G) →
@@ -127,7 +127,7 @@ module _
     {l : Level} (K : Subgroup l H) →
     ((g : type-Group G) → is-in-Subgroup H K (map-hom-Group G H f g)) →
     leq-Subgroup H image-hom-Group K
-  leq-image-hom-Group K = {!!}
+  leq-image-hom-Group = {!!}
 ```
 
 ### The image of a subgroup under a group homomorphism
@@ -151,12 +151,12 @@ module _
   abstract
     is-closed-under-multiplication-im-hom-Subgroup :
       is-closed-under-multiplication-subset-Group H subset-im-hom-Subgroup
-    is-closed-under-multiplication-im-hom-Subgroup {x} {y} u v = {!!}
+    is-closed-under-multiplication-im-hom-Subgroup = {!!}
 
   abstract
     is-closed-under-inverses-im-hom-Subgroup :
       is-closed-under-inverses-subset-Group H subset-im-hom-Subgroup
-    is-closed-under-inverses-im-hom-Subgroup {x} u = {!!}
+    is-closed-under-inverses-im-hom-Subgroup = {!!}
 
   im-hom-Subgroup : Subgroup (l1 ⊔ l2 ⊔ l3) H
   pr1 im-hom-Subgroup = {!!}
@@ -165,17 +165,17 @@ module _
     {l : Level} (U : Subgroup l H) →
     leq-Subgroup H im-hom-Subgroup U →
     leq-Subgroup G K (pullback-Subgroup G H f U)
-  forward-implication-is-image-subgroup-im-hom-Subgroup U = {!!}
+  forward-implication-is-image-subgroup-im-hom-Subgroup = {!!}
 
   backward-implication-is-image-subgroup-im-hom-Subgroup :
     {l : Level} (U : Subgroup l H) →
     leq-Subgroup G K (pullback-Subgroup G H f U) →
     leq-Subgroup H im-hom-Subgroup U
-  backward-implication-is-image-subgroup-im-hom-Subgroup U = {!!}
+  backward-implication-is-image-subgroup-im-hom-Subgroup = {!!}
 
   is-image-subgroup-im-hom-Subgroup :
     is-image-subgroup-hom-Group G H f K im-hom-Subgroup
-  is-image-subgroup-im-hom-Subgroup U = {!!}
+  is-image-subgroup-im-hom-Subgroup = {!!}
 ```
 
 ### The image-pullback Galois connection on subgroups
@@ -189,14 +189,14 @@ module _
     {l3 l4 : Level} (K : Subgroup l3 G) (L : Subgroup l4 G) →
     leq-Subgroup G K L →
     leq-Subgroup H (im-hom-Subgroup G H f K) (im-hom-Subgroup G H f L)
-  preserves-order-im-hom-Subgroup K L = {!!}
+  preserves-order-im-hom-Subgroup = {!!}
 
   im-subgroup-hom-large-poset-hom-Group :
     hom-Large-Poset
       ( λ l → l1 ⊔ l2 ⊔ l)
       ( Subgroup-Large-Poset G)
       ( Subgroup-Large-Poset H)
-  map-hom-Large-Preorder im-subgroup-hom-large-poset-hom-Group = {!!}
+  im-subgroup-hom-large-poset-hom-Group = {!!}
 
   image-pullback-galois-connection-Subgroup :
     galois-connection-Large-Poset
@@ -204,8 +204,7 @@ module _
       ( λ l → l)
       ( Subgroup-Large-Poset G)
       ( Subgroup-Large-Poset H)
-  lower-adjoint-galois-connection-Large-Poset
-    image-pullback-galois-connection-Subgroup = {!!}
+  image-pullback-galois-connection-Subgroup = {!!}
 ```
 
 ## Properties
@@ -221,10 +220,10 @@ module _
   is-image-subgroup-has-same-elements-Subgroup :
     has-same-elements-Subgroup H (im-hom-Subgroup G H f K) U →
     is-image-subgroup-hom-Group G H f K U
-  is-image-subgroup-has-same-elements-Subgroup s = {!!}
+  is-image-subgroup-has-same-elements-Subgroup = {!!}
 
   has-same-elements-is-image-Subgroup :
     is-image-subgroup-hom-Group G H f K U →
     has-same-elements-Subgroup H (im-hom-Subgroup G H f K) U
-  has-same-elements-is-image-Subgroup i = {!!}
+  has-same-elements-is-image-Subgroup = {!!}
 ```

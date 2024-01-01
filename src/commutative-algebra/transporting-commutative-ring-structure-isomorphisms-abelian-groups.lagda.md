@@ -88,11 +88,11 @@ module _
 
   commutative-mul-transport-commutative-ring-structure-iso-Ab :
     (x y : type-Ab B) → mul x y ＝ mul y x
-  commutative-mul-transport-commutative-ring-structure-iso-Ab x y = {!!}
+  commutative-mul-transport-commutative-ring-structure-iso-Ab = {!!}
 
   transport-commutative-ring-structure-iso-Ab :
     Commutative-Ring l2
-  pr1 transport-commutative-ring-structure-iso-Ab = {!!}
+  transport-commutative-ring-structure-iso-Ab = {!!}
 
   preserves-mul-transport-commutative-ring-structure-iso-Ab :
     preserves-mul-hom-Ab

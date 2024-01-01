@@ -77,39 +77,28 @@ module _
 
   naturality-family-of-equivalences-adjoint-pair-Large-Precategory :
     family-of-equivalences-adjoint-pair-Large-Precategory → UUω
-  naturality-family-of-equivalences-adjoint-pair-Large-Precategory e = {!!}
+  naturality-family-of-equivalences-adjoint-pair-Large-Precategory = {!!}
 
   record is-adjoint-pair-Large-Precategory : UUω
     where
     field
       equiv-is-adjoint-pair-Large-Precategory :
         family-of-equivalences-adjoint-pair-Large-Precategory
-      naturality-equiv-is-adjoint-pair-Large-Precategory :
-        naturality-family-of-equivalences-adjoint-pair-Large-Precategory
-          equiv-is-adjoint-pair-Large-Precategory
-
-  open is-adjoint-pair-Large-Precategory public
-
-  map-equiv-is-adjoint-pair-Large-Precategory :
-    (H : is-adjoint-pair-Large-Precategory) {l1 l2 : Level}
-    (X : obj-Large-Precategory C l1) (Y : obj-Large-Precategory D l2) →
-    hom-Large-Precategory D (obj-functor-Large-Precategory F X) Y →
-    hom-Large-Precategory C X (obj-functor-Large-Precategory G Y)
-  map-equiv-is-adjoint-pair-Large-Precategory H X Y = {!!}
+      equiv-is-adjoint-pair-Large-Precategory = {!!}
 
   inv-equiv-is-adjoint-pair-Large-Precategory :
     (H : is-adjoint-pair-Large-Precategory) {l1 l2 : Level}
     (X : obj-Large-Precategory C l1) (Y : obj-Large-Precategory D l2) →
     hom-Large-Precategory C X (obj-functor-Large-Precategory G Y) ≃
     hom-Large-Precategory D (obj-functor-Large-Precategory F X) Y
-  inv-equiv-is-adjoint-pair-Large-Precategory H X Y = {!!}
+  inv-equiv-is-adjoint-pair-Large-Precategory = {!!}
 
   map-inv-equiv-is-adjoint-pair-Large-Precategory :
     (H : is-adjoint-pair-Large-Precategory) {l1 l2 : Level}
     (X : obj-Large-Precategory C l1) (Y : obj-Large-Precategory D l2) →
     hom-Large-Precategory C X (obj-functor-Large-Precategory G Y) →
     hom-Large-Precategory D (obj-functor-Large-Precategory F X) Y
-  map-inv-equiv-is-adjoint-pair-Large-Precategory H X Y = {!!}
+  map-inv-equiv-is-adjoint-pair-Large-Precategory = {!!}
 
   naturality-inv-equiv-is-adjoint-pair-Large-Precategory :
     ( H : is-adjoint-pair-Large-Precategory)
@@ -300,7 +289,7 @@ module _
     hom-Large-Precategory D
       ( obj-left-adjoint-Adjunction-Large-Precategory X)
       ( Y)
-  inv-equiv-is-adjoint-pair-Adjunction-Large-Precategory X Y = {!!}
+  inv-equiv-is-adjoint-pair-Adjunction-Large-Precategory = {!!}
 
   map-inv-equiv-is-adjoint-pair-Adjunction-Large-Precategory :
     {l1 l2 : Level}
@@ -312,7 +301,7 @@ module _
     hom-Large-Precategory D
       ( obj-left-adjoint-Adjunction-Large-Precategory X)
       ( Y)
-  map-inv-equiv-is-adjoint-pair-Adjunction-Large-Precategory X Y = {!!}
+  map-inv-equiv-is-adjoint-pair-Adjunction-Large-Precategory = {!!}
 
   naturality-inv-equiv-is-adjoint-pair-Adjunction-Large-Precategory :
     {l1 l2 l3 l4 : Level}
@@ -356,7 +345,7 @@ module _
       ( comp-functor-Large-Precategory C D C
         ( right-adjoint-Adjunction-Large-Precategory FG)
         ( left-adjoint-Adjunction-Large-Precategory FG))
-  hom-unit-Adjunction-Large-Precategory X = {!!}
+  hom-unit-Adjunction-Large-Precategory = {!!}
 
   naturality-unit-Adjunction-Large-Precategory :
     naturality-family-of-morphisms-functor-Large-Precategory C C
@@ -365,7 +354,7 @@ module _
         ( right-adjoint-Adjunction-Large-Precategory FG)
         ( left-adjoint-Adjunction-Large-Precategory FG))
       ( hom-unit-Adjunction-Large-Precategory)
-  naturality-unit-Adjunction-Large-Precategory {X = X} {Y} f = {!!}
+  naturality-unit-Adjunction-Large-Precategory = {!!}
 
   unit-Adjunction-Large-Precategory :
     natural-transformation-Large-Precategory C C
@@ -373,8 +362,7 @@ module _
       ( comp-functor-Large-Precategory C D C
         ( right-adjoint-Adjunction-Large-Precategory FG)
         ( left-adjoint-Adjunction-Large-Precategory FG))
-  hom-natural-transformation-Large-Precategory
-    unit-Adjunction-Large-Precategory = {!!}
+  unit-Adjunction-Large-Precategory = {!!}
 ```
 
 ### The counit of an adjunction
@@ -395,7 +383,7 @@ module _
         ( left-adjoint-Adjunction-Large-Precategory FG)
         ( right-adjoint-Adjunction-Large-Precategory FG))
       ( id-functor-Large-Precategory D)
-  hom-counit-Adjunction-Large-Precategory Y = {!!}
+  hom-counit-Adjunction-Large-Precategory = {!!}
 
   naturality-counit-Adjunction-Large-Precategory :
     naturality-family-of-morphisms-functor-Large-Precategory D D
@@ -404,7 +392,7 @@ module _
         ( right-adjoint-Adjunction-Large-Precategory FG))
       ( id-functor-Large-Precategory D)
       ( hom-counit-Adjunction-Large-Precategory)
-  naturality-counit-Adjunction-Large-Precategory {X = X} {Y = Y} f = {!!}
+  naturality-counit-Adjunction-Large-Precategory = {!!}
 
   counit-Adjunction-Large-Precategory :
     natural-transformation-Large-Precategory D D
@@ -412,6 +400,5 @@ module _
         ( left-adjoint-Adjunction-Large-Precategory FG)
         ( right-adjoint-Adjunction-Large-Precategory FG))
       ( id-functor-Large-Precategory D)
-  hom-natural-transformation-Large-Precategory
-    counit-Adjunction-Large-Precategory = {!!}
+  counit-Adjunction-Large-Precategory = {!!}
 ```

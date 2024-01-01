@@ -73,7 +73,7 @@ module _
   map-equiv-sequential-diagram :
     ( n : ℕ) →
     family-sequential-diagram A n → family-sequential-diagram B n
-  map-equiv-sequential-diagram n = {!!}
+  map-equiv-sequential-diagram = {!!}
 
   naturality-equiv-sequential-diagram :
     naturality-hom-sequential-diagram A B map-equiv-sequential-diagram
@@ -85,7 +85,7 @@ module _
   is-equiv-map-equiv-sequential-diagram :
     ( n : ℕ) →
     is-equiv (map-equiv-sequential-diagram n)
-  is-equiv-map-equiv-sequential-diagram n = {!!}
+  is-equiv-map-equiv-sequential-diagram = {!!}
 ```
 
 ### The identity equivalence of sequential diagrams
@@ -111,7 +111,7 @@ module _
     equiv-sequential-diagram B C →
     equiv-sequential-diagram A B →
     equiv-sequential-diagram A C
-  pr1 (comp-equiv-sequential-diagram e e') n = {!!}
+  comp-equiv-sequential-diagram = {!!}
 ```
 
 ### Inverses of equivalences of sequential diagrams
@@ -145,7 +145,7 @@ an equivalence between them.
 equiv-eq-sequential-diagram :
   { l1 : Level} (A B : sequential-diagram l1) →
   A ＝ B → equiv-sequential-diagram A B
-equiv-eq-sequential-diagram A .A refl = {!!}
+equiv-eq-sequential-diagram = {!!}
 
 abstract
   is-torsorial-equiv-sequential-diagram :
@@ -156,18 +156,17 @@ abstract
   is-equiv-equiv-eq-sequential-diagram :
     { l1 : Level} (A B : sequential-diagram l1) →
     is-equiv (equiv-eq-sequential-diagram A B)
-  is-equiv-equiv-eq-sequential-diagram A = {!!}
+  is-equiv-equiv-eq-sequential-diagram = {!!}
 
 extensionality-sequential-diagram :
   { l1 : Level} (A B : sequential-diagram l1) →
   ( A ＝ B) ≃ equiv-sequential-diagram A B
-pr1 (extensionality-sequential-diagram A B) = {!!}
-pr2 (extensionality-sequential-diagram A B) = {!!}
+extensionality-sequential-diagram = {!!}
 
 eq-equiv-sequential-diagram :
   { l1 : Level} (A B : sequential-diagram l1) →
   equiv-sequential-diagram A B → (A ＝ B)
-eq-equiv-sequential-diagram A B = {!!}
+eq-equiv-sequential-diagram = {!!}
 ```
 
 ### Inverses of equivalences are inverses with respect to composition of morphisms of sequential diagrams
@@ -184,7 +183,7 @@ module _
         ( hom-equiv-sequential-diagram B e)
         ( hom-inv-equiv-sequential-diagram B e))
       ( id-hom-sequential-diagram B)
-  pr1 is-section-inv-equiv-sequential-diagram n = {!!}
+  is-section-inv-equiv-sequential-diagram = {!!}
 
   is-retraction-inv-equiv-sequential-diagram :
     htpy-hom-sequential-diagram A
@@ -192,5 +191,5 @@ module _
         ( hom-inv-equiv-sequential-diagram B e)
         ( hom-equiv-sequential-diagram B e))
       ( id-hom-sequential-diagram A)
-  pr1 is-retraction-inv-equiv-sequential-diagram n = {!!}
+  is-retraction-inv-equiv-sequential-diagram = {!!}
 ```

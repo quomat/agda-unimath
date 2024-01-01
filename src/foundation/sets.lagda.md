@@ -62,8 +62,7 @@ abstract
 
 Σ-Set :
   {l1 l2 : Level} (A : Set l1) (B : pr1 A → Set l2) → Set (l1 ⊔ l2)
-pr1 (Σ-Set A B) = {!!}
-pr2 (Σ-Set A B) = {!!}
+Σ-Set = {!!}
 ```
 
 ### Sets are closed under cartesian product types
@@ -77,7 +76,7 @@ abstract
 
 prod-Set :
   {l1 l2 : Level} (A : Set l1) (B : Set l2) → Set (l1 ⊔ l2)
-prod-Set A B = {!!}
+prod-Set = {!!}
 ```
 
 ### Being a set is a property
@@ -111,35 +110,33 @@ abstract
 
 type-Π-Set' :
   {l1 l2 : Level} (A : UU l1) (B : A → Set l2) → UU (l1 ⊔ l2)
-type-Π-Set' A B = {!!}
+type-Π-Set' = {!!}
 
 is-set-type-Π-Set' :
   {l1 l2 : Level} (A : UU l1) (B : A → Set l2) → is-set (type-Π-Set' A B)
-is-set-type-Π-Set' A B = {!!}
+is-set-type-Π-Set' = {!!}
 
 Π-Set' :
   {l1 l2 : Level} (A : UU l1) (B : A → Set l2) → Set (l1 ⊔ l2)
-pr1 (Π-Set' A B) = {!!}
-pr2 (Π-Set' A B) = {!!}
+Π-Set' = {!!}
 
 function-Set :
   {l1 l2 : Level} (A : UU l1) (B : Set l2) → Set (l1 ⊔ l2)
-function-Set A B = {!!}
+function-Set = {!!}
 
 type-Π-Set :
   {l1 l2 : Level} (A : Set l1) (B : type-Set A → Set l2) → UU (l1 ⊔ l2)
-type-Π-Set A B = {!!}
+type-Π-Set = {!!}
 
 is-set-type-Π-Set :
   {l1 l2 : Level} (A : Set l1) (B : type-Set A → Set l2) →
   is-set (type-Π-Set A B)
-is-set-type-Π-Set A B = {!!}
+is-set-type-Π-Set = {!!}
 
 Π-Set :
   {l1 l2 : Level} (A : Set l1) →
   (type-Set A → Set l2) → Set (l1 ⊔ l2)
-pr1 (Π-Set A B) = {!!}
-pr2 (Π-Set A B) = {!!}
+Π-Set = {!!}
 ```
 
 ### The type of functions into a set is a set
@@ -153,22 +150,21 @@ abstract
 
 hom-Set :
   {l1 l2 : Level} → Set l1 → Set l2 → UU (l1 ⊔ l2)
-hom-Set A B = {!!}
+hom-Set = {!!}
 
 is-set-hom-Set :
   {l1 l2 : Level} (A : Set l1) (B : Set l2) →
   is-set (hom-Set A B)
-is-set-hom-Set A B = {!!}
+is-set-hom-Set = {!!}
 
 hom-set-Set :
   {l1 l2 : Level} → Set l1 → Set l2 → Set (l1 ⊔ l2)
-pr1 (hom-set-Set A B) = {!!}
-pr2 (hom-set-Set A B) = {!!}
+hom-set-Set = {!!}
 
 precomp-Set :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} (f : A → B) (C : Set l3) →
   (B → type-Set C) → (A → type-Set C)
-precomp-Set f C = {!!}
+precomp-Set = {!!}
 ```
 
 ### The type of equivalences between sets is a set
@@ -248,11 +244,9 @@ module _
 ```agda
 is-trunc-is-set :
   {l : Level} (k : 𝕋) {A : UU l} → is-set A → is-trunc (succ-𝕋 (succ-𝕋 k)) A
-is-trunc-is-set neg-two-𝕋 is-set-A = {!!}
-is-trunc-is-set (succ-𝕋 k) is-set-A = {!!}
+is-trunc-is-set = {!!}
 
 set-Truncated-Type :
   {l : Level} (k : 𝕋) → Set l → Truncated-Type l (succ-𝕋 (succ-𝕋 k))
-pr1 (set-Truncated-Type k A) = {!!}
-pr2 (set-Truncated-Type k A) = {!!}
+set-Truncated-Type = {!!}
 ```

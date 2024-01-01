@@ -60,5 +60,5 @@ module _
   compute-map-conjugation-Concrete-Group :
     conjugation-Group' (group-Concrete-Group G) g ~
     map-conjugation-Concrete-Group
-  compute-map-conjugation-Concrete-Group x = {!!}
+  compute-map-conjugation-Concrete-Group = {!!}
 ```

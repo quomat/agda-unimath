@@ -33,5 +33,5 @@ module _
   dirichlet-convolution-arithmetic-functions-Ring :
     (f g : type-arithmetic-functions-Ring R) →
     type-arithmetic-functions-Ring R
-  dirichlet-convolution-arithmetic-functions-Ring f g (pair zero-ℕ H) = {!!}
+  dirichlet-convolution-arithmetic-functions-Ring = {!!}
 ```

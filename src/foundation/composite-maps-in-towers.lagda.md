@@ -32,8 +32,7 @@ Given a ([dependent](foundation.dependent-towers.md))
 ```agda
 comp-map-tower :
   {l : Level} (A : tower l) (n r : ℕ) → type-tower A (n +ℕ r) → type-tower A n
-comp-map-tower A n zero-ℕ = {!!}
-comp-map-tower A n (succ-ℕ r) = {!!}
+comp-map-tower = {!!}
 ```
 
 ### Composite maps in dependent towers
@@ -44,8 +43,7 @@ comp-map-dependent-tower :
   (n r : ℕ) (x : type-tower A (n +ℕ r)) →
   family-dependent-tower B (n +ℕ r) x →
   family-dependent-tower B n (comp-map-tower A n r x)
-comp-map-dependent-tower B n zero-ℕ x y = {!!}
-comp-map-dependent-tower {A = A} B n (succ-ℕ r) x y = {!!}
+comp-map-dependent-tower = {!!}
 ```
 
 ## Table of files about sequential limits

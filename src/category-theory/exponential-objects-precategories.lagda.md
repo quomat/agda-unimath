@@ -44,11 +44,11 @@ module _
     (x y e : obj-Precategory C) →
     hom-Precategory C (object-product-Precategory C p e x) y →
     UU (l1 ⊔ l2)
-  is-exponential-Precategory x y e ev = {!!}
+  is-exponential-Precategory = {!!}
 
   exponential-Precategory :
     obj-Precategory C → obj-Precategory C → UU (l1 ⊔ l2)
-  exponential-Precategory x y = {!!}
+  exponential-Precategory = {!!}
 
   has-all-exponentials-Precategory : UU (l1 ⊔ l2)
   has-all-exponentials-Precategory = {!!}
@@ -93,5 +93,5 @@ module _
         ( eval-exponential-Precategory)
         ( map-product-Precategory C p g (id-hom-Precategory C)) ＝ f) →
       morphism-into-exponential-Precategory ＝ g
-    is-unique-morphism-into-exponential-Precategory g q = {!!}
+    is-unique-morphism-into-exponential-Precategory = {!!}
 ```

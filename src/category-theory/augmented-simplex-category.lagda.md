@@ -47,18 +47,18 @@ obj-augmented-simplex-Category = {!!}
 
 hom-set-augmented-simplex-Category :
   obj-augmented-simplex-Category → obj-augmented-simplex-Category → Set lzero
-hom-set-augmented-simplex-Category n m = {!!}
+hom-set-augmented-simplex-Category = {!!}
 
 hom-augmented-simplex-Category :
   obj-augmented-simplex-Category → obj-augmented-simplex-Category → UU lzero
-hom-augmented-simplex-Category n m = {!!}
+hom-augmented-simplex-Category = {!!}
 
 comp-hom-augmented-simplex-Category :
   {n m r : obj-augmented-simplex-Category} →
   hom-augmented-simplex-Category m r →
   hom-augmented-simplex-Category n m →
   hom-augmented-simplex-Category n r
-comp-hom-augmented-simplex-Category {n} {m} {r} = {!!}
+comp-hom-augmented-simplex-Category = {!!}
 
 associative-comp-hom-augmented-simplex-Category :
   {n m r s : obj-augmented-simplex-Category}
@@ -71,7 +71,7 @@ associative-comp-hom-augmented-simplex-Category :
   comp-hom-augmented-simplex-Category {n} {r} {s}
     ( h)
     ( comp-hom-augmented-simplex-Category {n} {m} {r} g f)
-associative-comp-hom-augmented-simplex-Category {n} {m} {r} {s} = {!!}
+associative-comp-hom-augmented-simplex-Category = {!!}
 
 inv-associative-comp-hom-augmented-simplex-Category :
   {n m r s : obj-augmented-simplex-Category}
@@ -84,12 +84,12 @@ inv-associative-comp-hom-augmented-simplex-Category :
   comp-hom-augmented-simplex-Category {n} {m} {s}
     ( comp-hom-augmented-simplex-Category {m} {r} {s} h g)
     ( f)
-inv-associative-comp-hom-augmented-simplex-Category {n} {m} {r} {s} = {!!}
+inv-associative-comp-hom-augmented-simplex-Category = {!!}
 
 associative-composition-operation-augmented-simplex-Category :
   associative-composition-operation-binary-family-Set
     hom-set-augmented-simplex-Category
-pr1 associative-composition-operation-augmented-simplex-Category {n} {m} {r} = {!!}
+associative-composition-operation-augmented-simplex-Category = {!!}
 pr1
   ( pr2
       associative-composition-operation-augmented-simplex-Category
@@ -101,7 +101,7 @@ pr2
 
 id-hom-augmented-simplex-Category :
   (n : obj-augmented-simplex-Category) → hom-augmented-simplex-Category n n
-id-hom-augmented-simplex-Category n = {!!}
+id-hom-augmented-simplex-Category = {!!}
 
 left-unit-law-comp-hom-augmented-simplex-Category :
   {n m : obj-augmented-simplex-Category}
@@ -110,7 +110,7 @@ left-unit-law-comp-hom-augmented-simplex-Category :
     ( id-hom-augmented-simplex-Category m)
     ( f) ＝
   f
-left-unit-law-comp-hom-augmented-simplex-Category {n} {m} = {!!}
+left-unit-law-comp-hom-augmented-simplex-Category = {!!}
 
 right-unit-law-comp-hom-augmented-simplex-Category :
   {n m : obj-augmented-simplex-Category}
@@ -119,13 +119,13 @@ right-unit-law-comp-hom-augmented-simplex-Category :
     ( f)
     ( id-hom-augmented-simplex-Category n) ＝
   f
-right-unit-law-comp-hom-augmented-simplex-Category {n} {m} = {!!}
+right-unit-law-comp-hom-augmented-simplex-Category = {!!}
 
 is-unital-composition-operation-augmented-simplex-Category :
   is-unital-composition-operation-binary-family-Set
     ( hom-set-augmented-simplex-Category)
     ( λ {n} {m} {r} → comp-hom-augmented-simplex-Category {n} {m} {r})
-pr1 is-unital-composition-operation-augmented-simplex-Category = {!!}
+is-unital-composition-operation-augmented-simplex-Category = {!!}
 pr1 (pr2 is-unital-composition-operation-augmented-simplex-Category) {n} {m} = {!!}
 pr2 (pr2 is-unital-composition-operation-augmented-simplex-Category) {n} {m} = {!!}
 

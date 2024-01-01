@@ -58,25 +58,7 @@ module _
   data
     Precategory-Expr :
       obj-Precategory C → obj-Precategory C → UU (l1 ⊔ l2)
-    where
-    id-hom-Precategory-Expr :
-      {x : obj-Precategory C} → Precategory-Expr x x
-    hom-Precategory-Expr :
-      {x y : obj-Precategory C} →
-      hom-Precategory C x y → Precategory-Expr x y
-    comp-hom-Precategory-Expr :
-      {x y z : obj-Precategory C} →
-      Precategory-Expr y z → Precategory-Expr x y → Precategory-Expr x z
-```
-
-### The syntactic representation of a morphism
-
-```agda
-  in-Precategory-Expr :
-    {x y : obj-Precategory C} →
-    Precategory-Expr x y →
-    hom-Precategory C x y
-  in-Precategory-Expr id-hom-Precategory-Expr = {!!}
+    Precategory-Expr = {!!}
 ```
 
 ### The normalization of the syntactic representation of a morphism
@@ -87,7 +69,7 @@ module _
     Precategory-Expr y z →
     hom-Precategory C x y →
     hom-Precategory C x z
-  eval-Precategory-Expr id-hom-Precategory-Expr f = {!!}
+  eval-Precategory-Expr = {!!}
 
   is-sound-eval-Precategory-Expr :
     {x y z : obj-Precategory C}
@@ -95,20 +77,20 @@ module _
     (f : hom-Precategory C x y) →
     ( eval-Precategory-Expr e f) ＝
     ( comp-hom-Precategory C (in-Precategory-Expr e) f)
-  is-sound-eval-Precategory-Expr id-hom-Precategory-Expr f = {!!}
+  is-sound-eval-Precategory-Expr = {!!}
   is-sound-eval-Precategory-Expr (hom-Precategory-Expr f) g = {!!}
 
   normalize-Precategory-Expr :
     {x y : obj-Precategory C} →
     Precategory-Expr x y →
     hom-Precategory C x y
-  normalize-Precategory-Expr e = {!!}
+  normalize-Precategory-Expr = {!!}
 
   is-sound-normalize-Precategory-Expr :
     {x y : obj-Precategory C} →
     (e : Precategory-Expr x y) →
     normalize-Precategory-Expr e ＝ in-Precategory-Expr e
-  is-sound-normalize-Precategory-Expr e = {!!}
+  is-sound-normalize-Precategory-Expr = {!!}
 
   abstract
     solve-Precategory-Expr :
@@ -116,7 +98,7 @@ module _
       (f g : Precategory-Expr x y) →
       normalize-Precategory-Expr f ＝ normalize-Precategory-Expr g →
       in-Precategory-Expr f ＝ in-Precategory-Expr g
-    solve-Precategory-Expr f g p = {!!}
+    solve-Precategory-Expr = {!!}
 ```
 
 ## The macro definition

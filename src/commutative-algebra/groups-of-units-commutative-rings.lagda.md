@@ -130,7 +130,7 @@ module _
     (x y : type-group-of-units-Commutative-Ring) →
     mul-group-of-units-Commutative-Ring x y ＝
     mul-group-of-units-Commutative-Ring y x
-  commutative-mul-group-of-units-Commutative-Ring x y = {!!}
+  commutative-mul-group-of-units-Commutative-Ring = {!!}
 
   is-group-group-of-units-Commutative-Ring' :
     is-group'
@@ -159,7 +159,7 @@ module _
     mul-Commutative-Ring A
       ( inclusion-group-of-units-Commutative-Ring x)
       ( inclusion-group-of-units-Commutative-Ring y)
-  preserves-mul-inclusion-group-of-units-Commutative-Ring {x} {y} = {!!}
+  preserves-mul-inclusion-group-of-units-Commutative-Ring = {!!}
 
   hom-inclusion-group-of-units-Commutative-Ring :
     hom-Monoid monoid-group-of-units-Commutative-Ring
@@ -241,7 +241,7 @@ module _
       ( group-of-units-Commutative-Ring C)
       ( hom-group-of-units-hom-Commutative-Ring B C g)
       ( hom-group-of-units-hom-Commutative-Ring A B f)
-  preserves-comp-hom-group-of-units-hom-Commutative-Ring g f = {!!}
+  preserves-comp-hom-group-of-units-hom-Commutative-Ring = {!!}
 ```
 
 #### The functor `group-of-units-Commutative-Ring`
@@ -251,10 +251,7 @@ group-of-units-commutative-ring-functor-Large-Precategory :
   functor-Large-Precategory (λ l → l)
     ( Commutative-Ring-Large-Precategory)
     ( Ab-Large-Precategory)
-obj-functor-Large-Precategory
-  group-of-units-commutative-ring-functor-Large-Precategory = {!!}
-hom-functor-Large-Precategory
-  group-of-units-commutative-ring-functor-Large-Precategory {X = A} {Y = B} = {!!}
+group-of-units-commutative-ring-functor-Large-Precategory = {!!}
 preserves-comp-functor-Large-Precategory
   group-of-units-commutative-ring-functor-Large-Precategory
   {X = A}

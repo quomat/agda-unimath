@@ -55,7 +55,7 @@ module _
   compute-map-equiv-function-type :
     (h : A' → B') (x : A') →
     map-equiv-function-type h (map-equiv e x) ＝ map-equiv f (h x)
-  compute-map-equiv-function-type h x = {!!}
+  compute-map-equiv-function-type = {!!}
 
   is-equiv-map-equiv-function-type : is-equiv map-equiv-function-type
   is-equiv-map-equiv-function-type = {!!}
@@ -74,12 +74,12 @@ module _
   is-trunc-map-postcomp-is-trunc-map :
     is-trunc-map k f →
     {l3 : Level} (A : UU l3) → is-trunc-map k (postcomp A f)
-  is-trunc-map-postcomp-is-trunc-map is-trunc-f A = {!!}
+  is-trunc-map-postcomp-is-trunc-map = {!!}
 
   is-trunc-map-is-trunc-map-postcomp :
     ({l3 : Level} (A : UU l3) → is-trunc-map k (postcomp A f)) →
     is-trunc-map k f
-  is-trunc-map-is-trunc-map-postcomp is-trunc-postcomp-f = {!!}
+  is-trunc-map-is-trunc-map-postcomp = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} {Y : UU l2} (f : X → Y)
@@ -88,18 +88,17 @@ module _
   is-emb-postcomp-is-emb :
     is-emb f →
     {l3 : Level} (A : UU l3) → is-emb (postcomp A f)
-  is-emb-postcomp-is-emb is-emb-f A = {!!}
+  is-emb-postcomp-is-emb = {!!}
 
   is-emb-is-emb-postcomp :
     ({l3 : Level} (A : UU l3) → is-emb (postcomp A f)) →
     is-emb f
-  is-emb-is-emb-postcomp is-emb-postcomp-f = {!!}
+  is-emb-is-emb-postcomp = {!!}
 
 emb-postcomp :
   {l1 l2 l3 : Level} {X : UU l1} {Y : UU l2} (f : X ↪ Y) (A : UU l3) →
   (A → X) ↪ (A → Y)
-pr1 (emb-postcomp f A) = {!!}
-pr2 (emb-postcomp f A) = {!!}
+emb-postcomp = {!!}
 ```
 
 ## See also

@@ -47,7 +47,7 @@ module _
 
   is-proof-irrelevant-is-iso-Set :
     (f : hom-Set A B) → is-proof-irrelevant (is-iso-Set f)
-  pr1 (is-proof-irrelevant-is-iso-Set f H) = {!!}
+  is-proof-irrelevant-is-iso-Set = {!!}
 
   is-prop-is-iso-Set : (f : hom-Set A B) → is-prop (is-iso-Set f)
   is-prop-is-iso-Set f = {!!}

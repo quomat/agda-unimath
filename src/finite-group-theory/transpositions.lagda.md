@@ -77,11 +77,11 @@ module _
   map-transposition'' :
     Σ X (λ x → is-decidable (is-in-2-Element-Decidable-Subtype P x)) →
     Σ X (λ x → is-decidable (is-in-2-Element-Decidable-Subtype P x))
-  pr1 (map-transposition'' (pair x (inl p))) = {!!}
+  map-transposition'' = {!!}
 
   map-transposition' :
     (x : X) (d : is-decidable (is-in-2-Element-Decidable-Subtype P x)) → X
-  map-transposition' x (inl p) = {!!}
+  map-transposition' = {!!}
 
   map-transposition : X → X
   map-transposition x = {!!}
@@ -89,14 +89,14 @@ module _
   preserves-subtype-map-transposition :
     (x : X) → is-in-2-Element-Decidable-Subtype P x →
     is-in-2-Element-Decidable-Subtype P (map-transposition x)
-  preserves-subtype-map-transposition x p = {!!}
+  preserves-subtype-map-transposition = {!!}
 
   is-involution-map-transposition' :
     (x : X) (d : is-decidable (is-in-2-Element-Decidable-Subtype P x))
     (d' : is-decidable
           ( is-in-2-Element-Decidable-Subtype P (map-transposition' x d))) →
     Id (map-transposition' (map-transposition' x d) d') x
-  is-involution-map-transposition' x (inl p) (inl p') = {!!}
+  is-involution-map-transposition' = {!!}
 
   is-involution-map-transposition : is-involution map-transposition
   is-involution-map-transposition x = {!!}
@@ -119,7 +119,7 @@ module _
 
   is-prop-is-transposition-permutation :
     (f : X ≃ X) → is-prop (is-transposition-permutation f)
-  is-prop-is-transposition-permutation f = {!!}
+  is-prop-is-transposition-permutation = {!!}
 ```
 
 ### The standard transposition obtained from a pair of distinct points
@@ -154,9 +154,7 @@ module _
     is-fixed-point-standard-transposition :
       (z : X) → x ≠ z → y ≠ z →
       map-standard-transposition z ＝ z
-    is-fixed-point-standard-transposition z q r
-      with is-decidable-type-prop-standard-2-Element-Decidable-Subtype H p z
-    ... | inl (inl h) = {!!}
+    is-fixed-point-standard-transposition = {!!}
 ```
 
 ### The permutation obtained from a list of transpositions
@@ -177,7 +175,7 @@ module _
       ( ( permutation-list-transpositions l) ∘e
         ( permutation-list-transpositions l'))
       ( permutation-list-transpositions (concat-list l l'))
-  eq-concat-permutation-list-transpositions nil l' = {!!}
+  eq-concat-permutation-list-transpositions = {!!}
 ```
 
 ## Properties
@@ -218,7 +216,7 @@ module _
                     ( has-decidable-equality-count eX)
                     ( np))
                   ( Y))))
-  pr1 two-elements-transposition = {!!}
+  two-elements-transposition = {!!}
 
   element-two-elements-transposition : X
   element-two-elements-transposition = {!!}
@@ -244,7 +242,7 @@ module _
         ( Id (pr1 (pr2 two-elements-transposition)) y)) +
       ( ( Id (pr1 two-elements-transposition) y) ×
         ( Id (pr1 (pr2 two-elements-transposition)) x))
-    cases-eq-two-elements-transposition x y np p1 p2 (inl q) r s (inl u) = {!!}
+    cases-eq-two-elements-transposition = {!!}
 
     eq-two-elements-transposition :
       (x y : X) (np : x ≠ y) →
@@ -254,7 +252,7 @@ module _
         ( Id (pr1 (pr2 two-elements-transposition)) y)) +
       ( ( Id (pr1 two-elements-transposition) y) ×
         ( Id (pr1 (pr2 two-elements-transposition)) x))
-    eq-two-elements-transposition x y np p1 p2 = {!!}
+    eq-two-elements-transposition = {!!}
 ```
 
 #### The case of `Fin n`
@@ -325,7 +323,7 @@ module _
         ( λ P →
           has-cardinality 2
             ( Σ Y (type-Decidable-Prop ∘ P))))
-  pr1 (pr1 (transposition-conjugation-equiv (pair P H)) x) = {!!}
+  transposition-conjugation-equiv = {!!}
 
   abstract
     correct-transposition-conjugation-equiv :
@@ -336,7 +334,7 @@ module _
         ( transposition
           (transposition-conjugation-equiv t))
         ( (e ∘e (transposition t)) ∘e (inv-equiv e))
-    correct-transposition-conjugation-equiv t x = {!!}
+    correct-transposition-conjugation-equiv = {!!}
 
     correct-transposition-conjugation-equiv-list :
       (li : list
@@ -348,7 +346,7 @@ module _
         ( permutation-list-transpositions
           ( map-list transposition-conjugation-equiv li))
         ( (e ∘e (permutation-list-transpositions li)) ∘e (inv-equiv e))
-    correct-transposition-conjugation-equiv-list nil x = {!!}
+    correct-transposition-conjugation-equiv-list = {!!}
 ```
 
 ### For all `n : ℕ` and for each transposition of `Fin n`, there exists a matching transposition in `Fin (succ-ℕ n)`
@@ -364,9 +362,7 @@ Fin-succ-Fin-transposition :
       ( λ P →
         has-cardinality 2
           ( Σ (Fin (succ-ℕ n)) (type-Decidable-Prop ∘ P))))
-pr1 (Fin-succ-Fin-transposition n (pair P H)) (inl x) = {!!}
-pr1 (Fin-succ-Fin-transposition n (pair P H)) (inr x) = {!!}
-pr2 (Fin-succ-Fin-transposition n (pair P H)) = {!!}
+Fin-succ-Fin-transposition = {!!}
 
 correct-Fin-succ-Fin-transposition :
   (n : ℕ) →
@@ -379,11 +375,7 @@ correct-Fin-succ-Fin-transposition :
       ( map-equiv
         ( extend-equiv-Maybe (Fin-Set n))
         ( transposition t)))
-correct-Fin-succ-Fin-transposition n t (inl x) with
-  is-decidable-Decidable-Prop (pr1 t x)
-correct-Fin-succ-Fin-transposition n t (inl x) | inl p = {!!}
-correct-Fin-succ-Fin-transposition n t (inl x) | inr np = {!!}
-correct-Fin-succ-Fin-transposition n t (inr star) = {!!}
+correct-Fin-succ-Fin-transposition = {!!}
 
 correct-Fin-succ-Fin-transposition-list :
   (n : ℕ)
@@ -399,8 +391,7 @@ correct-Fin-succ-Fin-transposition-list :
       ( map-equiv
         ( extend-equiv-Maybe (Fin-Set n))
         ( permutation-list-transpositions l)))
-correct-Fin-succ-Fin-transposition-list n nil = {!!}
-correct-Fin-succ-Fin-transposition-list n (cons t l) x = {!!}
+correct-Fin-succ-Fin-transposition-list = {!!}
 ```
 
 ```agda
@@ -441,7 +432,7 @@ module _
       ( map-transposition
         ( map-equiv (equiv-universes-2-Element-Decidable-Subtype X l l') P)
         ( x))
-  cases-eq-equiv-universes-transposition P x (inl p) = {!!}
+  cases-eq-equiv-universes-transposition = {!!}
 
   eq-equiv-universes-transposition :
     ( P : 2-Element-Decidable-Subtype l X) →
@@ -449,7 +440,7 @@ module _
       ( transposition P)
       ( transposition
         ( map-equiv (equiv-universes-2-Element-Decidable-Subtype X l l') P))
-  eq-equiv-universes-transposition P = {!!}
+  eq-equiv-universes-transposition = {!!}
 
   eq-equiv-universes-transposition-list :
     ( li : list (2-Element-Decidable-Subtype l X)) →
@@ -459,7 +450,7 @@ module _
         ( map-list
           ( map-equiv (equiv-universes-2-Element-Decidable-Subtype X l l'))
           ( li)))
-  eq-equiv-universes-transposition-list nil = {!!}
+  eq-equiv-universes-transposition-list = {!!}
 ```
 
 ### Conjugate of a transposition is also a transposition
@@ -486,7 +477,7 @@ module _
           ( standard-transposition H npxy ∘e standard-transposition H npyz))
         w)
       ( map-equiv ( standard-transposition H npxz) w)
-  cases-htpy-conjugate-transposition x (inl refl) _ _ = {!!}
+  cases-htpy-conjugate-transposition = {!!}
 
   htpy-conjugate-transposition :
     htpy-equiv
@@ -494,5 +485,5 @@ module _
         ( standard-transposition H npxy ∘e
           standard-transposition H npyz))
       ( standard-transposition H npxz)
-  htpy-conjugate-transposition w = {!!}
+  htpy-conjugate-transposition = {!!}
 ```

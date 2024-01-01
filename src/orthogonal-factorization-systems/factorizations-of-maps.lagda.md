@@ -58,7 +58,7 @@ module _
   is-factorization :
     {l3 : Level} {X : UU l3} →
     (g : X → B) (h : A → X) → UU (l1 ⊔ l2)
-  is-factorization g h = {!!}
+  is-factorization = {!!}
 ```
 
 ### The type of factorizations of a map through a specified image/type
@@ -109,17 +109,17 @@ module _
   right-map-factorization :
     {l3 : Level} {f : A → B} (F : factorization l3 f) →
     image-factorization F → B
-  right-map-factorization F = {!!}
+  right-map-factorization = {!!}
 
   left-map-factorization :
     {l3 : Level} {f : A → B} (F : factorization l3 f) →
     A → image-factorization F
-  left-map-factorization F = {!!}
+  left-map-factorization = {!!}
 
   is-factorization-factorization :
     {l3 : Level} {f : A → B} (F : factorization l3 f) →
     is-factorization f (right-map-factorization F) (left-map-factorization F)
-  is-factorization-factorization F = {!!}
+  is-factorization-factorization = {!!}
 ```
 
 ## Properties
@@ -134,7 +134,7 @@ module _
   whisker-image-factorization-through :
     {l3 l4 : Level} {X : UU l3} {Y : UU l4} →
     X retract-of Y → factorization-through f X → factorization-through f Y
-  pr1 (whisker-image-factorization-through (s , r , h) (fr , fl , fH)) = {!!}
+  whisker-image-factorization-through = {!!}
 ```
 
 ### Characterization of identifications of factorizations through a type
@@ -150,40 +150,40 @@ module _
     right-map-factorization-through F ~ right-map-factorization-through E →
     left-map-factorization-through F ~ left-map-factorization-through E →
     UU (l1 ⊔ l2)
-  coherence-htpy-factorization-through F E R L = {!!}
+  coherence-htpy-factorization-through = {!!}
 
   htpy-factorization-through :
     (F E : factorization-through f X) → UU (l1 ⊔ l2 ⊔ l3)
-  htpy-factorization-through F E = {!!}
+  htpy-factorization-through = {!!}
 
   refl-htpy-factorization-through :
     (F : factorization-through f X) → htpy-factorization-through F F
-  pr1 (refl-htpy-factorization-through F) = {!!}
+  refl-htpy-factorization-through = {!!}
 
   htpy-eq-factorization-through :
     (F E : factorization-through f X) →
     F ＝ E → htpy-factorization-through F E
-  htpy-eq-factorization-through F .F refl = {!!}
+  htpy-eq-factorization-through = {!!}
 
   is-torsorial-htpy-factorization-through :
     (F : factorization-through f X) →
     is-torsorial (htpy-factorization-through F)
-  is-torsorial-htpy-factorization-through F = {!!}
+  is-torsorial-htpy-factorization-through = {!!}
 
   is-equiv-htpy-eq-factorization-through :
     (F E : factorization-through f X) →
     is-equiv (htpy-eq-factorization-through F E)
-  is-equiv-htpy-eq-factorization-through F = {!!}
+  is-equiv-htpy-eq-factorization-through = {!!}
 
   extensionality-factorization-through :
     (F E : factorization-through f X) →
     (F ＝ E) ≃ (htpy-factorization-through F E)
-  pr1 (extensionality-factorization-through F E) = {!!}
+  extensionality-factorization-through = {!!}
 
   eq-htpy-factorization-through :
     (F E : factorization-through f X) →
     htpy-factorization-through F E → F ＝ E
-  eq-htpy-factorization-through F E = {!!}
+  eq-htpy-factorization-through = {!!}
 ```
 
 ### Characterization of identifications of factorizations of a map in a universe level
@@ -195,33 +195,33 @@ module _
 
   equiv-factorization :
     (F E : factorization l3 f) → UU (l1 ⊔ l2 ⊔ l3)
-  equiv-factorization F E = {!!}
+  equiv-factorization = {!!}
 
   id-equiv-factorization :
     (F : factorization l3 f) → equiv-factorization F F
-  pr1 (id-equiv-factorization F) = {!!}
+  id-equiv-factorization = {!!}
 
   equiv-eq-factorization :
     (F E : factorization l3 f) →
     F ＝ E → equiv-factorization F E
-  equiv-eq-factorization F .F refl = {!!}
+  equiv-eq-factorization = {!!}
 
   is-torsorial-equiv-factorization :
     (F : factorization l3 f) →
     is-torsorial (equiv-factorization F)
-  is-torsorial-equiv-factorization F = {!!}
+  is-torsorial-equiv-factorization = {!!}
 
   is-equiv-equiv-eq-factorization :
     (F E : factorization l3 f) → is-equiv (equiv-eq-factorization F E)
-  is-equiv-equiv-eq-factorization F = {!!}
+  is-equiv-equiv-eq-factorization = {!!}
 
   extensionality-factorization :
     (F E : factorization l3 f) → (F ＝ E) ≃ (equiv-factorization F E)
-  pr1 (extensionality-factorization F E) = {!!}
+  extensionality-factorization = {!!}
 
   eq-equiv-factorization :
     (F E : factorization l3 f) → equiv-factorization F E → F ＝ E
-  eq-equiv-factorization F E = {!!}
+  eq-equiv-factorization = {!!}
 ```
 
 ## See also

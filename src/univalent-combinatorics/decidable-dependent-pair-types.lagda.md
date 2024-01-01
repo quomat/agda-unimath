@@ -42,9 +42,7 @@ that the dependent pair type `Σ A B` is decidable.
 is-decidable-Σ-Fin :
   {l : Level} (k : ℕ) {P : Fin k → UU l} →
   ((x : Fin k) → is-decidable (P x)) → is-decidable (Σ (Fin k) P)
-is-decidable-Σ-Fin zero-ℕ {P} d = {!!}
-is-decidable-Σ-Fin (succ-ℕ k) {P} d with d (inr star)
-... | inl p = {!!}
+is-decidable-Σ-Fin = {!!}
 ... | inr f = {!!}
 ```
 
@@ -54,5 +52,5 @@ is-decidable-Σ-Fin (succ-ℕ k) {P} d with d (inr star)
 is-decidable-Σ-count :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} → count A →
   ((x : A) → is-decidable (B x)) → is-decidable (Σ A B)
-is-decidable-Σ-count e d = {!!}
+is-decidable-Σ-count = {!!}
 ```

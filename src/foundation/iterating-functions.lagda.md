@@ -59,7 +59,7 @@ module _
   coherence-square-iterate :
     {f : A → B} (H : coherence-square-maps f s t f) →
     (n : ℕ) → coherence-square-maps f (iterate n s) (iterate n t) f
-  coherence-square-iterate {f} H zero-ℕ x = {!!}
+  coherence-square-iterate = {!!}
 ```
 
 ## Properties
@@ -73,7 +73,7 @@ module _
 
   iterate-succ-ℕ :
     (k : ℕ) (f : X → X) (x : X) → iterate (succ-ℕ k) f x ＝ iterate k f (f x)
-  iterate-succ-ℕ zero-ℕ f x = {!!}
+  iterate-succ-ℕ = {!!}
 
   reassociate-iterate : (k : ℕ) (f : X → X) → iterate k f ~ iterate' k f
   reassociate-iterate zero-ℕ f x = {!!}
@@ -89,32 +89,32 @@ module _
   iterate-add-ℕ :
     (k l : ℕ) (f : X → X) (x : X) →
     iterate (k +ℕ l) f x ＝ iterate k f (iterate l f x)
-  iterate-add-ℕ k zero-ℕ f x = {!!}
+  iterate-add-ℕ = {!!}
 
   left-unit-law-iterate-add-ℕ :
     (l : ℕ) (f : X → X) (x : X) →
     iterate-add-ℕ 0 l f x ＝ ap (λ t → iterate t f x) (left-unit-law-add-ℕ l)
-  left-unit-law-iterate-add-ℕ zero-ℕ f x = {!!}
+  left-unit-law-iterate-add-ℕ = {!!}
 
   right-unit-law-iterate-add-ℕ :
     (k : ℕ) (f : X → X) (x : X) →
     iterate-add-ℕ k 0 f x ＝ ap (λ t → iterate t f x) (right-unit-law-add-ℕ k)
-  right-unit-law-iterate-add-ℕ k f x = {!!}
+  right-unit-law-iterate-add-ℕ = {!!}
 
   iterate-iterate :
     (k l : ℕ) (f : X → X) (x : X) →
     iterate k f (iterate l f x) ＝ iterate l f (iterate k f x)
-  iterate-iterate k l f x = {!!}
+  iterate-iterate = {!!}
 
   iterate-mul-ℕ :
     (k l : ℕ) (f : X → X) (x : X) →
     iterate (k *ℕ l) f x ＝ iterate k (iterate l f) x
-  iterate-mul-ℕ zero-ℕ l f x = {!!}
+  iterate-mul-ℕ = {!!}
 
   iterate-exp-ℕ :
     (k l : ℕ) (f : X → X) (x : X) →
     iterate (exp-ℕ l k) f x ＝ iterate k (iterate l) f x
-  iterate-exp-ℕ zero-ℕ l f x = {!!}
+  iterate-exp-ℕ = {!!}
 
 module _
   {l : Level} (X : Set l)

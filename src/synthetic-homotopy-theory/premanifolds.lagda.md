@@ -54,7 +54,7 @@ module _
   mere-equiv-tangent-sphere-Premanifold :
     (x : type-Premanifold) →
     mere-equiv (sphere n) (type-tangent-sphere-Premanifold x)
-  mere-equiv-tangent-sphere-Premanifold x = {!!}
+  mere-equiv-tangent-sphere-Premanifold = {!!}
 
   complement-Premanifold : (x : type-Premanifold) → UU l
   complement-Premanifold x = {!!}
@@ -62,11 +62,11 @@ module _
   inclusion-tangent-sphere-Premanifold :
     (x : type-Premanifold) →
     type-tangent-sphere-Premanifold x → complement-Premanifold x
-  inclusion-tangent-sphere-Premanifold x = {!!}
+  inclusion-tangent-sphere-Premanifold = {!!}
 
   inclusion-complement-Premanifold :
     (x : type-Premanifold) → complement-Premanifold x → type-Premanifold
-  inclusion-complement-Premanifold x = {!!}
+  inclusion-complement-Premanifold = {!!}
 
   coherence-square-Premanifold :
     (x : type-Premanifold) →
@@ -75,7 +75,7 @@ module _
       ( terminal-map)
       ( inclusion-complement-Premanifold x)
       ( point x)
-  coherence-square-Premanifold x = {!!}
+  coherence-square-Premanifold = {!!}
 
   cocone-Premanifold :
     (x : type-Premanifold) →
@@ -83,7 +83,7 @@ module _
       ( terminal-map)
       ( inclusion-tangent-sphere-Premanifold x)
       ( type-Premanifold)
-  cocone-Premanifold x = {!!}
+  cocone-Premanifold = {!!}
 
   is-pushout-Premanifold :
     (x : type-Premanifold) →
@@ -91,5 +91,5 @@ module _
       ( terminal-map)
       ( inclusion-tangent-sphere-Premanifold x)
       ( cocone-Premanifold x)
-  is-pushout-Premanifold x = {!!}
+  is-pushout-Premanifold = {!!}
 ```

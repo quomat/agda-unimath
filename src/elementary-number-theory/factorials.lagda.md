@@ -34,21 +34,16 @@ factorial-ℕ (succ-ℕ m) = {!!}
 ```agda
 div-factorial-ℕ :
   (n x : ℕ) → leq-ℕ x n → is-nonzero-ℕ x → div-ℕ x (factorial-ℕ n)
-div-factorial-ℕ zero-ℕ zero-ℕ l H = {!!}
-div-factorial-ℕ (succ-ℕ n) x l H with
-  decide-leq-succ-ℕ x n l
-... | inl l' = {!!}
+div-factorial-ℕ = {!!}
 ... | inr refl = {!!}
 ```
 
 ```agda
 is-nonzero-factorial-ℕ :
   (x : ℕ) → is-nonzero-ℕ (factorial-ℕ x)
-is-nonzero-factorial-ℕ zero-ℕ = {!!}
-is-nonzero-factorial-ℕ (succ-ℕ x) = {!!}
+is-nonzero-factorial-ℕ = {!!}
 
 leq-factorial-ℕ :
   (n : ℕ) → leq-ℕ n (factorial-ℕ n)
-leq-factorial-ℕ zero-ℕ = {!!}
-leq-factorial-ℕ (succ-ℕ n) = {!!}
+leq-factorial-ℕ = {!!}
 ```

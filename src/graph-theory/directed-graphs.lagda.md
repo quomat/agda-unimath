@@ -66,22 +66,22 @@ module _
 
   target-total-edge-Directed-Graph :
     total-edge-Directed-Graph → vertex-Directed-Graph
-  target-total-edge-Directed-Graph e = {!!}
+  target-total-edge-Directed-Graph = {!!}
 
   edge-total-edge-Directed-Graph :
     (e : total-edge-Directed-Graph) →
     edge-Directed-Graph
       ( source-total-edge-Directed-Graph e)
       ( target-total-edge-Directed-Graph e)
-  edge-total-edge-Directed-Graph e = {!!}
+  edge-total-edge-Directed-Graph = {!!}
 
   direct-predecessor-Directed-Graph :
     vertex-Directed-Graph → UU (l1 ⊔ l2)
-  direct-predecessor-Directed-Graph x = {!!}
+  direct-predecessor-Directed-Graph = {!!}
 
   direct-successor-Directed-Graph :
     vertex-Directed-Graph → UU (l1 ⊔ l2)
-  direct-successor-Directed-Graph x = {!!}
+  direct-successor-Directed-Graph = {!!}
 ```
 
 ### Alternative definition
@@ -115,11 +115,11 @@ module equiv {l1 l2 : Level} where
 
   Directed-Graph-to-Directed-Graph' :
     Directed-Graph l1 l2 -> Directed-Graph' l1 (l1 ⊔ l2)
-  pr1 (Directed-Graph-to-Directed-Graph' G) = {!!}
+  Directed-Graph-to-Directed-Graph' = {!!}
 
   Directed-Graph'-to-Directed-Graph :
     Directed-Graph' l1 l2 -> Directed-Graph l1 (l1 ⊔ l2)
-  pr1 (Directed-Graph'-to-Directed-Graph (V , E , st , tg)) = {!!}
+  Directed-Graph'-to-Directed-Graph = {!!}
 ```
 
 ## External links

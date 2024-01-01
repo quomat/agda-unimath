@@ -42,11 +42,11 @@ numbers `m` and `n` such that `a m = {!!}
 is-repetition-of-values-sequence :
   {l : Level} {A : UU l} (a : sequence A) (p : pair-of-distinct-elements ℕ) →
   UU l
-is-repetition-of-values-sequence a p = {!!}
+is-repetition-of-values-sequence = {!!}
 
 repetition-of-values-sequence :
   {l : Level} {A : UU l} → sequence A → UU l
-repetition-of-values-sequence a = {!!}
+repetition-of-values-sequence = {!!}
 
 module _
   {l : Level} {A : UU l} (a : sequence A) (r : repetition-of-values-sequence a)
@@ -77,23 +77,23 @@ module _
 ```agda
 is-ordered-repetition-of-values-ℕ :
   {l1 : Level} {A : UU l1} (f : ℕ → A) (x : strictly-ordered-pair-ℕ) → UU l1
-is-ordered-repetition-of-values-ℕ f x = {!!}
+is-ordered-repetition-of-values-ℕ = {!!}
 
 ordered-repetition-of-values-ℕ :
   {l1 : Level} {A : UU l1} (f : ℕ → A) → UU l1
-ordered-repetition-of-values-ℕ f = {!!}
+ordered-repetition-of-values-ℕ = {!!}
 
 ordered-repetition-of-values-comp-ℕ :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (g : A → B) {f : ℕ → A} →
   ordered-repetition-of-values-ℕ f →
   ordered-repetition-of-values-ℕ (g ∘ f)
-ordered-repetition-of-values-comp-ℕ g ((a , b , H) , p) = {!!}
+ordered-repetition-of-values-comp-ℕ = {!!}
 
 ordered-repetition-of-values-right-factor-ℕ :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} {g : A → B} {f : ℕ → A} →
   is-emb g → ordered-repetition-of-values-ℕ (g ∘ f) →
   ordered-repetition-of-values-ℕ f
-ordered-repetition-of-values-right-factor-ℕ E ((a , b , H) , p) = {!!}
+ordered-repetition-of-values-right-factor-ℕ = {!!}
 ```
 
 ### Any repetition of values in a sequence can be ordered
@@ -106,9 +106,9 @@ module _
   ordered-repetition-of-values-repetition-of-values-ℕ' :
     (f : ℕ → A) (a b : ℕ) → a ≠ b → f a ＝ f b →
     ordered-repetition-of-values-ℕ f
-  ordered-repetition-of-values-repetition-of-values-ℕ' f zero-ℕ zero-ℕ H p = {!!}
+  ordered-repetition-of-values-repetition-of-values-ℕ' = {!!}
 
   ordered-repetition-of-values-repetition-of-values-ℕ :
     (f : ℕ → A) → repetition-of-values f → ordered-repetition-of-values-ℕ f
-  ordered-repetition-of-values-repetition-of-values-ℕ f ((a , b , H) , p) = {!!}
+  ordered-repetition-of-values-repetition-of-values-ℕ = {!!}
 ```

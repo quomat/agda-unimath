@@ -271,7 +271,7 @@ module _
     (k : ℤ) (x y : type-Ring R) →
     mul-Ring R (integer-multiple-Ring R k x) y ＝
     integer-multiple-Ring R k (mul-Ring R x y)
-  left-integer-multiple-law-mul-Ring (inl zero-ℕ) x y = {!!}
+  left-integer-multiple-law-mul-Ring = {!!}
   left-integer-multiple-law-mul-Ring (inl (succ-ℕ k)) x y = {!!}
   left-integer-multiple-law-mul-Ring (inr (inl _)) x y = {!!}
   left-integer-multiple-law-mul-Ring (inr (inr zero-ℕ)) x y = {!!}
@@ -281,7 +281,7 @@ module _
     (k : ℤ) (x y : type-Ring R) →
     mul-Ring R x (integer-multiple-Ring R k y) ＝
     integer-multiple-Ring R k (mul-Ring R x y)
-  right-integer-multiple-law-mul-Ring (inl zero-ℕ) x y = {!!}
+  right-integer-multiple-law-mul-Ring = {!!}
   right-integer-multiple-law-mul-Ring (inl (succ-ℕ k)) x y = {!!}
   right-integer-multiple-law-mul-Ring (inr (inl _)) x y = {!!}
   right-integer-multiple-law-mul-Ring (inr (inr zero-ℕ)) x y = {!!}
@@ -298,7 +298,7 @@ module _
   commute-integer-multiple-Ring :
     (k : ℤ) {x y : type-Ring R} → commute-Ring R x y →
     commute-Ring R x (integer-multiple-Ring R k y)
-  commute-integer-multiple-Ring (inl zero-ℕ) H = {!!}
+  commute-integer-multiple-Ring = {!!}
   commute-integer-multiple-Ring (inl (succ-ℕ k)) H = {!!}
   commute-integer-multiple-Ring (inr (inl _)) {x} H = {!!}
   commute-integer-multiple-Ring (inr (inr zero-ℕ)) H = {!!}
@@ -307,7 +307,7 @@ module _
   commute-integer-multiples-Ring :
     (k l : ℤ) {x y : type-Ring R} → commute-Ring R x y →
     commute-Ring R (integer-multiple-Ring R k x) (integer-multiple-Ring R l y)
-  commute-integer-multiples-Ring (inl zero-ℕ) l H = {!!}
+  commute-integer-multiples-Ring = {!!}
   commute-integer-multiples-Ring (inl (succ-ℕ k)) l H = {!!}
   commute-integer-multiples-Ring (inr (inl _)) l {x} H = {!!}
   commute-integer-multiples-Ring (inr (inr zero-ℕ)) l H = {!!}
@@ -316,7 +316,7 @@ module _
   commute-integer-multiples-diagonal-Ring :
     (k l : ℤ) {x : type-Ring R} →
     commute-Ring R (integer-multiple-Ring R k x) (integer-multiple-Ring R l x)
-  commute-integer-multiples-diagonal-Ring k l = {!!}
+  commute-integer-multiples-diagonal-Ring = {!!}
 ```
 
 ### For each integer `k`, the operation of taking `k`-multiples is a group homomorphism
@@ -372,7 +372,7 @@ module _
     ( map-hom-Ring R S f x ＝ map-hom-Ring R S g x) →
     map-hom-Ring R S f (integer-multiple-Ring R k x) ＝
     map-hom-Ring R S g (integer-multiple-Ring R k x)
-  eq-integer-multiple-hom-Ring g = {!!}
+  eq-integer-multiple-hom-Ring = {!!}
 ```
 
 ### Ring homomorphisms preserve integer multiples of `1`
@@ -386,5 +386,5 @@ module _
     (k : ℤ) →
     map-hom-Ring R S f (integer-multiple-Ring R k (one-Ring R)) ＝
     integer-multiple-Ring S k (one-Ring S)
-  preserves-integer-multiple-one-hom-Ring k = {!!}
+  preserves-integer-multiple-one-hom-Ring = {!!}
 ```

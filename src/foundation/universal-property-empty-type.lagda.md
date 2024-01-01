@@ -42,29 +42,29 @@ module _
   universal-property-dependent-universal-property-empty :
     ({l : Level} → dependent-universal-property-empty l) →
     ({l : Level} → universal-property-empty l)
-  universal-property-dependent-universal-property-empty dup-empty {l} X = {!!}
+  universal-property-dependent-universal-property-empty = {!!}
 
   is-empty-universal-property-empty :
     ({l : Level} → universal-property-empty l) → is-empty A
-  is-empty-universal-property-empty up-empty = {!!}
+  is-empty-universal-property-empty = {!!}
 
   dependent-universal-property-empty-is-empty :
     {l : Level} (H : is-empty A) → dependent-universal-property-empty l
-  pr1 (dependent-universal-property-empty-is-empty {l} H P) x = {!!}
+  dependent-universal-property-empty-is-empty = {!!}
 
   universal-property-empty-is-empty :
     {l : Level} (H : is-empty A) → universal-property-empty l
-  universal-property-empty-is-empty {l} H = {!!}
+  universal-property-empty-is-empty = {!!}
 
 abstract
   dependent-universal-property-empty' :
     {l : Level} (P : empty → UU l) → is-contr ((x : empty) → P x)
-  pr1 (dependent-universal-property-empty' P) = {!!}
+  dependent-universal-property-empty' = {!!}
 
 abstract
   universal-property-empty' :
     {l : Level} (X : UU l) → is-contr (empty → X)
-  universal-property-empty' X = {!!}
+  universal-property-empty' = {!!}
 
 abstract
   uniqueness-empty :

@@ -86,7 +86,7 @@ module _
 
   transpose-hom-arrow :
     hom-arrow (map-domain-hom-arrow f g α) (map-codomain-hom-arrow f g α)
-  pr1 transpose-hom-arrow = {!!}
+  transpose-hom-arrow = {!!}
 ```
 
 ### The identity morphism of arrows
@@ -172,11 +172,11 @@ module _
     (I : map-domain-hom-arrow f g α ~ map-domain-hom-arrow f g β)
     (J : map-codomain-hom-arrow f g α ~ map-codomain-hom-arrow f g β) →
     UU (l1 ⊔ l4)
-  coherence-htpy-hom-arrow β I J = {!!}
+  coherence-htpy-hom-arrow = {!!}
 
   htpy-hom-arrow :
     (β : hom-arrow f g) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  htpy-hom-arrow β = {!!}
+  htpy-hom-arrow = {!!}
 
   module _
     (β : hom-arrow f g) (η : htpy-hom-arrow β)
@@ -214,11 +214,11 @@ module _
 
   extensionality-hom-arrow :
     (β : hom-arrow f g) → (α ＝ β) ≃ htpy-hom-arrow β
-  pr1 (extensionality-hom-arrow β) = {!!}
+  extensionality-hom-arrow = {!!}
 
   eq-htpy-hom-arrow :
     (β : hom-arrow f g) → htpy-hom-arrow β → α ＝ β
-  eq-htpy-hom-arrow β = {!!}
+  eq-htpy-hom-arrow = {!!}
 ```
 
 ### Concatenation of homotopies of morphisms of arrows
@@ -242,7 +242,7 @@ module _
     coherence-htpy-hom-arrow f g α γ
       ( htpy-domain-concat-htpy-hom-arrow)
       ( htpy-codomain-concat-htpy-hom-arrow)
-  coh-concat-htpy-hom-arrow a = {!!}
+  coh-concat-htpy-hom-arrow = {!!}
 
   concat-htpy-hom-arrow : htpy-hom-arrow f g α γ
   pr1 concat-htpy-hom-arrow = {!!}
@@ -268,7 +268,7 @@ module _
     coherence-htpy-hom-arrow f g β α
       ( htpy-domain-inv-htpy-hom-arrow)
       ( htpy-codomain-inv-htpy-hom-arrow)
-  coh-inv-htpy-hom-arrow a = {!!}
+  coh-inv-htpy-hom-arrow = {!!}
 
   inv-htpy-hom-arrow : htpy-hom-arrow f g β α
   pr1 inv-htpy-hom-arrow = {!!}
@@ -301,13 +301,13 @@ module _
       ( comp-hom-arrow f g h γ β)
       ( htpy-domain-left-whisker-htpy-hom-arrow)
       ( htpy-codomain-left-whisker-htpy-hom-arrow)
-  coh-left-whisker-htpy-hom-arrow a = {!!}
+  coh-left-whisker-htpy-hom-arrow = {!!}
 
   left-whisker-htpy-hom-arrow :
     htpy-hom-arrow f h
       ( comp-hom-arrow f g h γ α)
       ( comp-hom-arrow f g h γ β)
-  pr1 left-whisker-htpy-hom-arrow = {!!}
+  left-whisker-htpy-hom-arrow = {!!}
 ```
 
 #### Right whiskering
@@ -343,13 +343,13 @@ module _
     htpy-hom-arrow f i
       ( comp-hom-arrow f g i (comp-hom-arrow g h i γ β) α)
       ( comp-hom-arrow f h i γ (comp-hom-arrow f g h β α))
-  pr1 assoc-comp-hom-arrow = {!!}
+  assoc-comp-hom-arrow = {!!}
 
   inv-assoc-comp-hom-arrow :
     htpy-hom-arrow f i
       ( comp-hom-arrow f h i γ (comp-hom-arrow f g h β α))
       ( comp-hom-arrow f g i (comp-hom-arrow g h i γ β) α)
-  pr1 inv-assoc-comp-hom-arrow = {!!}
+  inv-assoc-comp-hom-arrow = {!!}
 ```
 
 ### The left unit law for composition of morphisms of arrows
@@ -364,7 +364,7 @@ module _
     htpy-hom-arrow f g
       ( comp-hom-arrow f g g id-hom-arrow α)
       ( α)
-  pr1 left-unit-law-comp-hom-arrow = {!!}
+  left-unit-law-comp-hom-arrow = {!!}
 ```
 
 ### The right unit law for composition of morphisms of arrows
@@ -379,7 +379,7 @@ module _
     htpy-hom-arrow f g
       ( comp-hom-arrow f f g α id-hom-arrow)
       ( α)
-  pr1 right-unit-law-comp-hom-arrow = {!!}
+  right-unit-law-comp-hom-arrow = {!!}
 ```
 
 ## See also

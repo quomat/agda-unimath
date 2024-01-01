@@ -90,11 +90,11 @@ module _
 
   neg-is-trivial-is-not-trivial-Group :
     is-not-trivial-Group G → ¬ (is-trivial-Group G)
-  neg-is-trivial-is-not-trivial-Group H p = {!!}
+  neg-is-trivial-is-not-trivial-Group = {!!}
 
   is-not-trivial-neg-is-trivial-Group :
     ¬ (is-trivial-Group G) → is-not-trivial-Group G
-  is-not-trivial-neg-is-trivial-Group H p = {!!}
+  is-not-trivial-neg-is-trivial-Group = {!!}
 ```
 
 ### The map `subgroup-Prop G : Prop → Subgroup G` is an embedding for any nontrivial group

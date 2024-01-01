@@ -59,5 +59,5 @@ module _
 
   is-mono-iso-Large-Precategory :
     is-mono-Large-Precategory C l3 X Y (hom-iso-Large-Precategory C f)
-  is-mono-iso-Large-Precategory Z = {!!}
+  is-mono-iso-Large-Precategory = {!!}
 ```

@@ -39,11 +39,11 @@ module _
 
   is-locally-finite-multisubset :
     (U : Set l1) → multisubset U → UU (l1 ⊔ l2)
-  is-locally-finite-multisubset U (pair B f) = {!!}
+  is-locally-finite-multisubset = {!!}
 
   is-finite-multisubset :
     (U : Set l1) → multisubset U → UU (l1 ⊔ l2)
-  is-finite-multisubset U (pair B f) = {!!}
+  is-finite-multisubset = {!!}
 
 module _
   {l1 : Level}
@@ -54,9 +54,9 @@ module _
 
   support-locally-finite-multisubset :
     (U : Set l1) → locally-finite-multisubset U → UU l1
-  support-locally-finite-multisubset U μ = {!!}
+  support-locally-finite-multisubset = {!!}
 
   is-finite-locally-finite-multisubset :
     (U : Set l1) → locally-finite-multisubset U → UU l1
-  is-finite-locally-finite-multisubset U μ = {!!}
+  is-finite-locally-finite-multisubset = {!!}
 ```

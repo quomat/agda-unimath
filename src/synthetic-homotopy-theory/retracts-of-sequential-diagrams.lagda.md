@@ -78,7 +78,7 @@ module _
 retract-sequential-diagram :
   {l1 l2 : Level} (B : sequential-diagram l2) (A : sequential-diagram l1) →
   UU (l1 ⊔ l2)
-retract-sequential-diagram B A = {!!}
+retract-sequential-diagram = {!!}
 ```
 
 ### The higher coherence in the definition of retracts of sequential diagrams
@@ -160,7 +160,7 @@ module _
     (n : ℕ) →
     ( family-sequential-diagram A n) retract-of
     ( family-sequential-diagram B n)
-  pr1 (retract-family-retract-sequential-diagram n) = {!!}
+  retract-family-retract-sequential-diagram = {!!}
 
   coh-retract-sequential-diagram :
     coherence-retract-sequential-diagram A B

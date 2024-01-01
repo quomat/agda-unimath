@@ -91,13 +91,13 @@ module _
 
   map-swap-two-last-elements-transposition-Fin :
     Fin (succ-ℕ (succ-ℕ n)) → Fin (succ-ℕ (succ-ℕ n))
-  map-swap-two-last-elements-transposition-Fin (inl (inl x)) = {!!}
+  map-swap-two-last-elements-transposition-Fin = {!!}
 
   is-involution-map-swap-two-last-elements-transposition-Fin :
     ( map-swap-two-last-elements-transposition-Fin ∘
       map-swap-two-last-elements-transposition-Fin) ~
     id
-  is-involution-map-swap-two-last-elements-transposition-Fin (inl (inl x)) = {!!}
+  is-involution-map-swap-two-last-elements-transposition-Fin = {!!}
 
   swap-two-last-elements-transposition-Fin : Permutation (succ-ℕ (succ-ℕ n))
   pr1 swap-two-last-elements-transposition-Fin = {!!}
@@ -117,7 +117,7 @@ We show that this definiton is an instance of the previous one.
       ( neg-one-Fin (succ-ℕ n))
       ( neq-inl-inr)
       ( x)
-  cases-htpy-swap-two-last-elements-transposition-Fin _ (inl refl) _ = {!!}
+  cases-htpy-swap-two-last-elements-transposition-Fin = {!!}
 
   htpy-swap-two-last-elements-transposition-Fin :
     htpy-equiv
@@ -127,7 +127,7 @@ We show that this definiton is an instance of the previous one.
         ( neg-two-Fin (succ-ℕ n))
         ( neg-one-Fin (succ-ℕ n))
         ( neq-inl-inr))
-  htpy-swap-two-last-elements-transposition-Fin x = {!!}
+  htpy-swap-two-last-elements-transposition-Fin = {!!}
 ```
 
 ### Transpositions of a pair of adjacent elements in `Fin (succ-ℕ n)`
@@ -138,13 +138,12 @@ We show that this definiton is an instance of the previous one.
 adjacent-transposition-Fin :
   (n : ℕ) → (k : Fin n) →
   Permutation (succ-ℕ n)
-adjacent-transposition-Fin (succ-ℕ n) (inl x) = {!!}
-adjacent-transposition-Fin (succ-ℕ n) (inr x) = {!!}
+adjacent-transposition-Fin = {!!}
 
 map-adjacent-transposition-Fin :
   (n : ℕ) → (k : Fin n) →
   (Fin (succ-ℕ n) → Fin (succ-ℕ n))
-map-adjacent-transposition-Fin n k = {!!}
+map-adjacent-transposition-Fin = {!!}
 ```
 
 #### `adjacent-transposition-Fin` is an instance of the definiton `transposition-Fin`
@@ -162,7 +161,7 @@ cases-htpy-map-coprod-map-transposition-id-Fin :
     ( inl-Fin n l)
     ( neq ∘ is-injective-inl-Fin n)
     ( x)
-cases-htpy-map-coprod-map-transposition-id-Fin n k l neq x (inl refl) _ = {!!}
+cases-htpy-map-coprod-map-transposition-id-Fin = {!!}
 cases-htpy-map-coprod-map-transposition-id-Fin
   ( n)
   ( k)
@@ -197,7 +196,7 @@ htpy-map-coprod-map-transposition-id-Fin :
       ( inl-Fin n k)
       ( inl-Fin n l)
       ( neq ∘ is-injective-inl-Fin n))
-htpy-map-coprod-map-transposition-id-Fin n k l neq x = {!!}
+htpy-map-coprod-map-transposition-id-Fin = {!!}
 
 helper-htpy-same-transposition-Fin :
   (n : ℕ) (k l : Fin n) (neq1 : k ≠ l) (neq2 : k ≠ l) →
@@ -205,14 +204,14 @@ helper-htpy-same-transposition-Fin :
   htpy-equiv
     ( transposition-Fin n k l neq1)
     ( transposition-Fin n k l neq2)
-helper-htpy-same-transposition-Fin n k l neq1 .neq1 refl = {!!}
+helper-htpy-same-transposition-Fin = {!!}
 
 htpy-same-transposition-Fin :
   {n : ℕ} {k l : Fin n} {neq1 : k ≠ l} {neq2 : k ≠ l} →
   htpy-equiv
     ( transposition-Fin n k l neq1)
     ( transposition-Fin n k l neq2)
-htpy-same-transposition-Fin {n} {k} {l} {neq1} {neq2} = {!!}
+htpy-same-transposition-Fin = {!!}
 
 htpy-adjacent-transposition-Fin :
   (n : ℕ) → (k : Fin n) →
@@ -223,8 +222,7 @@ htpy-adjacent-transposition-Fin :
       ( inl-Fin n k)
       ( inr-Fin n k)
       ( neq-inl-Fin-inr-Fin n k))
-htpy-adjacent-transposition-Fin (succ-ℕ n) (inl x) = {!!}
-htpy-adjacent-transposition-Fin (succ-ℕ n) (inr star) = {!!}
+htpy-adjacent-transposition-Fin = {!!}
 ```
 
 ## Properties
@@ -267,7 +265,7 @@ htpy-transposition-Fin-transposition-swap-Fin :
   htpy-equiv
     ( transposition-Fin n i j neq)
     ( transposition-Fin n j i (neq ∘ inv))
-htpy-transposition-Fin-transposition-swap-Fin n i j neq x = {!!}
+htpy-transposition-Fin-transposition-swap-Fin = {!!}
 ```
 
 ### The conjugate of a transposition is also a transposition
@@ -283,18 +281,18 @@ htpy-conjugate-transposition-Fin :
       ( transposition-Fin n x y neqxy ∘e
         transposition-Fin n y z neqyz))
     ( transposition-Fin n x z neqxz)
-htpy-conjugate-transposition-Fin n x y z neqxy neqyz neqxz = {!!}
+htpy-conjugate-transposition-Fin = {!!}
 
 private
   htpy-whisk-conjugate :
     {l1 : Level} {A : UU l1} {f f' : A → A} (g : A → A) →
     (f ~ f') → (f ∘ (g ∘ f)) ~ (f' ∘ (g ∘ f'))
-  htpy-whisk-conjugate {f = f} {f' = f'} g H x = {!!}
+  htpy-whisk-conjugate = {!!}
 
   htpy-whisk :
     {l : Level} {A : UU l} (f : A → A) {g g' : A → A} →
     g ~ g' → (f ∘ (g ∘ f)) ~ (f ∘ (g' ∘ f))
-  htpy-whisk f H x = {!!}
+  htpy-whisk = {!!}
 
 htpy-conjugate-transposition-swap-two-last-elements-transposition-Fin :
   (n : ℕ) (x : Fin (succ-ℕ n)) (neq : x ≠ neg-one-Fin n) →
@@ -311,7 +309,7 @@ htpy-conjugate-transposition-swap-two-last-elements-transposition-Fin :
       ( inl-Fin (succ-ℕ n) x)
       ( neg-one-Fin (succ-ℕ n))
       ( neq-inl-inr))
-htpy-conjugate-transposition-swap-two-last-elements-transposition-Fin n x neq = {!!}
+htpy-conjugate-transposition-swap-two-last-elements-transposition-Fin = {!!}
 
 htpy-conjugate-transposition-swap-two-last-elements-transposition-Fin' :
   (n : ℕ) (x : Fin (succ-ℕ n)) (neq : x ≠ neg-one-Fin n) →
@@ -328,7 +326,7 @@ htpy-conjugate-transposition-swap-two-last-elements-transposition-Fin' :
       ( neg-one-Fin (succ-ℕ n))
       ( inl-Fin (succ-ℕ n) x)
       ( neq-inr-inl))
-htpy-conjugate-transposition-swap-two-last-elements-transposition-Fin' n x neq = {!!}
+htpy-conjugate-transposition-swap-two-last-elements-transposition-Fin' = {!!}
 ```
 
 ### Every transposition is the composition of a list of adjacent transpositions
@@ -337,10 +335,7 @@ htpy-conjugate-transposition-swap-two-last-elements-transposition-Fin' n x neq =
 list-adjacent-transpositions-transposition-Fin :
   (n : ℕ) → (i j : Fin (succ-ℕ n)) →
   list (Fin n)
-list-adjacent-transpositions-transposition-Fin n (inr _) (inr _) = {!!}
-list-adjacent-transpositions-transposition-Fin 0 (inl _) (inr _) = {!!}
-list-adjacent-transpositions-transposition-Fin 0 (inl _) (inl _) = {!!}
-list-adjacent-transpositions-transposition-Fin 0 (inr _) (inl _) = {!!}
+list-adjacent-transpositions-transposition-Fin = {!!}
 list-adjacent-transpositions-transposition-Fin
   ( succ-ℕ n)
   ( inl i)
@@ -364,12 +359,11 @@ list-adjacent-transpositions-transposition-Fin
 
 permutation-list-adjacent-transpositions :
   (n : ℕ) → list (Fin n) → Permutation (succ-ℕ n)
-permutation-list-adjacent-transpositions n nil = {!!}
-permutation-list-adjacent-transpositions n (cons x l) = {!!}
+permutation-list-adjacent-transpositions = {!!}
 
 map-permutation-list-adjacent-transpositions :
   (n : ℕ) → list (Fin n) → Fin (succ-ℕ n) → Fin (succ-ℕ n)
-map-permutation-list-adjacent-transpositions n l = {!!}
+map-permutation-list-adjacent-transpositions = {!!}
 
 htpy-permutation-inl-list-adjacent-transpositions :
   (n : ℕ) → (l : list (Fin n)) →
@@ -380,8 +374,7 @@ htpy-permutation-inl-list-adjacent-transpositions :
     ( equiv-coprod
       ( permutation-list-adjacent-transpositions n l)
       ( id-equiv))
-htpy-permutation-inl-list-adjacent-transpositions n nil = {!!}
-htpy-permutation-inl-list-adjacent-transpositions n (cons x l) = {!!}
+htpy-permutation-inl-list-adjacent-transpositions = {!!}
 
 htpy-permutation-snoc-list-adjacent-transpositions :
   (n : ℕ) (l : list (Fin n)) (x : Fin n) →
@@ -389,8 +382,7 @@ htpy-permutation-snoc-list-adjacent-transpositions :
     ( permutation-list-adjacent-transpositions n (snoc l x))
     ( permutation-list-adjacent-transpositions n l ∘e
       adjacent-transposition-Fin n x)
-htpy-permutation-snoc-list-adjacent-transpositions n nil x = {!!}
-htpy-permutation-snoc-list-adjacent-transpositions n (cons y l) x = {!!}
+htpy-permutation-snoc-list-adjacent-transpositions = {!!}
 
 htpy-permutation-list-adjacent-transpositions-transposition-Fin :
   (n : ℕ) (i j : Fin (succ-ℕ n)) (neq : i ≠ j) →

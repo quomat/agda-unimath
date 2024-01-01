@@ -69,7 +69,7 @@ module _
       ( comp-hom-Large-Precategory C g f) ＝
     hom-representable-functor-Large-Precategory g ∘
     hom-representable-functor-Large-Precategory f
-  preserves-comp-representable-functor-Large-Precategory g f = {!!}
+  preserves-comp-representable-functor-Large-Precategory = {!!}
 
   preserves-id-representable-functor-Large-Precategory :
     {l2 : Level} {X : obj-Large-Precategory C l2} →
@@ -80,7 +80,7 @@ module _
 
   representable-functor-Large-Precategory :
     functor-Large-Precategory (β l1) C (Set-Large-Precategory)
-  obj-functor-Large-Precategory representable-functor-Large-Precategory = {!!}
+  representable-functor-Large-Precategory = {!!}
 ```
 
 ## Natural transformations between representable functors
@@ -110,12 +110,11 @@ module _
       ( representable-functor-Large-Precategory C c)
       ( representable-functor-Large-Precategory C b)
       ( hom-representable-natural-transformation-Large-Precategory)
-  naturality-representable-natural-transformation-Large-Precategory h = {!!}
+  naturality-representable-natural-transformation-Large-Precategory = {!!}
 
   representable-natural-transformation-Large-Precategory :
     natural-transformation-Large-Precategory C Set-Large-Precategory
       ( representable-functor-Large-Precategory C c)
       ( representable-functor-Large-Precategory C b)
-  hom-natural-transformation-Large-Precategory
-    representable-natural-transformation-Large-Precategory = {!!}
+  representable-natural-transformation-Large-Precategory = {!!}
 ```

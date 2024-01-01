@@ -87,7 +87,7 @@ module _
 
   is-equiv-diagonal-into-fibers-precomp-is-epimorphism :
     is-epimorphism f → is-equiv (diagonal-into-fibers-precomp f X)
-  is-equiv-diagonal-into-fibers-precomp-is-epimorphism e = {!!}
+  is-equiv-diagonal-into-fibers-precomp-is-epimorphism = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B)
@@ -96,7 +96,7 @@ module _
   universal-property-pushout-is-epimorphism :
     is-epimorphism f →
     {l : Level} → universal-property-pushout l f f (cocone-codiagonal-map f)
-  universal-property-pushout-is-epimorphism e X = {!!}
+  universal-property-pushout-is-epimorphism = {!!}
 ```
 
 If the map `f : A → B` is epi, then its codiagonal is an equivalence.
@@ -104,7 +104,7 @@ If the map `f : A → B` is epi, then its codiagonal is an equivalence.
 ```agda
   is-equiv-codiagonal-map-is-epimorphism :
     is-epimorphism f → is-equiv (codiagonal-map f)
-  is-equiv-codiagonal-map-is-epimorphism e = {!!}
+  is-equiv-codiagonal-map-is-epimorphism = {!!}
 
   is-pushout-is-epimorphism :
     is-epimorphism f → is-pushout f f (cocone-codiagonal-map f)
@@ -118,16 +118,16 @@ If the map `f : A → B` is epi, then its codiagonal is an equivalence.
     {l : Level} →
     universal-property-pushout l f f (cocone-codiagonal-map f) →
     is-epimorphism-Level l f
-  is-epimorphism-universal-property-pushout-Level up-c X = {!!}
+  is-epimorphism-universal-property-pushout-Level = {!!}
 
   is-epimorphism-universal-property-pushout :
     ({l : Level} → universal-property-pushout l f f (cocone-codiagonal-map f)) →
     is-epimorphism f
-  is-epimorphism-universal-property-pushout up-c = {!!}
+  is-epimorphism-universal-property-pushout = {!!}
 
   is-epimorphism-is-equiv-codiagonal-map :
     is-equiv (codiagonal-map f) → is-epimorphism f
-  is-epimorphism-is-equiv-codiagonal-map e = {!!}
+  is-epimorphism-is-equiv-codiagonal-map = {!!}
 
   is-epimorphism-is-pushout :
     is-pushout f f (cocone-codiagonal-map f) → is-epimorphism f
@@ -144,11 +144,11 @@ module _
 
   is-epimorphism-comp :
     is-epimorphism g → is-epimorphism f → is-epimorphism (g ∘ f)
-  is-epimorphism-comp eg ef X = {!!}
+  is-epimorphism-comp = {!!}
 
   is-epimorphism-left-factor :
     is-epimorphism (g ∘ f) → is-epimorphism f → is-epimorphism g
-  is-epimorphism-left-factor ec ef X = {!!}
+  is-epimorphism-left-factor = {!!}
 ```
 
 ## See also

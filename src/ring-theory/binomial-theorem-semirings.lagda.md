@@ -50,7 +50,7 @@ binomial-sum-Semiring :
   {l : Level} (R : Semiring l)
   (n : ℕ) (f : functional-vec-Semiring R (succ-ℕ n)) →
   type-Semiring R
-binomial-sum-Semiring R n f = {!!}
+binomial-sum-Semiring = {!!}
 ```
 
 ## Properties
@@ -66,13 +66,13 @@ module _
     (f : functional-vec-Semiring R 1) →
     binomial-sum-Semiring R 0 f ＝
     head-functional-vec-Semiring R 0 f
-  binomial-sum-one-element-Semiring f = {!!}
+  binomial-sum-one-element-Semiring = {!!}
 
   binomial-sum-two-elements-Semiring :
     (f : functional-vec-Semiring R 2) →
     binomial-sum-Semiring R 1 f ＝
     add-Semiring R (f (zero-Fin 1)) (f (one-Fin 1))
-  binomial-sum-two-elements-Semiring f = {!!}
+  binomial-sum-two-elements-Semiring = {!!}
 ```
 
 ### Binomial sums are homotopy invariant
@@ -86,7 +86,7 @@ module _
     (n : ℕ) {f g : functional-vec-Semiring R (succ-ℕ n)} →
     (f ~ g) →
     binomial-sum-Semiring R n f ＝ binomial-sum-Semiring R n g
-  htpy-binomial-sum-Semiring n H = {!!}
+  htpy-binomial-sum-Semiring = {!!}
 ```
 
 ### Multiplication distributes over sums
@@ -101,14 +101,14 @@ module _
     (f : functional-vec-Semiring R (succ-ℕ n)) →
     mul-Semiring R x (binomial-sum-Semiring R n f) ＝
     binomial-sum-Semiring R n (λ i → mul-Semiring R x (f i))
-  left-distributive-mul-binomial-sum-Semiring n x f = {!!}
+  left-distributive-mul-binomial-sum-Semiring = {!!}
 
   right-distributive-mul-binomial-sum-Semiring :
     (n : ℕ) (f : functional-vec-Semiring R (succ-ℕ n)) →
     (x : type-Semiring R) →
     mul-Semiring R (binomial-sum-Semiring R n f) x ＝
     binomial-sum-Semiring R n (λ i → mul-Semiring R (f i) x)
-  right-distributive-mul-binomial-sum-Semiring n f x = {!!}
+  right-distributive-mul-binomial-sum-Semiring = {!!}
 ```
 
 ## Lemmas
@@ -146,7 +146,7 @@ module _
               ( power-Semiring R
                 ( dist-ℕ (nat-Fin (succ-ℕ n) i) (succ-ℕ n))
                 ( y))))))
-  left-summand-binomial-theorem-Semiring n x y H = {!!}
+  left-summand-binomial-theorem-Semiring = {!!}
 ```
 
 ### Computing a right summand that will appear in the proof of the binomial theorem
@@ -182,7 +182,7 @@ module _
               ( power-Semiring R
                 ( dist-ℕ (nat-Fin (succ-ℕ n) i) (succ-ℕ n))
                 ( y))))))
-  right-summand-binomial-theorem-Semiring n x y = {!!}
+  right-summand-binomial-theorem-Semiring = {!!}
 ```
 
 ## Theorem
@@ -199,9 +199,7 @@ binomial-theorem-Semiring :
       mul-Semiring R
       ( power-Semiring R (nat-Fin (succ-ℕ n) i) x)
       ( power-Semiring R (dist-ℕ (nat-Fin (succ-ℕ n) i) n) y))
-binomial-theorem-Semiring R zero-ℕ x y H = {!!}
-binomial-theorem-Semiring R (succ-ℕ zero-ℕ) x y H = {!!}
-binomial-theorem-Semiring R (succ-ℕ (succ-ℕ n)) x y H = {!!}
+binomial-theorem-Semiring = {!!}
 ```
 
 ## Corollaries
@@ -235,5 +233,5 @@ is-linear-combination-power-add-Semiring :
             ( mul-Semiring R
               ( power-Semiring R (nat-Fin (succ-ℕ m) i) x)
               ( power-Semiring R (dist-ℕ (nat-Fin (succ-ℕ m) i) m) y)))))
-is-linear-combination-power-add-Semiring R n m x y H = {!!}
+is-linear-combination-power-add-Semiring = {!!}
 ```

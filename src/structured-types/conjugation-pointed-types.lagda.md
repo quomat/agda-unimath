@@ -44,17 +44,17 @@ module _
   map-conjugation-Pointed-Type :
     {u : type-Pointed-Type B} (p : point-Pointed-Type B ＝ u) →
     type-Pointed-Type B → type-Pointed-Type B
-  map-conjugation-Pointed-Type refl = {!!}
+  map-conjugation-Pointed-Type = {!!}
 
   preserves-point-conjugation-Pointed-Type :
     {u : type-Pointed-Type B} (p : point-Pointed-Type B ＝ u) →
     map-conjugation-Pointed-Type p (point-Pointed-Type B) ＝ u
-  preserves-point-conjugation-Pointed-Type refl = {!!}
+  preserves-point-conjugation-Pointed-Type = {!!}
 
   conjugation-Pointed-Type :
     {u : type-Pointed-Type B} (p : point-Pointed-Type B ＝ u) →
     B →∗ (type-Pointed-Type B , u)
-  pr1 (conjugation-Pointed-Type p) = {!!}
+  conjugation-Pointed-Type = {!!}
 ```
 
 ## Properties
@@ -69,30 +69,30 @@ module _
   action-on-loops-conjugation-Pointed-Type :
     {u : type-Pointed-Type B} (p : point-Pointed-Type B ＝ u) →
     Ω B →∗ Ω (type-Pointed-Type B , u)
-  action-on-loops-conjugation-Pointed-Type p = {!!}
+  action-on-loops-conjugation-Pointed-Type = {!!}
 
   map-action-on-loops-conjugation-Pointed-Type :
     {u : type-Pointed-Type B} (p : point-Pointed-Type B ＝ u) →
     type-Ω B → type-Ω (type-Pointed-Type B , u)
-  map-action-on-loops-conjugation-Pointed-Type p = {!!}
+  map-action-on-loops-conjugation-Pointed-Type = {!!}
 
   preserves-point-action-on-loops-conjugation-Pointed-Type :
     {u : type-Pointed-Type B} (p : point-Pointed-Type B ＝ u) →
     map-action-on-loops-conjugation-Pointed-Type p refl ＝ refl
-  preserves-point-action-on-loops-conjugation-Pointed-Type p = {!!}
+  preserves-point-action-on-loops-conjugation-Pointed-Type = {!!}
 
   compute-action-on-loops-conjugation-Pointed-Type' :
     {u : type-Pointed-Type B} (p : point-Pointed-Type B ＝ u) →
     conjugation-Ω' p ~∗ action-on-loops-conjugation-Pointed-Type p
-  pr1 (compute-action-on-loops-conjugation-Pointed-Type' refl) ω = {!!}
+  compute-action-on-loops-conjugation-Pointed-Type' = {!!}
 
   compute-action-on-loops-conjugation-Pointed-Type :
     {u : type-Pointed-Type B} (p : point-Pointed-Type B ＝ u) →
     conjugation-Ω p ~∗ action-on-loops-conjugation-Pointed-Type p
-  compute-action-on-loops-conjugation-Pointed-Type p = {!!}
+  compute-action-on-loops-conjugation-Pointed-Type = {!!}
 
   htpy-compute-action-on-loops-conjugation-Pointed-Type :
     {u : type-Pointed-Type B} (p : point-Pointed-Type B ＝ u) →
     map-conjugation-Ω p ~ map-action-on-loops-conjugation-Pointed-Type p
-  htpy-compute-action-on-loops-conjugation-Pointed-Type p = {!!}
+  htpy-compute-action-on-loops-conjugation-Pointed-Type = {!!}
 ```

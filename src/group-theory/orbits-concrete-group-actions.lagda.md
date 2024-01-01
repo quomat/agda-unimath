@@ -59,7 +59,7 @@ transitive.
 orbit-action-Concrete-Group :
   {l1 l2 : Level} (G : Concrete-Group l1) (X : action-Concrete-Group l2 G) →
   UU (l1 ⊔ l2)
-orbit-action-Concrete-Group G X = {!!}
+orbit-action-Concrete-Group = {!!}
 ```
 
 ## See also

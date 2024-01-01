@@ -49,13 +49,13 @@ module _
   equiv-natural-isomorphism-htpy-functor-is-category-Precategory :
     (F G : functor-Precategory C D) →
     htpy-functor-Precategory C D F G ≃ natural-isomorphism-Precategory C D F G
-  equiv-natural-isomorphism-htpy-functor-is-category-Precategory F G = {!!}
+  equiv-natural-isomorphism-htpy-functor-is-category-Precategory = {!!}
 
   extensionality-functor-is-category-Precategory :
     (F G : functor-Precategory C D) →
     ( F ＝ G) ≃
     ( natural-isomorphism-Precategory C D F G)
-  extensionality-functor-is-category-Precategory F G = {!!}
+  extensionality-functor-is-category-Precategory = {!!}
 ```
 
 ### When the codomain is a category the functor precategory is a category
@@ -71,7 +71,7 @@ module _
   abstract
     is-category-functor-precategory-is-category-Precategory :
       is-category-Precategory (functor-precategory-Precategory C D)
-    is-category-functor-precategory-is-category-Precategory F G = {!!}
+    is-category-functor-precategory-is-category-Precategory = {!!}
 ```
 
 ## Definitions
@@ -86,15 +86,15 @@ module _
 
   functor-category-Category :
     Category (l1 ⊔ l2 ⊔ l3 ⊔ l4) (l1 ⊔ l2 ⊔ l4)
-  pr1 functor-category-Category = {!!}
+  functor-category-Category = {!!}
 
   extensionality-functor-Category :
     (F G : functor-Category C D) →
     (F ＝ G) ≃ natural-isomorphism-Category C D F G
-  extensionality-functor-Category F G = {!!}
+  extensionality-functor-Category = {!!}
 
   eq-natural-isomorphism-functor-Category :
     (F G : functor-Category C D) →
     natural-isomorphism-Category C D F G → F ＝ G
-  eq-natural-isomorphism-functor-Category F G = {!!}
+  eq-natural-isomorphism-functor-Category = {!!}
 ```

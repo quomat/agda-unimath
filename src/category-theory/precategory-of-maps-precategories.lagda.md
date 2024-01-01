@@ -49,7 +49,7 @@ module _
     natural-transformation-map-Precategory C D G H →
     natural-transformation-map-Precategory C D F G →
     natural-transformation-map-Precategory C D F H
-  comp-hom-map-precategory-Precategory {F} {G} {H} = {!!}
+  comp-hom-map-precategory-Precategory = {!!}
 
   associative-comp-hom-map-precategory-Precategory :
     {F G H I : map-Precategory C D}
@@ -62,7 +62,7 @@ module _
     comp-natural-transformation-map-Precategory C D F H I
       ( h)
       ( comp-natural-transformation-map-Precategory C D F G H g f)
-  associative-comp-hom-map-precategory-Precategory {F} {G} {H} {I} h g f = {!!}
+  associative-comp-hom-map-precategory-Precategory = {!!}
 
   inv-associative-comp-hom-map-precategory-Precategory :
     {F G H I : map-Precategory C D}
@@ -75,7 +75,7 @@ module _
     comp-natural-transformation-map-Precategory C D F G I
       ( comp-natural-transformation-map-Precategory C D G H I h g)
       ( f)
-  inv-associative-comp-hom-map-precategory-Precategory {F} {G} {H} {I} h g f = {!!}
+  inv-associative-comp-hom-map-precategory-Precategory = {!!}
 
   associative-composition-operation-map-precategory-Precategory :
     associative-composition-operation-binary-family-Set
@@ -93,7 +93,7 @@ module _
     ( comp-natural-transformation-map-Precategory C D F G G
       ( id-natural-transformation-map-Precategory C D G) α) ＝
     ( α)
-  left-unit-law-comp-hom-map-precategory-Precategory {F} {G} = {!!}
+  left-unit-law-comp-hom-map-precategory-Precategory = {!!}
 
   right-unit-law-comp-hom-map-precategory-Precategory :
     {F G : map-Precategory C D}
@@ -101,17 +101,17 @@ module _
     ( comp-natural-transformation-map-Precategory C D F F G
         α (id-natural-transformation-map-Precategory C D F)) ＝
     ( α)
-  right-unit-law-comp-hom-map-precategory-Precategory {F} {G} = {!!}
+  right-unit-law-comp-hom-map-precategory-Precategory = {!!}
 
   is-unital-composition-operation-map-precategory-Precategory :
     is-unital-composition-operation-binary-family-Set
       ( natural-transformation-map-set-Precategory C D)
       ( comp-hom-map-precategory-Precategory)
-  pr1 is-unital-composition-operation-map-precategory-Precategory = {!!}
+  is-unital-composition-operation-map-precategory-Precategory = {!!}
 
   map-precategory-Precategory :
     Precategory (l1 ⊔ l2 ⊔ l3 ⊔ l4) (l1 ⊔ l2 ⊔ l4)
-  pr1 map-precategory-Precategory = {!!}
+  map-precategory-Precategory = {!!}
 ```
 
 ## Properties
@@ -130,35 +130,35 @@ module _
     (f : natural-transformation-map-Precategory C D F G) →
     is-natural-isomorphism-map-Precategory C D F G f →
     is-iso-Precategory (map-precategory-Precategory C D) {F} {G} f
-  pr1 (is-iso-map-is-natural-isomorphism-map-Precategory f is-iso-f) = {!!}
+  is-iso-map-is-natural-isomorphism-map-Precategory = {!!}
 
   is-natural-isomorphism-map-is-iso-map-Precategory :
     (f : natural-transformation-map-Precategory C D F G) →
     is-iso-Precategory (map-precategory-Precategory C D) {F} {G} f →
     is-natural-isomorphism-map-Precategory C D F G f
-  pr1 (is-natural-isomorphism-map-is-iso-map-Precategory f is-iso-f x) = {!!}
+  is-natural-isomorphism-map-is-iso-map-Precategory = {!!}
 
   is-equiv-is-iso-map-is-natural-isomorphism-map-Precategory :
     (f : natural-transformation-map-Precategory C D F G) →
     is-equiv (is-iso-map-is-natural-isomorphism-map-Precategory f)
-  is-equiv-is-iso-map-is-natural-isomorphism-map-Precategory f = {!!}
+  is-equiv-is-iso-map-is-natural-isomorphism-map-Precategory = {!!}
 
   is-equiv-is-natural-isomorphism-map-is-iso-map-Precategory :
     (f : natural-transformation-map-Precategory C D F G) →
     is-equiv (is-natural-isomorphism-map-is-iso-map-Precategory f)
-  is-equiv-is-natural-isomorphism-map-is-iso-map-Precategory f = {!!}
+  is-equiv-is-natural-isomorphism-map-is-iso-map-Precategory = {!!}
 
   equiv-is-iso-map-is-natural-isomorphism-map-Precategory :
     (f : natural-transformation-map-Precategory C D F G) →
     is-natural-isomorphism-map-Precategory C D F G f ≃
     is-iso-Precategory (map-precategory-Precategory C D) {F} {G} f
-  pr1 (equiv-is-iso-map-is-natural-isomorphism-map-Precategory f) = {!!}
+  equiv-is-iso-map-is-natural-isomorphism-map-Precategory = {!!}
 
   equiv-is-natural-isomorphism-map-is-iso-map-Precategory :
     (f : natural-transformation-map-Precategory C D F G) →
     is-iso-Precategory (map-precategory-Precategory C D) {F} {G} f ≃
     is-natural-isomorphism-map-Precategory C D F G f
-  pr1 (equiv-is-natural-isomorphism-map-is-iso-map-Precategory f) = {!!}
+  equiv-is-natural-isomorphism-map-is-iso-map-Precategory = {!!}
 
   iso-map-natural-isomorphism-map-Precategory :
     natural-isomorphism-map-Precategory C D F G →
@@ -204,5 +204,5 @@ module _
     iso-eq-Precategory (map-precategory-Precategory C D) F G p ＝
     iso-map-natural-isomorphism-map-Precategory C D F G
       ( natural-isomorphism-map-eq-Precategory C D F G p)
-  compute-iso-map-natural-isomorphism-map-eq-Precategory refl = {!!}
+  compute-iso-map-natural-isomorphism-map-eq-Precategory = {!!}
 ```

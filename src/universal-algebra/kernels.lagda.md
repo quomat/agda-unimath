@@ -48,13 +48,13 @@ module _
 
   rel-prop-kernel-hom-Algebra :
     Relation-Prop l4 (type-Algebra Sg Th Alg1)
-  pr1 (rel-prop-kernel-hom-Algebra x y) = {!!}
+  rel-prop-kernel-hom-Algebra = {!!}
 
   equivalence-relation-kernel-hom-Algebra :
     equivalence-relation l4 (type-Algebra Sg Th Alg1)
-  pr1 equivalence-relation-kernel-hom-Algebra = {!!}
+  equivalence-relation-kernel-hom-Algebra = {!!}
 
   kernel-hom-Algebra :
     congruence-Algebra Sg Th Alg1 l4
-  pr1 kernel-hom-Algebra = {!!}
+  kernel-hom-Algebra = {!!}
 ```

@@ -78,7 +78,7 @@ module _
 
   is-prop-is-truncated-acyclic-map :
     (f : A → B) → is-prop (is-truncated-acyclic-map f)
-  is-prop-is-truncated-acyclic-map f = {!!}
+  is-prop-is-truncated-acyclic-map = {!!}
 ```
 
 ## Properties
@@ -92,11 +92,11 @@ module _
 
   is-truncated-acyclic-map-is-epimorphism-Truncated-Type :
     is-epimorphism-Truncated-Type k f → is-truncated-acyclic-map k f
-  is-truncated-acyclic-map-is-epimorphism-Truncated-Type e b = {!!}
+  is-truncated-acyclic-map-is-epimorphism-Truncated-Type = {!!}
 
   is-epimorphism-is-truncated-acyclic-map-Truncated-Type :
     is-truncated-acyclic-map k f → is-epimorphism-Truncated-Type k f
-  is-epimorphism-is-truncated-acyclic-map-Truncated-Type ac = {!!}
+  is-epimorphism-is-truncated-acyclic-map-Truncated-Type = {!!}
 ```
 
 ### A type is `k`-acyclic if and only if its terminal map is a `k`-acyclic map
@@ -136,13 +136,13 @@ module _
     is-truncated-acyclic k A →
     {l' : Level} (X : Truncated-Type l' k) →
     is-emb (const A (type-Truncated-Type X))
-  is-emb-const-is-truncated-acyclic-Truncated-Type ac X = {!!}
+  is-emb-const-is-truncated-acyclic-Truncated-Type = {!!}
 
   is-truncated-acyclic-is-emb-const-Truncated-Type :
     ({l' : Level} (X : Truncated-Type l' k) →
     is-emb (const A (type-Truncated-Type X))) →
     is-truncated-acyclic k A
-  is-truncated-acyclic-is-emb-const-Truncated-Type e = {!!}
+  is-truncated-acyclic-is-emb-const-Truncated-Type = {!!}
 ```
 
 ### A type is `k`-acyclic if and only if the constant map from any identity type of any `k`-type is an equivalence
@@ -165,13 +165,13 @@ module _
     is-truncated-acyclic k A →
     {l' : Level} (X : Truncated-Type l' k) (x y : type-Truncated-Type X) →
     is-equiv (const A (x ＝ y))
-  is-equiv-const-Id-is-acyclic-Truncated-Type ac X x y = {!!}
+  is-equiv-const-Id-is-acyclic-Truncated-Type = {!!}
 
   is-truncated-acyclic-is-equiv-const-Id-Truncated-Type :
     ( {l' : Level} (X : Truncated-Type l' k) (x y : type-Truncated-Type X) →
       is-equiv (const A (x ＝ y))) →
     is-truncated-acyclic k A
-  is-truncated-acyclic-is-equiv-const-Id-Truncated-Type h = {!!}
+  is-truncated-acyclic-is-equiv-const-Id-Truncated-Type = {!!}
 ```
 
 ### A map is `k`-acyclic if and only if it is an [dependent `k`-epimorphism](foundation.dependent-epimorphisms-with-respect-to-truncated-types.md)
@@ -186,11 +186,11 @@ module _
 
   is-truncated-acyclic-map-is-dependent-epimorphism-Truncated-Type :
     is-dependent-epimorphism-Truncated-Type k f → is-truncated-acyclic-map k f
-  is-truncated-acyclic-map-is-dependent-epimorphism-Truncated-Type e = {!!}
+  is-truncated-acyclic-map-is-dependent-epimorphism-Truncated-Type = {!!}
 
   is-dependent-epimorphism-is-truncated-acyclic-map-Truncated-Type :
     is-truncated-acyclic-map k f → is-dependent-epimorphism-Truncated-Type k f
-  is-dependent-epimorphism-is-truncated-acyclic-map-Truncated-Type ac C = {!!}
+  is-dependent-epimorphism-is-truncated-acyclic-map-Truncated-Type = {!!}
 ```
 
 In particular, every `k`-epimorphism is actually a dependent `k`-epimorphism.
@@ -203,7 +203,7 @@ module _
   is-dependent-epimorphism-is-epimorphism-Truncated-Type :
     is-epimorphism-Truncated-Type k f →
     is-dependent-epimorphism-Truncated-Type k f
-  is-dependent-epimorphism-is-epimorphism-Truncated-Type e = {!!}
+  is-dependent-epimorphism-is-epimorphism-Truncated-Type = {!!}
 ```
 
 ### The class of `k`-acyclic maps is closed under composition and has the right cancellation property
@@ -222,13 +222,13 @@ module _
     is-truncated-acyclic-map k g →
     is-truncated-acyclic-map k f →
     is-truncated-acyclic-map k (g ∘ f)
-  is-truncated-acyclic-map-comp ag af = {!!}
+  is-truncated-acyclic-map-comp = {!!}
 
   is-truncated-acyclic-map-left-factor :
     is-truncated-acyclic-map k (g ∘ f) →
     is-truncated-acyclic-map k f →
     is-truncated-acyclic-map k g
-  is-truncated-acyclic-map-left-factor ac af = {!!}
+  is-truncated-acyclic-map-left-factor = {!!}
 ```
 
 ### Every `k`-connected map is `(k+1)`-acyclic
@@ -240,7 +240,7 @@ module _
 
   is-truncated-acyclic-map-succ-is-connected-map :
     is-connected-map k f → is-truncated-acyclic-map (succ-𝕋 k) f
-  is-truncated-acyclic-map-succ-is-connected-map c b = {!!}
+  is-truncated-acyclic-map-succ-is-connected-map = {!!}
 ```
 
 In particular, the unit of the `k`-truncation is `(k+1)`-acyclic
@@ -262,12 +262,12 @@ module _
   is-truncated-acyclic-succ-is-truncated-acyclic-succ-type-trunc :
     is-truncated-acyclic (succ-𝕋 k) (type-trunc k A) →
     is-truncated-acyclic (succ-𝕋 k) A
-  is-truncated-acyclic-succ-is-truncated-acyclic-succ-type-trunc ac = {!!}
+  is-truncated-acyclic-succ-is-truncated-acyclic-succ-type-trunc = {!!}
 
   is-truncated-acyclic-succ-type-trunc-is-truncated-acyclic-succ :
     is-truncated-acyclic (succ-𝕋 k) A →
     is-truncated-acyclic (succ-𝕋 k) (type-trunc k A)
-  is-truncated-acyclic-succ-type-trunc-is-truncated-acyclic-succ ac = {!!}
+  is-truncated-acyclic-succ-type-trunc-is-truncated-acyclic-succ = {!!}
 ```
 
 ### Every `k`-equivalence is `k`-acyclic
@@ -279,7 +279,7 @@ module _
 
   is-truncated-acyclic-map-is-truncation-equivalence :
     is-truncation-equivalence k f → is-truncated-acyclic-map k f
-  is-truncated-acyclic-map-is-truncation-equivalence e = {!!}
+  is-truncated-acyclic-map-is-truncation-equivalence = {!!}
 ```
 
 ### `k`-acyclic maps are closed under pullbacks
@@ -294,7 +294,7 @@ module _
     is-pullback f g c →
     is-truncated-acyclic-map k g →
     is-truncated-acyclic-map k (vertical-map-cone f g c)
-  is-truncated-acyclic-map-vertical-map-cone-is-pullback pb ac a = {!!}
+  is-truncated-acyclic-map-vertical-map-cone-is-pullback = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {k : 𝕋} {A : UU l1} {B : UU l2} {C : UU l3}
@@ -305,7 +305,7 @@ module _
     is-pullback f g c →
     is-truncated-acyclic-map k f →
     is-truncated-acyclic-map k (horizontal-map-cone f g c)
-  is-truncated-acyclic-map-horizontal-map-cone-is-pullback pb = {!!}
+  is-truncated-acyclic-map-horizontal-map-cone-is-pullback = {!!}
 ```
 
 ### `k`-acyclic types are closed under dependent pair types
@@ -319,7 +319,7 @@ module _
     is-truncated-acyclic k A →
     ((a : A) → is-truncated-acyclic k (B a)) →
     is-truncated-acyclic k (Σ A B)
-  is-truncated-acyclic-Σ ac-A ac-B = {!!}
+  is-truncated-acyclic-Σ = {!!}
 ```
 
 ### `k`-acyclic types are closed under binary products
@@ -333,7 +333,7 @@ module _
     is-truncated-acyclic k A →
     is-truncated-acyclic k B →
     is-truncated-acyclic k (A × B)
-  is-truncated-acyclic-prod ac-A ac-B = {!!}
+  is-truncated-acyclic-prod = {!!}
 ```
 
 ### Inhabited, locally `k`-acyclic types are `k`-acyclic
@@ -347,7 +347,7 @@ module _
     is-inhabited A →
     ((a b : A) → is-truncated-acyclic k (a ＝ b)) →
     is-truncated-acyclic k A
-  is-truncated-acyclic-inhabited-is-truncated-acyclic-Id h l-ac = {!!}
+  is-truncated-acyclic-inhabited-is-truncated-acyclic-Id = {!!}
 ```
 
 ### Acyclic maps are closed under pushouts
@@ -415,13 +415,13 @@ module _
     {l5 : Level} (X : Truncated-Type l5 k) →
     cocone f (vertical-map-cocone f g c ∘ g) (type-Truncated-Type X) ≃
     (C → type-Truncated-Type X)
-  equiv-cocone-postcomp-vertical-map-cocone-Truncated-Type ac X = {!!}
+  equiv-cocone-postcomp-vertical-map-cocone-Truncated-Type = {!!}
 
   is-truncated-acyclic-map-vertical-map-cocone-is-pushout :
     is-pushout f g c →
     is-truncated-acyclic-map k f →
     is-truncated-acyclic-map k (vertical-map-cocone f g c)
-  is-truncated-acyclic-map-vertical-map-cocone-is-pushout po ac = {!!}
+  is-truncated-acyclic-map-vertical-map-cocone-is-pushout = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {k : 𝕋} {S : UU l1} {A : UU l2} {B : UU l3}
@@ -432,7 +432,7 @@ module _
     is-pushout f g c →
     is-truncated-acyclic-map k g →
     is-truncated-acyclic-map k (horizontal-map-cocone f g c)
-  is-truncated-acyclic-map-horizontal-map-cocone-is-pushout po = {!!}
+  is-truncated-acyclic-map-horizontal-map-cocone-is-pushout = {!!}
 ```
 
 ## See also

@@ -51,8 +51,7 @@ pr2 (refl-div-Fin {succ-ℕ k} x) = {!!}
 ```agda
 transitive-div-Fin :
   (k : ℕ) → is-transitive (div-Fin k)
-pr1 (transitive-div-Fin k x y z (pair v q) (pair u p)) = {!!}
-pr2 (transitive-div-Fin k x y z (pair v q) (pair u p)) = {!!}
+transitive-div-Fin = {!!}
 ```
 
 ### Every element divides zero
@@ -77,7 +76,7 @@ pr2 (div-one-Fin k x) = {!!}
 is-zero-div-zero-Fin :
   {k : ℕ} (x : Fin (succ-ℕ k)) →
   div-Fin (succ-ℕ k) (zero-Fin k) x → is-zero-Fin (succ-ℕ k) x
-is-zero-div-zero-Fin {k} x (pair u p) = {!!}
+is-zero-div-zero-Fin = {!!}
 ```
 
 ### The divisibility relation is decidable

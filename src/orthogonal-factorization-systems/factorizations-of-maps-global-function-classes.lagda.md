@@ -106,7 +106,7 @@ global-function-class-factorization :
   {l1 l2 : Level} (l3 : Level)
   {A : UU l1} {B : UU l2} (f : A → B) →
   UU (βL l1 l3 ⊔ βR l3 l2 ⊔ l1 ⊔ l2 ⊔ lsuc l3)
-global-function-class-factorization L R l3 = {!!}
+global-function-class-factorization = {!!}
 
 module _
   {βL βR : Level → Level → Level}

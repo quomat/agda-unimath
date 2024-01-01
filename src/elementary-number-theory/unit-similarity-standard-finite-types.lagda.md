@@ -37,7 +37,7 @@ structure on `Fin k`.
 ```agda
 sim-unit-Fin :
   (k : ℕ) → Fin k → Fin k → UU lzero
-sim-unit-Fin k x y = {!!}
+sim-unit-Fin = {!!}
 ```
 
 ### Unit similarity on `ℕ`
@@ -45,7 +45,7 @@ sim-unit-Fin k x y = {!!}
 ```agda
 sim-unit-ℕ :
   (k : ℕ) → ℕ → ℕ → UU lzero
-sim-unit-ℕ k x y = {!!}
+sim-unit-ℕ = {!!}
 ```
 
 ### Congruence to `1`
@@ -79,6 +79,5 @@ pr2 (transitive-sim-unit-Fin {succ-ℕ k} x y z (pair v q) (pair u p)) = {!!}
 is-unit-similar-one-sim-unit-mod-succ-ℕ :
   (k x : ℕ) → sim-unit-Fin (succ-ℕ k) (mod-succ-ℕ k x) (one-Fin k) →
   sim-unit-one-ℕ (succ-ℕ k) x
-pr1 (is-unit-similar-one-sim-unit-mod-succ-ℕ k x (pair u p)) = {!!}
-pr2 (is-unit-similar-one-sim-unit-mod-succ-ℕ k x (pair u p)) = {!!}
+is-unit-similar-one-sim-unit-mod-succ-ℕ = {!!}
 ```

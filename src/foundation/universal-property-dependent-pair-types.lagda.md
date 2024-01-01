@@ -60,7 +60,7 @@ equiv-ev-pair² :
     ( λ k → ( xy : Σ X Y) → Z k xy) ≃
   Σ ( (a : A) → B a → C)
     ( λ k → (x : X) → (y : Y x) → Z (ind-Σ k) (x , y))
-equiv-ev-pair² {X = X} {Y = Y} {Z = Z} = {!!}
+equiv-ev-pair² = {!!}
 
 equiv-ev-pair³ :
   { l1 l2 l3 l4 l5 l6 l7 l8 l9 : Level} →
@@ -76,5 +76,5 @@ equiv-ev-pair³ :
     ( λ k →
       Σ ( (x : X) → Y x → Z)
         ( λ l → (u : U) → (v : V u) → W (ind-Σ k) (ind-Σ l) (u , v)))
-equiv-ev-pair³ {X = X} {Y = Y} {Z = Z} {U = U} {V = V} {W = W} = {!!}
+equiv-ev-pair³ = {!!}
 ```

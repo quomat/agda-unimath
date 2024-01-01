@@ -71,12 +71,12 @@ module _
   left-unit-law-mul-core-Monoid :
     (x : type-core-Monoid) →
     mul-core-Monoid unit-core-Monoid x ＝ x
-  left-unit-law-mul-core-Monoid x = {!!}
+  left-unit-law-mul-core-Monoid = {!!}
 
   right-unit-law-mul-core-Monoid :
     (x : type-core-Monoid) →
     mul-core-Monoid x unit-core-Monoid ＝ x
-  right-unit-law-mul-core-Monoid x = {!!}
+  right-unit-law-mul-core-Monoid = {!!}
 
   is-unital-core-Monoid : is-unital-Semigroup semigroup-core-Monoid
   pr1 is-unital-core-Monoid = {!!}
@@ -87,12 +87,12 @@ module _
   left-inverse-law-mul-core-Monoid :
     (x : type-core-Monoid) →
     mul-core-Monoid (inv-core-Monoid x) x ＝ unit-core-Monoid
-  left-inverse-law-mul-core-Monoid x = {!!}
+  left-inverse-law-mul-core-Monoid = {!!}
 
   right-inverse-law-mul-core-Monoid :
     (x : type-core-Monoid) →
     mul-core-Monoid x (inv-core-Monoid x) ＝ unit-core-Monoid
-  right-inverse-law-mul-core-Monoid x = {!!}
+  right-inverse-law-mul-core-Monoid = {!!}
 
   is-group-core-Monoid' : is-group' semigroup-core-Monoid is-unital-core-Monoid
   pr1 is-group-core-Monoid' = {!!}
@@ -113,7 +113,7 @@ module _
     mul-Monoid M
       ( inclusion-core-Monoid x)
       ( inclusion-core-Monoid y)
-  preserves-mul-inclusion-core-Monoid {x} {y} = {!!}
+  preserves-mul-inclusion-core-Monoid = {!!}
 
   hom-inclusion-core-Monoid :
     hom-Monoid monoid-core-Monoid M
@@ -178,7 +178,7 @@ module _
       ( core-Monoid K)
       ( hom-core-hom-Monoid N K g)
       ( hom-core-hom-Monoid M N f)
-  preserves-comp-hom-core-hom-Monoid g f = {!!}
+  preserves-comp-hom-core-hom-Monoid = {!!}
 ```
 
 #### The functor `core-Monoid`
@@ -188,14 +188,7 @@ core-monoid-functor-Large-Precategory :
   functor-Large-Precategory (λ l → l)
     Monoid-Large-Precategory
     Group-Large-Precategory
-obj-functor-Large-Precategory
-  core-monoid-functor-Large-Precategory = {!!}
-hom-functor-Large-Precategory
-  core-monoid-functor-Large-Precategory {X = M} {Y = N} = {!!}
-preserves-comp-functor-Large-Precategory
-  core-monoid-functor-Large-Precategory {X = M} {Y = N} {Z = K} = {!!}
-preserves-id-functor-Large-Precategory
-  core-monoid-functor-Large-Precategory {X = M} = {!!}
+core-monoid-functor-Large-Precategory = {!!}
 ```
 
 ### The core functor is right adjoint to the forgetful functor from groups to monoids

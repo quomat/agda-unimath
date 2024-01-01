@@ -35,15 +35,15 @@ is-closed-under-Σ-subuniverses :
   (Q : subuniverse l2 lQ)
   (R : subuniverse (l1 ⊔ l2) lR) →
   UU (lsuc l1 ⊔ lsuc l2 ⊔ lP ⊔ lQ ⊔ lR)
-is-closed-under-Σ-subuniverses P Q R = {!!}
+is-closed-under-Σ-subuniverses = {!!}
 
 is-closed-under-Σ-subuniverse :
   {l lP : Level} → subuniverse l lP → UU (lsuc l ⊔ lP)
-is-closed-under-Σ-subuniverse P = {!!}
+is-closed-under-Σ-subuniverse = {!!}
 
 closed-under-Σ-subuniverse :
   (l lP : Level) → UU (lsuc l ⊔ lsuc lP)
-closed-under-Σ-subuniverse l lP = {!!}
+closed-under-Σ-subuniverse = {!!}
 ```
 
 ## See also

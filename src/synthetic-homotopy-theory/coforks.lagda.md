@@ -89,7 +89,7 @@ module _
     ( e e' : cofork f g X) →
     ( K : map-cofork f g e ~ map-cofork f g e') →
     UU (l1 ⊔ l3)
-  coherence-htpy-cofork e e' K = {!!}
+  coherence-htpy-cofork = {!!}
 
   htpy-cofork : cofork f g X → cofork f g X → UU (l1 ⊔ l2 ⊔ l3)
   htpy-cofork e e' = {!!}
@@ -131,20 +131,20 @@ module _
 
   htpy-cofork-eq :
     ( e e' : cofork f g X) → (e ＝ e') → htpy-cofork f g e e'
-  htpy-cofork-eq e .e refl = {!!}
+  htpy-cofork-eq = {!!}
 
   abstract
     is-torsorial-htpy-cofork :
       ( e : cofork f g X) → is-torsorial (htpy-cofork f g e)
-    is-torsorial-htpy-cofork e = {!!}
+    is-torsorial-htpy-cofork = {!!}
 
     is-equiv-htpy-cofork-eq :
       ( e e' : cofork f g X) → is-equiv (htpy-cofork-eq e e')
-    is-equiv-htpy-cofork-eq e = {!!}
+    is-equiv-htpy-cofork-eq = {!!}
 
   eq-htpy-cofork :
     ( e e' : cofork f g X) → htpy-cofork f g e e' → e ＝ e'
-  eq-htpy-cofork e e' = {!!}
+  eq-htpy-cofork = {!!}
 ```
 
 ### Postcomposing a cofork by identity is the identity
@@ -178,7 +178,7 @@ module _
   cofork-map-comp :
     (h : X → Y) (k : Y → Z) →
     cofork-map f g e (k ∘ h) ＝ cofork-map f g (cofork-map f g e h) k
-  cofork-map-comp h k = {!!}
+  cofork-map-comp = {!!}
 ```
 
 ### Coforks are special cases of cocones under spans
@@ -212,7 +212,7 @@ module _
         ( horizontal-map-span-cocone-cofork)
         ( X) →
       cofork f g X
-    pr1 (cofork-cocone-codiagonal c) = {!!}
+    cofork-cocone-codiagonal = {!!}
 
     horizontal-map-cocone-cofork : cofork f g X → A → X
     horizontal-map-cocone-cofork e = {!!}
@@ -227,7 +227,7 @@ module _
         ( vertical-map-span-cocone-cofork)
         ( vertical-map-cocone-cofork e)
         ( horizontal-map-cocone-cofork e)
-    coherence-square-cocone-cofork e (inl a) = {!!}
+    coherence-square-cocone-cofork = {!!}
 
     cocone-codiagonal-cofork :
       cofork f g X →
@@ -235,16 +235,16 @@ module _
         ( vertical-map-span-cocone-cofork)
         ( horizontal-map-span-cocone-cofork)
         ( X)
-    pr1 (cocone-codiagonal-cofork e) = {!!}
+    cocone-codiagonal-cofork = {!!}
 
     abstract
       is-section-cocone-codiagonal-cofork :
         cofork-cocone-codiagonal ∘ cocone-codiagonal-cofork ~ id
-      is-section-cocone-codiagonal-cofork e = {!!}
+      is-section-cocone-codiagonal-cofork = {!!}
 
       is-retraction-cocone-codiagonal-fork :
         cocone-codiagonal-cofork ∘ cofork-cocone-codiagonal ~ id
-      is-retraction-cocone-codiagonal-fork c = {!!}
+      is-retraction-cocone-codiagonal-fork = {!!}
 
     is-equiv-cofork-cocone-codiagonal :
       is-equiv cofork-cocone-codiagonal
@@ -256,7 +256,7 @@ module _
         ( horizontal-map-span-cocone-cofork)
         ( X) ≃
       cofork f g X
-    pr1 equiv-cocone-codiagonal-cofork = {!!}
+    equiv-cocone-codiagonal-cofork = {!!}
 
   triangle-cofork-cocone :
     { l3 l4 : Level} {X : UU l3} {Y : UU l4} →

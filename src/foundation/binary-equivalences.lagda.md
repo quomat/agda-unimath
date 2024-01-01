@@ -28,25 +28,25 @@ functions `λ x → f x b` and `λ y → f a y` are equivalences for each `a : A
 fix-left :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : UU l3} (f : A → B → C) →
   A → B → C
-fix-left f a = {!!}
+fix-left = {!!}
 
 fix-right :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : UU l3} (f : A → B → C) →
   B → A → C
-fix-right f b a = {!!}
+fix-right = {!!}
 
 is-binary-equiv :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : UU l3} →
   (A → B → C) → UU (l1 ⊔ l2 ⊔ l3)
-is-binary-equiv {A = A} {B = B} f = {!!}
+is-binary-equiv = {!!}
 
 is-equiv-fix-left :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : UU l3} (f : A → B → C) →
   is-binary-equiv f → {a : A} → is-equiv (fix-left f a)
-is-equiv-fix-left f H {a} = {!!}
+is-equiv-fix-left = {!!}
 
 is-equiv-fix-right :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : UU l3} (f : A → B → C) →
   is-binary-equiv f → {b : B} → is-equiv (fix-right f b)
-is-equiv-fix-right f H {b} = {!!}
+is-equiv-fix-right = {!!}
 ```

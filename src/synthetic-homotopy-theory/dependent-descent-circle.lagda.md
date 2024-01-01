@@ -47,7 +47,7 @@ consists of a type family `R : X → U` equipped with a family of equivalences
 dependent-descent-data-circle :
   {l1 : Level} (l2 : Level) →
   descent-data-circle l1 → UU (l1 ⊔ lsuc l2)
-dependent-descent-data-circle l2 P = {!!}
+dependent-descent-data-circle = {!!}
 
 module _
   { l1 l2 : Level} (P : descent-data-circle l1)
@@ -79,8 +79,7 @@ dependent-descent-data-double-family-circle :
   ( (x : S) → (family-family-with-descent-data-circle A x) → UU l3) →
   dependent-descent-data-circle l3
     ( descent-data-family-with-descent-data-circle A)
-pr1 (dependent-descent-data-double-family-circle l A B) x = {!!}
-pr2 (dependent-descent-data-double-family-circle l A B) x = {!!}
+dependent-descent-data-double-family-circle = {!!}
 ```
 
 ### The identity type of dependent descent data for the circle
@@ -137,17 +136,17 @@ module _
     dependent-descent-data-circle l3
       ( descent-data-family-with-descent-data-circle A) →
     UU (l1 ⊔ l2 ⊔ lsuc l3)
-  double-family-for-dependent-descent-data-circle {l3} Q = {!!}
+  double-family-for-dependent-descent-data-circle = {!!}
 
   dependent-descent-data-circle-for-double-family :
     { l3 : Level} →
     ( (x : S) → (family-family-with-descent-data-circle A x) → UU l3) →
     UU (l2 ⊔ lsuc l3)
-  dependent-descent-data-circle-for-double-family {l3} B = {!!}
+  dependent-descent-data-circle-for-double-family = {!!}
 
   double-family-with-dependent-descent-data-circle :
     ( l3 : Level) → UU (l1 ⊔ l2 ⊔ lsuc l3)
-  double-family-with-dependent-descent-data-circle l3 = {!!}
+  double-family-with-dependent-descent-data-circle = {!!}
 
 module _
   { l1 l2 l3 : Level} {S : UU l1} {l : free-loop S}
@@ -209,7 +208,7 @@ module _
     ( double-family-double-family-with-dependent-descent-data-circle
       ( base-free-loop l)
       ( map-equiv-family-with-descent-data-circle A x))
-  map-equiv-double-family-with-dependent-descent-data-circle x = {!!}
+  map-equiv-double-family-with-dependent-descent-data-circle = {!!}
 
   coherence-square-double-family-with-dependent-descent-data-circle :
     ( x : type-family-with-descent-data-circle A) →
@@ -229,7 +228,7 @@ module _
   double-family-for-double-family-with-dependent-descent-data-circle :
     double-family-for-dependent-descent-data-circle l A
       dependent-descent-data-double-family-with-dependent-descent-data-circle
-  pr1 double-family-for-double-family-with-dependent-descent-data-circle = {!!}
+  double-family-for-double-family-with-dependent-descent-data-circle = {!!}
 ```
 
 ## Properties

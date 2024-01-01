@@ -69,13 +69,13 @@ module _
   map-universal-property-sequential-limit :
     universal-property-sequential-limit A c →
     {Y : UU l3} (c' : cone-tower A Y) → Y → X
-  map-universal-property-sequential-limit up-c {Y} c' = {!!}
+  map-universal-property-sequential-limit = {!!}
 
   compute-map-universal-property-sequential-limit :
     (up-c : universal-property-sequential-limit A c) →
     {Y : UU l3} (c' : cone-tower A Y) →
     cone-map-tower A c (map-universal-property-sequential-limit up-c c') ＝ c'
-  compute-map-universal-property-sequential-limit up-c {Y} c' = {!!}
+  compute-map-universal-property-sequential-limit = {!!}
 ```
 
 ## Properties
@@ -93,12 +93,12 @@ module _
   inv-triangle-cone-cone-tower :
     {l6 : Level} (D : UU l6) →
     cone-map-tower A c ∘ postcomp D h ~ cone-map-tower A c'
-  inv-triangle-cone-cone-tower D k = {!!}
+  inv-triangle-cone-cone-tower = {!!}
 
   triangle-cone-cone-tower :
     {l6 : Level} (D : UU l6) →
     cone-map-tower A c' ~ cone-map-tower A c ∘ postcomp D h
-  triangle-cone-cone-tower D k = {!!}
+  triangle-cone-cone-tower = {!!}
 
   abstract
     is-equiv-universal-property-sequential-limit-universal-property-sequential-limit :
@@ -137,7 +137,7 @@ module _
       universal-property-sequential-limit A c →
       {l3 : Level} (Y : UU l3) (c' : cone-tower A Y) →
       is-contr (Σ (Y → X) (λ h → htpy-cone-tower A (cone-map-tower A c h) c'))
-    uniqueness-universal-property-sequential-limit up Y c' = {!!}
+    uniqueness-universal-property-sequential-limit = {!!}
 ```
 
 ### The homotopy of cones obtained from the universal property of sequential limits
@@ -154,7 +154,7 @@ module _
     htpy-cone-tower A
       ( cone-map-tower A c (map-universal-property-sequential-limit A c up c'))
       ( c')
-  htpy-cone-map-universal-property-sequential-limit c up c' = {!!}
+  htpy-cone-map-universal-property-sequential-limit = {!!}
 ```
 
 ### Unique uniqueness of sequential limits
@@ -172,7 +172,7 @@ module _
       is-contr
         ( Σ (Y ≃ X)
             ( λ e → htpy-cone-tower A (cone-map-tower A c (map-equiv e)) c'))
-    uniquely-unique-sequential-limit c' c up-c' up-c = {!!}
+    uniquely-unique-sequential-limit = {!!}
 ```
 
 ## Table of files about sequential limits

@@ -60,7 +60,7 @@ module _
 
   is-normal-core-Subgroup :
     {l3 : Level} (N : Normal-Subgroup l3 G) → UUω
-  is-normal-core-Subgroup N = {!!}
+  is-normal-core-Subgroup = {!!}
 ```
 
 ### The construction of the normal core
@@ -88,47 +88,45 @@ module _
 
   contains-unit-normal-core-Subgroup :
     contains-unit-subset-Group G subset-normal-core-Subgroup
-  pr1 (contains-unit-normal-core-Subgroup x) = {!!}
+  contains-unit-normal-core-Subgroup = {!!}
 
   is-closed-under-multiplication-normal-core-Subgroup :
     is-closed-under-multiplication-subset-Group G subset-normal-core-Subgroup
-  pr1 (is-closed-under-multiplication-normal-core-Subgroup u v z) = {!!}
+  is-closed-under-multiplication-normal-core-Subgroup = {!!}
 
   is-closed-under-inverses-normal-core-Subgroup :
     is-closed-under-inverses-subset-Group G subset-normal-core-Subgroup
-  pr1 (is-closed-under-inverses-normal-core-Subgroup u z) = {!!}
+  is-closed-under-inverses-normal-core-Subgroup = {!!}
 
   subgroup-normal-core-Subgroup : Subgroup (l1 ⊔ l2) G
   pr1 subgroup-normal-core-Subgroup = {!!}
 
   is-normal-normal-core-Subgroup :
     is-normal-Subgroup G subgroup-normal-core-Subgroup
-  pr1 (is-normal-normal-core-Subgroup x (y , u) z) = {!!}
+  is-normal-normal-core-Subgroup = {!!}
 
   normal-core-Subgroup : Normal-Subgroup (l1 ⊔ l2) G
   pr1 normal-core-Subgroup = {!!}
 
   is-contained-in-subgroup-normal-core-Subgroup :
     leq-Subgroup G subgroup-normal-core-Subgroup H
-  is-contained-in-subgroup-normal-core-Subgroup x h = {!!}
+  is-contained-in-subgroup-normal-core-Subgroup = {!!}
 
   forward-implication-is-normal-core-normal-core-Subgroup :
     {l : Level} (N : Normal-Subgroup l G) →
     leq-Subgroup G (subgroup-Normal-Subgroup G N) H →
     leq-Normal-Subgroup G N normal-core-Subgroup
-  pr1
-    ( pr1
-      ( forward-implication-is-normal-core-normal-core-Subgroup N u x n y)) = {!!}
+  forward-implication-is-normal-core-normal-core-Subgroup = {!!}
 
   backward-implication-is-normal-core-normal-core-Subgroup :
     {l : Level} (N : Normal-Subgroup l G) →
     leq-Normal-Subgroup G N normal-core-Subgroup →
     leq-Subgroup G (subgroup-Normal-Subgroup G N) H
-  backward-implication-is-normal-core-normal-core-Subgroup N = {!!}
+  backward-implication-is-normal-core-normal-core-Subgroup = {!!}
 
   is-normal-core-normal-core-Subgroup :
     is-normal-core-Subgroup G H normal-core-Subgroup
-  pr1 (is-normal-core-normal-core-Subgroup N) = {!!}
+  is-normal-core-normal-core-Subgroup = {!!}
 ```
 
 ### The normal core Galois connection
@@ -144,7 +142,7 @@ module _
     leq-Normal-Subgroup G
       ( normal-core-Subgroup G H)
       ( normal-core-Subgroup G K)
-  preserves-order-normal-core-Subgroup H K u = {!!}
+  preserves-order-normal-core-Subgroup = {!!}
 
   normal-core-subgroup-hom-Large-Poset :
     hom-Large-Poset
@@ -159,8 +157,7 @@ module _
       ( λ l2 → l1 ⊔ l2)
       ( Normal-Subgroup-Large-Poset G)
       ( Subgroup-Large-Poset G)
-  lower-adjoint-galois-connection-Large-Poset
-    normal-core-subgroup-Galois-Connection = {!!}
+  normal-core-subgroup-Galois-Connection = {!!}
 ```
 
 ## See also

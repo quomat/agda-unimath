@@ -85,7 +85,7 @@ module _
 
   is-finite-block-partition-𝔽 :
     (i : indexing-type-partition-𝔽) → is-finite (block-partition-𝔽 i)
-  is-finite-block-partition-𝔽 i = {!!}
+  is-finite-block-partition-𝔽 = {!!}
 
   number-of-elements-block-partition-𝔽 : indexing-type-partition-𝔽 → ℕ
   number-of-elements-block-partition-𝔽 i = {!!}
@@ -130,19 +130,17 @@ module _
 equiv-partition-𝔽 :
   {l1 l2 l3 l4 l5 : Level} (X : 𝔽 l1) →
   partition-𝔽 l2 l3 X → partition-𝔽 l4 l5 X → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ l5)
-equiv-partition-𝔽 X P Q = {!!}
+equiv-partition-𝔽 = {!!}
 
 id-equiv-partition-𝔽 :
   {l1 l2 l3 : Level} (X : 𝔽 l1)
   (P : partition-𝔽 l2 l3 X) → equiv-partition-𝔽 X P P
-pr1 (id-equiv-partition-𝔽 X P) = {!!}
-pr1 (pr2 (id-equiv-partition-𝔽 X P)) i = {!!}
-pr2 (pr2 (id-equiv-partition-𝔽 X P)) = {!!}
+id-equiv-partition-𝔽 = {!!}
 
 extensionality-partition-𝔽 :
   {l1 l2 l3 : Level} (X : 𝔽 l1) (P Q : partition-𝔽 l2 l3 X) →
   Id P Q ≃ equiv-partition-𝔽 X P Q
-extensionality-partition-𝔽 X P = {!!}
+extensionality-partition-𝔽 = {!!}
 ```
 
 ## Properties

@@ -129,10 +129,10 @@ module _
 
   is-torsion-free-has-unique-torsion-element-Group :
     has-unique-torsion-element-Group G → is-torsion-free-Group G
-  is-torsion-free-has-unique-torsion-element-Group H x k p = {!!}
+  is-torsion-free-has-unique-torsion-element-Group = {!!}
 
   abstract
     has-unique-torsion-element-is-torsion-free-Group :
       is-torsion-free-Group G → has-unique-torsion-element-Group G
-    has-unique-torsion-element-is-torsion-free-Group H = {!!}
+    has-unique-torsion-element-is-torsion-free-Group = {!!}
 ```

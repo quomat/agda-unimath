@@ -54,10 +54,10 @@ module _
   is-surjective-is-full-subsemigroup-image-hom-Semigroup :
     is-full-Subsemigroup H (image-hom-Semigroup G H f) →
     is-surjective-hom-Semigroup G H f
-  is-surjective-is-full-subsemigroup-image-hom-Semigroup u = {!!}
+  is-surjective-is-full-subsemigroup-image-hom-Semigroup = {!!}
 
   is-full-subsemigroup-image-is-surjective-hom-Semigroup :
     is-surjective-hom-Semigroup G H f →
     is-full-Subsemigroup H (image-hom-Semigroup G H f)
-  is-full-subsemigroup-image-is-surjective-hom-Semigroup u = {!!}
+  is-full-subsemigroup-image-is-surjective-hom-Semigroup = {!!}
 ```

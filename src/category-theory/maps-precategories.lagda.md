@@ -81,7 +81,7 @@ module _
       ( hom-eq-Precategory C y y' q)
       ( comp-hom-Precategory C f (hom-inv-eq-Precategory C x x' p))) ＝
     ( binary-tr (hom-Precategory C) p q f)
-  compute-binary-tr-hom-Precategory refl refl f = {!!}
+  compute-binary-tr-hom-Precategory = {!!}
 
   naturality-binary-tr-hom-Precategory :
     (p : x ＝ x') (q : y ＝ y')
@@ -91,7 +91,7 @@ module _
       ( hom-eq-Precategory C x x' p)
       ( hom-eq-Precategory C y y' q)
       ( binary-tr (hom-Precategory C) p q f))
-  naturality-binary-tr-hom-Precategory refl refl f = {!!}
+  naturality-binary-tr-hom-Precategory = {!!}
 
   naturality-binary-tr-hom-Precategory' :
     (p : x ＝ x') (q : y ＝ y')
@@ -101,7 +101,7 @@ module _
       ( f)
       ( binary-tr (hom-Precategory C) p q f)
       ( hom-eq-Precategory C y y' q))
-  naturality-binary-tr-hom-Precategory' refl refl f = {!!}
+  naturality-binary-tr-hom-Precategory' = {!!}
 ```
 
 ### Characterization of equality of maps between precategories
@@ -117,35 +117,35 @@ module _
     (f g : map-Precategory C D) →
     obj-map-Precategory C D f ~ obj-map-Precategory C D g →
     UU (l1 ⊔ l2 ⊔ l4)
-  coherence-htpy-map-Precategory f g H = {!!}
+  coherence-htpy-map-Precategory = {!!}
 
   htpy-map-Precategory :
     (f g : map-Precategory C D) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  htpy-map-Precategory f g = {!!}
+  htpy-map-Precategory = {!!}
 
   refl-htpy-map-Precategory :
     (f : map-Precategory C D) → htpy-map-Precategory f f
-  pr1 (refl-htpy-map-Precategory f) = {!!}
+  refl-htpy-map-Precategory = {!!}
 
   htpy-eq-map-Precategory :
     (f g : map-Precategory C D) → f ＝ g → htpy-map-Precategory f g
-  htpy-eq-map-Precategory f .f refl = {!!}
+  htpy-eq-map-Precategory = {!!}
 
   is-torsorial-htpy-map-Precategory :
     (f : map-Precategory C D) → is-torsorial (htpy-map-Precategory f)
-  is-torsorial-htpy-map-Precategory f = {!!}
+  is-torsorial-htpy-map-Precategory = {!!}
 
   is-equiv-htpy-eq-map-Precategory :
     (f g : map-Precategory C D) → is-equiv (htpy-eq-map-Precategory f g)
-  is-equiv-htpy-eq-map-Precategory f = {!!}
+  is-equiv-htpy-eq-map-Precategory = {!!}
 
   equiv-htpy-eq-map-Precategory :
     (f g : map-Precategory C D) → (f ＝ g) ≃ htpy-map-Precategory f g
-  pr1 (equiv-htpy-eq-map-Precategory f g) = {!!}
+  equiv-htpy-eq-map-Precategory = {!!}
 
   eq-htpy-map-Precategory :
     (f g : map-Precategory C D) → htpy-map-Precategory f g → f ＝ g
-  eq-htpy-map-Precategory f g = {!!}
+  eq-htpy-map-Precategory = {!!}
 ```
 
 ## See also

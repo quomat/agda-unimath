@@ -44,7 +44,7 @@ is-decidable-total-Poset P = {!!}
 
 is-prop-is-decidable-total-Poset :
   {l1 l2 : Level} (P : Poset l1 l2) → is-prop (is-decidable-total-Poset P)
-is-prop-is-decidable-total-Poset P = {!!}
+is-prop-is-decidable-total-Poset = {!!}
 ```
 
 ### The type of decidable total orders
@@ -125,7 +125,7 @@ module _
 
   decidable-total-preorder-Decidable-Total-Order :
     Decidable-Total-Preorder l1 l2
-  pr1 decidable-total-preorder-Decidable-Total-Order = {!!}
+  decidable-total-preorder-Decidable-Total-Order = {!!}
 
   leq-or-strict-greater-Decidable-Poset :
     (x y : type-Decidable-Total-Order) → UU (l1 ⊔ l2)
@@ -144,7 +144,7 @@ module _
   is-prop-leq-or-strict-greater-Decidable-Total-Order :
     (x y : type-Decidable-Total-Order) →
     is-prop (leq-or-strict-greater-Decidable-Poset x y)
-  is-prop-leq-or-strict-greater-Decidable-Total-Order x y = {!!}
+  is-prop-leq-or-strict-greater-Decidable-Total-Order = {!!}
 
   is-set-type-Decidable-Total-Order : is-set type-Decidable-Total-Order
   is-set-type-Decidable-Total-Order = {!!}

@@ -54,12 +54,12 @@ module _
   is-unit-commutator-commute-Group :
     (x y : type-Group G) →
     commute-Group G x y → is-unit-Group G (commutator-Group G x y)
-  is-unit-commutator-commute-Group x y H = {!!}
+  is-unit-commutator-commute-Group = {!!}
 
   commute-is-unit-commutator-Group :
     (x y : type-Group G) →
     is-unit-Group G (commutator-Group G x y) → commute-Group G x y
-  commute-is-unit-commutator-Group x y H = {!!}
+  commute-is-unit-commutator-Group = {!!}
 ```
 
 ### The inverse of the commutator `[x,y]` is `[y,x]`
@@ -71,7 +71,7 @@ that `((xy)(yx)⁻¹)⁻¹ ＝ (yx)(xy)⁻¹`.
   inv-commutator-Group :
     (x y : type-Group G) →
     inv-Group G (commutator-Group G x y) ＝ commutator-Group G y x
-  inv-commutator-Group x y = {!!}
+  inv-commutator-Group = {!!}
 ```
 
 ### Conjugation distributes over the commutator
@@ -95,7 +95,7 @@ module _
     (u x y : type-Group G) →
     conjugation-Group G u (commutator-Group G x y) ＝
     commutator-Group G (conjugation-Group G u x) (conjugation-Group G u y)
-  distributive-conjugation-commutator-Group u x y = {!!}
+  distributive-conjugation-commutator-Group = {!!}
 ```
 
 ### Group homomorphisms preserve commutators

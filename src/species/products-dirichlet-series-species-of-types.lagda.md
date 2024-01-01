@@ -73,13 +73,13 @@ module _
             ( λ B →
               Σ ( Σ ( UU l1) (λ F → F ≃ (A × B)))
                 ( λ F → ((S A) × (T B)) × (X → H (pr1 F)))))
-    pr1 reassociate (F , ((A , B , e) , x) , y) = {!!}
+    reassociate = {!!}
 
     reassociate' :
       Σ ( UU l1)
         ( λ A → Σ (UU l1) (λ B → (S A × T B) × ((X → H A) × (X → H B)))) ≃
       product-dirichlet-series-species-types H C1 S T X
-    pr1 reassociate' (A , B , (s , t) , (fs , ft)) = {!!}
+    reassociate' = {!!}
 
   equiv-dirichlet-series-dirichlet-product-species-types :
     dirichlet-series-species-types

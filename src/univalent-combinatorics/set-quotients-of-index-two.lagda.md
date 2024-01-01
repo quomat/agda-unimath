@@ -57,8 +57,7 @@ module _
     map-equiv eA (map-reflecting-map-equivalence-relation R f (h y)) ＝ k'' →
     h' (map-reflecting-map-equivalence-relation R f y) ＝
     map-reflecting-map-equivalence-relation R f (h y)
-  cases-coherence-square-maps-eq-one-value-emb-is-set-quotient H' y
-    ( inl (inr _)) (inl (inr _)) k'' p q r = {!!}
+  cases-coherence-square-maps-eq-one-value-emb-is-set-quotient = {!!}
 
   coherence-square-maps-eq-one-value-emb-is-set-quotient :
     is-emb h' →
@@ -67,10 +66,10 @@ module _
       ( map-reflecting-map-equivalence-relation R f)
       ( map-reflecting-map-equivalence-relation R f)
       ( h')
-  coherence-square-maps-eq-one-value-emb-is-set-quotient H' y = {!!}
+  coherence-square-maps-eq-one-value-emb-is-set-quotient = {!!}
 
   eq-equiv-eq-one-value-equiv-is-set-quotient :
     (P : is-equiv h) (Q : is-equiv h') →
     pair h' Q ＝ equiv-is-set-quotient R QR f R QR f Uf Uf ((h , P) , H)
-  eq-equiv-eq-one-value-equiv-is-set-quotient P Q = {!!}
+  eq-equiv-eq-one-value-equiv-is-set-quotient = {!!}
 ```

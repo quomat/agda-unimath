@@ -76,7 +76,7 @@ module _
 
   contains-subgroup-generating-subset-normal-closure-Subgroup :
     subset-Subgroup G H ⊆ generating-subset-normal-closure-Subgroup
-  contains-subgroup-generating-subset-normal-closure-Subgroup x h = {!!}
+  contains-subgroup-generating-subset-normal-closure-Subgroup = {!!}
 
   abstract
     is-closed-under-conjugation-generating-subset-normal-closure-Subgroup :
@@ -141,24 +141,24 @@ module _
     {l : Level} (N : Normal-Subgroup l G) →
     leq-Normal-Subgroup G normal-closure-Subgroup N →
     leq-Subgroup G H (subgroup-Normal-Subgroup G N)
-  forward-implication-is-normal-closure-normal-closure-Subgroup N u = {!!}
+  forward-implication-is-normal-closure-normal-closure-Subgroup = {!!}
 
   abstract
     contains-generating-subset-normal-closure-Normal-Subgroup :
       {l : Level} (N : Normal-Subgroup l G) →
       leq-Subgroup G H (subgroup-Normal-Subgroup G N) →
       generating-subset-normal-closure-Subgroup ⊆ subset-Normal-Subgroup G N
-    contains-generating-subset-normal-closure-Normal-Subgroup N u x g = {!!}
+    contains-generating-subset-normal-closure-Normal-Subgroup = {!!}
 
   backward-implication-is-normal-closure-normal-closure-Subgroup :
     {l : Level} (N : Normal-Subgroup l G) →
     leq-Subgroup G H (subgroup-Normal-Subgroup G N) →
     leq-Normal-Subgroup G normal-closure-Subgroup N
-  backward-implication-is-normal-closure-normal-closure-Subgroup N u = {!!}
+  backward-implication-is-normal-closure-normal-closure-Subgroup = {!!}
 
   is-normal-closure-normal-closure-Subgroup :
     is-normal-closure-Subgroup G H normal-closure-Subgroup
-  pr1 (is-normal-closure-normal-closure-Subgroup N) = {!!}
+  is-normal-closure-normal-closure-Subgroup = {!!}
 ```
 
 ### The normal closure Galois connection
@@ -174,7 +174,7 @@ module _
     leq-Normal-Subgroup G
       ( normal-closure-Subgroup G H)
       ( normal-closure-Subgroup G K)
-  preserves-order-normal-closure-Subgroup H K u = {!!}
+  preserves-order-normal-closure-Subgroup = {!!}
 
   normal-closure-subgroup-hom-Large-Poset :
     hom-Large-Poset

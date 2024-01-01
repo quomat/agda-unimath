@@ -43,7 +43,7 @@ module _
     (x y z : type-op-Semigroup) →
     mul-Semigroup G z (mul-Semigroup G y x) ＝
     mul-Semigroup G (mul-Semigroup G z y) x
-  associative-mul-op-Semigroup x y z = {!!}
+  associative-mul-op-Semigroup = {!!}
 
   op-Semigroup : Semigroup l
   pr1 op-Semigroup = {!!}

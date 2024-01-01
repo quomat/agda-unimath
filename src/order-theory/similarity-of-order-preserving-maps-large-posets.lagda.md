@@ -88,5 +88,5 @@ module _
 
   htpy-sim-hom-Large-Poset :
     sim-hom-Large-Poset P Q f g → htpy-hom-Large-Poset P Q f g
-  htpy-sim-hom-Large-Poset H x = {!!}
+  htpy-sim-hom-Large-Poset = {!!}
 ```

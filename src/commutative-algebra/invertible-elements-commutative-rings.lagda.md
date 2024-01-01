@@ -129,12 +129,12 @@ module _
   is-invertible-is-left-invertible-element-Commutative-Ring :
     is-left-invertible-element-Commutative-Ring A x →
     is-invertible-element-Commutative-Ring A x
-  pr1 (is-invertible-is-left-invertible-element-Commutative-Ring H) = {!!}
+  is-invertible-is-left-invertible-element-Commutative-Ring = {!!}
 
   is-invertible-is-right-invertible-element-Commutative-Ring :
     is-right-invertible-element-Commutative-Ring A x →
     is-invertible-element-Commutative-Ring A x
-  pr1 (is-invertible-is-right-invertible-element-Commutative-Ring H) = {!!}
+  is-invertible-is-right-invertible-element-Commutative-Ring = {!!}
 ```
 
 ## Properties

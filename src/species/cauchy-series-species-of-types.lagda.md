@@ -48,7 +48,7 @@ definition :
 ```agda
 cauchy-series-species-types :
   {l1 l2 l3 : Level} → species-types l1 l2 → UU l3 → UU (lsuc l1 ⊔ l2 ⊔ l3)
-cauchy-series-species-types {l1} S X = {!!}
+cauchy-series-species-types = {!!}
 ```
 
 ## Properties

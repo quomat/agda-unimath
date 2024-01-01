@@ -27,5 +27,5 @@ representing the derivative of that formal power series.
 ```agda
 derivative-species-types :
   {l1 l2 : Level} → species-types l1 l2 → species-types l1 l2
-derivative-species-types F X = {!!}
+derivative-species-types = {!!}
 ```

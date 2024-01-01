@@ -39,7 +39,7 @@ module _
 
   is-property-is-fiberwise-equiv :
     (f : (a : A) → B a → C a) → is-prop (is-fiberwise-equiv f)
-  is-property-is-fiberwise-equiv f = {!!}
+  is-property-is-fiberwise-equiv = {!!}
 ```
 
 ## See also

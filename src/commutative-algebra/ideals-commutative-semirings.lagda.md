@@ -40,7 +40,7 @@ module _
 
 ideal-Commutative-Semiring :
   {l1 : Level} (l2 : Level) → Commutative-Semiring l1 → UU (l1 ⊔ lsuc l2)
-ideal-Commutative-Semiring l2 A = {!!}
+ideal-Commutative-Semiring = {!!}
 
 module _
   {l1 l2 : Level} (A : Commutative-Semiring l1)
@@ -123,11 +123,7 @@ ideal-left-ideal-Commutative-Semiring :
   is-closed-under-addition-subset-Commutative-Semiring A S →
   is-closed-under-left-multiplication-subset-Commutative-Semiring A S →
   ideal-Commutative-Semiring l2 A
-pr1 (ideal-left-ideal-Commutative-Semiring A S z a m) = {!!}
-pr1 (pr1 (pr2 (ideal-left-ideal-Commutative-Semiring A S z a m))) = {!!}
-pr2 (pr1 (pr2 (ideal-left-ideal-Commutative-Semiring A S z a m))) = {!!}
-pr1 (pr2 (pr2 (ideal-left-ideal-Commutative-Semiring A S z a m))) = {!!}
-pr2 (pr2 (pr2 (ideal-left-ideal-Commutative-Semiring A S z a m))) x y H = {!!}
+ideal-left-ideal-Commutative-Semiring = {!!}
 
 ideal-right-ideal-Commutative-Semiring :
   {l1 l2 : Level} (A : Commutative-Semiring l1)
@@ -136,9 +132,5 @@ ideal-right-ideal-Commutative-Semiring :
   is-closed-under-addition-subset-Commutative-Semiring A S →
   is-closed-under-right-multiplication-subset-Commutative-Semiring A S →
   ideal-Commutative-Semiring l2 A
-pr1 (ideal-right-ideal-Commutative-Semiring A S z a m) = {!!}
-pr1 (pr1 (pr2 (ideal-right-ideal-Commutative-Semiring A S z a m))) = {!!}
-pr2 (pr1 (pr2 (ideal-right-ideal-Commutative-Semiring A S z a m))) = {!!}
-pr1 (pr2 (pr2 (ideal-right-ideal-Commutative-Semiring A S z a m))) x y H = {!!}
-pr2 (pr2 (pr2 (ideal-right-ideal-Commutative-Semiring A S z a m))) = {!!}
+ideal-right-ideal-Commutative-Semiring = {!!}
 ```

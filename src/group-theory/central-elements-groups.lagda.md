@@ -67,7 +67,7 @@ module _
     {x y : type-Group G} →
     is-central-element-Group G x → is-central-element-Group G y →
     is-central-element-Group G (mul-Group G x y)
-  is-central-element-mul-Group {x} {y} = {!!}
+  is-central-element-mul-Group = {!!}
 ```
 
 ### The inverse of a central element is central
@@ -80,7 +80,7 @@ module _
   is-central-element-inv-Group :
     {x : type-Group G} → is-central-element-Group G x →
     is-central-element-Group G (inv-Group G x)
-  is-central-element-inv-Group {x} H y = {!!}
+  is-central-element-inv-Group = {!!}
 ```
 
 ### The central elements are closed under conjugation
@@ -93,10 +93,10 @@ module _
   is-fixed-point-conjugation-is-central-element-Group :
     (x y : type-Group G) → is-central-element-Group G x →
     conjugation-Group G y x ＝ x
-  is-fixed-point-conjugation-is-central-element-Group x y H = {!!}
+  is-fixed-point-conjugation-is-central-element-Group = {!!}
 
   is-central-element-conjugation-Group :
     (x y : type-Group G) → is-central-element-Group G x →
     is-central-element-Group G (conjugation-Group G y x)
-  is-central-element-conjugation-Group x y H = {!!}
+  is-central-element-conjugation-Group = {!!}
 ```

@@ -33,7 +33,7 @@ equivalence.
 ```agda
 is-central-h-space :
   {l : Level} (A : Pointed-Type l) → UU l
-is-central-h-space A = {!!}
+is-central-h-space = {!!}
 ```
 
 ## References

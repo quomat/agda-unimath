@@ -36,6 +36,6 @@ tuple-types l n = {!!}
 tuple-types-complement-point :
   {l : Level} {n : ℕ} (A : tuple-types l (succ-ℕ n)) (i : Fin (succ-ℕ n)) →
   tuple-types l n
-tuple-types-complement-point A i = {!!}
+tuple-types-complement-point = {!!}
 -}
 ```

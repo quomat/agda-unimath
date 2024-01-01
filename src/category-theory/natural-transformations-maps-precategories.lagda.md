@@ -54,11 +54,11 @@ module _
   naturality-hom-family-map-Precategory :
     hom-family-map-Precategory →
     {x y : obj-Precategory C} (f : hom-Precategory C x y) → UU l4
-  naturality-hom-family-map-Precategory γ {x} {y} f = {!!}
+  naturality-hom-family-map-Precategory = {!!}
 
   is-natural-transformation-map-Precategory :
     hom-family-map-Precategory → UU (l1 ⊔ l2 ⊔ l4)
-  is-natural-transformation-map-Precategory γ = {!!}
+  is-natural-transformation-map-Precategory = {!!}
 
   natural-transformation-map-Precategory : UU (l1 ⊔ l2 ⊔ l4)
   natural-transformation-map-Precategory = {!!}
@@ -85,14 +85,14 @@ module _
 
   id-natural-transformation-map-Precategory :
     (F : map-Precategory C D) → natural-transformation-map-Precategory C D F F
-  pr1 (id-natural-transformation-map-Precategory F) x = {!!}
+  id-natural-transformation-map-Precategory = {!!}
 
   comp-natural-transformation-map-Precategory :
     (F G H : map-Precategory C D) →
     natural-transformation-map-Precategory C D G H →
     natural-transformation-map-Precategory C D F G →
     natural-transformation-map-Precategory C D F H
-  pr1 (comp-natural-transformation-map-Precategory F G H β α) x = {!!}
+  comp-natural-transformation-map-Precategory = {!!}
 ```
 
 ## Properties
@@ -113,11 +113,11 @@ module _
   is-prop-is-natural-transformation-map-Precategory :
     ( γ : hom-family-map-Precategory C D F G) →
     is-prop (is-natural-transformation-map-Precategory C D F G γ)
-  is-prop-is-natural-transformation-map-Precategory γ = {!!}
+  is-prop-is-natural-transformation-map-Precategory = {!!}
 
   is-natural-transformation-prop-map-Precategory :
     ( γ : hom-family-map-Precategory C D F G) → Prop (l1 ⊔ l2 ⊔ l4)
-  pr1 (is-natural-transformation-prop-map-Precategory α) = {!!}
+  is-natural-transformation-prop-map-Precategory = {!!}
 ```
 
 ### The set of natural transformations
@@ -152,14 +152,14 @@ module _
     ( α ＝ β) ≃
     ( hom-family-natural-transformation-map-Precategory C D F G α ~
       hom-family-natural-transformation-map-Precategory C D F G β)
-  extensionality-natural-transformation-map-Precategory α β = {!!}
+  extensionality-natural-transformation-map-Precategory = {!!}
 
   eq-htpy-hom-family-natural-transformation-map-Precategory :
     (α β : natural-transformation-map-Precategory C D F G) →
     ( hom-family-natural-transformation-map-Precategory C D F G α ~
       hom-family-natural-transformation-map-Precategory C D F G β) →
     α ＝ β
-  eq-htpy-hom-family-natural-transformation-map-Precategory α β = {!!}
+  eq-htpy-hom-family-natural-transformation-map-Precategory = {!!}
 ```
 
 ### Categorical laws for natural transformations
@@ -174,14 +174,14 @@ module _
     (α : natural-transformation-map-Precategory C D F G) →
     comp-natural-transformation-map-Precategory C D F F G α
       ( id-natural-transformation-map-Precategory C D F) ＝ α
-  right-unit-law-comp-natural-transformation-map-Precategory F G α = {!!}
+  right-unit-law-comp-natural-transformation-map-Precategory = {!!}
 
   left-unit-law-comp-natural-transformation-map-Precategory :
     (F G : map-Precategory C D)
     (α : natural-transformation-map-Precategory C D F G) →
     comp-natural-transformation-map-Precategory C D F G G
       ( id-natural-transformation-map-Precategory C D G) α ＝ α
-  left-unit-law-comp-natural-transformation-map-Precategory F G α = {!!}
+  left-unit-law-comp-natural-transformation-map-Precategory = {!!}
 
   associative-comp-natural-transformation-map-Precategory :
     (F G H I : map-Precategory C D)
@@ -192,7 +192,7 @@ module _
       ( comp-natural-transformation-map-Precategory C D G H I γ β) α ＝
     comp-natural-transformation-map-Precategory C D F H I γ
       ( comp-natural-transformation-map-Precategory C D F G H β α)
-  associative-comp-natural-transformation-map-Precategory F G H I α β γ = {!!}
+  associative-comp-natural-transformation-map-Precategory = {!!}
 
   inv-associative-comp-natural-transformation-map-Precategory :
     (F G H I : map-Precategory C D)
@@ -203,5 +203,5 @@ module _
       ( comp-natural-transformation-map-Precategory C D F G H β α) ＝
     comp-natural-transformation-map-Precategory C D F G I
       ( comp-natural-transformation-map-Precategory C D G H I γ β) α
-  inv-associative-comp-natural-transformation-map-Precategory F G H I α β γ = {!!}
+  inv-associative-comp-natural-transformation-map-Precategory = {!!}
 ```

@@ -48,11 +48,11 @@ module _
 
   preserves-root-hom-Directed-Tree :
     hom-Directed-Tree S T → UU l3
-  preserves-root-hom-Directed-Tree f = {!!}
+  preserves-root-hom-Directed-Tree = {!!}
 
   is-prop-preserves-root-hom-Directed-Tree :
     (f : hom-Directed-Tree S T) → is-prop (preserves-root-hom-Directed-Tree f)
-  is-prop-preserves-root-hom-Directed-Tree f = {!!}
+  is-prop-preserves-root-hom-Directed-Tree = {!!}
 
   rooted-hom-Directed-Tree : UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
   rooted-hom-Directed-Tree = {!!}
@@ -96,7 +96,7 @@ module _
 
     base-rooted-hom-Directed-Tree :
       base-Directed-Tree S → base-Directed-Tree T
-    base-rooted-hom-Directed-Tree (x , e) = {!!}
+    base-rooted-hom-Directed-Tree = {!!}
 ```
 
 ### The identity rooted morphism of directed trees
@@ -104,8 +104,7 @@ module _
 ```agda
 id-rooted-hom-Directed-Tree :
   {l1 l2 : Level} (T : Directed-Tree l1 l2) → rooted-hom-Directed-Tree T T
-pr1 (id-rooted-hom-Directed-Tree T) = {!!}
-pr2 (id-rooted-hom-Directed-Tree T) = {!!}
+id-rooted-hom-Directed-Tree = {!!}
 ```
 
 ### Composition of rooted morphisms of directed trees
@@ -128,7 +127,7 @@ module _
 
   comp-rooted-hom-Directed-Tree :
     rooted-hom-Directed-Tree R T
-  pr1 comp-rooted-hom-Directed-Tree = {!!}
+  comp-rooted-hom-Directed-Tree = {!!}
 ```
 
 ### Homotopies of rooted morphisms of directed trees
@@ -140,12 +139,12 @@ module _
 
   htpy-rooted-hom-Directed-Tree :
     (f g : rooted-hom-Directed-Tree S T) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  htpy-rooted-hom-Directed-Tree f g = {!!}
+  htpy-rooted-hom-Directed-Tree = {!!}
 
   refl-htpy-rooted-hom-Directed-Tree :
     (f : rooted-hom-Directed-Tree S T) →
     htpy-rooted-hom-Directed-Tree f f
-  refl-htpy-rooted-hom-Directed-Tree f = {!!}
+  refl-htpy-rooted-hom-Directed-Tree = {!!}
 
   module _
     (f g : rooted-hom-Directed-Tree S T)
@@ -196,12 +195,12 @@ module _
   htpy-eq-rooted-hom-Directed-Tree :
     (g : rooted-hom-Directed-Tree S T) →
     (f ＝ g) → htpy-rooted-hom-Directed-Tree S T f g
-  htpy-eq-rooted-hom-Directed-Tree g = {!!}
+  htpy-eq-rooted-hom-Directed-Tree = {!!}
 
   eq-htpy-rooted-hom-Directed-Tree :
     (g : rooted-hom-Directed-Tree S T) →
     htpy-rooted-hom-Directed-Tree S T f g → f ＝ g
-  eq-htpy-rooted-hom-Directed-Tree g = {!!}
+  eq-htpy-rooted-hom-Directed-Tree = {!!}
 
   is-torsorial-htpy-rooted-hom-Directed-Tree :
     is-torsorial (htpy-rooted-hom-Directed-Tree S T f)

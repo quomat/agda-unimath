@@ -124,14 +124,14 @@ module _
 
   shape-combinator-Enriched-Directed-Tree :
     node-combinator-Enriched-Directed-Tree → A
-  shape-combinator-Enriched-Directed-Tree root-combinator-Directed-Tree = {!!}
+  shape-combinator-Enriched-Directed-Tree = {!!}
 
   map-root-enrichment-combinator-Enriched-Directed-Tree :
     B a →
     Σ ( node-combinator-Enriched-Directed-Tree)
       ( λ y →
         edge-combinator-Enriched-Directed-Tree y root-combinator-Directed-Tree)
-  pr1 (map-root-enrichment-combinator-Enriched-Directed-Tree b) = {!!}
+  map-root-enrichment-combinator-Enriched-Directed-Tree = {!!}
 
   map-inv-root-enrichment-combinator-Enriched-Directed-Tree :
     Σ ( node-combinator-Enriched-Directed-Tree)
@@ -151,7 +151,7 @@ module _
   is-retraction-map-inv-root-enrichment-combinator-Enriched-Directed-Tree :
     ( map-inv-root-enrichment-combinator-Enriched-Directed-Tree ∘
       map-root-enrichment-combinator-Enriched-Directed-Tree) ~ id
-  is-retraction-map-inv-root-enrichment-combinator-Enriched-Directed-Tree b = {!!}
+  is-retraction-map-inv-root-enrichment-combinator-Enriched-Directed-Tree = {!!}
 
   is-equiv-map-root-enrichment-combinator-Enriched-Directed-Tree :
     is-equiv map-root-enrichment-combinator-Enriched-Directed-Tree
@@ -162,18 +162,18 @@ module _
     Σ ( node-combinator-Enriched-Directed-Tree)
       ( λ y →
         edge-combinator-Enriched-Directed-Tree y root-combinator-Directed-Tree)
-  pr1 root-enrichment-combinator-Enriched-Directed-Tree = {!!}
+  root-enrichment-combinator-Enriched-Directed-Tree = {!!}
 
   enrichment-combinator-Enriched-Directed-Tree :
     (x : node-combinator-Enriched-Directed-Tree) →
     B (shape-combinator-Enriched-Directed-Tree x) ≃
     Σ ( node-combinator-Enriched-Directed-Tree)
       ( λ y → edge-combinator-Enriched-Directed-Tree y x)
-  enrichment-combinator-Enriched-Directed-Tree root-combinator-Directed-Tree = {!!}
+  enrichment-combinator-Enriched-Directed-Tree = {!!}
 
   combinator-Enriched-Directed-Tree :
     Enriched-Directed-Tree (l2 ⊔ l3) (l2 ⊔ l3 ⊔ l4) A B
-  pr1 combinator-Enriched-Directed-Tree = {!!}
+  combinator-Enriched-Directed-Tree = {!!}
 ```
 
 ## Properties
@@ -217,7 +217,7 @@ eq-index-edge-combinator-Enriched-Directed-Tree :
     ( node-inclusion-combinator-Directed-Tree b x)
     ( node-inclusion-combinator-Directed-Tree c y) →
   b ＝ c
-eq-index-edge-combinator-Enriched-Directed-Tree A B a T = {!!}
+eq-index-edge-combinator-Enriched-Directed-Tree = {!!}
 ```
 
 ### The base of the combinator tree of a family `T` of enriched directed tree indexed by `B a` is equivalent to `B a`
@@ -384,7 +384,7 @@ module _
       ( combinator-Enriched-Directed-Tree A B T)
       ( node-base-index-combinator-Enriched-Directed-Tree A B T b)
       ( node-compute-fiber-combinator-Enriched-Directed-Tree b x)
-  direct-predecessor-compute-fiber-combinator-Enriched-Directed-Tree b = {!!}
+  direct-predecessor-compute-fiber-combinator-Enriched-Directed-Tree = {!!}
 
   is-equiv-directed-tree-hom-compute-fiber-combinator-Enriched-Directed-Tree :
     (b : B a) →
@@ -412,7 +412,7 @@ module _
         ( combinator-Enriched-Directed-Tree A B T)
         ( node-base-index-combinator-Enriched-Directed-Tree A B T b)) ∘
       ( node-compute-fiber-combinator-Enriched-Directed-Tree b))
-  shape-compute-fiber-combinator-Enriched-Directed-Tree b x = {!!}
+  shape-compute-fiber-combinator-Enriched-Directed-Tree = {!!}
 
   enrichment-compute-fiber-combinator-Enriched-Directed-Tree :
     (b : B a) (x : node-Enriched-Directed-Tree A B (T b)) →
@@ -424,7 +424,7 @@ module _
         ( combinator-Enriched-Directed-Tree A B T)
         ( b)
       ( node-compute-fiber-combinator-Enriched-Directed-Tree b x))
-  enrichment-compute-fiber-combinator-Enriched-Directed-Tree b x y = {!!}
+  enrichment-compute-fiber-combinator-Enriched-Directed-Tree = {!!}
 
   compute-fiber-combinator-Enriched-Directed-Tree :
     (b : B a) →
@@ -433,5 +433,5 @@ module _
       ( fiber-Enriched-Directed-Tree A B
         ( combinator-Enriched-Directed-Tree A B T)
         ( node-base-index-combinator-Enriched-Directed-Tree A B T b))
-  pr1 (compute-fiber-combinator-Enriched-Directed-Tree b) = {!!}
+  compute-fiber-combinator-Enriched-Directed-Tree = {!!}
 ```

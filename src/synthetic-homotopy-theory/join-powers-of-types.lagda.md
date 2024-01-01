@@ -38,5 +38,5 @@ join-power n A = {!!}
 ```agda
 join-power-family-of-types :
   {l1 l2 : Level} → ℕ → {A : UU l1} → (A → UU l2) → (A → UU l2)
-join-power-family-of-types n B a = {!!}
+join-power-family-of-types = {!!}
 ```

@@ -37,7 +37,7 @@ abstract
   is-prop-type-conjunction-Prop :
     {l1 l2 : Level} (P : Prop l1) (Q : Prop l2) →
     is-prop (type-conjunction-Prop P Q)
-  is-prop-type-conjunction-Prop P Q = {!!}
+  is-prop-type-conjunction-Prop = {!!}
 
 infixr 15 _∧_
 _∧_ = {!!}
@@ -50,9 +50,7 @@ _∧_ = {!!}
 conjunction-Decidable-Prop :
   {l1 l2 : Level} → Decidable-Prop l1 → Decidable-Prop l2 →
   Decidable-Prop (l1 ⊔ l2)
-pr1 (conjunction-Decidable-Prop P Q) = {!!}
-pr1 (pr2 (conjunction-Decidable-Prop P Q)) = {!!}
-pr2 (pr2 (conjunction-Decidable-Prop P Q)) = {!!}
+conjunction-Decidable-Prop = {!!}
 ```
 
 ## Properties
@@ -63,8 +61,7 @@ pr2 (pr2 (conjunction-Decidable-Prop P Q)) = {!!}
 intro-conjunction-Prop :
   {l1 l2 : Level} (P : Prop l1) (Q : Prop l2) →
   type-Prop P → type-Prop Q → type-conjunction-Prop P Q
-pr1 (intro-conjunction-Prop P Q p q) = {!!}
-pr2 (intro-conjunction-Prop P Q p q) = {!!}
+intro-conjunction-Prop = {!!}
 ```
 
 ### The universal property of conjunction
@@ -75,15 +72,12 @@ iff-universal-property-conjunction-Prop :
   {l3 : Level} (R : Prop l3) →
   ( type-hom-Prop R P × type-hom-Prop R Q) ↔
   ( type-hom-Prop R (conjunction-Prop P Q))
-pr1 (pr1 (iff-universal-property-conjunction-Prop P Q R) (f , g) r) = {!!}
-pr2 (pr1 (iff-universal-property-conjunction-Prop P Q R) (f , g) r) = {!!}
-pr1 (pr2 (iff-universal-property-conjunction-Prop P Q R) h) r = {!!}
-pr2 (pr2 (iff-universal-property-conjunction-Prop P Q R) h) r = {!!}
+iff-universal-property-conjunction-Prop = {!!}
 
 equiv-universal-property-conjunction-Prop :
   {l1 l2 : Level} (P : Prop l1) (Q : Prop l2)
   {l3 : Level} (R : Prop l3) →
   ( type-hom-Prop R P × type-hom-Prop R Q) ≃
   ( type-hom-Prop R (conjunction-Prop P Q))
-equiv-universal-property-conjunction-Prop P Q R = {!!}
+equiv-universal-property-conjunction-Prop = {!!}
 ```

@@ -43,7 +43,7 @@ module _
 
   preserves-mul-equiv :
     (μA : A → A → A) (μB : B → B → B) → (A ≃ B) → UU (l1 ⊔ l2)
-  preserves-mul-equiv μA μB e = {!!}
+  preserves-mul-equiv = {!!}
 ```
 
 ### Equivalences of semigroups
@@ -55,7 +55,7 @@ module _
 
   preserves-mul-equiv-Semigroup :
     (type-Semigroup G ≃ type-Semigroup H) → UU (l1 ⊔ l2)
-  preserves-mul-equiv-Semigroup e = {!!}
+  preserves-mul-equiv-Semigroup = {!!}
 
   equiv-Semigroup : UU (l1 ⊔ l2)
   equiv-Semigroup = {!!}
@@ -90,7 +90,7 @@ module _
     is-torsorial
       ( λ (μ : has-associative-mul (type-Semigroup G)) →
         preserves-mul (mul-Semigroup G) (pr1 μ) id)
-  pr1 is-torsorial-preserves-mul-id-Semigroup = {!!}
+  is-torsorial-preserves-mul-id-Semigroup = {!!}
 
   is-torsorial-equiv-Semigroup :
     is-torsorial (equiv-Semigroup G)

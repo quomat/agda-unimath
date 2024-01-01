@@ -45,7 +45,7 @@ set `X` equipped with a map `X → A`.
 ```agda
 unordered-tuple :
   {l : Level} (n : ℕ) (A : UU l) → UU (lsuc lzero ⊔ l)
-unordered-tuple n A = {!!}
+unordered-tuple = {!!}
 
 module _
   {l : Level} (n : ℕ) {A : UU l} (t : unordered-tuple n A)
@@ -91,7 +91,7 @@ module _
 
   unordered-tuple-complement-point-type-unordered-tuple :
     unordered-tuple n A
-  pr1 unordered-tuple-complement-point-type-unordered-tuple = {!!}
+  unordered-tuple-complement-point-type-unordered-tuple = {!!}
 ```
 
 ### Standard unordered tuples
@@ -99,8 +99,7 @@ module _
 ```agda
 standard-unordered-tuple :
   {l : Level} (n : ℕ) {A : UU l} (f : Fin n → A) → unordered-tuple n A
-pr1 (standard-unordered-tuple n f) = {!!}
-pr2 (standard-unordered-tuple n f) = {!!}
+standard-unordered-tuple = {!!}
 ```
 
 ## Properties
@@ -117,32 +116,32 @@ module _
 
   refl-Eq-unordered-tuple :
     (x : unordered-tuple n A) → Eq-unordered-tuple x x
-  pr1 (refl-Eq-unordered-tuple x) = {!!}
+  refl-Eq-unordered-tuple = {!!}
 
   Eq-eq-unordered-tuple :
     (x y : unordered-tuple n A) → x ＝ y → Eq-unordered-tuple x y
-  Eq-eq-unordered-tuple x .x refl = {!!}
+  Eq-eq-unordered-tuple = {!!}
 
   is-torsorial-Eq-unordered-tuple :
     (x : unordered-tuple n A) → is-torsorial (Eq-unordered-tuple x)
-  is-torsorial-Eq-unordered-tuple x = {!!}
+  is-torsorial-Eq-unordered-tuple = {!!}
 
   is-equiv-Eq-eq-unordered-tuple :
     (x y : unordered-tuple n A) → is-equiv (Eq-eq-unordered-tuple x y)
-  is-equiv-Eq-eq-unordered-tuple x = {!!}
+  is-equiv-Eq-eq-unordered-tuple = {!!}
 
   extensionality-unordered-tuple :
     (x y : unordered-tuple n A) → (x ＝ y) ≃ Eq-unordered-tuple x y
-  pr1 (extensionality-unordered-tuple x y) = {!!}
+  extensionality-unordered-tuple = {!!}
 
   eq-Eq-unordered-tuple :
     (x y : unordered-tuple n A) → Eq-unordered-tuple x y → x ＝ y
-  eq-Eq-unordered-tuple x y = {!!}
+  eq-Eq-unordered-tuple = {!!}
 
   is-retraction-eq-Eq-unordered-tuple :
     (x y : unordered-tuple n A) →
     (eq-Eq-unordered-tuple x y ∘ Eq-eq-unordered-tuple x y) ~ id
-  is-retraction-eq-Eq-unordered-tuple x y = {!!}
+  is-retraction-eq-Eq-unordered-tuple = {!!}
 ```
 
 ### Functoriality of unordered tuples
@@ -151,15 +150,14 @@ module _
 map-unordered-tuple :
   {l1 l2 : Level} (n : ℕ) {A : UU l1} {B : UU l2} (f : A → B) →
   unordered-tuple n A → unordered-tuple n B
-pr1 (map-unordered-tuple n f t) = {!!}
-pr2 (map-unordered-tuple n f t) = {!!}
+map-unordered-tuple = {!!}
 
 preserves-comp-map-unordered-tuple :
   {l1 l2 l3 : Level} (n : ℕ) {A : UU l1} {B : UU l2} {C : UU l3}
   (g : B → C) (f : A → B) →
   map-unordered-tuple n (g ∘ f) ~
   (map-unordered-tuple n g ∘ map-unordered-tuple n f)
-preserves-comp-map-unordered-tuple n g f p = {!!}
+preserves-comp-map-unordered-tuple = {!!}
 
 preserves-id-map-unordered-tuple :
   {l1 : Level} (n : ℕ) {A : UU l1} →
@@ -169,7 +167,7 @@ preserves-id-map-unordered-tuple n = {!!}
 htpy-unordered-tuple :
   {l1 l2 : Level} (n : ℕ) {A : UU l1} {B : UU l2} {f g : A → B} →
   (f ~ g) → (map-unordered-tuple n f ~ map-unordered-tuple n g)
-htpy-unordered-tuple n {f = f} {g = g} H t = {!!}
+htpy-unordered-tuple = {!!}
 
 preserves-refl-htpy-unordered-tuple :
   {l1 l2 : Level} (n : ℕ) {A : UU l1} {B : UU l2} (f : A → B) →
@@ -179,15 +177,15 @@ preserves-refl-htpy-unordered-tuple n f p = {!!}
 equiv-unordered-tuple :
   {l1 l2 : Level} (n : ℕ) {A : UU l1} {B : UU l2} →
   (A ≃ B) → (unordered-tuple n A ≃ unordered-tuple n B)
-equiv-unordered-tuple n e = {!!}
+equiv-unordered-tuple = {!!}
 
 map-equiv-unordered-tuple :
   {l1 l2 : Level} (n : ℕ) {A : UU l1} {B : UU l2} →
   (A ≃ B) → (unordered-tuple n A → unordered-tuple n B)
-map-equiv-unordered-tuple n e = {!!}
+map-equiv-unordered-tuple = {!!}
 
 is-equiv-map-equiv-unordered-tuple :
   {l1 l2 : Level} (n : ℕ) {A : UU l1} {B : UU l2} →
   (e : A ≃ B) → is-equiv (map-equiv-unordered-tuple n e)
-is-equiv-map-equiv-unordered-tuple n e = {!!}
+is-equiv-map-equiv-unordered-tuple = {!!}
 ```

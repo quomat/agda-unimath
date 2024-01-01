@@ -30,17 +30,17 @@ the same number of
 is-regular-undirected-graph-Prop :
   {l1 l2 l3 : Level} (X : UU l1)
   (G : Undirected-Graph l2 l3) → Prop (l1 ⊔ l2 ⊔ l3)
-is-regular-undirected-graph-Prop X G = {!!}
+is-regular-undirected-graph-Prop = {!!}
 
 is-regular-Undirected-Graph :
   {l1 l2 l3 : Level} (X : UU l1) (G : Undirected-Graph l2 l3) →
   UU (l1 ⊔ l2 ⊔ l3)
-is-regular-Undirected-Graph X G = {!!}
+is-regular-Undirected-Graph = {!!}
 
 is-prop-is-regular-Undirected-Graph :
   {l1 l2 l3 : Level} (X : UU l1) (G : Undirected-Graph l2 l3) →
   is-prop (is-regular-Undirected-Graph X G)
-is-prop-is-regular-Undirected-Graph X G = {!!}
+is-prop-is-regular-Undirected-Graph = {!!}
 ```
 
 ## External links

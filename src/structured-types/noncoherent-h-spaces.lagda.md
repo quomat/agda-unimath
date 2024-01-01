@@ -35,11 +35,11 @@ H-space, then `λ x → μ a x` and `λ x → μ x a` are
 unit-laws-mul-Pointed-Type :
   {l : Level} (A : Pointed-Type l)
   (μ : (x y : type-Pointed-Type A) → type-Pointed-Type A) → UU l
-unit-laws-mul-Pointed-Type A μ = {!!}
+unit-laws-mul-Pointed-Type = {!!}
 
 unital-mul-Pointed-Type :
   {l : Level} → Pointed-Type l → UU l
-unital-mul-Pointed-Type A = {!!}
+unital-mul-Pointed-Type = {!!}
 ```
 
 ### Non-coherent Noncoherent-H-Spaces
@@ -47,7 +47,7 @@ unital-mul-Pointed-Type A = {!!}
 ```agda
 noncoherent-h-space-structure :
   {l : Level} (A : Pointed-Type l) → UU l
-noncoherent-h-space-structure A = {!!}
+noncoherent-h-space-structure = {!!}
 
 Noncoherent-H-Space : (l : Level) → UU (lsuc l)
 Noncoherent-H-Space l = {!!}

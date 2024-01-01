@@ -97,7 +97,7 @@ module _
 
   irreflexive-le-𝕎 :
     {x : 𝕎 A B} → ¬ (x <-𝕎 x)
-  irreflexive-le-𝕎 {x = x} (le-∈-𝕎 H) = {!!}
+  irreflexive-le-𝕎 = {!!}
 ```
 
 ### The strict ordering on W-types is asymmetric
@@ -109,7 +109,7 @@ module _
 
   asymmetric-le-𝕎 :
     {x y : 𝕎 A B} → x <-𝕎 y → y <-𝕎 x → empty
-  asymmetric-le-𝕎 H K = {!!}
+  asymmetric-le-𝕎 = {!!}
 ```
 
 ### Transitivity of `≤-𝕎`
@@ -121,5 +121,5 @@ module _
 
   transitive-leq-𝕎 :
     {x y z : 𝕎 A B} → x ≤-𝕎 y → y ≤-𝕎 z → x ≤-𝕎 z
-  transitive-leq-𝕎 H refl-leq-𝕎 = {!!}
+  transitive-leq-𝕎 = {!!}
 ```

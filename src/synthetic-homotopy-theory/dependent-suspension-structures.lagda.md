@@ -139,7 +139,7 @@ module _
   dependent-cocone-dependent-suspension-structure :
     dependent-suspension-structure B c →
     dependent-suspension-cocone B (suspension-cocone-suspension-structure c)
-  pr1 (dependent-cocone-dependent-suspension-structure d) t = {!!}
+  dependent-cocone-dependent-suspension-structure = {!!}
 
   equiv-dependent-suspension-structure-suspension-cocone :
     ( dependent-suspension-cocone
@@ -234,7 +234,7 @@ module _
 
   refl-htpy-dependent-suspension-structure :
     htpy-dependent-suspension-structure B d d
-  pr1 refl-htpy-dependent-suspension-structure = {!!}
+  refl-htpy-dependent-suspension-structure = {!!}
 
   is-refl-refl-htpy-dependent-suspension-structure :
     refl-htpy-dependent-suspension-structure ＝

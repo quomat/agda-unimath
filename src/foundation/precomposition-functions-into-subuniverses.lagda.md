@@ -45,22 +45,22 @@ module _
 
   map-inv-is-equiv-precomp-structured-type :
     universal-property-equiv-structured-type → pr1 B → pr1 A
-  map-inv-is-equiv-precomp-structured-type H = {!!}
+  map-inv-is-equiv-precomp-structured-type = {!!}
 
   is-section-map-inv-is-equiv-precomp-structured-type :
     (H : universal-property-equiv-structured-type) →
     is-section f (map-inv-is-equiv-precomp-structured-type H)
-  is-section-map-inv-is-equiv-precomp-structured-type H = {!!}
+  is-section-map-inv-is-equiv-precomp-structured-type = {!!}
 
   is-retraction-map-inv-is-equiv-precomp-structured-type :
     (H : universal-property-equiv-structured-type) →
     is-retraction f (map-inv-is-equiv-precomp-structured-type H)
-  is-retraction-map-inv-is-equiv-precomp-structured-type H = {!!}
+  is-retraction-map-inv-is-equiv-precomp-structured-type = {!!}
 
   abstract
     is-equiv-is-equiv-precomp-structured-type :
       universal-property-equiv-structured-type → is-equiv f
-    is-equiv-is-equiv-precomp-structured-type H = {!!}
+    is-equiv-is-equiv-precomp-structured-type = {!!}
 ```
 
 ## Corollaries

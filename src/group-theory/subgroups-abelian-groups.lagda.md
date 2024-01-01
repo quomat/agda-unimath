@@ -77,7 +77,7 @@ module _
 ```agda
 Subgroup-Ab :
   (l : Level) {l1 : Level} (A : Ab l1) → UU ((lsuc l) ⊔ l1)
-Subgroup-Ab l A = {!!}
+Subgroup-Ab = {!!}
 
 module _
   {l1 l2 : Level} (A : Ab l1) (B : Subgroup-Ab l2 A)
@@ -221,7 +221,7 @@ module _
   commutative-add-Subgroup-Ab :
     ( x y : type-ab-Subgroup-Ab) →
     Id ( add-ab-Subgroup-Ab x y) (add-ab-Subgroup-Ab y x)
-  commutative-add-Subgroup-Ab x y = {!!}
+  commutative-add-Subgroup-Ab = {!!}
 
   semigroup-Subgroup-Ab : Semigroup (l1 ⊔ l2)
   semigroup-Subgroup-Ab = {!!}
@@ -242,7 +242,7 @@ module _
 
   preserves-add-inclusion-Subgroup-Ab :
     preserves-add-Ab (ab-Subgroup-Ab A B) A (map-inclusion-Subgroup-Ab A B)
-  preserves-add-inclusion-Subgroup-Ab {x} {y} = {!!}
+  preserves-add-inclusion-Subgroup-Ab = {!!}
 
   preserves-zero-inclusion-Subgroup-Ab :
     preserves-zero-Ab (ab-Subgroup-Ab A B) A (map-inclusion-Subgroup-Ab A B)
@@ -253,7 +253,7 @@ module _
       ( ab-Subgroup-Ab A B)
       ( A)
       ( map-inclusion-Subgroup-Ab A B)
-  preserves-negatives-inclusion-Subgroup-Ab {x} = {!!}
+  preserves-negatives-inclusion-Subgroup-Ab = {!!}
 
   hom-inclusion-Subgroup-Ab : hom-Ab (ab-Subgroup-Ab A B) A
   hom-inclusion-Subgroup-Ab = {!!}
@@ -264,7 +264,7 @@ module _
 ```agda
 Normal-Subgroup-Ab :
   {l1 : Level} (l2 : Level) (A : Ab l1) → UU (l1 ⊔ lsuc l2)
-Normal-Subgroup-Ab l2 A = {!!}
+Normal-Subgroup-Ab = {!!}
 ```
 
 ## Properties
@@ -302,47 +302,47 @@ module _
 leq-prop-Subgroup-Ab :
   {l1 l2 l3 : Level} (A : Ab l1) →
   Subgroup-Ab l2 A → Subgroup-Ab l3 A → Prop (l1 ⊔ l2 ⊔ l3)
-leq-prop-Subgroup-Ab A = {!!}
+leq-prop-Subgroup-Ab = {!!}
 
 leq-Subgroup-Ab :
   {l1 l2 l3 : Level} (A : Ab l1) →
   Subgroup-Ab l2 A → Subgroup-Ab l3 A → UU (l1 ⊔ l2 ⊔ l3)
-leq-Subgroup-Ab A = {!!}
+leq-Subgroup-Ab = {!!}
 
 refl-leq-Subgroup-Ab :
   {l1 : Level} (A : Ab l1) →
   is-reflexive-Large-Relation (λ l → Subgroup-Ab l A) (leq-Subgroup-Ab A)
-refl-leq-Subgroup-Ab A = {!!}
+refl-leq-Subgroup-Ab = {!!}
 
 transitive-leq-Subgroup-Ab :
   {l1 : Level} (A : Ab l1) →
   is-transitive-Large-Relation (λ l → Subgroup-Ab l A) (leq-Subgroup-Ab A)
-transitive-leq-Subgroup-Ab A = {!!}
+transitive-leq-Subgroup-Ab = {!!}
 
 antisymmetric-leq-Subgroup-Ab :
   {l1 : Level} (A : Ab l1) →
   is-antisymmetric-Large-Relation (λ l → Subgroup-Ab l A) (leq-Subgroup-Ab A)
-antisymmetric-leq-Subgroup-Ab A = {!!}
+antisymmetric-leq-Subgroup-Ab = {!!}
 
 Subgroup-Ab-Large-Preorder :
   {l1 : Level} (A : Ab l1) →
   Large-Preorder (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3)
-Subgroup-Ab-Large-Preorder A = {!!}
+Subgroup-Ab-Large-Preorder = {!!}
 
 Subgroup-Ab-Preorder :
   {l1 : Level} (l2 : Level) (A : Ab l1) →
   Preorder (l1 ⊔ lsuc l2) (l1 ⊔ l2)
-Subgroup-Ab-Preorder l2 A = {!!}
+Subgroup-Ab-Preorder = {!!}
 
 Subgroup-Ab-Large-Poset :
   {l1 : Level} (A : Ab l1) →
   Large-Poset (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3)
-Subgroup-Ab-Large-Poset A = {!!}
+Subgroup-Ab-Large-Poset = {!!}
 
 Subgroup-Ab-Poset :
   {l1 : Level} (l2 : Level) (A : Ab l1) →
   Poset (l1 ⊔ lsuc l2) (l1 ⊔ l2)
-Subgroup-Ab-Poset l2 A = {!!}
+Subgroup-Ab-Poset = {!!}
 ```
 
 ### Every subgroup of an abelian group is normal
@@ -556,7 +556,7 @@ module _
 
   equiv-congruence-Subgroup-Ab :
     Subgroup-Ab l2 A ≃ congruence-Ab l2 A
-  pr1 equiv-congruence-Subgroup-Ab = {!!}
+  equiv-congruence-Subgroup-Ab = {!!}
 
   is-equiv-subgroup-congruence-Ab :
     is-equiv (subgroup-congruence-Ab {l1} {l2} A)
@@ -564,5 +564,5 @@ module _
 
   equiv-subgroup-congruence-Ab :
     congruence-Ab l2 A ≃ Subgroup-Ab l2 A
-  pr1 equiv-subgroup-congruence-Ab = {!!}
+  equiv-subgroup-congruence-Ab = {!!}
 ```

@@ -37,16 +37,16 @@ quantifications are interpreted as propositions.
 ```agda
 exists-Prop :
   {l1 l2 : Level} (A : UU l1) (P : A → Prop l2) → Prop (l1 ⊔ l2)
-exists-Prop {l1} {l2} A P = {!!}
+exists-Prop = {!!}
 
 exists :
   {l1 l2 : Level} (A : UU l1) (P : A → Prop l2) → UU (l1 ⊔ l2)
-exists A P = {!!}
+exists = {!!}
 
 abstract
   is-prop-exists :
     {l1 l2 : Level} (A : UU l1) (P : A → Prop l2) → is-prop (exists A P)
-  is-prop-exists A P = {!!}
+  is-prop-exists = {!!}
 ```
 
 ### Existential quantification of arbitrary type families
@@ -54,15 +54,15 @@ abstract
 ```agda
 ∃-Prop :
   {l1 l2 : Level} (A : UU l1) (B : A → UU l2) → Prop (l1 ⊔ l2)
-∃-Prop A B = {!!}
+∃-Prop = {!!}
 
 ∃ :
   {l1 l2 : Level} (A : UU l1) (B : A → UU l2) → UU (l1 ⊔ l2)
-∃ A B = {!!}
+∃ = {!!}
 
 is-prop-∃ :
   {l1 l2 : Level} (A : UU l1) (B : A → UU l2) → is-prop (∃ A B)
-is-prop-∃ A B = {!!}
+is-prop-∃ = {!!}
 ```
 
 ## Properties
@@ -73,12 +73,12 @@ is-prop-∃ A B = {!!}
 intro-exists :
   {l1 l2 : Level} {A : UU l1} (P : A → Prop l2) →
   (x : A) → type-Prop (P x) → exists A P
-intro-exists P x p = {!!}
+intro-exists = {!!}
 
 intro-∃ :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (a : A) (b : B a) →
   ∃ A B
-intro-∃ a b = {!!}
+intro-∃ = {!!}
 ```
 
 ### The elimination rule and the universal property of existential quantification
@@ -87,24 +87,23 @@ intro-∃ a b = {!!}
 ev-intro-exists-Prop :
   {l1 l2 l3 : Level} {A : UU l1} (P : A → Prop l2) (Q : Prop l3) →
   type-hom-Prop (exists-Prop A P) Q → (x : A) → type-hom-Prop (P x) Q
-ev-intro-exists-Prop P Q H x p = {!!}
+ev-intro-exists-Prop = {!!}
 
 elim-exists-Prop :
   {l1 l2 l3 : Level} {A : UU l1} (P : A → Prop l2) (Q : Prop l3) →
   ((x : A) → type-hom-Prop (P x) Q) → type-hom-Prop (exists-Prop A P) Q
-elim-exists-Prop P Q f = {!!}
+elim-exists-Prop = {!!}
 
 abstract
   is-equiv-ev-intro-exists-Prop :
     {l1 l2 l3 : Level} (A : UU l1) (P : A → Prop l2) (Q : Prop l3) →
     is-equiv (ev-intro-exists-Prop P Q)
-  is-equiv-ev-intro-exists-Prop A P Q = {!!}
+  is-equiv-ev-intro-exists-Prop = {!!}
 
 is-least-upper-bound-exists-Prop :
   {l1 l2 l3 : Level} {A : UU l1} (P : A → Prop l2) (Q : Prop l3) →
   ((a : A) → type-hom-Prop (P a) Q) ↔ type-hom-Prop (exists-Prop A P) Q
-pr1 (is-least-upper-bound-exists-Prop P Q) = {!!}
-pr2 (is-least-upper-bound-exists-Prop P Q) h a p = {!!}
+is-least-upper-bound-exists-Prop = {!!}
 ```
 
 ### Conjunction distributes over existential quatification
@@ -117,7 +116,7 @@ module _
   iff-distributive-conjunction-exists-Prop :
     ( conjunction-Prop P (exists-Prop A Q)) ⇔
     ( exists-Prop A (λ a → conjunction-Prop P (Q a)))
-  pr1 iff-distributive-conjunction-exists-Prop (p , e) = {!!}
+  iff-distributive-conjunction-exists-Prop = {!!}
 
   distributive-conjunction-exists-Prop :
     conjunction-Prop P (exists-Prop A Q) ＝

@@ -62,7 +62,7 @@ faithful-functor-Precategory :
   {l1 l2 l3 l4 : Level}
   (C : Precategory l1 l2)
   (D : Precategory l3 l4) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-faithful-functor-Precategory C D = {!!}
+faithful-functor-Precategory = {!!}
 
 module _
   {l1 l2 l3 l4 : Level}
@@ -165,5 +165,5 @@ module _
   is-faithful-on-isos-is-faithful-functor-Precategory :
     (x y : obj-Precategory C) →
     is-emb (preserves-iso-functor-Precategory C D F {x} {y})
-  is-faithful-on-isos-is-faithful-functor-Precategory x y = {!!}
+  is-faithful-on-isos-is-faithful-functor-Precategory = {!!}
 ```

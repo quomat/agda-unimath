@@ -44,36 +44,28 @@ type-symmetric-Group X = {!!}
 
 is-set-type-symmetric-Group :
   {l : Level} (X : Set l) → is-set (type-symmetric-Group X)
-is-set-type-symmetric-Group X = {!!}
+is-set-type-symmetric-Group = {!!}
 
 has-associative-mul-aut-Set :
   {l : Level} (X : Set l) → has-associative-mul-Set (Aut-Set X)
-pr1 (has-associative-mul-aut-Set X) f e = {!!}
-pr2 (has-associative-mul-aut-Set X) e f g = {!!}
+has-associative-mul-aut-Set = {!!}
 
 symmetric-Semigroup :
   {l : Level} (X : Set l) → Semigroup l
-pr1 (symmetric-Semigroup X) = {!!}
-pr2 (symmetric-Semigroup X) = {!!}
+symmetric-Semigroup = {!!}
 
 is-unital-Semigroup-symmetric-Semigroup :
   {l : Level} (X : Set l) → is-unital-Semigroup (symmetric-Semigroup X)
-pr1 (is-unital-Semigroup-symmetric-Semigroup X) = {!!}
-pr1 (pr2 (is-unital-Semigroup-symmetric-Semigroup X)) = {!!}
-pr2 (pr2 (is-unital-Semigroup-symmetric-Semigroup X)) = {!!}
+is-unital-Semigroup-symmetric-Semigroup = {!!}
 
 is-group-symmetric-Semigroup' :
   {l : Level} (X : Set l) →
   is-group' (symmetric-Semigroup X) (is-unital-Semigroup-symmetric-Semigroup X)
-pr1 (is-group-symmetric-Semigroup' X) = {!!}
-pr1 (pr2 (is-group-symmetric-Semigroup' X)) = {!!}
-pr2 (pr2 (is-group-symmetric-Semigroup' X)) = {!!}
+is-group-symmetric-Semigroup' = {!!}
 
 symmetric-Group :
   {l : Level} → Set l → Group l
-pr1 (symmetric-Group X) = {!!}
-pr1 (pr2 (symmetric-Group X)) = {!!}
-pr2 (pr2 (symmetric-Group X)) = {!!}
+symmetric-Group = {!!}
 ```
 
 ## Properties
@@ -87,11 +79,11 @@ module _
 
   hom-symmetric-group-equiv-Set :
     hom-Group (symmetric-Group X) (symmetric-Group Y)
-  pr1 hom-symmetric-group-equiv-Set f = {!!}
+  hom-symmetric-group-equiv-Set = {!!}
 
   hom-inv-symmetric-group-equiv-Set :
     hom-Group (symmetric-Group Y) (symmetric-Group X)
-  pr1 hom-inv-symmetric-group-equiv-Set f = {!!}
+  hom-inv-symmetric-group-equiv-Set = {!!}
 
   is-section-hom-inv-symmetric-group-equiv-Set :
     Id
@@ -117,7 +109,7 @@ module _
 
   iso-symmetric-group-equiv-Set :
     iso-Group (symmetric-Group X) (symmetric-Group Y)
-  pr1 iso-symmetric-group-equiv-Set = {!!}
+  iso-symmetric-group-equiv-Set = {!!}
 ```
 
 ### The symmetric group and the abstract automorphism group of a set are isomorphic
@@ -140,13 +132,13 @@ module _
       ( op-group-Concrete-Group (symmetric-Concrete-Group A))
       ( symmetric-Group A)
       ( map-compute-symmetric-Concrete-Group)
-  preserves-mul-compute-symmetric-Concrete-Group {x} {y} = {!!}
+  preserves-mul-compute-symmetric-Concrete-Group = {!!}
 
   equiv-group-compute-symmetric-Concrete-Group :
     equiv-Group
       ( op-group-Concrete-Group (symmetric-Concrete-Group A))
       ( symmetric-Group A)
-  pr1 equiv-group-compute-symmetric-Concrete-Group = {!!}
+  equiv-group-compute-symmetric-Concrete-Group = {!!}
 
   compute-symmetric-Concrete-Group' :
     iso-Group

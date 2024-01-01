@@ -64,7 +64,7 @@ module _
 
   instance-factorization-operation-function-class :
     (A : UU l1) (B : UU l2) → UU (l1 ⊔ l2 ⊔ lsuc l3 ⊔ lL ⊔ lR)
-  instance-factorization-operation-function-class A B = {!!}
+  instance-factorization-operation-function-class = {!!}
 
   factorization-operation-function-class :
     UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3 ⊔ lL ⊔ lR)
@@ -82,7 +82,7 @@ module _
 
   instance-unique-factorization-operation-function-class :
     (A : UU l1) (B : UU l2) → UU (l1 ⊔ l2 ⊔ lsuc l3 ⊔ lL ⊔ lR)
-  instance-unique-factorization-operation-function-class A B = {!!}
+  instance-unique-factorization-operation-function-class = {!!}
 
   unique-factorization-operation-function-class :
     UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3 ⊔ lL ⊔ lR)
@@ -94,12 +94,12 @@ module _
 
   unique-factorization-operation-function-class-Prop :
     Prop (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3 ⊔ lL ⊔ lR)
-  pr1 unique-factorization-operation-function-class-Prop = {!!}
+  unique-factorization-operation-function-class-Prop = {!!}
 
   factorization-operation-unique-factorization-operation-function-class :
     unique-factorization-operation-function-class →
     factorization-operation-function-class L R
-  factorization-operation-unique-factorization-operation-function-class F f = {!!}
+  factorization-operation-unique-factorization-operation-function-class = {!!}
 ```
 
 ### Mere factorization properties into function classes
@@ -113,7 +113,7 @@ module _
 
   instance-mere-factorization-property-function-class :
     (A : UU l1) (B : UU l2) → UU (l1 ⊔ l2 ⊔ lsuc l3 ⊔ lL ⊔ lR)
-  instance-mere-factorization-property-function-class A B = {!!}
+  instance-mere-factorization-property-function-class = {!!}
 
   mere-factorization-property-function-class :
     UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3 ⊔ lL ⊔ lR)
@@ -125,7 +125,7 @@ module _
 
   mere-factorization-property-function-class-Prop :
     Prop (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3 ⊔ lL ⊔ lR)
-  pr1 mere-factorization-property-function-class-Prop = {!!}
+  mere-factorization-property-function-class-Prop = {!!}
 ```
 
 ## References

@@ -83,7 +83,7 @@ module _
 
   equiv-necklace :
     (N1 : necklace l1 m n) (N2 : necklace l2 m n) → UU (l1 ⊔ l2)
-  equiv-necklace N1 N2 = {!!}
+  equiv-necklace = {!!}
 
 module _
   {l : Level} (m n : ℕ)
@@ -91,7 +91,7 @@ module _
 
   id-equiv-necklace :
     (N : necklace l m n) → equiv-necklace m n N N
-  pr1 (id-equiv-necklace N) = {!!}
+  id-equiv-necklace = {!!}
 
 module _
   {l : Level} (m n : ℕ)
@@ -99,12 +99,12 @@ module _
 
   extensionality-necklace :
     (N1 N2 : necklace l m n) → Id N1 N2 ≃ equiv-necklace m n N1 N2
-  extensionality-necklace N1 = {!!}
+  extensionality-necklace = {!!}
 
   refl-extensionality-necklace :
     (N : necklace l m n) →
     Id (map-equiv (extensionality-necklace N N) refl) (id-equiv-necklace m n N)
-  refl-extensionality-necklace N = {!!}
+  refl-extensionality-necklace = {!!}
 ```
 
 ## See also

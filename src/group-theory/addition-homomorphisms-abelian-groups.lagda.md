@@ -39,7 +39,7 @@ module _
 
   add-hom-Ab :
     hom-Ab A B → hom-Ab A B → hom-Ab A B
-  pr1 (add-hom-Ab f g) x = {!!}
+  add-hom-Ab = {!!}
 
   zero-hom-Ab : hom-Ab A B
   pr1 zero-hom-Ab x = {!!}
@@ -59,7 +59,7 @@ module _
     (f g h : hom-Ab A B) →
     add-hom-Ab A B (add-hom-Ab A B f g) h ＝
     add-hom-Ab A B f (add-hom-Ab A B g h)
-  associative-add-hom-Ab f g h = {!!}
+  associative-add-hom-Ab = {!!}
 ```
 
 #### Commutativity of pointwise addition of morphisms of abelian groups
@@ -71,7 +71,7 @@ module _
 
   commutative-add-hom-Ab :
     (f g : hom-Ab A B) → add-hom-Ab A B f g ＝ add-hom-Ab A B g f
-  commutative-add-hom-Ab f g = {!!}
+  commutative-add-hom-Ab = {!!}
 ```
 
 #### Unit laws for pointwise addition of morphisms of abelian groups
@@ -83,11 +83,11 @@ module _
 
   left-unit-law-add-hom-Ab :
     (f : hom-Ab A B) → add-hom-Ab A B (zero-hom-Ab A B) f ＝ f
-  left-unit-law-add-hom-Ab f = {!!}
+  left-unit-law-add-hom-Ab = {!!}
 
   right-unit-law-add-hom-Ab :
     (f : hom-Ab A B) → add-hom-Ab A B f (zero-hom-Ab A B) ＝ f
-  right-unit-law-add-hom-Ab f = {!!}
+  right-unit-law-add-hom-Ab = {!!}
 ```
 
 #### Inverse laws for pointwise addition of morphisms of abelian groups
@@ -100,12 +100,12 @@ module _
   left-inverse-law-add-hom-Ab :
     (f : hom-Ab A B) →
     add-hom-Ab A B (neg-hom-Ab A B f) f ＝ zero-hom-Ab A B
-  left-inverse-law-add-hom-Ab f = {!!}
+  left-inverse-law-add-hom-Ab = {!!}
 
   right-inverse-law-add-hom-Ab :
     (f : hom-Ab A B) →
     add-hom-Ab A B f (neg-hom-Ab A B f) ＝ zero-hom-Ab A B
-  right-inverse-law-add-hom-Ab f = {!!}
+  right-inverse-law-add-hom-Ab = {!!}
 ```
 
 #### `hom G H` is an abelian group
@@ -138,13 +138,13 @@ module _
     (h : hom-Ab B C) (f g : hom-Ab A B) →
     comp-hom-Ab A B C h (add-hom-Ab A B f g) ＝
     add-hom-Ab A C (comp-hom-Ab A B C h f) (comp-hom-Ab A B C h g)
-  left-distributive-comp-add-hom-Ab h f g = {!!}
+  left-distributive-comp-add-hom-Ab = {!!}
 
   right-distributive-comp-add-hom-Ab :
     (g h : hom-Ab B C) (f : hom-Ab A B) →
     comp-hom-Ab A B C (add-hom-Ab B C g h) f ＝
     add-hom-Ab A C (comp-hom-Ab A B C g f) (comp-hom-Ab A B C h f)
-  right-distributive-comp-add-hom-Ab g h f = {!!}
+  right-distributive-comp-add-hom-Ab = {!!}
 ```
 
 ### Evaluation at an element is a group homomorphism `hom A B → A`
@@ -161,7 +161,7 @@ module _
     (f g : hom-Ab A B) →
     ev-element-hom-Ab (add-hom-Ab A B f g) ＝
     add-Ab B (ev-element-hom-Ab f) (ev-element-hom-Ab g)
-  preserves-add-ev-element-hom-Ab f g = {!!}
+  preserves-add-ev-element-hom-Ab = {!!}
 
   hom-ev-element-hom-Ab : hom-Ab (ab-hom-Ab A B) B
   pr1 hom-ev-element-hom-Ab = {!!}

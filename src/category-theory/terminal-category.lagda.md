@@ -49,11 +49,11 @@ obj-terminal-Category = {!!}
 
 hom-set-terminal-Category :
   obj-terminal-Category → obj-terminal-Category → Set lzero
-hom-set-terminal-Category _ _ = {!!}
+hom-set-terminal-Category = {!!}
 
 hom-terminal-Category :
   obj-terminal-Category → obj-terminal-Category → UU lzero
-hom-terminal-Category x y = {!!}
+hom-terminal-Category = {!!}
 ```
 
 ### The underlying precategory of the terminal category
@@ -64,7 +64,7 @@ comp-hom-terminal-Category :
   hom-terminal-Category y z →
   hom-terminal-Category x y →
   hom-terminal-Category x z
-comp-hom-terminal-Category _ _ = {!!}
+comp-hom-terminal-Category = {!!}
 
 associative-comp-hom-terminal-Category :
   {x y z w : obj-terminal-Category} →
@@ -73,7 +73,7 @@ associative-comp-hom-terminal-Category :
   (f : hom-terminal-Category x y) →
   comp-hom-terminal-Category {x} (comp-hom-terminal-Category {y} h g) f ＝
   comp-hom-terminal-Category {x} h (comp-hom-terminal-Category {x} g f)
-associative-comp-hom-terminal-Category h g f = {!!}
+associative-comp-hom-terminal-Category = {!!}
 
 inv-associative-comp-hom-terminal-Category :
   {x y z w : obj-terminal-Category} →
@@ -82,13 +82,11 @@ inv-associative-comp-hom-terminal-Category :
   (f : hom-terminal-Category x y) →
   comp-hom-terminal-Category {x} h (comp-hom-terminal-Category {x} g f) ＝
   comp-hom-terminal-Category {x} (comp-hom-terminal-Category {y} h g) f
-inv-associative-comp-hom-terminal-Category h g f = {!!}
+inv-associative-comp-hom-terminal-Category = {!!}
 
 associative-composition-operation-terminal-Category :
   associative-composition-operation-binary-family-Set hom-set-terminal-Category
-pr1 associative-composition-operation-terminal-Category = {!!}
-pr1 (pr2 associative-composition-operation-terminal-Category h g f) = {!!}
-pr2 (pr2 associative-composition-operation-terminal-Category h g f) = {!!}
+associative-composition-operation-terminal-Category = {!!}
 
 id-hom-terminal-Category :
   {x : obj-terminal-Category} → hom-terminal-Category x x
@@ -98,19 +96,19 @@ left-unit-law-comp-hom-terminal-Category :
   {x y : obj-terminal-Category} →
   (f : hom-terminal-Category x y) →
   comp-hom-terminal-Category {x} (id-hom-terminal-Category {y}) f ＝ f
-left-unit-law-comp-hom-terminal-Category f = {!!}
+left-unit-law-comp-hom-terminal-Category = {!!}
 
 right-unit-law-comp-hom-terminal-Category :
   {x y : obj-terminal-Category} →
   (f : hom-terminal-Category x y) →
   comp-hom-terminal-Category {x} f (id-hom-terminal-Category {x}) ＝ f
-right-unit-law-comp-hom-terminal-Category f = {!!}
+right-unit-law-comp-hom-terminal-Category = {!!}
 
 is-unital-composition-operation-terminal-Category :
   is-unital-composition-operation-binary-family-Set
     ( hom-set-terminal-Category)
     ( λ {x} {y} {z} → comp-hom-terminal-Category {x} {y} {z})
-pr1 is-unital-composition-operation-terminal-Category _ = {!!}
+is-unital-composition-operation-terminal-Category = {!!}
 pr1 (pr2 is-unital-composition-operation-terminal-Category) = {!!}
 pr2 (pr2 is-unital-composition-operation-terminal-Category) = {!!}
 
@@ -126,7 +124,7 @@ pr2 (pr2 (pr2 terminal-Precategory)) = {!!}
 ```agda
 is-category-terminal-Category :
   is-category-Precategory terminal-Precategory
-is-category-terminal-Category x y = {!!}
+is-category-terminal-Category = {!!}
 
 terminal-Category : Category lzero lzero
 pr1 terminal-Category = {!!}
@@ -183,7 +181,7 @@ point-Precategory = {!!}
 point-Category :
   {l1 l2 : Level} (C : Category l1 l2) (x : obj-Category C) →
   functor-Category terminal-Category C
-point-Category C = {!!}
+point-Category = {!!}
 ```
 
 ## Properties
@@ -200,7 +198,7 @@ module _
 
   equiv-point-Precategory :
     obj-Precategory C ≃ functor-Precategory terminal-Precategory C
-  pr1 equiv-point-Precategory = {!!}
+  equiv-point-Precategory = {!!}
 
   inv-equiv-point-Precategory :
     functor-Precategory terminal-Precategory C ≃ obj-Precategory C
@@ -222,11 +220,11 @@ module _
   uniqueness-terminal-functor-Precategory :
     (F : functor-Precategory C terminal-Precategory) →
     terminal-functor-Precategory ＝ F
-  uniqueness-terminal-functor-Precategory F = {!!}
+  uniqueness-terminal-functor-Precategory = {!!}
 
   is-contr-functor-terminal-Precategory :
     is-contr (functor-Precategory C terminal-Precategory)
-  pr1 is-contr-functor-terminal-Precategory = {!!}
+  is-contr-functor-terminal-Precategory = {!!}
 ```
 
 ## See also

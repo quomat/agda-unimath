@@ -43,7 +43,7 @@ module _
 
 chain-Poset :
   {l1 l2 : Level} (l : Level) (X : Poset l1 l2) → UU (l1 ⊔ l2 ⊔ lsuc l)
-chain-Poset l X = {!!}
+chain-Poset = {!!}
 
 module _
   {l1 l2 l3 : Level} (X : Poset l1 l2) (C : chain-Poset l3 X)

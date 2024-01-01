@@ -29,7 +29,7 @@ only defined up to [isomorphism](category-theory.isomorphisms-in-categories.md).
 anafunctor-Category :
   {l1 l2 l3 l4 : Level} (l : Level) →
   Category l1 l2 → Category l3 l4 → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ lsuc l)
-anafunctor-Category l C D = {!!}
+anafunctor-Category = {!!}
 
 module _
   {l1 l2 l3 l4 l5 : Level} (C : Category l1 l2) (D : Category l3 l4)
@@ -67,5 +67,5 @@ module _
 image-object-anafunctor-Category :
   {l1 l2 l3 l4 l5 : Level} (C : Category l1 l2) (D : Category l3 l4) →
   anafunctor-Category l5 C D → obj-Category C → UU (l3 ⊔ l5)
-image-object-anafunctor-Category C D F X = {!!}
+image-object-anafunctor-Category = {!!}
 ```

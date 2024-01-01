@@ -41,5 +41,5 @@ abstract
 abstract
   funext-univalence :
     {l : Level} → function-extensionality-Level l l
-  funext-univalence f = {!!}
+  funext-univalence = {!!}
 ```

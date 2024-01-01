@@ -88,7 +88,7 @@ module _
   is-central-element-neg-Ring :
     (x : type-Ring R) → is-central-element-Ring R x →
     is-central-element-Ring R (neg-Ring R x)
-  is-central-element-neg-Ring x H y = {!!}
+  is-central-element-neg-Ring = {!!}
 ```
 
 ### `-1` is a central element

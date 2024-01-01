@@ -55,7 +55,7 @@ hom-algebra-polynomial-endofunctor :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : A → UU l2}
   (X : algebra-polynomial-endofunctor l3 A B) →
   (Y : algebra-polynomial-endofunctor l4 A B) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-hom-algebra-polynomial-endofunctor {A = A} {B} X Y = {!!}
+hom-algebra-polynomial-endofunctor = {!!}
 
 map-hom-algebra-polynomial-endofunctor :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : A → UU l2}
@@ -64,7 +64,7 @@ map-hom-algebra-polynomial-endofunctor :
   hom-algebra-polynomial-endofunctor X Y →
   type-algebra-polynomial-endofunctor X →
   type-algebra-polynomial-endofunctor Y
-map-hom-algebra-polynomial-endofunctor X Y f = {!!}
+map-hom-algebra-polynomial-endofunctor = {!!}
 
 structure-hom-algebra-polynomial-endofunctor :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : A → UU l2}
@@ -76,7 +76,7 @@ structure-hom-algebra-polynomial-endofunctor :
   ( ( structure-algebra-polynomial-endofunctor Y) ∘
     ( map-polynomial-endofunctor A B
       ( map-hom-algebra-polynomial-endofunctor X Y f)))
-structure-hom-algebra-polynomial-endofunctor X Y f = {!!}
+structure-hom-algebra-polynomial-endofunctor = {!!}
 ```
 
 ## Properties
@@ -93,16 +93,16 @@ module _
 
   htpy-hom-algebra-polynomial-endofunctor :
     (g : hom-algebra-polynomial-endofunctor X Y) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  htpy-hom-algebra-polynomial-endofunctor g = {!!}
+  htpy-hom-algebra-polynomial-endofunctor = {!!}
 
   refl-htpy-hom-algebra-polynomial-endofunctor :
     htpy-hom-algebra-polynomial-endofunctor f
-  pr1 refl-htpy-hom-algebra-polynomial-endofunctor = {!!}
+  refl-htpy-hom-algebra-polynomial-endofunctor = {!!}
 
   htpy-eq-hom-algebra-polynomial-endofunctor :
     (g : hom-algebra-polynomial-endofunctor X Y) →
     f ＝ g → htpy-hom-algebra-polynomial-endofunctor g
-  htpy-eq-hom-algebra-polynomial-endofunctor .f refl = {!!}
+  htpy-eq-hom-algebra-polynomial-endofunctor = {!!}
 
   is-torsorial-htpy-hom-algebra-polynomial-endofunctor :
     is-torsorial htpy-hom-algebra-polynomial-endofunctor
@@ -116,10 +116,10 @@ module _
   extensionality-hom-algebra-polynomial-endofunctor :
     (g : hom-algebra-polynomial-endofunctor X Y) →
     (f ＝ g) ≃ htpy-hom-algebra-polynomial-endofunctor g
-  pr1 (extensionality-hom-algebra-polynomial-endofunctor g) = {!!}
+  extensionality-hom-algebra-polynomial-endofunctor = {!!}
 
   eq-htpy-hom-algebra-polynomial-endofunctor :
     (g : hom-algebra-polynomial-endofunctor X Y) →
     htpy-hom-algebra-polynomial-endofunctor g → f ＝ g
-  eq-htpy-hom-algebra-polynomial-endofunctor g = {!!}
+  eq-htpy-hom-algebra-polynomial-endofunctor = {!!}
 ```

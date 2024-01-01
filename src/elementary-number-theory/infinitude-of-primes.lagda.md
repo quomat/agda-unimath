@@ -56,18 +56,18 @@ Infinitude-Of-Primes-ℕ = {!!}
 ```agda
 minimal-element-in-sieve-of-eratosthenes-ℕ :
   (n : ℕ) → minimal-element-ℕ (in-sieve-of-eratosthenes-ℕ n)
-minimal-element-in-sieve-of-eratosthenes-ℕ n = {!!}
+minimal-element-in-sieve-of-eratosthenes-ℕ = {!!}
 
 larger-prime-ℕ : ℕ → ℕ
 larger-prime-ℕ n = {!!}
 
 in-sieve-of-eratosthenes-larger-prime-ℕ :
   (n : ℕ) → in-sieve-of-eratosthenes-ℕ n (larger-prime-ℕ n)
-in-sieve-of-eratosthenes-larger-prime-ℕ n = {!!}
+in-sieve-of-eratosthenes-larger-prime-ℕ = {!!}
 
 is-one-is-divisor-below-larger-prime-ℕ :
   (n : ℕ) → is-one-is-divisor-below-ℕ n (larger-prime-ℕ n)
-is-one-is-divisor-below-larger-prime-ℕ n = {!!}
+is-one-is-divisor-below-larger-prime-ℕ = {!!}
 
 le-larger-prime-ℕ : (n : ℕ) → le-ℕ n (larger-prime-ℕ n)
 le-larger-prime-ℕ n = {!!}
@@ -77,25 +77,24 @@ is-nonzero-larger-prime-ℕ n = {!!}
 
 is-lower-bound-larger-prime-ℕ :
   (n : ℕ) → is-lower-bound-ℕ (in-sieve-of-eratosthenes-ℕ n) (larger-prime-ℕ n)
-is-lower-bound-larger-prime-ℕ n = {!!}
+is-lower-bound-larger-prime-ℕ = {!!}
 
 is-not-one-larger-prime-ℕ :
   (n : ℕ) → is-nonzero-ℕ n → is-not-one-ℕ (larger-prime-ℕ n)
-is-not-one-larger-prime-ℕ n H p with is-successor-is-nonzero-ℕ H
-... | pair k refl = {!!}
+is-not-one-larger-prime-ℕ = {!!}
 
 not-in-sieve-of-eratosthenes-is-proper-divisor-larger-prime-ℕ :
   (n x : ℕ) → is-proper-divisor-ℕ (larger-prime-ℕ n) x →
   ¬ (in-sieve-of-eratosthenes-ℕ n x)
-not-in-sieve-of-eratosthenes-is-proper-divisor-larger-prime-ℕ n x H K = {!!}
+not-in-sieve-of-eratosthenes-is-proper-divisor-larger-prime-ℕ = {!!}
 
 is-one-is-proper-divisor-larger-prime-ℕ :
   (n : ℕ) → is-nonzero-ℕ n → is-one-is-proper-divisor-ℕ (larger-prime-ℕ n)
-is-one-is-proper-divisor-larger-prime-ℕ n H x (pair f K) = {!!}
+is-one-is-proper-divisor-larger-prime-ℕ = {!!}
 
 is-prime-larger-prime-ℕ :
   (n : ℕ) → is-nonzero-ℕ n → is-prime-ℕ (larger-prime-ℕ n)
-is-prime-larger-prime-ℕ n H = {!!}
+is-prime-larger-prime-ℕ = {!!}
 
 infinitude-of-primes-ℕ : Infinitude-Of-Primes-ℕ
 infinitude-of-primes-ℕ n with is-decidable-is-zero-ℕ n
@@ -126,8 +125,7 @@ number of primes `≤ n`
 ```agda
 prime-counting-succ-ℕ :
   (n : ℕ) → is-decidable (is-prime-ℕ (succ-ℕ n)) → ℕ → ℕ
-prime-counting-succ-ℕ n (inl d) x = {!!}
-prime-counting-succ-ℕ n (inr d) x = {!!}
+prime-counting-succ-ℕ = {!!}
 
 prime-counting-ℕ : ℕ → ℕ
 prime-counting-ℕ zero-ℕ = {!!}

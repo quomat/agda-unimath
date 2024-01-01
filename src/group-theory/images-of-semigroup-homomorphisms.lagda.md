@@ -96,14 +96,14 @@ module _
     is-closed-under-multiplication-image-hom-Semigroup :
       is-closed-under-multiplication-subset-Semigroup H
         subset-image-hom-Semigroup
-    is-closed-under-multiplication-image-hom-Semigroup {x} {y} K L = {!!}
+    is-closed-under-multiplication-image-hom-Semigroup = {!!}
 
   image-hom-Semigroup : Subsemigroup (l1 ⊔ l2) H
   pr1 image-hom-Semigroup = {!!}
 
   is-image-image-hom-Semigroup :
     is-image-hom-Semigroup G H f image-hom-Semigroup
-  is-image-image-hom-Semigroup K = {!!}
+  is-image-image-hom-Semigroup = {!!}
 
   contains-values-image-hom-Semigroup :
     (g : type-Semigroup G) →
@@ -115,7 +115,7 @@ module _
     ( ( g : type-Semigroup G) →
       is-in-Subsemigroup H K (map-hom-Semigroup G H f g)) →
     leq-Subsemigroup H image-hom-Semigroup K
-  leq-image-hom-Semigroup K = {!!}
+  leq-image-hom-Semigroup = {!!}
 ```
 
 ### The image of a subsemigroup under a semigroup homomorphism
@@ -133,7 +133,7 @@ module _
     is-closed-under-multiplication-im-hom-Subsemigroup :
       is-closed-under-multiplication-subset-Semigroup H
         subset-im-hom-Subsemigroup
-    is-closed-under-multiplication-im-hom-Subsemigroup {x} {y} u v = {!!}
+    is-closed-under-multiplication-im-hom-Subsemigroup = {!!}
 
   im-hom-Subsemigroup : Subsemigroup (l1 ⊔ l2 ⊔ l3) H
   pr1 im-hom-Subsemigroup = {!!}
@@ -143,17 +143,17 @@ module _
     {l : Level} (U : Subsemigroup l H) →
     leq-Subsemigroup H im-hom-Subsemigroup U →
     leq-Subsemigroup G K (pullback-Subsemigroup G H f U)
-  forward-implication-is-image-subsemigroup-im-hom-Subsemigroup U = {!!}
+  forward-implication-is-image-subsemigroup-im-hom-Subsemigroup = {!!}
 
   backward-implication-is-image-subsemigroup-im-hom-Subsemigroup :
     {l : Level} (U : Subsemigroup l H) →
     leq-Subsemigroup G K (pullback-Subsemigroup G H f U) →
     leq-Subsemigroup H im-hom-Subsemigroup U
-  backward-implication-is-image-subsemigroup-im-hom-Subsemigroup U = {!!}
+  backward-implication-is-image-subsemigroup-im-hom-Subsemigroup = {!!}
 
   is-image-subsemigroup-im-hom-Subsemigroup :
     is-image-subsemigroup-hom-Semigroup G H f K im-hom-Subsemigroup
-  is-image-subsemigroup-im-hom-Subsemigroup U = {!!}
+  is-image-subsemigroup-im-hom-Subsemigroup = {!!}
 ```
 
 ### The image-pullback Galois connection on subsemigroups
@@ -169,14 +169,14 @@ module _
     leq-Subsemigroup H
       ( im-hom-Subsemigroup G H f K)
       ( im-hom-Subsemigroup G H f L)
-  preserves-order-im-hom-Subsemigroup K L = {!!}
+  preserves-order-im-hom-Subsemigroup = {!!}
 
   im-hom-subsemigroup-hom-Large-Poset :
     hom-Large-Poset
       ( λ l → l1 ⊔ l2 ⊔ l)
       ( Subsemigroup-Large-Poset G)
       ( Subsemigroup-Large-Poset H)
-  map-hom-Large-Preorder im-hom-subsemigroup-hom-Large-Poset = {!!}
+  im-hom-subsemigroup-hom-Large-Poset = {!!}
   preserves-order-hom-Large-Preorder im-hom-subsemigroup-hom-Large-Poset = {!!}
 
   image-pullback-galois-connection-Subsemigroup :
@@ -185,8 +185,7 @@ module _
       ( λ l → l)
       ( Subsemigroup-Large-Poset G)
       ( Subsemigroup-Large-Poset H)
-  lower-adjoint-galois-connection-Large-Poset
-    image-pullback-galois-connection-Subsemigroup = {!!}
+  image-pullback-galois-connection-Subsemigroup = {!!}
   upper-adjoint-galois-connection-Large-Poset
     image-pullback-galois-connection-Subsemigroup = {!!}
   adjoint-relation-galois-connection-Large-Poset

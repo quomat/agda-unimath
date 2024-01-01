@@ -55,7 +55,7 @@ module _
 
   map-inv-is-iso-Semigroup :
     is-iso-Semigroup → type-Semigroup H → type-Semigroup G
-  map-inv-is-iso-Semigroup U = {!!}
+  map-inv-is-iso-Semigroup = {!!}
 
   is-section-hom-inv-is-iso-Semigroup :
     (U : is-iso-Semigroup) →
@@ -66,7 +66,7 @@ module _
   is-section-map-inv-is-iso-Semigroup :
     (U : is-iso-Semigroup) →
     ( map-hom-Semigroup G H f ∘ map-inv-is-iso-Semigroup U) ~ id
-  is-section-map-inv-is-iso-Semigroup U = {!!}
+  is-section-map-inv-is-iso-Semigroup = {!!}
 
   is-retraction-hom-inv-is-iso-Semigroup :
     (U : is-iso-Semigroup) →
@@ -77,7 +77,7 @@ module _
   is-retraction-map-inv-is-iso-Semigroup :
     (U : is-iso-Semigroup) →
     ( map-inv-is-iso-Semigroup U ∘ map-hom-Semigroup G H f) ~ id
-  is-retraction-map-inv-is-iso-Semigroup U = {!!}
+  is-retraction-map-inv-is-iso-Semigroup = {!!}
 ```
 
 ### Isomorphisms of semigroups
@@ -174,7 +174,7 @@ module _
       ( f : hom-Semigroup G H)
       ( U : is-equiv (map-hom-Semigroup G H f)) →
       preserves-mul-Semigroup H G (map-inv-is-equiv U)
-    preserves-mul-map-inv-is-equiv-Semigroup (f , μ-f) U {x} {y} = {!!}
+    preserves-mul-map-inv-is-equiv-Semigroup = {!!}
 ```
 
 ### A homomorphism of semigroups is an equivalence of semigroups if and only if it is an isomorphism
@@ -188,13 +188,13 @@ module _
     is-iso-is-equiv-hom-Semigroup :
       (f : hom-Semigroup G H) →
       is-equiv-hom-Semigroup G H f → is-iso-Semigroup G H f
-    pr1 (pr1 (is-iso-is-equiv-hom-Semigroup (f , μ-f) U)) = {!!}
+    is-iso-is-equiv-hom-Semigroup = {!!}
 
   abstract
     is-equiv-is-iso-Semigroup :
       (f : hom-Semigroup G H) →
       is-iso-Semigroup G H f → is-equiv-hom-Semigroup G H f
-    is-equiv-is-iso-Semigroup (f , μ-f) ((g , μ-g) , S , R) = {!!}
+    is-equiv-is-iso-Semigroup = {!!}
 
   equiv-iso-equiv-Semigroup : equiv-Semigroup G H ≃ iso-Semigroup G H
   equiv-iso-equiv-Semigroup = {!!}

@@ -50,7 +50,7 @@ module _
 ```agda
 id-equiv-∞-Group :
   {l1 : Level} (G : ∞-Group l1) → equiv-∞-Group G G
-id-equiv-∞-Group G = {!!}
+id-equiv-∞-Group = {!!}
 ```
 
 ### Isomorphisms of ∞-groups
@@ -72,22 +72,21 @@ module _
 is-torsorial-equiv-∞-Group :
   {l1 : Level} (G : ∞-Group l1) →
   is-torsorial (λ (H : ∞-Group l1) → equiv-∞-Group G H)
-is-torsorial-equiv-∞-Group G = {!!}
+is-torsorial-equiv-∞-Group = {!!}
 
 equiv-eq-∞-Group :
   {l1 : Level} (G H : ∞-Group l1) → (G ＝ H) → equiv-∞-Group G H
-equiv-eq-∞-Group G .G refl = {!!}
+equiv-eq-∞-Group = {!!}
 
 is-equiv-equiv-eq-∞-Group :
   {l1 : Level} (G H : ∞-Group l1) → is-equiv (equiv-eq-∞-Group G H)
-is-equiv-equiv-eq-∞-Group G = {!!}
+is-equiv-equiv-eq-∞-Group = {!!}
 
 extensionality-∞-Group :
   {l1 : Level} (G H : ∞-Group l1) → (G ＝ H) ≃ equiv-∞-Group G H
-pr1 (extensionality-∞-Group G H) = {!!}
-pr2 (extensionality-∞-Group G H) = {!!}
+extensionality-∞-Group = {!!}
 
 eq-equiv-∞-Group :
   {l1 : Level} (G H : ∞-Group l1) → equiv-∞-Group G H → G ＝ H
-eq-equiv-∞-Group G H = {!!}
+eq-equiv-∞-Group = {!!}
 ```

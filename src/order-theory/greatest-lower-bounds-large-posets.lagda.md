@@ -41,7 +41,7 @@ module _
 
   is-greatest-binary-lower-bound-Large-Poset :
     {l3 : Level} → type-Large-Poset P l3 → UUω
-  is-greatest-binary-lower-bound-Large-Poset x = {!!}
+  is-greatest-binary-lower-bound-Large-Poset = {!!}
 ```
 
 ## Properties
@@ -62,5 +62,5 @@ module _
     ( (i : I) →
       is-greatest-binary-lower-bound-Large-Poset (P i) (x i) (y i) (z i)) →
     is-greatest-binary-lower-bound-Large-Poset (Π-Large-Poset P) x y z
-  is-greatest-binary-lower-bound-Π-Large-Poset H u = {!!}
+  is-greatest-binary-lower-bound-Π-Large-Poset = {!!}
 ```

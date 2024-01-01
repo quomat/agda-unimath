@@ -196,7 +196,7 @@ module _
 
   is-section-map-section-left-map-triangle :
     (s : section g) → is-section f (map-section-left-map-triangle s)
-  is-section-map-section-left-map-triangle s = {!!}
+  is-section-map-section-left-map-triangle = {!!}
 
   section-left-map-triangle : section g → section f
   pr1 (section-left-map-triangle s) = {!!}

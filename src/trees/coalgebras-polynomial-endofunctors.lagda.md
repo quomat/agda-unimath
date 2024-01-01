@@ -49,11 +49,11 @@ module _
 
   shape-coalgebra-polynomial-endofunctor :
     type-coalgebra-polynomial-endofunctor → A
-  shape-coalgebra-polynomial-endofunctor x = {!!}
+  shape-coalgebra-polynomial-endofunctor = {!!}
 
   component-coalgebra-polynomial-endofunctor :
     (x : type-coalgebra-polynomial-endofunctor) →
     B (shape-coalgebra-polynomial-endofunctor x) →
     type-coalgebra-polynomial-endofunctor
-  component-coalgebra-polynomial-endofunctor x = {!!}
+  component-coalgebra-polynomial-endofunctor = {!!}
 ```

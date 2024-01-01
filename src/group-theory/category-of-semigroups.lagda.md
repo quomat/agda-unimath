@@ -35,16 +35,15 @@ category.
 ```agda
 is-large-category-Semigroup :
   is-large-category-Large-Precategory Semigroup-Large-Precategory
-is-large-category-Semigroup G = {!!}
+is-large-category-Semigroup = {!!}
 
 extensionality-Semigroup :
   {l : Level} (G H : Semigroup l) → Id G H ≃ iso-Semigroup G H
-pr1 (extensionality-Semigroup G H) = {!!}
-pr2 (extensionality-Semigroup G H) = {!!}
+extensionality-Semigroup = {!!}
 
 eq-iso-Semigroup :
   {l : Level} (G H : Semigroup l) → iso-Semigroup G H → Id G H
-eq-iso-Semigroup G H = {!!}
+eq-iso-Semigroup = {!!}
 
 Semigroup-Large-Category : Large-Category lsuc (_⊔_)
 large-precategory-Large-Category Semigroup-Large-Category = {!!}

@@ -37,26 +37,26 @@ module _
 
   restricted-arithmetic-function-Ring :
     {l' : Level} (P : nonzero-ℕ → Decidable-Prop l') → UU (l ⊔ l')
-  restricted-arithmetic-function-Ring P = {!!}
+  restricted-arithmetic-function-Ring = {!!}
 
   shift-arithmetic-function-Ring :
     type-arithmetic-functions-Ring R → type-arithmetic-functions-Ring R
-  shift-arithmetic-function-Ring f = {!!}
+  shift-arithmetic-function-Ring = {!!}
 
   shift-restricted-arithmetic-function-Ring :
     {l' : Level} (P : nonzero-ℕ → Decidable-Prop l') →
     restricted-arithmetic-function-Ring P →
     restricted-arithmetic-function-Ring (P ∘ succ-nonzero-ℕ)
-  shift-restricted-arithmetic-function-Ring P f = {!!}
+  shift-restricted-arithmetic-function-Ring = {!!}
 
   case-one-bounded-sum-arithmetic-function-Ring :
     {l' : Level} → (P : Decidable-Prop l') →
     is-decidable (type-Decidable-Prop P) →
     (type-Decidable-Prop P → type-Ring R) → type-Ring R
-  case-one-bounded-sum-arithmetic-function-Ring P (inl x) f = {!!}
+  case-one-bounded-sum-arithmetic-function-Ring = {!!}
 
   bounded-sum-arithmetic-function-Ring :
     (b : ℕ) {l' : Level} (P : nonzero-ℕ → Decidable-Prop l')
     (f : restricted-arithmetic-function-Ring P) → type-Ring R
-  bounded-sum-arithmetic-function-Ring zero-ℕ P f = {!!}
+  bounded-sum-arithmetic-function-Ring = {!!}
 ```

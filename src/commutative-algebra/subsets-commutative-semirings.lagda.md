@@ -31,12 +31,12 @@ A **subset** of a commutative semiring is a subtype of its underlying type.
 ```agda
 subset-Commutative-Semiring :
   (l : Level) {l1 : Level} (A : Commutative-Semiring l1) → UU ((lsuc l) ⊔ l1)
-subset-Commutative-Semiring l A = {!!}
+subset-Commutative-Semiring = {!!}
 
 is-set-subset-Commutative-Semiring :
   (l : Level) {l1 : Level} (A : Commutative-Semiring l1) →
   is-set (subset-Commutative-Semiring l A)
-is-set-subset-Commutative-Semiring l A = {!!}
+is-set-subset-Commutative-Semiring = {!!}
 
 module _
   {l1 l2 : Level} (A : Commutative-Semiring l1)

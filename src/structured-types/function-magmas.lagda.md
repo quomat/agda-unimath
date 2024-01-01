@@ -33,7 +33,7 @@ module _
 
   mul-function-Magma :
     type-function-Magma → type-function-Magma → type-function-Magma
-  mul-function-Magma f g x = {!!}
+  mul-function-Magma = {!!}
 
   function-Magma : Magma (l1 ⊔ l2)
   pr1 function-Magma = {!!}

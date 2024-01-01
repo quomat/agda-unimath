@@ -43,7 +43,7 @@ module _
 
   is-prop-commute-Semigroup :
     (x y : type-Semigroup G) → is-prop (commute-Semigroup x y)
-  is-prop-commute-Semigroup x y = {!!}
+  is-prop-commute-Semigroup = {!!}
 ```
 
 ## Properties
@@ -68,7 +68,7 @@ module _
 
   symmetric-commute-Semigroup :
     (x y : type-Semigroup G) → commute-Semigroup G x y → commute-Semigroup G y x
-  symmetric-commute-Semigroup x y = {!!}
+  symmetric-commute-Semigroup = {!!}
 ```
 
 ### If `x` commutes with `y`, then `x * (y * z) ＝ y * (x * z)` for any element `z`
@@ -85,12 +85,12 @@ module _
   left-swap-commute-Semigroup :
     (x y z : type-Semigroup G) → commute-Semigroup G x y →
     x * (y * z) ＝ y * (x * z)
-  left-swap-commute-Semigroup x y z H = {!!}
+  left-swap-commute-Semigroup = {!!}
 
   right-swap-commute-Semigroup :
     (x y z : type-Semigroup G) → commute-Semigroup G y z →
     (x * y) * z ＝ (x * z) * y
-  right-swap-commute-Semigroup x y z H = {!!}
+  right-swap-commute-Semigroup = {!!}
 ```
 
 ### If `x` commutes with `y` and with `z`, then `x` commutes with `yz`
@@ -108,5 +108,5 @@ module _
     (x y z : type-Semigroup G) →
     commute-Semigroup G x y → commute-Semigroup G x z →
     commute-Semigroup G x (mul-Semigroup G y z)
-  commute-mul-Semigroup x y z H K = {!!}
+  commute-mul-Semigroup = {!!}
 ```

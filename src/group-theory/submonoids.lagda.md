@@ -38,15 +38,15 @@ is closed under multiplication.
 is-submonoid-prop-subset-Monoid :
   {l1 l2 : Level} (M : Monoid l1) (P : subset-Monoid l2 M) →
   Prop (l1 ⊔ l2)
-is-submonoid-prop-subset-Monoid M P = {!!}
+is-submonoid-prop-subset-Monoid = {!!}
 
 is-submonoid-subset-Monoid :
   {l1 l2 : Level} (M : Monoid l1) (P : subset-Monoid l2 M) → UU (l1 ⊔ l2)
-is-submonoid-subset-Monoid M P = {!!}
+is-submonoid-subset-Monoid = {!!}
 
 Submonoid :
   {l1 : Level} (l2 : Level) (M : Monoid l1) → UU (l1 ⊔ lsuc l2)
-Submonoid l2 M = {!!}
+Submonoid = {!!}
 
 module _
   {l1 l2 : Level} (M : Monoid l1) (P : Submonoid l2 M)
@@ -106,7 +106,7 @@ module _
     {x y : type-Monoid M} →
     is-in-Submonoid x → is-in-Submonoid y →
     is-in-Submonoid (mul-Monoid M x y)
-  is-closed-under-multiplication-Submonoid {x} {y} = {!!}
+  is-closed-under-multiplication-Submonoid = {!!}
 
   mul-Submonoid : (x y : type-Submonoid) → type-Submonoid
   pr1 (mul-Submonoid x y) = {!!}
@@ -115,18 +115,18 @@ module _
     (x y z : type-Submonoid) →
     (mul-Submonoid (mul-Submonoid x y) z) ＝
     (mul-Submonoid x (mul-Submonoid y z))
-  associative-mul-Submonoid x y z = {!!}
+  associative-mul-Submonoid = {!!}
 
   semigroup-Submonoid : Semigroup (l1 ⊔ l2)
   pr1 semigroup-Submonoid = {!!}
 
   left-unit-law-mul-Submonoid :
     (x : type-Submonoid) → mul-Submonoid unit-Submonoid x ＝ x
-  left-unit-law-mul-Submonoid x = {!!}
+  left-unit-law-mul-Submonoid = {!!}
 
   right-unit-law-mul-Submonoid :
     (x : type-Submonoid) → mul-Submonoid x unit-Submonoid ＝ x
-  right-unit-law-mul-Submonoid x = {!!}
+  right-unit-law-mul-Submonoid = {!!}
 
   monoid-Submonoid : Monoid (l1 ⊔ l2)
   pr1 monoid-Submonoid = {!!}
@@ -157,7 +157,7 @@ module _
 
   has-same-elements-Submonoid :
     {l3 : Level} → Submonoid l3 M → UU (l1 ⊔ l2 ⊔ l3)
-  has-same-elements-Submonoid K = {!!}
+  has-same-elements-Submonoid = {!!}
 
   extensionality-Submonoid :
     (K : Submonoid l2 M) → (N ＝ K) ≃ has-same-elements-Submonoid K

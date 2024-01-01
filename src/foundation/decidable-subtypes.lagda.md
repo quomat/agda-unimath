@@ -44,7 +44,7 @@ over it.
 ```agda
 is-decidable-subtype-Prop :
   {l1 l2 : Level} {A : UU l1} → subtype l2 A → Prop (l1 ⊔ l2)
-is-decidable-subtype-Prop {A = A} P = {!!}
+is-decidable-subtype-Prop = {!!}
 
 is-decidable-subtype : {l1 l2 : Level} {A : UU l1} → subtype l2 A → UU (l1 ⊔ l2)
 is-decidable-subtype P = {!!}
@@ -52,7 +52,7 @@ is-decidable-subtype P = {!!}
 is-prop-is-decidable-subtype :
   {l1 l2 : Level} {A : UU l1} (P : subtype l2 A) →
   is-prop (is-decidable-subtype P)
-is-prop-is-decidable-subtype P = {!!}
+is-prop-is-decidable-subtype = {!!}
 
 decidable-subtype : {l1 : Level} (l : Level) (X : UU l1) → UU (l1 ⊔ lsuc l)
 decidable-subtype l X = {!!}
@@ -70,7 +70,7 @@ module _
 
   is-decidable-decidable-subtype :
     is-decidable-subtype subtype-decidable-subtype
-  is-decidable-decidable-subtype a = {!!}
+  is-decidable-decidable-subtype = {!!}
 
   is-in-decidable-subtype : A → UU l2
   is-in-decidable-subtype = {!!}
@@ -137,7 +137,7 @@ module _
 
   equiv-universes-decidable-subtype :
     (l l' : Level) → decidable-subtype l X ≃ decidable-subtype l' X
-  equiv-universes-decidable-subtype l l' = {!!}
+  equiv-universes-decidable-subtype = {!!}
 
   iff-universes-decidable-subtype :
     (l l' : Level) (S : decidable-subtype l X) →
@@ -145,7 +145,7 @@ module _
       prop-Decidable-Prop (S x) ⇔
       prop-Decidable-Prop
         ( map-equiv (equiv-universes-decidable-subtype l l') S x))
-  iff-universes-decidable-subtype l l' S x = {!!}
+  iff-universes-decidable-subtype = {!!}
 ```
 
 ### A decidable subtype of a `k+1`-truncated type is `k+1`-truncated
@@ -181,12 +181,12 @@ module _
 prop-decidable-subprop :
   {l1 l2 : Level} (A : Prop l1) (P : decidable-subtype l2 (type-Prop A)) →
   Prop (l1 ⊔ l2)
-prop-decidable-subprop A P = {!!}
+prop-decidable-subprop = {!!}
 
 set-decidable-subset :
   {l1 l2 : Level} (A : Set l1) (P : decidable-subtype l2 (type-Set A)) →
   Set (l1 ⊔ l2)
-set-decidable-subset A P = {!!}
+set-decidable-subset = {!!}
 ```
 
 ### The type of decidable subtypes of a type is a set
@@ -194,7 +194,7 @@ set-decidable-subset A P = {!!}
 ```agda
 is-set-decidable-subtype :
   {l1 l2 : Level} {X : UU l1} → is-set (decidable-subtype l2 X)
-is-set-decidable-subtype {l1} {l2} {X} = {!!}
+is-set-decidable-subtype = {!!}
 ```
 
 ### Extensionality of the type of decidable subtypes
@@ -206,7 +206,7 @@ module _
 
   has-same-elements-decidable-subtype :
     {l3 : Level} → decidable-subtype l3 A → UU (l1 ⊔ l2 ⊔ l3)
-  has-same-elements-decidable-subtype Q = {!!}
+  has-same-elements-decidable-subtype = {!!}
 
   extensionality-decidable-subtype :
     (Q : decidable-subtype l2 A) →
@@ -216,12 +216,12 @@ module _
   has-same-elements-eq-decidable-subtype :
     (Q : decidable-subtype l2 A) →
     (P ＝ Q) → has-same-elements-decidable-subtype Q
-  has-same-elements-eq-decidable-subtype Q = {!!}
+  has-same-elements-eq-decidable-subtype = {!!}
 
   eq-has-same-elements-decidable-subtype :
     (Q : decidable-subtype l2 A) →
     has-same-elements-decidable-subtype Q → P ＝ Q
-  eq-has-same-elements-decidable-subtype Q = {!!}
+  eq-has-same-elements-decidable-subtype = {!!}
 
   refl-extensionality-decidable-subtype :
     map-equiv (extensionality-decidable-subtype P) refl ＝ (λ x → pair id id)

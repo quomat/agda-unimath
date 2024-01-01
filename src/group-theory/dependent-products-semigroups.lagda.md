@@ -40,17 +40,17 @@ module _
 
   mul-Π-Semigroup :
     (f g : type-Π-Semigroup) → type-Π-Semigroup
-  mul-Π-Semigroup f g i = {!!}
+  mul-Π-Semigroup = {!!}
 
   associative-mul-Π-Semigroup :
     (f g h : type-Π-Semigroup) →
     mul-Π-Semigroup (mul-Π-Semigroup f g) h ＝
     mul-Π-Semigroup f (mul-Π-Semigroup g h)
-  associative-mul-Π-Semigroup f g h = {!!}
+  associative-mul-Π-Semigroup = {!!}
 
   has-associative-mul-Π-Semigroup :
     has-associative-mul-Set set-Π-Semigroup
-  pr1 has-associative-mul-Π-Semigroup = {!!}
+  has-associative-mul-Π-Semigroup = {!!}
 
   Π-Semigroup : Semigroup (l1 ⊔ l2)
   pr1 Π-Semigroup = {!!}

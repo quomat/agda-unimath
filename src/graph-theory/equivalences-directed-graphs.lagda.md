@@ -51,7 +51,7 @@ of edges indexed by `x y : V`.
 equiv-Directed-Graph :
   {l1 l2 l3 l4 : Level} (G : Directed-Graph l1 l2) (H : Directed-Graph l3 l4) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-equiv-Directed-Graph G H = {!!}
+equiv-Directed-Graph = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} (G : Directed-Graph l1 l2) (H : Directed-Graph l3 l4)
@@ -96,11 +96,11 @@ module _
     edge-Directed-Graph H
       ( vertex-equiv-Directed-Graph x)
       ( vertex-equiv-Directed-Graph y)
-  edge-equiv-Directed-Graph x y = {!!}
+  edge-equiv-Directed-Graph = {!!}
 
   is-equiv-edge-equiv-Directed-Graph :
     (x y : vertex-Directed-Graph G) → is-equiv (edge-equiv-Directed-Graph x y)
-  is-equiv-edge-equiv-Directed-Graph x y = {!!}
+  is-equiv-edge-equiv-Directed-Graph = {!!}
 ```
 
 ### The condition on a morphism of directed graphs to be an equivalence
@@ -112,12 +112,12 @@ module _
 
   is-equiv-hom-Directed-Graph :
     hom-Directed-Graph G H → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  is-equiv-hom-Directed-Graph f = {!!}
+  is-equiv-hom-Directed-Graph = {!!}
 
   equiv-is-equiv-hom-Directed-Graph :
     (f : hom-Directed-Graph G H) →
     is-equiv-hom-Directed-Graph f → equiv-Directed-Graph G H
-  pr1 (equiv-is-equiv-hom-Directed-Graph f (K , L)) = {!!}
+  equiv-is-equiv-hom-Directed-Graph = {!!}
 
   compute-equiv-Directed-Graph :
     equiv-Directed-Graph G H ≃
@@ -126,18 +126,18 @@ module _
 
   hom-equiv-Directed-Graph :
     equiv-Directed-Graph G H → hom-Directed-Graph G H
-  hom-equiv-Directed-Graph e = {!!}
+  hom-equiv-Directed-Graph = {!!}
 
   compute-hom-equiv-Directed-Graph :
     (e : equiv-Directed-Graph G H) →
     hom-equiv-Directed-Graph e ＝
     ( vertex-equiv-Directed-Graph G H e , edge-equiv-Directed-Graph G H e)
-  compute-hom-equiv-Directed-Graph e = {!!}
+  compute-hom-equiv-Directed-Graph = {!!}
 
   is-equiv-equiv-Directed-Graph :
     (e : equiv-Directed-Graph G H) →
     is-equiv-hom-Directed-Graph (hom-equiv-Directed-Graph e)
-  is-equiv-equiv-Directed-Graph e = {!!}
+  is-equiv-equiv-Directed-Graph = {!!}
 ```
 
 ### Identity equivalences of directed graphs
@@ -145,8 +145,7 @@ module _
 ```agda
 id-equiv-Directed-Graph :
   {l1 l2 : Level} (G : Directed-Graph l1 l2) → equiv-Directed-Graph G G
-pr1 (id-equiv-Directed-Graph G) = {!!}
-pr2 (id-equiv-Directed-Graph G) x y = {!!}
+id-equiv-Directed-Graph = {!!}
 ```
 
 ### Composition of equivalences of directed graphs
@@ -173,7 +172,7 @@ module _
     edge-Directed-Graph K
       ( vertex-comp-equiv-Directed-Graph x)
       ( vertex-comp-equiv-Directed-Graph y)
-  equiv-edge-comp-equiv-Directed-Graph x y = {!!}
+  equiv-edge-comp-equiv-Directed-Graph = {!!}
 
   edge-comp-equiv-Directed-Graph :
     (x y : vertex-Directed-Graph G) →
@@ -181,11 +180,11 @@ module _
     edge-Directed-Graph K
       ( vertex-comp-equiv-Directed-Graph x)
       ( vertex-comp-equiv-Directed-Graph y)
-  edge-comp-equiv-Directed-Graph x y = {!!}
+  edge-comp-equiv-Directed-Graph = {!!}
 
   comp-equiv-Directed-Graph :
     equiv-Directed-Graph G K
-  pr1 comp-equiv-Directed-Graph = {!!}
+  comp-equiv-Directed-Graph = {!!}
 ```
 
 ### Homotopies of equivalences of directed graphs
@@ -194,7 +193,7 @@ module _
 htpy-equiv-Directed-Graph :
   {l1 l2 l3 l4 : Level} (G : Directed-Graph l1 l2) (H : Directed-Graph l3 l4)
   (e f : equiv-Directed-Graph G H) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-htpy-equiv-Directed-Graph G H e f = {!!}
+htpy-equiv-Directed-Graph = {!!}
 ```
 
 ### The reflexivity homotopy of equivalences of directed graphs
@@ -203,7 +202,7 @@ htpy-equiv-Directed-Graph G H e f = {!!}
 refl-htpy-equiv-Directed-Graph :
   {l1 l2 l3 l4 : Level} (G : Directed-Graph l1 l2) (H : Directed-Graph l3 l4)
   (e : equiv-Directed-Graph G H) → htpy-equiv-Directed-Graph G H e e
-refl-htpy-equiv-Directed-Graph G H e = {!!}
+refl-htpy-equiv-Directed-Graph = {!!}
 ```
 
 ## Properties
@@ -222,7 +221,7 @@ module _
 
   htpy-eq-equiv-Directed-Graph :
     (f : equiv-Directed-Graph G H) → e ＝ f → htpy-equiv-Directed-Graph G H e f
-  htpy-eq-equiv-Directed-Graph .e refl = {!!}
+  htpy-eq-equiv-Directed-Graph = {!!}
 
   is-equiv-htpy-eq-equiv-Directed-Graph :
     (f : equiv-Directed-Graph G H) →
@@ -232,12 +231,12 @@ module _
   extensionality-equiv-Directed-Graph :
     (f : equiv-Directed-Graph G H) →
     (e ＝ f) ≃ htpy-equiv-Directed-Graph G H e f
-  pr1 (extensionality-equiv-Directed-Graph f) = {!!}
+  extensionality-equiv-Directed-Graph = {!!}
 
   eq-htpy-equiv-Directed-Graph :
     (f : equiv-Directed-Graph G H) →
     htpy-equiv-Directed-Graph G H e f → e ＝ f
-  eq-htpy-equiv-Directed-Graph f = {!!}
+  eq-htpy-equiv-Directed-Graph = {!!}
 ```
 
 ### Equivalences of directed graphs characterize identifications of directed graphs
@@ -253,11 +252,11 @@ module _
 
   equiv-eq-Directed-Graph :
     (H : Directed-Graph l1 l2) → (G ＝ H) → equiv-Directed-Graph G H
-  equiv-eq-Directed-Graph H = {!!}
+  equiv-eq-Directed-Graph = {!!}
 
   eq-equiv-Directed-Graph :
     (H : Directed-Graph l1 l2) → equiv-Directed-Graph G H → (G ＝ H)
-  eq-equiv-Directed-Graph H = {!!}
+  eq-equiv-Directed-Graph = {!!}
 
   is-torsorial-equiv-Directed-Graph :
     is-torsorial (equiv-Directed-Graph G)
@@ -300,7 +299,7 @@ module _
     edge-Directed-Graph G
       ( vertex-inv-equiv-Directed-Graph x)
       ( vertex-inv-equiv-Directed-Graph y)
-  equiv-edge-inv-equiv-Directed-Graph x y = {!!}
+  equiv-edge-inv-equiv-Directed-Graph = {!!}
 
   edge-inv-equiv-Directed-Graph :
     (x y : vertex-Directed-Graph H) →
@@ -308,7 +307,7 @@ module _
     edge-Directed-Graph G
       ( vertex-inv-equiv-Directed-Graph x)
       ( vertex-inv-equiv-Directed-Graph y)
-  edge-inv-equiv-Directed-Graph x y = {!!}
+  edge-inv-equiv-Directed-Graph = {!!}
 
   hom-inv-equiv-Directed-Graph : hom-Directed-Graph H G
   pr1 hom-inv-equiv-Directed-Graph = {!!}
@@ -330,13 +329,13 @@ module _
         ( vertex-inv-equiv-Directed-Graph x)
         ( vertex-inv-equiv-Directed-Graph y)
         ( edge-inv-equiv-Directed-Graph x y e)) ＝ e
-  edge-is-section-inv-equiv-Directed-Graph x y e = {!!}
+  edge-is-section-inv-equiv-Directed-Graph = {!!}
 
   is-section-inv-equiv-Directed-Graph :
     htpy-equiv-Directed-Graph H H
       ( comp-equiv-Directed-Graph H G H f (inv-equiv-Directed-Graph))
       ( id-equiv-Directed-Graph H)
-  pr1 is-section-inv-equiv-Directed-Graph = {!!}
+  is-section-inv-equiv-Directed-Graph = {!!}
 
   vertex-is-retraction-inv-equiv-Directed-Graph :
     ( vertex-inv-equiv-Directed-Graph ∘ vertex-equiv-Directed-Graph G H f) ~ id
@@ -352,13 +351,13 @@ module _
         ( vertex-equiv-Directed-Graph G H f x)
         ( vertex-equiv-Directed-Graph G H f y)
         ( edge-equiv-Directed-Graph G H f x y e)) ＝ e
-  edge-is-retraction-inv-equiv-Directed-Graph x y e = {!!}
+  edge-is-retraction-inv-equiv-Directed-Graph = {!!}
 
   is-retraction-inv-equiv-Directed-Graph :
     htpy-equiv-Directed-Graph G G
       ( comp-equiv-Directed-Graph G H G (inv-equiv-Directed-Graph) f)
       ( id-equiv-Directed-Graph G)
-  pr1 is-retraction-inv-equiv-Directed-Graph = {!!}
+  is-retraction-inv-equiv-Directed-Graph = {!!}
 ```
 
 ## External links

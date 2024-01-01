@@ -35,7 +35,7 @@ module _
   preserves-sups :
     (type-Suplattice A → type-Suplattice B) →
     UU (l1 ⊔ lsuc l3 ⊔ l4 ⊔ l5)
-  preserves-sups f = {!!}
+  preserves-sups = {!!}
 
   hom-Suplattice : UU (l1 ⊔ l2 ⊔ lsuc l3 ⊔ l4 ⊔ l5)
   hom-Suplattice = {!!}

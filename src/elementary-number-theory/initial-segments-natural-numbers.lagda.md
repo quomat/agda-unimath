@@ -73,8 +73,7 @@ module _
 ```agda
 shift-initial-segment-ℕ :
   {l : Level} → initial-segment-ℕ l → initial-segment-ℕ l
-pr1 (shift-initial-segment-ℕ I) = {!!}
-pr2 (shift-initial-segment-ℕ I) = {!!}
+shift-initial-segment-ℕ = {!!}
 ```
 
 ## Properties
@@ -85,8 +84,7 @@ pr2 (shift-initial-segment-ℕ I) = {!!}
 contains-zero-initial-segment-ℕ :
   {l : Level} (I : initial-segment-ℕ l) →
   (x : ℕ) → is-in-initial-segment-ℕ I x → is-in-initial-segment-ℕ I 0
-contains-zero-initial-segment-ℕ I zero-ℕ H = {!!}
-contains-zero-initial-segment-ℕ I (succ-ℕ x) H = {!!}
+contains-zero-initial-segment-ℕ = {!!}
 ```
 
 ### Initial segments that contain a successor contain `1`
@@ -95,7 +93,7 @@ contains-zero-initial-segment-ℕ I (succ-ℕ x) H = {!!}
 contains-one-initial-segment-ℕ :
   {l : Level} (I : initial-segment-ℕ l) →
   (x : ℕ) → is-in-initial-segment-ℕ I (succ-ℕ x) → is-in-initial-segment-ℕ I 1
-contains-one-initial-segment-ℕ I = {!!}
+contains-one-initial-segment-ℕ = {!!}
 ```
 
 ### Initial segments are closed under `max-ℕ`
@@ -105,7 +103,5 @@ max-initial-segment-ℕ :
   {l : Level} (I : initial-segment-ℕ l) →
   (x y : ℕ) → is-in-initial-segment-ℕ I x → is-in-initial-segment-ℕ I y →
   is-in-initial-segment-ℕ I (max-ℕ x y)
-max-initial-segment-ℕ I zero-ℕ y H K = {!!}
-max-initial-segment-ℕ I (succ-ℕ x) zero-ℕ H K = {!!}
-max-initial-segment-ℕ I (succ-ℕ x) (succ-ℕ y) H K = {!!}
+max-initial-segment-ℕ = {!!}
 ```

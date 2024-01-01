@@ -61,7 +61,7 @@ module _
 
   is-prop-is-power-of-element-Monoid :
     (x y : type-Monoid M) → is-prop (is-power-of-element-Monoid x y)
-  is-prop-is-power-of-element-Monoid x y = {!!}
+  is-prop-is-power-of-element-Monoid = {!!}
 ```
 
 ## Properties
@@ -76,7 +76,7 @@ module _
   power-unit-Monoid :
     (n : ℕ) →
     power-Monoid M n (unit-Monoid M) ＝ unit-Monoid M
-  power-unit-Monoid zero-ℕ = {!!}
+  power-unit-Monoid = {!!}
 ```
 
 ### `xⁿ⁺¹ = {!!}
@@ -89,7 +89,7 @@ module _
   power-succ-Monoid :
     (n : ℕ) (x : type-Monoid M) →
     power-Monoid M (succ-ℕ n) x ＝ mul-Monoid M (power-Monoid M n x) x
-  power-succ-Monoid zero-ℕ x = {!!}
+  power-succ-Monoid = {!!}
 ```
 
 ### `xⁿ⁺¹ ＝ xxⁿ`
@@ -102,7 +102,7 @@ module _
   power-succ-Monoid' :
     (n : ℕ) (x : type-Monoid M) →
     power-Monoid M (succ-ℕ n) x ＝ mul-Monoid M x (power-Monoid M n x)
-  power-succ-Monoid' zero-ℕ x = {!!}
+  power-succ-Monoid' = {!!}
 ```
 
 ### Powers by sums of natural numbers are products of powers
@@ -116,7 +116,7 @@ module _
     (m n : ℕ) {x : type-Monoid M} →
     power-Monoid M (m +ℕ n) x ＝
     mul-Monoid M (power-Monoid M m x) (power-Monoid M n x)
-  distributive-power-add-Monoid m zero-ℕ {x} = {!!}
+  distributive-power-add-Monoid = {!!}
 ```
 
 ### If `x` commutes with `y` then so do their powers
@@ -131,7 +131,7 @@ module _
     ( mul-Monoid M x y ＝ mul-Monoid M y x) →
     ( mul-Monoid M (power-Monoid M n x) y) ＝
     ( mul-Monoid M y (power-Monoid M n x))
-  commute-powers-Monoid' zero-ℕ H = {!!}
+  commute-powers-Monoid' = {!!}
 
   commute-powers-Monoid :
     (m n : ℕ) {x y : type-Monoid M} →
@@ -142,7 +142,7 @@ module _
     ( mul-Monoid M
       ( power-Monoid M n y)
       ( power-Monoid M m x))
-  commute-powers-Monoid zero-ℕ zero-ℕ H = {!!}
+  commute-powers-Monoid = {!!}
 ```
 
 ### If `x` commutes with `y`, then powers distribute over the product of `x` and `y`
@@ -157,7 +157,7 @@ module _
     (H : mul-Monoid M x y ＝ mul-Monoid M y x) →
     power-Monoid M n (mul-Monoid M x y) ＝
     mul-Monoid M (power-Monoid M n x) (power-Monoid M n y)
-  distributive-power-mul-Monoid zero-ℕ H = {!!}
+  distributive-power-mul-Monoid = {!!}
 ```
 
 ### Powers by products of natural numbers are iterated powers
@@ -171,7 +171,7 @@ module _
     (m n : ℕ) {x : type-Monoid M} →
     power-Monoid M (m *ℕ n) x ＝
     power-Monoid M n (power-Monoid M m x)
-  power-mul-Monoid zero-ℕ n {x} = {!!}
+  power-mul-Monoid = {!!}
 ```
 
 ### Monoid homomorphisms preserve powers
@@ -185,5 +185,5 @@ module _
     (n : ℕ) (x : type-Monoid M) →
     map-hom-Monoid M N f (power-Monoid M n x) ＝
     power-Monoid N n (map-hom-Monoid M N f x)
-  preserves-powers-hom-Monoid zero-ℕ x = {!!}
+  preserves-powers-hom-Monoid = {!!}
 ```

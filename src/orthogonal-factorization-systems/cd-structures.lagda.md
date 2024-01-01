@@ -62,7 +62,7 @@ module _
     (Σ : cd-structure) →
     {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {X : UU l3} {Y : UU l4} →
     (f : A → B) (g : X → Y) → hom-arrow f g → UU (α l1 l2 l3 l4)
-  is-distinguished-square-cd-structure Σ f g σ = {!!}
+  is-distinguished-square-cd-structure = {!!}
 ```
 
 ## Exernal links

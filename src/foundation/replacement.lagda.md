@@ -29,7 +29,7 @@ The **type theoretic replacement axiom** asserts that the
 instance-replacement :
   (l : Level) {l1 l2 : Level} {A : UU l1} {B : UU l2} → (A → B) →
   UU (lsuc l ⊔ l1 ⊔ l2)
-instance-replacement l {A = A} {B} f = {!!}
+instance-replacement = {!!}
 
 replacement-axiom-Level : (l l1 l2 : Level) → UU (lsuc l ⊔ lsuc l1 ⊔ lsuc l2)
 replacement-axiom-Level l l1 l2 = {!!}
@@ -49,7 +49,7 @@ postulate
 replacement' :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
   is-locally-small l1 B → is-small l1 (im f)
-replacement' f = {!!}
+replacement' = {!!}
 ```
 
 ## References

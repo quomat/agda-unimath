@@ -69,7 +69,7 @@ antisymmetric-leq-ℕ-Div m n H K = {!!}
 
 transitive-leq-ℕ-Div :
   (m n o : ℕ) → leq-ℕ-Div n o → leq-ℕ-Div m n → leq-ℕ-Div m o
-transitive-leq-ℕ-Div m n o H K = {!!}
+transitive-leq-ℕ-Div = {!!}
 
 ℕ-Div-Preorder : Preorder lzero lzero
 pr1 ℕ-Div-Preorder = {!!}

@@ -38,9 +38,7 @@ dependent-ev-suspension :
   (s : suspension-structure X Y) (B : Y → UU l3) →
   ((y : Y) → B y) →
   dependent-suspension-structure B s
-pr1 (dependent-ev-suspension s B f) = {!!}
-pr1 (pr2 (dependent-ev-suspension s B f)) = {!!}
-pr2 (pr2 (dependent-ev-suspension s B f)) = {!!}
+dependent-ev-suspension = {!!}
 
 module _
   {l1 l2 : Level} {X : UU l1} {Y : UU l2}
@@ -69,5 +67,5 @@ module _
         ( suspension-cocone-suspension-structure s)
         ( B))) ~
     ( dependent-ev-suspension s B)
-  triangle-dependent-ev-suspension s B = {!!}
+  triangle-dependent-ev-suspension = {!!}
 ```

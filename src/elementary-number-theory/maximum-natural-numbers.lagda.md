@@ -61,29 +61,19 @@ max-Fin-ℕ (succ-ℕ n) f = {!!}
 ```agda
 leq-max-ℕ :
   (k m n : ℕ) → m ≤-ℕ k → n ≤-ℕ k → (max-ℕ m n) ≤-ℕ k
-leq-max-ℕ zero-ℕ zero-ℕ zero-ℕ H K = {!!}
-leq-max-ℕ (succ-ℕ k) zero-ℕ zero-ℕ H K = {!!}
-leq-max-ℕ (succ-ℕ k) zero-ℕ (succ-ℕ n) H K = {!!}
-leq-max-ℕ (succ-ℕ k) (succ-ℕ m) zero-ℕ H K = {!!}
-leq-max-ℕ (succ-ℕ k) (succ-ℕ m) (succ-ℕ n) H K = {!!}
+leq-max-ℕ = {!!}
 
 leq-left-leq-max-ℕ :
   (k m n : ℕ) → (max-ℕ m n) ≤-ℕ k → m ≤-ℕ k
-leq-left-leq-max-ℕ k zero-ℕ zero-ℕ H = {!!}
-leq-left-leq-max-ℕ k zero-ℕ (succ-ℕ n) H = {!!}
-leq-left-leq-max-ℕ k (succ-ℕ m) zero-ℕ H = {!!}
-leq-left-leq-max-ℕ (succ-ℕ k) (succ-ℕ m) (succ-ℕ n) H = {!!}
+leq-left-leq-max-ℕ = {!!}
 
 leq-right-leq-max-ℕ :
   (k m n : ℕ) → (max-ℕ m n) ≤-ℕ k → n ≤-ℕ k
-leq-right-leq-max-ℕ k zero-ℕ zero-ℕ H = {!!}
-leq-right-leq-max-ℕ k zero-ℕ (succ-ℕ n) H = {!!}
-leq-right-leq-max-ℕ k (succ-ℕ m) zero-ℕ H = {!!}
-leq-right-leq-max-ℕ (succ-ℕ k) (succ-ℕ m) (succ-ℕ n) H = {!!}
+leq-right-leq-max-ℕ = {!!}
 
 is-least-upper-bound-max-ℕ :
   (m n : ℕ) → is-least-binary-upper-bound-Poset ℕ-Poset m n (max-ℕ m n)
-is-least-upper-bound-max-ℕ m n = {!!}
+is-least-upper-bound-max-ℕ = {!!}
 ```
 
 ### Associativity of `max-ℕ`
@@ -91,11 +81,7 @@ is-least-upper-bound-max-ℕ m n = {!!}
 ```agda
 associative-max-ℕ :
   (x y z : ℕ) → max-ℕ (max-ℕ x y) z ＝ max-ℕ x (max-ℕ y z)
-associative-max-ℕ zero-ℕ y z = {!!}
-associative-max-ℕ (succ-ℕ x) zero-ℕ zero-ℕ = {!!}
-associative-max-ℕ (succ-ℕ x) zero-ℕ (succ-ℕ z) = {!!}
-associative-max-ℕ (succ-ℕ x) (succ-ℕ y) zero-ℕ = {!!}
-associative-max-ℕ (succ-ℕ x) (succ-ℕ y) (succ-ℕ z) = {!!}
+associative-max-ℕ = {!!}
 ```
 
 ### Unit laws for `max-ℕ`
@@ -144,10 +130,9 @@ right-successor-diagonal-law-max-ℕ (succ-ℕ x) = {!!}
 ```agda
 left-distributive-add-max-ℕ :
   (x y z : ℕ) → x +ℕ (max-ℕ y z) ＝ max-ℕ (x +ℕ y) (x +ℕ z)
-left-distributive-add-max-ℕ zero-ℕ y z = {!!}
-left-distributive-add-max-ℕ (succ-ℕ x) y z = {!!}
+left-distributive-add-max-ℕ = {!!}
 
 right-distributive-add-max-ℕ :
   (x y z : ℕ) → (max-ℕ x y) +ℕ z ＝ max-ℕ (x +ℕ z) (y +ℕ z)
-right-distributive-add-max-ℕ x y z = {!!}
+right-distributive-add-max-ℕ = {!!}
 ```

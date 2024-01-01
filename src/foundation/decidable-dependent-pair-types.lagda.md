@@ -31,23 +31,23 @@ is-decidable-Σ-coprod :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} (C : A + B → UU l3) →
   is-decidable (Σ A (C ∘ inl)) → is-decidable (Σ B (C ∘ inr)) →
   is-decidable (Σ (A + B) C)
-is-decidable-Σ-coprod {l1} {l2} {l3} {A} {B} C dA dB = {!!}
+is-decidable-Σ-coprod = {!!}
 
 is-decidable-Σ-Maybe :
   {l1 l2 : Level} {A : UU l1} {B : Maybe A → UU l2} →
   is-decidable (Σ A (B ∘ unit-Maybe)) → is-decidable (B exception-Maybe) →
   is-decidable (Σ (Maybe A) B)
-is-decidable-Σ-Maybe {l1} {l2} {A} {B} dA de = {!!}
+is-decidable-Σ-Maybe = {!!}
 
 is-decidable-Σ-equiv :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {C : A → UU l3} {D : B → UU l4}
   (e : A ≃ B) (f : (x : A) → C x ≃ D (map-equiv e x)) →
   is-decidable (Σ A C) → is-decidable (Σ B D)
-is-decidable-Σ-equiv {D = D} e f = {!!}
+is-decidable-Σ-equiv = {!!}
 
 is-decidable-Σ-equiv' :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {C : A → UU l3} {D : B → UU l4}
   (e : A ≃ B) (f : (x : A) → C x ≃ D (map-equiv e x)) →
   is-decidable (Σ B D) → is-decidable (Σ A C)
-is-decidable-Σ-equiv' {D = D} e f = {!!}
+is-decidable-Σ-equiv' = {!!}
 ```

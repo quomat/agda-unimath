@@ -86,14 +86,14 @@ module _
   abstract
     is-1-type-classifying-type-product-Concrete-Group :
       is-trunc one-𝕋 classifying-type-product-Concrete-Group
-    is-1-type-classifying-type-product-Concrete-Group X Y = {!!}
+    is-1-type-classifying-type-product-Concrete-Group = {!!}
 
   classifying-1-type-product-Concrete-Group : Truncated-Type (l1 ⊔ l2) one-𝕋
   classifying-1-type-product-Concrete-Group = {!!}
 
   Id-product-BG-Set :
     (X Y : classifying-type-product-Concrete-Group) → Set (l1 ⊔ l2)
-  Id-product-BG-Set X Y = {!!}
+  Id-product-BG-Set = {!!}
 
   unit-product-Concrete-Group : type-product-Concrete-Group
   unit-product-Concrete-Group = {!!}
@@ -104,7 +104,7 @@ module _
 
   mul-product-Concrete-Group' :
     (x y : type-product-Concrete-Group) → type-product-Concrete-Group
-  mul-product-Concrete-Group' x y = {!!}
+  mul-product-Concrete-Group' = {!!}
 
   associative-mul-product-Concrete-Group :
     (x y z : type-product-Concrete-Group) →

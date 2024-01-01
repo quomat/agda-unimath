@@ -44,7 +44,7 @@ The **join** of `A` and `B` is the
 ```agda
 join :
   {l1 l2 : Level} (A : UU l1) (B : UU l2) → UU (l1 ⊔ l2)
-join A B = {!!}
+join = {!!}
 
 infixr 15 _*_
 _*_ = {!!}
@@ -75,7 +75,7 @@ module _
 
   cogap-join :
     {l3 : Level} (X : UU l3) → cocone pr1 pr2 X → A * B → X
-  cogap-join X = {!!}
+  cogap-join = {!!}
 
   compute-inl-cogap-join :
     {l3 : Level} {X : UU l3} (c : cocone pr1 pr2 X) →
@@ -106,8 +106,7 @@ is-equiv-inr-join-empty X = {!!}
 
 left-unit-law-join :
   {l : Level} (X : UU l) → X ≃ (empty * X)
-pr1 (left-unit-law-join X) = {!!}
-pr2 (left-unit-law-join X) = {!!}
+left-unit-law-join = {!!}
 
 is-equiv-inr-join-is-empty :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
@@ -117,8 +116,7 @@ is-equiv-inr-join-is-empty {A = A} {B = B} is-empty-A = {!!}
 left-unit-law-join-is-empty :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   is-empty A → B ≃ (A * B)
-pr1 (left-unit-law-join-is-empty is-empty-A) = {!!}
-pr2 (left-unit-law-join-is-empty is-empty-A) = {!!}
+left-unit-law-join-is-empty = {!!}
 ```
 
 ### The right unit law for joins
@@ -130,8 +128,7 @@ is-equiv-inl-join-empty X = {!!}
 
 right-unit-law-join :
   {l : Level} (X : UU l) → X ≃ (X * empty)
-pr1 (right-unit-law-join X) = {!!}
-pr2 (right-unit-law-join X) = {!!}
+right-unit-law-join = {!!}
 
 is-equiv-inl-join-is-empty :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
@@ -141,8 +138,7 @@ is-equiv-inl-join-is-empty {A = A} {B = B} is-empty-B = {!!}
 right-unit-law-join-is-empty :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   is-empty B → A ≃ (A * B)
-pr1 (right-unit-law-join-is-empty is-empty-B) = {!!}
-pr2 (right-unit-law-join-is-empty is-empty-B) = {!!}
+right-unit-law-join-is-empty = {!!}
 ```
 
 ### The left zero law for joins
@@ -154,7 +150,7 @@ is-equiv-inl-join-unit X = {!!}
 
 left-zero-law-join :
   {l : Level} (X : UU l) → is-contr (unit * X)
-left-zero-law-join X = {!!}
+left-zero-law-join = {!!}
 
 is-equiv-inl-join-is-contr :
   {l1 l2 : Level} (A : UU l1) (B : UU l2) →
@@ -163,7 +159,7 @@ is-equiv-inl-join-is-contr A B is-contr-A = {!!}
 
 left-zero-law-join-is-contr :
   {l1 l2 : Level} (A : UU l1) (B : UU l2) → is-contr A → is-contr (A * B)
-left-zero-law-join-is-contr A B is-contr-A = {!!}
+left-zero-law-join-is-contr = {!!}
 ```
 
 ### The right zero law for joins
@@ -175,7 +171,7 @@ is-equiv-inr-join-unit X = {!!}
 
 right-zero-law-join :
   {l : Level} (X : UU l) → is-contr (X * unit)
-right-zero-law-join X = {!!}
+right-zero-law-join = {!!}
 
 is-equiv-inr-join-is-contr :
   {l1 l2 : Level} (A : UU l1) (B : UU l2) →
@@ -184,7 +180,7 @@ is-equiv-inr-join-is-contr A B is-contr-B = {!!}
 
 right-zero-law-join-is-contr :
   {l1 l2 : Level} (A : UU l1) (B : UU l2) → is-contr B → is-contr (A * B)
-right-zero-law-join-is-contr A B is-contr-B = {!!}
+right-zero-law-join-is-contr = {!!}
 ```
 
 ### The join of propositions is a proposition
@@ -201,7 +197,7 @@ module _
 
   is-prop-join-is-prop :
     is-prop A → is-prop B → is-prop (A * B)
-  is-prop-join-is-prop is-prop-A is-prop-B = {!!}
+  is-prop-join-is-prop = {!!}
 
 module _
   {l1 l2 : Level} (P : Prop l1) (Q : Prop l2)
@@ -244,14 +240,14 @@ module _
 
   equiv-disjunction-join-Prop :
     (type-join-Prop A B) ≃ (type-disjunction-Prop A B)
-  pr1 equiv-disjunction-join-Prop = {!!}
+  equiv-disjunction-join-Prop = {!!}
 
   is-equiv-map-join-disjunction-Prop : is-equiv map-join-disjunction-Prop
   is-equiv-map-join-disjunction-Prop = {!!}
 
   equiv-join-disjunction-Prop :
     (type-disjunction-Prop A B) ≃ (type-join-Prop A B)
-  pr1 equiv-join-disjunction-Prop = {!!}
+  equiv-join-disjunction-Prop = {!!}
 
   up-join-disjunction :
     {l : Level} → universal-property-pushout l pr1 pr2 cocone-disjunction

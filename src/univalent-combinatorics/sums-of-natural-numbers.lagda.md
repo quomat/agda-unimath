@@ -38,5 +38,5 @@ abstract
     Id
       ( sum-count-ℕ count-A (λ x → sum-count-ℕ (count-B x) (f x)))
       ( sum-count-ℕ (count-Σ count-A count-B) (ind-Σ f))
-  associative-sum-count-ℕ {l1} {l2} {A} {B} count-A count-B f = {!!}
+  associative-sum-count-ℕ = {!!}
 ```

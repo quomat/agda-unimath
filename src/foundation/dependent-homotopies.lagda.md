@@ -42,7 +42,7 @@ module _
 
   dependent-homotopy :
     ((x : A) → C x (f x)) → ((x : A) → C x (g x)) → UU (l1 ⊔ l3)
-  dependent-homotopy f' g' = {!!}
+  dependent-homotopy = {!!}
 ```
 
 ### The reflexive dependent homotopy
@@ -70,5 +70,5 @@ module _
     {f' : (x : A) → C x (f x)} {g' : (x : A) → C x (g x)} →
     dependent-homotopy C H f' g' →
     dependent-homotopy C K f' g' → UU (l1 ⊔ l3)
-  dependent-homotopy² {f'} {g'} H' K' = {!!}
+  dependent-homotopy² = {!!}
 ```

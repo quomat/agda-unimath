@@ -51,11 +51,11 @@ module _
     is-contr
       ( Σ ( type-Truncated-Type C)
           ( λ z → (t : fiber f y) → g (pr1 t) ＝ z))
-  unique-extension-fiber-is-truncation-is-truncation-ap C g = {!!}
+  unique-extension-fiber-is-truncation-is-truncation-ap = {!!}
 
   is-truncation-is-truncation-ap :
     is-truncation B f
-  is-truncation-is-truncation-ap C = {!!}
+  is-truncation-is-truncation-ap = {!!}
 
 module _
   {l1 l2 : Level} {k : 𝕋} {A : UU l1} (B : Truncated-Type l2 (succ-𝕋 k))
@@ -64,5 +64,5 @@ module _
 
   is-surjective-is-truncation :
     is-truncation B f → is-surjective f
-  is-surjective-is-truncation H = {!!}
+  is-surjective-is-truncation = {!!}
 ```

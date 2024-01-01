@@ -37,7 +37,7 @@ module _
 
   pushout-Pointed-Type :
     (f : S →∗ A) (g : S →∗ B) → Pointed-Type (l1 ⊔ l2 ⊔ l3)
-  pr1 (pushout-Pointed-Type f g) = {!!}
+  pushout-Pointed-Type = {!!}
 ```
 
 ## Properties
@@ -52,11 +52,11 @@ module _
 
   inl-pushout-Pointed-Type :
       (f : S →∗ A) (g : S →∗ B) → A →∗ pushout-Pointed-Type f g
-  pr1 (inl-pushout-Pointed-Type f g) = {!!}
+  inl-pushout-Pointed-Type = {!!}
 
   inr-pushout-Pointed-Type :
       (f : S →∗ A) (g : S →∗ B) → B →∗ pushout-Pointed-Type f g
-  pr1 (inr-pushout-Pointed-Type f g) = {!!}
+  inr-pushout-Pointed-Type = {!!}
 ```
 
 ### The cogap map for pushouts of pointed types
@@ -73,14 +73,14 @@ module _
     {X : Pointed-Type l4} →
     type-cocone-Pointed-Type f g X →
     type-Pointed-Type (pushout-Pointed-Type f g) → type-Pointed-Type X
-  map-cogap-Pointed-Type f g c = {!!}
+  map-cogap-Pointed-Type = {!!}
 
   cogap-Pointed-Type :
     {l4 : Level}
     (f : S →∗ A) (g : S →∗ B) →
     {X : Pointed-Type l4} →
     type-cocone-Pointed-Type f g X → pushout-Pointed-Type f g →∗ X
-  pr1 (cogap-Pointed-Type f g c) = {!!}
+  cogap-Pointed-Type = {!!}
 ```
 
 ### Computation with the cogap map for pointed types

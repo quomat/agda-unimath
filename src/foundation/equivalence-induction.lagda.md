@@ -64,7 +64,7 @@ module _
   ev-id-equiv :
     {l : Level} (P : (B : UU l1) → (A ≃ B) → UU l) →
     ((B : UU l1) (e : A ≃ B) → P B e) → P A id-equiv
-  ev-id-equiv P f = {!!}
+  ev-id-equiv = {!!}
 
   triangle-ev-id-equiv :
     {l : Level}
@@ -73,7 +73,7 @@ module _
       ( ev-point (A , id-equiv))
       ( ev-id-equiv (λ X e → P (X , e)))
       ( ev-pair)
-  triangle-ev-id-equiv P f = {!!}
+  triangle-ev-id-equiv = {!!}
 ```
 
 ### The equivalence induction principle
@@ -137,12 +137,12 @@ module _
   ind-equiv :
     {l2 : Level} (P : (B : UU l1) → A ≃ B → UU l2) →
     P A id-equiv → {B : UU l1} (e : A ≃ B) → P B e
-  ind-equiv P p {B} = {!!}
+  ind-equiv = {!!}
 
   compute-ind-equiv :
     {l2 : Level} (P : (B : UU l1) → A ≃ B → UU l2) →
     (u : P A id-equiv) → ind-equiv P u id-equiv ＝ u
-  compute-ind-equiv P = {!!}
+  compute-ind-equiv = {!!}
 ```
 
 ### Equivalence induction in a subuniverse
@@ -156,7 +156,7 @@ module _
     {F : (B : type-subuniverse P) → equiv-subuniverse P A B → UU l3} →
     ((B : type-subuniverse P) (e : equiv-subuniverse P A B) → F B e) →
     F A id-equiv
-  ev-id-equiv-subuniverse f = {!!}
+  ev-id-equiv-subuniverse = {!!}
 
   triangle-ev-id-equiv-subuniverse :
     (F : (B : type-subuniverse P) → equiv-subuniverse P A B → UU l3) →
@@ -164,7 +164,7 @@ module _
       ( ev-point (A , id-equiv))
       ( ev-id-equiv-subuniverse {F})
       ( ev-pair)
-  triangle-ev-id-equiv-subuniverse F E = {!!}
+  triangle-ev-id-equiv-subuniverse = {!!}
 
   abstract
     is-identity-system-equiv-subuniverse :
@@ -176,13 +176,13 @@ module _
     (F : (B : type-subuniverse P) → equiv-subuniverse P A B → UU l3) →
     F A id-equiv → (B : type-subuniverse P) (e : equiv-subuniverse P A B) →
     F B e
-  ind-equiv-subuniverse F = {!!}
+  ind-equiv-subuniverse = {!!}
 
   compute-ind-equiv-subuniverse :
     (F : (B : type-subuniverse P) → equiv-subuniverse P A B → UU l3) →
     (u : F A id-equiv) →
     ind-equiv-subuniverse F u A id-equiv ＝ u
-  compute-ind-equiv-subuniverse F = {!!}
+  compute-ind-equiv-subuniverse = {!!}
 ```
 
 ### The evaluation map `ev-id-equiv` is an equivalence
@@ -228,5 +228,5 @@ abstract
   is-equiv-postcomp-univalence :
     {l1 l2 : Level} {X Y : UU l1} (A : UU l2) (e : X ≃ Y) →
     is-equiv (postcomp A (map-equiv e))
-  is-equiv-postcomp-univalence A = {!!}
+  is-equiv-postcomp-univalence = {!!}
 ```

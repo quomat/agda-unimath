@@ -88,7 +88,7 @@ module _
 ```agda
 free-action-∞-Group :
   {l1 : Level} (l2 : Level) → ∞-Group l1 → UU (l1 ⊔ lsuc l2)
-free-action-∞-Group l2 G = {!!}
+free-action-∞-Group = {!!}
 ```
 
 ## Property
@@ -106,7 +106,7 @@ module _
       (u : classifying-type-∞-Group G)
       (x : type-action-∞-Group G X) →
       is-emb (λ (p : shape-∞-Group G ＝ u) → tr X p x)
-    is-emb-tr-is-abstractly-free-action-∞-Group H u x = {!!}
+    is-emb-tr-is-abstractly-free-action-∞-Group = {!!}
 ```
 
 ### A higher group action `X` is free if and only if it is abstractly free
@@ -120,11 +120,11 @@ module _
     is-free-is-abstractly-free-action-∞-Group :
       is-abstractly-free-action-∞-Group G X →
       is-free-action-∞-Group G X
-    is-free-is-abstractly-free-action-∞-Group H = {!!}
+    is-free-is-abstractly-free-action-∞-Group = {!!}
 
   abstract
     is-abstractly-free-is-free-action-∞-Group :
       is-free-action-∞-Group G X →
       is-abstractly-free-action-∞-Group G X
-    is-abstractly-free-is-free-action-∞-Group H x = {!!}
+    is-abstractly-free-is-free-action-∞-Group = {!!}
 ```

@@ -28,5 +28,5 @@ invertible.
 ```agda
 is-division-Ring :
   { l : Level} → Ring l → UU l
-is-division-Ring R = {!!}
+is-division-Ring = {!!}
 ```

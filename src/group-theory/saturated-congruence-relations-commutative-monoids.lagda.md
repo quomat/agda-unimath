@@ -52,7 +52,7 @@ module _
 
 saturated-congruence-Commutative-Monoid :
   {l1 : Level} (l2 : Level) (M : Commutative-Monoid l1) → UU (l1 ⊔ lsuc l2)
-saturated-congruence-Commutative-Monoid l2 M = {!!}
+saturated-congruence-Commutative-Monoid = {!!}
 
 module _
   {l1 l2 : Level} (M : Commutative-Monoid l1)
@@ -136,13 +136,13 @@ relate-same-elements-saturated-congruence-Commutative-Monoid :
   {l1 l2 l3 : Level} (M : Commutative-Monoid l1)
   (R : saturated-congruence-Commutative-Monoid l2 M)
   (S : saturated-congruence-Commutative-Monoid l3 M) → UU (l1 ⊔ l2 ⊔ l3)
-relate-same-elements-saturated-congruence-Commutative-Monoid M R S = {!!}
+relate-same-elements-saturated-congruence-Commutative-Monoid = {!!}
 
 refl-relate-same-elements-saturated-congruence-Commutative-Monoid :
   {l1 l2 : Level} (M : Commutative-Monoid l1)
   (R : saturated-congruence-Commutative-Monoid l2 M) →
   relate-same-elements-saturated-congruence-Commutative-Monoid M R R
-refl-relate-same-elements-saturated-congruence-Commutative-Monoid M R = {!!}
+refl-relate-same-elements-saturated-congruence-Commutative-Monoid = {!!}
 
 is-torsorial-relate-same-elements-saturated-congruence-Commutative-Monoid :
   {l1 l2 : Level} (M : Commutative-Monoid l1)
@@ -156,21 +156,20 @@ relate-same-elements-eq-saturated-congruence-Commutative-Monoid :
   {l1 l2 : Level} (M : Commutative-Monoid l1)
   (R S : saturated-congruence-Commutative-Monoid l2 M) →
   R ＝ S → relate-same-elements-saturated-congruence-Commutative-Monoid M R S
-relate-same-elements-eq-saturated-congruence-Commutative-Monoid M R .R refl = {!!}
+relate-same-elements-eq-saturated-congruence-Commutative-Monoid = {!!}
 
 is-equiv-relate-same-elements-eq-saturated-congruence-Commutative-Monoid :
   {l1 l2 : Level} (M : Commutative-Monoid l1)
   (R S : saturated-congruence-Commutative-Monoid l2 M) →
   is-equiv
     ( relate-same-elements-eq-saturated-congruence-Commutative-Monoid M R S)
-is-equiv-relate-same-elements-eq-saturated-congruence-Commutative-Monoid M R = {!!}
+is-equiv-relate-same-elements-eq-saturated-congruence-Commutative-Monoid = {!!}
 
 extensionality-saturated-congruence-Commutative-Monoid :
   {l1 l2 : Level} (M : Commutative-Monoid l1)
   (R S : saturated-congruence-Commutative-Monoid l2 M) →
   (R ＝ S) ≃ relate-same-elements-saturated-congruence-Commutative-Monoid M R S
-pr1 (extensionality-saturated-congruence-Commutative-Monoid M R S) = {!!}
-pr2 (extensionality-saturated-congruence-Commutative-Monoid M R S) = {!!}
+extensionality-saturated-congruence-Commutative-Monoid = {!!}
 
 eq-relate-same-elements-saturated-congruence-Commutative-Monoid :
   {l1 l2 : Level} (M : Commutative-Monoid l1)

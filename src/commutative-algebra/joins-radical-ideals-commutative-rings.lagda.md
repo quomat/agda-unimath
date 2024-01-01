@@ -63,7 +63,7 @@ module _
     {l4 : Level} (J : radical-ideal-Commutative-Ring l4 A) →
     is-join-family-of-radical-ideals-Commutative-Ring J →
     {α : U} → leq-radical-ideal-Commutative-Ring A (I α) J
-  contains-ideal-is-join-family-of-radical-ideals-Commutative-Ring J H {α} = {!!}
+  contains-ideal-is-join-family-of-radical-ideals-Commutative-Ring = {!!}
 ```
 
 ### The join of a family of radical ideals
@@ -103,7 +103,7 @@ module _
   is-join-join-family-of-radical-ideals-Commutative-Ring :
     is-join-family-of-radical-ideals-Commutative-Ring A J
       join-family-of-radical-ideals-Commutative-Ring
-  pr1 (is-join-join-family-of-radical-ideals-Commutative-Ring K) = {!!}
+  is-join-join-family-of-radical-ideals-Commutative-Ring = {!!}
 ```
 
 ### The large suplattice of radical ideals in a commutative ring
@@ -116,13 +116,11 @@ module _
   is-large-suplattice-radical-ideal-Commutative-Ring :
     is-large-suplattice-Large-Poset l1
       ( radical-ideal-Commutative-Ring-Large-Poset A)
-  sup-has-least-upper-bound-family-of-elements-Large-Poset
-    ( is-large-suplattice-radical-ideal-Commutative-Ring I) = {!!}
+  is-large-suplattice-radical-ideal-Commutative-Ring = {!!}
 
   radical-ideal-Commutative-Ring-Large-Suplattice :
     Large-Suplattice (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3) l1
-  large-poset-Large-Suplattice
-    radical-ideal-Commutative-Ring-Large-Suplattice = {!!}
+  radical-ideal-Commutative-Ring-Large-Suplattice = {!!}
 ```
 
 ## Properties
@@ -227,7 +225,7 @@ module _
         ( join-family-of-radical-ideals-Commutative-Ring A J))
       ( join-family-of-radical-ideals-Commutative-Ring A
         ( λ α → product-radical-ideal-Commutative-Ring A I (J α)))
-  pr1 sim-distributive-product-join-family-of-radical-ideals-Commutative-Ring = {!!}
+  sim-distributive-product-join-family-of-radical-ideals-Commutative-Ring = {!!}
 
   distributive-product-join-family-of-radical-ideals-Commutative-Ring :
     product-radical-ideal-Commutative-Ring A

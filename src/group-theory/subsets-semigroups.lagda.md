@@ -62,7 +62,7 @@ module _
 ```agda
 subset-Semigroup :
   {l1 : Level} (l2 : Level) (G : Semigroup l1) → UU (l1 ⊔ lsuc l2)
-subset-Semigroup l2 G = {!!}
+subset-Semigroup = {!!}
 
 module _
   {l1 l2 : Level} (G : Semigroup l1) (P : subset-Semigroup l2 G)

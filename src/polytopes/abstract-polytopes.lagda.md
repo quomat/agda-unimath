@@ -50,8 +50,7 @@ Next, we assert the diamond condition for abstract polytopes.
 diamond-condition-finitely-graded-poset-Prop :
   {l1 l2 : Level} {k : ℕ} (X : Finitely-Graded-Poset l1 l2 k) →
   Prop (l1 ⊔ l2)
-diamond-condition-finitely-graded-poset-Prop {k = zero-ℕ} X = {!!}
-diamond-condition-finitely-graded-poset-Prop {k = succ-ℕ k} X = {!!}
+diamond-condition-finitely-graded-poset-Prop = {!!}
 
 module _
   {l1 l2 : Level} {k : ℕ} (X : Finitely-Graded-Poset l1 l2 k)
@@ -156,11 +155,11 @@ module _
   path-faces-Prepolytope :
     {i j : Fin (succ-ℕ k)} →
     face-Prepolytope i → face-Prepolytope j → UU (l1 ⊔ l2)
-  path-faces-Prepolytope x y = {!!}
+  path-faces-Prepolytope = {!!}
 
   refl-path-faces-Prepolytope :
     {i : Fin (succ-ℕ k)} (x : face-Prepolytope i) → path-faces-Prepolytope x x
-  refl-path-faces-Prepolytope x = {!!}
+  refl-path-faces-Prepolytope = {!!}
 
   cons-path-faces-Prepolytope :
     {i : Fin (succ-ℕ k)} {x : face-Prepolytope i}
@@ -168,7 +167,7 @@ module _
     {z : face-Prepolytope (succ-Fin (succ-ℕ k) (inl-Fin k j))} →
     adjacent-Prepolytope j y z → path-faces-Prepolytope x y →
     path-faces-Prepolytope x z
-  cons-path-faces-Prepolytope a p = {!!}
+  cons-path-faces-Prepolytope = {!!}
 
   tr-refl-path-faces-Preposet :
     {i j : Fin (succ-ℕ k)} (p : Id j i) (x : face-Prepolytope j) →
@@ -256,11 +255,11 @@ module _
   type-subtype-flag-Prepolytope :
     {l : Level} (F : flag-Prepolytope l) →
     {i : Fin (succ-ℕ k)} → face-Prepolytope i → UU l
-  type-subtype-flag-Prepolytope F x = {!!}
+  type-subtype-flag-Prepolytope = {!!}
 
   face-flag-Prepolytope :
     {l : Level} (F : flag-Prepolytope l) → Fin (succ-ℕ k) → UU (l1 ⊔ l)
-  face-flag-Prepolytope F i = {!!}
+  face-flag-Prepolytope = {!!}
 
   face-bottom-element-Prepolytope : face-Prepolytope (zero-Fin k)
   face-bottom-element-Prepolytope = {!!}
@@ -286,11 +285,11 @@ module _
 
   is-contr-face-bottom-dimension-Prepolytope :
     is-contr (face-Prepolytope (zero-Fin k))
-  pr1 is-contr-face-bottom-dimension-Prepolytope = {!!}
+  is-contr-face-bottom-dimension-Prepolytope = {!!}
 
   is-contr-face-top-dimension-Prepolytope :
     is-contr (face-Prepolytope (neg-one-Fin k))
-  pr1 is-contr-face-top-dimension-Prepolytope = {!!}
+  is-contr-face-top-dimension-Prepolytope = {!!}
 ```
 
 ### Flags are equivalently described as paths from the least to the largest element
@@ -310,12 +309,12 @@ module _
 
     is-on-path-face-Prepolytope :
       path-faces-Prepolytope x y → face-Prepolytope i3 → UU l1
-    is-on-path-face-Prepolytope p z = {!!}
+    is-on-path-face-Prepolytope = {!!}
 
     is-prop-is-on-path-face-Prepolytope :
       (p : path-faces-Prepolytope x y) (z : face-Prepolytope i3) →
       is-prop (is-on-path-face-Prepolytope p z)
-    is-prop-is-on-path-face-Prepolytope p z = {!!}
+    is-prop-is-on-path-face-Prepolytope = {!!}
 ```
 
 ### Proof condition P2 of polytopes
@@ -354,5 +353,5 @@ connects the two flags it is a subchain of.
 ```agda
 Polytope :
   (l1 l2 l3 : Level) (k : ℕ) → UU (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-Polytope l1 l2 l3 k = {!!}
+Polytope = {!!}
 ```

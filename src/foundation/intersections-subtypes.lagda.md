@@ -45,10 +45,7 @@ module _
       ( P)
       ( Q)
       ( intersection-subtype)
-  pr1
-    ( pr1
-      ( is-greatest-binary-lower-bound-intersection-subtype R)
-      ( p , q) x r) = {!!}
+  is-greatest-binary-lower-bound-intersection-subtype = {!!}
 ```
 
 ### The intersection of two decidable subtypes
@@ -61,7 +58,7 @@ module _
   intersection-decidable-subtype :
     decidable-subtype l1 X → decidable-subtype l2 X →
     decidable-subtype (l1 ⊔ l2) X
-  intersection-decidable-subtype P Q x = {!!}
+  intersection-decidable-subtype = {!!}
 ```
 
 ### The intersection of a family of subtypes
@@ -73,5 +70,5 @@ module _
 
   intersection-family-of-subtypes :
     {I : UU l2} (P : I → subtype l3 X) → subtype (l2 ⊔ l3) X
-  intersection-family-of-subtypes {I} P x = {!!}
+  intersection-family-of-subtypes = {!!}
 ```

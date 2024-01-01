@@ -31,5 +31,5 @@ abstract
   fixed-point-theorem-Lawvere :
     {l1 l2 : Level} {A : UU l1} {B : UU l2} {f : A → A → B} →
     is-surjective f → (h : B → B) → ∃ B (λ b → h b ＝ b)
-  fixed-point-theorem-Lawvere {A = A} {B} {f} H h = {!!}
+  fixed-point-theorem-Lawvere = {!!}
 ```

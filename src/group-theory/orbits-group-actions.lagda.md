@@ -33,5 +33,5 @@ module _
 
   hom-orbit-action-Group :
     (x y : type-action-Group G X) → UU (l1 ⊔ l2)
-  hom-orbit-action-Group x y = {!!}
+  hom-orbit-action-Group = {!!}
 ```

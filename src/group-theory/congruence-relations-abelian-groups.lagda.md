@@ -33,7 +33,7 @@ is-congruence-Ab :
   {l1 l2 : Level} (A : Ab l1) →
   equivalence-relation l2 (type-Ab A) →
   UU (l1 ⊔ l2)
-is-congruence-Ab A = {!!}
+is-congruence-Ab = {!!}
 
 congruence-Ab : {l : Level} (l2 : Level) (A : Ab l) → UU (l ⊔ lsuc l2)
 congruence-Ab l2 A = {!!}
@@ -154,35 +154,35 @@ module _
 relate-same-elements-congruence-Ab :
   {l1 l2 l3 : Level} (A : Ab l1) →
   congruence-Ab l2 A → congruence-Ab l3 A → UU (l1 ⊔ l2 ⊔ l3)
-relate-same-elements-congruence-Ab A = {!!}
+relate-same-elements-congruence-Ab = {!!}
 
 refl-relate-same-elements-congruence-Ab :
   {l1 l2 : Level} (A : Ab l1) (R : congruence-Ab l2 A) →
   relate-same-elements-congruence-Ab A R R
-refl-relate-same-elements-congruence-Ab A = {!!}
+refl-relate-same-elements-congruence-Ab = {!!}
 
 is-torsorial-relate-same-elements-congruence-Ab :
   {l1 l2 : Level} (A : Ab l1) (R : congruence-Ab l2 A) →
   is-torsorial (relate-same-elements-congruence-Ab A R)
-is-torsorial-relate-same-elements-congruence-Ab A = {!!}
+is-torsorial-relate-same-elements-congruence-Ab = {!!}
 
 relate-same-elements-eq-congruence-Ab :
   {l1 l2 : Level} (A : Ab l1) (R S : congruence-Ab l2 A) →
   R ＝ S → relate-same-elements-congruence-Ab A R S
-relate-same-elements-eq-congruence-Ab A = {!!}
+relate-same-elements-eq-congruence-Ab = {!!}
 
 is-equiv-relate-same-elements-eq-congruence-Ab :
   {l1 l2 : Level} (A : Ab l1) (R S : congruence-Ab l2 A) →
   is-equiv (relate-same-elements-eq-congruence-Ab A R S)
-is-equiv-relate-same-elements-eq-congruence-Ab A = {!!}
+is-equiv-relate-same-elements-eq-congruence-Ab = {!!}
 
 extensionality-congruence-Ab :
   {l1 l2 : Level} (A : Ab l1) (R S : congruence-Ab l2 A) →
   (R ＝ S) ≃ relate-same-elements-congruence-Ab A R S
-extensionality-congruence-Ab A = {!!}
+extensionality-congruence-Ab = {!!}
 
 eq-relate-same-elements-congruence-Ab :
   {l1 l2 : Level} (A : Ab l1) (R S : congruence-Ab l2 A) →
   relate-same-elements-congruence-Ab A R S → R ＝ S
-eq-relate-same-elements-congruence-Ab A = {!!}
+eq-relate-same-elements-congruence-Ab = {!!}
 ```

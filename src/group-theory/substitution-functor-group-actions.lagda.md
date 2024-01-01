@@ -45,7 +45,7 @@ module _
 
   obj-subst-action-Group :
     {l3 : Level} → action-Group H l3 → action-Group G l3
-  pr1 (obj-subst-action-Group X) = {!!}
+  obj-subst-action-Group = {!!}
 
   hom-subst-action-Group :
     {l3 l4 : Level}
@@ -54,14 +54,14 @@ module _
     hom-action-Group G
       ( obj-subst-action-Group X)
       ( obj-subst-action-Group Y)
-  pr1 (hom-subst-action-Group X Y h) = {!!}
+  hom-subst-action-Group = {!!}
 
   preserves-id-subst-action-Group :
     {l3 : Level} (X : action-Group H l3) →
     Id
       ( hom-subst-action-Group X X (id-hom-action-Group H X))
       ( id-hom-action-Group G (obj-subst-action-Group X))
-  preserves-id-subst-action-Group X = {!!}
+  preserves-id-subst-action-Group = {!!}
 
   preserves-comp-subst-action-Group :
     {l3 l4 l5 : Level} (X : action-Group H l3)
@@ -77,13 +77,13 @@ module _
         ( obj-subst-action-Group Z)
         ( hom-subst-action-Group Y Z g)
         ( hom-subst-action-Group X Y f))
-  preserves-comp-subst-action-Group X Y Z g f = {!!}
+  preserves-comp-subst-action-Group = {!!}
 
   subst-action-Group :
     functor-Large-Precategory (λ l → l)
       ( action-Group-Large-Precategory H)
       ( action-Group-Large-Precategory G)
-  obj-functor-Large-Precategory subst-action-Group = {!!}
+  subst-action-Group = {!!}
 ```
 
 ## Properties
@@ -97,29 +97,26 @@ module _
 
   preset-obj-left-adjoint-subst-action-Group :
     {l3 : Level} → action-Group G l3 → Set (l2 ⊔ l3)
-  preset-obj-left-adjoint-subst-action-Group X = {!!}
+  preset-obj-left-adjoint-subst-action-Group = {!!}
 
   pretype-obj-left-adjoint-subst-action-Group :
     {l3 : Level} → action-Group G l3 → UU (l2 ⊔ l3)
-  pretype-obj-left-adjoint-subst-action-Group X = {!!}
+  pretype-obj-left-adjoint-subst-action-Group = {!!}
 
   is-set-pretype-obj-left-adjoint-subst-action-Group :
     {l3 : Level} (X : action-Group G l3) →
     is-set (pretype-obj-left-adjoint-subst-action-Group X)
-  is-set-pretype-obj-left-adjoint-subst-action-Group X = {!!}
+  is-set-pretype-obj-left-adjoint-subst-action-Group = {!!}
 
   equivalence-relation-obj-left-adjoint-subst-action-Group :
     {l3 : Level} (X : action-Group G l3) →
     equivalence-relation
       ( l1 ⊔ l2 ⊔ l3)
       ( pretype-obj-left-adjoint-subst-action-Group X)
-  pr1
-    ( equivalence-relation-obj-left-adjoint-subst-action-Group X)
-    ( h , x)
-    ( h' , x') = {!!}
+  equivalence-relation-obj-left-adjoint-subst-action-Group = {!!}
 
   set-left-adjoint-subst-action-Group :
     {l3 : Level} → action-Group G l3 →
     Set (lsuc l1 ⊔ lsuc l2 ⊔ lsuc l3)
-  set-left-adjoint-subst-action-Group X = {!!}
+  set-left-adjoint-subst-action-Group = {!!}
 ```

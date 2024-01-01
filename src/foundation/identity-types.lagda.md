@@ -48,8 +48,14 @@ identifications in arbitrary types.
 mac-lane-pentagon :
   {l : Level} {A : UU l} {a b c d e : A}
   (p : a ＝ b) (q : b ＝ c) (r : c ＝ d) (s : d ＝ e) →
-  let α₁ = {!!}
-mac-lane-pentagon refl refl refl refl = {!!}
+  let α₁ = (ap (_∙ s) (assoc p q r))
+      α₂ = (assoc p (q ∙ r) s)
+      α₃ = (ap (p ∙_) (assoc q r s))
+      α₄ = (assoc (p ∙ q) r s)
+      α₅ = (assoc p q (r ∙ s))
+  in
+    coherence-pentagon-identifications α₁ α₄ α₂ α₅ α₃
+mac-lane-pentagon = {!!}!}
 ```
 
 ### The groupoidal operations on identity types are equivalences
@@ -71,33 +77,33 @@ module _
 
   is-retraction-inv-concat :
     {x y : A} (p : x ＝ y) (z : A) → (inv-concat p z ∘ concat p z) ~ id
-  is-retraction-inv-concat refl z q = {!!}
+  is-retraction-inv-concat = {!!}
 
   is-section-inv-concat :
     {x y : A} (p : x ＝ y) (z : A) → (concat p z ∘ inv-concat p z) ~ id
-  is-section-inv-concat refl z refl = {!!}
+  is-section-inv-concat = {!!}
 
   abstract
     is-equiv-concat :
       {x y : A} (p : x ＝ y) (z : A) → is-equiv (concat p z)
-    is-equiv-concat p z = {!!}
+    is-equiv-concat = {!!}
 
   equiv-concat :
     {x y : A} (p : x ＝ y) (z : A) → (y ＝ z) ≃ (x ＝ z)
-  pr1 (equiv-concat p z) = {!!}
+  equiv-concat = {!!}
 
   map-equiv-concat-equiv :
     {x x' : A} → ((y : A) → (x ＝ y) ≃ (x' ＝ y)) → (x' ＝ x)
-  map-equiv-concat-equiv {x} e = {!!}
+  map-equiv-concat-equiv = {!!}
 
   is-section-equiv-concat :
     {x x' : A} → map-equiv-concat-equiv {x} {x'} ∘ equiv-concat ~ id
-  is-section-equiv-concat refl = {!!}
+  is-section-equiv-concat = {!!}
 
   abstract
     is-retraction-equiv-concat :
       {x x' : A} → equiv-concat ∘ map-equiv-concat-equiv {x} {x'} ~ id
-    is-retraction-equiv-concat e = {!!}
+    is-retraction-equiv-concat = {!!}
 
   abstract
     is-equiv-map-equiv-concat-equiv :
@@ -106,43 +112,42 @@ module _
 
   equiv-concat-equiv :
     {x x' : A} → ((y : A) → (x ＝ y) ≃ (x' ＝ y)) ≃ (x' ＝ x)
-  pr1 equiv-concat-equiv = {!!}
+  equiv-concat-equiv = {!!}
 
   inv-concat' : (x : A) {y z : A} → y ＝ z → x ＝ z → x ＝ y
   inv-concat' x q = {!!}
 
   is-retraction-inv-concat' :
     (x : A) {y z : A} (q : y ＝ z) → (inv-concat' x q ∘ concat' x q) ~ id
-  is-retraction-inv-concat' x refl refl = {!!}
+  is-retraction-inv-concat' = {!!}
 
   is-section-inv-concat' :
     (x : A) {y z : A} (q : y ＝ z) → (concat' x q ∘ inv-concat' x q) ~ id
-  is-section-inv-concat' x refl refl = {!!}
+  is-section-inv-concat' = {!!}
 
   abstract
     is-equiv-concat' :
       (x : A) {y z : A} (q : y ＝ z) → is-equiv (concat' x q)
-    is-equiv-concat' x q = {!!}
+    is-equiv-concat' = {!!}
 
   equiv-concat' :
     (x : A) {y z : A} (q : y ＝ z) → (x ＝ y) ≃ (x ＝ z)
-  pr1 (equiv-concat' x q) = {!!}
+  equiv-concat' = {!!}
 
 is-binary-equiv-concat :
   {l : Level} {A : UU l} {x y z : A} →
   is-binary-equiv (λ (p : x ＝ y) (q : y ＝ z) → p ∙ q)
-pr1 (is-binary-equiv-concat {x = x}) q = {!!}
-pr2 (is-binary-equiv-concat {z = z}) p = {!!}
+is-binary-equiv-concat = {!!}
 
 equiv-binary-concat :
   {l : Level} {A : UU l} {x y z w : A} → (p : x ＝ y) (q : z ＝ w) →
   (y ＝ z) ≃ (x ＝ w)
-equiv-binary-concat {x = x} {z = z} p q = {!!}
+equiv-binary-concat = {!!}
 
 convert-eq-values :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} {f g : A → B} (H : f ~ g)
   (x y : A) → (f x ＝ f y) ≃ (g x ＝ g y)
-convert-eq-values {f = f} {g} H x y = {!!}
+convert-eq-values = {!!}
 
 module _
   {l1 : Level} {A : UU l1}
@@ -151,7 +156,7 @@ module _
   is-section-is-injective-concat :
     {x y z : A} (p : x ＝ y) {q r : y ＝ z} (s : (p ∙ q) ＝ (p ∙ r)) →
     ap (concat p z) (is-injective-concat p s) ＝ s
-  is-section-is-injective-concat refl refl = {!!}
+  is-section-is-injective-concat = {!!}
 
   cases-is-section-is-injective-concat' :
     {x y : A} {p q : x ＝ y} (s : p ＝ q) →
@@ -159,12 +164,12 @@ module _
       ( concat' x refl)
       ( is-injective-concat' refl (right-unit ∙ (s ∙ inv right-unit)))) ＝
     ( right-unit ∙ (s ∙ inv right-unit))
-  cases-is-section-is-injective-concat' {p = refl} refl = {!!}
+  cases-is-section-is-injective-concat' = {!!}
 
   is-section-is-injective-concat' :
     {x y z : A} (r : y ＝ z) {p q : x ＝ y} (s : (p ∙ r) ＝ (q ∙ r)) →
     ap (concat' x r) (is-injective-concat' r s) ＝ s
-  is-section-is-injective-concat' refl s = {!!}
+  is-section-is-injective-concat' = {!!}
 ```
 
 ## Transposing inverses is an equivalence
@@ -178,43 +183,43 @@ module _
     is-equiv-left-transpose-eq-concat :
       (p : x ＝ y) (q : y ＝ z) (r : x ＝ z) →
       is-equiv (left-transpose-eq-concat p q r)
-    is-equiv-left-transpose-eq-concat refl q r = {!!}
+    is-equiv-left-transpose-eq-concat = {!!}
 
   equiv-left-transpose-eq-concat :
     (p : x ＝ y) (q : y ＝ z) (r : x ＝ z) →
     ((p ∙ q) ＝ r) ≃ (q ＝ ((inv p) ∙ r))
-  pr1 (equiv-left-transpose-eq-concat p q r) = {!!}
+  equiv-left-transpose-eq-concat = {!!}
 
   equiv-left-transpose-eq-concat' :
     (p : x ＝ z) (q : x ＝ y) (r : y ＝ z) →
     (p ＝ q ∙ r) ≃ (inv q ∙ p ＝ r)
-  equiv-left-transpose-eq-concat' p q r = {!!}
+  equiv-left-transpose-eq-concat' = {!!}
 
   left-transpose-eq-concat' :
     (p : x ＝ z) (q : x ＝ y) (r : y ＝ z) →
     (p ＝ q ∙ r) → (inv q ∙ p ＝ r)
-  left-transpose-eq-concat' p q r = {!!}
+  left-transpose-eq-concat' = {!!}
 
   abstract
     is-equiv-right-transpose-eq-concat :
       (p : x ＝ y) (q : y ＝ z) (r : x ＝ z) →
       is-equiv (right-transpose-eq-concat p q r)
-    is-equiv-right-transpose-eq-concat p refl r = {!!}
+    is-equiv-right-transpose-eq-concat = {!!}
 
   equiv-right-transpose-eq-concat :
     (p : x ＝ y) (q : y ＝ z) (r : x ＝ z) →
     ((p ∙ q) ＝ r) ≃ (p ＝ (r ∙ (inv q)))
-  pr1 (equiv-right-transpose-eq-concat p q r) = {!!}
+  equiv-right-transpose-eq-concat = {!!}
 
   equiv-right-transpose-eq-concat' :
     (p : x ＝ z) (q : x ＝ y) (r : y ＝ z) →
     (p ＝ q ∙ r) ≃ (p ∙ inv r ＝ q)
-  equiv-right-transpose-eq-concat' p q r = {!!}
+  equiv-right-transpose-eq-concat' = {!!}
 
   right-transpose-eq-concat' :
     (p : x ＝ z) (q : x ＝ y) (r : y ＝ z) →
     (p ＝ q ∙ r) → (p ∙ inv r ＝ q)
-  right-transpose-eq-concat' p q r = {!!}
+  right-transpose-eq-concat' = {!!}
 ```
 
 ### Computation of fibers of families of maps out of the identity type
@@ -230,21 +235,21 @@ module _
 
   map-compute-fiber-map-out-of-identity-type :
     fiber (f x) y → ((a , f a refl) ＝ (x , y))
-  map-compute-fiber-map-out-of-identity-type (refl , refl) = {!!}
+  map-compute-fiber-map-out-of-identity-type = {!!}
 
   map-inv-compute-fiber-map-out-of-identity-type :
     ((a , f a refl) ＝ (x , y)) → fiber (f x) y
-  map-inv-compute-fiber-map-out-of-identity-type refl = {!!}
+  map-inv-compute-fiber-map-out-of-identity-type = {!!}
 
   is-section-map-inv-compute-fiber-map-out-of-identity-type :
     map-compute-fiber-map-out-of-identity-type ∘
     map-inv-compute-fiber-map-out-of-identity-type ~ id
-  is-section-map-inv-compute-fiber-map-out-of-identity-type refl = {!!}
+  is-section-map-inv-compute-fiber-map-out-of-identity-type = {!!}
 
   is-retraction-map-inv-compute-fiber-map-out-of-identity-type :
     map-inv-compute-fiber-map-out-of-identity-type ∘
     map-compute-fiber-map-out-of-identity-type ~ id
-  is-retraction-map-inv-compute-fiber-map-out-of-identity-type (refl , refl) = {!!}
+  is-retraction-map-inv-compute-fiber-map-out-of-identity-type = {!!}
 
   is-equiv-map-compute-fiber-map-out-of-identity-type :
     is-equiv map-compute-fiber-map-out-of-identity-type
@@ -252,5 +257,5 @@ module _
 
   compute-fiber-map-out-of-identity-type :
     fiber (f x) y ≃ ((a , f a refl) ＝ (x , y))
-  pr1 compute-fiber-map-out-of-identity-type = {!!}
+  compute-fiber-map-out-of-identity-type = {!!}
 ```

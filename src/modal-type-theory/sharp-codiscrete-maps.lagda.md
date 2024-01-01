@@ -29,7 +29,7 @@ A map is said to be **(sharp) codiscrete** if its
 ```agda
 is-sharp-codiscrete-map :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → (A → B) → UU (l1 ⊔ l2)
-is-sharp-codiscrete-map f = {!!}
+is-sharp-codiscrete-map = {!!}
 ```
 
 ## Properties

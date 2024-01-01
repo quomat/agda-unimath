@@ -31,19 +31,16 @@ open import univalent-combinatorics.standard-finite-types
 ```agda
 is-decidable-count :
   {l : Level} {X : UU l} → count X → is-decidable X
-is-decidable-count (pair zero-ℕ e) = {!!}
-is-decidable-count (pair (succ-ℕ k) e) = {!!}
+is-decidable-count = {!!}
 
 count-is-decidable-is-prop :
   {l : Level} {A : UU l} → is-prop A → is-decidable A → count A
-count-is-decidable-is-prop H (inl x) = {!!}
-count-is-decidable-is-prop H (inr f) = {!!}
+count-is-decidable-is-prop = {!!}
 
 count-Decidable-Prop :
   {l1 : Level} (P : Prop l1) →
   is-decidable (type-Prop P) → count (type-Prop P)
-count-Decidable-Prop P (inl p) = {!!}
-count-Decidable-Prop P (inr f) = {!!}
+count-Decidable-Prop = {!!}
 ```
 
 ### We can count the elements of an identity type of a type that has decidable equality
@@ -52,22 +49,20 @@ count-Decidable-Prop P (inr f) = {!!}
 cases-count-eq :
   {l : Level} {X : UU l} (d : has-decidable-equality X) {x y : X}
   (e : is-decidable (Id x y)) → count (Id x y)
-cases-count-eq d {x} {y} (inl p) = {!!}
-cases-count-eq d (inr f) = {!!}
+cases-count-eq = {!!}
 
 count-eq :
   {l : Level} {X : UU l} → has-decidable-equality X → (x y : X) → count (Id x y)
-count-eq d x y = {!!}
+count-eq = {!!}
 
 cases-number-of-elements-count-eq' :
   {l : Level} {X : UU l} {x y : X} →
   is-decidable (Id x y) → ℕ
-cases-number-of-elements-count-eq' (inl p) = {!!}
-cases-number-of-elements-count-eq' (inr f) = {!!}
+cases-number-of-elements-count-eq' = {!!}
 
 number-of-elements-count-eq' :
   {l : Level} {X : UU l} (d : has-decidable-equality X) (x y : X) → ℕ
-number-of-elements-count-eq' d x y = {!!}
+number-of-elements-count-eq' = {!!}
 
 cases-number-of-elements-count-eq :
   {l : Level} {X : UU l} (d : has-decidable-equality X) {x y : X}
@@ -75,13 +70,12 @@ cases-number-of-elements-count-eq :
   Id
     ( number-of-elements-count (cases-count-eq d e))
     ( cases-number-of-elements-count-eq' e)
-cases-number-of-elements-count-eq d (inl p) = {!!}
-cases-number-of-elements-count-eq d (inr f) = {!!}
+cases-number-of-elements-count-eq = {!!}
 
 abstract
   number-of-elements-count-eq :
     {l : Level} {X : UU l} (d : has-decidable-equality X) (x y : X) →
     Id ( number-of-elements-count (count-eq d x y))
       ( number-of-elements-count-eq' d x y)
-  number-of-elements-count-eq d x y = {!!}
+  number-of-elements-count-eq = {!!}
 ```

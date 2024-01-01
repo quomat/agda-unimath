@@ -59,9 +59,9 @@ module _
 ```agda
 subset-Ab :
   (l : Level) {l1 : Level} (A : Ab l1) → UU ((lsuc l) ⊔ l1)
-subset-Ab l A = {!!}
+subset-Ab = {!!}
 
 is-set-subset-Ab :
   (l : Level) {l1 : Level} (A : Ab l1) → is-set (subset-Ab l A)
-is-set-subset-Ab l A = {!!}
+is-set-subset-Ab = {!!}
 ```

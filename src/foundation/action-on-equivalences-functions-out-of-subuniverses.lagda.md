@@ -55,14 +55,14 @@ module _
       is-contr
         ( Σ ( (Y : type-subuniverse P) → equiv-subuniverse P X Y → f X ＝ f Y)
             ( λ h → h X id-equiv ＝ refl))
-    unique-action-equiv-function-subuniverse X = {!!}
+    unique-action-equiv-function-subuniverse = {!!}
 
   action-equiv-function-subuniverse :
     (X Y : type-subuniverse P) → equiv-subuniverse P X Y → f X ＝ f Y
-  action-equiv-function-subuniverse X Y = {!!}
+  action-equiv-function-subuniverse = {!!}
 
   compute-action-equiv-function-subuniverse-id-equiv :
     (X : type-subuniverse P) →
     action-equiv-function-subuniverse X X id-equiv ＝ refl
-  compute-action-equiv-function-subuniverse-id-equiv X = {!!}
+  compute-action-equiv-function-subuniverse-id-equiv = {!!}
 ```

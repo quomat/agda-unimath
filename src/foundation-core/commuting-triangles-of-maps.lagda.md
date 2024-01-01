@@ -49,11 +49,11 @@ module _
 
   coherence-triangle-maps :
     (left : A → X) (right : B → X) (top : A → B) → UU (l1 ⊔ l2)
-  coherence-triangle-maps left right top = {!!}
+  coherence-triangle-maps = {!!}
 
   coherence-triangle-maps' :
     (left : A → X) (right : B → X) (top : A → B) → UU (l1 ⊔ l2)
-  coherence-triangle-maps' left right top = {!!}
+  coherence-triangle-maps' = {!!}
 ```
 
 ### Concatenation of commuting triangles of maps
@@ -68,7 +68,7 @@ module _
     coherence-triangle-maps f g i →
     coherence-triangle-maps g h j →
     coherence-triangle-maps f h (j ∘ i)
-  concat-coherence-triangle-maps H K = {!!}
+  concat-coherence-triangle-maps = {!!}
 ```
 
 ### Coherences of commuting triangles of maps with fixed vertices
@@ -87,7 +87,7 @@ module _
 
   coherence-htpy-triangle-maps :
     left ~ left' → right ~ right' → top ~ top' → UU (l1 ⊔ l2)
-  coherence-htpy-triangle-maps L R T = {!!}
+  coherence-htpy-triangle-maps = {!!}
 ```
 
 ## Properties

@@ -81,7 +81,7 @@ module _
 
   eq-htpy-hom-∞-Group :
     (g : hom-∞-Group G H) → (htpy-hom-∞-Group g) → f ＝ g
-  eq-htpy-hom-∞-Group g = {!!}
+  eq-htpy-hom-∞-Group = {!!}
 ```
 
 ### Wild category structure on higher groups

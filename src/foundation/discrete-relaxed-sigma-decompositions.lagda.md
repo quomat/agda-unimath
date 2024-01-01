@@ -34,7 +34,7 @@ module _
 
   discrete-Relaxed-Σ-Decomposition :
     Relaxed-Σ-Decomposition l1 l2 A
-  pr1 discrete-Relaxed-Σ-Decomposition = {!!}
+  discrete-Relaxed-Σ-Decomposition = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1}
@@ -55,7 +55,7 @@ is-discrete-discrete-Relaxed-Σ-Decomposition = {!!}
 
 type-discrete-Relaxed-Σ-Decomposition :
   {l1 l2 l3 : Level} {A : UU l1} → UU (l1 ⊔ lsuc l2 ⊔ lsuc l3)
-type-discrete-Relaxed-Σ-Decomposition {l1} {l2} {l3} {A} = {!!}
+type-discrete-Relaxed-Σ-Decomposition = {!!}
 ```
 
 ## Propositions
@@ -69,11 +69,10 @@ module _
 
   equiv-discrete-is-discrete-Relaxed-Σ-Decomposition :
     equiv-Relaxed-Σ-Decomposition D (discrete-Relaxed-Σ-Decomposition l4 A)
-  pr1 equiv-discrete-is-discrete-Relaxed-Σ-Decomposition = {!!}
+  equiv-discrete-is-discrete-Relaxed-Σ-Decomposition = {!!}
 
 is-contr-type-discrete-Relaxed-Σ-Decomposition :
   {l1 l2 : Level} {A : UU l1} →
   is-contr (type-discrete-Relaxed-Σ-Decomposition {l1} {l1} {l2} {A})
-pr1 ( is-contr-type-discrete-Relaxed-Σ-Decomposition {l1} {l2} {A}) = {!!}
-pr2 ( is-contr-type-discrete-Relaxed-Σ-Decomposition {l1} {l2} {A}) = {!!}
+is-contr-type-discrete-Relaxed-Σ-Decomposition = {!!}
 ```

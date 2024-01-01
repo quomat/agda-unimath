@@ -75,7 +75,7 @@ module _
   counit-symmetric-core-Relation :
     {x y : A} →
     relation-Symmetric-Relation symmetric-core-Relation x y → R x y
-  counit-symmetric-core-Relation {x} {y} r = {!!}
+  counit-symmetric-core-Relation = {!!}
 ```
 
 ## Properties
@@ -91,7 +91,7 @@ module _
   map-universal-property-symmetric-core-Relation :
     hom-Symmetric-Relation S (symmetric-core-Relation R) →
     hom-Relation (relation-Symmetric-Relation S) R
-  map-universal-property-symmetric-core-Relation f x y s = {!!}
+  map-universal-property-symmetric-core-Relation = {!!}
 
   equiv-universal-property-symmetric-core-Relation :
     hom-Symmetric-Relation S (symmetric-core-Relation R) ≃

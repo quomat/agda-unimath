@@ -57,7 +57,7 @@ is-noncontractible A = {!!}
 ```agda
 is-not-contractible-is-empty :
   {l : Level} {X : UU l} → is-empty X → is-not-contractible X
-is-not-contractible-is-empty H C = {!!}
+is-not-contractible-is-empty = {!!}
 
 is-not-contractible-empty : is-not-contractible empty
 is-not-contractible-empty = {!!}

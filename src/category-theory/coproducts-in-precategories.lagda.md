@@ -35,7 +35,7 @@ module _
   is-coproduct-Precategory :
     (x y p : obj-Precategory C) →
     hom-Precategory C x p → hom-Precategory C y p → UU (l1 ⊔ l2)
-  is-coproduct-Precategory x y p l r = {!!}
+  is-coproduct-Precategory = {!!}
 
   coproduct-Precategory : obj-Precategory C → obj-Precategory C → UU (l1 ⊔ l2)
   coproduct-Precategory x y = {!!}
@@ -49,17 +49,17 @@ module _
 
   object-coproduct-Precategory :
     obj-Precategory C → obj-Precategory C → obj-Precategory C
-  object-coproduct-Precategory x y = {!!}
+  object-coproduct-Precategory = {!!}
 
   inl-coproduct-Precategory :
     (x y : obj-Precategory C) →
     hom-Precategory C x (object-coproduct-Precategory x y)
-  inl-coproduct-Precategory x y = {!!}
+  inl-coproduct-Precategory = {!!}
 
   inr-coproduct-Precategory :
     (x y : obj-Precategory C) →
     hom-Precategory C y (object-coproduct-Precategory x y)
-  inr-coproduct-Precategory x y = {!!}
+  inr-coproduct-Precategory = {!!}
 
   module _
     (x y z : obj-Precategory C)
@@ -90,7 +90,7 @@ module _
       comp-hom-Precategory C h (inl-coproduct-Precategory x y) ＝ f →
       comp-hom-Precategory C h (inr-coproduct-Precategory x y) ＝ g →
       morphism-out-of-coproduct-Precategory ＝ h
-    is-unique-morphism-out-of-coproduct-Precategory h comm1 comm2 = {!!}
+    is-unique-morphism-out-of-coproduct-Precategory = {!!}
 
 module _
   {l1 l2 : Level} (C : Precategory l1 l2)

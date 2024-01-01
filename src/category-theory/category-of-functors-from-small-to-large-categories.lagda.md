@@ -66,7 +66,7 @@ module _
     ( natural-isomorphism-Precategory C (precategory-Large-Precategory D γ)
       ( F)
       ( G))
-  extensionality-functor-is-category-Small-Large-Precategory F G = {!!}
+  extensionality-functor-is-category-Small-Large-Precategory = {!!}
 ```
 
 ### When the codomain is a large category the functor large precategory is a large category
@@ -100,18 +100,18 @@ module _
 
   functor-large-category-Small-Large-Category :
     Large-Category (λ l → l1 ⊔ l2 ⊔ α l ⊔ β l l) (λ l l' → l1 ⊔ l2 ⊔ β l l')
-  large-precategory-Large-Category functor-large-category-Small-Large-Category = {!!}
+  functor-large-category-Small-Large-Category = {!!}
 
   extensionality-functor-Small-Large-Category :
     {γ : Level} (F G : functor-Small-Large-Category C D γ) →
     (F ＝ G) ≃
     natural-isomorphism-Category C (category-Large-Category D γ) F G
-  extensionality-functor-Small-Large-Category {γ} = {!!}
+  extensionality-functor-Small-Large-Category = {!!}
 
   eq-natural-isomorphism-Small-Large-Category :
     {γ : Level} (F G : functor-Small-Large-Category C D γ) →
     natural-isomorphism-Category C (category-Large-Category D γ) F G → F ＝ G
-  eq-natural-isomorphism-Small-Large-Category F G = {!!}
+  eq-natural-isomorphism-Small-Large-Category = {!!}
 ```
 
 ### The small categories of functors and natural transformations from small to large categories

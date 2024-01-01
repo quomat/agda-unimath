@@ -54,7 +54,7 @@ a `k`-truncated type `B`.
 ```agda
 is-set-projective :
   {l1 : Level} (l2 l3 : Level) → UU l1 → UU (l1 ⊔ lsuc l2 ⊔ lsuc l3)
-is-set-projective l2 l3 X = {!!}
+is-set-projective = {!!}
 ```
 
 ### `k`-projective types
@@ -62,7 +62,7 @@ is-set-projective l2 l3 X = {!!}
 ```agda
 is-projective :
   {l1 : Level} (l2 l3 : Level) (k : ℕ) → UU l1 → UU (l1 ⊔ lsuc l2 ⊔ lsuc l3)
-is-projective l2 l3 k X = {!!}
+is-projective = {!!}
 ```
 
 ## See also

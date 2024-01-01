@@ -102,11 +102,11 @@ module _
     htpy-all-elements-equal-hom-Cyclic-Ring-Ring :
       (f g : hom-Ring (ring-Cyclic-Ring R) S) →
       htpy-hom-Ring (ring-Cyclic-Ring R) S f g
-    htpy-all-elements-equal-hom-Cyclic-Ring-Ring f g x = {!!}
+    htpy-all-elements-equal-hom-Cyclic-Ring-Ring = {!!}
 
   all-elements-equal-hom-Cyclic-Ring-Ring :
     all-elements-equal (hom-Ring (ring-Cyclic-Ring R) S)
-  all-elements-equal-hom-Cyclic-Ring-Ring f g = {!!}
+  all-elements-equal-hom-Cyclic-Ring-Ring = {!!}
 
   is-prop-hom-Cyclic-Ring-Ring :
     is-prop (hom-Ring (ring-Cyclic-Ring R) S)

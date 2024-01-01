@@ -33,7 +33,7 @@ Slice-emb l A = {!!}
 equiv-Fiber-Prop :
   (l : Level) {l1 : Level} (A : UU l1) →
   Slice-emb (l1 ⊔ l) A ≃ (A → Prop (l1 ⊔ l))
-equiv-Fiber-Prop l A = {!!}
+equiv-Fiber-Prop = {!!}
 
 Slice-surjection : (l : Level) {l1 : Level} (A : UU l1) → UU (lsuc l ⊔ l1)
 Slice-surjection l A = {!!}
@@ -41,5 +41,5 @@ Slice-surjection l A = {!!}
 equiv-Fiber-trunc-Prop :
   (l : Level) {l1 : Level} (A : UU l1) →
   Slice-surjection (l1 ⊔ l) A ≃ (A → Inhabited-Type (l1 ⊔ l))
-equiv-Fiber-trunc-Prop l A = {!!}
+equiv-Fiber-trunc-Prop = {!!}
 ```

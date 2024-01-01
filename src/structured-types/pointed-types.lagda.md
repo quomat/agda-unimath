@@ -42,7 +42,7 @@ module _
 ev-point-Pointed-Type :
   {l1 l2 : Level} (A : Pointed-Type l1) {B : UU l2} →
   (type-Pointed-Type A → B) → B
-ev-point-Pointed-Type A f = {!!}
+ev-point-Pointed-Type = {!!}
 ```
 
 ## See also

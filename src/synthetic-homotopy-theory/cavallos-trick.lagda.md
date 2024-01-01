@@ -42,7 +42,7 @@ module _
   cavallos-trick :
     (f g : A →∗ B) → section (λ (H : id ~ id) → H (point-Pointed-Type B)) →
     (map-pointed-map f ~ map-pointed-map g) → f ~∗ g
-  pr1 (cavallos-trick (f , refl) (g , q) (K , α) H) a = {!!}
+  cavallos-trick = {!!}
 ```
 
 ## References

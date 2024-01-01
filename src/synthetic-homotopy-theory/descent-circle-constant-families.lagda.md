@@ -57,9 +57,9 @@ module _
       ( descent-data-circle-constant-type l X)
       ( descent-data-family-circle l
         ( family-descent-data-circle-constant-type l X))
-  pr1 eq-descent-data-circle-constant-type = {!!}
+  eq-descent-data-circle-constant-type = {!!}
 
   family-with-descent-data-constant-type :
     family-with-descent-data-circle l l2
-  pr1 family-with-descent-data-constant-type = {!!}
+  family-with-descent-data-constant-type = {!!}
 ```

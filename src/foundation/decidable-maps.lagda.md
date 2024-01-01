@@ -40,7 +40,7 @@ module _
 is-decidable-map-retraction :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} → has-decidable-equality B →
   (i : A → B) → retraction i → is-decidable-map i
-is-decidable-map-retraction d i (pair r R) b = {!!}
+is-decidable-map-retraction = {!!}
 ```
 
 ## Properties
@@ -55,5 +55,5 @@ module _
   is-decidable-map-tot :
     {f : (x : A) → B x → C x} →
     ((x : A) → is-decidable-map (f x)) → is-decidable-map (tot f)
-  is-decidable-map-tot {f} H x = {!!}
+  is-decidable-map-tot = {!!}
 ```

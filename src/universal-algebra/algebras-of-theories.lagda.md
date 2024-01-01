@@ -40,44 +40,44 @@ module _
   is-algebra :
     { l3 : Level} →
     ( X : Model-Signature Sg l3) → UU (l2 ⊔ l3)
-  is-algebra M = {!!}
+  is-algebra = {!!}
 
   Algebra :
     ( l3 : Level) →
     UU (l1 ⊔ l2 ⊔ lsuc l3)
-  Algebra l3 = {!!}
+  Algebra = {!!}
 
   model-Algebra :
     { l3 : Level} →
     Algebra l3 → Model-Signature Sg l3
-  model-Algebra Alg = {!!}
+  model-Algebra = {!!}
 
   set-Algebra :
     { l3 : Level} →
     Algebra l3 → Set l3
-  set-Algebra Alg = {!!}
+  set-Algebra = {!!}
 
   is-model-set-Algebra :
     { l3 : Level} →
     ( Alg : Algebra l3) →
     is-model-signature Sg (set-Algebra Alg)
-  is-model-set-Algebra Alg = {!!}
+  is-model-set-Algebra = {!!}
 
   type-Algebra :
     { l3 : Level} →
     Algebra l3 → UU l3
-  type-Algebra Alg = {!!}
+  type-Algebra = {!!}
 
   is-set-Algebra :
     { l3 : Level} →
     (Alg : Algebra l3) → is-set (type-Algebra Alg)
-  is-set-Algebra Alg = {!!}
+  is-set-Algebra = {!!}
 
   is-algebra-Algebra :
     { l3 : Level} →
     ( Alg : Algebra l3) →
     is-algebra (model-Algebra Alg)
-  is-algebra-Algebra Alg = {!!}
+  is-algebra-Algebra = {!!}
 ```
 
 ## Properties
@@ -89,5 +89,5 @@ module _
     { l3 : Level} →
     ( X : Model-Signature Sg l3) →
     is-prop (is-algebra X)
-  is-prop-is-algebra M = {!!}
+  is-prop-is-algebra = {!!}
 ```

@@ -28,7 +28,7 @@ group**, and a labelling of the edges of `G` by elements of `Π`.
 ```agda
 Voltage-Graph :
   {l1 : Level} (l2 l3 : Level) (Π : Group l1) → UU (l1 ⊔ lsuc l2 ⊔ lsuc l3)
-Voltage-Graph l2 l3 Π = {!!}
+Voltage-Graph = {!!}
 
 module _
   {l1 l2 l3 : Level} (Π : Group l1) (G : Voltage-Graph l2 l3 Π)

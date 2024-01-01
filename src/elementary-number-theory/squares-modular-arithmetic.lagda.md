@@ -47,6 +47,5 @@ square-root-ℤ-Mod {succ-ℕ p} _ (root , _) = {!!}
 is-decidable-is-square-ℤ-Mod :
   (p : ℕ) (k : ℤ-Mod p) →
   is-decidable (is-square-ℤ-Mod p k)
-is-decidable-is-square-ℤ-Mod 0 k = {!!}
-is-decidable-is-square-ℤ-Mod (succ-ℕ p) k = {!!}
+is-decidable-is-square-ℤ-Mod = {!!}
 ```

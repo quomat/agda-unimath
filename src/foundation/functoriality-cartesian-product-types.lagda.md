@@ -81,7 +81,7 @@ module _
       ( map-prod id g)
       ( map-prod id g)
       ( map-prod f id)
-  coherence-square-map-prod t = {!!}
+  coherence-square-map-prod = {!!}
 ```
 
 ## Properties
@@ -102,7 +102,7 @@ map-prod-comp :
   {l1 l2 l3 l4 l5 l6 : Level} {A : UU l1} {B : UU l2} {C : UU l3} {D : UU l4}
   {E : UU l5} {F : UU l6} (f : A → C) (g : B → D) (h : C → E) (k : D → F) →
   map-prod (h ∘ f) (k ∘ g) ~ map-prod h k ∘ map-prod f g
-map-prod-comp f g h k t = {!!}
+map-prod-comp = {!!}
 ```
 
 ### Functoriality of products preserves homotopies
@@ -112,7 +112,7 @@ htpy-map-prod :
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {C : UU l3} {D : UU l4}
   {f f' : A → C} (H : f ~ f') {g g' : B → D} (K : g ~ g') →
   map-prod f g ~ map-prod f' g'
-htpy-map-prod H K (a , b) = {!!}
+htpy-map-prod = {!!}
 ```
 
 ### Functoriality of products preserves equivalences
@@ -124,22 +124,22 @@ module _
 
   map-inv-map-prod :
     (f : A → C) (g : B → D) → is-equiv f → is-equiv g → C × D → A × B
-  pr1 (map-inv-map-prod f g H K (c , d)) = {!!}
+  map-inv-map-prod = {!!}
 
   is-section-map-inv-map-prod :
     (f : A → C) (g : B → D) (H : is-equiv f) (K : is-equiv g) →
     map-prod f g ∘ map-inv-map-prod f g H K ~ id
-  is-section-map-inv-map-prod f g H K = {!!}
+  is-section-map-inv-map-prod = {!!}
 
   is-retraction-map-inv-map-prod :
     (f : A → C) (g : B → D) (H : is-equiv f) (K : is-equiv g) →
     map-inv-map-prod f g H K ∘ map-prod f g ~ id
-  is-retraction-map-inv-map-prod f g H K = {!!}
+  is-retraction-map-inv-map-prod = {!!}
 
   is-equiv-map-prod :
     (f : A → C) (g : B → D) →
     is-equiv f → is-equiv g → is-equiv (map-prod f g)
-  is-equiv-map-prod f g H K = {!!}
+  is-equiv-map-prod = {!!}
 
   equiv-prod : A ≃ C → B ≃ D → A × B ≃ C × D
   pr1 (equiv-prod (f , is-equiv-f) (g , is-equiv-g)) = {!!}
@@ -169,26 +169,26 @@ module _
 
   map-compute-fiber-map-prod :
     fiber (map-prod f g) t → fiber f (pr1 t) × fiber g (pr2 t)
-  pr1 (pr1 (map-compute-fiber-map-prod ((a , b) , refl))) = {!!}
+  map-compute-fiber-map-prod = {!!}
 
   map-inv-compute-fiber-map-prod :
     fiber f (pr1 t) × fiber g (pr2 t) → fiber (map-prod f g) t
-  pr1 (pr1 (map-inv-compute-fiber-map-prod ((x , refl) , (y , refl)))) = {!!}
+  map-inv-compute-fiber-map-prod = {!!}
 
   is-section-map-inv-compute-fiber-map-prod :
     map-compute-fiber-map-prod ∘ map-inv-compute-fiber-map-prod ~ id
-  is-section-map-inv-compute-fiber-map-prod ((x , refl) , (y , refl)) = {!!}
+  is-section-map-inv-compute-fiber-map-prod = {!!}
 
   is-retraction-map-inv-compute-fiber-map-prod :
     map-inv-compute-fiber-map-prod ∘ map-compute-fiber-map-prod ~ id
-  is-retraction-map-inv-compute-fiber-map-prod ((a , b) , refl) = {!!}
+  is-retraction-map-inv-compute-fiber-map-prod = {!!}
 
   is-equiv-map-compute-fiber-map-prod : is-equiv map-compute-fiber-map-prod
   is-equiv-map-compute-fiber-map-prod = {!!}
 
   compute-fiber-map-prod :
     fiber (map-prod f g) t ≃ (fiber f (pr1 t) × fiber g (pr2 t))
-  pr1 compute-fiber-map-prod = {!!}
+  compute-fiber-map-prod = {!!}
 ```
 
 ### If `map-prod f g : A × B → C × D` is an equivalence, then we have `D → is-equiv f` and `C → is-equiv g`
@@ -201,11 +201,11 @@ module _
 
   is-equiv-left-factor-is-equiv-map-prod :
     (d : D) → is-equiv (map-prod f g) → is-equiv f
-  is-equiv-left-factor-is-equiv-map-prod d is-equiv-fg = {!!}
+  is-equiv-left-factor-is-equiv-map-prod = {!!}
 
   is-equiv-right-factor-is-equiv-map-prod :
     (c : C) → is-equiv (map-prod f g) → is-equiv g
-  is-equiv-right-factor-is-equiv-map-prod c is-equiv-fg = {!!}
+  is-equiv-right-factor-is-equiv-map-prod = {!!}
 ```
 
 ## See also

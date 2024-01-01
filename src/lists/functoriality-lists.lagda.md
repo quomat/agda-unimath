@@ -41,7 +41,7 @@ Given a functiion `f : A → B`, we obtain a function
 map-list :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
   list A → list B
-map-list f = {!!}
+map-list = {!!}
 ```
 
 ## Properties
@@ -52,8 +52,7 @@ map-list f = {!!}
 length-map-list :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) (l : list A) →
   Id (length-list (map-list f l)) (length-list l)
-length-map-list f nil = {!!}
-length-map-list f (cons x l) = {!!}
+length-map-list = {!!}
 ```
 
 ### Link between `map-list` and `map-vec`
@@ -68,7 +67,7 @@ module _
     (l : list A) →
     list-vec (length-list l) (map-vec f (vec-list l)) ＝
     map-list f l
-  map-list-map-vec-list nil = {!!}
+  map-list-map-vec-list = {!!}
 
   map-vec-map-list-vec :
     (n : ℕ) (v : vec A n) →
@@ -78,7 +77,7 @@ module _
         compute-length-list-list-vec n v)
       ( vec-list (map-list f (list-vec n v))) ＝
     map-vec f v
-  map-vec-map-list-vec 0 empty-vec = {!!}
+  map-vec-map-list-vec = {!!}
 
   map-vec-map-list-vec' :
     (n : ℕ) (v : vec A n) →
@@ -89,7 +88,7 @@ module _
         ( length-map-list f (list-vec n v) ∙
           compute-length-list-list-vec n v))
       ( map-vec f v)
-  map-vec-map-list-vec' n v = {!!}
+  map-vec-map-list-vec' = {!!}
 
   vec-list-map-list-map-vec-list :
     (l : list A) →
@@ -98,7 +97,7 @@ module _
       ( length-map-list f l)
       ( vec-list (map-list f l)) ＝
     map-vec f (vec-list l)
-  vec-list-map-list-map-vec-list nil = {!!}
+  vec-list-map-list-map-vec-list = {!!}
 
   vec-list-map-list-map-vec-list' :
     (l : list A) →
@@ -107,7 +106,7 @@ module _
       ( vec B)
       ( inv (length-map-list f l))
       ( map-vec f (vec-list l))
-  vec-list-map-list-map-vec-list' l = {!!}
+  vec-list-map-list-map-vec-list' = {!!}
 
   list-vec-map-vec-map-list-vec :
     (n : ℕ) (v : vec A n) →
@@ -115,7 +114,7 @@ module _
       ( length-list (map-list f (list-vec n v)))
       ( vec-list (map-list f (list-vec n v))) ＝
     list-vec n (map-vec f v)
-  list-vec-map-vec-map-list-vec n v = {!!}
+  list-vec-map-vec-map-list-vec = {!!}
 ```
 
 ### `map-list` preserves concatenation
@@ -130,7 +129,7 @@ module _
     Id
       ( map-list f (concat-list l k))
       ( concat-list (map-list f l) (map-list f k))
-  preserves-concat-map-list nil k = {!!}
+  preserves-concat-map-list = {!!}
 ```
 
 ### Functoriality of the list operation
@@ -149,8 +148,7 @@ composition-law-map-list :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} {C : UU l3} →
   (f : A → B) (g : B → C) →
   map-list (g ∘ f) ~ (map-list g ∘ map-list f)
-composition-law-map-list f g nil = {!!}
-composition-law-map-list f g (cons a x) = {!!}
+composition-law-map-list = {!!}
 ```
 
 ### `map-list` applied to lists of the form `snoc x a`
@@ -159,6 +157,5 @@ composition-law-map-list f g (cons a x) = {!!}
 map-snoc-list :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) (x : list A) (a : A) →
   map-list f (snoc x a) ＝ snoc (map-list f x) (f a)
-map-snoc-list f nil a = {!!}
-map-snoc-list f (cons b x) a = {!!}
+map-snoc-list = {!!}
 ```

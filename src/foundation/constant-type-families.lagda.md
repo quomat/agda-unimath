@@ -59,8 +59,7 @@ constant-type-family A B a = {!!}
 is-constant-type-family-constant-type-family :
   {l1 l2 : Level} (A : UU l1) (B : UU l2) →
   is-constant-type-family (constant-type-family A B)
-pr1 (is-constant-type-family-constant-type-family A B) = {!!}
-pr2 (is-constant-type-family-constant-type-family A B) a = {!!}
+is-constant-type-family-constant-type-family = {!!}
 ```
 
 ## Properties
@@ -71,7 +70,7 @@ pr2 (is-constant-type-family-constant-type-family A B) a = {!!}
 tr-constant-type-family :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} {x y : A} (p : x ＝ y) (b : B) →
   dependent-identification (constant-type-family A B) p b b
-tr-constant-type-family refl b = {!!}
+tr-constant-type-family = {!!}
 ```
 
 ### Dependent action on paths of sections of standard constant type families
@@ -80,5 +79,5 @@ tr-constant-type-family refl b = {!!}
 apd-constant-type-family :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) {x y : A} (p : x ＝ y) →
   apd f p ＝ (tr-constant-type-family p (f x) ∙ ap f p)
-apd-constant-type-family f refl = {!!}
+apd-constant-type-family = {!!}
 ```

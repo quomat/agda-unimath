@@ -36,7 +36,7 @@ module _
 
   prod-Pointed-Type :
     (A : Pointed-Type l1) (B : Pointed-Type l2) → Pointed-Type (l1 ⊔ l2)
-  pr1 (prod-Pointed-Type (A , a) (B , b)) = {!!}
+  prod-Pointed-Type = {!!}
 
   infixr 15 _×∗_
   _×∗_ = {!!}
@@ -111,10 +111,10 @@ module _
     {l3 : Level} {S : Pointed-Type l3}
     (f : S →∗ A) (g : S →∗ B) →
     type-Pointed-Type S → type-Pointed-Type (A ×∗ B)
-  pr1 (map-gap-prod-Pointed-Type f g x) = {!!}
+  map-gap-prod-Pointed-Type = {!!}
 
   gap-prod-Pointed-Type :
     {l3 : Level} {S : Pointed-Type l3}
     (f : S →∗ A) (g : S →∗ B) → S →∗ (A ×∗ B)
-  pr1 (gap-prod-Pointed-Type f g) = {!!}
+  gap-prod-Pointed-Type = {!!}
 ```

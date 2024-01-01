@@ -38,31 +38,31 @@ leq-count e x y = {!!}
 ```agda
 refl-leq-count :
   {l : Level} {X : UU l} (e : count X) (x : X) → leq-count e x x
-refl-leq-count e x = {!!}
+refl-leq-count = {!!}
 
 antisymmetric-leq-count :
   {l : Level} {X : UU l} (e : count X) {x y : X} →
   leq-count e x y → leq-count e y x → Id x y
-antisymmetric-leq-count e H K = {!!}
+antisymmetric-leq-count = {!!}
 
 transitive-leq-count :
   {l : Level} {X : UU l} (e : count X) {x y z : X} →
   leq-count e y z → leq-count e x y → leq-count e x z
-transitive-leq-count (pair k e) {x} {y} {z} = {!!}
+transitive-leq-count = {!!}
 
 preserves-leq-equiv-count :
   {l : Level} {X : UU l} (e : count X)
   {x y : Fin (number-of-elements-count e)} →
   leq-Fin (number-of-elements-count e) x y →
   leq-count e (map-equiv-count e x) (map-equiv-count e y)
-preserves-leq-equiv-count e {x} {y} H = {!!}
+preserves-leq-equiv-count = {!!}
 
 reflects-leq-equiv-count :
   {l : Level} {X : UU l} (e : count X)
   {x y : Fin (number-of-elements-count e)} →
   leq-count e (map-equiv-count e x) (map-equiv-count e y) →
   leq-Fin (number-of-elements-count e) x y
-reflects-leq-equiv-count e {x} {y} H = {!!}
+reflects-leq-equiv-count = {!!}
 
 transpose-leq-equiv-count :
   {l : Level} {X : UU l} (e : count X) →
@@ -70,12 +70,12 @@ transpose-leq-equiv-count :
   leq-Fin
     ( number-of-elements-count e) x (map-inv-equiv-count e y) →
   leq-count e (map-equiv-count e x) y
-transpose-leq-equiv-count e {x} {y} H = {!!}
+transpose-leq-equiv-count = {!!}
 
 transpose-leq-equiv-count' :
   {l : Level} {X : UU l} (e : count X) →
   {x : X} {y : Fin (number-of-elements-count e)} →
   leq-Fin (number-of-elements-count e) (map-inv-equiv-count e x) y →
   leq-count e x (map-equiv-count e y)
-transpose-leq-equiv-count' e {x} {y} H = {!!}
+transpose-leq-equiv-count' = {!!}
 ```

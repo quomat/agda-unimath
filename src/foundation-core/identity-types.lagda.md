@@ -84,7 +84,7 @@ ind-Id :
   {l1 l2 : Level} {A : UU l1}
   (x : A) (B : (y : A) (p : x ＝ y) → UU l2) →
   (B x refl) → (y : A) (p : x ＝ y) → B y p
-ind-Id x B b y refl = {!!}
+ind-Id = {!!}
 ```
 
 ## Structure
@@ -130,7 +130,7 @@ module _
   assoc :
     {x y z w : A} (p : x ＝ y) (q : y ＝ z) (r : z ＝ w) →
     ((p ∙ q) ∙ r) ＝ (p ∙ (q ∙ r))
-  assoc refl q r = {!!}
+  assoc = {!!}
 
   left-unit : {x y : A} {p : x ＝ y} → refl ∙ p ＝ p
   left-unit = {!!}
@@ -150,7 +150,7 @@ module _
   distributive-inv-concat :
     {x y : A} (p : x ＝ y) {z : A} (q : y ＝ z) →
     inv (p ∙ q) ＝ inv q ∙ inv p
-  distributive-inv-concat refl refl = {!!}
+  distributive-inv-concat = {!!}
 ```
 
 ### Transposing inverses
@@ -163,22 +163,22 @@ module _
   left-transpose-eq-concat :
     {x y : A} (p : x ＝ y) {z : A} (q : y ＝ z) (r : x ＝ z) →
     p ∙ q ＝ r → q ＝ inv p ∙ r
-  left-transpose-eq-concat refl q r s = {!!}
+  left-transpose-eq-concat = {!!}
 
   right-transpose-eq-concat :
     {x y : A} (p : x ＝ y) {z : A} (q : y ＝ z) (r : x ＝ z) →
     p ∙ q ＝ r → p ＝ r ∙ inv q
-  right-transpose-eq-concat p refl r s = {!!}
+  right-transpose-eq-concat = {!!}
 
   double-transpose-eq-concat :
     {x y u v : A} (r : x ＝ u) (p : x ＝ y) (s : u ＝ v) (q : y ＝ v) →
     p ∙ q ＝ r ∙ s → (inv r) ∙ p ＝ s ∙ (inv q)
-  double-transpose-eq-concat refl p s refl α = {!!}
+  double-transpose-eq-concat = {!!}
 
   double-transpose-eq-concat' :
     {x y u v : A} (r : x ＝ u) (p : x ＝ y) (s : u ＝ v) (q : y ＝ v) →
     p ∙ q ＝ r ∙ s → q ∙ inv s ＝ inv p ∙ r
-  double-transpose-eq-concat' r refl refl q α = {!!}
+  double-transpose-eq-concat' = {!!}
 ```
 
 The fact that `left-transpose-eq-concat` and `right-transpose-eq-concat` are
@@ -194,11 +194,11 @@ module _
 
   is-injective-concat :
     {x y z : A} (p : x ＝ y) {q r : y ＝ z} → (p ∙ q) ＝ (p ∙ r) → q ＝ r
-  is-injective-concat refl s = {!!}
+  is-injective-concat = {!!}
 
   is-injective-concat' :
     {x y z : A} (r : y ＝ z) {p q : x ＝ y} → (p ∙ r) ＝ (q ∙ r) → p ＝ q
-  is-injective-concat' refl s = {!!}
+  is-injective-concat' = {!!}
 ```
 
 ## Equational reasoning
@@ -228,7 +228,7 @@ equational-reasoning x = refl
 step-equational-reasoning :
   {l : Level} {X : UU l} {x y : X} →
   (x ＝ y) → (u : X) → (y ＝ u) → (x ＝ u)
-step-equational-reasoning p z q = p ∙ q
+step-equational-reasoning = {!!}
 
 syntax step-equational-reasoning p z q = p ＝ z by q
 ```

@@ -36,7 +36,7 @@ module _
   count-union-subtypes-count-has-decidable-equalities :
     has-decidable-equality A → count (type-subtype P) →
     count (type-subtype Q) → count (type-subtype (union-subtype P Q))
-  count-union-subtypes-count-has-decidable-equalities dec-A count-P count-Q = {!!}
+  count-union-subtypes-count-has-decidable-equalities = {!!}
 ```
 
 ### If `A` has decidable equalities and `P` and `Q` are both finite, then `P ∪ Q` is also finite
@@ -49,5 +49,5 @@ module _
   finite-union-subtypes-finite-has-decidable-equalities :
     has-decidable-equality A → is-finite (type-subtype P) →
     is-finite (type-subtype Q) → is-finite (type-subtype (union-subtype P Q))
-  finite-union-subtypes-finite-has-decidable-equalities dec-A fin-P fin-Q = {!!}
+  finite-union-subtypes-finite-has-decidable-equalities = {!!}
 ```

@@ -27,6 +27,5 @@ type of `Mᵢ`. The base point is given pointwise.
 ```agda
 Π-Pointed-Type :
   {l1 l2 : Level} (I : UU l1) (P : I → Pointed-Type l2) → Pointed-Type (l1 ⊔ l2)
-pr1 (Π-Pointed-Type I P) = {!!}
-pr2 (Π-Pointed-Type I P) x = {!!}
+Π-Pointed-Type = {!!}
 ```

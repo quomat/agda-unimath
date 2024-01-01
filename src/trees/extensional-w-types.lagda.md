@@ -57,11 +57,11 @@ module _
 
   extensional-Eq-eq-𝕎 :
     {x y : 𝕎 A B} → x ＝ y → (z : 𝕎 A B) → (z ∈-𝕎 x) ≃ (z ∈-𝕎 y)
-  extensional-Eq-eq-𝕎 refl z = {!!}
+  extensional-Eq-eq-𝕎 = {!!}
 
 is-extensional-𝕎 :
   {l1 l2 : Level} (A : UU l1) (B : A → UU l2) → UU (l1 ⊔ l2)
-is-extensional-𝕎 A B = {!!}
+is-extensional-𝕎 = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2}
@@ -92,33 +92,33 @@ module _
 
   is-torsorial-Eq-Eq-ext-𝕎 :
     (x y : 𝕎 A B) (u : Eq-ext-𝕎 x y) → is-torsorial (Eq-Eq-ext-𝕎 x y u)
-  is-torsorial-Eq-Eq-ext-𝕎 x y u = {!!}
+  is-torsorial-Eq-Eq-ext-𝕎 = {!!}
 
   Eq-Eq-ext-eq-𝕎 :
     (x y : 𝕎 A B) (u v : Eq-ext-𝕎 x y) → u ＝ v → Eq-Eq-ext-𝕎 x y u v
-  Eq-Eq-ext-eq-𝕎 x y u .u refl = {!!}
+  Eq-Eq-ext-eq-𝕎 = {!!}
 
   is-equiv-Eq-Eq-ext-eq-𝕎 :
     (x y : 𝕎 A B) (u v : Eq-ext-𝕎 x y) → is-equiv (Eq-Eq-ext-eq-𝕎 x y u v)
-  is-equiv-Eq-Eq-ext-eq-𝕎 x y u = {!!}
+  is-equiv-Eq-Eq-ext-eq-𝕎 = {!!}
 
   eq-Eq-Eq-ext-𝕎 :
     {x y : 𝕎 A B} {u v : Eq-ext-𝕎 x y} → Eq-Eq-ext-𝕎 x y u v → u ＝ v
-  eq-Eq-Eq-ext-𝕎 {x} {y} {u} {v} = {!!}
+  eq-Eq-Eq-ext-𝕎 = {!!}
 
   equiv-total-Eq-ext-𝕎 :
     (x : 𝕎 A B) → Σ (𝕎 A B) (Eq-ext-𝕎 x) ≃ Σ A (λ a → B (shape-𝕎 x) ≃ B a)
-  equiv-total-Eq-ext-𝕎 (tree-𝕎 a f) = {!!}
+  equiv-total-Eq-ext-𝕎 = {!!}
 
   is-torsorial-Eq-ext-is-univalent-𝕎 :
     is-univalent B → (x : 𝕎 A B) → is-torsorial (Eq-ext-𝕎 x)
-  is-torsorial-Eq-ext-is-univalent-𝕎 H (tree-𝕎 a f) = {!!}
+  is-torsorial-Eq-ext-is-univalent-𝕎 = {!!}
 
   is-extensional-is-univalent-𝕎 :
     is-univalent B → is-extensional-𝕎 A B
-  is-extensional-is-univalent-𝕎 H x = {!!}
+  is-extensional-is-univalent-𝕎 = {!!}
 
   is-univalent-is-extensional-𝕎 :
     type-trunc-Prop (𝕎 A B) → is-extensional-𝕎 A B → is-univalent B
-  is-univalent-is-extensional-𝕎 p H x = {!!}
+  is-univalent-is-extensional-𝕎 = {!!}
 ```

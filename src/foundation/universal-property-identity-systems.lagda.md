@@ -36,7 +36,7 @@ also follows for identity systems.
 ```agda
 dependent-universal-property-identity-system :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} {a : A} (b : B a) → UUω
-dependent-universal-property-identity-system {A = A} {B} b = {!!}
+dependent-universal-property-identity-system = {!!}
 ```
 
 ## Properties
@@ -58,7 +58,7 @@ module _
     is-torsorial B →
     {l : Level} {C : (x : A) → B x → UU l} →
     ((x : A) (y : B x) → C x y) ≃ C a b
-  pr1 (equiv-dependent-universal-property-identity-system-is-torsorial H) = {!!}
+  equiv-dependent-universal-property-identity-system-is-torsorial = {!!}
 
   is-torsorial-dependent-universal-property-identity-system :
     dependent-universal-property-identity-system {B = B} b →

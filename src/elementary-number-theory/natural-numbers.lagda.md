@@ -76,8 +76,7 @@ is-not-one-ℕ' n = {!!}
 ind-ℕ :
   {l : Level} {P : ℕ → UU l} →
   P 0 → ((n : ℕ) → P n → P (succ-ℕ n)) → ((n : ℕ) → P n)
-ind-ℕ p-zero p-succ 0 = {!!}
-ind-ℕ p-zero p-succ (succ-ℕ n) = {!!}
+ind-ℕ = {!!}
 ```
 
 ### The recursion principle of ℕ

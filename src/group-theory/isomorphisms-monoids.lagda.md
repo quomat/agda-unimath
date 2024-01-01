@@ -75,13 +75,13 @@ module _
 
   map-iso-Monoid :
     iso-Monoid → type-Monoid M → type-Monoid N
-  map-iso-Monoid f = {!!}
+  map-iso-Monoid = {!!}
 
   preserves-mul-iso-Monoid :
     (f : iso-Monoid) {x y : type-Monoid M} →
     map-iso-Monoid f (mul-Monoid M x y) ＝
     mul-Monoid N (map-iso-Monoid f x) (map-iso-Monoid f y)
-  preserves-mul-iso-Monoid f = {!!}
+  preserves-mul-iso-Monoid = {!!}
 
   is-iso-iso-Monoid :
     (f : iso-Monoid) →
@@ -94,13 +94,13 @@ module _
 
   map-inv-iso-Monoid :
     iso-Monoid → type-Monoid N → type-Monoid M
-  map-inv-iso-Monoid f = {!!}
+  map-inv-iso-Monoid = {!!}
 
   preserves-mul-inv-iso-Monoid :
     (f : iso-Monoid) {x y : type-Monoid N} →
     map-inv-iso-Monoid f (mul-Monoid N x y) ＝
     mul-Monoid M (map-inv-iso-Monoid f x) (map-inv-iso-Monoid f y)
-  preserves-mul-inv-iso-Monoid f = {!!}
+  preserves-mul-inv-iso-Monoid = {!!}
 
   is-section-hom-inv-iso-Monoid :
     (f : iso-Monoid) →
@@ -111,7 +111,7 @@ module _
   is-section-map-inv-iso-Monoid :
     (f : iso-Monoid) →
     map-iso-Monoid f ∘ map-inv-iso-Monoid f ~ id
-  is-section-map-inv-iso-Monoid f = {!!}
+  is-section-map-inv-iso-Monoid = {!!}
 
   is-retraction-hom-inv-iso-Monoid :
     (f : iso-Monoid) →
@@ -122,7 +122,7 @@ module _
   is-retraction-map-inv-iso-Monoid :
     (f : iso-Monoid) →
     map-inv-iso-Monoid f ∘ map-iso-Monoid f ~ id
-  is-retraction-map-inv-iso-Monoid f = {!!}
+  is-retraction-map-inv-iso-Monoid = {!!}
 ```
 
 ## Examples
@@ -244,5 +244,5 @@ module _
     {x : type-Monoid M} →
     is-invertible-element-Monoid N (map-iso-Monoid M N f x) →
     is-invertible-element-Monoid M x
-  reflects-invertible-elements-iso-Monoid H = {!!}
+  reflects-invertible-elements-iso-Monoid = {!!}
 ```

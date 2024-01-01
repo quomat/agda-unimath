@@ -169,7 +169,7 @@ module _
     preserves-comp-hom-Set-Magmoid A C
       obj-comp-functor-Set-Magmoid
       hom-comp-functor-Set-Magmoid
-  preserves-comp-comp-functor-Set-Magmoid g f = {!!}
+  preserves-comp-comp-functor-Set-Magmoid = {!!}
 
   comp-functor-Set-Magmoid : functor-Set-Magmoid A C
   pr1 comp-functor-Set-Magmoid = {!!}

@@ -63,7 +63,7 @@ module _
     ( pair
       ( north-suspension ＝ south-suspension)
       ( meridian-suspension (point-Pointed-Type X)))
-  pr1 pointed-map-concat-meridian-suspension = {!!}
+  pointed-map-concat-meridian-suspension = {!!}
 
   pointed-map-unit-suspension-loop-adjunction :
     X →∗ Ω (suspension-Pointed-Type X)
@@ -79,7 +79,7 @@ module _
 
   pointed-map-counit-suspension-loop-adjunction :
     pair (suspension (type-Ω X)) (north-suspension) →∗ X
-  pr1 pointed-map-counit-suspension-loop-adjunction = {!!}
+  pointed-map-counit-suspension-loop-adjunction = {!!}
 ```
 
 #### The transposing maps of the adjunction
@@ -91,7 +91,7 @@ module _
 
   transpose-suspension-loop-adjunction :
     (suspension-Pointed-Type X →∗ Y) → (X →∗ Ω Y)
-  transpose-suspension-loop-adjunction f∗ = {!!}
+  transpose-suspension-loop-adjunction = {!!}
 
 module _
   {l1 l2 : Level} (X : Pointed-Type l1) (Y : Pointed-Type l2)
@@ -99,7 +99,7 @@ module _
 
   inv-transpose-suspension-loop-adjunction :
     (X →∗ Ω Y) → (suspension-Pointed-Type X →∗ Y)
-  pr1 (inv-transpose-suspension-loop-adjunction f∗) = {!!}
+  inv-transpose-suspension-loop-adjunction = {!!}
 ```
 
 We now show these maps are inverses of each other.

@@ -53,12 +53,11 @@ pr2 (endo-Set A) = {!!}
 ```agda
 is-trunc-endo :
   {l : Level} {A : UU l} (k : 𝕋) → is-trunc k A → is-trunc k (endo A)
-is-trunc-endo k is-trunc-A = {!!}
+is-trunc-endo = {!!}
 
 endo-Truncated-Type :
   {l : Level} (k : 𝕋) → Truncated-Type l k → Truncated-Type l k
-pr1 (endo-Truncated-Type k A) = {!!}
-pr2 (endo-Truncated-Type k A) = {!!}
+endo-Truncated-Type = {!!}
 ```
 
 ## See also

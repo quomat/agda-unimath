@@ -91,53 +91,6 @@ data Pattern where
 data Clause where
   clause :
     (tel : Telescope) (ps : list (Arg Pattern)) (t : Term) → Clause
-  absurd-clause :
-    (tel : Telescope) (ps : list (Arg Pattern)) → Clause
-```
-
-<details><summary>Bindings</summary>
-
-```agda
-{-# BUILTIN AGDATERM Term #-}
-{-# BUILTIN AGDASORT Sort #-}
-{-# BUILTIN AGDAPATTERN Pattern #-}
-{-# BUILTIN AGDACLAUSE Clause #-}
-
-{-# BUILTIN AGDATERMVAR var #-}
-{-# BUILTIN AGDATERMCON con #-}
-{-# BUILTIN AGDATERMDEF def #-}
-{-# BUILTIN AGDATERMMETA meta #-}
-{-# BUILTIN AGDATERMLAM lam #-}
-{-# BUILTIN AGDATERMEXTLAM pat-lam #-}
-{-# BUILTIN AGDATERMPI pi #-}
-{-# BUILTIN AGDATERMSORT agda-sort #-}
-{-# BUILTIN AGDATERMLIT lit #-}
-{-# BUILTIN AGDATERMUNSUPPORTED unknown #-}
-
-{-# BUILTIN AGDASORTSET set #-}
-{-# BUILTIN AGDASORTLIT lit #-}
-{-# BUILTIN AGDASORTPROP prop #-}
-{-# BUILTIN AGDASORTPROPLIT propLit #-}
-{-# BUILTIN AGDASORTINF inf #-}
-{-# BUILTIN AGDASORTUNSUPPORTED unknown #-}
-
-{-# BUILTIN AGDAPATCON con #-}
-{-# BUILTIN AGDAPATDOT dot #-}
-{-# BUILTIN AGDAPATVAR var #-}
-{-# BUILTIN AGDAPATLIT lit #-}
-{-# BUILTIN AGDAPATPROJ proj #-}
-{-# BUILTIN AGDAPATABSURD absurd #-}
-
-{-# BUILTIN AGDACLAUSECLAUSE clause #-}
-{-# BUILTIN AGDACLAUSEABSURD absurd-clause #-}
-```
-
-</details>
-
-## Helpers
-
-```agda
-replicate-hidden-Arg : ℕ → list (Arg Term)
-replicate-hidden-Arg zero-ℕ = {!!}
+  clause = {!!}
 replicate-hidden-Arg (succ-ℕ n) = {!!}
 ```

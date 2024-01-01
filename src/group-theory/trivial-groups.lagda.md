@@ -57,5 +57,5 @@ module _
   abstract
     is-contr-subgroup-is-trivial-Group :
       is-trivial-Group G → is-contr (Subgroup l1 G)
-    pr1 (is-contr-subgroup-is-trivial-Group H) = {!!}
+    is-contr-subgroup-is-trivial-Group = {!!}
 ```

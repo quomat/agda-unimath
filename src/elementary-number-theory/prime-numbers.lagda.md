@@ -91,7 +91,7 @@ has-unique-proper-divisor-ℕ n = {!!}
 ```agda
 is-nonzero-is-prime-ℕ :
   (n : ℕ) → is-prime-ℕ n → is-nonzero-ℕ n
-is-nonzero-is-prime-ℕ n H p = {!!}
+is-nonzero-is-prime-ℕ = {!!}
 ```
 
 ### The number `1` is not a prime
@@ -106,9 +106,7 @@ is-not-one-is-prime-ℕ n H p = {!!}
 ```agda
 le-one-is-prime-ℕ :
   (n : ℕ) → is-prime-ℕ n → le-ℕ 1 n
-le-one-is-prime-ℕ 0 x = {!!}
-le-one-is-prime-ℕ 1 x = {!!}
-le-one-is-prime-ℕ (succ-ℕ (succ-ℕ n)) x = {!!}
+le-one-is-prime-ℕ = {!!}
 ```
 
 ### Being a prime is a proposition
@@ -116,16 +114,15 @@ le-one-is-prime-ℕ (succ-ℕ (succ-ℕ n)) x = {!!}
 ```agda
 is-prop-is-prime-ℕ :
   (n : ℕ) → is-prop (is-prime-ℕ n)
-is-prop-is-prime-ℕ n = {!!}
+is-prop-is-prime-ℕ = {!!}
 
 is-prime-ℕ-Prop :
   (n : ℕ) → Prop lzero
-pr1 (is-prime-ℕ-Prop n) = {!!}
-pr2 (is-prime-ℕ-Prop n) = {!!}
+is-prime-ℕ-Prop = {!!}
 
 is-prop-has-unique-proper-divisor-ℕ :
   (n : ℕ) → is-prop (has-unique-proper-divisor-ℕ n)
-is-prop-has-unique-proper-divisor-ℕ n = {!!}
+is-prop-has-unique-proper-divisor-ℕ = {!!}
 ```
 
 ### The three definitions of primes are equivalent
@@ -142,12 +139,11 @@ pr2 (pr2 (is-prime-is-prime-easy-ℕ n H .(succ-ℕ zero-ℕ)) refl) = {!!}
 
 has-unique-proper-divisor-is-prime-ℕ :
   (n : ℕ) → is-prime-ℕ n → has-unique-proper-divisor-ℕ n
-has-unique-proper-divisor-is-prime-ℕ n H = {!!}
+has-unique-proper-divisor-is-prime-ℕ = {!!}
 
 is-prime-has-unique-proper-divisor-ℕ :
   (n : ℕ) → has-unique-proper-divisor-ℕ n → is-prime-ℕ n
-pr1 (is-prime-has-unique-proper-divisor-ℕ n H x) K = {!!}
-pr2 (is-prime-has-unique-proper-divisor-ℕ n H .1) refl = {!!}
+is-prime-has-unique-proper-divisor-ℕ = {!!}
 ```
 
 ### Being a prime is decidable
@@ -184,7 +180,7 @@ is-prime-two-ℕ = {!!}
 le-quotient-div-is-prime-ℕ :
   (p x : ℕ) → is-nonzero-ℕ x → is-prime-ℕ p →
   (H : div-ℕ p x) → le-ℕ (quotient-div-ℕ p x H) x
-le-quotient-div-is-prime-ℕ p x N P H = {!!}
+le-quotient-div-is-prime-ℕ = {!!}
 ```
 
 ### If a prime number `p` divides a number `x + 1`, then `(x + 1)/p ≤ x`
@@ -193,7 +189,7 @@ le-quotient-div-is-prime-ℕ p x N P H = {!!}
 leq-quotient-div-is-prime-ℕ :
   (p x : ℕ) → is-prime-ℕ p →
   (H : div-ℕ p (succ-ℕ x)) → leq-ℕ (quotient-div-ℕ p (succ-ℕ x) H) x
-leq-quotient-div-is-prime-ℕ p x P H = {!!}
+leq-quotient-div-is-prime-ℕ = {!!}
 ```
 
 ## See also

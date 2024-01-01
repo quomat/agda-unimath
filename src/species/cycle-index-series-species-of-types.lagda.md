@@ -32,17 +32,17 @@ of fixed points of `F e`.
 total-type-family-of-cyclic-types :
   {l1 l2 : Level} (X : UU l1) (C : X → Σ ℕ (Cyclic-Type l2)) →
   UU (l1 ⊔ l2)
-total-type-family-of-cyclic-types X C = {!!}
+total-type-family-of-cyclic-types = {!!}
 
 {-
 permutation-family-of-cyclic-types :
   {l1 l2 : Level} (X : 𝔽 l1) (C : type-𝔽 X → Σ ℕ (Cyclic-Type l2)) →
   Aut (total-type-family-of-cyclic-types X C)
-permutation-family-of-cyclic-types X C = {!!}
+permutation-family-of-cyclic-types = {!!}
 
 cycle-index-series-species-types :
   {l1 l2 : Level} (F : species-types l1 l2) (X : 𝔽 l1) →
   (type-𝔽 X → Σ ℕ (Cyclic-Type {!!} ∘ succ-ℕ)) →
   UU {!!}
-cycle-index-series-species-types F X C = {!!}
+cycle-index-series-species-types = {!!}
 ```

@@ -54,7 +54,7 @@ module _
 
 is-finite-total-order-Poset-Prop :
   {l1 l2 : Level} (P : Poset l1 l2) → Prop (l1 ⊔ l2)
-is-finite-total-order-Poset-Prop P = {!!}
+is-finite-total-order-Poset-Prop = {!!}
 
 Total-Order-𝔽 : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
 Total-Order-𝔽 l1 l2 = {!!}
@@ -72,8 +72,7 @@ is-total-Total-Order-𝔽 = {!!}
 
 total-order-Total-Order-𝔽 :
   {l1 l2 : Level} → Total-Order-𝔽 l1 l2 → Total-Order l1 l2
-pr1 (total-order-Total-Order-𝔽 P) = {!!}
-pr2 (total-order-Total-Order-𝔽 P) = {!!}
+total-order-Total-Order-𝔽 = {!!}
 
 type-Total-Order-𝔽 :
   {l1 l2 : Level} → Total-Order-𝔽 l1 l2 → UU l1

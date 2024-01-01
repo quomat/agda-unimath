@@ -43,21 +43,21 @@ such that both `i` and `h` are involutions.
 involution-over :
   {l1 l2 l3 : Level} {A : UU l1} {X : UU l2} {Y : UU l3} →
   (A → X) → (A → Y) → (X → Y) → UU (l1 ⊔ l3)
-involution-over {A = A} f g i = {!!}
+involution-over = {!!}
 
 fibered-involution :
   {l1 l2 : Level} {A : UU l1} {X : UU l2} →
   (A → X) → (A → X) → UU (l1 ⊔ l2)
-fibered-involution {X = X} f g = {!!}
+fibered-involution = {!!}
 
 is-fiberwise-involution :
   {l1 l2 : Level} {X : UU l1} {P : X → UU l2} →
   ((x : X) → P x → P x) → UU (l1 ⊔ l2)
-is-fiberwise-involution {X = X} f = {!!}
+is-fiberwise-involution = {!!}
 
 fam-involution :
   {l1 l2 : Level} {X : UU l1} (P : X → UU l2) → UU (l1 ⊔ l2)
-fam-involution {X = X} P = {!!}
+fam-involution = {!!}
 ```
 
 ```agda
@@ -88,7 +88,7 @@ module _
   equiv-Σ-is-fibered-involution-fibered-map-fibered-involution :
     ( fibered-involution f g) ≃
     ( Σ (fibered-map f g) (is-fibered-involution-fibered-map))
-  pr1 equiv-Σ-is-fibered-involution-fibered-map-fibered-involution = {!!}
+  equiv-Σ-is-fibered-involution-fibered-map-fibered-involution = {!!}
 
   is-equiv-map-fibered-involution-Σ-is-fibered-involution-fibered-map :
     is-equiv (map-fibered-involution-Σ-is-fibered-involution-fibered-map)
@@ -97,7 +97,7 @@ module _
   equiv-fibered-involution-Σ-is-fibered-involution-fibered-map :
     ( Σ (fibered-map f g) (is-fibered-involution-fibered-map)) ≃
     ( fibered-involution f g)
-  pr1 equiv-fibered-involution-Σ-is-fibered-involution-fibered-map = {!!}
+  equiv-fibered-involution-Σ-is-fibered-involution-fibered-map = {!!}
 ```
 
 ## Examples
@@ -105,9 +105,7 @@ module _
 ```agda
 self-fibered-involution :
   {l1 l2 : Level} {A : UU l1} → involution A → fibered-involution id id
-pr1 (self-fibered-involution e) = {!!}
-pr1 (pr2 (self-fibered-involution e)) = {!!}
-pr2 (pr2 (self-fibered-involution e)) = {!!}
+self-fibered-involution = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2}

@@ -42,7 +42,7 @@ We construct the **involutive type of H-space structures** on a pointed type.
 ```agda
 h-space-Involutive-Type :
   {l1 : Level} (A : Pointed-Type l1) (X : 2-Element-Type lzero) → UU l1
-h-space-Involutive-Type A X = {!!}
+h-space-Involutive-Type = {!!}
 ```
 
 ## Properties
@@ -56,34 +56,34 @@ module _
 
   htpy-h-space-Involutive-Type :
     (μ μ' : h-space-Involutive-Type A X) → UU l1
-  htpy-h-space-Involutive-Type μ μ' = {!!}
+  htpy-h-space-Involutive-Type = {!!}
 
   refl-htpy-h-space-Involutive-Type :
     (μ : h-space-Involutive-Type A X) → htpy-h-space-Involutive-Type μ μ
-  pr1 (refl-htpy-h-space-Involutive-Type (μ , unit-laws-μ , coh-μ)) f = {!!}
+  refl-htpy-h-space-Involutive-Type = {!!}
 
   is-torsorial-htpy-h-space-Involutive-Type :
     ( μ : h-space-Involutive-Type A X) →
     is-torsorial (htpy-h-space-Involutive-Type μ)
-  is-torsorial-htpy-h-space-Involutive-Type (μ , ν , ρ) = {!!}
+  is-torsorial-htpy-h-space-Involutive-Type = {!!}
 
   htpy-eq-h-space-Involutive-Type :
     (μ μ' : h-space-Involutive-Type A X) →
     (μ ＝ μ') → htpy-h-space-Involutive-Type μ μ'
-  htpy-eq-h-space-Involutive-Type μ .μ refl = {!!}
+  htpy-eq-h-space-Involutive-Type = {!!}
 
   is-equiv-htpy-eq-h-space-Involutive-Type :
     (μ μ' : h-space-Involutive-Type A X) →
     is-equiv (htpy-eq-h-space-Involutive-Type μ μ')
-  is-equiv-htpy-eq-h-space-Involutive-Type μ = {!!}
+  is-equiv-htpy-eq-h-space-Involutive-Type = {!!}
 
   extensionality-h-space-Involutive-Type :
     (μ μ' : h-space-Involutive-Type A X) →
     (μ ＝ μ') ≃ htpy-h-space-Involutive-Type μ μ'
-  pr1 (extensionality-h-space-Involutive-Type μ μ') = {!!}
+  extensionality-h-space-Involutive-Type = {!!}
 
   eq-htpy-h-space-Involutive-Type :
     (μ μ' : h-space-Involutive-Type A X) →
     htpy-h-space-Involutive-Type μ μ' → μ ＝ μ'
-  eq-htpy-h-space-Involutive-Type μ μ' = {!!}
+  eq-htpy-h-space-Involutive-Type = {!!}
 ```

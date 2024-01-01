@@ -207,7 +207,7 @@ natural-isomorphism-eq-Category :
   (D : Category l3 l4)
   (F G : functor-Category C D) →
   F ＝ G → natural-isomorphism-Category C D F G
-natural-isomorphism-eq-Category C D F .F refl = {!!}
+natural-isomorphism-eq-Category = {!!}
 ```
 
 ## Propositions
@@ -257,7 +257,7 @@ module _
     ( natural-transformation-natural-isomorphism-Category C D F G f ＝
       natural-transformation-natural-isomorphism-Category C D F G g) →
     f ＝ g
-  eq-eq-natural-transformation-natural-isomorphism-Category f g = {!!}
+  eq-eq-natural-transformation-natural-isomorphism-Category = {!!}
 
   eq-htpy-hom-family-natural-isomorphism-Category :
         (f g : natural-isomorphism-Category C D F G) →
@@ -328,7 +328,7 @@ module _
     (is-iso-f : is-natural-isomorphism-Category C D F G f) →
     is-natural-isomorphism-Category C D G F
       ( natural-transformation-inv-is-natural-isomorphism-Category is-iso-f)
-  is-natural-isomorphism-inv-is-natural-isomorphism-Category is-iso-f = {!!}
+  is-natural-isomorphism-inv-is-natural-isomorphism-Category = {!!}
 ```
 
 ### Inverses of natural isomorphisms
@@ -367,7 +367,7 @@ module _
 
   inv-natural-isomorphism-Category :
     natural-isomorphism-Category C D G F
-  pr1 inv-natural-isomorphism-Category = {!!}
+  inv-natural-isomorphism-Category = {!!}
 ```
 
 ### Natural isomorphisms are closed under composition
@@ -549,5 +549,5 @@ module _
     comp-natural-isomorphism-Category C D F G H
       ( natural-isomorphism-eq-Category C D G H q)
       ( natural-isomorphism-eq-Category C D F G p)
-  preserves-concat-natural-isomorphism-eq-Category refl q = {!!}
+  preserves-concat-natural-isomorphism-eq-Category = {!!}
 ```

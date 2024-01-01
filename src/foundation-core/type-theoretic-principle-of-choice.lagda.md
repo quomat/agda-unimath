@@ -79,11 +79,11 @@ module _
 
   is-section-map-inv-distributive-Π-Σ :
     map-distributive-Π-Σ ∘ map-inv-distributive-Π-Σ ~ id
-  is-section-map-inv-distributive-Π-Σ (ψ , ψ') = {!!}
+  is-section-map-inv-distributive-Π-Σ = {!!}
 
   is-retraction-map-inv-distributive-Π-Σ :
     map-inv-distributive-Π-Σ ∘ map-distributive-Π-Σ ~ id
-  is-retraction-map-inv-distributive-Π-Σ φ = {!!}
+  is-retraction-map-inv-distributive-Π-Σ = {!!}
 
   abstract
     is-equiv-map-distributive-Π-Σ : is-equiv (map-distributive-Π-Σ)
@@ -109,21 +109,21 @@ module _
 
   map-distributive-implicit-Π-Σ :
     implicit-Π-total-fam C → universally-structured-implicit-Π C
-  pr1 (map-distributive-implicit-Π-Σ φ) {x} = {!!}
+  map-distributive-implicit-Π-Σ = {!!}
 
   map-inv-distributive-implicit-Π-Σ :
     universally-structured-implicit-Π C → implicit-Π-total-fam C
-  pr1 (map-inv-distributive-implicit-Π-Σ ψ {x}) = {!!}
+  map-inv-distributive-implicit-Π-Σ = {!!}
 
   is-section-map-inv-distributive-implicit-Π-Σ :
     ( ( map-distributive-implicit-Π-Σ) ∘
       ( map-inv-distributive-implicit-Π-Σ)) ~ id
-  is-section-map-inv-distributive-implicit-Π-Σ (ψ , ψ') = {!!}
+  is-section-map-inv-distributive-implicit-Π-Σ = {!!}
 
   is-retraction-map-inv-distributive-implicit-Π-Σ :
     ( ( map-inv-distributive-implicit-Π-Σ) ∘
       ( map-distributive-implicit-Π-Σ)) ~ id
-  is-retraction-map-inv-distributive-implicit-Π-Σ φ = {!!}
+  is-retraction-map-inv-distributive-implicit-Π-Σ = {!!}
 
   abstract
     is-equiv-map-distributive-implicit-Π-Σ :
@@ -132,7 +132,7 @@ module _
 
   distributive-implicit-Π-Σ :
     implicit-Π-total-fam C ≃ universally-structured-implicit-Π C
-  pr1 distributive-implicit-Π-Σ = {!!}
+  distributive-implicit-Π-Σ = {!!}
 
   abstract
     is-equiv-map-inv-distributive-implicit-Π-Σ :
@@ -141,7 +141,7 @@ module _
 
   inv-distributive-implicit-Π-Σ :
     (universally-structured-implicit-Π C) ≃ (implicit-Π-total-fam C)
-  pr1 inv-distributive-implicit-Π-Σ = {!!}
+  inv-distributive-implicit-Π-Σ = {!!}
 ```
 
 ### Ordinary functions into a Σ-type
@@ -160,5 +160,5 @@ module _
 
   equiv-mapping-into-Σ :
     (A → Σ B C) ≃ Σ (A → B) (λ f → (x : A) → C (f x))
-  pr1 equiv-mapping-into-Σ = {!!}
+  equiv-mapping-into-Σ = {!!}
 ```

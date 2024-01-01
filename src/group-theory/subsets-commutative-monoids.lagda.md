@@ -29,7 +29,7 @@ A subset of a commutative monoid `M` is a subset of the underlying type of `M`.
 ```agda
 subset-Commutative-Monoid :
   {l1 : Level} (l2 : Level) (M : Commutative-Monoid l1) → UU (l1 ⊔ lsuc l2)
-subset-Commutative-Monoid l2 M = {!!}
+subset-Commutative-Monoid = {!!}
 
 module _
   {l1 l2 : Level} (M : Commutative-Monoid l1)

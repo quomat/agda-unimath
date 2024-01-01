@@ -44,7 +44,7 @@ module _
 
   coherence-square-identifications :
     (top : x ＝ y) (left : x ＝ z) (right : y ＝ w) (bottom : z ＝ w) → UU l
-  coherence-square-identifications top left right bottom = {!!}
+  coherence-square-identifications = {!!}
 ```
 
 ## Operations
@@ -68,7 +68,7 @@ module _
     coherence-square-identifications q-top middle q-right q-bottom →
     coherence-square-identifications
       (p-top ∙ q-top) p-left q-right (p-bottom ∙ q-bottom)
-  coherence-square-identifications-comp-horizontal p q = {!!}
+  coherence-square-identifications-comp-horizontal = {!!}
 
 module _
   {l : Level} {A : UU l} {x y1 y2 z1 z2 w : A}
@@ -83,7 +83,7 @@ module _
     coherence-square-identifications middle q-left q-right q-bottom →
     coherence-square-identifications
       p-top (p-left ∙ q-left) (p-right ∙ q-right) q-bottom
-  coherence-square-identifications-comp-vertical p q = {!!}
+  coherence-square-identifications-comp-vertical = {!!}
 ```
 
 ### Pasting of identifications along edges of squares of identifications
@@ -102,25 +102,25 @@ module _
     {left' : x ＝ z} (s : left ＝ left') →
     coherence-square-identifications top left right bottom →
     coherence-square-identifications top left' right bottom
-  coherence-square-identifications-left-paste refl sq = {!!}
+  coherence-square-identifications-left-paste = {!!}
 
   coherence-square-identifications-bottom-paste :
     {bottom' : z ＝ w} (s : bottom ＝ bottom') →
     coherence-square-identifications top left right bottom →
     coherence-square-identifications top left right bottom'
-  coherence-square-identifications-bottom-paste refl sq = {!!}
+  coherence-square-identifications-bottom-paste = {!!}
 
   coherence-square-identifications-top-paste :
     {top' : x ＝ y} (s : top ＝ top') →
     coherence-square-identifications top left right bottom →
     coherence-square-identifications top' left right bottom
-  coherence-square-identifications-top-paste refl sq = {!!}
+  coherence-square-identifications-top-paste = {!!}
 
   coherence-square-identifications-right-paste :
     {right' : y ＝ w} (s : right ＝ right') →
     coherence-square-identifications top left right bottom →
     coherence-square-identifications top left right' bottom
-  coherence-square-identifications-right-paste refl sq = {!!}
+  coherence-square-identifications-right-paste = {!!}
 ```
 
 ### Whiskering squares of identifications
@@ -138,31 +138,31 @@ module _
     {x' : A} (p : x' ＝ x) →
     coherence-square-identifications top left right bottom →
     coherence-square-identifications (p ∙ top) (p ∙ left) right bottom
-  coherence-square-identifications-top-left-whisk' refl sq = {!!}
+  coherence-square-identifications-top-left-whisk' = {!!}
 
   coherence-square-identifications-top-left-whisk :
     {x' : A} (p : x ＝ x') →
     coherence-square-identifications top left right bottom →
     coherence-square-identifications (inv p ∙ top) (inv p ∙ left) right bottom
-  coherence-square-identifications-top-left-whisk refl sq = {!!}
+  coherence-square-identifications-top-left-whisk = {!!}
 
   coherence-square-identifications-top-right-whisk :
     {y' : A} (p : y ＝ y') →
     coherence-square-identifications top left right bottom →
     coherence-square-identifications (top ∙ p) left (inv p ∙ right) bottom
-  coherence-square-identifications-top-right-whisk refl = {!!}
+  coherence-square-identifications-top-right-whisk = {!!}
 
   coherence-square-identifications-bottom-left-whisk :
     {z' : A} (p : z ＝ z') →
     coherence-square-identifications top left right bottom →
     coherence-square-identifications top (left ∙ p) right (inv p ∙ bottom)
-  coherence-square-identifications-bottom-left-whisk refl = {!!}
+  coherence-square-identifications-bottom-left-whisk = {!!}
 
   coherence-square-identifications-bottom-right-whisk :
     {w' : A} (p : w ＝ w') →
     coherence-square-identifications top left right bottom →
     coherence-square-identifications top left (right ∙ p) (bottom ∙ p)
-  coherence-square-identifications-bottom-right-whisk refl = {!!}
+  coherence-square-identifications-bottom-right-whisk = {!!}
 ```
 
 ### Inverting squares of identifications
@@ -176,7 +176,7 @@ module _
     (top : x ＝ y) (left : x ＝ z) (right : y ＝ w) (bottom : z ＝ w) →
     coherence-square-identifications top left right bottom →
     coherence-square-identifications (inv top) right left (inv bottom)
-  coherence-square-identifications-horizontal-inv refl refl right refl coh = {!!}
+  coherence-square-identifications-horizontal-inv = {!!}
 ```
 
 ### Functions acting on squares of identifications
@@ -194,5 +194,5 @@ module _
       ( ap f left)
       ( ap f right)
       ( ap f bottom)
-  coherence-square-identifications-ap refl refl right refl coh = {!!}
+  coherence-square-identifications-ap = {!!}
 ```

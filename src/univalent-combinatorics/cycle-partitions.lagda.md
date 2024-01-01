@@ -31,7 +31,7 @@ permutations of `A`.
 ```agda
 cyclic-partition-𝔽 :
   {l : Level} (l2 l3 : Level) → 𝔽 l → UU (l ⊔ lsuc l2 ⊔ lsuc l3)
-cyclic-partition-𝔽 l2 l3 X = {!!}
+cyclic-partition-𝔽 = {!!}
 
 module _
   {l1 l2 l3 : Level} (X : 𝔽 l1) (C : cyclic-partition-𝔽 l2 l3 X)
@@ -45,16 +45,16 @@ module _
 
   order-cycle-cyclic-partition-𝔽 :
     indexing-type-cyclic-partition-𝔽 → ℕ
-  order-cycle-cyclic-partition-𝔽 y = {!!}
+  order-cycle-cyclic-partition-𝔽 = {!!}
 
   cycle-cyclic-partition-𝔽 :
     (y : indexing-type-cyclic-partition-𝔽) →
     Cyclic-Type l3 (order-cycle-cyclic-partition-𝔽 y)
-  cycle-cyclic-partition-𝔽 y = {!!}
+  cycle-cyclic-partition-𝔽 = {!!}
 
   type-cycle-cyclic-partition-𝔽 :
     indexing-type-cyclic-partition-𝔽 → UU l3
-  type-cycle-cyclic-partition-𝔽 y = {!!}
+  type-cycle-cyclic-partition-𝔽 = {!!}
 
   equiv-cyclic-partition-𝔽 :
     type-𝔽 X ≃ Σ indexing-type-cyclic-partition-𝔽 type-cycle-cyclic-partition-𝔽

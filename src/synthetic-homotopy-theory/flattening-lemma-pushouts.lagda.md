@@ -105,7 +105,7 @@ module _
       ( vertical-map-span-flattening-pushout)
       ( horizontal-map-span-flattening-pushout)
       ( Σ X P)
-  pr1 cocone-flattening-pushout = {!!}
+  cocone-flattening-pushout = {!!}
 
   flattening-lemma-pushout-statement : UUω
   flattening-lemma-pushout-statement = {!!}
@@ -155,7 +155,7 @@ module _
       ( vertical-map-span-flattening-descent-data-pushout)
       ( horizontal-map-span-flattening-descent-data-pushout)
       ( Σ X Q)
-  pr1 cocone-flattening-descent-data-pushout = {!!}
+  cocone-flattening-descent-data-pushout = {!!}
 
   flattening-lemma-descent-data-pushout-statement : UUω
   flattening-lemma-descent-data-pushout-statement = {!!}
@@ -183,7 +183,7 @@ module _
       ( vertical-map-span-flattening-pushout P f g c)
       ( horizontal-map-span-flattening-pushout P f g c)
       ( Y)
-  cocone-map-flattening-pushout Y = {!!}
+  cocone-map-flattening-pushout = {!!}
 
   comparison-dependent-cocone-ind-Σ-cocone :
     { l : Level} (Y : UU l) →
@@ -195,7 +195,7 @@ module _
             ( k (f s) t) ＝
             ( l (g s) (tr P (coherence-square-cocone f g c s) t)))) ≃
     dependent-cocone f g c (λ x → P x → Y)
-  comparison-dependent-cocone-ind-Σ-cocone Y = {!!}
+  comparison-dependent-cocone-ind-Σ-cocone = {!!}
 
   triangle-comparison-dependent-cocone-ind-Σ-cocone :
     { l : Level} (Y : UU l) →
@@ -203,11 +203,11 @@ module _
       ( dependent-cocone-map f g c (λ x → P x → Y))
       ( map-equiv (comparison-dependent-cocone-ind-Σ-cocone Y))
       ( map-equiv equiv-ev-pair³ ∘ cocone-map-flattening-pushout Y ∘ ind-Σ)
-  triangle-comparison-dependent-cocone-ind-Σ-cocone Y h = {!!}
+  triangle-comparison-dependent-cocone-ind-Σ-cocone = {!!}
 
   flattening-lemma-pushout :
     flattening-lemma-pushout-statement P f g c
-  flattening-lemma-pushout dup-pushout Y = {!!}
+  flattening-lemma-pushout = {!!}
 ```
 
 ### Proof of the descent data statement of the flattening lemma
@@ -267,9 +267,9 @@ module _
       ( refl-htpy)
       ( refl-htpy)
       ( coherence-square-cocone-flattening-pushout Q f g c)
-  coherence-cube-flattening-lemma-descent-data-pushout (s , t) = {!!}
+  coherence-cube-flattening-lemma-descent-data-pushout = {!!}
 
   flattening-lemma-descent-data-pushout :
     flattening-lemma-descent-data-pushout-statement f g c P Q e
-  flattening-lemma-descent-data-pushout dup-pushout = {!!}
+  flattening-lemma-descent-data-pushout = {!!}
 ```

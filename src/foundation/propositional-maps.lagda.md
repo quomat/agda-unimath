@@ -80,8 +80,7 @@ comp-prop-map :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2}
   {X : UU l3} (g : prop-map B X) (h : prop-map A B) →
   prop-map A X
-pr1 (comp-prop-map g h) = {!!}
-pr2 (comp-prop-map g h) = {!!}
+comp-prop-map = {!!}
 ```
 
 ### In a commuting triangle `f ~ g ∘ h`, if `g` and `h` are propositional maps, then `f` is a propositional map
@@ -130,5 +129,5 @@ abstract
   is-trunc-map-is-prop-map :
     {l1 l2 : Level} (k : 𝕋) {A : UU l1} {B : UU l2} {f : A → B} →
     is-prop-map f → is-trunc-map (succ-𝕋 k) f
-  is-trunc-map-is-prop-map neg-two-𝕋 H = {!!}
+  is-trunc-map-is-prop-map = {!!}
 ```

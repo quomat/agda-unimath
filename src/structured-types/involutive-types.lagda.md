@@ -45,5 +45,5 @@ module _
 ```agda
 involutive-structure :
   {l1 : Level} (l2 : Level) (X : UU l1) → UU (l1 ⊔ lsuc l2)
-involutive-structure l2 X = {!!}
+involutive-structure = {!!}
 ```

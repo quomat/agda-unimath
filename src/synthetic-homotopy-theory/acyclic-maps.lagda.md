@@ -126,12 +126,12 @@ module _
   is-emb-const-is-acyclic :
     is-acyclic A →
     {l' : Level} (X : UU l') → is-emb (const A X)
-  is-emb-const-is-acyclic ac X = {!!}
+  is-emb-const-is-acyclic = {!!}
 
   is-acyclic-is-emb-const :
     ({l' : Level} (X : UU l') → is-emb (const A X)) →
     is-acyclic A
-  is-acyclic-is-emb-const e = {!!}
+  is-acyclic-is-emb-const = {!!}
 ```
 
 ### A type is acyclic if and only if the constant map from any identity type is an equivalence
@@ -153,12 +153,12 @@ module _
   is-equiv-const-Id-is-acyclic :
     is-acyclic A →
     {l' : Level} {X : UU l'} (x y : X) → is-equiv (const A (x ＝ y))
-  is-equiv-const-Id-is-acyclic ac {X = X} x y = {!!}
+  is-equiv-const-Id-is-acyclic = {!!}
 
   is-acyclic-is-equiv-const-Id :
     ({l' : Level} {X : UU l'} (x y : X) → is-equiv (const A (x ＝ y))) →
     is-acyclic A
-  is-acyclic-is-equiv-const-Id h = {!!}
+  is-acyclic-is-equiv-const-Id = {!!}
 ```
 
 ### A map is acyclic if and only if it is an [dependent epimorphism](foundation.dependent-epimorphisms.md)
@@ -188,11 +188,11 @@ module _
 
   is-acyclic-map-is-dependent-epimorphism :
     is-dependent-epimorphism f → is-acyclic-map f
-  is-acyclic-map-is-dependent-epimorphism e = {!!}
+  is-acyclic-map-is-dependent-epimorphism = {!!}
 
   is-dependent-epimorphism-is-acyclic-map :
     is-acyclic-map f → is-dependent-epimorphism f
-  is-dependent-epimorphism-is-acyclic-map ac C = {!!}
+  is-dependent-epimorphism-is-acyclic-map = {!!}
 ```
 
 In particular, every epimorphism is actually a dependent epimorphism.
@@ -204,7 +204,7 @@ module _
 
   is-dependent-epimorphism-is-epimorphism :
     is-epimorphism f → is-dependent-epimorphism f
-  is-dependent-epimorphism-is-epimorphism e = {!!}
+  is-dependent-epimorphism-is-epimorphism = {!!}
 ```
 
 ### The class of acyclic maps is closed under composition and has the right cancellation property
@@ -220,11 +220,11 @@ module _
 
   is-acyclic-map-comp :
     is-acyclic-map g → is-acyclic-map f → is-acyclic-map (g ∘ f)
-  is-acyclic-map-comp ag af = {!!}
+  is-acyclic-map-comp = {!!}
 
   is-acyclic-map-left-factor :
     is-acyclic-map (g ∘ f) → is-acyclic-map f → is-acyclic-map g
-  is-acyclic-map-left-factor ac af = {!!}
+  is-acyclic-map-left-factor = {!!}
 ```
 
 ### Acyclic maps are closed under pushouts
@@ -271,13 +271,13 @@ module _
     is-acyclic-map f →
     {l5 : Level} (X : UU l5) →
     cocone f (vertical-map-cocone f g c ∘ g) X ≃ (C → X)
-  equiv-cocone-postcomp-vertical-map-cocone ac X = {!!}
+  equiv-cocone-postcomp-vertical-map-cocone = {!!}
 
   is-acyclic-map-vertical-map-cocone-is-pushout :
     is-pushout f g c →
     is-acyclic-map f →
     is-acyclic-map (vertical-map-cocone f g c)
-  is-acyclic-map-vertical-map-cocone-is-pushout po ac = {!!}
+  is-acyclic-map-vertical-map-cocone-is-pushout = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {S : UU l1} {A : UU l2} {B : UU l3}
@@ -288,7 +288,7 @@ module _
     is-pushout f g c →
     is-acyclic-map g →
     is-acyclic-map (horizontal-map-cocone f g c)
-  is-acyclic-map-horizontal-map-cocone-is-pushout po = {!!}
+  is-acyclic-map-horizontal-map-cocone-is-pushout = {!!}
 ```
 
 ### Acyclic maps are closed under pullbacks
@@ -303,7 +303,7 @@ module _
     is-pullback f g c →
     is-acyclic-map g →
     is-acyclic-map (vertical-map-cone f g c)
-  is-acyclic-map-vertical-map-cone-is-pullback pb ac a = {!!}
+  is-acyclic-map-vertical-map-cone-is-pullback = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {A : UU l1} {B : UU l2} {C : UU l3}
@@ -314,7 +314,7 @@ module _
     is-pullback f g c →
     is-acyclic-map f →
     is-acyclic-map (horizontal-map-cone f g c)
-  is-acyclic-map-horizontal-map-cone-is-pullback pb = {!!}
+  is-acyclic-map-horizontal-map-cone-is-pullback = {!!}
 ```
 
 ### Acyclic types are closed under dependent pair types
@@ -326,7 +326,7 @@ module _
 
   is-acyclic-Σ :
     is-acyclic A → ((a : A) → is-acyclic (B a)) → is-acyclic (Σ A B)
-  is-acyclic-Σ ac-A ac-B = {!!}
+  is-acyclic-Σ = {!!}
 ```
 
 ### Acyclic types are closed under binary products
@@ -338,7 +338,7 @@ module _
 
   is-acyclic-prod :
     is-acyclic A → is-acyclic B → is-acyclic (A × B)
-  is-acyclic-prod ac-A ac-B = {!!}
+  is-acyclic-prod = {!!}
 ```
 
 ### Inhabited, locally acyclic types are acyclic
@@ -352,7 +352,7 @@ module _
     is-inhabited A →
     ((a b : A) → is-acyclic (a ＝ b)) →
     is-acyclic A
-  is-acyclic-inhabited-is-acyclic-Id h l-ac = {!!}
+  is-acyclic-inhabited-is-acyclic-Id = {!!}
 ```
 
 ## See also

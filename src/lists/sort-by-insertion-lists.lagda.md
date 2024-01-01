@@ -40,7 +40,7 @@ module _
 
   insertion-sort-list :
     list (type-Decidable-Total-Order X) → list (type-Decidable-Total-Order X)
-  insertion-sort-list l = {!!}
+  insertion-sort-list = {!!}
 ```
 
 ## Properties

@@ -37,7 +37,7 @@ A **poset** is a [set](foundation-core.sets.md)
 ```agda
 is-antisymmetric-leq-Preorder :
   {l1 l2 : Level} (P : Preorder l1 l2) → UU (l1 ⊔ l2)
-is-antisymmetric-leq-Preorder P = {!!}
+is-antisymmetric-leq-Preorder = {!!}
 
 Poset : (l1 l2 : Level) → UU (lsuc l1 ⊔ lsuc l2)
 Poset l1 l2 = {!!}
@@ -129,7 +129,7 @@ step-calculate-in-Poset :
   {l1 l2 : Level} (X : Poset l1 l2)
   {x y : type-Poset X} → leq-Poset X x y →
   (z : type-Poset X) → leq-Poset X y z → leq-Poset X x z
-step-calculate-in-Poset X {x} {y} u z v = {!!}
+step-calculate-in-Poset = {!!}
 
 syntax step-calculate-in-Poset X u z v = {!!}
 ```

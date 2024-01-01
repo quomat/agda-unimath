@@ -37,11 +37,11 @@ module _
 
   trivial-inhabited-Σ-Decomposition :
     (p : is-inhabited A) → Σ-Decomposition l2 l1 A
-  pr1 (trivial-inhabited-Σ-Decomposition p) = {!!}
+  trivial-inhabited-Σ-Decomposition = {!!}
 
   trivial-empty-Σ-Decomposition :
     (p : is-empty A) → Σ-Decomposition lzero lzero A
-  pr1 (trivial-empty-Σ-Decomposition p) = {!!}
+  trivial-empty-Σ-Decomposition = {!!}
 
 module _
   {l1 l2 l3 : Level} {A : UU l1}
@@ -57,11 +57,11 @@ module _
 is-trivial-trivial-inhabited-Σ-Decomposition :
   {l1 l2 : Level} {A : UU l1} (p : is-inhabited A) →
   is-trivial-Σ-Decomposition (trivial-inhabited-Σ-Decomposition l2 A p)
-is-trivial-trivial-inhabited-Σ-Decomposition p = {!!}
+is-trivial-trivial-inhabited-Σ-Decomposition = {!!}
 
 type-trivial-Σ-Decomposition :
   {l1 l2 l3 : Level} {A : UU l1} → UU (l1 ⊔ lsuc l2 ⊔ lsuc l3)
-type-trivial-Σ-Decomposition {l1} {l2} {l3} {A} = {!!}
+type-trivial-Σ-Decomposition = {!!}
 ```
 
 ## Propositions
@@ -83,12 +83,11 @@ module _
         ( l4)
         ( A)
         ( is-inhabited-base-type-is-trivial-Σ-Decomposition))
-  pr1 equiv-trivial-is-trivial-Σ-Decomposition = {!!}
+  equiv-trivial-is-trivial-Σ-Decomposition = {!!}
 
 is-contr-type-trivial-Σ-Decomposition :
   {l1 l2 : Level} {A : UU l1} →
   (p : is-inhabited A) →
   is-contr (type-trivial-Σ-Decomposition {l1} {l2} {l1} {A})
-pr1 ( is-contr-type-trivial-Σ-Decomposition {l1} {l2} {A} p) = {!!}
-pr2 ( is-contr-type-trivial-Σ-Decomposition {l1} {l2} {A} p) x = {!!}
+is-contr-type-trivial-Σ-Decomposition = {!!}
 ```

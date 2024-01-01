@@ -148,5 +148,5 @@ module _
   dependent-universal-property-universal-property-coequalizer :
     ( {l : Level} → universal-property-coequalizer l f g e) →
     ( {l : Level} → dependent-universal-property-coequalizer l f g e)
-  dependent-universal-property-universal-property-coequalizer up-coequalizer = {!!}
+  dependent-universal-property-universal-property-coequalizer = {!!}
 ```

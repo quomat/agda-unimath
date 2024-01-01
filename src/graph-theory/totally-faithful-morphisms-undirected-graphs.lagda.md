@@ -35,7 +35,7 @@ module _
 
   is-totally-faithful-hom-Undirected-Graph :
     hom-Undirected-Graph G H → UU (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l4)
-  is-totally-faithful-hom-Undirected-Graph f = {!!}
+  is-totally-faithful-hom-Undirected-Graph = {!!}
 
   totally-faithful-hom-Undirected-Graph : UU (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l3 ⊔ l4)
   totally-faithful-hom-Undirected-Graph = {!!}

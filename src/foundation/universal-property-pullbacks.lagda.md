@@ -60,7 +60,7 @@ module _
     htpy-cone f g
       ( cone-map f g c (map-universal-property-pullback f g c up c'))
       ( c')
-  htpy-cone-map-universal-property-pullback c up c' = {!!}
+  htpy-cone-map-universal-property-pullback = {!!}
 ```
 
 ### Uniquely uniqueness of pullbacks
@@ -78,7 +78,7 @@ module _
       ( up-c : universal-property-pullback f g c) →
       is-contr
         ( Σ (C' ≃ C) (λ e → htpy-cone f g (cone-map f g c (map-equiv e)) c'))
-    uniquely-unique-pullback c' c up-c' up-c = {!!}
+    uniquely-unique-pullback = {!!}
 ```
 
 ## Table of files about pullbacks

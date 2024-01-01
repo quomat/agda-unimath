@@ -47,16 +47,16 @@ An **ideal** in a [ring](ring-theory.rings.md) `R` is a submodule of `R`.
 ```agda
 is-ideal-subset-Ring :
   {l1 l2 : Level} (R : Ring l1) (P : subset-Ring l2 R) → UU (l1 ⊔ l2)
-is-ideal-subset-Ring R P = {!!}
+is-ideal-subset-Ring = {!!}
 
 is-prop-is-ideal-subset-Ring :
   {l1 l2 : Level} (R : Ring l1) (P : subset-Ring l2 R) →
   is-prop (is-ideal-subset-Ring R P)
-is-prop-is-ideal-subset-Ring R P = {!!}
+is-prop-is-ideal-subset-Ring = {!!}
 
 ideal-Ring :
   (l : Level) {l1 : Level} (R : Ring l1) → UU ((lsuc l) ⊔ l1)
-ideal-Ring l R = {!!}
+ideal-Ring = {!!}
 
 module _
   {l1 l2 : Level} (R : Ring l1) (I : ideal-Ring l2 R)
@@ -157,7 +157,7 @@ module _
 
   has-same-elements-eq-ideal-Ring :
     (J : ideal-Ring l2 R) → (I ＝ J) → has-same-elements-ideal-Ring R I J
-  has-same-elements-eq-ideal-Ring .I refl = {!!}
+  has-same-elements-eq-ideal-Ring = {!!}
 
   is-equiv-has-same-elements-eq-ideal-Ring :
     (J : ideal-Ring l2 R) → is-equiv (has-same-elements-eq-ideal-Ring J)
@@ -165,11 +165,11 @@ module _
 
   extensionality-ideal-Ring :
     (J : ideal-Ring l2 R) → (I ＝ J) ≃ has-same-elements-ideal-Ring R I J
-  pr1 (extensionality-ideal-Ring J) = {!!}
+  extensionality-ideal-Ring = {!!}
 
   eq-has-same-elements-ideal-Ring :
     (J : ideal-Ring l2 R) → has-same-elements-ideal-Ring R I J → I ＝ J
-  eq-has-same-elements-ideal-Ring J = {!!}
+  eq-has-same-elements-ideal-Ring = {!!}
 ```
 
 ### Two sided ideals of rings are in 1-1 correspondence with congruence relations
@@ -257,7 +257,7 @@ module _
     ( is-in-ideal-Ring R I (add-Ring R (neg-Ring R u) v)) →
     ( is-in-ideal-Ring R I
       ( add-Ring R (neg-Ring R (mul-Ring R x u)) (mul-Ring R y v)))
-  is-congruence-monoid-mul-congruence-ideal-Ring {x} {y} {u} {v} e f = {!!}
+  is-congruence-monoid-mul-congruence-ideal-Ring = {!!}
 
   mul-congruence-ideal-Ring :
     ( is-congruence-Monoid
@@ -288,23 +288,23 @@ module _
 
   is-closed-under-addition-subset-congruence-Ring :
     is-closed-under-addition-subset-Ring R subset-congruence-Ring
-  is-closed-under-addition-subset-congruence-Ring H K = {!!}
+  is-closed-under-addition-subset-congruence-Ring = {!!}
 
   is-closed-under-negatives-subset-congruence-Ring :
     is-closed-under-negatives-subset-Ring R subset-congruence-Ring
-  is-closed-under-negatives-subset-congruence-Ring H = {!!}
+  is-closed-under-negatives-subset-congruence-Ring = {!!}
 
   is-closed-under-left-multiplication-subset-congruence-Ring :
     is-closed-under-left-multiplication-subset-Ring R subset-congruence-Ring
-  is-closed-under-left-multiplication-subset-congruence-Ring x y H = {!!}
+  is-closed-under-left-multiplication-subset-congruence-Ring = {!!}
 
   is-closed-under-right-multiplication-subset-congruence-Ring :
     is-closed-under-right-multiplication-subset-Ring R subset-congruence-Ring
-  is-closed-under-right-multiplication-subset-congruence-Ring x y H = {!!}
+  is-closed-under-right-multiplication-subset-congruence-Ring = {!!}
 
   is-additive-subgroup-congruence-Ring :
     is-additive-subgroup-subset-Ring R subset-congruence-Ring
-  pr1 is-additive-subgroup-congruence-Ring = {!!}
+  is-additive-subgroup-congruence-Ring = {!!}
 
   ideal-congruence-Ring : ideal-Ring l2 R
   pr1 ideal-congruence-Ring = {!!}
@@ -321,7 +321,7 @@ module _
     has-same-elements-ideal-Ring R
       ( ideal-congruence-Ring R (congruence-ideal-Ring R I))
       ( I)
-  pr1 (has-same-elements-ideal-congruence-Ring x) H = {!!}
+  has-same-elements-ideal-congruence-Ring = {!!}
 
   is-retraction-ideal-congruence-Ring :
     ideal-congruence-Ring R (congruence-ideal-Ring R I) ＝ I
@@ -339,8 +339,7 @@ module _
     relate-same-elements-congruence-Ring R
       ( congruence-ideal-Ring R (ideal-congruence-Ring R S))
       ( S)
-  pr1
-    ( relate-same-elements-congruence-ideal-congruence-Ring x y) H = {!!}
+  relate-same-elements-congruence-ideal-congruence-Ring = {!!}
 
   is-section-ideal-congruence-Ring :
     congruence-ideal-Ring R (ideal-congruence-Ring R S) ＝ S
@@ -360,7 +359,7 @@ module _
 
   equiv-congruence-ideal-Ring :
     ideal-Ring l2 R ≃ congruence-Ring l2 R
-  pr1 equiv-congruence-ideal-Ring = {!!}
+  equiv-congruence-ideal-Ring = {!!}
 
   is-equiv-ideal-congruence-Ring :
     is-equiv (ideal-congruence-Ring {l1} {l2} R)
@@ -368,5 +367,5 @@ module _
 
   equiv-ideal-congruence-Ring :
     congruence-Ring l2 R ≃ ideal-Ring l2 R
-  pr1 equiv-ideal-congruence-Ring = {!!}
+  equiv-ideal-congruence-Ring = {!!}
 ```

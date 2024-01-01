@@ -34,11 +34,11 @@ open import structured-types.wild-monoids
 ```agda
 is-unital-Semigroup :
   {l : Level} → Semigroup l → UU l
-is-unital-Semigroup G = {!!}
+is-unital-Semigroup = {!!}
 
 Monoid :
   (l : Level) → UU (lsuc l)
-Monoid l = {!!}
+Monoid = {!!}
 
 module _
   {l : Level} (M : Monoid l)
@@ -122,7 +122,7 @@ abstract
 abstract
   is-prop-is-unital-Semigroup :
     {l : Level} (G : Semigroup l) → is-prop (is-unital-Semigroup G)
-  is-prop-is-unital-Semigroup G = {!!}
+  is-prop-is-unital-Semigroup = {!!}
 
 is-unital-prop-Semigroup : {l : Level} (G : Semigroup l) → Prop l
 pr1 (is-unital-prop-Semigroup G) = {!!}

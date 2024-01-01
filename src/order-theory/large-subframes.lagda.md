@@ -126,7 +126,7 @@ module _
     (x : type-Large-Subframe l1)
     (y : type-Large-Subframe l2) →
     type-Large-Subframe (l1 ⊔ l2)
-  pr1 (meet-Large-Subframe (x , p) (y , q)) = {!!}
+  meet-Large-Subframe = {!!}
 
   is-greatest-binary-lower-bound-meet-Large-Subframe :
     {l1 l2 : Level}
@@ -143,39 +143,35 @@ module _
   has-meets-Large-Subframe :
     has-meets-Large-Poset
       ( large-poset-Large-Subframe)
-  meet-has-meets-Large-Poset
-    has-meets-Large-Subframe = {!!}
+  has-meets-Large-Subframe = {!!}
 
   top-Large-Subframe :
     type-Large-Subframe lzero
-  pr1 top-Large-Subframe = {!!}
+  top-Large-Subframe = {!!}
 
   is-top-element-top-Large-Subframe :
     {l1 : Level} (x : type-Large-Subframe l1) →
     leq-Large-Subframe x top-Large-Subframe
-  is-top-element-top-Large-Subframe (x , p) = {!!}
+  is-top-element-top-Large-Subframe = {!!}
 
   has-top-element-Large-Subframe :
     has-top-element-Large-Poset
       ( large-poset-Large-Subframe)
-  top-has-top-element-Large-Poset
-    has-top-element-Large-Subframe = {!!}
+  has-top-element-Large-Subframe = {!!}
 
   is-large-meet-semilattice-Large-Subframe :
     is-large-meet-semilattice-Large-Poset
       ( large-poset-Large-Subframe)
-  has-meets-is-large-meet-semilattice-Large-Poset
-    is-large-meet-semilattice-Large-Subframe = {!!}
+  is-large-meet-semilattice-Large-Subframe = {!!}
 
   large-meet-semilattice-Large-Subframe :
     Large-Meet-Semilattice (λ l → α l ⊔ δ l) β
-  large-poset-Large-Meet-Semilattice
-    large-meet-semilattice-Large-Subframe = {!!}
+  large-meet-semilattice-Large-Subframe = {!!}
 
   sup-Large-Subframe :
     {l1 l2 : Level} {I : UU l1} (x : I → type-Large-Subframe l2) →
     type-Large-Subframe (γ ⊔ l1 ⊔ l2)
-  pr1 (sup-Large-Subframe x) = {!!}
+  sup-Large-Subframe = {!!}
 
   is-least-upper-bound-sup-Large-Subframe :
     {l1 l2 : Level} {I : UU l1} (x : I → type-Large-Subframe l2) →
@@ -183,27 +179,24 @@ module _
       ( large-poset-Large-Subframe)
       ( x)
       ( sup-Large-Subframe x)
-  is-least-upper-bound-sup-Large-Subframe x y = {!!}
+  is-least-upper-bound-sup-Large-Subframe = {!!}
 
   is-large-suplattice-Large-Subframe :
     is-large-suplattice-Large-Poset γ (large-poset-Large-Subframe)
-  sup-has-least-upper-bound-family-of-elements-Large-Poset
-    ( is-large-suplattice-Large-Subframe x) = {!!}
+  is-large-suplattice-Large-Subframe = {!!}
 
   large-suplattice-Large-Subframe :
     Large-Suplattice (λ l → α l ⊔ δ l) β γ
-  large-poset-Large-Suplattice
-    large-suplattice-Large-Subframe = {!!}
+  large-suplattice-Large-Subframe = {!!}
 
   distributive-meet-sup-Large-Subframe :
     {l1 l2 l3 : Level} (x : type-Large-Subframe l1)
     {I : UU l2} (y : I → type-Large-Subframe l3) →
     meet-Large-Subframe x (sup-Large-Subframe y) ＝
     sup-Large-Subframe (λ i → meet-Large-Subframe x (y i))
-  distributive-meet-sup-Large-Subframe x y = {!!}
+  distributive-meet-sup-Large-Subframe = {!!}
 
   large-frame-Large-Subframe :
     Large-Frame (λ l → α l ⊔ δ l) β γ
-  large-poset-Large-Frame
-    large-frame-Large-Subframe = {!!}
+  large-frame-Large-Subframe = {!!}
 ```

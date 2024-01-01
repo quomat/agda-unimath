@@ -53,11 +53,11 @@ Unital-Magma l = {!!}
 
 magma-Unital-Magma :
   {l : Level} → Unital-Magma l → Magma l
-magma-Unital-Magma M = {!!}
+magma-Unital-Magma = {!!}
 
 is-unital-magma-Unital-Magma :
   {l : Level} (M : Unital-Magma l) → is-unital-Magma (magma-Unital-Magma M)
-is-unital-magma-Unital-Magma M = {!!}
+is-unital-magma-Unital-Magma = {!!}
 ```
 
 ### Semigroups
@@ -82,5 +82,5 @@ is-commutative-monoid-Magma M = {!!}
 
 unit-is-commutative-monoid-Magma :
   {l : Level} (M : Magma l) → is-commutative-monoid-Magma M → type-Magma M
-unit-is-commutative-monoid-Magma M H = {!!}
+unit-is-commutative-monoid-Magma = {!!}
 ```

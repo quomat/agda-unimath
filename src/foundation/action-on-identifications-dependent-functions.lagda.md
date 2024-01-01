@@ -40,5 +40,5 @@ along `p` to obtain an element of type `B y` that is comparable to the value
 apd :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (f : (x : A) → B x) {x y : A}
   (p : x ＝ y) → dependent-identification B p (f x) (f y)
-apd f refl = {!!}
+apd = {!!}
 ```

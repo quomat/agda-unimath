@@ -52,12 +52,12 @@ module _
     (s t : fiber f b) (p : pr1 s ＝ pr1 t) →
     tr (λ (a : A) → f a ＝ b) p (pr2 s) ＝ pr2 t →
     ap f p ＝ pr2 s ∙ inv (pr2 t)
-  fiber-ap-eq-fiber-fiberwise (.x' , p) (x' , refl) refl = {!!}
+  fiber-ap-eq-fiber-fiberwise = {!!}
 
   abstract
     is-fiberwise-equiv-fiber-ap-eq-fiber-fiberwise :
       (s t : fiber f b) → is-fiberwise-equiv (fiber-ap-eq-fiber-fiberwise s t)
-    is-fiberwise-equiv-fiber-ap-eq-fiber-fiberwise (x , y) (.x , refl) refl = {!!}
+    is-fiberwise-equiv-fiber-ap-eq-fiber-fiberwise = {!!}
 
   fiber-ap-eq-fiber :
     (s t : fiber f b) → s ＝ t →
@@ -73,7 +73,7 @@ module _
   abstract
     is-equiv-fiber-ap-eq-fiber :
       (s t : fiber f b) → is-equiv (fiber-ap-eq-fiber s t)
-    is-equiv-fiber-ap-eq-fiber s t = {!!}
+    is-equiv-fiber-ap-eq-fiber = {!!}
 
   equiv-fiber-ap-eq-fiber :
     (s t : fiber f b) →
@@ -98,12 +98,12 @@ module _
 
   eq-fiber-fiber-ap :
     (q : f x ＝ f y) → (x , q) ＝ (y , refl) → fiber (ap f {x} {y}) q
-  eq-fiber-fiber-ap q = {!!}
+  eq-fiber-fiber-ap = {!!}
 
   abstract
     is-equiv-eq-fiber-fiber-ap :
       (q : (f x) ＝ f y) → is-equiv (eq-fiber-fiber-ap q)
-    is-equiv-eq-fiber-fiber-ap q = {!!}
+    is-equiv-eq-fiber-fiber-ap = {!!}
 ```
 
 ## Table of files about fibers of maps

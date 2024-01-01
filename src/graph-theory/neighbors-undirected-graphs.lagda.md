@@ -53,19 +53,19 @@ module _
     (e : equiv-Undirected-Graph G H) (x : vertex-Undirected-Graph G) →
     neighbor-Undirected-Graph G x ≃
     neighbor-Undirected-Graph H (vertex-equiv-Undirected-Graph G H e x)
-  equiv-neighbor-equiv-Undirected-Graph e x = {!!}
+  equiv-neighbor-equiv-Undirected-Graph = {!!}
 
   neighbor-equiv-Undirected-Graph :
     (e : equiv-Undirected-Graph G H) (x : vertex-Undirected-Graph G) →
     neighbor-Undirected-Graph G x →
     neighbor-Undirected-Graph H (vertex-equiv-Undirected-Graph G H e x)
-  neighbor-equiv-Undirected-Graph e x = {!!}
+  neighbor-equiv-Undirected-Graph = {!!}
 
 neighbor-id-equiv-Undirected-Graph :
   {l1 l2 : Level}
   (G : Undirected-Graph l1 l2) (x : vertex-Undirected-Graph G) →
   neighbor-equiv-Undirected-Graph G G (id-equiv-Undirected-Graph G) x ~ id
-neighbor-id-equiv-Undirected-Graph G x (pair y e) = {!!}
+neighbor-id-equiv-Undirected-Graph = {!!}
 ```
 
 ## External links

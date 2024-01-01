@@ -86,18 +86,18 @@ module _
 
   natural-isomorphism-iterative-groupoid-automorphism-𝔽 :
     (x y : type-𝔽 X) (f : iso-iterative-groupoid-automorphism-𝔽 x y) → ℕ
-  natural-isomorphism-iterative-groupoid-automorphism-𝔽 x y = {!!}
+  natural-isomorphism-iterative-groupoid-automorphism-𝔽 = {!!}
 
   id-iso-iterative-groupoid-automorphism-𝔽 :
     (x : type-𝔽 X) → iso-iterative-groupoid-automorphism-𝔽 x x
-  pr1 (id-iso-iterative-groupoid-automorphism-𝔽 x) = {!!}
+  id-iso-iterative-groupoid-automorphism-𝔽 = {!!}
 
   comp-iso-iterative-groupoid-automorphism-𝔽 :
     {x y z : type-𝔽 X} →
     iso-iterative-groupoid-automorphism-𝔽 y z →
     iso-iterative-groupoid-automorphism-𝔽 x y →
     iso-iterative-groupoid-automorphism-𝔽 x z
-  pr1 (comp-iso-iterative-groupoid-automorphism-𝔽 (pair n q) (pair m p)) = {!!}
+  comp-iso-iterative-groupoid-automorphism-𝔽 = {!!}
   pr2 (comp-iso-iterative-groupoid-automorphism-𝔽 (pair n q) (pair m p)) = {!!}
 ```
 
@@ -139,14 +139,14 @@ module _
           ( λ m →
             ( le-ℕ m n) ×
             ( Id (iterate n (map-equiv f) a) (iterate m (map-equiv f) a))))
-  pr1 (two-points-iterate-ordered-ℕ (inl p)) = {!!}
+  two-points-iterate-ordered-ℕ = {!!}
 
   leq-greater-point-number-elements :
     ( p :
       ( point1-iterate-ℕ ≤-ℕ point2-iterate-ℕ) +
       ( point2-iterate-ℕ ≤-ℕ point1-iterate-ℕ)) →
     pr1 (two-points-iterate-ordered-ℕ p) ≤-ℕ number-of-elements-count eX
-  leq-greater-point-number-elements (inl p) = {!!}
+  leq-greater-point-number-elements = {!!}
   leq-greater-point-number-elements (inr p) = {!!}
 
   abstract
@@ -190,12 +190,12 @@ module _
   abstract
     not-not-eq-second-point-zero-min-reporting :
       ¬¬ (Id second-point-min-repeating zero-ℕ)
-    not-not-eq-second-point-zero-min-reporting np = {!!}
+    not-not-eq-second-point-zero-min-reporting = {!!}
 
   has-finite-orbits-permutation' :
     is-decidable (Id second-point-min-repeating zero-ℕ) →
     Σ ℕ (λ k → (is-nonzero-ℕ k) × Id (iterate k (map-equiv f) a) a)
-  pr1 (has-finite-orbits-permutation' (inl p)) = {!!}
+  has-finite-orbits-permutation' = {!!}
 
   has-finite-orbits-permutation :
     Σ ℕ (λ k → (is-nonzero-ℕ k) × Id (iterate k (map-equiv f) a) a)
@@ -208,7 +208,7 @@ module _
   mult-has-finite-orbits-permutation :
     (k : ℕ) →
     Id (iterate (k *ℕ (pr1 has-finite-orbits-permutation)) (map-equiv f) a) a
-  mult-has-finite-orbits-permutation zero-ℕ = {!!}
+  mult-has-finite-orbits-permutation = {!!}
 ```
 
 ### For finite types, the number of orbits-permutation of a permutation is finite
@@ -226,14 +226,14 @@ module _
     is-decidable-same-orbits-permutation :
       ( a b : type-UU-Fin n X) →
       is-decidable (sim-equivalence-relation same-orbits-permutation a b)
-    is-decidable-same-orbits-permutation a b = {!!}
+    is-decidable-same-orbits-permutation = {!!}
 
   abstract
     is-decidable-is-in-equivalence-class-same-orbits-permutation :
       (T : equivalence-class same-orbits-permutation) →
       (a : type-UU-Fin n X) →
       is-decidable (is-in-equivalence-class same-orbits-permutation T a)
-    is-decidable-is-in-equivalence-class-same-orbits-permutation T a = {!!}
+    is-decidable-is-in-equivalence-class-same-orbits-permutation = {!!}
 
   abstract
     has-finite-number-orbits-permutation :
@@ -260,7 +260,7 @@ module _
     htpy-equiv
       ( composition-transposition-a-b (composition-transposition-a-b g))
       ( g)
-  composition-transposition-a-b-involution g x = {!!}
+  composition-transposition-a-b-involution = {!!}
 
   same-orbits-permutation-count : (X ≃ X) → equivalence-relation l1 X
   same-orbits-permutation-count = {!!}
@@ -269,7 +269,7 @@ module _
     minimal-element-iterate :
       (g : X ≃ X) (x y : X) → Σ ℕ (λ k → Id (iterate k (map-equiv g) x) y) →
       minimal-element-ℕ (λ k → Id (iterate k (map-equiv g) x) y)
-    minimal-element-iterate g x y = {!!}
+    minimal-element-iterate = {!!}
 
   abstract
     minimal-element-iterate-nonzero :
@@ -277,7 +277,7 @@ module _
       Σ ℕ (λ k → is-nonzero-ℕ k × Id (iterate k (map-equiv g) x) y) →
       minimal-element-ℕ
         ( λ k → is-nonzero-ℕ k × Id (iterate k (map-equiv g) x) y)
-    minimal-element-iterate-nonzero g x y = {!!}
+    minimal-element-iterate-nonzero = {!!}
 
   abstract
     minimal-element-iterate-2 :
@@ -290,7 +290,7 @@ module _
         ( λ k →
           ( Id (iterate k (map-equiv g) x) y) +
           ( Id (iterate k (map-equiv g) x) z))
-    minimal-element-iterate-2 g x y z p = {!!}
+    minimal-element-iterate-2 = {!!}
 
   abstract
     equal-iterate-transposition :
@@ -305,7 +305,7 @@ module _
       Id
         ( iterate k (map-equiv (composition-transposition-a-b g)) x)
         ( iterate k (map-equiv g) x)
-    equal-iterate-transposition x g C F Ind zero-ℕ p = {!!}
+    equal-iterate-transposition = {!!}
 
   abstract
     conserves-other-orbits-transposition :
@@ -317,7 +317,7 @@ module _
           ( same-orbits-permutation-count (composition-transposition-a-b g))
           ( x)
           ( y)))
-    conserves-other-orbits-transposition g x y NA NB = {!!}
+    conserves-other-orbits-transposition = {!!}
 
   conserves-other-orbits-transposition-quotient :
     (g : X ≃ X)
@@ -326,7 +326,7 @@ module _
     ¬ (is-in-equivalence-class (same-orbits-permutation-count g) T b) →
     equivalence-class
       ( same-orbits-permutation-count (composition-transposition-a-b g))
-  pr1 (conserves-other-orbits-transposition-quotient g T nq nr) = {!!}
+  conserves-other-orbits-transposition-quotient = {!!}
 
   abstract
     not-same-orbits-transposition-same-orbits :
@@ -343,7 +343,7 @@ module _
           ( same-orbits-permutation-count (composition-transposition-a-b g))
           ( a)
           ( b))
-    not-same-orbits-transposition-same-orbits g P Q = {!!}
+    not-same-orbits-transposition-same-orbits = {!!}
 
   coprod-sim-equivalence-relation-a-b-Prop :
     ( g : X ≃ X) →
@@ -356,7 +356,7 @@ module _
         ( a)
         ( b))
     (x : X) → Prop l1
-  coprod-sim-equivalence-relation-a-b-Prop g P x = {!!}
+  coprod-sim-equivalence-relation-a-b-Prop = {!!}
 
   abstract
     split-orbits-a-b-transposition :
@@ -380,7 +380,7 @@ module _
               ( composition-transposition-a-b g))
             ( x)
             ( b))))
-    split-orbits-a-b-transposition g P x = {!!}
+    split-orbits-a-b-transposition = {!!}
 
   private
     module _
@@ -412,7 +412,7 @@ module _
           ( is-in-equivalence-class (same-orbits-permutation-count g) T b) →
         equivalence-class
           ( same-orbits-permutation-count (composition-transposition-a-b g))
-      h'-inl k T p (inl q) r = {!!}
+      h'-inl = {!!}
       h'-inl k T p (inr nq) (inl r) = {!!}
       h'-inl k T p (inr nq) (inr nr) = {!!}
       h' :
@@ -438,7 +438,7 @@ module _
             ( T)
             ( b)) →
         Fin (succ-ℕ (number-of-elements-count h))
-      cases-inv-h' T (inl Q) R = {!!}
+      cases-inv-h' = {!!}
       cases-inv-h' T (inr NQ) (inl R) = {!!}
 
       inv-h' :
@@ -447,7 +447,7 @@ module _
             ( same-orbits-permutation-count
               ( composition-transposition-a-b g))) →
         Fin (succ-ℕ (number-of-elements-count h))
-      inv-h' T = {!!}
+      inv-h' = {!!}
       H-conserves :
         ( T :
           equivalence-class
@@ -463,7 +463,7 @@ module _
               ( T)
               ( b))) →
         is-equivalence-class (same-orbits-permutation-count g) (pr1 T)
-      H-conserves T NQ NR = {!!}
+      H-conserves = {!!}
 
       retraction-h'-inr-inr :
         ( T :
@@ -529,7 +529,7 @@ module _
             ( number-of-elements-count eX)
             ( pair X (unit-trunc-Prop (equiv-count eX)))
             ( composition-transposition-a-b g)))
-  transf-same-orbits-count g P h = {!!}
+  transf-same-orbits-count = {!!}
 
   abstract
     number-orbits-composition-transposition :
@@ -552,7 +552,7 @@ module _
           ( number-of-elements-count eX)
           ( pair X (unit-trunc-Prop (equiv-count eX)))
           ( composition-transposition-a-b g))
-    number-orbits-composition-transposition g P = {!!}
+    number-orbits-composition-transposition = {!!}
 
   abstract
     same-orbits-transposition-not-same-orbits :
@@ -563,7 +563,7 @@ module _
           ( same-orbits-permutation-count (composition-transposition-a-b g))
           ( a)
           ( b)
-    same-orbits-transposition-not-same-orbits g NP = {!!}
+    same-orbits-transposition-not-same-orbits = {!!}
 
   abstract
     number-orbits-composition-transposition' :
@@ -586,7 +586,7 @@ module _
             ( number-of-elements-count eX)
             ( pair X (unit-trunc-Prop (equiv-count eX)))
             ( composition-transposition-a-b g)))
-    number-orbits-composition-transposition' g NP = {!!}
+    number-orbits-composition-transposition' = {!!}
 
   abstract
     opposite-sign-composition-transposition-count :
@@ -602,7 +602,7 @@ module _
             ( number-of-elements-count eX)
             ( pair X (unit-trunc-Prop (equiv-count eX)))
             ( composition-transposition-a-b g)))
-    opposite-sign-composition-transposition-count g = {!!}
+    opposite-sign-composition-transposition-count = {!!}
 
 module _
   {l : Level} (X : UU l) (eX : count X)
@@ -627,5 +627,5 @@ module _
           ( number-of-elements-count eX)
           ( pair X (unit-trunc-Prop (equiv-count eX)))
           ( permutation-list-transpositions li))
-    sign-list-transpositions-count nil = {!!}
+    sign-list-transpositions-count = {!!}
 ```

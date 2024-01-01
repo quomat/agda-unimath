@@ -39,8 +39,7 @@ module _
 
   action-Group-Large-Precategory :
     Large-Precategory (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3)
-  obj-Large-Precategory
-    action-Group-Large-Precategory = {!!}
+  action-Group-Large-Precategory = {!!}
 ```
 
 ### The small precategory of `G`-sets

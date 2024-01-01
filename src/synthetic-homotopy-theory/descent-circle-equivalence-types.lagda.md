@@ -47,13 +47,13 @@ module _
   family-dependent-descent-data-circle-is-equiv :
     ( t : S) → family-descent-data-circle-function-type l A B t →
     UU (l2 ⊔ l3)
-  family-dependent-descent-data-circle-is-equiv t = {!!}
+  family-dependent-descent-data-circle-is-equiv = {!!}
 
   dependent-descent-data-circle-is-equiv :
     dependent-descent-data-circle
       ( l2 ⊔ l3)
       ( descent-data-circle-function-type l A B)
-  pr1 dependent-descent-data-circle-is-equiv = {!!}
+  dependent-descent-data-circle-is-equiv = {!!}
 ```
 
 ## Properties
@@ -74,13 +74,13 @@ module _
       ( dependent-descent-data-double-family-circle l
         ( family-with-descent-data-circle-function-type l A B)
         ( family-dependent-descent-data-circle-is-equiv l A B))
-  pr1 eq-dependent-descent-data-circle-is-equiv f = {!!}
+  eq-dependent-descent-data-circle-is-equiv = {!!}
 
   family-with-dependent-descent-data-circle-is-equiv :
     double-family-with-dependent-descent-data-circle l
       ( family-with-descent-data-circle-function-type l A B)
       ( l2 ⊔ l3)
-  pr1 family-with-dependent-descent-data-circle-is-equiv = {!!}
+  family-with-dependent-descent-data-circle-is-equiv = {!!}
 ```
 
 ### Characterization of descent data for families of equivalence types over the circle
@@ -114,5 +114,5 @@ module _
     ( equiv-descent-data-circle
       ( descent-data-family-with-descent-data-circle A)
       ( descent-data-family-with-descent-data-circle B))
-  equiv-section-descent-data-circle-equiv-equiv-descent-data-circle dup-circle = {!!}
+  equiv-section-descent-data-circle-equiv-equiv-descent-data-circle = {!!}
 ```

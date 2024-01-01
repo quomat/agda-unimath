@@ -56,24 +56,24 @@ module _
   equiv-vertex-equiv-Undirected-Graph :
     equiv-Undirected-Graph →
     vertex-Undirected-Graph G ≃ vertex-Undirected-Graph H
-  equiv-vertex-equiv-Undirected-Graph f = {!!}
+  equiv-vertex-equiv-Undirected-Graph = {!!}
 
   vertex-equiv-Undirected-Graph :
     equiv-Undirected-Graph →
     vertex-Undirected-Graph G → vertex-Undirected-Graph H
-  vertex-equiv-Undirected-Graph f = {!!}
+  vertex-equiv-Undirected-Graph = {!!}
 
   equiv-unordered-pair-vertices-equiv-Undirected-Graph :
     equiv-Undirected-Graph →
     unordered-pair-vertices-Undirected-Graph G ≃
     unordered-pair-vertices-Undirected-Graph H
-  equiv-unordered-pair-vertices-equiv-Undirected-Graph f = {!!}
+  equiv-unordered-pair-vertices-equiv-Undirected-Graph = {!!}
 
   unordered-pair-vertices-equiv-Undirected-Graph :
     equiv-Undirected-Graph →
     unordered-pair-vertices-Undirected-Graph G →
     unordered-pair-vertices-Undirected-Graph H
-  unordered-pair-vertices-equiv-Undirected-Graph f = {!!}
+  unordered-pair-vertices-equiv-Undirected-Graph = {!!}
 
   standard-unordered-pair-vertices-equiv-Undirected-Graph :
     (e : equiv-Undirected-Graph) (x y : vertex-Undirected-Graph G) →
@@ -83,7 +83,7 @@ module _
     standard-unordered-pair
       ( vertex-equiv-Undirected-Graph e x)
       ( vertex-equiv-Undirected-Graph e y)
-  standard-unordered-pair-vertices-equiv-Undirected-Graph e = {!!}
+  standard-unordered-pair-vertices-equiv-Undirected-Graph = {!!}
 
   equiv-edge-equiv-Undirected-Graph :
     (f : equiv-Undirected-Graph)
@@ -91,7 +91,7 @@ module _
     edge-Undirected-Graph G p ≃
     edge-Undirected-Graph H
       ( unordered-pair-vertices-equiv-Undirected-Graph f p)
-  equiv-edge-equiv-Undirected-Graph f = {!!}
+  equiv-edge-equiv-Undirected-Graph = {!!}
 
   edge-equiv-Undirected-Graph :
     (f : equiv-Undirected-Graph)
@@ -99,7 +99,7 @@ module _
     edge-Undirected-Graph G p →
     edge-Undirected-Graph H
       ( unordered-pair-vertices-equiv-Undirected-Graph f p)
-  edge-equiv-Undirected-Graph f p = {!!}
+  edge-equiv-Undirected-Graph = {!!}
 
   equiv-edge-standard-unordered-pair-vertices-equiv-Undirected-Graph :
     (e : equiv-Undirected-Graph) (x y : vertex-Undirected-Graph G) →
@@ -108,7 +108,7 @@ module _
       ( standard-unordered-pair
         ( vertex-equiv-Undirected-Graph e x)
         ( vertex-equiv-Undirected-Graph e y))
-  equiv-edge-standard-unordered-pair-vertices-equiv-Undirected-Graph e x y = {!!}
+  equiv-edge-standard-unordered-pair-vertices-equiv-Undirected-Graph = {!!}
 
   edge-standard-unordered-pair-vertices-equiv-Undirected-Graph :
     (e : equiv-Undirected-Graph) (x y : vertex-Undirected-Graph G) →
@@ -117,11 +117,11 @@ module _
       ( standard-unordered-pair
         ( vertex-equiv-Undirected-Graph e x)
         ( vertex-equiv-Undirected-Graph e y))
-  edge-standard-unordered-pair-vertices-equiv-Undirected-Graph e x y = {!!}
+  edge-standard-unordered-pair-vertices-equiv-Undirected-Graph = {!!}
 
   hom-equiv-Undirected-Graph :
     equiv-Undirected-Graph → hom-Undirected-Graph G H
-  pr1 (hom-equiv-Undirected-Graph f) = {!!}
+  hom-equiv-Undirected-Graph = {!!}
 ```
 
 ### The identity equivalence of unordered graphs
@@ -139,7 +139,7 @@ module _
     ( edge-standard-unordered-pair-vertices-equiv-Undirected-Graph G G
       ( id-equiv-Undirected-Graph) x y) ~
     ( id)
-  edge-standard-unordered-pair-vertices-id-equiv-Undirected-Graph x y e = {!!}
+  edge-standard-unordered-pair-vertices-id-equiv-Undirected-Graph = {!!}
 ```
 
 ## Properties
@@ -154,36 +154,36 @@ module _
 
   htpy-equiv-Undirected-Graph :
     (f g : equiv-Undirected-Graph G H) → UU (lsuc lzero ⊔ l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  htpy-equiv-Undirected-Graph f g = {!!}
+  htpy-equiv-Undirected-Graph = {!!}
 
   refl-htpy-equiv-Undirected-Graph :
     (f : equiv-Undirected-Graph G H) → htpy-equiv-Undirected-Graph f f
-  refl-htpy-equiv-Undirected-Graph f = {!!}
+  refl-htpy-equiv-Undirected-Graph = {!!}
 
   htpy-eq-equiv-Undirected-Graph :
     (f g : equiv-Undirected-Graph G H) → Id f g →
     htpy-equiv-Undirected-Graph f g
-  htpy-eq-equiv-Undirected-Graph f .f refl = {!!}
+  htpy-eq-equiv-Undirected-Graph = {!!}
 
   is-torsorial-htpy-equiv-Undirected-Graph :
     (f : equiv-Undirected-Graph G H) →
     is-torsorial (htpy-equiv-Undirected-Graph f)
-  is-torsorial-htpy-equiv-Undirected-Graph f = {!!}
+  is-torsorial-htpy-equiv-Undirected-Graph = {!!}
 
   is-equiv-htpy-eq-equiv-Undirected-Graph :
     (f g : equiv-Undirected-Graph G H) →
     is-equiv (htpy-eq-equiv-Undirected-Graph f g)
-  is-equiv-htpy-eq-equiv-Undirected-Graph f = {!!}
+  is-equiv-htpy-eq-equiv-Undirected-Graph = {!!}
 
   extensionality-equiv-Undirected-Graph :
     (f g : equiv-Undirected-Graph G H) →
     Id f g ≃ htpy-equiv-Undirected-Graph f g
-  pr1 (extensionality-equiv-Undirected-Graph f g) = {!!}
+  extensionality-equiv-Undirected-Graph = {!!}
 
   eq-htpy-equiv-Undirected-Graph :
     (f g : equiv-Undirected-Graph G H) →
     htpy-equiv-Undirected-Graph f g → Id f g
-  eq-htpy-equiv-Undirected-Graph f g = {!!}
+  eq-htpy-equiv-Undirected-Graph = {!!}
 ```
 
 ### Univalence for unordered graphs
@@ -195,7 +195,7 @@ module _
 
   equiv-eq-Undirected-Graph :
     (H : Undirected-Graph l1 l2) → Id G H → equiv-Undirected-Graph G H
-  equiv-eq-Undirected-Graph .G refl = {!!}
+  equiv-eq-Undirected-Graph = {!!}
 
   is-torsorial-equiv-Undirected-Graph :
     is-torsorial (equiv-Undirected-Graph G)
@@ -207,11 +207,11 @@ module _
 
   extensionality-Undirected-Graph :
     (H : Undirected-Graph l1 l2) → Id G H ≃ equiv-Undirected-Graph G H
-  pr1 (extensionality-Undirected-Graph H) = {!!}
+  extensionality-Undirected-Graph = {!!}
 
   eq-equiv-Undirected-Graph :
     (H : Undirected-Graph l1 l2) → equiv-Undirected-Graph G H → Id G H
-  eq-equiv-Undirected-Graph H = {!!}
+  eq-equiv-Undirected-Graph = {!!}
 ```
 
 ## External links

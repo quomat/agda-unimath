@@ -48,7 +48,7 @@ and is thus canonically pointed at the identified image of `a` and `b`.
 wedge-Pointed-Type :
   {l1 l2 : Level} (A : Pointed-Type l1) (B : Pointed-Type l2) →
   Pointed-Type (l1 ⊔ l2)
-wedge-Pointed-Type A B = {!!}
+wedge-Pointed-Type = {!!}
 
 infixr 10 _∨∗_
 _∨∗_ = {!!}
@@ -73,8 +73,7 @@ module _
 
 indexed-wedge-Pointed-Type :
   {l1 l2 : Level} (I : UU l1) (A : I → Pointed-Type l2) → Pointed-Type (l1 ⊔ l2)
-pr1 (indexed-wedge-Pointed-Type I A) = {!!}
-pr2 (indexed-wedge-Pointed-Type I A) = {!!}
+indexed-wedge-Pointed-Type = {!!}
 
 ⋁∗ = {!!}
 ```
@@ -96,7 +95,7 @@ glue-wedge-Pointed-Type :
   {l1 l2 : Level} (A : Pointed-Type l1) (B : Pointed-Type l2) →
   map-inl-wedge-Pointed-Type A B (point-Pointed-Type A) ＝
   map-inr-wedge-Pointed-Type A B (point-Pointed-Type B)
-glue-wedge-Pointed-Type A B = {!!}
+glue-wedge-Pointed-Type = {!!}
 ```
 
 ### The inclusion of the wedge sum `A ∨∗ B` into the pointed product `A ×∗ B`
@@ -117,7 +116,7 @@ module _
       ( inclusion-point-Pointed-Type A)
       ( inclusion-point-Pointed-Type B)
       ( A ×∗ B)
-  pr1 cocone-prod-wedge-Pointed-Type = {!!}
+  cocone-prod-wedge-Pointed-Type = {!!}
 
   pointed-map-prod-wedge-Pointed-Type :
     (A ∨∗ B) →∗ (A ×∗ B)

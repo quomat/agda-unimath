@@ -46,8 +46,7 @@ kolakoski-helper-inductive :
   (n : ℕ) →
   ((i : ℕ) → i ≤-ℕ n → bool × (bool × (Σ ℕ (λ j → j ≤-ℕ i)))) →
   bool × (bool × (Σ ℕ (λ j → j ≤-ℕ (succ-ℕ n))))
-kolakoski-helper-inductive n f with f n (refl-leq-ℕ n)
-... | b , false , i , H = {!!}
+kolakoski-helper-inductive = {!!}
 ... | b , true , i , H with f i H
 ... | true , true , j , K = {!!}
 ... | true , false , j , K = {!!}

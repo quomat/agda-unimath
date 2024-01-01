@@ -53,26 +53,26 @@ module _
     {s t : Σ A B}
     (α : pr1 s ＝ pr1 t) →
     dependent-identification B α (pr2 s) (pr2 t) → s ＝ t
-  eq-pair-Σ refl refl = {!!}
+  eq-pair-Σ = {!!}
 
   eq-pair-Σ' : {s t : Σ A B} → Eq-Σ s t → s ＝ t
   eq-pair-Σ' p = {!!}
 
   eq-pair-eq-pr1 :
     {x y : A} {s : B x} (p : x ＝ y) → (x , s) ＝ (y , tr B p s)
-  eq-pair-eq-pr1 refl = {!!}
+  eq-pair-eq-pr1 = {!!}
 
   eq-pair-eq-pr1' :
     {x y : A} {t : B y} (p : x ＝ y) → (x , tr B (inv p) t) ＝ (y , t)
-  eq-pair-eq-pr1' refl = {!!}
+  eq-pair-eq-pr1' = {!!}
 
   eq-pair-eq-pr2 :
     {x : A} {s t : B x} → s ＝ t → (x , s) ＝ (x , t)
-  eq-pair-eq-pr2 {x} = {!!}
+  eq-pair-eq-pr2 = {!!}
 
   ap-pr1-eq-pair-eq-pr2 :
     {x : A} {s t : B x} (p : s ＝ t) → ap pr1 (eq-pair-eq-pr2 p) ＝ refl
-  ap-pr1-eq-pair-eq-pr2 refl = {!!}
+  ap-pr1-eq-pair-eq-pr2 = {!!}
 
   is-retraction-pair-eq-Σ :
     (s t : Σ A B) → pair-eq-Σ {s} {t} ∘ eq-pair-Σ' {s} {t} ~ id {A = Eq-Σ s t}
@@ -80,7 +80,7 @@ module _
 
   is-section-pair-eq-Σ :
     (s t : Σ A B) → ((eq-pair-Σ' {s} {t}) ∘ (pair-eq-Σ {s} {t})) ~ id
-  is-section-pair-eq-Σ (pair x y) .(pair x y) refl = {!!}
+  is-section-pair-eq-Σ = {!!}
 
   abstract
     is-equiv-eq-pair-Σ : (s t : Σ A B) → is-equiv (eq-pair-Σ' {s} {t})
@@ -105,7 +105,7 @@ module _
   dependent-eq-family-eq-pair-Σ :
     {s t : Σ A B} → (p : s ＝ t) →
     dependent-identification B (eq-base-eq-pair-Σ p) (pr2 s) (pr2 t)
-  dependent-eq-family-eq-pair-Σ p = {!!}
+  dependent-eq-family-eq-pair-Σ = {!!}
 ```
 
 ### Lifting equality to the total space
@@ -117,7 +117,7 @@ module _
 
   lift-eq-Σ :
     {x y : A} (p : x ＝ y) (b : B x) → (pair x b) ＝ (pair y (tr B p b))
-  lift-eq-Σ refl b = {!!}
+  lift-eq-Σ = {!!}
 ```
 
 ### Transport in a family of dependent pair types
@@ -128,7 +128,7 @@ tr-Σ :
   (C : (x : A) → B x → UU l3) (p : a0 ＝ a1) (z : Σ (B a0) (λ x → C a0 x)) →
   tr (λ a → (Σ (B a) (C a))) p z ＝
   pair (tr B p (pr1 z)) (tr (ind-Σ C) (eq-pair-Σ p refl) (pr2 z))
-tr-Σ C refl z = {!!}
+tr-Σ = {!!}
 ```
 
 ### Transport in a family over a dependent pair type
@@ -140,7 +140,7 @@ tr-eq-pair-Σ :
   (p : a0 ＝ a1) (q : dependent-identification B p b0 b1) (u : C (a0 , b0)) →
   tr C (eq-pair-Σ p q) u ＝
   tr (λ x → C (a1 , x)) q (tr C (eq-pair-Σ p refl) u)
-tr-eq-pair-Σ C refl refl u = {!!}
+tr-eq-pair-Σ = {!!}
 ```
 
 ## See also

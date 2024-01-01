@@ -111,16 +111,16 @@ module _
   map-comp-hom-action-Group :
     hom-action-Group G Y Z → hom-action-Group G X Y →
     type-action-Group G X → type-action-Group G Z
-  map-comp-hom-action-Group g f = {!!}
+  map-comp-hom-action-Group = {!!}
 
   preserves-action-comp-hom-action-Group :
     (g : hom-action-Group G Y Z) (f : hom-action-Group G X Y) →
     preserves-action-Group G X Z (map-comp-hom-action-Group g f)
-  preserves-action-comp-hom-action-Group g f x = {!!}
+  preserves-action-comp-hom-action-Group = {!!}
 
   comp-hom-action-Group :
     hom-action-Group G Y Z → hom-action-Group G X Y → hom-action-Group G X Z
-  pr1 (comp-hom-action-Group g f) = {!!}
+  comp-hom-action-Group = {!!}
 ```
 
 ## Properties
@@ -135,7 +135,7 @@ module _
 
   htpy-hom-action-Group :
     (g : hom-action-Group G X Y) → UU (l2 ⊔ l3)
-  htpy-hom-action-Group g = {!!}
+  htpy-hom-action-Group = {!!}
 
   refl-htpy-hom-action-Group : htpy-hom-action-Group f
   refl-htpy-hom-action-Group = {!!}
@@ -143,7 +143,7 @@ module _
   htpy-eq-hom-action-Group :
     (g : hom-action-Group G X Y) →
     f ＝ g → htpy-hom-action-Group g
-  htpy-eq-hom-action-Group .f refl = {!!}
+  htpy-eq-hom-action-Group = {!!}
 
   is-torsorial-htpy-hom-action-Group :
     is-torsorial htpy-hom-action-Group
@@ -155,11 +155,11 @@ module _
 
   extensionality-hom-action-Group :
     (g : hom-action-Group G X Y) → (f ＝ g) ≃ htpy-hom-action-Group g
-  pr1 (extensionality-hom-action-Group g) = {!!}
+  extensionality-hom-action-Group = {!!}
 
   eq-htpy-hom-action-Group :
     (g : hom-action-Group G X Y) → htpy-hom-action-Group g → f ＝ g
-  eq-htpy-hom-action-Group g = {!!}
+  eq-htpy-hom-action-Group = {!!}
 ```
 
 ### The type of morphisms of group actions is a set
@@ -172,7 +172,7 @@ module _
 
   is-set-hom-action-Group :
     is-set (hom-action-Group G X Y)
-  is-set-hom-action-Group f g = {!!}
+  is-set-hom-action-Group = {!!}
 
   hom-set-action-Group : Set (l1 ⊔ l2 ⊔ l3)
   pr1 hom-set-action-Group = {!!}
@@ -212,10 +212,10 @@ module _
   left-unit-law-comp-hom-action-Group :
     (f : hom-action-Group G X Y) →
     comp-hom-action-Group G X Y Y (id-hom-action-Group G Y) f ＝ f
-  left-unit-law-comp-hom-action-Group f = {!!}
+  left-unit-law-comp-hom-action-Group = {!!}
 
   right-unit-law-comp-hom-action-Group :
     (f : hom-action-Group G X Y) →
     comp-hom-action-Group G X X Y f (id-hom-action-Group G X) ＝ f
-  right-unit-law-comp-hom-action-Group f = {!!}
+  right-unit-law-comp-hom-action-Group = {!!}
 ```

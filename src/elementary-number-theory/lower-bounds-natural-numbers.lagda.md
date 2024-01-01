@@ -27,7 +27,7 @@ A lower bound for a type family `P` over the natural numbers is a natural number
 ```agda
 is-lower-bound-ℕ :
   {l : Level} (P : ℕ → UU l) (n : ℕ) → UU l
-is-lower-bound-ℕ P n = {!!}
+is-lower-bound-ℕ = {!!}
 ```
 
 ## Properties

@@ -94,7 +94,7 @@ has-two-elements-type-2-Element-Type = {!!}
 
 is-finite-type-2-Element-Type :
   {l : Level} (X : 2-Element-Type l) → is-finite (type-2-Element-Type X)
-is-finite-type-2-Element-Type X = {!!}
+is-finite-type-2-Element-Type = {!!}
 
 finite-type-2-Element-Type : {l : Level} → 2-Element-Type l → 𝔽 l
 pr1 (finite-type-2-Element-Type X) = {!!}
@@ -136,7 +136,7 @@ module _
 ```agda
 is-inhabited-2-Element-Type :
   {l : Level} (X : 2-Element-Type l) → type-trunc-Prop (type-2-Element-Type X)
-is-inhabited-2-Element-Type X = {!!}
+is-inhabited-2-Element-Type = {!!}
 ```
 
 ### Any `2`-element type is a set
@@ -144,16 +144,15 @@ is-inhabited-2-Element-Type X = {!!}
 ```agda
 is-set-has-two-elements :
   {l : Level} {X : UU l} → has-two-elements X → is-set X
-is-set-has-two-elements H = {!!}
+is-set-has-two-elements = {!!}
 
 is-set-type-2-Element-Type :
   {l : Level} (X : 2-Element-Type l) → is-set (type-2-Element-Type X)
-is-set-type-2-Element-Type X = {!!}
+is-set-type-2-Element-Type = {!!}
 
 set-2-Element-Type :
   {l : Level} → 2-Element-Type l → Set l
-pr1 (set-2-Element-Type X) = {!!}
-pr2 (set-2-Element-Type X) = {!!}
+set-2-Element-Type = {!!}
 ```
 
 ### Characterizing identifications between general `2`-element types
@@ -161,21 +160,21 @@ pr2 (set-2-Element-Type X) = {!!}
 ```agda
 equiv-2-Element-Type :
   {l1 l2 : Level} → 2-Element-Type l1 → 2-Element-Type l2 → UU (l1 ⊔ l2)
-equiv-2-Element-Type X Y = {!!}
+equiv-2-Element-Type = {!!}
 
 id-equiv-2-Element-Type :
   {l1 : Level} (X : 2-Element-Type l1) → equiv-2-Element-Type X X
-id-equiv-2-Element-Type X = {!!}
+id-equiv-2-Element-Type = {!!}
 
 equiv-eq-2-Element-Type :
   {l1 : Level} (X Y : 2-Element-Type l1) → X ＝ Y → equiv-2-Element-Type X Y
-equiv-eq-2-Element-Type X Y = {!!}
+equiv-eq-2-Element-Type = {!!}
 
 abstract
   is-torsorial-equiv-2-Element-Type :
     {l1 : Level} (X : 2-Element-Type l1) →
     is-torsorial (λ (Y : 2-Element-Type l1) → equiv-2-Element-Type X Y)
-  is-torsorial-equiv-2-Element-Type X = {!!}
+  is-torsorial-equiv-2-Element-Type = {!!}
 
 abstract
   is-equiv-equiv-eq-2-Element-Type :
@@ -185,12 +184,11 @@ abstract
 
 eq-equiv-2-Element-Type :
   {l1 : Level} (X Y : 2-Element-Type l1) → equiv-2-Element-Type X Y → X ＝ Y
-eq-equiv-2-Element-Type X Y = {!!}
+eq-equiv-2-Element-Type = {!!}
 
 extensionality-2-Element-Type :
   {l1 : Level} (X Y : 2-Element-Type l1) → (X ＝ Y) ≃ equiv-2-Element-Type X Y
-pr1 (extensionality-2-Element-Type X Y) = {!!}
-pr2 (extensionality-2-Element-Type X Y) = {!!}
+extensionality-2-Element-Type = {!!}
 ```
 
 ### Characterization the identifications of `Fin 2` with a `2`-element type `X`
@@ -200,7 +198,7 @@ pr2 (extensionality-2-Element-Type X Y) = {!!}
 ```agda
 ev-zero-equiv-Fin-two-ℕ :
   {l1 : Level} {X : UU l1} → (Fin 2 ≃ X) → X
-ev-zero-equiv-Fin-two-ℕ e = {!!}
+ev-zero-equiv-Fin-two-ℕ = {!!}
 
 ev-zero-aut-Fin-two-ℕ : (Fin 2 ≃ Fin 2) → Fin 2
 ev-zero-aut-Fin-two-ℕ = {!!}
@@ -211,24 +209,22 @@ ev-zero-aut-Fin-two-ℕ = {!!}
 ```agda
 aut-point-Fin-two-ℕ :
   Fin 2 → (Fin 2 ≃ Fin 2)
-aut-point-Fin-two-ℕ (inl (inr star)) = {!!}
-aut-point-Fin-two-ℕ (inr star) = {!!}
+aut-point-Fin-two-ℕ = {!!}
 
 abstract
   is-section-aut-point-Fin-two-ℕ :
     (ev-zero-aut-Fin-two-ℕ ∘ aut-point-Fin-two-ℕ) ~ id
-  is-section-aut-point-Fin-two-ℕ (inl (inr star)) = {!!}
+  is-section-aut-point-Fin-two-ℕ = {!!}
 
   is-retraction-aut-point-Fin-two-ℕ' :
     (e : Fin 2 ≃ Fin 2) (x y : Fin 2) →
     map-equiv e (zero-Fin 1) ＝ x →
     map-equiv e (one-Fin 1) ＝ y → htpy-equiv (aut-point-Fin-two-ℕ x) e
-  is-retraction-aut-point-Fin-two-ℕ' e
-    (inl (inr star)) (inl (inr star)) p q (inl (inr star)) = {!!}
+  is-retraction-aut-point-Fin-two-ℕ' = {!!}
 
   is-retraction-aut-point-Fin-two-ℕ :
     (aut-point-Fin-two-ℕ ∘ ev-zero-aut-Fin-two-ℕ) ~ id
-  is-retraction-aut-point-Fin-two-ℕ e = {!!}
+  is-retraction-aut-point-Fin-two-ℕ = {!!}
 
 abstract
   is-equiv-ev-zero-aut-Fin-two-ℕ : is-equiv ev-zero-aut-Fin-two-ℕ
@@ -253,7 +249,7 @@ module _
 
   equiv-ev-zero-equiv-Fin-two-ℕ :
     (Fin 2 ≃ type-2-Element-Type X) ≃ type-2-Element-Type X
-  pr1 equiv-ev-zero-equiv-Fin-two-ℕ = {!!}
+  equiv-ev-zero-equiv-Fin-two-ℕ = {!!}
 
   equiv-point-2-Element-Type :
     type-2-Element-Type X → Fin 2 ≃ type-2-Element-Type X
@@ -261,23 +257,23 @@ module _
 
   map-equiv-point-2-Element-Type :
     type-2-Element-Type X → Fin 2 → type-2-Element-Type X
-  map-equiv-point-2-Element-Type x = {!!}
+  map-equiv-point-2-Element-Type = {!!}
 
   map-inv-equiv-point-2-Element-Type :
     type-2-Element-Type X → type-2-Element-Type X → Fin 2
-  map-inv-equiv-point-2-Element-Type x = {!!}
+  map-inv-equiv-point-2-Element-Type = {!!}
 
   is-section-map-inv-equiv-point-2-Element-Type :
     (x : type-2-Element-Type X) →
     (map-equiv-point-2-Element-Type x ∘ map-inv-equiv-point-2-Element-Type x) ~
     id
-  is-section-map-inv-equiv-point-2-Element-Type x = {!!}
+  is-section-map-inv-equiv-point-2-Element-Type = {!!}
 
   is-retraction-map-inv-equiv-point-2-Element-Type :
     (x : type-2-Element-Type X) →
     (map-inv-equiv-point-2-Element-Type x ∘ map-equiv-point-2-Element-Type x) ~
     id
-  is-retraction-map-inv-equiv-point-2-Element-Type x = {!!}
+  is-retraction-map-inv-equiv-point-2-Element-Type = {!!}
 
   compute-map-equiv-point-2-Element-Type :
     (x : type-2-Element-Type X) →
@@ -287,7 +283,7 @@ module _
   is-unique-equiv-point-2-Element-Type :
     (e : Fin 2 ≃ type-2-Element-Type X) →
     htpy-equiv (equiv-point-2-Element-Type (map-equiv e (zero-Fin 1))) e
-  is-unique-equiv-point-2-Element-Type e = {!!}
+  is-unique-equiv-point-2-Element-Type = {!!}
 ```
 
 #### The type of pointed `2`-element types of any universe level is contractible
@@ -299,7 +295,7 @@ Pointed-2-Element-Type l = {!!}
 abstract
   is-contr-pointed-2-Element-Type :
     {l : Level} → is-contr (Pointed-2-Element-Type l)
-  is-contr-pointed-2-Element-Type {l} = {!!}
+  is-contr-pointed-2-Element-Type = {!!}
 ```
 
 #### Completing the characterization of the identity type of the type of `2`-element types of arbitrary universe level
@@ -308,19 +304,18 @@ abstract
 point-eq-2-Element-Type :
   {l : Level} {X : 2-Element-Type l} →
   standard-2-Element-Type l ＝ X → type-2-Element-Type X
-point-eq-2-Element-Type refl = {!!}
+point-eq-2-Element-Type = {!!}
 
 abstract
   is-equiv-point-eq-2-Element-Type :
     {l : Level} (X : 2-Element-Type l) →
     is-equiv (point-eq-2-Element-Type {l} {X})
-  is-equiv-point-eq-2-Element-Type {l} = {!!}
+  is-equiv-point-eq-2-Element-Type = {!!}
 
 equiv-point-eq-2-Element-Type :
   {l : Level} {X : 2-Element-Type l} →
   (standard-2-Element-Type l ＝ X) ≃ type-2-Element-Type X
-pr1 (equiv-point-eq-2-Element-Type {l} {X}) = {!!}
-pr2 (equiv-point-eq-2-Element-Type {l} {X}) = {!!}
+equiv-point-eq-2-Element-Type = {!!}
 
 eq-point-2-Element-Type :
   {l : Level} {X : 2-Element-Type l} →
@@ -330,7 +325,7 @@ eq-point-2-Element-Type = {!!}
 is-identity-system-type-2-Element-Type :
   {l1 : Level} (X : 2-Element-Type l1) (x : type-2-Element-Type X) →
   is-identity-system (type-2-Element-Type {l1}) X x
-is-identity-system-type-2-Element-Type X x = {!!}
+is-identity-system-type-2-Element-Type = {!!}
 
 dependent-universal-property-identity-system-type-2-Element-Type :
   {l1 : Level} (X : 2-Element-Type l1) (x : type-2-Element-Type X) →
@@ -364,23 +359,23 @@ module _
   ev-zero-htpy-equiv-Fin-two-ℕ :
     (e e' : Fin 2 ≃ type-2-Element-Type X) → htpy-equiv e e' →
     map-equiv e (zero-Fin 1) ＝ map-equiv e' (zero-Fin 1)
-  ev-zero-htpy-equiv-Fin-two-ℕ e e' H = {!!}
+  ev-zero-htpy-equiv-Fin-two-ℕ = {!!}
 
   equiv-ev-zero-htpy-equiv-Fin-two-ℕ' :
     (e e' : Fin 2 ≃ type-2-Element-Type X) →
     htpy-equiv e e' ≃ (map-equiv e (zero-Fin 1) ＝ map-equiv e' (zero-Fin 1))
-  equiv-ev-zero-htpy-equiv-Fin-two-ℕ' e e' = {!!}
+  equiv-ev-zero-htpy-equiv-Fin-two-ℕ' = {!!}
 
   abstract
     is-equiv-ev-zero-htpy-equiv-Fin-two-ℕ :
       (e e' : Fin 2 ≃ type-2-Element-Type X) →
       is-equiv (ev-zero-htpy-equiv-Fin-two-ℕ e e')
-    is-equiv-ev-zero-htpy-equiv-Fin-two-ℕ e = {!!}
+    is-equiv-ev-zero-htpy-equiv-Fin-two-ℕ = {!!}
 
   equiv-ev-zero-htpy-equiv-Fin-two-ℕ :
     (e e' : Fin 2 ≃ type-2-Element-Type X) →
     htpy-equiv e e' ≃ (map-equiv e (zero-Fin 1) ＝ map-equiv e' (zero-Fin 1))
-  pr1 (equiv-ev-zero-htpy-equiv-Fin-two-ℕ e e') = {!!}
+  equiv-ev-zero-htpy-equiv-Fin-two-ℕ = {!!}
 ```
 
 ### The canonical type family on the type of `2`-element types has no section
@@ -389,7 +384,7 @@ module _
 abstract
   no-section-type-2-Element-Type :
     {l : Level} → ¬ ((X : 2-Element-Type l) → type-2-Element-Type X)
-  no-section-type-2-Element-Type {l} f = {!!}
+  no-section-type-2-Element-Type = {!!}
 ```
 
 ### There is no decidability procedure that proves that an arbitrary `2`-element type is decidable
@@ -399,7 +394,7 @@ abstract
   is-not-decidable-type-2-Element-Type :
     {l : Level} →
     ¬ ((X : 2-Element-Type l) → is-decidable (type-2-Element-Type X))
-  is-not-decidable-type-2-Element-Type {l} d = {!!}
+  is-not-decidable-type-2-Element-Type = {!!}
 ```
 
 ### Any automorphism on `Fin 2` is an involution
@@ -409,14 +404,7 @@ cases-is-involution-aut-Fin-two-ℕ :
   (e : Fin 2 ≃ Fin 2) (x y z : Fin 2) →
   map-equiv e x ＝ y → map-equiv e y ＝ z →
   map-equiv (e ∘e e) x ＝ x
-cases-is-involution-aut-Fin-two-ℕ e (inl (inr star)) (inl (inr star)) z p q = {!!}
-cases-is-involution-aut-Fin-two-ℕ e
-  (inl (inr star)) (inr star) (inl (inr star)) p q = {!!}
-cases-is-involution-aut-Fin-two-ℕ e (inl (inr star)) (inr star) (inr star) p q = {!!}
-cases-is-involution-aut-Fin-two-ℕ e
-  (inr star) (inl (inr star)) (inl (inr star)) p q = {!!}
-cases-is-involution-aut-Fin-two-ℕ e (inr star) (inl (inr star)) (inr star) p q = {!!}
-cases-is-involution-aut-Fin-two-ℕ e (inr star) (inr star) z p q = {!!}
+cases-is-involution-aut-Fin-two-ℕ = {!!}
 
 is-involution-aut-Fin-two-ℕ : (e : Fin 2 ≃ Fin 2) → is-involution-aut e
 is-involution-aut-Fin-two-ℕ e x = {!!}
@@ -427,7 +415,7 @@ module _
 
   is-involution-aut-2-element-type :
     (e : equiv-2-Element-Type X X) → is-involution-aut e
-  is-involution-aut-2-element-type e x = {!!}
+  is-involution-aut-2-element-type = {!!}
 ```
 
 ### The swapping equivalence on arbitrary `2`-element types
@@ -447,23 +435,22 @@ module _
     (x y : type-2-Element-Type X) → x ≠ y → (z : Fin 2) →
     map-inv-equiv-point-2-Element-Type X x y ＝ z →
     map-swap-2-Element-Type x ＝ y
-  compute-swap-2-Element-Type' x y f (inl (inr star)) q = {!!}
+  compute-swap-2-Element-Type' = {!!}
 
   compute-swap-2-Element-Type :
     (x y : type-2-Element-Type X) → x ≠ y →
     map-swap-2-Element-Type x ＝ y
-  compute-swap-2-Element-Type x y p = {!!}
+  compute-swap-2-Element-Type = {!!}
 
   compute-map-equiv-point-2-Element-Type' :
     (x : type-2-Element-Type X) →
     map-equiv-point-2-Element-Type X x (one-Fin 1) ＝
     map-swap-2-Element-Type x
-  compute-map-equiv-point-2-Element-Type' x = {!!}
+  compute-map-equiv-point-2-Element-Type' = {!!}
 
 compute-swap-Fin-two-ℕ :
   map-swap-2-Element-Type (Fin-UU-Fin' 2) ~ succ-Fin 2
-compute-swap-Fin-two-ℕ (inl (inr star)) = {!!}
-compute-swap-Fin-two-ℕ (inr star) = {!!}
+compute-swap-Fin-two-ℕ = {!!}
 ```
 
 ### The swapping equivalence is not the identity equivalence
@@ -475,7 +462,7 @@ module _
 
   is-not-identity-equiv-precomp-equiv-equiv-succ-Fin :
     equiv-precomp-equiv (equiv-succ-Fin 2) (type-2-Element-Type X) ≠ id-equiv
-  is-not-identity-equiv-precomp-equiv-equiv-succ-Fin p' = {!!}
+  is-not-identity-equiv-precomp-equiv-equiv-succ-Fin = {!!}
 
   is-not-identity-swap-2-Element-Type : swap-2-Element-Type X ≠ id-equiv
   is-not-identity-swap-2-Element-Type p = {!!}
@@ -490,7 +477,7 @@ module _
 
   has-no-fixed-points-swap-2-Element-Type :
     {x : type-2-Element-Type X} → map-equiv (swap-2-Element-Type X) x ≠ x
-  has-no-fixed-points-swap-2-Element-Type {x} P = {!!}
+  has-no-fixed-points-swap-2-Element-Type = {!!}
 ```
 
 ### Evaluating an automorphism at `0 : Fin 2` is a group homomorphism
@@ -500,10 +487,7 @@ preserves-add-aut-point-Fin-two-ℕ :
   (a b : Fin 2) →
   aut-point-Fin-two-ℕ (add-Fin 2 a b) ＝
   ( aut-point-Fin-two-ℕ a ∘e aut-point-Fin-two-ℕ b)
-preserves-add-aut-point-Fin-two-ℕ (inl (inr star)) (inl (inr star)) = {!!}
-preserves-add-aut-point-Fin-two-ℕ (inl (inr star)) (inr star) = {!!}
-preserves-add-aut-point-Fin-two-ℕ (inr star) (inl (inr star)) = {!!}
-preserves-add-aut-point-Fin-two-ℕ (inr star) (inr star) = {!!}
+preserves-add-aut-point-Fin-two-ℕ = {!!}
 ```
 
 ### Any Σ-type over `Fin 2` is a coproduct
@@ -512,7 +496,7 @@ preserves-add-aut-point-Fin-two-ℕ (inr star) (inr star) = {!!}
 is-coprod-Σ-Fin-two-ℕ :
   {l : Level} (P : Fin 2 → UU l) →
   Σ (Fin 2) P ≃ (P (zero-Fin 1) + P (one-Fin 1))
-is-coprod-Σ-Fin-two-ℕ P = {!!}
+is-coprod-Σ-Fin-two-ℕ = {!!}
 ```
 
 ### For any equivalence `e : Fin 2 ≃ X`, any element of `X` is either `e 0` or it is `e 1`
@@ -528,12 +512,12 @@ module _
       is-contr
         ( ( x ＝ map-equiv e (zero-Fin 1)) +
           ( x ＝ map-equiv e (one-Fin 1)))
-    is-contr-decide-value-equiv-Fin-two-ℕ e x = {!!}
+    is-contr-decide-value-equiv-Fin-two-ℕ = {!!}
 
   decide-value-equiv-Fin-two-ℕ :
     (e : Fin 2 ≃ type-2-Element-Type X) (x : type-2-Element-Type X) →
     (x ＝ map-equiv e (zero-Fin 1)) + (x ＝ map-equiv e (one-Fin 1))
-  decide-value-equiv-Fin-two-ℕ e x = {!!}
+  decide-value-equiv-Fin-two-ℕ = {!!}
 ```
 
 ### There can't be three distinct elements in a `2`-element type
@@ -546,7 +530,7 @@ module _
   contradiction-3-distinct-element-2-Element-Type :
     (x y z : type-2-Element-Type X) →
     x ≠ y → y ≠ z → x ≠ z → empty
-  contradiction-3-distinct-element-2-Element-Type x y z np nq nr = {!!}
+  contradiction-3-distinct-element-2-Element-Type = {!!}
 ```
 
 ### For any map between `2`-element types, being an equivalence is decidable
@@ -559,7 +543,7 @@ module _
   is-decidable-is-equiv-2-Element-Type :
     (f : type-2-Element-Type X → type-2-Element-Type Y) →
     is-decidable (is-equiv f)
-  is-decidable-is-equiv-2-Element-Type f = {!!}
+  is-decidable-is-equiv-2-Element-Type = {!!}
 ```
 
 ### A map between `2`-element types is an equivalence if and only if its image is the full subtype of the codomain
@@ -583,7 +567,7 @@ This remains to be shown.
     (f : type-2-Element-Type X → type-2-Element-Type Y) →
     ¬ (is-equiv f) →
     Σ (type-2-Element-Type Y) (λ y → f ~ const _ _ y)
-  pr1 (is-constant-is-not-equiv-2-Element-Type f H) = {!!}
+  is-constant-is-not-equiv-2-Element-Type = {!!}
 ```
 
 ### Any map between `2`-element types is either an equivalence or it is constant
@@ -599,6 +583,6 @@ equiv-iff-2-Element-Type :
   {l1 l2 : Level} (X : 2-Element-Type l1) (Y : 2-Element-Type l2) →
   (type-2-Element-Type X ↔ type-2-Element-Type Y) →
   (equiv-2-Element-Type X Y)
-equiv-iff-2-Element-Type X Y (f , g) = {!!}
+equiv-iff-2-Element-Type = {!!}
 -}
 ```

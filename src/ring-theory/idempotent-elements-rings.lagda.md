@@ -39,7 +39,7 @@ module _
 
 idempotent-element-Ring :
   {l : Level} (R : Ring l) → UU l
-idempotent-element-Ring R = {!!}
+idempotent-element-Ring = {!!}
 
 module _
   {l : Level} (R : Ring l) (x : idempotent-element-Ring R)

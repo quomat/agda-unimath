@@ -117,7 +117,7 @@ _+ℤ[i]_ = {!!}
 
 ap-add-ℤ[i] :
   {x x' y y' : ℤ[i]} → x ＝ x' → y ＝ y' → x +ℤ[i] y ＝ x' +ℤ[i] y'
-ap-add-ℤ[i] p q = {!!}
+ap-add-ℤ[i] = {!!}
 ```
 
 ### Negatives of Gaussian integers
@@ -140,7 +140,7 @@ _*ℤ[i]_ = {!!}
 
 ap-mul-ℤ[i] :
   {x x' y y' : ℤ[i]} → x ＝ x' → y ＝ y' → x *ℤ[i] y ＝ x' *ℤ[i] y'
-ap-mul-ℤ[i] p q = {!!}
+ap-mul-ℤ[i] = {!!}
 ```
 
 ### Conjugation of Gaussian integers
@@ -162,19 +162,19 @@ right-unit-law-add-ℤ[i] (a , b) = {!!}
 
 associative-add-ℤ[i] :
   (x y z : ℤ[i]) → (x +ℤ[i] y) +ℤ[i] z ＝ x +ℤ[i] (y +ℤ[i] z)
-associative-add-ℤ[i] (a1 , b1) (a2 , b2) (a3 , b3) = {!!}
+associative-add-ℤ[i] = {!!}
 
 left-inverse-law-add-ℤ[i] :
   (x : ℤ[i]) → (neg-ℤ[i] x) +ℤ[i] x ＝ zero-ℤ[i]
-left-inverse-law-add-ℤ[i] (a , b) = {!!}
+left-inverse-law-add-ℤ[i] = {!!}
 
 right-inverse-law-add-ℤ[i] :
   (x : ℤ[i]) → x +ℤ[i] (neg-ℤ[i] x) ＝ zero-ℤ[i]
-right-inverse-law-add-ℤ[i] (a , b) = {!!}
+right-inverse-law-add-ℤ[i] = {!!}
 
 commutative-add-ℤ[i] :
   (x y : ℤ[i]) → x +ℤ[i] y ＝ y +ℤ[i] x
-commutative-add-ℤ[i] (a , b) (a' , b') = {!!}
+commutative-add-ℤ[i] = {!!}
 
 left-unit-law-mul-ℤ[i] : (x : ℤ[i]) → one-ℤ[i] *ℤ[i] x ＝ x
 left-unit-law-mul-ℤ[i] (a , b) = {!!}
@@ -184,21 +184,21 @@ right-unit-law-mul-ℤ[i] (a , b) = {!!}
 
 commutative-mul-ℤ[i] :
   (x y : ℤ[i]) → x *ℤ[i] y ＝ y *ℤ[i] x
-commutative-mul-ℤ[i] (a , b) (c , d) = {!!}
+commutative-mul-ℤ[i] = {!!}
 
 associative-mul-ℤ[i] :
   (x y z : ℤ[i]) → (x *ℤ[i] y) *ℤ[i] z ＝ x *ℤ[i] (y *ℤ[i] z)
-associative-mul-ℤ[i] (a , b) (c , d) (e , f) = {!!}
+associative-mul-ℤ[i] = {!!}
 
 left-distributive-mul-add-ℤ[i] :
   (x y z : ℤ[i]) →
   x *ℤ[i] (y +ℤ[i] z) ＝ (x *ℤ[i] y) +ℤ[i] (x *ℤ[i] z)
-left-distributive-mul-add-ℤ[i] (a , b) (c , d) (e , f) = {!!}
+left-distributive-mul-add-ℤ[i] = {!!}
 
 right-distributive-mul-add-ℤ[i] :
   (x y z : ℤ[i]) →
   (x +ℤ[i] y) *ℤ[i] z ＝ (x *ℤ[i] z) +ℤ[i] (y *ℤ[i] z)
-right-distributive-mul-add-ℤ[i] x y z = {!!}
+right-distributive-mul-add-ℤ[i] = {!!}
 
 ℤ[i]-Semigroup : Semigroup lzero
 pr1 ℤ[i]-Semigroup = {!!}

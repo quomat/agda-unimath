@@ -53,26 +53,26 @@ module _
 ```agda
 subset-full-Subgroup :
   {l1 : Level} (l2 : Level) (G : Group l1) → subset-Group l2 G
-subset-full-Subgroup l2 G = {!!}
+subset-full-Subgroup = {!!}
 
 type-full-Subgroup :
   {l1 : Level} (l2 : Level) (G : Group l1) → UU (l1 ⊔ l2)
-type-full-Subgroup l2 G = {!!}
+type-full-Subgroup = {!!}
 
 contains-unit-full-Subgroup :
   {l1 l2 : Level} (G : Group l1) →
   contains-unit-subset-Group G (subset-full-Subgroup l2 G)
-contains-unit-full-Subgroup G = {!!}
+contains-unit-full-Subgroup = {!!}
 
 is-closed-under-multiplication-full-Subgroup :
   {l1 l2 : Level} (G : Group l1) →
   is-closed-under-multiplication-subset-Group G (subset-full-Subgroup l2 G)
-is-closed-under-multiplication-full-Subgroup G {x} {y} _ _ = {!!}
+is-closed-under-multiplication-full-Subgroup = {!!}
 
 is-closed-under-inverses-full-Subgroup :
   {l1 l2 : Level} (G : Group l1) →
   is-closed-under-inverses-subset-Group G (subset-full-Subgroup l2 G)
-is-closed-under-inverses-full-Subgroup G {x} _ = {!!}
+is-closed-under-inverses-full-Subgroup = {!!}
 
 full-Subgroup : {l1 : Level} (l2 : Level) (G : Group l1) → Subgroup l2 G
 pr1 (full-Subgroup l2 G) = {!!}
@@ -101,7 +101,7 @@ module _
 
   preserves-mul-inclusion-full-Subgroup :
     preserves-mul-Group group-full-Subgroup G inclusion-full-Subgroup
-  preserves-mul-inclusion-full-Subgroup {x} {y} = {!!}
+  preserves-mul-inclusion-full-Subgroup = {!!}
 
   equiv-group-inclusion-full-Subgroup : equiv-Group group-full-Subgroup G
   pr1 equiv-group-inclusion-full-Subgroup = {!!}
@@ -126,14 +126,14 @@ module _
   is-iso-inclusion-is-full-Subgroup :
     is-full-Subgroup G H →
     is-iso-Group (group-Subgroup G H) G (hom-inclusion-Subgroup G H)
-  is-iso-inclusion-is-full-Subgroup K = {!!}
+  is-iso-inclusion-is-full-Subgroup = {!!}
 
   iso-inclusion-is-full-Subgroup :
     is-full-Subgroup G H → iso-Group (group-Subgroup G H) G
-  pr1 (iso-inclusion-is-full-Subgroup K) = {!!}
+  iso-inclusion-is-full-Subgroup = {!!}
 
   is-full-is-iso-inclusion-Subgroup :
     is-iso-Group (group-Subgroup G H) G (hom-inclusion-Subgroup G H) →
     is-full-Subgroup G H
-  is-full-is-iso-inclusion-Subgroup K = {!!}
+  is-full-is-iso-inclusion-Subgroup = {!!}
 ```

@@ -41,12 +41,12 @@ identifications are proven in
 dependent-identification :
   {l1 l2 : Level} {A : UU l1} (B : A → UU l2) {x x' : A} (p : x ＝ x') →
   B x → B x' → UU l2
-dependent-identification B p u v = {!!}
+dependent-identification = {!!}
 
 refl-dependent-identification :
   {l1 l2 : Level} {A : UU l1} (B : A → UU l2) {x : A} {y : B x} →
   dependent-identification B refl y y
-refl-dependent-identification B = {!!}
+refl-dependent-identification = {!!}
 ```
 
 ### Iterated dependent identifications
@@ -62,5 +62,5 @@ module _
     (p' : dependent-identification B p x' y')
     (q' : dependent-identification B q x' y') →
     UU l2
-  dependent-identification² α {x'} {y'} p' q' = {!!}
+  dependent-identification² = {!!}
 ```

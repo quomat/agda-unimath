@@ -58,7 +58,7 @@ module _
 
   powerset-Large-Preorder :
     Large-Preorder (λ l → l1 ⊔ lsuc l) (λ l2 l3 → l1 ⊔ l2 ⊔ l3)
-  type-Large-Preorder powerset-Large-Preorder l = {!!}
+  powerset-Large-Preorder = {!!}
 ```
 
 ### The powerset large poset
@@ -70,7 +70,7 @@ module _
 
   powerset-Large-Poset :
     Large-Poset (λ l → l1 ⊔ lsuc l) (λ l2 l3 → l1 ⊔ l2 ⊔ l3)
-  large-preorder-Large-Poset powerset-Large-Poset = {!!}
+  powerset-Large-Poset = {!!}
 ```
 
 ### The powerset preorder at a universe level

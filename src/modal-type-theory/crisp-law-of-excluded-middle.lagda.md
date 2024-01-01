@@ -40,9 +40,7 @@ Crisp-LEM l = {!!}
 ```agda
 decidable-prop-Crisp-Prop :
   {@♭ l : Level} → Crisp-LEM l → @♭ Prop l → Decidable-Prop l
-pr1 (decidable-prop-Crisp-Prop lem P) = {!!}
-pr1 (pr2 (decidable-prop-Crisp-Prop lem P)) = {!!}
-pr2 (pr2 (decidable-prop-Crisp-Prop lem P)) = {!!}
+decidable-prop-Crisp-Prop = {!!}
 ```
 
 ## See also

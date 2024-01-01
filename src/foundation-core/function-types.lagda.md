@@ -44,11 +44,11 @@ _∘_ :
 ```agda
 ev-point :
   {l1 l2 : Level} {A : UU l1} (a : A) {P : A → UU l2} → ((x : A) → P x) → P a
-ev-point a f = {!!}
+ev-point = {!!}
 
 ev-point' :
   {l1 l2 : Level} {A : UU l1} (a : A) {X : UU l2} → (A → X) → X
-ev-point' a f = {!!}
+ev-point' = {!!}
 ```
 
 ### Postcomposition functions
@@ -60,7 +60,7 @@ map-Π :
   (f : (i : I) → A i → B i) →
   ((i : I) → A i) →
   ((i : I) → B i)
-map-Π f h i = {!!}
+map-Π = {!!}
 
 map-Π' :
   {l1 l2 l3 l4 : Level}
@@ -69,7 +69,7 @@ map-Π' :
   ((i : I) → A i → B i) →
   ((j : J) → A (α j)) →
   ((j : J) → B (α j))
-map-Π' α f = {!!}
+map-Π' = {!!}
 ```
 
 ## See also

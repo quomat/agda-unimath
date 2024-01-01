@@ -44,13 +44,13 @@ module _
     ( hom-Commutative-Monoid
       ( additive-commutative-monoid-Semiring R)
       ( additive-commutative-monoid-Semiring S)) → Prop (l1 ⊔ l2)
-  is-homomorphism-semiring-prop-hom-Commutative-Monoid f = {!!}
+  is-homomorphism-semiring-prop-hom-Commutative-Monoid = {!!}
 
   is-homomorphism-semiring-hom-Commutative-Monoid :
     ( hom-Commutative-Monoid
       ( additive-commutative-monoid-Semiring R)
       ( additive-commutative-monoid-Semiring S)) → UU (l1 ⊔ l2)
-  is-homomorphism-semiring-hom-Commutative-Monoid f = {!!}
+  is-homomorphism-semiring-hom-Commutative-Monoid = {!!}
 
   is-prop-is-homomorphism-semiring-hom-Commutative-Monoid :
     ( f :
@@ -58,7 +58,7 @@ module _
         ( additive-commutative-monoid-Semiring R)
         ( additive-commutative-monoid-Semiring S)) →
     is-prop (is-homomorphism-semiring-hom-Commutative-Monoid f)
-  is-prop-is-homomorphism-semiring-hom-Commutative-Monoid f = {!!}
+  is-prop-is-homomorphism-semiring-hom-Commutative-Monoid = {!!}
 
   hom-set-Semiring : Set (l1 ⊔ l2)
   hom-set-Semiring = {!!}
@@ -105,7 +105,7 @@ module _
     is-homomorphism-semiring-hom-Semiring :
       is-homomorphism-semiring-hom-Commutative-Monoid
         ( hom-additive-commutative-monoid-hom-Semiring)
-    pr1 is-homomorphism-semiring-hom-Semiring = {!!}
+    is-homomorphism-semiring-hom-Semiring = {!!}
 
     hom-multiplicative-monoid-hom-Semiring :
       hom-Monoid
@@ -208,7 +208,7 @@ module _
 
   htpy-eq-hom-Semiring :
     (g : hom-Semiring R S) → (f ＝ g) → htpy-hom-Semiring R S f g
-  htpy-eq-hom-Semiring .f refl = {!!}
+  htpy-eq-hom-Semiring = {!!}
 
   is-equiv-htpy-eq-hom-Semiring :
     (g : hom-Semiring R S) → is-equiv (htpy-eq-hom-Semiring g)
@@ -216,11 +216,11 @@ module _
 
   extensionality-hom-Semiring :
     (g : hom-Semiring R S) → (f ＝ g) ≃ htpy-hom-Semiring R S f g
-  pr1 (extensionality-hom-Semiring g) = {!!}
+  extensionality-hom-Semiring = {!!}
 
   eq-htpy-hom-Semiring :
     (g : hom-Semiring R S) → htpy-hom-Semiring R S f g → f ＝ g
-  eq-htpy-hom-Semiring g = {!!}
+  eq-htpy-hom-Semiring = {!!}
 ```
 
 ### Associativity of composition of homomorphisms of semirings

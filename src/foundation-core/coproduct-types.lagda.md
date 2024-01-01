@@ -31,6 +31,5 @@ ind-coprod :
   {l1 l2 l3 : Level} {A : UU l1} {B : UU l2} (C : A + B → UU l3) →
   ((x : A) → C (inl x)) → ((y : B) → C (inr y)) →
   (t : A + B) → C t
-ind-coprod C f g (inl x) = {!!}
-ind-coprod C f g (inr x) = {!!}
+ind-coprod = {!!}
 ```

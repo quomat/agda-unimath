@@ -93,7 +93,7 @@ module _
   commute-inv-Group :
     (x y : type-Group G) →
     commute-Group G x y → commute-Group G x (inv-Group G y)
-  commute-inv-Group x y H = {!!}
+  commute-inv-Group = {!!}
 ```
 
 ### If `x` commutes with `y`, then `x * (y * z) ＝ y * (x * z)` for any element `z`

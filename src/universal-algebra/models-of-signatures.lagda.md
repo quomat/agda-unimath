@@ -49,7 +49,7 @@ module _
     { l2 : Level} →
     ( M : Model-Signature l2) →
     is-model-signature (set-Model-Signature M)
-  is-model-set-Model-Signature M = {!!}
+  is-model-set-Model-Signature = {!!}
 
   type-Model-Signature : {l2 : Level} → Model-Signature l2 → UU l2
   type-Model-Signature M = {!!}
@@ -58,5 +58,5 @@ module _
     { l2 : Level} →
     ( M : Model-Signature l2) →
     is-set (type-Model-Signature M)
-  is-set-type-Model-Signature M = {!!}
+  is-set-type-Model-Signature = {!!}
 ```

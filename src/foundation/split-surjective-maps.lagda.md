@@ -88,16 +88,16 @@ module _
 
   retraction-is-split-surjective-is-injective :
     is-injective f → is-split-surjective f → retraction f
-  pr1 (retraction-is-split-surjective-is-injective l s) = {!!}
+  retraction-is-split-surjective-is-injective = {!!}
 
   is-equiv-is-split-surjective-is-injective :
     is-injective f → is-split-surjective f → is-equiv f
-  pr1 (is-equiv-is-split-surjective-is-injective l s) = {!!}
+  is-equiv-is-split-surjective-is-injective = {!!}
 
   is-split-surjective-is-equiv : is-equiv f → is-split-surjective f
   is-split-surjective-is-equiv = {!!}
 
   is-split-surjective-is-injective-is-equiv :
     is-equiv f → is-injective f × is-split-surjective f
-  pr1 (is-split-surjective-is-injective-is-equiv is-equiv-f) = {!!}
+  is-split-surjective-is-injective-is-equiv = {!!}
 ```

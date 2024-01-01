@@ -57,11 +57,11 @@ module _
 
   is-left-ideal-subset-Semiring :
     {l2 : Level} → subset-Semiring l2 R → UU (l1 ⊔ l2)
-  is-left-ideal-subset-Semiring P = {!!}
+  is-left-ideal-subset-Semiring = {!!}
 
 left-ideal-Semiring :
   (l : Level) {l1 : Level} (R : Semiring l1) → UU ((lsuc l) ⊔ l1)
-left-ideal-Semiring l R = {!!}
+left-ideal-Semiring = {!!}
 
 module _
   {l1 l2 : Level} (R : Semiring l1) (I : left-ideal-Semiring l2 R)
@@ -130,11 +130,11 @@ module _
 
   is-right-ideal-subset-Semiring :
     {l2 : Level} → subset-Semiring l2 R → UU (l1 ⊔ l2)
-  is-right-ideal-subset-Semiring P = {!!}
+  is-right-ideal-subset-Semiring = {!!}
 
 right-ideal-Semiring :
   (l : Level) {l1 : Level} (R : Semiring l1) → UU ((lsuc l) ⊔ l1)
-right-ideal-Semiring l R = {!!}
+right-ideal-Semiring = {!!}
 
 module _
   {l1 l2 : Level} (R : Semiring l1) (I : right-ideal-Semiring l2 R)
@@ -199,11 +199,11 @@ module _
 ```agda
 is-ideal-subset-Semiring :
   {l1 l2 : Level} (R : Semiring l1) (P : subset-Semiring l2 R) → UU (l1 ⊔ l2)
-is-ideal-subset-Semiring R P = {!!}
+is-ideal-subset-Semiring = {!!}
 
 ideal-Semiring :
   (l : Level) {l1 : Level} (R : Semiring l1) → UU ((lsuc l) ⊔ l1)
-ideal-Semiring l R = {!!}
+ideal-Semiring = {!!}
 
 module _
   {l1 l2 : Level} (R : Semiring l1) (I : ideal-Semiring l2 R)

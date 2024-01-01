@@ -52,7 +52,7 @@ where the composition operation is
 partial-dependent-function :
   {l1 l2 : Level} (l3 : Level) (A : UU l1) (B : A → UU l2) →
   UU (l1 ⊔ l2 ⊔ lsuc l3)
-partial-dependent-function l3 A B = {!!}
+partial-dependent-function = {!!}
 ```
 
 ### Partial functions
@@ -60,7 +60,7 @@ partial-dependent-function l3 A B = {!!}
 ```agda
 partial-function :
   {l1 l2 : Level} (l3 : Level) → UU l1 → UU l2 → UU (l1 ⊔ l2 ⊔ lsuc l3)
-partial-function l3 A B = {!!}
+partial-function = {!!}
 ```
 
 ### The predicate on partial dependent functions of being defined at an element in the domain
@@ -102,7 +102,7 @@ module _
 
   partial-dependent-function-dependent-function :
     partial-dependent-function lzero A B
-  partial-dependent-function-dependent-function a = {!!}
+  partial-dependent-function-dependent-function = {!!}
 ```
 
 ### The partial function obtained from a function

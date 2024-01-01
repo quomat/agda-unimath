@@ -27,5 +27,5 @@ is-contr-Pointed-Type A = {!!}
 
 is-prop-is-contr-Pointed-Type :
   {l : Level} (A : Pointed-Type l) → is-prop (is-contr-Pointed-Type A)
-is-prop-is-contr-Pointed-Type A = {!!}
+is-prop-is-contr-Pointed-Type = {!!}
 ```

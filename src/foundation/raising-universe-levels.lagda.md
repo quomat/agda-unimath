@@ -103,11 +103,11 @@ module _
 
   is-section-map-inv-equiv-raise :
     ( map-equiv-raise ∘ map-inv-equiv-raise) ~ id
-  is-section-map-inv-equiv-raise (map-raise y) = {!!}
+  is-section-map-inv-equiv-raise = {!!}
 
   is-retraction-map-inv-equiv-raise :
     ( map-inv-equiv-raise ∘ map-equiv-raise) ~ id
-  is-retraction-map-inv-equiv-raise (map-raise x) = {!!}
+  is-retraction-map-inv-equiv-raise = {!!}
 
   is-equiv-map-equiv-raise : is-equiv map-equiv-raise
   is-equiv-map-equiv-raise = {!!}

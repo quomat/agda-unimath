@@ -31,7 +31,7 @@ in the case that `l1 ⊔ l2 = {!!}
 ```agda
 operator-raise-modality :
   (l1 l2 : Level) → operator-modality l1 (l1 ⊔ l2)
-operator-raise-modality l1 l2 = {!!}
+operator-raise-modality = {!!}
 
 unit-raise-modality :
   {l1 l2 : Level} → unit-modality (operator-raise-modality l1 l2)
@@ -46,7 +46,7 @@ unit-raise-modality = {!!}
 is-uniquely-eliminating-modality-raise-modality :
   {l1 l2 : Level} →
   is-uniquely-eliminating-modality (unit-raise-modality {l1} {l2})
-is-uniquely-eliminating-modality-raise-modality {l1} {l2} P = {!!}
+is-uniquely-eliminating-modality-raise-modality = {!!}
 ```
 
 ### In the case that `l1 ⊔ l2 = {!!}

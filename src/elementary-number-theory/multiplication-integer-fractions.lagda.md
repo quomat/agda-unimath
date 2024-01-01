@@ -43,7 +43,7 @@ _*fraction-ℤ_ = {!!}
 ap-mul-fraction-ℤ :
   {x y x' y' : fraction-ℤ} → x ＝ x' → y ＝ y' →
   x *fraction-ℤ y ＝ x' *fraction-ℤ y'
-ap-mul-fraction-ℤ p q = {!!}
+ap-mul-fraction-ℤ = {!!}
 ```
 
 ## Properties
@@ -67,12 +67,12 @@ sim-fraction-mul-fraction-ℤ
 left-unit-law-mul-fraction-ℤ :
   (k : fraction-ℤ) →
   sim-fraction-ℤ (mul-fraction-ℤ one-fraction-ℤ k) k
-left-unit-law-mul-fraction-ℤ k = {!!}
+left-unit-law-mul-fraction-ℤ = {!!}
 
 right-unit-law-mul-fraction-ℤ :
   (k : fraction-ℤ) →
   sim-fraction-ℤ (mul-fraction-ℤ k one-fraction-ℤ) k
-right-unit-law-mul-fraction-ℤ (n , d , p) = {!!}
+right-unit-law-mul-fraction-ℤ = {!!}
 ```
 
 ### Multiplication is associative
@@ -83,7 +83,7 @@ associative-mul-fraction-ℤ :
   sim-fraction-ℤ
     (mul-fraction-ℤ (mul-fraction-ℤ x y) z)
     (mul-fraction-ℤ x (mul-fraction-ℤ y z))
-associative-mul-fraction-ℤ (nx , dx , dxp) (ny , dy , dyp) (nz , dz , dzp) = {!!}
+associative-mul-fraction-ℤ = {!!}
 ```
 
 ### Multiplication is commutative
@@ -91,5 +91,5 @@ associative-mul-fraction-ℤ (nx , dx , dxp) (ny , dy , dyp) (nz , dz , dzp) = {
 ```agda
 commutative-mul-fraction-ℤ :
   (x y : fraction-ℤ) → sim-fraction-ℤ (x *fraction-ℤ y) (y *fraction-ℤ x)
-commutative-mul-fraction-ℤ (nx , dx , dxp) (ny , dy , dyp) = {!!}
+commutative-mul-fraction-ℤ = {!!}
 ```

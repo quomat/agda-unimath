@@ -32,7 +32,7 @@ module _
 
   is-top-element-Large-Poset :
     {l1 : Level} → type-Large-Poset P l1 → UUω
-  is-top-element-Large-Poset x = {!!}
+  is-top-element-Large-Poset = {!!}
 ```
 
 ### The predicate on posets of having a top element
@@ -49,25 +49,5 @@ module _
     field
       top-has-top-element-Large-Poset :
         type-Large-Poset P lzero
-      is-top-element-top-has-top-element-Large-Poset :
-        is-top-element-Large-Poset P top-has-top-element-Large-Poset
-
-  open has-top-element-Large-Poset public
-```
-
-## Properties
-
-### If `P` is a family of large posets, then `Π-Large-Poset P` has a largest element
-
-```agda
-module _
-  {α : Level → Level} {β : Level → Level → Level}
-  {l1 : Level} {I : UU l1} (P : I → Large-Poset α β)
-  where
-
-  has-top-element-Π-Large-Poset :
-    ((i : I) → has-top-element-Large-Poset (P i)) →
-    has-top-element-Large-Poset (Π-Large-Poset P)
-  top-has-top-element-Large-Poset
-    ( has-top-element-Π-Large-Poset H) i = {!!}
+      top-has-top-element-Large-Poset = {!!}
 ```

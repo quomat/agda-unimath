@@ -47,12 +47,12 @@ is-prop-is-acyclic A = {!!}
 is-acyclic-equiv :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   A ≃ B → is-acyclic B → is-acyclic A
-is-acyclic-equiv {B = B} e ac = {!!}
+is-acyclic-equiv = {!!}
 
 is-acyclic-equiv' :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} →
   A ≃ B → is-acyclic A → is-acyclic B
-is-acyclic-equiv' e = {!!}
+is-acyclic-equiv' = {!!}
 ```
 
 ### Acyclic types are closed under retracts

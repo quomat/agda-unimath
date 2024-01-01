@@ -98,7 +98,7 @@ module _
 
   cocone-has-tangent-sphere :
     cocone terminal-map inclusion-tangent-sphere-has-tangent-sphere X
-  pr1 cocone-has-tangent-sphere = {!!}
+  cocone-has-tangent-sphere = {!!}
 
   is-pushout-has-tangent-sphere :
     is-pushout

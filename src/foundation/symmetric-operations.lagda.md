@@ -68,7 +68,7 @@ module _
 is-commutative-Prop :
   {l1 l2 : Level} {A : UU l1} (B : Set l2) →
   (A → A → type-Set B) → Prop (l1 ⊔ l2)
-is-commutative-Prop B f = {!!}
+is-commutative-Prop = {!!}
 ```
 
 ### Commutative operations
@@ -93,7 +93,7 @@ module _
 is-commutative-symmetric-operation :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : symmetric-operation A B) →
   is-commutative (λ x y → f (standard-unordered-pair x y))
-is-commutative-symmetric-operation f x y = {!!}
+is-commutative-symmetric-operation = {!!}
 ```
 
 ### A binary operation from `A` to `B` is commutative if and only if it extends to the unordered pairs in `A`
@@ -109,18 +109,18 @@ module _
     (htpy-equiv e e') + (htpy-equiv e (e' ∘e equiv-succ-Fin 2)) →
     ( f (p (map-equiv e (zero-Fin 1))) (p (map-equiv e (one-Fin 1)))) ＝
     ( f (p (map-equiv e' (zero-Fin 1))) (p (map-equiv e' (one-Fin 1))))
-  is-weakly-constant-on-equivalences-is-commutative f H X p e e' (inl K) = {!!}
+  is-weakly-constant-on-equivalences-is-commutative = {!!}
 
   symmetric-operation-is-commutative :
     (f : A → A → type-Set B) → is-commutative f →
     symmetric-operation A (type-Set B)
-  symmetric-operation-is-commutative f H (pair (pair X K) p) = {!!}
+  symmetric-operation-is-commutative = {!!}
 
   compute-symmetric-operation-is-commutative :
     (f : A → A → type-Set B) (H : is-commutative f) (x y : A) →
     symmetric-operation-is-commutative f H (standard-unordered-pair x y) ＝
     f x y
-  compute-symmetric-operation-is-commutative f H x y = {!!}
+  compute-symmetric-operation-is-commutative = {!!}
 ```
 
 ### Characterization of equality of symmetric operations into sets
@@ -133,16 +133,16 @@ module _
 
   htpy-symmetric-operation-Set-Prop :
     (g : symmetric-operation A (type-Set B)) → Prop (l1 ⊔ l2)
-  htpy-symmetric-operation-Set-Prop g = {!!}
+  htpy-symmetric-operation-Set-Prop = {!!}
 
   htpy-symmetric-operation-Set :
     (g : symmetric-operation A (type-Set B)) → UU (l1 ⊔ l2)
-  htpy-symmetric-operation-Set g = {!!}
+  htpy-symmetric-operation-Set = {!!}
 
   center-total-htpy-symmetric-operation-Set :
     Σ ( symmetric-operation A (type-Set B))
       ( htpy-symmetric-operation-Set)
-  pr1 center-total-htpy-symmetric-operation-Set = {!!}
+  center-total-htpy-symmetric-operation-Set = {!!}
 
   abstract
     contraction-total-htpy-symmetric-operation-Set :
@@ -150,16 +150,16 @@ module _
         Σ ( symmetric-operation A (type-Set B))
           ( htpy-symmetric-operation-Set)) →
       center-total-htpy-symmetric-operation-Set ＝ t
-    contraction-total-htpy-symmetric-operation-Set (g , H) = {!!}
+    contraction-total-htpy-symmetric-operation-Set = {!!}
 
   is-torsorial-htpy-symmetric-operation-Set :
     is-torsorial (htpy-symmetric-operation-Set)
-  pr1 is-torsorial-htpy-symmetric-operation-Set = {!!}
+  is-torsorial-htpy-symmetric-operation-Set = {!!}
 
   htpy-eq-symmetric-operation-Set :
     (g : symmetric-operation A (type-Set B)) →
     (f ＝ g) → htpy-symmetric-operation-Set g
-  htpy-eq-symmetric-operation-Set g refl x y = {!!}
+  htpy-eq-symmetric-operation-Set = {!!}
 
   is-equiv-htpy-eq-symmetric-operation-Set :
     (g : symmetric-operation A (type-Set B)) →
@@ -169,12 +169,12 @@ module _
   extensionality-symmetric-operation-Set :
     (g : symmetric-operation A (type-Set B)) →
     (f ＝ g) ≃ htpy-symmetric-operation-Set g
-  pr1 (extensionality-symmetric-operation-Set g) = {!!}
+  extensionality-symmetric-operation-Set = {!!}
 
   eq-htpy-symmetric-operation-Set :
     (g : symmetric-operation A (type-Set B)) →
     htpy-symmetric-operation-Set g → (f ＝ g)
-  eq-htpy-symmetric-operation-Set g = {!!}
+  eq-htpy-symmetric-operation-Set = {!!}
 ```
 
 ### The type of commutative operations into a set is equivalent to the type of symmetric operations
@@ -186,21 +186,21 @@ module _
 
   map-compute-symmetric-operation-Set :
     symmetric-operation A (type-Set B) → Σ (A → A → type-Set B) is-commutative
-  pr1 (map-compute-symmetric-operation-Set f) = {!!}
+  map-compute-symmetric-operation-Set = {!!}
 
   map-inv-compute-symmetric-operation-Set :
     Σ (A → A → type-Set B) is-commutative → symmetric-operation A (type-Set B)
-  map-inv-compute-symmetric-operation-Set (f , H) = {!!}
+  map-inv-compute-symmetric-operation-Set = {!!}
 
   is-section-map-inv-compute-symmetric-operation-Set :
     ( map-compute-symmetric-operation-Set ∘
       map-inv-compute-symmetric-operation-Set) ~ id
-  is-section-map-inv-compute-symmetric-operation-Set (f , H) = {!!}
+  is-section-map-inv-compute-symmetric-operation-Set = {!!}
 
   is-retraction-map-inv-compute-symmetric-operation-Set :
     ( map-inv-compute-symmetric-operation-Set ∘
       map-compute-symmetric-operation-Set) ~ id
-  is-retraction-map-inv-compute-symmetric-operation-Set g = {!!}
+  is-retraction-map-inv-compute-symmetric-operation-Set = {!!}
 
   is-equiv-map-compute-symmetric-operation-Set :
     is-equiv map-compute-symmetric-operation-Set
@@ -208,5 +208,5 @@ module _
 
   compute-symmetric-operation-Set :
     symmetric-operation A (type-Set B) ≃ Σ (A → A → type-Set B) is-commutative
-  pr1 compute-symmetric-operation-Set = {!!}
+  compute-symmetric-operation-Set = {!!}
 ```

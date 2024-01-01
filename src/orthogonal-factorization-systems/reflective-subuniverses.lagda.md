@@ -45,7 +45,7 @@ precisely the types in the reflective subuniverse.
 ```agda
 is-reflective-subuniverse :
   {l1 l2 : Level} (P : UU l1 → Prop l2) → UU (lsuc l1 ⊔ l2)
-is-reflective-subuniverse {l1} P = {!!}
+is-reflective-subuniverse = {!!}
 ```
 
 ```agda
@@ -132,7 +132,7 @@ module _
 
   has-all-localizations-is-reflective-subuniverse :
     (A : UU l1) → subuniverse-localization P A
-  pr1 (has-all-localizations-is-reflective-subuniverse A) = {!!}
+  has-all-localizations-is-reflective-subuniverse = {!!}
 
 module _
   {l1 l2 : Level} (P : subuniverse l1 l2)
@@ -141,7 +141,7 @@ module _
 
   is-reflective-has-all-localizations-subuniverse :
     is-reflective-subuniverse P
-  pr1 is-reflective-has-all-localizations-subuniverse A = {!!}
+  is-reflective-has-all-localizations-subuniverse = {!!}
 ```
 
 ## Recursion for reflective subuniverses
@@ -154,7 +154,7 @@ module _
 
   rec-modality-is-reflective-subuniverse :
     rec-modality (unit-is-reflective-subuniverse P is-reflective-P)
-  rec-modality-is-reflective-subuniverse {X} {Y} = {!!}
+  rec-modality-is-reflective-subuniverse = {!!}
 
   map-is-reflective-subuniverse :
     {X Y : UU l1} → (X → Y) →

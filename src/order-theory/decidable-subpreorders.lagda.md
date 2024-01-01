@@ -30,7 +30,7 @@ the restricted ordering of `P`.
 ```agda
 Decidable-Subpreorder :
   {l1 l2 : Level} (l3 : Level) → Preorder l1 l2 → UU (l1 ⊔ lsuc l3)
-Decidable-Subpreorder l3 P = {!!}
+Decidable-Subpreorder = {!!}
 
 module _
   {l1 l2 l3 : Level} (P : Preorder l1 l2) (S : Decidable-Subpreorder l3 P)

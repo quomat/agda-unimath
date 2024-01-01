@@ -30,11 +30,11 @@ has-associative-mul X = {!!}
 
 has-associative-mul-Set :
   {l : Level} (X : Set l) → UU l
-has-associative-mul-Set X = {!!}
+has-associative-mul-Set = {!!}
 
 Semigroup :
   (l : Level) → UU (lsuc l)
-Semigroup l = {!!}
+Semigroup = {!!}
 
 module _
   {l : Level} (G : Semigroup l)
@@ -61,7 +61,7 @@ module _
   ap-mul-Semigroup :
     {x x' y y' : type-Semigroup} →
     x ＝ x' → y ＝ y' → mul-Semigroup x y ＝ mul-Semigroup x' y'
-  ap-mul-Semigroup p q = {!!}
+  ap-mul-Semigroup = {!!}
 
   associative-mul-Semigroup :
     (x y z : type-Semigroup) →
@@ -74,19 +74,19 @@ module _
     {x y z : type-Semigroup} → mul-Semigroup x y ＝ mul-Semigroup y x →
     mul-Semigroup x (mul-Semigroup y z) ＝
     mul-Semigroup y (mul-Semigroup x z)
-  left-swap-mul-Semigroup H = {!!}
+  left-swap-mul-Semigroup = {!!}
 
   right-swap-mul-Semigroup :
     {x y z : type-Semigroup} → mul-Semigroup y z ＝ mul-Semigroup z y →
     mul-Semigroup (mul-Semigroup x y) z ＝
     mul-Semigroup (mul-Semigroup x z) y
-  right-swap-mul-Semigroup H = {!!}
+  right-swap-mul-Semigroup = {!!}
 
   interchange-mul-mul-Semigroup :
     {x y z w : type-Semigroup} → mul-Semigroup y z ＝ mul-Semigroup z y →
     mul-Semigroup (mul-Semigroup x y) (mul-Semigroup z w) ＝
     mul-Semigroup (mul-Semigroup x z) (mul-Semigroup y w)
-  interchange-mul-mul-Semigroup H = {!!}
+  interchange-mul-mul-Semigroup = {!!}
 ```
 
 ### The structure of a semigroup
@@ -94,10 +94,9 @@ module _
 ```agda
 structure-semigroup :
   {l1 : Level} → UU l1 → UU l1
-structure-semigroup X = {!!}
+structure-semigroup = {!!}
 
 compute-structure-semigroup :
   {l1 : Level} → (X : UU l1) → structure-semigroup X → Semigroup l1
-pr1 (compute-structure-semigroup X (s , g)) = {!!}
-pr2 (compute-structure-semigroup X (s , g)) = {!!}
+compute-structure-semigroup = {!!}
 ```

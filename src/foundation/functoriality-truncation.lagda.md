@@ -63,18 +63,18 @@ module _
 naturality-unit-trunc :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (k : 𝕋) (f : A → B) →
   map-trunc k f ∘ unit-trunc ~ unit-trunc ∘ f
-naturality-unit-trunc k f = {!!}
+naturality-unit-trunc = {!!}
 
 htpy-uniqueness-map-trunc :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (k : 𝕋) (f : A → B) →
   (h : type-trunc k A → type-trunc k B) →
   h ∘ unit-trunc ~ unit-trunc ∘ f → map-trunc k f ~ h
-htpy-uniqueness-map-trunc k f h H = {!!}
+htpy-uniqueness-map-trunc = {!!}
 
 htpy-trunc :
   {l1 l2 : Level} {A : UU l1} {B : UU l2} {k : 𝕋} {f g : A → B} →
   f ~ g → map-trunc k f ~ map-trunc k g
-htpy-trunc {k = k} {f} {g} H = {!!}
+htpy-trunc = {!!}
 ```
 
 ### The truncation of the identity map is the identity map
@@ -92,7 +92,7 @@ preserves-comp-map-trunc :
   ( g : B → C) (f : A → B) →
   ( map-trunc k (g ∘ f)) ~
   ( (map-trunc k g) ∘ (map-trunc k f))
-preserves-comp-map-trunc k g f = {!!}
+preserves-comp-map-trunc = {!!}
 ```
 
 ### The functorial action of truncations preserves equivalences
@@ -124,13 +124,13 @@ module _
 
   section-map-trunc-section :
     (f : A → B) → section f → section (map-trunc k f)
-  pr1 (section-map-trunc-section f S) = {!!}
+  section-map-trunc-section = {!!}
 
   retraction-map-trunc-retraction :
     (f : A → B) → retraction f → retraction (map-trunc k f)
-  pr1 (retraction-map-trunc-retraction f S) = {!!}
+  retraction-map-trunc-retraction = {!!}
 
   retract-of-trunc-retract-of :
     A retract-of B → (type-trunc k A) retract-of (type-trunc k B)
-  pr1 (retract-of-trunc-retract-of R) = {!!}
+  retract-of-trunc-retract-of = {!!}
 ```

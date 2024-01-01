@@ -44,7 +44,7 @@ precomp-Trunc :
   {l1 l2 l3 : Level} {k : 𝕋} {A : UU l1} {B : UU l2} (f : A → B)
   (C : Truncated-Type l3 k) →
   (B → type-Truncated-Type C) → (A → type-Truncated-Type C)
-precomp-Trunc f C = {!!}
+precomp-Trunc = {!!}
 
 module _
   {l1 l2 : Level} {k : 𝕋} {A : UU l1}
@@ -58,7 +58,7 @@ module _
     {l3 : Level} (H : is-truncation) (C : Truncated-Type l3 k) →
     ( type-Truncated-Type B → type-Truncated-Type C) ≃
     ( A → type-Truncated-Type C)
-  pr1 (equiv-is-truncation H C) = {!!}
+  equiv-is-truncation = {!!}
 ```
 
 ### The universal property of truncations
@@ -81,7 +81,7 @@ precomp-Π-Truncated-Type :
   (C : B → Truncated-Type l3 k) →
   ((b : B) → type-Truncated-Type (C b)) →
   ((a : A) → type-Truncated-Type (C (f a)))
-precomp-Π-Truncated-Type f C h a = {!!}
+precomp-Π-Truncated-Type = {!!}
 
 module _
   {l1 l2 : Level} {k : 𝕋} {A : UU l1}
@@ -101,14 +101,14 @@ abstract
   is-truncation-id :
     {l1 : Level} {k : 𝕋} {A : UU l1} (H : is-trunc k A) →
     is-truncation (A , H) id
-  is-truncation-id H B = {!!}
+  is-truncation-id = {!!}
 
 abstract
   is-truncation-equiv :
     {l1 l2 : Level} {k : 𝕋} {A : UU l1} (B : Truncated-Type l2 k)
     (e : A ≃ type-Truncated-Type B) →
     is-truncation B (map-equiv e)
-  is-truncation-equiv B e C = {!!}
+  is-truncation-equiv = {!!}
 ```
 
 ### A map into a truncated type is a truncation if and only if it satisfies the universal property of the truncation
@@ -122,24 +122,24 @@ module _
   abstract
     is-truncation-universal-property-truncation :
       universal-property-truncation B f → is-truncation B f
-    is-truncation-universal-property-truncation H C = {!!}
+    is-truncation-universal-property-truncation = {!!}
 
   abstract
     universal-property-truncation-is-truncation :
       is-truncation B f → universal-property-truncation B f
-    universal-property-truncation-is-truncation H C g = {!!}
+    universal-property-truncation-is-truncation = {!!}
 
   map-is-truncation :
     is-truncation B f →
     {l : Level} (C : Truncated-Type l k) (g : A → type-Truncated-Type C) →
     type-hom-Truncated-Type k B C
-  map-is-truncation H C g = {!!}
+  map-is-truncation = {!!}
 
   triangle-is-truncation :
     (H : is-truncation B f) →
     {l : Level} (C : Truncated-Type l k) (g : A → type-Truncated-Type C) →
     map-is-truncation H C g ∘ f ~ g
-  triangle-is-truncation H C g = {!!}
+  triangle-is-truncation = {!!}
 ```
 
 ### A map into a truncated type is a truncation if and only if it satisfies the dependent universal property of the truncation
@@ -154,17 +154,17 @@ module _
     dependent-universal-property-truncation-is-truncation :
       is-truncation B f →
       dependent-universal-property-truncation B f
-    dependent-universal-property-truncation-is-truncation H X = {!!}
+    dependent-universal-property-truncation-is-truncation = {!!}
 
   abstract
     is-truncation-dependent-universal-property-truncation :
       dependent-universal-property-truncation B f → is-truncation B f
-    is-truncation-dependent-universal-property-truncation H X = {!!}
+    is-truncation-dependent-universal-property-truncation = {!!}
 
   section-is-truncation :
     is-truncation B f →
     {l3 : Level} (C : Truncated-Type l3 k)
     (h : A → type-Truncated-Type C) (g : type-hom-Truncated-Type k C B) →
     f ~ g ∘ h → section g
-  section-is-truncation H C h g K = {!!}
+  section-is-truncation = {!!}
 ```

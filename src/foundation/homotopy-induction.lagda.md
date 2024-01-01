@@ -33,12 +33,12 @@ ev-refl-htpy :
   {l1 l2 l3 : Level} {A : UU l1} {B : A → UU l2}
   (f : (x : A) → B x) (C : (g : (x : A) → B x) → f ~ g → UU l3) →
   ((g : (x : A) → B x) (H : f ~ g) → C g H) → C f refl-htpy
-ev-refl-htpy f C φ = {!!}
+ev-refl-htpy = {!!}
 
 induction-principle-homotopies :
   {l1 l2 : Level} {A : UU l1} {B : A → UU l2}
   (f : (x : A) → B x) → UUω
-induction-principle-homotopies f = {!!}
+induction-principle-homotopies = {!!}
 ```
 
 ## Propositions
@@ -85,7 +85,7 @@ abstract
     {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (f : (x : A) → B x) →
     induction-principle-homotopies f →
     based-function-extensionality f
-  based-function-extensionality-induction-principle-homotopies f ind-htpy-f = {!!}
+  based-function-extensionality-induction-principle-homotopies = {!!}
 ```
 
 ### Homotopy induction
@@ -98,19 +98,19 @@ module _
   abstract
     induction-principle-htpy :
       (f : (x : A) → B x) → induction-principle-homotopies f
-    induction-principle-htpy f = {!!}
+    induction-principle-htpy = {!!}
 
     ind-htpy :
       {l3 : Level} (f : (x : A) → B x)
       (C : (g : (x : A) → B x) → f ~ g → UU l3) →
       C f refl-htpy → {g : (x : A) → B x} (H : f ~ g) → C g H
-    ind-htpy f C t {g} = {!!}
+    ind-htpy = {!!}
 
     compute-ind-htpy :
       {l3 : Level} (f : (x : A) → B x)
       (C : (g : (x : A) → B x) → f ~ g → UU l3) →
       (c : C f refl-htpy) → ind-htpy f C c refl-htpy ＝ c
-    compute-ind-htpy f C = {!!}
+    compute-ind-htpy = {!!}
 ```
 
 ## See also

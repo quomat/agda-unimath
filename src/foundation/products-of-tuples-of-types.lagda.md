@@ -28,7 +28,7 @@ The product of an `n`-tuple of types is their dependent product.
 ```agda
 product-tuple-types :
   {l : Level} (n : ℕ) → tuple-types l n → UU l
-product-tuple-types n A = {!!}
+product-tuple-types = {!!}
 ```
 
 ### The projection maps
@@ -37,5 +37,5 @@ product-tuple-types n A = {!!}
 pr-product-tuple-types :
   {l : Level} {n : ℕ} (A : tuple-types l n) (i : Fin n) →
   product-tuple-types n A → A i
-pr-product-tuple-types A i f = {!!}
+pr-product-tuple-types = {!!}
 ```

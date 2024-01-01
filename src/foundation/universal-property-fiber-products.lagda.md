@@ -60,12 +60,12 @@ map.
   abstract
     is-section-inv-gap-fiberwise-prod :
       (gap-fiberwise-prod ∘ inv-gap-fiberwise-prod) ~ id
-    is-section-inv-gap-fiberwise-prod ((x , p) , (.x , q) , refl) = {!!}
+    is-section-inv-gap-fiberwise-prod = {!!}
 
   abstract
     is-retraction-inv-gap-fiberwise-prod :
       (inv-gap-fiberwise-prod ∘ gap-fiberwise-prod) ~ id
-    is-retraction-inv-gap-fiberwise-prod (x , p , q) = {!!}
+    is-retraction-inv-gap-fiberwise-prod = {!!}
 
   abstract
     is-pullback-fiberwise-prod :
@@ -94,17 +94,17 @@ module _
 
   inv-gap-total-prod-fibers :
     standard-pullback f g → Σ X (λ x → (fiber f x) × (fiber g x))
-  pr1 (inv-gap-total-prod-fibers (a , b , p)) = {!!}
+  inv-gap-total-prod-fibers = {!!}
 
   abstract
     is-section-inv-gap-total-prod-fibers :
       (gap-total-prod-fibers ∘ inv-gap-total-prod-fibers) ~ id
-    is-section-inv-gap-total-prod-fibers (a , b , p) = {!!}
+    is-section-inv-gap-total-prod-fibers = {!!}
 
   abstract
     is-retraction-inv-gap-total-prod-fibers :
       (inv-gap-total-prod-fibers ∘ gap-total-prod-fibers) ~ id
-    is-retraction-inv-gap-total-prod-fibers (.(g b) , (a , p) , (b , refl)) = {!!}
+    is-retraction-inv-gap-total-prod-fibers = {!!}
 
   abstract
     is-pullback-total-prod-fibers :

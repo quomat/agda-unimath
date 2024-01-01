@@ -40,5 +40,5 @@ module _
 
   prod-Type-With-Endomorphism :
     Type-With-Endomorphism (l1 ⊔ l2)
-  pr1 prod-Type-With-Endomorphism = {!!}
+  prod-Type-With-Endomorphism = {!!}
 ```

@@ -47,7 +47,7 @@ precomp-comp-Set-Quotient :
   (D : Set l5) (h : hom-Set C D) →
   ( precomp-Set-Quotient R B f D (h ∘ g)) ＝
   ( precomp-Set-Quotient R C (precomp-Set-Quotient R B f C g) D h)
-precomp-comp-Set-Quotient R B f C g D h = {!!}
+precomp-comp-Set-Quotient = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {A : UU l1} (R : equivalence-relation l2 A)
@@ -63,33 +63,33 @@ module _
     is-set-quotient R B f →
     is-set-quotient R C g →
     type-Set C → type-Set B
-  map-inv-is-equiv-is-set-quotient-is-set-quotient Uf Ug = {!!}
+  map-inv-is-equiv-is-set-quotient-is-set-quotient = {!!}
 
   is-section-map-inv-is-equiv-is-set-quotient-is-set-quotient :
     ( Uf : is-set-quotient R B f) →
     ( Ug : is-set-quotient R C g) →
     ( h ∘ map-inv-is-equiv-is-set-quotient-is-set-quotient Uf Ug) ~ id
-  is-section-map-inv-is-equiv-is-set-quotient-is-set-quotient Uf Ug = {!!}
+  is-section-map-inv-is-equiv-is-set-quotient-is-set-quotient = {!!}
 
   is-retraction-map-inv-is-equiv-is-set-quotient-is-set-quotient :
     ( Uf : is-set-quotient R B f) →
     ( Ug : is-set-quotient R C g) →
     ( map-inv-is-equiv-is-set-quotient-is-set-quotient Uf Ug ∘ h) ~ id
-  is-retraction-map-inv-is-equiv-is-set-quotient-is-set-quotient Uf Ug = {!!}
+  is-retraction-map-inv-is-equiv-is-set-quotient-is-set-quotient = {!!}
 
   is-equiv-is-set-quotient-is-set-quotient :
     is-set-quotient R B f →
     is-set-quotient R C g →
     is-equiv h
-  is-equiv-is-set-quotient-is-set-quotient Uf Ug = {!!}
+  is-equiv-is-set-quotient-is-set-quotient = {!!}
 
   is-set-quotient-is-set-quotient-is-equiv :
     is-equiv h → is-set-quotient R B f → is-set-quotient R C g
-  is-set-quotient-is-set-quotient-is-equiv E Uf {l} X = {!!}
+  is-set-quotient-is-set-quotient-is-equiv = {!!}
 
   is-set-quotient-is-equiv-is-set-quotient :
     is-set-quotient R C g → is-equiv h → is-set-quotient R B f
-  is-set-quotient-is-equiv-is-set-quotient Ug E {l} X = {!!}
+  is-set-quotient-is-equiv-is-set-quotient = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} {A : UU l1} (R : equivalence-relation l2 A)

@@ -44,11 +44,11 @@ module _
 
   is-large-category-action-Group-Large-Category :
     is-large-category-Large-Precategory (action-Group-Large-Precategory G)
-  is-large-category-action-Group-Large-Category X = {!!}
+  is-large-category-action-Group-Large-Category = {!!}
 
   action-Group-Large-Category :
     Large-Category (λ l2 → l1 ⊔ lsuc l2) (λ l2 l3 → l1 ⊔ l2 ⊔ l3)
-  large-precategory-Large-Category action-Group-Large-Category = {!!}
+  action-Group-Large-Category = {!!}
 ```
 
 ### The small category of `G`-sets

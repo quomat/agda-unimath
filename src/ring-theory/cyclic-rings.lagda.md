@@ -283,7 +283,7 @@ module _
   abstract
     is-surjective-initial-hom-Cyclic-Ring :
       is-surjective-initial-hom-Ring (ring-Cyclic-Ring R)
-    is-surjective-initial-hom-Cyclic-Ring x = {!!}
+    is-surjective-initial-hom-Cyclic-Ring = {!!}
 
   abstract
     is-generating-element-one-Cyclic-Ring :
@@ -301,7 +301,7 @@ module _
   is-cyclic-is-surjective-initial-hom-Ring :
     (R : Ring l) →
     is-surjective-initial-hom-Ring R → is-cyclic-Ring R
-  is-cyclic-is-surjective-initial-hom-Ring R H = {!!}
+  is-cyclic-is-surjective-initial-hom-Ring = {!!}
 
   classification-Cyclic-Ring :
     Cyclic-Ring l ≃ Σ (Ring l) is-surjective-initial-hom-Ring
@@ -328,7 +328,7 @@ module _
   abstract
     is-surjective-hom-element-is-invertible-element-Cyclic-Ring :
       is-surjective-hom-element-Group (group-Cyclic-Ring R) x
-    is-surjective-hom-element-is-invertible-element-Cyclic-Ring y = {!!}
+    is-surjective-hom-element-is-invertible-element-Cyclic-Ring = {!!}
 
   is-generating-element-group-is-invertible-element-Cyclic-Ring :
     is-generating-element-Group (group-Cyclic-Ring R) x
@@ -346,7 +346,7 @@ module _
     commutative-mul-Cyclic-Ring :
       (x y : type-Cyclic-Ring R) →
       mul-Cyclic-Ring R x y ＝ mul-Cyclic-Ring R y x
-    commutative-mul-Cyclic-Ring x y = {!!}
+    commutative-mul-Cyclic-Ring = {!!}
 
   commutative-ring-Cyclic-Ring : Commutative-Ring l
   pr1 commutative-ring-Cyclic-Ring = {!!}

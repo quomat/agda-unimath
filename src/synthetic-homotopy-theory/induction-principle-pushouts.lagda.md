@@ -48,7 +48,7 @@ induction-principle-pushout :
   { S : UU l1} {A : UU l2} {B : UU l3} {X : UU l4} →
   ( f : S → A) (g : S → B) (c : cocone f g X) →
   UU (lsuc l ⊔ l1 ⊔ l2 ⊔ l3 ⊔ l4)
-induction-principle-pushout l {X = X} f g c = {!!}
+induction-principle-pushout = {!!}
 
 module _
   { l1 l2 l3 l4 l : Level} {S : UU l1} {A : UU l2} {B : UU l3} {X : UU l4}
@@ -65,19 +65,19 @@ module _
     htpy-dependent-cocone f g c P
       ( dependent-cocone-map f g c P (ind-induction-principle-pushout h))
       ( h)
-  compute-ind-induction-principle-pushout h = {!!}
+  compute-ind-induction-principle-pushout = {!!}
 
   left-compute-ind-induction-principle-pushout :
     ( h : dependent-cocone f g c P) (a : A) →
     ind-induction-principle-pushout h (horizontal-map-cocone f g c a) ＝
     horizontal-map-dependent-cocone f g c P h a
-  left-compute-ind-induction-principle-pushout h = {!!}
+  left-compute-ind-induction-principle-pushout = {!!}
 
   right-compute-ind-induction-principle-pushout :
     ( h : dependent-cocone f g c P) (b : B) →
     ind-induction-principle-pushout h (vertical-map-cocone f g c b) ＝
     vertical-map-dependent-cocone f g c P h b
-  right-compute-ind-induction-principle-pushout h = {!!}
+  right-compute-ind-induction-principle-pushout = {!!}
 
   path-compute-ind-induction-principle-pushout :
     (h : dependent-cocone f g c P) →
@@ -86,5 +86,5 @@ module _
       ( h)
       ( left-compute-ind-induction-principle-pushout h)
       ( right-compute-ind-induction-principle-pushout h)
-  path-compute-ind-induction-principle-pushout h = {!!}
+  path-compute-ind-induction-principle-pushout = {!!}
 ```

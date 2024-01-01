@@ -32,7 +32,7 @@ ordering on `P`, the subpreorder inherits the structure of a preorder.
 ```agda
 Subpreorder :
   {l1 l2 : Level} (l3 : Level) → Preorder l1 l2 → UU (l1 ⊔ lsuc l3)
-Subpreorder l3 P = {!!}
+Subpreorder = {!!}
 
 module _
   {l1 l2 l3 : Level} (P : Preorder l1 l2) (S : Subpreorder l3 P)
@@ -43,7 +43,7 @@ module _
 
   eq-type-Subpreorder :
     (x y : type-Subpreorder) → Id (pr1 x) (pr1 y) → Id x y
-  eq-type-Subpreorder x y = {!!}
+  eq-type-Subpreorder = {!!}
 
   leq-Subpreorder-Prop : (x y : type-Subpreorder) → Prop l2
   leq-Subpreorder-Prop x y = {!!}
@@ -53,7 +53,7 @@ module _
 
   is-prop-leq-Subpreorder :
     (x y : type-Subpreorder) → is-prop (leq-Subpreorder x y)
-  is-prop-leq-Subpreorder x y = {!!}
+  is-prop-leq-Subpreorder = {!!}
 
   refl-leq-Subpreorder : is-reflexive leq-Subpreorder
   refl-leq-Subpreorder x = {!!}
@@ -88,7 +88,7 @@ module _
 
   refl-inclusion-Subpreorder :
     {l3 : Level} → is-reflexive (inclusion-Subpreorder {l3})
-  refl-inclusion-Subpreorder S x = {!!}
+  refl-inclusion-Subpreorder = {!!}
 
   transitive-inclusion-Subpreorder :
     {l3 l4 l5 : Level} (S : type-Preorder P → Prop l3)
@@ -97,7 +97,7 @@ module _
     inclusion-Subpreorder T U →
     inclusion-Subpreorder S T →
     inclusion-Subpreorder S U
-  transitive-inclusion-Subpreorder S T U g f x = {!!}
+  transitive-inclusion-Subpreorder = {!!}
 
   Sub-Preorder : (l : Level) → Preorder (l1 ⊔ lsuc l) (l1 ⊔ l)
   pr1 (Sub-Preorder l) = {!!}

@@ -34,7 +34,7 @@ parametric-Poset-Large-Precategory :
   Large-Precategory
     ( λ l → lsuc (α l) ⊔ lsuc (β l))
     ( λ l1 l2 → α l1 ⊔ β l1 ⊔ α l2 ⊔ β l2)
-parametric-Poset-Large-Precategory α β = {!!}
+parametric-Poset-Large-Precategory = {!!}
 
 Poset-Large-Precategory : Large-Precategory lsuc (_⊔_)
 Poset-Large-Precategory = {!!}

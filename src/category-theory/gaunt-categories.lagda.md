@@ -196,7 +196,7 @@ module _
 ```agda
 nonunital-precategory-Gaunt-Category :
   {l1 l2 : Level} → Gaunt-Category l1 l2 → Nonunital-Precategory l1 l2
-nonunital-precategory-Gaunt-Category C = {!!}
+nonunital-precategory-Gaunt-Category = {!!}
 ```
 
 ### The underlying precategory of a gaunt category
@@ -204,7 +204,7 @@ nonunital-precategory-Gaunt-Category C = {!!}
 ```agda
 precategory-Gaunt-Category :
   {l1 l2 : Level} → Gaunt-Category l1 l2 → Precategory l1 l2
-precategory-Gaunt-Category C = {!!}
+precategory-Gaunt-Category = {!!}
 ```
 
 ### The underlying preunivalent category of a gaunt category
@@ -212,7 +212,7 @@ precategory-Gaunt-Category C = {!!}
 ```agda
 preunivalent-category-Gaunt-Category :
   {l1 l2 : Level} → Gaunt-Category l1 l2 → Preunivalent-Category l1 l2
-preunivalent-category-Gaunt-Category C = {!!}
+preunivalent-category-Gaunt-Category = {!!}
 ```
 
 ### The total hom-type of a gaunt category
@@ -220,13 +220,13 @@ preunivalent-category-Gaunt-Category C = {!!}
 ```agda
 total-hom-Gaunt-Category :
   {l1 l2 : Level} (C : Gaunt-Category l1 l2) → UU (l1 ⊔ l2)
-total-hom-Gaunt-Category C = {!!}
+total-hom-Gaunt-Category = {!!}
 
 obj-total-hom-Gaunt-Category :
   {l1 l2 : Level} (C : Gaunt-Category l1 l2) →
   total-hom-Gaunt-Category C →
   obj-Gaunt-Category C × obj-Gaunt-Category C
-obj-total-hom-Gaunt-Category C = {!!}
+obj-total-hom-Gaunt-Category = {!!}
 ```
 
 ### Equalities induce morphisms
@@ -255,7 +255,7 @@ is-strict-category-is-prop-iso-Preunivalent-Category :
   {l1 l2 : Level} (C : Preunivalent-Category l1 l2) →
   is-prop-iso-Precategory (precategory-Preunivalent-Category C) →
   is-strict-category-Preunivalent-Category C
-is-strict-category-is-prop-iso-Preunivalent-Category C is-prop-iso-C x y = {!!}
+is-strict-category-is-prop-iso-Preunivalent-Category = {!!}
 ```
 
 ### Gaunt categories are strict
@@ -264,7 +264,7 @@ is-strict-category-is-prop-iso-Preunivalent-Category C is-prop-iso-C x y = {!!}
 is-strict-category-is-gaunt-Category :
   {l1 l2 : Level} (C : Category l1 l2) →
   is-gaunt-Category C → is-strict-category-Category C
-is-strict-category-is-gaunt-Category C = {!!}
+is-strict-category-is-gaunt-Category = {!!}
 ```
 
 ### A strict category is gaunt if `iso-eq` is surjective
@@ -282,17 +282,17 @@ module _
   is-prop-iso-is-category-Strict-Category :
     is-category-Precategory (precategory-Strict-Category C) →
     is-prop-iso-Precategory (precategory-Strict-Category C)
-  is-prop-iso-is-category-Strict-Category is-category-C x y = {!!}
+  is-prop-iso-is-category-Strict-Category = {!!}
 
   is-prop-iso-is-surjective-iso-eq-Strict-Category :
     is-surjective-iso-eq-Precategory (precategory-Strict-Category C) →
     is-prop-iso-Precategory (precategory-Strict-Category C)
-  is-prop-iso-is-surjective-iso-eq-Strict-Category is-surj-iso-eq-C = {!!}
+  is-prop-iso-is-surjective-iso-eq-Strict-Category = {!!}
 
   is-gaunt-is-surjective-iso-eq-Strict-Category :
     is-surjective-iso-eq-Precategory (precategory-Strict-Category C) →
     is-gaunt-Precategory (precategory-Strict-Category C)
-  pr1 (is-gaunt-is-surjective-iso-eq-Strict-Category is-surj-iso-eq-C) = {!!}
+  is-gaunt-is-surjective-iso-eq-Strict-Category = {!!}
 ```
 
 ### A category is gaunt if and only if every object is rigid
@@ -311,11 +311,11 @@ module _
 
   is-gaunt-is-rigid-Category :
     ((x : obj-Category C) → is-rigid-obj-Category C x) → is-gaunt-Category C
-  is-gaunt-is-rigid-Category is-rigid-obj-C x y = {!!}
+  is-gaunt-is-rigid-Category = {!!}
 
   is-rigid-is-gaunt-Category :
     is-gaunt-Category C → (x : obj-Category C) → is-rigid-obj-Category C x
-  is-rigid-is-gaunt-Category is-gaunt-C x = {!!}
+  is-rigid-is-gaunt-Category = {!!}
 ```
 
 ## See also

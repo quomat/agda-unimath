@@ -49,7 +49,7 @@ module _
   abstract
     is-torsorial-htpy-equiv :
       (e : A ≃ B) → is-torsorial (htpy-equiv e)
-    is-torsorial-htpy-equiv e = {!!}
+    is-torsorial-htpy-equiv = {!!}
 
   refl-htpy-equiv : (e : A ≃ B) → htpy-equiv e e
   refl-htpy-equiv e = {!!}
@@ -79,16 +79,16 @@ module _
       section
         ( λ (h : (e' : A ≃ B) (H : htpy-equiv e e') → P e' H) →
           h e (refl-htpy-equiv e))
-    induction-principle-htpy-equiv e = {!!}
+    induction-principle-htpy-equiv = {!!}
 
   ind-htpy-equiv :
     {l3 : Level} (e : A ≃ B) (P : (e' : A ≃ B) (H : htpy-equiv e e') → UU l3) →
     P e (refl-htpy-equiv e) → (e' : A ≃ B) (H : htpy-equiv e e') → P e' H
-  ind-htpy-equiv e P = {!!}
+  ind-htpy-equiv = {!!}
 
   compute-ind-htpy-equiv :
     {l3 : Level} (e : A ≃ B) (P : (e' : A ≃ B) (H : htpy-equiv e e') → UU l3)
     (p : P e (refl-htpy-equiv e)) →
     ind-htpy-equiv e P p e (refl-htpy-equiv e) ＝ p
-  compute-ind-htpy-equiv e P = {!!}
+  compute-ind-htpy-equiv = {!!}
 ```

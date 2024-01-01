@@ -41,12 +41,12 @@ module _
 
   contains-product-right-ideal-Ring :
     {l4 : Level} (K : right-ideal-Ring l4 R) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  contains-product-right-ideal-Ring K = {!!}
+  contains-product-right-ideal-Ring = {!!}
 
   is-product-right-ideal-Ring :
     {l4 : Level} (K : right-ideal-Ring l4 R) →
     contains-product-right-ideal-Ring K → UUω
-  is-product-right-ideal-Ring K H = {!!}
+  is-product-right-ideal-Ring = {!!}
 ```
 
 ### The product of two right ideals in a ring
@@ -73,13 +73,13 @@ module _
     (x y : type-Ring R) →
     is-in-right-ideal-Ring R I x → is-in-right-ideal-Ring R J y →
     is-in-product-right-ideal-Ring (mul-Ring R x y)
-  contains-product-product-right-ideal-Ring x y H K = {!!}
+  contains-product-product-right-ideal-Ring = {!!}
 
   is-product-product-right-ideal-Ring :
     is-product-right-ideal-Ring R I J
       ( product-right-ideal-Ring)
       ( contains-product-product-right-ideal-Ring)
-  is-product-product-right-ideal-Ring K H = {!!}
+  is-product-product-right-ideal-Ring = {!!}
 ```
 
 ## Properties
@@ -101,7 +101,7 @@ module _
     leq-right-ideal-Ring A
       ( product-right-ideal-Ring A I K)
       ( product-right-ideal-Ring A J L)
-  preserves-leq-product-right-ideal-Ring p q = {!!}
+  preserves-leq-product-right-ideal-Ring = {!!}
 
 module _
   {l1 l2 l3 l4 : Level} (A : Ring l1)
@@ -115,7 +115,7 @@ module _
     leq-right-ideal-Ring A
       ( product-right-ideal-Ring A I K)
       ( product-right-ideal-Ring A J K)
-  preserves-leq-left-product-right-ideal-Ring p = {!!}
+  preserves-leq-left-product-right-ideal-Ring = {!!}
 
   preserves-leq-right-product-right-ideal-Ring :
     leq-right-ideal-Ring A J K →

@@ -103,7 +103,7 @@ module _
       (p : reflects-normal-subgroup-hom-Group G G N N (id-hom-Group G)) →
       hom-quotient-Group G G N N (id-reflecting-hom-Group' G N p) ＝
       id-hom-Group (quotient-Group G N)
-    preserves-id-hom-quotient-Group' p = {!!}
+    preserves-id-hom-quotient-Group' = {!!}
 
   abstract
     preserves-id-hom-quotient-Group :
@@ -138,7 +138,7 @@ module _
         ( quotient-Group K N)
         ( hom-quotient-Group H K M N g)
         ( hom-quotient-Group G H L M f)
-    preserves-comp-hom-quotient-Group' g f p = {!!}
+    preserves-comp-hom-quotient-Group' = {!!}
 
   abstract
     preserves-comp-hom-quotient-Group :
@@ -151,7 +151,7 @@ module _
         ( quotient-Group K N)
         ( hom-quotient-Group H K M N g)
         ( hom-quotient-Group G H L M f)
-    preserves-comp-hom-quotient-Group g f = {!!}
+    preserves-comp-hom-quotient-Group = {!!}
 ```
 
 #### The quotient group functor

@@ -58,15 +58,15 @@ module _
 
   is-additive-subgroup-kernel-hom-Ring :
     is-additive-subgroup-subset-Ring R subset-kernel-hom-Ring
-  pr1 is-additive-subgroup-kernel-hom-Ring = {!!}
+  is-additive-subgroup-kernel-hom-Ring = {!!}
 
   is-closed-under-left-multiplication-kernel-hom-Ring :
     is-closed-under-left-multiplication-subset-Ring R subset-kernel-hom-Ring
-  is-closed-under-left-multiplication-kernel-hom-Ring x y H = {!!}
+  is-closed-under-left-multiplication-kernel-hom-Ring = {!!}
 
   is-closed-under-right-multiplication-kernel-hom-Ring :
     is-closed-under-right-multiplication-subset-Ring R subset-kernel-hom-Ring
-  is-closed-under-right-multiplication-kernel-hom-Ring x y H = {!!}
+  is-closed-under-right-multiplication-kernel-hom-Ring = {!!}
 
   kernel-hom-Ring : ideal-Ring l2 R
   pr1 kernel-hom-Ring = {!!}

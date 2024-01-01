@@ -46,7 +46,7 @@ module _
 
   symmetric-Id :
     (a : unordered-pair A) → UU l
-  symmetric-Id a = {!!}
+  symmetric-Id = {!!}
 
   module _
     (a : unordered-pair A)
@@ -54,31 +54,31 @@ module _
 
     Eq-symmetric-Id :
       (p q : symmetric-Id a) → UU l
-    Eq-symmetric-Id (x , H) q = {!!}
+    Eq-symmetric-Id = {!!}
 
     refl-Eq-symmetric-Id :
       (p : symmetric-Id a) → Eq-symmetric-Id p p
-    pr1 (refl-Eq-symmetric-Id (x , H)) = {!!}
+    refl-Eq-symmetric-Id = {!!}
 
     is-torsorial-Eq-symmetric-Id :
       (p : symmetric-Id a) → is-torsorial (Eq-symmetric-Id p)
-    is-torsorial-Eq-symmetric-Id (x , H) = {!!}
+    is-torsorial-Eq-symmetric-Id = {!!}
 
     Eq-eq-symmetric-Id :
       (p q : symmetric-Id a) → (p ＝ q) → Eq-symmetric-Id p q
-    Eq-eq-symmetric-Id p .p refl = {!!}
+    Eq-eq-symmetric-Id = {!!}
 
     is-equiv-Eq-eq-symmetric-Id :
       (p q : symmetric-Id a) → is-equiv (Eq-eq-symmetric-Id p q)
-    is-equiv-Eq-eq-symmetric-Id p = {!!}
+    is-equiv-Eq-eq-symmetric-Id = {!!}
 
     extensionality-symmetric-Id :
       (p q : symmetric-Id a) → (p ＝ q) ≃ Eq-symmetric-Id p q
-    pr1 (extensionality-symmetric-Id p q) = {!!}
+    extensionality-symmetric-Id = {!!}
 
     eq-Eq-symmetric-Id :
       (p q : symmetric-Id a) → Eq-symmetric-Id p q → p ＝ q
-    eq-Eq-symmetric-Id p q = {!!}
+    eq-Eq-symmetric-Id = {!!}
 
   module _
     (a b : A)
@@ -86,20 +86,20 @@ module _
 
     map-compute-symmetric-Id :
       symmetric-Id (standard-unordered-pair a b) → a ＝ b
-    map-compute-symmetric-Id (x , f) = {!!}
+    map-compute-symmetric-Id = {!!}
 
     map-inv-compute-symmetric-Id :
       a ＝ b → symmetric-Id (standard-unordered-pair a b)
-    pr1 (map-inv-compute-symmetric-Id p) = {!!}
+    map-inv-compute-symmetric-Id = {!!}
 
     is-section-map-inv-compute-symmetric-Id :
       ( map-compute-symmetric-Id ∘ map-inv-compute-symmetric-Id) ~ id
-    is-section-map-inv-compute-symmetric-Id refl = {!!}
+    is-section-map-inv-compute-symmetric-Id = {!!}
 
     abstract
       is-retraction-map-inv-compute-symmetric-Id :
         ( map-inv-compute-symmetric-Id ∘ map-compute-symmetric-Id) ~ id
-      is-retraction-map-inv-compute-symmetric-Id (x , f) = {!!}
+      is-retraction-map-inv-compute-symmetric-Id = {!!}
 
     is-equiv-map-compute-symmetric-Id :
       is-equiv (map-compute-symmetric-Id)
@@ -122,7 +122,7 @@ module _
   map-symmetric-Id :
     (f : A → B) (a : unordered-pair A) →
     symmetric-Id a → symmetric-Id (map-unordered-pair f a)
-  map-symmetric-Id f a = {!!}
+  map-symmetric-Id = {!!}
 ```
 
 ### The action of equivalences on symmetric identity types
@@ -135,17 +135,17 @@ module _
   equiv-symmetric-Id :
     (e : A ≃ B) (a : unordered-pair A) →
     symmetric-Id a ≃ symmetric-Id (map-equiv-unordered-pair e a)
-  equiv-symmetric-Id e a = {!!}
+  equiv-symmetric-Id = {!!}
 
   map-equiv-symmetric-Id :
     (e : A ≃ B) (a : unordered-pair A) →
     symmetric-Id a → symmetric-Id (map-equiv-unordered-pair e a)
-  map-equiv-symmetric-Id e a = {!!}
+  map-equiv-symmetric-Id = {!!}
 
 id-equiv-symmetric-Id :
   {l : Level} {A : UU l} (a : unordered-pair A) →
   map-equiv-symmetric-Id id-equiv a ~ id
-id-equiv-symmetric-Id a (x , H) = {!!}
+id-equiv-symmetric-Id = {!!}
 ```
 
 ### Transport in the symmetric identity type along observational equality of unordered pairs
@@ -158,14 +158,14 @@ module _
   equiv-tr-symmetric-Id :
     (p q : unordered-pair A) → Eq-unordered-pair p q →
     symmetric-Id p ≃ symmetric-Id q
-  equiv-tr-symmetric-Id (X , f) (Y , g) (e , H) = {!!}
+  equiv-tr-symmetric-Id = {!!}
 
   tr-symmetric-Id :
     (p q : unordered-pair A)
     (e : type-unordered-pair p ≃ type-unordered-pair q) →
     (element-unordered-pair p ~ (element-unordered-pair q ∘ map-equiv e)) →
     symmetric-Id p → symmetric-Id q
-  tr-symmetric-Id p q e H = {!!}
+  tr-symmetric-Id = {!!}
 
   compute-pr2-tr-symmetric-Id :
     (p q : unordered-pair A)
@@ -175,10 +175,10 @@ module _
     (K : (x : type-unordered-pair p) → a ＝ element-unordered-pair p x) →
     (x : type-unordered-pair p) →
     pr2 (tr-symmetric-Id p q e H (a , K)) (map-equiv e x) ＝ (K x ∙ H x)
-  compute-pr2-tr-symmetric-Id (X , f) (Y , g) e H {a} = {!!}
+  compute-pr2-tr-symmetric-Id = {!!}
 
   refl-Eq-unordered-pair-tr-symmetric-Id :
     (p : unordered-pair A) →
     tr-symmetric-Id p p id-equiv refl-htpy ~ id
-  refl-Eq-unordered-pair-tr-symmetric-Id p (a , K) = {!!}
+  refl-Eq-unordered-pair-tr-symmetric-Id = {!!}
 ```

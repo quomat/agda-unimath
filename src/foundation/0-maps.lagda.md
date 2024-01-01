@@ -64,7 +64,7 @@ module _
 
   pr1-0-map :
     (B : A → Set l2) → 0-map (Σ A (λ x → type-Set (B x))) A
-  pr1 (pr1-0-map B) = {!!}
+  pr1-0-map = {!!}
 ```
 
 ### `0`-maps are closed under homotopies

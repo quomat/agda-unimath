@@ -145,19 +145,19 @@ module _
       ( is-lift-lifting-square l') ~
       ( is-lift-lifting-square l ∙h (g ·l K))) →
     UU (l1 ⊔ l4)
-  coherence-htpy-lifting-square l l' K E L = {!!}
+  coherence-htpy-lifting-square = {!!}
 
   htpy-lifting-square :
     (l l' : lifting-square h f g i H) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  htpy-lifting-square l l' = {!!}
+  htpy-lifting-square = {!!}
 
   refl-htpy-lifting-square :
     (l : lifting-square h f g i H) → htpy-lifting-square l l
-  pr1 (refl-htpy-lifting-square l) = {!!}
+  refl-htpy-lifting-square = {!!}
 
   htpy-eq-lifting-square :
     (l l' : lifting-square h f g i H) → l ＝ l' → htpy-lifting-square l l'
-  htpy-eq-lifting-square l .l refl = {!!}
+  htpy-eq-lifting-square = {!!}
 ```
 
 It remains to show that `coherence-htpy-lifting-square` indeed is a
@@ -197,7 +197,7 @@ module _
 
   is-lifting-square-diagonal :
     (j : X → B) → is-lifting-square (j ∘ f) f g (g ∘ j) refl-htpy j
-  pr1 (is-lifting-square-diagonal j) = {!!}
+  is-lifting-square-diagonal = {!!}
 ```
 
 ### The lifting square associated to a fibered map
@@ -210,5 +210,5 @@ module _
 
   lifting-square-fibered-map :
     (h : fibered-map f g) → UU (l1 ⊔ l2 ⊔ l3 ⊔ l4)
-  lifting-square-fibered-map h = {!!}
+  lifting-square-fibered-map = {!!}
 ```

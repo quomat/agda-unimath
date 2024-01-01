@@ -202,7 +202,7 @@ module _
 
   retract-domain-retract-map :
     A retract-of X
-  pr1 retract-domain-retract-map = {!!}
+  retract-domain-retract-map = {!!}
 
   is-retraction-map-codomain-hom-retraction-retract-map :
     is-retraction
@@ -438,7 +438,7 @@ module _
     retract-map
       ( inclusion-fiber g {map-codomain-inclusion-retract-map f g R b})
       ( inclusion-fiber f {b})
-  pr1 retract-map-inclusion-fiber-retract-map = {!!}
+  retract-map-inclusion-fiber-retract-map = {!!}
 ```
 
 ### If `f` is a retract of `g`, then the fibers of `f` are retracts of the fibers of `g`

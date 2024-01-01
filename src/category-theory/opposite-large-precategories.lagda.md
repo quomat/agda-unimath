@@ -45,13 +45,13 @@ module _
     {l1 l2 : Level}
     (X : obj-opposite-Large-Precategory l1)
     (Y : obj-opposite-Large-Precategory l2) → Set (β l2 l1)
-  hom-set-opposite-Large-Precategory X Y = {!!}
+  hom-set-opposite-Large-Precategory = {!!}
 
   hom-opposite-Large-Precategory :
     {l1 l2 : Level}
     (X : obj-opposite-Large-Precategory l1)
     (Y : obj-opposite-Large-Precategory l2) → UU (β l2 l1)
-  hom-opposite-Large-Precategory X Y = {!!}
+  hom-opposite-Large-Precategory = {!!}
 
   comp-hom-opposite-Large-Precategory :
     {l1 l2 l3 : Level}
@@ -61,7 +61,7 @@ module _
     hom-opposite-Large-Precategory Y Z →
     hom-opposite-Large-Precategory X Y →
     hom-opposite-Large-Precategory X Z
-  comp-hom-opposite-Large-Precategory g f = {!!}
+  comp-hom-opposite-Large-Precategory = {!!}
 
   associative-comp-hom-opposite-Large-Precategory :
     {l1 l2 l3 l4 : Level}
@@ -78,7 +78,7 @@ module _
     comp-hom-opposite-Large-Precategory
       ( h)
       ( comp-hom-opposite-Large-Precategory g f)
-  associative-comp-hom-opposite-Large-Precategory h g f = {!!}
+  associative-comp-hom-opposite-Large-Precategory = {!!}
 
   inv-associative-comp-hom-opposite-Large-Precategory :
     {l1 l2 l3 l4 : Level}
@@ -95,7 +95,7 @@ module _
     comp-hom-opposite-Large-Precategory
       ( comp-hom-opposite-Large-Precategory h g)
       ( f)
-  inv-associative-comp-hom-opposite-Large-Precategory h g f = {!!}
+  inv-associative-comp-hom-opposite-Large-Precategory = {!!}
 
   id-hom-opposite-Large-Precategory :
     {l1 : Level} {X : obj-opposite-Large-Precategory l1} →
@@ -136,12 +136,12 @@ module _
   map-compute-iso-opposite-Large-Precategory :
     iso-Large-Precategory C X Y →
     iso-Large-Precategory (opposite-Large-Precategory C) Y X
-  pr1 (map-compute-iso-opposite-Large-Precategory f) = {!!}
+  map-compute-iso-opposite-Large-Precategory = {!!}
 
   map-inv-compute-iso-opposite-Large-Precategory :
     iso-Large-Precategory (opposite-Large-Precategory C) Y X →
     iso-Large-Precategory C X Y
-  pr1 (map-inv-compute-iso-opposite-Large-Precategory f) = {!!}
+  map-inv-compute-iso-opposite-Large-Precategory = {!!}
 
   is-equiv-map-compute-iso-opposite-Large-Precategory :
     is-equiv (map-compute-iso-opposite-Large-Precategory)
@@ -150,7 +150,7 @@ module _
   compute-iso-opposite-Large-Precategory :
     iso-Large-Precategory C X Y ≃
     iso-Large-Precategory (opposite-Large-Precategory C) Y X
-  pr1 compute-iso-opposite-Large-Precategory = {!!}
+  compute-iso-opposite-Large-Precategory = {!!}
 ```
 
 ## External links

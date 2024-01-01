@@ -26,19 +26,17 @@ open import univalent-combinatorics.standard-finite-types
 ```agda
 skip-Fin :
   (k : ℕ) → Fin (succ-ℕ k) → Fin k → Fin (succ-ℕ k)
-skip-Fin (succ-ℕ k) (inl x) (inl y) = {!!}
-skip-Fin (succ-ℕ k) (inl x) (inr y) = {!!}
-skip-Fin (succ-ℕ k) (inr x) y = {!!}
+skip-Fin = {!!}
 
 abstract
   is-injective-skip-Fin :
     (k : ℕ) (x : Fin (succ-ℕ k)) → is-injective (skip-Fin k x)
-  is-injective-skip-Fin (succ-ℕ k) (inl x) {inl y} {inl z} p = {!!}
+  is-injective-skip-Fin = {!!}
 
 abstract
   is-emb-skip-Fin :
     (k : ℕ) (x : Fin (succ-ℕ k)) → is-emb (skip-Fin k x)
-  is-emb-skip-Fin k x = {!!}
+  is-emb-skip-Fin = {!!}
 
 emb-skip-Fin : (k : ℕ) (x : Fin (succ-ℕ k)) → Fin k ↪ Fin (succ-ℕ k)
 pr1 (emb-skip-Fin k x) = {!!}

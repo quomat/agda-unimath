@@ -59,7 +59,7 @@ abstract
           ( λ e →
             ( map-equiv e ∘ unit-trunc-Set) ~
             ( map-Π (λ x → unit-trunc-Set))))
-  distributive-trunc-Π-Fin-Set zero-ℕ A = {!!}
+  distributive-trunc-Π-Fin-Set = {!!}
 
 module _
   {l : Level} (k : ℕ) (A : Fin k → UU l)
@@ -91,7 +91,7 @@ module _
             ( λ e →
               ( map-equiv e ∘ unit-trunc-Set) ~
               ( map-Π (λ x → unit-trunc-Set))))
-    distributive-trunc-Π-count-Set (pair k e) = {!!}
+    distributive-trunc-Π-count-Set = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} (B : A → UU l2) (c : count A)

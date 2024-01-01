@@ -106,7 +106,7 @@ module _
 
   large-subpreorder-closure-operator-Large-Locale :
     Large-Subpreorder α (large-preorder-Large-Locale L)
-  large-subpreorder-closure-operator-Large-Locale {l1} x = {!!}
+  large-subpreorder-closure-operator-Large-Locale = {!!}
 
   is-closed-element-closure-operator-Large-Locale :
     {l1 : Level} → type-Large-Locale L l1 → UU (α l1)
@@ -121,7 +121,7 @@ module _
     {l1 : Level} (x : type-Large-Locale L l1) →
     leq-Large-Locale L (map-closure-operator-Large-Locale L j x) x →
     is-closed-element-closure-operator-Large-Locale x
-  is-closed-element-leq-closure-operator-Large-Locale x H = {!!}
+  is-closed-element-leq-closure-operator-Large-Locale = {!!}
 
   closed-element-closure-operator-Large-Locale :
     (l1 : Level) → UU (α l1)
@@ -134,12 +134,11 @@ module _
     leq-Large-Locale L x y → leq-Large-Locale L y x →
     is-closed-element-closure-operator-Large-Locale x →
     is-closed-element-closure-operator-Large-Locale y
-  is-closed-under-sim-closure-operator-Large-Locale x y H K c = {!!}
+  is-closed-under-sim-closure-operator-Large-Locale = {!!}
 
   large-subposet-closure-operator-Large-Locale :
     Large-Subposet α (large-poset-Large-Locale L)
-  large-subpreorder-Large-Subposet
-    large-subposet-closure-operator-Large-Locale = {!!}
+  large-subposet-closure-operator-Large-Locale = {!!}
 
   large-poset-closure-operator-Large-Locale :
     Large-Poset α β
@@ -208,13 +207,13 @@ module _
     is-closed-element-closure-operator-Large-Locale y →
     leq-Large-Locale L x y ↔
     leq-Large-Locale L (map-closure-operator-Large-Locale L j x) y
-  pr1 (adjoint-relation-closure-operator-Large-Locale x y H) = {!!}
+  adjoint-relation-closure-operator-Large-Locale = {!!}
 
   sup-closed-element-closure-operator-Large-Locale :
     {l1 l2 : Level} {I : UU l1}
     (x : I → closed-element-closure-operator-Large-Locale l2) →
     closed-element-closure-operator-Large-Locale (γ ⊔ l1 ⊔ l2)
-  pr1 (sup-closed-element-closure-operator-Large-Locale x) = {!!}
+  sup-closed-element-closure-operator-Large-Locale = {!!}
 
   is-least-upper-bound-sup-closed-element-closure-operator-Large-Locale :
     {l1 l2 : Level} {I : UU l1}
@@ -223,20 +222,16 @@ module _
       ( large-poset-closure-operator-Large-Locale)
       ( x)
       ( sup-closed-element-closure-operator-Large-Locale x)
-  pr1
-    ( is-least-upper-bound-sup-closed-element-closure-operator-Large-Locale x y)
-    ( H) = {!!}
+  is-least-upper-bound-sup-closed-element-closure-operator-Large-Locale = {!!}
 
   is-large-suplattice-large-poset-closure-operator-Large-Locale :
     is-large-suplattice-Large-Poset γ
       ( large-poset-closure-operator-Large-Locale)
-  sup-has-least-upper-bound-family-of-elements-Large-Poset
-    ( is-large-suplattice-large-poset-closure-operator-Large-Locale x) = {!!}
+  is-large-suplattice-large-poset-closure-operator-Large-Locale = {!!}
 
   large-suplattice-closure-operator-Large-Locale :
     Large-Suplattice α β γ
-  large-poset-Large-Suplattice
-    large-suplattice-closure-operator-Large-Locale = {!!}
+  large-suplattice-closure-operator-Large-Locale = {!!}
 ```
 
 ### The predicate that the closed elements of a closure operator on a large locale are closed under meets
@@ -272,8 +267,7 @@ module _
 
   large-meet-subsemilattice-closure-operator-Large-Locale :
     Large-Meet-Subsemilattice α (large-meet-semilattice-Large-Locale L)
-  large-subposet-Large-Meet-Subsemilattice
-    large-meet-subsemilattice-closure-operator-Large-Locale = {!!}
+  large-meet-subsemilattice-closure-operator-Large-Locale = {!!}
 
   large-meet-semilattice-closure-operator-Large-Locale :
     Large-Meet-Semilattice α β
@@ -300,12 +294,11 @@ module _
     sup-closed-element-closure-operator-Large-Locale L j
       ( λ i →
         meet-closed-element-closure-operator-Large-Locale x (y i))
-  distributive-meet-sup-closure-operator-Large-Locale (x , p) y = {!!}
+  distributive-meet-sup-closure-operator-Large-Locale = {!!}
 
   large-frame-closure-operator-Large-Locale :
     Large-Frame α β γ
-  large-poset-Large-Frame
-    large-frame-closure-operator-Large-Locale = {!!}
+  large-frame-closure-operator-Large-Locale = {!!}
 
   large-locale-closure-operator-Large-Locale :
     Large-Locale α β γ

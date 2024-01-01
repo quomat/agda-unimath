@@ -51,7 +51,7 @@ record
 
   lam :
     {Γ : Ctx} (A : Ty Γ) (B : Ty (ext Γ A)) → Tm (ext Γ A) B → Tm Γ (Π A B)
-  lam A B = {!!}
+  lam = {!!}
 
   field
     substitution-law-Π :

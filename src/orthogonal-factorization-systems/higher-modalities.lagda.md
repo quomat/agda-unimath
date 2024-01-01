@@ -242,7 +242,7 @@ map-inv-unit-small-Id-higher-modality :
   ( operator-higher-modality m
     ( type-is-small (is-locally-small-operator-higher-modality m X x' y'))) →
   x' ＝ y'
-map-inv-unit-small-Id-higher-modality m {X} {x'} {y'} = {!!}
+map-inv-unit-small-Id-higher-modality = {!!}
 
 module _
   {l : Level} (m : higher-modality l l)
@@ -251,17 +251,17 @@ module _
   map-inv-unit-Id-higher-modality :
     {X : UU l} {x' y' : operator-higher-modality m X} →
     operator-higher-modality m (x' ＝ y') → x' ＝ y'
-  map-inv-unit-Id-higher-modality {X} {x'} {y'} = {!!}
+  map-inv-unit-Id-higher-modality = {!!}
 
   is-section-unit-Id-higher-modality :
     {X : UU l} {x' y' : operator-higher-modality m X} →
     (map-inv-unit-Id-higher-modality ∘ unit-higher-modality m {x' ＝ y'}) ~ id
-  is-section-unit-Id-higher-modality {X} {x'} {y'} p = {!!}
+  is-section-unit-Id-higher-modality = {!!}
 
   retraction-unit-Id-higher-modality :
     {X : UU l} {x' y' : operator-higher-modality m X} →
     retraction (unit-higher-modality m {x' ＝ y'})
-  pr1 retraction-unit-Id-higher-modality = {!!}
+  retraction-unit-Id-higher-modality = {!!}
 ```
 
 We get this retraction without applying univalence, so, using strong subuniverse
@@ -272,7 +272,7 @@ full equivalence.
   is-modal-Id-higher-modality :
     {X : UU l} {x' y' : operator-higher-modality m X} →
     is-modal (unit-higher-modality m) (x' ＝ y')
-  is-modal-Id-higher-modality {X} {x'} {y'} = {!!}
+  is-modal-Id-higher-modality = {!!}
 ```
 
 ### Subuniverse induction on identity types
@@ -288,7 +288,7 @@ module _
       (x' : operator-higher-modality m X) → operator-higher-modality m (Y x')) →
     (f ∘ unit-higher-modality m) ~ (g ∘ unit-higher-modality m) →
     f ~ g
-  ind-subuniverse-Id-higher-modality {X} f g = {!!}
+  ind-subuniverse-Id-higher-modality = {!!}
 
   compute-ind-subuniverse-Id-higher-modality :
     {X : UU l} {Y : operator-higher-modality m X → UU l}
@@ -302,7 +302,7 @@ module _
       ( H)
       ( unit-higher-modality m x)) ＝
     ( H x)
-  compute-ind-subuniverse-Id-higher-modality f g = {!!}
+  compute-ind-subuniverse-Id-higher-modality = {!!}
 ```
 
 ### Types in the image of the modal operator are modal
@@ -342,7 +342,7 @@ is-section-ind-higher-modality :
   ( ( precomp-Π (unit-higher-modality m) (operator-higher-modality m ∘ P)) ∘
     ( ind-higher-modality m P)) ~
   ( id)
-is-section-ind-higher-modality m = {!!}
+is-section-ind-higher-modality = {!!}
 
 module _
   {l : Level} (m : higher-modality l l)
@@ -353,12 +353,12 @@ module _
     ( ind-higher-modality m P ∘
       precomp-Π (unit-higher-modality m) (operator-higher-modality m ∘ P)) ~
     ( id)
-  is-retraction-ind-higher-modality P s = {!!}
+  is-retraction-ind-higher-modality = {!!}
 
   is-equiv-ind-higher-modality :
     {X : UU l} (P : operator-higher-modality m X → UU l) →
     is-equiv (ind-higher-modality m P)
-  pr1 (pr1 (is-equiv-ind-higher-modality P)) = {!!}
+  is-equiv-ind-higher-modality = {!!}
   pr2 (pr1 (is-equiv-ind-higher-modality P)) = {!!}
   pr1 (pr2 (is-equiv-ind-higher-modality P)) = {!!}
   pr2 (pr2 (is-equiv-ind-higher-modality P)) = {!!}
@@ -367,11 +367,11 @@ module _
     {X : UU l} (P : operator-higher-modality m X → UU l) →
     ((x : X) → operator-higher-modality m (P (unit-higher-modality m x))) ≃
     ((x' : operator-higher-modality m X) → operator-higher-modality m (P x'))
-  pr1 (equiv-ind-higher-modality P) = {!!}
+  equiv-ind-higher-modality = {!!}
 
   is-uniquely-eliminating-higher-modality :
     is-uniquely-eliminating-modality (unit-higher-modality m)
-  is-uniquely-eliminating-higher-modality P = {!!}
+  is-uniquely-eliminating-higher-modality = {!!}
 ```
 
 ## See also

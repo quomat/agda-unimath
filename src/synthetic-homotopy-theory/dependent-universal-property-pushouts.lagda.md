@@ -49,7 +49,7 @@ dependent-universal-property-pushout :
   {l1 l2 l3 l4 : Level} (l : Level) {S : UU l1} {A : UU l2} {B : UU l3}
   (f : S → A) (g : S → B) {X : UU l4} (c : cocone f g X) →
   UU (l1 ⊔ l2 ⊔ l3 ⊔ l4 ⊔ lsuc l)
-dependent-universal-property-pushout l f g {X} c = {!!}
+dependent-universal-property-pushout = {!!}
 ```
 
 ## Properties
@@ -67,7 +67,7 @@ abstract
       ( Σ ( (x : X) → P x)
           ( λ k →
             htpy-dependent-cocone f g c P (dependent-cocone-map f g c P k) h))
-  uniqueness-dependent-universal-property-pushout f g c dup-c P h = {!!}
+  uniqueness-dependent-universal-property-pushout = {!!}
 ```
 
 ### The induction principle of pushouts is equivalent to the dependent universal property of pushouts
@@ -81,7 +81,7 @@ htpy-eq-dependent-cocone-map :
   ( H : induction-principle-pushout l f g c)
   { P : X → UU l} (h h' : (x : X) → P x) →
   dependent-cocone-map f g c P h ＝ dependent-cocone-map f g c P h' → h ~ h'
-htpy-eq-dependent-cocone-map f g c ind-c {P} h h' p = {!!}
+htpy-eq-dependent-cocone-map = {!!}
 
 dependent-universal-property-pushout-induction-principle-pushout :
   {l1 l2 l3 l4 : Level} {S : UU l1} {A : UU l2} {B : UU l3}
@@ -120,7 +120,7 @@ triangle-dependent-pullback-property-pushout :
       ( λ (h : (a : A) → P (i a)) → λ s → tr P (H s) (h (f s)))
       ( λ (h : (b : B) → P (j b)) → λ s → h (g s))
       ( cone-dependent-pullback-property-pushout f g c P)))
-triangle-dependent-pullback-property-pushout f g (pair i (pair j H)) P h = {!!}
+triangle-dependent-pullback-property-pushout = {!!}
 
 dependent-pullback-property-dependent-universal-property-pushout :
   {l1 l2 l3 l4 : Level} {S : UU l1} {A : UU l2} {B : UU l3}

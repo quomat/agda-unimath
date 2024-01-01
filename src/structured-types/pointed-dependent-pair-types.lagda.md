@@ -30,7 +30,7 @@ module _
 
   Σ-Pointed-Type :
     (A : Pointed-Type l1) (B : Pointed-Fam l2 A) → Pointed-Type (l1 ⊔ l2)
-  pr1 (Σ-Pointed-Type (A , a) (B , b)) = {!!}
+  Σ-Pointed-Type = {!!}
 
   Σ∗ = {!!}
 ```

@@ -54,7 +54,7 @@ abstract
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
     dependent-universal-property-equiv f →
     universal-property-equiv f
-  is-equiv-precomp-is-equiv-precomp-Π f H C = {!!}
+  is-equiv-precomp-is-equiv-precomp-Π = {!!}
 ```
 
 #### If `f` is an equivalence, then precomposition by `f` is an equivalence
@@ -67,7 +67,7 @@ module _
   abstract
     is-equiv-precomp-is-equiv :
       is-equiv f → universal-property-equiv f
-    is-equiv-precomp-is-equiv H = {!!}
+    is-equiv-precomp-is-equiv = {!!}
 
 module _
   {l1 l2 : Level} {A : UU l1} {B : UU l2} (e : A ≃ B)
@@ -92,7 +92,7 @@ module _
   abstract
     is-equiv-is-equiv-precomp :
       universal-property-equiv f → is-equiv f
-    is-equiv-is-equiv-precomp H = {!!}
+    is-equiv-is-equiv-precomp = {!!}
 ```
 
 #### If dependent precomposition by `f` is an equivalence, then `f` is an equivalence
@@ -103,5 +103,5 @@ abstract
     {l1 l2 : Level} {A : UU l1} {B : UU l2} (f : A → B) →
     dependent-universal-property-equiv f →
     is-equiv f
-  is-equiv-is-equiv-precomp-Π f H = {!!}
+  is-equiv-is-equiv-precomp-Π = {!!}
 ```
